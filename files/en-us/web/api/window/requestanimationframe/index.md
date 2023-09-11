@@ -1,23 +1,8 @@
 ---
-title: Window.requestAnimationFrame()
+title: "Window: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animations
-  - Drawing
-  - Games
-  - Graphics
-  - HTML DOM
-  - Intermediate
-  - JavaScript timers
-  - Method
-  - Performance
-  - Reference
-  - Scheduling
-  - Window
-  - requestAnimationFrame
-  - Polyfill
 browser-compat: api.Window.requestAnimationFrame
 ---
 
@@ -25,7 +10,7 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. The method takes a
+specified function to update an animation right before the next repaint. The method takes a
 callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call
@@ -85,25 +70,26 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 (`0.1 * 2000`) to the right of its initial position.
 
 ```js
-const element = document.getElementById('some-element-you-want-to-animate');
+const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
-let done = false
+let done = false;
 
-function step(timestamp) {
+function step(timeStamp) {
   if (start === undefined) {
-    start = timestamp;
-    }
-  const elapsed = timestamp - start;
+    start = timeStamp;
+  }
+  const elapsed = timeStamp - start;
 
-  if (previousTimeStamp !== timestamp) {
+  if (previousTimeStamp !== timeStamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
     element.style.transform = `translateX(${count}px)`;
     if (count === 200) done = true;
   }
 
-  if (elapsed < 2000) { // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp;
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
+    previousTimeStamp = timeStamp;
     if (!done) {
       window.requestAnimationFrame(step);
     }
@@ -124,9 +110,10 @@ window.requestAnimationFrame(step);
 ## See also
 
 - {{domxref("Window.cancelAnimationFrame()")}}
+- {{domxref("OffscreenCanvas")}}
+- [DedicatedWorkerGlobalScope](/en-US/docs/Web/API/DedicatedWorkerGlobalScope)
 - [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) – Blog post
 - [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

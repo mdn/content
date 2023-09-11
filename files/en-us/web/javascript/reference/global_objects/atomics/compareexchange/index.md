@@ -2,18 +2,12 @@
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.compareExchange
 ---
 
 {{JSRef}}
 
-The static
-**`Atomics.compareExchange()`**
+The **`Atomics.compareExchange()`** static
 method exchanges a given replacement value at a given position in the array, if a given
 expected value equals the old value. It returns the old value at that position whether
 it was equal to the expected value or not. This atomic operation guarantees that no
@@ -49,10 +43,10 @@ The old value at the given position
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
-  of the allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
-  in the `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 

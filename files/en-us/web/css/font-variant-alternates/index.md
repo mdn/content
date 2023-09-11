@@ -2,18 +2,18 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 ---
 
 {{CSSRef}}
 
 The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
+
+The {{cssxref("@font-feature-values")}} at-rule can be used to associate, for a given font face, a human-readable name with a numeric index that controls a particular OpenType font feature. For features that select alternative glyphs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), the `font-variant-alternates` property can then reference the human-readable name in order to apply the associated feature.
+
+This allows CSS rules to enable alternative glyphs without needing to know the specific index values that a particular font uses to control them.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -36,10 +36,6 @@ font-variant-alternates: revert;
 font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
-
-The {{cssxref("@font-feature-values")}} at-rule can define names for alternative glyph functions (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), associating the name with OpenType parameters. This property allows those human-readable names (defined in {{cssxref("@font-feature-values")}}) in the stylesheet.
-
-## Syntax
 
 This property may take one of two forms:
 
@@ -81,11 +77,15 @@ This property may take one of two forms:
 
 ### Enabling swash glyphs
 
+In this example, we use the `@font-feature-values` at-rule to define a name for the `swash` feature of the [MonteCarlo](https://github.com/googlefonts/monte-carlo) font. The rule maps the name `"fancy"` to the index value `1`.
+
+We can then use that name inside `font-variant-alternates` to switch on swashes for that font. This is the equivalent of a line like `font-feature-settings: "swsh" 1`, except that the CSS applying the feature does not need to include, or even know, the index value needed for this particular font.
+
 #### HTML
 
 ```html
-<p> A Fancy Swash</p>
-<p class="variant"> A Fancy Swash</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
 #### CSS
@@ -93,7 +93,7 @@ This property may take one of two forms:
 ```css
 @font-face {
   font-family: MonteCarlo;
-  src: url(MonteCarlo-Regular.ttf);
+  src: url("montecarlo-regular.woff2");
 }
 
 @font-feature-values "MonteCarlo" {
@@ -104,18 +104,18 @@ This property may take one of two forms:
 
 p {
   font-family: "MonteCarlo";
-  font-size: 1.5rem;
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
 }
 
 .variant {
-  font-feature-settings: "swsh" 1;
   font-variant-alternates: swash(fancy);
 }
 ```
 
-> **Note:** For this example to work you need to load the MonteCarlo font which is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL). Download at <https://github.com/googlefonts/monte-carlo>.
->
-> More fonts are available in the [Google Font corpus](https://github.com/google/fonts). However, note that fonts loaded from Google Fonts directly (for example, using `@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");`) won't work. Google Fonts hosted fonts seem to strip the swash feature.
+#### Result
+
+{{EmbedLiveSample("Enabling swash glyphs", 0, 230)}}
 
 ## Specifications
 
@@ -135,3 +135,4 @@ p {
 - [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
 - [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
 - [`@font-feature-values`](/en-US/docs/Web/CSS/@font-feature-values)
+- [`font-feature-settings`](/en-US/docs/Web/CSS/font-feature-settings)

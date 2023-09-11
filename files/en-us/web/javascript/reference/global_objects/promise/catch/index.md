@@ -2,35 +2,27 @@
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
 browser-compat: javascript.builtins.Promise.catch
 ---
 
 {{JSRef}}
 
-The **`catch()`** method of a {{jsxref("Promise")}} object schedules a function to be called when the promise is rejected. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}}.
+The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}}.
 
 {{EmbedInteractiveExample("pages/js/promise-catch.html")}}
 
 ## Syntax
 
 ```js-nolint
-catch(onRejected)
-
-catch((reason) => {
-  // rejection handler
-})
+promiseInstance.catch(onRejected)
 ```
 
 ### Parameters
 
 - `onRejected`
-  - : A {{jsxref("Function")}} called when the `Promise` is rejected. This function has one parameter: the _rejection reason_.
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `catch()`. The function is called with the following arguments:
+    - `reason`
+      - : The value that the promise was rejected with.
 
 ### Return value
 

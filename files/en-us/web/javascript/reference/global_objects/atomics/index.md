@@ -2,21 +2,16 @@
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 page-type: javascript-namespace
-tags:
-  - JavaScript
-  - Namespace
-  - Shared Memory
-  - Specifications
 browser-compat: javascript.builtins.Atomics
 ---
 
 {{JSRef}}
 
-The **`Atomics`** object provides atomic operations as static methods. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
+The **`Atomics`** namespace object contains static methods for carrying out atomic operations. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
 
 ## Description
 
-The Atomic operations are installed on an `Atomics` module. Unlike the other global objects, `Atomics` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Atomics` object as a function. All properties and methods of `Atomics` are static (as is the case with the {{jsxref("Math")}} object, for example).
+Unlike most global objects, `Atomics` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Atomics` object as a function. All properties and methods of `Atomics` are static (just like the {{jsxref("Math")}} object).
 
 ### Atomic operations
 
@@ -41,7 +36,7 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
   - : Stores a value at the specified index of the array, if it equals a value. Returns the old value.
 - {{jsxref("Atomics.exchange()")}}
   - : Stores a value at the specified index of the array. Returns the old value.
-- {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
+- {{jsxref("Atomics.isLockFree()")}}
   - : An optimization primitive that can be used to determine whether to use locks or atomic operations. Returns `true` if an atomic operation on arrays of the given element size will be implemented using a hardware atomic operation (as opposed to a lock). Experts only.
 - {{jsxref("Atomics.load()")}}
   - : Returns the value at the specified index of the array.
@@ -135,8 +130,7 @@ Atomics.notify(int32, 0, 1);
 ## See also
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
-- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
-- [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
-- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md) in the TC39 ecmascript-sharedmem proposal
+- [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) on hacks.mozilla.org (2016)

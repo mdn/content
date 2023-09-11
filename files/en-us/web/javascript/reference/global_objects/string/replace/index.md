@@ -2,21 +2,12 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 page-type: javascript-instance-method
-tags:
-  - Expressions
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.replace
 ---
 
 {{JSRef}}
 
-The **`replace()`** method returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
+The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 
 {{EmbedInteractiveExample("pages/js/string-replace.html")}}
 
@@ -137,11 +128,11 @@ console.log(newstr); // Twas the night before Christmas...
 
 This logs `'Twas the night before Christmas...'`.
 
-> **Note:** See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) for more explanations about regular expressions.
+> **Note:** See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
 
 ### Using the global and ignoreCase flags with replace()
 
-Global replace can only be done with a regular expression. In the following example, the regular expression includes the [global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) which permits `replace()` to replace each occurrence of `'apples'` in the string with `'oranges'`.
+Global replace can only be done with a regular expression. In the following example, the regular expression includes the [global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) which permits `replace()` to replace each occurrence of `'apples'` in the string with `'oranges'`.
 
 ```js
 const re = /apples/gi;
@@ -154,7 +145,7 @@ This logs `'oranges are round, and oranges are juicy'`.
 
 ### Switching words in a string
 
-The following script switches the words in the string. For the replacement text, the script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) and the `$1` and `$2` replacement patterns.
+The following script switches the words in the string. For the replacement text, the script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) and the `$1` and `$2` replacement patterns.
 
 ```js
 const re = /(\w+)\s(\w+)/;

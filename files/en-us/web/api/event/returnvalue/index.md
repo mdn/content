@@ -1,11 +1,10 @@
 ---
-title: Event.returnValue
+title: "Event: returnValue property"
+short-title: returnValue
 slug: Web/API/Event/returnValue
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Event.returnValue
 ---
 

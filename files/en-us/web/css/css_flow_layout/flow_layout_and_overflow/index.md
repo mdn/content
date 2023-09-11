@@ -1,16 +1,7 @@
 ---
 title: Flow layout and overflow
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 page-type: guide
-tags:
-  - CSS
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - Visibility
-  - overflow
-  - text-overflow
 ---
 
 {{CSSRef}}
@@ -49,7 +40,7 @@ The overflow property is in reality a shorthand for the [`overflow-x`](/en-US/do
 
 ## Flow Relative Properties
 
-In the guide to [Writing Modes and Flow Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes), we looked at the newer properties of `block-size` and `inline-size` which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The Level 3 Overflow Module also includes flow relative properties for overflow - [`overflow-block`](/en-US/docs/Web/CSS/@media/overflow-block) and [`overflow-inline`](/en-US/docs/Web/CSS/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
+In the guide to [Writing Modes and Flow Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes), we looked at the newer properties of `block-size` and `inline-size` which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The Level 3 Overflow Module also includes flow relative properties for overflow - [`overflow-block`](/en-US/docs/Web/CSS/@media/overflow-block) and [`overflow-inline`](/en-US/docs/Web/CSS/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
 
 These properties currently do not have implementations in browsers, so you will need to use the physical properties at the present time and adjust for your writing mode.
 

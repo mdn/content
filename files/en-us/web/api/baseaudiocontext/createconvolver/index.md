@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createConvolver()
+title: "BaseAudioContext: createConvolver() method"
+short-title: createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createConvolver
 browser-compat: api.BaseAudioContext.createConvolver
 ---
 
@@ -70,7 +63,7 @@ ajaxRequest.onload = () => {
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
     },
-    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    (e) => console.error(`Error with decoding audio data: ${e.err}`),
   );
 };
 

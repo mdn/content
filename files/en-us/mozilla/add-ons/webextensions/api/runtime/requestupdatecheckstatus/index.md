@@ -1,16 +1,7 @@
 ---
 title: runtime.RequestUpdateCheckStatus
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/RequestUpdateCheckStatus
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RequestUpdateCheckStatus
-  - Type
-  - WebExtensions
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.RequestUpdateCheckStatus
 ---
 

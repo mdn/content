@@ -1,15 +1,7 @@
 ---
 title: Updating extensions for Firefox 4
 slug: Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4
-tags:
-  - "4"
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Firefox 4
-  - Gecko 2.0
-  - Mozilla
-  - Release
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -63,7 +55,7 @@ The API for handling network redirects has been changed to be asynchronous; any 
 
 ## XPI unpacking
 
-Firefox 4 [no longer extracts XPIs](https://bugzilla.mozilla.org/show_bug.cgi?id=533038) when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify [`<em:unpack>`](/en-US/Install_Manifests#unpack) in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.
+Firefox 4 [no longer extracts XPIs](https://bugzil.la/533038) when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify [`<em:unpack>`](/en-US/Install_Manifests#unpack) in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.
 
 If your extension only contains these types of files then you do not need to make any changes:
 
@@ -79,7 +71,7 @@ If your extension contains any of the following then you will need to include `<
 - Shared libraries loaded with ctypes
 - `searchplugins/` (which are supposed to be loaded automatically by Firefox)
 - `dictionaries/`
-- Window icons (might get [fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=595462))
+- Window icons (might get [fixed](https://bugzil.la/595462))
 
 If your extension code accesses other files that you have packaged in the XPI then you will either need to include `<em:unpack>` in the install.rdf or you may be able to support packed installation by making some changes to your code. Any code that used getInstallLocation() and nsIFile will either need em:unpack or needs to be changed. You can use the method [`Addon.getResourceURI()`](/en-US/docs/Addons/Add-on_Manager/Addon#getResourceURI%28%29), it will return an `nsIURI` pointing to the requested file. If the extension is unpacked then it will be a `file://` URI. If the extension is packed then it will be a `jar://` URI. You can open streams to these URIs by opening a channel using the `nsIIOService` which will allow you to load the files contents without any unpacking.
 
@@ -105,7 +97,7 @@ Because Firefox now caches code and other resources more aggressively, you'll wa
 
 The old Profile Manager tool will be getting removed from Firefox 4, although it hasn't been yet. This tool hasn't been updated for a long time and is missing features. On top of that, its presence is slowing down application startup.
 
-A replacement to the profile manager is [available](ftp://ftp.mozilla.org/pub/utilities/profilemanager/). (See also {{bug("539524")}}). This new tool is independent of the browser itself, and more robust than the old Profile Manager.
+A replacement to the profile manager is [available](ftp://ftp.mozilla.org/pub/utilities/profilemanager/). (See also [Firefox bug 539524](https://bugzil.la/539524)). This new tool is independent of the browser itself, and more robust than the old Profile Manager.
 
 ### Installing extensions globally
 

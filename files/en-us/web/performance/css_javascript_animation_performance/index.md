@@ -1,14 +1,7 @@
 ---
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
-tags:
-  - Animation
-  - Animations
-  - CSS
-  - FPS
-  - JavaScript
-  - Performance
-  - Transitions
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -19,8 +12,8 @@ Animations are critical for a pleasurable user experience on many applications. 
 
 Both CSS transitions and animations can be used to write animation. They each have their own user scenarios:
 
-- CSS {{cssxref("transition","transitions")}} provide an easy way to make animations occur between the current style and an end CSS state, e.g., a resting button state and a hover state. Even if an element is in the middle of a transition, the new transition starts from the current style immediately instead of jumping to the end CSS state. See [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) for more details.
-- CSS {{cssxref("animation","animations")}}, on the other hand, allow developers to make animations between a set of starting property values and a final set rather than between two states. CSS animations consist of two components: a style describing the CSS animation, and a set of key frames that indicate the start and end states of the animation's style, as well as possible intermediate points. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more details.
+- CSS {{cssxref("transition","transitions")}} provide an easy way to make animations occur between the current style and an end CSS state, e.g., a resting button state and a hover state. Even if an element is in the middle of a transition, the new transition starts from the current style immediately instead of jumping to the end CSS state. See [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) for more details.
+- CSS {{cssxref("animation","animations")}}, on the other hand, allow developers to make animations between a set of starting property values and a final set rather than between two states. CSS animations consist of two components: a style describing the CSS animation, and a set of key frames that indicate the start and end states of the animation's style, as well as possible intermediate points. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for more details.
 
 In terms of performance, there is no difference between implementing an animation with CSS transitions or animations. Both of them are classified under the same CSS-based umbrella in this article.
 

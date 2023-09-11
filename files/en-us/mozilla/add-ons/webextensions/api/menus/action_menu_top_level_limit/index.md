@@ -1,16 +1,7 @@
 ---
 title: menus.ACTION_MENU_TOP_LEVEL_LIMIT
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ACTION_MENU_TOP_LEVEL_LIMIT
-tags:
-  - ACTION_MENU_TOP_LEVEL_LIMIT
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-property
 browser-compat: webextensions.api.menus.ACTION_MENU_TOP_LEVEL_LIMIT
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: How to add images and media
 slug: MDN/Writing_guidelines/Howto/Images_media
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 
@@ -17,7 +14,7 @@ Let's walk through an example:
 
 1. Start with a fresh working branch with the latest content from the `main` branch of the `mdn` remote.
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
@@ -30,7 +27,7 @@ Let's walk through an example:
 2. Add your image to the document folder. For this example, let's assume
    we're adding a new image to the `files/en-us/web/css` document.
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    cp ../some/path/my-cool-image.png files/en-us/web/css/
    ```
@@ -38,7 +35,7 @@ Let's walk through an example:
 3. Run `filecheck` on each image, which might complain if something's wrong.
    For more details, see the [Compressing images](#compressing-images) section.
 
-   ```sh
+   ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
@@ -51,7 +48,7 @@ Let's walk through an example:
 5. Add and commit all of the deleted, created, and modified files, as well as
    push your branch to your fork:
 
-   ```sh
+   ```bash
    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
    git commit
    git push -u origin my-images
@@ -104,7 +101,7 @@ You can compress an image appropriately by using the `filecheck` command with th
 This option compresses the image as much as possible and replaces the original with the compressed version.
 For example:
 
-```sh
+```bash
 yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
@@ -265,13 +262,13 @@ Ask a member of MDN Web Docs team to upload the video if you don't have somewher
 Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) macro.
 This is used by inserting the following in your page at the position you want the video to appear:
 
-```
+```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
 For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
 
-```
+```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```

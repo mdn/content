@@ -1,15 +1,7 @@
 ---
 title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - events
+page-type: webextension-api
 browser-compat: webextensions.api.events
 ---
 

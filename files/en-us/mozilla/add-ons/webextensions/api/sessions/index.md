@@ -1,14 +1,7 @@
 ---
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sessions
+page-type: webextension-api
 browser-compat: webextensions.api.sessions
 ---
 

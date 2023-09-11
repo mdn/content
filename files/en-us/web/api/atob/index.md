@@ -1,14 +1,8 @@
 ---
-title: atob()
+title: atob() global function
+short-title: atob()
 slug: Web/API/atob
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - atob
 browser-compat: api.atob
 ---
 
@@ -19,10 +13,9 @@ string of data which has been encoded using {{glossary("Base64")}} encoding. You
 the {{domxref("btoa","btoa()")}} method to encode and transmit
 data which may otherwise cause communication problems, then transmit it and use the
 `atob()` method to decode the data again. For example, you can encode,
-transmit, and decode control characters such as ASCII values 0 through 31.
+transmit, and decode control characters such as {{Glossary("ASCII")}} values 0 through 31.
 
-For use with Unicode or UTF-8 strings, see the note on "Unicode strings" in the page
-for {{domxref("btoa", "btoa()")}}.
+For use with arbitrary Unicode strings, see [The "Unicode Problem"](/en-US/docs/Glossary/Base64#the_unicode_problem) section of the {{Glossary("Base64")}} glossary entry.
 
 ## Syntax
 

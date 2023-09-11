@@ -1,16 +1,8 @@
 ---
-title: 'Window: blur event'
+title: "Window: blur event"
+short-title: blur
 slug: Web/API/Window/blur_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FocusEvent
-  - Reference
-  - Web
-  - Window
-  - blur
-  - onblur
 browser-compat: api.Window.blur_event
 ---
 
@@ -27,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blur', (event) => { });
+addEventListener("blur", (event) => {});
 
-onblur = (event) => { };
+onblur = (event) => {};
 ```
 
 ## Event type
@@ -70,19 +62,20 @@ This example changes the appearance of a document when it loses focus. It uses {
 
 ```js
 function pause() {
-  document.body.classList.add('paused');
-  log.textContent = 'FOCUS LOST!';
+  document.body.classList.add("paused");
+  log.textContent = "FOCUS LOST!";
 }
 
 function play() {
-  document.body.classList.remove('paused');
-  log.textContent = 'This document has focus. Click outside the document to lose focus.';
+  document.body.classList.remove("paused");
+  log.textContent =
+    "This document has focus. Click outside the document to lose focus.";
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
-window.addEventListener('blur', pause);
-window.addEventListener('focus', play);
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
 #### Result
@@ -97,7 +90,7 @@ window.addEventListener('focus', play);
 
 {{Compat}}
 
-The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ({{bug(452307)}}): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the `body` of the document.
+The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ([Firefox bug 452307](https://bugzil.la/452307)): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the `body` of the document.
 
 ## See also
 

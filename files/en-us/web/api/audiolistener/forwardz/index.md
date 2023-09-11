@@ -1,15 +1,8 @@
 ---
-title: AudioListener.forwardZ
+title: "AudioListener: forwardZ property"
+short-title: forwardZ
 slug: Web/API/AudioListener/forwardZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - forwardZ
 browser-compat: api.AudioListener.forwardZ
 ---
 
@@ -25,7 +18,7 @@ An {{domxref("AudioParam")}}. Its default value is -1, and it can range between 
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

@@ -1,16 +1,10 @@
 ---
 title: User agent
 slug: Glossary/User_agent
-tags:
-  - Browser
-  - UA
-  - User-agent
-  - Web Browser
-  - WebMechanics
-  - agent
-  - user agent
-  - userAgent
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A user agent is a computer program representing a person, for example, a {{Glossary("Browser","browser")}} in a {{Glossary("World Wide Web", "Web")}} context.
 

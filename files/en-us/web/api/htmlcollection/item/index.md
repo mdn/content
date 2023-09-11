@@ -1,14 +1,8 @@
 ---
-title: HTMLCollection.item()
+title: "HTMLCollection: item() method"
+short-title: item()
 slug: Web/API/HTMLCollection/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLCollection
-  - Method
-  - Reference
-  - item
 browser-compat: api.HTMLCollection.item
 ---
 
@@ -50,9 +44,9 @@ The `item()` method returns a numbered element from an
 ## Examples
 
 ```js
-const images = document.images;  // This is an HTMLCollection
-const img0 = images.item(0);     // You can use the item() method this way
-const img1 = images[1];          // But this notation is easier and more common
+const images = document.images; // This is an HTMLCollection
+const img0 = images.item(0); // You can use the item() method this way
+const img1 = images[1]; // But this notation is easier and more common
 ```
 
 ## Browser compatibility

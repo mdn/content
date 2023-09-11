@@ -2,24 +2,6 @@
 title: Key values for keyboard events
 slug: Web/API/UI_Events/Keyboard_event_key_values
 page-type: guide
-tags:
-  - Characters
-  - DOM
-  - Key Codes
-  - Key Values
-  - KeyboardEvent
-  - Keycodes
-  - Keypad
-  - Keystrokes
-  - Meta
-  - Meta Keys
-  - Modifier Keys
-  - Modifiers
-  - Reference
-  - UI Events
-  - events
-  - keyboard
-  - keys
 ---
 
 {{DefaultAPISidebar("UI Events")}}
@@ -85,7 +67,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </thead>
   <tbody>
     <tr>
-      <td><code>"Alt"</code> [5]</td>
+      <td><code>"Alt"</code> [4]</td>
       <td>The <kbd>Alt</kbd> (Alternative) key.</td>
       <td>
         <code>VK_MENU</code> (0x12)<br /><code>VK_LMENU</code> (0xA4)<br /><code
@@ -106,7 +88,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       </td>
     </tr>
     <tr>
-      <td><code>"AltGraph"</code> [5]</td>
+      <td><code>"AltGraph"</code> [4]</td>
       <td>
         The <kbd>AltGr</kbd> or <kbd>AltGraph</kbd> (Alternate Graphics) key.
         Enables the ISO Level 3 shift modifier (where <kbd>Shift</kbd> is the
@@ -200,7 +182,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       <td></td>
     </tr>
     <tr>
-      <td><code>"Hyper"</code> [4]</td>
+      <td><code>"Hyper"</code> [3]</td>
       <td>The <kbd>Hyper</kbd> key.</td>
       <td></td>
       <td></td>
@@ -292,7 +274,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       </td>
     </tr>
     <tr>
-      <td><code>"Super"</code> [4]</td>
+      <td><code>"Super"</code> [3]</td>
       <td>The <kbd>Super</kbd> key.</td>
       <td></td>
       <td></td>
@@ -313,7 +295,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_SYM</code> (63) [3]</td>
+      <td><code>KEYCODE_SYM</code> (63) [2]</td>
     </tr>
     <tr>
       <td><code>"SymbolLock"</code></td>
@@ -326,15 +308,13 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
+\[1] In Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [Firefox bug 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
 
-\[2] Internet Explorer (tested on release 9 and 11) reports `"Scroll"` instead of `"ScrollLock"` for the <kbd>Scroll Lock</kbd> key.
+\[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
-\[3] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
+\[3] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
-\[4] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
-
-\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
+\[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://crbug.com/25503) for further details.
 
 ## Whitespace keys
 
@@ -409,7 +389,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] Older browsers may return `"Spacebar"` instead of `" "` for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.
+\[1] Older browsers may return `"Spacebar"` instead of `" "` for the <kbd>Space Bar</kbd> key. Firefox did so until version 37.
 
 ## Navigation keys
 
@@ -529,7 +509,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge (16 and earlier), and Firefox (36 and earlier) use `"Left"`, `"Right"`, `"Up"`, and `"Down"` instead of `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, and `"ArrowDown"`.
+\[1] Edge (16 and earlier) and Firefox (36 and earlier) use `"Left"`, `"Right"`, `"Up"`, and `"Down"` instead of `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, and `"ArrowDown"`.
 
 ## Editing keys
 
@@ -683,11 +663,11 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 \[1] On keyboards without a dedicated <kbd>Del</kbd> key, the Mac generates the `"Delete"` value when <kbd>Fn</kbd> is pressed in tandem with <kbd>Delete</kbd> (which is <kbd>Backspace</kbd> on other platforms).
 
-\[2] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier use `"Del"` instead of `"Delete"` for the <kbd>Del</kbd> key.
+\[2] Firefox 36 and earlier uses `"Del"` instead of `"Delete"` for the <kbd>Del</kbd> key.
 
-\[3] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value `"Crsel"` instead of `"CrSel"` when the <kbd>CrSel</kbd> key is pressed.
+\[3] Firefox 36 and earlier generates the value `"Crsel"` instead of `"CrSel"` when the <kbd>CrSel</kbd> key is pressed.
 
-\[4] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value `"Exsel"` instead of `"ExSel"` when the <kbd>ExSel</kbd> key is pressed.
+\[4] Firefox 36 and earlier generates the value `"Exsel"` instead of `"ExSel"` when the <kbd>ExSel</kbd> key is pressed.
 
 ## UI keys
 
@@ -901,15 +881,15 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code `"Pause"`. This is fixed in Chrome 53. (See [Chrome bug 612749](https://bugs.chromium.org/p/chromium/issues/detail?id=612749) for details.)
+\[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code `"Pause"`. This is fixed in Chrome 53. (See [Chrome bug 612749](https://crbug.com/612749) for details.)
 
-\[2] In Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier, the <kbd>Esc</kbd> key returns `"Esc"` instead of `"Escape"`.
+\[2] In Firefox 36 and earlier, the <kbd>Esc</kbd> key returns `"Esc"` instead of `"Escape"`.
 
-\[3] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier report `"Apps"` instead of `"ContextMenu"` for the context menu key.
+\[3] Firefox 36 and earlier reports `"Apps"` instead of `"ContextMenu"` for the context menu key.
 
-\[4] The <kbd>Attn</kbd> key generates the key code `"Unidentified"` on Internet Explorer (tested on release 9 and 11). Firefox and Google Chrome report the same, unless the Japanese keyboard layout is in effect, in which case it generates `"KanaMode"` instead.
+\[4] The <kbd>Attn</kbd> key generates the key code `"Unidentified"` on Firefox and Google Chrome, unless the Japanese keyboard layout is in effect, in which case it generates `"KanaMode"` instead.
 
-\[5] The <kbd>Finish</kbd> key generates the key code `"Unidentified"` on Internet Explorer (tested on release 9 and 11). Firefox reports the same, unless the Japanese keyboard layout is in effect, in which case it generates `"Katakana"` instead.
+\[5] The <kbd>Finish</kbd> key generates the key code `"Unidentified"` on Firefox, unless the Japanese keyboard layout is in effect, in which case it generates `"Katakana"` instead.
 
 \[6] Firefox didn't support the `"ZoomIn"` and `"ZoomOut"` keys until Firefox 37.
 
@@ -1103,7 +1083,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] The <kbd>Standby</kbd> key is not supported by Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier, so it is reported as `"Unidentified"`.
+\[1] The <kbd>Standby</kbd> key is not supported by Firefox 36 and earlier, so it is reported as `"Unidentified"`.
 
 \[2] Prior to Firefox 37, this key generated the value `"Unidentified"`.
 
@@ -1381,9 +1361,9 @@ Some keys are common across multiple languages, while others exist only on keybo
 
 \[1] On the _X Window System_, the <kbd>Compose</kbd> key is called the <kbd>Multi</kbd> key.
 
-\[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Internet Explorer (tested on release 9 and 11) and Firefox versions 36 and earlier.
+\[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Firefox versions 36 and earlier.
 
-\[3] The <kbd>Process</kbd> key currently returns `"Unidentified"` in Firefox and Internet Explorer. Google Chrome returns the value of the key as if IME were not in use.
+\[3] The <kbd>Process</kbd> key currently returns `"Unidentified"` in Firefox. Google Chrome returns the value of the key as if IME were not in use.
 
 \[4] Prior to Firefox 37, these keys were `"Unidentified"`.
 
@@ -1620,11 +1600,11 @@ These keys are only available on Japanese keyboards.
 
 \[2] `VK_HANGUL` and `VK_KANA` share the same numeric key value on Windows, as do `VK_HANJA` and `VK_KANJI`.
 
-\[3] Prior to Firefox 37, the <kbd>Hankaku</kbd> (half-width) key generated the key value `"HalfWidth"` on Firefox. Also, this key generates the value `"Unidentified"` on Internet Explorer (tested on release 9 and 11).
+\[3] Prior to Firefox 37, the <kbd>Hankaku</kbd> (half-width) key generated the key value `"HalfWidth"` on Firefox.
 
-\[4] Internet Explorer (tested on release 9 and 11) reports `"Unidentified"` for the <kbd>Zenkaku</kbd> key; Firefox 36 and earlier identify this key as `"FullWidth"` on Japanese keyboard layouts and `"Unidentified"` on all other keyboard layouts. Firefox 37 and later, and all versions of Google Chrome, correctly return `"Zenkaku"`.
+\[4] Firefox 36 and earlier identifies this key as `"FullWidth"` on Japanese keyboard layouts and `"Unidentified"` on all other keyboard layouts. Firefox 37 and later, and all versions of Google Chrome, correctly return `"Zenkaku"`.
 
-\[5] `"Unidentified"` in Internet Explorer (tested on release 9 and 11). Firefox 36 and earlier identify the <kbd>Romaji</kbd> key as `"RomanCharacters"` on Japanese keyboards and `"Unidentified"` for other keyboards; this is corrected to return `"Romaji"` in Firefox 37 and later.
+\[5] Firefox 36 and earlier identifies the <kbd>Romaji</kbd> key as `"RomanCharacters"` on Japanese keyboards and `"Unidentified"` for other keyboards; this is corrected to return `"Romaji"` in Firefox 37 and later.
 
 \[6] This key is reported as `"Unidentified"` prior to Firefox 37.
 
@@ -2569,7 +2549,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
+\[1] Legacy Edge and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
 
 \[2] Prior to Firefox 37, Firefox generated the key code `"FastFwd"` on some platforms and `"Unidentified"` on others instead of `"MediaFastForward"`.
 
@@ -2783,7 +2763,7 @@ These media keys are used specifically for controlling audio.
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification.
+\[1] Legacy Edge and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification.
 
 ## TV control keys
 
@@ -3792,7 +3772,7 @@ The values below are derived in part from a number of consumer electronics techn
 
 \[1] Don't confuse the media controller `VK_APPS` key with the Windows `VK_APPS` key, which is also known as `VK_CONTEXT_MENU`. That key is encoded as `"ContextMenu"`.
 
-\[2] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier identify the zoom toggle button as `"Zoom"`. Firefox 37 corrects this to `"ZoomToggle"`.
+\[2] Firefox 36 and earlier identifies the zoom toggle button as `"Zoom"`. Firefox 37 corrects this to `"ZoomToggle"`.
 
 \[3] These keys were `"Unidentified"` until Firefox 37.
 
@@ -4388,11 +4368,11 @@ Some keyboards offer special keys for launching or switching to certain common a
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
+\[1] Legacy Edge and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
 
-\[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
+\[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
+\[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
 \[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of "`LaunchWebBrowser"` for the Web browser key.
 

@@ -1,14 +1,8 @@
 ---
-title: TextEncoder.encode()
+title: "TextEncoder: encode() method"
+short-title: encode()
 slug: Web/API/TextEncoder/encode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Encoding
-  - Method
-  - Reference
-  - TextEncoder
-  - encode
 browser-compat: api.TextEncoder.encode
 ---
 

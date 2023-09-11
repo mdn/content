@@ -1,11 +1,8 @@
 ---
-title: ProcessingInstruction.target
+title: "ProcessingInstruction: target property"
+short-title: target
 slug: Web/API/ProcessingInstruction/target
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.ProcessingInstruction.target
 ---
 
@@ -38,11 +35,11 @@ A string containing the name of the application.
 let parser = new DOMParser();
 const doc = parser.parseFromString(
   '<?xml version="1.0"?><test/>',
-  "application/xml"
+  "application/xml",
 );
 const pi = doc.createProcessingInstruction(
   "xml-stylesheet",
-  'href="mycss.css" type="text/css"'
+  'href="mycss.css" type="text/css"',
 );
 doc.insertBefore(pi, doc.firstChild);
 

@@ -1,12 +1,7 @@
 ---
-title: 'Test your skills: Form structure'
+title: "Test your skills: Form structure"
 slug: Learn/Forms/Test_your_skills:_Form_structure
-tags:
-  - Beginner
-  - Forms
-  - HTML
-  - Learn
-  - Structure
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

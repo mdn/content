@@ -2,13 +2,6 @@
 title: StereoPannerNode
 slug: Web/API/StereoPannerNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Reference
-  - StereoPannerNode
-  - Web Audio API
 browser-compat: api.StereoPannerNode
 ---
 
@@ -65,7 +58,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example) for example code.
+See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#examples) for example code.
 
 ## Specifications
 

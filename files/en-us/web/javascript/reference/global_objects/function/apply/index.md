@@ -2,17 +2,12 @@
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 page-type: javascript-instance-method
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Function.apply
 ---
 
 {{JSRef}}
 
-The **`apply()`** method calls the specified function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
+The **`apply()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
@@ -36,7 +31,7 @@ The result of calling the function with the specified `this` value and arguments
 
 ## Description
 
-> **Note:** This function is almost identical to {{jsxref("Function/call", "call()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
+> **Note:** This function is almost identical to {{jsxref("Function/call", "call()")}}, except that the function arguments are passed to `call()` individually as a list, while for `apply()` they are combined in one object, typically an array — for example, `func.call(this, "eat", "bananas")` vs. `func.apply(this, ["eat", "bananas"])`.
 
 Normally, when calling a function, the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) inside the function is the object that the function was accessed on. With `apply()`, you can assign an arbitrary value as `this` when calling an existing function, without first attaching the function to the object as a property. This allows you to use methods of one object as generic utility functions.
 
@@ -117,7 +112,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 But beware: by using `apply()` (or the spread syntax) with an arbitrarily long arguments list, you run the risk of exceeding the JavaScript engine's argument length limit.
 
-The consequences of calling a function with too many arguments (that is, more than tens of thousands of arguments) is unspecified and varies across engines. (The JavaScriptCore engine has a hard-coded [argument limit of 65536](https://bugs.webkit.org/show_bug.cgi?id=80797).) Most engines throw an exception; but there's no normative specification preventing other behaviors, such as arbitrarily limiting the number of arguments actually passed to the applied function. To illustrate this latter case: if such an engine had a limit of four arguments (actual limits are of course significantly higher), it would be as if the arguments `5, 6, 2, 3` had been passed to `apply` in the examples above, rather than the full array.
+The consequences of calling a function with too many arguments (that is, more than tens of thousands of arguments) is unspecified and varies across engines. (The JavaScriptCore engine has a hard-coded [argument limit of 65536](https://webkit.org/b/80797).) Most engines throw an exception; but there's no normative specification preventing other behaviors, such as arbitrarily limiting the number of arguments actually passed to the applied function. To illustrate this latter case: if such an engine had a limit of four arguments (actual limits are of course significantly higher), it would be as if the arguments `5, 6, 2, 3` had been passed to `apply` in the examples above, rather than the full array.
 
 If your value array might grow into the tens of thousands, use a hybrid strategy: apply your function to chunks of the array at a time:
 
@@ -150,9 +145,9 @@ const min = minOfArray([5, 6, 2, 3, 7]);
 
 ## See also
 
-- {{jsxref("Functions/arguments", "arguments")}} object
+- {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
 - {{jsxref("Reflect.apply()")}}
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

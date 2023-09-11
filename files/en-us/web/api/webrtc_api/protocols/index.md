@@ -2,21 +2,6 @@
 title: Introduction to WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Beginner
-  - Draft
-  - Guide
-  - ICE
-  - Media
-  - NAT
-  - SDP
-  - STUN
-  - TURN
-  - Video
-  - WebRTC
-  - WebRTC API
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -65,5 +50,5 @@ SDP consists of one or more lines of UTF-8 text, each beginning with a one-chara
 
 To learn more about SDP, see the following useful resources:
 
-- Specification: {{RFC(4566, "SDP: Session Description Protocol")}}
+- Specification: {{RFC(8866, "SDP: Session Description Protocol")}}
 - [IANA registry of SDP parameters](https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml)

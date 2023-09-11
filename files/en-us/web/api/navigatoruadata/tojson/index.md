@@ -1,14 +1,10 @@
 ---
-title: NavigatorUAData.toJSON()
+title: "NavigatorUAData: toJSON() method"
+short-title: toJSON()
 slug: Web/API/NavigatorUAData/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.toJSON
 ---
 

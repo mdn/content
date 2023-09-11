@@ -2,13 +2,8 @@
 title: image-resolution
 slug: Web/CSS/image-resolution
 page-type: css-property
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Experimental
-  - Reference
-  - image-resolution
+status:
+  - experimental
 spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
 ---
 
@@ -88,4 +83,4 @@ No browser currently supports this property.
 ## See also
 
 - Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
-- [Chromium bug: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).
+- [Chromium bug: 1086473](https://crbug.com/1086473).

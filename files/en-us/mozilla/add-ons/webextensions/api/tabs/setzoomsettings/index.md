@@ -1,16 +1,7 @@
 ---
 title: tabs.setZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - setZoomSettings
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.setZoomSettings
 ---
 
@@ -53,7 +44,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let setting = browser.tabs.setZoomSettings({mode:"disabled"});
+let setting = browser.tabs.setZoomSettings({ mode: "disabled" });
 setting.then(onSet, onError);
 ```
 

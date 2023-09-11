@@ -1,20 +1,11 @@
 ---
-title: PaymentAddress.country
+title: "PaymentAddress: country property"
+short-title: country
 slug: Web/API/PaymentAddress/country
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Reference
-  - country
-  - payment
-  - paymentAddress
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.country
 ---
 

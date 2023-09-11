@@ -1,44 +1,38 @@
 ---
-title: FileSystemSyncAccessHandle.write()
+title: "FileSystemSyncAccessHandle: write() method"
+short-title: write()
 slug: Web/API/FileSystemSyncAccessHandle/write
 page-type: web-api-instance-method
-tags:
-  - write
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.write
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`write()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.
 
-Writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in the {{domxref("File System Access API", "File System Access API", "", "nocode")}} (e.g. {{domxref('FileSystemFileHandle.createWritable()')}}), where changes are not committed to disk until the writing stream is closed.
+Files within the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) are not visible to end-users, therefore are not subject to the same security checks as methods running on files within the user-visible file system. As a result, writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
 
 ## Syntax
 
 ```js-nolint
-write(buffer, FileSystemReadWriteOptions)
+write(buffer, options)
 ```
 
 ### Parameters
 
 - `buffer`
   - : An {{jsxref("ArrayBuffer")}} or `ArrayBufferView` (such as a {{jsxref("DataView")}}) representing the buffer to be written to the file.
-- `FileSystemReadWriteOptions` {{optional_inline}}
+- `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `at`
       - : A number representing the offset in bytes from the start of the file that the buffer should be written at.
 
+> **Note:** You cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create a typed array object like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object, which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
+
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to a number representing the number of bytes written to the file.
+A number representing the number of bytes written to the file.
 
 ### Exceptions
 
@@ -62,7 +56,7 @@ onmessage = async (e) => {
 
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
@@ -82,10 +76,10 @@ onmessage = async (e) => {
 
   // Always close FileSystemSyncAccessHandle if done.
   accessHandle.close();
-}
+};
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Specifications
 
@@ -97,5 +91,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

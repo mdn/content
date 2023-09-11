@@ -2,12 +2,6 @@
 title: font-variant-position
 slug: Web/CSS/font-variant-position
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-position
 ---
 
@@ -16,6 +10,12 @@ browser-compat: css.properties.font-variant-position
 The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
 
 The glyphs are positioned relative to the baseline of the font, which remains unchanged. These glyphs are typically used in {{HTMLElement("sub")}} and {{HTMLElement("sup")}} elements.
+
+When the usage of these alternate glyphs is activated, if one character in the run doesn't have such a typographically-enhanced glyph, the whole set of characters of the run is rendered using a fallback method, synthesizing these glyphs.
+
+These alternate glyphs share the same em-box and the same baseline as the rest of the font. They are merely graphically enhanced, and have no effect on the line-height and other box characteristics.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -30,12 +30,6 @@ font-variant-position: revert;
 font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
-
-When the usage of these alternate glyphs is activated, if one character in the run doesn't have such a typographically-enhanced glyph, the whole set of characters of the run is rendered using a fallback method, synthesizing these glyphs.
-
-These alternate glyphs share the same em-box and the same baseline as the rest of the font. They are merely graphically enhanced, and have no effect on the line-height and other box characteristics.
-
-## Syntax
 
 The `font-variant-position` property is specified as one of the keyword values listed below.
 

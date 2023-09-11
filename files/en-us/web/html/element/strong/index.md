@@ -1,18 +1,7 @@
 ---
-title: '<strong>: The Strong Importance element'
+title: "<strong>: The Strong Importance element"
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Strong Importance
-  - Urgency
-  - Web
-  - strong
+page-type: html-element
 browser-compat: html.elements.strong
 ---
 
@@ -60,7 +49,7 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 </p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 80)}}
 
@@ -73,25 +62,25 @@ The resulting output:
 </p>
 ```
 
-This results in:
+#### Result
 
 {{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -99,7 +88,7 @@ This results in:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -112,10 +101,10 @@ This results in:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

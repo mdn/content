@@ -1,21 +1,8 @@
 ---
-title: AudioTrackList.getTrackById()
+title: "AudioTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
 browser-compat: api.AudioTrackList.getTrackById
 ---
 

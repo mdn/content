@@ -1,17 +1,8 @@
 ---
-title: Navigator.sendBeacon()
+title: "Navigator: sendBeacon() method"
+short-title: sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 page-type: web-api-instance-method
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
 browser-compat: api.Navigator.sendBeacon
 ---
 
@@ -82,13 +73,13 @@ The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request.
 
 ### Sending analytics at the end of a session
 
-Web sites often want to send analytics or diagnostics to the server when the user has finished with the page.
+Websites often want to send analytics or diagnostics to the server when the user has finished with the page.
 The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```
@@ -120,9 +111,9 @@ Like `beforeunload` and `unload`, this event is not reliably fired, especially o
 The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```

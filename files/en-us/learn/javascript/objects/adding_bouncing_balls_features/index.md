@@ -1,16 +1,7 @@
 ---
 title: Adding features to our bouncing balls demo
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - OOJS
-  - Object-Oriented
-  - Objects
-  - "l10n:priority"
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -175,7 +166,7 @@ Now we've defined the evil circle, we need to actually make it appear in our sce
 
 To implement the score counter, follow the following steps:
 
-1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
+1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("Heading_Elements", "h1")}} element containing the text "Ball count: ".
 2. In your CSS file, add the following rule at the bottom:
 
    ```css
@@ -208,13 +199,3 @@ If you would like your work assessed, or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- **Adding features to our bouncing balls demo**

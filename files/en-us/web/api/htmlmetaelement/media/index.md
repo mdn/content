@@ -1,13 +1,8 @@
 ---
-title: HTMLMetaElement.media
+title: "HTMLMetaElement: media property"
+short-title: media
 slug: Web/API/HTMLMetaElement/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.media
 ---
 
@@ -71,4 +66,4 @@ document.head.appendChild(meta);
 ## See also
 
 - {{HTMLElement("meta")}}
-- [Possible values for media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Possible values for media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

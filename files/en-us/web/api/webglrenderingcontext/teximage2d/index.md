@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.texImage2D()
+title: "WebGLRenderingContext: texImage2D() method"
+short-title: texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texImage2D
 ---
 
@@ -21,8 +15,8 @@ image.
 
 ```js-nolint
 // WebGL1
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels can be a TypedArray or a DataView or null
-texImage2D(target, level, internalformat, format, type, pixels) // pixels cannot be a TypedArray or a DataView or null
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels)
+texImage2D(target, level, internalformat, format, type, pixels)
 
 
 // WebGL2
@@ -808,7 +802,15 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
 - `pixels`
 
-  - : One of the following objects can be used as a pixel source for the texture:
+  - : The following types can always be used as a pixel source for the texture:
+
+    - {{domxref("ImageData")}},
+    - {{domxref("HTMLImageElement")}},
+    - {{domxref("HTMLCanvasElement")}},
+    - {{domxref("HTMLVideoElement")}},
+    - {{domxref("ImageBitmap")}}.
+
+    The following types can only be used as a pixel source when `width`, `height`, and `border` are specified:
 
     - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
     - {{jsxref("Uint16Array")}} (must be used if `type` is either
@@ -817,11 +819,6 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       `ext.HALF_FLOAT_OES`)
     - {{jsxref("Uint32Array")}} (must be used if `type` is `gl.UNSIGNED_INT` or `ext.UNSIGNED_INT_24_8_WEBGL`)
     - {{jsxref("Float32Array")}} (must be used if `type` is `gl.FLOAT`)
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}},
-    - {{domxref("ImageBitmap")}}.
 
 - `offset`
   - : (WebGL 2 only) A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the

@@ -2,13 +2,6 @@
 title: scroll-padding-inline-start
 slug: Web/CSS/scroll-padding-inline-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Web
-  - recipe:css-property
-  - scroll-padding-inline
-  - scroll-padding-inline-start
 browser-compat: css.properties.scroll-padding-inline-start
 ---
 
@@ -62,5 +55,5 @@ scroll-padding-inline-start: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

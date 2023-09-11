@@ -2,67 +2,54 @@
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 page-type: javascript-function
-tags:
-  - Functions
-  - JavaScript
-  - Method
-  - Reference
-  - inFinite
 browser-compat: javascript.builtins.isFinite
 ---
 
 {{jsSidebar("Objects")}}
 
-The global **`isFinite()`** function determines whether the
-passed value is a finite number. If needed, the parameter is first converted to a
-number.
+The **`isFinite()`** function determines whether a value is finite, first converting the value to a number if necessary. A finite number is one that's not {{jsxref("NaN")}} or ±{{jsxref("Infinity")}}. Because coercion inside the `isFinite()` function can be [surprising](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), you may prefer to use {{jsxref("Number.isFinite()")}}.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
 ## Syntax
 
 ```js-nolint
-isFinite(testValue)
+isFinite(value)
 ```
 
 ### Parameters
 
-- `testValue`
-  - : The value to be tested for finiteness.
+- `value`
+  - : The value to be tested.
 
 ### Return value
 
-**`false`** if the argument is (or will be coerced to) positive
-or negative {{jsxref("Infinity")}} or {{jsxref("NaN")}} or {{jsxref("undefined")}};
-otherwise, **`true`**.
+`false` if the given value is {{jsxref("NaN")}}, {{jsxref("Infinity")}}, or `-Infinity` after being [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion); otherwise, `true`.
 
 ## Description
 
-`isFinite` is a function property of the global object.
+`isFinite()` is a function property of the global object.
 
-You can use this function to determine whether a number is a finite number. The
-`isFinite` function examines the number in its argument. If the argument is
-`NaN`, positive infinity, or negative infinity, this method returns
-`false`; otherwise, it returns `true`.
+When the argument to the `isFinite()` function is not of type [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against `NaN` and ±Infinity. This is as confusing as the behavior of {{jsxref("isNaN")}} — for example, `isFinite("1")` is `true`.
+
+{{jsxref("Number.isFinite()")}} is a more reliable way to test whether a value is a finite number value, because it returns `false` for any non-number input.
 
 ## Examples
 
-### Using isFinite
+### Using isFinite()
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true, would've been false with the
-                     // more robust Number.isFinite(null)
-
-isFinite('0');       // true, would've been false with the
-                     // more robust Number.isFinite("0")
+// Would've been false with the more robust Number.isFinite():
+isFinite(null); // true
+isFinite("0"); // true
 ```
 
 ## Specifications

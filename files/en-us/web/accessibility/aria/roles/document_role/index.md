@@ -1,12 +1,7 @@
 ---
 title: "ARIA: document role"
 slug: Web/Accessibility/ARIA/Roles/document_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Document
-  - document structure role
-  - Reference
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document
 ---
 

@@ -1,11 +1,9 @@
 ---
 title: share_target
 slug: Web/Manifest/share_target
-tags:
-  - Manifest
-  - Web
-  - share_target
-  - Experimental
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.share_target
 ---
 
@@ -16,10 +14,6 @@ browser-compat: html.manifest.share_target
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -116,7 +110,7 @@ self.addEventListener("fetch", (event) => {
       // function, for example, `/`.
       const responseUrl = await saveBookmark(link);
       return Response.redirect(responseUrl, 303);
-    })()
+    })(),
   );
 });
 ```
@@ -158,7 +152,7 @@ To handle shared file data, see the `POST` example above and the [`FileReader`](
 
 ## Security & Privacy
 
-Your PWA can only act as a web share target if it has been installed. See also [How to make PWAs installable](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs).
+Your PWA can only act as a web share target if it has been installed. See also [How to make PWAs installable](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs).
 
 Similar to HTML form submissions, you should be cautious about data that is sent to your application via the share target. Be sure to validate incoming data before using it.
 

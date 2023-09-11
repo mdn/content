@@ -2,42 +2,49 @@
 title: Banners and notices
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
 
-Sometimes, an article needs a special notice added to it.
-This might happen if the page covers deprecated technology or other material that shouldn't be used in production code.
-This article covers the most common such cases and what to do.
+Banners are added to some pages, in particular API reference, in order to highlight important factors that will affect how the described content is used.
+For example, banners are used to highlight when a particular interface, method or property is deprecated, and should not be used in production code.
 
-## How to add notice boxes
+This article describes the more important banners, and how they are added.
 
-In most cases, you apply these notices by adding a macro call to inject an appropriate banner into the page content, and by adding a tag to the page's list of tags.
+## How to add a banner
 
-To do this, you insert the macro call at the top of the article, and add the new tag to the list.
-Once you've done that, raise a pull request and get your changes reviewed and merged.
-From then on, an appropriate banner will appear on the page, and any macros that reference page tags when looking for up-to-date articles will know that the page you've updated is deprecated, or whatever.
+Banners are added using macros.
+Banners macros should be inserted below the page metadata, alongside the page sidebar macro.
+For example, the `\{{SeeCompatTable}}` macro is added below to indicate that the [Ink API](/en-US/docs/Web/API/Ink_API) is [Experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 
-> **Note:** To learn more about editing, see our [content repo README](https://github.com/mdn/content).
+```md
+---
+title: Ink API
+slug: Web/API/Ink_API
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.Ink
+---
 
-Sometimes, you might want to flag just a single item in a list of items, or in a table, as obsolete, deprecated, or the like.
-There are special versions of each of the following macros for that; change "\_header" to "\_inline" to the end of the macro's name.
+\{{DefaultAPISidebar("Ink API")}}\{{SeeCompatTable}}
+```
 
-## Deprecated content
+A page that has a banner will usually also have "complementary" page metadata.
+For example, a page that has `\{{SeeCompatTable}}` should usually have the `experimental` status added too (as shown above) to ensure that it has appropriate icons in the sidebar.
 
-Deprecated content is content that covers a technology or idea that is in the process of becoming obsolete.
-It's no longer recommended, and is expected to be removed from browsers in the relatively near future.
-For more information on the definitions of **deprecated**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
+> **Note:** Banner macros do not _depend_ on the metadata, but some other macro-inserted content does.
+> For example, the `\{{Compat}}` macro depends on the `browser-compat` metadata value.
 
-You can mark pages as deprecated using the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro.
-As with obsolete content, you can specify the Gecko version in which the technology was deprecated as a parameter, if the technology is Gecko-specific.
+## What banners can/should be added
 
-You should also add the tag "Deprecated" to the page.
+The [Page type templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#templates) include the most important macros.
+In summary:
 
-## Non-standard content
-
-Non-standard content is any content not yet part of a Web standard; this includes any technology that isn't even proposed as a draft specification, even if it's implemented by multiple browsers.
-You should use the [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) macro on these pages, and tag the pages with "Non-standard".
+- `\{{SeeCompatTable}}` — generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+  Also add `status` of `experimental` to the page front-matter.
+- `\{{Deprecated_Header}}` — generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+  Also add `status` of `deprecated` to the page front-matter.
+- `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
+  Also add `status` of `non-standard` to the page front-matter.
+- `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).

@@ -1,9 +1,10 @@
 ---
 title: "Null"
 slug: Glossary/Null
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 In computer science, a **`null`** value represents a reference that points, generally intentionally, to a nonexistent or invalid {{glossary("object")}} or address. The meaning of a null reference varies among language implementations.
 
@@ -29,4 +30,4 @@ This is considered [a bug](/en-US/docs/Web/JavaScript/Reference/Operators/typeof
   - {{Glossary("boolean")}}
   - {{Glossary("null")}}
   - {{Glossary("undefined")}}
-  - {{Glossary("symbol")}}
+  - {{jsxref("Symbol")}}

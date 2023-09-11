@@ -2,11 +2,6 @@
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
 page-type: web-api-overview
-tags:
-  - API
-  - Media Capabilities
-  - Overview
-  - Reference
 browser-compat: api.MediaCapabilities
 ---
 
@@ -21,24 +16,28 @@ The **Media Capabilities API** allows developers to determine decoding and encod
 This example defines an audio configuration then checks to see if the user agent supports decoding that media configuration, and whether it will perform well in terms of smoothness and power efficiency.
 
 ```js
-if ('mediaCapabilities' in navigator) {
+if ("mediaCapabilities" in navigator) {
   const audioFileConfiguration = {
-    type : 'file',
-    audio : {
-        contentType: "audio/mp3",
-        channels: 2,
-        bitrate: 132700,
-        samplerate: 5200
-    }
+    type: "file",
+    audio: {
+      contentType: "audio/mp3",
+      channels: 2,
+      bitrate: 132700,
+      samplerate: 5200,
+    },
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then((result) => {
-    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
-    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
-    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
+  navigator.mediaCapabilities
+    .decodingInfo(audioFileConfiguration)
+    .then((result) => {
+      console.log(
+        `This configuration is ${result.supported ? "" : "not "}supported,`,
+      );
+      console.log(`${result.smooth ? "" : "not "}smooth, and`);
+      console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
     })
     .catch(() => {
-      console.log(`decodingInfo error: ${contentType}`)
+      console.log(`decodingInfo error: ${contentType}`);
     });
 }
 ```
@@ -49,7 +48,7 @@ There are a myriad of video and audio codecs. Different browsers support differe
 
 Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables determining which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.
 
-The Media Capabilities API provide more powerful features than say {{DOMxRef("MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as supported color {{glossary("gamut")}}, dynamic range abilities, and real-time feedback about the playback.
+The Media Capabilities API provide more powerful features than say {{DOMxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as supported color {{glossary("gamut")}}, dynamic range abilities, and real-time feedback about the playback.
 
 To test support, smoothness, and power efficiency of a video or audio file, you use the {{DOMxRef("MediaCapabilities")}} interface's {{DOMxRef("MediaCapabilities.encodingInfo()","encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()","decodingInfo()")}} methods.
 
@@ -75,6 +74,6 @@ Media capabilities information enables websites to enable adaptive streaming to 
 ## See also
 
 - [HTMLMediaElement](/en-US/docs/Web/API/HTMLMediaElement)'s method [canPlayType()](/en-US/docs/Web/API/HTMLMediaElement/canPlayType)
-- [MediaSource](/en-US/docs/Web/API/MediaSource)'s method [isTypeSupported()](/en-US/docs/Web/API/MediaSource/isTypeSupported)
+- [MediaSource](/en-US/docs/Web/API/MediaSource)'s method [isTypeSupported()](/en-US/docs/Web/API/MediaSource/isTypeSupported_static)
 - {{DOMxRef("Navigator")}} interface
 - [Using the Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)

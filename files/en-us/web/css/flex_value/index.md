@@ -2,13 +2,6 @@
 title: <flex>
 slug: Web/CSS/flex_value
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.flex
 ---
 
@@ -48,4 +41,4 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 
 ## See also
 
-- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)

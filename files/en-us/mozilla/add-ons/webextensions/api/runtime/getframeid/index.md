@@ -1,15 +1,7 @@
 ---
 title: runtime.getFrameId()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getFrameId
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getBrowserInfo
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getFrameId
 ---
 

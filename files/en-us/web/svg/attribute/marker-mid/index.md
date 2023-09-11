@@ -2,9 +2,6 @@
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.marker-mid
 ---
 

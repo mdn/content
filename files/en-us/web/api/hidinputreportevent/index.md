@@ -2,12 +2,8 @@
 title: HIDInputReportEvent
 slug: Web/API/HIDInputReportEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - HIDInputReportEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent
 ---
 

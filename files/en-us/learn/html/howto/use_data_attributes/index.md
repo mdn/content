@@ -1,12 +1,7 @@
 ---
 title: Using data attributes
 slug: Learn/HTML/Howto/Use_data_attributes
-tags:
-  - Custom Data Attributes
-  - Example
-  - Guide
-  - HTML
-  - Web
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
@@ -31,7 +26,7 @@ The syntax is simple. Any attribute on any element whose attribute name starts w
 
 Reading the values of these attributes out in [JavaScript](/en-US/docs/Web/JavaScript) is also very simple. You could use {{domxref("Element.getAttribute", "getAttribute()")}} with their full HTML name to read them, but the standard defines a simpler way: a {{domxref("DOMStringMap")}} you can read out via a {{domxref("HTMLElement/dataset", "dataset")}} property.
 
-To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to camelCase).
+To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to {{Glossary("camel_case", "camel case")}}).
 
 ```js
 const article = document.querySelector("#electric-cars");

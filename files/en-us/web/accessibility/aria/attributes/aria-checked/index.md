@@ -1,12 +1,7 @@
 ---
 title: aria-checked
 slug: Web/Accessibility/ARIA/Attributes/aria-checked
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-checked
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-checked
   - https://w3c.github.io/aria-practices/#checkbox
@@ -84,8 +79,8 @@ myHTMLElement.ariaChecked = true;
 
 ## See Also
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/Input/checkbox)
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/radio)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - [Two state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html) - w3.org

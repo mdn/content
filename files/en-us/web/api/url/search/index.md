@@ -1,13 +1,8 @@
 ---
-title: URL.search
+title: "URL: search property"
+short-title: search
 slug: Web/API/URL/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
 browser-compat: api.URL.search
 ---
 
@@ -30,7 +25,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123",
+);
 console.log(url.search); // Logs "?q=123"
 ```
 

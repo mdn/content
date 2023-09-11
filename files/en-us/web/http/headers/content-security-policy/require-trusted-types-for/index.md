@@ -1,12 +1,9 @@
 ---
-title: 'CSP: require-trusted-types-for'
+title: "CSP: require-trusted-types-for"
 slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Security
-  - Experimental
+page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.require-trusted-types-for
 ---
 
@@ -31,17 +28,17 @@ Content-Security-Policy: require-trusted-types-for 'script';
 // Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
 
 const attackerInput = '<svg onload="alert(/cross-site-scripting/)" />';
-const el = document.createElement('div');
+const el = document.createElement("div");
 
-if (typeof trustedTypes !== 'undefined') {
+if (typeof trustedTypes !== "undefined") {
   // Create a policy that can create TrustedHTML values
   // after sanitizing the input strings with DOMPurify library.
-  const sanitizer = trustedTypes.createPolicy('foo', {
-    createHTML: (input) => DOMPurify.sanitize(input)
+  const sanitizer = trustedTypes.createPolicy("foo", {
+    createHTML: (input) => DOMPurify.sanitize(input),
   });
 
-  el.innerHTML = sanitizer.createHTML(attackerInput);  // Puts the sanitized value into the DOM.
-  el.innerHTML = attackerInput;                        // Rejects a string value; throws a TypeError.
+  el.innerHTML = sanitizer.createHTML(attackerInput); // Puts the sanitized value into the DOM.
+  el.innerHTML = attackerInput; // Rejects a string value; throws a TypeError.
 }
 ```
 

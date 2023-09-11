@@ -1,12 +1,6 @@
 ---
 title: br
 slug: WebAssembly/Reference/Control_flow/br
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
 
 {{WebAssemblySidebar}}

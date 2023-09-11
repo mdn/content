@@ -2,13 +2,6 @@
 title: Drawing shapes with canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML Canvas
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
@@ -44,7 +37,7 @@ Below is the `draw()` function from the previous page, but now it is making use 
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -61,6 +54,10 @@ function draw() {
     ctx.strokeRect(50, 50, 50, 50);
   }
 }
+```
+
+```js hidden
+draw();
 ```
 
 This example's output is shown below.
@@ -110,7 +107,7 @@ For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="100" height="100"></canvas>
   </body>
 </html>
@@ -131,6 +128,10 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The result looks like this:
 
 {{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
@@ -148,7 +149,7 @@ To try this for yourself, you can use the code snippet below. Just paste it into
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -173,6 +174,10 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The result looks like this:
 
 {{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
@@ -194,7 +199,7 @@ The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -222,6 +227,10 @@ function draw() {
     ctx.stroke();
   }
 }
+```
+
+```js hidden
+draw();
 ```
 
 This starts by calling `beginPath()` to start a new shape path. We then use the `moveTo()` method to move the starting point to the desired position. Below this, two lines are drawn which make up two sides of the triangle.
@@ -255,7 +264,7 @@ The statement for the `clockwise` parameter results in the first and third row b
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="200"></canvas>
   </body>
 </html>
@@ -290,6 +299,10 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 {{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
 
 ### Bezier and quadratic curves
@@ -299,7 +312,7 @@ The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezie
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Draws a quadratic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control point specified by `cp1x` and `cp1y`.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
-  - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (cp2x, cp2y).
+  - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (`cp2x`, `cp2y`).
 
 The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one **control point** (indicated by the red dot) while a cubic Bézier curve uses two control points.
 ![Quadratic and Bezier curve comparison.](canvas_curves.png)
@@ -316,7 +329,7 @@ This example uses multiple quadratic Bézier curves to render a speech balloon.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -342,6 +355,10 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 {{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
 
 #### Cubic Bezier curves
@@ -350,7 +367,7 @@ This example draws a heart using cubic Bézier curves.
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -376,6 +393,10 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 {{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
 
 ### Rectangles
@@ -393,7 +414,7 @@ So far, each example on this page has used only one type of path function per sh
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -481,6 +502,10 @@ function roundedRect(ctx, x, y, width, height, radius) {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The resulting image looks like this:
 
 {{EmbedLiveSample("Making_combinations", 160, 160, "combinations.png")}}
@@ -516,7 +541,7 @@ In this example, we are creating a rectangle and a circle. Both are stored as a 
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="130" height="100"></canvas>
   </body>
 </html>
@@ -538,6 +563,10 @@ function draw() {
     ctx.fill(circle);
   }
 }
+```
+
+```js hidden
+draw();
 ```
 
 {{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}

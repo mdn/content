@@ -1,17 +1,14 @@
 ---
-title: MediaTrackSettings.suppressLocalAudioPlayback
+title: "MediaTrackSettings: suppressLocalAudioPlayback property"
+short-title: suppressLocalAudioPlayback
 slug: Web/API/MediaTrackSettings/suppressLocalAudioPlayback
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - suppressLocalAudioPlayback
+status:
+  - experimental
 browser-compat: api.MediaTrackSettings.suppressLocalAudioPlayback
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seecompattable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`suppressLocalAudioPlayback`** property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
@@ -29,7 +26,7 @@ The below function sets up the constraints object specifying the options for the
 async function capture() {
   const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   const displayMediaOptions = {
-    audio: {}
+    audio: {},
   };
 
   if (supportedConstraints.suppressLocalAudioPlayback) {
@@ -37,7 +34,8 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     /* handle the error */
   }

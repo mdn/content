@@ -2,12 +2,6 @@
 title: <basic-shape>
 slug: Web/CSS/basic-shape
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - Data Type
-  - Reference
 browser-compat: css.types.basic-shape
 ---
 
@@ -36,21 +30,43 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines an inset rectangle.
 
     ```css
-    inset( <shape-arg>{1,4} [round <border-radius>]? )
+    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
     ```
 
-    When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
+    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
 
-    The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 
     A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
+
+- `{{cssxref("basic-shape/rect","rect()")}}` {{Experimental_Inline}}
+
+  - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
+
+    ```css
+    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
+    ```
+
+    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
+
+- `{{cssxref("basic-shape/xywh","xywh()")}}` {{Experimental_Inline}}
+
+  - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
+
+    ```css
+    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
+    ```
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
 
 - `{{cssxref("basic-shape/circle","circle()")}}`
 
   - : Defines a circle using a radius and a position.
 
     ```css
-    circle( [<shape-radius>]? [at <position>]? )
+    circle( <shape-radius>? [ at <position> ]? )
     ```
 
     The `<shape-radius>` argument represents _r_, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`.
@@ -62,7 +78,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines an ellipse using two radii and a position.
 
     ```css
-    ellipse( [<shape-radius>{2}]? [at <position>]? )
+    ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
     ```
 
     The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.
@@ -74,7 +90,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
     ```css
-    polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
+    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
     ```
 
     `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
@@ -86,7 +102,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
     ```css
-    path( [<fill-rule>,]? <string>)
+    path( [ <fill-rule>, ]? <string> )
     ```
 
     The optional `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
@@ -204,5 +220,6 @@ div {
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)

@@ -2,11 +2,6 @@
 title: Sending and Receiving Binary Data
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 page-type: guide
-tags:
-  - AJAX
-  - FileReader
-  - MIME
-  - XMLHttpRequest
 ---
 
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
@@ -43,7 +38,7 @@ req.onload = (event) => {
   // ...
 };
 
-oReq.send();
+req.send();
 ```
 
 ## Receiving binary data in older browsers
@@ -71,7 +66,7 @@ const abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7
 
 The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `filestream.length-1`.
 
-See [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation. See also [downloading files](/en-US/docs/Code_snippets/Downloading_Files).
+See [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation.
 
 ## Sending binary data
 
@@ -108,6 +103,6 @@ This is building a 512-byte array of 8-bit integers and sending it; you can use 
 
 ## Submitting forms and uploading files
 
-Please, read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
+Please, read [FormData](/en-US/docs/Web/API/FormData).
 
 {{APIRef("XMLHttpRequest")}}

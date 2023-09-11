@@ -1,14 +1,7 @@
 ---
-title: 'Test your skills: Styling basics'
+title: "Test your skills: Styling basics"
 slug: Learn/Forms/Test_your_skills:_Styling_basics
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - Forms
-  - Learn
-  - Styling
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

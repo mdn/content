@@ -1,18 +1,10 @@
 ---
-title: Magnetometer.z
+title: "Magnetometer: z property"
+short-title: z
 slug: Web/API/Magnetometer/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Magnetometer
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - z
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Magnetometer.z
 ---
 
@@ -32,9 +24,9 @@ The magnetometer is typically read in the {{domxref('Sensor.reading_event', 'rea
 callback. In the example below this occurs sixty times a second.
 
 ```js
-let magSensor = new Magnetometer({frequency: 60});
+let magSensor = new Magnetometer({ frequency: 60 });
 
-magSensor.addEventListener('reading', (e) => {
+magSensor.addEventListener("reading", (e) => {
   console.log(`Magnetic field along the X-axis ${magSensor.x}`);
   console.log(`Magnetic field along the Y-axis ${magSensor.y}`);
   console.log(`Magnetic field along the Z-axis ${magSensor.z}`);

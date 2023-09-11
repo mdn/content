@@ -1,14 +1,8 @@
 ---
-title: Touch.target
+title: "Touch: target property"
+short-title: target
 slug: Web/API/Touch/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - EventTarget
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.target
 ---
 
@@ -30,13 +24,17 @@ In following simple code snippet, we assume the user initiates one or more touch
 // Register a touchmove listener for the 'source' element
 const src = document.getElementById("source");
 
-src.addEventListener('touchstart', (e) => {
-  // Iterate through the touch points that were activated
-  // for this element.
-  for (let i = 0; i < e.targetTouches.length; i++) {
-    console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
-  }
-}, false);
+src.addEventListener(
+  "touchstart",
+  (e) => {
+    // Iterate through the touch points that were activated
+    // for this element.
+    for (let i = 0; i < e.targetTouches.length; i++) {
+      console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

@@ -1,15 +1,7 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - Host
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - origin
-  - secure
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -39,17 +31,6 @@ Scripts executed from pages with an `about:blank` or `javascript:` URL inherit t
 For example, `about:blank` is often used as a URL of new, empty popup windows into which the parent script writes content (e.g. via the {{domxref("Window.open()")}} mechanism). If this popup also contains JavaScript, that script would inherit the same origin as the script that created it.
 
 `data:` URLs get a new, empty, security context.
-
-### Exceptions in Internet Explorer
-
-Internet Explorer has two major exceptions to the same-origin policy:
-
-- Trust Zones
-  - : If both domains are in the _highly trusted zone_ (e.g. corporate intranet domains), then the same-origin limitations are not applied.
-- Port
-  - : IE doesn't include port into same-origin checks. Therefore, `https://company.com:81/index.html` and `https://company.com/index.html` are considered the same origin and no restrictions are applied.
-
-These exceptions are nonstandard and unsupported in any other browser.
 
 ### File origins
 
@@ -84,7 +65,7 @@ The same-origin policy controls interactions between two different origins, such
 
 - Cross-origin _writes_ are typically allowed. Examples are links, redirects, and form submissions. Some HTTP requests require [preflight](/en-US/docs/Web/HTTP/CORS#preflighted_requests).
 - Cross-origin _embedding_ is typically allowed. (Examples are listed below.)
-- Cross-origin _reads_ are typically disallowed, but read access is often leaked by embedding. For example, you can read the dimensions of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
+- Cross-origin _reads_ are typically disallowed, but read access is often leaked by embedding. For example, you can read the dimensions of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzil.la/629094).
 
 Here are some examples of resources which may be embedded cross-origin:
 
@@ -149,7 +130,7 @@ The following cross-origin access to `Location` properties is allowed:
 
 | Attributes                   |             |
 | ---------------------------- | ----------- |
-| {{domxref("URLUtils.href")}} | Write-only. |
+| {{domxref("location.href")}} | Write-only. |
 
 Some browsers allow access to more properties than the above.
 
@@ -157,7 +138,7 @@ Some browsers allow access to more properties than the above.
 
 Access to data stored in the browser such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) and [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) are separated by origin. Each origin gets its own separate storage, and JavaScript in one origin cannot read from or write to the storage belonging to another origin.
 
-{{glossary("Cookie", "Cookies")}} use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](https://publicsuffix.org/) to determine if a domain is a public suffix. Internet Explorer uses its own internal method to determine if a domain is a public suffix. The browser will make a cookie available to the given domain including any sub-domains, no matter which protocol (HTTP/HTTPS) or port is used. When you set a cookie, you can limit its availability using the `Domain`, `Path`, `Secure`, and `HttpOnly` flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
+{{glossary("Cookie", "Cookies")}} use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](https://publicsuffix.org/) to determine if a domain is a public suffix. When you set a cookie, you can limit its availability using the `Domain`, `Path`, `Secure`, and `HttpOnly` flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
 
 ## See also
 

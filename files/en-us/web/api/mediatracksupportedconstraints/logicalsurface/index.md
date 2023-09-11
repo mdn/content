@@ -1,22 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.logicalSurface
+title: "MediaTrackSupportedConstraints: logicalSurface property"
+short-title: logicalSurface
 slug: Web/API/MediaTrackSupportedConstraints/logicalSurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Logical
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - screen
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 ---
 
@@ -51,7 +37,7 @@ async function capture() {
   const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   const displayMediaOptions = {
     video: {},
-    audio: false
+    audio: false,
   };
 
   if (supportedConstraints.logicalSurface) {
@@ -59,7 +45,8 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     /* handle the error */
   }

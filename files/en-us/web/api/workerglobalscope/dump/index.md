@@ -1,16 +1,11 @@
 ---
-title: WorkerGlobalScope.dump()
+title: "WorkerGlobalScope: dump() method"
+short-title: dump()
 slug: Web/API/WorkerGlobalScope/dump
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - dump
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.WorkerGlobalScope.dump
 ---
 

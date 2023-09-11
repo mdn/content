@@ -2,12 +2,6 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.writing-mode
 ---
 
@@ -46,9 +40,9 @@ The `writing-mode` property is specified as one of the values listed below. The 
 - `vertical-lr`
   - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.
 - `sideways-rl` {{experimental_inline}}
-  - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the right.
+  - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the right.
 - `sideways-lr` {{experimental_inline}}
-  - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the left.
+  - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the left.
 - `lr` {{deprecated_inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
 - `lr-tb` {{deprecated_inline}}
@@ -82,6 +76,9 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
 
 ```html
 <table>
+  <caption>
+    Using multiple writing modes
+  </caption>
   <tr>
     <th>Value</th>
     <th>Vertical script</th>
@@ -89,42 +86,46 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
     <th>Horizontal (RTL) script</th>
     <th>Mixed script</th>
   </tr>
-  <tr>
-    <td>horizontal-tb</td>
-    <td class="example Text1"><span>我家没有电脑。</span></td>
-    <td class="example Text1"><span>Example text</span></td>
-    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text1"><span>1994年に至っては</span></td>
+  <tr class="text1">
+    <th>horizontal-tb</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr>
-    <td>vertical-lr</td>
-    <td class="example Text2"><span>我家没有电脑。</span></td>
-    <td class="example Text2"><span>Example text</span></td>
-    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text2"><span>1994年に至っては</span></td>
+  <tr class="text2">
+    <th>vertical-lr</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr>
-    <td>vertical-rl</td>
-    <td class="example Text3"><span>我家没有电脑。</span></td>
-    <td class="example Text3"><span>Example text</span></td>
-    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text3"><span>1994年に至っては</span></td>
+  <tr class="text3">
+    <th>vertical-rl</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr>
-    <td>sideways-lr</td>
-    <td class="example Text4"><span>我家没有电脑。</span></td>
-    <td class="example Text4"><span>Example text</span></td>
-    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text4"><span>1994年に至っては</span></td>
+  <tr class="experimental text4">
+    <th>sideways-lr</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr>
-    <td>sideways-rl</td>
-    <td class="example Text5"><span>我家没有电脑。</span></td>
-    <td class="example Text5"><span>Example text</span></td>
-    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text5"><span>1994年に至っては</span></td>
+  <tr class="experimental text5">
+    <th>sideways-rl</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
 </table>
+<p class="notice">
+  Your browser does not support the <code>sideways-lr</code> or
+  <code>sideways-rl</code> values.
+</p>
 ```
 
 #### CSS
@@ -135,54 +136,148 @@ table {
 }
 td,
 th {
-  border: 1px black solid;
-  padding: 3px;
+  border: 2px black solid;
+  padding: 4px;
 }
 th {
   background-color: lightgray;
 }
-.example {
-  height: 75px;
-  width: 75px;
+
+.experimental {
+  display: none;
+}
+
+.notice {
+  display: table-row;
+  font-weight: bold;
+  text-align: center;
+}
+
+@supports (writing-mode: sideways-lr) {
+  .experimental {
+    display: table-row;
+  }
+  .notice {
+    display: none;
+  }
 }
 ```
 
 The CSS that adjusts the directionality of the content looks like this:
 
 ```css
-.example.Text1 span,
-.example.Text1 {
+.text1 td {
   writing-mode: horizontal-tb;
 }
 
-.example.Text2 span,
-.example.Text2 {
+.text2 td {
   writing-mode: vertical-lr;
 }
 
-.example.Text3 span,
-.example.Text3 {
+.text3 td {
   writing-mode: vertical-rl;
 }
 
-.example.Text4 span,
-.example.Text4 {
+.text4 td {
   writing-mode: sideways-lr;
 }
 
-.example.Text5 span,
-.example.Text5 {
+.text5 td {
   writing-mode: sideways-rl;
 }
 ```
 
 #### Result
 
-This image shows what the output should look like, in case your browser's support for `writing-mode` is incomplete:
+{{EmbedLiveSample("Using_multiple_writing_modes", 400, 700)}}
 
-![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb CSS properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
+### Using writing-mode with transforms
 
-{{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
+If your browser doesn't support `sideways-lr`, a workaround is to use {{cssxref("transform")}} to achieve a similar effect depending on the script direction.
+The effect of `vertical-rl` is the same as with `sideways-lr`, so no transformation is required for left-to-right scripts.
+In some cases, rotating the text 180 degrees is sufficient to achieve the effect of `sideways-lr`, but font glyphs may not be designed to be rotated, so this may produce unexpected positioning or rendering.
+
+#### HTML
+
+```html
+<table>
+  <caption>
+    Using writing-mode with transforms
+  </caption>
+  <thead>
+    <tr>
+      <th>Vertical LR</th>
+      <th>Vertical LR with transform</th>
+      <th>Sideways LR</th>
+      <th>Only rotate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="vertical-lr">我家没有电脑。</span>
+        <span class="vertical-lr">Example text</span>
+      </td>
+      <td>
+        <span class="vertical-lr rotated">我家没有电脑。</span>
+        <span class="vertical-lr rotated">Example text</span>
+      </td>
+      <td>
+        <span class="sideways-lr">我家没有电脑。</span>
+        <span class="sideways-lr">Example text</span>
+      </td>
+      <td>
+        <span class="only-rotate">我家没有电脑。</span>
+        <span class="only-rotate">Example text</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+.only-rotate {
+  inline-size: fit-content;
+  transform: rotate(-90deg);
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 2px black solid;
+  padding: 4px;
+}
+th {
+  background-color: lightgray;
+}
+span {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using_writing-mode_with_transforms", 400, 200)}}
 
 ## Specifications
 
@@ -199,6 +294,6 @@ This image shows what the output should look like, in case your browser's suppor
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
-- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
-- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/writing-mode-vertical>
+- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
+- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module

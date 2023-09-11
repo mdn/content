@@ -1,9 +1,7 @@
 ---
 title: Subdomain takeovers
 slug: Web/Security/Subdomain_takeovers
-tags:
-  - Guide
-  - Security
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

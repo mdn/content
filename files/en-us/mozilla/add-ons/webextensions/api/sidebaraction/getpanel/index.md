@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getPanel
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
 
@@ -47,7 +39,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the panel's document. This will be a fully qualified URL, such as:
 
-```
+```url
 moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 ```
 

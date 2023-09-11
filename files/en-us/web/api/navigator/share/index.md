@@ -1,13 +1,8 @@
 ---
-title: Navigator.share()
+title: "Navigator: share() method"
+short-title: share()
 slug: Web/API/Navigator/share
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Navigator
-  - Reference
-  - Share
-  - Web
 browser-compat: api.Navigator.share
 ---
 
@@ -139,19 +134,19 @@ The HTML just creates a button to trigger the share, and a paragraph in which to
 
 ```js
 const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org'
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const btn = document.querySelector('button');
-const resultPara = document.querySelector('.result');
+const btn = document.querySelector("button");
+const resultPara = document.querySelector(".result");
 
 // Share must be triggered by "user activation"
-btn.addEventListener('click', async () => {
+btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = 'MDN shared successfully';
+    resultPara.textContent = "MDN shared successfully";
   } catch (err) {
     resultPara.textContent = `Error: ${err}`;
   }
@@ -184,39 +179,39 @@ To share files, first test for and call {{domxref("navigator.canShare()")}}. The
 Note that the data object passed to the `navigator.canShare()` only includes the `files` property, as the `title` and `text` shouldn't matter.
 
 ```js
-const input = document.getElementById('files')
-const output = document.getElementById('output')
+const input = document.getElementById("files");
+const output = document.getElementById("output");
 
-document.getElementById('share').addEventListener('click', async () => {
-  const files = input.files
+document.getElementById("share").addEventListener("click", async () => {
+  const files = input.files;
 
   if (files.length === 0) {
-    output.textContent = 'No files selected.'
-    return
+    output.textContent = "No files selected.";
+    return;
   }
 
   // feature detecting navigator.canShare() also implies
   // the same for the navigator.share()
   if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`
-    return
+    output.textContent = `Your browser doesn't support the Web Share API.`;
+    return;
   }
 
   if (navigator.canShare({ files })) {
     try {
       await navigator.share({
         files,
-        title: 'Images',
-        text: 'Beautiful images'
-      })
-      output.textContent = 'Shared!'
+        title: "Images",
+        text: "Beautiful images",
+      });
+      output.textContent = "Shared!";
     } catch (error) {
-      output.textContent = `Error: ${error.message}`
+      output.textContent = `Error: ${error.message}`;
     }
   } else {
-    output.textContent = `Your system doesn't support sharing these files.`
+    output.textContent = `Your system doesn't support sharing these files.`;
   }
-})
+});
 ```
 
 #### Result

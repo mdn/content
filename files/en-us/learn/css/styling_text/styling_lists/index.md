@@ -1,15 +1,7 @@
 ---
 title: Styling lists
 slug: Learn/CSS/Styling_text/Styling_lists
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Guide
-  - Styling
-  - Text
-  - bullets
-  - lists
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
@@ -103,9 +95,9 @@ The HTML for our list example looks like so:
 </dl>
 ```
 
-If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
+If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
 
-- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`).
+- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`). If the directionality attribute [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) is set to right-to-left (`rtl`) for `ul` and `ol` elements, in that case {{cssxref("padding-right")}} comes into effect and its default value is `40px` (`2.5em`) .
 - The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.
 - The {{htmlelement("dl")}} element has a top and bottom {{cssxref("margin")}} of `16px` (`1em`), but no padding set.
 - The {{htmlelement("dd")}} elements have {{cssxref("margin-left")}} of `40px` (`2.5em`).
@@ -269,7 +261,7 @@ Sometimes you might want to count differently on an ordered list — e.g., start
 
 ### start
 
-The {{htmlattrxref("start","ol")}} attribute allows you to start the list counting from a number other than 1. The following example:
+The [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute allows you to start the list counting from a number other than 1. The following example:
 
 ```html
 <ol start="4">
@@ -288,7 +280,7 @@ Gives you this output:
 
 ### reversed
 
-The {{htmlattrxref("reversed","ol")}} attribute will start the list counting down instead of up. The following example:
+The [`reversed`](/en-US/docs/Web/HTML/Element/ol#reversed) attribute will start the list counting down instead of up. The following example:
 
 ```html
 <ol start="4" reversed>
@@ -309,7 +301,7 @@ Gives you this output:
 
 ### value
 
-The {{htmlattrxref("value","li")}} attribute allows you to set your list items to specific numerical values. The following example:
+The [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute allows you to set your list items to specific numerical values. The following example:
 
 ```html
 <ol>
@@ -358,7 +350,8 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul>
+  </textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -446,11 +439,3 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 - {{cssxref("counter-reset")}}
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

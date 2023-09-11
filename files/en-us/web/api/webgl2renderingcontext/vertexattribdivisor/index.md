@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.vertexAttribDivisor()
+title: "WebGL2RenderingContext: vertexAttribDivisor() method"
+short-title: vertexAttribDivisor()
 slug: Web/API/WebGL2RenderingContext/vertexAttribDivisor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.vertexAttribDivisor
 ---
 

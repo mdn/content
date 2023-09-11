@@ -2,18 +2,9 @@
 title: VRDisplay
 slug: Web/API/VRDisplay
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Media
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay
 ---
 
@@ -73,7 +64,7 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 
 ```js
 if (navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene

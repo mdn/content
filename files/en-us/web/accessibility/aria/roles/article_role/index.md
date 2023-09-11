@@ -1,14 +1,7 @@
 ---
 title: "ARIA: article role"
 slug: Web/Accessibility/ARIA/Roles/article_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA article role
-  - Article
-  - Article role
-  - document structure role
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#article
   - https://w3c.github.io/aria-practices/#feed
@@ -44,7 +37,7 @@ Don't use `role="article"`. Instead use the `<article>` element.
 
 ## Description
 
-The `article` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#document_structure_roles) denotes a section of a document, page, or site that, if it were standing on its own, could be viewed as a complete document, page or site. The aim of a set of article sections is to indicate their relationship to one another.
+The `article` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles) denotes a section of a document, page, or site that, if it were standing on its own, could be viewed as a complete document, page or site. The aim of a set of article sections is to indicate their relationship to one another.
 
 Articles are not considered a navigational landmark, but many assistive technologies that support landmarks also support a means to navigate among articles. They may also support indication of nesting relationships within articles.
 
@@ -78,7 +71,7 @@ This role does not support any specific keyboard interaction.
 
 ## Examples
 
-- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/example-index/feed/feedDisplay.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
+- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed-display.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
 
 ## Specifications
 
@@ -90,7 +83,6 @@ This role corresponds to the {{HTMLElement('article')}} element in HTML, and tha
 
 ## See also
 
-- [ARIA: using the `article` role](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
 - [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
 - [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
 - The {{HTMLElement('article')}} element

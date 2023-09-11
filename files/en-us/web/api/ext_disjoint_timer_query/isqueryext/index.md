@@ -1,13 +1,8 @@
 ---
-title: EXT_disjoint_timer_query.isQueryEXT()
+title: "EXT_disjoint_timer_query: isQueryEXT() method"
+short-title: isQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/isQueryEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.isQueryEXT
 ---
 
@@ -37,7 +32,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const query = ext.createQueryEXT();
 
 // …

@@ -2,21 +2,6 @@
 title: RTCRtpSender
 slug: Web/API/RTCRtpSender
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DTLS
-  - DTMF
-  - Interface
-  - Media
-  - NeedsExample
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCRtpSender
 ---
 
@@ -34,6 +19,8 @@ With it, you can configure the encoding used for the corresponding track, get in
   - : The {{domxref("MediaStreamTrack")}} which is being handled by the `RTCRtpSender`. If `track` is `null`, the `RTCRtpSender` doesn't transmit anything.
 - {{domxref("RTCRtpSender.transport")}} {{ReadOnlyInline}}
   - : The {{domxref("RTCDtlsTransport")}} over which the sender is exchanging the RTP and RTCP packets used to manage transmission of media and control data. This value is `null` until the transport is established. When bundling is in use, more than transceiver may be sharing the same transport object.
+- {{domxref("RTCRtpReceiver.transform")}}
+  - : An {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} --> is used to insert a transform stream ({{domxref("TransformStream")}}) running in a worker thread into the sender pipeline, allowing stream transforms to be applied to encoded video and audio frames after they are output by a codec, and before they are sent.
 
 ### Obsolete properties
 
@@ -42,13 +29,13 @@ With it, you can configure the encoding used for the corresponding track, get in
 
 ## Static methods
 
-- {{domxref("RTCRtpSender.getCapabilities()")}}
-  - : Returns an {{domxref("RTCRtpCapabilities")}} object describing the system's capabilities for sending a specified kind of media data.
+- {{domxref("RTCRtpSender.getCapabilities_static", "RTCRtpSender.getCapabilities()")}}
+  - : Returns an object describing the system's capabilities for sending a specified kind of media data.
 
 ## Instance methods
 
 - {{domxref("RTCRtpSender.getParameters()")}}
-  - : Returns a {{domxref("RTCRtpParameters")}} object describing the current configuration for the encoding and transmission of media on the `track`.
+  - : Returns an object describing the current configuration for the encoding and transmission of media on the `track`.
 - {{domxref("RTCRtpSender.getStats()")}}
   - : Returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("RTCStatsReport")}} which provides statistics data for all outbound streams being sent using this `RTCRtpSender`.
 - {{domxref("RTCRtpSender.setParameters()")}}

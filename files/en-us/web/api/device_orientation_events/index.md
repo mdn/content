@@ -2,13 +2,6 @@
 title: Device orientation events
 slug: Web/API/Device_orientation_events
 page-type: web-api-overview
-tags:
-  - API
-  - Events
-  - Landing
-  - Overview
-  - Reference
-  - Device orientation events
 browser-compat:
   - api.Window.deviceorientation_event
   - api.Window.devicemotion_event
@@ -36,6 +29,8 @@ Some typical features for which you might want to use the device orientation eve
 - in mapping applications, to re-orient a map based on the device's position, or to provide turn-by-turn directions that update with the user's movements
 
 - for gesture recognition — for example, recognizing a "shake" gesture and using it to perform some action such as clearing an input area when the user shakes the device
+
+> **Note:** This API is widely supported on mobile browsers. While some desktop-only browsers may have limitations due to hardware differences, these constraints are rarely significant given the API's primary usage on sensor-equipped devices.
 
 ## Interfaces
 
@@ -67,4 +62,4 @@ Some typical features for which you might want to use the device orientation eve
 
 ## See also
 
-- [Device Orientation & Motion](https://web.dev/native-hardware-device-orientation/) at web.dev
+- [Device Orientation & Motion](https://web.dev/device-orientation/) at web.dev

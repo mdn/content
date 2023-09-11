@@ -2,16 +2,12 @@
 title: GeneratorFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.GeneratorFunction.GeneratorFunction
 ---
 
 {{JSRef}}
 
-The **`GeneratorFunction()`** constructor creates a new {{jsxref("GeneratorFunction")}} object. In JavaScript, every [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*) is actually a `GeneratorFunction` object.
+The **`GeneratorFunction()`** constructor creates {{jsxref("GeneratorFunction")}} objects.
 
 Note that `GeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
@@ -25,14 +21,14 @@ The `GeneratorFunction()` constructor is not intended to be used directly, and a
 
 ```js-nolint
 new GeneratorFunction(functionBody)
-new GeneratorFunction(arg0, functionBody)
-new GeneratorFunction(arg0, arg1, functionBody)
-new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new GeneratorFunction(arg1, functionBody)
+new GeneratorFunction(arg1, arg2, functionBody)
+new GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 GeneratorFunction(functionBody)
-GeneratorFunction(arg0, functionBody)
-GeneratorFunction(arg0, arg1, functionBody)
-GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+GeneratorFunction(arg1, functionBody)
+GeneratorFunction(arg1, arg2, functionBody)
+GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
@@ -62,8 +58,8 @@ console.log(iterator.next().value); // 20
 
 ## See also
 
-- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
 - {{jsxref("Functions", "Functions", "", 1)}}

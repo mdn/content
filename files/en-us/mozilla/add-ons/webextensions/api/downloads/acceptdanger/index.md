@@ -1,16 +1,7 @@
 ---
 title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - acceptDanger
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.acceptDanger
 ---
 

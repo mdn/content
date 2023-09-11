@@ -1,14 +1,7 @@
 ---
 title: management.get()
 slug: Mozilla/Add-ons/WebExtensions/API/management/get
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - get
-  - management
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.get
 ---
 

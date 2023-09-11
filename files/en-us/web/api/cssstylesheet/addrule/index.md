@@ -1,23 +1,10 @@
 ---
-title: CSSStyleSheet.addRule()
+title: "CSSStyleSheet: addRule() method"
+short-title: addRule()
 slug: Web/API/CSSStyleSheet/addRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Style
-  - StyleSheet
-  - addRule
-  - legacy
-  - rules
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
 

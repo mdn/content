@@ -2,10 +2,8 @@
 title: glyph-orientation-vertical
 slug: Web/SVG/Attribute/glyph-orientation-vertical
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.glyph-orientation-vertical
 ---
 
@@ -21,7 +19,6 @@ This attribute is applied only to text written in a vertical {{SVGAttr("writing-
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}

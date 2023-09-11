@@ -1,15 +1,7 @@
 ---
 title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getModuleSlots
-  - pkcs11
+page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.getModuleSlots
 ---
 

@@ -2,13 +2,8 @@
 title: <hkern>
 slug: Web/SVG/Element/hkern
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.hkern
 ---
 

@@ -2,22 +2,14 @@
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getFullYear
 ---
 
 {{JSRef}}
 
-The **`getFullYear()`** method returns the year of the
-specified date according to local time.
+The **`getFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to local time.
 
-Use this method instead of the {{jsxref("Date.prototype.getYear()", "getYear()")}}
-method.
+Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 
 {{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
 
@@ -27,27 +19,29 @@ method.
 getFullYear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A number corresponding to the year of the given date, according to local time.
+An integer representing the year for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
-The value returned by `getFullYear()` is an absolute number. For dates
-between the years 1000 and 9999, `getFullYear()` returns a four-digit number,
-for example, 1995. Use this function to make sure a year is compliant with years after
-2000\.
+Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getFullYear()` is an absolute number. For dates between the years 1000 and 9999, `getFullYear()` returns a four-digit number, for example, 1995. Use this function to make sure a year is compliant with years after 2000.
 
 ## Examples
 
 ### Using getFullYear()
 
-The following example assigns the four-digit value of the current year to the variable
-`year`.
+The `fullYear` variable has value `1995`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const today = new Date();
-const year = today.getFullYear();
+const xmas95 = new Date("1995-12-25T23:15:30");
+const fullYear = xmas95.getFullYear();
+
+console.log(fullYear); // 1995
 ```
 
 ## Specifications

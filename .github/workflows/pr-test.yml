@@ -10,9 +10,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - ".github/workflows/pr-test.yml"
-      - "files/en-us/**"
 
 jobs:
   tests:
@@ -20,24 +17,46 @@ jobs:
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      # This is the directory where the built files will be placed.
+      # It's also hardcoded in the `yarn build` command in package.json.
+      # If you change it here, you must also make the same change in
+      # package.json.
+      BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
+      # This is a "required" workflow so path filtering can not be used:
+      # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
+      # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
+      - uses: dorny/paths-filter@v2
+        name: See if any file needs checking
+        id: filter
+        with:
+          filters: |
+            required_files :
+              - ".nvmrc"
+              - ".github/workflows/pr-test.yml"
+              - "files/en-us/**"
+
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        if: steps.filter.outputs.required_files == 'true'
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get changed files
+        if: steps.filter.outputs.required_files == 'true'
         run: |
           # Use the GitHub API to get the list of changed files
-          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
@@ -68,17 +87,8 @@ jobs:
           # we set this to disable that stuff.
           REACT_APP_CRUD_MODE_READONLY: true
 
-          # Setting this to an empty string effectively means that the
-          # <iframe> src will end up being the relative URL of the current
-          # document as a base.
-          # I.e. like this, if the current document is '/en-US/docs/Foo':
-          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
-          # ...for example.
-          # Yes, it's potentially "insecure" because the iframe will execute
-          # whatever code is inserted into the code example. But since the
-          # whole (possible) domain for PR builds will never be somewhere
-          # where there are interesting cookies, it's a safe choice.
-          BUILD_LIVE_SAMPLES_BASE_URL: ""
+          BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
 
           # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
@@ -87,6 +97,9 @@ jobs:
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
 
+          # Playground
+          REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
+
         run: |
           # The reason this script isn't in `package.json` is because
           # you don't need that script as a writer. It's only used in CI
@@ -94,43 +107,31 @@ jobs:
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-          echo "Disk usage size of build/"
-          du -sh $BUILD_OUT_ROOT
+          echo "Disk usage size of the build"
+          du -sh ${{ env.BUILD_OUT_ROOT }}
 
           # Save the PR number into the build
-          echo ${{ github.event.number }} > build/NR
+          echo ${{ github.event.number }} > ${{ env.BUILD_OUT_ROOT }}/NR
 
-          # Download the raw diff blob and store that inside the ./build/
+          # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O build/DIFF
+          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
-          rsync -a node_modules/@mdn/yari/client/build/ build/
-
-          # Now that build/ directory contains everything you need to deploy
-          # that as a site. HTML, static assets, images, etc.
-          # However, that Yari static files is very heavy and it's in large
-          # part due to the .map files.
-          # In fact, as of March 2021, the client/build/static directory
-          # is 2.3MB but only 864KB without all the .map files.
-          # Let's delete those this time because this isn't the right time
-          # to debug JS or CSS.
-          echo "Before..."
-          du -sh build
-          find build/static -type f -name "*.map" | xargs ls -lh
-          find build/static -type f -name "*.map" | xargs rm
-          echo "After..."
-          du -sh build
+          # Exclude the .map files, as they're used for debugging JS and CSS.
+          rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ ${{ env.BUILD_OUT_ROOT }}
+          # Show the final disk usage size of the build.
+          du -sh ${{ env.BUILD_OUT_ROOT }}
 
       - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
-          path: build/
+          path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}

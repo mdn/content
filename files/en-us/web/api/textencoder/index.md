@@ -2,12 +2,6 @@
 title: TextEncoder
 slug: Web/API/TextEncoder
 page-type: web-api-interface
-tags:
-  - API
-  - Encoding
-  - Interface
-  - Reference
-  - TextEncoder
 browser-compat: api.TextEncoder
 ---
 

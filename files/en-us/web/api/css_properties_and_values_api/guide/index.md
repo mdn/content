@@ -2,14 +2,6 @@
 title: Using the CSS properties and values API
 slug: Web/API/CSS_Properties_and_Values_API/guide
 page-type: guide
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values
-  - Guide
-  - Houdini
-  - JavaScript
-  - Learn
 ---
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}{{SeeCompatTable}}
@@ -22,14 +14,14 @@ Registering a custom property allows you to tell the browser how the custom prop
 
 ### CSS.registerProperty
 
-The following will register a {{cssxref('--*', 'CSS custom properties')}}, `--my-prop`, using {{domxref('CSS.registerProperty')}}, as a color, give it a default value, and have it not inherit its value:
+The following will register a {{cssxref('--*', 'CSS custom properties')}}, `--my-prop`, using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}, as a color, give it a default value, and have it not inherit its value:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-prop',
-  syntax: '<color>',
+  name: "--my-prop",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -95,10 +87,10 @@ button {
 
 ```js
 window.CSS.registerProperty({
-  name: '--registered',
-  syntax: '<color>',
+  name: "--registered",
+  syntax: "<color>",
   inherits: false,
-  initialValue: 'red',
+  initialValue: "red",
 });
 ```
 

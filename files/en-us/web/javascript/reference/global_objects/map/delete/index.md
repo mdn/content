@@ -2,19 +2,12 @@
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Map.delete
 ---
 
 {{JSRef}}
 
-The **`delete()`** method removes the specified element from a `Map` object by
+The **`delete()`** method of {{jsxref("Map")}} instances removes the specified element from this map by
 key.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
@@ -22,7 +15,7 @@ key.
 ## Syntax
 
 ```js-nolint
-delete(key)
+mapInstance.delete(key)
 ```
 
 ### Parameters
@@ -41,10 +34,10 @@ delete(key)
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-console.log(myMap.delete('bar')); // Returns true. Successfully removed.
-console.log(myMap.has('bar')); // Returns false. The "bar" element is no longer present.
+console.log(myMap.delete("bar")); // Returns true. Successfully removed.
+console.log(myMap.has("bar")); // Returns false. The "bar" element is no longer present.
 ```
 
 ## Specifications

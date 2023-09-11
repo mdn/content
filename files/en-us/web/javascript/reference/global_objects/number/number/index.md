@@ -2,18 +2,12 @@
 title: Number() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number.Number
 ---
 
 {{JSRef}}
 
-The **`Number()` constructor** creates a {{jsxref("Number")}} object. When called instead as a function, it performs type conversion to a {{Glossary("number", "primitive number")}}, which is usually more useful.
+The **`Number()`** constructor creates {{jsxref("Number")}} objects. When called as a function, it returns primitive values of type Number.
 
 ## Syntax
 
@@ -42,12 +36,12 @@ When `Number` is called as a function, it [coerces the parameter to a number pri
 ### Creating Number objects
 
 ```js
-const a = new Number('123'); // a === 123 is false
-const b = Number('123');     // b === 123 is true
-a instanceof Number;         // is true
-b instanceof Number;         // is false
-typeof a // "object"
-typeof b // "number"
+const a = new Number("123"); // a === 123 is false
+const b = Number("123"); // b === 123 is true
+a instanceof Number; // is true
+b instanceof Number; // is false
+typeof a; // "object"
+typeof b; // "number"
 ```
 
 ### Using Number() to convert a BigInt to a number
@@ -81,5 +75,5 @@ BigInt(Number(2n ** 54n + 1n)) === 2n ** 54n + 1n; // false
 
 - [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("NaN")}}
-- The {{jsxref("Math")}} global object
-- Integers with arbitrary precision: {{jsxref("BigInt")}}
+- {{jsxref("Math")}}
+- {{jsxref("BigInt")}}

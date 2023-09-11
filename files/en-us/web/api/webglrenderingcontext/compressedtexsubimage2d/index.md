@@ -1,15 +1,8 @@
 ---
-title: WebGLRenderingContext.compressedTexSubImage2D()
+title: "WebGLRenderingContext: compressedTexSubImage2D() method"
+short-title: compressedTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/compressedTexSubImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGL extension
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compressedTexSubImage2D
 ---
 
@@ -157,12 +150,20 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = (
-  gl.getExtension('WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
+const ext =
+  gl.getExtension("WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("MOZ_WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("WEBKIT_WEBGL_compressed_texture_s3tc");
+gl.compressedTexSubImage2D(
+  gl.TEXTURE_2D,
+  0,
+  256,
+  256,
+  512,
+  512,
+  ext.COMPRESSED_RGBA_S3TC_DXT5_EXT,
+  textureData,
 );
-gl.compressedTexSubImage2D(gl.TEXTURE_2D, 0, 256, 256, 512, 512, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, textureData);
 ```
 
 ## Specifications

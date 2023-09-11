@@ -2,15 +2,6 @@
 title: Using IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Database
-  - Guide
-  - IndexedDB
-  - Storage
-  - Tutorial
-  - jsstore
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -70,9 +61,9 @@ request.onsuccess = (event) => {
 
 Which of the two functions, `onsuccess()` or `onerror()`, gets called? If everything succeeds, a success event (that is, a DOM event whose `type` property is set to `"success"`) is fired with `request` as its `target`. Once it is fired, the `onsuccess()` function on `request` is triggered with the success event as its argument. Otherwise, if there was any problem, an error event (that is, a DOM event whose `type` property is set to `"error"`) is fired at `request`. This triggers the `onerror()` function with the error event as its argument.
 
-The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see [Storage limits](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#storage_limits).)
+The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see [How much data can be stored? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored).)
 
-Obviously, browsers do not want to allow some advertising network or malicious website to pollute your computer, so browsers used to prompt the user the first time any given web app attempts to open an IndexedDB for storage. The user could choose to allow or deny access. Also, IndexedDB storage in browsers' privacy modes only lasts in-memory until the incognito session is closed (Private Browsing mode for Firefox and Incognito mode for Chrome, but in Firefox this is [not implemented yet](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) as of May 2021 so you can't use IndexedDB in Firefox Private Browsing at all).
+Obviously, browsers do not want to allow some advertising network or malicious website to pollute your computer, so browsers used to prompt the user the first time any given web app attempts to open an IndexedDB for storage. The user could choose to allow or deny access. Also, IndexedDB storage in browsers' privacy modes only lasts in-memory until the incognito session is closed.
 
 Now, assuming that the user allowed your request to create a database, and you've received a success event to trigger the success callback; What's next? The request here was generated with a call to `indexedDB.open()`, so `request.result` is an instance of `IDBDatabase`, and you definitely want to save that for later. Your code might look something like this:
 
@@ -187,7 +178,7 @@ That may sound confusing, but this simple example should illustrate the concepts
 // This is what our customer data looks like.
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -223,7 +214,9 @@ request.onupgradeneeded = (event) => {
   // finished before adding data into it.
   objectStore.transaction.oncomplete = (event) => {
     // Store values in the newly created objectStore.
-    const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+    const customerObjectStore = db
+      .transaction("customers", "readwrite")
+      .objectStore("customers");
     customerData.forEach((customer) => {
       customerObjectStore.add(customer);
     });
@@ -252,11 +245,10 @@ We can create another object store with the key generator as below:
 const request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = (event) => {
-
   const db = event.target.result;
 
   // Create another object store called "names" with the autoIncrement flag set as true.
-  const objStore = db.createObjectStore("names", { autoIncrement : true });
+  const objStore = db.createObjectStore("names", { autoIncrement: true });
 
   // Because the "names" object store has the key generator, the key for the name value is generated automatically.
   // The added records would be like:
@@ -278,7 +270,7 @@ To change the "schema" or structure of the database—which involves creating or
 
 To read the records of an existing object store, the transaction can either be in `readonly` or `readwrite` mode. To make changes to an existing object store, the transaction must be in `readwrite` mode. You open such transactions with {{domxref("IDBDatabase.transaction")}}. The method accepts two parameters: the `storeNames` (the scope, defined as an array of object stores that you want to access) and the `mode` (`readonly` or `readwrite`) for the transaction. The method returns a transaction object containing the {{domxref("IDBIndex.objectStore")}} method, which you can use to access your object store. By default, where no mode is specified, transactions open in `readonly` mode.
 
-> **Note:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}).
+> **Note:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Webkit bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}).
 
 You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:
 
@@ -359,24 +351,24 @@ request.onsuccess = (event) => {
 That's a lot of code for a "simple" retrieval. Here's how you can shorten it up a bit, assuming that you handle errors at the database level:
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = (event) => {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = (event) => {
   console.log(`Name for SSN 444-44-4444 is ${event.target.result.name}`);
 };
 ```
 
 See how this works? Since there's only one object store, you can avoid passing a list of object stores you need in your transaction and just pass the name as a string. Also, you're only reading from the database, so you don't need a `"readwrite"` transaction. Calling `transaction()` with no mode specified gives you a `"readonly"` transaction. Another subtlety here is that you don't actually save the request object to a variable. Since the DOM event has the request as its target you can use the event to get to the `result` property.
 
-Note that you can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:
-
-- When defining the [scope](#scope), specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
-- Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction) in the [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology) article.
-
 ### Updating an entry in the database
 
 Now we've retrieved some data, updating it and inserting it back into the IndexedDB is pretty simple. Let's update the previous example somewhat:
 
 ```js
-const objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+const objectStore = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers");
 const request = objectStore.get("444-44-4444");
 request.onerror = (event) => {
   // Handle errors!
@@ -475,7 +467,9 @@ index.openCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    console.log(`Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`);
+    console.log(
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
+    );
     cursor.continue();
   }
 };
@@ -591,7 +585,9 @@ function useDatabase(db) {
   // If you don't do this then the upgrade won't happen until the user closes the tab.
   db.onversionchange = (event) => {
     db.close();
-    console.log("A new version of this page is ready. Please reload or close this tab!");
+    console.log(
+      "A new version of this page is ready. Please reload or close this tab!",
+    );
   };
 
   // Do stuff with the database.
@@ -604,7 +600,7 @@ You should also listen for `VersionError` errors to handle the situation where a
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-Third party window content (e.g. {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection?redirectslug=disable-third-party-cookies&redirectlocale=en-US) (see {{bug("1147821")}}.)
+Third party window content (e.g. {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see [Firefox bug 1147821](https://bugzil.la/1147821)).
 
 ## Warning about browser shutdown
 
@@ -624,7 +620,7 @@ First, you should take care to always leave your database in a consistent state 
 
 Second, you should never tie database transactions to unload events. If the unload event is triggered by the browser closing, any transactions created in the unload event handler will never complete. An intuitive approach to maintaining some information across browser sessions is to read it from the database when the browser (or a particular page) is opened, update it as the user interacts with the browser, and then save it to the database when the browser (or page) closes. However, this will not work. The database transactions will be created in the unload event handler, but because they are asynchronous they will be aborted before they can execute.
 
-In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See {{ bug(870645) }}. As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
+In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See [Firefox bug 870645](https://bugzil.la/870645). As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
 
 At least with the addition of the abort notifications and {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}}, you can know when this has happened.
 
@@ -672,9 +668,9 @@ Further reading for you to find out more information if desired.
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to Web SQL (deprecated) and then localStorage in browsers that don't support IndexedDB.
 - [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.
-- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory mongodb backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
+- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory MongoDB backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
 - [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
 - [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
-- [RxDB](https://rxdb.info/) A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.
+- [RxDB](https://rxdb.info/): A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.

@@ -2,18 +2,12 @@
 title: counter-set
 slug: Web/CSS/counter-set
 page-type: css-property
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - recipe:css-property
 browser-compat: css.properties.counter-set
 ---
 
 {{CSSRef}}
 
-The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
+The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
@@ -86,7 +80,7 @@ h1 {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}

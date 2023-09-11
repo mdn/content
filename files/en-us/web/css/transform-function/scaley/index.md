@@ -2,12 +2,6 @@
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.scaleY
 ---
 
@@ -18,7 +12,7 @@ y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} d
 
 {{EmbedInteractiveExample("pages/css/function-scaleY.html")}}
 
-It modifies the ordinate of each element point by a constant factor, except when the scale factor is 1, in which case
+It modifies the ordinate (vertical, y-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
 `scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
@@ -38,16 +32,16 @@ scaleY(s)
 ### Values
 
 - `s`
-  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate of each point of the
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate (vertical, y-coordinate) of each point of the
     element.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^2</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
-      <th scope="col">Cartesian coordinates on ℝ^3</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
+      <th scope="col"><a href="/en-US/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
   </thead>
   <tbody>

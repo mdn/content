@@ -1,11 +1,7 @@
 ---
-title: 'Test your skills: Conditionals'
+title: "Test your skills: Conditionals"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
-tags:
-  - Beginner
-  - Conditionals
-  - JavaScript
-  - Learn
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}
@@ -47,7 +43,7 @@ For this task you are given three variables:
 
 You need to create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
 
-Inside the first, you need to nest an `if...else if...else` that puts appropriate messages into the `response` variable depending on what the value of score is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
+Inside the first `if...else`, you need to nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of score is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
 
 - Score of less than 0 or more than 100 — "This is not possible, an error has occurred."
 - Score of 0 to 19 — "That was a terrible score — total fail!"
@@ -66,18 +62,6 @@ Try updating the live code below to recreate the finished example. After you've 
 
 ## Conditionals 3
 
-In this task you need to take the code you wrote for the second task, and rewrite the inner `if...else if...else` to use a `switch` statement instead.
-
-Try updating the live code below to recreate the finished example:
-
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
-
-> **Callout:**
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals3-download.html) to work in your own editor or in an online editor.
-
-## Conditionals 4
-
 For the final task you are given four variables:
 
 - `machineActive` — contains an indicator of whether the login machine is switched on or not (`true`/`false`).
@@ -91,7 +75,7 @@ If the machine is on, we also want a second conditional to run that checks wheth
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals4.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
 
 > **Callout:**
 >

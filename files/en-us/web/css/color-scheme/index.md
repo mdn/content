@@ -2,19 +2,6 @@
 title: color-scheme
 slug: Web/CSS/color-scheme
 page-type: css-property
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color-scheme
-  - recipe:css-property
 browser-compat: css.properties.color-scheme
 ---
 
@@ -54,6 +41,7 @@ The `color-scheme` property's value must be one of the following keywords.
 - `dark`
   - : Indicates that the element can be rendered using the operating system dark color scheme.
 - `only`
+
   - : Forbids the user agent from overriding the color scheme for the element.
 
     Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: only light;` on a specific element or `:root`.
@@ -89,7 +77,7 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 ## See also
 
 - [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query to detect user preferences for color schemes.
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}

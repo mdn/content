@@ -1,15 +1,8 @@
 ---
-title: ServiceWorkerRegistration.pushManager
+title: "ServiceWorkerRegistration: pushManager property"
+short-title: pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push
-  - PushManager
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
 browser-compat: api.ServiceWorkerRegistration.pushManager
 ---
 
@@ -32,10 +25,11 @@ this.onpush = (event) => {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  (serviceWorkerRegistration) => {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.subscribe().then(
       (pushSubscription) => {
         console.log(pushSubscription.subscriptionId);
@@ -43,13 +37,14 @@ navigator.serviceWorker.register('serviceworker.js').then(
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
-      }, (error) => {
+      },
+      (error) => {
         // During development it often helps to log errors to the
         // console. In a production environment it might make sense to
         // also report information about errors back to the
         // application server.
         console.error(error);
-      }
+      },
     );
   });
 ```

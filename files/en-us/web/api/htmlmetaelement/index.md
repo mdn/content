@@ -2,11 +2,6 @@
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLMetaElement
 ---
 

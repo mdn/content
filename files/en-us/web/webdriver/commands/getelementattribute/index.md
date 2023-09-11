@@ -1,11 +1,7 @@
 ---
 title: Get Element Attribute
 slug: Web/WebDriver/Commands/GetElementAttribute
-tags:
-  - Command
-  - Get Element Tag Name
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementAttribute
 ---
 

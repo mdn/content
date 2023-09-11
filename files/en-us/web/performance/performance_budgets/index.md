@@ -1,11 +1,7 @@
 ---
 title: Performance budgets
 slug: Web/Performance/Performance_budgets
-tags:
-  - Budget
-  - Performance
-  - Performance Budget
-  - Web Performance
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -50,7 +46,7 @@ The ultimate value of a Performance Budget is to correlate the impact of Perform
 During development, there are a few tools to run checks against new or modified assets:
 
 - A module bundler (e.g. [webpack](https://webpack.js.org/)), has [performance features](https://webpack.js.org/configuration/performance/) that will notify you when assets exceed specified limits.
-- [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your [CI](/en-US/docs/Mozilla/Continuous_integration) pipeline.
+- [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your continuous integration (CI) pipeline.
 
 File size checks are the first line of defense against regressions but translating size back into time metrics can be difficult since development environments could be missing 3rd party scripts, and optimizations commonly provided by a [CDN](/en-US/docs/Glossary/CDN).
 

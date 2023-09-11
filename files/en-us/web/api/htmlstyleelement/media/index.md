@@ -1,14 +1,8 @@
 ---
-title: HTMLStyleElement.media
+title: "HTMLStyleElement: media property"
+short-title: media
 slug: Web/API/HTMLStyleElement/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.HTMLStyleElement.media
 ---
 
@@ -24,7 +18,7 @@ A string describing a single medium or a comma-separated list.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

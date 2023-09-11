@@ -2,11 +2,6 @@
 title: Guide to scroll anchoring
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - overflow-anchor
-  - scroll anchoring
 browser-compat: css.properties.overflow-anchor
 ---
 
@@ -74,7 +69,7 @@ These suppression triggers are changes to the computed value of any of the follo
 
 Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box also disable scroll anchoring.
 
-> **Note:** In {{bug(1584285)}} the `layout.css.scroll-anchoring.suppressions.enabled` flag was added to Firefox Nightly in order to allow the disabling of these triggers.
+> **Note:** In [Firefox bug 1584285](https://bugzil.la/1584285) the `layout.css.scroll-anchoring.suppressions.enabled` flag was added to Firefox Nightly in order to allow the disabling of these triggers.
 
 ## Further reading
 

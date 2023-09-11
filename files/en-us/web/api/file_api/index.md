@@ -2,10 +2,6 @@
 title: File API
 slug: Web/API/File_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
 spec-urls: https://w3c.github.io/FileAPI/
 ---
 
@@ -36,10 +32,10 @@ Sets of files made available in this way are represented as {{domxref("FileList"
 
 ### Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : Creates a URL that can be used to fetch a {{domxref("File")}} or {{domxref("Blob")}} object.
-- {{domxref("URL.revokeObjectURL()")}}
-  - : Releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL()")}}.
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
+  - : Releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Examples
 
@@ -68,18 +64,15 @@ In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Elem
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
-fileInput.addEventListener("change", () => {
+fileInput.addEventListener("change", async () => {
   const [file] = fileInput.files;
+
   if (file) {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      output.innerText = reader.result;
-    });
-    reader.readAsText(file);
+    output.innerText = await file.text();
   }
-})
+});
 ```
 
 ### Result
@@ -93,4 +86,5 @@ fileInput.addEventListener("change", () => {
 ## See also
 
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file): the file input element
+- [`text() method`](/en-US/docs/Web/API/Blob/text): .text()
 - The {{domxref("DataTransfer")}} interface

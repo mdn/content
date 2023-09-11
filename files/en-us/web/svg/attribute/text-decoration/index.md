@@ -2,9 +2,6 @@
 title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.text-decoration
 ---
 
@@ -20,7 +17,6 @@ The paint order of the text decoration, i.e. the fill and stroke, is determined 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

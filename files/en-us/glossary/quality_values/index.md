@@ -1,9 +1,10 @@
 ---
 title: Quality values
 slug: Glossary/Quality_values
-tags:
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Quality values**, or _q-values_ and _q-factors_, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some [HTTP headers](/en-US/docs/Web/HTTP/Headers) and in HTML.
 
@@ -39,13 +40,7 @@ text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 
 Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like `text/html;level=1`. These increase the specificity of the value. Their use is extremely rare.
 
-## Browser-specific information
-
-### Firefox
-
-Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ({{bug(672448)}}).
-
 ## More information
 
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Want-Digest")}}.
 - [Header field definitions.](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)

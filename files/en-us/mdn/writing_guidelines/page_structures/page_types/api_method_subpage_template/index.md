@@ -2,21 +2,18 @@
 title: API method subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheMethod
 ---
 
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> **Note:** _Remove this whole explanatory note before publishing._
 >
 > ---
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular method.
 >
 > ```md
@@ -24,10 +21,10 @@ browser-compat: path.to.feature.NameOfTheMethod
 > title: NameOfTheParentInterface.NameOfTheMethod()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheMethod
 > page-type: web-api-instance-method OR web-api-static-method
-> tags:
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheMethod
 > ---
 > ```
@@ -37,13 +34,18 @@ browser-compat: path.to.feature.NameOfTheMethod
 >     Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.
 >     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex.count()`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheMethod`.
+>
+>     If the method is static, then the slug must have a `_static` suffix, like: `Web/API/NameOfTheParentInterface/NameOfTheMethod_static`. This enables us to support instance and static methods which have the same name.
+>
 >     Note that the name of the method in the slug omits the parenthesis (it ends in `NameOfTheMethod` not `NameOfTheMethod()`).
+>
 > - **page-type**
 >   - : The `page-type` key for Web/API methods is either `web-api-instance-method` (for instance methods) or `web-api-static-method` (for static methods).
-> - **tags**
->   - : Include (appropriate) technology status tags: **Experimental** (if [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if not on a standards track.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -56,13 +58,13 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -70,15 +72,16 @@ browser-compat: path.to.feature.NameOfTheMethod
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> _Remember to remove this whole explanatory note before publishing_
+> Samples of the **Experimental**, **Secure context**, and **Deprecated** banners are shown right after this note block.
+>
+> _Remember to remove this whole explanatory note before publishing._
 
-{{APIRef("GroupDataName")}}{{SeeCompatTable}}{{SecureContext_header}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{SecureContext_header}}{{Deprecated_Header}}
 
-The summary paragraph — start by naming the method, saying what interface it is part of, and saying what it does.
-This should ideally be 1 or 2 short sentences. You could copy most of this from the method's summary on the corresponding API reference page.
+Begin the content on the page with an introductory paragraph — start by naming the method, saying what interface it is part of, and saying what it does.
+This should ideally be one or two short sentences. You could copy most of this from the method's summary on the corresponding API reference page.
 
 ## Syntax
 
@@ -101,10 +104,12 @@ If the method doesn't return anything, just put "None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
+Include a list of all the exceptions that the constructor can raise. Include one term and definition for each exception.
+
 - `Exception1`
-  - : Include a list of all the exceptions that the method can raise, along with descriptions of how that exception is raised. Include one term and definition for each exception.
+  - : Include descriptions of how the exception is raised.
 - `Exception2`
-  - : etc.
+  - : Include descriptions of how the exception is raised.
 
 Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know:
 
@@ -160,14 +165,20 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-- Include list of
-- other links related to
-- this API that might be useful
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2
+- external_link (year)

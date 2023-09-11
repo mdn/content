@@ -2,10 +2,6 @@
 title: z
 slug: Web/SVG/Attribute/z
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-z
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-z

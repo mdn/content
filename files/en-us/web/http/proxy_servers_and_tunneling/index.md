@@ -1,11 +1,7 @@
 ---
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - Proxies
-  - Proxy
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +14,7 @@ There are two types of proxies: **forward proxies** (or tunnel, or gateway) and 
 
 A forward proxy, or gateway, or just "proxy" provides proxy services to a client or a group of clients. There are likely hundreds of thousands of open forward proxies on the Internet. They store and forward Internet services (like the DNS, or web pages) to reduce and control the bandwidth used by the group.
 
-Forward proxies can also be anonymous proxies and allow users to hide their IP address while browsing the Web or using other Internet services. [TOR](https://www.torproject.org/) (The Onion Router), routes internet traffic through multiple proxies for anonymity.
+Forward proxies can also be anonymous and allow users to hide their IP address while browsing the Web or using other Internet services. For example, [Tor](https://www.torproject.org/) routes internet traffic through multiple proxies for anonymity.
 
 ## Reverse proxies
 

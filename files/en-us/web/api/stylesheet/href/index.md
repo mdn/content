@@ -1,12 +1,8 @@
 ---
-title: StyleSheet.href
+title: "StyleSheet: href property"
+short-title: href
 slug: Web/API/StyleSheet/href
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.href
 ---
 
@@ -15,16 +11,18 @@ browser-compat: api.StyleSheet.href
 The **`href`** property of the {{domxref("StyleSheet")}}
 interface returns the location of the style sheet.
 
+This property is read-only.
+
 ## Value
 
 A string containing the stylesheet's URI.
 
 ## Examples
 
-On a local machine:
+On a local Windows machine:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -50,9 +48,6 @@ Returns "file:////C:/Windows/Desktop/example.css"
 
 If the style sheet is a linked style sheet, the value of its attribute is its location.
 For inline style sheets, the value of this attribute is `NULL`.
-
-This property is read-only in Firefox, Opera, Google Chrome, and Safari, and it is
-read/write in Internet Explorer.
 
 ## Specifications
 

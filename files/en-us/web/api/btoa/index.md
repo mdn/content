@@ -1,21 +1,15 @@
 ---
-title: btoa()
+title: btoa() global function
+short-title: btoa()
 slug: Web/API/btoa
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
 browser-compat: api.btoa
 ---
 
 {{APIRef("HTML DOM")}}
 
 The **`btoa()`** method creates a
-{{glossary("Base64")}}-encoded ASCII string from a _binary string_ (i.e., a
+{{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a _binary string_ (i.e., a
 string in which each character in the string is treated as a byte
 of binary data).
 
@@ -55,14 +49,8 @@ const decodedData = atob(encodedData); // decode the string
 
 ## Unicode strings
 
-The `btoa()` function takes a JavaScript string as a parameter. In
-JavaScript strings are represented using the UTF-16 character encoding: in this
-encoding, strings are represented as a sequence of 16-bit (2 byte) units. Every ASCII
-character fits into the first byte of one of these units, but many other characters
-don't.
-
 Base64, by design, expects binary data as its input. In terms of JavaScript strings,
-this means strings in which each character occupies only one byte. So if you pass a
+this means strings in which the code point of each character occupies only one byte. So if you pass a
 string into `btoa()` containing characters that occupy more than one byte,
 you will get an error, because this is not considered binary data:
 
@@ -77,56 +65,7 @@ console.log(btoa(ok)); // YQ==
 console.log(btoa(notOK)); // error
 ```
 
-If you need to encode Unicode text as ASCII using `btoa()`, one option is to
-convert the string such that each 16-bit unit occupies only one byte. For example:
-
-```js
-// convert a Unicode string to a string in which
-// each 16-bit unit occupies only one byte
-function toBinary(string) {
-  const codeUnits = Uint16Array.from(
-    { length: string.length },
-    (element, index) => string.charCodeAt(index)
-  );
-  const charCodes = new Uint8Array(codeUnits.buffer);
-
-  let result = "";
-  charCodes.forEach((char) => {
-    result += String.fromCharCode(char);
-  });
-  return result;
-}
-
-// a string that contains characters occupying > 1 byte
-const myString = "☸☹☺☻☼☾☿";
-
-const converted = toBinary(myString);
-const encoded = btoa(converted);
-console.log(encoded); // OCY5JjomOyY8Jj4mPyY=
-```
-
-If you do this, of course you'll have to reverse the conversion on the decoded string:
-
-```js
-function fromBinary(binary) {
-  const bytes = Uint8Array.from({ length: binary.length }, (element, index) =>
-    binary.charCodeAt(index)
-  );
-  const charCodes = new Uint16Array(bytes.buffer);
-
-  let result = "";
-  charCodes.forEach((char) => {
-    result += String.fromCharCode(char);
-  });
-  return result;
-}
-
-const decoded = atob(encoded);
-const original = fromBinary(decoded);
-console.log(original); // ☸☹☺☻☼☾☿
-```
-
-See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution #1 – escaping the string before encoding it](/en-US/docs/Glossary/Base64#solution_1_%E2%80%93_escaping_the_string_before_encoding_it) section of the {{Glossary("Base64")}} glossary entry.
+For how to work around this limitation when dealing with arbitrary Unicode text, see [The "Unicode Problem"](/en-US/docs/Glossary/Base64#the_unicode_problem) section of the {{Glossary("Base64")}} glossary entry.
 
 ## Specifications
 

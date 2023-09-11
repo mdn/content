@@ -1,13 +1,7 @@
 ---
 title: How to add a shadow to an element
 slug: Learn/CSS/Howto/Add_a_shadow
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}
@@ -35,5 +29,5 @@ In the example below we have set the X and Y axes to 5px, the blur to 10px and t
 
 ## See also
 
-- The [Box shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
+- The [Box shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
 - [Learn CSS: Advanced styling effects.](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)

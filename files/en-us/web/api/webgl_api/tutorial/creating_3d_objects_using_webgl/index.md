@@ -2,14 +2,6 @@
 title: Creating 3D objects using WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 page-type: guide
-tags:
-  - 3D
-  - Drawing
-  - Graphics
-  - Guide
-  - Tutorial
-  - WebGL
-  - rendering
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
@@ -140,7 +132,7 @@ function initIndexBuffer(gl) {
   gl.bufferData(
     gl.ELEMENT_ARRAY_BUFFER,
     new Uint16Array(indices),
-    gl.STATIC_DRAW
+    gl.STATIC_DRAW,
   );
 
   return indexBuffer;
@@ -208,19 +200,19 @@ mat4.rotate(
   modelViewMatrix, // destination matrix
   modelViewMatrix, // matrix to rotate
   cubeRotation, // amount to rotate in radians
-  [0, 0, 1]
+  [0, 0, 1],
 ); // axis to rotate around (Z)
 mat4.rotate(
   modelViewMatrix, // destination matrix
   modelViewMatrix, // matrix to rotate
   cubeRotation * 0.7, // amount to rotate in radians
-  [0, 1, 0]
+  [0, 1, 0],
 ); // axis to rotate around (Y)
 mat4.rotate(
   modelViewMatrix, // destination matrix
   modelViewMatrix, // matrix to rotate
   cubeRotation * 0.3, // amount to rotate in radians
-  [1, 0, 0]
+  [1, 0, 0],
 ); // axis to rotate around (X)
 ```
 

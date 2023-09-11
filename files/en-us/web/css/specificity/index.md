@@ -2,12 +2,6 @@
 title: Specificity
 slug: Web/CSS/Specificity
 page-type: guide
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 
@@ -19,7 +13,7 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 
 ## How is specificity calculated?
 
-Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector-weight-categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector_weight_categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
 
 The specificity algorithm is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element.
 
@@ -38,7 +32,7 @@ The selector weight categories are listed here in the order of decreasing specif
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":has", ":has()")}} pseudo-classes. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()`, `:is()` and `:has()` exceptions](#the-is-not-and-has-exceptions) are discussed below.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":has", ":has()")}} pseudo-classes. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()`, `:is()` and `:has()` exceptions](#the_is_not_and_has_exceptions) are discussed below.
 
 #### Matching selector
 
@@ -58,7 +52,7 @@ All inputs, no matter the type, when receiving focus, match the second selector 
 
 The specificity for a required input nested in an element with attribute `id="myApp"` is `1-2-1`, based on one ID, two pseudo-classes, and one element type.
 
-If the password input type is nested in an element with `id="myApp"` set, the specificity weight will be `1-2-1`, whether or not it has focus. Why is the specificity weight `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right.
+If the password input type with `required` is nested in an element with `id="myApp"` set, the specificity weight will be `1-2-1`, based on one ID, two pseudo-classes, and one element type, whether or not it has focus. Why is the specificity weight `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right.
 
 ```css
 [type="password"]             /* 0-1-0 */
@@ -135,7 +129,6 @@ h2:has(~ h2) {
   /* 0-0-2 */
 }
 
-
 div.outer p {
   /* 0-1-2 */
 }
@@ -173,7 +166,7 @@ a:not(#fakeId#fakeId#fakeID) {
 }
 ```
 
-In this example, all links will be blue, unless overridden by a link declaration with 3 or more IDs, a color value matching an `a` includes the [`!important` flag](#the-important-exception), or if the link has an [inline style](#inline-styles) color declaration. If you use such a technique, add a comment to explain why the hack was needed.
+In this example, all links will be blue, unless overridden by a link declaration with 3 or more IDs, a color value matching an `a` includes the [`!important` flag](#the_!important_exception), or if the link has an [inline style](#inline_styles) color declaration. If you use such a technique, add a comment to explain why the hack was needed.
 
 ### Inline styles
 
@@ -454,11 +447,11 @@ A few things to remember about specificity:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)

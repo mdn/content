@@ -1,15 +1,7 @@
 ---
 title: browserSettings.tlsVersionRestrictionConfig
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/tlsVersionRestrictionConfig
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - tlsVersionRestrictionConfig
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.tlsVersionRestrictionConfig
 ---
 

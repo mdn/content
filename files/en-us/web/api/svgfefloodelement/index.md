@@ -2,12 +2,6 @@
 title: SVGFEFloodElement
 slug: Web/API/SVGFEFloodElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEFloodElement
 ---
 

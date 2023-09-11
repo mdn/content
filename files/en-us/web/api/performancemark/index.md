@@ -2,12 +2,6 @@
 title: PerformanceMark
 slug: Web/API/PerformanceMark
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Timing API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMark
 ---
 
@@ -50,7 +44,7 @@ This interface has no methods.
 
 ## Example
 
-See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
+See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
 
 ## Specifications
 
@@ -62,5 +56,5 @@ See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_A
 
 ## See also
 
-- [User Timing (Overview)](/en-US/docs/Web/API/User_Timing_API)
-- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [User Timing (Overview)](/en-US/docs/Web/API/Performance_API/User_timing)
+- [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)

@@ -1,12 +1,6 @@
 ---
 title: Reinterpret
 slug: WebAssembly/Reference/Numeric/Reinterpret
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
 ---
 
 {{WebAssemblySidebar}}

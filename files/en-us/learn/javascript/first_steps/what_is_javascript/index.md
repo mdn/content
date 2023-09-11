@@ -1,22 +1,7 @@
 ---
 title: What is JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - 3rd party
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Core
-  - JavaScript
-  - Learn
-  - Script
-  - comments
-  - external
-  - inline
-  - "l10n:priority"
-  - what
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
@@ -34,7 +19,7 @@ In this article we will look at JavaScript from a high level, answering question
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with what JavaScript is, what it can do, and how it
-        fits into a web site.
+        fits into a website.
       </td>
     </tr>
   </tbody>
@@ -67,10 +52,10 @@ p {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0, 0, 200, 0.6);
-  background: rgba(0, 0, 200, 0.3);
-  color: rgba(0, 0, 200, 0.6);
-  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+  border: 2px solid rgb(0 0 200 / 0.6);
+  background: rgb(0 0 200 / 0.6);
+  color: rgb(255 255 255 / 1);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -83,12 +68,12 @@ p {
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('Enter a new name');
+  const name = prompt("Enter a new name");
   para.textContent = `Player 1: ${name}`;
 }
 ```
@@ -166,19 +151,19 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('Enter a new name');
+  const name = prompt("Enter a new name");
   para.textContent = `Player 1: ${name}`;
 }
 ```
 
 Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) — `TypeError: para is undefined`.
+If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`.
 This means that the `para` object does not exist yet, so we can't add an event listener to it.
 
 > **Note:** This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
@@ -239,17 +224,17 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
 
    ```js
-   document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener("DOMContentLoaded", () => {
      function createParagraph() {
-       const para = document.createElement('p');
-       para.textContent = 'You clicked the button!';
+       const para = document.createElement("p");
+       para.textContent = "You clicked the button!";
        document.body.appendChild(para);
      }
 
-     const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
      for (const button of buttons) {
-       button.addEventListener('click', createParagraph);
+       button.addEventListener("click", createParagraph);
      }
    });
    ```
@@ -278,15 +263,15 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 
    ```js
    function createParagraph() {
-     const para = document.createElement('p');
-     para.textContent = 'You clicked the button!';
+     const para = document.createElement("p");
+     para.textContent = "You clicked the button!";
      document.body.appendChild(para);
    }
 
-   const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
    for (const button of buttons) {
-     button.addEventListener('click', createParagraph);
+     button.addEventListener("click", createParagraph);
    }
    ```
 
@@ -304,8 +289,8 @@ It might look something like this:
 
 ```js example-bad
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -330,10 +315,10 @@ You can then loop through the buttons, assigning a handler for each using `addEv
 The code for this is shown below:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 
@@ -356,7 +341,7 @@ This could cause an error, so we've used some constructs to get around it.
 In the internal example, you can see this structure around the code:
 
 ```js
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // …
 });
 ```
@@ -425,7 +410,7 @@ Scripts loaded using the `defer` attribute (see below) will run in the order the
 ```
 
 In the second example, we can be sure that `jquery.js` will load before `script2.js` and `script3.js` and that `script2.js` will load before `script3.js`.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one of more elements on the page).
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
 
 To summarize:
 
@@ -463,8 +448,8 @@ So for example, we could annotate our last demo's JavaScript with comments like 
 // Function: creates a new paragraph and appends it to the bottom of the HTML body.
 
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -475,10 +460,10 @@ function createParagraph() {
   When any button is pressed, the createParagraph() function will be run.
 */
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 
@@ -494,15 +479,3 @@ JavaScript may seem a bit daunting right now, but don't worry — in this course
 In the next article, we will [plunge straight into the practical](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash), getting you to jump straight in and build your own JavaScript examples.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

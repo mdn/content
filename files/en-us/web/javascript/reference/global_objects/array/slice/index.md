@@ -2,18 +2,12 @@
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Array.slice
 ---
 
 {{JSRef}}
 
-The **`slice()`** method returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
+The **`slice()`** method of {{jsxref("Array")}} instances returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
 an array into a new array object selected from `start` to `end`
 (`end` not included) where `start` and `end` represent
 the index of items in that array. The original array will not be modified.
@@ -98,7 +92,7 @@ console.log("newCar[0].color =", newCar[0].color);
 
 This script writes:
 
-```
+```plain
 myCar = [
   { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } },
   2,
@@ -123,6 +117,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 33, // ignored by slice() since length is 3
 };
 console.log(Array.prototype.slice.call(arrayLike, 1, 3));
 // [ 3, 4 ]
@@ -161,6 +156,12 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 
 ## See also
 
+- [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.splice()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("TypedArray.prototype.slice()")}}
+- {{jsxref("String.prototype.slice()")}}

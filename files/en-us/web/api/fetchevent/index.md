@@ -2,14 +2,6 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 page-type: web-api-interface
-tags:
-  - API
-  - FetchEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
 browser-compat: api.FetchEvent
 ---
 
@@ -22,7 +14,7 @@ This is the event type for `fetch` events dispatched on the {{domxref("ServiceWo
 ## Constructor
 
 - {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
-  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to `fetch` event callbacks.
+  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects and provides them to `fetch` event callbacks.
 
 ## Instance properties
 
@@ -30,6 +22,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 - {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
+- {{domxref("FetchEvent.handled")}} {{ReadOnlyInline}}
+  - : A promise that is pending while the event has not been handled, and fulfilled once it has.
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
 - {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
@@ -75,7 +69,7 @@ self.addEventListener("fetch", (event) => {
 
       // If we didn't find a match in the cache, use the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```
@@ -90,5 +84,6 @@ self.addEventListener("fetch", (event) => {
 
 ## See also
 
+- [`fetch` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

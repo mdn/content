@@ -1,15 +1,8 @@
 ---
-title: PointerEvent.twist
+title: "PointerEvent: twist property"
+short-title: twist
 slug: Web/API/PointerEvent/twist
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - twist
 browser-compat: api.PointerEvent.twist
 ---
 
@@ -32,15 +25,19 @@ When a {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, d
 depending on the value of the event's `twist` property.
 
 ```js
-someElement.addEventListener('pointerdown', (event) => {
-  if (event.twist === 0) {
-    // No twist
-    process_no_twist(event);
-  } else {
-    // Default
-    process_twist(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.twist === 0) {
+      // No twist
+      process_no_twist(event);
+    } else {
+      // Default
+      process_twist(event);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

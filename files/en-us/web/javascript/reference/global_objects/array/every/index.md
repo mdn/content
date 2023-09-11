@@ -2,19 +2,12 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
 
 {{JSRef}}
 
-The **`every()`** method tests whether
+The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
@@ -23,43 +16,26 @@ returns a Boolean value.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-every((element) => { /* … */ })
-every((element, index) => { /* … */ })
-every((element, index, array) => { /* … */ })
-
-// Callback function
 every(callbackFn)
 every(callbackFn, thisArg)
-
-// Inline callback function
-every(function (element) { /* … */ })
-every(function (element, index) { /* … */ })
-every(function (element, index, array) { /* … */ })
-every(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `every()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for an array element, in which case `false` is immediately returned.
 
 ## Description
 
@@ -83,7 +59,7 @@ The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ### Testing size of all array elements
 
-The following example tests whether all elements in the array are bigger than 10.
+The following example tests whether all elements in the array are bigger than 9.
 
 ```js
 function isBigEnough(element, index, array) {
@@ -172,7 +148,7 @@ arr.every((elem, index, arr) => {
 
 ### Calling every() on non-array objects
 
-The `every()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `false`.
+The `every()` method reads the `length` property of `this` and then accesses each property with a nonnegative integer key less than `length` until they all have been accessed or `callbackFn` returns `false`.
 
 ```js
 const arrayLike = {
@@ -180,6 +156,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: 345, // ignored by every() since length is 3
 };
 console.log(
   Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
@@ -197,6 +174,8 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.find()")}}

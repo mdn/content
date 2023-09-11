@@ -1,13 +1,8 @@
 ---
-title: SVGMarkerElement.preserveAspectRatio
+title: "SVGMarkerElement: preserveAspectRatio property"
+short-title: preserveAspectRatio
 slug: Web/API/SVGMarkerElement/preserveAspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - preserveAspectRatio
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.preserveAspectRatio
 ---
 

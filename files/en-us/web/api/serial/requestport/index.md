@@ -1,14 +1,10 @@
 ---
-title: Serial.requestPort()
+title: "Serial: requestPort() method"
+short-title: requestPort()
 slug: Web/API/Serial/requestPort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestPort
-  - Serial
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Serial.requestPort
 ---
 
@@ -46,7 +42,7 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 
 - `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature or a user permission prompt was denied.
-- `AbortError` {{domxref("DOMException")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
 
 ## Examples
@@ -54,13 +50,16 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 The following example shows a filter being passed to `requestPort()` with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.
 
 ```js
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // Connect to `port` or add it to the list of available ports.
-  }).catch((e) => {
-    // The user didn't select a port.
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // Connect to `port` or add it to the list of available ports.
+    })
+    .catch((e) => {
+      // The user didn't select a port.
+    });
 });
 ```
 

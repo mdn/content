@@ -1,9 +1,7 @@
 ---
 title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
-tags:
-  - Firefox
-  - Firefox 11
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -50,8 +48,8 @@ _No change._
 
 ### WebSocket
 
-- [WebSocket](/en-US/docs/Web/API/WebSockets_API) API now supports binary messages (see {{bug("676439")}}).
-- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see {{bug("666349")}} and {{bug("695635")}}).
+- [WebSocket](/en-US/docs/Web/API/WebSockets_API) API now supports binary messages (see [Firefox bug 676439](https://bugzil.la/676439)).
+- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see [Firefox bug 666349](https://bugzil.la/666349) and [Firefox bug 695635](https://bugzil.la/695635)).
 - Previously, messages sent and received using WebSockets in Firefox were limited to 16 MB in size; they may now be up to 2 GB (although memory capacity limitations may prevent them from being that large, Firefox supports it).
 
 ### IndexedDB
@@ -73,10 +71,10 @@ _No change._
 - Previous to Firefox 11, object store {{domxref("IDBObjectStore.autoIncrement","autoIncrement")}} counters were shared across all object stores for a given database, whereas per spec each object store should have a separate counter. This is now fixed.
 - It is now possible to {{domxref("IDBObjectStore.createIndex","create an index")}} with an empty `keyPath`.
 - It is now possible to create a multi-entry index (see [`IDBObjectStore.createIndex` parameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} handler has been added.
+- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an `onabort` handler has been added.
 - IndexedDB can now be used to store files/blobs.
 - IndexedDB now supports complex key paths, e.g. `foo.bar` to access property `bar` of property `foo`.
-- IndexedDB can now accept an array as a `keyPath` when creating an {{domxref("IDBDatabase.createObjectStore()","object store")}} or an {{domxref("IDBObjectStore.createIndex()","index")}} ({{bug("694138")}}.)
+- IndexedDB can now accept an array as a `keyPath` when creating an {{domxref("IDBDatabase.createObjectStore()","object store")}} or an {{domxref("IDBObjectStore.createIndex()","index")}} ([Firefox bug 694138](https://bugzil.la/694138).)
 
 ### Network
 
@@ -95,7 +93,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- `readInputStreamToString()` has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 
@@ -114,7 +112,7 @@ _No change._
 The following interfaces were implementation details that are no longer needed:
 
 - `nsICharsetResolver`
-- `nsIDOMNSElement`, see [bug707576](https://bugzilla.mozilla.org/show_bug.cgi?id=707576), use `nsIDOMElement` instead.
+- `nsIDOMNSElement`, see [bug707576](https://bugzil.la/707576), use `nsIDOMElement` instead.
 
 ### Theme-related changes
 

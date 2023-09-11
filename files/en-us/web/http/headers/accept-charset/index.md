@@ -1,12 +1,7 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 ---
 
 {{HTTPSidebar}}
@@ -15,7 +10,7 @@ tags:
 
 The **`Accept-Charset`** request HTTP header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
 
-UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To [guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), all browsers omit the `Accept-Charset` header. Chrome, Firefox, Internet Explorer, Opera, and Safari abandoned this header.
+UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To [guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), all browsers omit the `Accept-Charset` header.
 
 Today, `Accept-Charset` is most notable for being one of several [forbidden header names](/en-US/docs/Glossary/Forbidden_header_name).
 

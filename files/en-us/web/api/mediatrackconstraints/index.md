@@ -2,21 +2,6 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-tags:
-  - API
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Reference
-  - Screen Sharing
-  - Screen Sharing API
-  - Sharing
-  - WebRTC
-  - screen
 browser-compat: api.MediaTrackConstraints
 ---
 
@@ -168,9 +153,10 @@ These constraints apply to the `video` property of the object passed into {{domx
       - : The stream contains a single window selected by the user for sharing.
 
 - {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
+
   - : A [`ConstrainBoolean`](#constrainboolean) value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.
 
-- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}}
+- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
   - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
 ## Specifications

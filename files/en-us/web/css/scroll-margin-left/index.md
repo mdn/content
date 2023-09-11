@@ -2,15 +2,6 @@
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Scroll margin left
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-left
 browser-compat: css.properties.scroll-margin-left
 ---
 
@@ -37,7 +28,7 @@ scroll-margin-left: unset;
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the left edge of the scroll container.
 
 ## Formal definition
@@ -58,5 +49,5 @@ scroll-margin-left: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

@@ -1,20 +1,12 @@
 ---
-title: CSSMathValue.operator
+title: "CSSMathValue: operator property"
+short-title: operator
 slug: Web/API/CSSMathValue/operator
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathValue
-  - Experimental
-  - Houdini
-  - Operator
-  - Property
-  - Reference
 browser-compat: api.CSSMathValue.operator
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathValue.operator`** read-only
 property of the {{domxref("CSSMathValue")}} interface indicates the operator that the
@@ -58,12 +50,12 @@ div {
 We add the JavaScript
 
 ```js
-const styleMap = document.querySelector('div').computedStyleMap();
+const styleMap = document.querySelector("div").computedStyleMap();
 
-console.log(styleMap.get('width'));                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
-console.log(styleMap.get('width').values);            // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}
-console.log(styleMap.get('width').operator);          // 'sum'
-console.log(styleMap.get('width').values[1].operator); // 'negate'
+console.log(styleMap.get("width")); // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log(styleMap.get("width").values); // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}
+console.log(styleMap.get("width").operator); // 'sum'
+console.log(styleMap.get("width").values[1].operator); // 'negate'
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

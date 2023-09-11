@@ -2,25 +2,20 @@
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.concat
 ---
 
 {{JSRef}}
 
-The **`concat()`** method concatenates
-the string arguments to the calling string and returns a new string.
+The **`concat()`** method of {{jsxref("String")}} values concatenates
+the string arguments to this string and returns a new string.
 
 {{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
 ## Syntax
 
 ```js-nolint
+concat()
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, /* …, */ strN)
@@ -28,7 +23,7 @@ concat(str1, str2, /* …, */ strN)
 
 ### Parameters
 
-- `strN`
+- `str1`, …, `strN`
   - : One or more strings to concatenate to `str`.
 
 ### Return value
@@ -78,4 +73,4 @@ const greetList = ["Hello", " ", "Venkat", "!"];
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

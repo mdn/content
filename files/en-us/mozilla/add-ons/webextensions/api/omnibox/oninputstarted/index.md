@@ -1,15 +1,7 @@
 ---
 title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputStarted
+page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputStarted
 ---
 
@@ -29,7 +21,7 @@ browser.omnibox.onInputStarted.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,8 +32,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. The function will be passed no arguments.
+- `listener`
+  - : The function called when this event occurs. The function is passed no arguments.
 
 ## Browser compatibility
 
@@ -51,7 +43,7 @@ Events have three functions:
 
 ```js
 browser.omnibox.onInputStarted.addListener(() => {
-  console.log("User has started interacting with me.")
+  console.log("User has started interacting with me.");
 });
 ```
 

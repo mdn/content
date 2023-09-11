@@ -1,17 +1,11 @@
 ---
-title: FileSystemEntry.getMetadata()
+title: "FileSystemEntry: getMetadata() method"
+short-title: getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - getMetadata
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.getMetadata
 ---
 
@@ -57,15 +51,25 @@ This example checks the size of a log file in a temporary folder and, if it exce
 megabyte, moves it into a different directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
-  fileEntry.getMetadata((metadata) => {
-    if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, (dirEntry) => {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (metadata.size > 1048576) {
+        workingDirectory.getDirectory(
+          "log",
+          {},
+          (dirEntry) => {
+            fileEntry.moveTo(dirEntry);
+          },
+          handleError,
+        );
+      }
+    });
+  },
+  handleError,
+);
 ```
 
 ## Browser compatibility

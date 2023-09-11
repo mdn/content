@@ -2,19 +2,12 @@
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.set
 ---
 
 {{JSRef}}
 
-The **`set()`** method stores multiple values in the typed
+The **`set()`** method of {{jsxref("TypedArray")}} instances stores multiple values in the typed
 array, reading input values from a specified array.
 
 {{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
@@ -46,12 +39,12 @@ set(typedarray, targetOffset)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if one of the two conditions is met:
+  - : Thrown in one of the following cases:
     - An element will be stored beyond the end of the typed array, either because `targetOffset` is too large or because `array` or `typedarray` is too large.
     - `targetOffset` is negative.
 
@@ -79,6 +72,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

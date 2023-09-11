@@ -2,20 +2,12 @@
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - indexof
-  - Polyfill
 browser-compat: javascript.builtins.Array.indexOf
 ---
 
 {{JSRef}}
 
-The **`indexOf()`** method returns the first index at which a
+The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which a
 given element can be found in the array, or -1 if it is not present.
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
@@ -39,11 +31,11 @@ indexOf(searchElement, fromIndex)
 
 ### Return value
 
-The first index of the element in the array; **-1** if not found.
+The first index of the element in the array; `-1` if not found.
 
 ## Description
 
-The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator).
+The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) values are never compared as equal, so `indexOf()` always returns `-1` when `searchElement` is `NaN`.
 
 The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
@@ -62,6 +54,13 @@ array.indexOf(7); // -1
 array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
+```
+
+You cannot use `indexOf()` to search for `NaN`.
+
+```js
+const array = [NaN];
+array.indexOf(NaN); // -1
 ```
 
 ### Finding all the occurrences of an element
@@ -109,7 +108,7 @@ console.log([1, , 3].indexOf(undefined)); // -1
 
 ### Calling indexOf() on non-array objects
 
-The `indexOf()` method reads the `length` property of `this` and then accesses each integer index.
+The `indexOf()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -117,6 +116,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by indexOf() since length is 3
 };
 console.log(Array.prototype.indexOf.call(arrayLike, 2));
 // 0
@@ -135,6 +135,10 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("String.prototype.indexOf()")}}

@@ -1,11 +1,7 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
 ---
 
@@ -15,7 +11,7 @@ The **`<mmultiscripts>`** [MathML](/en-US/docs/Web/MathML) element is used to at
 
 MathML uses the syntax below, that is a base expression, followed by an arbitrary number of postsubscript-postsuperscript pairs (attached in the given order) optionally followed by an `<mprescripts>` and an arbitrary number of presubscript-presuperscript pairs (attached in the given order). In addition, empty `<mrow>` elements can be used to represent absent scripts.
 
-```html
+```html-nolint
 <mmultiscripts>
   base
   postsubscript1 postsuperscript1
@@ -41,7 +37,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the superscript up.
 
-> **Note:** For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> **Note:** For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -49,7 +45,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Children after the `<mprescripts/>` element are placed as pre-scripts (before the base expression):
 
-```html
+```html-nolint
 <math display="block">
   <mmultiscripts>
     <mi>X</mi>      <!-- base expression -->
@@ -68,7 +64,7 @@ Children after the `<mprescripts/>` element are placed as pre-scripts (before th
 
 Empty `<mrow>` elements can be used to represent absent scripts:
 
-```html
+```html-nolint
 <math display="block">
   <mmultiscripts>
     <mi>X</mi>      <!-- base expression -->

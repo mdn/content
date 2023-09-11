@@ -1,14 +1,8 @@
 ---
-title: 'HTMLSlotElement: slotchange event'
+title: "HTMLSlotElement: slotchange event"
+short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Components
-  - events
-  - shadow dom
-  - slotchange
 browser-compat: api.HTMLSlotElement.slotchange_event
 ---
 
@@ -27,9 +21,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('slotchange', (event) => {});
+addEventListener("slotchange", (event) => {});
 
-onslotchange = (event) => { };
+onslotchange = (event) => {};
 ```
 
 ## Event type
@@ -39,19 +33,21 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-element.setAttribute('slot', slotName);
+element.setAttribute("slot", slotName);
 // element.assignedSlot = $slot
-element.removeAttribute('slot');
+element.removeAttribute("slot");
 // element.assignedSlot = null
 ```
 
 The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', (e) => {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

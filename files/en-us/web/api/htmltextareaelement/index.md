@@ -2,12 +2,6 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLTextAreaElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLTextAreaElement
 ---
 
@@ -25,7 +19,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>accessKey</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("accesskey", "textarea")}} attribute.
+        <a href="/en-US/docs/Web/HTML/Element/textarea#accesskey"><code>accesskey</code></a> attribute.
       </td>
     </tr>
     <tr>
@@ -45,7 +39,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>autofocus</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("autofocus", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#autofocus"><code>autofocus</code></a> attribute,
         indicating that the control should have input focus when the page loads
       </td>
     </tr>
@@ -53,7 +47,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>cols</code></td>
       <td>
         <code><em>unsigned long</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("cols", "textarea")}} attribute, indicating
+        <a href="/en-US/docs/Web/HTML/Element/textarea#cols"><code>cols</code></a> attribute, indicating
         the visible width of the text area.
       </td>
     </tr>
@@ -69,7 +63,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>disabled</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("disabled", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#disabled"><code>disabled</code></a> attribute,
         indicating that the control is not available for interaction.
       </td>
     </tr>
@@ -78,7 +72,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td>
         <code><em>object</em>:</code> Returns a reference to the parent form
         element. If this element is not contained in a form element, it can be
-        the {{htmlattrxref("id", "form")}} attribute of any
+        the <a href="/en-US/docs/Web/HTML/Element/form#id"><code>id</code></a> attribute of any
         {{HTMLElement("form")}} element in the same document or the
         value <code>null</code>.
       </td>
@@ -91,7 +85,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>maxLength</code></td>
       <td>
         <code><em>long</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("maxlength", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#maxlength"><code>maxlength</code></a> attribute,
         indicating the maximum number of characters the user can enter. This
         constraint is evaluated only when the value changes.
       </td>
@@ -100,7 +94,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>minLength</code></td>
       <td>
         <code><em>long</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("minlength", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#minlength"><code>minlength</code></a> attribute,
         indicating the minimum number of characters the user can enter. This
         constraint is evaluated only when the value changes.
       </td>
@@ -109,7 +103,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>name</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("name", "textarea")}} attribute, containing
+        <a href="/en-US/docs/Web/HTML/Element/textarea#name"><code>name</code></a> attribute, containing
         the name of the control.
       </td>
     </tr>
@@ -117,7 +111,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>placeholder</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("placeholder", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#placeholder"><code>placeholder</code></a> attribute,
         containing a hint to the user about what to enter in the control.
       </td>
     </tr>
@@ -125,7 +119,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>readOnly</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("readonly", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#readonly"><code>readonly</code></a> attribute,
         indicating that the user cannot modify the value of the control.
       </td>
     </tr>
@@ -133,7 +127,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>required</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("required", "textarea")}} attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#required"><code>required</code></a>) attribute,
         indicating that the user must specify a value before submitting the
         form.
       </td>
@@ -142,7 +136,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>rows</code></td>
       <td>
         <code><em>unsigned long</em>:</code> Returns / Sets the element's
-        {{htmlattrxref("rows", "textarea")}} attribute, indicating
+        <a href="/en-US/docs/Web/HTML/Element/textarea#rows><code>rows</code></a> attribute, indicating
         the number of visible text lines for the control.
       </td>
     </tr>
@@ -188,7 +182,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
     <tr>
       <td><code>textLength</code> {{ReadOnlyInline}}</td>
       <td>
-        <code><em>long</em>:</code> Returns the codepoint length of the
+        <code><em>long</em>:</code> Returns the code point length of the
         control's <code>value</code>. Same as reading <code>value.length</code>
       </td>
     </tr>
@@ -238,7 +232,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>wrap</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the
-        {{htmlattrxref("wrap", "textarea")}} HTML attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#wrap"><code>wrap</code></a> HTML attribute,
         indicating how the control wraps text.
       </td>
     </tr>

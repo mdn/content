@@ -1,14 +1,7 @@
 ---
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
@@ -43,7 +36,7 @@ In the modern world of web development, learning about server-side development i
 
 ## What is server-side website programming?
 
-Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an **HTTP request** is sent from your browser to the target server.
+Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an **HTTP request** is sent from your browser to the target server.
 
 The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a [query string](https://en.wikipedia.org/wiki/Query_string)), as POST data (data sent by the [HTTP POST method](/en-US/docs/Web/HTTP/Methods/POST)), or in associated {{glossary("Cookie", "cookies")}}.
 
@@ -95,7 +88,7 @@ Developers typically write their code using **web frameworks**. Web frameworks a
 
 Again, while both client and server-side code use frameworks, the domains are very different, and hence so are the frameworks. Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of "common" web server functionality that you might otherwise have to implement yourself (e.g. support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
 
-> **Note:** Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.
+> **Note:** Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple website UI.
 >
 > In contrast, you would almost never consider writing the server-side component of a web app without a framework — implementing a vital feature like an HTTP server is really hard to do from scratch in say Python, but Python web frameworks like Django provide one out of the box, along with other very useful tools.
 
@@ -194,10 +187,3 @@ Lastly, you should understand that server-side code can be written in a number o
 In a future article we'll help you choose the best web framework for your first site. Here we'll take you through the main client-server interactions in just a little more detail.
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

@@ -2,19 +2,12 @@
 title: "@page"
 slug: Web/CSS/@page
 page-type: css-at-rule
-tags:
-  - "@page"
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.page
 ---
 
 {{CSSRef}}
 
-The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a printed page property. It targets and modifies the page's dimensions, page orientation, and margins. The **`@page`** at-rule can be used to target all pages in a print-out, or even specific ones using its various pseudo-classes.
+The **`@page`** at-rule is a CSS at-rule used to modify different aspects of printed pages. It targets and modifies the page's dimensions, orientation, and margins. The `@page` at-rule can be used to target all pages in a print-out or a subset using its various pseudo-classes.
 
 ## Syntax
 
@@ -35,42 +28,35 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
   size: 11in;
   margin-top: 4in;
 }
+
+/* Targets all selectors with `page: wide;` set */
+@page wide {
+  size: a4 landscape;
+}
+
+@page {
+  /* margin box at top right showing page number */
+  @top-right {
+    content: "Page " counter(pageNumber);
+  }
+}
 ```
 
-### Descriptors
+### Page properties
 
+The `@page` at-rule can contain only [page descriptors](#page-descriptors) and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
+
+- [`margin`](/en-US/docs/Web/CSS/margin)
+  - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/margin-top), [`margin-right`](/en-US/docs/Web/CSS/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/margin-left) can also be used.
+- [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
+  - : Specifies the orientation of the page. This does not affect the layout of the page; the rotation is applied after the layout in the output medium.
 - [`size`](/en-US/docs/Web/CSS/@page/size)
   - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
-## Description
+The specification mentions following CSS properties to be applicable to page boxes via @page at-rule. But these have _not been supported_ by any user agent yet.
 
-> **Note:** This documentation lists out features yet to be implemented across UAs, but they are stated in the official documentation. At the time of this writing, the only CSS property shown to have visible on both the at-rule and its pseudo-classes is the `margin` property.
-
-You can't change all CSS properties with **`@page`**. You can only change the margin of the document. Attempts to change any other CSS properties will be ignored.
-
-The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
-
-> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
-
-## Formal syntax
-
-{{csssyntax}}
-
-Where the `<page-body>` includes:
-
-- page-properties
-- page-margin properties
-
-and `<pseudo-selector>` represents these pseudo-classes:
-
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
-
-> **Note:** The **`@page`** at-rule can only contain **page-properties** and **margin at-rules**, and the **margin at-rules** can only contain **page-margin properties**
-
-### page-properties
+<details>
+<summary>Remaining page properties</summary>
 
 | Feature               | CSS properties        |
 | --------------------- | --------------------- |
@@ -141,14 +127,47 @@ and `<pseudo-selector>` represents these pseudo-classes:
 |                       | min-width             |
 |                       | max-width             |
 
-### margin at-rules
+</details>
 
-The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page and make changes based on the properties or content set in the block of code:
+## Description
+
+The @page rule defines properties of the page box. The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
+
+> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+
+### Related properties
+
+The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
+
+- {{Cssxref("page")}}
+  - : Allows a selector to use a user defined **named page**
+
+## Formal syntax
+
+{{csssyntax}}
+
+Where the `<page-body>` includes:
+
+- page-properties
+- page-margin properties
+
+and `<pseudo-selector>` represents these pseudo-classes:
+
+- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
+- {{Cssxref(":first")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}
+
+## Margin at-rules
+
+> **Warning:** The margin at-rules have not been implemented by any user agent (updated: August 2023).
+
+The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
 ```css
 @page {
   @top-left {
-    <page-margin-properties>
+    /* page-margin-properties */
   }
 }
 ```
@@ -157,60 +176,31 @@ The margin at-rules are used inside of the `@page` at-rule. They each target a d
 
 Other margin-at rules include:
 
-```
-@top-left-corner {
-  <page-margin-properties>
-}
-@top-left {
-  <page-margin-properties>
-}
-@top-center {
-  <page-margin-properties>
-}
-@top-right {
-  <page-margin-properties>
-}
-@top-right-corner {
-  <page-margin-properties>
-}
-@bottom-left-corner {
-  <page-margin-properties>
-}
-@bottom-left {
-  <page-margin-properties>
-}
-@bottom-center {
-  <page-margin-properties>
-}
-@bottom-right {
-  <page-margin-properties>
-}
-@bottom-right-corner {
-  <page-margin-properties>
-}
-@left-top {
-  <page-margin-properties>
-}
-@left-middle {
-  <page-margin-properties>
-}
-@left-bottom {
-  <page-margin-properties>
-}
-@right-top {
-  <page-margin-properties>
-}
-@right-middle {
-  <page-margin-properties>
-}
-@right-bottom {
-  <page-margin-properties>
-}
+```css-nolint
+@top-left-corner
+@top-left
+@top-center
+@top-right
+@top-right-corner
+@bottom-left-corner
+@bottom-left
+@bottom-center
+@bottom-right
+@bottom-right-corner
+@left-top
+@left-middle
+@left-bottom
+@right-top
+@right-middle
+@right-bottom
 ```
 
-#### page-margin properties
+#### Page-margin properties
 
 The page-margin properties are the set of CSS properties can be set in any individual margin at-rule. They include:
+
+<details>
+<summary>Page-margin properties</summary>
 
 | Feature               | CSS properties        |
 | --------------------- | --------------------- |
@@ -284,13 +274,26 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 |                       | max-width             |
 | z-index               | z-index               |
 
+</details>
+
+## Named pages
+
+Named pages enable performing per-page layout and adding [page-breaks](/en-US/docs/Web/CSS/CSS_fragmentation) in a declarative manner when printing.
+
+Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
+
+An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#examples) examples.
+
 ## Examples
 
-The example below prints out 5 different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
+### Using the size property to change the page orientation
 
-HTML:
+This example shows how to split the `<section>`s into individual pages in `landscape` format with each page having a 20% margin when printed.
+
+#### HTML
 
 ```html
+<button>Print Webpage</button>
 <article>
   <section>
     <h2>Header</h2>
@@ -319,30 +322,10 @@ HTML:
       velit.
     </p>
   </section>
-  <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
-  </section>
-  <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
-  </section>
 </article>
-
-<button>Print Webpage</button>
 ```
 
-CSS:
+#### CSS
 
 ```css
 @page {
@@ -350,9 +333,22 @@ CSS:
   margin: 20%;
 }
 
+section {
+  page-break-after: always;
+  break-after: page;
+}
+
+@media print {
+  button {
+    display: none;
+  }
+}
+```
+
+```css hidden
 body {
-  font-family: "Helvetica";
-  background-color: rgb(110 110 119);
+  font-family: "Helvetica", sans-serif;
+  background-color: silver;
 }
 
 article {
@@ -363,23 +359,18 @@ section {
   display: grid;
   background-color: white;
   border-radius: 0.6rem;
-  margin-block-end: 1.5rem;
   justify-items: center;
   padding: 1rem;
   width: 50%;
-  page-break-after: always;
-  break-after: page;
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
-}
-
-section {
-  page-break-after: always;
-  break-after: page;
+  margin: 0 auto;
+  margin-block-end: 1.5rem;
+  border: 1px dashed;
 }
 ```
 
-JavaScript:
+#### JavaScript
 
 ```js
 const button = document.querySelector("button");
@@ -389,14 +380,16 @@ button.addEventListener("click", () => {
 });
 ```
 
-Print out the page below to see the output of this example:
-{{ EmbedLiveSample('Examples', '100%', 520) }}
+#### Result
+
+Clicking the print button will launch a print dialog with the html sections split into individual pages.
+{{ EmbedLiveSample('Using the size property to change the page orientation', '100%', 520) }}
 
 ### @page pseudo-class examples
 
 Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
-- {{Cssxref(":blank")}}
+- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
@@ -411,4 +404,8 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
+- The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
+- The {{Cssxref("page")}} property
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture)

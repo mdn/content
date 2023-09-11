@@ -1,21 +1,8 @@
 ---
-title: HTMLImageElement.decode()
+title: "HTMLImageElement: decode() method"
+short-title: decode()
 slug: Web/API/HTMLImageElement/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Decode
-  - Graphics
-  - HTML DOM
-  - HTMLImageElement
-  - Images
-  - Loading
-  - Method
-  - Performance
-  - Reference
-  - async
-  - asynchronous
-  - decoding
 browser-compat: api.HTMLImageElement.decode
 ---
 
@@ -23,8 +10,8 @@ browser-compat: api.HTMLImageElement.decode
 
 The **`decode()`**
 method of the {{domxref("HTMLImageElement")}} interface returns a
-{{jsxref("Promise")}} that resolves when the image is decoded and it is safe to append
-the image to the DOM.
+{{jsxref("Promise")}} that resolves once the image is decoded and it is safe to append
+it to the DOM.
 
 This can be used to initiate loading of the image prior
 to attaching it to an element in the DOM (or adding it to the DOM as a new element), so
@@ -44,7 +31,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} which is resolved once the image data is ready to be used.
+A {{jsxref('Promise')}} that fulfills with `undefined` once the image data is ready to be used.
 
 ### Exceptions
 
@@ -64,23 +51,53 @@ low-resolution image with the full-resolution one that's now available.
 
 ## Examples
 
+### Basic usage
+
 The following example shows how to use the `decode()` method to control when
-an image is appended to the DOM. Without a {{jsxref('Promise')}}-returning method, you
-would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler, such as by using
-the {{domxref("HTMLImageElement.load_event", "img.onload")}} event handler, and by
-handling the error in the {{domxref("Element/error_event", "error")}} event's handler.
+an image is appended to the DOM.
 
 ```js
 const img = new Image();
-img.src = 'nebula.jpg';
-img.decode()
-.then(() => {
-  document.body.appendChild(img);
-})
-.catch((encodingError) => {
-  // Do something with the error.
-})
+img.src = "nebula.jpg";
+img
+  .decode()
+  .then(() => {
+    document.body.appendChild(img);
+  })
+  .catch((encodingError) => {
+    // Do something with the error.
+  });
 ```
+
+> **Note:** Without a {{jsxref('Promise')}}-returning method, you
+> would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler,
+> and handle the error in the {{domxref("Element/error_event", "error")}} event's handler.
+
+### Avoiding empty images
+
+In the below example, you'll likely get an empty image shown on the page as the image is downloaded:
+
+```js
+const img = new Image();
+img.src = "img/logo.png";
+document.body.appendChild(img);
+```
+
+Using `decode()` will delay inserting the image into the DOM until it is fully downloaded and decoded, thereby avoiding the empty image problem:
+
+```js
+async function getImage() {
+  const img = new Image();
+  img.src = "img/logo.png";
+  await img.decode();
+  document.body.appendChild(img);
+  const p = document.createElement("p");
+  p.textContent = "Image is fully loaded!";
+  document.body.appendChild(p);
+}
+```
+
+This is particularly useful if you're dynamically swapping an existing image for a new one, and also prevents unrelated paints outside of this code from being held up while the image is decoding.
 
 ## Specifications
 
@@ -89,3 +106,8 @@ img.decode()
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) on tunetheweb.com (2023)
+- The {{domxref("HTMLImageElement.decoding")}} property

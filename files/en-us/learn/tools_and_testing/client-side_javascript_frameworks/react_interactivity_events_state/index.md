@@ -1,17 +1,7 @@
 ---
-title: 'React interactivity: Events and state'
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - events
-  - interactivity
-  - state
+title: "React interactivity: Events and state"
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -50,9 +40,9 @@ With our component plan worked out, it's now time to start updating our app from
 If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:
 
 ```jsx
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   alert("hi!");
 });
 ```
@@ -60,10 +50,7 @@ btn.addEventListener('click', () => {
 In React, we write event handlers directly on the elements in our JSX, like this:
 
 ```jsx
-<button
-  type="button"
-  onClick={() => alert("hi!")}
->
+<button type="button" onClick={() => alert("hi!")}>
   Say hi!
 </button>
 ```
@@ -74,7 +61,7 @@ In the above example, we're adding an `onClick` attribute to the `<button>` elem
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 
-- The camel-cased nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
+- The {{Glossary("camel_case", "camel-cased")}} nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
 - All browser events follow this format in JSX – `on`, followed by the name of the event.
 
 Let's apply this to our app, starting in the `Form.js` component.
@@ -86,7 +73,7 @@ At the top of the `Form()` component function, create a function named `handleSu
 ```jsx
 function handleSubmit(e) {
   e.preventDefault();
-  alert('Hello, world!');
+  alert("Hello, world!");
 }
 ```
 
@@ -156,7 +143,7 @@ This is a lot to take in at once, so let's try it out. We're going to make ourse
 Write the following above your `handleSubmit()` function, inside `Form()`:
 
 ```jsx
-const [name, setName] = useState('Use hooks!');
+const [name, setName] = useState("Use hooks!");
 ```
 
 What's going on in this line of code?
@@ -183,7 +170,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.
 
 ```jsx
-const [name, setName] = useState('');
+const [name, setName] = useState("");
 ```
 
 ### Reading user input
@@ -205,7 +192,7 @@ function handleChange(e) {
   autoComplete="off"
   value={name}
   onChange={handleChange}
-/>
+/>;
 ```
 
 Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
@@ -339,7 +326,7 @@ Now you can use the browser to add a task to our data! Type anything into the fo
 
 **However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key…"
 
-We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
+We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny and it works.
 
 Make sure you're in the root directory of your application and run the following terminal command:
 
@@ -355,7 +342,7 @@ Now we can import `nanoid` into the top of `App.js` so we can use it to create u
 import { nanoid } from "nanoid";
 ```
 
-Now let's update `addTask()` so that each task ID becomes a prefix todo- plus a unique string generated by nanoid. Update your `newTask` constant declaration to this:
+Now let's update `addTask()` so that each task ID becomes a prefix `todo-` plus a unique string generated by nanoid. Update your `newTask` constant declaration to this:
 
 ```jsx
 const newTask = { id: `todo-${nanoid()}`, name, completed: false };
@@ -376,7 +363,7 @@ const headingText = `${taskList.length} tasks remaining`;
 This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
 
 ```jsx
-const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
 const headingText = `${taskList.length} ${tasksNoun} remaining`;
 ```
 
@@ -400,7 +387,7 @@ Add this just above your `taskList` constant declaration:
 
 ```jsx
 function toggleTaskCompleted(id) {
-  console.log(tasks[0])
+  console.log(tasks[0]);
 }
 ```
 
@@ -409,11 +396,11 @@ Next, we'll add `toggleTaskCompleted` to the props of each `<Todo />` component 
 ```jsx
 const taskList = tasks.map((task) => (
   <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-      toggleTaskCompleted={toggleTaskCompleted}
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+    toggleTaskCompleted={toggleTaskCompleted}
   />
 ));
 ```
@@ -431,7 +418,7 @@ Next, go over to your `Todo.js` component and add an `onChange` handler to your 
 
 Save everything and return to your browser and notice that our first task, Eat, is checked. Open your JavaScript console, then click on the checkbox next to Eat. It unchecks, as we expect. Your JavaScript console, however, will log something like this:
 
-```
+```plain
 Object { id: "task-0", name: "Eat", completed: true }
 ```
 
@@ -450,7 +437,7 @@ function toggleTaskCompleted(id) {
     if (id === task.id) {
       // use object spread to make a new object
       // whose `completed` prop has been inverted
-      return {...task, completed: !task.completed}
+      return { ...task, completed: !task.completed };
     }
     return task;
   });
@@ -472,7 +459,7 @@ Here we'll start by writing a `deleteTask()` function in your `App` component. L
 
 ```jsx
 function deleteTask(id) {
-  console.log(id)
+  console.log(id);
 }
 ```
 
@@ -499,8 +486,7 @@ Update the "Delete" button inside `Todo.js`, like so:
 <button
   type="button"
   className="btn btn__danger"
-  onClick={() => props.deleteTask(props.id)}
->
+  onClick={() => props.deleteTask(props.id)}>
   Delete <span className="visually-hidden">{props.name}</span>
 </button>
 ```
@@ -529,58 +515,3 @@ Try your app out again. Now you should be able to delete a task from your app!
 That's enough for one article. Here we've given you the lowdown on how React deals with events and handles state, and implemented functionality to add tasks, delete tasks, and toggle tasks as completed. We are nearly there. In the next article we'll implement functionality to edit existing tasks and filter the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

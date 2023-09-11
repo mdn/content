@@ -2,21 +2,14 @@
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.anchor
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-The **`anchor()`** method creates a string that embeds a string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
+The **`anchor()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 >

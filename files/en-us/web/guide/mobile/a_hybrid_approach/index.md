@@ -1,10 +1,7 @@
 ---
 title: A hybrid approach
 slug: Web/Guide/Mobile/A_hybrid_approach
-tags:
-  - Mobile
-  - Responsive Design
-  - Web Development
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}
@@ -33,7 +30,7 @@ One downside of mixing approaches is that it can lead to an increase in the numb
 
 Combining server-side and client-side techniques is something that is always worth considering; there are so many options that one must just weigh the pros and cons of each individual technique employed.
 
-In many cases, the added complexity of the hybrid approach is not even necessary. For example, you may not even need to adjust your content based on what actual device a user is using — just knowing whether a feature is present on their browser is often good enough. This is something you might be able to discern on the client-side using JavaScript feature detection from [Modernizr](https://modernizr.com/docs/#s2) or [Detect It](https://github.com/rafgraph/detect-it). It can't hurt to dig down and ask yourself which axis you are actually looking to adjust your content around.
+In many cases, the added complexity of the hybrid approach is not even necessary. For example, you may not even need to adjust your content based on what actual device a user is using — just knowing whether a feature is present on their browser is often good enough. This is something you can discern on the client-side using [JavaScript feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). It can't hurt to dig down and ask yourself which axis you are actually looking to adjust your content around.
 
 We've talked about incorporating server-side techniques into a responsive design, but there are even ways to use the hybrid approach if your use cases for mobile and desktop are very different. You could, for example, increase the flexibility of your separate site designs by incorporating media queries and a flexible layout. You may even be able to make your mobile site design adaptable enough to extend comfortably to tablets as well.
 

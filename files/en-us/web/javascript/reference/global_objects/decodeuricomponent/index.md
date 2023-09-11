@@ -2,10 +2,6 @@
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 page-type: javascript-function
-tags:
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.decodeURIComponent
 ---
 

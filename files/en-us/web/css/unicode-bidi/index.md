@@ -2,12 +2,6 @@
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
 page-type: css-property
-tags:
-  - BiDi
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.unicode-bidi
 ---
 

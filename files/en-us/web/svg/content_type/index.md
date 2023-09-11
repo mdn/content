@@ -2,12 +2,9 @@
 title: Content type
 slug: Web/SVG/Content_type
 page-type: guide
-tags:
-  - NeedsTechnicalReview
-  - SVG
-  - Types
-  - data types
 ---
+
+{{SVGRef}}
 
 SVG makes use of a number of data types. This article lists these types along with their syntax and descriptions of what they're used for.
 
@@ -33,7 +30,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The unit identifiers in such \<angle> values must be in lower case.
 
-    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle objects")}}.
+    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle")}} objects.
 
 ## Anything
 
@@ -173,7 +170,8 @@ SVG makes use of a number of data types. This article lists these types along wi
     http://example.com/someDrawing.svg#Lamppost
     ```
 
-    _IRIs_ are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    _IRIs_ are used in the {{SVGAttr("href")}} attribute.
+    Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
@@ -189,8 +187,8 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     SVG supports two types of _IRI_ references:
 
-    - **local _IRI_ references**, where the IRI reference does not contain an `<absoluteIRI>` or `<relativeIRI>` and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
-    - **non-local _IRI_ references**, where the _IRI_ reference does contain an `<absoluteIRI>` or `<relativeIRI>`.
+    - **local _IRI_ references**, where the IRI reference does not contain an \<absoluteIRI> or \<relativeIRI> and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
+    - **non-local _IRI_ references**, where the _IRI_ reference does contain an \<absoluteIRI> or \<relativeIRI>.
 
       For the full specification of IRI references in SVG, see [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference).
 
@@ -198,25 +196,19 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 - \<length>
 
-  - : A length is a distance measurement, given as a number along with a unit. Lengths are specified in one of two ways. When used in a stylesheet, a \<length> is defined as follows:
+  - : A length is a distance measurement, given as a number along with a unit.
+    The SVG2 specification aligns with CSS [`<length>`](/en-US/docs/Web/CSS/length) data types and units for the attribute syntax and values.
+    A length unit identifier must be provided and the values of the length unit identifiers are case-insensitive.
+    The syntax follows the CSS `<length>` syntax:
 
     ```plain
-    length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?
+    length ::= <number> (<absolute-length> | <relative-length>)?
     ```
 
-    [See the CSS2 specification](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units) for the meanings of the unit identifiers.
+    For SVG-specific properties defined in SVG1.1 and their corresponding presentation attributes, the unit identifiers in values are optional. If not provided, the length value represents a distance in the current user coordinate system. Length identifiers must be in lower case when used in presentation attributes for all properties whether they are defined in SVG or in CSS. This case sensitivity is relaxed in SVG2 to align with CSS.
 
-    For properties defined in CSS2, a length unit identifier must be provided. For length values in SVG-specific properties and their corresponding presentation attributes, the length unit identifier is optional. If not provided, the length value represents a distance in the current user coordinate system. In presentation attributes for all properties, whether defined in SVG1.1 or in CSS2, the length identifier, if specified, must be in lower case.
-
-    When lengths are used in an SVG attribute, a \<length> is instead defined as follows:
-
-    ```plain
-    length ::= number ("em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%")?
-    ```
-
-    The unit identifiers in such \<length> values must be in lower case.
-
-    Note that the non-property \<length> definition also allows a percentage unit identifier. The meaning of a percentage length value depends on the attribute for which the percentage length value has been specified. Two common cases are:
+    Note that the non-property \<length> definition also allows a percentage (`%`) unit identifier.
+    The meaning of a percentage length value depends on the attribute for which the percentage length value has been specified. Two common cases are:
 
     - when a percentage length value represents a percentage of the viewport width or height
     - when a percentage length value represents a percentage of the bounding box width or height on a given object.
@@ -294,7 +286,14 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 - \<paint>
 
-  - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} are specifications of the type of paint to use when filling or stroking a given graphics element. The available options and syntax for \<paint> are described in [Specifying paint](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint).
+  - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} define the type of paint to use when filling or stroking a given graphics element.
+    The available options and syntax for \<paint> are:
+
+    ```plain
+    paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
+    ```
+
+    The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
 
     Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
 

@@ -2,14 +2,6 @@
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 page-type: javascript-class
-tags:
-  - Class
-  - Date
-  - Epoch
-  - JavaScript
-  - Time
-  - Unix Epoch
-  - timeStamp
 browser-compat: javascript.builtins.Date
 ---
 
@@ -21,39 +13,185 @@ JavaScript **`Date`** objects represent a single moment in time in a platform-in
 
 ## Description
 
-### The ECMAScript epoch and timestamps
+### The epoch, timestamps, and invalid date
 
-A JavaScript date is fundamentally specified as the number of milliseconds that have elapsed since the [ECMAScript epoch](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range), which is defined as the midnight at the beginning of January 1, 1970, UTC (equivalent to the [UNIX epoch](https://en.wikipedia.org/wiki/Unix_time)).
+A JavaScript date is fundamentally specified as the time in milliseconds that has elapsed since the [epoch](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range), which is defined as the midnight at the beginning of January 1, 1970, UTC (equivalent to the [UNIX epoch](/en-US/docs/Glossary/Unix_time)). This timestamp is _timezone-agnostic_ and uniquely defines an instant in history.
 
-> **Note:** It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
+> **Note:** While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
-It should be noted that the maximum `Date` is not of the same value as the maximum safe integer (`Number.MAX_SAFE_INTEGER` is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE \~ September 13, 275760 CE) can be represented by the standard `Date` object (equivalent to ±8,640,000,000,000,000 milliseconds).
+The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This is the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
 
-### Date format and time zone conversions
+```js
+console.log(new Date(8.64e15).toString()); // "Sat Sep 13 275760 00:00:00 GMT+0000 (Coordinated Universal Time)"
+console.log(new Date(8.64e15 + 1).toString()); // "Invalid Date"
+```
 
-There are several methods available to obtain a date in various formats, as well as to perform time zone conversions. Particularly useful are the functions that output the date and time in Coordinated Universal Time (UTC), the global standard time defined by the World Time Standard. (This time is historically known as _Greenwich Mean Time_, as UTC lies along the meridian that includes London—and nearby Greenwich—in the United Kingdom.) The user's device provides the local time.
+There are various methods that allow you to interact with the timestamp stored in the date:
 
-In addition to methods to read and alter individual components of the local date and time (such as {{jsxref("Date/getDay", "getDay()")}} and {{jsxref("Date/setHours", "setHours()")}}), there are also versions of the same methods that read and manipulate the date and time using UTC (such as {{jsxref("Date/getUTCDay()", "getUTCDay()")}} and {{jsxref("Date/setUTCHours", "setUTCHours()")}}).
+- You can interact with the timestamp value directly using the {{jsxref("Date/getTime", "getTime()")}} and {{jsxref("Date/setTime", "setTime()")}} methods.
+- The {{jsxref("Date/valueOf", "valueOf()")}} and [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) (when passed `"number"`) methods — which are automatically called in [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) — return the timestamp, causing `Date` objects to behave like their timestamps when used in number contexts.
+- All static methods ({{jsxref("Date.now()")}}, {{jsxref("Date.parse()")}}, and {{jsxref("Date.UTC()")}}) return timestamps instead of `Date` objects.
+- The {{jsxref("Date/Date", "Date()")}} constructor can be called with a timestamp as the only argument.
+
+### Date components and time zones
+
+A date is represented internally as a single number, the _timestamp_. When interacting with it, the timestamp needs to be interpreted as a structured date-and-time representation. There are always two ways to interpret a timestamp: as a local time or as a Coordinated Universal Time (UTC), the global standard time defined by the World Time Standard. The local timezone is not stored in the date object, but is determined by the host environment (user's device).
+
+> **Note:** UTC should not be confused with the [Greenwich Mean Time](https://en.wikipedia.org/wiki/Greenwich_Mean_Time) (GMT), because they are not always equal — this is explained in more detail in the linked Wikipedia page.
+
+For example, the timestamp 0 represents a unique instant in history, but it can be interpreted in two ways:
+
+- As a UTC time, it is midnight at the beginning of January 1, 1970, UTC,
+- As a local time in New York (UTC-5), it is 19:00:00 on December 31, 1969.
+
+The {{jsxref("Date/getTimezoneOffset", "getTimezoneOffset()")}} method returns the difference between UTC and the local time in minutes. Note that the timezone offset does not only depend on the current timezone, but also on the time represented by the `Date` object, because of daylight saving time and historical changes. In essence, the timezone offset is the offset from UTC time, at the time represented by the `Date` object and at the location of the host environment.
+
+There are two groups of `Date` methods: one group gets and sets various date components by interpreting the timestamp as a local time, while the other uses UTC.
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th rowspan="2">Component</th>
+      <th colspan="2">Local</th>
+      <th colspan="2">UTC</th>
+    </tr>
+    <tr>
+      <th>Get</th>
+      <th>Set</th>
+      <th>Get</th>
+      <th>Set</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Year</td>
+      <td>{{jsxref("Date/getFullYear", "getFullYear()")}}</td>
+      <td>{{jsxref("Date/setFullYear", "setFullYear()")}}</td>
+      <td>{{jsxref("Date/getUTCFullYear", "getUTCFullYear()")}}</td>
+      <td>{{jsxref("Date/setUTCFullYear", "setUTCFullYear()")}}</td>
+    </tr>
+    <tr>
+      <td>Month</td>
+      <td>{{jsxref("Date/getMonth", "getMonth()")}}</td>
+      <td>{{jsxref("Date/setMonth", "setMonth()")}}</td>
+      <td>{{jsxref("Date/getUTCMonth", "getUTCMonth()")}}</td>
+      <td>{{jsxref("Date/setUTCMonth", "setUTCMonth()")}}</td>
+    </tr>
+    <tr>
+      <td>Date (of month)</td>
+      <td>{{jsxref("Date/getDate", "getDate()")}}</td>
+      <td>{{jsxref("Date/setDate", "setDate()")}}</td>
+      <td>{{jsxref("Date/getUTCDate", "getUTCDate()")}}</td>
+      <td>{{jsxref("Date/setUTCDate", "setUTCDate()")}}</td>
+    </tr>
+    <tr>
+      <td>Hours</td>
+      <td>{{jsxref("Date/getHours", "getHours()")}}</td>
+      <td>{{jsxref("Date/setHours", "setHours()")}}</td>
+      <td>{{jsxref("Date/getUTCHours", "getUTCHours()")}}</td>
+      <td>{{jsxref("Date/setUTCHours", "setUTCHours()")}}</td>
+    </tr>
+    <tr>
+      <td>Minutes</td>
+      <td>{{jsxref("Date/getMinutes", "getMinutes()")}}</td>
+      <td>{{jsxref("Date/setMinutes", "setMinutes()")}}</td>
+      <td>{{jsxref("Date/getUTCMinutes", "getUTCMinutes()")}}</td>
+      <td>{{jsxref("Date/setUTCMinutes", "setUTCMinutes()")}}</td>
+    </tr>
+    <tr>
+      <td>Seconds</td>
+      <td>{{jsxref("Date/getSeconds", "getSeconds()")}}</td>
+      <td>{{jsxref("Date/setSeconds", "setSeconds()")}}</td>
+      <td>{{jsxref("Date/getUTCSeconds", "getUTCSeconds()")}}</td>
+      <td>{{jsxref("Date/setUTCSeconds", "setUTCSeconds()")}}</td>
+    </tr>
+    <tr>
+      <td>Milliseconds</td>
+      <td>{{jsxref("Date/getMilliseconds", "getMilliseconds()")}}</td>
+      <td>{{jsxref("Date/setMilliseconds", "setMilliseconds()")}}</td>
+      <td>{{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}}</td>
+      <td>{{jsxref("Date/setUTCMilliseconds", "setUTCMilliseconds()")}}</td>
+    </tr>
+    <tr>
+      <td>Day (of week)</td>
+      <td>{{jsxref("Date/getDay", "getDay()")}}</td>
+      <td>N/A</td>
+      <td>{{jsxref("Date/getUTCDay", "getUTCDay()")}}</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+The {{jsxref("Date/Date", "Date()")}} constructor can be called with two or more arguments, in which case they are interpreted as the year, month, day, hour, minute, second, and millisecond, respectively, in local time. {{jsxref("Date.UTC()")}} works similarly, but it interprets the components as UTC time and also accepts a single argument representing the year.
+
+> **Note:** Some methods, including the `Date()` constructor, `Date.UTC()`, and the deprecated {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} methods, interpret a two-digit year as a year in the 1900s. For example, `new Date(99, 5, 24)` is interpreted as June 24, 1999, not June 24, 99. See [Interpretation of two-digit years](#interpretation_of_two-digit_years) for more information.
+
+When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it become the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month. This also applies to dates specified with the [date time string format](#date_time_string_format).
+
+### Date time string format
+
+There are many ways to format a date as a string. The JavaScript specification only specifies one format to be universally supported: the [_date time string format_](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format), a simplification of the ISO 8601 calendar date extended format. The format is as follows:
+
+```plain
+YYYY-MM-DDTHH:mm:ss.sssZ
+```
+
+- `YYYY` is the year, with four digits (`0000` to `9999`), or as an _expanded year_ of `+` or `-` followed by six digits. The sign is required for expanded years. `-000000` is explicitly disallowed as a valid year.
+- `MM` is the month, with two digits (`01` to `12`). Defaults to `01`.
+- `DD` is the day of the month, with two digits (`01` to `31`). Defaults to `01`.
+- `T` is a literal character, which indicates the beginning of the _time_ part of the string. The `T` is required when specifying the time part.
+- `HH` is the hour, with two digits (`00` to `23`). As a special case, `24:00:00` is allowed, and is interpreted as midnight at the beginning of the next day. Defaults to `00`.
+- `mm` is the minute, with two digits (`00` to `59`). Defaults to `00`.
+- `ss` is the second, with two digits (`00` to `59`). Defaults to `00`.
+- `sss` is the millisecond, with three digits (`000` to `999`). Defaults to `000`.
+- `Z` is the timezone offset, which can either be the literal character `Z` (indicating UTC), or `+` or `-` followed by `HH:mm`, the offset in hours and minutes from UTC.
+
+Various components can be omitted, so the following are all valid:
+
+- Date-only form: `YYYY`, `YYYY-MM`, `YYYY-MM-DD`
+- Date-time form: one of the above date-only forms, followed by `T`, followed by `HH:mm`, `HH:mm:ss`, or `HH:mm:ss.sss`. Each combination can be followed by a time zone offset.
+
+For example, `"2011-10-10"` (_date-only_ form), `"2011-10-10T14:48:00"` (_date-time_ form), or `"2011-10-10T14:48:00.000+09:00"` (_date-time_ form with milliseconds and time zone) are all valid date time strings.
+
+When the time zone offset is absent, **date-only forms are interpreted as a UTC time and date-time forms are interpreted as local time.** This is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility. See [Broken Parser – A Web Reality Issue](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/).
+
+{{jsxref("Date.parse()")}} and the {{jsxref("Date/Date", "Date()")}} constructor both accept strings in the date time string format as input. Furthermore, implementations are allowed to support other date formats when the input fails to match this format.
+
+The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
+
+> **Note:** You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
+
+Non-standard strings can be parsed in any way as desired by the implementation, including the time zone — most implementations use the local time zone by default. Implementations are not required to return invalid date for out-of-bounds date components, although they usually do. A string may have in-bounds date components (with the bounds defined above), but does not represent a date in reality (for example, "February 30"). Implementations behave inconsistently in this case. The [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#examples) page offers more examples about these non-standard cases.
+
+### Other ways to format a date
+
+- {{jsxref("Date/toISOString", "toISOString()")}} returns a string in the format `1970-01-01T00:00:00.000Z` (the date time string format introduced above, which is simplified [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)). {{jsxref("Date/toJSON", "toJSON()")}} calls `toISOString()` and returns the result.
+- {{jsxref("Date/toString", "toString()")}} returns a string in the format `Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)`, while {{jsxref("Date/toDateString", "toDateString()")}} and {{jsxref("Date/toTimeString", "toTimeString()")}} return the date and time parts of the string, respectively. [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) (when passed `"string"` or `"default"`) calls `toString()` and returns the result.
+- {{jsxref("Date/toUTCString", "toUTCString()")}} returns a string in the format `Thu, 01 Jan 1970 00:00:00 GMT` (generalized {{rfc(7231)}}).
+- {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}, {{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}}, and {{jsxref("Date/toLocaleString", "toLocaleString()")}} use locale-specific date and time formats, usually provided by the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) API.
+
+See the [Formats of `toString` method return values](#formats_of_tostring_method_return_values) section for examples.
 
 ## Constructor
 
 - {{jsxref("Date/Date", "Date()")}}
-  - : When called as a function, returns a string representation of the current date and time. All arguments are ignored. The result is the same as executing `new Date().toString()`.
-- {{jsxref("Date/Date", "new Date()")}}
-  - : When called as a constructor, returns a new `Date` object.
+  - : When called as a constructor, returns a new `Date` object. When called as a function, returns a string representation of the current date and time.
 
 ## Static methods
 
 - {{jsxref("Date.now()")}}
   - : Returns the numeric value corresponding to the current time—the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 - {{jsxref("Date.parse()")}}
-
   - : Parses a string representation of a date and returns the number of milliseconds since 1 January, 1970, 00:00:00 UTC, with leap seconds ignored.
-
-    > **Note:** Parsing of strings with `Date.parse` is strongly discouraged due to browser differences and inconsistencies.
-
 - {{jsxref("Date.UTC()")}}
   - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.
+
+## Instance properties
+
+These properties are defined on `Date.prototype` and shared by all `Date` instances.
+
+- {{jsxref("Object/constructor", "Date.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Date` instances, the initial value is the {{jsxref("Date/Date", "Date")}} constructor.
 
 ## Instance methods
 
@@ -147,6 +285,8 @@ In addition to methods to read and alter individual components of the local date
   - : Converts a date to a string using the UTC timezone.
 - {{jsxref("Date.prototype.valueOf()")}}
   - : Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
+- [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)
+  - : Converts this `Date` object to a primitive value.
 
 ## Examples
 
@@ -154,12 +294,12 @@ In addition to methods to read and alter individual components of the local date
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
+> **Note:** Creating a date from a string has a lot of behavior inconsistencies. See [date time string format](#date_time_string_format) for caveats on using different formats.
 
 ```js
 const today = new Date();
 const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
-const birthday2 = new Date("1995-12-17T03:24:00"); // This is ISO8601-compliant and will work reliably
+const birthday2 = new Date("1995-12-17T03:24:00"); // This is standardized and will work reliably
 const birthday3 = new Date(1995, 11, 17); // the month is 0-indexed
 const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
 const birthday5 = new Date(628021800000); // passing epoch timestamp
@@ -172,9 +312,13 @@ const date = new Date("2020-05-12T23:50:21.817Z");
 date.toString(); // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
 date.toDateString(); // Tue May 12 2020
 date.toTimeString(); // 18:50:21 GMT-0500 (Central Daylight Time)
+date[Symbol.toPrimitive]("string"); // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
+
 date.toISOString(); // 2020-05-12T23:50:21.817Z
-date.toUTCString(); // Tue, 12 May 2020 23:50:21 GMT
 date.toJSON(); // 2020-05-12T23:50:21.817Z
+
+date.toUTCString(); // Tue, 12 May 2020 23:50:21 GMT
+
 date.toLocaleString(); // 5/12/2020, 6:50:21 PM
 date.toLocaleDateString(); // 5/12/2020
 date.toLocaleTimeString(); // 6:50:21 PM
@@ -183,17 +327,19 @@ date.toLocaleTimeString(); // 6:50:21 PM
 ### To get Date, Month and Year or Time
 
 ```js
-const date = new Date();
+const date = new Date("2000-01-17T16:45:30");
 const [month, day, year] = [
   date.getMonth(),
   date.getDate(),
   date.getFullYear(),
 ];
+// [0, 17, 2000] as month are 0-indexed
 const [hour, minutes, seconds] = [
   date.getHours(),
   date.getMinutes(),
   date.getSeconds(),
 ];
+// [16, 45, 30]
 ```
 
 ### Interpretation of two-digit years
@@ -283,4 +429,4 @@ In this case, it's important to return only an integer—so a simple division wo
 
 ## See also
 
-- {{jsxref("Date/Date", "Date()")}} constructor
+- {{jsxref("Date/Date", "Date()")}}

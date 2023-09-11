@@ -2,23 +2,12 @@
 title: TypedArray.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.reverse
 ---
 
 {{JSRef}}
 
-The **`reverse()`** method reverses a typed array in place. The
-first typed array element becomes the last and the last becomes the first. This method
-has the same algorithm as {{jsxref("Array.prototype.reverse()")}}. _TypedArray_
-is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+The **`reverse()`** method of {{jsxref("TypedArray")}} instances reverses a typed array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same typed array, the first typed array element now becoming the last, and the last typed array element becoming the first. In other words, elements order in the typed array will be turned towards the direction opposite to that previously stated. This method has the same algorithm as {{jsxref("Array.prototype.reverse()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}
 
@@ -28,13 +17,21 @@ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 reverse()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-The reversed array.
+The reference to the original typed array, now reversed. Note that the typed array is reversed _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
+
+## Description
+
+See {{jsxref("Array.prototype.reverse()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
-### Using reverse
+### Using reverse()
 
 ```js
 const uint8 = new Uint8Array([1, 2, 3]);
@@ -54,4 +51,9 @@ console.log(uint8); // Uint8Array [3, 2, 1]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.reverse` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxref("TypedArray.prototype.sort()")}}
+- {{jsxref("TypedArray.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.reverse()")}}

@@ -1,12 +1,7 @@
 ---
 title: Create genre form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - part 6
-  - server-side
+page-type: learn-module-chapter
 ---
 
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
@@ -15,7 +10,7 @@ This sub article shows how we define our page to create `Genre` objects (this is
 
 To use the _express-validator_ in our controllers we have to _require_ the functions we want to use from the `'express-validator'` module.
 
-Open **/controllers/genreController.js**, and add the following line at the top of the file:
+Open **/controllers/genreController.js**, and add the following line at the top of the file, before any route handler functions:
 
 ```js
 const { body, validationResult } = require("express-validator");
@@ -31,7 +26,8 @@ const { body, validationResult } = require("express-validator");
 
 ## Controller—get route
 
-Find the exported `genre_create_get()` controller method and replace it with the following code. This renders the **genre_form.pug** view, passing a title variable.
+Find the exported `genre_create_get()` controller method and replace it with the following code.
+This renders the **genre_form.pug** view, passing a title variable.
 
 ```js
 // Display Genre create form on GET.
@@ -39,6 +35,9 @@ exports.genre_create_get = (req, res, next) => {
   res.render("genre_form", { title: "Create Genre" });
 };
 ```
+
+Note that this replaces the placeholder asynchronous handler that we added in the [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#genre_controller) with a "normal" express route handler function.
+We don't need the `asyncHandler()` wrapper for this route, because it doesn't contain any code that can throw an exception.
 
 ## Controller—post route
 
@@ -48,10 +47,13 @@ Find the exported `genre_create_post()` controller method and replace it with th
 // Handle Genre create on POST.
 exports.genre_create_post = [
   // Validate and sanitize the name field.
-  body("name", "Genre name required").trim().isLength({ min: 1 }).escape(),
+  body("name", "Genre name must contain at least 3 characters")
+    .trim()
+    .isLength({ min: 3 })
+    .escape(),
 
   // Process request after validation and sanitization.
-  (req, res, next) => {
+  asyncHandler(async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -62,37 +64,29 @@ exports.genre_create_post = [
       // There are errors. Render the form again with sanitized values/error messages.
       res.render("genre_form", {
         title: "Create Genre",
-        genre,
+        genre: genre,
         errors: errors.array(),
       });
       return;
     } else {
       // Data from form is valid.
       // Check if Genre with same name already exists.
-      Genre.findOne({ name: req.body.name }).exec((err, found_genre) => {
-        if (err) {
-          return next(err);
-        }
-
-        if (found_genre) {
-          // Genre exists, redirect to its detail page.
-          res.redirect(found_genre.url);
-        } else {
-          genre.save((err) => {
-            if (err) {
-              return next(err);
-            }
-            // Genre saved. Redirect to genre detail page.
-            res.redirect(genre.url);
-          });
-        }
-      });
+      const genreExists = await Genre.findOne({ name: req.body.name }).exec();
+      if (genreExists) {
+        // Genre exists, redirect to its detail page.
+        res.redirect(genreExists.url);
+      } else {
+        await genre.save();
+        // New genre saved. Redirect to genre detail page.
+        res.redirect(genre.url);
+      }
     }
-  },
+  }),
 ];
 ```
 
-The first thing to note is that instead of being a single middleware function (with arguments `(req, res, next)`) the controller specifies an _array_ of middleware functions. The array is passed to the router function and each method is called in order.
+The first thing to note is that instead of being a single middleware function (with arguments `(req, res, next)`) the controller specifies an _array_ of middleware functions.
+The array is passed to the router function and each method is called in order.
 
 > **Note:** This approach is needed, because the validators are middleware functions.
 
@@ -101,7 +95,10 @@ The first method in the array defines a body validator (`body()`) that validates
 ```js
 [
   // Validate that the name field is not empty.
-  body("name", "Genre name required").trim().isLength({ min: 1 }).escape(),
+  body("name", "Genre name must contain at least 3 characters")
+    .trim()
+    .isLength({ min: 3 })
+    .escape(),
   // …
 ];
 ```
@@ -110,7 +107,7 @@ After specifying the validators we create a middleware function to extract any v
 
 ```js
 // Process request after validation and sanitization.
-(req, res, next) => {
+asyncHandler(async (req, res, next) => {
   // Extract the validation errors from a request.
   const errors = validationResult(req);
 
@@ -121,39 +118,37 @@ After specifying the validators we create a middleware function to extract any v
     // There are errors. Render the form again with sanitized values/error messages.
     res.render("genre_form", {
       title: "Create Genre",
-      genre,
+      genre: genre,
       errors: errors.array(),
     });
     return;
   } else {
-    // Form data is valid.
-    // Save the result.
+    // Data from form is valid.
     // …
   }
-};
+});
 ```
 
-If the genre name data is valid then we check if a `Genre` with the same name already exists (as we don't want to create duplicates). If it does, we redirect to the existing genre's detail page. If not, we save the new `Genre` and redirect to its detail page.
+If the genre name data is valid then we perform a case-insensitive search to see if a `Genre` with the same name already exists (as we don't want to create duplicate or near duplicate records that vary only in letter case, such as: "Fantasy", "fantasy", "FaNtAsY", and so on).
+To ignore letter case and accents when searching we chain the [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) method, specifying the locale of 'en' and strength of 2 (for more information see the MongoDB [Collation](https://www.mongodb.com/docs/manual/reference/collation/) topic).
+
+If a `Genre` with a matching name already exists we redirect to its detail page.
+If not, we save the new `Genre` and redirect to its detail page.
+Note that here we `await` on the result of the database query, following the same pattern as in other route handlers.
 
 ```js
 // Check if Genre with same name already exists.
-Genre.findOne({ name: req.body.name }).exec((err, found_genre) => {
-  if (err) {
-    return next(err);
-  }
-  if (found_genre) {
-    // Genre exists, redirect to its detail page.
-    res.redirect(found_genre.url);
-  } else {
-    genre.save((err) => {
-      if (err) {
-        return next(err);
-      }
-      // Genre saved. Redirect to genre detail page.
-      res.redirect(genre.url);
-    });
-  }
-});
+const genreExists = await Genre.findOne({ name: req.body.name })
+  .collation({ locale: "en", strength: 2 })
+  .exec();
+if (genreExists) {
+  // Genre exists, redirect to its detail page.
+  res.redirect(genreExists.url);
+} else {
+  await genre.save();
+  // New genre saved. Redirect to genre detail page.
+  res.redirect(genre.url);
+}
 ```
 
 This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data.
@@ -161,9 +156,13 @@ This same pattern is used in all our post controllers: we run validators (with s
 ## View
 
 The same view is rendered in both the `GET` and `POST` controllers/routes when we create a new `Genre` (and later on it is also used when we _update_ a `Genre`). In the `GET` case the form is empty, and we just pass a title variable. In the `POST` case the user has previously entered invalid data—in the `genre` variable we pass back a sanitized version of the entered data and in the `errors` variable we pass back an array of error messages.
+The code below shows the controller code for rendering the template in both cases.
 
 ```js
+// Render the GET route
 res.render("genre_form", { title: "Create Genre" });
+
+// Render the POST route
 res.render("genre_form", {
   title: "Create Genre",
   genre,
@@ -213,7 +212,7 @@ The only error we validate against server-side is that the genre field must not 
 
 > **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >
-> ```
+> ```pug
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
 > ```
 

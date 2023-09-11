@@ -2,15 +2,6 @@
 title: Basic scissoring
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Scissoring
-  - Tutorial
-  - WebGL
-  - scissor
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
@@ -54,37 +45,41 @@ canvas {
 ```
 
 ```js
-window.addEventListener("load", function setupWebGL (evt) {
-  "use strict"
-  window.removeEventListener(evt.type, setupWebGL, false);
-  const paragraph = document.querySelector("p");
-  const canvas = document.querySelector("canvas");
+window.addEventListener(
+  "load",
+  function setupWebGL(evt) {
+    "use strict";
+    window.removeEventListener(evt.type, setupWebGL, false);
+    const paragraph = document.querySelector("p");
+    const canvas = document.querySelector("canvas");
 
-  // The following two lines set the size (in CSS pixels) of
-  // the drawing buffer to be identical to the size of the
-  // canvas HTML element, as determined by CSS.
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+    // The following two lines set the size (in CSS pixels) of
+    // the drawing buffer to be identical to the size of the
+    // canvas HTML element, as determined by CSS.
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
 
-  const gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    paragraph.innerHTML = "Failed to get WebGL context. "
-      + "Your browser or device may not support WebGL.";
-    return;
-  }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+    const gl =
+      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    if (!gl) {
+      paragraph.innerHTML =
+        "Failed to get WebGL context. " +
+        "Your browser or device may not support WebGL.";
+      return;
+    }
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
 
-  // Enable scissoring operation and define the position and
-  // size of the scissoring area.
-  gl.enable(gl.SCISSOR_TEST);
-  gl.scissor(40, 20, 60, 130);
+    // Enable scissoring operation and define the position and
+    // size of the scissoring area.
+    gl.enable(gl.SCISSOR_TEST);
+    gl.scissor(40, 20, 60, 130);
 
-  // Clear the drawing buffer solid yellow.
-  gl.clearColor(1.0, 1.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-}, false);
+    // Clear the drawing buffer solid yellow.
+    gl.clearColor(1.0, 1.0, 0.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  },
+  false,
+);
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring).

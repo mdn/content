@@ -1,13 +1,8 @@
 ---
-title: Blob.type
+title: "Blob: type property"
+short-title: type
 slug: Web/API/Blob/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Blob
-  - File API
-  - Property
-  - Reference
 browser-compat: api.Blob.type
 ---
 
@@ -57,7 +52,7 @@ input.addEventListener("change", (event) => {
   }
 
   const allAllowed = Array.from(files).every((file) =>
-    allowedFileTypes.includes(file.type)
+    allowedFileTypes.includes(file.type),
   );
   output.innerText = allAllowed
     ? "All files clear!"

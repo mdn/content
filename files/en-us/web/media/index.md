@@ -1,12 +1,7 @@
 ---
 title: Web media technologies
 slug: Web/Media
-tags:
-  - Audio
-  - Landing
-  - Media
-  - Video
-  - Web
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -48,7 +43,7 @@ These articles cover HTML features for media developers.
 - [Using audio and video in HTML](/en-US/docs/Web/Media/HTML_media)
   - : A guide to using the HTML `<audio>` and `<video>` elements.
 - [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
+  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : A guide to the file types and codecs available for images, audio, and video media on the web. This includes recommendations for what formats to use for what kinds of content, best practices including how to provide fallbacks and how to prioritize media types, and also includes general browser support information for each media container and codec.
 - [Streaming audio and video](/en-US/docs/Web/Media/Streaming)

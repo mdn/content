@@ -1,14 +1,8 @@
 ---
-title: Element.clientLeft
+title: "Element: clientLeft property"
+short-title: clientLeft
 slug: Web/API/Element/clientLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientLeft
 ---
 

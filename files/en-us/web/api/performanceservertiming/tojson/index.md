@@ -1,14 +1,8 @@
 ---
-title: PerformanceServerTiming.toJSON()
+title: "PerformanceServerTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceServerTiming
-  - Reference
-  - ServerTiming
-  - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
 
@@ -54,7 +48,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 ["navigation", "resource"].forEach((type) =>
-  observer.observe({ type, buffered: true })
+  observer.observe({ type, buffered: true }),
 );
 ```
 

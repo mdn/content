@@ -2,13 +2,6 @@
 title: PaymentResponse
 slug: Web/API/PaymentResponse
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Request
-  - PaymentResponse
-  - Reference
-  - Secure context
 browser-compat: api.PaymentResponse
 ---
 
@@ -43,6 +36,8 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
   - : If something is wrong with the payment response's data (and there is a recoverable error), this method allows a merchant to request that the user retry the payment. The method takes an object as argument, which is used to signal to the user exactly what is wrong with the payment response so they can try to correct any issues.
 - {{domxref('PaymentResponse.complete()')}} {{SecureContext_Inline}}
   - : Notifies the user agent that the user interaction is over. This causes any remaining user interface to be closed. This method should only be called after the Promise returned by the {{domxref('PaymentRequest.show()')}} method.
+- {{domxref("PaymentResponse.toJSON()")}} {{SecureContext_Inline}}
+  - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PaymentResponse` object.
 
 ## Events
 

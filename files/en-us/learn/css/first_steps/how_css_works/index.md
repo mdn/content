@@ -1,11 +1,7 @@
 ---
 title: How CSS works
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - Learn
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -80,7 +76,7 @@ Take the following HTML code:
 
 In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
 
-```
+```plain
 P
 ├─ "Let's use:"
 ├─ SPAN
@@ -168,18 +164,10 @@ This works particularly well when you want to use a value that is quite new and 
 }
 ```
 
-We will look at many more ways to support varying browsers in later lessons.
+We will look at many more ways to support various browsers in later lessons.
 
 ## Summary
 
 You've nearly finished this module — we only have one more thing to do. In the [Styling a biography page assessment](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page) you'll use your new knowledge to restyle an example, testing out some CSS in the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

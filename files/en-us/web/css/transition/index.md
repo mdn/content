@@ -2,12 +2,6 @@
 title: transition
 slug: Web/CSS/transition
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.transition
 ---
 
@@ -45,7 +39,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;
@@ -71,7 +67,7 @@ Each single-property transition describes the transition that should be applied 
 - zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use
 - zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.
 
-See [how things are handled](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.
+See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.
 
 ## Formal definition
 
@@ -85,7 +81,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_trans
 
 ### Simple example
 
-This example performs a four-second font size transition with a one-second delay when the user hovers over the element.
+In this example, when the user hovers over the element, there is a one-second delay before the four-second `font-size` transition occurs.
 
 #### HTML
 
@@ -94,6 +90,8 @@ This example performs a four-second font size transition with a one-second delay
 ```
 
 #### CSS
+
+We include two {{cssxref("time")}} values. In the `transition` shorthand, the first `<time>` value is the `transition-duration`. The second time value is the `transition-delay`. Both default to `0s` if omitted.
 
 ```css
 .target {
@@ -108,7 +106,7 @@ This example performs a four-second font size transition with a one-second delay
 
 {{EmbedLiveSample('Simple_example', 600, 100)}}
 
-There are several more examples of CSS transitions included in the [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) article.
+There are several more examples of CSS transitions included in the [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) article.
 
 ## Specifications
 
@@ -120,5 +118,5 @@ There are several more examples of CSS transitions included in the [Using CSS tr
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

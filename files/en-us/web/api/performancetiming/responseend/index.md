@@ -1,17 +1,10 @@
 ---
-title: PerformanceTiming.responseEnd
+title: "PerformanceTiming: responseEnd property"
+short-title: responseEnd
 slug: Web/API/PerformanceTiming/responseEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.responseEnd
 ---
 

@@ -1,18 +1,12 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-page-type: guide
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - "l10n:priority"
+page-type: landing-page
 ---
 
 {{JsSidebar}}
 
-**JavaScript** (**JS**) is a lightweight, interpreted, or [just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation) compiled programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+**JavaScript** (**JS**) is a lightweight interpreted (or [just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation) compiled) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)), object introspection (via [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [`Object` utilities](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), and source-code recovery (JavaScript functions store their source text and can be retrieved through [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
 
@@ -64,7 +58,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 - [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
-- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_Overview)
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
   - : Overview of available data structures in JavaScript.
@@ -79,12 +73,10 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-  - : JavaScript typed arrays provide a mechanism for accessing raw binary data.
-- [Memory Management](/en-US/docs/Web/JavaScript/Memory_Management)
+- [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
-- [Concurrency model and Event Loop](/en-US/docs/Web/JavaScript/EventLoop)
-  - : JavaScript has a concurrency model based on an "event loop".
+- [The event loop](/en-US/docs/Web/JavaScript/Event_loop)
+  - : JavaScript has a runtime model based on an "event loop".
 
 ## Reference
 
@@ -93,7 +85,7 @@ Browse the complete [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
 - [Standard objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects)
   - : Get to know standard built-in objects {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, and others.
 - [Expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators)
-  - : Learn more about the behavior of JavaScript's operators {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), and more.
+  - : Learn more about the behavior of JavaScript's operators {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), and more.
 - [Statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)
   - : Learn how {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}}, and more JavaScript statements and keywords work.
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)

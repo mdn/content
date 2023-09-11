@@ -1,18 +1,12 @@
 ---
-title: FileSystemDirectoryHandle.getDirectoryHandle()
+title: "FileSystemDirectoryHandle: getDirectoryHandle() method"
+short-title: getDirectoryHandle()
 slug: Web/API/FileSystemDirectoryHandle/getDirectoryHandle
 page-type: web-api-instance-method
-tags:
-  - Directories
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`getDirectoryHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a
@@ -61,10 +55,10 @@ The following example returns a directory handle with the specified name, if the
 directory does not exist it is created.
 
 ```js
-const dirName = 'directoryToGetName';
+const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
 ## Specifications
@@ -77,5 +71,5 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

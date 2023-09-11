@@ -2,11 +2,6 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 page-type: javascript-class
-tags:
-  - Boolean
-  - Class
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.Boolean
 ---
 
@@ -41,31 +36,32 @@ if (x) {
 Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
 
 ```js
-const good = Boolean(expression);    // use this
-const good2 = !!(expression);        // or this
+const good = Boolean(expression); // use this
+const good2 = !!expression; // or this
 const bad = new Boolean(expression); // don't use this!
 ```
 
 If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
 
 ```js
-const myFalse = new Boolean(false);   // initial value of false
-const g = Boolean(myFalse);           // initial value of true
-const myString = new String('Hello'); // string object
-const s = Boolean(myString);          // initial value of true
+const myFalse = new Boolean(false); // initial value of false
+const g = Boolean(myFalse); // initial value of true
+const myString = new String("Hello"); // string object
+const s = Boolean(myString); // initial value of true
 ```
 
 > **Warning:** You should rarely find yourself using `Boolean` as a constructor.
 
 ### Boolean coercion
 
-Many built-in operations that expect booleans first coerce their arguments to booleans. [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+Many built-in operations that expect booleans first coerce their arguments to booleans. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toboolean) can be summarized as follows:
 
 - Booleans are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `false`.
 - [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `false`.
 - `0`, `-0`, and `NaN` turn into `false`; other numbers turn into `true`.
 - `0n` turns into `false`; other [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) turn into `true`.
+- The empty string `""` turns into `false`; other strings turn into `true`.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) turn into `true`.
 - All objects become `true`.
 
@@ -103,8 +99,15 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+- {{jsxref("Boolean/Boolean", "Boolean()")}}
   - : Creates a new `Boolean` object.
+
+## Instance properties
+
+These properties are defined on `Boolean.prototype` and shared by all `Boolean` instances.
+
+- {{jsxref("Object/constructor", "Boolean.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Boolean` instances, the initial value is the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
 
 ## Instance methods
 
@@ -121,7 +124,7 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 const bNoParam = new Boolean();
 const bZero = new Boolean(0);
 const bNull = new Boolean(null);
-const bEmptyString = new Boolean('');
+const bEmptyString = new Boolean("");
 const bfalse = new Boolean(false);
 ```
 
@@ -129,9 +132,9 @@ const bfalse = new Boolean(false);
 
 ```js
 const btrue = new Boolean(true);
-const btrueString = new Boolean('true');
-const bfalseString = new Boolean('false');
-const bSuLin = new Boolean('Su Lin');
+const btrueString = new Boolean("true");
+const bfalseString = new Boolean("false");
+const bSuLin = new Boolean("Su Lin");
 const bArrayProto = new Boolean([]);
 const bObjProto = new Boolean({});
 ```
@@ -148,4 +151,4 @@ const bObjProto = new Boolean({});
 
 - [Boolean](/en-US/docs/Glossary/Boolean)
 - [Boolean primitives](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Boolean data type (Wikipedia)](https://en.wikipedia.org/wiki/Boolean_data_type)
+- [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia

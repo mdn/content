@@ -1,14 +1,8 @@
 ---
-title: DOMRectReadOnly.x
+title: "DOMRectReadOnly: x property"
+short-title: x
 slug: Web/API/DOMRectReadOnly/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Property
-  - Reference
 browser-compat: api.DOMRectReadOnly.x
 ---
 

@@ -2,23 +2,12 @@
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 page-type: javascript-instance-method
-tags:
-  - TypedArray
-  - TypedArrays
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
-  - at
 browser-compat: javascript.builtins.TypedArray.at
 ---
 
 {{JSRef}}
 
-The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
-
-This is not to suggest there is anything wrong with using the square bracket notation. For example `array[0]` would return the first item. However instead of using {{jsxref('TypedArray.prototype.length','array.length')}} for latter items; e.g. `array[array.length-1]` for the last item, you can call `array.at(-1)`. [(See the examples below)](#examples)
+The **`at()`** method of {{jsxref("TypedArray")}} instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.at()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
 
@@ -31,11 +20,15 @@ at(index)
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; that is, if a negative number is used, the element returned will be found by counting back from the end of the array.
+  - : Zero-based index of the array element to be returned, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). Negative index counts back from the end of the array — if `index < 0`, `index + array.length` is accessed.
 
 ### Return value
 
-The element in the array matching the given index. Returns {{jsxref('undefined')}} if the given index can not be found.
+The element in the typed array matching the given index. Always returns {{jsxref("undefined")}} if `index < -array.length` or `index >= array.length` without attempting to access the corresponding property.
+
+## Description
+
+See {{jsxref("Array.prototype.at()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -57,7 +50,7 @@ console.log(lastItem); // 18
 
 ### Comparing methods
 
-Here we compare different ways to select the penultimate (last but one) item of a {{jsxref('TypedArray')}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
+Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
 
 ```js
 // Our typed array with values
@@ -87,7 +80,9 @@ console.log(atWay); // 11
 ## See also
 
 - [Polyfill of `TypedArray.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
-- [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("TypedArray.prototype.find()")}} – return a value based on a given test.
-- {{jsxref("TypedArray.prototype.includes()")}} – test whether a value exists in the array.
-- {{jsxref("TypedArray.prototype.indexOf()")}} – return the index of a given element.
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.at()")}}
+- {{jsxref("String.prototype.at()")}}

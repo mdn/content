@@ -1,14 +1,7 @@
 ---
 title: "ARIA: alertdialog role"
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - Alert
-  - Alertdialog
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alertdialog
   - https://w3c.github.io/aria-practices/#alertdialog
@@ -61,7 +54,12 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 ### Example 2: Confirmation dialog with two options
 
 ```html
-<div id="alert_dialog" role="alertdialog" aria-modal="true" aria-labelledby="dialog_label" aria-describedby="dialog_desc">
+<div
+  id="alert_dialog"
+  role="alertdialog"
+  aria-modal="true"
+  aria-labelledby="dialog_label"
+  aria-describedby="dialog_desc">
   <h2 id="dialog_label">Confirmation</h2>
   <div id="dialog_desc">
     <p>Are you sure you want to delete this image?</p>
@@ -72,9 +70,15 @@ The code snippet above shows how to mark up an alert dialog that only provides a
       <button type="button" onclick="closeThis()">No</button>
     </li>
     <li>
-      <button type="button" aria-controls="form" id="delete_file_confirm" onclick="deleteFile()">Yes</button>
+      <button
+        type="button"
+        aria-controls="form"
+        id="delete_file_confirm"
+        onclick="deleteFile()">
+        Yes
+      </button>
     </li>
-  </div>
+  </ul>
 </div>
 ```
 

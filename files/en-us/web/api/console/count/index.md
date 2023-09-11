@@ -1,15 +1,8 @@
 ---
-title: console.count()
+title: "console: count() method"
+short-title: count()
 slug: Web/API/console/count
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
 browser-compat: api.console.count
 ---
 
@@ -60,7 +53,7 @@ console.count();
 
 Console output will look something like this:
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -90,7 +83,7 @@ console.count("alice");
 
 We will see output like this:
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"

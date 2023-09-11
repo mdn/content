@@ -2,18 +2,14 @@
 title: scale
 slug: Web/CSS/scale
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Transforms
-  - recipe:css-property
 browser-compat: css.properties.scale
 ---
 
 {{CSSRef}}
 
 The **`scale`** [CSS](/en-US/docs/Web/CSS) property allows you to specify scale transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
+
+{{EmbedInteractiveExample("pages/css/scale.html")}}
 
 ## Syntax
 
@@ -64,51 +60,42 @@ scale: unset;
 
 ### Scaling an element on hover
 
+The following example shows how to scale an element on hover.
+Two boxes are shown, one with a single `scale` value which scales the element along both axes.
+The second box has two `scale` values which scales the element along the X and Y axes independently.
+
 #### HTML
 
 ```html
-<div>
-  <p class="scale">Scaling</p>
-</div>
+<div class="box" id="box1">single value</div>
+<div class="box" id="box2">two values</div>
 ```
 
 #### CSS
 
 ```css
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
+.box {
+  float: left;
+  margin: 1em;
+  width: 7em;
+  line-height: 7em;
   text-align: center;
+  transition: 0.5s ease-in-out;
+  border: 3px dotted;
 }
 
-.scale {
-  transition: scale 1s;
+#box1:hover {
+  scale: 1.25;
 }
 
-div:hover .scale {
-  scale: 2 0.7;
+#box2:hover {
+  scale: 1.25 0.75;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Scaling_an_element_on_hover")}}
+{{EmbedLiveSample("Scaling_an_element_on_hover", "100%", 150)}}
 
 ## Specifications
 

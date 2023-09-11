@@ -1,14 +1,7 @@
 ---
 title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Performance
-  - Web
-  - Web Performance
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
@@ -144,7 +137,7 @@ and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/El
 
 By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
 
-To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
+To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
 <img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
@@ -156,7 +149,7 @@ Note that lazily-loaded images may not be available when the `load` event is fir
 
 To achieve the greatest improvements in page design, make sure that reasonable user-agent requirements are specified for projects. Do not require your content to appear pixel-perfect in all browsers, especially not in down-version browsers.
 
-Ideally, your basic minimum requirements should be based on the consideration of modern browsers that support the relevant standards. This can include recent versions of Firefox, Internet Explorer, Google Chrome, Opera, and Safari.
+Ideally, your basic minimum requirements should be based on the consideration of modern browsers that support the relevant standards. This can include recent versions of Firefox, Google Chrome, Opera, and Safari.
 
 Note, however, that many of the tips listed in this article are common-sense techniques which apply to any user agent, and can be applied to any web page, regardless of browser-support requirements.
 

@@ -1,13 +1,8 @@
 ---
-title: ExtendableCookieChangeEvent.deleted
+title: "ExtendableCookieChangeEvent: deleted property"
+short-title: deleted
 slug: Web/API/ExtendableCookieChangeEvent/deleted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - deleted
-  - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent.deleted
 ---
 
@@ -33,7 +28,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
   - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -42,14 +37,12 @@ An array of objects containing the deleted cookie(s). Each object contains the f
     - `"none"`
       - : Cookies will be sent in all contexts.
 
-    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
-
 ## Examples
 
 In this example when the cookie is deleted the event listener logs the first item in the `deleted` property to the console. It contains an object representing the cookie that has just been deleted.
 
 ```js
-self.addEventListener('cookiechange', (event) => {
+self.addEventListener("cookiechange", (event) => {
   console.log(event.deleted[0]);
 });
 ```

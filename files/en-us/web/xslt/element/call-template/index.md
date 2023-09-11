@@ -1,14 +1,10 @@
 ---
 title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - call-template
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:call-template>` element invokes a named template.
 

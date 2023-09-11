@@ -2,18 +2,12 @@
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Array.pop
 ---
 
 {{JSRef}}
 
-The **`pop()`** method removes the **last**
+The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
@@ -24,6 +18,10 @@ array.
 ```js-nolint
 pop()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -121,6 +119,8 @@ console.log(collection.length); // 2
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

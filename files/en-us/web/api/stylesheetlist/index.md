@@ -2,10 +2,6 @@
 title: StyleSheetList
 slug: Web/API/StyleSheetList
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - StyleSheetList
 browser-compat: api.StyleSheetList
 ---
 
@@ -46,15 +42,16 @@ for (let i = 0; i < styleSheets.length; i++) {
 const allCSS = [...document.styleSheets]
   .map((styleSheet) => {
     try {
-      return [...styleSheet.cssRules]
-        .map((rule) => rule.cssText)
-        .join('');
+      return [...styleSheet.cssRules].map((rule) => rule.cssText).join("");
     } catch (e) {
-      console.log('Access to stylesheet %s is denied. Ignoring…', styleSheet.href);
+      console.log(
+        "Access to stylesheet %s is denied. Ignoring…",
+        styleSheet.href,
+      );
     }
   })
   .filter(Boolean)
-  .join('\n');
+  .join("\n");
 ```
 
 ## Specifications

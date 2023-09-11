@@ -2,20 +2,12 @@
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getMonth
 ---
 
 {{JSRef}}
 
-The **`getMonth()`** method returns the month in the specified
-date according to local time, as a zero-based value (where zero indicates the first
-month of the year).
+The **`getMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).
 
 {{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}
 
@@ -25,38 +17,48 @@ month of the year).
 getMonth()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-An integer number, between 0 and 11, representing the month in the given date according
-to local time. 0 corresponds to January, 1 to February, and so on.
+An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+
+## Description
+
+The return value of `getMonth()` is zero-based, which is useful for indexing into arrays of months, for example:
+
+```js
+const valentines = new Date("1995-02-14");
+const month = valentines.getMonth();
+const monthNames = ["January", "February", "March" /* , … */];
+
+console.log(monthNames[month]); // "February"
+```
+
+However, for the purpose of internationalization, you should prefer using {{jsxref("Intl.DateTimeFormat")}} with the `options` parameter instead.
+
+```js
+const options = { month: "long" };
+console.log(new Intl.DateTimeFormat("en-US", options).format(valentines));
+// "February"
+console.log(new Intl.DateTimeFormat("de-DE", options).format(valentines));
+// "Februar"
+```
 
 ## Examples
 
 ### Using getMonth()
 
-The second statement below assigns the value 11 to the variable `month`,
-based on the value of the {{jsxref("Date")}} object `xmas95`.
+The `month` variable has value `11`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const month = xmas95.getMonth();
 
 console.log(month); // 11
 ```
-
-> **Note:** If needed, the full name of a month (`January` for
-> example) can be obtained by using
-> [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#using_options)
-> with an `options` parameter. Using this method, internationalization is
-> made easier:
->
-> ```js
-> const options = { month: "long" };
-> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
-> // December
-> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
-> // Dezember
-> ```
 
 ## Specifications
 

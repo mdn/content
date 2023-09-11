@@ -1,15 +1,7 @@
 ---
 title: Using CSS generated content
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Graphics
-  - Guide
-  - NeedsUpdate
-  - Web
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

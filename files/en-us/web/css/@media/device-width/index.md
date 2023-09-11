@@ -2,13 +2,8 @@
 title: device-width
 slug: Web/CSS/@media/device-width
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Deprecated
-  - Media Queries
-  - Reference
-  - media feature
+status:
+  - deprecated
 browser-compat: css.at-rules.media.device-width
 ---
 
@@ -16,7 +11,7 @@ browser-compat: css.at-rules.media.device-width
 
 > **Note:** To query for the width of the viewport, developers should use the [`width`](/en-US/docs/Web/CSS/@media/width) media feature instead.
 
-The **`device-width`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the width of an output device's rendering surface.
+The **`device-width`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the width of an output device's rendering surface.
 
 ## Syntax
 
@@ -43,5 +38,5 @@ The `device-width` feature is specified as a {{cssxref("&lt;length&gt;")}} value
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

@@ -2,13 +2,6 @@
 title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint16Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint16Array
 ---
 
@@ -16,19 +9,19 @@ browser-compat: javascript.builtins.Uint16Array
 
 The **`Uint16Array`** typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
+`Uint16Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
+
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint16Array/Uint16Array", "Uint16Array()")}}
+- {{jsxref("Uint16Array/Uint16Array", "Uint16Array()")}}
   - : Creates a new `Uint16Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of `Uint16Array`.
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
-  - : Returns the string value of the constructor name. `"Uint16Array"` in the case of `Uint16Array`.
 
 ## Static methods
 
@@ -38,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Uint16Array.prototype` and shared by all `Uint16Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint16Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of a `Uint16Array`.
+- {{jsxref("Object/constructor", "Uint16Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint16Array` instances, the initial value is the {{jsxref("Uint16Array/Uint16Array", "Uint16Array")}} constructor.
 
 ## Instance methods
 
@@ -90,6 +87,7 @@ console.log(uint16FromIterable);
 ## See also
 
 - [Polyfill of `Uint16Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

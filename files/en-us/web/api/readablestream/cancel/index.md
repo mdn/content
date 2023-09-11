@@ -1,14 +1,8 @@
 ---
-title: ReadableStream.cancel()
+title: "ReadableStream: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStream/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - cancel
 browser-compat: api.ReadableStream.cancel
 ---
 
@@ -56,60 +50,70 @@ const searchTerm = "service workers";
 const contextBefore = 30;
 const contextAfter = 30;
 const caseInsensitive = true;
-const url = 'https://html.spec.whatwg.org/';
+const url = "https://html.spec.whatwg.org/";
 
 console.log(`Searching '${url}' for '${searchTerm}'`);
 
-fetch(url).then((response) => {
-  console.log('Received headers');
+fetch(url)
+  .then((response) => {
+    console.log("Received headers");
 
-  const decoder = new TextDecoder();
-  const reader = response.body.getReader();
-  const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
-  const bufferSize = Math.max(toMatch.length - 1, contextBefore);
+    const decoder = new TextDecoder();
+    const reader = response.body.getReader();
+    const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
+    const bufferSize = Math.max(toMatch.length - 1, contextBefore);
 
-  let bytesReceived = 0;
-  let buffer = '';
-  let matchFoundAt = -1;
+    let bytesReceived = 0;
+    let buffer = "";
+    let matchFoundAt = -1;
 
-  return reader.read().then(function process(result) {
-    if (result.done) {
-      console.log('Failed to find match');
-      return;
-    }
+    return reader.read().then(function process(result) {
+      if (result.done) {
+        console.log("Failed to find match");
+        return;
+      }
 
-    bytesReceived += result.value.length;
-    console.log(`Received ${bytesReceived} bytes of data so far`);
+      bytesReceived += result.value.length;
+      console.log(`Received ${bytesReceived} bytes of data so far`);
 
-    buffer += decoder.decode(result.value, {stream: true});
+      buffer += decoder.decode(result.value, { stream: true });
 
-    // already found match & just context-gathering?
-    if (matchFoundAt === -1) {
-      matchFoundAt = (caseInsensitive ? buffer.toLowerCase() : buffer).indexOf(toMatch);
-    }
+      // already found match & just context-gathering?
+      if (matchFoundAt === -1) {
+        matchFoundAt = (
+          caseInsensitive ? buffer.toLowerCase() : buffer
+        ).indexOf(toMatch);
+      }
 
-    if (matchFoundAt === -1) {
-      buffer = buffer.slice(-bufferSize);
-    } else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
-      console.log("Here's the match:")
-      console.log(buffer.slice(
-        Math.max(0, matchFoundAt - contextBefore),
-        matchFoundAt + toMatch.length + contextAfter
-      ));
-      console.log("Cancelling fetch");
-      reader.cancel();
-      return;
-    } else {
-      console.log('Found match, but need more context…');
-    }
+      if (matchFoundAt === -1) {
+        buffer = buffer.slice(-bufferSize);
+      } else if (
+        buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter
+      ) {
+        console.log("Here's the match:");
+        console.log(
+          buffer.slice(
+            Math.max(0, matchFoundAt - contextBefore),
+            matchFoundAt + toMatch.length + contextAfter,
+          ),
+        );
+        console.log("Cancelling fetch");
+        reader.cancel();
+        return;
+      } else {
+        console.log("Found match, but need more context…");
+      }
 
-    // keep reading
-    return reader.read().then(process);
+      // keep reading
+      return reader.read().then(process);
+    });
+  })
+  .catch((err) => {
+    console.error(
+      "Something went wrong. See devtools for details. Does the response lack CORS headers?",
+    );
+    throw err;
   });
-}).catch((err) => {
-  console.error("Something went wrong. See devtools for details. Does the response lack CORS headers?");
-  throw err;
-});
 ```
 
 ## Specifications
@@ -119,3 +123,8 @@ fetch(url).then((response) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

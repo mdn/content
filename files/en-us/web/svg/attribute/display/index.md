@@ -2,9 +2,6 @@
 title: display
 slug: Web/SVG/Attribute/display
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.display
 ---
 
@@ -16,9 +13,9 @@ A value of `display="none"` indicates that the given element and its children wi
 
 When applied to a container element, setting `display` to `none` causes the container and all of its children to be invisible; thus, it acts on groups of elements as a group. This means that any child of an element with `display="none"` will never be rendered even if the child has a value for `display` other than `none`.
 
-When the `display` attribute is set to `none`, then the given element does not become part of the rendering tree. It has implications for the {{SVGElement("tspan")}}, {{SVGElement("tref")}}, and {{SVGElement("altGlyph")}} elements, event processing, for bounding box calculations and for calculation of clipping paths:
+When the `display` attribute is set to `none`, then the given element does not become part of the rendering tree. It has implications for the {{SVGElement("tspan")}} and {{SVGElement("tref")}} elements, event processing, for bounding box calculations and for calculation of clipping paths:
 
-- If `display` is set to `none` on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("altGlyph")}} element, then the text string is ignored for the purposes of text layout.
+- If `display` is set to `none` on a {{SVGElement("tspan")}} or {{SVGElement("tref")}} element, then the text string is ignored for the purposes of text layout.
 - Regarding events, if `display` is set to `none`, the element receives no events.
 - The geometry of a [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements) with `display` set to `none` is not included in bounding box and clipping paths calculations.
 

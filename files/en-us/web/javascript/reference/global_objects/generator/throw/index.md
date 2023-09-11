@@ -2,26 +2,19 @@
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Generator.throw
 ---
 
 {{JSRef}}
 
-The **`throw()`** method of a generator acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
+The **`throw()`** method of {{jsxref("Generator")}} instances acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
 ## Syntax
 
-<!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
+<!-- We don't usually add the "generatorInstance" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
 
-```js
-generatorObject.throw(exception)
+```js-nolint
+generatorInstance.throw(exception)
 ```
 
 ### Parameters
@@ -60,7 +53,7 @@ function* gen() {
     try {
       yield 42;
     } catch (e) {
-      console.log('Error caught!');
+      console.log("Error caught!");
     }
   }
 }
@@ -68,7 +61,7 @@ function* gen() {
 const g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error('Something went wrong'));
+g.throw(new Error("Something went wrong"));
 // "Error caught!"
 // { value: 42, done: false }
 ```

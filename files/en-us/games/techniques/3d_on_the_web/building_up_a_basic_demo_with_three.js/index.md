@@ -1,18 +1,7 @@
 ---
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
-  - three.js
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -35,7 +24,7 @@ To start developing with Three.js, you don't need much. You should:
 Here's the HTML structure we will use:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />

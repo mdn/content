@@ -1,16 +1,10 @@
 ---
-title: FederatedCredential.provider
+title: "FederatedCredential: provider property"
+short-title: provider
 slug: Web/API/FederatedCredential/provider
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - NeedsExample
-  - Property
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FederatedCredential.provider
 ---
 

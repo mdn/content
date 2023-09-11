@@ -2,9 +2,6 @@
 title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-miterlimit
 ---
 
@@ -16,7 +13,6 @@ The **`stroke-miterlimit`** attribute is a presentation attribute defining a lim
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('path')}}
 - {{SVGElement('polygon')}}
 - {{SVGElement('polyline')}}

@@ -1,13 +1,7 @@
 ---
-title: "aria-multiselectable"
+title: aria-multiselectable
 slug: Web/Accessibility/ARIA/Attributes/aria-multiselectable
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-multiselectable
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiselectable
 ---
 
@@ -21,7 +15,7 @@ The default behavior of selection lists, such as {{HTMLElement('select')}}, is t
 
 ### Used with `aria-selected`
 
-When the user does select one or more items, remember to set the selected descendants as selected with [`aria-selected="true"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and selectable descendants that are not selected have `aria-selected="false"` set. If an element is not selectable, omit the `aria-selected` attribute altogether as its presence informs the user the item is selectable.
+When the user does select one or more items, remember to set the selected descendants as selected with [`aria-selected="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected), and selectable descendants that are not selected have `aria-selected="false"` set. If an element is not selectable, omit the `aria-selected` attribute altogether as its presence informs the user the item is selectable.
 
 If a tree, grid, tab list, or list box supports selection of more than one node, the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role), or [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) has `aria-multiselectable` set to `true`. Otherwise, `aria-multiselectable` is either set to `false` or the default value of false is implied.
 
@@ -51,7 +45,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 
 This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explicitly set to `false` indicates to assistive technology users that the item is selectable.
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected.
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." Instead of creating an unordered list requiring [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex), ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute. If included, the user can select multiple options. If not, only a single option can be selected.
 
 ```html
 <label for="flagcolors"> Choose the colors for your flag. </label>
@@ -127,7 +121,7 @@ If the above isn't stylable to your liking, you can also create a list of select
 </fieldset>
 ```
 
-Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
+Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute. The browser does the rest.
 
 ## Values
 
@@ -165,8 +159,8 @@ Inherited into roles:
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
-- {{htmlattrxref("multiple")}} attribute
-- [`aria-selected`](/en-US/docs/Web/Accessibility/Attributes/aria-selected)
+- [multiple](/en-US/docs/Web/HTML/Attributes/multiple) attribute
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

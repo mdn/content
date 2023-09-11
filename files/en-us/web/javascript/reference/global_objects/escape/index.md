@@ -2,11 +2,8 @@
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 page-type: javascript-function
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.escape
 ---
 
@@ -35,9 +32,9 @@ A new string in which certain characters have been escaped.
 
 `escape()` is a function property of the global object.
 
-The `escape()` function replaces all characters with escape sequences, with the exception of ASCII word characters (A–Z, a–z, 0–9, _) and `@*_+-./`. Characters are escaped by UTF-16 code units. If the code unit's value is less than 256, it is represented by a two-digit hexadecimal number in the format `%XX`, left-padded with 0 if necessary. Otherwise, it is represented by a four-digit hexadecimal number in the format `%uXXXX`, left-padded with 0 if necessary.
+The `escape()` function replaces all characters with escape sequences, with the exception of {{Glossary("ASCII")}} word characters (A–Z, a–z, 0–9, \_) and `@\*_+-./`. Characters are escaped by UTF-16 code units. If the code unit's value is less than 256, it is represented by a two-digit hexadecimal number in the format `%XX`, left-padded with 0 if necessary. Otherwise, it is represented by a four-digit hexadecimal number in the format `%uXXXX`, left-padded with 0 if necessary.
 
-> **Note:** This function was used mostly for URL encoding and is partly based on the escape format in {{rfc(1738)}}. The escape format is _not_ an [escape sequence](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) in string literals. You can replace `%XX` with `\xXX` and `%uXXXX` with `\uXXXX` to get a string containing actual string-literal escape sequences.
+> **Note:** This function was used mostly for [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) and is partly based on the escape format in {{rfc(1738)}}. The escape format is _not_ an [escape sequence](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) in string literals. You can replace `%XX` with `\xXX` and `%uXXXX` with `\uXXXX` to get a string containing actual string-literal escape sequences.
 
 ## Examples
 

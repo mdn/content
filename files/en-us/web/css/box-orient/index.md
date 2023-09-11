@@ -2,20 +2,19 @@
 title: box-orient
 slug: Web/CSS/box-orient
 page-type: css-property
-tags:
-  - CSS
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-orient
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
 The **`box-orient`** [CSS](/en-US/docs/Web/CSS) property sets whether an element lays out its contents horizontally or vertically.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -29,8 +28,6 @@ box-orient: inherit;
 box-orient: initial;
 box-orient: unset;
 ```
-
-## Syntax
 
 The `box-orient` property is specified as one of the keyword values listed below.
 

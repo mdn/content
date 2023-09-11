@@ -1,14 +1,10 @@
 ---
-title: CookieStoreManager.unsubscribe()
+title: "CookieStoreManager: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - unsubscribe
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
 

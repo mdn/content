@@ -1,12 +1,7 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -16,7 +11,7 @@ It is usually caused by omitting a variable name or a typographic error.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing variable name (Firefox)
 SyntaxError: Unexpected token '='. Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
@@ -36,7 +31,7 @@ When declaring multiple variables at the same time, make sure that the previous 
 
 ### Missing a variable name
 
-```js example-bad
+```js-nolint example-bad
 const = "foo";
 ```
 
@@ -51,7 +46,7 @@ const description = "foo";
 There are a few variable names that are [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 You can't use these. Sorry :(
 
-```js example-bad
+```js-nolint example-bad
 const debugger = "whoop";
 // SyntaxError: missing variable name
 ```
@@ -62,12 +57,12 @@ Pay special attention to commas when declaring multiple variables.
 Is there an excess comma, or did you use commas instead of semicolons?
 Did you remember to assign values for all your `const` variables?
 
-```js example-bad
+```js-nolint example-bad
 let x, y = "foo",
 const z, = "foo"
 
-const first = document.getElementById('one'),
-const second = document.getElementById('two'),
+const first = document.getElementById("one"),
+const second = document.getElementById("two"),
 
 // SyntaxError: missing variable name
 ```
@@ -75,11 +70,12 @@ const second = document.getElementById('two'),
 The fixed version:
 
 ```js example-good
-let x, y = "foo";
+let x,
+  y = "foo";
 const z = "foo";
 
-const first = document.getElementById('one');
-const second = document.getElementById('two');
+const first = document.getElementById("one");
+const second = document.getElementById("two");
 ```
 
 ### Arrays
@@ -87,7 +83,7 @@ const second = document.getElementById('two');
 {{jsxref("Array")}} literals in JavaScript need square brackets around the values.
 This won't work:
 
-```js example-bad
+```js-nolint example-bad
 const arr = 1,2,3,4,5;
 // SyntaxError: missing variable name
 ```
@@ -95,11 +91,11 @@ const arr = 1,2,3,4,5;
 This would be correct:
 
 ```js example-good
-const arr = [1,2,3,4,5];
+const arr = [1, 2, 3, 4, 5];
 ```
 
 ## See also
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
 - {{jsxref("Statements/var", "var")}}
-- [Variable declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

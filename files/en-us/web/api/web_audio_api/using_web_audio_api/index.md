@@ -2,17 +2,6 @@
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Guide
-  - Playback
-  - Using
-  - Web
-  - Web Audio
-  - Web Audio API
-  - basics
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -133,7 +122,7 @@ playButton.addEventListener(
       playButton.dataset.playing = "false";
     }
   },
-  false
+  false,
 );
 ```
 
@@ -145,7 +134,7 @@ audioElement.addEventListener(
   () => {
     playButton.dataset.playing = "false";
   },
-  false
+  false,
 );
 ```
 
@@ -189,7 +178,7 @@ volumeControl.addEventListener(
   () => {
     gainNode.gain.value = volumeControl.value;
   },
-  false
+  false,
 );
 ```
 
@@ -236,7 +225,7 @@ pannerControl.addEventListener(
   () => {
     panner.pan.value = pannerControl.value;
   },
-  false
+  false,
 );
 ```
 

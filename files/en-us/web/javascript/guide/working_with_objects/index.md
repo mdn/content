@@ -1,20 +1,12 @@
 ---
 title: Working with objects
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 page-type: guide
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - "l10n:priority"
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
-JavaScript is designed on a simple object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
+JavaScript is designed on a simple object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
 Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
 
@@ -26,7 +18,7 @@ You can create an object using an [object initializer](/en-US/docs/Web/JavaScrip
 
 ### Using object initializers
 
-Object initializers are also called _object literals_. "Object initializer" is consistent with the terminology used by C++。
+Object initializers are also called _object literals_. "Object initializer" is consistent with the terminology used by C++.
 
 The syntax for an object using an object initializer is:
 
@@ -63,7 +55,7 @@ const myHonda = {
 };
 ```
 
-Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#creating_a_regular_expression).
+Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression).
 
 ### Using a constructor function
 
@@ -148,7 +140,7 @@ car1.color = "black";
 
 adds a property `color` to `car1`, and assigns it a value of `"black"`. However, this does not affect any other objects. To add the new property to all objects of the same type, you have to add the property to the definition of the `Car` object type.
 
-You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syntax instead of the `function` syntax to define a constructor function. For more information, see the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syntax instead of the `function` syntax to define a constructor function. For more information, see the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ### Using the Object.create() method
 
@@ -192,7 +184,7 @@ Like JavaScript variables, property names are case sensitive. Property names can
 
 ### Accessing properties
 
-You can access a property of an object by its property name. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) come in two syntaxes: _dot notation_ and _bracket notation_. For example, you could access the properties of the `myCar` object as follows:
+You can access a property of an object by its property name. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) come in two syntaxes: _dot notation_ and _bracket notation_. For example, you could access the properties of the `myCar` object as follows:
 
 ```js
 // Dot notation
@@ -295,7 +287,7 @@ function showProps(obj, objName) {
 
 The term "own property" refers to the properties of the object, but excluding those of the prototype chain. So, the function call `showProps(myCar, 'myCar')` would print the following:
 
-```
+```plain
 myCar.make = Ford
 myCar.model = Mustang
 myCar.year = 1969
@@ -383,7 +375,7 @@ where `objectName` is an existing object, `methodName` is the name you are assig
 You can then call the method in the context of the object as follows:
 
 ```js
-object.methodName(params);
+objectName.methodName(params);
 ```
 
 Methods are typically defined on the `prototype` object of the constructor, so that all objects of the same type share the same method. For example, you can define a function that formats and displays the properties of the previously-defined `Car` objects.
@@ -520,7 +512,7 @@ For more information about comparison operators, see [equality operators](/en-US
 
 ## See also
 
-- To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

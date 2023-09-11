@@ -1,13 +1,8 @@
 ---
-title: CSSGroupingRule.deleteRule()
+title: "CSSGroupingRule: deleteRule() method"
+short-title: deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - Method
-  - Reference
 browser-compat: api.CSSGroupingRule.deleteRule
 ---
 

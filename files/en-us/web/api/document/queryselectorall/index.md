@@ -1,20 +1,8 @@
 ---
-title: Document.querySelectorAll()
+title: "Document: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - Document
-  - Finding Elements
-  - Locating Elements
-  - Method
-  - Reference
-  - Searching Elements
-  - Selecting Elements
-  - Selectors
-  - querySelectorAll
 browser-compat: api.Document.querySelectorAll
 ---
 
@@ -34,7 +22,7 @@ querySelectorAll(selectors)
 
 - `selectors`
   - : A string containing one or more selectors to match against. This
-    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
+    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_selectors)
     string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.
@@ -115,47 +103,6 @@ const highlightedItems = userList.querySelectorAll(".highlighted");
 highlightedItems.forEach((userItem) => {
   deleteUser(userItem);
 });
-```
-
-## User notes
-
-`querySelectorAll()` behaves differently than most common JavaScript DOM
-libraries, which might lead to unexpected results.
-
-### HTML
-
-Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
-
-```html
-<div class="outer">
-  <div class="select">
-    <div class="inner"></div>
-  </div>
-</div>
-```
-
-### JavaScript
-
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1, not 0!
-```
-
-In this example, when selecting `.outer .inner` in the context of the
-`<div>` with the class `select`, the element with the class
-`.inner` is still found, even though `.outer` is not a descendant
-of the base element on which the search is performed (`.select`). By default,
-`querySelectorAll()` only verifies that the last element in the selector is
-within the search scope.
-
-The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matching
-selectors on descendants of the base element:
-
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
-inner.length; // 0
 ```
 
 ## Specifications

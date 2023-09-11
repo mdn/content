@@ -2,19 +2,6 @@
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
 page-type: web-api-interface
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - screen
 browser-compat: api.MediaTrackSupportedConstraints
 ---
 

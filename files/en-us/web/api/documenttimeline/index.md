@@ -2,16 +2,6 @@
 title: DocumentTimeline
 slug: Web/API/DocumentTimeline
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - DocumentTimeline
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
 browser-compat: api.DocumentTimeline
 ---
 
@@ -32,21 +22,6 @@ _This interface inherits its property from its parent, {{domxref("AnimationTimel
 
 - {{domxref("AnimationTimeline.currentTime")}}
   - : Returns the time value in milliseconds for this timeline or `null` if it is inactive.
-
-## Examples
-
-We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
-
-```js
-const cats = document.querySelectorAll('.sharedTimelineCat');
-const sharedTimeline = new DocumentTimeline({ originTime: 500 });
-
-for (const cat of cats) {
-  const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
-  const catAnimation = new Animation(catKeyframes, sharedTimeline);
-  catAnimation.play();
-}
-```
 
 ## Specifications
 

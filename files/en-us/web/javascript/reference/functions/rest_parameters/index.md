@@ -2,11 +2,6 @@
 title: Rest parameters
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 page-type: javascript-language-feature
-tags:
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
 
@@ -45,7 +40,7 @@ myFun("one", "two", "three", "four", "five", "six");
 
 A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
 
-```js example-bad
+```js-nolint example-bad
 function wrong1(...one, ...wrong) {}
 function wrong2(...wrong, arg2, arg3) {}
 ```
@@ -203,7 +198,9 @@ function fn(...args) {
 
 ## See also
 
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also '`...`')
-- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-- [`arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Array")}}

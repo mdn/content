@@ -1,16 +1,7 @@
 ---
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRestartRequired
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onRestartRequired
 ---
 
@@ -28,7 +19,7 @@ browser.runtime.onRestartRequired.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,7 +32,7 @@ Events have three functions:
 
 - `function`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `reason`
       - : A {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} value — the reason that the event is being dispatched.

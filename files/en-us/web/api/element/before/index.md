@@ -1,13 +1,8 @@
 ---
-title: Element.before()
+title: "Element: before() method"
+short-title: before()
 slug: Web/API/Element/before
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
 browser-compat: api.Element.before
 ---
 
@@ -23,7 +18,7 @@ String objects are inserted as equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 before(param1)
 before(param1, param2)
-before(param1, param2, /* … ,*/ paramN)
+before(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

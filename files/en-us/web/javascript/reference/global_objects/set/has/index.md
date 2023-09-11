@@ -2,19 +2,13 @@
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - set
 browser-compat: javascript.builtins.Set.has
 ---
 
 {{JSRef}}
 
-The **`has()`** method returns a boolean indicating whether an
-element with the specified value exists in a `Set` object or not.
+The **`has()`** method of {{jsxref("Set")}} instances returns a boolean indicating whether an
+element with the specified value exists in this set or not.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 

@@ -2,12 +2,6 @@
 title: Adjacent sibling combinator
 slug: Web/CSS/Adjacent_sibling_combinator
 page-type: css-combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.adjacent_sibling
 ---
 
@@ -24,7 +18,8 @@ img + p {
 
 ## Syntax
 
-```css
+```css-nolint
+/* The white space around the + combinator is optional but recommended. */
 former_element + target_element { style properties }
 ```
 

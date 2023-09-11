@@ -1,18 +1,10 @@
 ---
-title: ServiceWorkerRegistration.index
+title: "ServiceWorkerRegistration: index property"
+short-title: index
 slug: Web/API/ServiceWorkerRegistration/index
 page-type: web-api-instance-property
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - Property
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - content index
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ServiceWorkerRegistration.index
 ---
 
@@ -38,11 +30,9 @@ Here is an example from the main script:
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('index' in registration) {
-
+if ("index" in registration) {
   // Content Index API functionality
   const contentIndex = registration.index;
-
 }
 ```
 

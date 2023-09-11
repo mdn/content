@@ -1,14 +1,8 @@
 ---
-title: WebGL2RenderingContext.uniform[1234][uif][v]()
+title: "WebGL2RenderingContext: uniform[1234][uif][v]() method"
+short-title: uniform[1234][uif][v]()
 slug: Web/API/WebGL2RenderingContext/uniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
-  - WebGL2RenderingContext
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
 
@@ -18,7 +12,7 @@ The **`WebGL2RenderingContext.uniform[1234][uif][v]()`**
 methods of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of
 uniform variables.
 
-> **Note:** `ui` stands for _unsigned integer_, `i` for _integer,_ > `f` for _float_, and `v` for _vector._
+> **Note:** `ui` stands for _unsigned integer_, `i` for _integer_, `f` for _float_, and `v` for _vector_.
 > Not all combinations are valid: `u` cannot be combined with `f`.
 > See the syntax table below. Equivalent Regex: `uniform[1234](u?i|f)v?`
 

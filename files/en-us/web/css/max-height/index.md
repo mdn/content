@@ -2,18 +2,6 @@
 title: max-height
 slug: Web/CSS/max-height
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Maximum
-  - Reference
-  - dimensions
-  - height
-  - limit
-  - max-height
-  - recipe:css-property
-  - size
 browser-compat: css.properties.max-height
 ---
 
@@ -102,6 +90,6 @@ form {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{Cssxref("height")}}, {{Cssxref("min-height")}}
 - The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}

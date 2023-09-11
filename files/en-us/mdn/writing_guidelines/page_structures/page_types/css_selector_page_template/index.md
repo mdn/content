@@ -2,9 +2,6 @@
 title: CSS selector page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: css.selectors.NameOfTheSelector
 ---
 
@@ -24,13 +21,10 @@ browser-compat: css.selectors.NameOfTheSelector
 > title: :NameOfTheSelector
 > slug: Web/CSS/:NameOfTheSelector
 > page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
-> tags:
->   - CSS
->   - Reference
->   - Selector
->   - NameOfTheSelector
->   - Experimental
->   - Deprecated
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: css.selectors.NameOfTheSelector
 > ---
 > ```
@@ -42,17 +36,9 @@ browser-compat: css.selectors.NameOfTheSelector
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
 >     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_Selectors#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_Selectors#basic_selectors).
-> - **tags**
->
->   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
->
->     Include the following tags as appropriate:
->
->     - Type of selector: **Layout**, **Basic Selectors**, **Combinators**, **Pseudo-classes**, **Pseudo-elements**
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
->     - Any other tags that represent terms people might search for related to the technology.
->
+>   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -71,7 +57,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{CSSRef}}` — this must be present on every CSS selector page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
@@ -151,7 +137,7 @@ Remove this section if there are none to list.
 
 ## See also
 
-- Include list of
-- other links related to
-- this Element that might
-- be useful
+Include links to reference pages and guides related to the current selector. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

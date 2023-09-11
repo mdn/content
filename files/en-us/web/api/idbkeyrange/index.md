@@ -2,14 +2,6 @@
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBKeyRange
 ---
 
@@ -19,17 +11,17 @@ The **`IDBKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/Index
 
 A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is _bounded_; if it has no bounds, it is _unbounded_. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:
 
-| Range                       | Code                                                   |
-| --------------------------- | ------------------------------------------------------ |
-| All keys ≥ **x**            | {{domxref("IDBKeyRange.lowerBound")}} `(x)`            |
-| All keys > **x**            | {{domxref("IDBKeyRange.lowerBound")}} `(x, true)`      |
-| All keys ≤ **y**            | {{domxref("IDBKeyRange.upperBound")}} `(y)`            |
-| All keys < **y**            | {{domxref("IDBKeyRange.upperBound")}} `(y, true)`      |
-| All keys ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}} `(x, y)`              |
-| All keys > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}} `(x, y, true, true)`  |
-| All keys > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}} `(x, y, true, false)` |
-| All keys ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}} `(x, y, false, true)` |
-| The key = **z**             | {{domxref("IDBKeyRange.only")}} `(z)`                  |
+| Range                       | Code                                   |
+| --------------------------- | -------------------------------------- |
+| All keys ≥ **x**            | `IDBKeyRange.lowerBound(x)`            |
+| All keys > **x**            | `IDBKeyRange.lowerBound(x, true)`      |
+| All keys ≤ **y**            | `IDBKeyRange.upperBound(y)`            |
+| All keys < **y**            | `IDBKeyRange.upperBound(y, true)`      |
+| All keys ≥ **x** && ≤ **y** | `IDBKeyRange.bound(x, y)`              |
+| All keys > **x** &&< **y**  | `IDBKeyRange.bound(x, y, true, true)`  |
+| All keys > **x** && ≤ **y** | `IDBKeyRange.bound(x, y, true, false)` |
+| All keys ≥ **x** &&< **y**  | `IDBKeyRange.bound(x, y, false, true)` |
+| The key = **z**             | `IDBKeyRange.only(z)`                  |
 
 A key is in a key range if the following conditions are true:
 
@@ -60,13 +52,13 @@ A key is in a key range if the following conditions are true:
 
 ## Static methods
 
-- {{domxref("IDBKeyRange.bound()")}}
+- {{domxref("IDBKeyRange.bound_static", "IDBKeyRange.bound()")}}
   - : Creates a new key range with upper and lower bounds.
-- {{domxref("IDBKeyRange.only()")}}
+- {{domxref("IDBKeyRange.only_static", "IDBKeyRange.only()")}}
   - : Creates a new key range containing a single value.
-- {{domxref("IDBKeyRange.lowerBound()")}}
+- {{domxref("IDBKeyRange.lowerBound_static", "IDBKeyRange.lowerBound()")}}
   - : Creates a new key range with only a lower bound.
-- {{domxref("IDBKeyRange.upperBound()")}}
+- {{domxref("IDBKeyRange.upperBound_static", "IDBKeyRange.upperBound()")}}
   - : Creates a new upper-bound key range.
 
 ## Instance methods
@@ -85,19 +77,19 @@ If we used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not 
 function displayData() {
   const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }

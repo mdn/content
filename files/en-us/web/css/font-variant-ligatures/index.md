@@ -2,12 +2,6 @@
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-ligatures
 ---
 
@@ -48,28 +42,28 @@ The `font-variant-ligatures` property is specified as one of the keyword values 
   - : This keyword leads to the activation of the usual ligatures and contextual forms needed for correct rendering. The ligatures and forms activated depend on the font, language and kind of script. This is the default value.
 - `none`
   - : This keyword specifies that all ligatures and contextual forms are disabled, even common ones.
-- _\<common-lig-values>_
+- _`<common-lig-values>`_
 
   - : These values control the most common ligatures, like for `fi`, `ffi`, `th` or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
 
     - `common-ligatures` activating these ligatures. Note that the keyword `normal` activates these ligatures.
     - `no-common-ligatures` deactivating these ligatures.
 
-- _\<discretionary-lig-values>_
+- _`<discretionary-lig-values>`_
 
   - : These values control specific ligatures, specific to the font and defined by the type designer. They correspond to the OpenType values `dlig`. Two values are possible:
 
     - `discretionary-ligatures` activating these ligatures.
     - `no-discretionary-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
 
-- _\<historical-lig-values>_
+- _`<historical-lig-values>`_
 
   - : These values control the ligatures used historically, in old books, like the German tz digraph being displayed as ꜩ. They correspond to the OpenType values `hlig`. Two values are possible:
 
     - `historical-ligatures` activating these ligatures.
     - `no-historical-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
 
-- _\<contextual-alt-values>_
+- _`<contextual-alt-values>`_
 
   - : These values control whether letters adapt to their context—that is, whether they adapt to the surrounding letters. These values correspond to the OpenType values `calt`. Two values are possible:
 
@@ -196,9 +190,9 @@ p {
 ## See also
 
 - [`font-variant`](/en-US/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-ligatures)
 - [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
 - [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
 - [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
 - [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
 - [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
+- [CSS fonts module](/en-US/docs/Web/CSS/CSS_fonts)

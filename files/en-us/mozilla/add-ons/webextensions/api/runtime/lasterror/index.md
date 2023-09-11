@@ -1,16 +1,7 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-  - runtime
+page-type: webextension-api-property
 browser-compat: webextensions.api.runtime.lastError
 ---
 
@@ -52,10 +43,7 @@ function logCookie(c) {
   }
 }
 
-browser.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 The same, but using a promise to handle the result of `setCookie()`:
@@ -69,9 +57,9 @@ function logError(e) {
   console.error(e);
 }
 
-const setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+const setCookie = browser.cookies.set({
+  url: "https://developer.mozilla.org/",
+});
 
 setCookie.then(logCookie, logError);
 ```

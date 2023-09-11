@@ -2,18 +2,12 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transition-timing-function
 ---
 
 {{CSSRef}}
 
-The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
@@ -47,7 +41,7 @@ transition-timing-function: steps(5, jump-both);
 transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
-/* Multiple timing functions */
+/* Multiple easing functions */
 transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
@@ -64,7 +58,7 @@ transition-timing-function: unset;
 
   - : Each {{cssxref("&lt;easing-function&gt;")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
 
-    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
+    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
 
     - `ease`
       - : Equal to `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, the default value, increases in velocity towards the middle of the transition, slowing back down at the end.
@@ -73,7 +67,7 @@ transition-timing-function: unset;
     - `ease-in`
       - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the transition speed increasing until complete.
     - `ease-out`
-      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down the transition continues. •
+      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down as the transition continues.
     - `ease-in-out`
       - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, starts transitioning slowly, speeds up, and then slows down again.
     - `cubic-bezier(p1, p2, p3, p4)`
@@ -104,7 +98,7 @@ transition-timing-function: unset;
 
 Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) (or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) to create a complimentary experience for users who have expressed a preference for less animation.
 
 ## Formal definition
 
@@ -268,7 +262,7 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}

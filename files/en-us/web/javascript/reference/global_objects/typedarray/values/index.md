@@ -2,20 +2,12 @@
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.values
 ---
 
 {{JSRef}}
 
-The **`values()`** method returns a new _array iterator_ object that contains the values for each index in the array.
+The **`values()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.values()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
 
@@ -25,9 +17,17 @@ The **`values()`** method returns a new _array iterator_ object that contains th
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new _array iterator_ object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+
+## Description
+
+See {{jsxref("Array.prototype.values()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -64,8 +64,10 @@ console.log(values.next().value); // 50
 ## See also
 
 - [Polyfill of `TypedArray.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Array.prototype.values()")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -2,19 +2,12 @@
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.trimStart
 ---
 
 {{JSRef}}
 
-The **`trimStart()`** method removes whitespace from the beginning of a string and returns a new string, without modifying the original string. `trimLeft()` is an alias of this method.
+The **`trimStart()`** method of {{jsxref("String")}} values removes whitespace from the beginning of this string and returns a new string, without modifying the original string. `trimLeft()` is an alias of this method.
 
 {{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
@@ -26,6 +19,10 @@ trimStart()
 trimLeft()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string representing `str` stripped of whitespace from its beginning (left side). Whitespace is defined as [white space](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) characters plus [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators).
@@ -34,7 +31,7 @@ If the beginning of `str` has no whitespace, a new string is still returned (ess
 
 ### Aliasing
 
-After {{jsxref("String/trim", "trim()")}} was standardized, engines also implemented the non-standard method `trimLeft`. However, for consistency with {{jsxref("String/padEnd", "padEnd()")}}, when the method got standardized, its name was chosen as `trimStart`. For web compatibility reasons, `trimLeft` remains as an alias to `trimStart`, and they refer to the exact same function object. In some engines this means:
+After {{jsxref("String/trim", "trim()")}} was standardized, engines also implemented the non-standard method `trimLeft`. However, for consistency with {{jsxref("String/padStart", "padStart()")}}, when the method got standardized, its name was chosen as `trimStart`. For web compatibility reasons, `trimLeft` remains as an alias to `trimStart`, and they refer to the exact same function object. In some engines this means:
 
 ```js
 String.prototype.trimLeft.name === "trimStart";

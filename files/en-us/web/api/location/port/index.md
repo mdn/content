@@ -1,12 +1,8 @@
 ---
-title: location.port
+title: "location: port property"
+short-title: port
 slug: Web/API/Location/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.port
 ---
 

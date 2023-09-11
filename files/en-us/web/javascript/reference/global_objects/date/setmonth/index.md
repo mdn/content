@@ -2,18 +2,12 @@
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setMonth
 ---
 
 {{JSRef}}
 
-The **`setMonth()`** method sets the month for a specified date according to the currently set year.
+The **`setMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
@@ -21,31 +15,25 @@ The **`setMonth()`** method sets the month for a specified date according to the
 
 ```js-nolint
 setMonth(monthValue)
-setMonth(monthValue, dayValue)
+setMonth(monthValue, dateValue)
 ```
 
 ### Parameters
 
 - `monthValue`
-  - : A zero-based integer representing the month of the year offset from the start of the
-    year. So, 0 represents January, 11 represents December, -1 represents December of the
-    previous year, and 12 represents January of the following year.
-- `dayValue`
-  - : Optional. An integer from 1 to 31, representing the day of the month.
+  - : An integer representing the month: 0 for January, 1 for February, and so on.
+- `dateValue` {{optional_inline}}
+  - : An integer from 1 to 31 representing the day of the month.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
-If you do not specify the `dayValue` parameter, the value
-returned from the {{jsxref("Date.prototype.getDate()", "getDate()")}} method is used.
+If you do not specify the `dateValue` parameter, the same value as what is returned by {{jsxref("Date/getDate", "getDate()")}} is used.
 
-If a parameter you specify is outside of the expected range, `setMonth()`
-attempts to update the date information in the {{jsxref("Date")}} object accordingly.
-For example, if you use 15 for `monthValue`, the year will be
-incremented by 1, and 3 will be used for month.
+If a parameter you specify is outside of the expected range, other parameters and the date information in the {{jsxref("Date")}} object are updated accordingly. For example, if you specify 15 for `monthValue`, the year is incremented by 1, and 3 is used for month.
 
 The current day of month will have an impact on the behavior of this method.
 Conceptually it will add the number of days given by the current day of the month to the

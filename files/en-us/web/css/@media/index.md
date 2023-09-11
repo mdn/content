@@ -2,18 +2,12 @@
 title: "@media"
 slug: Web/CSS/@media
 page-type: css-at-rule
-tags:
-  - "@media"
-  - At-rule
-  - CSS
-  - Conditional
-  - Reference
 browser-compat: css.at-rules.media
 ---
 
 {{CSSRef}}
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > **Note:** In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
 
@@ -41,7 +35,7 @@ The `@media` at-rule may be placed at the top level of your code or nested insid
 }
 ```
 
-For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax).
+For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
 ## Description
 
@@ -53,7 +47,7 @@ Except when using the `not` or `only` logical operators, the media type is optio
 - `all`
   - : Suitable for all devices.
 - `print`
-  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Paged_Media) for information about formatting issues that are specific to these formats.)
+  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/CSS_paged_media) for information about formatting issues that are specific to these formats.)
 - `screen`
   - : Intended primarily for screens.
 
@@ -132,7 +126,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
-- {{cssxref("@media/update-frequency", "update")}} {{Experimental_Inline}}
+- {{cssxref("@media/update", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
@@ -169,17 +163,24 @@ You can also combine multiple media queries into a single rule by separating the
 - `or`
   - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
+### User agent client hints
+
+Some media queries have corresponding [user agent client hints](/en-US/docs/Web/HTTP/Client_hints).
+These are HTTP headers that request content that is pre-optimized for the particular media requirement.
+They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
+
 ## Accessibility concerns
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 Both [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) and [`px`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) are valid units, but [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) works better if the user changes the browser text size.
 
-Also consider using Level 4 media queries to improve the user's experience. For example, `prefers-reduced-motion` to [detect if the user has requested that the system minimize the amount of animation](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or motion it uses.
+Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
+For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the eqivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
 
 ## Security
 
-Because media queries provide insights into the capabilities—and by extension, the features and design—of the device the user is working with, there is the potential that they could be abused to construct a "fingerprint" which identifies the device, or at least categorizes it to some degree of detail that may be undesirable to users.
+Because media queries provide insights into the capabilities—and by extension, the features and design—of the device the user is working with, there is the potential that they could be abused to construct a ["fingerprint"](/en-US/docs/Glossary/Fingerprinting) which identifies the device, or at least categorizes it to some degree of detail that may be undesirable to users.
 
 Because of this potential, a browser may opt to fudge the returned values in some manner in order to prevent them from being used to precisely identify a computer. A browser might also offer additional measures in this area; for example, if Firefox's "Resist Fingerprinting" setting is enabled, many media queries report default values rather than values representing the actual device state.
 
@@ -233,7 +234,7 @@ Introduced in Media Queries Level 4 is a new range syntax that allows for less v
 }
 ```
 
-For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Specifications
 
@@ -245,7 +246,7 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Media_Qu
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - In JavaScript, `@media` can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)

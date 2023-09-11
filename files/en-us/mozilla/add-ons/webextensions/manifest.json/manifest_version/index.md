@@ -1,10 +1,7 @@
 ---
 title: manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.manifest_version
 ---
 
@@ -22,7 +19,7 @@ browser-compat: webextensions.manifest.manifest_version
     </tr>
     <tr>
       <th scope="row">Example</th>
-      <td><pre class="brush: json">"manifest_version": 2</pre></td>
+      <td><pre class="brush: json">"manifest_version": 3</pre></td>
     </tr>
   </tbody>
 </table>
@@ -32,7 +29,7 @@ This key specifies the version of manifest.json used by this extension.
 ## Example
 
 ```json
-"manifest_version": 2
+"manifest_version": 3
 ```
 
 ## Browser compatibility

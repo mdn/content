@@ -1,9 +1,7 @@
 ---
 title: Keyboard
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-tags:
-  - Accessibility
-  - keyboard
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

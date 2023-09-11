@@ -1,17 +1,9 @@
 ---
 title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onActiveChanged
-  - tabs
+page-type: webextension-api-event
+status:
+  - deprecated
 browser-compat: webextensions.api.tabs.onActiveChanged
 ---
 
@@ -31,7 +23,7 @@ browser.tabs.onActiveChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,9 +34,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `tabId`
       - : `integer`. The ID of the tab that has become active.

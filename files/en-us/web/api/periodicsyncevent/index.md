@@ -2,16 +2,8 @@
 title: PeriodicSyncEvent
 slug: Web/API/PeriodicSyncEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Background Sync
-  - Interface
-  - Offline
-  - PeriodicSyncEvent
-  - Reference
-  - ServiceWorker
-  - Workers
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncEvent
 ---
 
@@ -42,8 +34,8 @@ Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'get-latest-news') {
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "get-latest-news") {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

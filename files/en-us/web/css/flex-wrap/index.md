@@ -2,12 +2,6 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.flex-wrap
 ---
 
@@ -17,7 +11,7 @@ The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items 
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for more properties and information.
+See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for more properties and information.
 
 ## Syntax
 
@@ -141,5 +135,6 @@ The following values are accepted:
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- CSS {{CSSXRef("flex-flow")}} shorthand property for the CSS `flex-wrap` and {{CSSXRef("flex-direction")}} properties.
+- Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_

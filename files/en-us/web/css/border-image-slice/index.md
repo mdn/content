@@ -2,13 +2,6 @@
 title: border-image-slice
 slug: Web/CSS/border-image-slice
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-image-slice
 ---
 

@@ -2,27 +2,12 @@
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Full
-  - fullscreen
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - Intermediate
-  - Overview
-  - Reference
-  - View
-  - fullscreen
-  - screen
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenElement
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -100,11 +85,15 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.key === "Enter") {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 #### Toggling fullscreen mode
@@ -135,10 +124,9 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## See also
 
-- [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
 - {{DOMxRef("Element.requestFullscreen()")}}
 - {{DOMxRef("Document.exitFullscreen()")}}
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

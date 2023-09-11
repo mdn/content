@@ -2,14 +2,6 @@
 title: offset-anchor
 slug: Web/CSS/offset-anchor
 page-type: css-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Motion Path
-  - Reference
-  - offset-anchor
-  - recipe:css-property
 browser-compat: css.properties.offset-anchor
 ---
 
@@ -46,6 +38,7 @@ offset-anchor: right 3em bottom 10px;
 offset-anchor: inherit;
 offset-anchor: initial;
 offset-anchor: revert;
+offset-anchor: revert-layer;
 offset-anchor: unset;
 ```
 

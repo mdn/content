@@ -2,12 +2,6 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 page-type: web-api-interface
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - Interface
-  - Reference
 browser-compat: api.AbortSignal
 ---
 
@@ -28,9 +22,9 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 ## Static methods
 
-- {{domxref("AbortSignal.abort()")}}
+- {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
-- {{domxref("AbortSignal.timeout()")}}
+- {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
   - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
 
 ## Instance methods
@@ -91,7 +85,7 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 
 ### Aborting a fetch operation with a timeout
 
-If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal.timeout()")}} method.
+If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}} method.
 This returns an `AbortSignal` that will automatically timeout after a certain number of milliseconds.
 
 The code snippet below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
@@ -110,7 +104,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc."
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");
@@ -129,9 +123,10 @@ To trigger on multiple signals they must be daisy chained.
 The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
 
 ```js
+let timeoutId;
 try {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 5000);
+  timeoutId = setTimeout(() => controller.abort(), 5000);
   const res = await fetch(url, { signal: controller.signal });
   const body = await res.json();
 } catch (e) {
@@ -147,7 +142,60 @@ try {
 }
 ```
 
-> **Note:** Unlike when using {{domxref("AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+> **Note:** Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+
+### Implementing an abortable API
+
+An API that needs to support aborting can accept an `AbortSignal` object, and use its state to trigger abort signal handling when needed.
+
+A {{jsxref("Promise")}}-based API should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
+For example, consider the following `myCoolPromiseAPI`, which takes a signal and returns a promise.
+The promise is rejected immediately if the signal is already aborted, or if the abort event is detected.
+Otherwise it completes normally and then resolves the promise.
+
+```js
+function myCoolPromiseAPI(/* …, */ { signal }) {
+  return new Promise((resolve, reject) => {
+    // If the signal is already aborted, immediately throw in order to reject the promise.
+    if (signal.aborted) {
+      reject(signal.reason);
+    }
+
+    // Perform the main purpose of the API
+    // Call resolve(result) when done.
+
+    // Watch for 'abort' signals
+    signal.addEventListener("abort", () => {
+      // Stop the main operation
+      // Reject the promise with the abort reason.
+      reject(signal.reason);
+    });
+  });
+}
+```
+
+The API might then be used as shown.
+Note that {{domxref("AbortController.abort()")}} is called to abort the operation.
+
+```js
+const controller = new AbortController();
+const signal = controller.signal;
+
+startSpinner();
+
+myCoolPromiseAPI({ /* …, */ signal })
+  .then((result) => {})
+  .catch((err) => {
+    if (err.name === "AbortError") return;
+    showUserErrorMessage();
+  })
+  .then(() => stopSpinner());
+
+controller.abort();
+```
+
+APIs that do not return promises might react in a similar manner.
+In some cases it may make sense to absorb the signal.
 
 ## Specifications
 

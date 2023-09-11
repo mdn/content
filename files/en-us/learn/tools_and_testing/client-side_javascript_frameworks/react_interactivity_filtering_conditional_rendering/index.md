@@ -1,16 +1,7 @@
 ---
-title: 'React interactivity: Editing, filtering, conditional rendering'
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - conditional rendering
-  - filtering
+title: "React interactivity: Editing, filtering, conditional rendering"
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -53,10 +44,10 @@ Add the `editTask()` function inside your `App` component, in the same place as 
 ```jsx
 function editTask(id, newName) {
   const editedTaskList = tasks.map((task) => {
-  // if this task has the same ID as the edited task
+    // if this task has the same ID as the edited task
     if (id === task.id) {
       //
-      return {...task, name: newName}
+      return { ...task, name: newName };
     }
     return task;
   });
@@ -127,28 +118,27 @@ const editingTemplate = (
 const viewTemplate = (
   <div className="stack-small">
     <div className="c-cb">
-        <input
-          id={props.id}
-          type="checkbox"
-          defaultChecked={props.completed}
-          onChange={() => props.toggleTaskCompleted(props.id)}
-        />
-        <label className="todo-label" htmlFor={props.id}>
-          {props.name}
-        </label>
-      </div>
-      <div className="btn-group">
-        <button type="button" className="btn">
-          Edit <span className="visually-hidden">{props.name}</span>
-        </button>
-        <button
-          type="button"
-          className="btn btn__danger"
-          onClick={() => props.deleteTask(props.id)}
-        >
-          Delete <span className="visually-hidden">{props.name}</span>
-        </button>
-      </div>
+      <input
+        id={props.id}
+        type="checkbox"
+        defaultChecked={props.completed}
+        onChange={() => props.toggleTaskCompleted(props.id)}
+      />
+      <label className="todo-label" htmlFor={props.id}>
+        {props.name}
+      </label>
+    </div>
+    <div className="btn-group">
+      <button type="button" className="btn">
+        Edit <span className="visually-hidden">{props.name}</span>
+      </button>
+      <button
+        type="button"
+        className="btn btn__danger"
+        onClick={() => props.deleteTask(props.id)}>
+        Delete <span className="visually-hidden">{props.name}</span>
+      </button>
+    </div>
   </div>
 );
 ```
@@ -157,7 +147,7 @@ We've now got the two different template structures — "edit" and "view" — de
 
 ## Conditional rendering
 
-In JSX, we can use a condition to change what is rendered by the browser. To write a condition in JSX, we can use a [ternary operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+In JSX, we can use a condition to change what is rendered by the browser. To write a condition in JSX, we can use a [ternary operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
 In the case of our `<Todo />` component, our condition is "Is this task being edited?" Change the `return` statement inside `Todo()` so that it reads like so:
 
@@ -187,8 +177,7 @@ Update the "Cancel" button in the `editingTemplate` like so:
 <button
   type="button"
   className="btn todo-cancel"
-  onClick={() => setEditing(false)}
->
+  onClick={() => setEditing(false)}>
   Cancel
   <span className="visually-hidden">renaming {props.name}</span>
 </button>
@@ -209,7 +198,7 @@ Much of what we're about to do will mirror the work we did in `Form.js`: as the 
 We'll start by making a new hook for storing and setting the new name. Still in `Todo.js`, put the following underneath the existing hook:
 
 ```jsx
-const [newName, setNewName] = useState('');
+const [newName, setNewName] = useState("");
 ```
 
 Next, create a `handleChange()` function that will set the new name; put this underneath the hooks but before the templates:
@@ -265,7 +254,7 @@ Now that our main features are complete, we can think about our filter buttons. 
 Add a new hook to your `App()` function that reads and sets a filter. We want the default filter to be `All` because all of our tasks should be shown initially:
 
 ```jsx
-const [filter, setFilter] = useState('All');
+const [filter, setFilter] = useState("All");
 ```
 
 ### Defining our filters
@@ -283,7 +272,7 @@ At the top of `App.js`, beneath our imports but above our `App()` function, let'
 const FILTER_MAP = {
   All: () => true,
   Active: (task) => !task.completed,
-  Completed: (task) => task.completed
+  Completed: (task) => task.completed,
 };
 ```
 
@@ -309,7 +298,7 @@ Add the following underneath your `taskList` constant declaration:
 
 ```jsx
 const filterList = FILTER_NAMES.map((name) => (
-  <FilterButton key={name} name={name}/>
+  <FilterButton key={name} name={name} />
 ));
 ```
 
@@ -323,7 +312,7 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 
 With this:
 
-```jsx
+```jsx-nolint
 {filterList}
 ```
 
@@ -364,8 +353,7 @@ function FilterButton(props) {
       type="button"
       className="btn toggle-btn"
       aria-pressed={props.isPressed}
-      onClick={() => props.setFilter(props.name)}
-    >
+      onClick={() => props.setFilter(props.name)}>
       <span className="visually-hidden">Show </span>
       <span>{props.name}</span>
       <span className="visually-hidden"> tasks</span>
@@ -388,18 +376,18 @@ Update your `taskList` like so:
 
 ```jsx
 const taskList = tasks
-.filter(FILTER_MAP[filter])
-.map((task) => (
-  <Todo
-    id={task.id}
-    name={task.name}
-    completed={task.completed}
-    key={task.id}
-    toggleTaskCompleted={toggleTaskCompleted}
-    deleteTask={deleteTask}
-    editTask={editTask}
-  />
-));
+  .filter(FILTER_MAP[filter])
+  .map((task) => (
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+      toggleTaskCompleted={toggleTaskCompleted}
+      deleteTask={deleteTask}
+      editTask={editTask}
+    />
+  ));
 ```
 
 In order to decide which callback function to use in `Array.prototype.filter()`, we access the value in `FILTER_MAP` that corresponds to the key of our filter state. When filter is `All`, for example, `FILTER_MAP[filter]` will evaluate to `() => true`.
@@ -413,58 +401,3 @@ Choosing a filter in your browser will now remove the tasks that do not meet its
 So that's it — our app is now functionally complete. However, now that we've implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

@@ -2,20 +2,12 @@
 title: inset()
 slug: Web/CSS/basic-shape/inset
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - inset
-  - CSS Functions
-  - Data Type
-  - Reference
 browser-compat: css.types.basic-shape.inset
 ---
 
 {{CSSRef}}
 
-The **`inset()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types). It defines an inset rectangle.
+The **`inset()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from each side of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
 
 {{EmbedInteractiveExample("pages/css/function-inset.html")}}
 
@@ -51,4 +43,5 @@ In the example below we have an `inset()` shape used to pull content over the fl
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Guide to basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)

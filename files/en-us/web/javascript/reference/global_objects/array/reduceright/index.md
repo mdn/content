@@ -2,69 +2,40 @@
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
 
 {{JSRef}}
 
-The **`reduceRight()`** method applies a function against an
+The **`reduceRight()`** method of {{jsxref("Array")}} instances applies a function against an
 accumulator and each value of the array (from right-to-left) to reduce it to a single
 value.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
-
 See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
+
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduceRight((accumulator, currentValue) => { /* … */ })
-reduceRight((accumulator, currentValue, index) => { /* … */ })
-reduceRight((accumulator, currentValue, index, array) => { /* … */ })
-reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
-
-// Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
-
-// Callback reducer function
-reduceRight(function (accumulator, currentValue) { /* … */ })
-reduceRight(function (accumulator, currentValue, index) { /* … */ })
-reduceRight(function (accumulator, currentValue, index, array) { /* … */ })
-reduceRight(function (accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduceRight()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or
-        `initialValue`, if supplied. (See below.)
+      - : The value resulting from the previous call to `callbackFn`. On the first call, its value is `initialValue` if the latter is specified; otherwise its value is the last element of the array.
     - `currentValue`
-      - : The current element being processed in the array.
-    - `index`
-      - : The index of the current element being processed in the array.
+      - : The value of the current element. On the first call, its value is the last element if `initialValue` is specified; otherwise its value is the second-to-last element.
+    - `currentIndex`
+      - : The index position of `currentValue` in the typed array. On the first call, its value is `array.length - 1` if `initialValue` is specified, otherwise `array.length - 2`.
     - `array`
       - : The array `reduceRight()` was called upon.
-
 - `initialValue` {{optional_inline}}
-  - : Value to use as accumulator to the first call of the
-    `callbackFn`. If no initial value is supplied, the last element in
-    the array will be used and skipped. Calling reduce or reduceRight on an empty array
-    without an initial value creates a `TypeError`.
+  - : Value to use as accumulator to the first call of the `callbackFn`. If no initial value is supplied, the last element in the array will be used and skipped. Calling `reduceRight()` on an empty array without an initial value creates a `TypeError`.
 
 ### Return value
 
@@ -76,7 +47,7 @@ The `reduceRight()` method is an [iterative method](/en-US/docs/Web/JavaScript/R
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduce()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
+Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduceRight()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
 
 `reduceRight()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
@@ -163,18 +134,6 @@ The value returned by `reduceRight` this time would be, of course, `20`.
 ```js
 const sum = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // sum is 6
-```
-
-### Flatten an array of arrays
-
-```js
-const arrays = [
-  [0, 1],
-  [2, 3],
-  [4, 5],
-];
-const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
-// flattened is [4, 5, 2, 3, 0, 1]
 ```
 
 ### Run a list of asynchronous functions with callbacks in series each passing their results to the next
@@ -276,7 +235,7 @@ console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
 
 ### Calling reduceRight() on non-array objects
 
-The `reduceRight()` method reads the `length` property of `this` and then accesses each integer index.
+The `reduceRight()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -284,6 +243,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 99, // ignored by reduceRight() since length is 3
 };
 console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 // -1, which is 4 - 3 - 2
@@ -300,4 +260,12 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

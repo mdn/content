@@ -2,21 +2,14 @@
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.big
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-The **`big()`** method creates a string that embeds a string in a {{HTMLElement("big")}} element (`<big>str</big>`), which causes a string to be displayed in a big font.
+The **`big()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("big")}} element (`<big>str</big>`), which causes this string to be displayed in a big font.
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `big()`, the `<big>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties Instead.
 
@@ -25,6 +18,10 @@ The **`big()`** method creates a string that embeds a string in a {{HTMLElement(
 ```js-nolint
 big()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

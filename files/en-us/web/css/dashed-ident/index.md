@@ -2,17 +2,7 @@
 title: <dashed-ident>
 slug: Web/CSS/dashed-ident
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Draft
-  - Layout
-  - Reference
-  - Web
-  - dashed-ident
-spec-urls:
-  - https://drafts.csswg.org/css-values/#dashed-idents
+spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
 ---
 
 {{CSSRef}}
@@ -23,7 +13,7 @@ The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/
 
 The syntax of `<dashed-ident>` is similar to CSS identifiers (such as property names), except that it is [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). It starts with two dashes, followed by the user-defined identifier.
 
-The double dash at the beginning makes them easily identifiable when reading through a CSS code block.
+The double dash at the beginning makes them easily identifiable when reading through a CSS code block, and helps to avoid name clashes with standard CSS keywords.
 
 Just like [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) `<dashed-ident>`s are defined by the user, but unlike `<custom-ident>` [CSS](/en-US/docs/Web/CSS) will never define a `<dashed-ident>`.
 
@@ -40,15 +30,18 @@ html {
   --tertiary-color: green;
 }
 
-h1, h4 {
+h1,
+h4 {
   color: var(--primary-color);
 }
 
-h2, h5 {
+h2,
+h5 {
   color: var(--secondary-color);
 }
 
-h3, h6 {
+h3,
+h6 {
   color: var(--tertiary-color);
 }
 ```
@@ -78,7 +71,10 @@ When `<dashed-ident>` is used with the [@font-palette-values](/en-US/docs/Web/CS
   override-colors: 0 #ff0000;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-palette: --my-palette;
 }
 ```

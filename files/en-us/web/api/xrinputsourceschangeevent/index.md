@@ -2,25 +2,6 @@
 title: XRInputSourcesChangeEvent
 slug: Web/API/XRInputSourcesChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourcesChangeEvent
-  - augmented
-  - events
-  - inputsourceschange
 browser-compat: api.XRInputSourcesChangeEvent
 ---
 

@@ -1,21 +1,8 @@
 ---
-title: RTCIceTransport.getLocalCandidates()
+title: "RTCIceTransport: getLocalCandidates() method"
+short-title: getLocalCandidates()
 slug: Web/API/RTCIceTransport/getLocalCandidates
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - ICE
-  - Method
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - getLocalCandidates
-  - rtc
 browser-compat: api.RTCIceTransport.getLocalCandidates
 ---
 
@@ -58,7 +45,9 @@ This simple example gets the local candidate list from the
 the list.
 
 ```js
-const localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
+const localCandidates = pc
+  .getSenders()[0]
+  .transport.transport.getLocalCandidates();
 
 localCandidates.forEach((candidate, index) => {
   console.log(`Candidate ${index}: ${candidate.candidate}`);

@@ -1,18 +1,8 @@
 ---
-title: Document.fullscreenElement
+title: "Document: fullscreenElement property"
+short-title: fullscreenElement
 slug: Web/API/Document/fullscreenElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Fullscreen
-  - Fullscreen API
-  - Graphics
-  - Property
-  - Read-only
-  - Reference
-  - fullscreenElement
-  - screen
 browser-compat: api.Document.fullscreenElement
 ---
 
@@ -44,7 +34,7 @@ that the video is in fullscreen mode.
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement?.nodeName === 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === "VIDEO") {
     return true;
   }
   return false;
@@ -66,5 +56,5 @@ function isVideoInFullscreen() {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- The {{HTMLElement("iframe")}} [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute

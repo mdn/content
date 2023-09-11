@@ -2,10 +2,8 @@
 title: unicode-range
 slug: Web/SVG/Attribute/unicode-range
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.unicode-range
 ---
 

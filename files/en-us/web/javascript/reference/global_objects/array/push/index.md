@@ -2,19 +2,12 @@
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.push
 ---
 
 {{JSRef}}
 
-The **`push()`** method adds one or more elements to the end of
+The **`push()`** method of {{jsxref("Array")}} instances adds the specified elements to the end of
 an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
@@ -22,14 +15,15 @@ an array and returns the new length of the array.
 ## Syntax
 
 ```js-nolint
-push(element0)
-push(element0, element1)
-push(element0, element1, /* … ,*/ elementN)
+push()
+push(element1)
+push(element1, element2)
+push(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : The element(s) to add to the end of the array.
 
 ### Return value
@@ -42,7 +36,7 @@ The `push()` method appends values to an array.
 
 {{jsxref("Array.prototype.unshift()")}} has similar behavior to `push()`, but applied to the start of an array.
 
-The `push()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with elements appended to the end, you can use [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of `concat()`.
+The `push()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with elements appended to the end, you can use [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of `concat()`.
 
 The `push()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
@@ -144,7 +138,10 @@ were dealing with an actual array.
 ## See also
 
 - [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

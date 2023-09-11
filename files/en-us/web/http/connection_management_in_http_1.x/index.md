@@ -1,18 +1,12 @@
 ---
 title: Connection management in HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-tags:
-  - Connection Management
-  - Guide
-  - HTTP
-  - Networking
-  - Performance
-  - WebMechanics
+page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-Connection management is a key topic in HTTP: opening and maintaining connections largely impacts the performance of Web sites and Web applications. In HTTP/1.x, there are several models: _short-lived connections_, _persistent connections_, and _HTTP pipelining._
+Connection management is a key topic in HTTP: opening and maintaining connections largely impacts the performance of websites and Web applications. In HTTP/1.x, there are several models: _short-lived connections_, _persistent connections_, and _HTTP pipelining._
 
 HTTP mostly relies on TCP for its transport protocol, providing a connection between the client and the server. In its infancy, HTTP used a single model to handle such connections. These connections were short-lived: a new one created each time a request needed sending, and closed once the answer had been received.
 
@@ -74,7 +68,7 @@ Today, every HTTP/1.1-compliant proxy and server should support pipelining, thou
 
 As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering [DoS](/en-US/docs/Glossary/DOS_attack) protection on the server side if attempting more than this number.
 
-If the server wishes a faster Web site or application response, it is possible for the server to force the opening of more connections. For example, instead of having all resources on the same domain, say `www.example.com`, it could split over several domains, `www1.example.com`, `www2.example.com`, `www3.example.com`. Each of these domains resolves to the _same_ server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called _domain sharding_.
+If the server wishes a faster website or application response, it is possible for the server to force the opening of more connections. For example, instead of having all resources on the same domain, say `www.example.com`, it could split over several domains, `www1.example.com`, `www2.example.com`, `www3.example.com`. Each of these domains resolves to the _same_ server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called _domain sharding_.
 
 ![Without domain sharding, a client requests six images from a domain with a maximum of two requests taking place in parallel. With domain sharding, the images are available from two domains and the client can run four requests in parallel, downloading the images in less time.](httpsharding.png)
 

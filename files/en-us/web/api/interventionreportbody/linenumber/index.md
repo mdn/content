@@ -1,14 +1,10 @@
 ---
-title: InterventionReportBody.lineNumber
+title: "InterventionReportBody: lineNumber property"
+short-title: lineNumber
 slug: Web/API/InterventionReportBody/lineNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - lineNumber
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.lineNumber
 ---
 
@@ -28,9 +24,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

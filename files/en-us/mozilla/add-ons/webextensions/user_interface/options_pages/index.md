@@ -1,8 +1,7 @@
 ---
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -19,10 +18,10 @@ Options pages have a Content Security Policy that restricts the sources from whi
 
 ## Specifying the options page
 
-To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) example, includes a JavaScript file:
+To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the [favourite-color](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) example, includes a JavaScript file:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -48,19 +47,16 @@ You also need to include the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExten
 
 ```json
 "options_ui": {
-  "page": "options.html",
-  "browser_style": true
+  "page": "options.html"
 },
 ```
-
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
 
 See the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) page for **sharing options** between your options page and background or content scripts.
 
 ## Options content design
 
-For details on how to design your options content to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) example which implements options page features.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [favourite-color](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) example which implements options page features.

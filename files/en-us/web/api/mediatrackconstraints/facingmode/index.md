@@ -1,20 +1,8 @@
 ---
-title: MediaTrackConstraints.facingMode
+title: "MediaTrackConstraints: facingMode property"
+short-title: facingMode
 slug: Web/API/MediaTrackConstraints/facingMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - Video
-  - WebRTC
-  - facingMode
-  - getusermedia
 browser-compat: api.MediaTrackConstraints.facingMode
 ---
 
@@ -44,7 +32,7 @@ specifically required; for example:
 
 ```js
 const constraints = {
-  facingMode: { exact: "user" }
+  facingMode: { exact: "user" },
 };
 ```
 
@@ -70,8 +58,7 @@ pointed.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

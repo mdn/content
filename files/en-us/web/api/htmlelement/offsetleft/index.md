@@ -1,14 +1,8 @@
 ---
-title: HTMLElement.offsetLeft
+title: "HTMLElement: offsetLeft property"
+short-title: offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLElement.offsetLeft
 ---
 

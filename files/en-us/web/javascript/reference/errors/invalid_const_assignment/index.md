@@ -2,10 +2,6 @@
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -17,7 +13,7 @@ declarations can't be re-assigned or redeclared.
 
 ## Message
 
-```
+```plain
 TypeError: Assignment to constant variable. (V8-based)
 TypeError: invalid assignment to const 'x' (Firefox)
 TypeError: Attempted to assign to readonly property. (Safari)
@@ -102,14 +98,14 @@ means the object itself can still be altered. This means that you can't mutate t
 stored in a variable:
 
 ```js example-bad
-const obj = {foo: 'bar'};
-obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
+const obj = { foo: "bar" };
+obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 ```
 
 But you can mutate the properties in a variable:
 
 ```js example-good
-obj.foo = 'baz';
+obj.foo = "baz";
 obj; // { foo: "baz" }
 ```
 

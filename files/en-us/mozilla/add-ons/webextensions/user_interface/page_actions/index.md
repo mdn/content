@@ -1,11 +1,7 @@
 ---
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - AddressBarButton
-  - Page Action
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -63,7 +59,6 @@ You define the page action's properties using the [`page_action`](/en-US/docs/Mo
 
 ```json
 "page_action": {
-  "browser_style": true,
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
@@ -90,8 +85,8 @@ You can change any of the page action properties programmatically using the [`pa
 
 ## Icons
 
-For details on how to create icons to use with your page action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) example which implements a page action without a popup.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out) example which implements a page action without a popup.

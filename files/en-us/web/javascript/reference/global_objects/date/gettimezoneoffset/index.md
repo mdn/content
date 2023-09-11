@@ -2,18 +2,12 @@
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getTimezoneOffset
 ---
 
 {{JSRef}}
 
-The **`getTimezoneOffset()`** method returns the difference, in minutes, between a date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
+The **`getTimezoneOffset()`** method of {{jsxref("Date")}} instances returns the difference, in minutes, between this date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
 
 {{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}
 
@@ -23,9 +17,13 @@ The **`getTimezoneOffset()`** method returns the difference, in minutes, between
 getTimezoneOffset()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-The difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data.
+A number representing the difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 

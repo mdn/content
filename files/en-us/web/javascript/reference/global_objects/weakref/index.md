@@ -2,11 +2,6 @@
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WeakRef
 browser-compat: javascript.builtins.WeakRef
 ---
 
@@ -18,11 +13,13 @@ A **`WeakRef`** object lets you hold a weak reference to another object, without
 
 A `WeakRef` object contains a weak reference to an object, which is called its _target_ or _referent_. A _weak reference_ to an object is a reference that does not prevent the object from being reclaimed by the garbage collector. In contrast, a normal (or _strong_) reference keeps an object in memory. When an object no longer has any strong references to it, the JavaScript engine's garbage collector may destroy the object and reclaim its memory. If that happens, you can't get the object from a weak reference anymore.
 
+Because [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) are also garbage collectable, they can also be used as the target of a `WeakRef` object. However, the use case of this is limited.
+
 ### Avoid where possible
 
 Correct use of `WeakRef` takes careful thought, and it's best avoided if possible. It's also important to avoid relying on any specific behaviors not guaranteed by the specification. When, how, and whether garbage collection occurs is down to the implementation of any given JavaScript engine. Any behavior you observe in one engine may be different in another engine, in another version of the same engine, or even in a slightly different situation with the same version of the same engine. Garbage collection is a hard problem that JavaScript engine implementers are constantly refining and improving their solutions to.
 
-Here are some specific points that the authors of the WeakRef proposal included in its [explainer document](https://github.com/tc39/proposal-weakrefs/blob/master/README.md):
+Here are some specific points included by the authors in the [proposal](https://github.com/tc39/proposal-weakrefs) that introduced `WeakRef`:
 
 > [Garbage collectors](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>) are complicated. If an application or library depends on GC cleaning up a WeakRef or calling a finalizer \[cleanup callback] in a timely, predictable manner, it's likely to be disappointed: the cleanup may happen much later than expected, or not at all. Sources of variability include:
 >
@@ -35,7 +32,7 @@ Here are some specific points that the authors of the WeakRef proposal included 
 
 ### Notes on WeakRefs
 
-- If your code has just created a `WeakRef` for a target object, or has gotten a target object from a `WeakRef`'s `deref` method, that target object will not be reclaimed until the end of the current JavaScript [job](https://tc39.es/ecma262/#job) (including any promise reaction jobs that run at the end of a script job). That is, you can only "see" an object get reclaimed between turns of the event loop. This is primarily to avoid making the behavior of any given JavaScript engine's garbage collector apparent in code — because if it were, people would write code relying on that behavior, which would break when the garbage collector's behavior changed. (Garbage collection is a hard problem; JavaScript engine implementers are constantly refining and improving how it works.)
+- If your code has just created a `WeakRef` for a target object, or has gotten a target object from a `WeakRef`'s `deref` method, that target object will not be reclaimed until the end of the current JavaScript [job](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#job) (including any promise reaction jobs that run at the end of a script job). That is, you can only "see" an object get reclaimed between turns of the event loop. This is primarily to avoid making the behavior of any given JavaScript engine's garbage collector apparent in code — because if it were, people would write code relying on that behavior, which would break when the garbage collector's behavior changed. (Garbage collection is a hard problem; JavaScript engine implementers are constantly refining and improving how it works.)
 - If multiple `WeakRef`s have the same target, they're consistent with one another. The result of calling `deref` on one of them will match the result of calling `deref` on another of them (in the same job), you won't get the target object from one of them but `undefined` from another.
 - If the target of a `WeakRef` is also in a {{jsxref("FinalizationRegistry")}}, the `WeakRef`'s target is cleared at the same time or before any cleanup callback associated with the registry is called; if your cleanup callback calls `deref` on a `WeakRef` for the object, it will receive `undefined`.
 - You cannot change the target of a `WeakRef`, it will always only ever be the original target object or `undefined` when that target has been reclaimed.
@@ -47,6 +44,14 @@ Here are some specific points that the authors of the WeakRef proposal included 
   - : Creates a new `WeakRef` object.
 
 ## Instance properties
+
+These properties are defined on `WeakRef.prototype` and shared by all `WeakRef` instances.
+
+- {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{Optional_Inline}}
+
+  - : The constructor function that created the instance object. For `WeakRef` instances, the initial value is the {{jsxref("WeakRef/WeakRef", "WeakRef")}} constructor.
+
+    > **Note:** This property is marked as "normative optional" in the specification, which means a conforming implementation may not expose the `constructor` property. This prevents arbitrary code from obtaining the `WeakRef` constructor and being able to observe garbage collection. However, all major engines do expose it by default.
 
 - `WeakRef.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakRef"`. This property is used in {{jsxref("Object.prototype.toString()")}}.

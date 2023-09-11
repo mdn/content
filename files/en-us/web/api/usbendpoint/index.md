@@ -2,14 +2,8 @@
 title: USBEndpoint
 slug: Web/API/USBEndpoint
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - USBEndpoint
-  - Web USB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBEndpoint
 ---
 

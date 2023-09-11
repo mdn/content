@@ -1,16 +1,7 @@
 ---
-title: 'Recipe: Media objects'
+title: "Recipe: Media objects"
 slug: Web/CSS/Layout_cookbook/Media_objects
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Media object
-  - cookbook
-  - fit-content
-  - float
-  - grid
 browser-compat:
   - css.properties.grid-template-areas
   - css.properties.float
@@ -42,7 +33,7 @@ Media Object pattern needs some or all of the following characteristics:
 
 ## Choices made
 
-I have chosen to use [Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.
+I have chosen to use [Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.
 
 Another reason to use Grid Layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width")}} of 100% applied, it scales down so that it continues to fit inside the column.
 
@@ -68,11 +59,11 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 ## Relevant resources on MDN
 
-- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
-- [Progressive Enhancement and Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Using Grid Template Areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+- [Progressive Enhancement and Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Using Grid Template Areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [fit-content](/en-US/docs/Web/CSS/fit-content)
-- [Grid-template-areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [Grid-template-areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 
 ## Browser compatibility
 

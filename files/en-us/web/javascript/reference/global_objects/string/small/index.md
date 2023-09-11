@@ -2,21 +2,14 @@
 title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.small
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-The **`small()`** method creates a string that embeds a string in a {{HTMLElement("small")}} element (`<small>str</small>`), which causes a string to be displayed in a small font.
+The **`small()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("small")}} element (`<small>str</small>`), which causes this string to be displayed in a small font.
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
@@ -25,6 +18,10 @@ The **`small()`** method creates a string that embeds a string in a {{HTMLElemen
 ```js-nolint
 small()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -41,7 +38,7 @@ const worldString = "Hello, world";
 
 console.log(worldString.small()); // <small>Hello, world</small>
 console.log(worldString.big()); // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
 ```
 
 With the {{domxref("HTMLElement/style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:

@@ -1,13 +1,7 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.itemtype
 ---
 
@@ -170,7 +164,8 @@ This example uses microdata attributes to represent structured data for a produc
       <meta itemprop="priceCurrency" content="USD" />
       <span itemprop="price">Sale price: $119.99<br /></span>
       (Sale ends
-      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time>)<br />
+      <time itemprop="priceValidUntil" datetime="2020-11-05">5 November!</time>)
+      <br />
       Available from:
       <span
         itemprop="seller"

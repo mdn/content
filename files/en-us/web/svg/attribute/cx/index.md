@@ -2,9 +2,6 @@
 title: cx
 slug: Web/SVG/Attribute/cx
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CX
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCXAttribute

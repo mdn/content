@@ -1,13 +1,10 @@
 ---
-title: FeaturePolicy.getAllowlistForFeature()
+title: "FeaturePolicy: getAllowlistForFeature() method"
+short-title: getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 page-type: web-api-instance-method
-tags:
-  - API
-  - Feature Policy
-  - Permissions-Policy
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 
@@ -30,8 +27,7 @@ A specific feature name must be specified.
 
 ### Return value
 
-An [allowlist](/en-US/docs/Web/HTTP/Permissions_Policy/#allowlists) for the
-specified feature.
+An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (`*`) is used, the array will contain `*`.
 
 ## Errors
 
@@ -46,13 +42,13 @@ Permissions Policy. Please note that Camera API might also be restricted by the 
 
 ```js
 // First, get the FeaturePolicy object
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Query for specific feature
-const allowlist = featurePolicy.getAllowlistForFeature("camera")
+const allowlist = featurePolicy.getAllowlistForFeature("camera");
 
 for (const origin of allowlist) {
-  console.log(origin)
+  console.log(origin);
 }
 ```
 

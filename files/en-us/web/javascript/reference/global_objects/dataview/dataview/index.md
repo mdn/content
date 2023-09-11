@@ -2,19 +2,12 @@
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
 
 {{JSRef}}
 
-The **`DataView()`** constructor is used to create {{jsxref("DataView")}} objects.
+The **`DataView()`** constructor creates {{jsxref("DataView")}} objects.
 
 {{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
@@ -47,13 +40,7 @@ A new {{jsxref("DataView")}} object representing the specified data buffer.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-
-  - : Thrown if the `byteOffset` or `byteLength` parameter values
-    result in the view extending past the end of the buffer.
-
-    For example, if the buffer is 16 bytes long, the `byteOffset` is 8, and
-    the `byteLength` is 10, this error is thrown because the resulting view
-    tries to extend 2 bytes past the total length of the buffer.
+  - : Thrown if the `byteOffset` or `byteLength` parameter values result in the view extending past the end of the buffer. In other words, `byteOffset + byteLength > buffer.byteLength`.
 
 ## Examples
 

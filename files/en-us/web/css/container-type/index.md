@@ -2,38 +2,57 @@
 title: container-type
 slug: Web/CSS/container-type
 page-type: css-property
-tags:
-  - container
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container-type
 ---
 
 {{CSSRef}}
 
-The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the [type of containment](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
+The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the [type of containment](/en-US/docs/Web/CSS/CSS_container_queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_container_queries).
 
 ## Syntax
 
 ```css
-container-type: <type>;
+/* Keyword values */
+container-type: normal;
+container-type: size;
+container-type: inline-size;
+
+/* Global Values */
+container-type: inherit;
+container-type: initial;
+container-type: revert;
+container-type: revert-layer;
+container-type: unset;
 ```
 
 ### Values
 
-- `size`: Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
-  Applies layout containment, style containment, and size containment to the container.
+- `size`
 
-- `inline-size`: Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container.
-  Applies layout, style, and inline-size containment to the element.
+  - : Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions.
+    Applies layout containment, style containment, and size containment to the container.
 
-- `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
+- `inline-size`
+
+  - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container.
+    Applies layout, style, and inline-size containment to the element.
+
+- `normal`
+  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the {{cssxref("contain")}} property.
 
-## Example
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
+
+## Examples
+
+### Establishing inline size containment
 
 Given the following HTML example which is a card component with an image, a title, and some text:
 
@@ -48,7 +67,7 @@ Given the following HTML example which is a card component with an image, a titl
 ```
 
 To create a container context, add the `container-type` property to an element.
-The following uses the `inline-size` value to create a containment context for the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container:
+The following uses the `inline-size` value to create a containment context for the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container:
 
 ```css
 .container {
@@ -67,8 +86,6 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
 }
 ```
 
-For more information on container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries) page.
-
 ## Specifications
 
 {{Specifications}}
@@ -79,7 +96,7 @@ For more information on container queries, see the [CSS Container Queries](/en-U
 
 ## See also
 
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property

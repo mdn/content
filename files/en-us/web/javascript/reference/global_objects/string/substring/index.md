@@ -2,18 +2,12 @@
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.substring
 ---
 
 {{JSRef}}
 
-The **`substring()`** method returns the part of the `string` from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
 
@@ -52,22 +46,22 @@ Any argument value that is {{jsxref("NaN")}} is treated as if it were `0`.
 ### Using substring()
 
 The following example uses `substring()` to display characters from the
-string `'Mozilla'`:
+string `"Mozilla"`:
 
 ```js
 const anyString = "Mozilla";
 
-console.log(anyString.substring(0, 1)); // 'M'
-console.log(anyString.substring(1, 0)); // 'M'
+console.log(anyString.substring(0, 1)); // "M"
+console.log(anyString.substring(1, 0)); // "M"
 
-console.log(anyString.substring(0, 6)); // 'Mozill'
+console.log(anyString.substring(0, 6)); // "Mozill"
 
-console.log(anyString.substring(4)); // 'lla'
-console.log(anyString.substring(4, 7)); // 'lla'
-console.log(anyString.substring(7, 4)); // 'lla'
+console.log(anyString.substring(4)); // "lla"
+console.log(anyString.substring(4, 7)); // "lla"
+console.log(anyString.substring(7, 4)); // "lla"
 
-console.log(anyString.substring(0, 7)); // 'Mozilla'
-console.log(anyString.substring(0, 10)); // 'Mozilla'
+console.log(anyString.substring(0, 7)); // "Mozilla"
+console.log(anyString.substring(0, 10)); // "Mozilla"
 ```
 
 ### Using substring() with length property
@@ -167,7 +161,7 @@ replaceString("World", "Web", "Brave New World");
 
 Note that this can result in an infinite loop if `oldS` is itself a
 substring of `newS` — for example, if you attempted to replace
-'`World`' with '`OtherWorld`' here.
+`"World"` with `"OtherWorld"` here.
 
 A better method for replacing strings is as follows:
 

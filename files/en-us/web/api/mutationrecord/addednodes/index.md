@@ -1,12 +1,8 @@
 ---
-title: MutationRecord.addedNodes
+title: "MutationRecord: addedNodes property"
+short-title: addedNodes
 slug: Web/API/MutationRecord/addedNodes
 page-type: web-api-instance-property
-tags:
-  - addedNodes
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.addedNodes
 ---
 

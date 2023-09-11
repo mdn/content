@@ -1,14 +1,10 @@
 ---
 title: <xsl:if>
 slug: Web/XSLT/Element/if
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - if
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:if>` element contains a test attribute and a template. If the test evaluates to true, the template is processed. In this it is similar to an if statement in other languages. To achieve the functionality of an if-then-else statement, however, use the `<xsl:choose>` element with one `<xsl:when>` and one `<xsl:otherwise>` children.
 

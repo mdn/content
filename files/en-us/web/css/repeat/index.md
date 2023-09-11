@@ -2,20 +2,12 @@
 title: repeat()
 slug: Web/CSS/repeat
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.properties.grid-template-columns.repeat
 ---
 
 {{CSSRef}}
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
 
 {{EmbedInteractiveExample("pages/css/function-repeat.html")}}
 
@@ -57,7 +49,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 The `repeat()` function takes two arguments:
 
 - **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
-- **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
+- **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
 
 If you use [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count, you may only specify track sizes using the [`<fixed-size>`](#fixed-size) type, not the [`<track-size>`](#track-size) type. This give us three main syntax forms for `repeat()`:
 
@@ -81,17 +73,17 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 }
 ```
 
-There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) keyword and only specifies line names, not track sizes.
+There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) keyword and only specifies line names, not track sizes.
 
 ### Values
 
 - `<fixed-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
       - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
 - {{cssxref("&lt;flex&gt;")}}
@@ -105,10 +97,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<track-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
+    - a {{cssxref("fit-content_function", "fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
 - `auto`
   - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 - `auto-fill`
@@ -177,5 +169,5 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 ## See also
 
 - Related CSS properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_

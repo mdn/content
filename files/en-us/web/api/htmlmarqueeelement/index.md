@@ -2,12 +2,8 @@
 title: HTMLMarqueeElement
 slug: Web/API/HTMLMarqueeElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Interface
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLMarqueeElement
 ---
 

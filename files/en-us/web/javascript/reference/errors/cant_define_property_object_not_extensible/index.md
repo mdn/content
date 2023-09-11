@@ -2,11 +2,6 @@
 title: 'TypeError: can''t define property "x": "obj" is not extensible'
 slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -18,7 +13,7 @@ as non-extensible.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot add property x, object is not extensible (V8-based)
 TypeError: Cannot define property x, object is not extensible (V8-based)
 TypeError: can't define property "x": Object is not extensible (Firefox)
@@ -46,12 +41,12 @@ attempting to add new properties to a non-extensible object throws a
 ignored.
 
 ```js example-bad
-'use strict';
+"use strict";
 
 const obj = {};
 Object.preventExtensions(obj);
 
-obj.x = 'foo';
+obj.x = "foo";
 // TypeError: can't define property "x": Object is not extensible
 ```
 
@@ -60,10 +55,10 @@ sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding 
 property to a non-extensible object.
 
 ```js example-bad
-const obj = { };
+const obj = {};
 Object.preventExtensions(obj);
 
-Object.defineProperty(obj, 'x', { value: "foo" });
+Object.defineProperty(obj, "x", { value: "foo" });
 // TypeError: can't define property "x": Object is not extensible
 ```
 
@@ -74,10 +69,10 @@ course you can also remove the property that was attempted to be added, if you d
 need it.
 
 ```js example-good
-'use strict';
+"use strict";
 
 const obj = {};
-obj.x = 'foo'; // add property first and only then prevent extensions
+obj.x = "foo"; // add property first and only then prevent extensions
 
 Object.preventExtensions(obj);
 ```

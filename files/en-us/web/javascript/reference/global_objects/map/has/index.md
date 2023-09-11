@@ -2,20 +2,13 @@
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Map.has
 ---
 
 {{JSRef}}
 
-The **`has()`** method returns a boolean indicating whether an element with the
-specified key exists or not.
+The **`has()`** method of {{jsxref("Map")}} instances returns a boolean indicating whether an element with the
+specified key exists in this map or not.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
 

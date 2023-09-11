@@ -1,14 +1,8 @@
 ---
-title: IDBIndex.getAll()
+title: "IDBIndex: getAll() method"
+short-title: getAll()
 slug: Web/API/IDBIndex/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBIndex.getAll
 ---
 
@@ -46,8 +40,9 @@ getAll(query, count)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of the values of all records matching the given query, up to the value of `count`, if `count` was supplied.
 
 ### Exceptions
 
@@ -59,16 +54,16 @@ This method may raise a {{domxref("DOMException")}} of the following types:
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
-not between `0` and `2^32> - 1` included.
+not between `0` and `2^32 - 1` included.
 
 ## Examples
 
 ```js
-const myIndex = objectStore.index('index');
+const myIndex = objectStore.index("index");
 const getAllRequest = myIndex.getAll();
 getAllRequest.onsuccess = () => {
   console.log(getAllRequest.result);
-}
+};
 ```
 
 ## Specifications

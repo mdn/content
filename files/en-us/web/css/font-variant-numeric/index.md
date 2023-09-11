@@ -2,12 +2,6 @@
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-numeric
 ---
 
@@ -47,26 +41,32 @@ This property can take one of two forms:
 ### Values
 
 - `normal`
+
   - : This keyword leads to the deactivation of the use of such alternate glyphs.
+
 - `ordinal`
+
   - : This keyword forces the use of special glyphs for the ordinal markers, like 1st, 2nd, 3rd, 4th in English or a 1a in Italian. It corresponds to the OpenType values `ordn`.
+
 - `slashed-zero`
+
   - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
-- _\<numeric-figure-values_>
+
+- _`<numeric-figure-values`>_
 
   - : These values control the figures used for numbers. Two values are possible:
 
     - `lining-nums` activating the set of figures where numbers are all lying on the baseline. It corresponds to the OpenType values `lnum`.
     - `oldstyle-nums` activating the set of figures where some numbers, like 3, 4, 7, 9 have descenders. It corresponds to the OpenType values `onum`.
 
-- _\<numeric-spacing-values_>
+- _`<numeric-spacing-values>`_
 
   - : These values controls the sizing of figures used for numbers. Two values are possible:
 
     - `proportional-nums` activating the set of figures where numbers are not all of the same size. It corresponds to the OpenType values `pnum`.
     - `tabular-nums` activating the set of figures where numbers are all of the same size, allowing them to be easily aligned like in tables. It corresponds to the OpenType values `tnum`.
 
-- _\<numeric-fraction-values_>
+- _`<numeric-fraction-values>`_
 
   - : These values controls the glyphs used to display fractions. Two values are possible:
 

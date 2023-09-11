@@ -1,16 +1,7 @@
 ---
 title: Drawing graphics
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
-tags:
-  - API
-  - Article
-  - Beginner
-  - Canvas
-  - CodingScripting
-  - Graphics
-  - JavaScript
-  - Learn
-  - WebGL
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -106,8 +97,8 @@ Let's start by creating our own canvas that we draw future experiments on to.
 
    ```js
    const canvas = document.querySelector(".myCanvas");
-   const width = canvas.width = window.innerWidth;
-   const height = canvas.height = window.innerHeight;
+   const width = (canvas.width = window.innerWidth);
+   const height = (canvas.height = window.innerHeight);
    ```
 
    Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
@@ -236,7 +227,7 @@ Let's draw an equilateral triangle on the canvas.
 
    ```js
    function degToRad(degrees) {
-     return degrees * Math.PI / 180;
+     return (degrees * Math.PI) / 180;
    }
    ```
 
@@ -369,7 +360,7 @@ It is possible to render external images onto your canvas. These can be simple i
    image.src = "firefox.png";
    ```
 
-   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
+   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
 
 3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
@@ -426,7 +417,7 @@ Let's build a simple example.
 
    ```js
    function degToRad(degrees) {
-     return degrees * Math.PI / 180;
+     return (degrees * Math.PI) / 180;
    }
 
    function rand(min, max) {
@@ -448,7 +439,7 @@ Let's build a simple example.
    ctx.beginPath();
    ctx.moveTo(moveOffset, moveOffset);
    ctx.lineTo(moveOffset + length, moveOffset);
-   const triHeight = length / 2 * Math.tan(degToRad(60));
+   const triHeight = (length / 2) * Math.tan(degToRad(60));
    ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
    ctx.lineTo(moveOffset, moveOffset);
    ctx.fill();
@@ -535,9 +526,9 @@ Now let's create our own simple animation — we'll get a character from a certa
 2. Update the inner HTML to reflect the image:
 
    ```html
-    <canvas class="myCanvas">
-      <p>A man walking.</p>
-    </canvas>
+   <canvas class="myCanvas">
+     <p>A man walking.</p>
+   </canvas>
    ```
 
 3. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
@@ -546,7 +537,7 @@ Now let's create our own simple animation — we'll get a character from a certa
    ctx.translate(width / 2, height / 2);
    ```
 
-4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
    ```js
    const image = new Image();
@@ -658,9 +649,9 @@ document.addEventListener("mousemove", (e) => {
   curY = e.pageY;
 });
 
-canvas.addEventListener("mousedown", () => pressed = true);
+canvas.addEventListener("mousedown", () => (pressed = true));
 
-canvas.addEventListener("mouseup", () => pressed = false);
+canvas.addEventListener("mouseup", () => (pressed = false));
 ```
 
 When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:
@@ -685,7 +676,7 @@ function draw() {
       sizePicker.value,
       degToRad(0),
       degToRad(360),
-      false
+      false,
     );
     ctx.fill();
   }
@@ -732,7 +723,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
      75,
      window.innerWidth / window.innerHeight,
      0.1,
-     1000
+     1000,
    );
    camera.position.z = 5;
    ```
@@ -839,13 +830,3 @@ Here we have covered only the real basics of canvas — there is so much more to
 - [Voice change-o-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- **Drawing graphics**
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

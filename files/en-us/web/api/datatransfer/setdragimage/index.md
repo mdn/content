@@ -1,14 +1,8 @@
 ---
-title: DataTransfer.setDragImage()
+title: "DataTransfer: setDragImage() method"
+short-title: setDragImage()
 slug: Web/API/DataTransfer/setDragImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - H5 DnD
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.setDragImage
 ---
 
@@ -67,7 +61,7 @@ default drag image.
 [demo](https://codepen.io/webgeeker/full/KBzrxE/)
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Example of DataTransfer.setDragImage()</title>

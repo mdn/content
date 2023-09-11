@@ -1,16 +1,7 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - download
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.download
 ---
 
@@ -77,7 +68,7 @@ let downloading = browser.downloads.download(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the download started successfully, the promise will be fulfilled with the `id` of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.
 
-If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
+If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL_static) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL_static)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
 
 ## Browser compatibility
 
@@ -99,9 +90,9 @@ function onFailed(error) {
 let downloadUrl = "https://example.org/image.png";
 
 let downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);

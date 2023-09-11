@@ -2,11 +2,6 @@
 title: xChannelSelector
 slug: Web/SVG/Attribute/xChannelSelector
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feDisplacementMap.xChannelSelector
 ---
 
@@ -32,7 +27,7 @@ svg {
 <svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg">
   <filter id="displacementFilter">
     <feImage
-      xlink:href="mdn.svg"
+      href="mdn.svg"
       x="0"
       y="0"
       width="100%"
@@ -46,7 +41,7 @@ svg {
   </filter>
   <filter id="displacementFilter2">
     <feImage
-      xlink:href="mdn.svg"
+      href="mdn.svg"
       x="0"
       y="0"
       width="100%"

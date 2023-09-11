@@ -1,11 +1,7 @@
 ---
 title: protocol_handlers
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.protocol_handlers
 ---
 
@@ -57,7 +53,7 @@ Each protocol handler has three properties, all mandatory:
   - : A string defining the protocol. This must be either:
 
     - one of the following: "bitcoin", "dat", "dweb", "ftp", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "matrix", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
-    - a string consisting of a custom name prefixed with "web+" or "ext+". For example: "web+foo" or "ext+foo". The custom name must consist only of lower-case ASCII characters. It's recommended that extensions use the "ext+" form.
+    - a string consisting of a custom name prefixed with "web+" or "ext+". For example: "web+foo" or "ext+foo". The custom name must consist only of lower-case {{Glossary("ASCII")}} characters. It's recommended that extensions use the "ext+" form.
 
 - `name`
   - : A string representing the name of the protocol handler. This will be displayed to the user when they are being asked if they want this handler to open the link.

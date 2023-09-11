@@ -2,14 +2,10 @@
 title: SVG Presentation Attributes
 slug: Web/SVG/Attribute/Presentation
 page-type: svg-attribute
-tags:
-  - Attribute
-  - Beginner
-  - Draft
-  - Reference
-  - SVG
 browser-compat: svg.attributes.presentation
 ---
+
+{{SVGRef}}
 
 SVG presentation attributes are CSS properties that can be used as attributes on SVG elements.
 

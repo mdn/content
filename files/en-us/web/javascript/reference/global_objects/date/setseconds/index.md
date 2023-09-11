@@ -2,19 +2,12 @@
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setSeconds
 ---
 
 {{JSRef}}
 
-The **`setSeconds()`** method sets the seconds for a specified
-date according to local time.
+The **`setSeconds()`** method of {{jsxref("Date")}} instances changes the seconds and/or milliseconds for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
 
@@ -28,13 +21,13 @@ setSeconds(secondsValue, msValue)
 ### Parameters
 
 - `secondsValue`
-  - : An integer between 0 and 59, representing the seconds.
-- `msValue` {{Optional_inline}}
-  - : Optional. A number between 0 and 999, representing the milliseconds.
+  - : An integer between 0 and 59 representing the seconds.
+- `msValue` {{optional_inline}}
+  - : An integer between 0 and 999 representing the milliseconds.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 

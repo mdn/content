@@ -1,15 +1,7 @@
 ---
 title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Options
-  - Reference
-  - Web
-  - WebExtensions
-  - options_ui
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.options_ui
 ---
 
@@ -68,39 +60,33 @@ The `options_ui` key is an object with the following contents:
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        ><br />{{optional_inline}}
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
+        <br />{{deprecated_inline}} in Manifest V3.
       </td>
       <td><code>Boolean</code></td>
       <td>
-        <p>Defaults to <code>true</code>.</p>
-        <p>
-          Use this to include a stylesheet in your page that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although it defaults to
-          <code>true</code>, it's recommended that you include this property.
-        </p>
+        <p>Optional, defaulting to:</p>
+          <ul>
+            <li><code>true</code> in Manifest V2 and prior to Firefox 115 in Manifest V3.</li>
+            <li><code>false</code> in Manifest V3 from Firefox 115.</li>
+          </ul>
+        <div class="notecard warning">
+          <p>
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
-          <code>chrome://browser/content/extension.css</code>, or
+          <code>chrome://browser/content/extension.css</code> or
           <code>chrome://browser/content/extension-mac.css</code> on macOS. When
-          setting dimensions, be aware that this style sheet currently sets
+          setting dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
-        </p>
-        <p>
-          The
-          <a
-            class="external external-icon"
-            href="https://design.firefox.com/photon/"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the popup in order
-          to get particular styles.
         </p>
       </td>
     </tr>

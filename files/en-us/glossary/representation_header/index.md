@@ -1,9 +1,10 @@
 ---
 title: Representation header
 slug: Glossary/Representation_header
-tags:
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} that describes the particular _representation_ of the resource sent in an HTTP message body.
 

@@ -2,10 +2,6 @@
 title: WebGLActiveInfo
 slug: Web/API/WebGLActiveInfo
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLActiveInfo
 ---
 

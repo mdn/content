@@ -1,10 +1,7 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
-tags:
-  - Firefox
-  - Firefox 31
-  - Firefox for Developers
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -29,47 +26,47 @@ Highlights:
 
 ### CSS
 
-- Changed `var-` prefix of CSS Variables to `--` to reflect the final spec change ({{Bug(985838)}}).
-- The {{cssxref("hyphens")}} property now support Polish hyphenation rules ({{Bug(987668)}}).
-- Removed an unwanted white space for multiple of 10,000 in Korean counter styles ({{Bug(985186)}}).
-- CSS opacity transition broken with parent pseudo :before and overflow auto ({{Bug(990340)}}).
-- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
+- Changed `var-` prefix of CSS Variables to `--` to reflect the final spec change ([Webkit bug 985838](https://bugzil.la/985838)).
+- The {{cssxref("hyphens")}} property now support Polish hyphenation rules ([Webkit bug 987668](https://bugzil.la/987668)).
+- Removed an unwanted white space for multiple of 10,000 in Korean counter styles ([Webkit bug 985186](https://bugzil.la/985186)).
+- CSS opacity transition broken with parent pseudo :before and overflow auto ([Webkit bug 990340](https://bugzil.la/990340)).
+- The `::-moz-math-stretchy` pseudo-element has been removed ([Webkit bug 1000879](https://bugzil.la/1000879)).
 
 ### HTML
 
-- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
+- {{HTMLElement("track")}} has been implemented ([Webkit bug 629350](https://bugzil.la/629350)).
 
 ### JavaScript
 
 New ECMAScript 2015 features implemented:
 
-- New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
-- New `Math` function: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
-- New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ({{Bug(918987)}}).
+- New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ([Webkit bug 911147](https://bugzil.la/911147))
+- New `Math` function: {{jsxref("Math.clz32()")}} ([Webkit bug 925123](https://bugzil.la/925123))
+- New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ([Webkit bug 918987](https://bugzil.la/918987)).
 - New `Object` method {{jsxref("Object.setPrototypeOf()")}}.
 - New `Number` constants: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
-- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ([Firefox bug 978235](https://bugzil.la/978235)).
 
 ### Interfaces/APIs/DOM
 
-- Constructor of `KeyboardEvent` has been implemented ({{Bug(930893)}}).
-- The Resource Timing API has been implemented (see {{ Bug("822480") }}).
-- `KeyboardEvent.isComposing` attribute has been implemented ({{Bug(993234)}}).
-- `InputEvent` interface has been implemented ({{Bug(993253)}}).
-- `InputEvent.isComposing` attribute has been implemented ({{Bug(993253)}}).
-- {{domxref("CSS.escape", "CSS.escape()")}} has been implemented ({{Bug(955860)}}).
-- {{domxref("Element/mousemove_event", "mousemove")}} is now cancelable like in other browsers ({{Bug(704423)}}). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
+- Constructor of `KeyboardEvent` has been implemented ([Webkit bug 930893](https://bugzil.la/930893)).
+- The Resource Timing API has been implemented (see [Webkit bug 822480](https://bugzil.la/822480)).
+- `KeyboardEvent.isComposing` attribute has been implemented ([Webkit bug 993234](https://bugzil.la/993234)).
+- `InputEvent` interface has been implemented ([Webkit bug 993253](https://bugzil.la/993253)).
+- `InputEvent.isComposing` attribute has been implemented ([Webkit bug 993253](https://bugzil.la/993253)).
+- {{domxref("CSS.escape_static", "CSS.escape()")}} has been implemented ([Webkit bug 955860](https://bugzil.la/955860)).
+- {{domxref("Element/mousemove_event", "mousemove")}} is now cancelable like in other browsers ([Webkit bug 704423](https://bugzil.la/704423)). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
 - The {{domxref("Path2D")}} interface has been implemented.
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
-- The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
+- The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ([Firefox bug 960426](https://bugzil.la/960426)).
 - The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{domxref("Window/unload_event", "unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
-- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
-- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
+- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ([Webkit bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- The `::-moz-math-stretchy` pseudo-element has been removed ([Webkit bug 1000879](https://bugzil.la/1000879)).
+- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ([Webkit bug 930504](https://bugzil.la/930504)).
 
 ### SVG
 

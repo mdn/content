@@ -1,11 +1,8 @@
 ---
-title: BatteryManager.chargingTime
+title: "BatteryManager: chargingTime property"
+short-title: chargingTime
 slug: Web/API/BatteryManager/chargingTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.chargingTime
 ---
 
@@ -25,20 +22,20 @@ A number.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {
   const time = battery.chargingTime;
 
   document.querySelector(
-    "#chargingTime"
+    "#chargingTime",
   ).textContent = `Time to fully charge the battery: ${time}s`;
 });
 ```

@@ -2,14 +2,8 @@
 title: USB
 slug: Web/API/USB
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB
 ---
 

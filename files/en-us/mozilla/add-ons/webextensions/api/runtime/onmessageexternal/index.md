@@ -1,16 +1,7 @@
 ---
 title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMessageExternal
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onMessageExternal
 ---
 
@@ -39,7 +30,7 @@ browser.runtime.onMessageExternal.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -50,9 +41,9 @@ Events have three functions:
 
 ### Parameters
 
-- `function`
+- `listener`
 
-  - : A callback function that is called when this event occurs. The function is passed these arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `message`
       - : `object`. The message itself. This is a JSON-ifiable object.
@@ -81,10 +72,7 @@ In this example the extension "blue\@mozilla.org" sends a message to the extensi
 // sender: browser.runtime.id === "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage(
-    "red@mozilla.org",
-    "my message"
-  );
+browser.runtime.sendMessage("red@mozilla.org", "my message");
 ```
 
 ```js

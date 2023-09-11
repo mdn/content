@@ -1,18 +1,12 @@
 ---
-title: ReportingObserver()
+title: "ReportingObserver: ReportingObserver() constructor"
+short-title: ReportingObserver()
 slug: Web/API/ReportingObserver/ReportingObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Reporting API
-  - ReportingObserver
 browser-compat: api.ReportingObserver.ReportingObserver
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`ReportingObserver()`** constructor of the [Reporting API](/en-US/docs/Web/API/Reporting_API) creates a new
 {{domxref("ReportingObserver")}} object instance, which can be used to collect and
@@ -43,14 +37,13 @@ new ReportingObserver(callback, options)
 
 - `options` {{optional_inline}}
 
-  - : An {{domxref("ReportingObserverOptions")}} object allowing you to set the options
-    for creating the object. The available options are:
+  - : An object allowing you to set the options for creating the object. The available options are:
 
     - `types`
       - : An array of strings representing the types of report to be
         collected by this observer. Available types include `deprecation`,
         `intervention`, and `crash` (although this last type usually
-        isn't retrievable via a `ReportingObserver`).
+        isn't retrievable via a `ReportingObserver`). If this option is omitted, all supported types are collected.
     - `buffered`
       - : a boolean that defines whether the reports that were
         generated before the observer was able to be created should be observable
@@ -60,9 +53,9 @@ new ReportingObserver(callback, options)
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);

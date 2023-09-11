@@ -1,14 +1,8 @@
 ---
-title: Touch.clientX
+title: "Touch: clientX property"
+short-title: clientX
 slug: Web/API/Touch/clientX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - touch
 browser-compat: api.Touch.clientX
 ---
 
@@ -44,24 +38,32 @@ const src = document.getElementById("source");
 let clientX;
 let clientY;
 
-src.addEventListener('touchstart', (e) => {
-  // Cache the client X/Y coordinates
-  clientX = e.touches[0].clientX;
-  clientY = e.touches[0].clientY;
-}, false);
+src.addEventListener(
+  "touchstart",
+  (e) => {
+    // Cache the client X/Y coordinates
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  },
+  false,
+);
 
-src.addEventListener('touchend', (e) => {
-  let deltaX;
-  let deltaY;
+src.addEventListener(
+  "touchend",
+  (e) => {
+    let deltaX;
+    let deltaY;
 
-  // Compute the change in X and Y coordinates.
-  // The first touch point in the changedTouches
-  // list is the touch point that was just removed from the surface.
-  deltaX = e.changedTouches[0].clientX - clientX;
-  deltaY = e.changedTouches[0].clientY - clientY;
+    // Compute the change in X and Y coordinates.
+    // The first touch point in the changedTouches
+    // list is the touch point that was just removed from the surface.
+    deltaX = e.changedTouches[0].clientX - clientX;
+    deltaY = e.changedTouches[0].clientY - clientY;
 
-  // Process the data…
-}, false);
+    // Process the data…
+  },
+  false,
+);
 ```
 
 ## Specifications

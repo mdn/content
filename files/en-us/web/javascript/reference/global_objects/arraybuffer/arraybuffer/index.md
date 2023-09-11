@@ -2,18 +2,12 @@
 title: ArrayBuffer() constructor
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 page-type: javascript-constructor
-tags:
-  - ArrayBuffer
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
 
 {{JSRef}}
 
-The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} objects.
+The **`ArrayBuffer()`** constructor creates {{jsxref("ArrayBuffer")}} objects.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
 
@@ -21,6 +15,7 @@ The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} 
 
 ```js-nolint
 new ArrayBuffer(length)
+new ArrayBuffer(length, options)
 ```
 
 > **Note:** `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
@@ -29,16 +24,21 @@ new ArrayBuffer(length)
 
 - `length`
   - : The size, in bytes, of the array buffer to create.
+- `options` {{optional_inline}}
+  - : An object, which can contain the following properties:
+    - `maxByteLength` {{optional_inline}}
+      - : The maximum size, in bytes, that the array buffer can be resized to.
 
 ### Return value
 
-A new `ArrayBuffer` object of the specified size. Its contents are
-initialized to 0.
+A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are initialized to 0.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `length` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
+  - : Thrown in one of the following cases:
+    - `length` or `maxByteLength` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
+    - `length` is larger than `maxByteLength`.
 
 ## Examples
 
@@ -52,6 +52,18 @@ const buffer = new ArrayBuffer(8);
 const view = new Int32Array(buffer);
 ```
 
+### Creating a resizable ArrayBuffer
+
+In this example, we create a 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("ArrayBuffer/resize", "resize()")}} it to 12 bytes:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+
+buffer.resize(12);
+```
+
+> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. It should never exceed `1073741824` (1GB) to reduce the risk of out-of-memory errors.
+
 ## Specifications
 
 {{Specifications}}
@@ -63,5 +75,5 @@ const view = new Int32Array(buffer);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("SharedArrayBuffer")}}

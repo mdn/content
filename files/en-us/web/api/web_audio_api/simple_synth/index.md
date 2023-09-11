@@ -2,16 +2,6 @@
 title: "Example and tutorial: Simple synth keyboard"
 slug: Web/API/Web_Audio_API/Simple_synth
 page-type: guide
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Media
-  - Oscillator
-  - Piano
-  - Synthesizer
-  - Tutorial
-  - Web Audio API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -66,7 +56,7 @@ First we create the `<div>` to contain the settings bar, so it can be styled as 
 </div>
 ```
 
-We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the {{htmlattrxref("name")}} attribute to find an option list whose ID matches; in this case, the data set is named `"volume"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
+We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`name`](/en-US/docs/Web/HTML/Global_attributes#name) attribute to find an option list whose ID matches; in this case, the data set is named `"volume"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
 
 ##### The waveform picker
 
@@ -106,7 +96,11 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 
 .key {
   cursor: pointer;
-  font: 16px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   border: 1px solid black;
   border-radius: 5px;
   width: 20px;
@@ -139,7 +133,8 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
   background-color: #eef;
 }
 
-.key:active {
+.key:active,
+.active {
   background-color: #000;
   color: #fff;
 }
@@ -151,7 +146,11 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 
 .settingsBar {
   padding-top: 8px;
-  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   position: relative;
   vertical-align: middle;
   width: 100%;
@@ -260,70 +259,70 @@ function createNoteTable() {
 Several octaves not shown for brevity.
 
 ```js hidden
-  noteFreq[2]["C"] = 65.406391325149658;
-  noteFreq[2]["C#"] = 69.295657744218024;
-  noteFreq[2]["D"] = 73.416191979351890;
-  noteFreq[2]["D#"] = 77.781745930520227;
-  noteFreq[2]["E"] = 82.406889228217482;
-  noteFreq[2]["F"] = 87.307057858250971;
-  noteFreq[2]["F#"] = 92.498605677908599;
-  noteFreq[2]["G"] = 97.998858995437323;
-  noteFreq[2]["G#"] = 103.826174394986284;
-  noteFreq[2]["A"] = 110.000000000000000;
-  noteFreq[2]["A#"] = 116.540940379522479;
-  noteFreq[2]["B"] = 123.470825314031027;
+noteFreq[2]["C"] = 65.406391325149658;
+noteFreq[2]["C#"] = 69.295657744218024;
+noteFreq[2]["D"] = 73.41619197935189;
+noteFreq[2]["D#"] = 77.781745930520227;
+noteFreq[2]["E"] = 82.406889228217482;
+noteFreq[2]["F"] = 87.307057858250971;
+noteFreq[2]["F#"] = 92.498605677908599;
+noteFreq[2]["G"] = 97.998858995437323;
+noteFreq[2]["G#"] = 103.826174394986284;
+noteFreq[2]["A"] = 110.0;
+noteFreq[2]["A#"] = 116.540940379522479;
+noteFreq[2]["B"] = 123.470825314031027;
 
-  noteFreq[3]["C"] = 130.812782650299317;
-  noteFreq[3]["C#"] = 138.591315488436048;
-  noteFreq[3]["D"] = 146.832383958703780;
-  noteFreq[3]["D#"] = 155.563491861040455;
-  noteFreq[3]["E"] = 164.813778456434964;
-  noteFreq[3]["F"] = 174.614115716501942;
-  noteFreq[3]["F#"] = 184.997211355817199;
-  noteFreq[3]["G"] = 195.997717990874647;
-  noteFreq[3]["G#"] = 207.652348789972569;
-  noteFreq[3]["A"] = 220.000000000000000;
-  noteFreq[3]["A#"] = 233.081880759044958;
-  noteFreq[3]["B"] = 246.941650628062055;
+noteFreq[3]["C"] = 130.812782650299317;
+noteFreq[3]["C#"] = 138.591315488436048;
+noteFreq[3]["D"] = 146.83238395870378;
+noteFreq[3]["D#"] = 155.563491861040455;
+noteFreq[3]["E"] = 164.813778456434964;
+noteFreq[3]["F"] = 174.614115716501942;
+noteFreq[3]["F#"] = 184.997211355817199;
+noteFreq[3]["G"] = 195.997717990874647;
+noteFreq[3]["G#"] = 207.652348789972569;
+noteFreq[3]["A"] = 220.0;
+noteFreq[3]["A#"] = 233.081880759044958;
+noteFreq[3]["B"] = 246.941650628062055;
 
-  noteFreq[4]["C"] = 261.625565300598634;
-  noteFreq[4]["C#"] = 277.182630976872096;
-  noteFreq[4]["D"] = 293.664767917407560;
-  noteFreq[4]["D#"] = 311.126983722080910;
-  noteFreq[4]["E"] = 329.627556912869929;
-  noteFreq[4]["F"] = 349.228231433003884;
-  noteFreq[4]["F#"] = 369.994422711634398;
-  noteFreq[4]["G"] = 391.995435981749294;
-  noteFreq[4]["G#"] = 415.304697579945138;
-  noteFreq[4]["A"] = 440.000000000000000;
-  noteFreq[4]["A#"] = 466.163761518089916;
-  noteFreq[4]["B"] = 493.883301256124111;
+noteFreq[4]["C"] = 261.625565300598634;
+noteFreq[4]["C#"] = 277.182630976872096;
+noteFreq[4]["D"] = 293.66476791740756;
+noteFreq[4]["D#"] = 311.12698372208091;
+noteFreq[4]["E"] = 329.627556912869929;
+noteFreq[4]["F"] = 349.228231433003884;
+noteFreq[4]["F#"] = 369.994422711634398;
+noteFreq[4]["G"] = 391.995435981749294;
+noteFreq[4]["G#"] = 415.304697579945138;
+noteFreq[4]["A"] = 440.0;
+noteFreq[4]["A#"] = 466.163761518089916;
+noteFreq[4]["B"] = 493.883301256124111;
 
-  noteFreq[5]["C"] = 523.251130601197269;
-  noteFreq[5]["C#"] = 554.365261953744192;
-  noteFreq[5]["D"] = 587.329535834815120;
-  noteFreq[5]["D#"] = 622.253967444161821;
-  noteFreq[5]["E"] = 659.255113825739859;
-  noteFreq[5]["F"] = 698.456462866007768;
-  noteFreq[5]["F#"] = 739.988845423268797;
-  noteFreq[5]["G"] = 783.990871963498588;
-  noteFreq[5]["G#"] = 830.609395159890277;
-  noteFreq[5]["A"] = 880.000000000000000;
-  noteFreq[5]["A#"] = 932.327523036179832;
-  noteFreq[5]["B"] = 987.766602512248223;
+noteFreq[5]["C"] = 523.251130601197269;
+noteFreq[5]["C#"] = 554.365261953744192;
+noteFreq[5]["D"] = 587.32953583481512;
+noteFreq[5]["D#"] = 622.253967444161821;
+noteFreq[5]["E"] = 659.255113825739859;
+noteFreq[5]["F"] = 698.456462866007768;
+noteFreq[5]["F#"] = 739.988845423268797;
+noteFreq[5]["G"] = 783.990871963498588;
+noteFreq[5]["G#"] = 830.609395159890277;
+noteFreq[5]["A"] = 880.0;
+noteFreq[5]["A#"] = 932.327523036179832;
+noteFreq[5]["B"] = 987.766602512248223;
 
-  noteFreq[6]["C"] = 1046.502261202394538;
-  noteFreq[6]["C#"] = 1108.730523907488384;
-  noteFreq[6]["D"] = 1174.659071669630241;
-  noteFreq[6]["D#"] = 1244.507934888323642;
-  noteFreq[6]["E"] = 1318.510227651479718;
-  noteFreq[6]["F"] = 1396.912925732015537;
-  noteFreq[6]["F#"] = 1479.977690846537595;
-  noteFreq[6]["G"] = 1567.981743926997176;
-  noteFreq[6]["G#"] = 1661.218790319780554;
-  noteFreq[6]["A"] = 1760.000000000000000;
-  noteFreq[6]["A#"] = 1864.655046072359665;
-  noteFreq[6]["B"] = 1975.533205024496447;
+noteFreq[6]["C"] = 1046.502261202394538;
+noteFreq[6]["C#"] = 1108.730523907488384;
+noteFreq[6]["D"] = 1174.659071669630241;
+noteFreq[6]["D#"] = 1244.507934888323642;
+noteFreq[6]["E"] = 1318.510227651479718;
+noteFreq[6]["F"] = 1396.912925732015537;
+noteFreq[6]["F#"] = 1479.977690846537595;
+noteFreq[6]["G"] = 1567.981743926997176;
+noteFreq[6]["G#"] = 1661.218790319780554;
+noteFreq[6]["A"] = 1760.0;
+noteFreq[6]["A#"] = 1864.655046072359665;
+noteFreq[6]["B"] = 1975.533205024496447;
 ```
 
 ```js
@@ -401,7 +400,15 @@ With this table in place, we can find out the frequency for a given note in a pa
 ```js hidden
 if (!Object.entries) {
   Object.entries = function entries(O) {
-    return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' && isEnumerable(O, k) ? [[k, O[k]]] : []), []);
+    return reduce(
+      keys(O),
+      (e, k) =>
+        concat(
+          e,
+          typeof k === "string" && isEnumerable(O, k) ? [[k, O[k]]] : [],
+        ),
+      [],
+    );
   };
 }
 ```
@@ -438,7 +445,9 @@ function setup() {
     keyboard.appendChild(octaveElem);
   });
 
-  document.querySelector("div[data-note='B'][data-octave='5']").scrollIntoView(false);
+  document
+    .querySelector("div[data-note='B'][data-octave='5']")
+    .scrollIntoView(false);
 
   sineTerms = new Float32Array([0, 0, 1, 0, 1]);
   cosineTerms = new Float32Array(sineTerms.length);
@@ -488,7 +497,7 @@ function createKey(note, octave, freq) {
 }
 ```
 
-After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add {{htmlattrxref("data-*")}} attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
+After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Global_attributes#data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
 
 ### Making music
 
@@ -516,11 +525,11 @@ function playTone(freq) {
 }
 ```
 
-`playTone()` begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("BaseAudioContext.createOscillator()")}} method. We then connect it to the main gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the main gain node will affect the volume of all tones being generated.
+`playTone()` begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("BaseAudioContext.createOscillator()")}} method. We then connect it to the main gain node by calling the new oscillator's {{domxref("AudioNode/connect", "connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the main gain node will affect the volume of all tones being generated.
 
 Then we get the type of waveform to use by checking the value of the waveform picker control in the settings bar. If the user has it set to `"custom"`, we call {{domxref("OscillatorNode.setPeriodicWave()")}} to configure the oscillator to use our custom waveform. Doing this automatically sets the oscillator's {{domxref("OscillatorNode.type", "type")}} to `custom`. If any other waveform type is selected in the wave picker, we set the oscillator's type to the value of the picker; that value will be one of `sine`, `square`, `triangle`, and `sawtooth`.
 
-The oscillator's frequency is set to the value specified in the `freq` parameter by setting the value of the {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.
+The oscillator's frequency is set to the value specified in the `freq` parameter by setting the value of the {{domxref("OscillatorNode.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.
 
 #### Playing a note
 
@@ -542,7 +551,7 @@ function notePressed(event) {
 
 We start by checking whether the primary mouse button is pressed, for two reasons. First, we want to only allow the primary mouse button to trigger notes playing. Second, and more importantly, we are using this to handle {{domxref("Element/mouseover_event", "mouseover")}} for cases where the user is dragging from note to note, and we only want to start playing the note if the mouse is pressed when it enters the element.
 
-If the mouse button is in fact down, we get the pressed key's {{htmlattrxref("dataset")}} attribute; this makes it easy to access the custom data attributes on the element. We look for a `data-pressed` attribute; if there isn't one (which indicates that the note isn't already playing), we call `playTone()` to start playing the note, passing in the value of the element's `data-frequency` attribute. The returned oscillator is stored into `oscList` for future reference, and `data-pressed` is set to `yes` to indicate that the note is playing so we don't start it again next time this is called.
+If the mouse button is in fact down, we get the pressed key's [`dataset`](/en-US/docs/Web/HTML/Global_attributes#dataset) attribute; this makes it easy to access the custom data attributes on the element. We look for a `data-pressed` attribute; if there isn't one (which indicates that the note isn't already playing), we call `playTone()` to start playing the note, passing in the value of the element's `data-frequency` attribute. The returned oscillator is stored into `oscList` for future reference, and `data-pressed` is set to `yes` to indicate that the note is playing so we don't start it again next time this is called.
 
 #### Stopping a tone
 
@@ -569,11 +578,44 @@ The volume slider in the settings bar provides a simple interface to change the 
 
 ```js
 function changeVolume(event) {
-  mainGainNode.gain.value = volumeControl.value
+  mainGainNode.gain.value = volumeControl.value;
 }
 ```
 
 This sets the value of the main gain node's `gain` {{domxref("AudioParam")}} to the slider's new value.
+
+#### Keyboard support
+
+The code below adds [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and [`keyup`](/en-US/docs/Web/API/Element/keyup_event) event listeners to handle keyboard input. The `keydown` event handler calls `notePressed()` to start playing the note corresponding to the key that was pressed, and the `keyup` event handler calls `noteReleased()` to stop playing the note corresponding to the key that was released.
+
+```js-nolint
+const synthKeys = document.querySelectorAll(".key");
+const keyCodes = [
+  "Space",
+  "ShiftLeft", "KeyZ", "KeyX", "KeyC", "KeyV", "KeyB", "KeyN", "KeyM", "Comma", "Period", "Slash", "ShiftRight",
+  "KeyA", "KeyS", "KeyD", "KeyF", "KeyG", "KeyH", "KeyJ", "KeyK", "KeyL", "Semicolon", "Quote", "Enter",
+  "Tab", "KeyQ", "KeyW", "KeyE", "KeyR", "KeyT", "KeyY", "KeyU", "KeyI", "KeyO", "KeyP", "BracketLeft", "BracketRight",
+  "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6", "Digit7", "Digit8", "Digit9", "Digit0", "Minus", "Equal", "Backspace",
+  "Escape",
+];
+function keyNote(event) {
+  const elKey = synthKeys[keyCodes.indexOf(event.code)];
+  if (elKey) {
+    if (event.type === "keydown") {
+      elKey.tabIndex = -1;
+      elKey.focus();
+      elKey.classList.add("active");
+      notePressed({ buttons: 1, target: elKey });
+    } else {
+      elKey.classList.remove("active");
+      noteReleased({ buttons: 1, target: elKey });
+    }
+    event.preventDefault();
+  }
+}
+addEventListener("keydown", keyNote);
+addEventListener("keyup", keyNote);
+```
 
 ### Result
 

@@ -2,29 +2,24 @@
 title: Addition assignment (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The **addition assignment (`+=`)** operator adds the value of the right operand
-to a variable and assigns the result to the variable. The types of the two operands
-determine the behavior of the addition assignment operator. Addition or concatenation is
-possible.
+The **addition assignment (`+=`)** operator performs [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (which is either numeric addition or string concatenation) on the two operands and assigns the result to the left operand.
 
 {{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
 ## Syntax
 
 ```js-nolint
-x += y // x = x + y
+x += y
 ```
+
+## Description
+
+`x += y` is equivalent to `x = x + y`.
 
 ## Examples
 
@@ -60,6 +55,16 @@ bar += 2; // 7
 bar += "foo"; // "7foo"
 ```
 
+```js
+let x = 1n;
+
+// BigInt + BigInt -> addition
+x += 2n; // 3n
+
+// BigInt + Number -> throws TypeError
+x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -70,5 +75,5 @@ bar += "foo"; // "7foo"
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

@@ -1,33 +1,22 @@
 ---
-title: DataTransfer.types
+title: "DataTransfer: types property"
+short-title: types
 slug: Web/API/DataTransfer/types
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.types
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer.types`** read-only property returns an
-array of the drag data formats (as strings) that were set in
-the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. The order of the formats is the same order as the data
-included in the drag operation.
-
-The formats are Unicode strings giving the type or format of the data, generally given
-by a MIME type. Some values that are not MIME types are special-cased for legacy reasons
-(for example "`text`").
+The **`DataTransfer.types`** read-only property returns the available types
+that exist in the {{domxref("DataTransfer.items","items")}}.
 
 ## Value
 
-An array of the data formats used in the drag operation. Each format is a
-string. If the drag operation included no data, this list
-will be empty. If any files are included in the drag operation, then one of the types
-will be the string `Files`.
+An array of the data formats used in the drag operation. Each format is a string
+which is generally a MIME type such as `text/plain` or `text/html`. If the drag
+operation included no data, this list will be empty. If any files are included in
+the drag operation, then one of the types will be the string `Files`.
 
 ## Examples
 
@@ -35,7 +24,7 @@ This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <title>Examples of DataTransfer.{types,items} properties</title>
   <meta content="width=device-width" />
@@ -74,7 +63,7 @@ This example shows the use of the `types` and
       // Print each item's "kind" and "type"
       for (let i = 0; i < ev.dataTransfer.items.length; i++) {
         console.log(
-          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`
+          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
         );
       }
     }

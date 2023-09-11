@@ -1,16 +1,7 @@
 ---
 title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - Sync
-  - WebExtensions
+page-type: webextension-api-property
 browser-compat: webextensions.api.storage.sync
 ---
 

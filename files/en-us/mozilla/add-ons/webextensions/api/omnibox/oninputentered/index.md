@@ -1,15 +1,7 @@
 ---
 title: omnibox.onInputEntered
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputEntered
+page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputEntered
 ---
 
@@ -62,7 +54,7 @@ The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and open
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 
 /*
@@ -86,7 +78,7 @@ const props = [
   "padding",
   "position",
   "transform",
-  "transition"
+  "transition",
 ];
 
 const baseURL = "https://developer.mozilla.org/en-US/docs/Web/CSS/";
@@ -102,8 +94,8 @@ function getMatchingProperties(input) {
       console.log(prop);
       const suggestion = {
         content: `${baseURL}${prop}`,
-        description: prop
-      }
+        description: prop,
+      };
       result.push(suggestion);
     } else if (result.length !== 0) {
       return result;
@@ -119,13 +111,13 @@ browser.omnibox.onInputChanged.addListener((input, suggest) => {
 browser.omnibox.onInputEntered.addListener((url, disposition) => {
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });

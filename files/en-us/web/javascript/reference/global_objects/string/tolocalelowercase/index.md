@@ -2,20 +2,12 @@
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.toLocaleLowerCase
 ---
 
 {{JSRef}}
 
-The **`toLocaleLowerCase()`** method returns the calling string
-value converted to lower case, according to any locale-specific case mappings.
+The **`toLocaleLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case, according to any locale-specific case mappings.
 
 {{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
@@ -29,19 +21,15 @@ toLocaleLowerCase(locales)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to lower case according to any locale-specific case mappings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+
+  - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to lower case according to any locale-specific case mappings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+
+    Unlike other methods that use the `locales` argument, `toLocaleLowerCase()` does not allow locale matching. Therefore, after checking the validity of the `locales` argument, `toLocaleLowerCase()` always uses the first locale in the list (or the default locale if the list is empty), even if this locale is not supported by the implementation.
 
 ### Return value
 
 A new string representing the calling string converted to lower case, according to any
 locale-specific case mappings.
-
-### Exceptions
-
-- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a
-  `locale` argument isn't a valid language tag.
-- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an
-  array element isn't of type string.
 
 ## Description
 

@@ -1,14 +1,8 @@
 ---
-title: Document.append()
+title: "Document: append() method"
+short-title: append()
 slug: Web/API/Document/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
 browser-compat: api.Document.append
 ---
 
@@ -26,7 +20,7 @@ This method appends a child to a `Document`. To append to an arbitrary element i
 ```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

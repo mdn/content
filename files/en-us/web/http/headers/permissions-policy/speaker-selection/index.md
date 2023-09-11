@@ -1,13 +1,9 @@
 ---
-title: 'Permissions-Policy: speaker-selection'
+title: "Permissions-Policy: speaker-selection"
 slug: Web/HTTP/Headers/Permissions-Policy/speaker-selection
-tags:
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - header
-  - microphone
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.speaker-selection
 ---
 
@@ -19,7 +15,7 @@ Specifically, where a defined policy blocks use of this feature:
 
 - {{domxref("MediaDevices.enumerateDevices()")}} won't return devices of type _audio output_.
 - {{domxref("MediaDevices.selectAudioOutput()")}} won't display the popup for selecting an audio output, and the returned {{jsxref("Promise")}} will reject with a {{domxref("DOMException")}} of type `NotAllowedError`.
-- {{domxref("HTMLMediaElement.setSinkId()")}} will throw a `NotAllowedError` if called for an audio output.
+- {{domxref("HTMLMediaElement.setSinkId()")}} and {{domxref("AudioContext.setSinkId()")}} will throw a `NotAllowedError` if called for an audio output.
 
 ## Syntax
 

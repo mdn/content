@@ -1,11 +1,8 @@
 ---
-title: OVR_multiview2
+title: OVR_multiview2 extension
+short-title: OVR_multiview2
 slug: Web/API/OVR_multiview2
 page-type: webgl-extension
-tags:
-  - API
-  - WebGL
-  - WebGL extensions
 browser-compat: api.OVR_multiview2
 ---
 
@@ -52,22 +49,38 @@ This extension exposes 4 constants that can be used in [`getParameter()`](/en-US
 This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/).
 
 ```js
-const gl = document.createElement('canvas').getContext('webgl2', { antialias: false });
-const ext = gl.getExtension('OVR_multiview2');
+const gl = document
+  .createElement("canvas")
+  .getContext("webgl2", { antialias: false });
+const ext = gl.getExtension("OVR_multiview2");
 const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER, fb);
 
 const colorTex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D_ARRAY, colorTex);
 gl.texStorage3D(gl.TEXTURE_2D_ARRAY, 1, gl.RGBA8, 512, 512, 2);
-ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.COLOR_ATTACHMENT0, colorTex, 0, 0, 2);
+ext.framebufferTextureMultiviewOVR(
+  gl.DRAW_FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  colorTex,
+  0,
+  0,
+  2,
+);
 
 const depthStencilTex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D_ARRAY, depthStencilTex);
 gl.texStorage3D(gl.TEXTURE_2D_ARRAY, 1, gl.DEPTH32F_STENCIL8, 512, 512, 2);
 
-ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.DEPTH_STENCIL_ATTACHMENT, depthStencilTex, 0, 0, 2);
-gl.drawElements(/* … */);  // draw will be broadcasted to the layers of colorTex and depthStencilTex.
+ext.framebufferTextureMultiviewOVR(
+  gl.DRAW_FRAMEBUFFER,
+  gl.DEPTH_STENCIL_ATTACHMENT,
+  depthStencilTex,
+  0,
+  0,
+  2,
+);
+gl.drawElements(/* … */); // draw will be broadcasted to the layers of colorTex and depthStencilTex.
 ```
 
 Shader code

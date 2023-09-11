@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.blendColor()
+title: "WebGLRenderingContext: blendColor() method"
+short-title: blendColor()
 slug: Web/API/WebGLRenderingContext/blendColor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendColor
 ---
 

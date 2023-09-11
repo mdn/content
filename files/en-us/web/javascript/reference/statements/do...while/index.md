@@ -2,10 +2,6 @@
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.do_while
 ---
 
@@ -23,7 +19,7 @@ at least once.
 ```js-nolint
 do
   statement
-while (condition)
+while (condition);
 ```
 
 - `statement`
@@ -64,7 +60,15 @@ console.log(result);
 
 ### Using an assignment as a condition
 
-In some cases, it can make sense to use an assignment as a condition — but when you do, there's a right way to do it, and a wrong way; the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with an example showing a general best-practice syntax you should know about and follow.
+In some cases, it can make sense to use an assignment as a condition, such as this:
+
+```js
+do {
+  // …
+} while ((match = regexp.exec(str)));
+```
+
+But when you do, there are readability tradeoffs. The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with our recommendations.
 
 ## Specifications
 

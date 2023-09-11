@@ -2,14 +2,6 @@
 title: sin()
 slug: Web/CSS/sin
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - sin
 browser-compat: css.types.sin
 ---
 
@@ -54,21 +46,21 @@ The sine of an `angle` will always return a number between `−1` and `1`.
 
 ## Examples
 
-### Boxes Size
+### Changing box sizes
 
-For example, when creating a 100x100 box based on external parameters, in this case `sin(90deg)`. Thus `sin(90deg)` will return `1` making the box `100px` width and `100px` height.
+In this example, `sin(30deg)` will return `0.5`, making the box have a `50px` width and a `50px` height.
 
 ```css
 div {
   background-color: red;
-  width: calc(sin(90deg) * 100px);
-  height: calc(sin(90deg) * 100px);
+  width: calc(sin(30deg) * 100px);
+  height: calc(sin(30deg) * 100px);
 }
 ```
 
-### Controlling Animation Duration
+### Controlling animation duration
 
-Another use-case is to control the {{cssxref("animation-duration")}}. Reducing duration based on the sine value. In this case, the animation duration will be `1s`.
+Another use case is to control the {{cssxref("animation-duration")}}, reducing the duration based on the sine value. In this case, the animation duration will be `1s`.
 
 ```css
 div {

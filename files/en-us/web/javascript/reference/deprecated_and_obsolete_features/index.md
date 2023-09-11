@@ -2,11 +2,6 @@
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 page-type: guide
-tags:
-  - Deprecated
-  - Guide
-  - JavaScript
-  - Deprecated
 ---
 
 {{JsSidebar("More")}}
@@ -17,7 +12,7 @@ This page lists features of JavaScript that are deprecated (that is, still avail
 
 These deprecated features can still be used, but should be used with caution because they are not required to be implemented by every JavaScript engine. You should work to remove their use from your code.
 
-Some of these deprecated features are listed in the [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) section of the ECMAScript specification. This section is described as normative optional — that is, web browser hosts must implement these features, while non-web hosts may not. These features are likely stable because removing them will cause backward compatibility issues and break legacy websites. (JavaScript has the design goal of "don't break the web".) Still, they are not cross-platform portable and may not be supported by all analysis tools, so you are advised to not use them, as the introduction of Annex B states:
+Some of these deprecated features are listed in the [Annex B](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html) section of the ECMAScript specification. This section is described as normative optional — that is, web browser hosts must implement these features, while non-web hosts may not. These features are likely stable because removing them will cause backward compatibility issues and break legacy websites. (JavaScript has the design goal of "don't break the web".) Still, they are not cross-platform portable and may not be supported by all analysis tools, so you are advised to not use them, as the introduction of Annex B states:
 
 > … All of the language features and behaviors specified in this annex have one or more undesirable characteristics and in the absence of legacy usage would be removed from this specification. …
 >
@@ -62,6 +57,16 @@ The following properties are deprecated. This does not affect their use in [repl
 
 The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
+The following regex syntaxes are deprecated and only available in [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). In Unicode-aware mode, they are all syntax errors:
+
+- [Lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can have [quantifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
+- [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](#escape_sequences).
+- In [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), character ranges where one boundary is a character class makes the `-` become a literal character.
+- An escape sequence that's not recognized becomes an ["identity escape"](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
+- Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with {{Glossary("ASCII")}} letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
+- The sequence `\k` within a regex that doesn't have any [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) is treated as an identity escape.
+- The syntax characters `]`, `{`, and `}` may appear [literally](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) without escaping if they cannot be interpreted as the end of a character class or quantifier delimiters.
+
 ### Function
 
 - The {{jsxref("Global_Objects/Function/caller", "caller")}} property of functions and the [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property are deprecated and unavailable in strict mode.
@@ -93,6 +98,29 @@ The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a 
 The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
 
 Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. They are silently ignored in non-strict mode.
+
+Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement cannot contain any variable declaration with the same name as the variables bound in the `catch()`. An extension grammar allows the `catch` block to contain a [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declared variable with the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). However, this variable's initialization and assignment would only act on the `catch`-bound identifier, instead of the upper scope variable, and the behavior could be confusing.
+
+```js
+var a = 2;
+try {
+  throw 42;
+} catch (a) {
+  var a = 1; // This 1 is assigned to the caught `a`, not the outer `a`.
+}
+console.log(a); // 2
+
+try {
+  throw 42;
+  // Note: identifier changed to `err` to avoid conflict with
+  // the inner declaration of `a`.
+} catch (err) {
+  var a = 1; // This 1 is assigned to the upper-scope `a`.
+}
+console.log(a); // 1
+```
+
+This is listed in Annex B of the spec and hence may not be implemented everywhere. Avoid any name conflicts between the `catch`-bound identifier and variables declared in the `catch` block.
 
 ## Obsolete features
 
@@ -143,7 +171,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### Date
 
-- `Date.prototype.toLocaleFormat()` is obsolete. Use [`toLocaleString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
+- `Date.prototype.toLocaleFormat()`, which used a format string in the same format expected by the `strftime()` function in C, is obsolete. Use [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
 
 ### Array
 
@@ -162,10 +190,10 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 - `Proxy.create` and `Proxy.createFunction` are obsolete. Use the {{jsxref("Proxy/Proxy", "Proxy()")}} constructor instead.
 - The following traps are obsolete:
-  - `hasOwn` ([bug 980565](https://bugzilla.mozilla.org/show_bug.cgi?id=980565), Firefox 33).
-  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzilla.mozilla.org/show_bug.cgi?id=783829), Firefox 37)
-  - `getOwnPropertyNames` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
-  - `keys` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
+  - `hasOwn` ([bug 980565](https://bugzil.la/980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzil.la/783829), Firefox 37)
+  - `getOwnPropertyNames` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `keys` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### ParallelArray
 
@@ -175,7 +203,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 - `for each...in` is obsolete. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
-- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
+- Expression closures (`function () 1` as a shorthand of `function () { return 1; }`) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
 
 ### Acquiring source text
 
@@ -187,7 +215,7 @@ Legacy generator function statements and legacy generator function expressions a
 
 Array comprehensions and generator comprehensions are removed.
 
-```
+```js-nolint
 // Legacy array comprehensions
 [for (x of iterable) x]
 [for (x of iterable) if (condition) x]

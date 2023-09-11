@@ -1,12 +1,8 @@
 ---
-title: PerformanceNavigationTiming.toJSON()
+title: "PerformanceNavigationTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceNavigationTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.toJSON
 ---
 

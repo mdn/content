@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.transformFeedbackVaryings()
+title: "WebGL2RenderingContext: transformFeedbackVaryings() method"
+short-title: transformFeedbackVaryings()
 slug: Web/API/WebGL2RenderingContext/transformFeedbackVaryings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.transformFeedbackVaryings
 ---
 
@@ -44,12 +39,12 @@ None ({{jsxref("undefined")}}).
 ```js
 const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
-const transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
+const transformFeedbackOutputs = ["gl_Position", "anotherOutput"];
 
 gl.transformFeedbackVaryings(
   shaderProg,
   transformFeedbackOutputs,
-  gl.INTERLEAVED_ATTRIBS
+  gl.INTERLEAVED_ATTRIBS,
 );
 gl.linkProgram(shaderProg);
 ```

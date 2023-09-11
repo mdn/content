@@ -1,20 +1,8 @@
 ---
-title: Navigator.requestMediaKeySystemAccess()
+title: "Navigator: requestMediaKeySystemAccess() method"
+short-title: requestMediaKeySystemAccess()
 slug: Web/API/Navigator/requestMediaKeySystemAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - DOM Reference
-  - EME
-  - Encrypted Media Extensions
-  - Encrypted Media Extensions API
-  - HTML DOM
-  - Method
-  - Navigator
-  - Reference
-  - Video
-  - requestMediaKeySystemAccess
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 
@@ -85,7 +73,7 @@ In case of an error, the returned {{jsxref('Promise')}} is rejected with a
 ### Firefox compatibility notes
 
 Firefox 55 outputs a warning to the console if a candidate
-{{domxref("MediaKeySystemConfiguration")}} included in
+`MediaKeySystemConfiguration` included in
 `supportedConfigurations` includes an `audioCapabilities` or
 `videoCapabilities` object whose value of `contentType` doesn't
 specify a `"codecs"` substring defining which codecs within the media wrapper
@@ -96,17 +84,14 @@ For example:
 ```js example-bad
 const clearKeyOptions = [
   {
-    initDataTypes: ['keyids', 'webm'],
-    audioCapabilities: [
-      { contentType: 'audio/webm' }
-    ],
-    videoCapabilities: [
-      { contentType: 'video/webm' }
-    ]
-  }
+    initDataTypes: ["keyids", "webm"],
+    audioCapabilities: [{ contentType: "audio/webm" }],
+    videoCapabilities: [{ contentType: "video/webm" }],
+  },
 ];
 
-navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+navigator
+  .requestMediaKeySystemAccess("org.w3.clearkey", clearKeyOptions)
   .then((keySystemAccess) => {
     /* use the access to get create keys */
   });
@@ -119,19 +104,20 @@ warning to console, because `"codecs"` is not included in the
 ```js example-good
 const clearKeyOptions = [
   {
-    initDataTypes: ['keyids', 'webm'],
+    initDataTypes: ["keyids", "webm"],
     audioCapabilities: [
       { contentType: 'audio/webm; codecs="opus"' },
-      { contentType: 'audio/webm; codecs="vorbis"' }
+      { contentType: 'audio/webm; codecs="vorbis"' },
     ],
     videoCapabilities: [
       { contentType: 'video/webm; codecs="vp9"' },
-      { contentType: 'video/webm; codecs="vp8"' }
-    ]
-  }
+      { contentType: 'video/webm; codecs="vp8"' },
+    ],
+  },
 ];
 
-navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+navigator
+  .requestMediaKeySystemAccess("org.w3.clearkey", clearKeyOptions)
   .then((keySystemAccess) => {
     /* use the access to get create keys */
   });

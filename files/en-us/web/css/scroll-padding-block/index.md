@@ -2,15 +2,6 @@
 title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-padding
-  - scroll-padding-block
 browser-compat: css.properties.scroll-padding-block
 ---
 
@@ -73,5 +64,5 @@ scroll-padding-block: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

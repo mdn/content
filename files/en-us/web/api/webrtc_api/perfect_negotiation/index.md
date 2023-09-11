@@ -2,19 +2,6 @@
 title: "Establishing a connection: The WebRTC perfect negotiation pattern"
 slug: Web/API/WebRTC_API/Perfect_negotiation
 page-type: guide
-tags:
-  - API
-  - Configure
-  - Connection
-  - Connectivity
-  - Guide
-  - Intermediate
-  - Negotiation
-  - Perfect Negotiation
-  - Setup
-  - Startup
-  - WebRTC
-  - WebRTC API
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

@@ -2,12 +2,6 @@
 title: ProgressEvent
 slug: Web/API/ProgressEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Progress Events
-  - ProgressEvent
-  - Reference
 browser-compat: api.ProgressEvent
 ---
 
@@ -43,18 +37,18 @@ The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest"
 
 ```js
 const progressBar = document.getElementById("p"),
-    client = new XMLHttpRequest()
-client.open("GET", "magical-unicorns")
+  client = new XMLHttpRequest();
+client.open("GET", "magical-unicorns");
 client.onprogress = (pe) => {
   if (pe.lengthComputable) {
-    progressBar.max = pe.total
-    progressBar.value = pe.loaded
+    progressBar.max = pe.total;
+    progressBar.value = pe.loaded;
   }
-}
+};
 client.onloadend = (pe) => {
-  progressBar.value = pe.loaded
-}
-client.send()
+  progressBar.value = pe.loaded;
+};
+client.send();
 ```
 
 ## Specifications

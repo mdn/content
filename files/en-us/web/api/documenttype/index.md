@@ -2,11 +2,6 @@
 title: DocumentType
 slug: Web/API/DocumentType
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentType
-  - Interface
 browser-compat: api.DocumentType
 ---
 
@@ -21,11 +16,11 @@ The **`DocumentType`** interface represents a {{domxref("Node")}} containing a d
 _Inherits properties from its parent, {{domxref("Node")}}._
 
 - {{domxref("DocumentType.name")}} {{ReadOnlyInline}}
-  - : A string, eg `"html"` for `<!DOCTYPE HTML>`.
+  - : The type of the document. It is always `"html"` for HTML documents, but will vary for XML documents.
 - {{domxref("DocumentType.publicId")}} {{ReadOnlyInline}}
-  - : A string, eg `"-//W3C//DTD HTML 4.01//EN"`, now and empty string for HTML.
+  - : A string with an identifier of the type of document. Always empty (`""`) for HTML, it will be, for example, `"-//W3C//DTD SVG 1.1//EN"` for SVG documents.
 - {{domxref("DocumentType.systemId")}} {{ReadOnlyInline}}
-  - : A string, eg `"http://www.w3.org/TR/html4/strict.dtd"`, now an empty string for HTML.
+  - : A string containing the URL to the associated DTD. Always empty (`""`) for HTML, it will be, for example, `"http://www.w3.org/2000/svg"` for SVG documents.
 
 ## Instance methods
 
@@ -33,12 +28,12 @@ _Inherits methods from its parent, {{domxref("Node")}}._
 
 - {{domxref("DocumentType.after()")}}
   - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
-    `DocumentType`'s parent, just after the `DocumentType` object.
+    object's parent, just after this node.
 - {{domxref("DocumentType.before()")}}
   - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
-    `DocumentType`'s parent, just before the `DocumentType` object.
+    object's parent, just before this node.
 - {{domxref("DocumentType.remove()")}}
-  - : Removes the object from its parent children list.
+  - : Removes this object from its parent children list.
 - {{domxref("DocumentType.replaceWith()")}}
   - : Replaces the document type with a set of given nodes.
 
@@ -53,3 +48,4 @@ _Inherits methods from its parent, {{domxref("Node")}}._
 ## See also
 
 - [The DOM interfaces index.](/en-US/docs/Web/API/Document_Object_Model)
+- {{domxref("DOMImplementation.createDocumentType()")}} to create a new `DocumentType` node.

@@ -1,15 +1,8 @@
 ---
-title: PerformanceObserver.takeRecords()
+title: "PerformanceObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - observers
-  - takeRecords()
 browser-compat: api.PerformanceObserver.takeRecords
 ---
 
@@ -39,10 +32,9 @@ The following example stores the current list of performance entries into `recor
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  list.getEntries()
-    .forEach((entry) => {
-      // Process "mark" and "measure" events
-    });
+  list.getEntries().forEach((entry) => {
+    // Process "mark" and "measure" events
+  });
 });
 observer.observe({ entryTypes: ["mark", "measure"] });
 const records = observer.takeRecords();

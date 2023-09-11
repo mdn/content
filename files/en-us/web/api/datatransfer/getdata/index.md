@@ -1,13 +1,8 @@
 ---
-title: DataTransfer.getData()
+title: "DataTransfer: getData() method"
+short-title: getData()
 slug: Web/API/DataTransfer/getData
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.getData
 ---
 
@@ -52,7 +47,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}} and
 {{domxref("DataTransfer.setData()","setData()")}} methods.
 
-### HTML Content
+### HTML
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -63,14 +58,15 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
-#div1, #div2 {
-    width:100px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
+#div1,
+#div2 {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 ```
 
@@ -78,20 +74,20 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 
 ```js
 function allowDrop(allowdropevent) {
-    allowdropevent.target.style.color = 'blue';
-    allowdropevent.preventDefault();
+  allowdropevent.target.style.color = "blue";
+  allowdropevent.preventDefault();
 }
 
 function drag(dragevent) {
-    dragevent.dataTransfer.setData("text", dragevent.target.id);
-    dragevent.target.style.color = 'green';
+  dragevent.dataTransfer.setData("text", dragevent.target.id);
+  dragevent.target.style.color = "green";
 }
 
 function drop(dropevent) {
-    dropevent.preventDefault();
-    const data = dropevent.dataTransfer.getData("text");
-    dropevent.target.appendChild(document.getElementById(data));
-    document.getElementById("drag").style.color = 'black';
+  dropevent.preventDefault();
+  const data = dropevent.dataTransfer.getData("text");
+  dropevent.target.appendChild(document.getElementById(data));
+  document.getElementById("drag").style.color = "black";
 }
 ```
 

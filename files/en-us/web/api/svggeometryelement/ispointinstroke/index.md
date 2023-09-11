@@ -1,14 +1,8 @@
 ---
-title: SVGGeometryElement.isPointInStroke()
+title: "SVGGeometryElement: isPointInStroke() method"
+short-title: isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInStroke
 ---
 
@@ -65,36 +59,36 @@ A boolean indicating whether the given point is within the stroke or not.
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 
 try {
   // Point not in circle
-  console.log('Point at 10,10:', circle.isPointInStroke(new DOMPoint(10, 10)));
+  console.log("Point at 10,10:", circle.isPointInStroke(new DOMPoint(10, 10)));
 
   // Point in circle but not stroke
-  console.log('Point at 40,30:', circle.isPointInStroke(new DOMPoint(40, 30)));
+  console.log("Point at 40,30:", circle.isPointInStroke(new DOMPoint(40, 30)));
 
   // Point in circle stroke
-  console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
+  console.log("Point at 83,17:", circle.isPointInStroke(new DOMPoint(83, 17)));
 } catch (e) {
   // for the browsers that still support the deprecated interface SVGPoint
-  const svg = document.getElementsByTagName('svg')[0];
+  const svg = document.getElementsByTagName("svg")[0];
   const point = svg.createSVGPoint();
 
   // Point not in circle
   point.x = 10;
   point.y = 10;
-  console.log('Point at 10,10:', circle.isPointInStroke(point));
+  console.log("Point at 10,10:", circle.isPointInStroke(point));
 
   // Point in circle but not stroke
   point.x = 40;
   point.y = 30;
-  console.log('Point at 40,30:', circle.isPointInStroke(point));
+  console.log("Point at 40,30:", circle.isPointInStroke(point));
 
   // Point in circle stroke
   point.x = 83;
   point.y = 17;
-  console.log('Point at 83,17:', circle.isPointInStroke(point));
+  console.log("Point at 83,17:", circle.isPointInStroke(point));
 }
 ```
 

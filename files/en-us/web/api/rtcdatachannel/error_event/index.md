@@ -1,23 +1,8 @@
 ---
-title: 'RTCDataChannel: error event'
+title: "RTCDataChannel: error event"
+short-title: error
 slug: Web/API/RTCDataChannel/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Connectivity
-  - Data Channel
-  - Error
-  - Error Handling
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - channel
-  - data
-  - events
-  - Event
-  - rtc
 browser-compat: api.RTCDataChannel.error_event
 ---
 
@@ -34,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -73,46 +58,58 @@ const sctpCauseCodes = [
   "Cookie received while shutting down",
   "Restart of an association with new addresses",
   "User-initiated abort",
-  "Protocol violation"
+  "Protocol violation",
 ];
 
-dc.addEventListener("error", (ev) => {
-  const err = ev.error;
+dc.addEventListener(
+  "error",
+  (ev) => {
+    const err = ev.error;
 
-  console.error("WebRTC error: ", err.message);
+    console.error("WebRTC error: ", err.message);
 
-  // Handle specific error detail types
+    // Handle specific error detail types
 
-  switch(err.errorDetail) {
-    case "sdp-syntax-error":
-      console.error("    SDP syntax error in line ", err.sdpLineNumber);
-      break;
-    case "idp-load-failure":
-      console.error("    Identity provider load failure: HTTP error ",
-                    err.httpRequestStatusCode);
-      break;
-    case "sctp-failure":
-      if (err.sctpCauseCode < sctpCauseCodes.length) {
-        console.error("    SCTP failure: ", err.sctpCauseCode);
-      } else {
-        console.error("    Unknown SCTP error");
-      }
-      break;
-    case "dtls-failure":
-      if (err.receivedAlert) {
-        console.error("    Received DLTS failure alert: ", err.receivedAlert);
-      }
-      if (err.sentAlert) {
-        console.error("    Sent DLTS failure alert: ", err.receivedAlert);
-      }
-      break;
-  }
+    switch (err.errorDetail) {
+      case "sdp-syntax-error":
+        console.error("    SDP syntax error in line ", err.sdpLineNumber);
+        break;
+      case "idp-load-failure":
+        console.error(
+          "    Identity provider load failure: HTTP error ",
+          err.httpRequestStatusCode,
+        );
+        break;
+      case "sctp-failure":
+        if (err.sctpCauseCode < sctpCauseCodes.length) {
+          console.error("    SCTP failure: ", err.sctpCauseCode);
+        } else {
+          console.error("    Unknown SCTP error");
+        }
+        break;
+      case "dtls-failure":
+        if (err.receivedAlert) {
+          console.error("    Received DLTS failure alert: ", err.receivedAlert);
+        }
+        if (err.sentAlert) {
+          console.error("    Sent DLTS failure alert: ", err.receivedAlert);
+        }
+        break;
+    }
 
-  // Add source file name and line information
+    // Add source file name and line information
 
-  console.error("    Error in file ", err.filename, " at line ", err.lineNumber,
-                ", column ", err.columnNumber);
-}, false);
+    console.error(
+      "    Error in file ",
+      err.filename,
+      " at line ",
+      err.lineNumber,
+      ", column ",
+      err.columnNumber,
+    );
+  },
+  false,
+);
 ```
 
 The received event provides details in an {{domxref("RTCError")}} object called {{domxref("RTCErrorEvent.error", "error")}}; `RTCError` is an extension of the {{domxref("DOMException")}} interface. The error's {{domxref("DOMException.name", "name")}} is `RTCError` and the {{domxref("DOMException.message", "message")}} is an error string specified by the WebRTC layer.
@@ -128,7 +125,7 @@ dc.onerror = (ev) => {
   const err = ev.error;
 
   // …
-}
+};
 ```
 
 > **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.

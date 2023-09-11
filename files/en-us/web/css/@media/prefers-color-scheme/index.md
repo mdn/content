@@ -2,19 +2,12 @@
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Reference
-  - Web
-  - media feature
-  - prefers-color-scheme
 browser-compat: css.at-rules.media.prefers-color-scheme
 ---
 
 {{CSSRef}}
 
-The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
+The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
 A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
 ## Embedded elements
@@ -35,67 +28,74 @@ To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and f
 
 ## Examples
 
-### Detecting a dark theme
+### Detecting a dark or light theme
 
-The elements below have an initial color theme.
-They can be further themed according to the user's color scheme preference.
+A common usage is to use a light color scheme by default, and then use `prefers-color-scheme: dark` to override the colors to a darker variant. It is also possible to do it the other way around.
+
+This example shows both options: Theme A uses light colors, but can be overridden to dark colors. Theme B uses dark colors, but can be overridden to light colors. In the end, if the browser supports `prefers-color-scheme`, both themes will be light or dark.
+
+#### HTML
 
 ```html
-<div class="day">Day (initial)</div>
-<div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div>
+<div class="box theme-a">Theme A (initial)</div>
+<div class="box theme-a adaptive">Theme A (changed if dark preferred)</div>
 <br />
 
-<div class="night">Night (initial)</div>
-<div class="night light-scheme">Night (changes in light scheme)</div>
-<div class="night dark-scheme">Night (changes in dark scheme)</div>
+<div class="box theme-b">Theme B (initial)</div>
+<div class="box theme-b adaptive">Theme B (changed if light preferred)</div>
 ```
 
-The following CSS is used to style the elements above:
+#### CSS
 
-```css
-.day {
-  background: #eee;
-  color: black;
-}
-.night {
-  background: #333;
-  color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme {
-    background: #333;
-    color: white;
-  }
-  .night.dark-scheme {
-    background: black;
-    color: #ddd;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .day.light-scheme {
-    background: white;
-    color: #555;
-  }
-  .night.light-scheme {
-    background: #eee;
-    color: black;
-  }
-}
-
-.day,
-.night {
+```css hidden
+div.box {
   display: inline-block;
   padding: 1em;
-  width: 7em;
+  margin: 6px;
+  outline: 2px solid #000;
+  width: 12em;
   height: 2em;
   vertical-align: middle;
 }
 ```
 
-{{EmbedLiveSample("Detecting_a_dark_theme")}}
+Theme A (brown) uses a light color scheme by default, but will switch to a dark scheme based on the media query:
+
+```css
+.theme-a {
+  background: #dca;
+  color: #731;
+}
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+    background: #753;
+    color: #dcb;
+    outline: 5px dashed #000;
+  }
+}
+```
+
+Theme B (blue) uses a dark color scheme by default, but will switch to a light scheme based on the media query:
+
+```css
+.theme-b {
+  background: #447;
+  color: #bbd;
+}
+@media (prefers-color-scheme: light) {
+  .theme-b.adaptive {
+    background: #bcd;
+    color: #334;
+    outline: 5px dotted #000;
+  }
+}
+```
+
+#### Result
+
+The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme. The outline of one box will be dashed or dotted if it was changed based on your browser or operating systems settings.
+
+{{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
 
 ### Color scheme inheritance
 
@@ -154,6 +154,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 ## See also
 
 - {{cssxref("color-scheme")}} CSS property
+- {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme) (Firefox Page Inspector > Examine and edit CSS)
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)

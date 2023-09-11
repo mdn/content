@@ -2,20 +2,13 @@
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Array.join
 ---
 
 {{JSRef}}
 
-The **`join()`** method creates and
-returns a new string by concatenating all of the elements in an array
-(or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)),
+The **`join()`** method of {{jsxref("Array")}} instances creates and
+returns a new string by concatenating all of the elements in this array,
 separated by commas or a specified separator string. If the array has
 only one item, then that item will be returned without using the separator.
 
@@ -31,10 +24,7 @@ join(separator)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : Specifies a string to separate each pair of adjacent elements of the array. The
-    separator is converted to a string if necessary. If omitted, the array elements are
-    separated with a comma (","). If `separator` is an empty string, all
-    elements are joined without any characters in between them.
+  - : A string to separate each pair of adjacent elements of the array. If omitted, the array elements are separated with a comma (",").
 
 ### Return value
 
@@ -46,6 +36,27 @@ A string with all array elements joined. If `arr.length` is
 The string conversions of all array elements are joined into one string. If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
 The `join` method is accessed internally by [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) with no arguments. Overriding `join` of an array instance will override its `toString` behavior as well.
+
+`Array.prototype.join` recursively converts each element, including other arrays, to strings. Because the string returned by `Array.prototype.toString` (which is the same as calling `join()`) does not have delimiters, nested arrays look like they are flattened. You can only control the separator of the first level, while deeper levels always use the default comma.
+
+```js
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix.join()); // 1,2,3,4,5,6,7,8,9
+console.log(matrix.join(";")); // 1,2,3;4,5,6;7,8,9
+```
+
+When an array is cyclic (it contains an element that is itself), browsers avoid infinite recursion by ignoring the cyclic reference.
+
+```js
+const arr = [];
+arr.push(1, [3, arr, 4], 2);
+console.log(arr.join(";")); // 1;3,,4;2
+```
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `join()` method iterates empty slots as if they have the value `undefined`.
 
@@ -78,7 +89,7 @@ console.log([1, undefined, 3].join()); // '1,,3'
 
 ### Calling join() on non-array objects
 
-The `join()` method reads the `length` property of `this` and then accesses each integer index.
+The `join()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -86,6 +97,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by join() since length is 3
 };
 console.log(Array.prototype.join.call(arrayLike));
 // 2,3,4
@@ -103,6 +115,9 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 
 ## See also
 
-- {{jsxref("String.prototype.split()")}}
+- [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxref("String.prototype.split()")}}

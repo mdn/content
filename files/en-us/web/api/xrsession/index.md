@@ -2,17 +2,8 @@
 title: XRSession
 slug: Web/API/XRSession
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR Device API
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession
 ---
 
@@ -108,8 +99,12 @@ if (XR) {
 
         for (const xrView of viewer.views) {
           const xrViewport = xrWebGLLayer.getViewport(xrView);
-          gl.viewport(xrViewport.x, xrViewport.y,
-                      xrViewport.width, xrViewport.height);
+          gl.viewport(
+            xrViewport.x,
+            xrViewport.y,
+            xrViewport.width,
+            xrViewport.height,
+          );
         }
       });
     });

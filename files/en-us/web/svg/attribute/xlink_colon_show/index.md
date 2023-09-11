@@ -2,10 +2,8 @@
 title: xlink:show
 slug: Web/SVG/Attribute/xlink:show
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.xlink.xlink_show
 ---
 
@@ -40,9 +38,9 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `new`
-  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_blank`.
+  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Element/a#target) set to `_blank`.
 - `replace`
-  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_self`.
+  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Element/a#target) set to `_self`.
 - `embed`
   - : This value specifies that instead of linking to the resource it will be loaded and shown within the document. This is similar to the effect achieved by an HTML {{HTMLElement("img")}} element.
 - `other`

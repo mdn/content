@@ -2,14 +2,6 @@
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - observers
 browser-compat: api.PerformanceObserver
 ---
 
@@ -24,7 +16,7 @@ The **`PerformanceObserver`** interface is used to observe performance measureme
 
 ## Static properties
 
-- {{domxref("PerformanceObserver.supportedEntryTypes")}} {{ReadOnlyInline}}
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} {{ReadOnlyInline}}
   - : Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
 ## Instance methods
@@ -45,13 +37,13 @@ The `perfObserver` callback provides a `list` ({{domxref("PerformanceObserverEnt
 
 ```js
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

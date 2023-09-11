@@ -1,13 +1,7 @@
 ---
-title: "aria-activedescendant"
+title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-activedescendant
-  - NeedsExample
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-activedescendant
   - https://w3c.github.io/aria-practices/#kbd_focus_activedescendant

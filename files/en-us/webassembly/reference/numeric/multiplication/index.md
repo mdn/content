@@ -1,12 +1,6 @@
 ---
 title: Multiplication
 slug: WebAssembly/Reference/Numeric/Multiplication
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Arithmetic
 ---
 
 {{WebAssemblySidebar}}

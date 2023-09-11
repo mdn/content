@@ -2,20 +2,24 @@
 title: "-webkit-border-before"
 slug: Web/CSS/-webkit-border-before
 page-type: css-shorthand-property
-tags:
-  - "-webkit-border-before"
-  - CSS
-  - CSS Property
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-border-before
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
 The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet.
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("-webkit-border-before-color")}}
+- {{cssxref("-webkit-border-before-style")}}
+- {{cssxref("-webkit-border-before-width")}}
+
+## Syntax
 
 ```css
 /* Border values */
@@ -26,16 +30,10 @@ The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shortha
 /* Global values */
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-border-before: unset;
 ```
-
-`-webkit-border-before` can be used to set the values for one or more of: {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, and {{cssxref("-webkit-border-before-color")}}. It maps to a physical border depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
-
-It relates to {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, and {{cssxref("-webkit-border-end")}}, which define the other borders of the element.
-
-This property is on the standard track as {{cssxref("border-block-start")}}.
-
-## Syntax
 
 ### Values
 
@@ -47,6 +45,14 @@ One or more of the following, in any order:
   - : See {{cssxref("border-style")}}
 - `<'color'>`
   - : See {{cssxref("color")}}
+
+## Description
+
+The `-webkit-border-before` property maps to a physical border depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+It relates to {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, and {{cssxref("-webkit-border-end")}}, which define the other borders of the element.
+
+The standard-track equivalent of this property is {{cssxref("border-block-start")}}.
 
 ## Formal definition
 

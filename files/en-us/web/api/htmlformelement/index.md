@@ -2,15 +2,6 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 page-type: web-api-interface
-tags:
-  - API
-  - Form Element
-  - Forms
-  - HTML DOM
-  - HTML forms
-  - HTMLFormElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLFormElement
 ---
 
@@ -29,32 +20,32 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
   - : A `long` reflecting the number of controls in the form.
 - {{domxref("HTMLFormElement.name")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+  - : A string reflecting the value of the form's [`name`](/en-US/docs/Web/HTML/Element/form#name) HTML attribute, containing the name of the form.
 - {{domxref("HTMLFormElement.method")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+  - : A string reflecting the value of the form's [`method`](/en-US/docs/Web/HTML/Element/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.target")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : A string reflecting the value of the form's [`target`](/en-US/docs/Web/HTML/Element/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 - {{domxref("HTMLFormElement.action")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+  - : A string reflecting the value of the form's [`action`](/en-US/docs/Web/HTML/Element/form#action) HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
+  - : A string reflecting the value of the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.
+  - : A string reflecting the value of the form's [`accept-charset`](/en-US/docs/Web/HTML/Element/form#accept-charset) HTML attribute, representing the character encoding that the server accepts.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : A string reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
+  - : A string reflecting the value of the form's [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : A boolean value reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.
+  - : A boolean value reflecting the value of the form's [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) HTML attribute, indicating whether the form should not be validated.
 
-Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named `action` will have its `action` property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).
+Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named `action` will have its `action` property return that input instead of the form's [`action`](/en-US/docs/Web/HTML/Element/form#action) HTML attribute).
 
 ## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}
-  - : Returns `true` if the element's child controls are subject to [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) and satisfy those constraints; returns `false` if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
+  - : Returns `true` if the element's child controls are subject to [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) and satisfy those constraints; returns `false` if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
 - {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their [validation constraints](/en-US/docs/Web/Guide/HTML/Constraint_validation). When `false` is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their [validation constraints](/en-US/docs/Web/HTML/Constraint_validation). When `false` is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.
 - {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}
   - : Requests that the form be submitted using the specified submit button and its corresponding configuration.
 - {{domxref("HTMLFormElement.reset", "reset()")}}
@@ -65,7 +56,7 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 ### Deprecated methods
 
 - {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
 
 ## Events
 
@@ -82,7 +73,7 @@ Listen to these events using `addEventListener()`, or by assigning an event list
 
 ### Obtaining a form element object
 
-To obtain an `HTMLFormElement` object, you can use a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors) with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.
+To obtain an `HTMLFormElement` object, you can use a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors) with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.
 
 {{domxref("Document.forms")}} returns an array of `HTMLFormElement` objects listing each of the forms on the page. You can then use any of the following syntaxes to get an individual form:
 
@@ -121,7 +112,7 @@ The elements included by `HTMLFormElement.elements` and `HTMLFormElement.length`
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -135,10 +126,10 @@ Creating a new form element, modifying its attributes, then submitting it:
 
 ```js
 const f = document.createElement("form"); // Create a form
-document.body.appendChild(f);             // Add it to the document body
-f.action = "/cgi-bin/some.cgi";           // Add action and method attributes
+document.body.appendChild(f); // Add it to the document body
+f.action = "/cgi-bin/some.cgi"; // Add action and method attributes
 f.method = "POST";
-f.submit();                               // Call the form's submit() method
+f.submit(); // Call the form's submit() method
 ```
 
 Extract information from a `<form>` element and set some of its attributes:
@@ -192,7 +183,7 @@ Extract information from a `<form>` element and set some of its attributes:
 Submit a `<form>` into a new window:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -243,10 +234,6 @@ Submit a `<form>` into a new window:
   </body>
 </html>
 ```
-
-### Submitting forms and uploading files using XMLHttpRequest
-
-If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 
 ## Specifications
 

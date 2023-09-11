@@ -2,12 +2,6 @@
 title: clear
 slug: Web/CSS/clear
 page-type: css-property
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.clear
 ---
 
@@ -17,7 +11,7 @@ The **`clear`** [CSS](/en-US/docs/Web/CSS) property sets whether an element must
 
 {{EmbedInteractiveExample("pages/css/clear.html")}}
 
-When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) of all relevant floats. The non-floated block's top margin collapses.
+When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) of all relevant floats. The non-floated block's top margin collapses.
 
 Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.
 
@@ -227,4 +221,4 @@ p {
 
 ## See also
 
-- [CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

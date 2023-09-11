@@ -1,16 +1,10 @@
 ---
-title: BackgroundFetchManager.get()
+title: "BackgroundFetchManager: get() method"
+short-title: get()
 slug: Web/API/BackgroundFetchManager/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - get
-  - BackgroundFetchManager
-  - Experimental
-  - Service Workers
-  - Fetch
+status:
+  - experimental
 browser-compat: api.BackgroundFetchManager.get
 ---
 
@@ -27,7 +21,7 @@ get(id)
 ### Parameters
 
 - `id`
-  - : the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
+  - : The ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchManager.fetch","fetch()")}}.
 
 ### Return value
 

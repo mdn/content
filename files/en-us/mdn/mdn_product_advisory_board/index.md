@@ -1,10 +1,7 @@
 ---
 title: MDN Product Advisory Board
 slug: MDN/MDN_Product_Advisory_Board
-tags:
-  - MDN
-  - PAB
-  - Product advisory board
+page-type: guide
 ---
 
 {{MDNSidebar}}

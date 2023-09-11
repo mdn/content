@@ -1,14 +1,7 @@
 ---
 title: Game development
 slug: Games
-tags:
-  - Apps
-  - Game Development
-  - Gamedev
-  - Games
-  - HTML Games
-  - JavaScript Games
-  - Web
+page-type: landing-page
 ---
 
 {{GamesSidebar}}
@@ -35,7 +28,7 @@ To get started, see:
 
 ## Examples
 
-For a list of web game examples, see our [examples page](/en-US/docs/Games/Examples). Also, check out [games.mozilla.org](https://games.mozilla.org/) for more useful resources!
+For a list of web game examples, see our [tutorials page](/en-US/docs/Games/Tutorials). Also, check out [games.mozilla.org](https://games.mozilla.org/) for more useful resources!
 
 ## See also
 

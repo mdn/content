@@ -2,15 +2,6 @@
 title: A basic 2D WebGL animation example
 slug: Web/API/WebGL_API/Basic_2D_animation_example
 page-type: guide
-tags:
-  - 2D Animation
-  - 2D Graphics
-  - Animation
-  - Drawing
-  - Example
-  - Graphics
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}}
@@ -115,6 +106,8 @@ let aVertexPosition;
 
 // Animation timing
 
+let shaderProgram;
+let currentAngle;
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 ```
@@ -235,7 +228,7 @@ function compileShader(id, type) {
     console.log(
       `Error compiling ${
         type === gl.VERTEX_SHADER ? "vertex" : "fragment"
-      } shader:`
+      } shader:`,
     );
     console.log(gl.getShaderInfoLog(shader));
   }
@@ -286,7 +279,7 @@ function animateScene() {
     gl.FLOAT,
     false,
     0,
-    0
+    0,
   );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);

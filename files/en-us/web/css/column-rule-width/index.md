@@ -2,12 +2,6 @@
 title: column-rule-width
 slug: Web/CSS/column-rule-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.column-rule-width
 ---
 

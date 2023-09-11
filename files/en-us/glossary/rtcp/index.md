@@ -1,13 +1,10 @@
 ---
 title: RTCP (RTP Control Protocol)
 slug: Glossary/RTCP
-tags:
-  - Media
-  - Networking
-  - Protocol
-  - RTCP
-  - control
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 The **RTP Control Protocol** (**RTCP**) is a partner to the {{Glossary("RTP")}} protocol. RTCP is used to provide control and statistical information about an RTP media streaming session.
 

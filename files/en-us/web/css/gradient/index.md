@@ -2,14 +2,6 @@
 title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Data Type
-  - Graphics
-  - Layout
-  - Reference
 browser-compat: css.types.image.gradient
 ---
 
@@ -43,7 +35,7 @@ Conic gradients transition colors progressively around a circle. They are genera
 
 ## Interpolation
 
-As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the [transparent keyword](/en-US/docs/Web/CSS/color_value#transparent_keyword).)
+As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the [transparent keyword](/en-US/docs/Web/CSS/named-color#transparent).)
 
 ## Formal syntax
 
@@ -179,7 +171,7 @@ div {
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)

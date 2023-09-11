@@ -2,13 +2,6 @@
 title: symbols
 slug: Web/CSS/@counter-style/symbols
 page-type: css-at-rule-descriptor
-tags:
-  - "@counter-style"
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
 browser-compat: css.at-rules.counter-style.symbols
 ---
 
@@ -36,13 +29,15 @@ A symbol can be a string, image, or identifier. It is used within the {{cssxref(
 
 ```css
 symbols: A B C D E;
-symbols: "\24B6""\24B7""\24B8"D E;
+symbols: "\24B6" "\24B7" "\24B8" D E;
 symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
-symbols: url("first.svg") url("second.svg") url("third.svg");
+symbols: url("one.svg") url("two.svg") url("three.svg");
 symbols: indic-numbers;
 ```
 
 The `symbols` descriptor must be specified when the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`. When the `additive` system is used, use the {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} descriptor instead to specify the symbols.
+
+While a space between quoted symbols is not required, it makes the CSS more legible. To use a quote as a symbol, either escape the quote character or enclose the character is using different quotes, such as `"'"`.
 
 ## Formal definition
 
@@ -73,7 +68,7 @@ The `symbols` descriptor must be specified when the value of the {{cssxref('@cou
 ```css
 @counter-style symbols-example {
   system: fixed;
-  symbols: A "1" "\24B7"D E;
+  symbols: A "1" "\24B7" D E;
 }
 
 .list {
@@ -99,3 +94,4 @@ The `symbols` descriptor must be specified when the value of the {{cssxref('@cou
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles
 - {{cssxref("url", "url()")}} function
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

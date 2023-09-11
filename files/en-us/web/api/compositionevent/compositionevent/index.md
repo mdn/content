@@ -1,12 +1,8 @@
 ---
-title: CompositionEvent()
+title: "CompositionEvent: CompositionEvent() constructor"
+short-title: CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - CompositionEvent
-  - Constructor
-  - Reference
 browser-compat: api.CompositionEvent.CompositionEvent
 ---
 

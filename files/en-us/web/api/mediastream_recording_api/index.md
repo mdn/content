@@ -2,16 +2,6 @@
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Overview
-  - Reference
-  - Video
 browser-compat: api.MediaRecorder
 ---
 
@@ -67,7 +57,7 @@ function handleDataAvailable(event) {
 }
 function download() {
   const blob = new Blob(recordedChunks, {
-    type: "video/webm"
+    type: "video/webm",
   });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -90,7 +80,7 @@ setTimeout((event) => {
 
 You can also use the properties of the `MediaRecorder` object to determine the state of the recording process, and its {{domxref("MediaRecorder.pause", "pause()")}} and {{domxref("MediaRecorder.resume", "resume()")}} methods to pause and resume recording of the source media.
 
-If you need or want to check to see if a specific MIME type is supported, that's possible as well. Just call {{domxref("MediaRecorder.isTypeSupported()")}}.
+If you need or want to check to see if a specific MIME type is supported, that's possible as well. Just call {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}.
 
 ### Examining potential input sources
 
@@ -99,8 +89,7 @@ If your goal is to record camera and/or microphone input, you may wish to examin
 In this code snippet, `enumerateDevices()` is used to examine the available input devices, locate those which are audio input devices, and create {{HTMLElement("option")}} elements that are then added to a {{HTMLElement("select")}} element representing an input source picker.
 
 ```js
-navigator.mediaDevices.enumerateDevices()
-.then((devices) => {
+navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
     const menu = document.getElementById("inputdevices");
     if (device.kind === "audioinput") {

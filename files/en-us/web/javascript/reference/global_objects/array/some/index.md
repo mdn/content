@@ -2,20 +2,12 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
 
 {{JSRef}}
 
-The **`some()`** method tests whether
+The **`some()`** method of {{jsxref("Array")}} instances tests whether
 at least one element in the array passes the test implemented by the provided
 function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
 
@@ -24,43 +16,26 @@ function. It returns true if, in the array, it finds an element for which the pr
 ## Syntax
 
 ```js-nolint
-// Arrow function
-some((element) => { /* … */ })
-some((element, index) => { /* … */ })
-some((element, index, array) => { /* … */ })
-
-// Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
-
-// Inline callback function
-some(function (element) { /* … */ })
-some(function (element, index) { /* … */ })
-some(function (element, index, array) { /* … */ })
-some(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `some()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for at least one element in the array. Otherwise, `false`.
+`false` unless `callbackFn` returns a {{Glossary("truthy")}} value for an array element, in which case `true` is immediately returned.
 
 ## Description
 
@@ -75,6 +50,8 @@ The `some()` method is an [iterative method](/en-US/docs/Web/JavaScript/Referenc
 - `callbackFn` will not visit any elements added beyond the array's initial length when the call to `some()` began.
 - Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
+
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `some()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -149,7 +126,7 @@ console.log([1, undefined, 1].some((x) => x !== 1)); // true
 
 ### Calling some() on non-array objects
 
-The `some()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `true`.
+The `some()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length` until they all have been accessed or `callbackFn` returns `true`.
 
 ```js
 const arrayLike = {
@@ -157,6 +134,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: 3, // ignored by some() since length is 3
 };
 console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 // false
@@ -173,7 +151,10 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 ## See also
 
 - [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

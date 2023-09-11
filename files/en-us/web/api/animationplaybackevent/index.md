@@ -2,15 +2,6 @@
 title: AnimationPlaybackEvent
 slug: Web/API/AnimationPlaybackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - AnimationPlaybackEvent
-  - Interface
-  - Reference
-  - events
-  - waapi
-  - web animations api
 browser-compat: api.AnimationPlaybackEvent
 ---
 

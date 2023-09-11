@@ -2,18 +2,12 @@
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Map.Map
 ---
 
 {{JSRef}}
 
-The **`Map()` constructor** creates {{jsxref("Map")}} objects.
+The **`Map()`** constructor creates {{jsxref("Map")}} objects.
 
 ## Syntax
 
@@ -39,9 +33,9 @@ new Map(iterable)
 
 ```js
 const myMap = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 ```
 
@@ -55,8 +49,7 @@ const myMap = new Map([
 
 ## See also
 
-- A polyfill of `Map` is available in
-  [`core-js`](https://github.com/zloirock/core-js#map)
+- [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

@@ -1,15 +1,7 @@
 ---
 title: privacy.websites
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Property
-  - Reference
-  - WebExtensions
-  - websites
+page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.websites
 ---
 
@@ -90,21 +82,21 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
   let getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
+    if (
+      got.levelOfControl === "controlled_by_this_extension" ||
+      got.levelOfControl === "controllable_by_this_extension"
+    ) {
       let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-        value: true
+        value: true,
       });
       setting.then(onSet);
     } else {
       console.log("Not able to set hyperlinkAuditingEnabled");
     }
   });
-
 });
 ```
 

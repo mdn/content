@@ -1,14 +1,8 @@
 ---
-title: 'HTMLDialogElement: close event'
+title: "HTMLDialogElement: close event"
+short-title: close
 slug: Web/API/HTMLDialogElement/close_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - HTMLDialogElement
-  - Reference
-  - close
 browser-compat: api.HTMLDialogElement.close_event
 ---
 
@@ -23,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('close', (event) => {});
+addEventListener("close", (event) => {});
 
-onclose = (event) => { };
+onclose = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +35,7 @@ A generic {{domxref("Event")}}.
 ```html
 <dialog class="example-dialog">
   <form method="dialog">
-     <button>Close via method="dialog"</button>
+    <button>Close via method="dialog"</button>
   </form>
   <button class="close">Close via .close() method</button>
   <p>Or hit the <kbd>Esc</kbd> key</p>
@@ -62,22 +56,22 @@ div {
 #### JavaScript
 
 ```js
-const result = document.querySelector('.result');
+const result = document.querySelector(".result");
 
-const dialog = document.querySelector('.example-dialog');
-dialog.addEventListener('close', (event) => {
-    result.textContent = 'dialog was closed';
+const dialog = document.querySelector(".example-dialog");
+dialog.addEventListener("close", (event) => {
+  result.textContent = "dialog was closed";
 });
 
-const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () => {
+const openDialog = document.querySelector(".open-dialog");
+openDialog.addEventListener("click", () => {
   dialog.showModal();
   result.textContent = "";
 });
 
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () => {
-    dialog.close();
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
 ```
 

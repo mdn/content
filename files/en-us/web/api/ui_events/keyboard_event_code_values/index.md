@@ -1,5 +1,5 @@
 ---
-title: 'Code values for keyboard events'
+title: Code values for keyboard events
 slug: Web/API/UI_Events/Keyboard_event_code_values
 page-type: guide
 ---

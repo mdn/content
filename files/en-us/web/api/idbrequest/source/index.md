@@ -1,16 +1,8 @@
 ---
-title: IDBRequest.source
+title: "IDBRequest: source property"
+short-title: source
 slug: Web/API/IDBRequest/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - source
 browser-compat: api.IDBRequest.source
 ---
 
@@ -19,7 +11,7 @@ browser-compat: api.IDBRequest.source
 The **`source`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the source of the request, such as an
 Index or an object store. If no source exists (such as when calling
-{{domxref("indexedDB.open")}}), it returns null.
+{{domxref("IDBFactory.open")}}), it returns null.
 
 {{AvailableInWorkers}}
 
@@ -41,7 +33,9 @@ console. For a full working example, see our [To-do Notifications](https://githu
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
@@ -61,7 +55,9 @@ objectStoreTitleRequest.onsuccess = () => {
   console.log(`The source of this request is ${updateTitleRequest.source}`);
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = () => { displayData(); };
+  updateTitleRequest.onsuccess = () => {
+    displayData();
+  };
 };
 ```
 

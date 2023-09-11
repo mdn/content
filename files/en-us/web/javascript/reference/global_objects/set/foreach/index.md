@@ -2,62 +2,39 @@
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
 browser-compat: javascript.builtins.Set.forEach
 ---
 
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
-for each value in the `Set` object, in insertion order.
+The **`forEach()`** method of {{jsxref("Set")}} instances executes a provided function once
+for each value in this set, in insertion order.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* ... */ } )
-forEach((value) => { /* ... */ } )
-forEach((value, key) => { /* ... */ } )
-forEach((value, key, set) => { /* ... */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* ... */ })
-forEach(function(value) { /* ... */ })
-forEach(function(value, key) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callback`
-
-  - : Function to execute for each element, taking three arguments:
-
-    - `value`, `key`
-      - : The current element being processed in the `Set`. As there are no
-        keys in `Set`, the value is passed for both arguments.
+  - : A function to execute for each entry in the set. The function is called with the following arguments:
+    - `value`
+      - : Value of each iteration.
+    - `key`
+      - : Key of each iteration. This is always the same as `value`.
     - `set`
-      - : The `Set` object which `forEach()` was called upon.
-
-- `thisArg`
-  - : Value to use as `this` when executing `callbackFn`.
+      - : The set being iterated.
+- `thisArg` {{optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

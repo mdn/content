@@ -1,13 +1,8 @@
 ---
-title: Window.clearImmediate()
+title: "Window: clearImmediate() method"
+short-title: clearImmediate()
 slug: Web/API/Window/clearImmediate
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Window
-  - Polyfill
 browser-compat: api.Window.clearImmediate
 ---
 
@@ -15,10 +10,8 @@ browser-compat: api.Window.clearImmediate
 
 This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
-> **Note:** This method is not expected to become standard, and is only implemented by recent
-> builds of Internet Explorer and Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and
-> [Webkit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172)
-> (Google/Apple).
+> **Note:** This method is not expected to become standard, and is nowadays only implemented
+> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzil.la/686201) (Firefox) and [Chromium/WebKit](https://crbug.com/146172) (Chrome/Safari).
 
 ## Syntax
 
@@ -43,8 +36,7 @@ let immediateID = setImmediate(() => {
   // Run some code
 });
 
-document.getElementById("button")
-  .addEventListener(() => {
+document.getElementById("button").addEventListener(() => {
   clearImmediate(immediateID);
 });
 ```

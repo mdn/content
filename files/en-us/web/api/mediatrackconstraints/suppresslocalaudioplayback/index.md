@@ -1,22 +1,14 @@
 ---
-title: MediaTrackConstraints.suppressLocalAudioPlayback
+title: "MediaTrackConstraints: suppressLocalAudioPlayback property"
+short-title: suppressLocalAudioPlayback
 slug: Web/API/MediaTrackConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Web
-  - suppressLocalAudioPlayback
+status:
+  - experimental
 browser-compat: api.MediaTrackConstraints.suppressLocalAudioPlayback
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seecompattable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`suppressLocalAudioPlayback`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
@@ -40,10 +32,12 @@ result in an error.
 ## Examples
 
 ```js
-let isLocalAudioSuppressed = displayStream.getVideoTracks()[0].getSettings().suppressLocalAudioPlayback;
+let isLocalAudioSuppressed = displayStream
+  .getVideoTracks()[0]
+  .getSettings().suppressLocalAudioPlayback;
 ```
 
-See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example that allows you to play with media track constraints.
+The [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example shows how to use media track constraints.
 
 ## Specifications
 

@@ -2,14 +2,6 @@
 title: SpeechRecognitionResultList
 slug: Web/API/SpeechRecognitionResultList
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognitionResultList
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResultList
 ---
 
@@ -45,7 +37,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

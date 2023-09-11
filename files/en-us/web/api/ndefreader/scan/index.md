@@ -1,19 +1,16 @@
 ---
-title: NDEFReader.scan()
+title: "NDEFReader: scan() method"
+short-title: scan()
 slug: Web/API/NDEFReader/scan
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.scan
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
+The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag read operation is scheduled or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Syntax
 
@@ -64,7 +61,7 @@ ndef
     console.log("Scan started successfully.");
     ndef.onreadingerror = (event) => {
       console.log(
-        "Error! Cannot read data from the NFC tag. Try a different one?"
+        "Error! Cannot read data from the NFC tag. Try a different one?",
       );
     };
     ndef.onreading = (event) => {

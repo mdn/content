@@ -2,15 +2,6 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 page-type: javascript-statement
-tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - asynchronous
-  - await
 browser-compat: javascript.statements.for_await_of
 ---
 
@@ -20,8 +11,6 @@ The **`for await...of`** statement creates a loop iterating over [async iterable
 
 {{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
 
-> **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
-
 ## Syntax
 
 ```js-nolint
@@ -30,7 +19,7 @@ for await (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable or an object property).
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for await...of` loop is in.
 - `iterable`
   - : An async iterable or sync iterable. The source of the sequence of values on which the loop operates.
 - `statement`

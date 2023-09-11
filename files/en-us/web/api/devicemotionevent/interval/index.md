@@ -1,15 +1,8 @@
 ---
-title: DeviceMotionEvent.interval
+title: "DeviceMotionEvent: interval property"
+short-title: interval
 slug: Web/API/DeviceMotionEvent/interval
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation
-  - Mobile
-  - Motion
-  - Orientation
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEvent.interval
 ---
 

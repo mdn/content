@@ -2,17 +2,12 @@
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.load
 ---
 
 {{JSRef}}
 
-The static **`Atomics.load()`**
+The **`Atomics.load()`** static
 method returns a value at a given position in the array.
 
 {{EmbedInteractiveExample("pages/js/atomics-load.html")}}
@@ -39,10 +34,10 @@ The value at the given position (`typedArray[index]`).
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one of the
-  allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds in the
-  `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 

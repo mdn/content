@@ -2,18 +2,12 @@
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.any-pointer
 ---
 
 {{CSSRef}}
 
-The **`any-pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has _any_ pointing device (such as a mouse), and if so, how accurate it is.
+The **`any-pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) tests whether the user has _any_ pointing device (such as a mouse), and if so, how accurate it is.
 
 > **Note:** If you want to test the accuracy of the _primary_ pointing device, use [`pointer`](/en-US/docs/Web/CSS/@media/pointer) instead.
 

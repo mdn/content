@@ -2,11 +2,6 @@
 title: font-variant-emoji
 slug: Web/CSS/font-variant-emoji
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
 browser-compat: css.properties.font-variant-emoji
 ---
 
@@ -14,7 +9,7 @@ browser-compat: css.properties.font-variant-emoji
 
 The **`font-variant-emoji`** [CSS](/en-US/docs/Web/CSS) property specifies the default presentation style for displaying emojis.
 
-Traditionally, this was done by appending a _Variation Selector_, `U+FE0E` for text and `U+FE0F` for emoji, to the emoji codepoint. Only emojis listed as contributing to a [Unicode emoji presentation sequence](http://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
+Traditionally, this was done by appending a _Variation Selector_, `U+FE0E` for text and `U+FE0F` for emoji, to the emoji code point. Only emojis listed as contributing to a [Unicode emoji presentation sequence](https://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
 
 ## Syntax
 
@@ -63,8 +58,14 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 #### HTML
 
 ```html hidden
-<p class="nosupport">Your Browser does not support <code>font-variant-emoji</code>. This image shows how it is rendered with support.</p>
-<img class="nosupport" src="./font-variant-emoji-example.jpg" alt="a telephone emoji show as text, black and white next to a telephone emoji shown as emoji full color and graphical representation">
+<p class="nosupport">
+  Your Browser does not support <code>font-variant-emoji</code>. This image
+  shows how it is rendered with support.
+</p>
+<img
+  class="nosupport"
+  src="./font-variant-emoji-example.jpg"
+  alt="a telephone emoji show as text, black and white next to a telephone emoji shown as emoji full color and graphical representation" />
 ```
 
 ```html
@@ -83,7 +84,7 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 #### CSS
 
 ```css hidden
-@supports (font-variant-emoji:emoji) {
+@supports (font-variant-emoji: emoji) {
   .nosupport {
     display: none;
   }
@@ -97,13 +98,11 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
   }
 }
 
-@supports not (font-variant-emoji:emoji) {
+@supports not (font-variant-emoji: emoji) {
   .emojis {
     display: none;
   }
 }
-
-
 ```
 
 ```css

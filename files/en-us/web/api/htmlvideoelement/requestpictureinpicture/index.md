@@ -1,18 +1,8 @@
 ---
-title: HTMLVideoElement.requestPictureInPicture()
+title: "HTMLVideoElement: requestPictureInPicture() method"
+short-title: requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 
@@ -58,10 +48,13 @@ listener to handle the floating window resizing.
 
 ```js
 function enterPictureInPicture() {
-  videoElement.requestPictureInPicture()
-    .then((pictureInPictureWindow) => {
-      pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
-    })
+  videoElement.requestPictureInPicture().then((pictureInPictureWindow) => {
+    pictureInPictureWindow.addEventListener(
+      "resize",
+      () => onPipWindowResize(),
+      false,
+    );
+  });
 }
 ```
 
@@ -76,7 +69,6 @@ function enterPictureInPicture() {
 ## See also
 
 - The {{HTMLElement("video")}} element
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

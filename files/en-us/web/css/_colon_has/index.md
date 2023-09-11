@@ -1,34 +1,31 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
 page-type: css-pseudo-class
-tags:
-  - ':has'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.has
 ---
 
 {{CSSRef}}
 
-The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
+The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
 ```css
 /* Selects an h1 heading with a
 paragraph element that immediately follows
 the h1 and applies the style to h1 */
-h1:has(+ p) { margin-bottom: 0; }
+h1:has(+ p) {
+  margin-bottom: 0;
+}
 ```
 
 The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
 
 ## Syntax
 
-```
-:has( <relative-selector-list> )
+```css-nolint
+:has(<relative-selector-list>) {
+  /* ... */
+}
 ```
 
 If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where)).
@@ -49,12 +46,18 @@ The `:has()` style declaration in the following example adjusts the spacing afte
 <section>
   <article>
     <h1>Morning Times</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -63,9 +66,9 @@ The `:has()` style declaration in the following example adjusts the spacing afte
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -73,19 +76,21 @@ article {
   width: 40%;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.2em;
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 ```
 
 ```css
-h1, h2 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2 {
+  margin: 0 0 1rem 0;
 }
 
 h1:has(+ h2) {
@@ -110,13 +115,19 @@ This example builds on the previous example to show how to select multiple eleme
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
     <h3>8:00 am</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -125,9 +136,9 @@ This example builds on the previous example to show how to select multiple eleme
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -140,7 +151,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 
@@ -151,8 +162,10 @@ h3 {
 ```
 
 ```css
-h1, h2, h3 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem 0;
 }
 
 :is(h1, h2, h3):has(+ :is(h2, h3, h4)) {
@@ -191,6 +204,20 @@ body:has(video):has(audio) {
 }
 ```
 
+## Analogy between :has() and regular expressions
+
+Interestingly, we can relate some CSS `:has()` constructs with the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) in regular expressions because they both allow you to select elements (or strings in regular expressions) based on a condition without actually selecting the condition matching the element (or string) itself.
+
+### Positive lookahead (?=pattern)
+
+In the regular expression `abc(?=xyz)`, the string `abc` is matched only if it is immediately followed by the string `xyz`. As it is a lookahead operation, the `xyz` is not included in the match.
+
+The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the element `.abc` only if there is an adjacent sibling `.xyz`. The part `:has(+ .xyz)` acts as a lookahead operation because the element `.abc` is selected and not the element `.xyz`.
+
+### Negative lookahead (?!pattern)
+
+Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
+
 ## Specifications
 
 {{Specifications}}
@@ -202,7 +229,8 @@ body:has(video):has(audio) {
 ## See also
 
 - [`:is()`](/en-US/docs/Web/CSS/:is), [`:where()`](/en-US/docs/Web/CSS/:where), [`:not()`](/en-US/docs/Web/CSS/:not)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
-- [CSS combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+- [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)

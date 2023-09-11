@@ -1,15 +1,7 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webNavigation
+page-type: webextension-api
 browser-compat: webextensions.api.webNavigation
 ---
 
@@ -66,7 +58,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
   - : Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event is fired in the page.
+  - : Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event is fired in the page.
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
   - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/en-US/docs/Web/API/Window/load_event) event.
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}

@@ -1,15 +1,10 @@
 ---
 title: WAI-ARIA Roles
 slug: Web/Accessibility/ARIA/Roles
-tags:
-  - ARIA
-  - ARIA Roles
-  - Accessibility
-  - Reference
-  - Roles
+page-type: landing-page
 ---
 
-ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
+ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
 
 By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return `null`. The `role` attribute can provide semantics.
 
@@ -40,12 +35,12 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [article](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) (use {{HTMLElement('article')}})
 - [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) (use {{HTMLElement('td')}})
 - [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) (use `{{HTMLElement('th', '&lt;th scope="col">')}}`)
-- [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}}
+- [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}})
 - [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role)
 - [document](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
 - [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) (use {{HTMLElement('figure')}} instead)
 - [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement('h1')}} thru {{HTMLElement('h6')}})
+- [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement("Heading_Elements", "h1")}} thru {{HTMLElement("Heading_Elements", "h6")}})
 - [img](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) (use {{HTMLElement('img')}} or {{HTMLElement('picture')}} instead)
 - [list](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) (use either {{HTMLElement('ul')}} or {{HTMLElement('ol')}} instead)
 - [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) (use {{HTMLElement('li')}} instead)

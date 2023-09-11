@@ -2,13 +2,8 @@
 title: SVGCursorElement
 slug: Web/API/SVGCursorElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.SVGCursorElement
 ---
 

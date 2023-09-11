@@ -1,17 +1,10 @@
 ---
-title: GamepadPose.hasPosition
+title: "GamepadPose: hasPosition property"
+short-title: hasPosition
 slug: Web/API/GamepadPose/hasPosition
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - hasPosition
+status:
+  - experimental
 browser-compat: api.GamepadPose.hasPosition
 ---
 

@@ -2,12 +2,6 @@
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-timing-function
 ---
 
@@ -54,15 +48,13 @@ animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
-
 ### Values
 
 - {{cssxref("&lt;easing-function&gt;")}}
 
   - : The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.
 
-    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
+    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
 
 - `ease`
   - : Equal to `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, the default value, increases in velocity towards the middle of the animation, slowing back down at the end.
@@ -98,11 +90,15 @@ animation-timing-function: unset;
 - `step-end`
   - : Equal to `steps(1, jump-end)`
 
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+
+> **Note:** `animation-timing-function` has the same effect when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) as it does for regular time-based animations.
+
 ## Description
 
-Timing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
+Easing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
 
-Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor, not the property of the same name. The timing is not being animated. Rather, a keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
+Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor, not the property of the same name. The timing is not being animated. Rather, a keyframe's easing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
 
 ## Formal definition
 
@@ -254,7 +250,7 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)

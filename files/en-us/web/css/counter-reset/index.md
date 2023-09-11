@@ -2,18 +2,12 @@
 title: counter-reset
 slug: Web/CSS/counter-reset
 page-type: css-property
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - recipe:css-property
 browser-compat: css.properties.counter-reset
 ---
 
 {{CSSRef}}
 
-The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value.
+The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) to a given value.
 This property will create a new counter or reversed counter with the given name on the specified element.
 
 Normal counters have a default initial value of 0.
@@ -89,7 +83,7 @@ The "implicit" counter named `list-item` can be used to control the numbering fo
 
 The following examples show how to reset the counters, but not how they are incremented, decremented, and displayed.
 
-For more-complete examples see [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters).
+For more-complete examples see [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters).
 
 ### Resetting named counters
 
@@ -122,7 +116,7 @@ h1 {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}

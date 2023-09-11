@@ -2,9 +2,6 @@
 title: Linking
 slug: Web/SVG/Linking
 page-type: guide
-tags:
-  - Guide
-  - SVG
 ---
 
 {{SVGRef}}
@@ -27,7 +24,7 @@ button.svg:
 ```xml
 <?xml version="1.1" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg">
-  <a xlink:href="page2.html" target="_top">
+  <a href="page2.html" target="_top">
     <g>
       <!-- button graphical elements here -->
     </g>

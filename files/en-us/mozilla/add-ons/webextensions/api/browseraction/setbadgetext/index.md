@@ -1,16 +1,7 @@
 ---
 title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeText
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setBadgeText
 ---
 
@@ -18,7 +9,7 @@ browser-compat: webextensions.api.browserAction.setBadgeText
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
-Tabs without an specific badge text will inherit the global badge text, which is `""` by default.
+Tabs without a specific badge text will inherit the global badge text, which is `""` by default.
 
 ## Syntax
 

@@ -1,13 +1,7 @@
 ---
 title: Work with the Bookmarks API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
-tags:
-  - Add-ons
-  - Beginner
-  - Bookmarks
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -60,7 +54,7 @@ The Bookmarks API lets your extension do the things users can do with bookmarks 
 
 ## Example walkthrough
 
-To gain an understanding of how to work with the Bookmarks API let's take a look at the [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) example. This example adds a toolbar icon ({{WebExtAPIRef("browserAction")}}) which, when clicked, adds or removes the current page from bookmarks. If the page is bookmarked (or removed from bookmarks) in some other way, the icon is updated to show the state of the page's bookmarking.
+To gain an understanding of how to work with the Bookmarks API let's take a look at the [bookmark-it](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it) example. This example adds a toolbar icon ({{WebExtAPIRef("browserAction")}}) which, when clicked, adds or removes the current page from bookmarks. If the page is bookmarked (or removed from bookmarks) in some other way, the icon is updated to show the state of the page's bookmarking.
 
 This video shows the extension in action:
 
@@ -68,7 +62,7 @@ This video shows the extension in action:
 
 ### manifest.json
 
-The [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/manifest.json) describes the extension:
+The [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/bookmark-it/manifest.json) describes the extension:
 
 ```json
 {
@@ -76,7 +70,7 @@ The [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bo
   "name": "Bookmark it!",
   "version": "1.1",
   "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/bookmark-it",
 ```
 
 Defines the icons that'll be used to represent the extension, in places such as the add-on manager.
@@ -118,14 +112,17 @@ Defines the background script that'll add and remove the page's bookmark and set
 
 ### background.js
 
-As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updatetab()` with this code:
+As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/main/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updateTab()` with this code:
 
 ```js
-  let gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
+let gettingActiveTab = browser.tabs.query({
+  active: true,
+  currentWindow: true,
+});
+gettingActiveTab.then(updateTab);
 ```
 
-`updatetab()` first passes the active tab's URL to `isSupportedProtocol()`:
+`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`:
 
 ```js
   function updateTab(tabs) {
@@ -137,12 +134,12 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
 `isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLAnchorElement](/en-US/docs/Web/API/HTMLAnchorElement) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
 
 ```js
-  function isSupportedProtocol(urlString) {
-    let supportedProtocols = ["https:", "http:", "file:"];
-    let url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.includes(url.protocol);
-  }
+function isSupportedProtocol(urlString) {
+  let supportedProtocols = ["https:", "http:", "file:"];
+  let url = document.createElement("a");
+  url.href = urlString;
+  return supportedProtocols.includes(url.protocol);
+}
 ```
 
 If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
@@ -159,19 +156,21 @@ If the protocol is one supported by bookmarks, the extension determines if the t
 ```js
 function updateIcon() {
   browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
-    } : {
-      19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
+    path: currentBookmark
+      ? {
+          19: "icons/star-filled-19.png",
+          38: "icons/star-filled-38.png",
+        }
+      : {
+          19: "icons/star-empty-19.png",
+          38: "icons/star-empty-38.png",
+        },
+    tabId: currentTab.id,
   });
   browser.browserAction.setTitle({
     // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
+    title: currentBookmark ? "Unbookmark it!" : "Bookmark it!",
+    tabId: currentTab.id,
   });
 }
 ```
@@ -189,7 +188,7 @@ function toggleBookmark() {
   if (currentBookmark) {
     browser.bookmarks.remove(currentBookmark.id);
   } else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+    browser.bookmarks.create({ title: currentTab.title, url: currentTab.url });
   }
 }
 ```

@@ -1,9 +1,7 @@
 ---
 title: IMSC and other standards
 slug: Related/IMSC/IMSC_and_other_standards
-tags:
-  - IMSC
-  - Specifications
+page-type: guide
 ---
 
 IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/document/7291854). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.

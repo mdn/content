@@ -1,14 +1,7 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Header
-  - Authorization
-  - Authentication
+page-type: http-header
 browser-compat: http.headers.Authorization
 ---
 
@@ -20,6 +13,8 @@ The **`Authorization`** header is usually, but not always, sent after the user a
 The server responds with a {{HTTPStatus("401")}} `Unauthorized` message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.
 This header indicates what authentication schemes can be used to access the resource (and any additional information needed by the client to use them).
 The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource (including the encoded credentials in the **`Authorization`** header).
+
+This header is stripped from cross-origin redirects.
 
 > **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
 > It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
@@ -110,7 +105,7 @@ Generally you will need to check the relevant specifications for these (keys for
     - `"auth"`: Authentication
     - `"auth-int"`: Authentication with integrity protection
 - `cnonce`
-  - : An quoted ASCII-only string value provided by the client.
+  - : An quoted {{Glossary("ASCII")}}-only string value provided by the client.
     This is used by both the client and server to provide mutual authentication, provide some message integrity protection, and avoid "chosen plaintext
     attacks".
     See the specification for additional information.

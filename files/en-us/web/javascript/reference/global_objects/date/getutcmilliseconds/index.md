@@ -2,19 +2,12 @@
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
 
 {{JSRef}}
 
-The **`getUTCMilliseconds()`** method returns the milliseconds
-portion of the time object's value according to universal time.
+The **`getUTCMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
 
@@ -24,23 +17,21 @@ portion of the time object's value according to universal time.
 getUTCMilliseconds()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A number.
-If the `Date` object represents a valid date, an integer between 0 and 999, representing
-the milliseconds portion of the given `Date` object according to universal time.
-Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn't represent a valid date.
+An integer, between 0 and 999, representing the milliseconds for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
-Not to be confused with Unix epoch time. To get the total milliseconds since 1970/01/01,
-use the [`getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
+Not to be confused with the timestamp. To get the total milliseconds since the epoch, use the [`getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
 
 ## Examples
 
 ### Using getUTCMilliseconds()
 
-The following example assigns the milliseconds portion of the current time to the
-variable `milliseconds`.
+The following example assigns the milliseconds portion of the current time to the variable `milliseconds`.
 
 ```js
 const today = new Date();

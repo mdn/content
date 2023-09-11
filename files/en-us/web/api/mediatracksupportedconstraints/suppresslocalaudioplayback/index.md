@@ -1,17 +1,14 @@
 ---
-title: MediaTrackSupportedConstraints.suppressLocalAudioPlayback
+title: "MediaTrackSupportedConstraints: suppressLocalAudioPlayback property"
+short-title: suppressLocalAudioPlayback
 slug: Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - suppressLocalAudioPlayback
+status:
+  - experimental
 browser-compat: api.MediaTrackSupportedConstraints.suppressLocalAudioPlayback
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seecompattable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`suppressLocalAudioPlayback`** property indicates whether or not the {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} constraint is supported by the user agent and the device on which the content is being used.
 
@@ -29,7 +26,7 @@ The function below sets up the options object for the call to {{domxref("MediaDe
 async function capture() {
   const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   const displayMediaOptions = {
-    audio: {}
+    audio: {},
   };
 
   if (supportedConstraints.suppressLocalAudioPlayback) {
@@ -37,7 +34,8 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     /* handle the error */
   }

@@ -1,15 +1,7 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
+page-type: webextension-api
 browser-compat: webextensions.api.browserAction
 ---
 
@@ -17,7 +9,7 @@ browser-compat: webextensions.api.browserAction
 
 Adds a button to the browser's toolbar.
 
-A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) is a button in the browser's toolbar.
+A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
 You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 

@@ -1,15 +1,10 @@
 ---
-title: HTMLIFrameElement.featurePolicy
+title: "HTMLIFrameElement: featurePolicy property"
+short-title: featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Feature Policy
-  - Permissions-Policy
-  - HTMLIFrameElement
-  - Policy
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
 

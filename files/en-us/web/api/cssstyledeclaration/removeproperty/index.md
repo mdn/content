@@ -1,12 +1,8 @@
 ---
-title: CSSStyleDeclaration.removeProperty()
+title: "CSSStyleDeclaration: removeProperty() method"
+short-title: removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.removeProperty
 ---
 
@@ -24,7 +20,7 @@ removeProperty(property)
 ### Parameters
 
 - `property`
-  - A string representing the property name to be removed. Multi-word property names are hyphenated and not camel-cased.
+  - A string representing the property name to be removed. Multi-word property names are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) and not {{Glossary("camel_case", "camel-cased")}}.
 
 ### Return value
 
@@ -42,7 +38,7 @@ from a selector rule:
 
 ```js
 const declaration = document.styleSheets[0].rules[0].style;
-const oldValue = declaration.removeProperty('background-color');
+const oldValue = declaration.removeProperty("background-color");
 ```
 
 ## Specifications

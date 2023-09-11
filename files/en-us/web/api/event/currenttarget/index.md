@@ -1,11 +1,8 @@
 ---
-title: Event.currentTarget
+title: "Event: currentTarget property"
+short-title: currentTarget
 slug: Web/API/Event/currentTarget
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.currentTarget
 ---
 
@@ -28,19 +25,19 @@ handler to several elements.
 
 ```js
 function hide(e) {
-  e.currentTarget.style.visibility = 'hidden';
+  e.currentTarget.style.visibility = "hidden";
   console.log(e.currentTarget);
   // When this function is used as an event handler: this === e.currentTarget
 }
 
-const ps = document.getElementsByTagName('p');
+const ps = document.getElementsByTagName("p");
 
 for (const p of ps) {
   // Hide the clicked <p> element
-  p.addEventListener('click', hide, false);
+  p.addEventListener("click", hide, false);
 }
 
-document.body.addEventListener('click', hide, false);
+document.body.addEventListener("click", hide, false);
 
 // Click around and make paragraphs disappear
 ```

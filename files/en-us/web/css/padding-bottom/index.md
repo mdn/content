@@ -2,18 +2,12 @@
 title: padding-bottom
 slug: Web/CSS/padding-bottom
 page-type: css-property
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.padding-bottom
 ---
 
 {{CSSRef}}
 
-The **`padding-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on the bottom of an element.
+The **`padding-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on the bottom of an element.
 
 {{EmbedInteractiveExample("pages/css/padding-bottom.html")}}
 
@@ -82,6 +76,6 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 
 ## See also
 
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} and the {{cssxref("padding")}} shorthand
 - The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}

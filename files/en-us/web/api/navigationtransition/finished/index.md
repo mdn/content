@@ -1,20 +1,10 @@
 ---
-title: NavigationTransition.finished
+title: "NavigationTransition: finished property"
+short-title: finished
 slug: Web/API/NavigationTransition/finished
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - finished
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationTransition.finished
 ---
 

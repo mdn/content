@@ -1,19 +1,8 @@
 ---
-title: XMLHttpRequest.send()
+title: "XMLHttpRequest: send() method"
+short-title: send()
 slug: Web/API/XMLHttpRequest/send
 page-type: web-api-instance-method
-tags:
-  - AJAX
-  - API
-  - HTTP request
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - XHR
-  - XHR Request
-  - XMLHttpRequest
-  - send
 browser-compat: api.XMLHttpRequest.send
 ---
 
@@ -74,7 +63,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = () => {
   // Request finished. Do processing here.
@@ -91,16 +80,17 @@ xhr.send(null);
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
-//Send the proper header information along with the request
+// Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = () => { // Call a function when the state changes.
+xhr.onreadystatechange = () => {
+  // Call a function when the state changes.
   if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
     // Request finished. Do processing here.
   }
-}
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);

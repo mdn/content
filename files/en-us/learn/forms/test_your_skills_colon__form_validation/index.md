@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: Form validation'
+title: "Test your skills: Form validation"
 slug: Learn/Forms/Test_your_skills:_Form_validation
-tags:
-  - Assessment
-  - Beginner
-  - Forms
-  - Learn
-  - Validation
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}
@@ -40,7 +34,7 @@ Now we want you to take the same form you saw in the previous task (use your pre
 2. All of the email addresses for our users consist of one or more letters (lower or upper case) or numbers, followed by "@bigcorp.eu".
 3. Remove the length validation from the phone number field if it is present, and set it so that it accepts 10 digits — either 10 digits in a row, or a pattern of three digits, three digits, then four digits, separated by either spaces, dashes, or dots.
 
-> **Note:** Regular expressions are really challenging if you are new to them, but don't despair — have a go and see where you get to; there is no shame in asking for some help. You can find everything you need to answer these questions at our [regular expression reference](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), and by searching on [Stack Overflow](https://stackoverflow.com/).
+> **Note:** Regular expressions are really challenging if you are new to them, but don't despair — have a go and see where you get to; there is no shame in asking for some help. You can find everything you need to answer these questions at our [regular expression reference](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), and by searching on [Stack Overflow](https://stackoverflow.com/).
 
 Again, to help you might want to consider adding some simple CSS to show when a form field is valid or invalid.
 

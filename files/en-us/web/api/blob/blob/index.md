@@ -1,13 +1,8 @@
 ---
-title: Blob()
+title: "Blob: Blob() constructor"
+short-title: Blob()
 slug: Web/API/Blob/Blob
 page-type: web-api-constructor
-tags:
-  - API
-  - Blob
-  - Constructor
-  - File API
-  - Reference
 browser-compat: api.Blob.Blob
 ---
 
@@ -32,7 +27,7 @@ new Blob(array, options)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
-    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
+    Strings should be well-formed Unicode, and lone surrogates are sanitized using the same algorithm as {{jsxref("String.prototype.toWellFormed()")}}.
 
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:

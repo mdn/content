@@ -2,20 +2,14 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.italics
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-The **`italics()`** method creates a string that embeds a string in an {{HTMLElement("i")}} element (`<i>str</i>`), which causes a string to be displayed as italic.
+The **`italics()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("i")}} element (`<i>str</i>`), which causes this string to be displayed as italic.
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
@@ -24,6 +18,10 @@ The **`italics()`** method creates a string that embeds a string in an {{HTMLEle
 ```js-nolint
 italics()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

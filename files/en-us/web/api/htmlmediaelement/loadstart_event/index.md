@@ -1,14 +1,8 @@
 ---
 title: "HTMLMediaElement: loadstart event"
+short-title: loadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - loadstart
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
 
@@ -21,9 +15,9 @@ The **`loadstart`** event is fired when the browser has started to load a resour
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadstart', (event) => {});
+addEventListener("loadstart", (event) => {});
 
-onloadstart = (event) => { };
+onloadstart = (event) => {};
 ```
 
 ## Event type
@@ -86,32 +80,34 @@ video {
 #### JavaScript
 
 ```js
-const loadVideo = document.querySelector('button');
-const video = document.querySelector('video');
-const eventLog = document.querySelector('.event-log-contents');
+const loadVideo = document.querySelector("button");
+const video = document.querySelector("video");
+const eventLog = document.querySelector(".event-log-contents");
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent += `${event.type}\n`;
+  eventLog.textContent += `${event.type}\n`;
 }
 
-video.addEventListener('loadstart', handleEvent);
-video.addEventListener('progress', handleEvent);
-video.addEventListener('canplay', handleEvent);
-video.addEventListener('canplaythrough', handleEvent);
+video.addEventListener("loadstart", handleEvent);
+video.addEventListener("progress", handleEvent);
+video.addEventListener("canplay", handleEvent);
+video.addEventListener("canplaythrough", handleEvent);
 
-loadVideo.addEventListener('click', () => {
+loadVideo.addEventListener("click", () => {
+  if (source) {
+    document.location.reload();
+  } else {
+    loadVideo.textContent = "Reset example";
+    source = document.createElement("source");
+    source.setAttribute(
+      "src",
+      "https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm",
+    );
+    source.setAttribute("type", "video/webm");
 
-    if (source) {
-        document.location.reload();
-    } else {
-        loadVideo.textContent = "Reset example";
-        source = document.createElement('source');
-        source.setAttribute('src', 'https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm');
-        source.setAttribute('type', 'video/webm');
-
-        video.appendChild(source);
-    }
+    video.appendChild(source);
+  }
 });
 ```
 

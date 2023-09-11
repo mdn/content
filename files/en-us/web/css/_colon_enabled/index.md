@@ -2,13 +2,6 @@
 title: ":enabled"
 slug: Web/CSS/:enabled
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.enabled
 ---
 

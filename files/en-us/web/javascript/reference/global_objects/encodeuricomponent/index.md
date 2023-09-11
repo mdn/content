@@ -2,11 +2,6 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 page-type: javascript-function
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - URI
 browser-compat: javascript.builtins.encodeURIComponent
 ---
 
@@ -34,7 +29,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 ### Exceptions
 
 - {{jsxref("URIError")}}
-  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Description
 
@@ -42,7 +37,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 
 `encodeURIComponent()` uses the same encoding algorithm as described in {{jsxref("encodeURI()")}}. It escapes all characters **except**:
 
-```
+```plain
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
@@ -59,7 +54,7 @@ The following example provides the special encoding required within UTF-8 {{HTTP
 ```js
 const fileName = "my file(2).txt";
 const header = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(
-  fileName
+  fileName,
 )}`;
 
 console.log(header);
@@ -68,14 +63,18 @@ console.log(header);
 function encodeRFC5987ValueChars(str) {
   return (
     encodeURIComponent(str)
-      // Note that although RFC3986 reserves "!", RFC5987 does not,
-      // so we do not need to escape it
-      .replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16)}`) // i.e., %27 %28 %29 %2a (Note that valid encoding of "*" is %2A
-      // which necessitates calling toUpperCase() to properly encode)
+      // The following creates the sequences %27 %28 %29 %2A (Note that
+      // the valid encoding of "*" is %2A, which necessitates calling
+      // toUpperCase() to properly encode). Although RFC3986 reserves "!",
+      // RFC5987 does not, so we do not need to escape it.
+      .replace(
+        /['()*]/g,
+        (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+      )
       // The following are not required for percent-encoding per RFC5987,
       // so we can allow for a little better readability over the wire: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>
-        String.fromCharCode(parseInt(hex, 16))
+        String.fromCharCode(parseInt(hex, 16)),
       )
   );
 }
@@ -87,13 +86,29 @@ The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserve
 
 ```js
 function encodeRFC3986URIComponent(str) {
-  return encodeURIComponent(str)
-    .replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
-    );
+  return encodeURIComponent(str).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+  );
 }
 ```
+
+### Encoding a lone surrogate throws
+
+A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
+
+```js
+// High-low pair OK
+encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
+
+// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
+encodeURIComponent("\uD800");
+
+// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
+encodeURIComponent("\uDFFF");
+```
+
+You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURIComponent()`.
 
 ## Specifications
 

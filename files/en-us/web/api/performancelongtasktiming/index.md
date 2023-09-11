@@ -2,13 +2,8 @@
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Long Tasks API
-  - PerformanceLongTaskTiming
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceLongTaskTiming
 ---
 
@@ -43,7 +38,7 @@ For tasks that don't occur within the top-level page and for figuring out which 
 
 ## Instance properties
 
-This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
+This interface extends the following {{domxref("PerformanceEntry")}} properties for long task timing performance entry types by qualifying them as follows:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the elapsed time between the start and end of the task, with a 1ms granularity.
@@ -77,7 +72,7 @@ This interface also supports the following properties:
 
 ### Getting long tasks
 
-To get long task timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"longtasks"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. You also need to set `buffered` to `true` to get access to long tasks the user agent buffered while constructing the document. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceLongTaskTiming` objects which you can analyze.
+To get long task timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"longtask"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. You also need to set `buffered` to `true` to get access to long tasks the user agent buffered while constructing the document. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceLongTaskTiming` objects which you can analyze.
 
 ```js
 const observer = new PerformanceObserver((list) => {

@@ -1,17 +1,10 @@
 ---
-title: VRLayerInit.rightBounds
+title: "VRLayerInit: rightBounds property"
+short-title: rightBounds
 slug: Web/API/VRLayerInit/rightBounds
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - rightBounds
+status:
+  - deprecated
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

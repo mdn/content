@@ -2,23 +2,8 @@
 title: XRView
 slug: Web/API/XRView
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Eye
-  - Interface
-  - Orientation
-  - Position
-  - Reference
-  - VR
-  - View
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - camera
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView
 ---
 
@@ -106,8 +91,13 @@ To programmatically move and/or rotate (often referred to as **teleporting**) an
 
 ```js
 function applyMouseMovement(refSpace) {
-  if (!mouseYaw && !mousePitch && !axialDistance &&
-      !transverseDistance && !verticalDistance) {
+  if (
+    !mouseYaw &&
+    !mousePitch &&
+    !axialDistance &&
+    !transverseDistance &&
+    !verticalDistance
+  ) {
     return refSpace;
   }
 
@@ -128,11 +118,15 @@ function applyMouseMovement(refSpace) {
   // later; otherwise we probably wouldn't need to save mouseMatrix
   // at all.
 
-  let newTransform = new XRRigidTransform({x: transverseDistance,
-                                           y: verticalDistance,
-                                           z: axialDistance},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: transverseDistance, y: verticalDistance, z: axialDistance },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
   // Create a new reference space that transforms the object to the new

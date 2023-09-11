@@ -2,12 +2,6 @@
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - HTML
-  - JavaScript
-  - Reference
 ---
 
 {{DefaultAPISidebar("Web Workers API") }}
@@ -83,9 +77,8 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 ## See also
 
 - [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
-- {{Glossary("Transferable objects")}}
+- [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)
 - {{domxref("structuredClone()")}}
-- {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)

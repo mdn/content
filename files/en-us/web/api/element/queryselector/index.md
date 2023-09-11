@@ -1,22 +1,8 @@
 ---
-title: Element.querySelector()
+title: "Element: querySelector() method"
+short-title: querySelector()
 slug: Web/API/Element/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSS Selectors
-  - DOM
-  - Element
-  - Elements
-  - Finding Elements
-  - Locating Elements
-  - Method
-  - Reference
-  - Searching Elements
-  - Selecting Elements
-  - Selectors
-  - querySelector
 browser-compat: api.Element.querySelector
 ---
 
@@ -68,7 +54,9 @@ In this first example, the first {{HTMLElement("style")}} element which either h
 type or has type "text/css" in the HTML document body is returned:
 
 ```js
-const el = document.body.querySelector("style[type='text/css'], style:not([type])");
+const el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### Get direct descendants using the :scope pseudo-class
@@ -108,9 +96,9 @@ span {
 #### JavaScript
 
 ```js
-  const parentElement = document.querySelector('#parent');
-  let allChildren = parentElement.querySelectorAll(":scope > span");
-  allChildren.forEach((item) => item.classList.add("red"));
+const parentElement = document.querySelector("#parent");
+let allChildren = parentElement.querySelectorAll(":scope > span");
+allChildren.forEach((item) => item.classList.add("red"));
 ```
 
 #### Result
@@ -145,7 +133,7 @@ applying `selectors`, so that levels outside the specified
 ```js
 const baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-  (baseElement.querySelector("div span").innerHTML);
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### Result

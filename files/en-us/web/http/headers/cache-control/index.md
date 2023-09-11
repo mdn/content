@@ -1,13 +1,7 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Cache-Control
 ---
 
@@ -283,8 +277,6 @@ The `no-store` request directive allows a client to request that caches refrain 
 Cache-Control: no-store
 ```
 
-Note that the major browsers do not support requests with `no-store`.
-
 #### `max-age`
 
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
@@ -343,7 +335,7 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 #### `only-if-cached`
 
-The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it's reused.
+The client indicates that an already-cached response should be returned. If a cache has a stored response, even a stale one, it will be returned. If no cached response is available, a [504 Gateway Timeout](/en-US/docs/Web/HTTP/Status/504) response will be returned.
 
 ## Use Cases
 

@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
 page-type: web-api-interface
-tags:
-  - DOM
-  - Interface
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming
 ---
 
@@ -27,6 +22,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring TCP handshake time (`connectEnd` - `connectStart`)
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring interim request time (`firstInterimResponseStart` - `requestStart`)
 - Measuring request time (`responseStart` - `requestStart`)
 - Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
@@ -77,6 +73,8 @@ The interface supports the following timestamp properties which you can see in t
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
+- {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that represents the interim response time (for example, 100 Continue or 103 Early Hints).
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
@@ -102,6 +100,8 @@ Additionally, this interface exposes the following properties containing more in
   - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : Indicates how the resource was delivered; currently can either be "`cache`", or the empty string. (The set of possible values is expected to be expanded in the future.)
 
 ## Instance methods
 
@@ -155,5 +155,4 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
-- [Resource Timing (Overview)](/en-US/docs/Web/API/Resource_Timing_API)
-- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource timing (Overview)](/en-US/docs/Web/API/Performance_API/Resource_timing)

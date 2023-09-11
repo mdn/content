@@ -2,10 +2,8 @@
 title: stemv
 slug: Web/SVG/Attribute/stemv
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.stemv
 ---
 

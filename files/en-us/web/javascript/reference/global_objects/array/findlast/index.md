@@ -2,23 +2,13 @@
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - findLast
-  - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
 
 {{JSRef}}
 
-The **`findLast()`** method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
+The **`findLast()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
-
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
 If you need to find:
 
@@ -30,40 +20,25 @@ If you need to find:
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
+{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLast((element) => { /* … */ })
-findLast((element, index) => { /* … */ })
-findLast((element, index, array) => { /* … */ })
-
-// Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
-
-// Inline callback function
-findLast(function (element) { /* … */ })
-findLast(function (element, index) { /* … */ })
-findLast(function (element, index, array) { /* … */ })
-findLast(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `findLast()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -128,9 +103,9 @@ console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 
-### Find last prime number in an array
+### Find the last prime number in an array
 
-The following example finds the last element in the array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number):
+The following example returns the last element in the array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element) {
@@ -191,7 +166,7 @@ array.findLast((value, index) => {
 
 ### Calling findLast() on non-array objects
 
-The `findLast()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLast()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -199,6 +174,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLast() since length is 3
 };
 console.log(
   Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
@@ -216,8 +192,13 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLastIndex()")}} – find last element and return its index
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-- {{jsxref("Array.prototype.filter()")}} – remove all non-matching elements
-- {{jsxref("Array.prototype.every()")}} – test all elements
-- {{jsxref("Array.prototype.some()")}} – test until one element matches
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}

@@ -2,15 +2,6 @@
 title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Scroll margin bottom
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-bottom
 browser-compat: css.properties.scroll-margin-bottom
 ---
 
@@ -37,7 +28,7 @@ scroll-margin-bottom: unset;
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the bottom edge of the scroll container.
 
 ## Formal definition
@@ -58,5 +49,5 @@ scroll-margin-bottom: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

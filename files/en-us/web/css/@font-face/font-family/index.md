@@ -2,19 +2,12 @@
 title: font-family
 slug: Web/CSS/@font-face/font-family
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - Reference
 browser-compat: css.at-rules.font-face.font-family
 ---
 
 {{CSSRef}}
 
-The **`font-family`** CSS descriptor sets the font family for a font specified in an {{cssxref("@font-face")}} rule.
+The **`font-family`** CSS descriptor sets the font family for a font specified in an {{cssxref("@font-face")}} at-rule.
 
 The value is used for name matching against a particular `@font-face` when styling elements using the [`font-family`](/en-US/docs/Web/CSS/font-family) property.
 Any name may be used, and this overrides any name specified in the underlying font data.

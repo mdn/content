@@ -2,16 +2,6 @@
 title: OrientationSensor
 slug: Web/API/OrientationSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Orientation Sensor API
-  - OrientationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.OrientationSensor
 ---
 
@@ -38,7 +28,7 @@ Below is a list of interfaces based on the OrientationSensor interface.
 ## Instance methods
 
 - {{domxref("OrientationSensor.populateMatrix()")}}
-  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation matrix is shown below.
+  - : Populates the given object with the rotation matrix based on the latest sensor reading.
 
 ## Examples
 
@@ -47,15 +37,15 @@ Below is a list of interfaces based on the OrientationSensor interface.
 The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `AbsoluteOrientationSensor` with a frequency of 60 times a second. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
 ```js
-const options = { frequency: 60, referenceFrame: 'device' };
+const options = { frequency: 60, referenceFrame: "device" };
 const sensor = new AbsoluteOrientationSensor(options);
 
-sensor.addEventListener('reading', () => {
+sensor.addEventListener("reading", () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', (error) => {
-   if (event.error.name === 'NotReadableError') {
+sensor.addEventListener("error", (error) => {
+  if (event.error.name === "NotReadableError") {
     console.log("Sensor is not available.");
   }
 });
@@ -68,17 +58,18 @@ Using orientation sensors requires requesting permissions for multiple device se
 
 ```js
 const sensor = new AbsoluteOrientationSensor();
-Promise.all([navigator.permissions.query({ name: "accelerometer" }),
-             navigator.permissions.query({ name: "magnetometer" }),
-             navigator.permissions.query({ name: "gyroscope" })])
-       .then((results) => {
-         if (results.every((result) => result.state === "granted")) {
-           sensor.start();
-           // …
-         } else {
-           console.log("No permissions to use AbsoluteOrientationSensor.");
-         }
-   });
+Promise.all([
+  navigator.permissions.query({ name: "accelerometer" }),
+  navigator.permissions.query({ name: "magnetometer" }),
+  navigator.permissions.query({ name: "gyroscope" }),
+]).then((results) => {
+  if (results.every((result) => result.state === "granted")) {
+    sensor.start();
+    // …
+  } else {
+    console.log("No permissions to use AbsoluteOrientationSensor.");
+  }
+});
 ```
 
 ## Specifications

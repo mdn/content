@@ -1,11 +1,10 @@
 ---
 title: Fork
 slug: Glossary/Fork
-tags:
-  - Fork
-  - Tools
-  - git
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A fork is a copy of an existing software project at some point to add someone's own modifications to the project.
 

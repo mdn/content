@@ -2,18 +2,12 @@
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Number.toFixed
 ---
 
 {{JSRef}}
 
-The **`toFixed()`** method formats a number using fixed-point notation.
+The **`toFixed()`** method of {{jsxref("Number")}} values formats this number using fixed-point notation.
 
 {{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
 
@@ -36,9 +30,9 @@ A string representing the given number using fixed-point notation.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `digits` is smaller than `0`, larger than `100`, or is `NaN`.
+  - : Thrown if `digits` is not between `0` and `100` (inclusive).
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
@@ -56,7 +50,7 @@ The output of `toFixed()` may be more precise than [`toString()`](/en-US/docs/We
 However, choosing a `digits` precision that's too high can return unexpected results, because decimal fractional numbers cannot be represented precisely in floating point. For example:
 
 ```js
-0.3.toFixed(50); // '0.29999999999999998889776975374843459576368331909180'
+(0.3).toFixed(50); // '0.29999999999999998889776975374843459576368331909180'
 ```
 
 ## Examples
@@ -69,15 +63,15 @@ const numObj = 12345.6789;
 numObj.toFixed(); // '12346'; rounding, no fractional part
 numObj.toFixed(1); // '12345.7'; it rounds up
 numObj.toFixed(6); // '12345.678900'; additional zeros
-(1.23e+20).toFixed(2); // '123000000000000000000.00'
+(1.23e20).toFixed(2); // '123000000000000000000.00'
 (1.23e-10).toFixed(2); // '0.00'
-2.34.toFixed(1); // '2.3'
-2.35.toFixed(1); // '2.4'; it rounds up
-2.55.toFixed(1); // '2.5'
+(2.34).toFixed(1); // '2.3'
+(2.35).toFixed(1); // '2.4'; it rounds up
+(2.55).toFixed(1); // '2.5'
 // it rounds down as it can't be represented exactly by a float and the
 // closest representable float is lower
-2.449999999999999999.toFixed(1); // '2.5'
-// it rounds up as it's less than NUMBER.EPSILON away from 2.45.
+(2.449999999999999999).toFixed(1); // '2.5'
+// it rounds up as it's less than Number.EPSILON away from 2.45.
 // This literal actually encodes the same number value as 2.45
 
 (6.02 * 10 ** 23).toFixed(50); // 6.019999999999999e+23; large numbers still use exponential notation
@@ -85,9 +79,9 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 
 ### Using toFixed() with negative numbers
 
-Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than unary minus, you need to group the negative number expression to get a string.
+Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary minus, you need to group the negative number expression to get a string.
 
-```js
+```js-nolint
 -2.34.toFixed(1); // -2.3, a number
 (-2.34).toFixed(1); // '-2.3'
 ```

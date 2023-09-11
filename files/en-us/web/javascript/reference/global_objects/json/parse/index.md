@@ -2,18 +2,12 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
 
 {{JSRef}}
 
-The **`JSON.parse()`** method parses a JSON string, constructing the JavaScript value or object described by the string. An optional _reviver_ function can be provided to perform a transformation on the resulting object before it is returned.
+The **`JSON.parse()`** static method parses a JSON string, constructing the JavaScript value or object described by the string. An optional _reviver_ function can be provided to perform a transformation on the resulting object before it is returned.
 
 {{EmbedInteractiveExample("pages/js/json-parse.html")}}
 
@@ -118,16 +112,14 @@ const map = new Map([
   [3, "three"],
 ]);
 
-const jsonText = JSON.stringify(
-  map,
-  (key, value) => (value instanceof Map ? Array.from(value.entries()) : value),
+const jsonText = JSON.stringify(map, (key, value) =>
+  value instanceof Map ? Array.from(value.entries()) : value,
 );
 
 console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
 const obj = JSON.parse(jsonText);
-
 const map2 = new Map(obj);
 
 console.log(map2);

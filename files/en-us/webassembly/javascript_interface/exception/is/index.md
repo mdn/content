@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.is()
 slug: WebAssembly/JavaScript_interface/Exception/is
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - is
-  - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
 

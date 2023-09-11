@@ -2,11 +2,6 @@
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - Strict Mode
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -42,7 +37,7 @@ letter "O" (`0o` or `0O`).
 
 ### "0"-prefixed octal literals
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 03;
@@ -52,7 +47,7 @@ letter "O" (`0o` or `0O`).
 
 ### Octal escape sequences
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 "\251";
@@ -71,10 +66,9 @@ Use a leading zero followed by the letter "o" or "O":
 For octal escape sequences, you can use hexadecimal escape sequences instead:
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## See also
 
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)

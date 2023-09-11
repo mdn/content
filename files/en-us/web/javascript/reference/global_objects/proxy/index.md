@@ -2,17 +2,12 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
 
 {{JSRef}}
 
-The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
+The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
 ## Description
 
@@ -150,8 +145,10 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
+
+> **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
 
 ## Static methods
 
@@ -255,7 +252,7 @@ const proxy = new Proxy(aSecret, {
 console.log(proxy.x());
 ```
 
-Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
+Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
 
 ```js
 const proxy = new Proxy(new Map(), {});
@@ -328,7 +325,7 @@ const view = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
 
 const item1 = document.getElementById("item-1");
@@ -357,7 +354,7 @@ The `products` proxy object evaluates the passed value and converts it to an arr
 ```js
 const products = new Proxy(
   {
-    browsers: ["Internet Explorer", "Netscape"],
+    browsers: ["Firefox", "Chrome"],
   },
   {
     get(obj, prop) {
@@ -387,90 +384,25 @@ const products = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
-
-console.log(products.browsers);
-//  ['Internet Explorer', 'Netscape']
-
-products.browsers = "Firefox";
-//  pass a string (by mistake)
-
-console.log(products.browsers);
-//  ['Firefox'] <- no problem, the value is an array
-
-products.latestBrowser = "Chrome";
 
 console.log(products.browsers);
 //  ['Firefox', 'Chrome']
 
+products.browsers = "Safari";
+//  pass a string (by mistake)
+
+console.log(products.browsers);
+//  ['Safari'] <- no problem, the value is an array
+
+products.latestBrowser = "Edge";
+
+console.log(products.browsers);
+//  ['Safari', 'Edge']
+
 console.log(products.latestBrowser);
-//  'Chrome'
-```
-
-### Finding an array item object by its property
-
-This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement/rows", "table.rows")}}.
-
-```js
-const products = new Proxy(
-  [
-    { name: "Firefox", type: "browser" },
-    { name: "SeaMonkey", type: "browser" },
-    { name: "Thunderbird", type: "mailer" },
-  ],
-  {
-    get(obj, prop) {
-      // The default behavior to return the value; prop is usually an integer
-      if (prop in obj) {
-        return obj[prop];
-      }
-
-      // Get the number of products; an alias of products.length
-      if (prop === "number") {
-        return obj.length;
-      }
-
-      let result;
-      const types = {};
-
-      for (const product of obj) {
-        if (product.name === prop) {
-          result = product;
-        }
-        if (types[product.type]) {
-          types[product.type].push(product);
-        } else {
-          types[product.type] = [product];
-        }
-      }
-
-      // Get a product by name
-      if (result) {
-        return result;
-      }
-
-      // Get products by type
-      if (prop in types) {
-        return types[prop];
-      }
-
-      // Get product types
-      if (prop === "types") {
-        return Object.keys(types);
-      }
-
-      return undefined;
-    },
-  }
-);
-
-console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Chrome"]); // undefined
-console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types); // ['browser', 'mailer']
-console.log(products.number); // 3
+//  'Edge'
 ```
 
 ### A complete traps list example
@@ -543,5 +475,4 @@ console.log(docCookies.myCookie1);
 
 ## See also
 
-- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [Tutorial on proxies](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
+- [Proxies are awesome](https://youtu.be/sClk6aB_CPk) presentation by Brendan Eich at JSConf (2014)

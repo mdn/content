@@ -1,19 +1,8 @@
 ---
-title: MutationObserver()
+title: "MutationObserver: MutationObserver() constructor"
+short-title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Changes
-  - Constructor
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
 browser-compat: api.MutationObserver.MutationObserver
 ---
 
@@ -46,7 +35,7 @@ new MutationObserver(callback)
     1. An array of {{domxref("MutationRecord")}} objects, describing each change that
        occurred; and
     2. the {{domxref("MutationObserver")}} which invoked the
-       `callback`.
+       `callback`. This is most often used to disconnect the observer using {{domxref("MutationObserver.disconnect()")}}.
 
     See the [examples](#examples) below for more details.
 
@@ -57,72 +46,102 @@ A new {{domxref("MutationObserver")}} object, configured to call the specified
 
 ## Examples
 
-This example creates a new `MutationObserver` configured to watch a node and
-all of its children for additions and removals of elements to the tree, as well as any
-changes to attributes on any of the elements in the tree.
+### Observing child elements
 
-### The callback function
+This example has buttons to add an {{htmlelement("li")}} element to a list, and to remove the first `<li>` element from the list.
 
-```js
-function callback(mutationList, observer) {
-  mutationList.forEach((mutation) => {
-    switch(mutation.type) {
-      case 'childList':
-        /* One or more children have been added to and/or removed
-           from the tree.
-           (See mutation.addedNodes and mutation.removedNodes.) */
-        break;
-      case 'attributes':
-        /* An attribute value changed on the element in
-           mutation.target.
-           The attribute name is in mutation.attributeName, and
-           its previous value is in mutation.oldValue. */
-        break;
-    }
-  });
+We use a `MutationObserver` to be notified about changes to the list. In the callback, we log additions and removals, and as soon as the list is empty, we disconnect the observer.
+
+The "Reset example" button resets the example to its original state.
+
+#### HTML
+
+```html
+<button id="add">Add child</button>
+<button id="remove">Remove child</button>
+<button id="reset">Reset example</button>
+
+<ul id="container"></ul>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+#container,
+#log {
+  height: 150px;
+  overflow: scroll;
+}
+
+#container li {
+  background-color: paleturquoise;
+  margin: 0.5rem;
 }
 ```
 
-The `callback()` function is invoked when the observer sees changes matching
-the configuration of the observation request specified when calling
-{{domxref("MutationObserver.observe", "observe()")}} to begin watching the DOM.
-
-The kind of change that took place (either a change to the list of children, or a
-change to an attribute) is detected by looking at the {{domxref("MutationRecord.type",
-  "mutation.type")}} property.
-
-### Creating and starting the observer
-
-This code actually sets up the observation process.
+#### JavaScript
 
 ```js
-const targetNode = document.querySelector("#someElement");
+const add = document.querySelector("#add");
+const remove = document.querySelector("#remove");
+const reset = document.querySelector("#reset");
+const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+let namePrefix = 0;
+
+add.addEventListener("click", () => {
+  const newItem = document.createElement("li");
+  newItem.textContent = `item ${namePrefix}`;
+  container.appendChild(newItem);
+  namePrefix++;
+});
+
+remove.addEventListener("click", () => {
+  const itemToRemove = document.querySelector("li");
+  if (itemToRemove) {
+    itemToRemove.parentNode.removeChild(itemToRemove);
+  }
+});
+
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
+
+function logChanges(records, observer) {
+  for (const record of records) {
+    for (const addedNode of record.addedNodes) {
+      log.textContent = `Added: ${addedNode.textContent}\n${log.textContent}`;
+    }
+    for (const removedNode of record.removedNodes) {
+      log.textContent = `Removed: ${removedNode.textContent}\n${log.textContent}`;
+    }
+    if (record.target.childNodes.length === 0) {
+      log.textContent = `Disconnected\n${log.textContent}`;
+      observer.disconnect();
+    }
+    console.log(record.target.childNodes.length);
+  }
+}
+
 const observerOptions = {
   childList: true,
-  attributes: true,
+  subtree: true,
+};
 
-  // Omit (or set to false) to observe only changes to the parent node
-  subtree: true
-}
-
-const observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);
+const observer = new MutationObserver(logChanges);
+observer.observe(container, observerOptions);
 ```
 
-The desired subtree is located by finding an element with the ID
-`someElement`. A set of options for the observer is also established in the
-`observerOptions` record. In it, we specify values of `true` for
-both `childList` and `attributes`, so we get the information we
-want.
+#### Result
 
-Then the observer is instantiated, specifying the `callback()` function. We
-begin observing the DOM nodes of interest by calling `observe()`, specifying
-the `target` node and the `options` object.
+Try clicking "Add child" to add list items, and "Remove child" to remove them. The observer callback logs additions and removals. As soon as the list is empty, the observer logs a "Disconnected" message and disconnects the observer.
 
-From this point until {{domxref("MutationObserver.disconnect", "disconnect()")}} is
-called, `callback()` will be called each time an element is added to or
-removed from the DOM tree rooted at `targetNode`, or any of those
-elements' attributes are changed.
+The "Reset example" button reloads the example so you can try it again.
+
+{{EmbedLiveSample("Observing child elements", 0, 400)}}
 
 ## Specifications
 

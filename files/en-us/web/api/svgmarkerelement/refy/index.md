@@ -1,13 +1,8 @@
 ---
-title: SVGMarkerElement.refY
+title: "SVGMarkerElement: refY property"
+short-title: refY
 slug: Web/API/SVGMarkerElement/refY
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - refY
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.refY
 ---
 

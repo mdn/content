@@ -1,15 +1,8 @@
 ---
-title: Element.ariaHidden
+title: "Element: ariaHidden property"
+short-title: ariaHidden
 slug: Web/API/Element/ariaHidden
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaHidden
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaHidden
 ---
 
@@ -37,9 +30,9 @@ In this example the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attribute
 ```
 
 ```js
-let el = document.getElementById('hidden');
+let el = document.getElementById("hidden");
 console.log(el.ariaHidden); // true
-el.ariaHidden = "false"
+el.ariaHidden = "false";
 console.log(el.ariaHidden); // false
 ```
 

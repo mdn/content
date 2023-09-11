@@ -2,19 +2,12 @@
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 page-type: javascript-static-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.from
 ---
 
 {{JSRef}}
 
-The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an iterable or array-like object.
+The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 
 {{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}
 
@@ -22,20 +15,8 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ```js-nolint
 Array.from(arrayLike)
-
-// Arrow function
-Array.from(arrayLike, (element) => { /* … */ })
-Array.from(arrayLike, (element, index) => { /* … */ })
-
-// Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
-
-// Inline mapping function
-Array.from(arrayLike, function (element) { /* … */ })
-Array.from(arrayLike, function (element, index) { /* … */ })
-Array.from(arrayLike, function (element) { /* … */ }, thisArg)
-Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -43,16 +24,11 @@ Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 - `arrayLike`
   - : An iterable or array-like object to convert to an array.
 - `mapFn` {{Optional_inline}}
-
-  - : Map function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead.
-
-    The function is called with the following arguments:
-
+  - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
-
 - `thisArg` {{Optional_inline}}
   - : Value to use as `this` when executing `mapFn`.
 
@@ -67,11 +43,13 @@ A new {{jsxref("Array")}} instance.
 - [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}); or, if the object is not iterable,
 - array-like objects (objects with a `length` property and indexed elements).
 
+To convert an ordinary object that's not iterable or array-like to an array (by enumerating its property keys, values, or both), use {{jsxref("Object.keys()")}}, {{jsxref("Object.values()")}}, or {{jsxref("Object.entries()")}}. To convert an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) to an array, use {{jsxref("Array.fromAsync()")}}.
+
 `Array.from()` never creates a sparse array. If the `arrayLike` object is missing some index properties, they become `undefined` in the new array.
 
 `Array.from()` has an optional parameter `mapFn`, which allows you to execute a function on each element of the array being created, similar to {{jsxref("Array.prototype.map()", "map()")}}. More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.from(obj).map(mapFn, thisArg)`, except that it does not create an intermediate array, and `mapFn` only receives two arguments (`element`, `index`) without the whole array, because the array is still under construction.
 
-> **Note:** This behavior is more important for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type. `Array.from()` is implemented to have the same signature as {{jsxref("TypedArray.from()")}}.
+> **Note:** This behavior is more important for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type. `Array.from()` is implemented to have the same signature as {{jsxref("TypedArray.from()")}}.
 
 The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `arrayLike`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
 
@@ -209,7 +187,10 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## See also
 
 - [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
+- {{jsxref("Array.fromAsync()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("TypedArray.from()")}}

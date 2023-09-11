@@ -1,32 +1,23 @@
 ---
-title: '<div>: The Content Division element'
+title: "<div>: The Content Division element"
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
+page-type: html-element
 browser-compat: html.elements.div
 ---
 
 {{HTMLSidebar}}
 
-The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is applied to its parent element).
+The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is applied to its parent element).
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes, marking a section of a document as being written in a different language (using the {{htmlattrxref("lang")}} attribute), and so on.
+As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) or [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute), and so on.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
+> **Note:** The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
 
 ## Usage notes
 
@@ -48,13 +39,13 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 </div>
 ```
 
-The result looks like this:
+#### Result
 
 {{EmbedLiveSample("A_simple_example", 650, 60)}}
 
 ### A styled example
 
-This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the {{htmlattrxref("class")}} attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
+This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
 
 #### HTML
 
@@ -80,26 +71,26 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 
 {{EmbedLiveSample("A_styled_example", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
-        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
+        >, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.<br />Or (in {{glossary("WHATWG")}} HTML): If the parent is a
         {{HTMLElement("dl")}} element: one or more
@@ -117,7 +108,7 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.<br />Or (in {{glossary("WHATWG")}} HTML):
         {{HTMLElement("dl")}} element.

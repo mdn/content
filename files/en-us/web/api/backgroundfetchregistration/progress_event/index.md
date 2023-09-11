@@ -1,13 +1,10 @@
 ---
 title: "BackgroundFetchRegistration: progress event"
+short-title: progress
 slug: Web/API/BackgroundFetchRegistration/progress_event
 page-type: web-api-event
-tags:
-  - progress
-  - API
-  - Reference
-  - Event
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.progress_event
 ---
 
@@ -43,7 +40,7 @@ The following example demonstrates how to log the progress of a download. The co
 bgFetch.addEventListener("progress", () => {
   if (!bgFetch.downloadTotal) return;
   const percent = Math.round(
-    (bgFetch.downloaded / bgFetch.downloadTotal) * 100
+    (bgFetch.downloaded / bgFetch.downloadTotal) * 100,
   );
   console.log(`Download progress: ${percent}%`);
 });

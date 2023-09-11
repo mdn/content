@@ -2,10 +2,6 @@
 title: Multi-touch interaction
 slug: Web/API/Touch_events/Multi-touch_interaction
 page-type: guide
-tags:
-  - Guide
-  - TouchEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Touch Events")}}
@@ -65,20 +61,20 @@ Event handlers are registered for all four touch event types. The {{domxref("Ele
 
 ```js
 function set_handlers(name) {
- // Install event handlers for the given element
- const el = document.getElementById(name);
- el.ontouchstart = start_handler;
- el.ontouchmove = move_handler;
- // Use same handler for touchcancel and touchend
- el.ontouchcancel = end_handler;
- el.ontouchend = end_handler;
+  // Install event handlers for the given element
+  const el = document.getElementById(name);
+  el.ontouchstart = start_handler;
+  el.ontouchmove = move_handler;
+  // Use same handler for touchcancel and touchend
+  el.ontouchcancel = end_handler;
+  el.ontouchend = end_handler;
 }
 
 function init() {
- set_handlers("target1");
- set_handlers("target2");
- set_handlers("target3");
- set_handlers("target4");
+  set_handlers("target1");
+  set_handlers("target2");
+  set_handlers("target3");
+  set_handlers("target4");
 }
 ```
 
@@ -94,21 +90,25 @@ function handle_pinch_zoom(ev) {
     // Check if the two target touches are the same ones that started
     // the 2-touch
     const point1 = tpCache.findLastIndex(
-      (tp) => tp.identifier === ev.targetTouches[0].identifier
+      (tp) => tp.identifier === ev.targetTouches[0].identifier,
     );
     const point2 = tpCache.findLastIndex(
-      (tp) => tp.identifier === ev.targetTouches[1].identifier
+      (tp) => tp.identifier === ev.targetTouches[1].identifier,
     );
 
     if (point1 >= 0 && point2 >= 0) {
       // Calculate the difference between the start and move coordinates
-      const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
-      const diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
+      const diff1 = Math.abs(
+        tpCache[point1].clientX - ev.targetTouches[0].clientX,
+      );
+      const diff2 = Math.abs(
+        tpCache[point2].clientX - ev.targetTouches[1].clientX,
+      );
 
       // This threshold is device dependent as well as application specific
       const PINCH_THRESHOLD = ev.target.clientWidth / 10;
       if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
-          ev.target.style.background = "green";
+        ev.target.style.background = "green";
     } else {
       // empty tpCache
       tpCache = [];
@@ -123,20 +123,20 @@ The {{domxref("Element/touchstart_event", "touchstart")}} event handler caches t
 
 ```js
 function start_handler(ev) {
- // If the user makes simultaneous touches, the browser will fire a
- // separate touchstart event for each touch point. Thus if there are
- // three simultaneous touches, the first touchstart event will have
- // targetTouches length of one, the second event will have a length
- // of two, and so on.
- ev.preventDefault();
- // Cache the touch points for later processing of 2-touch pinch/zoom
- if (ev.targetTouches.length === 2) {
-   for (let i = 0; i < ev.targetTouches.length; i++) {
-     tpCache.push(ev.targetTouches[i]);
-   }
- }
- if (logEvents) log("touchStart", ev, true);
- update_background(ev);
+  // If the user makes simultaneous touches, the browser will fire a
+  // separate touchstart event for each touch point. Thus if there are
+  // three simultaneous touches, the first touchstart event will have
+  // targetTouches length of one, the second event will have a length
+  // of two, and so on.
+  ev.preventDefault();
+  // Cache the touch points for later processing of 2-touch pinch/zoom
+  if (ev.targetTouches.length === 2) {
+    for (let i = 0; i < ev.targetTouches.length; i++) {
+      tpCache.push(ev.targetTouches[i]);
+    }
+  }
+  if (logEvents) log("touchStart", ev, true);
+  update_background(ev);
 }
 ```
 
@@ -146,26 +146,26 @@ The {{domxref("Element/touchmove_event", "touchmove")}} handler calls {{domxref(
 
 ```js
 function move_handler(ev) {
- // Note: if the user makes more than one "simultaneous" touches, most browsers
- // fire at least one touchmove event and some will fire several touchmoves.
- // Consequently, an application might want to "ignore" some touchmoves.
- //
- // This function sets the target element's border to "dashed" to visually
- // indicate the target received a move event.
- //
- ev.preventDefault();
- if (logEvents) log("touchMove", ev, false);
- // To avoid too much color flashing many touchmove events are started,
- // don't update the background if two touch points are active
- if (!(ev.touches.length === 2 && ev.targetTouches.length === 2))
-   update_background(ev);
+  // Note: if the user makes more than one "simultaneous" touches, most browsers
+  // fire at least one touchmove event and some will fire several touchmoves.
+  // Consequently, an application might want to "ignore" some touchmoves.
+  //
+  // This function sets the target element's border to "dashed" to visually
+  // indicate the target received a move event.
+  //
+  ev.preventDefault();
+  if (logEvents) log("touchMove", ev, false);
+  // To avoid too much color flashing many touchmove events are started,
+  // don't update the background if two touch points are active
+  if (!(ev.touches.length === 2 && ev.targetTouches.length === 2))
+    update_background(ev);
 
- // Set the target element's border to dashed to give a clear visual
- // indication the element received a move event.
- ev.target.style.border = "dashed";
+  // Set the target element's border to dashed to give a clear visual
+  // indication the element received a move event.
+  ev.target.style.border = "dashed";
 
- // Check this event for 2-touch Move/Pinch/Zoom gesture
- handle_pinch_zoom(ev);
+  // Check this event for 2-touch Move/Pinch/Zoom gesture
+  handle_pinch_zoom(ev);
 }
 ```
 
@@ -212,24 +212,24 @@ The background color of the touch areas will change as follows: no touch is `whi
 
 ```js
 function update_background(ev) {
- // Change background color based on the number simultaneous touches
- // in the event's targetTouches list:
- //   yellow - one tap (or hold)
- //   pink - two taps
- //   lightblue - more than two taps
- switch (ev.targetTouches.length) {
-   case 1:
-     // Single tap`
-     ev.target.style.background = "yellow";
-     break;
-   case 2:
-     // Two simultaneous touches
-     ev.target.style.background = "pink";
-     break;
-   default:
-     // More than two simultaneous touches
-     ev.target.style.background = "lightblue";
- }
+  // Change background color based on the number simultaneous touches
+  // in the event's targetTouches list:
+  //   yellow - one tap (or hold)
+  //   pink - two taps
+  //   lightblue - more than two taps
+  switch (ev.targetTouches.length) {
+    case 1:
+      // Single tap`
+      ev.target.style.background = "yellow";
+      break;
+    case 2:
+      // Two simultaneous touches
+      ev.target.style.background = "pink";
+      break;
+    default:
+      // More than two simultaneous touches
+      ev.target.style.background = "lightblue";
+  }
 }
 ```
 
@@ -243,8 +243,9 @@ function enableLog(ev) {
 }
 
 function log(name, ev, printTargetIds) {
-  const o = document.getElementsByTagName('output')[0];
-  let s = `${name}: touches = ${ev.touches.length} ; ` +
+  const o = document.getElementsByTagName("output")[0];
+  let s =
+    `${name}: touches = ${ev.touches.length} ; ` +
     `targetTouches = ${ev.targetTouches.length} ; ` +
     `changedTouches = ${ev.changedTouches.length}`;
   o.innerHTML += `${s}<br>`;
@@ -259,8 +260,8 @@ function log(name, ev, printTargetIds) {
 }
 
 function clearLog(event) {
- const o = document.getElementsByTagName('output')[0];
- o.innerHTML = "";
+  const o = document.getElementsByTagName("output")[0];
+  o.innerHTML = "";
 }
 ```
 

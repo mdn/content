@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createBiquadFilter()
+title: "BaseAudioContext: createBiquadFilter() method"
+short-title: createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createBiquadFilter
 browser-compat: api.BaseAudioContext.createBiquadFilter
 ---
 

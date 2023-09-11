@@ -1,15 +1,10 @@
 ---
-title: TaskAttributionTiming.containerId
+title: "TaskAttributionTiming: containerId property"
+short-title: containerId
 slug: Web/API/TaskAttributionTiming/containerId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.containerId
 ---
 

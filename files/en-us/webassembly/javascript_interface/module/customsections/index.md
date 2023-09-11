@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Module
-  - Object
-  - Reference
-  - WebAssembly
-  - customSections
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
 
@@ -43,23 +34,23 @@ If `module` is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_i
 
 ## Description
 
-A wasm module consists of a sequence of **sections**. Most of these
-sections are fully specified and validated by the wasm spec, but modules can also
+A Wasm module consists of a sequence of **sections**. Most of these
+sections are fully specified and validated by the Wasm spec, but modules can also
 contain **custom sections** that are ignored and skipped over during
 validation. (Read [High level structure](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#high-level-structure)
 for information on section structures, and how normal sections
 ("known sections") and custom sections are distinguished.)
 
-This provides developers with a way to include custom data inside wasm modules for other purposes,
+This provides developers with a way to include custom data inside Wasm modules for other purposes,
 for example the [name custom section](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#name-section),
 which allows developers to provide names for all the functions and
 locals in the module (like "symbols" in a native build).
 
 Note that the WebAssembly text format currently doesn't have a syntax specified for
-adding new custom sections; you can however add a name section to your wasm during
-conversion from text format over to .wasm. The `wast2wasm` command available as part of
+adding new custom sections; you can however add a name section to your Wasm during
+conversion from text format over to Wasm. The `wast2wasm` command available as part of
 the [wabt tool](https://github.com/webassembly/wabt) has a
-`--debug-names` option — specify this during conversion to get a .wasm with a
+`--debug-names` option — specify this during conversion to get a Wasm with a
 names custom section, for example:
 
 ```bash

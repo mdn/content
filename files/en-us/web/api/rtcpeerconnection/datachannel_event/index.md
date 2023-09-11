@@ -1,21 +1,8 @@
 ---
-title: 'RTCPeerConnection: datachannel event'
+title: "RTCPeerConnection: datachannel event"
+short-title: datachannel
 slug: Web/API/RTCPeerConnection/datachannel_event
 page-type: web-api-event
-tags:
-  - Channels
-  - Connection
-  - Connectivity
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - data
-  - datachannel
-  - events
-  - Event
-  - rtc
 browser-compat: api.RTCPeerConnection.datachannel_event
 ---
 
@@ -32,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('datachannel', (event) => { });
+addEventListener("datachannel", (event) => {});
 
-ondatachannel = (event) => { };
+ondatachannel = (event) => {};
 ```
 
 ## Event type
@@ -55,12 +42,16 @@ _Also inherits properties from {{DOMxRef("Event")}}._
 This example sets up a function that handles `datachannel` events by gathering the information needed to communicate with the newly added {{domxref("RTCDataChannel")}} and by adding event handlers for the events that occur on that channel.
 
 ```js
-pc.addEventListener("datachannel", (ev) => {
-  receiveChannel = ev.channel;
-  receiveChannel.onmessage = myHandleMessage;
-  receiveChannel.onopen = myHandleOpen;
-  receiveChannel.onclose = myHandleClose;
-}, false);
+pc.addEventListener(
+  "datachannel",
+  (ev) => {
+    receiveChannel = ev.channel;
+    receiveChannel.onmessage = myHandleMessage;
+    receiveChannel.onopen = myHandleOpen;
+    receiveChannel.onclose = myHandleClose;
+  },
+  false,
+);
 ```
 
 `receiveChannel` is set to the value of the event's {{domxref("RTCDataChannelEvent.channel", "channel")}} property, which specifies the `RTCDataChannel` object representing the data channel linking the remote peer to the local one.
@@ -73,7 +64,7 @@ pc.ondatachannel = (ev) => {
   receiveChannel.onmessage = myHandleMessage;
   receiveChannel.onopen = myHandleOpen;
   receiveChannel.onclose = myHandleClose;
-}
+};
 ```
 
 ## Specifications

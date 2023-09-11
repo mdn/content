@@ -1,15 +1,8 @@
 ---
-title: WindowClient.visibilityState
+title: "WindowClient: visibilityState property"
+short-title: visibilityState
 slug: Web/API/WindowClient/visibilityState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - visibilityState
 browser-compat: api.WindowClient.visibilityState
 ---
 
@@ -27,18 +20,21 @@ A string (See {{domxref("Document.visibilityState")}} for values).
 ## Examples
 
 ```js
-event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client) {
-        if (client.visibilityState === 'hidden') return client.focus();
+event.waitUntil(
+  clients
+    .matchAll({
+      type: "window",
+    })
+    .then((clientList) => {
+      for (const client of clientList) {
+        if (client.url === "/" && "focus" in client) {
+          if (client.visibilityState === "hidden") return client.focus();
+        }
       }
-    }
-    if (clients.openWindow) {
-      return clients.openWindow('/');
-    }
-  })
+      if (clients.openWindow) {
+        return clients.openWindow("/");
+      }
+    }),
 );
 ```
 

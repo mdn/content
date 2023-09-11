@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.CompileError() constructor
 slug: WebAssembly/JavaScript_interface/CompileError/CompileError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
 

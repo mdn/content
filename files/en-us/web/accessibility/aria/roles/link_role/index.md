@@ -1,13 +1,7 @@
 ---
 title: "ARIA: link role"
 slug: Web/Accessibility/ARIA/Roles/link_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - Link role
-  - ARIA link
-  - Accessibility
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#link
 ---
 
@@ -21,7 +15,7 @@ The `link` role is used to identify an element that creates a hyperlink to a res
 
 When not using semantic HTML for its intended purpose, interactive features must be re-implemented. For example, when `role="link"` is added to an element, the <kbd>tab</kbd> key should enable giving focus to the link and the <kbd>enter</kbd> key should execute the link when focused.
 
-Use the {{HTMLattrXRef('tabindex')}} attribute with a value of `0` to ensure the link is in the correct tab focus order.
+Use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute with a value of `0` to ensure the link is in the correct tab focus order.
 
 > **Warning:** Applying the `link` role to an element will not cause browsers to enhance the element with standard link appearance or behaviors, such as underlining, focus rings, navigation to the link target, or context menu actions. That's the developer's responsibility.
 

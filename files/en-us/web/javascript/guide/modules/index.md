@@ -2,12 +2,6 @@
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Modules
-  - export
-  - import
 browser-compat:
   - javascript.statements.import
   - javascript.statements.export
@@ -94,7 +88,7 @@ The first thing you do to get access to module features is export them. This is 
 The easiest way to use it is to place it in front of any items you want exported out of the module, for example:
 
 ```js
-export const name = 'square';
+export const name = "square";
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -117,7 +111,7 @@ export { name, draw, reportArea, reportPerimeter };
 Once you've exported some features out of your module, you need to import them into your script to be able to use them. The simplest way to do this is as follows:
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
 You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
@@ -146,15 +140,15 @@ You can see such lines in action in [`main.js`](https://github.com/mdn/js-exampl
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
 ```js
-const myCanvas = create('myCanvas', document.body, 480, 320);
+const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
-const square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
+const square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
 reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Note:** Although imported features are available in the file, they are read only views of the feature that was exported. You cannot change the variable that was imported, but you can still modify properties similar to `const`. Additionally, these features are imported as live bindings, meaning that they can change in value even if you cannot modify the binding unlike `const`.
+> **Note:** The imported values are read-only views of the features that were exported. Similar to `const` variables, you cannot re-assign the variable that was imported, but you can still modify properties of object values. The value can only be re-assigned by the module exporting it. See the [`import` reference](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter) for an example.
 
 ## Importing modules using import maps
 
@@ -177,9 +171,9 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
     "imports": {
       "shapes": "./shapes/square.js",
       "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
       "https://example.com/shapes/square.js": "./shapes/square.js",
-      "../shapes/square": "./shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
+      "../shapes/square": "./shapes/square.js"
     }
   }
 </script>
@@ -198,7 +192,7 @@ import { name as squareNameOne } from "shapes";
 import { name as squareNameTwo } from "shapes/square";
 
 // Remap a URL to another URL
-import { name as squareNameThree } from "https://example.com/shapes/moduleshapes/square.js";
+import { name as squareNameThree } from "https://example.com/shapes/square.js";
 ```
 
 If the module specifier has a trailing forward slash then the value must have one as well, and the key is matched as a "path prefix".
@@ -206,7 +200,7 @@ This allows remapping of whole classes of URLs.
 
 ```js
 // Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/square.js";
+import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
 ```
 
 It is possible for multiple keys in an import map to be valid matches for a module specifier.
@@ -222,7 +216,7 @@ The following sections expand on the various features outlined above.
 
 ### Feature detection
 
-You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
+You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports_static) static method (which is itself broadly supported):
 
 ```js
 if (HTMLScriptElement.supports?.("importmap")) {
@@ -334,7 +328,7 @@ With this mapping, if a script with an URL that contains `/node_modules/dependen
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `coolmodule` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/coolmodule/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
-The value in the mapped path does not have to have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
+The value in the mapped path does not have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
 
 Just as for module specifier maps, you can have many scope keys, and these may contain overlapping paths.
 If multiple scopes match the referrer URL, then the most specific scope path is checked first (the longest scope key) for a matching specifier.
@@ -385,6 +379,9 @@ The script into which you import the module features basically acts as the top-l
 
 You can only use `import` and `export` statements inside modules, not regular scripts.
 
+> **Note:** Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> This can significantly reduce load time when the modules are used.
+
 ## Other differences between modules and standard scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
@@ -396,7 +393,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 Module-defined variables are scoped to the module unless explicitly attached to the global object. On the other hand, globally-defined variables are available within the module. For example, given the following code:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -446,13 +443,13 @@ export default function (ctx) {
 Over in our `main.js` file, we import the default function using this line:
 
 ```js
-import randomSquare from './modules/square.js';
+import randomSquare from "./modules/square.js";
 ```
 
 Again, note the lack of curly braces. This is because there is only one default export allowed per module, and we know that `randomSquare` is it. The above line is basically shorthand for:
 
 ```js
-import {default as randomSquare} from './modules/square.js';
+import { default as randomSquare } from "./modules/square.js";
 ```
 
 > **Note:** The as syntax for renaming exported items is explained below in the [Renaming imports and exports](#renaming_imports_and_exports) section.
@@ -471,13 +468,10 @@ So for example, both of the following would do the same job, albeit in a slightl
 
 ```js
 // inside module.js
-export {
-  function1 as newFunctionName,
-  function2 as anotherNewFunctionName
-};
+export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
 // inside main.js
-import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
+import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
@@ -488,7 +482,7 @@ export { function1, function2 };
 import {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName,
-} from './modules/module.js';
+} from "./modules/module.js";
 ```
 
 Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
@@ -502,9 +496,9 @@ export { name, draw, reportArea, reportPerimeter };
 When importing these into `main.js`, if we tried to use
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/circle.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
 ```
 
 The browser would throw an error such as "SyntaxError: redeclaration of import name" (Firefox).
@@ -517,21 +511,21 @@ import {
   draw as drawSquare,
   reportArea as reportSquareArea,
   reportPerimeter as reportSquarePerimeter,
-} from './modules/square.js';
+} from "./modules/square.js";
 
 import {
   name as circleName,
   draw as drawCircle,
   reportArea as reportCircleArea,
   reportPerimeter as reportCirclePerimeter,
-} from './modules/circle.js';
+} from "./modules/circle.js";
 
 import {
   name as triangleName,
   draw as drawTriangle,
   reportArea as reportTriangleArea,
   reportPerimeter as reportTrianglePerimeter,
-} from './modules/triangle.js';
+} from "./modules/triangle.js";
 ```
 
 Note that you could solve the problem in the module files instead, e.g.
@@ -548,7 +542,12 @@ export {
 
 ```js
 // in main.js
-import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from './modules/square.js';
+import {
+  squareName,
+  drawSquare,
+  reportSquareArea,
+  reportSquarePerimeter,
+} from "./modules/square.js";
 ```
 
 And it would work just the same. What style you use is up to you, however it arguably makes more sense to leave your module code alone, and make the changes in the imports. This especially makes sense when you are importing from third party modules that you don't have any control over.
@@ -558,7 +557,7 @@ And it would work just the same. What style you use is up to you, however it arg
 The above method works OK, but it's a little messy and long-winded. An even better solution is to import each module's features inside a module object. The following syntax form does that:
 
 ```js
-import * as Module from './modules/module.js';
+import * as Module from "./modules/module.js";
 ```
 
 This grabs all the exports available inside `module.js`, and makes them available as members of an object `Module`, effectively giving it its own namespace. So for example:
@@ -577,17 +576,17 @@ export { name, draw, reportArea, reportPerimeter };
 The imports on the other hand look like this:
 
 ```js
-import * as Canvas from './modules/canvas.js';
+import * as Canvas from "./modules/canvas.js";
 
-import * as Square from './modules/square.js';
-import * as Circle from './modules/circle.js';
-import * as Triangle from './modules/triangle.js';
+import * as Square from "./modules/square.js";
+import * as Circle from "./modules/circle.js";
+import * as Triangle from "./modules/triangle.js";
 ```
 
 In each case, you can now access the module's imports underneath the specified object name, for example:
 
 ```js
-const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
@@ -623,13 +622,13 @@ export { Square };
 Over in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js), we import it like this:
 
 ```js
-import { Square } from './modules/square.js';
+import { Square } from "./modules/square.js";
 ```
 
 And then use the class to draw our square:
 
 ```js
-const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
@@ -640,8 +639,8 @@ square1.reportPerimeter();
 There will be times where you'll want to aggregate modules together. You might have multiple levels of dependencies, where you want to simplify things, combining several submodules into one parent module. This is possible using export syntax of the following forms in the parent module:
 
 ```js
-export * from 'x.js'
-export { name } from 'x.js'
+export * from "x.js";
+export { name } from "x.js";
 ```
 
 For an example, see our [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation) directory. In this example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
@@ -665,9 +664,9 @@ export { Square };
 Next up comes the aggregation part. Inside [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js), we include the following lines:
 
 ```js
-export { Square } from './shapes/square.js';
-export { Triangle } from './shapes/triangle.js';
-export { Circle } from './shapes/circle.js';
+export { Square } from "./shapes/square.js";
+export { Triangle } from "./shapes/triangle.js";
+export { Circle } from "./shapes/circle.js";
 ```
 
 These grab the exports from the individual submodules and effectively make them available from the `shapes.js` module.
@@ -677,15 +676,15 @@ These grab the exports from the individual submodules and effectively make them 
 So now in the `main.js` file, we can get access to all three module classes by replacing
 
 ```js
-import { Square } from './modules/square.js';
-import { Circle } from './modules/circle.js';
-import { Triangle } from './modules/triangle.js';
+import { Square } from "./modules/square.js";
+import { Circle } from "./modules/circle.js";
+import { Triangle } from "./modules/triangle.js";
 ```
 
 with the following single line:
 
 ```js
-import { Square, Circle, Triangle } from './modules/shapes.js';
+import { Square, Circle, Triangle } from "./modules/shapes.js";
 ```
 
 ## Dynamic module loading
@@ -695,11 +694,15 @@ A recent addition to JavaScript modules functionality is dynamic module loading.
 This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
 
 ```js
-import('./modules/myModule.js')
-  .then((module) => {
-    // Do something with the module.
-  });
+import("./modules/myModule.js").then((module) => {
+  // Do something with the module.
+});
 ```
+
+> **Note:** Dynamic import is permitted in the browser main thread, and in shared and dedicated workers.
+> However `import()` will throw if called in a service worker or worklet.
+
+<!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
 Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.
 
@@ -708,19 +711,26 @@ In this example we've only made changes to our [`index.html`](https://github.com
 Over in `main.js` we've grabbed a reference to each button using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
 
 ```js
-const squareBtn = document.querySelector('.square');
+const squareBtn = document.querySelector(".square");
 ```
 
 We then attach an event listener to each button so that when pressed, the relevant module is dynamically loaded and used to draw the shape:
 
 ```js
-squareBtn.addEventListener('click', () => {
-  import('./modules/square.js').then((Module) => {
-    const square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+squareBtn.addEventListener("click", () => {
+  import("./modules/square.js").then((Module) => {
+    const square1 = new Module.Square(
+      myCanvas.ctx,
+      myCanvas.listId,
+      50,
+      50,
+      100,
+      "blue",
+    );
     square1.draw();
     square1.reportArea();
     square1.reportPerimeter();
-  })
+  });
 });
 ```
 
@@ -761,8 +771,7 @@ Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-exa
 
 ```js
 // fetch request
-const colors = fetch('../data/colors.json')
-  .then((response) => response.json());
+const colors = fetch("../data/colors.json").then((response) => response.json());
 
 export default await colors;
 ```
@@ -774,10 +783,10 @@ We're using the keyword `await` before specifying the constant `colors` to expor
 Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) file:
 
 ```js
-import colors from './modules/getColors.js';
-import { Canvas } from './modules/canvas.js';
+import colors from "./modules/getColors.js";
+import { Canvas } from "./modules/canvas.js";
 
-const circleBtn = document.querySelector('.circle');
+const circleBtn = document.querySelector(".circle");
 
 // …
 ```
@@ -785,14 +794,140 @@ const circleBtn = document.querySelector('.circle');
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-const square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
+const square1 = new Module.Square(
+  myCanvas.ctx,
+  myCanvas.listId,
+  50,
+  50,
+  100,
+  colors.blue,
+);
 
-const circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
+const circle1 = new Module.Circle(
+  myCanvas.ctx,
+  myCanvas.listId,
+  75,
+  200,
+  100,
+  colors.green,
+);
 
-const triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
+const triangle1 = new Module.Triangle(
+  myCanvas.ctx,
+  myCanvas.listId,
+  100,
+  75,
+  190,
+  colors.yellow,
+);
 ```
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
+
+## Import declarations are hoisted
+
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+
+So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
+
+```js
+// …
+const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from "./modules/canvas.js";
+myCanvas.createReportList();
+// …
+```
+
+Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
+
+## Cyclic imports
+
+Modules can import other modules, and those modules can import other modules, and so on. This forms a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) called the "dependency graph". In an ideal world, this graph is [acyclic](https://en.wikipedia.org/wiki/Directed_acyclic_graph). In this case, the graph can be evaluated using a depth-first traversal.
+
+However, cycles are often inevitable. Cyclic import arises if module `a` imports module `b`, but `b` directly or indirectly depends on `a`. For example:
+
+```js
+// -- a.js --
+import { b } from "./b.js";
+
+// -- b.js --
+import { a } from "./a.js";
+
+// Cycle:
+// a.js ───> b.js
+//  ^         │
+//  └─────────┘
+```
+
+Cyclic imports don't always fail. The imported variable's value is only retrieved when the variable is actually used (hence allowing [live bindings](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter)), and only if the variable remains uninitialized at that time will a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) be thrown.
+
+```js
+// -- a.js --
+import { b } from "./b.js";
+
+setTimeout(() => {
+  console.log(b); // 1
+}, 10);
+
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+setTimeout(() => {
+  console.log(a); // 2
+}, 10);
+
+export const b = 1;
+```
+
+In this example, both `a` and `b` are used asynchronously. Therefore, at the time the module is evaluated, neither `b` nor `a` is actually read, so the rest of the code is executed as normal, and the two `export` declarations produce the values of `a` and `b`. Then, after the timeout, both `a` and `b` are available, so the two `console.log` statements also execute as normal.
+
+If you change the code to use `a` synchronously, the module evaluation fails:
+
+```js
+// -- a.js (entry module) --
+import { b } from "./b.js";
+
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+export const b = 1;
+```
+
+This is because when JavaScript evaluates `a.js`, it needs to first evaluate `b.js`, the dependency of `a.js`. However, `b.js` uses `a`, which is not yet available.
+
+On the other hand, if you change the code to use `b` synchronously but `a` asynchronously, the module evaluation succeeds:
+
+```js
+// -- a.js (entry module) --
+import { b } from "./b.js";
+
+console.log(b); // 1
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+setTimeout(() => {
+  console.log(a); // 2
+}, 10);
+export const b = 1;
+```
+
+This is because the evaluation of `b.js` completes normally, so the value of `b` is available when `a.js` is evaluated.
+
+You should usually avoid cyclic imports in your project, because they make your code more error-prone. Some common cycle-elimination techniques are:
+
+- Merge the two modules into one.
+- Move the shared code into a third module.
+- Move some code from one module to the other.
+
+However, cyclic imports can also occur if the libraries depend on each other, which is harder to fix.
 
 ## Authoring "isomorphic" modules
 
@@ -813,7 +948,7 @@ In order to maximize the reusability of a module, it is often advised to make th
     password = process.env.PASSWORD;
   } else if (typeof window !== "undefined") {
     // We are running in the browser; read it from the input box
-    password = document.getElementById('password').value;
+    password = document.getElementById("password").value;
   }
   ```
 
@@ -844,9 +979,9 @@ Here are a few tips that may help you if you are having trouble getting your mod
 
 ## See also
 
-- [Using JavaScript modules on the web](https://v8.dev/features/modules#mjs), by Addy Osmani and Mathias Bynens
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html), Book by Axel Rauschmayer
+- [JavaScript modules](https://v8.dev/features/modules) on v8.dev (2018)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

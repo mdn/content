@@ -2,29 +2,16 @@
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - Unicode
 browser-compat: javascript.builtins.String.charCodeAt
 ---
 
 {{JSRef}}
 
-The **`charCodeAt()`** method returns
-an integer between `0` and `65535` representing the UTF-16 code
-unit at the given index.
+The **`charCodeAt()`** method of {{jsxref("String")}} values returns an integer between `0` and `65535` representing the UTF-16 code unit at the given index.
+
+`charCodeAt()` always indexes the string as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters), so it may return lone surrogates. To get the full Unicode code point at the given index, use {{jsxref("String.prototype.codePointAt()")}}.
 
 {{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
-
-The UTF-16 code unit matches the Unicode code point for code points which can be
-represented in a single UTF-16 code unit. If the Unicode code point cannot be
-represented in a single UTF-16 code unit (because its value is greater than
-`0xFFFF`) then the code unit returned will be _the first part of a
-surrogate pair_ for the code point. If you want the entire code point value, use
-{{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}}.
 
 ## Syntax
 
@@ -35,43 +22,17 @@ charCodeAt(index)
 ### Parameters
 
 - `index`
-  - : An integer greater than or equal to `0` and less than the
-    `length` of the string. If `index` is not a number,
-    it defaults to `0`.
+  - : Zero-based index of the character to be returned. [Converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) — `undefined` is converted to 0.
 
 ### Return value
 
-A number representing the UTF-16 code unit value of the character at the given
-`index`. If `index` is out of range,
-`charCodeAt()` returns {{jsxref("Global_Objects/NaN", "NaN")}}.
+An integer between `0` and `65535` representing the UTF-16 code unit value of the character at the specified `index`. If `index` is out of range of `0` – `str.length - 1`, `charCodeAt()` returns {{jsxref("NaN")}}.
 
 ## Description
 
-Unicode code points range from `0` to `1114111`
-(`0x10FFFF`). The first 128 Unicode code points are a direct match of the
-ASCII character encoding. (For information on Unicode, see [UTF-16 characters, Unicode codepoints, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).)
+Characters in a string are indexed from left to right. The index of the first character is `0`, and the index of the last character in a string called `str` is `str.length - 1`.
 
-> **Note:** `charCodeAt()` will always return a value that is
-> less than `65536`. This is because the higher code points are represented
-> by _a pair_ of (lower valued) "surrogate" pseudo-characters which are used to
-> comprise the real character.
->
-> Because of this, in order to examine (or reproduce) the full character for individual
-> character values of `65536` or greater, for such characters, it is
-> necessary to retrieve not only `charCodeAt(i)`, but also
-> `charCodeAt(i+1)` (as if manipulating a string with two
-> letters), or to use `codePointAt(i)` instead. See examples 2 and
-> 3 (below).
-
-`charCodeAt()` returns {{jsxref("Global_Objects/NaN", "NaN")}} if the given
-index is less than `0`, or if it is equal to or greater than the
-`length` of the string.
-
-Backward compatibility: In historic versions (like JavaScript 1.2) the
-`charCodeAt()` method returns a number indicating the ISO-Latin-1 codeset
-value of the character at the given index. The ISO-Latin-1 codeset ranges from
-`0` to `255`. The first `0` to `127` are a
-direct match of the ASCII character set.
+Unicode code points range from `0` to `1114111` (`0x10FFFF`). `charCodeAt()` always returns a value that is less than `65536`, because the higher code points are represented by _a pair_ of 16-bit surrogate pseudo-characters. Therefore, in order to get a full character with value greater than `65535`, it is necessary to retrieve not only `charCodeAt(i)`, but also `charCodeAt(i + 1)` (as if manipulating a string with two characters), or to use {{jsxref("String/codePointAt", "codePointAt(i)")}} instead. For information on Unicode, see [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Examples
 
@@ -83,79 +44,42 @@ The following example returns `65`, the Unicode value for A.
 "ABC".charCodeAt(0); // returns 65
 ```
 
-### Fixing charCodeAt() to handle non-Basic-Multilingual-Plane characters if their presence earlier in the string is unknown
-
-This version might be used in for loops and the like when it is unknown whether non-BMP
-characters exist before the specified index position.
+`charCodeAt()` may return lone surrogates, which are not valid Unicode characters.
 
 ```js
-function fixedCharCodeAt(str, idx) {
-  // ex. fixedCharCodeAt('\uD800\uDC00', 0); // 65536
-  // ex. fixedCharCodeAt('\uD800\uDC00', 1); // false
-  idx = idx || 0;
-  const code = str.charCodeAt(idx);
-  let hi, low;
-
-  // High surrogate (could change last hex to 0xDB7F
-  // to treat high private surrogates
-  // as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    if (isNaN(low)) {
-      throw new Error(
-        "High surrogate not followed by low surrogate in fixedCharCodeAt()",
-      );
-    }
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-  }
-  if (0xdc00 <= code && code <= 0xdfff) {
-    // Low surrogate
-    // We return false to allow loops to skip
-    // this iteration since should have already handled
-    // high surrogate above in the previous iteration
-    return false;
-    // hi = str.charCodeAt(idx - 1);
-    // low = code;
-    // return ((hi - 0xD800) * 0x400) +
-    //   (low - 0xDC00) + 0x10000;
-  }
-  return code;
-}
+const str = "𠮷𠮾";
+console.log(str.charCodeAt(0)); // 55362, or d842, which is not a valid Unicode character
+console.log(str.charCodeAt(1)); // 57271, or dfb7, which is not a valid Unicode character
 ```
 
-### Fixing charCodeAt() to handle non-Basic-Multilingual-Plane characters if their presence earlier in the string is known
+To get the full Unicode code point at the given index, use {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-function knownCharCodeAt(str, idx) {
-  str += "";
-  const end = str.length;
+const str = "𠮷𠮾";
+console.log(str.codePointAt(0)); // 134071
+```
 
-  const surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) !== null) {
-    const li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
+> **Note:** Avoid re-implementing `codePointAt()` using `charCodeAt()`. The translation from UTF-16 surrogates to Unicode code points is complex, and `codePointAt()` may be more performant as it directly uses the internal representation of the string. Install a polyfill for `codePointAt()` if necessary.
 
-  if (idx >= end || idx < 0) {
-    return NaN;
-  }
+Below is a possible algorithm to convert a pair of UTF-16 code units into a Unicode code point, adapted from the [Unicode FAQ](https://unicode.org/faq/utf_bom.html#utf16-3):
 
-  const code = str.charCodeAt(idx);
+```js
+// constants
+const LEAD_OFFSET = 0xd800 - (0x10000 >> 10);
+const SURROGATE_OFFSET = 0x10000 - (0xd800 << 10) - 0xdc00;
 
-  if (0xd800 <= code && code <= 0xdbff) {
-    const hi = code;
-    const low = str.charCodeAt(idx + 1);
-    // Go one further, since one of the "characters"
-    // is part of a surrogate pair
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-  }
-  return code;
+function utf16ToUnicode(lead, trail) {
+  return (lead << 10) + trail + SURROGATE_OFFSET;
 }
+function unicodeToUTF16(codePoint) {
+  const lead = LEAD_OFFSET + (codePoint >> 10);
+  const trail = 0xdc00 + (codePoint & 0x3ff);
+  return [lead, trail];
+}
+
+const str = "𠮷";
+console.log(utf16ToUnicode(str.charCodeAt(0), str.charCodeAt(1))); // 134071
+console.log(str.codePointAt(0)); // 134071
 ```
 
 ## Specifications

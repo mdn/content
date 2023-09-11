@@ -1,20 +1,10 @@
 ---
-title: MediaSession.setMicrophoneActive()
+title: "MediaSession: setMicrophoneActive() method"
+short-title: setMicrophoneActive()
 slug: Web/API/MediaSession/setMicrophoneActive
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Reference
-  - UX
-  - Video
-  - setActionHandler
-  - setMicrophoneActive
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaSession.setMicrophoneActive
 ---
 
@@ -45,14 +35,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 Below is an example of updating the microphone mute state of the current
-{{domxref('MediaSession')}}, as well as listening to requests to change the mute status with {{domxref("navigator.mediaSession.setActionHandler", "setActionHandler")}}.
+{{domxref('MediaSession')}}, as well as listening to requests to change the mute status with {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}.
 
 ```js
 let microphoneActive = false;
 
 navigator.mediaSession.setMicrophoneActive(microphoneActive);
 
-navigator.mediaSession.setActionHandler('togglemicrophone', () => {
+navigator.mediaSession.setActionHandler("togglemicrophone", () => {
   microphoneActive = !microphoneActive;
   navigator.mediaSession.setMicrophoneActive(microphoneActive);
 });

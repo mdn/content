@@ -2,14 +2,6 @@
 title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-right
 browser-compat: css.properties.scroll-padding-right
 ---
 
@@ -63,5 +55,5 @@ scroll-padding-right: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

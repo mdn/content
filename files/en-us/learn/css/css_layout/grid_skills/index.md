@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: Grid'
+title: "Test your skills: Grid"
 slug: Learn/CSS/CSS_layout/Grid_skills
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Grid
-  - Layout
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

@@ -1,20 +1,8 @@
 ---
-title: RTCPeerConnection.restartIce()
+title: "RTCPeerConnection: restartIce() method"
+short-title: restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - ICE Restarts
-  - Media
-  - Method
-  - Negotiation
-  - RTCPeerConnection
-  - Reference
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - restartIce
 browser-compat: api.RTCPeerConnection.restartIce
 ---
 
@@ -70,7 +58,7 @@ resets ICE so that it creates all new candidates using new credentials. Existing
 transmissions continue uninterrupted during this process.
 
 For details about how ICE restart works, see
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} and
+[ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) and
 {{RFC(5245, "ICE specification", "9.1.1.1")}}.
 
 ## Examples

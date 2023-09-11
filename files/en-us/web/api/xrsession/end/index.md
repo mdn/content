@@ -1,20 +1,10 @@
 ---
-title: XRSession.end()
+title: "XRSession: end() method"
+short-title: end()
 slug: Web/API/XRSession/end
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - end()
+status:
+  - experimental
 browser-compat: api.XRSession.end
 ---
 

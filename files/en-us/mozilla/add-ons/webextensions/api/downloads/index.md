@@ -1,15 +1,7 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
+page-type: webextension-api
 browser-compat: webextensions.api.downloads
 ---
 

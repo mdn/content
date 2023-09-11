@@ -1,14 +1,10 @@
 ---
-title: AudioData.allocationSize()
+title: "AudioData: allocationSize() method"
+short-title: allocationSize()
 slug: Web/API/AudioData/allocationSize
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - allocationSize
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.allocationSize
 ---
 

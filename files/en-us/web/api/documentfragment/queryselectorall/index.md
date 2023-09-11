@@ -1,13 +1,8 @@
 ---
-title: DocumentFragment.querySelectorAll()
+title: "DocumentFragment: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Method
-  - Reference
 browser-compat: api.DocumentFragment.querySelectorAll
 ---
 
@@ -46,7 +41,7 @@ This example returns a list of all `div` elements within the
 "`alert`":
 
 ```js
-const matches = documentfrag.querySelectorAll('div.note, div.alert');
+const matches = documentfrag.querySelectorAll("div.note, div.alert");
 ```
 
 ## Specifications

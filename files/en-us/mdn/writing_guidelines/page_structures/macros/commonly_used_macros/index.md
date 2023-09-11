@@ -2,9 +2,6 @@
 title: Commonly-used macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -18,7 +15,7 @@ See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Oth
 
 MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
 
-Link macros are recommended over normal HTML links because they are succinct and translation-friendly.
+Link macros are recommended over normal Markdown links because they are succinct and translation-friendly.
 For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
 ### Glossary links
@@ -78,20 +75,6 @@ Most macros will also take a second argument allowing you to change the display 
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attribute description</a>
-        if you only specify the attribute name.<br />Attribute associated with a specific HTML element if you specify an attribute name and an element name.
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}} </code>links to the global attribute description {{HTMLAttrxRef("lang")}}.<br />
-        <code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).
       </td>
     </tr>
     <tr>
@@ -163,15 +146,6 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
   </tbody>
 </table>
-
-### Linking to bugs
-
-- Bugs
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\{{Bug(123456)}}`.
-    This gives you: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
-    For example, `\{{WebkitBug(31277)}}` inserts {{WebkitBug(31277)}}.
 
 ### Navigation aids for multi-page guides
 

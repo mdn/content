@@ -2,10 +2,8 @@
 title: xml:lang
 slug: Web/SVG/Attribute/xml:lang
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.attributes.core.xml_lang
 ---
 

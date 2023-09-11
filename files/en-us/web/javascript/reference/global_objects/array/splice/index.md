@@ -2,22 +2,15 @@
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - remove
-  - replace
-  - splice
 browser-compat: javascript.builtins.Array.splice
 ---
 
 {{JSRef}}
 
-The **`splice()`** method changes the contents of an array by
-removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm). To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
+The **`splice()`** method of {{jsxref("Array")}} instances changes the contents of an array by
+removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
+
+To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
@@ -27,7 +20,8 @@ removing or replacing existing elements and/or adding new elements [in place](ht
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2, itemN)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 ### Parameters
@@ -36,8 +30,9 @@ splice(start, deleteCount, item1, item2, itemN)
 
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
-    - If `start < -array.length` or `start` is omitted, `0` is used.
+    - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
+    - If `start` is omitted (and `splice()` is called with no arguments), nothing is deleted. This is different from passing `undefined`, which is converted to `0`.
 
 - `deleteCount` {{optional_inline}}
 
@@ -189,6 +184,12 @@ console.log(arrayLike);
 
 ## See also
 
-- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}}— add/remove elements from the end of the array
-- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}}— add/remove elements from the beginning of the array
-- {{jsxref("Array.prototype.concat()", "concat()")}}— returns a new array comprised of this array joined with other array(s) and/or value(s)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.slice()")}}
+- {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.unshift()")}}

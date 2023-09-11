@@ -2,20 +2,12 @@
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - "Null"
-  - Object
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Object.create
 ---
 
 {{JSRef}}
 
-The **`Object.create()`** method creates a new object, using an existing object as the prototype of the newly created object.
+The **`Object.create()`** static method creates a new object, using an existing object as the prototype of the newly created object.
 
 {{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
 
@@ -191,4 +183,4 @@ Of course, if there is actual initialization code in the `Constructor` function,
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Reflect.construct()")}}
-- John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)
+- [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) by John Resig (2008)

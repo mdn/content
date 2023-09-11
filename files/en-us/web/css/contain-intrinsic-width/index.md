@@ -2,17 +2,12 @@
 title: contain-intrinsic-width
 slug: Web/CSS/contain-intrinsic-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - contain-intrinsic-width
 browser-compat: css.properties.contain-intrinsic-width
 ---
 
 {{CSSRef}}
 
-The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment).
 
 ## Syntax
 

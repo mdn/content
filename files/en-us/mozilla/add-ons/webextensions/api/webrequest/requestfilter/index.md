@@ -1,16 +1,7 @@
 ---
 title: webRequest.RequestFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RequestFilter
-  - Type
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.RequestFilter
 ---
 

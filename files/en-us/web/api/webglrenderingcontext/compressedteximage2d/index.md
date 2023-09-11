@@ -1,15 +1,8 @@
 ---
-title: WebGLRenderingContext.compressedTexImage[23]D()
+title: "WebGLRenderingContext: compressedTexImage[23]D() method"
+short-title: compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGL extension
-  - WebGLRenderingContext
 browser-compat:
   - api.WebGLRenderingContext.compressedTexImage2D
   - api.WebGL2RenderingContext.compressedTexImage3D
@@ -178,15 +171,22 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = (
-  gl.getExtension('WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
-);
+const ext =
+  gl.getExtension("WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("MOZ_WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("WEBKIT_WEBGL_compressed_texture_s3tc");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGBA_S3TC_DXT5_EXT,
+  512,
+  512,
+  0,
+  textureData,
+);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 ```

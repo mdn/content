@@ -2,12 +2,6 @@
 title: ":modal"
 slug: Web/CSS/:modal
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Modal
-  - Pseudo-class
-  - Reference
-  - Selector
 browser-compat: css.selectors.modal
 ---
 
@@ -15,10 +9,14 @@ browser-compat: css.selectors.modal
 
 The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed. Multiple elements can be selected by the `:modal` pseudo-class at the same time, but only one of them will be active and able to receive input.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-modal.html", "tabbed-shorter")}}
+
 ## Syntax
 
-```
-:modal
+```css
+:modal {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -39,7 +37,8 @@ This example styles a modal dialog that opens when the "Update details" button i
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label>Favorite animal:
+      <label
+        >Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -88,8 +87,7 @@ updateButton.addEventListener("click", () => {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    outputBox.value =
-      "Sorry, the dialog API is not supported by this browser.";
+    outputBox.value = "Sorry, the dialog API is not supported by this browser.";
   }
 });
 // "Favorite animal" input sets the value of the submit button

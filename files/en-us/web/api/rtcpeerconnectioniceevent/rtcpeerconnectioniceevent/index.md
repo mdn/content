@@ -1,13 +1,8 @@
 ---
-title: RTCPeerConnectionIceEvent()
+title: "RTCPeerConnectionIceEvent: RTCPeerConnectionIceEvent() constructor"
+short-title: RTCPeerConnectionIceEvent()
 slug: Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnectionIceEvent
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 ---
 

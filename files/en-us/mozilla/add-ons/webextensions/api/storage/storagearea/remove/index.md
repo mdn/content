@@ -1,17 +1,7 @@
 ---
 title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.remove
 ---
 

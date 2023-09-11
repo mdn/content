@@ -2,9 +2,6 @@
 title: Selection API
 slug: Web/API/Selection_API
 page-type: web-api-overview
-tags:
-  - API
-  - Selection
 spec-urls: https://w3c.github.io/selection-api/#selection-interface
 ---
 

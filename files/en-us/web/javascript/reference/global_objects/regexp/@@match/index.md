@@ -2,20 +2,12 @@
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@match
 ---
 
 {{JSRef}}
 
-The **`[@@match]()`** method of a regular expression specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
+The **`[@@match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
@@ -71,7 +63,7 @@ When the regex is sticky and global, it would still perform sticky matches — i
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
 ```
 
-If the current match is an empty string, the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
+If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
 
 ```js
 console.log("😄".match(/(?:)/g)); // [ '', '', '' ]
@@ -132,8 +124,10 @@ console.log(result.group(3)); // 02
 
 - [Polyfill of `RegExp.prototype[@@match]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.match")}}

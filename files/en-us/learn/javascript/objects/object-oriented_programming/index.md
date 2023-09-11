@@ -1,9 +1,7 @@
 ---
 title: Object-oriented programming
 slug: Learn/JavaScript/Objects/Object-oriented_programming
-tags:
-  - JavaScript
-  - Learn
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
@@ -49,7 +47,7 @@ So `Professor` could be a **class** in our system. The definition of the class l
 
 In pseudocode, a `Professor` class could be written like this:
 
-```
+```plain
 class Professor
     properties
         name
@@ -68,7 +66,7 @@ On its own, a class doesn't do anything: it's a kind of template for creating co
 
 Generally, the constructor is written out as part of the class definition, and it usually has the same name as the class itself:
 
-```
+```plain
 class Professor
     properties
         name
@@ -103,7 +101,7 @@ Suppose in our school we also want to represent students. Unlike professors, stu
 
 However, students do have a name and may also want to introduce themselves, so we might write out the definition of a student class like this:
 
-```
+```plain
 class Student
     properties
         name
@@ -118,7 +116,7 @@ It would be helpful if we could represent the fact that students and professors 
 
 We start by observing that students and professors are both people, and people have names and want to introduce themselves. We can model this by defining a new class `Person`, where we define all the common properties of people. Then, `Professor` and `Student` can both **derive** from `Person`, adding their extra properties:
 
-```
+```plain
 class Person
     properties
         name
@@ -182,12 +180,12 @@ if (student.year > 1) {
 
 The problem is, if we decide to change the criteria for allowing students to study archery - for example by also requiring the parent or guardian to give their permission - we'd need to update every place in our system that performs this test. It would be better to have a `canStudyArchery()` method on `Student` objects, that implements the logic in one place:
 
-```
+```plain
 class Student : extends Person
     properties
        year
     constructor
-        Student(name, year)
+       Student(name, year)
     methods
        introduceSelf()
        canStudyArchery() { return this.year > 1 }
@@ -203,7 +201,7 @@ That way, if we want to change the rules about studying archery, we only have to
 
 In many OOP languages, we can prevent other code from accessing an object's internal state by marking some properties as `private`. This will generate an error if code outside the object tries to access them:
 
-```
+```plain
 class Student : extends Person
     properties
        private year
@@ -244,13 +242,3 @@ This article has described the basic features of class-based object oriented pro
 In the next article, we'll look at the features JavaScript provides to support class-based object-oriented programming.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- **Object-oriented programming concepts**
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

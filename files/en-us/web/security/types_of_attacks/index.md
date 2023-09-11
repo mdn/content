@@ -1,6 +1,7 @@
 ---
 title: Types of attacks
 slug: Web/Security/Types_of_attacks
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -50,14 +51,16 @@ Now, if you are logged into your bank account and your cookies are still valid (
   <input type="hidden" name="for" value="mallory" />
 </form>
 <script>
-  window.addEventListener('DOMContentLoaded', () => { document.querySelector('form').submit(); }
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("form").submit();
+  });
 </script>
 ```
 
 There are a few techniques that should be used to prevent this from happening:
 
 - GET endpoints should be idempotent—actions that enact a change and do not retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.
-- A CSRF token should be included in \<form> elements via a hidden input field. This token should be unique per user and stored (for example, in a cookie) such that the server can look up the expected value when the request is sent. For all non-GET requests that have the potential to perform an action, this input field should be compared against the expected value. If there is a mismatch, the request should be aborted.
+- A session-unique CSRF token should be provided by the server to the browser. This token can then be included whenever a form is posted by the browser (in a hidden input field in the `<form>` element). For all non-GET requests that have the potential to perform an action, the server compares the sent token against its stored value for the session. If there is a mismatch, the request is aborted.
 - This method of protection relies on an attacker being unable to predict the user's assigned CSRF token. The token should be regenerated on sign-in.
 - Cookies that are used for sensitive actions (such as session cookies) should have a short lifetime with the SameSite attribute set to Strict or Lax. (See SameSite cookies above). In supporting browsers, this will have the effect of ensuring that the session cookie is not sent along with cross-site requests and so the request is effectively unauthenticated to the application server.
 - Both CSRF tokens and SameSite cookies should be deployed. This ensures all browsers are protected and provides protection where SameSite cookies cannot help (such as attacks originating from a separate subdomain).

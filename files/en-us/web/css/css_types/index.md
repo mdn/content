@@ -2,17 +2,6 @@
 title: CSS data types
 slug: Web/CSS/CSS_Types
 page-type: guide
-tags:
-  - CSS
-  - CSS Data Type
-  - Guide
-  - Index
-  - Overview
-  - Reference
-  - Syntax
-  - Types
-  - data types
-  - list
 spec-urls: https://drafts.csswg.org/css-values/
 ---
 
@@ -39,17 +28,21 @@ In formal CSS syntax, data types are denoted by a keyword placed between the ine
 These types include keywords and identifiers as well as strings, and URLs.
 
 - Pre-defined keywords
-  - : Keywords with a pre-defined meaning, for example the value of `collapse` for the {{cssxref("border-collapse")}} property.
-- CSS-wide keyword: `initial`
-  - : The value specified as the property's initial value.
-- CSS-wide keyword: `inherit`
-  - : The computed value of the property on the element's parent.
-- CSS-wide keyword: `unset`
-  - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
+  - : Keywords with a pre-defined meaning, for example, the value of `collapse` for the {{cssxref("border-collapse")}} property.
+- CSS-wide keywords
+  - : All properties, including custom properties, accept the CSS-wide keywords:
+    - {{CSSXref("initial")}}
+      - : The value specified as the property's initial value.
+    - {{CSSXref("inherit")}}
+      - : The computed value of the property on the element's parent.
+    - {{CSSXref("revert")}}
+      - : Rolls back the cascade to the value of the earlier origin.
+    - {{CSSXref("unset")}}
+      - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : A user-defined identifier, for example the name assigned using the {{cssxref("grid-area")}} property.
 - {{cssxref("&lt;dashed-ident&gt;")}}
-  - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example with [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+  - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example, with [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
 - {{cssxref("&lt;string&gt;")}}
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property.
 - {{cssxref("&lt;url&gt;", "url()")}}
@@ -70,7 +63,7 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 - {{cssxref("&lt;ratio&gt;")}}
   - : A ratio, written with the syntax `<number> / <number>`.
 - {{cssxref("&lt;flex&gt;")}}
-  - : A flexible length introduced for [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), written as a `<number>` with the `fr` unit attached and used for grid track sizing.
+  - : A flexible length introduced for [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout), written as a `<number>` with the `fr` unit attached and used for grid track sizing.
 
 ## Quantities
 
@@ -102,12 +95,14 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-[The CSS Color Specification](https://www.w3.org/TR/css-color-3/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+[The CSS Color Specification](https://www.w3.org/TR/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
 - {{cssxref("&lt;alpha-value&gt;")}}
   - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
+- {{cssxref("&lt;hue&gt;")}}
+  - : Specifies the `<angle>`, with a unit identifier of `deg`, `grad`, `rad`, or `turn`, or unitless `<number>` interpreted as `deg`, of the {{glossary("color wheel")}} specific to the `<absolute-color-functions>` of which it is a component.
 
 ## Images
 

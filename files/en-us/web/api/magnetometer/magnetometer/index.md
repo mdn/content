@@ -1,17 +1,10 @@
 ---
-title: Magnetometer()
+title: "Magnetometer: Magnetometer() constructor"
+short-title: Magnetometer()
 slug: Web/API/Magnetometer/Magnetometer
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Generic Sensor API
-  - Magnetometer
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
 

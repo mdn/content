@@ -2,16 +2,8 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Landing
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - Video
-  - streaming
+status:
+  - experimental
 spec-urls: https://w3c.github.io/media-source/
 ---
 
@@ -62,7 +54,7 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
 
 ## Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : Creates an object URL pointing to a `MediaSource` object that can then be specified as the `src` value of an HTML media element to play a media stream.
 - {{domxref("HTMLMediaElement.seekable")}}
   - : When a `MediaSource` object is played by an HTML media element, this property will return a {{domxref("TimeRanges")}} object that contains the time ranges that the user is able to seek to.

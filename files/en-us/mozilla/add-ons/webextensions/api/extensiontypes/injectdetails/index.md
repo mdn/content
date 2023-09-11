@@ -1,16 +1,7 @@
 ---
 title: extensionTypes.InjectDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/InjectDetails
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - InjectDetails
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - extensionTypes
+page-type: webextension-api-type
 ---
 
 {{AddonSidebar}}

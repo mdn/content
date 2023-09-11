@@ -2,59 +2,35 @@
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.findLastIndex
 ---
 
 {{JSRef}}
 
-The **`findLastIndex()`** method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
+The **`findLastIndex()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
-
 See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
+
+{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLastIndex((element) => { /* … */ })
-findLastIndex((element, index) => { /* … */ })
-findLastIndex((element, index, array) => { /* … */ })
-
-// Callback function
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
-
-// Inline callback function
-findLastIndex(function (element) { /* … */ })
-findLastIndex(function (element, index) { /* … */ })
-findLastIndex(function (element, index, array) { /* … */ })
-findLastIndex(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `findLastIndex()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -112,7 +88,7 @@ console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 
 ### Calling findLastIndex() on non-array objects
 
-The `findLastIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLastIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -120,6 +96,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLastIndex() since length is 3
 };
 console.log(
   Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
@@ -137,6 +114,10 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLast()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}

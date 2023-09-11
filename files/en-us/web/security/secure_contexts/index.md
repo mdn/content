@@ -1,9 +1,7 @@
 ---
 title: Secure contexts
 slug: Web/Security/Secure_Contexts
-tags:
-  - Secure contexts
-  - Security
+page-type: guide
 spec-urls: https://w3c.github.io/webappsec-secure-contexts/
 ---
 

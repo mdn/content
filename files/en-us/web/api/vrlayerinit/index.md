@@ -2,16 +2,8 @@
 title: VRLayerInit
 slug: Web/API/VRLayerInit
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -38,17 +30,17 @@ You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}
 let layers = vrDisplay.getLayers();
 
 if (navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
     if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', () => {
+      btn.addEventListener("click", () => {
         vrDisplay.requestPresent([{ source: canvas }]).then(() => {
-          console.log('Presenting to WebVR display');
+          console.log("Presenting to WebVR display");
 
           // Here it returns an array of VRLayerInit objects
           layers = vrDisplay.getLayers();
@@ -63,10 +55,10 @@ if (navigator.getVRDisplays) {
 
 {{domxref("VRLayerInit")}} objects look something like this:
 
-```
+```js
 {
-  leftBounds : [ /* … */ ],
-  rightBounds: [ /* … */ ],
+  leftBounds : [/* … */],
+  rightBounds: [/* … */],
   source: canvasReference
 }
 ```

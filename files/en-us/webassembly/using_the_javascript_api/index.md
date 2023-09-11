@@ -1,34 +1,25 @@
 ---
 title: Using the WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - DevTools
-  - JavaScript
-  - WebAssembly
-  - compile
-  - instantiate
-  - memory
-  - table
 ---
 
 {{WebAssemblySidebar}}
 
-If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/C_to_wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
+If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/C_to_Wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
 
 > **Note:** If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts) first, then come back.
 
 ## Some simple examples
 
-Let's run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a wasm module in a web page.
+Let's run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a Wasm module in a web page.
 
 > **Note:** You can find the sample code in our [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo.
 
 ### Preparing the example
 
-1. First we need a wasm module! Grab our [`simple.wasm`](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
-2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
-3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
+1. First we need a Wasm module! Grab our [`simple.wasm`](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
+2. Next, let's create a simple HTML file called `index.html` in the same directory as your Wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
+3. Now, to help us understand what is going on here, let's look at the text representation of our Wasm module (which we also meet in [Converting WebAssembly format to Wasm](/en-US/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)):
 
    ```wasm
    (module
@@ -38,7 +29,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
        call $i))
    ```
 
-4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
+4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the Wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
 
    ```js
    const importObject = {
@@ -50,13 +41,13 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
 New in Firefox 58 is the ability to compile and instantiate WebAssembly modules directly from underlying sources. This is achieved using the [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) and [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) methods. These methods are easier than their non-streaming counterparts, because they can turn the byte code directly into `Module`/`Instance` instances, cutting out the need to separately put the {{domxref("Response")}} into an {{jsxref("ArrayBuffer")}}.
 
-This example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) shows how to use `instantiateStreaming()` to fetch a wasm module, import a JavaScript function into it, compile and instantiate it, and access its exported function — all in one step.
+This example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) shows how to use `instantiateStreaming()` to fetch a Wasm module, import a JavaScript function into it, compile and instantiate it, and access its exported function — all in one step.
 
 Add the following to your script, below the first block:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 
@@ -64,11 +55,11 @@ The net result of this is that we call our exported WebAssembly function `export
 
 > **Note:** This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we've said elsewhere, WebAssembly doesn't aim to replace JavaScript; the two instead can work together, drawing on each other's strengths.
 
-### Loading our wasm module without streaming
+### Loading our Wasm module without streaming
 
 If you can't or don't want to use the streaming methods as described above, you can use the non-streaming methods [`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile) / [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) instead.
 
-These methods don't directly access the byte code, so require an extra step to turn the response into an {{jsxref("ArrayBuffer")}} before compiling/instantiating the wasm module.
+These methods don't directly access the byte code, so require an extra step to turn the response into an {{jsxref("ArrayBuffer")}} before compiling/instantiating the Wasm module.
 
 The equivalent code would look like this:
 
@@ -81,13 +72,13 @@ fetch("simple.wasm")
   });
 ```
 
-### Viewing wasm in developer tools
+### Viewing Wasm in developer tools
 
-In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the "wasm://" entry.
+In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any Wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the "wasm://" entry.
 
 ![Developer tools debugger panel highlighting a module.](wasm-debug.png)
 
-In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
+In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format.
 
 ## Memory
 
@@ -144,7 +135,7 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
    > **Note:** You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
-2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
+2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your Wasm module as before — add the following to the bottom of your script:
 
    ```js
    WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
@@ -186,7 +177,7 @@ Function references are necessary to compile languages like C/C++ that have func
 
 When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference. Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
 
-Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) in JavaScript, and to wasm modules.
+Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) in JavaScript, and to Wasm modules.
 
 ### A table example
 
@@ -197,7 +188,7 @@ Let's look at a simple table example — a WebAssembly module that creates and e
    > **Note:** You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
-3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
+3. As before, fetch, compile, and instantiate your Wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
 
    ```js
    WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
@@ -260,17 +251,17 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq(
       "getting initial value from wasm",
       instance.exports.getGlobal(),
-      0
+      0,
     );
     global.value = 42;
     assertEq(
       "getting JS-updated value from wasm",
       instance.exports.getGlobal(),
-      42
+      42,
     );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-  }
+  },
 );
 ```
 

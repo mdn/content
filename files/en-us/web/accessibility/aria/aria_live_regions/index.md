@@ -1,10 +1,7 @@
 ---
 title: ARIA live regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-tags:
-  - ARIA
-  - Accessibility
-  - ariaLive
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -14,7 +11,7 @@ tags:
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
     <li class="toggle">
       <details><summary>ARIA states and properties</summary>
@@ -118,7 +115,7 @@ function renderPlanetInfo(planet) {
 }
 
 const renderPlanetInfoButton = document.querySelector(
-  "#renderPlanetInfoButton"
+  "#renderPlanetInfoButton",
 );
 
 renderPlanetInfoButton.addEventListener("click", (event) => {
@@ -173,12 +170,12 @@ Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>marquee</td>
-   <td>for text which scrolls, such as a stock ticker.</td>
+   <td>Text which scrolls, such as a stock ticker.</td>
    <td></td>
   </tr>
   <tr>
    <td>timer</td>
-   <td>or any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
+   <td>Any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
    <td></td>
   </tr>
  </tbody>
@@ -268,7 +265,7 @@ As an example, consider a chat site that wants to display a list of users curren
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add and remove users here -->
 </ul>
 ```
 

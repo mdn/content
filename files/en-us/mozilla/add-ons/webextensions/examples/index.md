@@ -1,9 +1,7 @@
 ---
 title: Example extensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
-tags:
-  - Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -14,14 +12,15 @@ These examples work in Firefox Nightly: most work in earlier versions of Firefox
 
 > **Warning:** Some examples work only on specific domains or pages. Details of any restrictions are provided in each example's readme file. None of the examples work in private browsing windows by default, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows) for details.
 
-To try these examples, clone the repository then:
+To try these examples, clone the repository, then install and run the extension using one of these options:
 
-1. load the extension from its source folder using the [Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) feature. The extension stays loaded until you restart Firefox.
-2. open the extension's source folder at the command-line and use [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) to run the extension. The extension stays loaded until you restart Firefox.
-3. in Firefox use **File** > **Open File** and find the example in the [`build`](https://github.com/mdn/webextensions-examples/tree/master/build) folder. The `build` folder contains built and signed versions of all the examples. This permanently installs the example.
+- use the [Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) feature and open the extension from its source folder.
+- install [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/), open the extension's source folder at the command line, and use `web-ext run`.
 
-> **Warning:** Please do not submit these WebExtension examples to addons.mozilla.org (AMO); you do not have to sign the add-on WebExtension examples to run them. Follow the steps above.
+The extension stays loaded until you restart Firefox.
 
-If you want to contribute to the repository, [send us a pull request.](https://github.com/mdn/webextensions-examples/blob/master/CONTRIBUTING.md)
+> **Warning:** Please do not submit these WebExtension examples to addons.mozilla.org (AMO); you do not have to sign the add-on WebExtension examples to run them.
+
+If you want to contribute to the repository, [send us a pull request.](https://github.com/mdn/webextensions-examples/blob/main/CONTRIBUTING.md)
 
 {{WebExtAllExamples}}

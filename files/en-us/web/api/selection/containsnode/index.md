@@ -1,13 +1,8 @@
 ---
-title: Selection.containsNode()
+title: "Selection: containsNode() method"
+short-title: containsNode()
 slug: Web/API/Selection/containsNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.containsNode
 ---
 
@@ -36,7 +31,7 @@ containsNode(node, partialContainment)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns `true` if the given node is part of the selection, and `false` otherwise.
 
 ## Examples
 
@@ -68,15 +63,15 @@ In this example, a message appears when you select the secret word. It uses
 #### JavaScript
 
 ```js
-const secret = document.getElementById('secret');
-const win = document.getElementById('win');
+const secret = document.getElementById("secret");
+const win = document.getElementById("win");
 
 // Listen for selection changes
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   const selection = window.getSelection();
   const found = selection.containsNode(secret);
 
-  win.toggleAttribute('hidden', !found);
+  win.toggleAttribute("hidden", !found);
 });
 ```
 

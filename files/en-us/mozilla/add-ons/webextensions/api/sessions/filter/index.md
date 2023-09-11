@@ -1,16 +1,7 @@
 ---
 title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - filter
-  - sessions
+page-type: webextension-api-type
 browser-compat: webextensions.api.sessions.Filter
 ---
 

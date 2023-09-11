@@ -2,12 +2,6 @@
 title: Grid wrapper
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - cookbook
-  - recipes
 browser-compat: css.properties.grid-template-columns
 ---
 
@@ -68,7 +62,7 @@ This gives a good approximation of the layout, only without the benefit of being
 
 ## Accessibility concerns
 
-Although Grid enables us to position items anywhere (within reason), it is important when placing items using CSS Grid that your underlying markup follows a logical order (see [CSS Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) for more details).
+Although Grid enables us to position items anywhere (within reason), it is important when placing items using CSS Grid that your underlying markup follows a logical order (see [CSS Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) for more details).
 
 ## Browser compatibility
 
@@ -77,6 +71,6 @@ Although Grid enables us to position items anywhere (within reason), it is impor
 ## See also
 
 - {{Cssxref("grid-template-columns")}}
-- [CSS Grid Layout on MDN](/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS Grid Layout on MDN](/en-US/docs/Web/CSS/CSS_grid_layout)
 - Article: [CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/)
 - Article: [Breaking Out with CSS Grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

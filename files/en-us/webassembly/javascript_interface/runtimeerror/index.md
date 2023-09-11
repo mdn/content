@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.RuntimeError
 slug: WebAssembly/JavaScript_interface/RuntimeError
-tags:
-  - API
-  - Class
-  - JavaScript
-  - Reference
-  - RuntimeError
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.RuntimeError
 ---
 

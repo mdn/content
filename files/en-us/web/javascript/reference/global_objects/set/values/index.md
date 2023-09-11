@@ -2,25 +2,12 @@
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
 browser-compat: javascript.builtins.Set.values
 ---
 
 {{JSRef}}
 
-The **`values()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
-contains the values for each element in the `Set` object in insertion order.
-
-> **Note:** The **`keys()`** method is an alias
-> for this method (for similarity with {{jsxref("Map")}} objects), hence the
-> `keys()` page redirecting here. It behaves exactly the same and returns
-> **values** of `Set` elements.
+The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this set in insertion order.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
@@ -30,10 +17,13 @@ contains the values for each element in the `Set` object in insertion order.
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterator object containing the values for each element in the given
-`Set`, in insertion order.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 

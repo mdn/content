@@ -2,10 +2,8 @@
 title: arabic-form
 slug: Web/SVG/Attribute/arabic-form
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.glyph.arabic-form
 ---
 

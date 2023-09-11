@@ -1,13 +1,8 @@
 ---
-title: File.lastModified
+title: "File: lastModified property"
+short-title: lastModified
 slug: Web/API/File/lastModified
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.lastModified
 ---
 
@@ -43,19 +38,21 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
     const date = new Date(file.lastModified);
     // true if the file hasn't been modified for more than 1 year
     const stale = now.getTime() - file.lastModified > 31_536_000_000;
-    output.textContent += `${file.name} is ${stale ? 'stale' : 'fresh'} (${date}).\n`;
+    output.textContent += `${file.name} is ${
+      stale ? "stale" : "fresh"
+    } (${date}).\n`;
   }
 });
 ```
@@ -72,18 +69,18 @@ If a File is created dynamically, the last modified time can be supplied in the
 moment the `File` object gets created.
 
 ```js
-const fileWithDate = new File([], 'file.bin', {
+const fileWithDate = new File([], "file.bin", {
   lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); // returns 1485903600000
 
-const fileWithoutDate = new File([], 'file.bin');
+const fileWithoutDate = new File([], "file.bin");
 console.log(fileWithoutDate.lastModified); // returns current time
 ```
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `someFile.lastModified` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.

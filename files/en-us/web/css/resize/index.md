@@ -2,12 +2,6 @@
 title: resize
 slug: Web/CSS/resize
 page-type: css-property
-tags:
-  - Basic User Interface
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.resize
 ---
 

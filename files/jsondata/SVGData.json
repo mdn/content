@@ -11,7 +11,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -47,57 +46,6 @@
       ],
       "interfaces": ["SVGAElement"]
     },
-    "altGlyph": {
-      "categories": ["textContentElement", "textContentChildElement"],
-      "content": {
-        "description": "anyElementsOrCharacterData"
-      },
-      "attributes": [
-        "conditionalProcessingAttributes",
-        "coreAttributes",
-        "graphicalEventAttributes",
-        "presentationAttributes",
-        "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'x'",
-        "'y'",
-        "'dx'",
-        "'dy'",
-        "'rotate'",
-        "'glyphRef'",
-        "'format'",
-        "'xlink:href'"
-      ],
-      "interfaces": ["SVGAltGlyphElement"]
-    },
-    "altGlyphDef": {
-      "categories": ["textContentElement"],
-      "content": {
-        "description": {
-          "en-US": "Either:<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements, or<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a> elements",
-          "fr": "L'un ou l'autre:<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
-          "pt-BR": "Ambos:<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
-          "zh-CN": "\u4e24\u8005\u4e4b\u4e00\uff1a<br>\n    \u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20\uff0c\u6216\u8005\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/altGlyphItem\" title=\"\u6b64\u9875\u9762\u4ecd\u672a\u88ab\u672c\u5730\u5316, \u671f\u5f85\u60a8\u7684\u7ffb\u8bd1!\"><code>&lt;altGlyphItem&gt;</code></a>\u5143\u7d20"
-        }
-      },
-      "attributes": ["coreAttributes"],
-      "interfaces": ["SVGAltGlyphDefElement"]
-    },
-    "altGlyphItem": {
-      "categories": ["textContentElement"],
-      "content": {
-        "description": {
-          "en-US": "One or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements",
-          "fr": "un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
-          "pt-BR": "Um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
-          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20"
-        }
-      },
-      "attributes": ["coreAttributes"],
-      "interfaces": ["SVGAltGlyphItemElement"]
-    },
     "animate": {
       "categories": ["animationElement"],
       "content": {
@@ -122,28 +70,6 @@
         "'repeatCount'"
       ],
       "interfaces": ["SVGAnimateElement"]
-    },
-    "animateColor": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
-      },
-      "attributes": [
-        "conditionalProcessingAttributes",
-        "coreAttributes",
-        "animationEventAttributes",
-        "xLinkAttributes",
-        "animationAttributeTargetAttributes",
-        "animationTimingAttributes",
-        "animationValueAttributes",
-        "animationAdditionAttributes",
-        "'externalResourcesRequired'",
-        "'by'",
-        "'from'",
-        "'to'"
-      ],
-      "interfaces": ["SVGAnimateColorElement"]
     },
     "animateMotion": {
       "categories": ["animationElement"],
@@ -280,7 +206,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -318,19 +243,6 @@
       },
       "attributes": ["coreAttributes", "'class'", "'style'"],
       "interfaces": ["SVGDescElement"]
-    },
-    "discard": {
-      "categories": ["animationElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements", "&lt;script&gt;"]
-      },
-      "attributes": [
-        "conditionalProcessingAttributes",
-        "coreAttributes",
-        "'begin'",
-        "'href'"
-      ]
     },
     "ellipse": {
       "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
@@ -532,7 +444,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -941,7 +853,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -983,7 +894,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1186,7 +1096,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1234,7 +1143,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1288,7 +1196,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1365,7 +1272,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1534,7 +1440,7 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -1566,7 +1472,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1649,7 +1554,6 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
           "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
@@ -1718,9 +1622,7 @@
         "elements": [
           "descriptiveElements",
           "&lt;a&gt;",
-          "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"
@@ -1754,12 +1656,7 @@
       "categories": ["textContentElement", "textContentChildElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "descriptiveElements",
-          "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
-          "&lt;set&gt;"
-        ]
+        "elements": ["descriptiveElements", "&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1781,9 +1678,7 @@
         "elements": [
           "descriptiveElements",
           "&lt;a&gt;",
-          "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"

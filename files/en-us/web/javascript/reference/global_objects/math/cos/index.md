@@ -2,21 +2,12 @@
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 page-type: javascript-static-method
-tags:
-  - Geometry
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Trigonometry
-  - cos
-  - cosine
 browser-compat: javascript.builtins.Math.cos
 ---
 
 {{JSRef}}
 
-The **`Math.cos()`** function returns the cosine of a number in radians.
+The **`Math.cos()`** static method returns the cosine of a number in radians.
 
 {{EmbedInteractiveExample("pages/js/math-cos.html")}}
 

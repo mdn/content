@@ -1,14 +1,8 @@
 ---
 title: "Window: resize event"
+short-title: resize
 slug: Web/API/Window/resize_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Web
-  - Window
-  - events
-  - resize
 browser-compat: api.Window.resize_event
 ---
 

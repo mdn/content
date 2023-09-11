@@ -2,15 +2,9 @@
 title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - CSS:Mozilla Extensions
-  - Function
-  - Non-standard
-  - Reference
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: css.types.-moz-image-rect
 ---
 
@@ -165,4 +159,4 @@ Not part of any standard.
 ## See also
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)

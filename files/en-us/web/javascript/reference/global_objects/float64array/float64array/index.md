@@ -2,24 +2,12 @@
 title: Float64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
 
 {{JSRef}}
 
-The **`Float64Array()`** typed array constructor creates a new
-{{jsxref("Float64Array")}} object, which is, an array of 64-bit floating point numbers
-(corresponding to the C `double` data type) in the platform byte order. If
-control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are
-initialized to `0`. Once established, you can reference elements in the array
-using the object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 
@@ -89,6 +77,7 @@ console.log(float64FromIterable);
 ## See also
 
 - [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

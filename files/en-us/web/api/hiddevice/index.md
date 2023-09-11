@@ -2,12 +2,8 @@
 title: HIDDevice
 slug: Web/API/HIDDevice
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice
 ---
 

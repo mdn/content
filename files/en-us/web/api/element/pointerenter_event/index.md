@@ -1,15 +1,9 @@
 ---
-title: 'Element: pointerenter event'
+title: "Element: pointerenter event"
+short-title: pointerenter
 slug: Web/API/Element/pointerenter_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.pointerenter_event
 page-type: web-api-event
+browser-compat: api.Element.pointerenter_event
 ---
 
 {{APIRef}}
@@ -21,9 +15,9 @@ The `pointerenter` event fires when a pointing device is moved into the hit test
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerenter', (event) => {});
+addEventListener("pointerenter", (event) => {});
 
-onpointerenter = (event) => { };
+onpointerenter = (event) => {};
 ```
 
 ## Event type
@@ -62,20 +56,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerenter', (event) => {
-  console.log('Pointer entered element');
+para.addEventListener("pointerenter", (event) => {
+  console.log("Pointer entered element");
 });
 ```
 
 Using the `onpointerenter` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerenter = (event) => {
-  console.log('Pointer entered element');
+  console.log("Pointer entered element");
 };
 ```
 

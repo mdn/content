@@ -1,13 +1,7 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-tags:
-  - API
-  - CSS
-  - Houdini
-  - JavaScript
-  - Landing
-  - Web
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -41,10 +35,10 @@ requiring a single line of JavaScript to import configurable components:
 no pre-processors, post-processors or JavaScript frameworks needed.
 
 ```js
-CSS.paintWorklet.addModule('csscomponent.js');
+CSS.paintWorklet.addModule("csscomponent.js");
 ```
 
-This added module contains {{domxref("PaintWorklet.registerPaint")}} functions,
+This added module contains {{domxref("PaintWorkletGlobalScope.registerPaint")}} functions,
 which register completely configurable worklets.
 
 > **Note:** You can write your own worklets, or install components created by other people.
@@ -61,9 +55,9 @@ In the following example the `paint()` function is passed a worklet called `myCo
 
 ```css
 li {
-    background-image: paint(myComponent, stroke, 10px);
-    --highlights: blue;
-    --lowlights: green;
+  background-image: paint(myComponent, stroke, 10px);
+  --highlights: blue;
+  --lowlights: green;
 }
 ```
 

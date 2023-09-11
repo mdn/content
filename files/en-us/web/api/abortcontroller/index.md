@@ -2,11 +2,6 @@
 title: AbortController
 slug: Web/API/AbortController
 page-type: web-api-interface
-tags:
-  - API
-  - AbortController
-  - Interface
-  - Reference
 browser-compat: api.AbortController
 ---
 
@@ -18,7 +13,7 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 
 ## Constructor
 
-- {{domxref("AbortController()")}}
+- {{domxref("AbortController.AbortController()", "AbortController()")}}
   - : Creates a new `AbortController` object instance.
 
 ## Instance properties

@@ -2,20 +2,12 @@
 title: CSSPropertyRule
 slug: Web/API/CSSPropertyRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Houdini
-  - Interface
-  - Reference
 browser-compat: api.CSSPropertyRule
 ---
 
 {{APIRef("CSS Properties and Values API")}}
 
-The **`CSSPropertyRule`** interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.
+The **`CSSPropertyRule`** interface of the [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) represents a single CSS {{cssxref("@property")}} rule.
 
 {{InheritanceDiagram}}
 
@@ -42,7 +34,7 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

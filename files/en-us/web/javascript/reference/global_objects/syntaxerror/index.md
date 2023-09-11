@@ -2,12 +2,6 @@
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - SyntaxError
 browser-compat: javascript.builtins.SyntaxError
 ---
 
@@ -17,27 +11,27 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
 
 `SyntaxError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
+`SyntaxError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
+- {{jsxref("SyntaxError/SyntaxError", "SyntaxError()")}}
   - : Creates a new `SyntaxError` object.
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "SyntaxError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "SyntaxError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}} {{non-standard_inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "SyntaxError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "SyntaxError.prototype.stack")}} {{non-standard_inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `SyntaxError.prototype` and shared by all `SyntaxError` instances.
+
+- {{jsxref("Object/constructor", "SyntaxError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `SyntaxError` instances, the initial value is the {{jsxref("SyntaxError/SyntaxError", "SyntaxError")}} constructor.
+- {{jsxref("Error/name", "SyntaxError.prototype.name")}}
+  - : Represents the name for the type of error. For `SyntaxError.prototype.name`, the initial value is `"SyntaxError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
@@ -47,13 +41,10 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
 try {
   eval("hoo bar");
 } catch (e) {
-  console.error(e instanceof SyntaxError);
-  console.error(e.message);
-  console.error(e.name);
-  console.error(e.fileName);
-  console.error(e.lineNumber);
-  console.error(e.columnNumber);
-  console.error(e.stack);
+  console.log(e instanceof SyntaxError); // true
+  console.log(e.message);
+  console.log(e.name); // "SyntaxError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
@@ -61,15 +52,12 @@ try {
 
 ```js
 try {
-  throw new SyntaxError("Hello", "someFile.js", 10);
+  throw new SyntaxError("Hello");
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // Hello
-  console.error(e.name); // SyntaxError
-  console.error(e.fileName); // someFile.js
-  console.error(e.lineNumber); // 10
-  console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+  console.log(e instanceof SyntaxError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "SyntaxError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 

@@ -1,14 +1,7 @@
 ---
 title: JavaScript error reference
 slug: Web/JavaScript/Reference/Errors
-page-type: javascript-error
-tags:
-  - Debugging
-  - Errors
-  - Exception
-  - JavaScript
-  - Landing page
-  - exceptions
+page-type: landing-page
 ---
 
 {{jsSidebar("Errors")}}

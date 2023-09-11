@@ -1,10 +1,10 @@
 ---
 title: Global object
 slug: Glossary/Global_object
-tags:
-  - CodingScripting
-  - NeedsContent
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A global object is an {{glossary("object")}} that always exists in the {{glossary("global scope")}}.
 

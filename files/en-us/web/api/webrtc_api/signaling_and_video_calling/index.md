@@ -2,17 +2,6 @@
 title: Signaling and video calling
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Calling
-  - Example
-  - Guide
-  - Media
-  - Signaling
-  - Tutorial
-  - Video
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -244,7 +233,7 @@ function invite(evt) {
 
     if (clickedUsername === myUsername) {
       alert(
-        "I'm afraid I can't let you talk to yourself. That would be weird."
+        "I'm afraid I can't let you talk to yourself. That would be weird.",
       );
       return;
     }
@@ -293,7 +282,7 @@ function handleGetUserMediaError(e) {
     case "NotFoundError":
       alert(
         "Unable to open your call because no camera and/or microphone" +
-          "were found."
+          "were found.",
       );
       break;
     case "SecurityError":
@@ -544,7 +533,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's {{htmlattrxref("srcObject", "video")}} attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
 
 If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
 
@@ -617,7 +606,7 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
 4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their {{htmlattrxref("src", "video")}} and {{htmlattrxref("srcObject", "video")}} attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/HTML/Element/video#src) and [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
 Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 

@@ -1,13 +1,9 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.stack
 ---
 
@@ -43,7 +39,7 @@ Different browsers set this value at different times. For example, Firefox sets 
 The following HTML markup demonstrates the use of `stack` property.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>
@@ -133,5 +129,6 @@ Not part of any standard.
 
 ## See also
 
-- External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
-- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)
+- [TraceKit](https://github.com/csnover/TraceKit/) on GitHub
+- [stacktrace.js](https://github.com/stacktracejs/stacktrace.js) on GitHub
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

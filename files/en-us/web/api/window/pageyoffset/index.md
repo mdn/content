@@ -1,18 +1,8 @@
 ---
-title: Window.pageYOffset
+title: "Window: pageYOffset property"
+short-title: pageYOffset
 slug: Web/API/Window/pageYOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Alias
-  - CSSOM View
-  - CSSOM View API
-  - Property
-  - Scrolling Documents
-  - Scrolling Windows
-  - Vertical
-  - Window
-  - scrolling
 browser-compat: api.Window.pageYOffset
 ---
 
@@ -90,8 +80,7 @@ condimentum sapien non felis cursus blandit. Integer
 euismod lectus a ipsum pellentesque lacinia.</p>
 `;
 
-document.getElementById("frame").contentDocument
-        .body.innerHTML = contentHTML;
+document.getElementById("frame").contentDocument.body.innerHTML = contentHTML;
 ```
 
 In this example, an {{HTMLElement("iframe")}} is created and filled with content, then
@@ -151,7 +140,10 @@ iframe {
 
 #info {
   margin-top: 20px;
-  font: 16px "Open Sans", "Helvetica", "Arial";
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial";
 }
 ```
 

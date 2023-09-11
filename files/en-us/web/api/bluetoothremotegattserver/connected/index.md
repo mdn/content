@@ -1,15 +1,10 @@
 ---
-title: BluetoothRemoteGATTServer.connected
+title: "BluetoothRemoteGATTServer: connected property"
+short-title: connected
 slug: Web/API/BluetoothRemoteGATTServer/connected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
 

@@ -2,17 +2,10 @@
 title: WebTransportDatagramDuplexStream
 slug: Web/API/WebTransportDatagramDuplexStream
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportDatagramDuplexStream
 browser-compat: api.WebTransportDatagramDuplexStream
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`WebTransportDatagramDuplexStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a duplex stream that can be used for unreliable transport of datagrams between client and server. Provides access to a {{domxref("ReadableStream")}} for reading incoming datagrams, a {{domxref("WritableStream")}} for writing outgoing datagrams, and various settings and statistics related to the stream.
 
@@ -63,7 +56,7 @@ The {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} propert
 async function readData() {
   const reader = transport.datagrams.readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

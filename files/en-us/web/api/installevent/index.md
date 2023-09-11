@@ -2,18 +2,9 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 page-type: web-api-interface
-tags:
-  - API
-  - InstallEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent
 ---
 
@@ -25,6 +16,8 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 {{InheritanceDiagram}}
 
+> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+
 ## Constructor
 
 - {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -33,9 +26,6 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 ## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
-
-- {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
 
 ## Instance methods
 
@@ -52,28 +42,38 @@ The code snippet also shows a best practice for versioning caches used by the se
 ```js
 const CACHE_VERSION = 1;
 const CURRENT_CACHES = {
-  prefetch: `prefetch-cache-v${CACHE_VERSION}`
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`,
 };
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   const urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log(
+    "Handling install event. Resources to pre-fetch:",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then((cache) => {
-      return cache.addAll(urlsToPrefetch.map((urlToPrefetch) => {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(() => {
-        console.log('All resources have been fetched and cached.');
-      });
-    }).catch((error) => {
-      console.error('Pre-fetching failed:', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then((cache) => {
+        return cache
+          .addAll(
+            urlsToPrefetch.map((urlToPrefetch) => {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(() => {
+            console.log("All resources have been fetched and cached.");
+          });
+      })
+      .catch((error) => {
+        console.error("Pre-fetching failed:", error);
+      }),
   );
 });
 ```
@@ -84,6 +84,7 @@ self.addEventListener('install', (event) => {
 
 ## See also
 
+- [`install` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event)
 - {{domxref("NotificationEvent")}}
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

@@ -2,33 +2,26 @@
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 page-type: javascript-class
-tags:
-  - Class
-  - Int8Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int8Array
 ---
 
 {{JSRef}}
 
-The **`Int8Array`** typed array represents an array of twos-complement 8-bit signed integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+The **`Int8Array`** typed array represents an array of 8-bit signed integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Int8Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Int8Array/Int8Array", "Int8Array()")}}
+- {{jsxref("Int8Array/Int8Array", "Int8Array()")}}
   - : Creates a new `Int8Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of `Int8Array`.
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
-  - : Returns the string value of the constructor name. `"Int8Array"` in the case of `Int8Array`.
 
 ## Static methods
 
@@ -38,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Int8Array.prototype` and shared by all `Int8Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int8Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Int8Array`.
+- {{jsxref("Object/constructor", "Int8Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Int8Array` instances, the initial value is the {{jsxref("Int8Array/Int8Array", "Int8Array")}} constructor.
 
 ## Instance methods
 
@@ -90,6 +87,7 @@ console.log(int8FromIterable);
 ## See also
 
 - [Polyfill of `Int8Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

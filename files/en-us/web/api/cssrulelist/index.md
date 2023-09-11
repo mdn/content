@@ -2,11 +2,6 @@
 title: CSSRuleList
 slug: Web/API/CSSRuleList
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSRuleList
 ---
 
@@ -42,7 +37,10 @@ The number of rules in the list is printed to the console using {{domxref("CSSRu
 
 ```css
 body {
-  font-family: system-ui,-apple-system,sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   margin: 2em;
 }
 

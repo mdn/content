@@ -2,20 +2,12 @@
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.fill
 ---
 
 {{JSRef}}
 
-The **`fill()`** method changes all elements in an array to a static value, from a start index (default `0`) to an end index (default `array.length`).
-It returns the modified array.
+The **`fill()`** method of {{jsxref("Array")}} instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
 
 {{EmbedInteractiveExample("pages/js/array-fill.html")}}
 
@@ -61,7 +53,7 @@ The `fill()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Examples
 
-### Using fill
+### Using fill()
 
 ```js
 console.log([1, 2, 3].fill(4)); // [4, 4, 4]
@@ -107,7 +99,7 @@ Note that the array was initially a [sparse array](/en-US/docs/Web/JavaScript/Gu
 
 ### Calling fill() on non-array objects
 
-The `fill()` method reads the `length` property of `this` and sets the value of each integer property from `start` to `end`.
+The `fill()` method reads the `length` property of `this` and sets the value of each integer-keyed property from `start` to `end`.
 
 ```js
 const arrayLike = { length: 2 };
@@ -126,5 +118,6 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

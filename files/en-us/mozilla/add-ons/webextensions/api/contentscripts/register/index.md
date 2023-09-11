@@ -1,13 +1,7 @@
 ---
 title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
-tags:
-  - API
-  - Extensions
-  - Method
-  - Reference
-  - contentScripts
-  - register
+page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.register
 ---
 
@@ -33,7 +27,7 @@ let registering = browser.contentScripts.register(
 
   - : `object`. A `RegisteredContentScriptOptions` object representing the content scripts to register. It has similar syntax to the objects in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key array. The differences are:
 
-    - property names use camelCase, rather than underscores (for example, `excludeMatches`, not `exclude_matches`
+    - property names use {{Glossary("camel_case", "camel case")}}, rather than underscores ({{Glossary("snake_case", "snake case")}}) — for example, `excludeMatches`, not `exclude_matches`.
     - the `js` and `css` properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.
 
     The `RegisteredContentScriptOptions` object has the following properties:
@@ -75,16 +69,15 @@ This example registers the `defaultCode` content script for all `.org` URLs:
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
+const defaultCode =
+  "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
-
   return await browser.contentScripts.register({
     matches: [hosts],
-    js: [{code}],
-    runAt: "document_idle"
+    js: [{ code }],
+    runAt: "document_idle",
   });
-
 }
 
 let registered = register(defaultHosts, defaultCode);
@@ -94,10 +87,10 @@ This code registers the JS file at content_scripts/example.js:
 
 ```js
 const scriptObj = await browser.contentScripts.register({
-  "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["<all_urls>"],
-  "allFrames": true,
-  "runAt": "document_start"
+  js: [{ file: "/content_scripts/example.js" }],
+  matches: ["<all_urls>"],
+  allFrames: true,
+  runAt: "document_start",
 });
 ```
 

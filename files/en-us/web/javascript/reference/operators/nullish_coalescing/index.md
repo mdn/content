@@ -2,12 +2,6 @@
 title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - nullish coalescing
 browser-compat: javascript.operators.nullish_coalescing
 ---
 
@@ -30,11 +24,11 @@ leftExpr ?? rightExpr
 
 The nullish coalescing operator can be seen as a special case of the [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR). The latter returns the right-hand side operand if the left operand is _any_ {{Glossary("falsy")}} value, not only `null` or `undefined`. In other words, if you use `||` to provide some default value to another variable `foo`, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., `''` or `0`). See [below](#assigning_a_default_value_to_a_variable) for more examples.
 
-The nullish coalescing operator has the fifth-lowest [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), directly lower than `||` and directly higher than the [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+The nullish coalescing operator has the fifth-lowest [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), directly lower than `||` and directly higher than the [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
 It is not possible to combine both the AND (`&&`) and OR operators (`||`) directly with `??`. A [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) will be thrown in such cases.
 
-```js example-bad
+```js-nolint example-bad
 null || undefined ?? "foo"; // raises a SyntaxError
 true && undefined ?? "foo"; // raises a SyntaxError
 ```
@@ -105,26 +99,26 @@ console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 Like the OR and AND logical operators, the right-hand side expression is not evaluated if the left-hand side proves to be neither `null` nor `undefined`.
 
 ```js
-function A() {
-  console.log("A was called");
+function a() {
+  console.log("a was called");
   return undefined;
 }
-function B() {
-  console.log("B was called");
+function b() {
+  console.log("b was called");
   return false;
 }
-function C() {
-  console.log("C was called");
+function c() {
+  console.log("c was called");
   return "foo";
 }
 
-console.log(A() ?? C());
-// Logs "A was called" then "C was called" and then "foo"
-// as A() returned undefined so both expressions are evaluated
+console.log(a() ?? c());
+// Logs "a was called" then "c was called" and then "foo"
+// as a() returned undefined so both expressions are evaluated
 
-console.log(B() ?? C());
-// Logs "B was called" then "false"
-// as B() returned false (and not null or undefined), the right
+console.log(b() ?? c());
+// Logs "b was called" then "false"
+// as b() returned false (and not null or undefined), the right
 // hand side expression was not evaluated
 ```
 
@@ -149,7 +143,7 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 
 ## See also
 
-- The [nullish coalescing assignment (`??=`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-- The [optional chaining (`?.`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- The [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Default parameters in functions](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Nullish coalescing assignment (`??=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+- [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Logical OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)

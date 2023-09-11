@@ -2,18 +2,8 @@
 title: NavigationHistoryEntry
 slug: Web/API/NavigationHistoryEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationHistoryEntry
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry
 ---
 
@@ -60,19 +50,19 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 function initHomeBtn() {
   // Get the key of the first loaded entry
   // so the user can always go back to this view.
-  const {key} = navigation.currentEntry;
+  const { key } = navigation.currentEntry;
   backToHomeButton.onclick = () => {
     navigation.traverseTo(key);
-  }
+  };
 }
 // Intercept navigate events, such as link clicks, and
 // replace them with single-page navigations
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   event.intercept({
-      async handler() {
-        // Navigate to a different view,
-        // but the "home" button will always work.
-      }
+    async handler() {
+      // Navigate to a different view,
+      // but the "home" button will always work.
+    },
   });
 });
 ```

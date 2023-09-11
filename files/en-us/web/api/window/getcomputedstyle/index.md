@@ -1,14 +1,8 @@
 ---
-title: Window.getComputedStyle()
+title: "Window: getComputedStyle() method"
+short-title: getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-  - getComputedStyle
 browser-compat: api.Window.getComputedStyle
 ---
 
@@ -53,7 +47,7 @@ object, which updates automatically when the element's styles are changed.
     > **Note:** Valid pseudo-element selector refers to syntactic
     > validity, e.g. `::unsupported` is considered valid, even though the
     > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
-    > WG draft [does not > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
+    > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
 
 ## Examples
 
@@ -84,10 +78,13 @@ p {
 ### JavaScript
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 const compStyles = window.getComputedStyle(para);
-para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
-  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
+para.textContent =
+  `My computed font-size is ${compStyles.getPropertyValue("font-size")},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue(
+    "line-height",
+  )}.`;
 ```
 
 ### Result
@@ -169,7 +166,7 @@ Java.
 - Returned values are sometimes deliberately inaccurate. To avoid the "CSS History
   Leak" security issue, browsers may lie about the computed styles for a visited link,
   returning values as if the user never visited the linked URL. See [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
-- During [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions),
+- During [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions),
   `getComputedStyle` returns the original property value in Firefox, but the
   final property value in WebKit.
 - In Firefox, properties with the value `auto` return the used value, not

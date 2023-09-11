@@ -2,27 +2,19 @@
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
 browser-compat: javascript.builtins.Set.delete
 ---
 
 {{JSRef}}
 
-The **`delete()`** method removes a specified value from a
-`Set` object, if it is in the set.
+The **`delete()`** method of {{jsxref("Set")}} instances removes a specified value from this set, if it is in the set.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
 ## Syntax
 
 ```js-nolint
-delete(value)
+setInstance.delete(value)
 ```
 
 ### Parameters

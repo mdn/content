@@ -1,11 +1,7 @@
 ---
 title: <mstyle>
 slug: Web/MathML/Element/mstyle
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mstyle
 ---
 
@@ -40,13 +36,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 The following example uses [global attributes](/en-US/docs/Web/MathML/Global_attributes) `displaystyle` and `mathcolor` to respectively override the [`math-style`](/en-US/docs/Web/CSS/math-style) and [`color`](/en-US/docs/Web/CSS/color) of the `<munder>` and `<munderover>` children:
 
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
-
 ```html
 <math display="block">
   <mstyle displaystyle="false" mathcolor="teal">
@@ -67,7 +56,7 @@ The following example uses [global attributes](/en-US/docs/Web/MathML/Global_att
 </math>
 ```
 
-{{ EmbedLiveSample('mstyle_example1', 700, 200, "", "") }}
+{{EmbedLiveSample('Attributes mapped to CSS')}}
 
 ### Legacy script attributes
 
@@ -99,7 +88,7 @@ The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/fon
 </math>
 ```
 
-{{ EmbedLiveSample('mstyle_example2', 700, 400, "", "") }}
+{{EmbedLiveSample('Legacy script attributes', 700, 400)}}
 
 ## Specifications
 

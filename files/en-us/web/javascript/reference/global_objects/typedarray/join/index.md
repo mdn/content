@@ -2,23 +2,12 @@
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.join
 ---
 
 {{JSRef}}
 
-The **`join()`** method joins all elements of an array into a
-string. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
-_TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+The **`join()`** method of {{jsxref("TypedArray")}} instances creates and returns a new string by concatenating all of the elements in this typed array, separated by commas or a specified separator string. If the typed array has only one item, then that item will be returned without using the separator. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
 
@@ -32,13 +21,16 @@ join(separator)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : Specifies a string to separate each element. The `separator`
-    is converted to a string if necessary. If omitted, the typed array elements are
-    separated with a comma (",").
+  - : A string to separate each pair of adjacent elements of the array. If omitted, the typed array elements are separated with a comma (",").
 
 ### Return value
 
-A string with all array elements joined.
+A string with all array elements joined. If `arr.length` is
+`0`, the empty string is returned.
+
+## Description
+
+See {{jsxref("Array.prototype.join()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -62,5 +54,8 @@ uint8.join(""); // '123'
 ## See also
 
 - [Polyfill of `TypedArray.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.toString()")}}
 - {{jsxref("Array.prototype.join()")}}
+- {{jsxref("String.prototype.split()")}}

@@ -1,11 +1,10 @@
 ---
 title: Long task
 slug: Glossary/Long_task
-tags:
-  - Long Tasks API
-  - Reference
-  - Web Performance
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A **long task** is a task that takes more than 50ms to complete.
 

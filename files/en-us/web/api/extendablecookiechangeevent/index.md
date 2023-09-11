@@ -2,11 +2,6 @@
 title: ExtendableCookieChangeEvent
 slug: Web/API/ExtendableCookieChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent
 ---
 
@@ -43,20 +38,20 @@ _This interface also inherits properties from {{domxref("ExtendableEvent")}}._
 In the below example we use {{domxref("CookieStoreManager.getSubscriptions()")}} to get a list of existing subscriptions. (In service workers, a subscription is required in order to listen for events.) We unsubscribe from existing subscriptions using {{domxref("CookieStoreManager.unsubscribe()")}}, then subscribe to the cookie with a name of 'COOKIE_NAME' using {{domxref("CookieStoreManager.subscribe()")}}. If that cookie is changed, the event listener logs the event to the console. This will be an `ExtendableCookieChangeEvent` object, with the {{domxref("ExtendableCookieChangeEvent.changed","changed")}} or {{domxref("ExtendableCookieChangeEvent.deleted","deleted")}} property containing the modified cookie.
 
 ```js
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(async () => {
     const subscriptions = await self.registration.cookies.getSubscriptions();
     await self.registration.cookies.unsubscribe(subscriptions);
 
     await self.registration.cookies.subscribe([
       {
-        name: 'COOKIE_NAME',
-      }
+        name: "COOKIE_NAME",
+      },
     ]);
   });
 });
 
-self.addEventListener('cookiechange', (event) => {
+self.addEventListener("cookiechange", (event) => {
   console.log(event);
 });
 ```

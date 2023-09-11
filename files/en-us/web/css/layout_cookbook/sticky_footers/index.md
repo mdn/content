@@ -2,14 +2,6 @@
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - cookbook
-  - flexbox
-  - grid
-  - sticky footer
 browser-compat:
   - css.properties.grid-template-rows
   - css.properties.flex-direction
@@ -60,4 +52,4 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Resources on MDN
 
-- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

@@ -2,15 +2,6 @@
 title: DOMParser
 slug: Web/API/DOMParser
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Document
-  - HTML
-  - HTMLDocument
-  - Parsing
-  - Reference
 browser-compat: api.DOMParser
 ---
 
@@ -32,7 +23,7 @@ Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly
 from a URL-addressable resource, returning a `Document` in its
 {{domxref("XMLHttpRequest.response", "response")}} property.
 
-> **Note:** Be aware that [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+> **Note:** Be aware that [block-level elements](/en-US/docs/Glossary/Block-level_content)
 > like `<p>` will be automatically closed if another
 > block-level element is nested inside and therefore parsed before the closing `</p>` tag.
 

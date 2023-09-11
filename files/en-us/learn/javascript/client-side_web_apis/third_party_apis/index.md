@@ -1,16 +1,7 @@
 ---
 title: Third-party APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - 3rd party
-  - API
-  - Beginner
-  - CodingScripting
-  - Google Maps
-  - Learn
-  - NYTimes
-  - Third party
-  - youtube
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -59,7 +50,7 @@ Browser APIs are built into the browser — you can access them from JavaScript 
 ```js
 const audioCtx = new AudioContext();
 // …
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 // …
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
@@ -79,10 +70,10 @@ Third party APIs, on the other hand, are located on third party servers. To acce
 You can then start using the objects available in that library. For example:
 
 ```js
-const map = L.mapquest.map('map', {
+const map = L.mapquest.map("map", {
   center: [53.480759, -2.242631],
-  layers: L.mapquest.tileLayer('map'),
-  zoom: 12
+  layers: L.mapquest.tileLayer("map"),
+  zoom: 12,
 });
 ```
 
@@ -101,7 +92,7 @@ Third party APIs have a slightly different permissions system — they tend to u
 You'll find a line similar to the following in the Mapquest API example:
 
 ```js
-L.mapquest.key = 'YOUR-API-KEY-HERE';
+L.mapquest.key = "YOUR-API-KEY-HERE";
 ```
 
 This line specifies an API or developer key to use in your application — the developer of the application must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example we've just provided a placeholder.
@@ -125,7 +116,7 @@ Let's add some more functionality to the Mapquest example to show how to use som
 There are a number of different types of map that can be shown with the Mapquest API. To do this, find the following line:
 
 ```js
-layers: L.mapquest.tileLayer('map')
+layers: L.mapquest.tileLayer("map");
 ```
 
 Try changing `'map'` to `'hybrid'` to show a hybrid-style map. Try some other values too. The [`tileLayer` reference page](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) shows the different available options, plus a lot more information.
@@ -141,7 +132,7 @@ map.addControl(L.mapquest.control());
 The [`mapquest.control()` method](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) just creates a simple full-featured control set, and it is placed in the top-right-hand corner by default. You can adjust the position by specifying an options object as a parameter for the control containing a `position` property, the value of which is a string specifying a position for the control. Try this, for example:
 
 ```js
-  map.addControl(L.mapquest.control({ position: 'bottomright' }));
+map.addControl(L.mapquest.control({ position: "bottomright" }));
 ```
 
 There are other types of control available, for example [`mapquest.searchControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-search-control/) and [`mapquest.satelliteControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-satellite-control/), and some are quite complex and powerful. Have a play around and see what you can come up with.
@@ -153,15 +144,15 @@ Adding a marker (icon) at a certain point on the map is easy — you just use th
 ```js
 L.marker([53.480759, -2.242631], {
   icon: L.mapquest.icons.marker({
-    primaryColor: '#22407F',
-    secondaryColor: '#3B5998',
+    primaryColor: "#22407F",
+    secondaryColor: "#3B5998",
     shadow: true,
-    size: 'md',
-    symbol: 'A'
-  })
+    size: "md",
+    symbol: "A",
+  }),
 })
-.bindPopup('This is Manchester!')
-.addTo(map);
+  .bindPopup("This is Manchester!")
+  .addTo(map);
 ```
 
 As you can see, this at its simplest takes two parameters, an array containing the coordinates at which to display the marker, and an options object containing an `icon` property that defines the icon to display at that point.
@@ -207,7 +198,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 1. Find the following line:
 
    ```js
-   const key = 'INSERT-YOUR-API-KEY-HERE';
+   const key = "INSERT-YOUR-API-KEY-HERE";
    ```
 
    Replace the existing API key with the actual API key you got in the previous section.
@@ -215,7 +206,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
 
    ```js
-   searchForm.addEventListener('submit', submitSearch);
+   searchForm.addEventListener("submit", submitSearch);
    ```
 
 3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
@@ -233,13 +224,13 @@ First, you'll need to make a connection between the API and your app. In the cas
      // Assemble the full URL
      let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
 
-     if (startDate.value !== '') {
+     if (startDate.value !== "") {
        url = `${url}&begin_date=${startDate.value}`;
-     };
+     }
 
-     if (endDate.value !== '') {
+     if (endDate.value !== "") {
        url = `${url}&end_date=${endDate.value}`;
-     };
+     }
    }
    ```
 
@@ -255,7 +246,7 @@ Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statemen
 
 So, a complete URL would end up looking something like this:
 
-```
+```url
 https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
@@ -291,30 +282,30 @@ function displayResults(json) {
 
   const articles = json.response.docs;
 
-  nav.style.display = articles.length === 10 ? 'block' : 'none';
+  nav.style.display = articles.length === 10 ? "block" : "none";
 
   if (articles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No results returned.'
+    const para = document.createElement("p");
+    para.textContent = "No results returned.";
     section.appendChild(para);
   } else {
     for (const current of articles) {
-      const article = document.createElement('article');
-      const heading = document.createElement('h2');
-      const link = document.createElement('a');
-      const img = document.createElement('img');
-      const para1 = document.createElement('p');
-      const keywordPara = document.createElement('p');
-      keywordPara.classList.add('keywords');
+      const article = document.createElement("article");
+      const heading = document.createElement("h2");
+      const link = document.createElement("a");
+      const img = document.createElement("img");
+      const para1 = document.createElement("p");
+      const keywordPara = document.createElement("p");
+      keywordPara.classList.add("keywords");
 
       console.log(current);
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
       para1.textContent = current.snippet;
-      keywordPara.textContent = 'Keywords: ';
+      keywordPara.textContent = "Keywords: ";
       for (const keyword of current.keywords) {
-        const span = document.createElement('span');
+        const span = document.createElement("span");
         span.textContent = `${keyword.value} `;
         keywordPara.appendChild(span);
       }
@@ -332,7 +323,7 @@ function displayResults(json) {
       section.appendChild(article);
     }
   }
-};
+}
 ```
 
 There's a lot of code here; let's explain it step by step:
@@ -355,8 +346,8 @@ This allows us to write a simplistic pagination function.
 1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
 
    ```js
-   nextBtn.addEventListener('click', nextPage);
-   previousBtn.addEventListener('click', previousPage);
+   nextBtn.addEventListener("click", nextPage);
+   previousBtn.addEventListener("click", previousPage);
    ```
 
 2. Below your previous addition, let's define the two functions — add this code now:
@@ -365,7 +356,7 @@ This allows us to write a simplistic pagination function.
    function nextPage(e) {
      pageNumber++;
      fetchResults(e);
-   };
+   }
 
    function previousPage(e) {
      if (pageNumber > 0) {
@@ -374,7 +365,7 @@ This allows us to write a simplistic pagination function.
        return;
      }
      fetchResults(e);
-   };
+   }
    ```
 
    The first function increments the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
@@ -409,13 +400,3 @@ To get it running, you'll need to:
 This article has given you a useful introduction to using third-party APIs to add functionality to your websites.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- **Third party APIs**
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

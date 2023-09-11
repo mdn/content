@@ -2,12 +2,6 @@
 title: AudioListener
 slug: Web/API/AudioListener
 page-type: web-api-interface
-tags:
-  - API
-  - AudioListener
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioListener
 ---
 
@@ -53,24 +47,11 @@ It is important to note that there is only one listener per context and that it 
 
 ## Deprecated features
 
-- {{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}
-  - : A double value representing the amount of pitch shift to use when rendering a [doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
-- {{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}
-  - : A double value representing the speed of sound, in _meters per second_.
-
-In a previous version of the specification, the `dopplerFactor` and `speedOfSound` properties and the `setPosition()` method could be used to control the doppler effect applied to {{domxref("AudioBufferSourceNode")}}s connected downstream — these would be pitched up and down according to the relative speed of the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}. These features had a number of problems:
-
-- Only {{domxref("AudioBufferSourceNode")}}s were pitched up or down, not other source nodes.
-- The behavior to adopt when an {{domxref("AudioBufferSourceNode")}} was connected to multiple {{domxref("PannerNode")}}s was unclear.
-- Because the velocity of the panner and the listener were not {{domxref("AudioParam")}}s, the pitch modification could not be smoothly applied, resulting in audio glitches.
-
-Because of these issues, these properties and methods have been removed.
-
 The `setOrientation()` and `setPosition()` methods have been replaced by setting their property value equivalents. For example `setPosition(x, y, z)` can be achieved by setting `positionX.value`, `positionY.value`, and `positionZ.value` respectively.
 
 ## Example
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

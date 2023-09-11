@@ -2,19 +2,16 @@
 title: "-webkit-mask-repeat-y"
 slug: Web/CSS/-webkit-mask-repeat-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-y
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeated (tiled) vertically.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -29,10 +26,10 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 /* Global values */
 -webkit-mask-repeat-y: inherit;
 -webkit-mask-repeat-y: initial;
+-webkit-mask-repeat-y: revert;
+-webkit-mask-repeat-y: revert-layer;
 -webkit-mask-repeat-y: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -97,4 +94,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}

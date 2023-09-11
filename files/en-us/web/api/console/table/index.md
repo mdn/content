@@ -1,14 +1,8 @@
 ---
-title: console.table()
+title: "console: table() method"
+short-title: table()
 slug: Web/API/console/table
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.table
 ---
 
@@ -41,7 +35,7 @@ console.table(["apples", "oranges", "bananas"]);
 ```
 
 | (index) | Values    |
-|---------|-----------|
+| ------- | --------- |
 | 0       | 'apples'  |
 | 1       | 'oranges' |
 | 2       | 'bananas' |
@@ -60,7 +54,7 @@ console.table(me);
 ```
 
 | (index)   | Values   |
-|-----------|----------|
+| --------- | -------- |
 | firstName | 'Tyrone' |
 | lastName  | 'Jones'  |
 
@@ -81,7 +75,7 @@ console.table(people);
 ```
 
 | (index) | 0        | 1       |
-|---------|----------|---------|
+| ------- | -------- | ------- |
 | 0       | 'Tyrone' | 'Jones' |
 | 1       | 'Janet'  | 'Smith' |
 | 2       | 'Maria'  | 'Cruz'  |
@@ -105,7 +99,7 @@ Note that if the array contains objects, then the columns are labeled with the p
 name.
 
 | (index) | firstName | lastName |
-|---------|-----------|----------|
+| ------- | --------- | -------- |
 | 0       | 'Tyrone'  | 'Jones'  |
 | 1       | 'Janet'   | 'Smith'  |
 | 2       | 'Maria'   | 'Cruz'   |
@@ -123,7 +117,7 @@ console.table(family);
 ```
 
 | (index)  | firstName | lastName |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | daughter | 'Maria'   | 'Jones'  |
 | father   | 'Tyrone'  | 'Jones'  |
 | mother   | 'Janet'   | 'Jones'  |
@@ -149,7 +143,7 @@ console.table([tyrone, janet, maria], ["firstName"]);
 ```
 
 | (index) | firstName |
-|---------|-----------|
+| ------- | --------- |
 | 0       | 'Tyrone'  |
 | 1       | 'Janet'   |
 | 2       | 'Maria'   |

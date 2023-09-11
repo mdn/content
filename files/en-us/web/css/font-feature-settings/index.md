@@ -2,12 +2,6 @@
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-feature-settings
 ---
 
@@ -27,7 +21,9 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* Global values */
 font-feature-settings: inherit;
@@ -43,11 +39,17 @@ These lead to more effective, predictable, understandable results than `font-fea
 
 ### Values
 
+This property is specified as either the keyword `normal` or as a comma-separated list of `<feature-tag-value>` values. When rendering text, the list of OpenType `<feature-tag-value>` values are passed to the text layout engine to enable or disable font features.
+
 - `normal`
-  - : Text is laid out using default settings.
+  - : Indicates that text is laid out using default font settings. This is the default value.
 - `<feature-tag-value>`
-  - : When rendering text, the list of OpenType feature tag value is passed to the text layout engine to enable or disable font features. The tag is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters. If it has more or less characters, or if it contains characters outside the `U+20` – `U+7E` codepoint range, the whole property is invalid.
-    The value is a positive integer. The two keywords `on` and `off` are synonyms for `1` and `0` respectively. If no value is set, the default is `1`. For non-Boolean OpenType features (e.g. [stylistic alternates](https://docs.microsoft.com/typography/opentype/spec/features_pt)), the value implies a particular glyph to be selected; for Boolean values, it is a switch.
+
+  - : Represents a space-separated tuple consisting of a tag name and an optional value.
+
+    The tag name is always a {{cssxref("&lt;string&gt;")}} of four {{Glossary("ASCII")}} characters. If the tag name has more or fewer characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
+
+    The optional value can be a positive integer or the keyword `on` or `off`. The keywords `on` and `off` are synonyms for the values `1` and `0`, respectively. If no value is set, the default is `1`. For non-boolean OpenType features (e.g., [stylistic alternates](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt)), the value implies a particular glyph to be selected; for boolean features, the value turns the feature on or off.
 
 ## Formal definition
 
@@ -104,7 +106,7 @@ td.tabular {
 
 /* enable stylistic set 7 */
 .fancystyle {
-  font-family: Gabriola; 
+  font-family: Gabriola;
   font-feature-settings: "ss07";
 }
 ```
@@ -124,7 +126,6 @@ td.tabular {
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}

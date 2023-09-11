@@ -2,11 +2,6 @@
 title: BluetoothUUID
 slug: Web/API/BluetoothUUID
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BluetoothUUID
 browser-compat: api.BluetoothUUID
 ---
 
@@ -22,23 +17,15 @@ The Bluetooth registry contains lists of descriptors, services, and characterist
 
 The `BluetoothUUID` interface provides methods to retrieve these 128-bit UUIDs.
 
-## Instance properties
+## Static methods
 
-None.
-
-### Event handlers
-
-None.
-
-## Instance methods
-
-- {{domxref("BluetoothUUID.canonicalUUID()")}} {{Experimental_Inline}}
+- [`BluetoothUUID.canonicalUUID()`](/en-US/docs/Web/API/BluetoothUUID/canonicalUUID_static) {{Experimental_Inline}}
   - : Returns the 128-bit UUID when passed the 16- or 32-bit UUID alias.
-- {{domxref("BluetoothUUID.getCharacteristic()")}} {{Experimental_Inline}}
+- [`BluetoothUUID.getCharacteristic()`](/en-US/docs/Web/API/BluetoothUUID/getCharacteristic_static) {{Experimental_Inline}}
   - : Returns the 128-bit UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
-- {{domxref("BluetoothUUID.getDescriptor()")}} {{Experimental_Inline}}
+- [`BluetoothUUID.getDescriptor()`](/en-US/docs/Web/API/BluetoothUUID/getDescriptor_static) {{Experimental_Inline}}
   - : Returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
-- {{domxref("BluetoothUUID.getService()")}} {{Experimental_Inline}}
+- [`BluetoothUUID.getService()`](/en-US/docs/Web/API/BluetoothUUID/getService_static) {{Experimental_Inline}}
   - : Returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
 
 ## Examples

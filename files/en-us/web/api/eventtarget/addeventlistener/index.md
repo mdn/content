@@ -1,10 +1,8 @@
 ---
-title: EventTarget.addEventListener()
+title: "EventTarget: addEventListener() method"
+short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.EventTarget.addEventListener
 ---
 
@@ -25,7 +23,7 @@ but the target may be any object that supports events (such as {{domxref("XMLHtt
 > - It works on any event target, not just HTML or SVG elements.
 
 The method `addEventListener()` works by adding a function, or an object that implements
-{{domxref("EventListener")}}, to the list of event listeners for the specified event type
+{{domxref("EventTarget.addEventListener", "EventListener")}}, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
 > **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
@@ -78,7 +76,7 @@ addEventListener(type, listener, useCapture)
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
-        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
+        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
@@ -125,9 +123,9 @@ For example, an event handler callback that can be used to handle both
 
 ```js
 function eventHandler(event) {
-  if (event.type === 'fullscreenchange') {
+  if (event.type === "fullscreenchange") {
     /* handle a full screen toggle */
-  } else /* fullscreenerror */ {
+  } else {
     /* handle a full screen toggle error */
   }
 }
@@ -155,11 +153,12 @@ let passiveSupported = false;
 
 try {
   const options = {
-    get passive() { // This function will be called when the browser
-                    //   attempts to access the passive property.
+    get passive() {
+      // This function will be called when the browser
+      // attempts to access the passive property.
       passiveSupported = true;
       return false;
-    }
+    },
   };
 
   window.addEventListener("test", null, options);
@@ -191,7 +190,7 @@ question, you can do something like this:
 someElement.addEventListener(
   "mouseup",
   handleMouseUp,
-  passiveSupported ? { passive: true } : false
+  passiveSupported ? { passive: true } : false,
 );
 ```
 
@@ -202,9 +201,7 @@ event on the element `someElement`. For the third parameter, if
 `true`; otherwise, we know that we need to pass a Boolean, and we pass
 `false` as the value of the `useCapture` parameter.
 
-If you'd prefer, you can use a third-party library like [Modernizr](https://modernizr.com/docs) or [Detect It](https://github.com/rafgraph/detect-it) to do this test for you.
-
-You can learn more from the article about
+You can learn more in the [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) documentation and the explainer about
 [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection)
 from the [Web Incubator Community Group](https://wicg.github.io/admin/charter.html).
 
@@ -274,7 +271,7 @@ This example demonstrates how to add an `addEventListener()` that can be aborted
 // Add an abortable event listener to table
 const controller = new AbortController();
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, { signal: controller.signal } );
+el.addEventListener("click", modifyText, { signal: controller.signal });
 
 // Function to change the content of t2
 function modifyText() {
@@ -323,7 +320,13 @@ function modifyText(new_text) {
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", function () { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  function () {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -363,7 +366,13 @@ function modifyText(new_text) {
 
 // Add event listener to table with an arrow function
 const el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  () => {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 #### Result
@@ -430,59 +439,59 @@ also available to the event handler when using an arrow function.
 #### JavaScript
 
 ```js
-const outer  = document.querySelector('.outer');
-const middle = document.querySelector('.middle');
-const inner1 = document.querySelector('.inner1');
-const inner2 = document.querySelector('.inner2');
+const outer = document.querySelector(".outer");
+const middle = document.querySelector(".middle");
+const inner1 = document.querySelector(".inner1");
+const inner2 = document.querySelector(".inner2");
 
 const capture = {
-  capture : true
+  capture: true,
 };
 const noneCapture = {
-  capture : false
+  capture: false,
 };
 const once = {
-  once : true
+  once: true,
 };
 const noneOnce = {
-  once : false
+  once: false,
 };
 const passive = {
-  passive : true
+  passive: true,
 };
 const nonePassive = {
-  passive : false
+  passive: false,
 };
 
-outer.addEventListener('click', onceHandler, once);
-outer.addEventListener('click', noneOnceHandler, noneOnce);
-middle.addEventListener('click', captureHandler, capture);
-middle.addEventListener('click', noneCaptureHandler, noneCapture);
-inner1.addEventListener('click', passiveHandler, passive);
-inner2.addEventListener('click', nonePassiveHandler, nonePassive);
+outer.addEventListener("click", onceHandler, once);
+outer.addEventListener("click", noneOnceHandler, noneOnce);
+middle.addEventListener("click", captureHandler, capture);
+middle.addEventListener("click", noneCaptureHandler, noneCapture);
+inner1.addEventListener("click", passiveHandler, passive);
+inner2.addEventListener("click", nonePassiveHandler, nonePassive);
 
 function onceHandler(event) {
-  alert('outer, once');
+  alert("outer, once");
 }
 function noneOnceHandler(event) {
-  alert('outer, none-once, default');
+  alert("outer, none-once, default");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
-  alert('middle, capture');
+  alert("middle, capture");
 }
 function noneCaptureHandler(event) {
-  alert('middle, none-capture, default');
+  alert("middle, none-capture, default");
 }
 function passiveHandler(event) {
   // Unable to preventDefault inside passive event listener invocation.
   event.preventDefault();
-  alert('inner1, passive, open new page');
+  alert("inner1, passive, open new page");
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  alert('inner2, none-passive, default, not open new page');
+  alert("inner2, none-passive, default, not open new page");
 }
 ```
 
@@ -490,8 +499,7 @@ function nonePassiveHandler(event) {
 
 Click the outer, middle, inner containers respectively to see how the options work.
 
-{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '',
-  'Web/API/EventTarget/addEventListener') }}
+{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '') }}
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition
@@ -531,25 +539,18 @@ function eventListener() {
 }
 
 function addListener() {
-  buttonToBeClicked.addEventListener(
-    "click",
-    eventListener,
-    {
-      passive: true,
-      once: true
-    }
-  );
+  buttonToBeClicked.addEventListener("click", eventListener, {
+    passive: true,
+    once: true,
+  });
 }
 
 // when the reset button is clicked, the example button is reset,
 // and allowed to have its state updated again
-resetButton.addEventListener(
-  "click",
-  () => {
-    buttonToBeClicked.textContent = initialText;
-    addListener();
-  }
-);
+resetButton.addEventListener("click", () => {
+  buttonToBeClicked.textContent = initialText;
+  addListener();
+});
 
 addListener();
 ```
@@ -571,19 +572,19 @@ the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
 ```js
-my_element.addEventListener('click', function (e) {
-  console.log(this.className)           // logs the className of my_element
-  console.log(e.currentTarget === this) // logs `true`
-})
+my_element.addEventListener("click", function (e) {
+  console.log(this.className); // logs the className of my_element
+  console.log(e.currentTarget === this); // logs `true`
+});
 ```
 
-As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this).
+As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods).
 
 ```js
-my_element.addEventListener('click', (e) => {
-  console.log(this.className)           // WARNING: `this` is not `my_element`
-  console.log(e.currentTarget === this) // logs `false`
-})
+my_element.addEventListener("click", (e) => {
+  console.log(this.className); // WARNING: `this` is not `my_element`
+  console.log(e.currentTarget === this); // logs `false`
+});
 ```
 
 If an event handler (for example, {{domxref("Element.click_event",
@@ -630,7 +631,7 @@ This is an example with and without `bind()`:
 ```js
 const Something = function (element) {
   // |this| is a newly created object
-  this.name = 'Something Good';
+  this.name = "Something Good";
   this.onclick1 = function (event) {
     console.log(this.name); // undefined, as |this| is the element
   };
@@ -642,9 +643,9 @@ const Something = function (element) {
   // bind causes a fixed `this` context to be assigned to onclick2
   this.onclick2 = this.onclick2.bind(this);
 
-  element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2, false); // Trick
-}
+  element.addEventListener("click", this.onclick1, false);
+  element.addEventListener("click", this.onclick2, false); // Trick
+};
 const s = new Something(document.body);
 ```
 
@@ -654,27 +655,27 @@ any events:
 ```js
 const Something = function (element) {
   // |this| is a newly created object
-  this.name = 'Something Good';
+  this.name = "Something Good";
   this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
-    switch(event.type) {
-      case 'click':
+    switch (event.type) {
+      case "click":
         // some code here…
         break;
-      case 'dblclick':
+      case "dblclick":
         // some code here…
         break;
     }
   };
 
   // Note that the listeners in this case are |this|, not this.handleEvent
-  element.addEventListener('click', this, false);
-  element.addEventListener('dblclick', this, false);
+  element.addEventListener("click", this, false);
+  element.addEventListener("dblclick", this, false);
 
   // You can properly remove the listeners
-  element.removeEventListener('click', this, false);
-  element.removeEventListener('dblclick', this, false);
-}
+  element.removeEventListener("click", this, false);
+  element.removeEventListener("dblclick", this, false);
+};
 const s = new Something(document.body);
 ```
 
@@ -684,19 +685,20 @@ the fields that need to be accessed:
 
 ```js
 class SomeClass {
-
   constructor() {
-    this.name = 'Something Good';
+    this.name = "Something Good";
   }
 
   register() {
     const that = this;
-    window.addEventListener('keydown', (e) => { that.someMethod(e); });
+    window.addEventListener("keydown", (e) => {
+      that.someMethod(e);
+    });
   }
 
   someMethod(e) {
     console.log(this.name);
-    switch(e.keyCode) {
+    switch (e.keyCode) {
       case 5:
         // some code here…
         break;
@@ -705,7 +707,6 @@ class SomeClass {
         break;
     }
   }
-
 }
 
 const myObject = new SomeClass();
@@ -729,12 +730,15 @@ As mentioned [above](#specifying_this_using_bind), you can use
 `this` reference variable.
 
 ```js
-const myButton = document.getElementById('my-button-id');
-const someString = 'Data';
+const myButton = document.getElementById("my-button-id");
+const someString = "Data";
 
-myButton.addEventListener('click', function () {
-  console.log(this); // Expected Value: 'Data'
-}.bind(someString));
+myButton.addEventListener(
+  "click",
+  function () {
+    console.log(this); // Expected Value: 'Data'
+  }.bind(someString),
+);
 ```
 
 This method is suitable when you don't need to know which HTML element the event
@@ -753,16 +757,16 @@ from outside of an event listener is to make it accessible to the scope in which
 event listener is declared.
 
 ```js
-const myButton = document.getElementById('my-button-id');
-let someString = 'Data';
+const myButton = document.getElementById("my-button-id");
+let someString = "Data";
 
-myButton.addEventListener('click', () => {
-  console.log(someString);  // Expected Value: 'Data'
+myButton.addEventListener("click", () => {
+  console.log(someString); // Expected Value: 'Data'
 
-  someString = 'Data Again';
+  someString = "Data Again";
 });
 
-console.log(someString);  // Expected Value: 'Data' (will never output 'Data Again')
+console.log(someString); // Expected Value: 'Data' (will never output 'Data Again')
 ```
 
 > **Note:** Although inner scopes have access to `const`,
@@ -788,19 +792,19 @@ event listener, and any changes to the data back out after an event handler exec
 Consider this example.
 
 ```js
-const myButton = document.getElementById('my-button-id');
-const someObject = {aProperty: 'Data'};
+const myButton = document.getElementById("my-button-id");
+const someObject = { aProperty: "Data" };
 
-myButton.addEventListener('click', () => {
-  console.log(someObject.aProperty);  // Expected Value: 'Data'
+myButton.addEventListener("click", () => {
+  console.log(someObject.aProperty); // Expected Value: 'Data'
 
-  someObject.aProperty = 'Data Again';  // Change the value
+  someObject.aProperty = "Data Again"; // Change the value
 });
 
 setInterval(() => {
-  if (someObject.aProperty === 'Data Again') {
-    console.log('Data Again: True');
-    someObject.aProperty = 'Data';  // Reset value to wait for next event execution
+  if (someObject.aProperty === "Data Again") {
+    console.log("Data Again: True");
+    someObject.aProperty = "Data"; // Reset value to wait for next event execution
   }
 }, 5000);
 ```
@@ -826,13 +830,17 @@ can respond to the change).
 ### Memory issues
 
 ```js
-const elts = document.getElementsByTagName('*');
+const elts = document.getElementsByTagName("*");
 
 // Case 1
 for (const elt of elts) {
-  elt.addEventListener("click", (e) => {
-    // Do something
-  }, false);
+  elt.addEventListener(
+    "click",
+    (e) => {
+      // Do something
+    },
+    false,
+  );
 }
 
 // Case 2
@@ -867,26 +875,30 @@ Setting the `passive` option to `true` — as shown in the following example —
 let passiveIfSupported = false;
 
 try {
-  window.addEventListener("test", null,
-    Object.defineProperty(
-      {},
-      "passive",
-      {
-        get() { passiveIfSupported = { passive: true }; }
-      }
-    )
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get() {
+        passiveIfSupported = { passive: true };
+      },
+    }),
   );
 } catch (err) {}
 
-window.addEventListener('scroll', (event) => {
-  /* do something */
-  // can't use event.preventDefault();
-}, passiveIfSupported );
+window.addEventListener(
+  "scroll",
+  (event) => {
+    /* do something */
+    // can't use event.preventDefault();
+  },
+  passiveIfSupported,
+);
 ```
 
 The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, that introduces the potential for event listeners handling touch events and wheel events to block the browser's main thread while the browser is attempting to handle scrolling — possibly resulting in an enormous reduction in performance during scroll handling.
 
-To prevent that problem, browsers other than Safari and Internet Explorer have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
+To prevent that problem, browsers other than Safari have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
 
 > **Note:** See the compatibility table below if you need to know which
 > browsers (and/or which versions of those browsers) implement this altered behavior.

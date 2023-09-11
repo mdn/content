@@ -1,13 +1,8 @@
 ---
-title: HTMLElement.offsetParent
+title: "HTMLElement: offsetParent property"
+short-title: offsetParent
 slug: Web/API/HTMLElement/offsetParent
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.offsetParent
 ---
 
@@ -27,7 +22,7 @@ If there is no positioned ancestor element, the `body` is returned.
 > **Note:** `offsetParent` returns `null` in the following
 > situations:
 >
-> - The element or its parent element has the `display` property set to
+> - The element or any ancestor has the `display` property set to
 >   `none`.
 > - The element has the `position` property set to `fixed`
 >   (Firefox returns `<body>`).

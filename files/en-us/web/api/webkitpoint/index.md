@@ -2,14 +2,9 @@
 title: Point
 slug: Web/API/WebKitPoint
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Transforms
-  - Interface
-  - Non-standard
-  - Point
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.WebKitPoint
 ---
 

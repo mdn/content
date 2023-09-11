@@ -1,16 +1,8 @@
 ---
-title: IIRFilterNode.getFrequencyResponse()
+title: "IIRFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/IIRFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.IIRFilterNode.getFrequencyResponse
 ---
 
@@ -82,7 +74,7 @@ and grab a reference to it in our JavaScript:
 ```
 
 ```js
-const freqResponseOutput = document.querySelector('.freq-response-output');
+const freqResponseOutput = document.querySelector(".freq-response-output");
 ```
 
 Finally, after creating our filter, we use `getFrequencyResponse()` to
@@ -93,15 +85,22 @@ output them in a human-readable list at the bottom of the page:
 const feedforwardCoefficients = [0.1, 0.2, 0.3, 0.4, 0.5];
 const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
-const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
+const iirFilter = audioCtx.createIIRFilter(
+  feedforwardCoefficients,
+  feedbackCoefficients,
+);
 
 // …
 
 function calcFrequencyResponse() {
-  iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
+  iirFilter.getFrequencyResponse(
+    myFrequencyArray,
+    magResponseOutput,
+    phaseResponseOutput,
+  );
 
   for (let i = 0; i < myFrequencyArray.length; i++) {
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }

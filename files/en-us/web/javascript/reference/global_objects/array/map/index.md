@@ -2,21 +2,13 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.map
 ---
 
 {{JSRef}}
 
-The **`map()`** method **creates
-a new array** populated with the results of calling a provided function on
+The **`map()`** method of {{jsxref("Array")}} instances creates
+a new array populated with the results of calling a provided function on
 every element in the calling array.
 
 {{EmbedInteractiveExample("pages/js/array-map.html")}}
@@ -24,37 +16,20 @@ every element in the calling array.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-map((element) => { /* … */ })
-map((element, index) => { /* … */ })
-map((element, index, array) => { /* … */ })
-
-// Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
-
-// Inline callback function
-map(function (element) { /* … */ })
-map(function (element, index) { /* … */ })
-map(function (element, index, array) { /* … */ })
-map(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value is added as a single element in the new array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value is added as a single element in the new array. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `map()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -134,9 +109,62 @@ console.log(doubles); // [2, 8, 18]
 console.log(numbers); // [1, 4, 9]
 ```
 
+### Side-effectful mapping
+
+The callback can have side effects.
+
+```js
+const cart = [5, 15, 25];
+let total = 0;
+const withTax = cart.map((cost) => {
+  total += cost;
+  return cost * 1.2;
+});
+console.log(withTax); // [6, 18, 30]
+console.log(total); // 45
+```
+
+This is not recommended, because copying methods are best used with pure functions. In this case, we can choose to iterate the array twice.
+
+```js
+const cart = [5, 15, 25];
+const total = cart.reduce((acc, cost) => acc + cost, 0);
+const withTax = cart.map((cost) => cost * 1.2);
+```
+
+Sometimes this pattern goes to its extreme and the _only_ useful thing that `map()` does is causing side effects.
+
+```js
+const products = [
+  { name: "sports car" },
+  { name: "laptop" },
+  { name: "phone" },
+];
+
+products.map((product) => {
+  product.price = 100;
+});
+```
+
+As mentioned previously, this is an anti-pattern. If you don't use the return value of `map()`, use `forEach()` or a `for...of` loop instead.
+
+```js
+products.forEach((product) => {
+  product.price = 100;
+});
+```
+
+Or, if you want to create a new array instead:
+
+```js
+const productsWithPrice = products.map((product) => {
+  return { ...product, price: 100 };
+});
+```
+
 ### Calling map() on non-array objects
 
-The `map()` method reads the `length` property of `this` and then accesses each integer index.
+The `map()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -144,6 +172,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by map() since length is 3
 };
 console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]
@@ -277,6 +306,9 @@ const filteredNumbers = numbers.map((num, index) => {
 ## See also
 
 - [Polyfill of `Array.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map")}} object
 - {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.prototype.map()")}}
+- {{jsxref("Map")}}

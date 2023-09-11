@@ -1,15 +1,7 @@
 ---
 title: scripting.ContentScriptFilter
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/ContentScriptFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ContentScriptFilter
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
+page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.ContentScriptFilter
 ---
 

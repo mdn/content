@@ -1,8 +1,7 @@
 ---
 title: sidebar_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
-tags:
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.sidebar_action
 ---
 
@@ -64,43 +63,39 @@ The `sidebar_action` key is an object that may have any of the properties listed
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
+        <br />{{deprecated_inline}} in Manifest V3.
       </td>
       <td><code>Boolean</code></td>
       <td>
-        <p>Optional, defaulting to <code>true</code>.</p>
-        <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property.
-        </p>
+        <p>Optional, defaulting to:</p>
+          <ul>
+            <li><code>true</code> in Manifest V2 and prior to Firefox 115 in Manifest V3.</li>
+            <li><code>false</code> in Manifest V3 from Firefox 115.</li>
+          </ul>
+        <div class="notecard warning">
+          <p>
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css, or
+          chrome://browser/content/extension.css or
           chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this style sheet currently sets
+          dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
-        </p>
-        <p>
-          The
-          <a
-            class="external external-icon"
-            href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the sidebar in
-          order to get particular styles.
         </p>
       </td>
     </tr>
     <tr>
-      <td><code>default_icon</code></td>
+      <td><code>default_icon</code>
+      <br />{{optional_inline}}</td>
       <td><code>Object</code> or <code>String</code></td>
       <td>
         <p>
@@ -178,7 +173,8 @@ The `sidebar_action` key is an object that may have any of the properties listed
       </td>
     </tr>
     <tr>
-      <td><code>default_title</code></td>
+      <td><code>default_title</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -206,7 +202,8 @@ The `sidebar_action` key is an object that may have any of the properties listed
       </td>
     </tr>
     <tr>
-      <td><code>open_at_install</code></td>
+      <td><code>open_at_install</code>
+      <br />{{optional_inline}}</td>
       <td>Boolean</td>
       <td>
         Optional, defaulting to <code>true</code>. Determines whether the
@@ -223,12 +220,11 @@ The `sidebar_action` key is an object that may have any of the properties listed
 "sidebar_action": {
   "default_icon": "sidebar.svg",
   "default_title": "My sidebar!",
-  "default_panel": "sidebar.html",
-  "browser_style": true
+  "default_panel": "sidebar.html"
 }
 ```
 
-For a simple example of an extension that uses a sidebar, see [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+For a simple example of an extension that uses a sidebar, see [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page).
 
 ## Browser compatibility
 

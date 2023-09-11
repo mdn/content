@@ -1,15 +1,7 @@
 ---
 title: Installing basic software
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Beginner
-  - Browser
-  - Learn
-  - Setup
-  - Tools
-  - WebMechanics
-  - "l10n:priority"
-  - text editor
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
@@ -38,7 +30,7 @@ Before going on, you should install at least two of these browsers and have them
 
 ### Installing a local web server
 
-Some examples will need to be run by a web server to work successfully. You can find out how to do this in [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server)
+Some examples will need to be run by a web server to work successfully. You can find out how to do this in [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
 
 ## What tools do the professionals use?
 
@@ -46,7 +38,7 @@ The following looks like a scary list, but fortunately, you can get started in w
 
 - **A computer**. Maybe that sounds obvious to some people, but some of you are reading this article on your phone or a library computer. For serious web development, it's better to invest in a desktop or laptop computer running Windows, macOS or Linux.
 - **A text editor**, to write code in. This could be a text editor (e.g. [Visual Studio Code](https://code.visualstudio.com/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [GNU Emacs](https://www.gnu.org/software/emacs/), or [VIM](https://www.vim.org/)), or a hybrid editor (e.g. [Dreamweaver](https://www.adobe.com/products/dreamweaver.html) or [WebStorm](https://www.jetbrains.com/webstorm/)). Office document editors are not suitable for this use, as they rely on hidden elements that interfere with the rendering engines used by web browsers.
-- **Web browsers**, to test code in. Currently, the most-used browsers are [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), [Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70) and [Microsoft Edge](https://www.microsoft.com/edge). You should also test how your site performs on mobile devices and on any old browsers your target audience may still be using (such as IE 8–10). [Lynx](https://lynx.browser.org/), a text-based terminal web browser, is great for seeing how your site is experienced by visually-impaired users.
+- **Web browsers**, to test code in. Currently, the most-used browsers are [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/), [Safari](https://www.apple.com/safari/), and [Microsoft Edge](https://www.microsoft.com/edge). You should also test how your site performs on mobile devices and on any old browsers your target audience may still be using (such as IE 8–10). [Lynx](https://lynx.browser.org/), a text-based terminal web browser, is great for seeing how your site is experienced by visually-impaired users.
 - **A graphics editor**, like [GIMP](https://www.gimp.org/), [Figma](https://www.figma.com/), [Paint.NET](https://www.getpaint.net/), [Photoshop](https://www.adobe.com/products/photoshop.html), [Sketch](https://www.sketch.com) or [XD](https://www.adobe.com/products/xd.html), to make images or graphics for your web pages.
 - **A version control system**, to manage files on servers, collaborate on a project with a team, share code and assets and avoid editing conflicts. Right now, [Git](https://git-scm.com/) is the most popular version control system along with the [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) hosting service.
 - **An FTP program**, used on older web hosting accounts to manage files on servers ([Git](https://git-scm.com/) is increasingly replacing FTP for this purpose). There are loads of (S)FTP programs available including [Cyberduck](https://cyberduck.io/), [Fetch](https://fetchsoftworks.com/) and [FileZilla](https://filezilla-project.org/).
@@ -55,14 +47,3 @@ The following looks like a scary list, but fortunately, you can get started in w
 - More tools besides!
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -2,17 +2,6 @@
 title: contain
 slug: Web/CSS/contain
 page-type: css-property
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Property
-  - Layout
-  - NeedsExample
-  - Paint
-  - Reference
-  - Style
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.contain
 ---
 
@@ -33,7 +22,7 @@ Using the `contain` property is useful on pages with groups of elements that are
 > **Note:** using `layout`, `paint`, `strict` or `content` values for this property creates:
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+> 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 > 3. A new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
 ## Syntax
@@ -200,7 +189,7 @@ This impacts performance and interferes with the rest of the page layout.
 
 ### Style containment
 
-Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
+Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
 For CSS counters, the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties are scoped to the element as if the element is at the root of the document.
 
 #### Containment and counters
@@ -288,7 +277,7 @@ Because of containment, the first closing quote ignores the inner span and uses 
 
 ## See also
 
-- [CSS containment](/en-US/docs/Web/CSS/CSS_Containment)
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - CSS {{cssxref("content-visibility")}} property
 - CSS {{cssxref("position")}} property

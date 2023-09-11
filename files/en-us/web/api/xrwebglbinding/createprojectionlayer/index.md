@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.createProjectionLayer()
+title: "XRWebGLBinding: createProjectionLayer() method"
+short-title: createProjectionLayer()
 slug: Web/API/XRWebGLBinding/createProjectionLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createProjectionLayer
 ---
 
@@ -35,7 +30,7 @@ createProjectionLayer(options)
           - : The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).
             The default value is `texture`.
     - `colorFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
           Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -48,7 +43,7 @@ createProjectionLayer(options)
         - `gl.RGB8_ALPHA8`
           The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
         Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT`
         - `gl.DEPTH_STENCIL`
@@ -57,7 +52,7 @@ createProjectionLayer(options)
         - `gl.DEPTH24_STENCIL24`
           The default value is `gl.DEPTH_COMPONENT`.
     - `scaleFactor` {{optional_inline}}
-      - : A floating-point value which is used to scale the layer during compositing. A value of `1.0` represents the default pixel size for the frame buffer. (See also {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}}.) Unlike other layers, the `XRProjectionLayer` can't be created with an explicit pixel width and height, because the size is inferred by the hardware. (Projection layers fill the observer's entire view.)
+      - : A floating-point value which is used to scale the layer during compositing. A value of `1.0` represents the default pixel size for the frame buffer. (See also {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor_static", "XRWebGLLayer.getNativeFramebufferScaleFactor()")}}.) Unlike other layers, the `XRProjectionLayer` can't be created with an explicit pixel width and height, because the size is inferred by the hardware. (Projection layers fill the observer's entire view.)
 
 ### Return value
 
@@ -75,12 +70,12 @@ function onXRSessionStarted(xrSession) {
   const gl = glCanvas.getContext("webgl2", { xrCompatible: true });
   const xrGlBinding = new XRWebGLBinding(xrSession, gl);
   const projectionLayer = xrGlBinding.createProjectionLayer({
-    textureType: "texture-array"
+    textureType: "texture-array",
   });
   xrSession.updateRenderState({
-    layers: [projectionLayer]
+    layers: [projectionLayer],
   });
- }
+}
 ```
 
 ## Specifications

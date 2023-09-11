@@ -1,16 +1,8 @@
 ---
-title: FontFace.style
+title: "FontFace: style property"
+short-title: style
 slug: Web/API/FontFace/style
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - Style
 browser-compat: api.FontFace.style
 ---
 

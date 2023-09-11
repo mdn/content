@@ -2,17 +2,6 @@
 title: max-inline-size
 slug: Web/CSS/max-inline-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Properties
-  - CSS Logical Property
-  - CSS Property
-  - Element size
-  - Reference
-  - Text Direction
-  - Writing Mode
-  - max-inline-size
-  - recipe:css-property
 browser-compat: css.properties.max-inline-size
 ---
 

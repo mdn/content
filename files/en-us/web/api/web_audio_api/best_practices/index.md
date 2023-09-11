@@ -2,11 +2,6 @@
 title: Web Audio API best practices
 slug: Web/API/Web_Audio_API/Best_practices
 page-type: guide
-tags:
-  - Audio
-  - Best practices
-  - Guide
-  - Web Audio API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -52,25 +47,33 @@ When you create an audio context (either offline or online) it is created with a
 When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is a simple example of creating the context from inside a `click` event:
 
 ```js
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-  const audioCtx = new AudioContext();
-  // Do something with the audio context
-}, false);
+const button = document.querySelector("button");
+button.addEventListener(
+  "click",
+  () => {
+    const audioCtx = new AudioContext();
+    // Do something with the audio context
+  },
+  false,
+);
 ```
 
 If however, you create the context outside of a user gesture, its state will be set to `suspended` and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the [`resume()`](/en-US/docs/Web/API/AudioContext/resume) method.
 
 ```js
 const audioCtx = new AudioContext();
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-  // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-    audioCtx.resume();
-  }
-}, false);
+button.addEventListener(
+  "click",
+  () => {
+    // check if context is in suspended state (autoplay policy)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+  },
+  false,
+);
 ```
 
 You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the [`startRendering()`](/en-US/docs/Web/API/OfflineAudioContext/startRendering) method.

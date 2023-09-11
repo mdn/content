@@ -2,9 +2,6 @@
 title: media
 slug: Web/SVG/Attribute/media
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.style.media
 ---
 

@@ -2,20 +2,12 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 page-type: javascript-global-property
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - global
-  - globalThis
-  - this
-  - Polyfill
 browser-compat: javascript.builtins.globalThis
 ---
 
 {{jsSidebar("Objects")}}
 
-The global **`globalThis`** property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
+The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 
 {{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
 
@@ -66,20 +58,22 @@ function check(it) {
 }
 
 const globalObject =
-  check(typeof window === 'object' && window) ||
-  check(typeof self === 'object' && self) ||
-  check(typeof global === 'object' && global) ||
+  check(typeof window === "object" && window) ||
+  check(typeof self === "object" && self) ||
+  check(typeof global === "object" && global) ||
   // This returns undefined when running in strict mode
-  (function () { return this; })() ||
-  Function('return this')();
+  (function () {
+    return this;
+  })() ||
+  Function("return this")();
 ```
 
 After obtaining the global object, we can define new globals on it. For example, adding an implementation for [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl):
 
 ```js
-if (typeof globalObject.Intl === 'undefined') {
+if (typeof globalObject.Intl === "undefined") {
   // No Intl in this environment; define our own on the global scope
-  Object.defineProperty(globalObject, 'Intl', {
+  Object.defineProperty(globalObject, "Intl", {
     value: {
       // Our Intl implementation
     },
@@ -93,8 +87,8 @@ if (typeof globalObject.Intl === 'undefined') {
 With `globalThis` available, the additional search for the global across environments is not necessary anymore:
 
 ```js
-if (typeof globalThis.Intl === 'undefined') {
-  Object.defineProperty(globalThis, 'Intl', {
+if (typeof globalThis.Intl === "undefined") {
+  Object.defineProperty(globalThis, "Intl", {
     value: {
       // Our Intl implementation
     },

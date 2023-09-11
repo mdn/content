@@ -1,14 +1,10 @@
 ---
-title: WorkerNavigator.serial
+title: "WorkerNavigator: serial property"
+short-title: serial
 slug: Web/API/WorkerNavigator/serial
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - serial
-  - WorkerNavigator
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WorkerNavigator.serial
 ---
 
@@ -27,8 +23,7 @@ A {{domxref("Serial")}} object.
 The following example uses the `getPorts()` method to initialize a list of available ports.
 
 ```js
-navigator.serial.getPorts()
-.then((ports) => {
+navigator.serial.getPorts().then((ports) => {
   // Initialize the list of available ports.
 });
 ```

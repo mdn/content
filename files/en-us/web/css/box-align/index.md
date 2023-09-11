@@ -2,14 +2,9 @@
 title: box-align
 slug: Web/CSS/box-align
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - NeedsUpdate
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-align
 ---
 
@@ -19,7 +14,11 @@ browser-compat: css.properties.box-align
 
 The **`box-align`** [CSS](/en-US/docs/Web/CSS) property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
 
-See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+
+The direction of layout depends on the element's orientation: horizontal or vertical.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -34,10 +33,6 @@ box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
 ```
-
-The direction of layout depends on the element's orientation: horizontal or vertical.
-
-## Syntax
 
 The `box-align` property is specified as one of the keyword values listed below.
 
@@ -81,7 +76,7 @@ box-align =
 ### Setting box alignment
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

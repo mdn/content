@@ -2,12 +2,6 @@
 title: counter()
 slug: Web/CSS/counter
 page-type: css-function
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Function
-  - Function
-  - Reference
 browser-compat: css.types.counter
 ---
 
@@ -28,7 +22,7 @@ counter(countername);
 counter(countername, upper-roman)
 ```
 
-A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself.
+A [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) has no visible effect by itself.
 The `counter()` function (and {{cssxref("counters", "counters()")}} function) is what makes it useful by returning developer defined strings (or images).
 
 ### Values
@@ -36,7 +30,7 @@ The `counter()` function (and {{cssxref("counters", "counters()")}} function) is
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : A name identifying the counter, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
 - `<counter-style>`
-  - : A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols", "symbols()")}} function, where a counter style name is a `numeric`, `alphabetic`, or `symbolic` simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_Counter_Styles). If omitted, the counter-style defaults to `decimal`.
+  - : A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols", "symbols()")}} function, where a counter style name is a `numeric`, `alphabetic`, or `symbolic` simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to `decimal`.
 
 ### Formal syntax
 
@@ -119,7 +113,7 @@ li::after {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}

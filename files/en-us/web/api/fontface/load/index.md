@@ -1,16 +1,8 @@
 ---
-title: FontFace.load()
+title: "FontFace: load() method"
+short-title: load()
 slug: Web/API/FontFace/load
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Method
-  - Reference
-  - load
 browser-compat: api.FontFace.load
 ---
 
@@ -53,7 +45,7 @@ const canvas = document.getElementById("js-canvas");
 // load the "Bitter" font from Google Fonts
 const fontFile = new FontFace(
   "FontFamily Style Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)"
+  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
 );
 document.fonts.add(fontFile);
 
@@ -69,7 +61,7 @@ fontFile.load().then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 

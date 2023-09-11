@@ -1,16 +1,7 @@
 ---
 title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webNavigation
+page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCompleted
 ---
 
@@ -31,7 +22,7 @@ browser.webNavigation.onCompleted.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,15 +33,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
 
 - `filter` {{optional_inline}}
-  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions.
 
 ## Additional objects
 
@@ -60,8 +51,8 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation has occurred.
 - `url`
   - : `string`. The URL to which the given frame has navigated.
-- `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation has occurred. `0` indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happened in a nested iframe. Frame IDs are unique for a given tab and process.
 - `timeStamp`
@@ -77,12 +68,8 @@ Logs the target URLs for `onCompleted`, if the target URL's hostname contains "e
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCompleted(details) {
   console.log(`onCompleted: ${details.url}`);

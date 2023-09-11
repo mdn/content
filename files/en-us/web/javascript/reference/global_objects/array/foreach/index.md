@@ -2,20 +2,12 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.forEach
 ---
 
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
+The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
 
 {{EmbedInteractiveExample("pages/js/array-foreach.html")}}
@@ -23,43 +15,26 @@ for each array element.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function (element) { /* … */ })
-forEach(function (element, index) { /* … */ })
-forEach(function (element, index, array) { /* … */ })
-forEach(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value is discarded.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value is discarded. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `forEach()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
@@ -104,7 +79,7 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 
 ### Using forEach() on sparse arrays
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
@@ -250,7 +225,7 @@ console.log(words); // ['two', 'three', 'four']
 ### Flatten an array
 
 The following example is only here for learning purpose. If you want to flatten an
-array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
+array using built-in methods, you can use {{jsxref("Array.prototype.flat()")}}.
 
 ```js
 const flatten = (arr) => {
@@ -272,7 +247,7 @@ console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ### Calling forEach() on non-array objects
 
-The `forEach()` method reads the `length` property of `this` and then accesses each integer index.
+The `forEach()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -280,6 +255,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by forEach() since length is 3
 };
 Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 // 2
@@ -298,11 +274,13 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## See also
 
 - [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.filter()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
 - {{jsxref("Set.prototype.forEach()")}}

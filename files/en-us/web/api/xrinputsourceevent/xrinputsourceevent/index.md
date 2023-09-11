@@ -1,26 +1,8 @@
 ---
-title: XRInputSourceEvent()
+title: "XRInputSourceEvent: XRInputSourceEvent() constructor"
+short-title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - controllers
-  - events
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
 
@@ -63,7 +45,7 @@ sends it to the {{domxref("XRSession")}}.
 ```js
 let event = new XRInputSourceEvent("select", {
   frame: eventFrame,
-  inputSource: source
+  inputSource: source,
 });
 if (event) {
   xrSession.dispatchEvent(event);

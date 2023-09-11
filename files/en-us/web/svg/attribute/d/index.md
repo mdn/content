@@ -2,9 +2,6 @@
 title: d
 slug: Web/SVG/Attribute/d
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.path.d
 ---
 
@@ -681,7 +678,7 @@ svg {
     <circle cx="50" cy="10" r="1.5" />
     <circle cx="90" cy="90" r="1.5" />
   </g>
-  <use xlink:href="#ControlPoints" x="100" />
+  <use href="#ControlPoints" x="100" />
 </svg>
 ```
 
@@ -900,9 +897,9 @@ svg {
       <circle cx="100" cy="50" r="1.5" />
     </g>
 
-    <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp" x="60" />
-    <use xlink:href="#SmoothQuadraticDown" x="120" />
+    <use href="#SmoothQuadraticDown" x="60" />
+    <use href="#SmoothQuadraticUp" x="60" />
+    <use href="#SmoothQuadraticDown" x="120" />
   </g>
 </svg>
 ```

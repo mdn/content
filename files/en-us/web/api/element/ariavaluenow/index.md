@@ -1,15 +1,8 @@
 ---
-title: Element.ariaValueNow
+title: "Element: ariaValueNow property"
+short-title: ariaValueNow
 slug: Web/API/Element/ariaValueNow
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueNow
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaValueNow
 ---
 
@@ -35,7 +28,7 @@ In this example the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attribu
 ```
 
 ```js
-let el = document.getElementById('slider');
+let el = document.getElementById("slider");
 console.log(el.ariaValueNow); // 1
 el.ariaValueNow = "2";
 console.log(el.ariaValueNow); // 2

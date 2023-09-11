@@ -1,16 +1,7 @@
 ---
 title: Document and website structure
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Layout
-  - Page
-  - Site
-  - blocks
-  - semantics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -65,6 +56,10 @@ A "typical website" could be structured something like this:
 
 ![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
+> **Note:** The image above illustrates the main sections of a document, which you can define with HTML. However, the _appearance_ of the page shown here - including the layout, colors, and fonts - is achieved by applying [CSS](/en-US/docs/Learn/CSS) to the HTML.
+>
+> In this module we're not teaching CSS, but once you have an understanding of the basics of HTML, try diving into our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module to start learning how to style your site.
+
 ## HTML for structuring content
 
 The simple example shown above isn't pretty, but it is perfectly fine for illustrating a typical website layout example. Some websites have more columns, some are a lot more complex, but you get the idea. With the right CSS, you could use pretty much any elements to wrap around the different sections and get it looking how you wanted, but as discussed before, we need to respect semantics and **use the right element for the right job**.
@@ -88,7 +83,7 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -210,17 +205,17 @@ Each of the aforementioned elements can be clicked on to read the corresponding 
 
 ### Non-semantic wrappers
 
-Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable {{htmlattrxref('class')}} attribute, to provide some kind of label for them so they can be easily targeted.
+Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute, to provide some kind of label for them so they can be easily targeted.
 
 {{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:
 
 ```html
 <p>
   The King walked drunkenly back to his room at 01:00, the beer doing nothing to
-  aid him as he staggered through the door
+  aid him as he staggered through the door.
   <span class="editor-note">
-    [Editor's note: At this point in the play, the lights should be down low]
-  </span>.
+    [Editor's note: At this point in the play, the lights should be down low].
+  </span>
 </p>
 ```
 
@@ -228,14 +223,13 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 
 {{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:
 
-```html
+```html-nolint
 <div class="shopping-cart">
   <h2>Shopping cart</h2>
   <ul>
     <li>
       <p>
-        <a href=""><strong>Silver earrings</strong></a>:
-        $99.95.
+        <a href=""><strong>Silver earrings</strong></a>: $99.95.
       </p>
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>
@@ -313,20 +307,4 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
-## See also
-
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML semantic elements and the HTML outline algorithm.
-
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

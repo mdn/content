@@ -2,13 +2,6 @@
 title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-last-child
 ---
 
@@ -22,8 +15,10 @@ The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/doc
 
 The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
-```
-:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-last-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### Keyword values
@@ -44,6 +39,23 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the `An+B`-th element of a list. The index of the first element, counting from the end, is `1`. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
+
+### The `of <selector>` syntax
+
+By passing a selector argument, we can select the **nth-last** element that matches that selector. For example, the following selector matches the last three _important_ list items, which are assigned with `class="important"`.
+
+```css
+:nth-last-child(-n + 3 of li.important) {
+}
+```
+
+> **Note:** This is different from moving the selector outside of the function, like:
+
+```css
+li.important: nth-last-child(-n + 3);
+```
+
+This selector applies a style to list items if they are also within the last three children.
 
 ## Examples
 
@@ -156,6 +168,78 @@ li:nth-last-child(3) ~ li {
 
 {{EmbedLiveSample('Quantity_query', '100%', 270)}}
 
+### `of <selector>` syntax example
+
+In this example, there is an unordered list of names. Some items have a `noted` class applied and are then highlighted with a thick bottom border.
+
+#### HTML
+
+```html
+<ul>
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
+  <li>Jayla</li>
+  <li>Tyrone</li>
+  <li>Ricardo</li>
+  <li class="noted">Gila</li>
+  <li>Sienna</li>
+  <li>Titilayo</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Aisha</li>
+  <li>Veronica</li>
+  <li class="noted">Kyouko</li>
+  <li>Shireen</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+```
+
+#### CSS
+
+```css
+* {
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+In the following CSS we are targeting the **odd** list items that are marked with `class="noted"`.
+
+```css
+li:nth-last-child(odd of .noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### Result
+
+Items with `class="noted"` have a think bottom border and items 1, 7, 14, and 20 have a solid background as they are the _odd_ list items with `class="noted"`.
+
+{{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -166,5 +250,6 @@ li:nth-last-child(3) ~ li {
 
 ## See also
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{Cssxref(":nth-child")}}
+- {{Cssxref(":nth-last-of-type")}}
 - [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css/)

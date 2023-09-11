@@ -1,13 +1,7 @@
 ---
 title: Building up a basic demo with A-Frame
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
-tags:
-  - 3D
-  - A-Frame
-  - VR
-  - Virtual Reality
-  - Web
-  - WebGL
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -35,7 +29,7 @@ Let's start by setting up an environment to create something with A-Frame. We'll
 The first step is to create an HTML document — inside your project directory, create a new `index.html` file, and save the follow HTML inside it:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

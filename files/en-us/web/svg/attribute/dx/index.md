@@ -2,9 +2,6 @@
 title: dx
 slug: Web/SVG/Attribute/dx
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dx
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx
@@ -17,7 +14,6 @@ The **`dx`** attribute indicates a shift along the x-axis on the position of an 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('feDropShadow')}}
 - {{SVGElement('feOffset')}}
 - {{SVGElement('glyphRef')}}
@@ -59,36 +55,6 @@ line {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## altGlyph
-
-> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('altGlyph')}}, if it contains a single value, `dx` defines a shift along the x-axis for all alternate glyph.
-
-If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
 
 ## feDropShadow
 

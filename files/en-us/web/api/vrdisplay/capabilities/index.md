@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.capabilities
+title: "VRDisplay: capabilities property"
+short-title: capabilities
 slug: Web/API/VRDisplay/capabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - capabilities
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.capabilities
 ---
 

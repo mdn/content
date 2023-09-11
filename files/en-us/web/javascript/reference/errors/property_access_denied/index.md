@@ -2,11 +2,6 @@
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Security
 ---
 
 {{jsSidebar("Errors")}}
@@ -16,7 +11,7 @@ an attempt to access an object for which you have no permission.
 
 ## Message
 
-```
+```plain
 DOMException: Blocked a frame with origin "x" from accessing a cross-origin frame. (Chromium-based)
 DOMException: Permission denied to access property "x" on cross-origin object (Firefox)
 SecurityError: Blocked a frame with origin "x" from accessing a cross-origin frame. Protocols, domains, and ports must match. (Safari)
@@ -37,7 +32,7 @@ violated the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 ### No permission to access document
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <iframe

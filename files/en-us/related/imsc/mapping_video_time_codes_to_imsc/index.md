@@ -1,13 +1,7 @@
 ---
 title: Mapping video time codes to IMSC
 slug: Related/IMSC/Mapping_video_time_codes_to_IMSC
-tags:
-  - Guide
-  - IMSC
-  - Timing
-  - captions
-  - mapping
-  - subtitles
+page-type: guide
 ---
 
 Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.

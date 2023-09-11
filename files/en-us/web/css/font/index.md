@@ -2,12 +2,6 @@
 title: font
 slug: Web/CSS/font
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
 
@@ -32,6 +26,23 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("line-height")}}
 
 ## Syntax
+
+```css-nolint
+/* font-size font-family */
+font: 1.2em "Fira Sans", sans-serif;
+
+/* font-size/line height font-family */
+font: 1.2em/2 "Fira Sans", sans-serif;
+
+/* font-style font-weight font-size font-family */
+font: italic bold 1.2em "Fira Sans", sans-serif;
+
+/* font-stretch font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+
+/* system font */
+font: caption;
+```
 
 The `font` property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.
 
@@ -439,12 +450,14 @@ input {
 const textAreas = document.getElementsByClassName("curCss");
 
 function getProperties() {
-  return `${getCheckedValue("font_style")} `
-    + `${getCheckedValue("font_variant")} `
-    + `${getCheckedValue("font_weight")} `
-    + `${getCheckedValue("font_size")}`
-    + `${getCheckedValue("line_height")} `
-    + `${getCheckedValue("font_family")}`;
+  return (
+    `${getCheckedValue("font_style")} ` +
+    `${getCheckedValue("font_variant")} ` +
+    `${getCheckedValue("font_weight")} ` +
+    `${getCheckedValue("font_size")}` +
+    `${getCheckedValue("line_height")} ` +
+    `${getCheckedValue("font_family")}`
+  );
 }
 
 function getCheckedValue(radioName) {
@@ -461,8 +474,7 @@ function getCheckedValue(radioName) {
 }
 
 function setCss() {
-  getProperties();
-  injectCss(shortText);
+  injectCss(getProperties());
 }
 
 function injectCss(cssFragment) {

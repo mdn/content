@@ -2,12 +2,6 @@
 title: Applying styles and colors
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
@@ -50,7 +44,7 @@ function draw() {
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
       ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)}, ${Math.floor(
-        255 - 42.5 * j
+        255 - 42.5 * j,
       )}, 0)`;
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
@@ -82,7 +76,7 @@ function draw() {
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
       ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${Math.floor(
-        255 - 42.5 * j
+        255 - 42.5 * j,
       )})`;
       ctx.beginPath();
       ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, 2 * Math.PI, true);
@@ -451,7 +445,7 @@ The `setLineDash` method and the `lineDashOffset` property specify the dash patt
 In this example we are creating a marching ants effect. It is an animation technique often found in selection tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border. In a later part of this tutorial, you can learn how to do this and other [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations).
 
 ```html hidden
-<canvas id="canvas" width="110" height="110" role="presentation"></canvas>
+<canvas id="canvas" width="111" height="111" role="presentation"></canvas>
 ```
 
 ```js
@@ -467,7 +461,7 @@ function draw() {
 
 function march() {
   offset++;
-  if (offset > 16) {
+  if (offset > 5) {
     offset = 0;
   }
   draw();

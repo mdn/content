@@ -1,13 +1,8 @@
 ---
-title: DocumentFragment.querySelector()
+title: "DocumentFragment: querySelector() method"
+short-title: querySelector()
 slug: Web/API/DocumentFragment/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Method
-  - Reference
 browser-compat: api.DocumentFragment.querySelector
 ---
 
@@ -39,7 +34,7 @@ querySelector(selectors)
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), or `null` is returned if there are no matches.
 
 ## Examples
 
@@ -49,7 +44,7 @@ In this basic example, the first element in the {{domxref("DocumentFragment")}} 
 the class "`myclass`" is returned:
 
 ```js
-const el = documentfragment.querySelector('.myclass');
+const el = documentfragment.querySelector(".myclass");
 ```
 
 ### CSS syntax and the method's argument

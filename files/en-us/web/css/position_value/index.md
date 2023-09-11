@@ -2,13 +2,6 @@
 title: <position>
 slug: Web/CSS/position_value
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.position
 ---
 
@@ -49,7 +42,7 @@ keyword value keyword value /* Each value is an offset from the keyword that pre
 
 ## Interpolation
 
-When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [timing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
+When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [easing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
 
 ## Formal syntax
 

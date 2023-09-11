@@ -2,15 +2,6 @@
 title: Synchronous and asynchronous requests
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 page-type: guide
-tags:
-  - Communication
-  - DOM
-  - Guide
-  - Intermediate
-  - Networking
-  - Synchronous
-  - XMLHttpRequest
-  - asynchronous
 ---
 
 {{domxref('XMLHttpRequest')}} supports both synchronous and asynchronous communications. In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
@@ -127,7 +118,7 @@ Notice the addition of code to handle the "timeout" event by setting the `ontime
 Usage:
 
 ```js
-function showMessage (message) {
+function showMessage(message) {
   console.log(`${message} ${this.responseText}`);
 }
 
@@ -148,7 +139,7 @@ This example demonstrates how to make a simple synchronous request.
 
 ```js
 const request = new XMLHttpRequest();
-request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
+request.open("GET", "/bar/foo.txt", false); // `false` makes the request synchronous
 request.send(null);
 
 if (request.status === 200) {
@@ -167,7 +158,7 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -190,7 +181,7 @@ One of the few cases in which a synchronous request does not usually block execu
 
 **`myFile.txt`** (the target of the synchronous {{domxref('XMLHttpRequest')}} invocation):
 
-```
+```plain
 Hello World!!
 ```
 
@@ -200,7 +191,7 @@ Hello World!!
 self.onmessage = (event) => {
   if (event.data === "Hello") {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "myFile.txt", false);  // synchronous request
+    xhr.open("GET", "myFile.txt", false); // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
   }
@@ -218,7 +209,7 @@ There are some cases in which the synchronous usage of {{domxref('XMLHttpRequest
 The following example shows theoretical analytics code that attempts to submit data to a server by using a synchronous {{domxref('XMLHttpRequest')}} in an unload handler. This results in the unloading of the page to be delayed.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
   const client = new XMLHttpRequest();
@@ -233,7 +224,7 @@ Using the **`sendBeacon()`** method, the data will be transmitted asynchronously
 The following example shows a theoretical analytics code pattern that submits data to a server by using the **`sendBeacon()`** method.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
   navigator.sendBeacon("/log", analyticsData);

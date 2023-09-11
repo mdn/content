@@ -1,15 +1,8 @@
 ---
-title: HTMLObjectElement.contentWindow
+title: "HTMLObjectElement: contentWindow property"
+short-title: contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - contentWindow
 browser-compat: api.HTMLObjectElement.contentWindow
 ---
 
@@ -22,7 +15,7 @@ otherwise null.
 
 ## Value
 
-A {{domxref('WindowProxy')}}.
+A {{domxref('Window')}}, or `null` if there are none.
 
 ## Specifications
 

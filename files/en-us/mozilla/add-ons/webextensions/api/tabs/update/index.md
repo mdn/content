@@ -1,16 +1,7 @@
 ---
 title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.update
 ---
 
@@ -42,7 +33,7 @@ let updating = browser.tabs.update(
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
     - `autoDiscardable` {{optional_inline}}
-      - : `boolean`. Whether the tab should be discarded automatically by the browser when resources are low.
+      - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
     - `highlighted` {{optional_inline}}
 
       - : `boolean`. Adds or removes the tab from the current selection. If `true` and the tab is not highlighted, it will become active by default.
@@ -98,7 +89,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+let updating = browser.tabs.update({ url: "https://developer.mozilla.org" });
 updating.then(onUpdated, onError);
 ```
 
@@ -116,12 +107,12 @@ function onError(error) {
 function updateFirstTab(tabs) {
   let updating = browser.tabs.update(tabs[0].id, {
     active: true,
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
   updating.then(onUpdated, onError);
 }
 
-let querying = browser.tabs.query({currentWindow:true});
+let querying = browser.tabs.query({ currentWindow: true });
 querying.then(updateFirstTab, onError);
 ```
 

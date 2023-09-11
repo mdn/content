@@ -2,18 +2,12 @@
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variation-settings
 ---
 
 {{CSSRef}}
 
-The **`font-variation-settings`** CSS property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) characteristics, by specifying the four letter axis names of the characteristics you want to vary, along with their values.
+The **`font-variation-settings`** CSS property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
 
 {{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
 
@@ -41,13 +35,13 @@ This property's value can take one of two forms:
 - `normal`
   - : Text is laid out using default settings.
 - `<string> <number>`
-  - : When rendering text, the list of variable font axis names is passed to the text layout engine to enable or disable font features. Each setting is always one or more pairs consisting of a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters followed by a {{cssxref("number")}} indicating the axis value to set. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E codepoint range, the whole property is invalid. The `<number>` can be fractional or negative, depending on the value range available in your font, as defined by the font designer.
+  - : When rendering text, the list of variable font axis names is passed to the text layout engine to enable or disable font features. Each setting is always one or more pairs consisting of a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters followed by a {{cssxref("number")}} indicating the axis value to set. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E code point range, the whole property is invalid. The `<number>` can be fractional or negative, depending on the value range available in your font, as defined by the font designer.
 
 ## Description
 
 This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
 
-Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g. `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the `@font-face` declaration includes a `font-weight` range.
+Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g. `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the {{cssxref("@font-face")}} declaration includes a {{cssxref("@font-face/font-weight", "font-weight")}} range.
 
 ### Registered and custom axes
 
@@ -104,19 +98,19 @@ To use variable fonts on your operating system, you need to make sure that it is
 
 ## Examples
 
-You can find a number of other variable fonts examples at our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide), [v-fonts.com](https://v-fonts.com/), and [axis-praxis.org](https://www.axis-praxis.org/).
+You can find a number of other variable font examples in our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide).
 
-### Weight (wght)
+### Controlling variable font weight (wght)
 
-The following live example's CSS can be edited to allow you to play with font weight values.
+You can edit the CSS in the example below to play with different font weight values. See what happens when you specify a value outside the weight range.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}
+{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 940)}}
 
-### Slant (slnt)
+### Controlling variable font slant (slnt)
 
-The following live example's CSS can be edited to allow you to play with font slant/oblique values.
+You can edit the CSS in the example below to play with different font slant/oblique values.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
+{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 940)}}
 
 ## Specifications
 
@@ -128,6 +122,8 @@ The following live example's CSS can be edited to allow you to play with font sl
 
 ## See also
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
-- [OpenType Font Variations Overview](https://docs.microsoft.com/typography/opentype/spec/otvaroverview)
-- [OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg)
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [OpenType font variations overview](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview) on microsoft.com
+- [OpenType design-variation axis tag registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg) on microsoft.com
+- [OpenType variable fonts](https://www.axis-praxis.org/) on axis-praxis.org
+- [Variable fonts](https://v-fonts.com/) on v-fonts.com

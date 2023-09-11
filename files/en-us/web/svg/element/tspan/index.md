@@ -2,11 +2,6 @@
 title: <tspan>
 slug: Web/SVG/Element/tspan
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
 browser-compat: svg.elements.tspan
 ---
 

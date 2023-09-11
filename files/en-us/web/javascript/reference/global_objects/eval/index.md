@@ -2,13 +2,6 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 page-type: javascript-function
-tags:
-  - Evaluating JavaScript
-  - JavaScript
-  - Method
-  - Reference
-  - Warning
-  - eval
 browser-compat: javascript.builtins.eval
 ---
 
@@ -47,7 +40,7 @@ The argument of the `eval()` function is a string. It will evaluate the source s
 
 In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{jsxref("SyntaxError")}}.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
@@ -256,7 +249,7 @@ const propName = getPropName(); // returns "a" or "b"
 const result = eval(`obj.${propName}`);
 ```
 
-However, `eval()` is not necessary here — in fact, it's more error-prone, because if `propName` is not a valid identifier, it leads to a syntax error. Moreover, if `getPropName` is not a function you control, this may lead to execution of arbitrary code. Instead, use the [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), which are much faster and safer:
+However, `eval()` is not necessary here — in fact, it's more error-prone, because if `propName` is not a valid identifier, it leads to a syntax error. Moreover, if `getPropName` is not a function you control, this may lead to execution of arbitrary code. Instead, use the [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), which are much faster and safer:
 
 ```js
 const obj = { a: 20, b: 30 };
@@ -392,7 +385,7 @@ const str = `if (x === 5) {
   z = 0;
 }`;
 
-console.log("x is ", eval(str)); // z is 42  x is 420
+console.log("x is", eval(str)); // z is 42  x is 420
 ```
 
 ### eval() as a string defining function requires "(" and ")" as prefix and suffix
@@ -416,5 +409,5 @@ const fct2 = eval(fctStr2); // return the function `b`
 
 ## See also
 
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [WebExtensions: Using eval in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)

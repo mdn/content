@@ -2,11 +2,6 @@
 title: "@font-palette-values"
 slug: Web/CSS/@font-palette-values
 page-type: css-at-rule
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - Reference
 browser-compat: css.at-rules.font-palette-values
 ---
 
@@ -67,8 +62,8 @@ p {
 }
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
-  override-colors: 
-    0 #00ffbb, 
+  override-colors:
+    0 #00ffbb,
     1 #007744;
 }
 .alternate {
@@ -96,3 +91,4 @@ When overriding colors of the normal or base-palette at index 0 you do not need 
 - {{cssxref("@font-palette-values/font-family", "font-family")}} descriptor
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}} descriptor
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor
+- {{domxref("CSSFontPaletteValuesRule")}}

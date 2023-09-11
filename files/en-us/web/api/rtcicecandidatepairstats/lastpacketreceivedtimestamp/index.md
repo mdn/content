@@ -1,20 +1,8 @@
 ---
-title: RTCIceCandidatePairStats.lastPacketReceivedTimestamp
+title: "RTCIceCandidatePairStats: lastPacketReceivedTimestamp property"
+short-title: lastPacketReceivedTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Networking
-  - Packet
-  - Property
-  - RTCIceCandidatePairStats
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - lastPacketReceivedTimestamp
-  - timeStamp
 browser-compat: api.RTCIceCandidatePairStats.lastPacketReceivedTimestamp
 ---
 

@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: Images and form elements'
+title: "Test your skills: Images and form elements"
 slug: Learn/CSS/Building_blocks/Images_tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Images
-  - Form
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

@@ -2,18 +2,12 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.continue
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`continue`** statement terminates execution of the
-statements in the current iteration of the current or labeled loop, and continues
-execution of the loop with the next iteration.
+The **`continue`** statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
 
 {{EmbedInteractiveExample("pages/js/statement-continue.html")}}
 
@@ -29,24 +23,21 @@ continue label;
 
 ## Description
 
-In contrast to the {{jsxref("Statements/break", "break")}} statement,
-`continue` does not terminate the execution of the loop entirely, but instead:
+In contrast to the {{jsxref("Statements/break", "break")}} statement, `continue` does not terminate the execution of the loop entirely, but instead:
 
-- In a {{jsxref("Statements/while", "while")}} loop, it jumps back to the condition.
+- In a {{jsxref("Statements/while", "while")}} or {{jsxref("Statements/do...while", "do...while")}} loop, it jumps back to the condition.
 - In a {{jsxref("Statements/for", "for")}} loop, it jumps to the update expression.
+- In a {{jsxref("Statements/for...in", "for...in")}}, {{jsxref("Statements/for...of", "for...of")}}, or {{jsxref("Statements/for-await...of", "for await...of")}} loop, it jumps to the next iteration.
 
-The `continue` statement can include an optional label that allows the
-program to jump to the next iteration of a labeled loop statement instead of the current
-loop. In this case, the `continue` statement needs to be nested within this
-labeled statement.
+The `continue` statement can include an optional label that allows the program to jump to the next iteration of a labeled loop statement instead of the innermost loop. In this case, the `continue` statement needs to be nested within this labeled statement.
+
+A `continue` statement, with or without a following label, cannot be used at the top level of a script, module, function's body, or [static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), even when the function or class is further contained within a loop.
 
 ## Examples
 
 ### Using continue with while
 
-The following example shows a {{jsxref("Statements/while", "while")}} loop that has a
-`continue` statement that executes when the value of `i` is 3.
-Thus, `n` takes on the values 1, 3, 7, and 12.
+The following example shows a {{jsxref("Statements/while", "while")}} loop that has a `continue` statement that executes when the value of `i` is 3. Thus, `n` takes on the values 1, 3, 7, and 12.
 
 ```js
 let i = 0;
@@ -65,31 +56,23 @@ while (i < 5) {
 
 ### Using continue with a label
 
-In the following example, a statement labeled `checkiandj` contains a
-statement labeled `checkj`. If `continue` is encountered, the
-program continues at the top of the `checkj` statement. Each time
-`continue` is encountered, `checkj` reiterates until its condition
-returns false. When false is returned, the remainder of the `checkiandj`
-statement is completed.
+In the following example, a statement labeled `checkIAndJ` contains a statement labeled `checkJ`. If `continue` is encountered, the program continues at the top of the `checkJ` statement. Each time `continue` is encountered, `checkJ` reiterates until its condition returns false. When false is returned, the remainder of the `checkIAndJ` statement is completed.
 
-If `continue` had a label of `checkiandj`, the program would
-continue at the top of the `checkiandj` statement.
-
-See also {{jsxref("Statements/label", "label", "", 1)}}.
+If `continue` had a label of `checkIAndJ`, the program would continue at the top of the `checkIAndJ` statement.
 
 ```js
 let i = 0;
 let j = 8;
 
-checkiandj: while (i < 4) {
+checkIAndJ: while (i < 4) {
   console.log(`i: ${i}`);
   i += 1;
 
-  checkj: while (j > 4) {
+  checkJ: while (j > 4) {
     console.log(`j: ${j}`);
     j -= 1;
 
-    if (j % 2 === 0) continue checkj;
+    if (j % 2 === 0) continue checkJ;
     console.log(`${j} is odd.`);
   }
   console.log(`i = ${i}`);
@@ -99,7 +82,7 @@ checkiandj: while (i < 4) {
 
 Output:
 
-```
+```plain
 i: 0
 
 // start checkj
@@ -125,6 +108,40 @@ j = 4
 i: 3
 i = 4
 j = 4
+```
+
+### Unsyntactic continue statements
+
+`continue` cannot be used within loops across function boundaries.
+
+```js-nolint example-bad
+for (let i = 0; i < 10; i++) {
+  (() => {
+    continue; // SyntaxError: Illegal continue statement: no surrounding iteration statement
+  })();
+}
+```
+
+When referencing a label, the labeled statement must contain the `continue` statement.
+
+```js-nolint example-bad
+label: for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+for (let i = 0; i < 10; i++) {
+  continue label; // SyntaxError: Undefined label 'label'
+}
+```
+
+The labeled statement must be a loop.
+
+```js-nolint example-bad
+label: {
+  for (let i = 0; i < 10; i++) {
+    continue label; // SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement
+  }
+}
 ```
 
 ## Specifications

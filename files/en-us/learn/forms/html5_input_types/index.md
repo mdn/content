@@ -1,15 +1,7 @@
 ---
 title: The HTML5 input types
 slug: Learn/Forms/HTML5_input_types
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
@@ -43,13 +35,13 @@ Because HTML form control appearance may be quite different from a designer's sp
 
 ## Email address field
 
-This type of field is set using the value `email` for the {{htmlattrxref("type","input")}} attribute:
+This type of field is set using the value `email` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="email" id="email" name="email" />
 ```
 
-When this {{htmlattrxref("type","input")}} is used, the user is required to type a valid email address into the field. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
+When this [`type`](/en-US/docs/Web/HTML/Element/input#type) is used, the user is required to type a valid email address into the field. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -79,7 +71,7 @@ Note that `a@b` is a valid email address according to the default provided const
 
 ## Search field
 
-Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the {{htmlattrxref("type","input")}} attribute:
+Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="search" id="search" name="search" />
@@ -95,7 +87,7 @@ Another worth-noting feature is that the values of a `search` field can be autom
 
 ## Phone number field
 
-A special field for filling in phone numbers can be created using `tel` as the value of the {{htmlattrxref("type","input")}} attribute:
+A special field for filling in phone numbers can be created using `tel` as the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="tel" id="tel" name="tel" />
@@ -113,7 +105,7 @@ As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern
 
 ## URL field
 
-A special type of field for entering URLs can be created using the value `url` for the {{htmlattrxref("type","input")}} attribute:
+A special type of field for entering URLs can be created using the value `url` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="url" id="url" name="url" />
@@ -129,13 +121,13 @@ See below for an example (taken on Firefox for Android):
 
 ## Numeric field
 
-Controls for entering numbers can be created with an {{HTMLElement("input")}} {{htmlattrxref("type","input")}} of `number`. This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control. On devices with dynamic keyboards, the numeric keyboard is generally displayed.
+Controls for entering numbers can be created with an {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Element/input#type) of `number`. This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control. On devices with dynamic keyboards, the numeric keyboard is generally displayed.
 
 The following screenshot (from Firefox for Android) provides an example:
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-With the `number` input type, you can constrain the minimum and maximum values allowed by setting the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.
+With the `number` input type, you can constrain the minimum and maximum values allowed by setting the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes.
 
 You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer. To allow float numbers, specify [`step="any"`](/en-US/docs/Web/HTML/Attributes/step). If omitted, the `step` value defaults to `1`, meaning only whole numbers are valid.
 
@@ -161,7 +153,7 @@ Another way to pick a number is to use a **slider**. You see these quite often o
 
 Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
 
-A slider is created using the {{HTMLElement("input")}} with its {{htmlattrxref("type","input")}} attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
+A slider is created using the {{HTMLElement("input")}} with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
 It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum, and increment values, respectively.
 
@@ -207,7 +199,7 @@ Gathering date and time values has traditionally been a nightmare for web develo
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
-A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the {{htmlattrxref("type","input")}} attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
+A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -266,7 +258,7 @@ All date and time controls can be constrained using the [`min`](/en-US/docs/Web/
 
 Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, and so on.
 
-A `color` control can be created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value `color`:
+A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
 
 ```html
 <input type="color" name="color" id="color" />
@@ -289,19 +281,6 @@ You've reached the end of this article, but can you remember the most important 
 That brings us to the end of our tour of the HTML5 form input types. There are a few other control types that cannot be easily grouped together due to their very specific behaviors, but which are still essential to know about. We cover those in the next article.
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- **The HTML5 input types**
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

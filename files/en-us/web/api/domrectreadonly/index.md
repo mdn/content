@@ -2,15 +2,6 @@
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 page-type: web-api-interface
-tags:
-  - API
-  - DOMRectReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Read-only
-  - Rectangle
-  - Reference
 browser-compat: api.DOMRectReadOnly
 ---
 
@@ -44,7 +35,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties used by {{
 
 ## Static methods
 
-- {{domxref("DOMRectReadOnly.fromRect()")}}
+- {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}}
   - : Creates a new `DOMRect` object with a given location and dimensions.
 
 ## Specifications

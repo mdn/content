@@ -1,12 +1,8 @@
 ---
-title: Range.extractContents()
+title: "Range: extractContents() method"
+short-title: extractContents()
 slug: Web/API/Range/extractContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.extractContents
 ---
 
@@ -85,22 +81,26 @@ button {
 #### JavaScript
 
 ```js
-const list1 = document.getElementById('list1');
-const list2 = document.getElementById('list2');
-const button = document.getElementById('swap');
+const list1 = document.getElementById("list1");
+const list2 = document.getElementById("list2");
+const button = document.getElementById("swap");
 
-button.addEventListener('click', (e) => {
+button.addEventListener("click", (e) => {
   selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {
     const range = selection.getRangeAt(i);
 
-    if (range.commonAncestorContainer === list1 ||
-        range.commonAncestorContainer.parentNode === list1) {
+    if (
+      range.commonAncestorContainer === list1 ||
+      range.commonAncestorContainer.parentNode === list1
+    ) {
       const documentFragment = range.extractContents();
       list2.appendChild(documentFragment);
-    } else if (range.commonAncestorContainer === list2 ||
-        range.commonAncestorContainer.parentNode === list2) {
+    } else if (
+      range.commonAncestorContainer === list2 ||
+      range.commonAncestorContainer.parentNode === list2
+    ) {
       const documentFragment = range.extractContents();
       list1.appendChild(documentFragment);
     }

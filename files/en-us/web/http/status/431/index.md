@@ -1,12 +1,7 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-5
 ---
 

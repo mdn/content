@@ -1,10 +1,10 @@
 ---
 title: First interactive
 slug: Glossary/First_interactive
-tags:
-  - Lighthouse
-  - Web Performance
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **First Interactive,** also known as [first CPU idle](/en-US/docs/Glossary/First_CPU_idle), is a non-standard web performance metric that measures when the user's window is quiet enough to handle user input, or what is termed as minimally interactive.
 

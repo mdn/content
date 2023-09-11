@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createBufferSource()
+title: "BaseAudioContext: createBufferSource() method"
+short-title: createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createBufferSource
 browser-compat: api.BaseAudioContext.createBufferSource
 ---
 
@@ -67,7 +60,7 @@ const frameCount = audioCtx.sampleRate * 2.0;
 const myArrayBuffer = audioCtx.createBuffer(
   channels,
   frameCount,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 button.onclick = () => {

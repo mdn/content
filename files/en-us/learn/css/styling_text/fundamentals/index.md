@@ -1,19 +1,7 @@
 ---
 title: Fundamental text and font styling
 slug: Learn/CSS/Styling_text/Fundamentals
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Guide
-  - Style
-  - Text
-  - alignment
-  - family
-  - font
-  - shorthand
-  - spacing
-  - weight
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
@@ -111,7 +99,7 @@ To set a different font for your text, you use the {{cssxref("font-family")}} pr
 
 ```css
 p {
-  font-family: arial;
+  font-family: Arial;
 }
 ```
 
@@ -295,7 +283,9 @@ In such a case, the browser starts at the beginning of the list and looks to see
 
 It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasize this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
 
-> **Note:** Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> **Note:** While you can use font family names that contain a space, such as `Trebuchet MS`, without quoting the name, to avoid mistakes in escaping, it is recommended to quote font family names that contain white space, digits, or punctuation characters other than hyphens.
+
+> **Warning:** Any font family name which could be misinterpreted as a generic family name or a CSS-wide keyword must be quoted. While the font-family names can be included as a {{cssxref("custom-ident")}} or a {{cssxref("string")}}, font family names that happen to be the same as a CSS-wide property value, like `initial`, or `inherit`, or CSS have the same name as one to the generic font family names, like `sans-serif` or `fantasy`, must be included as a quoted string. Otherwise, the font family name will be interpreted as being the equivalent CSS keyword or generic family name. When used as keywords, the generic font family names —`serif`, `sans-serif`, `monospace`, `cursive`, and `fantasy` — and the global CSS keywords MUST NOT be quoted, as strings are not interpreted as CSS keywords.
 
 #### A font-family example
 
@@ -334,7 +324,7 @@ In our previous module's [CSS values and units](/en-US/docs/Learn/CSS/Building_b
 - `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element). This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
 - `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, although if you want to support really old browsers, you might struggle — `rem` is not supported in Internet Explorer 8 and below.
 
-The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to `16px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of `16px`. Other elements may have different default sizes. For example, an {{htmlelement("h1")}} element has a size of `2em` set by default, so it will have a final size of `32px`.
+The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to `16px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of `16px`. Other elements may have different default sizes. For example, an {{htmlelement("Heading_Elements", "h1")}} element has a size of `2em` set by default, so it will have a final size of `32px`.
 
 Things become more tricky when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element in your page, and set its `font-size` to 1.5 `em` (which would compute to 24 `px` final size), and then wanted the paragraphs inside the `<article>` elements to have a computed font size of 20 `px`, what `em` value would you use?
 
@@ -444,11 +434,13 @@ You can apply multiple shadows to the same text by including multiple shadow val
 
 ```css
 h1 {
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
 }
 ```
 
-If we applied this to the {{htmlelement("h1")}} element in our Tommy The Cat example, we'd end up with this:
+If we applied this to the {{htmlelement("Heading_Elements", "h1")}} element in our Tommy The Cat example, we'd end up with this:
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -502,7 +494,7 @@ The {{cssxref("text-align")}} property is used to control how text is aligned wi
 - `center`: Centers the text.
 - `justify`: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully — it can look terrible, especially when applied to a paragraph with lots of long words in it. If you are going to use this, you should also think about using something else along with it, such as {{cssxref("hyphens")}}, to break some of the longer words across lines.
 
-If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example, we'd end up with this:
+If we applied `text-align: center;` to the {{htmlelement("Heading_Elements", "h1")}} in our example, we'd end up with this:
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -526,7 +518,9 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
   text-align: center;
 }
 
@@ -577,7 +571,9 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
   text-align: center;
 }
 
@@ -632,7 +628,9 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -697,7 +695,10 @@ A forward slash has to be put in between the {{cssxref("font-size")}} and {{cssx
 A full example would look like this:
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Active learning: Playing with styling text
@@ -726,7 +727,7 @@ If you make a mistake, you can always reset it using the _Reset_ button.
 p {
 
 }
-</textarea>
+  </textarea>
 
   <h2>Output</h2>
   <div
@@ -777,11 +778,3 @@ window.addEventListener("load", drawOutput);
 We hope you enjoyed playing with text in this article! The next article will provide you with all you need to know about [styling HTML lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists).
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

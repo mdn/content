@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.error
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.error
 ---
 
@@ -30,15 +23,15 @@ function listener(details) {
 
   filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
-  }
+  };
 
   //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["<all_urls>"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["<all_urls>"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

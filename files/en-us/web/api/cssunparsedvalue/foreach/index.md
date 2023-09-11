@@ -1,22 +1,12 @@
 ---
-title: CSSUnparsedValue.forEach()
+title: "CSSUnparsedValue: forEach() method"
+short-title: forEach()
 slug: Web/API/CSSUnparsedValue/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
-  - forEach()
 browser-compat: api.CSSUnparsedValue.forEach
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.forEach()`** method
 executes a provided function once for each element of the
@@ -25,20 +15,8 @@ executes a provided function once for each element of the
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((currentValue) => { /* … */ } )
-forEach((currentValue, index) => { /* … */ } )
-forEach((currentValue, index, array) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function(currentValue) { /* … */ })
-forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters

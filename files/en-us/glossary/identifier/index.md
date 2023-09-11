@@ -1,11 +1,10 @@
 ---
 title: Identifier
 slug: Glossary/Identifier
-tags:
-  - Beginner
-  - CodingScripting
-  - Sharing
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 An **identifier** is a sequence of characters in the code that identifies a {{glossary("variable")}}, {{glossary("function")}}, or {{glossary("property")}}.
 

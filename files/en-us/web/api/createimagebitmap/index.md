@@ -1,14 +1,8 @@
 ---
-title: createImageBitmap()
+title: createImageBitmap() global function
+short-title: createImageBitmap()
 slug: Web/API/createImageBitmap
 page-type: web-api-global-function
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Method
-  - Reference
-  - createImageBitmap
 browser-compat: api.createImageBitmap
 ---
 
@@ -93,25 +87,25 @@ sprite to the canvas. A sprite sheet is an image containing multiple smaller ima
 each of which you want to be able to render separately.
 
 ```js
-const canvas = document.getElementById('myCanvas'),
-ctx = canvas.getContext('2d'),
-image = new Image();
+const canvas = document.getElementById("myCanvas"),
+  ctx = canvas.getContext("2d"),
+  image = new Image();
 
 // Wait for the sprite sheet to load
 image.onload = () => {
   Promise.all([
     // Cut out two sprites from the sprite sheet
     createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32)
+    createImageBitmap(image, 32, 0, 32, 32),
   ]).then((sprites) => {
     // Draw each sprite onto the canvas
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);
   });
-}
+};
 
 // Load the sprite sheet from an image file
-image.src = 'sprites.png';
+image.src = "sprites.png";
 ```
 
 ## Specifications

@@ -2,12 +2,6 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number
 ---
 
@@ -19,12 +13,15 @@ The `Number` constructor contains constants and methods for working with numbers
 
 ## Description
 
-Numbers are most commonly expressed in literal forms like `0b101`, `0o13`, `0x0A`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
+Numbers are most commonly expressed in literal forms like `255` or `3.14159`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
 
 ```js
-123; // one-hundred twenty-three
-123.0; // same
-123 === 123.0; // true
+255; // two-hundred and fifty-five
+255.0; // same number
+255 === 255.0; // true
+255 === 0xff; // true (hexadecimal notation)
+255 === 0b11111111; // true (binary notation)
+255 === 0.255e3; // true (decimal exponential notation)
 ```
 
 A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a {{jsxref("BigInt")}} type, but it's not designed to replace Number for everyday uses. `37` is still a number, not a BigInt.)
@@ -57,11 +54,11 @@ The largest value a number can hold is 2<sup>1024</sup> - 1 (with the exponent b
 
 Integers can only be represented without loss of precision in the range -2<sup>53</sup> + 1 to 2<sup>53</sup> - 1, inclusive (obtainable via {{jsxref("Number.MIN_SAFE_INTEGER")}} and {{jsxref("Number.MAX_SAFE_INTEGER")}}), because the mantissa can only hold 53 bits (including the leading 1).
 
-More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type).
+More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type).
 
 ### Number coercion
 
-Many built-in operations that expect numbers first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/#sec-tonumber) can be summarized as follows:
+Many built-in operations that expect numbers first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber) can be summarized as follows:
 
 - Numbers are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
@@ -97,16 +94,24 @@ JavaScript has some lower-level functions that deal with the binary encoding of 
 
 ```js
 new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
-new Int8Array([257, -257]); // Int8Array(1) [ 1, -1 ]
-// 257 = 0001 0000 0001 = 0000 0001 (mod 2^8) = 1
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = -1 (as signed integer)
-new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = 255 (as unsigned integer)
+
+new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
+// 257 = 0001 0000 0001
+//     =      0000 0001 (mod 2^8)
+//     = 1
+// -257 = 1110 1111 1111
+//      =      1111 1111 (mod 2^8)
+//      = -1 (as signed integer)
+
+new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
+// -257 = 1110 1111 1111
+//      =      1111 1111 (mod 2^8)
+//      = 255 (as unsigned integer)
 ```
 
 ## Constructor
 
-- [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
+- {{jsxref("Number/Number", "Number()")}}
   - : Creates a new `Number` value.
 
 When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
@@ -131,23 +136,28 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : Special value representing negative infinity. Returned on overflow.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Special value representing infinity. Returned on overflow.
-- {{jsxref("Number", "Number.prototype")}}
-  - : Allows the addition of properties to the `Number` object.
 
 ## Static methods
 
-- {{jsxref("Number.isNaN()")}}
-  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isFinite()")}}
   - : Determine whether the passed value is a finite number.
 - {{jsxref("Number.isInteger()")}}
   - : Determine whether the passed value is an integer.
+- {{jsxref("Number.isNaN()")}}
+  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()")}}
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
 
 ## Instance methods
 
@@ -198,7 +208,7 @@ Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 The following example converts the {{jsxref("Date")}} object to a numerical value using `Number` as a function:
 
 ```js
-const d = new Date("December 17, 1995 03:24:00");
+const d = new Date("1995-12-17T03:24:00");
 console.log(Number(d));
 ```
 
@@ -235,5 +245,5 @@ Number("-Infinity"); // -Infinity
 - [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
-- The {{jsxref("Math")}} global object
-- Integers with arbitrary precision: {{jsxref("BigInt")}}
+- {{jsxref("Math")}}
+- {{jsxref("BigInt")}}

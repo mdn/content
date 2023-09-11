@@ -1,16 +1,8 @@
 ---
-title: ServiceWorkerRegistration.showNotification()
+title: "ServiceWorkerRegistration: showNotification() method"
+short-title: showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
 
@@ -116,7 +108,7 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 navigator.serviceWorker.register("sw.js");
 
 function showNotification() {
-  Notification.requestPermission((result) => {
+  Notification.requestPermission().then((result) => {
     if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
         registration.showNotification("Vibration Sample", {

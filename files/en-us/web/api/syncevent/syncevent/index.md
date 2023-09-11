@@ -1,15 +1,10 @@
 ---
-title: SyncEvent()
+title: "SyncEvent: SyncEvent() constructor"
+short-title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Background Sync
-  - Constructor
-  - Experimental
-  - Reference
-  - ServiceWorker
-  - SyncEvent
+status:
+  - experimental
 browser-compat: api.SyncEvent.SyncEvent
 ---
 
@@ -29,7 +24,7 @@ new SyncEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `sync`.
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
+  - : An object that, in addition to the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}, can have the following properties:
     - `tag`
       - : A developer-defined unique identifier for this `SyncEvent`.
     - `lastChance` {{optional_inline}}

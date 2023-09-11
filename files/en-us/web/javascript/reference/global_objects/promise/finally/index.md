@@ -2,20 +2,12 @@
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Promises
-  - Prototype
-  - Reference
-  - finally
-  - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
 
 {{JSRef}}
 
-The **`finally()`** method of a {{jsxref("Promise")}} object schedules a function to be called when the promise is settled (either fulfilled or rejected). It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
+The **`finally()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is settled (either fulfilled or rejected). It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
 This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then", "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
@@ -24,17 +16,13 @@ This lets you avoid duplicating code in both the promise's {{jsxref("Promise/the
 ## Syntax
 
 ```js-nolint
-finally(onFinally)
-
-finally(() => {
-  // Code that will run after promise is settled (fulfilled or rejected)
-})
+promiseInstance.finally(onFinally)
 ```
 
 ### Parameters
 
 - `onFinally`
-  - : A {{jsxref("Function")}} called when the `Promise` is settled. This handler receives no parameters.
+  - : A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise. The function is called with no arguments.
 
 ### Return value
 

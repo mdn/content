@@ -2,19 +2,14 @@
 title: <glyphRef>
 slug: Web/SVG/Element/glyphRef
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Text Content
+status:
+  - deprecated
 browser-compat: svg.elements.glyphRef
 ---
 
 {{SVGRef}}{{deprecated_header}}
 
-The `glyphRef` element provides a single possible glyph to the referencing {{ SVGElement("altGlyph") }} substitution.
+The `glyphRef` element provides a single possible glyph to the referencing `<altGlyph>` substitution.
 
 ## Usage context
 
@@ -38,7 +33,7 @@ The `glyphRef` element provides a single possible glyph to the referencing {{ SV
 - {{SVGAttr("dy")}} {{Deprecated_Inline}}
 - {{SVGAttr("glyphRef")}} {{Deprecated_Inline}}
 - {{SVGAttr("format")}} {{Deprecated_Inline}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
@@ -51,7 +46,3 @@ This element implements the [`SVGGlyphRefElement`](/en-US/docs/DOM/SVGGlyphRefEl
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{SVGElement("altGlyph")}}

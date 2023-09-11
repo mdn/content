@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     if: >
-      ${{ github.event.workflow_run.event == 'pull_request' &&
+      ${{ github.repository == 'mdn/content' &&
+      github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
@@ -54,10 +55,9 @@ jobs:
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
 
       - name: Unzip what was downloaded
-        run: |
-          unzip build.zip -d build
+        run: 7z x build.zip -obuild -bb1
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: mdn/yari
           path: yari
@@ -66,7 +66,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.10"
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local

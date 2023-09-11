@@ -2,13 +2,6 @@
 title: white-space
 slug: Web/CSS/white-space
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-  - white-space
 browser-compat: css.properties.white-space
 ---
 
@@ -21,20 +14,24 @@ The **`white-space`** CSS property sets how {{Glossary("whitespace", "white spac
 The property specifies two things:
 
 - Whether and how white space is [collapsed](#collapsing_of_white_space).
-- Whether lines may wrap at soft-wrap opportunities.
+- Whether and how lines wrap.
 
 > **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Single keyword values */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
 white-space: pre-wrap;
 white-space: pre-line;
 white-space: break-spaces;
+
+/* white-space-collapse and text-wrap shorthand values */
+white-space: collapse balance;
+white-space: preserve nowrap;
 
 /* Global values */
 white-space: inherit;
@@ -44,9 +41,9 @@ white-space: revert-layer;
 white-space: unset;
 ```
 
-The `white-space` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+`white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
 
 - `normal`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
@@ -63,10 +60,10 @@ The `white-space` property is specified as a single keyword chosen from the list
   - : The behavior is identical to that of `pre-wrap`, except that:
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
-    - A line breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, and thus affect the box's intrinsic sizes (min-content size and max-content size).
+    - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
+    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
 
-The following table summarizes the behavior of the various `white-space` values:
+The following table summarizes the behavior of the various `white-space` keyword values:
 
 <table class="standard-table">
   <thead>
@@ -142,7 +139,7 @@ The following table summarizes the behavior of the various `white-space` values:
 
 ## Collapsing of white space
 
-The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text-3/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+The {{cssxref("white-space-collapse")}} property page explains the [browser algorithm for collapsing white space](/en-US/docs/Web/CSS/white-space-collapse#collapsing_of_white_space).
 
 ## Formal definition
 
@@ -172,8 +169,6 @@ pre {
 
 ### In action
 
-#### HTML
-
 ```html hidden
 <div id="css-code" class="box">
   p { white-space:
@@ -184,6 +179,7 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
+    <option>preserve nowrap</option>
   </select>
   }
 </div>
@@ -203,7 +199,6 @@ pre {
 .box {
   width: 300px;
   padding: 16px;
-  border-radius: 10px;
 }
 
 #css-code {
@@ -219,34 +214,20 @@ pre {
 #results {
   background-color: rgb(230, 230, 230);
   overflow-x: scroll;
-  height: 400px;
   white-space: normal;
   font-size: 14px;
 }
 ```
 
 ```js hidden
-const select  = document.querySelector("#css-code select");
+const select = document.querySelector("#css-code select");
 const results = document.querySelector("#results p");
 select.addEventListener("change", (e) => {
   results.setAttribute("style", `white-space: ${e.target.value}`);
-})
+});
 ```
 
-```html
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-  in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-```
-
-#### Result
-
-{{EmbedLiveSample("In_action", "100%", 500)}}
+{{EmbedLiveSample("In_action", "100%", 350)}}
 
 ## Specifications
 

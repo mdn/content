@@ -2,11 +2,6 @@
 title: Default parameters
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Language feature
 browser-compat: javascript.functions.default_parameters
 ---
 
@@ -19,7 +14,7 @@ browser-compat: javascript.functions.default_parameters
 ## Syntax
 
 ```js-nolint
-function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) {
+function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {
   // …
 }
 ```
@@ -74,7 +69,7 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-> **Note:** Parameters after the first default parameter will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
+> **Note:** The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 The default parameter initializers live in their own scope, which is a parent of the scope created for the function body.
 
@@ -188,6 +183,7 @@ function withDefaults(
 
 function withoutDefaults(a, b, c, d, e, f, g) {
   switch (arguments.length) {
+    case 0:
     case 1:
       b = 5;
     case 2:
@@ -215,7 +211,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax.
 
-A common way of doing that is to set an empty object/array as the default value the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
+A common way of doing that is to set an empty object/array as the default value for the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
 
 ```js
 function preFilledArray([x = 1, y = 2] = []) {
@@ -247,4 +243,7 @@ preFilledObject({ z: 2 }); // 2
 
 ## See also
 
-- [Original proposal at ecmascript.org](https://web.archive.org/web/20161222115423/http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

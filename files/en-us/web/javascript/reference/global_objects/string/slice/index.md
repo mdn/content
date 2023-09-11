@@ -2,18 +2,12 @@
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.slice
 ---
 
 {{JSRef}}
 
-The **`slice()`** method extracts a section of a string and
+The **`slice()`** method of {{jsxref("String")}} values extracts a section of this string and
 returns it as a new string, without modifying the original string.
 
 {{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}

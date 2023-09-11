@@ -2,25 +2,16 @@
 title: appearance
 slug: Web/CSS/appearance
 page-type: css-property
-tags:
-  - '-moz-appearance'
-  - '-webkit-appearance'
-  - CSS
-  - CSS Basic User Interface
-  - CSS Property
-  - Reference
-  - appearance
-  - recipe:css-property
 browser-compat: css.properties.appearance
 ---
 
 {{CSSRef}}
 
-The **`appearance`** CSS property is used to control native appearance of UI controls, that are based on operating system's theme.
+The **`appearance`** CSS property is used to display UI elements with platform-specific styling, based on the operating system's theme.
 
 {{EmbedInteractiveExample("pages/css/appearance.html")}}
 
-Before standardization this property allowed simple elements to be shown as widgets, such as buttons or check boxes. It was considered a misfeature and authors are encouraged to use only standard keywords now.
+Before standardization, this property allowed elements to be shown as widgets, such as buttons or check boxes. It was considered a misfeature and authors are encouraged to use only standard keywords now.
 
 > **Note:** If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword `none` does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
 
@@ -33,223 +24,125 @@ appearance: auto;
 appearance: menulist-button;
 appearance: textfield;
 
-/* "Compat-auto" values, which have the same effect as 'auto' */
-appearance: button;
-appearance: searchfield;
-appearance: textarea;
-appearance: push-button;
-appearance: slider-horizontal;
-appearance: checkbox;
-appearance: radio;
-appearance: square-button;
-appearance: menulist;
-appearance: listbox;
-appearance: meter;
-appearance: progress-bar;
-
-/* Partial list of available values in Gecko */
--moz-appearance: scrollbarbutton-up;
--moz-appearance: button-bevel;
-
-/* Partial list of available values in WebKit/Blink (as well as Gecko and Edge) */
--webkit-appearance: media-mute-button;
--webkit-appearance: caret;
-
 /* Global values */
 appearance: inherit;
 appearance: initial;
 appearance: revert;
 appearance: revert-layer;
 appearance: unset;
+
+/* <compat-auto> values have the same effect as 'auto' */
+appearance: button;
+appearance: checkbox;
 ```
 
 ### Values
 
-#### Standard keywords
+For the following keywords, the user agent selects the appropriate styling based on the element.
+Some examples are provided, but the list is not exhaustive.
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Value</th>
-      <th>Browser</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>none</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td>Hides certain features of widgets, such as arrow displayed in select element, indicating that list can be expanded.</td>
-    </tr>
-    <tr>
-      <td><code>auto</code></td>
-      <td>Firefox Chrome Edge</td>
-      <td>
-        The user agent selects the appropriate special styling based on the
-        element. Acts as <code>none</code> on elements with no special styling.
-      </td>
-    </tr>
-    <tr>
-      <td><code>menulist-button</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>textfield</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        The following values are treated as equivalent to <code>auto</code>:
-      </td>
-    </tr>
-    <tr>
-      <td><code>button</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td>The element used to be drawn like a button.</td>
-    </tr>
-    <tr>
-      <td><code>checkbox</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td>
-        The element used to be drawn like a checkbox, including only the actual
-        "checkbox" portion.
-      </td>
-    </tr>
-    <tr>
-      <td><code>listbox</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>menulist</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>meter</code></td>
-      <td>Chrome Safari Firefox</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>progress-bar</code></td>
-      <td>Chrome Safari Firefox</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>push-button</code></td>
-      <td>Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>radio</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td>
-        The element used to be drawn like a radio button, including only the actual
-        "radio button" portion.
-      </td>
-    </tr>
-    <tr>
-      <td><code>searchfield</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>slider-horizontal</code></td>
-      <td>Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>square-button</code></td>
-      <td>Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>textarea</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+- `none`
 
-#### Non-standard keywords
+  - : Hides certain features of widgets, such as arrow displayed in select element, indicating that list can be expanded.
 
-The following values may be operational on historical browser versions using **`-moz-appearance`** or **`-webkit-appearance`** prefix, but not on the standard **`appearance`** property.
+- `auto`
 
-| Value                                  | Browser                    | Description                                                                                                                                                                        |
-| -------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `attachment`                           | Safari                     |                                                                                                                                                                                    |
-| `borderless-attachment`                | Safari                     |                                                                                                                                                                                    |
-| `button-bevel`                         | Firefox Chrome Safari Edge |                                                                                                                                                                                    |
-| `caps-lock-indicator`                  | Safari Edge                |                                                                                                                                                                                    |
-| `caret`                                | Firefox Chrome Safari Edge |                                                                                                                                                                                    |
-| `checkbox-container`                   | Firefox                    | The element is drawn like a container for a checkbox, which may include a prelighting background effect under certain platforms. Normally it would contain a label and a checkbox. |
-| `checkbox-label`                       | Firefox                    |                                                                                                                                                                                    |
-| `checkmenuitem`                        | Firefox                    |                                                                                                                                                                                    |
-| `color-well`                           | Safari                     | `input type=color`                                                                                                                                                                 |
-| `continuous-capacity-level-indicator`  | Safari                     |                                                                                                                                                                                    |
-| `default-button`                       | Safari Edge                |                                                                                                                                                                                    |
-| `discrete-capacity-level-indicator`    | Safari                     |                                                                                                                                                                                    |
-| `inner-spin-button`                    | Firefox Chrome Safari      |                                                                                                                                                                                    |
-| `image-controls-button`                | Safari                     |                                                                                                                                                                                    |
-| `list-button`                          | Safari                     | datalist                                                                                                                                                                           |
-| `listitem`                             | Firefox Chrome Safari Edge |                                                                                                                                                                                    |
-| `media-enter-fullscreen-button`        | Chrome Safari              |                                                                                                                                                                                    |
-| `media-exit-fullscreen-button`         | Chrome Safari              |                                                                                                                                                                                    |
-| `media-fullscreen-volume-slider`       | Safari                     |                                                                                                                                                                                    |
-| `media-fullscreen-volume-slider-thumb` | Safari                     |                                                                                                                                                                                    |
-| `media-mute-button`                    | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `media-play-button`                    | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `media-overlay-play-button`            | Chrome Safari              |                                                                                                                                                                                    |
-| `media-return-to-realtime-button`      | Safari                     |                                                                                                                                                                                    |
-| `media-rewind-button`                  | Safari                     |                                                                                                                                                                                    |
-| `media-seek-back-button`               | Safari Edge                |                                                                                                                                                                                    |
-| `media-seek-forward-button`            | Safari Edge                |                                                                                                                                                                                    |
-| `media-toggle-closed-captions-button`  | Chrome Safari              |                                                                                                                                                                                    |
-| `media-slider`                         | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `media-sliderthumb`                    | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `media-volume-slider-container`        | Chrome Safari              |                                                                                                                                                                                    |
-| `media-volume-slider-mute-button`      | Safari                     |                                                                                                                                                                                    |
-| `media-volume-slider`                  | Chrome Safari              |                                                                                                                                                                                    |
-| `media-volume-sliderthumb`             | Chrome Safari              |                                                                                                                                                                                    |
-| `media-controls-background`            | Chrome Safari              |                                                                                                                                                                                    |
-| `media-controls-dark-bar-background`   | Safari                     |                                                                                                                                                                                    |
-| `media-controls-fullscreen-background` | Chrome Safari              |                                                                                                                                                                                    |
-| `media-controls-light-bar-background`  | Safari                     |                                                                                                                                                                                    |
-| `media-current-time-display`           | Chrome Safari              |                                                                                                                                                                                    |
-| `media-time-remaining-display`         | Chrome Safari              |                                                                                                                                                                                    |
-| `menulist-text`                        | Firefox Chrome Safari Edge |                                                                                                                                                                                    |
-| `menulist-textfield`                   | Firefox Chrome Safari Edge | The element is styled as the text field for a menulist. (Not implemented for the Windows platform)                                                                                 |
-| `meterbar`                             | Firefox                    | Use `meter` instead.                                                                                                                                                               |
-| `number-input`                         | Firefox                    |                                                                                                                                                                                    |
-| `progress-bar-value`                   | Chrome Safari              |                                                                                                                                                                                    |
-| `progressbar`                          | Firefox                    | The element is styled like a progress bar. Use `progress-bar` instead                                                                                                              |
-| `progressbar-vertical`                 | Firefox                    |                                                                                                                                                                                    |
-| `range`                                | Firefox                    |                                                                                                                                                                                    |
-| `range-thumb`                          | Firefox                    |                                                                                                                                                                                    |
-| `rating-level-indicator`               | Safari                     |                                                                                                                                                                                    |
-| `relevancy-level-indicator`            | Safari                     |                                                                                                                                                                                    |
-| `scale-horizontal`                     | Firefox                    |                                                                                                                                                                                    |
-| `scalethumbend`                        | Firefox                    |                                                                                                                                                                                    |
-| `scalethumb-horizontal`                | Firefox                    |                                                                                                                                                                                    |
-| `scalethumbstart`                      | Firefox                    |                                                                                                                                                                                    |
-| `scalethumbtick`                       | Firefox                    |                                                                                                                                                                                    |
-| `scalethumb-vertical`                  | Firefox                    |                                                                                                                                                                                    |
-| `scale-vertical`                       | Firefox                    |                                                                                                                                                                                    |
-| `scrollbarthumb-horizontal`            | Firefox                    |                                                                                                                                                                                    |
-| `scrollbarthumb-vertical`              | Firefox                    |                                                                                                                                                                                    |
-| `scrollbartrack-horizontal`            | Firefox                    |                                                                                                                                                                                    |
-| `scrollbartrack-vertical`              | Firefox                    |                                                                                                                                                                                    |
-| `searchfield-decoration`               | Safari Edge                |                                                                                                                                                                                    |
-| `searchfield-results-decoration`       | Chrome Safari Edge         | (Works on Chrome 51 on Windows 7)                                                                                                                                                  |
-| `searchfield-results-button`           | Safari Edge                |                                                                                                                                                                                    |
-| `searchfield-cancel-button`            | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `snapshotted-plugin-overlay`           | Safari                     |                                                                                                                                                                                    |
-| `sheet`                                | None                       |                                                                                                                                                                                    |
-| `slider-vertical`                      | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `sliderthumb-horizontal`               | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `sliderthumb-vertical`                 | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `textfield-multiline`                  | Firefox                    | Use `textarea` instead.                                                                                                                                                            |
-| `-apple-pay-button`                    | Safari                     | **iOS and macOS only**. Available on the web starting in iOS 10.1 and macOS 10.12.1                                                                                                |
+  - : Acts as `none` on elements with no special styling.
+
+- `<compat-special>`
+
+  - : One of `menulist-button` or `textfield`.
+    Both of these values are equivalent to `auto` on elements with no special styling.
+
+- `<compat-auto>`
+
+  - : Possible values are `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea`.
+    Keywords which are the equivalent of `auto` for maintaining compatibility with older browsers.
+
+#### Non-standard values
+
+The following values may be operational on historical browser versions using **`-moz-appearance`** or **`-webkit-appearance`** prefix, but not on the standard **`appearance`** property:
+
+<details>
+<summary>Non-standard values</summary>
+
+| Value                                  | Safari | Firefox | Chrome | Edge |
+| -------------------------------------- | ------ | ------- | ------ | ---- |
+| `attachment`                           | Y      |         |        |      |
+| `borderless-attachment`                | Y      |         |        |      |
+| `button-bevel`                         | Y      | Y       | Y      | Y    |
+| `caps-lock-indicator`                  | Y      |         |        | Y    |
+| `caret`                                | Y      | Y       | Y      | Y    |
+| `checkbox-container`                   |        | Y       |        |      |
+| `checkbox-label`                       |        | Y       |        |      |
+| `checkmenuitem`                        |        | Y       |        |      |
+| `color-well`                           | Y      |         |        |      |
+| `continuous-capacity-level-indicator`  | Y      |         |        |      |
+| `default-button`                       | Y      |         |        | Y    |
+| `discrete-capacity-level-indicator`    | Y      |         |        |      |
+| `inner-spin-button`                    | Y      | Y       | Y      |      |
+| `image-controls-button`                | Y      |         |        |      |
+| `list-button`                          | Y      |         |        |      |
+| `listitem`                             | Y      | Y       | Y      | Y    |
+| `media-enter-fullscreen-button`        | Y      |         | Y      |      |
+| `media-exit-fullscreen-button`         | Y      |         | Y      |      |
+| `media-fullscreen-volume-slider`       | Y      |         |        |      |
+| `media-fullscreen-volume-slider-thumb` | Y      |         |        |      |
+| `media-mute-button`                    | Y      |         |        | Y    |
+| `media-play-button`                    | Y      |         |        | Y    |
+| `media-overlay-play-button`            | Y      |         | Y      |      |
+| `media-return-to-realtime-button`      | Y      |         |        |      |
+| `media-rewind-button`                  | Y      |         |        |      |
+| `media-seek-back-button`               | Y      |         | Y      |      |
+| `media-seek-forward-button`            | Y      |         | Y      |      |
+| `media-toggle-closed-captions-button`  | Y      |         | Y      |      |
+| `media-slider`                         | Y      |         | Y      | Y    |
+| `media-sliderthumb`                    | Y      |         | Y      | Y    |
+| `media-volume-slider-container`        | Y      |         | Y      |      |
+| `media-volume-slider-mute-button`      | Y      |         |        |      |
+| `media-volume-slider`                  | Y      |         | Y      |      |
+| `media-volume-sliderthumb`             | Y      |         | Y      |      |
+| `media-controls-background`            | Y      |         | Y      |      |
+| `media-controls-dark-bar-background`   | Y      |         |        |      |
+| `media-controls-fullscreen-background` | Y      |         | Y      |      |
+| `media-controls-light-bar-background`  | Y      |         |        |      |
+| `media-current-time-display`           | Y      |         | Y      |      |
+| `media-time-remaining-display`         | Y      |         | Y      |      |
+| `menulist-text`                        | Y      | Y       | Y      | Y    |
+| `menulist-textfield`                   | Y      | Y       | Y      | Y    |
+| `meterbar`                             |        | Y       |        |      |
+| `number-input`                         |        | Y       |        |      |
+| `progress-bar-value`                   | Y      |         | Y      |      |
+| `progressbar`                          |        | Y       |        |      |
+| `progressbar-vertical`                 |        | Y       |        |      |
+| `range`                                |        | Y       |        |      |
+| `range-thumb`                          |        | Y       |        |      |
+| `rating-level-indicator`               | Y      |         |        |      |
+| `relevancy-level-indicator`            | Y      |         |        |      |
+| `scale-horizontal`                     |        | Y       |        |      |
+| `scalethumbend`                        |        | Y       |        |      |
+| `scalethumb-horizontal`                |        | Y       |        |      |
+| `scalethumbstart`                      |        | Y       |        |      |
+| `scalethumbtick`                       |        | Y       |        |      |
+| `scalethumb-vertical`                  |        | Y       |        |      |
+| `scale-vertical`                       |        | Y       |        |      |
+| `scrollbarthumb-horizontal`            |        | Y       |        |      |
+| `scrollbarthumb-vertical`              |        | Y       |        |      |
+| `scrollbartrack-horizontal`            |        | Y       |        |      |
+| `scrollbartrack-vertical`              |        | Y       |        |      |
+| `searchfield-decoration`               | Y      |         |        | Y    |
+| `searchfield-results-decoration`       | Y      | Y       | Y      | Y    |
+| `searchfield-results-button`           | Y      |         |        | Y    |
+| `searchfield-cancel-button`            | Y      | Y       | Y      | Y    |
+| `snapshotted-plugin-overlay`           | Y      |         |        |      |
+| `sheet`                                |        |         |        |      |
+| `slider-vertical`                      |        |         | Y      | Y    |
+| `sliderthumb-horizontal`               |        |         | Y      | Y    |
+| `sliderthumb-vertical`                 |        |         | Y      | Y    |
+| `textfield-multiline`                  |        | Y       |        |      |
+| `-apple-pay-button`                    | Y      |         |        |      |
+
+</details>
 
 ## Formal definition
 
@@ -261,43 +154,55 @@ The following values may be operational on historical browser versions using **`
 
 ## Examples
 
-### Make an element look like a menulist button
-
-```css
-.exampleone {
-  -webkit-appearance: menulist-button;
-  -moz-appearance: menulist-button;
-  appearance: menulist-button;
-}
-```
-
 ### Apply custom styling
+
+The following example shows how to remove the default styling from a checkbox and select element, and apply custom styling.
+The appearance of the checkbox is changed to a circle, and the select element shows how to remove the arrow indicating that the list can be expanded.
 
 #### HTML
 
 ```html
+<input type="checkbox" />
+<input type="checkbox" checked />
+
+<select>
+  <option>default</option>
+  <option>option 2</option>
+</select>
 <select class="none">
   <option>appearance: none</option>
-</select>
-<select class="auto">
-  <option>appearance: auto</option>
+  <option>option 2</option>
 </select>
 ```
 
 #### CSS
 
 ```css
-.none {
+input {
   appearance: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background: red;
 }
-.auto {
-  appearance: auto;
+input:checked {
+  border-radius: 50%;
+  background: green;
+}
+
+select {
+  border: 1px solid black;
+  font-size: 1em;
+}
+
+select.none {
+  appearance: none;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Apply_custom_styling", 1050, 70)}}
+{{EmbedLiveSample("Apply_custom_styling", 1050, 100)}}
 
 ## Specifications
 
@@ -309,4 +214,4 @@ The following values may be operational on historical browser versions using **`
 
 ## See also
 
-- [Definition of `appearance` in CSS Basic User Interface Module Level 4](https://drafts.csswg.org/css-ui/#appearance-switching)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)

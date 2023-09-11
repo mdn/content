@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.primaryKey
+title: "IDBCursor: primaryKey property"
+short-title: primaryKey
 slug: Web/API/IDBCursor/primaryKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - primaryKey
 browser-compat: api.IDBCursor.primaryKey
 ---
 
@@ -34,7 +26,7 @@ cursor to iterate through all the records in the object store. Within each itera
 log the primary key of the cursor to the console, something like this (its the album
 title in each case, which is our primarykey):
 
-```
+```plain
 Hemispheres
 ```
 
@@ -44,23 +36,23 @@ you can grab data from the current record under the cursor object using `cursor.
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       console.log(cursor.primaryKey);
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

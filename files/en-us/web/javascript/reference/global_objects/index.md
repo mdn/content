@@ -2,11 +2,6 @@
 title: Standard built-in objects
 slug: Web/JavaScript/Reference/Global_Objects
 page-type: landing-page
-tags:
-  - JavaScript
-  - Landing page
-  - Overview
-  - Reference
 ---
 
 {{JSSidebar("Objects")}}
@@ -17,7 +12,7 @@ The term "global objects" (or standard built-in objects) here is not to be confu
 
 The **global object** itself can be accessed using the {{JSxRef("Operators/this", "this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
 
-Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
+Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
 
 For more information about the distinction between the [DOM](/en-US/docs/Web/API/Document_Object_Model) and core [JavaScript](/en-US/docs/Web/JavaScript), see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 
@@ -134,6 +129,8 @@ These objects interact with the garbage collection mechanism.
 
 Control abstractions can help to structure code, especially async code (without using deeply nested callbacks, for example).
 
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncGeneratorFunction")}}
@@ -151,12 +148,13 @@ Control abstractions can help to structure code, especially async code (without 
 Additions to the ECMAScript core for language-sensitive functionalities.
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.DurationFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}

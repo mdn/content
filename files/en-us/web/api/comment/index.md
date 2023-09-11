@@ -2,9 +2,6 @@
 title: Comment
 slug: Web/API/Comment
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.Comment
 ---
 

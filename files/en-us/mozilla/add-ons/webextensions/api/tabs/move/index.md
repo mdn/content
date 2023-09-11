@@ -1,16 +1,7 @@
 ---
 title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - move
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.move
 ---
 
@@ -70,12 +61,12 @@ function firstToLast(windowInfo) {
   if (windowInfo.tabs.length === 0) {
     return;
   }
-  let moving = browser.tabs.move(windowInfo.tabs[0].id, {index: -1});
+  let moving = browser.tabs.move(windowInfo.tabs[0].id, { index: -1 });
   moving.then(onMoved, onError);
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let gettingCurrent = browser.windows.getCurrent({populate: true});
+  let gettingCurrent = browser.windows.getCurrent({ populate: true });
   gettingCurrent.then(firstToLast, onError);
 });
 ```
@@ -93,12 +84,12 @@ function onError(error) {
 
 function moveMoz(tabs) {
   let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
-  let moving = browser.tabs.move(mozTabIds, {index: -1});
+  let moving = browser.tabs.move(mozTabIds, { index: -1 });
   moving.then(onMoved, onError);
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
+  let gettingMozTabs = browser.tabs.query({ url: "*://*.mozilla.org/*" });
   gettingMozTabs.then(moveMoz, onError);
 });
 ```
@@ -117,12 +108,15 @@ function onError(error) {
 function moveMoz(tabs) {
   let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
   let targetWindow = tabs[0].windowId;
-  let moving = browser.tabs.move(mozTabIds, {windowId: targetWindow, index: 0});
+  let moving = browser.tabs.move(mozTabIds, {
+    windowId: targetWindow,
+    index: 0,
+  });
   moving.then(onMoved, onError);
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
+  let gettingMozTabs = browser.tabs.query({ url: "*://*.mozilla.org/*" });
   gettingMozTabs.then(moveMoz, onError);
 });
 ```

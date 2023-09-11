@@ -2,32 +2,17 @@
 title: box-lines
 slug: Web/CSS/box-lines
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-lines
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
 The **`box-lines`** [CSS](/en-US/docs/Web/CSS) property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
-
-```css
-/* Keyword values */
-box-lines: single;
-box-lines: multiple;
-
-/* Global values */
-box-lines: inherit;
-box-lines: initial;
-box-lines: unset;
-```
 
 By default a horizontal box will lay out its children in a single row, and a vertical box will lay out its children in a single column. This behavior can be changed using the `box-lines` property. The default value is `single`, which means that all elements will be placed in a single row or column, and any elements that don't fit will be considered overflow.
 
@@ -40,6 +25,17 @@ A similar process occurs for children in a vertical box. Later lines in normal d
 Once the number of lines has been determined, elements with a computed value for {{CSSxRef("box-flex")}} other than `0` stretch as necessary in an attempt to fill the remaining space on the lines. Each line computes flexes independently, so only elements on that line are considered when evaluating {{CSSxRef("box-flex")}} and {{CSSxRef("box-flex-groups")}}. The packing of elements in a line, as specified by the {{CSSxRef("box-pack")}} property, is also computed independently for each line.
 
 ## Syntax
+
+```css
+/* Keyword values */
+box-lines: single;
+box-lines: multiple;
+
+/* Global values */
+box-lines: inherit;
+box-lines: initial;
+box-lines: unset;
+```
 
 The `box-lines` property is specified as one of the keyword values listed below.
 

@@ -1,12 +1,10 @@
 ---
 title: RTF
 slug: Glossary/RTF
-tags:
-  - Composing
-  - Format
-  - RTF
-  - Rich Text Format
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 RTF (Rich Text Format) is a plain-text-based file format with support for formatting instructions (like bold or italic).
 

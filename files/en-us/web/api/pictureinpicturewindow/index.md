@@ -2,15 +2,6 @@
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Interface
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.PictureInPictureWindow
 ---
 
@@ -52,7 +43,9 @@ const video = document.querySelector("video");
 
 function printPipWindowDimensions(evt) {
   const pipWindow = evt.target;
-  console.log(`The floating window dimensions are: ${pipWindow.width}x${pipWindow.height}px`);
+  console.log(
+    `The floating window dimensions are: ${pipWindow.width}x${pipWindow.height}px`,
+  );
   // will print:
   // The floating window dimensions are: 640x360px
 }

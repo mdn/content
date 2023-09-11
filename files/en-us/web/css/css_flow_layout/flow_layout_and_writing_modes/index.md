@@ -1,20 +1,14 @@
 ---
 title: Flow layout and writing modes
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 page-type: guide
-tags:
-  - CSS
-  - Flow Layout
-  - Guide
-  - Orientation
-  - Writing-mode
 ---
 
 {{CSSRef}}
 
-The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
+The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
 
-This is not a comprehensive guide to the use of writing modes in CSS, the aim here is to document the areas where flow layout interacts with writing modes in possibly unanticipated ways. The [external resources](#external_resources) and [see also](#see_also) sections of this document link to more writing modes resources.
+This is not a comprehensive guide to the use of writing modes in CSS, the aim here is to document the areas where flow layout interacts with writing modes in possibly unanticipated ways. The [See also](#see_also) section provides links to more writing modes resources.
 
 ## Writing modes specification
 
@@ -72,7 +66,7 @@ Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("in
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-The [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties) specification includes logical versions of the properties that control margins, padding and borders as well as other mappings for things that we have typically used physical directions to specify.
+The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module includes logical versions of the properties that control margins, padding and borders as well as other mappings for things that we have typically used physical directions to specify.
 
 ## Summary
 
@@ -80,6 +74,6 @@ In most cases, flow layout works as you would expect it to when changing the wri
 
 ## See also
 
-- [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
-- [Writing Modes And CSS Layout](https://www.smashingmagazine.com/2019/08/writing-modes-layout/)
-- [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/)
+- [Writing Modes](/en-US/docs/Web/CSS/CSS_writing_modes)
+- [Writing modes and CSS layout](https://www.smashingmagazine.com/2019/08/writing-modes-layout/) on Smashing Magazine (2019)
+- [CSS writing modes](https://24ways.org/2016/css-writing-modes/) on 24ways.org (2016)

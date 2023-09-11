@@ -1,18 +1,13 @@
 ---
-title: get Set[@@species]
+title: Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - set
 browser-compat: javascript.builtins.Set.@@species
 ---
 
 {{JSRef}}
 
-The **`Set[@@species]`** accessor property is an unused accessor property specifying how to copy `Set` objects.
+The **`Set[@@species]`** static accessor property is an unused accessor property specifying how to copy `Set` objects.
 
 ## Syntax
 

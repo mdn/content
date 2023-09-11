@@ -2,10 +2,6 @@
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.for_in
 ---
 
@@ -25,7 +21,7 @@ for (variable in object)
 ### Parameters
 
 - `variable`
-  - : Receives a string property name on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable or an object property).
+  - : Receives a string property name on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...in` loop is in.
 - `object`
   - : Object whose non-symbol enumerable properties are iterated over.
 - `statement`
@@ -39,15 +35,31 @@ A `for...in` loop only iterates over enumerable, non-symbol properties. Objects 
 
 The traversal order, as of modern ECMAScript specification, is well-defined and consistent across implementations. Within each component of the prototype chain, all non-negative integer keys (those that can be array indices) will be traversed first in ascending order by value, then other string keys in ascending chronological order of property creation.
 
-The `variable` part of `for...in` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}. You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) or an object property like `for (x.y in iterable)` as well.
+The `variable` part of `for...in` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}. You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple local variables, or use a property accessor like `for (x.y in iterable)` to assign the value to an object property.
 
 A [legacy syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements) allows `var` declarations of the loop variable to have an initializer. This throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode and is ignored in non–strict mode.
 
 ### Deleted, added, or modified properties
 
-If a property is modified in one iteration and then visited at a later time, its value in the loop is its value at that later time. A property that is deleted before it has been visited will not be visited later. Properties added to the object over which iteration is occurring may either be visited or omitted from iteration.
+`for...in` visits property keys in the following fashion:
 
-In general, it is best not to add, modify, or remove properties from the object during iteration, other than the property currently being visited. There is no guarantee whether an added property will be visited, whether a modified property (other than the current one) will be visited before or after it is modified, or whether a deleted property will be visited before it is deleted.
+1. It first gets all own string keys of the current object, in a fashion very similar to {{jsxref("Object.getOwnPropertyNames()")}}.
+2. For each key, if no string with the same value has ever been visited, the [property descriptor is retrieved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor) and the property is only visited if it is enumerable. However, this property string will be marked as visited even if it's not enumerable.
+3. Then, the current object is replaced with its prototype, and the process is repeated.
+
+This means:
+
+- Any property added to the currently visited object during iteration will not be visited, because all own properties of the current object have already been saved beforehand.
+- If multiple objects in the prototype chain have a property with the same name, only the first one will be considered, and it is only visited if it's enumerable. If it is non-enumerable, no other properties with the same name further up the prototype chain will be visited, even if they are enumerable.
+
+In general, it is best not to add, modify, or remove properties from the object during iteration, other than the property currently being visited. The spec explicitly allows the implementation to not follow the algorithm above in one of the following cases:
+
+- The object's prototype chain is modified during iteration.
+- A property is deleted from the object or its prototype chain during iteration.
+- A property is added to the object's prototype chain during iteration.
+- A property's enumerability is changed during iteration.
+
+In these cases, implementations may behave differently from what you may expect, or even from each other.
 
 ### Array iteration and for...in
 
@@ -108,6 +120,102 @@ for (const prop in obj) {
 
 // Logs:
 // "obj.color = red"
+```
+
+### Concurrent modification
+
+> **Warning:** You should not write code like this yourself. It is only included here to illustrate the behavior of `for...in` in some corner cases.
+
+Properties added to the current object during iteration are never visited:
+
+```js
+const obj = { a: 1, b: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  obj.c = 3;
+}
+
+// Logs:
+// obj.a = 1
+// obj.b = 2
+```
+
+Shadowed properties are only visited once:
+
+```js
+const proto = { a: 1 };
+const obj = { __proto__: proto, a: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+}
+
+// Logs:
+// obj.a = 2
+
+Object.defineProperty(obj, "a", { enumerable: false });
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+}
+// Logs nothing, because the first "a" property visited is non-enumerable.
+```
+
+In addition, consider the following cases, where the behavior is unspecified, and implementations tend to diverge from the specified algorithm:
+
+Changing the prototype during iteration:
+
+```js
+const obj = { a: 1, b: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  Object.setPrototypeOf(obj, { c: 3 });
+}
+```
+
+Deleting a property during iteration:
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+
+// Deleting a property before it is visited
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  delete obj.c;
+}
+
+const obj2 = { a: 1, b: 2, c: 3 };
+
+// Deleting a property after it is visited
+for (const prop in obj2) {
+  console.log(`obj2.${prop} = ${obj2[prop]}`);
+  delete obj2.a;
+}
+```
+
+Enumerable properties added to the prototype during iteration:
+
+```js
+const proto = {};
+const obj = { __proto__: proto, a: 1, b: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  proto.c = 3;
+}
+```
+
+Changing the enumerability of a property during iteration:
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  Object.defineProperty(obj, "c", { enumerable: false });
+}
 ```
 
 ## Specifications

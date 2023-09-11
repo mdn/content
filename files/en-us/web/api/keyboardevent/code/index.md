@@ -1,17 +1,8 @@
 ---
-title: KeyboardEvent.code
+title: "KeyboardEvent: code property"
+short-title: code
 slug: Web/API/KeyboardEvent/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Code
-  - DOM
-  - DOM Events
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
 browser-compat: api.KeyboardEvent.code
 ---
 
@@ -29,7 +20,7 @@ To determine what character corresponds with the key event, use the {{domxref("K
 
 ## Value
 
-The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) page.
+The code values for Windows, Linux, and macOS are listed on the [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) page.
 
 ## Examples
 
@@ -62,12 +53,16 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", (event) => {
-  const p = document.createElement("p");
-  p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
-  document.getElementById("output").appendChild(p);
-  window.scrollTo(0, document.body.scrollHeight);
-}, true);
+window.addEventListener(
+  "keydown",
+  (event) => {
+    const p = document.createElement("p");
+    p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
+    document.getElementById("output").appendChild(p);
+    window.scrollTo(0, document.body.scrollHeight);
+  },
+  true,
+);
 ```
 
 #### Try it out
@@ -120,12 +115,12 @@ The first section of the JavaScript code establishes some variables we'll be usi
 ```js
 let shipSize = {
   width: 30,
-  height: 30
+  height: 30,
 };
 
 let position = {
   x: 200,
-  y: 200
+  y: 200,
 };
 
 let moveRate = 9;
@@ -140,9 +135,9 @@ Next comes the function `updatePosition()`. This function takes as input the dis
 
 ```js
 function updatePosition(offset) {
-  let rad = angle * (Math.PI/180);
-  position.x += (Math.sin(rad) * offset);
-  position.y -= (Math.cos(rad) * offset);
+  let rad = angle * (Math.PI / 180);
+  position.x += Math.sin(rad) * offset;
+  position.y -= Math.cos(rad) * offset;
 
   if (position.x < 0) {
     position.x = 399;
@@ -162,8 +157,8 @@ The `refresh()` function handles applying the rotation and position by using an 
 
 ```js
 function refresh() {
-  let x = position.x - (shipSize.width/2);
-  let y = position.y - (shipSize.height/2);
+  let x = position.x - shipSize.width / 2;
+  let y = position.y - shipSize.height / 2;
   let transform = `translate(${x} ${y}) rotate(${angle} 15 15) `;
 
   spaceship.setAttribute("transform", transform);
@@ -174,43 +169,46 @@ refresh();
 Finally, the `addEventListener()` method is used to start listening for {{domxref("Element/keydown_event", "keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // Do nothing if event already handled
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if event already handled
+    }
 
-  switch(event.code) {
-    case "KeyS":
-    case "ArrowDown":
-      // Handle "back"
-      updatePosition(-moveRate);
-      break;
-    case "KeyW":
-    case "ArrowUp":
-      // Handle "forward"
-      updatePosition(moveRate);
-      break;
-    case "KeyA":
-    case "ArrowLeft":
-      // Handle "turn left"
-      angle -= turnRate;
-      break;
-    case "KeyD":
-    case "ArrowRight":
-      // Handle "turn right"
-      angle += turnRate;
-      break;
-  }
+    switch (event.code) {
+      case "KeyS":
+      case "ArrowDown":
+        // Handle "back"
+        updatePosition(-moveRate);
+        break;
+      case "KeyW":
+      case "ArrowUp":
+        // Handle "forward"
+        updatePosition(moveRate);
+        break;
+      case "KeyA":
+      case "ArrowLeft":
+        // Handle "turn left"
+        angle -= turnRate;
+        break;
+      case "KeyD":
+      case "ArrowRight":
+        // Handle "turn right"
+        angle += turnRate;
+        break;
+    }
 
-  refresh();
+    refresh();
 
-  if (event.code !== "Tab")
-  {
-    // Consume the event so it doesn't get handled twice,
-    // as long as the user isn't trying to move focus away
-    event.preventDefault();
-  }
-}, true);
+    if (event.code !== "Tab") {
+      // Consume the event so it doesn't get handled twice,
+      // as long as the user isn't trying to move focus away
+      event.preventDefault();
+    }
+  },
+  true,
+);
 ```
 
 #### Try it out

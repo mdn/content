@@ -2,13 +2,6 @@
 title: <calc-sum>
 slug: Web/CSS/calc-sum
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.calc-sum
 ---
 
@@ -38,7 +31,7 @@ The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax v
 
 Different unit types can be used in a single expression. For example, subtracting `px` from `%`, as in `calc(100% - 10px)`, is a valid expression.
 
-Including [CSS variables](/en-US/docs/Web/CSS/CSS_Variables) in `calc-sum` expressions is also allowed. The following code `calc(10px + var(--variable))`, is a valid expression.
+Including [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables) in `calc-sum` expressions is also allowed. The following code `calc(10px + var(--variable))`, is a valid expression.
 
 The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as a percentage followed by a negative length — an invalid expression — while `calc(50% - 8px)` is a percentage followed by a subtraction operator and a length. Likewise, `calc(8px + -50%)` is treated as a length followed by an addition operator and a negative percentage.
 

@@ -2,19 +2,12 @@
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
 ---
 
 {{JSRef}}
 
-The **`trimEnd()`** method removes whitespace from the end of a string and returns a new string, without modifying the original string. `trimRight()` is an alias of this method.
+The **`trimEnd()`** method of {{jsxref("String")}} values removes whitespace from the end of this string and returns a new string, without modifying the original string. `trimRight()` is an alias of this method.
 
 {{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
@@ -25,6 +18,10 @@ trimEnd()
 
 trimRight()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

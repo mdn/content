@@ -1,15 +1,10 @@
 ---
-title: ContactsManager.select()
+title: "ContactsManager: select() method"
+short-title: select()
 slug: Web/API/ContactsManager/select
 page-type: web-api-instance-method
-tags:
-  - Contact Picker API
-  - Contacts
-  - ContactsPicker
-  - Method
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager.select
 ---
 
@@ -100,7 +95,7 @@ async function getContacts() {
 
 ### Select Using Only Supported Properties
 
-The following example uses {{jsxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
+The following example uses {{domxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
 
 ```js
 const supportedProperties = await navigator.contacts.getProperties();

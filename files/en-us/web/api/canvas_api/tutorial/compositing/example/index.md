@@ -2,12 +2,6 @@
 title: Compositing example
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 page-type: guide
-tags:
-  - Canvas
-  - Example
-  - Graphics
-  - HTML
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -225,7 +219,7 @@ const colorSphere = (element) => {
       oleft + halfWidth,
       otop,
       oleft + halfWidth,
-      otop + halfWidth
+      otop + halfWidth,
     );
     const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
     gradient.addColorStop(0, "rgba(0,0,0,0)");

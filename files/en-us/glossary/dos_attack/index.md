@@ -1,9 +1,10 @@
 ---
 title: DoS attack
 slug: Glossary/DOS_attack
-tags:
-  - Security
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 DoS (Denial of Service) is a network attack that prevents legitimate use of {{glossary("server")}} resources by flooding the server with requests.
 

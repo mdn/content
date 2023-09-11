@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTitle
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getTitle
 ---
 
@@ -60,9 +52,9 @@ This code switches the title between "this" and "that" each time the user clicks
 ```js
 function toggleTitle(title) {
   if (title === "this") {
-    browser.sidebarAction.setTitle({title: "that"});
+    browser.sidebarAction.setTitle({ title: "that" });
   } else {
-    browser.sidebarAction.setTitle({title: "this"});
+    browser.sidebarAction.setTitle({ title: "this" });
   }
 }
 

@@ -1,15 +1,10 @@
 ---
-title: navigator.platform
+title: "navigator: platform property"
+short-title: platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-  - platform
+status:
+  - deprecated
 browser-compat: api.Navigator.platform
 ---
 
@@ -21,7 +16,7 @@ The **`platform`** property read-only property of the {{domxref("Navigator")}} i
 
 ## Value
 
-A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux x86_64"`.
+A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux armv81"`.
 
 ## Examples
 
@@ -29,8 +24,11 @@ A string identifying the platform on which the user's browser is running; for ex
 
 ```js
 let modifierKeyPrefix = "^"; // control key
-if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") {
-    modifierKeyPrefix = "⌘"; // command key
+if (
+  navigator.platform.indexOf("Mac") === 0 ||
+  navigator.platform === "iPhone"
+) {
+  modifierKeyPrefix = "⌘"; // command key
 }
 ```
 
@@ -38,8 +36,7 @@ That is, check if `navigator.platform` starts with `"Mac"` or else is an exact m
 
 ## Usage notes
 
-Most browsers, including Chrome, Edge, and Firefox 63 and later, return `"Win32"` even if running on a 64-bit version of Windows.
-Internet Explorer and versions of Firefox prior to version 63 still report `"Win64"`.
+On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
 
 ## Specifications
 

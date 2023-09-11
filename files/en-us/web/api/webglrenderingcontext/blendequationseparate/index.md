@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.blendEquationSeparate()
+title: "WebGLRenderingContext: blendEquationSeparate() method"
+short-title: blendEquationSeparate()
 slug: Web/API/WebGLRenderingContext/blendEquationSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendEquationSeparate
 ---
 

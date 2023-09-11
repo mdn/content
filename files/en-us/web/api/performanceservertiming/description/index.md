@@ -1,12 +1,8 @@
 ---
-title: PerformanceServerTiming.description
+title: "PerformanceServerTiming: description property"
+short-title: description
 slug: Web/API/PerformanceServerTiming/description
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ServerTiming
 browser-compat: api.PerformanceServerTiming.description
 ---
 
@@ -39,7 +35,7 @@ const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     entry.serverTiming.forEach((serverEntry) => {
       console.log(
-        `${serverEntry.name} (${serverEntry.description}) duration: ${serverEntry.duration}`
+        `${serverEntry.name} (${serverEntry.description}) duration: ${serverEntry.duration}`,
       );
       // Logs "cache (Cache Read) duration: 23.2"
     });
@@ -47,7 +43,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 ["navigation", "resource"].forEach((type) =>
-  observer.observe({ type, buffered: true })
+  observer.observe({ type, buffered: true }),
 );
 ```
 
@@ -56,7 +52,7 @@ Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `n
 ```js
 for (const entryType of ["navigation", "resource"]) {
   for (const { name: url, serverTiming } of performance.getEntriesByType(
-    entryType
+    entryType,
   )) {
     if (serverTiming) {
       for (const { name, description, duration } of serverTiming) {

@@ -2,11 +2,6 @@
 title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 page-type: guide
-tags:
-  - Media
-  - Tutorial
-  - Video
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
@@ -46,7 +41,7 @@ function setupVideo(url) {
       playing = true;
       checkReady();
     },
-    true
+    true,
   );
 
   video.addEventListener(
@@ -55,7 +50,7 @@ function setupVideo(url) {
       timeupdate = true;
       checkReady();
     },
-    true
+    true,
   );
 
   video.src = url;
@@ -75,7 +70,7 @@ First we create a video element. We set it to autoplay, mute the sound, and loop
 
 And finally, we set the `src` attribute to start and call `play` to start loading and playing the video.
 
-The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
+The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 ## Using the video frames as a texture
 
@@ -109,7 +104,7 @@ function initTexture(gl) {
     border,
     srcFormat,
     srcType,
-    pixel
+    pixel,
   );
 
   // Turn off mips and set wrapping to clamp to edge so it
@@ -137,7 +132,7 @@ function updateTexture(gl, texture, video) {
     internalFormat,
     srcFormat,
     srcType,
-    video
+    video,
   );
 }
 ```

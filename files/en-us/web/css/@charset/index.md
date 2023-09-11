@@ -1,13 +1,7 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.charset
 ---
 
@@ -19,7 +13,7 @@ The **`@charset`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-r
 @charset "utf-8";
 ```
 
-This at-rule is useful when using non-ASCII characters in some CSS properties, like {{ cssxref("content") }}.
+This at-rule is useful when using non-{{Glossary("ASCII")}} characters in some CSS properties, like {{ cssxref("content") }}.
 
 As there are several ways to define the character encoding of a style sheet, the browser will try the following methods in the following order (and stop as soon as one yields a result) :
 
@@ -38,7 +32,7 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ### Formal syntax
 
-```
+```plain
 @charset "<charset>";
 ```
 
@@ -49,12 +43,12 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ### Valid and invalid charset declarations
 
-```css
-@charset "UTF-8";       /* Set the encoding of the style sheet to Unicode UTF-8 */
+```css-nolint
+@charset "UTF-8"; /* Set the encoding of the style sheet to Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Invalid, wrong quoting style used */
-@charset  "UTF-8";      /* Invalid, more than one space */
- @charset "UTF-8";      /* Invalid, there is a character (a space) before the at-rule */
-@charset UTF-8;         /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
+@charset  "UTF-8"; /* Invalid, more than one space */
+ @charset "UTF-8"; /* Invalid, there is a character (a space) before the at-rule */
+@charset UTF-8; /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
 ```
 
 ## Specifications
@@ -67,5 +61,5 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ## See also
 
-- [Character set](/en-US/docs/Glossary/character_set) glossary entry
+- [Character set](/en-US/docs/Glossary/Character_set) glossary entry
 - [Unicode](/en-US/docs/Glossary/Unicode) glossary entry

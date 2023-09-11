@@ -2,33 +2,26 @@
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
 page-type: javascript-class
-tags:
-  - Class
-  - Float32Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Float32Array
 ---
 
 {{JSRef}}
 
-The **`Float32Array`** typed array represents an array of 32-bit floating point numbers (corresponding to the C `float` data type) in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+The **`Float32Array`** typed array represents an array of 32-bit floating point numbers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Float32Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
-- [`Float32Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array)
+- {{jsxref("Float32Array/Float32Array", "Float32Array()")}}
   - : Creates a new `Float32Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float32Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float32Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of `Float32Array`.
-- {{jsxref("TypedArray.name", "Float32Array.name")}}
-  - : Returns the string value of the constructor name. `"Float32Array"` in the case of `Float32Array`.
 
 ## Static methods
 
@@ -38,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float32Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Float32Array.prototype` and shared by all `Float32Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float32Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of a `Float32Array`.
+- {{jsxref("Object/constructor", "Float32Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Float32Array` instances, the initial value is the {{jsxref("Float32Array/Float32Array", "Float32Array")}} constructor.
 
 ## Instance methods
 
@@ -47,7 +44,7 @@ _Inherits instance methods from its parent {{jsxref("TypedArray")}}_.
 
 ## Examples
 
-### Different ways to create a `Float32Array`
+### Different ways to create a Float32Array
 
 ```js
 // From a length
@@ -90,6 +87,7 @@ console.log(float32FromIterable);
 ## See also
 
 - [Polyfill of `Float32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

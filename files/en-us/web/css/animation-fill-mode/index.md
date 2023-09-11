@@ -2,12 +2,6 @@
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-fill-mode
 ---
 
@@ -69,7 +63,9 @@ animation-fill-mode: unset;
 - `both`
   - : The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+
+> **Note:** `animation-fill-mode` has the same effect when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) as it does for regular time-based animations.
 
 ## Formal definition
 
@@ -83,7 +79,7 @@ animation-fill-mode: unset;
 
 ### Setting fill mode
 
-You can see the effect of `animation-fill-mode` in the following example. It demonstrates how, for an animation that runs for an infinite time, you can cause it to remain in its final state rather than reverting to the original state (which is the default).
+You can see the effect of `animation-fill-mode` in the following example. It demonstrates how you can make the animation remain in its final state rather than reverting to the original state (which is the default).
 
 #### HTML
 
@@ -128,7 +124,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 
 {{EmbedLiveSample('Setting fill mode',700,300)}}
 
-See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
+See [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for more examples.
 
 ## Specifications
 
@@ -140,6 +136,6 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

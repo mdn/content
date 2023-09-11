@@ -1,16 +1,7 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - show
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.show
 ---
 
@@ -55,16 +46,16 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      let showing = browser.downloads.show(latestDownloadId);
-      showing.then(onShowing, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    let showing = browser.downloads.show(latestDownloadId);
+    showing.then(onShowing, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

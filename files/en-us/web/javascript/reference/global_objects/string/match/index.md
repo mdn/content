@@ -2,20 +2,12 @@
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.match
 ---
 
 {{JSRef}}
 
-The **`match()`** method retrieves the result of matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 {{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
 
@@ -91,7 +83,7 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags).
+> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
 
 ### Using named capturing groups
 
@@ -153,7 +145,7 @@ This may have unexpected results if special characters are not properly escaped.
 console.log("123".match("1.3")); // [ "123" ]
 ```
 
-This is a match because `.` in a regex matches all characters. In order to make it only match the dot character, you need to escape the input.
+This is a match because `.` in a regex matches any character. In order to make it only match specifically a dot character, you need to escape the input.
 
 ```js
 console.log("123".match("1\\.3")); // null

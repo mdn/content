@@ -2,12 +2,6 @@
 title: <fePointLight>
 slug: Web/SVG/Element/fePointLight
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Filter
-  - SVG Light Source
 browser-compat: svg.elements.fePointLight
 ---
 
@@ -66,7 +60,7 @@ This element implements the {{domxref("SVGFEPointLightElement")}} interface.
   </defs>
 
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"

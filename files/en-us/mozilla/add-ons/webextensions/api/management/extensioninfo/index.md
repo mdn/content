@@ -1,15 +1,7 @@
 ---
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
-tags:
-  - API
-  - Add-ons
-  - ExtensionInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - management
+page-type: webextension-api-type
 browser-compat: webextensions.api.management.ExtensionInfo
 ---
 

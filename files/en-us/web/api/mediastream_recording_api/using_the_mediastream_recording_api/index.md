@@ -2,14 +2,6 @@
 title: Using the MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 page-type: guide
-tags:
-  - API
-  - Example
-  - Guide
-  - MediaRecorder
-  - MediaStream Recording API
-  - NeedsUpdate
-  - Tutorial
 browser-compat: api.MediaRecorder
 ---
 
@@ -58,8 +50,6 @@ However, we wanted to make the third area (which contains the recorded samples y
   overflow: scroll;
 }
 ```
-
-> **Note:** `calc()` has good support across modern browsers too, even going back to Internet Explorer 9.
 
 ### Checkbox hack for showing/hiding
 
@@ -137,7 +127,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       // constraints - only audio needed for this app
       {
         audio: true,
-      }
+      },
     )
 
     // Success callback
@@ -259,7 +249,7 @@ Next, we create an HTML structure like the following, inserting it into our clip
 </article>
 ```
 
-After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's {{htmlattrxref("src", "audio")}} attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
+After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's [`src`](/en-US/docs/Web/HTML/Element/audio#src) attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
 
 Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
 

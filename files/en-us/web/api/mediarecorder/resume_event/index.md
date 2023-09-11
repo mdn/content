@@ -1,16 +1,8 @@
 ---
 title: "MediaRecorder: resume event"
+short-title: resume
 slug: Web/API/MediaRecorder/resume_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - MediaRecorder
-  - Event
-  - Reference
-  - Video
-  - resume
 browser-compat: api.MediaRecorder.resume_event
 ---
 

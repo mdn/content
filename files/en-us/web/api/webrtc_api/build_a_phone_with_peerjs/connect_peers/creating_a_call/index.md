@@ -45,7 +45,7 @@ Exciting times — now you're going to give your users the ability to create cal
 
 3. To test this out, open `localhost:8000` in two browser windows and click Call inside one of them. You should see this:
 
-   ![Two screens side by side both A cream background with the words 'phone a friend' in bold, dark green font as the heading. The first screen has 'Your device ID is: 3b77' and the second 'Your device ID is: 2doa', is immediately below the title and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background. The second screen has a browser dialogue that asks for a peer id.](1pubiml_pj-jjavpjjeouow.png)
+   ![Two screens side by side both A cream background with the words 'phone a friend' in bold, dark green font as the heading. The first screen has 'Your device ID is: 3b77' and the second 'Your device ID is: 2doa', is immediately below the title and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background. The second screen has a browser dialogue that asks for a peer id.](screens_side_by_side.png)
 
    If you submit the other peer's ID, the call will be connected!
 

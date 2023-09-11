@@ -1,13 +1,8 @@
 ---
-title: URLSearchParams.entries()
+title: "URLSearchParams: entries() method"
+short-title: entries()
 slug: Web/API/URLSearchParams/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.entries
 ---
 
@@ -43,7 +38,7 @@ const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
 for (const [key, value] of searchParams.entries()) {
-   console.log(`${key}, ${value}`);
+  console.log(`${key}, ${value}`);
 }
 ```
 

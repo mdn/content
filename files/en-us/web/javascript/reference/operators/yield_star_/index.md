@@ -2,23 +2,12 @@
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 page-type: javascript-operator
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.yield_star
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`yield*`** operator is used to
-delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
-object.
+The **`yield*`** operator is used to delegate to another [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as a {{jsxref("Generator")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
 
@@ -28,16 +17,22 @@ object.
 yield* expression
 ```
 
-- `expression`
-  - : The expression which returns an iterable object.
+### Parameters
+
+- `expression` {{optional_inline}}
+  - : An iterable object.
+
+### Return value
+
+Returns the value returned by that iterator when it's closed (when `done` is `true`).
 
 ## Description
 
-The `yield*` expression iterates over the operand and `yield`s
-each value returned by it.
+The `yield*` expression iterates over the operand and yields each value returned by it. It delegates iteration of the current generator to an underlying iterator — which we will refer to as "generator" and "iterator", respectively. `yield*` first gets the iterator from the operand by calling the latter's [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method. Then, each time the `next()` method of the generator is called, `yield*` calls the iterator's `next()` method, passing the argument received by the generator's `next()` method (always `undefined` for the first call), and yielding the same result object as what's returned from the iterator's `next()` method. If the iterator result has `done: true`, then the `yield*` expression stops executing and returns the `value` of that result.
 
-The value of `yield*` expression itself is the value returned by that
-iterator when it's closed (i.e., when `done` is `true`).
+The `yield*` operator forwards the current generator's {{jsxref("Generator/throw", "throw()")}} and {{jsxref("Generator/return", "return()")}} methods to the underlying iterator as well. If the current generator is prematurely closed through one of these methods, the underlying iterator will be notified. If the generator's `throw()`/`return()` method is called, the `throw()`/`return()` method of the underlying iterator is called with the same argument. The return value of `throw()`/`return()` is handled like the `next()` method's result, and if the method throws, the exception is propagated from the `yield*` expression.
+
+If the underlying iterator doesn't have a `throw()` method, this causes `yield*` to throw a {{jsxref("TypeError")}} – but before throwing the error, the underlying iterator's `return()` method is called if one exists. If the underlying iterator doesn't have a `return()` method, the `yield*` expression turns into a {{jsxref("Statements/return", "return")}} statement, just like calling `return()` on a suspended {{jsxref("Operators/yield", "yield")}} expression.
 
 ## Examples
 
@@ -59,14 +54,14 @@ function* g2() {
   yield 5;
 }
 
-const iterator = g2();
+const gen = g2();
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: 3, done: false}
-console.log(iterator.next()); // {value: 4, done: false}
-console.log(iterator.next()); // {value: 5, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
+console.log(gen.next()); // {value: 1, done: false}
+console.log(gen.next()); // {value: 2, done: false}
+console.log(gen.next()); // {value: 3, done: false}
+console.log(gen.next()); // {value: 4, done: false}
+console.log(gen.next()); // {value: 5, done: false}
+console.log(gen.next()); // {value: undefined, done: true}
 ```
 
 ### Other Iterable objects
@@ -82,20 +77,20 @@ function* g3(...args) {
   yield* args;
 }
 
-const iterator = g3(5, 6);
+const gen = g3(5, 6);
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: "3", done: false}
-console.log(iterator.next()); // {value: "4", done: false}
-console.log(iterator.next()); // {value: 5, done: false}
-console.log(iterator.next()); // {value: 6, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
+console.log(gen.next()); // {value: 1, done: false}
+console.log(gen.next()); // {value: 2, done: false}
+console.log(gen.next()); // {value: "3", done: false}
+console.log(gen.next()); // {value: "4", done: false}
+console.log(gen.next()); // {value: 5, done: false}
+console.log(gen.next()); // {value: 6, done: false}
+console.log(gen.next()); // {value: undefined, done: true}
 ```
 
 ### The value of yield\* expression itself
 
-`yield*` is an expression, not a statement—so it evaluates to a value.
+`yield*` is an expression, not a statement, so it evaluates to a value.
 
 ```js
 function* g4() {
@@ -109,12 +104,128 @@ function* g5() {
   return g4ReturnValue;
 }
 
-const iterator = g5();
+const gen = g5();
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
-console.log(iterator.next()); // {value: 'foo', done: true}
+console.log(gen.next()); // {value: 1, done: false}
+console.log(gen.next()); // {value: 2, done: false}
+console.log(gen.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
+console.log(gen.next()); // {value: 'foo', done: true}
+```
+
+### Method forwarding
+
+The `next()`, `throw()`, and `return()` methods of the current generator are all forwarded to the underlying iterator.
+
+```js
+const iterable = {
+  [Symbol.iterator]() {
+    let count = 0;
+    return {
+      next(v) {
+        console.log("next called with", v);
+        count++;
+        return { value: count, done: false };
+      },
+      return(v) {
+        console.log("return called with", v);
+        return { value: "iterable return value", done: true };
+      },
+      throw(v) {
+        console.log("throw called with", v);
+        return { value: "iterable thrown value", done: true };
+      },
+    };
+  },
+};
+
+function* gf() {
+  yield* iterable;
+  return "gf return value";
+}
+
+const gen = gf();
+console.log(gen.next(10));
+// next called with undefined; the argument of the first next() call is always ignored
+// { value: 1, done: false }
+console.log(gen.next(20));
+// next called with 20
+// { value: 2, done: false }
+console.log(gen.return(30));
+// return called with 30
+// { value: 'iterable return value', done: true }
+console.log(gen.next(40));
+// { value: undefined, done: true }; gen is already closed
+
+const gen2 = gf();
+console.log(gen2.next(10));
+// next called with undefined
+// { value: 1, done: false }
+console.log(gen2.throw(50));
+// throw called with 50
+// { value: 'gf return value', done: true }
+console.log(gen.next(60));
+// { value: undefined, done: true }; gen is already closed
+```
+
+If the `return()`/`throw()` method of the underlying iterator returns `done: false`, the current generator continues executing and `yield*` continues to delegate to the underlying iterator.
+
+```js
+const iterable = {
+  [Symbol.iterator]() {
+    let count = 0;
+    return {
+      next(v) {
+        console.log("next called with", v);
+        count++;
+        return { value: count, done: false };
+      },
+      return(v) {
+        console.log("return called with", v);
+        return { value: "iterable return value", done: false };
+      },
+    };
+  },
+};
+
+function* gf() {
+  yield* iterable;
+  return "gf return value";
+}
+
+const gen = gf();
+console.log(gen.next(10));
+// next called with undefined
+// { value: 1, done: false }
+console.log(gen.return(20));
+// return called with 20
+// { value: 'iterable return value', done: false }
+console.log(gen.next(30));
+// { value: 2, done: false }; gen is not closed
+```
+
+If the underlying iterator doesn't have a `throw()` method and the generator's `throw()` is called, `yield*` throws an error.
+
+```js
+const iterable = {
+  [Symbol.iterator]() {
+    let count = 0;
+    return {
+      next(v) {
+        count++;
+        return { value: count, done: false };
+      },
+    };
+  },
+};
+
+function* gf() {
+  yield* iterable;
+  return "gf return value";
+}
+
+const gen = gf();
+gen.next(); // First next() starts the yield* expression
+gen.throw(20); // TypeError: The iterator does not provide a 'throw' method.
 ```
 
 ## Specifications
@@ -127,7 +238,7 @@ console.log(iterator.next()); // {value: 'foo', done: true}
 
 ## See also
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

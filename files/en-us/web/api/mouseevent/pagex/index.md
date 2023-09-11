@@ -1,19 +1,8 @@
 ---
-title: MouseEvent.pageX
+title: "MouseEvent: pageX property"
+short-title: pageX
 slug: Web/API/MouseEvent/pageX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - Mouse Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-  - events
-  - pageX
 browser-compat: api.MouseEvent.pageX
 ---
 
@@ -25,11 +14,11 @@ This includes any portion of the document not currently visible.
 Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.
 For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by `pageX` will be 300.
 
-Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_View) redefined it as a
+Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_view) redefined it as a
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for some additional information about coordinates specified in this fashion.
+See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
 
 ## Value
 
@@ -73,7 +62,12 @@ The CSS used for this example is shown below.
   border: 2px solid darkblue;
   background-color: blue;
   color: white;
-  font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Zilla",
+    "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -107,7 +101,7 @@ Try this out here:
 
 ### More examples
 
-You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#example) information in every available coordinate system.
+You can also see an example that demonstrates [how to access the mouse position](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#example) information in every available coordinate system.
 
 ## Specifications
 

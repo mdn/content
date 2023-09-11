@@ -1,13 +1,7 @@
 ---
 title: Inheritance
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Inheritance
-  - Layout
-  - Web
 ---
 
 {{CSSRef}}
@@ -19,7 +13,7 @@ CSS properties can be categorized in two types:
 - **inherited properties**, which by default are set to the [computed value](/en-US/docs/Web/CSS/computed_value) of the parent element
 - **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/initial_value) of the property
 
-Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#keyword_index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
+Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
 
 ## Inherited properties
 
@@ -109,10 +103,10 @@ We can see here another border around the word "emphasized text".
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)

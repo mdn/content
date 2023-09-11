@@ -1,25 +1,12 @@
 ---
 title: Client-side web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - Articles
-  - Beginner
-  - CodingScripting
-  - DOM
-  - Graphics
-  - JavaScript
-  - Landing
-  - Learn
-  - Media
-  - Module
-  - WebAPI
-  - data
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
 
-When writing client-side JavaScript for web sites or applications, you will quickly encounter **Application Programming Interfaces** (**APIs**). APIs are programming features for manipulating different aspects of the browser and operating system the site is running on, or manipulating data from other web sites or services. In this module, we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
+When writing client-side JavaScript for websites or applications, you will quickly encounter **Application Programming Interfaces** (**APIs**). APIs are programming features for manipulating different aspects of the browser and operating system the site is running on, or manipulating data from other websites or services. In this module, we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
 > **Callout:**
 >
@@ -53,4 +40,4 @@ Basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CS
 - [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
   - : HTML comes with elements for embedding rich media in documents — {{htmlelement("video")}} and {{htmlelement("audio")}} — which in turn come with their own APIs for controlling playback, seeking, etc. This article shows you how to do common tasks such as creating custom playback controls.
 - [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
-  - : Modern web browsers feature a number of different technologies that allow you to store data related to web sites and retrieve it when necessary allowing you to persist data long term, save sites offline, and more. This article explains the very basics of how these work.
+  - : Modern web browsers feature a number of different technologies that allow you to store data related to websites and retrieve it when necessary allowing you to persist data long term, save sites offline, and more. This article explains the very basics of how these work.

@@ -1,20 +1,14 @@
 ---
 title: Insecure passwords
 slug: Web/Security/Insecure_passwords
-tags:
-  - Insecure
-  - Intermediate
-  - Security
-  - Web
-  - password
-  - passwords
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user's password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
 
-The [HTTPS](/en-US/docs/Glossary/https) protocol is designed to protect user data from eavesdropping (confidentiality) and from modification (integrity) on the network. Websites that handle user data should use HTTPS to protect their users from attackers. If a website uses HTTP instead of HTTPS, it is trivial to steal user information (such as their login credentials). This was famously demonstrated by [Firesheep](https://codebutler.github.io/firesheep/).
+The [HTTPS](/en-US/docs/Glossary/HTTPS) protocol is designed to protect user data from eavesdropping (confidentiality) and from modification (integrity) on the network. Websites that handle user data should use HTTPS to protect their users from attackers. If a website uses HTTP instead of HTTPS, it is trivial to steal user information (such as their login credentials). This was famously demonstrated by [Firesheep](https://codebutler.github.io/firesheep/).
 
 To fix this issue, install and configure an SSL/[TLS](/en-US/docs/Glossary/TLS) certificate onto your server. There are various vendors offering free and paid certificates. If you are using a cloud platform, it may have its own ways of enabling HTTPS.
 

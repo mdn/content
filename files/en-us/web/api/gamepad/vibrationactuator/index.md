@@ -1,20 +1,14 @@
 ---
-title: Gamepad.vibrationActuator
+title: "Gamepad: vibrationActuator property"
+short-title: vibrationActuator
 slug: Web/API/Gamepad/vibrationActuator
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - vibrationActuator
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Gamepad.vibrationActuator
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Gamepad")}}{{Non-standard_Header}}
 
 The **`vibrationActuator`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 
@@ -27,7 +21,7 @@ A {{domxref("GamepadHapticActuator")}} object.
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

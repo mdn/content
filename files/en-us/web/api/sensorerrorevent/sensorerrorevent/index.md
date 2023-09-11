@@ -1,17 +1,8 @@
 ---
-title: SensorErrorEvent()
+title: "SensorErrorEvent: SensorErrorEvent() constructor"
+short-title: SensorErrorEvent()
 slug: Web/API/SensorErrorEvent/SensorErrorEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Error
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - SensorErrorEvent
-  - Sensors
 browser-compat: api.SensorErrorEvent.SensorErrorEvent
 ---
 

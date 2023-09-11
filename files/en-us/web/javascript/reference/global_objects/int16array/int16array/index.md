@@ -2,23 +2,12 @@
 title: Int16Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - Polyfill
 browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
 
 {{JSRef}}
 
-The **`Int16Array()`** typed array constructor creates an array
-of twos-complement 16-bit signed integers in the platform byte order. If control over
-byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized
-to `0`. Once established, you can reference elements in the array using the
-object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Int16Array()`** constructor creates {{jsxref("Int16Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 
@@ -88,6 +77,7 @@ console.log(int16FromIterable);
 ## See also
 
 - [Polyfill of `Int16Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

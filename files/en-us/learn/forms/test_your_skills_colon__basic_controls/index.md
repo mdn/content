@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: Basic controls'
+title: "Test your skills: Basic controls"
 slug: Learn/Forms/Test_your_skills:_Basic_controls
-tags:
-  - Assessment
-  - Beginner
-  - Forms
-  - Learn
-  - basic controls
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

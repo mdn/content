@@ -1,16 +1,7 @@
 ---
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
+page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getBackgroundPage
 ---
 
@@ -20,7 +11,7 @@ Returns the [Window](/en-US/docs/Web/API/Window) of the background page if the b
 
 This a synchronous function.
 
-> **Note:** This method cannot be used in Private Browsing mode — it always returns null. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. See {{bug(1329304)}} for more information.
+> **Note:** This method cannot be used in Private Browsing mode — it always returns null. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. See [Firefox bug 1329304](https://bugzil.la/1329304) for more information.
 
 ## Syntax
 

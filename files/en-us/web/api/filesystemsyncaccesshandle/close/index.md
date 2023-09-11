@@ -1,23 +1,17 @@
 ---
-title: FileSystemSyncAccessHandle.close()
+title: "FileSystemSyncAccessHandle: close() method"
+short-title: close()
 slug: Web/API/FileSystemSyncAccessHandle/close
 page-type: web-api-instance-method
-tags:
-  - close
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.close
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`close()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface closes an open synchronous file handle, disabling any further operations on it and releasing the exclusive lock previously put on the file associated with the file handle.
+
+> **Note:** In earlier versions of the spec, `close()`, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Syntax
 
@@ -54,7 +48,7 @@ onmessage = async (e) => {
 
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
@@ -74,10 +68,8 @@ onmessage = async (e) => {
 
   // Always close FileSystemSyncAccessHandle if done.
   accessHandle.close();
-}
+};
 ```
-
-> **Note:** In earlier versions of the spec, `close()`, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 
@@ -89,5 +81,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

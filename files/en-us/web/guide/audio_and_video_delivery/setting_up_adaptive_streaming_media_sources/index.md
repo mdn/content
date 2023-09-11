@@ -1,14 +1,7 @@
 ---
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
-tags:
-  - Audio
-  - HLS
-  - HTML
-  - HTTP Live Streaming
-  - MPEG-DASH
-  - Video
-  - adaptive streaming
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
@@ -42,7 +35,7 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1. Your client or server does not support range requests
+1. Your client or server does not support [range requests](/en-US/docs/Web/HTTP/Range_requests)
 2. Your server cannot cache range requests efficiently
 3. Your server cannot prefetch range requests efficiently
 4. The SIDX\* is large and having to load it first slows down startup a little
@@ -123,7 +116,7 @@ A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https:/
 
 Once encoded your file structure may look something like this:
 
-```
+```plain
 play list ->                /segments/news.mp4.mpd
 
 main segment folder ->      /segments/main/
@@ -230,7 +223,7 @@ There are a number of useful tools available for HLS encoding
 
 The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other metadata such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
 
-```
+```plain
 #EXT-X-VERSION:3
 #EXTM3U
 #EXT-X-TARGETDURATION:10

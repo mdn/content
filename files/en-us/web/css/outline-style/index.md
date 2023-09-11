@@ -2,12 +2,6 @@
 title: outline-style
 slug: Web/CSS/outline-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.outline-style
 ---
 

@@ -1,14 +1,8 @@
 ---
 title: "SVGAnimationElement: repeatEvent event"
+short-title: repeatEvent
 slug: Web/API/SVGAnimationElement/repeatEvent_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SMIL
-  - SVG animations
-  - SVGAnimationElement
-  - Event
 browser-compat: api.SVGAnimationElement.repeatEvent_event
 ---
 
@@ -25,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('repeatEvent', (event) => { });
+addEventListener("repeatEvent", (event) => {});
 
-onrepeat = (event) => { };
+onrepeat = (event) => {};
 ```
 
 ## Event type
@@ -70,25 +64,25 @@ ul {
 ```
 
 ```js
-let svgElem = document.querySelector('svg');
-let animateElem = document.querySelector('animateMotion');
-let list = document.querySelector('ul');
+let svgElem = document.querySelector("svg");
+let animateElem = document.querySelector("animateMotion");
+let list = document.querySelector("ul");
 
-animateElem.addEventListener('beginEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'beginEvent fired';
+animateElem.addEventListener("beginEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "beginEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('repeatEvent', (e) => {
-  let listItem = document.createElement('li');
-  let msg = 'repeatEvent fired';
+animateElem.addEventListener("repeatEvent", (e) => {
+  let listItem = document.createElement("li");
+  let msg = "repeatEvent fired";
   if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
-})
+});
 ```
 
 {{EmbedLiveSample('Animated_circle', '100%', '270')}}
@@ -99,8 +93,8 @@ Note that you can also create an event listener for the `repeat` event using the
 
 ```js
 animateElem.onrepeat = () => {
-  console.log('repeatEvent fired');
-}
+  console.log("repeatEvent fired");
+};
 ```
 
 ## Specifications

@@ -1,17 +1,8 @@
 ---
 title: "MediaDevices: devicechange event"
+short-title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Video
-  - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
 
@@ -26,7 +17,7 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', (event) => {});
+addEventListener("devicechange", (event) => {});
 
 ondevicechange = (event) => {};
 ```
@@ -64,7 +55,10 @@ media device is attached to or removed from the device running the sample.
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -125,16 +119,17 @@ startButton.addEventListener(
       video: {
         width: 160,
         height: 120,
-        frameRate: 30
+        frameRate: 30,
       },
       audio: {
         sampleRate: 44100,
         sampleSize: 16,
-        volume: 0.25
-      }
+        volume: 0.25,
+      },
     };
 
-    navigator.mediaDevices.getUserMedia(constraints)
+    navigator.mediaDevices
+      .getUserMedia(constraints)
       .then((stream) => {
         videoElement.srcObject = stream;
         updateDeviceList();
@@ -143,7 +138,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 
@@ -163,23 +158,22 @@ displayed lists of audio and video devices using that information.
 
 ```js
 function updateDeviceList() {
-  navigator.mediaDevices.enumerateDevices()
-    .then((devices) => {
-      audioList.innerHTML = "";
-      videoList.innerHTML = "";
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
+    audioList.innerHTML = "";
+    videoList.innerHTML = "";
 
-      devices.forEach((device) => {
-        const elem = document.createElement("li");
-        const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+    devices.forEach((device) => {
+      const elem = document.createElement("li");
+      const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-        elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
-        if (type === "audio") {
-          audioList.appendChild(elem);
-        } else if (type === "video") {
-          videoList.appendChild(elem);
-        }
-      });
+      elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
+      if (type === "audio") {
+        audioList.appendChild(elem);
+      } else if (type === "video") {
+        videoList.appendChild(elem);
+      }
     });
+  });
 }
 ```
 

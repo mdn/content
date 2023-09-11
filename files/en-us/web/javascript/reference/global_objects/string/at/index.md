@@ -2,20 +2,12 @@
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 page-type: javascript-instance-method
-tags:
-  - String
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
 browser-compat: javascript.builtins.String.at
 ---
 
 {{JSRef}}
 
-The **`at()`** method takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
+The **`at()`** method of {{jsxref("String")}} values takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
 
 {{EmbedInteractiveExample("pages/js/string-at.html")}}
 
@@ -86,7 +78,6 @@ console.log(atWay); // 't'
 ## See also
 
 - [Polyfill of `String.prototype.at` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

@@ -2,13 +2,6 @@
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-class
-  - Reference
-  - Selectors
 spec-urls:
   - https://html.spec.whatwg.org/multipage/#pseudo-classes
   - https://drafts.csswg.org/selectors/
@@ -26,7 +19,7 @@ button:hover {
 }
 ```
 
-A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parenthesis to define the arguments (e.g., `:dir()`). The element that a pseudo-class is attached to is defined as an _anchor element_ (e.g., `button` in case `button:hover`).
+A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parentheses to define the arguments (e.g., `:dir()`). The element that a pseudo-class is attached to is defined as an _anchor element_ (e.g., `button` in case `button:hover`).
 
 Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
@@ -86,9 +79,9 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 These pseudo-classes reflect the document language and enable the selection of elements based on language or script direction.
 
-- {{CSSxRef(":dir()")}}
+- {{CSSxRef(":dir", ":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
-- {{CSSxRef(":lang()")}}
+- {{CSSxRef(":lang", ":lang()")}}
   - : Select an element based on its content language.
 
 ## Location pseudo-classes

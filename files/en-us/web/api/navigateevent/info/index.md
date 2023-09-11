@@ -1,21 +1,10 @@
 ---
-title: NavigateEvent.info
+title: "NavigateEvent: info property"
+short-title: info
 slug: Web/API/NavigateEvent/info
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - info
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.info
 ---
 

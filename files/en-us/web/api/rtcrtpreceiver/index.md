@@ -2,15 +2,6 @@
 title: RTCRtpReceiver
 slug: Web/API/RTCRtpReceiver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - RTCRtpReceiver
-  - Reference
-  - WebRTC
-  - WebRTC Statistics
-  - WebRTC Statistics API
 browser-compat: api.RTCRtpReceiver
 ---
 
@@ -24,6 +15,8 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
   - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
 - {{domxref("RTCRtpReceiver.transport")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.
+- {{domxref("RTCRtpReceiver.transform")}}
+  - : An {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} --> is used to insert a transform stream ({{domxref("TransformStream")}}) running in a worker thread into the receiver pipeline, allowing stream transforms to be applied to incoming encoded video and audio frames.
 
 ### Obsolete properties
 
@@ -32,7 +25,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ## Static methods
 
-- {{domxref("RTCRtpReceiver.getCapabilities()")}}
+- {{domxref("RTCRtpReceiver.getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}}
   - : Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.
 
 ## Instance methods
@@ -40,11 +33,11 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 - {{domxref("RTCRtpReceiver.getContributingSources()")}}
   - : Returns an array of {{domxref("RTCRtpContributingSource")}} instances for each unique CSRC (contributing source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
 - {{domxref("RTCRtpReceiver.getParameters()")}}
-  - : Returns an `RTCRtpParameters` object which contains information about how the RTC data is to be decoded.
+  - : Returns an object that contains information about how the RTC data is to be decoded.
 - {{domxref("RTCRtpReceiver.getStats()")}}
   - : Returns a {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("RTCStatsReport")}} which contains statistics about the incoming streams and their dependencies.
 - {{domxref("RTCRtpReceiver.getSynchronizationSources()")}}
-  - : Returns an array including one {{domxref("RTCRtpSynchronizationSource")}} instance for each unique SSRC (synchronization source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
+  - : Returns an array including one `RTCRtpSynchronizationSource` instance for each unique SSRC (synchronization source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
 
 ## Specifications
 

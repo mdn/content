@@ -1,17 +1,8 @@
 ---
-title: Document.pictureInPictureEnabled
+title: "Document: pictureInPictureEnabled property"
+short-title: pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - pip
 browser-compat: api.Document.pictureInPictureEnabled
 ---
 
@@ -46,7 +37,7 @@ function requestPictureInPicture() {
   if (document.pictureInPictureEnabled) {
     videoElement.requestPictureInPicture();
   } else {
-    console.log('Your browser cannot use picture-in-picture right now');
+    console.log("Your browser cannot use picture-in-picture right now");
   }
 }
 ```
@@ -62,7 +53,6 @@ function requestPictureInPicture() {
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}

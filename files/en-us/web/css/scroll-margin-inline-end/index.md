@@ -2,14 +2,6 @@
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-inline
-  - scroll-margin-inline-end
 browser-compat: css.properties.scroll-margin-inline-end
 ---
 
@@ -36,7 +28,7 @@ scroll-margin-inline-end: unset;
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the inline end edge of the scroll container.
 
 ## Formal definition
@@ -140,5 +132,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

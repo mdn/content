@@ -2,16 +2,6 @@
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
 
@@ -62,7 +52,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 - `<linear-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the start of the gradient; the value `100%` is 100% of the image size, meaning the gradient will not repeat.
 - `<color-hint>`
-  - : Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
+  - : The color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
 > **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
 
@@ -125,7 +115,7 @@ body {
 
 Because the last color stop is 10% and the gradient is vertical, each gradient in the repeated gradient is 10% of the height, fitting 10 horizontal bars.
 
-> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -137,7 +127,7 @@ Because the last color stop is 10% and the gradient is vertical, each gradient i
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

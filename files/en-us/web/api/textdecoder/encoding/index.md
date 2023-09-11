@@ -1,13 +1,8 @@
 ---
-title: TextDecoder.encoding
+title: "TextDecoder: encoding property"
+short-title: encoding
 slug: Web/API/TextDecoder/encoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - Encoding
-  - Property
-  - Read-only
-  - TextDecoder
 browser-compat: api.TextDecoder.encoding
 ---
 
@@ -53,7 +48,7 @@ A lower-cased ASCII string, which can be one of the following values:
   ['x-mac-cyrillic'](https://en.wikipedia.org/wiki/Macintosh_Cyrillic_encoding).
 - The legacy multi-byte Chinese (simplified) encodings:
   ['gbk'](https://en.wikipedia.org/wiki/GBK),
-  ['gb18030'](https://en.wikipedia.org/wiki/GB_18030)
+  ['gb18030'](https://en.wikipedia.org/wiki/GB_18030).
 - The legacy multi-byte Chinese (traditional) encoding:
   ['big5'](https://en.wikipedia.org/wiki/Big5).
 - The legacy multi-byte Japanese encodings:
@@ -61,7 +56,7 @@ A lower-cased ASCII string, which can be one of the following values:
   ['iso-2022-jp'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-JP),
   ['shift-jis'](https://en.wikipedia.org/wiki/Shift_JIS).
 - The legacy multi-byte Korean encodings:
-  ['euc-kr'](https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR)
+  ['euc-kr'](https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR).
 - The legacy miscellaneous encodings:
   ['utf-16be'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
   ['utf-16le'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
@@ -69,7 +64,7 @@ A lower-cased ASCII string, which can be one of the following values:
 - A special encoding, `'replacement'`.
   This decodes empty input into empty output and any other arbitrary-length input into a single replacement character.
   It is used to prevent attacks that mismatch encodings between the client and server.
-  The following encodings also map to the replacement encoding: `ISO-2022-CN`, `ISO-2022-CN-ext`, ['iso-2022-kr'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR) and ['hz-gb-2312'](<https://en.wikipedia.org/wiki/HZ_(character_encoding)>).
+  The following encodings also map to the replacement encoding: `ISO-2022-CN`, `ISO-2022-CN-ext`, ['iso-2022-kr'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR), and ['hz-gb-2312'](<https://en.wikipedia.org/wiki/HZ_(character_encoding)>).
 
 ## Specifications
 

@@ -2,12 +2,8 @@
 title: BackgroundFetchRecord
 slug: Web/API/BackgroundFetchRecord
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchRecord
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRecord
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.BackgroundFetchRecord
 
 The **`BackgroundFetchRecord`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual request and response.
 
-A `BackgroundFetchRecord` is created by the {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} method, therefore there is no constructor for this interface.
+A `BackgroundFetchRecord` is created by the {{domxref("BackgroundFetchRegistration.match()","BackgroundFetchRegistration.matchAll()")}} method, therefore there is no constructor for this interface.
 
 There will be one `BackgroundFetchRecord` for each resource requested by `fetch()`.
 
@@ -28,7 +24,7 @@ There will be one `BackgroundFetchRecord` for each resource requested by `fetch(
 
 ## Examples
 
-In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.
+In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchRegistration.match()","BackgroundFetchRegistration.matchAll()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {

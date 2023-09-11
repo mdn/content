@@ -1,15 +1,8 @@
 ---
-title: HTMLElement.dataset
+title: "HTMLElement: dataset property"
+short-title: dataset
 slug: Web/API/HTMLElement/dataset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Read-only
-  - Reference
-  - dataset
 browser-compat: api.HTMLElement.dataset
 ---
 
@@ -31,12 +24,12 @@ they are read or written:
 - In HTML
   - : The attribute name begins with `data-`. It can contain only letters,
     numbers, dashes (`-`), periods (`.`), colons (`:`),
-    and underscores (`_`). Any ASCII capital letters (`A` to
+    and underscores (`_`). Any {{Glossary("ASCII")}} capital letters (`A` to
     `Z`) are converted to lowercase.
 - In JavaScript
   - : The property name of a custom data attribute is the same as the HTML attribute
     without the `data-` prefix, and removes single dashes (`-`) for
-    when to capitalize the property's "camelCased" name.
+    when to capitalize the property's "{{Glossary("camel_case", "camel-cased")}}" name.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
 attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
@@ -101,7 +94,7 @@ A {{domxref("DOMStringMap")}}.
 ```
 
 ```js
-const el = document.querySelector('#user');
+const el = document.querySelector("#user");
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
@@ -109,7 +102,7 @@ const el = document.querySelector('#user');
 // el.dataset.dateOfBirth === ''
 
 // set a data attribute
-el.dataset.dateOfBirth = '1960-10-03';
+el.dataset.dateOfBirth = "1960-10-03";
 // Result on JS: el.dataset.dateOfBirth === '1960-10-03'
 // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-date-of-birth="1960-10-03">Carina Anand</div>
 
@@ -117,8 +110,8 @@ delete el.dataset.dateOfBirth;
 // Result on JS: el.dataset.dateOfBirth === undefined
 // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand">Carina Anand</div>
 
-if (!('someDataAttr' in el.dataset)) {
-  el.dataset.someDataAttr = 'mydata';
+if (!("someDataAttr" in el.dataset)) {
+  el.dataset.someDataAttr = "mydata";
   // Result on JS: 'someDataAttr' in el.dataset === true
   // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-some-data-attr="mydata">Carina Anand</div>
 }

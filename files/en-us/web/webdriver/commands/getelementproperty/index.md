@@ -1,11 +1,7 @@
 ---
 title: Get Element Property
 slug: Web/WebDriver/Commands/GetElementProperty
-tags:
-  - Command
-  - Get Element Property
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementProperty
 ---
 
@@ -60,7 +56,7 @@ print(text_box.get_property("value"))
 
 Output:
 
-```
+```plain
 foo
 bar
 ```

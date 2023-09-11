@@ -2,14 +2,8 @@
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 page-type: javascript-static-accessor-property
-tags:
-  - JavaScript
-  - Deprecated
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.lastMatch
 ---
 
@@ -25,7 +19,7 @@ Because `lastMatch` is a static property of {{jsxref("RegExp")}}, you always use
 
 The value of `lastMatch` updates whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, `lastMatch` is an empty string. The set accessor of `lastMatch` is `undefined`, so you cannot change this property directly.
 
-You cannot use the shorthand alias with the dot property accessor (`RegExp.$&`), because `&` is not a valid identifier part, so this causes a {{jsxref("SyntaxError")}}. Use the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) instead.
+You cannot use the shorthand alias with the dot property accessor (`RegExp.$&`), because `&` is not a valid identifier part, so this causes a {{jsxref("SyntaxError")}}. Use the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) instead.
 
 `$&` can also be used in the replacement string of {{jsxref("String.prototype.replace()")}}, but that's unrelated to the `RegExp["$&"]` legacy property.
 
@@ -54,4 +48,4 @@ RegExp["$&"]; // "hi"
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

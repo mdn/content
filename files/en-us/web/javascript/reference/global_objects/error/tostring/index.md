@@ -2,24 +2,22 @@
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Error.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified {{jsxref("Error")}} object.
+The **`toString()`** method of {{jsxref("Error")}} instances returns a string representing this error.
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -28,8 +26,7 @@ A string representing the specified {{jsxref("Error")}} object.
 ## Description
 
 The {{jsxref("Error")}} object overrides the {{jsxref("Object.prototype.toString()")}}
-method inherited by all objects. Its semantics are as follows (assuming
-{{jsxref("Object")}} and {{jsxref("String")}} have their original values):
+method inherited by all objects. Its semantics are as follows:
 
 ```js
 Error.prototype.toString = function () {
@@ -42,7 +39,7 @@ Error.prototype.toString = function () {
   let name = this.name;
   name = name === undefined ? "Error" : `${name}`;
   let msg = this.message;
-  msg = msg === undefined ? "" : `${name}`;
+  msg = msg === undefined ? "" : `${msg}`;
   if (name === "") {
     return msg;
   }
@@ -66,7 +63,7 @@ e2.name = undefined;
 console.log(e2.toString()); // "Error: fatal error"
 
 const e3 = new Error("fatal error");
-e3.name = '';
+e3.name = "";
 console.log(e3.toString()); // "fatal error"
 
 const e4 = new Error("fatal error");
@@ -90,4 +87,4 @@ console.log(e5.toString()); // "hello"
 
 ## See also
 
-- [A polyfill of `Error.prototype.toString`](https://github.com/zloirock/core-js#ecmascript-error) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)

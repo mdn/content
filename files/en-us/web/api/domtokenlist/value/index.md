@@ -1,10 +1,8 @@
 ---
-title: DOMTokenList.value
+title: "DOMTokenList: value property"
+short-title: value
 slug: Web/API/DOMTokenList/value
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
 browser-compat: api.DOMTokenList.value
 ---
 

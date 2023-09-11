@@ -1,16 +1,7 @@
 ---
 title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - isAllowedFileSchemeAccess
+page-type: webextension-api-function
 browser-compat: webextensions.api.extension.isAllowedFileSchemeAccess
 ---
 

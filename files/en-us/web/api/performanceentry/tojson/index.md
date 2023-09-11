@@ -1,12 +1,8 @@
 ---
-title: PerformanceEntry.toJSON()
+title: "PerformanceEntry: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceEntry/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.toJSON
 ---
 
@@ -35,8 +31,8 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 In this example, calling `entry.toJSON()` returns a JSON representation of the {{domxref("PerformanceMark")}} object.
 
 ```js
-performance.mark("debug-marker", { 
-  detail: "debugging-marker-123" 
+performance.mark("debug-marker", {
+  detail: "debugging-marker-123",
 });
 
 const observer = new PerformanceObserver((list) => {
@@ -52,9 +48,9 @@ This would log a JSON object like so:
 
 ```json
 {
-  "name": "debug-marker", 
-  "entryType": "mark", 
-  "startTime": 158361, 
+  "name": "debug-marker",
+  "entryType": "mark",
+  "startTime": 158361,
   "duration": 0
 }
 ```

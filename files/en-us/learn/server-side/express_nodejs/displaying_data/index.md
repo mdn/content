@@ -1,15 +1,7 @@
 ---
 title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-tags:
-  - Beginner
-  - Controller
-  - Express
-  - Learn
-  - Template
-  - View
-  - nodejs
-  - pug
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
@@ -21,13 +13,13 @@ We're now ready to add the pages that display the [LocalLibrary](/en-US/docs/Lea
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete previous tutorial topics (including<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a>).
+        Complete previous tutorial topics (including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to use the async module and Pug template language, and how to get data from the URL in our controller functions.
+        To understand how to perform asynchronous database operations using <code>async</code>/<code>await</code>, how to use the Pug template language, and how to get data from the URL in our controller functions.
       </td>
     </tr>
   </tbody>
@@ -45,20 +37,20 @@ At the end of this article, you should have a good end-to-end understanding of h
 
 ## Displaying library data tutorial subarticles
 
-The following subarticles go through the process of adding the different features required for us to display the required website pages. You need to read and work through each one of these in turn, before moving on to the next one.
+The following subarticles go through the process of adding the different features required for us to display the required website pages.
+You need to read and work through each one of these in turn, before moving on to the next one.
 
-1. [Asynchronous flow control using async](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2. [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3. [The LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4. [Home page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5. [Book list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6. [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7. [Date formatting using luxon](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8. [Author list page and Genre list page challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9. [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-10. [Book detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-11. [Author detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-12. [BookInstance detail page and challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+1. [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+2. [The LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+3. [Home page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+4. [Book list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+5. [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+6. [Date formatting using luxon](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+7. [Author list page and Genre list page challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+8. [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+9. [Book detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+10. [Author detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+11. [BookInstance detail page and challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## Summary
 
@@ -68,21 +60,8 @@ In our next article, we'll build on our knowledge, creating HTML forms and form 
 
 ## See also
 
-- [Async module](https://caolan.github.io/async/) (Async docs)
 - [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
 - [Luxon](https://moment.github.io/luxon/#/) (Luxon docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

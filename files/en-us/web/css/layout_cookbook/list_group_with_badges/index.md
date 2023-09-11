@@ -2,14 +2,6 @@
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - box alignment
-  - cookbook
-  - flexbox
-  - lists
 browser-compat:
   - css.properties.justify-content
   - css.properties.align-items
@@ -47,5 +39,5 @@ To align the content horizontally, I use the {{cssxref("align-items")}} property
 
 ## See also
 
-- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

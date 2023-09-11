@@ -2,20 +2,12 @@
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Authentication
-  - Interface
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.
+The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and is part of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API).
 
 {{InheritanceDiagram}}
 
@@ -23,19 +15,33 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 ## Instance properties
 
+- {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+
+  - : A string that indicates the mechanism by which the WebAuthn implementation is attached to the authenticator at the time the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call completes.
+
+- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+
+  - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
+
+- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+
+  - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
+
+- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+
+  - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
+
 - `PublicKeyCredential.type` {{ReadOnlyInline()}} {{securecontext_inline}}
   - : Inherited from {{domxref("Credential")}}. Always set to `public-key` for `PublicKeyCredential` instances.
-- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
-- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.
-- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-  - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
 
 ## Static methods
 
-- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
-  - : A static method returning a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
+- {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} {{securecontext_inline}}
+
+  - : Returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
+
+- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static", "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
+  - : Returns a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
 
 ## Instance methods
 
@@ -50,10 +56,12 @@ Here, we use {{domxref("CredentialsContainer.create()","navigator.credentials.cr
 
 ```js
 const publicKey = {
-  challenge: new Uint8Array([21, 31, 105 /* 29 more random bytes generated by the server */]),
+  challenge: new Uint8Array([
+    21, 31, 105 /* 29 more random bytes generated by the server */,
+  ]),
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
     id: new Uint8Array(16),
@@ -63,17 +71,20 @@ const publicKey = {
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({ publicKey })
+navigator.credentials
+  .create({ publicKey })
   .then((newCredentialInfo) => {
     const response = newCredentialInfo.response;
-    const clientExtensionsResults = newCredentialInfo.getClientExtensionResults();
-  }).catch((err) => {
-     console.error(err);
+    const clientExtensionsResults =
+      newCredentialInfo.getClientExtensionResults();
+  })
+  .catch((err) => {
+    console.error(err);
   });
 ```
 
@@ -83,16 +94,20 @@ Here, we fetch an existing credential from an authenticator, using {{domxref("Cr
 
 ```js
 const options = {
-  challenge: new Uint8Array([/* bytes sent from the server */])
+  challenge: new Uint8Array([
+    /* bytes sent from the server */
+  ]),
 };
 
-navigator.credentials.get({ "publicKey": options })
-    .then((credentialInfoAssertion) => {
+navigator.credentials
+  .get({ publicKey: options })
+  .then((credentialInfoAssertion) => {
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch((err) => {
-     console.error(err);
-});
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## Specifications

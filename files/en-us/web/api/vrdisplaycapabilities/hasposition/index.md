@@ -1,18 +1,11 @@
 ---
-title: VRDisplayCapabilities.hasPosition
+title: "VRDisplayCapabilities: hasPosition property"
+short-title: hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - hasPosition
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities.hasPosition
 ---
 

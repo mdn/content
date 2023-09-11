@@ -2,12 +2,6 @@
 title: HmacImportParams
 slug: Web/API/HmacImportParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - HmacImportParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacImportParams
 ---
 

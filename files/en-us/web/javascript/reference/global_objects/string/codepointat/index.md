@@ -2,45 +2,39 @@
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.codePointAt
 ---
 
 {{JSRef}}
 
-The **`codePointAt()`** method returns a non-negative integer
-that is the Unicode code point value at the given position.
-Note that this function does not give the nth code point in a string,
-but the code point starting at the specified string index.
+The **`codePointAt()`** method of {{jsxref("String")}} values returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Note that the index is still based on UTF-16 code units, not Unicode code points.
 
 {{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
 
 ## Syntax
 
 ```js-nolint
-codePointAt(pos)
+codePointAt(index)
 ```
 
 ### Parameters
 
-- `pos`
-  - : Position of an element in `str` to return the code point value
-    from.
+- `index`
+  - : Zero-based index of the character to be returned. [Converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) — `undefined` is converted to 0.
 
 ### Return value
 
-A decimal number representing the code point value of the character at the given `pos`.
+A non-negative integer representing the code point value of the character at the given `index`.
 
-- If there is no element at `pos`, returns [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
-- If the element at `pos` is a UTF-16 high surrogate, returns the code point of the surrogate _pair_.
-- If the element at `pos` is a UTF-16 low surrogate, returns _only_ the low surrogate code point.
+- If `index` is out of the range of `0` – `str.length - 1`, `codePointAt()` returns {{jsxref("undefined")}}.
+- If the element at `index` is a UTF-16 leading surrogate, returns the code point of the surrogate _pair_.
+- If the element at `index` is a UTF-16 trailing surrogate, returns _only_ the trailing surrogate code unit.
+
+## Description
+
+Characters in a string are indexed from left to right. The index of the first character is `0`, and the index of the last character in a string called `str` is `str.length - 1`.
+
+Unicode code points range from `0` to `1114111` (`0x10FFFF`). In UTF-16, each string index is a code unit with value `0` – `65535`. Higher code points are represented by _a pair_ of 16-bit surrogate pseudo-characters. Therefore, `codePointAt()` returns a code point that may span two string indices. For information on Unicode, see [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Examples
 
@@ -63,18 +57,27 @@ A decimal number representing the code point value of the character at the given
 
 ### Looping with codePointAt()
 
-Because indexing to a `pos` whose element is a UTF-16 low surrogate, returns _only_ the low surrogate,
-it's better not to index directly into a UTF-16 string.
+Because using string indices for looping causes the same code point to be visited twice (once for the leading surrogate, once for the trailing surrogate), and the second time `codePointAt()` returns _only_ the trailing surrogate, it's better to avoid looping by index.
 
-Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement
-or an Array's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method
-(or anything which correctly iterates UTF-16 surrogates) to iterate the string, using `codePointAt(0)` to get the code point of each element.
+```js example-bad
+const str = "\ud83d\udc0e\ud83d\udc71\u2764";
+
+for (let i = 0; i < str.length; i++) {
+  console.log(str.codePointAt(i).toString(16));
+}
+// '1f40e', 'dc0e', '1f471', 'dc71', '2764'
+```
+
+Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement or [spread the string](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), both of which invoke the string's [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator), which iterates by code points. Then, use `codePointAt(0)` to get the code point of each element.
 
 ```js
-for (const codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
+for (const codePoint of str) {
   console.log(codePoint.codePointAt(0).toString(16));
 }
 // '1f40e', '1f471', '2764'
+
+[...str].map((cp) => cp.codePointAt(0).toString(16));
+// ['1f40e', '1f471', '2764']
 ```
 
 ## Specifications

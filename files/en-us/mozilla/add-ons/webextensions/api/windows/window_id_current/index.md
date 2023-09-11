@@ -1,16 +1,7 @@
 ---
 title: windows.WINDOW_ID_CURRENT
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WINDOW_ID_CURRENT
-  - WebExtensions
-  - Windows
+page-type: webextension-api-property
 browser-compat: webextensions.api.windows.WINDOW_ID_CURRENT
 ---
 

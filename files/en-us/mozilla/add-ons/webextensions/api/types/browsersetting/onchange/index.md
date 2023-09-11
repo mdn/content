@@ -1,16 +1,7 @@
 ---
 title: BrowserSetting.onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Event
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - onchange
+page-type: webextension-api-event
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
 
@@ -41,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
 

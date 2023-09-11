@@ -1,16 +1,7 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - addUrl
+page-type: webextension-api-function
 browser-compat: webextensions.api.history.addUrl
 ---
 
@@ -70,7 +61,7 @@ browser.history
       text: "https://example.org/",
       startTime: 0,
       maxResults: 1,
-    })
+    }),
   )
   .then(onGot);
 ```
@@ -100,7 +91,7 @@ browser.history
   .then(() =>
     browser.history.getVisits({
       url: "https://example.org/",
-    })
+    }),
   )
   .then(onGot);
 ```

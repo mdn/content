@@ -1,14 +1,8 @@
 ---
-title: PerformanceResourceTiming.workerStart
+title: "PerformanceResourceTiming: workerStart property"
+short-title: workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - PerformanceResourceTiming
-  - Property
-  - Reference
-  - Web Performance
-  - workerStart
 browser-compat: api.PerformanceResourceTiming.workerStart
 ---
 
@@ -43,7 +37,7 @@ const observer = new PerformanceObserver((list) => {
     const workerProcessingTime = entry.fetchStart - entry.workerStart;
     if (workerProcessingTime > 0) {
       console.log(
-        `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+        `${entry.name}: Worker processing time: ${workerProcessingTime}ms`,
       );
     }
   });
@@ -60,7 +54,7 @@ resources.forEach((entry) => {
   const workerProcessingTime = entry.fetchStart - entry.workerStart;
   if (workerProcessingTime > 0) {
     console.log(
-      `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+      `${entry.name}: Worker processing time: ${workerProcessingTime}ms`,
     );
   }
 });

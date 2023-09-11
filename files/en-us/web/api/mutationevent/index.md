@@ -2,73 +2,76 @@
 title: MutationEvent
 slug: Web/API/MutationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - MutationEvent
-  - Reference
-  - events
+status:
+  - deprecated
 browser-compat: api.MutationEvent
 ---
 
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
-> **Note:** [Mutation Events](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents) (W3C DOM Level 3 Events) have been deprecated in favor of [Mutation Observers](/en-US/docs/Web/API/MutationObserver) (W3C DOM4).
-
 The **`MutationEvent`** interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
+
+> **Note:** Using _mutation events_ is problematic:
+>
+> - Their design is [flawed](https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html).
+> - Adding DOM mutation listeners to a document [profoundly degrades the performance](https://groups.google.com/d/topic/mozilla.dev.platform/L0Lx11u5Bvs?pli=1) of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.
+> - They have poor cross-browser compatibility: Safari doesn't support `DOMAttrModified` (see [WebKit bug 8191](https://webkit.org/b/8191)) and Firefox doesn't support _mutation name events_ (like `DOMElementNameChanged` and `DOMAttributeNameChanged`).
+>
+> They have been deprecated in favor of [mutation observers](/en-US/docs/Web/API/MutationObserver). **Consider using these instead.**
 
 {{InheritanceDiagram}}
 
-## Preface
+## Instance properties
 
-The mutation events have been marked as deprecated in [the DOM Events specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents), as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html)).
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
 
-[Mutation Observers](/en-US/docs/Web/API/MutationObserver) have replaced mutation events in DOM4. They have been supported in [most popular browsers for some years](/en-US/docs/Web/API/MutationObserver#browser_compatibility).
+- {{domxref("MutationEvent.attrChange")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Indicates what kind of change triggered the `DOMAttrModified` event. It can be `MODIFICATION` (`1`), `ADDITION` (`2`) or `REMOVAL` (`3`). It has no meaning for other events and is then set to `0`.
+- {{domxref("MutationEvent.attrName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Indicates the name of the node affected by the `DOMAttrModified` event. It has no meaning for other events and is then set to the empty string (`""`).
+- {{domxref("MutationEvent.newValue")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : In `DOMAttrModified` events, contains the new value of the modified {{domxref("Attr")}} node. In `DOMCharacterDataModified` events, contains the new value of the modified {{domxref("CharacterData")}} node. In all other cases, returns the empty string (`""`).
+- {{domxref("MutationEvent.prevValue")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : In `DOMAttrModified` events, contains the previous value of the modified {{domxref("Attr")}} node. In `DOMCharacterDataModified` events, contains previous new value of the modified{{domxref("CharacterData")}} node. In all other cases, returns the empty string (`""`).
+- {{domxref("MutationEvent.relatedNode")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Indicates the node related to the event, like the changed node inside the subtree for `DOMSubtreeModified`.
 
-In addition, mutation events should be avoided because they have **performance issues** and **poor cross-browser support** (as described in the following sections).
+## Instance methods
 
-### Performance
-
-Adding DOM mutation listeners to a document [profoundly degrades the performance](https://groups.google.com/d/topic/mozilla.dev.platform/L0Lx11u5Bvs?pli=1) of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.
-
-The performance effect is [limited to the documents that have the mutation event listeners](https://groups.google.com/forum/#!topic/mozilla.dev.platform/UH2VqFQRTDA).
-
-### Cross-browser support
-
-These events are not implemented consistently across different browsers, for example:
-
-- IE prior to version 9 didn't support the mutation events at all and does not implement some of them correctly in version 9 ([for example, DOMNodeInserted](http://help.dottoro.com/ljmcxjla.php))
-- WebKit doesn't support DOMAttrModified (see [webkit bug 8191](https://bugs.webkit.org/show_bug.cgi?id=8191) and [the workaround](https://engineering.silk.co/post/31921750832/mutation-events-what-happens))
-- "mutation name events", i.e. DOMElementNameChanged and DOMAttributeNameChanged are not supported in Firefox (as of version 11), and probably in other browsers as well.
-
-Dottoro [documents browser support for mutation events](http://help.dottoro.com/ljfvvdnm.php#additionalEvents).
+- {{domxref("MutationEvent.initMutationEvent()")}} {{Deprecated_Inline}}
+  - : Constructor method that returns a new `MutationEvent` configured with the parameters given.
 
 ## Mutation events list
 
-The following is a list of all mutation events, as defined in [DOM Level 3 Events specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents):
+The following is a list of all mutation events:
 
-- `DOMAttrModified`
-- `DOMAttributeNameChanged`
+- `DOMAttrModified` (Not supported by Safari)
+- `DOMAttributeNameChanged` (Not supported by Firefox)
 - `DOMCharacterDataModified`
-- `DOMElementNameChanged`
+- `DOMElementNameChanged` (Not supported by Firefox)
 - `DOMNodeInserted`
 - `DOMNodeInsertedIntoDocument`
 - `DOMNodeRemoved`
 - `DOMNodeRemovedFromDocument`
 - `DOMSubtreeModified`
 
-## Usage
+## Examples
 
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener("DOMNodeInserted", (event) => {
-  // …
-}, false);
+element.addEventListener(
+  "DOMNodeInserted",
+  (event) => {
+    // …
+  },
+  false,
+);
 ```
 
-The event object is passed to the listener in a `MutationEvent` (see [its definition in the specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-MutationEvent)) for most events, and {{DOMxRef("MutationNameEvent")}} for `DOMAttributeNameChanged` and `DOMElementNameChanged`.
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -76,4 +79,4 @@ The event object is passed to the listener in a `MutationEvent` (see [its defini
 
 ## See also
 
-- {{DOMxRef("MutationNameEvent")}}
+- {{DOMxRef("MutationObserver")}}

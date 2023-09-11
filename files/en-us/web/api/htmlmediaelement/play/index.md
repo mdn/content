@@ -1,17 +1,8 @@
 ---
-title: HTMLMediaElement.play()
+title: "HTMLMediaElement: play() method"
+short-title: play()
 slug: Web/API/HTMLMediaElement/play
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
 browser-compat: api.HTMLMediaElement.play
 ---
 
@@ -69,7 +60,7 @@ apply to any script-initiated playback of media, including calls to `play()`.
 
 If the {{Glossary("user agent")}} is configured not to allow automatic or
 script-initiated playback of media, calling `play()` will cause the returned
-promise to be immediately rejected with a `NotAllowedError`. Web sites should
+promise to be immediately rejected with a `NotAllowedError`. Websites should
 be prepared to handle this situation. For example, a site should not present a user
 interface that assumes playback has begun automatically, but should instead update their
 UI based on whether the returned promise is fulfilled or rejected. See the

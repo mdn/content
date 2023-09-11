@@ -1,18 +1,7 @@
 ---
 title: Backwards compatibility of flexbox
-slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 page-type: guide
-tags:
-  - '@supports'
-  - CSS
-  - CSS Tables
-  - Flexible Boxes
-  - Floats
-  - Guide
-  - fallbacks
-  - feature queries
-  - flexbox
-  - inline-block
 ---
 
 {{CSSRef}}
@@ -35,12 +24,7 @@ There are a few old articles in existence that refer to the older versions of fl
 
 ## Status in browsers
 
-Browser support for flexbox is excellent, and the majority of browsers do not need a prefix at this point. Safari was the last of the major browsers to remove prefixes, with the release of Safari 9 in 2015. The two browsers you should still keep in mind for cross-browser compatibility are:
-
-- Internet Explorer 10, which implemented the `display: flexbox` version of the specification with the `-ms-` prefix.
-- UC Browser, which still supports the 2009 `display: box` version only with the `-webkit-` prefix.
-
-Note also that Internet Explorer 11 supports the modern `display: flex` specification however it has a number of bugs in the implementation.
+Browser support for flexbox is excellent, and the majority of browsers do not need a prefix at this point. Safari was the last of the major browsers to remove prefixes, with the release of Safari 9 in 2015.
 
 ## Common issues
 
@@ -83,7 +67,7 @@ Remove `display: flex` to see the fallback behavior. You'll see white space adde
 
 ### display: table-
 
-The CSS table display properties are potentially very useful as a fallback, due to the fact that they allow design patterns such as full height columns and vertical centering and work back as far as Internet Explorer 8.
+The CSS table display properties are potentially very useful as a fallback, due to the fact that they allow design patterns such as full height columns and vertical centering.
 
 If you use `display: table-cell` on an item in your HTML it takes on the styling of an HTML table cell. CSS creates anonymous boxes to represent these items so that you do not need to wrap each item in a wrapper to represent the HTML table row, and a second one to represent the table element itself, You can't see or style these anonymous boxes; they are there purely to fix up the tree.
 
@@ -109,7 +93,7 @@ You can use [feature queries](/en-US/docs/Web/CSS/@supports) to detect flexbox s
 }
 ```
 
-Note that Internet Explorer 11 does not support feature queries yet _does_ support flexbox. If you decide the IE11 implementation is too buggy and you wish to serve it the fallback layout then you could use feature queries to serve flexbox rules only to those browsers with good flexbox support. Remember that if you want to include versions of browsers that had vendor-prefixed flexbox you would need to include the prefixed version in your feature query. The following feature query would include UC Browser, which supports feature queries and old flexbox syntax, prefixed:
+Remember that if you want to include versions of browsers that had vendor-prefixed flexbox you would need to include the prefixed version in your feature query. The following feature query would include UC Browser, which supports feature queries and old flexbox syntax, prefixed:
 
 ```css
 @supports (display: flex) or (display: -webkit-box) {

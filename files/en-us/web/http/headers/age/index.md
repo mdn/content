@@ -1,11 +1,7 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - Caching
-  - HTTP
-  - Response
-  - header
+page-type: http-header
 browser-compat: http.headers.Age
 ---
 

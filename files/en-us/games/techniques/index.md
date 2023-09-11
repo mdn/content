@@ -1,9 +1,7 @@
 ---
 title: Techniques for game development
 slug: Games/Techniques
-tags:
-  - Games
-  - Guide
+page-type: landing-page
 ---
 
 {{GamesSidebar}}

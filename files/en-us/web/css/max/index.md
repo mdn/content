@@ -2,16 +2,6 @@
 title: max()
 slug: Web/CSS/max
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - max
 browser-compat: css.types.max
 ---
 
@@ -21,7 +11,7 @@ The **`max()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 {{EmbedInteractiveExample("pages/css/function-max.html")}}
 
-In the first above example, the width will be at least 400px, but will be wider if the viewport is more than 2000px wide (in which case 1vw would be 20px, so 20vw would be 400px). Think of the `max()` value as providing the _minimum_ value a property can have.
+In the first example shown above, the width will be at least 400px, but will be wider if the viewport is more than 2000px wide (in which case 1vw would be 20px, so 20vw would be 400px). This technique uses an absolute unit to specify a fixed minimum value for the property, and a relative unit to allow the value to grow to suit larger viewports.
 
 ## Syntax
 
@@ -46,7 +36,7 @@ You can use different units for each value in your expression. You may also use 
 
 ### Setting a minimum size for a font
 
-Another use case for CSS functions is allow a font size to grow while ensuring it is at least a minimum size, enabling responsive font sizes while ensuring legibility.
+Another use case for `max()` is to allow a font size to grow while ensuring it is at least a minimum size, enabling responsive font sizes while ensuring legibility.
 
 Let's look at some CSS:
 
@@ -59,7 +49,7 @@ h1.responsive {
 }
 ```
 
-The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensure it is legible and ensures accessibility
+The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensures that it is legible and accessible.
 
 ```html
 <h1>This text is always legible, but doesn't change size</h1>

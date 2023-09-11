@@ -1,14 +1,7 @@
 ---
-title: 'Test your skills: Advanced styling'
+title: "Test your skills: Advanced styling"
 slug: Learn/Forms/Test_your_skills:_Advanced_styling
-tags:
-  - Assessment
-  - Beginner
-  - Forms
-  - Learn
-  - Pseudo-classes
-  - Styling
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

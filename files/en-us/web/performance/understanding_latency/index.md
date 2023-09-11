@@ -1,11 +1,7 @@
 ---
 title: Understanding latency
 slug: Web/Performance/Understanding_latency
-tags:
-  - Connection
-  - Network
-  - Web Performance
-  - latency
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -51,7 +47,7 @@ Also, on the network tab, you can see how long each request took to complete. We
 
 When a request is in a queue, waiting for a network connection it is considered **blocked**. Blocking happens when there are too many simultaneous connections made to a single server over HTTP. If all connections are in use, the browser can't download more resources until a connection is released, meaning those requests and resources are blocked.
 
-**DNS resolution** is the time it took to do the {{glossary('DNS lookup')}}. The greater the number of [hostnames](/en-US/docs/Web/API/URL/hostname), the more DNS lookups need to be done.
+**DNS resolution** is the time it took to do the {{glossary('DNS')}} lookup. The greater the number of [hostnames](/en-US/docs/Web/API/URL/hostname), the more DNS lookups need to be done.
 
 **Connecting** is the time it takes for a {{glossary('TCP handshake')}} to complete. Like DNS, the greater the number of server connections needed, the more time is spent creating server connections.
 

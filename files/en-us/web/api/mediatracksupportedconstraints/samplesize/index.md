@@ -1,18 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.sampleSize
+title: "MediaTrackSupportedConstraints: sampleSize property"
+short-title: sampleSize
 slug: Web/API/MediaTrackSupportedConstraints/sampleSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - sampleSize
 browser-compat: api.MediaTrackSupportedConstraints.sampleSize
 ---
 
@@ -44,7 +34,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

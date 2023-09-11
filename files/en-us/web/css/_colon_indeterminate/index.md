@@ -2,23 +2,12 @@
 title: ":indeterminate"
 slug: Web/CSS/:indeterminate
 page-type: css-pseudo-class
-tags:
-  - ":indeterminate"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - checkbox
-  - progress
-  - radio button
 browser-compat: css.selectors.indeterminate
 ---
 
 {{CSSRef}}
 
-The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes which have their HTML [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate) attribute set to `true`, radio buttons which are members of a group in which all radio buttons are unchecked, and indeterminate {{HTMLElement("progress")}} elements.
+The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes which have their HTML [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) attribute set to `true`, radio buttons which are members of a group in which all radio buttons are unchecked, and indeterminate {{HTMLElement("progress")}} elements.
 
 ```css
 /* Selects any <input> whose state is indeterminate */
@@ -142,6 +131,6 @@ progress:indeterminate {
 
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- The [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate) attribute
+- The [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxe) attribute
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The {{cssxref(":checked")}} CSS selector lets you style checkboxes based on whether they're checked or not

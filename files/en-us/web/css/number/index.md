@@ -2,13 +2,6 @@
 title: <number>
 slug: Web/CSS/number
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.number
 ---
 
@@ -22,7 +15,7 @@ The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A
 
 ## Interpolation
 
-When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 

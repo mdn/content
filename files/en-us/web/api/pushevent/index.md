@@ -2,16 +2,6 @@
 title: PushEvent
 slug: Web/API/PushEvent
 page-type: web-api-interface
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - Workers
 browser-compat: api.PushEvent
 ---
 
@@ -42,24 +32,27 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 The following example takes data from a `PushEvent` and displays it on all of the service worker's clients.
 
 ```js
-self.addEventListener('push', (event) => {
-  if (!(self.Notification && self.Notification.permission === 'granted')) {
+self.addEventListener("push", (event) => {
+  if (!(self.Notification && self.Notification.permission === "granted")) {
     return;
   }
 
   const data = event.data?.json() ?? {};
   const title = data.title || "Something Has Happened";
-  const message = data.message || "Here's something you might want to check out.";
+  const message =
+    data.message || "Here's something you might want to check out.";
   const icon = "images/new-notification.png";
 
   const notification = new self.Notification(title, {
     body: message,
-    tag: 'simple-push-demo-notification',
+    tag: "simple-push-demo-notification",
     icon,
   });
 
-  notification.addEventListener('click', () => {
-    clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
+  notification.addEventListener("click", () => {
+    clients.openWindow(
+      "https://example.blog.com/2015/03/04/something-new.html",
+    );
   });
 });
 ```

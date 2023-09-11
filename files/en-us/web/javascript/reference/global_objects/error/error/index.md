@@ -2,17 +2,12 @@
 title: Error() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Error.Error
 ---
 
 {{JSRef}}
 
-The **`Error()`** constructor creates an error object.
+The **`Error()`** constructor creates {{jsxref("Error")}} objects.
 
 ## Syntax
 
@@ -79,11 +74,11 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 JavaScript only tries to read `options.cause` if `options` is an object — this avoids ambiguity with the other non-standard `Error(message, fileName, lineNumber)` signature, which requires the second parameter to be a string. If you omit `options`, pass a primitive value as `options`, or pass an object without the `cause` property, then the created `Error` object will have no `cause` property.
 
 ```js
-// Omitting options 
+// Omitting options
 const error1 = new Error("Error message");
 console.log("cause" in error1); // false
 
-// Passing a primitive value 
+// Passing a primitive value
 const error2 = new Error("Error message", "");
 console.log("cause" in error2); // false
 
@@ -102,7 +97,7 @@ console.log("cause" in error3); // false
 
 ## See also
 
-- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
-- [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)
+- [Error causes](https://v8.dev/features/error-cause) on v8.dev (2021)

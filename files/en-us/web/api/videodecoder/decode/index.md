@@ -1,18 +1,12 @@
 ---
-title: VideoDecoder.decode()
+title: "VideoDecoder: decode() method"
+short-title: decode()
 slug: Web/API/VideoDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.decode
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`decode()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to decode a given chunk of video.
 
@@ -47,6 +41,7 @@ const responses = await downloadVideoChunksFromServer(timestamp);
 for (const response of responses) {
   const chunk = new EncodedVideoChunk({
     timestamp: response.timestamp,
+    type: response.key ? "key" : "delta",
     data: new Uint8Array(response.body),
   });
   decoder.decode(chunk);

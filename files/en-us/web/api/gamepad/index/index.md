@@ -1,15 +1,8 @@
 ---
-title: Gamepad.index
+title: "Gamepad: index property"
+short-title: index
 slug: Web/API/Gamepad/index
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.index
 ---
 

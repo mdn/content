@@ -1,11 +1,7 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
-tags:
-  - Add-ons
-  - Extensions
-  - Keyboard Shortcuts
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.commands
 ---
 
@@ -144,8 +140,8 @@ browser.commands.onCommand.addListener((command) => {
 
 There are these 4 **special shortcuts with default actions** for which the {{WebExtAPIRef("commands.onCommand")}} event does not fire:
 
-- `_execute_browser_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) created with {{WebExtAPIRef("browserAction")}} or specified in the [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json key.
-- `_execute_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) created with {{WebExtAPIRef("action")}} or specified in the [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json key.
+- `_execute_browser_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) created with {{WebExtAPIRef("browserAction")}} or specified in the [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json key.
+- `_execute_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) created with {{WebExtAPIRef("action")}} or specified in the [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json key.
 - `_execute_page_action`: works like a click on an [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) created with {{WebExtAPIRef("pageAction")}} or specified in the [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in the manifest.json key.
 - `_execute_sidebar_action`: opens the extension's [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) specified in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key.
 

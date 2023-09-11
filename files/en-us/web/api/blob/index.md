@@ -2,12 +2,6 @@
 title: Blob
 slug: Web/API/Blob
 page-type: web-api-interface
-tags:
-  - API
-  - Blob
-  - File API
-  - Interface
-  - Reference
 browser-compat: api.Blob
 ---
 
@@ -61,7 +55,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### Creating a URL representing the contents of a typed array
 
-The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
+The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
 
 #### HTML
 
@@ -75,7 +69,7 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 
 #### JavaScript
 
-The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).
+The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute (assuming the data contains an image, of course).
 
 ```js
 function showViewLiveResultButton() {
@@ -97,7 +91,7 @@ function showViewLiveResultButton() {
 if (!showViewLiveResultButton()) {
   function typedArrayToURL(typedArray, mimeType) {
     return URL.createObjectURL(
-      new Blob([typedArray.buffer], { type: mimeType })
+      new Blob([typedArray.buffer], { type: mimeType }),
     );
   }
   const bytes = new Uint8Array(59);
@@ -158,5 +152,5 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("URL.createObjectURL")}}
+- {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

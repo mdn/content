@@ -1,16 +1,7 @@
 ---
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - show
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.show
 ---
 
@@ -52,14 +43,14 @@ This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when th
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
-})
+  title: "Show page action",
+});
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "show") {
-    browser.pageAction.show(tab.id)
+    browser.pageAction.show(tab.id);
   }
-})
+});
 ```
 
 {{WebExtExamples}}

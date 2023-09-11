@@ -1,13 +1,8 @@
 ---
-title: FormData.getAll()
+title: "FormData: getAll() method"
+short-title: getAll()
 slug: Web/API/FormData/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.getAll
 ---
 
@@ -37,14 +32,14 @@ An array of values whose key matches the specified `name`. Otherwise, an empty l
 If we add two `username` values to a {{domxref("FormData")}} using {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 The following `getAll()` method will return both `username` values in an array:
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
 ## Specifications

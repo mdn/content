@@ -1,14 +1,10 @@
 ---
-title: BackgroundFetchRegistration.abort()
+title: "BackgroundFetchRegistration: abort() method"
+short-title: abort()
 slug: Web/API/BackgroundFetchRegistration/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - abort
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.abort
 ---
 

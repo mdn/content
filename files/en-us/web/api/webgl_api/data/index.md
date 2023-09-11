@@ -2,20 +2,6 @@
 title: Data in WebGL
 slug: Web/API/WebGL_API/Data
 page-type: guide
-tags:
-  - 3D
-  - 3D Graphics
-  - Attributes
-  - Drawing
-  - Graphics
-  - Guide
-  - Intermediate
-  - NeedsContent
-  - NeedsExample
-  - Uniforms
-  - Varyings
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}}

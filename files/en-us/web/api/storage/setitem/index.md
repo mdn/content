@@ -1,13 +1,8 @@
 ---
-title: Storage.setItem()
+title: "Storage: setItem() method"
+short-title: setItem()
 slug: Web/API/Storage/setItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.setItem
 ---
 
@@ -46,13 +41,25 @@ The following function creates three data items inside local storage.
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 }
 ```
 
-> **Note:** To see this used within a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** To see this used within a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+
+`Storage` only supports storing and retrieving strings. If you want to save other data types, you have to convert them to strings. For plain objects and arrays, you can use {{jsxref("JSON.stringify()")}}.
+
+```js
+const person = { name: "Alex" };
+localStorage.setItem("user", person);
+console.log(localStorage.getItem("user")); // "[object Object]"; not useful!
+localStorage.setItem("user", JSON.stringify(person));
+console.log(JSON.parse(localStorage.getItem("user"))); // { name: "Alex" }
+```
+
+However, there's no generic way to store arbitrary data types. Furthermore, the retrieved object is a [deep copy](/en-US/docs/Glossary/Deep_copy) of the original object and mutations to it do not affect the original object.
 
 ## Specifications
 

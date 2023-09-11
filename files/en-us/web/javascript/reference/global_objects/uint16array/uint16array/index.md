@@ -2,19 +2,12 @@
 title: Uint16Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint16Array.Uint16Array
 ---
 
 {{JSRef}}
 
-The **`Uint16Array()`** typed array constructor creates an
-array of 16-bit unsigned integers in the platform byte order.
+The **`Uint16Array()`** constructor creates {{jsxref("Uint16Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 
@@ -84,6 +77,7 @@ console.log(uint16FromIterable);
 ## See also
 
 - [Polyfill of `Uint16Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

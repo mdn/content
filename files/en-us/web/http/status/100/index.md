@@ -1,10 +1,7 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-tags:
-  - HTTP
-  - Informational
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.100
 ---
 

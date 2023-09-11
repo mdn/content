@@ -1,15 +1,10 @@
 ---
-title: TaskAttributionTiming.containerSrc
+title: "TaskAttributionTiming: containerSrc property"
+short-title: containerSrc
 slug: Web/API/TaskAttributionTiming/containerSrc
 page-type: web-api-instance-property
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.containerSrc
 ---
 
@@ -20,7 +15,7 @@ attribute. A container is the iframe, embed or object etc. that is being implica
 
 ## Value
 
-A string containing the container's `src` attribute (e.g. [`<iframe src="url.html"`](/en-US/docs/Web/HTML/Element/iframe#attr-src)).
+A string containing the container's `src` attribute (e.g. [`<iframe src="url.html"`](/en-US/docs/Web/HTML/Element/iframe#src)).
 
 ## Specifications
 

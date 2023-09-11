@@ -2,9 +2,6 @@
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
 ---
 
@@ -17,14 +14,15 @@ Each time in the list corresponds to a value in the {{SVGAttr("values")}} attrib
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

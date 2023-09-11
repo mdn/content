@@ -1,22 +1,15 @@
 ---
 title: Segments.prototype[@@iterator]()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segments.@@iterator
 ---
 
 {{JSRef}}
 
-The **`@@iterator`** method of a `Segments` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields data about each segment.
+The **`[@@iterator]()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [segments iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields data about each segment.
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html")}}
+{{EmbedInteractiveExample("pages/js/segments-prototype-@@iterator.html")}}
 
 ## Syntax
 
@@ -24,15 +17,19 @@ The **`@@iterator`** method of a `Segments` object implements the [iterable prot
 segments[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterable iterator object that yields data about each segment. Each yielded object has the same properties as the object returned by the [`containing()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing) method.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields data about each segment. Each yielded object has the same properties as the object returned by the [`containing()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing) method.
 
 ## Examples
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes `Segments` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically calls this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes `Segments` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 ```js
 const segmenter = new Intl.Segmenter("zh-CN", { granularity: "word" });
@@ -97,7 +94,7 @@ while (!result.done) {
 
 ## See also
 
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
 - [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
 - [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
+- {{jsxref("Symbol.iterator")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

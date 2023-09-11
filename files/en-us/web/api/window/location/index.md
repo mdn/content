@@ -1,28 +1,18 @@
 ---
-title: Window.location
+title: "Window: location property"
+short-title: location
 slug: Web/API/Window/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.location
 ---
 
 {{APIRef}}
 
-The **`Window.location`** read-only property returns a
-{{domxref("Location")}} object with information about the current location of the
-document.
+The **`Window.location`** read-only property returns a {{domxref("Location")}} object with information about the current location of the document.
 
-Though `Window.location` is a _read-only_ `Location`
-object, you can also assign a string to it. This means that you can
-work with `location` as if it were a string in most cases:
-`location = 'http://www.example.com'` is a synonym of
-`location.href = 'http://www.example.com'`.
+Though `Window.location` is a _read-only_ `Location` object, you can also assign a string to it.
+This means that you can work with `location` as if it were a string in most cases:
+`location = 'http://www.example.com'` is a synonym of `location.href = 'http://www.example.com'`.
 
 See {{domxref("Location")}} for all available properties.
 
@@ -40,15 +30,13 @@ alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Win
 
 ### Example 1: Navigate to a new page
 
-Whenever a new value is assigned to the location object, a document will be loaded
-using the URL as if `location.assign()` had been called with the modified
-URL.
+Whenever a new value is assigned to the location object, a document will be loaded using the URL as if `location.assign()` had been called with the modified URL.
 
 Note that [navigation-related sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
 
 ```js
-location.assign("http://www.mozilla.org"); // or
-location = "http://www.mozilla.org";
+location.assign("https://www.mozilla.org"); // or
+location = "https://www.mozilla.org";
 ```
 
 ### Example 2: Reloading the current page
@@ -59,12 +47,11 @@ location.reload();
 
 ### Example 3
 
-Consider the following example, which will reload the page by using the [`replace()`](/en-US/docs/Web/API/Location/replace) method to
-insert the value of `location.pathname` into the hash:
+Consider the following example, which will reload the page by using the [`replace()`](/en-US/docs/Web/API/Location/replace) method to insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  location.replace(`http://example.com/#${location.pathname}`);
+  location.replace(`https://example.com/#${location.pathname}`);
 }
 ```
 
@@ -72,9 +59,14 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  const logLines = [
+    "Property (Typeof): Value",
+    `location (${typeof location}): ${location}`,
+  ];
   for (const prop in location) {
-    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
+    logLines.push(
+      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`,
+    );
   }
   alert(logLines.join("\n"));
 }
@@ -92,13 +84,12 @@ function sendData(data) {
 // in html: <button onclick="sendData('Some data');">Send data</button>
 ```
 
-The current URL with "?Some%20data" appended is sent to the server (if no action is
-taken by the server, the current document is reloaded with the modified search string).
+The current URL with "?Some%20data" appended is sent to the server (if no action is taken by the server, the current document is reloaded with the modified search string).
 
 ### Example 6: Using bookmarks without changing the `hash` property
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -402,8 +393,12 @@ const showBookmark = (() => {
       return;
     }
     _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / frames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / frames);
+    document.documentElement.scrollTop = Math.round(
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames,
+    );
+    document.documentElement.scrollLeft = Math.round(
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames,
+    );
     if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;
     }

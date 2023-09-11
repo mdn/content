@@ -2,20 +2,14 @@
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 page-type: javascript-instance-method
-tags:
-  - Date
-  - IANA Timezone Format
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
 
 {{JSRef}}
 
-The **`toLocaleDateString()`** method returns a string with a language-sensitive representation of the date portion of the specified date in the user agent's timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleDateString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the date portion of the specified date in the user agent's timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+
+When formatting large numbers of dates, it is better to create an {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method.
 
 {{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
 
@@ -53,10 +47,6 @@ A string representing the date portion of the given {{jsxref("Global_Objects/Dat
 
 In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`, where `options` has been normalized as described above.
 
-## Performance
-
-When formatting large numbers of dates, it is better to create an [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object and use its [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) method.
-
 ## Examples
 
 ### Using toLocaleDateString()
@@ -72,19 +62,17 @@ console.log(date.toLocaleDateString());
 // "12/11/2012" if run in en-US locale with time zone America/Los_Angeles
 ```
 
-### Checking for support for locales and options arguments
+### Checking for support for locales and options parameters
 
-The `locales` and `options` arguments are not supported in all browsers yet.
-To check whether an implementation supports them already, you can use the requirement that illegal language tags are rejected with a {{jsxref("RangeError")}} exception:
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internationalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleDateString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
 
 ```js
 function toLocaleDateStringSupportsLocales() {
-  try {
-    new Date().toLocaleDateString("i");
-  } catch (e) {
-    return e.name === "RangeError";
-  }
-  return false;
+  return (
+    typeof Intl === "object" &&
+    !!Intl &&
+    typeof Intl.DateTimeFormat === "function"
+  );
 }
 ```
 

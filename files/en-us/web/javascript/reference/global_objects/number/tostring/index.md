@@ -2,17 +2,12 @@
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
 browser-compat: javascript.builtins.Number.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified number value.
+The **`toString()`** method of {{jsxref("Number")}} values returns a string representing this number value.
 
 {{EmbedInteractiveExample("pages/js/number-tostring.html")}}
 

@@ -2,16 +2,6 @@
 title: Writing WebSocket servers
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
-tags:
-  - Guide
-  - HTML
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSocket
-  - WebSocket API
-  - WebSockets
 ---
 
 {{APIRef("Websockets API")}}
@@ -117,7 +107,7 @@ Frame format:
 
 The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. _Note: You must mask messages even when using a secure socket._ RSV1-3 can be ignored, they are for extensions.
 
-The opcode field defines how to interpret the payload data: `0x0` for continuation, 0x1 for text (which is always encoded in UTF-8), `0x2` for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, `0x3` to `0x7` and `0xB` to `0xF` have no meaning.
+The opcode field defines how to interpret the payload data: `0x0` for continuation, `0x1` for text (which is always encoded in UTF-8), `0x2` for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, `0x3` to `0x7` and `0xB` to `0xF` have no meaning.
 
 The FIN bit tells whether this is the last message in a series. If it's 0, then the server keeps listening for more parts of the message; otherwise, the server should consider the message delivered. More on this later.
 
@@ -149,7 +139,7 @@ The FIN and opcode fields work together to send a message split up into separate
 
 Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
-```
+```plain
 Client: FIN=1, opcode=0x1, msg="hello"
 Server: (process complete message immediately) Hi.
 Client: FIN=0, opcode=0x1, msg="and a"

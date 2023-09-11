@@ -2,19 +2,6 @@
 title: Introducing the CSS Cascade
 slug: Web/CSS/Cascade
 page-type: guide
-tags:
-  - CSS
-  - Cascade
-  - Guide
-  - Introduction
-  - Layout
-  - Cascade layers
-  - specificity
-  - \@layers
-  - Reference
-  - Style
-  - Style sheet
-  - Stylesheets
 spec-urls: https://drafts.csswg.org/css-cascade/
 ---
 
@@ -22,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-cascade/
 
 The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types) or [cascade layer](/en-US/docs/Web/CSS/@layer) set a value for a property on an element.
 
-The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_Selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).
+The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).
 
 This article explains what the cascade is and the order in which {{Glossary("CSS")}} [declarations](/en-US/docs/Web/API/CSSStyleDeclaration) cascade, covering cascade layers and origin type. Understanding origin precedence is key to understanding the cascade.
 
@@ -44,11 +31,11 @@ Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/
 
 ### Author stylesheets
 
-**Author stylesheets** are the most common type of style sheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the {{htmlattrxref('style')}} attribute. These author styles define the look and feel of the website — its theme.
+**Author stylesheets** are the most common type of style sheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute. These author styles define the look and feel of the website — its theme.
 
 ### User stylesheets
 
-In most browsers, the user (or reader) of the web site can choose to override styles using a custom **user stylesheet** designed to tailor the experience to the user's wishes. Depending on the user agent, [user styles can be configured](https://www.thoughtco.com/user-style-sheet-3469931) directly or added via browser extensions.
+In most browsers, the user (or reader) of the website can choose to override styles using a custom **user stylesheet** designed to tailor the experience to the user's wishes. Depending on the user agent, [user styles can be configured](https://www.thoughtco.com/user-style-sheet-3469931) directly or added via browser extensions.
 
 ### Cascade layers
 
@@ -92,7 +79,7 @@ The cascade algorithm is applied _before_ the specificity algorithm, meaning if 
 
 Before taking a deeper look at how cascade layers impact the cascade, let's look at an example involving multiple sources of CSS across the various origins, and work through the steps of the cascade algorithm:
 
-Here we have a user agent style sheet, two author style sheets, a user stylesheet, and inline styles within the HTML:
+Here we have a user agent style sheet, two author style sheets, and a user stylesheet, with no inline styles within the HTML:
 
 **User-agent CSS:**
 
@@ -338,9 +325,9 @@ Only CSS property/value pair declarations participate in the cascade. This means
 
 For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
-While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, the at-rule may make an entire selector not relevant, as we saw with the print style in the [basic example](#basic-example).
+While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, the at-rule may make an entire selector not relevant, as we saw with the print style in the [basic example](#basic_example).
 
-Declarations in {{cssxref("@keyframes")}} don't participate in the cascade. As with `@font-face`, only the `@keyframes` as a whole is selected via the cascade algorithm. The [precedence order of animation is described below](#css-animations-and-the-cascade).
+Declarations in {{cssxref("@keyframes")}} don't participate in the cascade. As with `@font-face`, only the `@keyframes` as a whole is selected via the cascade algorithm. The [precedence order of animation is described below](#css_animations_and_the_cascade).
 
 When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](/en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
 
@@ -348,7 +335,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 ## CSS animations and the cascade
 
-[CSS animations](/en-US/docs/Web/CSS/CSS_Animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
+[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
 
 If the several keyframe animations are defined with the same animation name, the last defined `@keyframes` in the origin and layer with the greatest precedence. Only one `@keyframes` definition is used, even if the `@keyframes` animate different property. `@keyframes` with the same name are never combined.
 
@@ -409,11 +396,11 @@ After your content has finished altering styles, it may find itself in a situati
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)

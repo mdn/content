@@ -1,16 +1,8 @@
 ---
-title: FetchEvent.respondWith()
+title: "FetchEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/FetchEvent/respondWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - FetchEvent
-  - Method
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
-  - respondWith
 browser-compat: api.FetchEvent.respondWith
 ---
 
@@ -51,7 +43,7 @@ This means, for example, if a service worker intercepts a stylesheet or worker s
 then the provided {{domxref("Response.url")}} will be used to resolve any relative
 {{cssxref("@import")}} or
 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads
-({{bug(1222008)}}).
+([Firefox bug 1222008](https://bugzil.la/1222008)).
 
 For most types of network request this change has no impact because you can't observe
 the final URL. There are a few, though, where it does matter:
@@ -104,16 +96,18 @@ This fetch event tries to return a response from the cache API, falling back to 
 network otherwise.
 
 ```js
-addEventListener('fetch', (event) => {
+addEventListener("fetch", (event) => {
   // Prevent the default, and handle the request ourselves.
-  event.respondWith((async () => {
-    // Try to get the response from a cache.
-    const cachedResponse = await caches.match(event.request);
-    // Return it if we found one.
-    if (cachedResponse) return cachedResponse;
-    // If we didn't find a match in the cache, use the network.
-    return fetch(event.request);
-  })());
+  event.respondWith(
+    (async () => {
+      // Try to get the response from a cache.
+      const cachedResponse = await caches.match(event.request);
+      // Return it if we found one.
+      if (cachedResponse) return cachedResponse;
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 

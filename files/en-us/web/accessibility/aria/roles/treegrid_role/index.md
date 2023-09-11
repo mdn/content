@@ -1,15 +1,7 @@
 ---
 title: "ARIA: treegrid role"
 slug: Web/Accessibility/ARIA/Roles/treegrid_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Treegrid role
-  - composite widget role
-  - treegrid
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treegrid
   - https://w3c.github.io/aria-practices/#treegrid
@@ -52,7 +44,7 @@ The element with the role of `treegrid` must have an accessible name. If an appr
 
 If the content includes a caption or description for the `treegrid`, include [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) on the `treegrid` element with the attribute value being the `id` of the element containing the description.
 
-If the `treegrid` container itself receives focus, the value of its [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property should reference the {{HTMLattrxref('id')}} of the selected `row`, `columnheader`, `rowheader` or `gridcell`, unless roving tabindex is used to manage focus between those roles, in which case `aria-activedescendant` should not be used.
+If the `treegrid` container itself receives focus, the value of its [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property should reference the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the selected `row`, `columnheader`, `rowheader` or `gridcell`, unless roving tabindex is used to manage focus between those roles, in which case `aria-activedescendant` should not be used.
 
 If the `treegrid` is disabled, make that disabled state visually apparent, programmatically enforced, and include the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute on the `treegrid` itself to inform assistive technologies of its disabled state.
 
@@ -68,7 +60,7 @@ If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Ro
 
 By default, treegrids are assumed to be editable. If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role, propagates down to all `columnheader`, `rowheader`, and `gridcell` elements. That global value can be overridden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
 
-Like all ARIA attributes, adding `aria-readonly` only informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global {{HTMLattrxref('contenteditable')}} attribute or with JavaScript.
+Like all ARIA attributes, adding `aria-readonly` only informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute or with JavaScript.
 
 ### Associated WAI-ARIA roles, states, and properties
 

@@ -1,17 +1,13 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - is
+page-type: html-attribute
 browser-compat: html.global_attributes.is
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`is`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to specify that a standard HTML element should behave like a defined custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
+The **`is`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to specify that a standard HTML element should behave like a defined custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
 This attribute can only be used if the specified custom element name has been successfully [defined](/en-US/docs/Web/API/CustomElementRegistry/define) in the current document, and extends the element type it is being applied to.
 

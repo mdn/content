@@ -1,15 +1,7 @@
 ---
 title: "ARIA: log role"
 slug: Web/Accessibility/ARIA/Roles/log_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - log
-  - log role
-  - ARIA log
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#log
 ---
 
@@ -47,7 +39,6 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 ## See Also
 
-- [ARIA: using the `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)

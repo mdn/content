@@ -1,11 +1,7 @@
 ---
-title: empty
+title: Empty statement
 slug: Web/JavaScript/Reference/Statements/Empty
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.empty
 ---
 

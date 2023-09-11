@@ -1,15 +1,10 @@
 ---
-title: InkPresenter.expectedImprovement
+title: "InkPresenter: expectedImprovement property"
+short-title: expectedImprovement
 slug: Web/API/InkPresenter/expectedImprovement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Property
-  - expectedImprovement
+status:
+  - experimental
 browser-compat: api.InkPresenter.expectedImprovement
 ---
 
@@ -26,11 +21,10 @@ A number.
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
   console.log(presenter.expectedImprovement);
 
   //...
-
 }
 ```
 

@@ -2,13 +2,8 @@
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
 
@@ -16,7 +11,7 @@ browser-compat: javascript.builtins.Object.lookupGetter
 
 > **Note:** This feature is deprecated in favor of the {{jsxref("Object.getOwnPropertyDescriptor()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
-The **`__lookupGetter__()`** method returns the function bound as a getter to the specified property.
+The **`__lookupGetter__()`** method of {{jsxref("Object")}} instances returns the function bound as a getter to the specified property.
 
 ## Syntax
 
@@ -82,7 +77,7 @@ const obj2 = {
 
 function findGetter(obj, prop) {
   while (obj) {
-    const desc = Object.getOwnPropertyDescriptor(obj, "foo");
+    const desc = Object.getOwnPropertyDescriptor(obj, prop);
     if (desc) {
       return desc.get;
     }
@@ -105,8 +100,8 @@ console.log(findGetter(obj2, "foo")); // [Function: get foo]
 
 - [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- {{jsxref("Functions/get", "get")}} syntax
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)

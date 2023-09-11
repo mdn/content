@@ -2,18 +2,12 @@
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 page-type: javascript-instance-method
-tags:
-  - Boolean
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Boolean.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified boolean value.
+The **`toString()`** method of {{jsxref("Boolean")}} values returns a string representing the specified boolean value.
 
 {{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
 
@@ -22,6 +16,10 @@ The **`toString()`** method returns a string representing the specified boolean 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

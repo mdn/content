@@ -1,24 +1,14 @@
 ---
-title: StorageManager.getDirectory()
+title: "StorageManager: getDirectory() method"
+short-title: getDirectory()
 slug: Web/API/StorageManager/getDirectory
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - getDirectory
 browser-compat: api.StorageManager.getDirectory
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}
 
-The **`getDirectory()`** method of the {{domxref("StorageManager")}} interface is used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) (OPFS).
+The **`getDirectory()`** method of the {{domxref("StorageManager")}} interface is used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS).
 
 ## Syntax
 
@@ -57,7 +47,7 @@ onmessage = async (e) => {
 
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
@@ -77,10 +67,10 @@ onmessage = async (e) => {
 
   // Always close FileSystemSyncAccessHandle if done.
   accessHandle.close();
-}
+};
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Specifications
 

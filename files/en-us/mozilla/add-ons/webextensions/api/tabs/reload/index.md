@@ -1,16 +1,7 @@
 ---
 title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - reload
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.reload
 ---
 
@@ -55,7 +46,7 @@ browser.tabs.reload();
 Reload the active tab of the current window, bypassing the cache:
 
 ```js
-browser.tabs.reload({bypassCache: true});
+browser.tabs.reload({ bypassCache: true });
 ```
 
 Reload the tab whose ID is 2, bypassing the cache and calling a callback when done:
@@ -69,7 +60,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let reloading = browser.tabs.reload(2, {bypassCache: true});
+let reloading = browser.tabs.reload(2, { bypassCache: true });
 reloading.then(onReloaded, onError);
 ```
 

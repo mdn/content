@@ -1,16 +1,7 @@
 ---
 title: Your first form
 slug: Learn/Forms/Your_first_form
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
@@ -80,7 +71,7 @@ All forms start with a {{HTMLelement("form")}} element, like this:
 <form action="/my-handling-form-page" method="post">…</form>
 ```
 
-This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the [`action`](/en-US/docs/Web/HTML/Element/form#attr-action) and [`method`](/en-US/docs/Web/HTML/Element/form#attr-method) attributes:
+This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method) attributes:
 
 - The `action` attribute defines the location (URL) where the form's collected data should be sent when it is submitted.
 - The `method` attribute defines which HTTP method to send the data with (usually `get` or `post`).
@@ -269,7 +260,7 @@ Save and reload, and you'll see that your form should look much less ugly.
 ## Sending form data to your web server
 
 The last part, and perhaps the trickiest, is to handle form data on the server side.
-The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Element/form#attr-action) and [`method`](/en-US/docs/Web/HTML/Element/form#attr-method) attributes.
+The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method) attributes.
 
 We provide a `name` attribute for each form control.
 The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name.
@@ -408,19 +399,6 @@ button {
 That's only the beginning, however — now it's time to take a deeper look. Forms have way more power than what we saw here and the other articles in this module will help you to master the rest.
 
 {{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
-
-## In this module
-
-- **Your first form**
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

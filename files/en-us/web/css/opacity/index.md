@@ -2,12 +2,6 @@
 title: opacity
 slug: Web/CSS/opacity
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Opacity
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.opacity
 ---
 
@@ -47,7 +41,7 @@ opacity: unset;
 
 `opacity` applies to the element as a whole, including its contents, even though the value is not inherited by child elements. Thus, the element and its children all have the same opacity relative to the element's background, even if they have different opacities relative to one another.
 
-Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
 To change the opacity of a background only, use the {{cssxref("background")}} property with a {{cssxref("color_value", "color value")}} that allows for an alpha channel. For example:
 

@@ -1,14 +1,8 @@
 ---
-title: SubtleCrypto.digest()
+title: "SubtleCrypto: digest() method"
+short-title: digest()
 slug: Web/API/SubtleCrypto/digest
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - WebCrypto API
-  - digest
 browser-compat: api.SubtleCrypto.digest
 ---
 
@@ -22,6 +16,8 @@ inputs that have the same digest value.
 
 It takes as its arguments an identifier for the digest algorithm to use and the data to
 digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the digest.
+
+Note that this API does not support streaming input: you must read the entire input into memory before passing it into the digest function.
 
 ## Syntax
 
@@ -110,23 +106,27 @@ cryptography.
 
 ## Examples
 
+For more examples of using the `digest()` API, see [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto).
+
 ### Basic example
 
 This example encodes a message, then calculates its SHA-256 digest and logs the digest
 length:
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
-digestMessage(text)
-  .then((digestBuffer) => console.log(digestBuffer.byteLength));
+digestMessage(text).then((digestBuffer) =>
+  console.log(digestBuffer.byteLength),
+);
 ```
 
 ### Converting a digest to a hex string
@@ -136,18 +136,20 @@ digests are often represented as hex strings. This example calculates a digest, 
 converts the `ArrayBuffer` to a hex string:
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convert bytes to hex string
   return hashHex;
 }
 
-digestMessage(text)
-  .then((digestHex) => console.log(digestHex));
+digestMessage(text).then((digestHex) => console.log(digestHex));
 ```
 
 ## Specifications
@@ -157,9 +159,6 @@ digestMessage(text)
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** Chrome 60 added a feature that disables crypto.subtle for non-TLS
-> connections.
 
 ## See also
 

@@ -1,21 +1,8 @@
 ---
 title: "RTCDataChannel: closing event"
+short-title: closing
 slug: Web/API/RTCDataChannel/closing_event
 page-type: web-api-event
-tags:
-  - API
-  - Communications
-  - Connection
-  - Disconnecting
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - closing
-  - events
-  - Event
 browser-compat: api.RTCDataChannel.closing_event
 ---
 
@@ -32,7 +19,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("closing", (event) => {});
 
-onbufferedamountlow = (event) => {};
+onclosing = (event) => {};
 ```
 
 ## Event type

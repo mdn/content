@@ -1,32 +1,24 @@
 ---
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
-tags:
-  - CSS
-  - Firefox
-  - Gecko
-  - Gecko 1.9.2
-  - HTML
-  - JavaScript
-  - Namoroka
-  - XUL
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
 
 [Firefox 3.6](https://www.mozilla.org/firefox/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
 
-## For web site and application developers
+## For website and application developers
 
 ### CSS
 
-- [Using gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
-- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.
-- [Mozilla-specific media features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#mozilla-specific_media_features)
-  - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
-- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+- [Mozilla-specific media features](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#mozilla-specific_media_features)
+  - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
+- [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
 - [WOFF font support](/en-US/docs/Web/Guide/WOFF)
   - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.
@@ -35,11 +27,11 @@ tags:
 
 #### Miscellaneous CSS changes
 
-- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit from [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) is now supported. {{bug(472195)}}
-- {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. {{bug(423756)}}
-- {{Cssxref("text-align")}}:end is now supported. {{bug(299837)}}
+- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit from [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) is now supported. [Firefox bug 472195](https://bugzil.la/472195)
+- {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. [Firefox bug 423756](https://bugzil.la/423756)
+- {{Cssxref("text-align")}}:end is now supported. [Firefox bug 299837](https://bugzil.la/299837)
 - DOM changes to elements using the table {{Cssxref("display")}} types now work much better.
-- Added {{cssxref(":-moz-locale-dir(ltr)")}} and {{cssxref(":-moz-locale-dir(rtl)")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. {{bug(478416)}}
+- Added {{cssxref(":-moz-locale-dir_ltr")}} and {{cssxref(":-moz-locale-dir_rtl")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. [Firefox bug 478416](https://bugzil.la/478416)
 - Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Element/input) elements whose `indeterminate` attribute is `true`.
 - Windowed plugins are no longer displayed in CSS transforms, because they can't be transformed properly by the compositor.
 
@@ -70,7 +62,7 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 - Drag and drop now supports files
   - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
 - Checking to see if an element matches a specified CSS selector
-  - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See {{bug(518003)}}.
+  - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See [Firefox bug 518003](https://bugzil.la/518003).
 - [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Detecting document width and height changes](/en-US/docs/DOM/Detecting_document_width_and_height_changes)
@@ -78,12 +70,12 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 
 #### Miscellaneous DOM changes
 
-- The `getBoxObjectFor()` method has been **removed**, as it was non-standard and exposed even more non-standard stuff to the web. See {{bug(340571)}}. Also affects [MooTools](https://mootools.net/) which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.
+- The `getBoxObjectFor()` method has been **removed**, as it was non-standard and exposed even more non-standard stuff to the web. See [Firefox bug 340571](https://bugzil.la/340571). Also affects [MooTools](https://mootools.net/) which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.
 - The new [`mozInnerScreenX`](/en-US/docs/Web/API/Window/mozInnerScreenX) and [`mozInnerScreenY`](/en-US/docs/Web/API/Window/mozInnerScreenY) properties on DOM windows have been added; these return the screen coordinates of the top-left corner of the window's viewport.
 - The new `mozScreenPixelsPerCSSPixel` attribute on the `nsIDOMWindowUtils` interface, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.
-- When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new `hashchange` event is sent to the page. See the [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event for more information. {{bug(385434)}}
-- The attribute [`document.readyState`](/en-US/docs/Web/API/Document/readyState) is now supported. {{bug(347174)}}
-- Support for HTML5's [`element.classList`](/en-US/docs/Web/API/Element/classList) to allow easier handling of the class attribute. {{bug(501257)}}
+- When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new `hashchange` event is sent to the page. See the [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event for more information. [Firefox bug 385434](https://bugzil.la/385434)
+- The attribute [`document.readyState`](/en-US/docs/Web/API/Document/readyState) is now supported. [Firefox bug 347174](https://bugzil.la/347174)
+- Support for HTML5's [`element.classList`](/en-US/docs/Web/API/Element/classList) to allow easier handling of the class attribute. [Firefox bug 501257](https://bugzil.la/501257)
 - `localName` and `namespaceURI` in HTML documents now behave like they do in XHTML documents: `localName` returns in lower case and `namespaceURI` for HTML elements is `"http://www.w3.org/1999/xhtml"`.
 - [`element.getElementsByTagNameNS`](/en-US/docs/Web/API/Element/getElementsByTagNameNS) no longer lowercases its argument, so upper-case ASCII letters in the argument make matches against HTML elements fail. The same is true for [`document.getElementsByTagNameNS`](/en-US/docs/Web/API/Document/getElementsByTagNameNS).
 - Support has been added for addresses in geolocation via the `nsIDOMGeoPositionAddress` interface and a new field added to `nsIDOMGeoPosition`.
@@ -119,9 +111,9 @@ If you're an extension developer, you should start by reading [Updating extensio
 - [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#enumeration_of_properties)
   - : You can now use a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
 - mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
-  - : See {{bug(528166)}} for details.
+  - : See [Firefox bug 528166](https://bugzil.la/528166) for details.
 - Asynchronously bind multiple sets of parameters and execute a statement.
-  - : See {{bug(490085)}} for details. Documentation coming soon.
+  - : See [Firefox bug 490085](https://bugzil.la/490085) for details. Documentation coming soon.
 
 ### Preferences
 
@@ -137,13 +129,13 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 ### Miscellaneous
 
 - Firefox will no longer load third-party components installed in its internal components directory. This helps to ensure stability by preventing buggy third-party components from being executed. Developers that install components this way must [repackage their components as XPI packages](/en-US/docs/Migrating_raw_components_to_add-ons) so they can be installed as standard add-ons.
-- `contents.rdf` is no longer supported for registering chrome in extensions. You must now use the [`chrome.manifest`](/en-US/docs/Install_Manifests) file instead. See {{bug(492008)}}.
-- Added support for hiding the menu bar automatically. See {{bug(477256)}}.
-- Added support for the `container-live-role` attribute to objects. See {{bug(391829)}}.
-- The `tabs-closebutton` binding has been removed. See {{bug(500971)}}.
-- Added support to `nsISound` for playing sounds based on events that have occurred. See {{bug(502799)}}.
-- The syntax for the `nsITreeView` methods `nsITreeView.canDrop()` and `nsITreeView.drop()` has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
-- Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call `nsIDOMChromeWindow.notifyDefaultButtonLoaded` during the window's `onload` event handler.
+- `contents.rdf` is no longer supported for registering chrome in extensions. You must now use the [`chrome.manifest`](/en-US/docs/Install_Manifests) file instead. See [Firefox bug 492008](https://bugzil.la/492008).
+- Added support for hiding the menu bar automatically. See [Firefox bug 477256](https://bugzil.la/477256).
+- Added support for the `container-live-role` attribute to objects. See [Firefox bug 391829](https://bugzil.la/391829).
+- The `tabs-closebutton` binding has been removed. See [Firefox bug 500971](https://bugzil.la/500971).
+- Added support to `nsISound` for playing sounds based on events that have occurred. See [Firefox bug 502799](https://bugzil.la/502799).
+- The syntax for the `nsITreeView` methods `nsITreeView.canDrop()` and `nsITreeView.drop()` has changed to support the new drag & drop API introduced in Gecko 1.9. See [Firefox bug 455590](https://bugzil.la/455590).
+- Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see [Firefox bug 76053](https://bugzil.la/76053). This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call `nsIDOMChromeWindow.notifyDefaultButtonLoaded` during the window's `onload` event handler.
 - The `nsILocalFileMac` interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
 - The new [`NetUtils.jsm`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
 - The new [`openLocationLastURL.jsm`](/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm) code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.
@@ -206,7 +198,7 @@ The following assorted changes have been made:
 
 ### Changes in accessibility code
 
-- The `EVENT_REORDER` [accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.
+- The `EVENT_REORDER` [accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See [Firefox bug 420845](https://bugzil.la/420845).
 - The `nsIAccessibleTable.selectRow()` now correctly removes any current selection before selecting the specified row.
 
 ## See also

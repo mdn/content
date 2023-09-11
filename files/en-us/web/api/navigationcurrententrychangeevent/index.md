@@ -2,18 +2,8 @@
 title: NavigationCurrentEntryChangeEvent
 slug: Web/API/NavigationCurrentEntryChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationCurrentEntryChangeEvent
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationCurrentEntryChangeEvent
 ---
 

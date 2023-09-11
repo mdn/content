@@ -2,18 +2,12 @@
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
 page-type: css-media-feature
-tags:
-  - CSS
-  - Reference
-  - color
-  - forced-colors
-  - media feature
 browser-compat: css.at-rules.media.forced-colors
 ---
 
 {{CSSRef}}
 
-The **`forced-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.
+The **`forced-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.
 
 ## Syntax
 
@@ -24,7 +18,7 @@ The `forced-colors` media feature indicates whether or not the browser is curren
 - `none`
   - : Forced colors mode is not active; the page's colors are not being forced into a limited palette.
 - `active`
-  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/color_value#system_colors) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
+  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/system-color) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
 
 ## Usage notes
 
@@ -96,7 +90,9 @@ This example is a button that normally gets its contrast via {{cssxref("box-shad
 .button {
   border: 0;
   padding: 10px;
-  box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
+  box-shadow:
+    -2px -2px 5px gray,
+    2px 2px 5px gray;
 }
 
 @media (forced-colors: active) {

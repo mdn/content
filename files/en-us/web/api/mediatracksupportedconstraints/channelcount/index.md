@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.channelCount
+title: "MediaTrackSupportedConstraints: channelCount property"
+short-title: channelCount
 slug: Web/API/MediaTrackSupportedConstraints/channelCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - channelCount
 browser-compat: api.MediaTrackSupportedConstraints.channelCount
 ---
 
@@ -45,7 +34,9 @@ you'll get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

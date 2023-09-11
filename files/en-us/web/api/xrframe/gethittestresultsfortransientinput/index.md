@@ -1,15 +1,10 @@
 ---
-title: XRFrame.getHitTestResultsForTransientInput()
+title: "XRFrame: getHitTestResultsForTransientInput() method"
+short-title: getHitTestResultsForTransientInput()
 slug: Web/API/XRFrame/getHitTestResultsForTransientInput
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getHitTestResultsForTransientInput
 ---
 
@@ -40,20 +35,24 @@ To request a transient input hit test source, start an {{domxref("XRSession")}} 
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"],
 });
 
 let transientHitTestSource = null;
-xrSession.requestHitTestSourceForTransientInput({
-  profile : "generic-touchscreen",
-  offsetRay : new XRRay()
-}).then((touchScreenHitTestSource) => {
-  transientHitTestSource = touchScreenHitTestSource;
-});
+xrSession
+  .requestHitTestSourceForTransientInput({
+    profile: "generic-touchscreen",
+    offsetRay: new XRRay(),
+  })
+  .then((touchScreenHitTestSource) => {
+    transientHitTestSource = touchScreenHitTestSource;
+  });
 
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource,
+  );
   // do things with the transient hit test results
 }
 ```
@@ -68,6 +67,6 @@ function onXRFrame(time, xrFrame) {
 
 ## See also
 
-- {{domxref("XRTransientInputHitResult")}}
+- {{domxref("XRTransientInputHitTestResult")}}
 - {{domxref("XRTransientInputHitTestSource")}}
 - {{domxref("XRRay")}}

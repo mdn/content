@@ -2,13 +2,8 @@
 title: TaskAttributionTiming
 slug: Web/API/TaskAttributionTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Long Tasks API
-  - Performance
-  - TaskAttributionTiming
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming
 ---
 

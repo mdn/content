@@ -2,21 +2,16 @@
 title: KeyboardLayoutMap
 slug: Web/API/KeyboardLayoutMap
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap
 ---
 
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-The **`KeyboardLayoutMap`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) is a map-like object with functions for retrieving the string associated with specific physical keys.
+The **`KeyboardLayoutMap`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) is a read-only object with functions for retrieving the string associated with specific physical keys.
+
+A `KeyboardLayoutMap` instance is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is a string identifying the unique physical key on the keyboard (a "key code"), and the corresponding value is the associated key attribute value (which may be affected by the keyboard layout, and so on).
 
 A list of valid keys is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) specification.
 
@@ -46,11 +41,10 @@ The following example demonstrates how to get the location- or layout-specific s
 
 ```js
 const keyboard = navigator.keyboard;
-keyboard.getLayoutMap()
-.then((keyboardLayoutMap) => {
-  const upKey = keyboardLayoutMap.get('KeyW');
+keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  const upKey = keyboardLayoutMap.get("KeyW");
   window.alert(`Press ${upKey} to move up.`);
-})
+});
 ```
 
 ## Specifications

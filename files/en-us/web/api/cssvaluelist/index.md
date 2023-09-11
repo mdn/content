@@ -2,13 +2,8 @@
 title: CSSValueList
 slug: Web/API/CSSValueList
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSValueList
-  - Interface
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSValueList
 ---
 

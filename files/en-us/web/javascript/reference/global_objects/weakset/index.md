@@ -2,29 +2,23 @@
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - WeakSet
-  - Polyfill
 browser-compat: javascript.builtins.WeakSet
 ---
 
 {{JSRef}}
 
-The **`WeakSet`** object lets you store weakly held _objects_ in a collection.
+A **`WeakSet`** is a collection of garbage-collectable values, including objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). A value in the `WeakSet` may only occur once. It is unique in the `WeakSet`'s collection.
 
 ## Description
 
-`WeakSet` objects are collections of objects. Just as with {{jsxref("Set")}}s, each object in a `WeakSet` may occur only once; all objects in a `WeakSet`'s collection are unique.
+Values of WeakSets must be garbage-collectable. Most {{Glossary("Primitive", "primitive data types")}} can be arbitrarily created and don't have a lifetime, so they cannot be stored. Objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) can be stored because they are garbage-collectable.
 
 The main differences to the {{jsxref("Set")}} object are:
 
-- `WeakSet`s are collections of **objects only**. They cannot contain arbitrary values of any type, as {{jsxref("Set")}}s can.
-- The `WeakSet` is _weak_, meaning references to objects in a `WeakSet` are held _weakly_. If no other references to an object stored in the `WeakSet` exist, those objects can be garbage collected.
+- `WeakSet`s are collections of **objects and symbols only**. They cannot contain arbitrary values of any type, as {{jsxref("Set")}}s can.
+- The `WeakSet` is _weak_, meaning references to objects in a `WeakSet` are held _weakly_. If no other references to a value stored in the `WeakSet` exist, those values can be garbage collected.
 
-  > **Note:** This also means that there is no list of current objects stored in the collection. `WeakSets` are not enumerable.
+  > **Note:** This also means that there is no list of current values stored in the collection. `WeakSets` are not enumerable.
 
 ### Use case: Detecting circular references
 
@@ -41,7 +35,7 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
   }
 
   fn(subject);
-  if (typeof subject === "object") {
+  if (typeof subject === "object" && subject) {
     _refs.add(subject);
     for (const key in subject) {
       execRecursively(fn, subject[key], _refs);
@@ -72,6 +66,10 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 
 ## Instance properties
 
+These properties are defined on `WeakSet.prototype` and shared by all `WeakSet` instances.
+
+- {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `WeakSet` instances, the initial value is the {{jsxref("WeakSet/WeakSet", "WeakSet")}} constructor.
 - `WeakSet.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

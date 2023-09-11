@@ -2,52 +2,39 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Array method
-  - JavaScript
-  - Method
-  - Prototype
-  - Sorting
-  - Polyfill
 browser-compat: javascript.builtins.Array.sort
 ---
 
 {{JSRef}}
 
-The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
 
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
+
+To sort the elements in an array without mutating the original array, use {{jsxref("Array/toSorted", "toSorted()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-sort.html")}}
 
 ## Syntax
 
 ```js-nolint
-// Functionless
 sort()
-
-// Arrow function
-sort((a, b) => { /* … */ } )
-
-// Compare function
 sort(compareFn)
-
-// Inline compare function
-sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
 
 - `compareFn` {{optional_inline}}
 
-  - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+  - : A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if `a` is less than `b`, positive if `a` is greater than `b`, and zero if they are equal. `NaN` is treated as `0`. The function is called with the following arguments:
 
     - `a`
-      - : The first element for comparison.
+      - : The first element for comparison. Will never be `undefined`.
     - `b`
-      - : The second element for comparison.
+      - : The second element for comparison. Will never be `undefined`.
+
+    If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
 ### Return value
 
@@ -77,18 +64,17 @@ elements are sorted according to the return value of the compare function (all
 
 | `compareFn(a, b)` return value | sort order                         |
 | ------------------------------ | ---------------------------------- |
-| > 0                            | sort `a` after `b`                 |
-| < 0                            | sort `a` before `b`                |
+| > 0                            | sort `a` after `b`, e.g. `[b, a]`  |
+| < 0                            | sort `a` before `b`, e.g. `[a, b]` |
 | === 0                          | keep original order of `a` and `b` |
 
 So, the compare function has the following form:
 
-```js
+```js-nolint
 function compareFn(a, b) {
   if (a is less than b by some ordering criterion) {
     return -1;
-  }
-  if (a is greater than b by the ordering criterion) {
+  } else if (a is greater than b by the ordering criterion) {
     return 1;
   }
   // a must be equal to b
@@ -110,7 +96,7 @@ The default lexicographic comparator satisfies all constraints above.
 
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
-it doesn't contain `Infinity` and `NaN`):
+it doesn't contain `NaN`):
 
 ```js
 function compareNumbers(a, b) {
@@ -189,7 +175,7 @@ items.sort((a, b) => {
 
 ### Sorting non-ASCII characters
 
-For sorting strings with non-ASCII characters, i.e. strings with accented characters
+For sorting strings with non-{{Glossary("ASCII")}} characters, i.e. strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
 {{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.
@@ -248,7 +234,7 @@ sorted[0] = 10;
 console.log(numbers[0]); // 10
 ```
 
-In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toSorted", "toSorted()")}} method. Alternatively, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 1, 4, 1, 5];
@@ -260,7 +246,7 @@ console.log(numbers[0]); // 3
 
 ### Sort stability
 
-Since version 10 (or ECMAScript 2019), the [specification](https://tc39.es/ecma262/#sec-array.prototype.sort) dictates that `Array.prototype.sort` is stable.
+Since version 10 (or ECMAScript 2019), the specification dictates that `Array.prototype.sort` is stable.
 
 For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:
 
@@ -364,8 +350,12 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
+- {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
-- [V8 sort stability](https://v8.dev/features/stable-sort)
-- [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)
+- {{jsxref("TypedArray.prototype.sort()")}}
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (2018)
+- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (2019)
+- [`Array.prototype.sort` stability](https://mathiasbynens.be/demo/sort-stability) by Mathias Bynens

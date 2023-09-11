@@ -2,16 +2,6 @@
 title: border-block-start-color
 slug: Web/CSS/border-block-start-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-block
-  - border-block-color
-  - border-block-start
-  - border-block-start-color
-  - recipe:css-property
 browser-compat: css.properties.border-block-start-color
 ---
 
@@ -39,8 +29,8 @@ Related properties are {{cssxref("border-block-end-color")}}, {{cssxref("border-
 
 ### Values
 
-- `<'color'>`
-  - : See {{ cssxref("border-color") }}
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -92,6 +82,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

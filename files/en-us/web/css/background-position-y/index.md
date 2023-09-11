@@ -2,12 +2,6 @@
 title: background-position-y
 slug: Web/CSS/background-position-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-position-y
 ---
 
@@ -94,7 +88,7 @@ div {
   width: 300px;
   height: 300px;
   background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom 10px;
@@ -119,4 +113,4 @@ div {
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

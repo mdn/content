@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - get
-  - table
 browser-compat: javascript.builtins.WebAssembly.Table.get
 ---
 
@@ -32,7 +24,7 @@ get(index)
 ### Return value
 
 A function reference — this is an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a
-JavaScript wrapper for an underlying wasm function.
+JavaScript wrapper for an underlying Wasm function.
 
 ### Exceptions
 

@@ -2,21 +2,12 @@
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale.script
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.script`** property is an accessor property which returns the script used for writing the particular language used in the locale.
+The **`script`** accessor property of {{jsxref("Intl.Locale")}} instances returns the script used for writing the particular language used in this locale.
 
 ## Description
 
@@ -53,4 +44,4 @@ console.log(locale.script); // Prints "Latn"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode's script subtag specification](https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity)
+- [Unicode script subtag](https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity) in the Unicode locale data markup language spec

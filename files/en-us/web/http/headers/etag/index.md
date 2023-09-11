@@ -1,11 +1,7 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - header
+page-type: http-header
 browser-compat: http.headers.ETag
 ---
 
@@ -52,7 +48,7 @@ ETag: "<etag_value>"
     means weak etags prevent caching when [byte range requests](/en-US/docs/Web/HTTP/Headers/Accept-Ranges) are used,
     but strong etags mean range requests can still be cached.
 - "\<etag_value>"
-  - : Entity tag that uniquely represents the requested resource. It is a string of ASCII
+  - : Entity tag that uniquely represents the requested resource. It is a string of {{Glossary("ASCII")}}
     characters placed between double quotes, like `"675af34563dc-tr34"`. The
     method by which `ETag` values are generated is not specified. Typically, the ETag value
     is a hash of the content, a hash of the last modification timestamp, or just a revision number.

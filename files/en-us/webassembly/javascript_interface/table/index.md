@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Table
 slug: WebAssembly/JavaScript_interface/Table
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - table
 browser-compat: javascript.builtins.WebAssembly.Table
 ---
 
@@ -56,7 +50,7 @@ const importObj = {
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method. The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
+Finally, we load and instantiate a Wasm module (table2.wasm) using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method. The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
@@ -64,13 +58,13 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());
-  }
+  },
 );
 ```
 
 Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. `get(0)()` rather than `get(0)`) .
 
-This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the wasm instance too.
+This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the Wasm instance too.
 
 ## Specifications
 

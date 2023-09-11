@@ -1,16 +1,7 @@
 ---
 title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - clear
+page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.clear
 ---
 
@@ -53,10 +44,10 @@ function toggleAlarm(all) {
     browser.notifications.clear(myNotification);
   } else {
     browser.notifications.create(myNotification, {
-      "type": "basic",
-      "iconUrl": browser.runtime.getURL("icons/cake-48.png"),
-      "title": "Am imposing title",
-      "message": "Some interesting content"
+      type: "basic",
+      iconUrl: browser.runtime.getURL("icons/cake-48.png"),
+      title: "Am imposing title",
+      message: "Some interesting content",
     });
   }
 }

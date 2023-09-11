@@ -1,16 +1,10 @@
 ---
-title: Window.scrollByPages()
+title: "Window: scrollByPages() method"
+short-title: scrollByPages()
 slug: Web/API/Window/scrollByPages
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - Window
-  - scrollByPages
-  - scrolling
+status:
+  - non-standard
 browser-compat: api.Window.scrollByPages
 ---
 

@@ -1,16 +1,7 @@
 ---
 title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
+page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onMoved
 ---
 
@@ -30,7 +21,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `id`
       - : `string`. ID of the item that was moved.

@@ -1,16 +1,7 @@
 ---
 title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onImportBegan
+page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onImportBegan
 ---
 
@@ -30,7 +21,7 @@ browser.bookmarks.onImportBegan.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,8 +32,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. It's passed no parameters.
+- `listener`
+  - : The function called when this event occurs. It's passed no parameters.
 
 ## Browser compatibility
 

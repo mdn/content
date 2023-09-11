@@ -2,12 +2,6 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLButtonElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLButtonElement
 ---
 
@@ -31,21 +25,25 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : An {{domxref("HTMLFormElement")}} reflecting the form that this button is associated with. If the button is a descendant of a form element, then this attribute is a reference to that form's associated `HTMLFormElement`.
     If the button is not a descendant of a form element, then the attribute can be a reference to any `HTMLFormElement` element in the same document it is related to, or the `null` value if none matches.
 - {{domxref("HTMLButtonElement.formAction")}}
-  - : A string reflecting the URI of a resource that processes information submitted by the button. If specified, this attribute overrides the {{htmlattrxref("action", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
+  - : A string reflecting the URI of a resource that processes information submitted by the button. If specified, this attribute overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formEnctype")}}
-  - : A string reflecting the type of content that is used to submit the form to the server. If specified, this attribute overrides the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
+  - : A string reflecting the type of content that is used to submit the form to the server. If specified, this attribute overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formMethod")}}
-  - : A string reflecting the HTTP method that the browser uses to submit the form. If specified, this attribute overrides the {{htmlattrxref("method", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
+  - : A string reflecting the HTTP method that the browser uses to submit the form. If specified, this attribute overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formNoValidate")}}
-  - : A boolean value indicating that the form is not to be validated when it is submitted. If specified, this attribute overrides the {{htmlattrxref("novalidate", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
+  - : A boolean value indicating that the form is not to be validated when it is submitted. If specified, this attribute overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formTarget")}}
-  - : A string reflecting a name or keyword indicating where to display the response that is received after submitting the form. If specified, this attribute overrides the {{htmlattrxref("target", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
+  - : A string reflecting a name or keyword indicating where to display the response that is received after submitting the form. If specified, this attribute overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} that represents a list of {{HTMLElement("label")}} elements that are labels for this button.
 - {{domxref("HTMLButtonElement.menu")}} {{experimental_inline}}
   - : A {{domxref("HTMLMenuElement")}} representing the menu element to be displayed if the button is clicked and is of `type="menu"`.
 - {{domxref("HTMLButtonElement.name")}}
   - : A string representing the name of the object when submitted with a form. If specified, it must not be the empty string.
+- {{domxref("HTMLButtonElement.popoverTargetAction")}}
+  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by a control button. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
+- {{domxref("HTMLButtonElement.popoverTargetElement")}}
+  - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.tabIndex")}}
   - : A `long` that represents this element's position in the tabbing order.
 - {{domxref("HTMLButtonElement.type")}}

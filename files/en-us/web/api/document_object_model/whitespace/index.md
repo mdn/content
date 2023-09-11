@@ -2,12 +2,6 @@
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
 page-type: guide
-tags:
-  - CSS
-  - DOM
-  - HTML
-  - JavaScript
-  - whitespace
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -22,7 +16,7 @@ Whitespace is any string of text composed only of spaces, tabs or line breaks (t
 
 In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
-```html
+```html-nolint
 <!DOCTYPE html>
 
   <h1>      Hello      World!     </h1>
@@ -46,18 +40,16 @@ Any whitespace characters that are outside of HTML elements in the original docu
 Take the following document, for example:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>
-    Paragraph
-  </p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -77,7 +69,7 @@ Let's take another example. To make it easier, we've added a comment that shows 
 
 This example:
 
-```html
+```html-nolint
 <h1>   Hello
         <span> World!</span>   </h1>
 
@@ -105,40 +97,40 @@ Inside this context, whitespace character processing can be summarized as follow
 
 1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before:
 
-   ```html
+   ```html-nolint
    <h1>◦◦◦Hello◦⏎
    ⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
    ```
 
    ...and apply this first rule, we get:
 
-   ```html
+   ```html-nolint
    <h1>◦◦◦Hello⏎
    <span>◦World!</span>⇥◦◦</h1>
    ```
 
 2. Next, all tab characters are handled as space characters, so the example becomes:
 
-   ```html
+   ```html-nolint
    <h1>◦◦◦Hello⏎
    <span>◦World!</span>◦◦◦</h1>
    ```
 
 3. Next, line breaks are converted to spaces:
 
-   ```html
+   ```html-nolint
    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
    ```
 
 4. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
-   ```html
+   ```html-nolint
    <h1>◦Hello◦<span>World!</span>◦</h1>
    ```
 
 5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
-   ```html
+   ```html-nolint
    <h1>Hello◦<span>World!</span></h1>
    ```
 
@@ -156,9 +148,9 @@ Within this context, whitespace is treated very differently.
 
 Let's take a look at an example to explain how. We've marked the whitespace characters as before.
 
-We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
+We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
 
-```html
+```html-nolint
 <body>
   <div>  Hello  </div>
 
@@ -184,7 +176,7 @@ We can summarize how the whitespace here is handled as follows (there may be som
 
 1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that, starting from the example above:
 
-   ```html
+   ```html-nolint
    <body>⏎
    ⇥<div>◦◦Hello◦◦</div>⏎
    ⏎
@@ -246,32 +238,28 @@ Consider this example (again, we've included an HTML comment that shows the whit
 
 ```html
 <ul class="people-list">
+  <li></li>
 
-    <li></li>
+  <li></li>
 
-    <li></li>
+  <li></li>
 
-    <li></li>
+  <li></li>
 
-    <li></li>
-
-    <li></li>
-
-  </ul>
+  <li></li>
+</ul>
 
 <!--
 <ul class="people-list">⏎
-
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
 </ul>
 -->
 ```
@@ -330,7 +318,7 @@ li {
 
 You can also solve this problem by putting your list items all on the same line in the source, which causes the whitespace nodes to not be created in the first place:
 
-```html
+```html-nolint
 <li></li><li></li><li></li><li></li><li></li>
 ```
 
@@ -365,7 +353,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  *             otherwise false.
  */
 function is_all_ws(nod) {
-  return !(/[^\t\n\r ]/.test(nod.textContent));
+  return !/[^\t\n\r ]/.test(nod.textContent);
 }
 
 /**
@@ -379,8 +367,10 @@ function is_all_ws(nod) {
  */
 
 function is_ignorable(nod) {
-  return (nod.nodeType === 8) || // A comment node
-         (nod.nodeType === 3 && is_all_ws(nod)); // a text node, all ws
+  return (
+    nod.nodeType === 8 || // A comment node
+    (nod.nodeType === 3 && is_all_ws(nod))
+  ); // a text node, all ws
 }
 
 /**

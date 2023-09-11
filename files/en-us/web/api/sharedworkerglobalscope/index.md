@@ -2,12 +2,6 @@
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
 browser-compat: api.SharedWorkerGlobalScope
 ---
 
@@ -26,16 +20,28 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 ### Instance properties inherited from WorkerGlobalScope
 
-- {{domxref("WorkerGlobalScope.self")}}
-  - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
-- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("console")}} object associated with the worker.
-- {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
+- {{domxref("caches", "SharedWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+- {{domxref("console", "SharedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+  - : Returns the {{domxref("console")}} associated with the worker.
+- {{domxref("WorkerGlobalScope.fonts", "SharedWorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
+- {{domxref("indexedDB", "SharedWorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
+  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
+- {{domxref("isSecureContext", "SharedWorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+- {{domxref("WorkerGlobalScope.location", "SharedWorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.navigator", "SharedWorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("origin", "SharedWorkerGlobalScope.origin")}} {{ReadOnlyInline}}
+  - : Returns the global object's origin, serialized as a string.
+- {{domxref("performance_property", "SharedWorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
+- {{domxref("Window.scheduler", "SharedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+- {{domxref("WorkerGlobalScope.self", "SharedWorkerGlobalScope.self")}}
+  - : Returns an object reference to the `SharedWorkerGlobalScope` object itself.
 
 ## Instance methods
 
@@ -46,24 +52,21 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ### Inherited from WorkerGlobalScope
 
-- {{domxref("WorkerGlobalScope.dump()")}} {{Non-standard_Inline}}
-  - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
-- {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
-
-### Implemented from other places
-
-- {{domxref("atob", "atob()")}}
+- {{domxref("atob", "SharedWorkerGlobalScope.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("btoa", "btoa()")}}
+- {{domxref("btoa", "SharedWorkerGlobalScope.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout()")}}
-  - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
-- {{domxref("setInterval()")}}
+- {{domxref("clearInterval", "SharedWorkerGlobalScope.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+- {{domxref("clearTimeout", "SharedWorkerGlobalScope.clearTimeout()")}}
+  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+- {{domxref("WorkerGlobalScope.dump", "SharedWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Writes a message to the console.
+- {{domxref("WorkerGlobalScope.importScripts", "SharedWorkerGlobalScope.importScripts()")}}
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
+- {{domxref("setInterval", "SharedWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
-- {{domxref("setTimeout()")}}
+- {{domxref("setTimeout", "SharedWorkerGlobalScope.setTimeout()")}}
   - : Sets a delay for executing a function.
 
 ## Events

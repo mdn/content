@@ -2,14 +2,6 @@
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 page-type: javascript-class
-tags:
-  - Class
-  - Collator
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Collator
 ---
 
@@ -18,8 +10,6 @@ browser-compat: javascript.builtins.Intl.Collator
 The **`Intl.Collator`** object enables language-sensitive string comparison.
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Constructor
 
@@ -31,9 +21,18 @@ The **`Intl.Collator`** object enables language-sensitive string comparison.
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
+## Instance properties
+
+These properties are defined on `Intl.Collator.prototype` and shared by all `Intl.Collator` instances.
+
+- {{jsxref("Object/constructor", "Intl.Collator.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.Collator` instances, the initial value is the {{jsxref("Intl/Collator/Collator", "Intl.Collator")}} constructor.
+- `Intl.Collator.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Collator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
-- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
+- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare()")}}
   - : Getter function that compares two strings according to the sort order of this {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} object.
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.

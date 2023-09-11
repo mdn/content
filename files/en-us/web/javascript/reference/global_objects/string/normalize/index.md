@@ -2,21 +2,13 @@
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Unicode
 browser-compat: javascript.builtins.String.normalize
 ---
 
 {{JSRef}}
 
-The **`normalize()`** method returns the Unicode Normalization
-Form of the string.
+The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
+Form of this string.
 
 {{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}
 
@@ -50,10 +42,10 @@ normalize(form)
 
 A string containing the Unicode Normalization Form of the given string.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : A {{jsxref("RangeError")}} is thrown if `form` isn't one of the values
+  - : Thrown if `form` isn't one of the values
     specified above.
 
 ## Description
@@ -243,4 +235,4 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ## See also
 
 - [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
-- [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence)
+- [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) on Wikipedia

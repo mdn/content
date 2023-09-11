@@ -2,18 +2,8 @@
 title: FeaturePolicy
 slug: Web/API/FeaturePolicy
 page-type: web-api-interface
-tags:
-  - API
-  - Feature Policy
-  - FeaturePolicy
-  - Interface
-  - Permissions
-  - Permissions-Policy
-  - Privileges
-  - Reference
-  - access
-  - delegation
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FeaturePolicy
 ---
 

@@ -2,10 +2,6 @@
 title: Grammar and types
 slug: Web/JavaScript/Guide/Grammar_and_types
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -48,7 +44,7 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 
 You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
 
-```js example-bad
+```js-nolint example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
 ```
 
@@ -81,7 +77,7 @@ You use variables as symbolic names for values in your application. The names of
 
 A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0` – `9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
 
-You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6) or the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
+You can use most Unicode letters such as `å` and `ü` in identifiers. (For more details, see the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) to represent characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -109,7 +105,7 @@ In essence, `let x = 42` is equivalent to `let x; x = 42`.
 
 `const` declarations always need an initializer, because they forbid any kind of assignment after declaration, and implicitly initializing it with `undefined` is likely a programmer mistake.
 
-```js example-bad
+```js-nolint example-bad
 const x; // SyntaxError: Missing initializer in const declaration
 ```
 
@@ -133,7 +129,7 @@ When you declare a variable outside of any function, it is called a _global_ var
 if (Math.random() > 0.5) {
   const y = 5;
 }
-console.log(y);  // ReferenceError: y is not defined
+console.log(y); // ReferenceError: y is not defined
 ```
 
 However, variables created with `var` are not block-scoped, but only local to the _function (or global scope)_ that the block resides within.
@@ -144,7 +140,7 @@ For example, the following code will log `5`, because the scope of `x` is the gl
 if (true) {
   var x = 5;
 }
-console.log(x);  // x is 5
+console.log(x); // x is 5
 ```
 
 ### Variable hoisting
@@ -155,9 +151,9 @@ console.log(x);  // x is 5
 console.log(x === undefined); // true
 var x = 3;
 
-(function() {
+(function () {
   console.log(x); // undefined
-  var x = 'local value';
+  var x = "local value";
 })();
 ```
 
@@ -168,10 +164,10 @@ var x;
 console.log(x === undefined); // true
 x = 3;
 
-(function() {
+(function () {
   var x;
   console.log(x); // undefined
-  x = 'local value';
+  x = "local value";
 })();
 ```
 
@@ -209,32 +205,30 @@ A constant cannot change value through assignment or be re-declared while the sc
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js example-bad
+```js-nolint example-bad
 // THIS WILL CAUSE AN ERROR
-function f() {};
+function f() {}
 const f = 5;
 
 // THIS WILL CAUSE AN ERROR TOO
 function f() {
   const g = 5;
   var g;
-
-  //statements
 }
 ```
 
 However, `const` only prevents _re-assignments_, but doesn't prevent _mutations_. The properties of objects assigned to constants are not protected, so the following statement is executed without problems.
 
 ```js
-const MY_OBJECT = { key: 'value' };
-MY_OBJECT.key = 'otherValue';
+const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "otherValue";
 ```
 
 Also, the contents of an array are not protected, so the following statement is executed without problems.
 
 ```js
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
 console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 ```
 
@@ -271,7 +265,7 @@ let answer = 42;
 And later, you could assign the same variable a string value, for example:
 
 ```js
-answer = 'Thanks for all the fish!';
+answer = "Thanks for all the fish!";
 ```
 
 Because JavaScript is dynamically typed, this assignment does not cause an error message.
@@ -281,16 +275,16 @@ Because JavaScript is dynamically typed, this assignment does not cause an error
 In expressions involving numeric and string values with the `+` operator, JavaScript converts numeric values to strings. For example, consider the following statements:
 
 ```js
-x = 'The answer is ' + 42 // "The answer is 42"
-y = 42 + ' is the answer' // "42 is the answer"
-z = '37' + 7 // "377"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
+z = "37" + 7; // "377"
 ```
 
 With all other operators, JavaScript does _not_ convert numeric values to strings. For example:
 
 ```js
-'37' - 7 // 30
-'37' * 7 // 259
+"37" - 7; // 30
+"37" * 7; // 259
 ```
 
 ### Converting strings to numbers
@@ -305,14 +299,14 @@ In the case that a value representing a number is in memory as a string, there a
 > **Note:** Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
 
 ```js
-parseInt('101', 2) // 5
+parseInt("101", 2); // 5
 ```
 
 An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
 
-```js
-'1.1' + '1.1' // '1.11.1'
-(+'1.1') + (+'1.1') // 2.2
+```js-nolint
+"1.1" + "1.1" // '1.11.1'
+(+"1.1") + (+"1.1"); // 2.2
 // Note: the parentheses are added for clarity, not required.
 ```
 
@@ -334,7 +328,7 @@ An array literal is a list of zero or more expressions, each of which represents
 The following example creates the `coffees` array with three elements and a `length` of three:
 
 ```js
-const coffees = ['French Roast', 'Colombian', 'Kona'];
+const coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
@@ -346,7 +340,7 @@ If an array is created using a literal in a top-level script, JavaScript interpr
 If you put two commas in a row in an array literal, the array leaves an empty slot for the unspecified element. The following example creates the `fish` array:
 
 ```js
-const fish = ['Lion', , 'Angel'];
+const fish = ["Lion", , "Angel"];
 ```
 
 When you log this array, you will see:
@@ -363,19 +357,19 @@ If you include a trailing comma at the end of the list of elements, the comma is
 In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
 
 ```js
-const myList = ['home', , 'school', ];
+const myList = ["home", , "school"];
 ```
 
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-const myList = [, 'home', , 'school'];
+const myList = [, "home", , "school"];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
 
 ```js
-const myList = ['home', , 'school', , ];
+const myList = ["home", , "school", ,];
 ```
 
 > **Note:** [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
@@ -392,8 +386,8 @@ Understanding the behavior of extra commas is important to understanding JavaScr
 
 However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
 
-```js
-const myList = ['home', /* empty */, 'school', /* empty */, ];
+```js-nolint
+const myList = ["home", /* empty */, "school", /* empty */, ];
 ```
 
 ### Boolean literals
@@ -422,7 +416,7 @@ Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), h
 
 Some examples of integer literals are:
 
-```
+```plain
 0, 117, 123456789123456789n             (decimal, base 10)
 015, 0001, 0o777777777777n              (octal, base 8)
 0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
@@ -444,13 +438,13 @@ The exponent part is an `e` or `E` followed by an integer, which can be signed (
 
 More succinctly, the syntax is:
 
-```
+```plain
 [digits].[digits][(E|e)[(+|-)]digits]
 ```
 
 For example:
 
-```js
+```js-nolint
 3.1415926
 .123456789
 3.1E+12
@@ -466,23 +460,23 @@ An object literal is a list of zero or more pairs of property names and associat
 The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, `"Saturn"`; the second element, the `getCar` property, is immediately assigned the result of invoking the function `(carTypes("Honda"))`; the third element, the `special` property, uses an existing variable (`sales`).
 
 ```js
-const sales = 'Toyota';
+const sales = "Toyota";
 
 function carTypes(name) {
-  return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
+  return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
 }
 
-const car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 Additionally, you can use a numeric or string literal for the name of a property or nest an object inside another. The following example uses these options.
 
 ```js
-const car = { manyCars: { a: 'Saab', b: 'Jeep' }, 7: 'Mazda' };
+const car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -492,7 +486,7 @@ Object property names can be any string, including the empty string. If the prop
 
 Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js example-bad
+```js-nolint example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
@@ -504,8 +498,8 @@ console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
 Instead, they must be accessed with the bracket notation (`[]`).
 
 ```js example-good
-console.log(unusualPropertyNames['']);  // An empty string
-console.log(unusualPropertyNames['!']); // Bang!
+console.log(unusualPropertyNames[""]); // An empty string
+console.log(unusualPropertyNames["!"]); // Bang!
 ```
 
 #### Enhanced Object literals
@@ -523,16 +517,16 @@ const obj = {
   // Methods
   toString() {
     // Super calls
-    return 'd ' + super.toString();
+    return "d " + super.toString();
   },
   // Computed (dynamic) property names
-  ['prop_' + (() => 42)()]: 42,
-}
+  ["prop_" + (() => 42)()]: 42,
+};
 ```
 
 ### RegExp literals
 
-A regex literal (which is defined in detail [later](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)) is a pattern enclosed between slashes. The following is an example of a regex literal.
+A regex literal (which is defined in detail [later](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)) is a pattern enclosed between slashes. The following is an example of a regex literal.
 
 ```js
 const re = /ab+c/;
@@ -544,7 +538,7 @@ A string literal is zero or more characters enclosed in double (`"`) or single (
 
 The following are examples of string literals:
 
-```js
+```js-nolint
 'foo'
 "bar"
 '1234'
@@ -558,14 +552,14 @@ You can call any of the {{jsxref("String")}} object's methods on a string litera
 
 ```js
 // Will print the number of symbols in the string including whitespace.
-console.log("Joyo's cat".length)  // In this case, 10.
+console.log("Joyo's cat".length); // In this case, 10.
 ```
 
 [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) are also available. Template literals are enclosed by the back-tick (`` ` ``) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes.
 
 Template literals provide syntactic sugar for constructing strings. (This is similar to string interpolation features in Perl, Python, and more.)
 
-```js
+```js-nolint
 // Basic literal string creation
 `In JavaScript '\n' is a line-feed.`
 
@@ -593,7 +587,7 @@ const formatArg = (arg) => {
     return JSON.stringify(arg);
   }
   return arg;
-}
+};
 
 const print = (segments, ...args) => {
   // For any well-formed template literal, there will always be N args and
@@ -603,7 +597,7 @@ const print = (segments, ...args) => {
     message += formatArg(args[index]) + segment;
   });
   console.log(message);
-}
+};
 
 const todos = [
   "Learn JavaScript",
@@ -646,7 +640,7 @@ You can see how the tagged template reads more naturally than a traditional "for
 In addition to ordinary characters, you can also include special characters in strings, as shown in the following example.
 
 ```js
-'one line \n another line'
+"one line \n another line";
 ```
 
 The following table lists the special characters that you can use in JavaScript strings.
@@ -674,41 +668,42 @@ For characters not listed in the table, a preceding backslash is ignored, but th
 
 You can insert a quotation mark inside a string by preceding it with a backslash. This is known as _escaping_ the quotation mark. For example:
 
-```js
+```js-nolint
 const quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 ```
 
 The result of this would be:
 
-```
+```plain
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 
 To include a literal backslash inside a string, you must escape the backslash character. For example, to assign the file path `c:\temp` to a string, use the following:
 
 ```js
-const home = 'c:\\temp';
+const home = "c:\\temp";
 ```
 
 You can also escape line breaks by preceding them with backslash. The backslash and line break are both removed from the value of the string.
 
 ```js
-const str = 'this string \
+const str =
+  "this string \
 is broken \
 across multiple \
-lines.'
-console.log(str);   // this string is broken across multiple lines.
+lines.";
+console.log(str); // this string is broken across multiple lines.
 ```
 
 ## More information
 
 This chapter focuses on basic syntax for declarations and types. To learn more about JavaScript's language constructs, see also the following chapters in this guide:
 
-- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) guide
 - [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) guide
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

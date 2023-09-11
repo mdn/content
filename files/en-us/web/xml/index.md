@@ -1,11 +1,7 @@
 ---
-title: 'XML: Extensible Markup Language'
+title: "XML: Extensible Markup Language"
 slug: Web/XML
-tags:
-  - Draft
-  - Landing
-  - Web
-  - XML
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}

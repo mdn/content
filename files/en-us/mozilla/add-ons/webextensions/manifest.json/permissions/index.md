@@ -1,13 +1,7 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-tags:
-  - Add-ons
-  - Extensions
-  - Permissions
-  - Reference
-  - WebExtensions
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.permissions
 ---
 
@@ -48,13 +42,13 @@ For information on how to test and preview permission requests, see [Test permis
 
 The key can contain three kinds of permissions:
 
-- host permissions (Manifest V2 only, host permissions are specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
+- host permissions (Manifest V2 only, host permissions are specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
 - API permissions
 - the `activeTab` permission
 
 ## Host permissions
 
-> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
@@ -69,7 +63,7 @@ The extra privileges include:
 
 In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
 
-```
+```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
@@ -84,7 +78,7 @@ browser.extension.getURL("");
 
 API permissions are specified as keywords, and each keyword names a [WebExtension API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension would like to use.
 
-The following keywords are currently available:
+These permissions are available in Manifest V2 and above unless otherwise noted:
 
 - `activeTab`
 - `alarms`
@@ -100,6 +94,10 @@ The following keywords are currently available:
 - `contextualIdentities`
 - `cookies`
 - `debugger`
+- `declarativeNetRequest`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
+- `devtools` (This permission is granted implicitly when the [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest key is present.)
 - `dns`
 - `downloads`
 - `downloads.open`
@@ -129,6 +127,8 @@ The following keywords are currently available:
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 In most cases the permission just grants access to the API, with the following exceptions:
 
@@ -164,7 +164,7 @@ For example, consider an extension that wants to run a script in the current pag
 
 Usually the tab that's granted `activeTab` is just the currently active tab, except in one case. The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).
 
-If the user clicks such an item, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, {{bug(1446956)}}).
+If the user clicks such an item, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
 
 ## Clipboard access
 

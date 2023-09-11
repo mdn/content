@@ -2,12 +2,6 @@
 title: SVGNumber
 slug: Web/API/SVGNumber
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGNumber
 ---
 

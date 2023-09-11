@@ -2,12 +2,6 @@
 title: MediaStreamAudioDestinationNode
 slug: Web/API/MediaStreamAudioDestinationNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - MediaStreamAudioDestinationNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaStreamAudioDestinationNode
 ---
 

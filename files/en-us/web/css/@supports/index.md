@@ -2,13 +2,6 @@
 title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - supports
 browser-compat: css.at-rules.supports
 ---
 
@@ -81,21 +74,26 @@ The following example returns true and applies the CSS style if the browser supp
 }
 ```
 
-The table below describes the available font technologies that can be queried using this function:
+The table below describes the font technologies (`<font-tech>`), including color font technologies (`<color-font-tech>`), font feature technologies (`<font-features-tech>`), and other available font technologies that can be queried using the `font-tech()` function:
 
-| Technology          | Supports                                                                                      |
-| :------------------ | :-------------------------------------------------------------------------------------------- |
-| `color-colrv0`      | Multi-colored glyphs via COLR version 0 table                                                 |
-| `color-colrv1`      | Multi-colored glyphs via COLR version 1 table                                                 |
-| `color-svg`         | SVG multi-colored tables                                                                      |
-| `color-sbix`        | Standard bitmap graphics tables                                                               |
-| `color-cbdt`        | Color bitmap data tables                                                                      |
-| `features-opentype` | OpenType `GSUB` and `GPOS` tables                                                             |
-| `features-aat`      | TrueType `morx` and `kerx` tables                                                             |
-| `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
-| `incremental`       | Incremental font loading                                                                      |
-| `variations`        | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
-| `palettes`          | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
+| Technology                     | Supports                                                                                      |
+| :----------------------------- | :-------------------------------------------------------------------------------------------- |
+| **`<color-font-tech>`**        |
+| `color-colrv0`                 | Multi-colored glyphs via COLR version 0 table                                                 |
+| `color-colrv1`                 | Multi-colored glyphs via COLR version 1 table                                                 |
+| `color-svg`                    | SVG multi-colored tables                                                                      |
+| `color-sbix`                   | Standard bitmap graphics tables                                                               |
+| `color-cbdt`                   | Color bitmap data tables                                                                      |
+| **`<font-features-tech>`**     |
+| `features-opentype`            | OpenType `GSUB` and `GPOS` tables                                                             |
+| `features-aat`                 | TrueType `morx` and `kerx` tables                                                             |
+| `features-graphite`            | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
+| **Other `<font-tech>` values** |
+| `incremental-patch`            | Incremental font loading using the patch subset method                                        |
+| `incremental-range`            | Incremental font loading using the range request method                                       |
+| `incremental-auto`             | Incremental font loading using method negotiation                                             |
+| `variations`                   | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
+| `palettes`                     | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
 
 #### `font-format()`
 
@@ -107,7 +105,7 @@ The following example returns true and applies the CSS style if the browser supp
 }
 ```
 
-The following table describes the available formats that can be queried with this function:
+The following table describes the available formats (`<font-format>` values) that can be queried with this function:
 
 | Format              | Description                     | File extensions |
 | :------------------ | :------------------------------ | :-------------- |
@@ -261,7 +259,8 @@ If a browser doesn't support the font technology, a fallback font (`Bungee-fallb
 ```css
 @font-face {
   font-family: "Bungee Spice";
-  src: url("https://fonts.googleapis.com/css2?family=Bungee+Spice") tech(color-COLRv1),
+  src:
+    url("https://fonts.googleapis.com/css2?family=Bungee+Spice") tech(color-COLRv1),
     url("Bungee-fallback.otf") format("opentype");
 }
 ```
@@ -287,5 +286,5 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
-- The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxref("CSS.supports_static", "CSS.supports()")}} method that allows the same check to be performed via JavaScript.

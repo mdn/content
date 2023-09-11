@@ -24,17 +24,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build content
         env:
@@ -52,17 +54,8 @@ jobs:
           # we set this to disable that stuff.
           REACT_APP_CRUD_MODE_READONLY: true
 
-          # Setting this to an empty string effectively means that the
-          # <iframe> src will end up being the relative URL of the current
-          # document as a base.
-          # I.e. like this, if the current document is '/en-US/docs/Foo':
-          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
-          # ...for example.
-          # Yes, it's potentially "insecure" because the iframe will execute
-          # whatever code is inserted into the code example. But since the
-          # whole (possible) domain for PR builds will never be somewhere
-          # where there are interesting cookies, it's a safe choice.
-          BUILD_LIVE_SAMPLES_BASE_URL: ""
+          BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
 
           # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
@@ -70,6 +63,9 @@ jobs:
 
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
+
+          # Playground
+          REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
 
         run: |
           # The reason this script isn't in `package.json` is because
@@ -133,7 +129,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
 
       - name: Checkout Yari
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: mdn/yari
           path: yari

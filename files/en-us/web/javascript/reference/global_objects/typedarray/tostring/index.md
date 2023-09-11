@@ -2,21 +2,12 @@
 title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
 browser-compat: javascript.builtins.TypedArray.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified array and its elements. This method has the same algorithm as
-{{jsxref("Array.prototype.toString()")}}. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+The **`toString()`** method of {{jsxref("TypedArray")}} instances returns a string representing the specified typed array and its elements. This method has the same algorithm as {{jsxref("Array.prototype.toString()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-tostring.html","shorter")}}
 
@@ -26,35 +17,28 @@ specified array and its elements. This method has the same algorithm as
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the elements of the typed array.
 
+## Description
+
+See {{jsxref("Array.prototype.toString()")}} for more details. This method is not generic and can only be called on typed array instances.
+
 ## Examples
 
-The {{jsxref("TypedArray")}} objects override the `toString` method of
-{{jsxref("Object")}}. For `TypedArray` objects, the `toString`
-method joins the array and returns one string containing each typed array element
-separated by commas. For example, the following code creates a typed array and uses
-`toString` to convert the array to a string.
+### Converting a typed array to a string
 
 ```js
-const numbers = new Uint8Array([2, 5, 8, 1, 4]);
-numbers.toString(); // "2,5,8,1,4"
-```
-
-JavaScript calls the `toString` method automatically when a typed array is
-to be represented as a text value or when an array is referred to in a string
-concatenation.
-
-### Compatibility
-
-If a browser doesn't support the `TypedArray.prototype.toString()` method
-yet, JavaScript will call the `toString` method of {{jsxref("Object")}}:
-
-```js
-const numbers = new Uint8Array([2, 5, 8, 1, 4]);
-numbers.toString(); // "[object Uint8Array]"
+const uint8 = new Uint8Array([1, 2, 3]);
+// Explicit conversion
+console.log(uint8.toString()); // 1,2,3
+// Implicit conversion
+console.log(`${uint8}`); // 1,2,3
 ```
 
 ## Specifications
@@ -67,4 +51,9 @@ numbers.toString(); // "[object Uint8Array]"
 
 ## See also
 
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("String.prototype.toString()")}}

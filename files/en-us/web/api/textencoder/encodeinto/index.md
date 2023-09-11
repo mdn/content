@@ -1,13 +1,8 @@
 ---
-title: TextEncoder.encodeInto()
+title: "TextEncoder: encodeInto() method"
+short-title: encodeInto()
 slug: Web/API/TextEncoder/encodeInto
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - TextEncoder
-  - encodeInto
 browser-compat: api.TextEncoder.encodeInto
 ---
 
@@ -16,7 +11,7 @@ browser-compat: api.TextEncoder.encodeInto
 The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the
 progress of the encoding.
-This is potentially more performant than the older `encode()` method — especially when the target buffer is a view into a WASM heap.
+This is potentially more performant than the older `encode()` method — especially when the target buffer is a view into a Wasm heap.
 
 ## Syntax
 
@@ -54,7 +49,7 @@ const encoder = new TextEncoder();
 function encodeIntoAtPosition(string, u8array, position) {
   return encoder.encodeInto(
     string,
-    position ? u8array.subarray(position | 0) : u8array
+    position ? u8array.subarray(position | 0) : u8array,
   );
 }
 
@@ -66,7 +61,7 @@ console.log(u8array.join()); // 0,0,104,101,108,108,111,0
 ## Buffer sizing
 
 To convert a JavaScript string `s`, the output space needed for full conversion is never less than `s.length` bytes and never greater than `s.length * 3` bytes.
-If the output allocation (typically within WASM heap) is expected to be short-lived, it makes sense to allocate `s.length * 3` bytes for the output, in which case the first conversion attempt is guaranteed to convert the whole string.
+If the output allocation (typically within Wasm heap) is expected to be short-lived, it makes sense to allocate `s.length * 3` bytes for the output, in which case the first conversion attempt is guaranteed to convert the whole string.
 Note that the `s.length * 3` is rare because the string would have to be packed with some of the few characters that expand into 3 bytes.
 It is unlikely that long text will exceed `s.length * 2` bytes in length.
 Thus, a more optimistic approach might be to allocate `s.length * 2 + 5` bytes, and perform reallocation in the rare circumstance that the optimistic prediction was wrong.
@@ -83,7 +78,7 @@ If the behavior of the Wasm allocator is unknown, `roundUpToBucketSize()` should
 If the behavior of your allocator is unknown, you might want to have up to two reallocation steps and make the first reallocation step multiply the _remaining unconverted_ length by two instead of three.
 However, in that case, it makes sense not to implement the usual multiplying by two of the _already written_ buffer length, because in such a case if a second reallocation happened, it would always over-allocate compared to the original length times three.
 The above advice assumes that you don't need to allocate space for a zero terminator.
-That is, on the WASM side you are working with Rust strings or a non-zero-terminating C++ class.
+That is, on the Wasm side you are working with Rust strings or a non-zero-terminating C++ class.
 If you are working with C++ `std::string`, even though the logical length is shown to you, you need to take the extra terminator byte into account when computing rounding up to allocator bucket size.
 See the next section about C strings.
 
@@ -101,7 +96,7 @@ const encoder = new TextEncoder();
 function encodeIntoWithSentinel(string, u8array, position) {
   const stats = encoder.encodeInto(
     string,
-    position ? u8array.subarray(position | 0) : u8array
+    position ? u8array.subarray(position | 0) : u8array,
   );
   if (stats.written < u8array.length) u8array[stats.written] = 0; // append null if room
   return stats;

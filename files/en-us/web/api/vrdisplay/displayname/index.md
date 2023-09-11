@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.displayName
+title: "VRDisplay: displayName property"
+short-title: displayName
 slug: Web/API/VRDisplay/displayName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - displayName
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.displayName
 ---
 

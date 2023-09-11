@@ -2,23 +2,14 @@
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.@@iterator
 ---
 
 {{JSRef}}
 
-The **`@@iterator`** method of a string implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows strings to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields the Unicode code points of the string value as individual strings.
+The **`[@@iterator]()`** method of {{jsxref("String")}} values implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows strings to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [string iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the Unicode code points of the string value as individual strings.
 
-{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
+{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
 
 ## Syntax
 
@@ -26,9 +17,13 @@ The **`@@iterator`** method of a string implements the [iterable protocol](/en-U
 string[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterable iterator object that yields the Unicode code points of the string value as individual strings.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the Unicode code points of the string value as individual strings.
 
 ## Description
 
@@ -49,7 +44,7 @@ Strings are iterated by Unicode code points. This means grapheme clusters will b
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes strings [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically calls this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes strings [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 ```js
 const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
@@ -89,4 +84,6 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ## See also
 
 - [Polyfill of `String.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
+- {{jsxref("Symbol.iterator")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

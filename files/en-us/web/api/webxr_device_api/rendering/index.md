@@ -2,27 +2,6 @@
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
 page-type: guide
-tags:
-  - API
-  - AR
-  - Animation
-  - Drawing
-  - Frames
-  - Games
-  - Guide
-  - Intermediate
-  - Reality
-  - Scene
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - display
-  - rendering
-  - requestAnimationFrame
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -45,7 +24,7 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-      new XRRigidTransform(viewerStartPosition, viewerStartOrientation)
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation),
     );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
@@ -137,7 +116,7 @@ The `XRFrame` doesn't directly keep track of the positions or orientations of th
 
 After rendering the scene twice—once into the left half of the framebuffer and once into the right half of the framebuffer—the framebuffer is sent to the XR hardware, which displays each half of the framebuffer to the corresponding eye. This is often (but not always) done by drawing the image to a single screen and using lenses to transfer the correct half of that image to each eye.
 
-You can learn more about how 3D is represented by WebXR in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Cameras", "Representing 3D with WebXR")}}.
+You can learn more about how 3D is represented by WebXR in [Representing 3D with WebXR](/en-US/docs/Web/API/WebXR_Device_API/Cameras#representing_3d_with_webxr).
 
 ## Drawing the scene
 
@@ -149,7 +128,7 @@ Ideally, you want this code to be fast enough that it can maintain a 60 FPS fram
 
 In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:
 
-```
+```plain
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -246,7 +225,7 @@ An advantage of WebXR's approach of using a single WebGL framebuffer to contain 
 
 The resulting pseudocode looks like this:
 
-```
+```plain
 for each object in the scene
   bindProgram()
   bindUniforms()
@@ -311,9 +290,12 @@ This maintains a global (or an object property) called `lastFrameTime` which con
 With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:
 
 ```js
-const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+const xDeltaRotation =
+  xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const yDeltaRotation =
+  yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const zDeltaRotation =
+  zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 ```
 
 This computes the amount by which the object has rotated around each of the three axes since the last time the frame was drawn. Without this, the shape would rotate by the given amount every frame, regardless of the elapsed time. This could cause substantial stutter in many cases.

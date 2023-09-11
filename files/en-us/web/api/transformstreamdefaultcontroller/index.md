@@ -2,11 +2,6 @@
 title: TransformStreamDefaultController
 slug: Web/API/TransformStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
 
@@ -40,43 +35,47 @@ const transformContent = {
   async transform(chunk, controller) {
     chunk = await chunk;
     switch (typeof chunk) {
-      case 'object':
+      case "object":
         // just say the stream is done I guess
         if (chunk === null) {
           controller.terminate();
         } else if (ArrayBuffer.isView(chunk)) {
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength));
+          controller.enqueue(
+            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
+          );
         } else if (
           Array.isArray(chunk) &&
-          chunk.every((value) => typeof value === 'number')
+          chunk.every((value) => typeof value === "number")
         ) {
           controller.enqueue(new Uint8Array(chunk));
         } else if (
-          typeof chunk.valueOf === 'function' &&
+          typeof chunk.valueOf === "function" &&
           chunk.valueOf() !== chunk
         ) {
           this.transform(chunk.valueOf(), controller); // hack
-        } else if ('toJSON' in chunk) {
+        } else if ("toJSON" in chunk) {
           this.transform(JSON.stringify(chunk), controller);
         }
         break;
-      case 'symbol':
-        controller.error("Cannot send a symbol as a chunk part")
-        break
-      case 'undefined':
-        controller.error("Cannot send undefined as a chunk part")
-        break
+      case "symbol":
+        controller.error("Cannot send a symbol as a chunk part");
+        break;
+      case "undefined":
+        controller.error("Cannot send undefined as a chunk part");
+        break;
       default:
-        controller.enqueue(this.textencoder.encode(String(chunk)))
-        break
+        controller.enqueue(this.textencoder.encode(String(chunk)));
+        break;
     }
   },
-  flush() { /* do any destructor work here */ }
-}
+  flush() {
+    /* do any destructor work here */
+  },
+};
 
 class AnyToU8Stream extends TransformStream {
   constructor() {
-    super({...transformContent, textencoder: new TextEncoder()})
+    super({ ...transformContent, textencoder: new TextEncoder() });
   }
 }
 ```

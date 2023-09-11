@@ -2,11 +2,6 @@
 title: 'TypeError: "x" has no properties'
 slug: Web/JavaScript/Reference/Errors/No_properties
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}
@@ -17,7 +12,7 @@ don't have any.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: null has no properties (Firefox)
 TypeError: undefined has no properties (Firefox)

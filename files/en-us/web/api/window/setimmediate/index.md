@@ -1,15 +1,8 @@
 ---
-title: Window.setImmediate()
+title: "Window: setImmediate() method"
+short-title: setImmediate()
 slug: Web/API/Window/setImmediate
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - setImmediate
-  - Polyfill
 browser-compat: api.Window.setImmediate
 ---
 
@@ -19,18 +12,16 @@ This method is used to break up long running operations and run a callback funct
 immediately after the browser has completed other operations such as events and display
 updates.
 
-> **Note:** This method is not expected to become standard, and is only implemented
-> by recent builds of Internet Explorer and Node.js 0.10+. It meets resistance both from
-> [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Webkit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172)
-> (Google/Apple).
+> **Note:** This method is not expected to become standard, and is nowadays only implemented
+> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzil.la/686201) (Firefox) and [Chromium/WebKit](https://crbug.com/146172) (Chrome/Safari).
 
 ## Syntax
 
 ```js-nolint
 setImmediate(func)
-setImmediate(func, param0)
-setImmediate(func, param0, param1)
-setImmediate(func, param0, param1, /* … ,*/ paramN)
+setImmediate(func, param1)
+setImmediate(func, param1, param2)
+setImmediate(func, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -39,7 +30,7 @@ setImmediate(func, param0, param1, /* … ,*/ paramN)
 
   - : The function you wish to call.
 
-- `param0`, …, `paramN`
+- `param1`, …, `paramN`
   - : All parameters will be passed directly to your function.
 
 ### Return value
@@ -58,8 +49,6 @@ This method can be used instead of the `setTimeout(fn, 0)` method to execute
 The feature can be emulated in a few different ways:
 
 - {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
-  Do note that Internet Explorer 8 includes a synchronous version of
-  `postMessage`, which means it cannot be used as a fallback.
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is
@@ -81,5 +70,6 @@ specification is no longer being worked on.
 ## See also
 
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
-- {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
+- {{DOMxRef("Window.clearImmediate()")}}
+- {{DOMxRef("Window.requestIdleCallback()")}}

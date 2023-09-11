@@ -2,13 +2,6 @@
 title: image-set()
 slug: Web/CSS/image/image-set
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
 browser-compat: css.types.image.image-set
 ---
 
@@ -22,10 +15,29 @@ Resolution and bandwidth differ by device and network access. The `image-set()` 
 
 ## Syntax
 
-```css
-image-set() = image-set( <image-set-option># )
-where <image-set-option> = [ <image> | <string> ] <resolution> and
-      <string> is an <url>
+```css-nolint
+/* Select image based on resolution */
+image-set(
+  "image1.jpg" 1x,
+  "image2.jpg" 2x
+);
+
+image-set(
+  url("image1.jpg") 1x,
+  url("image2.jpg") 2x
+);
+
+/* Select gradient based on resolution */
+image-set(
+  linear-gradient(blue, white) 1x,
+  linear-gradient(blue, green) 2x
+);
+
+/* Select image based on supported formats */
+image-set(
+  url("image1.avif") type("image/avif"),
+  url("image2.jpg") type("image/jpeg")
+);
 ```
 
 ### Values
@@ -38,6 +50,10 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
   - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
 - `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -73,7 +89,7 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Specifications

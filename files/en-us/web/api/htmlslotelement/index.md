@@ -2,18 +2,12 @@
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTMLSlotElement
-  - Interface
-  - Reference
-  - shadow dom
 browser-compat: api.HTMLSlotElement
 ---
 
 {{APIRef('Web Components')}}
 
-The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
+The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
 
 {{InheritanceDiagram}}
 
@@ -41,10 +35,12 @@ The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_
 The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', (e) => {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

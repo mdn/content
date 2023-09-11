@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.aspectRatio
+title: "MediaTrackSupportedConstraints: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - aspectRatio
 browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
 ---
 
@@ -40,7 +29,9 @@ you'll get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

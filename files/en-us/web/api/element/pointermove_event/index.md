@@ -1,14 +1,9 @@
 ---
-title: 'Element: pointermove event'
+title: "Element: pointermove event"
+short-title: pointermove
 slug: Web/API/Element/pointermove_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.pointermove_event
 page-type: web-api-event
+browser-compat: api.Element.pointermove_event
 ---
 
 {{APIRef}}
@@ -20,9 +15,9 @@ The `pointermove` event is fired when a pointer changes coordinates, and the poi
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointermove', (event) => {});
+addEventListener("pointermove", (event) => {});
 
-onpointermove = (event) => { };
+onpointermove = (event) => {};
 ```
 
 ## Event type
@@ -65,20 +60,20 @@ The event, which is of type {{domxref("PointerEvent")}}, provides all the inform
 To add a handler for `pointermove` events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointermove', (event) => {
-  console.log('Pointer moved');
+para.addEventListener("pointermove", (event) => {
+  console.log("Pointer moved");
 });
 ```
 
 You can also use the `onpointermove` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointermove = (event) => {
-  console.log('Pointer moved');
+  console.log("Pointer moved");
 };
 ```
 
@@ -103,5 +98,3 @@ para.onpointermove = (event) => {
   - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-Internet Explorer also used to support an event named `MSPointerHover`, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the `pointermove` event will fire for all pen movement (regardless if its hovering or not).

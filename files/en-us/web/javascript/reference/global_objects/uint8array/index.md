@@ -2,13 +2,6 @@
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint8Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint8Array
 ---
 
@@ -16,19 +9,19 @@ browser-compat: javascript.builtins.Uint8Array
 
 The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
+`Uint8Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
+
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint8Array/Uint8Array", "Uint8Array()")}}
+- {{jsxref("Uint8Array/Uint8Array", "Uint8Array()")}}
   - : Creates a new `Uint8Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of `Uint8Array`.
-- {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : Returns the string value of the constructor name. `"Uint8Array"` in the case of `Uint8Array`.
 
 ## Static methods
 
@@ -38,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Uint8Array.prototype` and shared by all `Uint8Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Uint8Array`.
+- {{jsxref("Object/constructor", "Uint8Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint8Array` instances, the initial value is the {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} constructor.
 
 ## Instance methods
 
@@ -90,6 +87,7 @@ console.log(uint8FromIterable);
 ## See also
 
 - [Polyfill of `Uint8Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

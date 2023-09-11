@@ -2,11 +2,6 @@
 title: Strict inequality (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.strict_inequality
 ---
 
@@ -98,6 +93,6 @@ console.log(object1 !== object1); // false
 
 ## See also
 
-- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Equality (`==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality (`!=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality (`===`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)

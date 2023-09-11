@@ -1,12 +1,8 @@
 ---
-title: CSSStyleDeclaration.cssText
+title: "CSSStyleDeclaration: cssText property"
+short-title: cssText
 slug: Web/API/CSSStyleDeclaration/cssText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.CSSStyleDeclaration.cssText
 ---
 

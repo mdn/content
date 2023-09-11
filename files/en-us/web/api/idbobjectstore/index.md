@@ -2,12 +2,6 @@
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
 page-type: web-api-interface
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Interface
-  - Reference
 browser-compat: api.IDBObjectStore
 ---
 
@@ -70,7 +64,7 @@ This example shows a variety of different uses of object stores, from updating t
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in db.
   db = DBOpenRequest.result;
@@ -84,12 +78,14 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
 
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 
@@ -101,12 +97,20 @@ DBOpenRequest.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.innerHTML += "<li>Object store created.</li>";
 };
 
 // Create a new item to add in to the object store
 const newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  {
+    taskTitle: "Walk dog",
+    hours: 19,
+    minutes: 30,
+    day: 24,
+    month: "December",
+    year: 2013,
+    notified: "no",
+  },
 ];
 
 // open a read/write db transaction, ready for adding the data
@@ -114,11 +118,12 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
 transaction.oncomplete = (event) => {
-  note.innerHTML += '<li>Transaction completed.</li>';
+  note.innerHTML += "<li>Transaction completed.</li>";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // create an object store on the transaction
@@ -127,8 +132,8 @@ const objectStore = transaction.objectStore("toDoList");
 const objectStoreRequest = objectStore.add(newItem[0]);
 
 objectStoreRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Request successful .</li>';
-}
+  note.innerHTML += "<li>Request successful .</li>";
+};
 ```
 
 ## Specifications

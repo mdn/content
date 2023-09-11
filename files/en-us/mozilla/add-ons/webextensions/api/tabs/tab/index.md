@@ -1,16 +1,7 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Tab
-  - Type
-  - WebExtensions
-  - tabs
+page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.Tab
 ---
 
@@ -33,7 +24,7 @@ Values of this type are objects. They contain the following properties:
 - `audible` {{optional_inline}}
   - : `boolean`. Indicates whether the tab is producing sound. However, the user will not hear the sound if the tab is muted (see the `mutedInfo` property).
 - `autoDiscardable` {{optional_inline}}
-  - : `boolean`. Whether the tab can be discarded automatically by the browser when resources are low.
+  - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
 - `cookieStoreId` {{optional_inline}}
   - : `string`. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), you can pass this as the `storeId` option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 - `discarded` {{optional_inline}}
@@ -48,7 +39,7 @@ Values of this type are objects. They contain the following properties:
 
   - : `boolean`. Whether the tab is highlighted, i.e. part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
 
-    Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the `browser.tabs.multiselect` preference (enabled by default).
+    Firefox for Android doesn't support highlighting multiple tabs.
 
 - `id` {{optional_inline}}
   - : `integer`. The tab's ID. Tab IDs are unique within a browser session. The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).

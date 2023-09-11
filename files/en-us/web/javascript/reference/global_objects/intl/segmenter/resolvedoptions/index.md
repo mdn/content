@@ -2,18 +2,12 @@
 title: Intl.Segmenter.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
 
 {{JSRef}}
 
-The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and granularity options computed during the initialization of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances returns a new object with properties reflecting the locale and granularity options computed during the initialization of this `Intl.Segmenter` object.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
 
@@ -50,7 +44,7 @@ The resulting object has the following properties:
 ### Basic usage
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
+const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"

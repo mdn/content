@@ -2,23 +2,12 @@
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.keys
 ---
 
 {{JSRef}}
 
-The **`keys()`** method returns a new _array iterator_ object
-that contains the keys for each index in the array.
+The **`keys()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.keys()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
 
@@ -28,9 +17,17 @@ that contains the keys for each index in the array.
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new _array iterator_ object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+
+## Description
+
+See {{jsxref("Array.prototype.keys()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -67,10 +64,10 @@ console.log(arrKeys.next().value); // 4
 ## See also
 
 - [Polyfill of `TypedArray.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Array.prototype.keys()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

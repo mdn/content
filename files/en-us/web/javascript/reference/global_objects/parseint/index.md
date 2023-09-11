@@ -2,11 +2,6 @@
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 page-type: javascript-function
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - parseInt
 browser-compat: javascript.builtins.parseInt
 ---
 
@@ -29,7 +24,7 @@ parseInt(string, radix)
   - : A string starting with an integer. Leading {{glossary("whitespace")}} in this argument is ignored.
 - `radix` {{optional_inline}}
 
-  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. It is converted to a [32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion); if it's outside the range of \[2, 36] after conversion, the function will always return `NaN`. If `0` or not provided, the radix will be inferred based on `string`'s value. Be careful — this does NOT always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
+  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. It is converted to a [32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion); if it's nonzero and outside the range of \[2, 36] after conversion, the function will always return `NaN`. If `0` or not provided, the radix will be inferred based on `string`'s value. Be careful — this does _not_ always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
 
 ### Return value
 
@@ -180,10 +175,10 @@ parseInt(1e21, 10); // 1
 ## See also
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
+- [`Number()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`BigInt()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)

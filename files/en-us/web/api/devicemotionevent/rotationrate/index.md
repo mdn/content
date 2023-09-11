@@ -1,17 +1,8 @@
 ---
-title: DeviceMotionEvent.rotationRate
+title: "DeviceMotionEvent: rotationRate property"
+short-title: rotationRate
 slug: Web/API/DeviceMotionEvent/rotationRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Device Orientation
-  - Mobile
-  - Motion
-  - Orientation
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEvent.rotationRate
 ---
 

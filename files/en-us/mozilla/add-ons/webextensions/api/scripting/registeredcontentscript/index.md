@@ -1,15 +1,7 @@
 ---
 title: scripting.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - RegisteredContentScript
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
+page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.RegisteredContentScript
 ---
 
@@ -37,6 +29,8 @@ Values of this type are objects. They contain these properties:
   - : `boolean`. Specifies if this content script persists across browser restarts and updates and extension restarts. Defaults to `true`.
 - `runAt` {{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`. In Firefox, `runAt` also affects the point where the CSS is inserted. In Chrome, `runAt` does not affect the CSS insertion point.
+- `world` {{optional_inline}}
+  - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in. The default value is `ISOLATED`.
 
 ## Browser compatibility
 

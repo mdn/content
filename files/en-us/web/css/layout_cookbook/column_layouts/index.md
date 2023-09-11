@@ -2,15 +2,6 @@
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Multi-col
-  - columns
-  - cookbook
-  - flexbox
-  - grid
 browser-compat:
   - css.properties.column-width
   - css.properties.column-rule
@@ -103,6 +94,6 @@ Use Grid:
 
 ## Resources on MDN
 
-- [Guide to Multi-column Layout](/en-US/docs/Web/CSS/CSS_Columns)
-- [Guide to Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [Guide to Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
+- [Guide to Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)

@@ -2,12 +2,6 @@
 title: HkdfParams
 slug: Web/API/HkdfParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - HkdfParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-HkdfParams
 ---
 

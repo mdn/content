@@ -1,12 +1,7 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{JSSidebar("Errors")}}
@@ -17,7 +12,7 @@ underscore (\_), or dollar sign ($).
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
@@ -41,8 +36,8 @@ They can't start with a digit! Only subsequent characters can be digits (0-9).
 
 Variable names can't start with numbers in JavaScript. The following fails:
 
-```js example-bad
-const 1life = 'foo';
+```js-nolint example-bad
+const 1life = "foo";
 // SyntaxError: identifier starts immediately after numeric literal
 
 const foo = 1life;
@@ -55,12 +50,11 @@ alert(1.foo);
 You will need to rename your variable to avoid the leading number.
 
 ```js example-good
-const life1 = 'foo';
+const life1 = "foo";
 const foo = life1;
 ```
 
 ## See also
 
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables)
-  in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

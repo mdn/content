@@ -2,14 +2,6 @@
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 page-type: javascript-function
-tags:
-  - Encoding
-  - JavaScript
-  - Method
-  - Text
-  - URI
-  - URL
-  - encodeURI
 browser-compat: javascript.builtins.encodeURI
 ---
 
@@ -37,7 +29,7 @@ A new string representing the provided string encoded as a URI.
 ### Exceptions
 
 - {{jsxref("URIError")}}
-  - : Thrown if `uri` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Thrown if `uri` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Description
 
@@ -47,7 +39,7 @@ The `encodeURI()` function escapes characters by UTF-8 code units, with each oct
 
 `encodeURI()` escapes all characters **except**:
 
-```
+```plain
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 
 ; / ? : @ & = + $ , #
@@ -57,7 +49,7 @@ The characters on the second line are characters that may be part of the URI syn
 
 The `encodeURI()` function does not encode characters that have special meaning (reserved characters) for a URI. The following example shows all the parts that a URI can possibly contain. Note how certain characters are used to signify special meaning:
 
-```
+```url
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 
@@ -83,20 +75,22 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encode
 
 Note that `encodeURI()` by itself _cannot_ form proper HTTP {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} requests, such as for {{domxref("XMLHttpRequest")}}, because `&`, `+`, and `=` are not encoded, which are treated as special characters in `GET` and `POST` requests. `encodeURIComponent()`, however, does encode these characters.
 
-### Encoding a lone high surrogate throws
+### Encoding a lone surrogate throws
 
-An {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
+A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
 
 ```js
 // High-low pair OK
 encodeURI("\uD800\uDFFF"); // "%F0%90%8F%BF"
 
-// Lone high surrogate throws "URIError: malformed URI sequence"
+// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURI("\uD800");
 
-// Lone low surrogate throws "URIError: malformed URI sequence"
+// Lone low-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURI("\uDFFF");
 ```
+
+You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURI()`.
 
 ### Encoding for RFC3986
 
@@ -109,7 +103,7 @@ function encodeRFC3986URI(str) {
     .replace(/%5D/g, "]")
     .replace(
       /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
     );
 }
 ```

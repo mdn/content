@@ -1,18 +1,12 @@
 ---
-title: VideoFrame.visibleRect
+title: "VideoFrame: visibleRect property"
+short-title: visibleRect
 slug: Web/API/VideoFrame/visibleRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - visibleRect
-  - VideoFrame
-  - Experimental
 browser-compat: api.VideoFrame.visibleRect
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`visibleRect`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
 

@@ -1,15 +1,8 @@
 ---
-title: CanvasRenderingContext2D.globalCompositeOperation
+title: "CanvasRenderingContext2D: globalCompositeOperation property"
+short-title: globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Blending
-  - Canvas
-  - CanvasRenderingContext2D
-  - Compositing
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 ---
 
@@ -25,11 +18,6 @@ See also [Compositing and clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Comp
 ## Value
 
 A string identifying which of the compositing or blending mode operations to use.
-
-### Operations
-
-{{EmbedLiveSample("Compositing_example", 750, 6900, ""
-  ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
 ## Examples
 
@@ -82,7 +70,7 @@ ctx.fillRect(50, 50, 100, 100);
 
 - An early Canvas specification draft specified the value `"darker"`.
   However, Firefox removed support for `"darker"` in version 4
-  ({{bug(571532)}}). See also [this blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
+  ([Firefox bug 571532](https://bugzil.la/571532)). See also [this blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
   similar affect to `"darker"`.
 
 ## See also

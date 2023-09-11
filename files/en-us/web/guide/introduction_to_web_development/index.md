@@ -1,14 +1,7 @@
 ---
 title: Introduction to Web development
 slug: Web/Guide/Introduction_to_Web_development
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Development
-  - HTML
-  - JavaScript
-  - Web
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -49,7 +42,7 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 #### Intermediate
 
-- [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) — a recap on the JavaScript programming language aimed at intermediate-level developers
+- [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/Language_overview) — a recap on the JavaScript programming language aimed at intermediate-level developers
 - [Essential JavaScript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) — an introduction to essential JavaScript design patterns
 - [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects) — learn about the JavaScript object model.
 - [You don't know JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md)

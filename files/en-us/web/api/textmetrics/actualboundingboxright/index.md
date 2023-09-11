@@ -1,12 +1,8 @@
 ---
-title: TextMetrics.actualBoundingBoxRight
+title: "TextMetrics: actualBoundingBoxRight property"
+short-title: actualBoundingBoxRight
 slug: Web/API/TextMetrics/actualBoundingBoxRight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics.actualBoundingBoxRight
 ---
 
@@ -17,9 +13,9 @@ The read-only `actualBoundingBoxRight` property of the {{domxref("TextMetrics")}
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.actualBoundingBoxRight; // 15.633333333333333;
 ```

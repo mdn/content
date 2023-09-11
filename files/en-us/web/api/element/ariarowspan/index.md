@@ -1,15 +1,8 @@
 ---
-title: Element.ariaRowSpan
+title: "Element: ariaRowSpan property"
+short-title: ariaRowSpan
 slug: Web/API/Element/ariaRowSpan
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowSpan
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowSpan
 ---
 
@@ -41,7 +34,7 @@ In this example the `aria-rowspan` attribute on the element with an ID of `spann
 ```
 
 ```js
-let el = document.getElementById('spanning-heading');
+let el = document.getElementById("spanning-heading");
 console.log(el.ariaRowSpan);
 el.ariaRowSpan = "2";
 console.log(el.ariaRowSpan);

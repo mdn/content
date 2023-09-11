@@ -2,18 +2,16 @@
 title: Attribute selectors
 slug: Web/CSS/Attribute_selectors
 page-type: css-selector
-tags:
-  - Attribute selectors
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.attribute
 ---
 
 {{CSSRef}}
 
-The CSS **attribute selector** matches elements based on the presence or value of a given attribute.
+The CSS **attribute selector** matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.
+
+The case sensitivity of attribute names and values depends on the document language. In HTML, attribute names are case insensitive, as are spec-defined {{glossary("enumerated")}} values. The [case-insensitive HTML attribute values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) are listed in the HTML spec. For these attributes, the attribute value in the selector is case-insensitive, regardless of whether the value is invalid or the attribute for the element on which it is set is invalid.
+
+If the attribute value is case sensitive, like [`class`](/en-US/docs/Web/HTML/Global_attributes/class), [`id`](/en-US/docs/Web/HTML/Global_attributes/id), and [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attributes, the attribute selector value match is case-sensitive. Attributes defined outside of the HTML specification, like [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) and [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes) attributes, are also case-sensitive. Normally case-sensitive attribute selectors can be made case-insensitive with the inclusion of the case-insensitive modifier (`i`).
 
 ```css
 /* <a> elements with a title attribute */
@@ -32,8 +30,8 @@ a[href*="example"] {
   font-size: 2em;
 }
 
-/* <a> elements with an href ending ".org" */
-a[href$=".org"] {
+/* <a> elements with an href ending ".org", case-insensitive */
+a[href$=".org" i] {
   font-style: italic;
 }
 
@@ -60,7 +58,7 @@ a[class~="logo"] {
 - `[attr*=value]`
   - : Represents elements with an attribute name of _attr_ whose value contains at least one occurrence of _value_ within the string.
 - `[attr operator value i]`
-  - : Adding an `i` (or `I`) before the closing bracket causes the value to be compared case-insensitively (for characters within the ASCII range).
+  - : Adding an `i` (or `I`) before the closing bracket causes the value to be compared case-insensitively (for characters within the {{Glossary("ASCII")}} range).
 - `[attr operator value s]` {{Experimental_Inline}}
   - : Adding an `s` (or `S`) before the closing bracket causes the value to be compared case-sensitively (for characters within the ASCII range).
 
@@ -102,8 +100,9 @@ a[href$=".org"] {
   color: red;
 }
 
-/* Links that start with "https" and end in ".org" */
-a[href^="https"][href$=".org"] {
+/* Links that start with "https://" and end in ".org" */
+a[href^="https://"][href$=".org"]
+{
   color: green;
 }
 ```
@@ -150,7 +149,7 @@ div[lang="pt"] {
 }
 
 /* All divs in Chinese are red, whether
-   simplified (zh-CN) or traditional (zh-TW). */
+   simplified (zh-Hans-CN) or traditional (zh-Hant-TW). */
 div[lang|="zh"] {
   color: red;
 }
@@ -159,7 +158,7 @@ div[lang|="zh"] {
    `data-lang` are purple. */
 /* Note: You could also use hyphenated attributes
    without double quotes */
-div[data-lang="zh-TW"] {
+div[data-lang="zh-Hant-TW"] {
   color: purple;
 }
 ```
@@ -169,9 +168,9 @@ div[data-lang="zh-TW"] {
 ```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+<div lang="zh-Hans-CN">世界您好！</div>
+<div lang="zh-Hant-TW">世界您好！</div>
+<div data-lang="zh-Hant-TW">世界您好！</div>
 ```
 
 #### Result
@@ -180,8 +179,8 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
-Note that if the modifiers are not supported by the user agent, then the selector will not match.
+The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
+Note that if a modifier is not supported by the user agent, then the selector will not match.
 
 #### CSS
 
@@ -246,3 +245,4 @@ ol[type="c" i] {
 - {{CSSxRef("attr")}}
 - Selecting a single element: {{DOMxRef("Document.querySelector()")}}, {{DOMxRef("DocumentFragment.querySelector()")}}, or {{DOMxRef("Element.querySelector()")}}
 - Selecting all matching elements: {{DOMxRef("Document.querySelectorAll()")}}, {{DOMxRef("DocumentFragment.querySelectorAll()")}}, or {{DOMxRef("Element.querySelectorAll()")}}
+- [Case-insensitive attribute selector values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) on WHATWG

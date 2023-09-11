@@ -2,20 +2,12 @@
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.matchAll
 ---
 
 {{JSRef}}
 
-The **`matchAll()`** method returns an iterator of all results matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+The **`matchAll()`** method of {{jsxref("String")}} values returns an iterator of all results matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 {{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
@@ -37,7 +29,7 @@ matchAll(regexp)
 
 ### Return value
 
-An [iterable iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (which is not restartable) of matches. Each match is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
+An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches. Each match is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
 
 ### Exceptions
 
@@ -162,8 +154,8 @@ str.matchAll({
 
 - [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

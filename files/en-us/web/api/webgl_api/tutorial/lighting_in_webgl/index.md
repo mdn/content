@@ -2,19 +2,6 @@
 title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 page-type: guide
-tags:
-  - 3D
-  - Fragments
-  - Graphics
-  - Guide
-  - Light Sources
-  - Shaders
-  - Shading
-  - Tutorial
-  - Vertexes
-  - WebGL
-  - lighting
-  - vertices
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
@@ -76,7 +63,7 @@ function initNormalBuffer(gl) {
   gl.bufferData(
     gl.ARRAY_BUFFER,
     new Float32Array(vertexNormals),
-    gl.STATIC_DRAW
+    gl.STATIC_DRAW,
   );
 
   return normalBuffer;
@@ -120,7 +107,7 @@ function setNormalAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
 }
@@ -148,7 +135,7 @@ mat4.transpose(normalMatrix, normalMatrix);
 gl.uniformMatrix4fv(
   programInfo.uniformLocations.normalMatrix,
   false,
-  normalMatrix
+  normalMatrix,
 );
 ```
 
@@ -158,7 +145,7 @@ Now that all the data the shaders need is available to them, we need to update t
 
 ### The vertex shader
 
-The first thing to do i,s update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting.
+The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting.
 
 > **Note:** Update the `vsSource` declaration in your `main()` function like this:
 

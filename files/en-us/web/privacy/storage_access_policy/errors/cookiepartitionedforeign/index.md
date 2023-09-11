@@ -1,12 +1,7 @@
 ---
-title: 'Partitioned: All third-party storage access requests'
+title: "Partitioned: All third-party storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookiePartitionedForeign
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
@@ -15,7 +10,7 @@ tags:
 
 Firefox:
 
-```
+```plain
 CookiePartitionedForeign=Partitioned cookie
 or storage access was provided to "<URL>" because it is loaded in the
 third-party context and storage partitioning is enabled.

@@ -1,8 +1,7 @@
 ---
 title: Adding feed readers to Firefox
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-tags:
-  - Configuration management
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -21,7 +20,7 @@ In older versions, JavaScript code on the web can add a feed reader easily, usin
 navigator.registerContentHandler(
   "application/vnd.mozilla.maybe.feed",
   "https://www.example.com/?feed-feed=%s",
-  "My Feed Reader"
+  "My Feed Reader",
 );
 ```
 

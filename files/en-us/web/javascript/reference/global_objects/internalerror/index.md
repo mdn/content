@@ -2,18 +2,14 @@
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 page-type: javascript-class
-tags:
-  - Class
-  - InternalError
-  - JavaScript
-  - Object
-  - Non-standard
+status:
+  - non-standard
 browser-compat: javascript.builtins.InternalError
 ---
 
 {{JSRef}}{{Non-standard_Header}}
 
-The **`InternalError` object** indicates an error that occurred internally in the JavaScript engine.
+The **`InternalError`** object indicates an error that occurred internally in the JavaScript engine.
 
 Example cases are mostly when something is too large, e.g.:
 
@@ -22,6 +18,8 @@ Example cases are mostly when something is too large, e.g.:
 - "array initializer too large",
 - "too much recursion".
 
+`InternalError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
 - {{jsxref("InternalError/InternalError", "InternalError()")}} {{Non-standard_Inline}}
@@ -29,20 +27,18 @@ Example cases are mostly when something is too large, e.g.:
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "InternalError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}} {{Non-standard_Inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}} {{Non-standard_Inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}} {{Non-standard_Inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}} {{Non-standard_Inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `InternalError.prototype` and shared by all `InternalError` instances.
+
+- {{jsxref("Object/constructor", "InternalError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `InternalError` instances, the initial value is the {{jsxref("InternalError/InternalError", "InternalError")}} constructor.
+- {{jsxref("Error/name", "InternalError.prototype.name")}}
+  - : Represents the name for the type of error. For `InternalError.prototype.name`, the initial value is `"InternalError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 

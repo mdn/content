@@ -1,17 +1,9 @@
 ---
-title: ':-moz-drag-over'
+title: ":-moz-drag-over"
 slug: Web/CSS/:-moz-drag-over
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Firefox
-  - Mozilla
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors:-moz-drag-over
 ---
 
@@ -22,7 +14,9 @@ The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ## Syntax
 
 ```css
-:-moz-drag-over
+:-moz-drag-over {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -52,10 +46,6 @@ td:-moz-drag-over {
 ## Specifications
 
 Not part of any standard.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

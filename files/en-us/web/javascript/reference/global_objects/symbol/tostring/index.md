@@ -2,18 +2,12 @@
 title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Symbol
 browser-compat: javascript.builtins.Symbol.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified symbol value.
+The **`toString()`** method of {{jsxref("Symbol")}} values returns a string representing this symbol value.
 
 {{EmbedInteractiveExample("pages/js/symbol-prototype-tostring.html")}}
 
@@ -22,6 +16,10 @@ The **`toString()`** method returns a string representing the specified symbol v
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -1,13 +1,8 @@
 ---
-title: Touch.screenY
+title: "Touch: screenY property"
+short-title: screenY
 slug: Web/API/Touch/screenY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.screenY
 ---
 
@@ -23,7 +18,7 @@ A number.
 
 ## Examples
 
-The [Touch.screenX example](/en-US/docs/Web/API/Touch/screenX#example) includes an example of this property's usage.
+The [Touch.screenX example](/en-US/docs/Web/API/Touch/screenX#examples) includes an example of this property's usage.
 
 ## Specifications
 
