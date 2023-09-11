@@ -52,7 +52,7 @@ Highlights:
 - The non-standard `WeakMap.prototype.clear()` and `WeakSet.prototype.clear()` methods have been removed ([Firefox bug 1101817](https://bugzil.la/1101817)).
 - The non-standard, static `RegExp.multiline` property is now deprecated ([Firefox bug 1220457](https://bugzil.la/1220457)).
 - Built-in accessor function names now have a "get" or "set" prefix ([Firefox bug 1180290](https://bugzil.la/1180290), [Firefox bug 1235656](https://bugzil.la/1235656)).
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 (legacy) array comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 (legacy) generator comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
+- [JS1.7/JS1.8 (legacy) array comprehensions and generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator) have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
 
 ### Interfaces/APIs/DOM
 
@@ -64,7 +64,7 @@ Highlights:
 
 #### Canvas
 
-- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, {{domxref("OffscreenCanvas.toBlob()")}}, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 1172796](https://bugzil.la/1172796)).
+- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, `OffscreenCanvas.toBlob()`, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 1172796](https://bugzil.la/1172796)).
 - The {{domxref("ImageBitmap.close()")}} method is now supported ([Firefox bug 1172796](https://bugzil.la/1172796)).
 - A new {{domxref("ImageBitmapRenderingContext")}} rendering context is now implemented. Use `"bitmaprenderer"` with {{domxref("OffscreenCanvas.getContext()")}} or {{domxref("HTMLCanvasElement.getContext()")}} to obtain this context. ([Firefox bug 1172796](https://bugzil.la/1172796)).
 

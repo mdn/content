@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.split
 
 {{JSRef}}
 
-The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+The **`split()`** method of {{jsxref("String")}} values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 
 {{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
 
@@ -295,4 +295,4 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide

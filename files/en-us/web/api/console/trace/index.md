@@ -51,7 +51,7 @@ foo();
 
 In the console, the following trace will be displayed:
 
-```
+```plain
 bar
 foo
 <anonymous>

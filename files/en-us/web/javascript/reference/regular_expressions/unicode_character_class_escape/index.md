@@ -30,7 +30,7 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
     > **Note:** [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) syntax allows omitting the `Script` property name as well, but JavaScript does not support this, because most of the time `Script_Extensions` is more useful than `Script`.
 
 - `property`
-  - : A Unicode property name. Must be made of ASCII letters (`A–Z`, `a–z`) and underscores (`_`), and must be one of the [non-binary property names](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).
+  - : A Unicode property name. Must be made of {{Glossary("ASCII")}} letters (`A–Z`, `a–z`) and underscores (`_`), and must be one of the [non-binary property names](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).
 - `value`
   - : A Unicode property value. Must be made of ASCII letters (`A–Z`, `a–z`), underscores (`_`), and digits (`0–9`), and must be one of the supported values listed in [`PropertyValueAliases.txt`](https://unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt).
 
@@ -159,8 +159,8 @@ console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 
 However, you can't use `\P` to match "a string that does not have a property", because it's unclear how many characters should be consumed.
 
-```js
-/\P{RGI_Emoji_Flag_Sequence}/v; // Invalid regular expression: /\P{RGI_Emoji_Flag_Sequence}/v: Invalid property name
+```js-nolint example-bad
+/\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
 ```
 
 ## Specifications
@@ -173,14 +173,14 @@ However, you can't use `\P` to match "a string that does not have a property", b
 
 ## See also
 
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [Unicode character property](https://en.wikipedia.org/wiki/Unicode_character_property) on Wikipedia
 - [ES2018: RegExp Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) by Dr. Axel Rauschmayer (2017)
-- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories) on unicode.org
+- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories)
 - [Unicode Utilities: UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
 - [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (2022)

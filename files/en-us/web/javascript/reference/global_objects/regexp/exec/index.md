@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.exec
 
 {{JSRef}}
 
-The **`exec()`** method executes a search for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
 
@@ -134,5 +134,5 @@ This will log a message containing `'hello world!'`.
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("RegExp")}}

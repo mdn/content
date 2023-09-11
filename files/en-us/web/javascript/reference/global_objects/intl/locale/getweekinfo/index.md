@@ -17,6 +17,10 @@ The **`getWeekInfo()`** method of {{jsxref("Intl.Locale")}} instances returns a 
 getWeekInfo()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An object representing week information associated with the Locale data specified in [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements). It has the following properties:

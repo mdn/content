@@ -152,7 +152,7 @@ const func2 = (x, y) => {
 
 Returning object literals using the concise body syntax `(params) => { object: literal }` does not work as expected.
 
-```js example-bad
+```js-nolint example-bad
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
@@ -247,11 +247,6 @@ For similar reasons, the [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_
 Arrow functions do not have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. Thus, in this example, `arguments` is a reference to the arguments of the enclosing scope:
 
 ```js
-const arguments = [1, 2, 3];
-const arr = () => arguments[0];
-
-arr(); // 1
-
 function foo(n) {
   const f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
   return f();
@@ -292,7 +287,7 @@ The [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) keyword cann
 
 An arrow function cannot contain a line break between its parameters and its arrow.
 
-```js example-bad
+```js-nolint example-bad
 const func = (a, b, c)
   => 1;
 // SyntaxError: Unexpected token '=>'
@@ -323,7 +318,7 @@ const func4 = (
 
 Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) compared to regular functions.
 
-```js example-bad
+```js-nolint example-bad
 let callback;
 
 callback = callback || () => {};
@@ -476,7 +471,7 @@ obj.doSomethingLater(); // logs 11
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)

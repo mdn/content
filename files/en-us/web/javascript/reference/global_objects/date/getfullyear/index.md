@@ -19,6 +19,10 @@ Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 getFullYear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer representing the year for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

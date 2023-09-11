@@ -81,12 +81,12 @@ page-type: firefox-release-notes
 
 - Added {{SVGAttr("tabindex")}} attribute ([Firefox bug 778654](https://bugzil.la/778654)).
 - Added {{SVGAttr("href")}} attribute, which renders {{SVGAttr("xlink:href")}} obsolete ([Firefox bug 1245751](https://bugzil.la/1245751)).
-- You can now use custom data attributes on SVG elements through the {{domxref("SVGElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ([Firefox bug 921834](https://bugzil.la/921834)).
+- You can now use custom data attributes on SVG elements through the {{domxref("HTMLElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ([Firefox bug 921834](https://bugzil.la/921834)).
 - CSS Animations used in an SVG image which is presented in an {{HTMLElement("img")}} element now work again; this was an old regression ([Firefox bug 1190881](https://bugzil.la/1190881)).
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("DedicatedWorkerGlobalScope.close")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 
@@ -117,10 +117,10 @@ page-type: firefox-release-notes
 
 - The {{domxref("DOMImplementation.hasFeature()")}} now returns `true` in all cases ([Firefox bug 984778](https://bugzil.la/984778)).
 - The {{domxref("HTMLInputElement")}} and {{domxref("HTMLTextAreaElement")}} properties `selectionStart` and `selectionEnd` now correctly return the current position of the text input cursor when there's no selection, instead of returning 0 ([Firefox bug 1287655](https://bugzil.la/1287655)).
-- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the `onerror` event handler, sending {{domxref("Element/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
+- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the `onerror` event handler, sending {{domxref("HTMLElement/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
 - You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ([Firefox bug 1049975](https://bugzil.la/1049975)).
 - The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (`dom.permissions.revoke.enable`) and disabled by default since its design and even its very existence is under discussion in the [Web Application Security Working Group](https://www.w3.org/2011/webappsec/).
-- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See [Firefox bug 1267941](https://bugzil.la/1267941).
+- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("Navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See [Firefox bug 1267941](https://bugzil.la/1267941).
 - For privacy reasons, both {{domxref("BatteryManager.chargingTime")}} and {{domxref("BatteryManager.dischargingTime")}} now round the returned value to the closest 15 minutes ([Firefox bug 1292655](https://bugzil.la/1292655)).
 
 ### Events

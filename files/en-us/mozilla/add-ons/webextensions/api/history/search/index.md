@@ -35,7 +35,7 @@ let searching = browser.history.search(
 
         Title: `"Example Domain"`
 
-        ```
+        ```plain
         "http"              -> matches
         "domain"            -> matches
         "MAIN ample"        -> matches

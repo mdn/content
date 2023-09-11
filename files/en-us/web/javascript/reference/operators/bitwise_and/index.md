@@ -19,7 +19,7 @@ x & y
 
 ## Description
 
-The `&` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt AND if both operands becomes BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise AND. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+The `&` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt AND if both operands become BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise AND. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 The operator operates on the operands' bit representations in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). Each bit in the first operand is paired with the corresponding bit in the second operand: _first bit_ to _first bit_, _second bit_ to _second bit_, and so on. The operator is applied to each pair of bits, and the result is constructed bitwise.
 
@@ -55,11 +55,13 @@ Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit intege
 ### Using bitwise AND
 
 ```js
-// 5: 00000000000000000000000000000101
-// 2: 00000000000000000000000000000010
-5 & 2; // 0
+// 9  (00000000000000000000000000001001)
+// 14 (00000000000000000000000000001110)
 
-5n & 2n; // 0n
+14 & 9;
+// 8  (00000000000000000000000000001000)
+
+14n & 9n; // 8n
 ```
 
 ## Specifications
@@ -73,4 +75,4 @@ Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit intege
 ## See also
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Bitwise AND assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [Bitwise AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

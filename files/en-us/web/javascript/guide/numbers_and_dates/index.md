@@ -371,7 +371,7 @@ const endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
 endYear.setFullYear(today.getFullYear()); // Set year to this year
 const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
 let daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
-daysLeft = Math.round(daysLeft); //returns days left in the year
+daysLeft = Math.round(daysLeft); // Returns days left in the year
 ```
 
 This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.

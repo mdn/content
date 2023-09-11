@@ -1,5 +1,5 @@
 ---
-title: delete operator
+title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 page-type: javascript-operator
 browser-compat: javascript.operators.delete
@@ -42,7 +42,7 @@ delete object[property]
 
 The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
 
-```js example-bad
+```js-nolint example-bad
 delete identifier;
 delete object.#privateProperty;
 ```

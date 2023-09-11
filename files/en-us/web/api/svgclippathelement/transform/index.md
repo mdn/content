@@ -36,7 +36,7 @@ svg {
 
     <rect id="r1" x="0" y="0" width="100" height="100" />
 
-    <use clip-path="url(#clip1)" xlink:href="#r1" fill="lightblue" />
+    <use clip-path="url(#clip1)" href="#r1" fill="lightblue" />
   </svg>
 </div>
 <pre id="log"></pre>

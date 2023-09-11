@@ -18,7 +18,7 @@ The **`SVGUseElement`** interface corresponds to the {{SVGElement("use")}} eleme
 _This interface also inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGUseElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
 - {{domxref("SVGUseElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
 - {{domxref("SVGUseElement.y")}} {{ReadOnlyInline}}

@@ -22,7 +22,7 @@ function* (param0) {
 function* (param0, param1) {
   statements
 }
-function* (param0, param1, /* … ,*/ paramN) {
+function* (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -32,7 +32,7 @@ function* name(param0) {
 function* name(param0, param1) {
   statements
 }
-function* name(param0, param1, /* … ,*/ paramN) {
+function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -44,7 +44,7 @@ function* name(param0, param1, /* … ,*/ paramN) {
 - `name` {{optional_inline}}
   - : The function name. Can be omitted, in which case the function is _anonymous_. The name is only local to the function body.
 - `paramN` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
@@ -74,11 +74,8 @@ const x = function* (y) {
 
 ## See also
 
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("GeneratorFunction")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Operators/function", "function")}} expression

@@ -107,6 +107,7 @@ This works better with longer pieces of audio or video, but press play and click
 ## Seekable
 
 The `seekable` attribute returns a {{ domxref("TimeRanges") }} object and tells us which parts of the media can be played without delay; this is irrespective of whether that part has been downloaded or not. Some parts of the media may be seekable but not buffered if byte-range requests are enabled on the server. Byte range requests allow parts of the media file to be delivered from the server and so can be ready to play almost immediately — thus they are seekable.
+For more information on byte range requests see [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests).
 
 ```js
 const seekableTimeRanges = audio.seekable;

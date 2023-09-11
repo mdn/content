@@ -115,5 +115,5 @@ console.log(proxy.proxied); // "replaced value"
 
 ## See also
 
-- [`Proxy` and `Reflect` in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming) guide
+- {{jsxref("Reflect")}}

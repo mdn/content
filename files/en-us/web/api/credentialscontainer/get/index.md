@@ -309,10 +309,10 @@ navigator.credentials.get({ publicKey }).then((publicKeyCredential) => {
   const clientJSON = response.clientDataJSON;
 
   // Access signature ArrayBuffer
-  const clientJSON = response.signature;
+  const signature = response.signature;
 
   // Access userHandle ArrayBuffer
-  const clientJSON = response.userHandle;
+  const userHandle = response.userHandle;
 });
 ```
 

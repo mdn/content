@@ -12,7 +12,7 @@ The **`throw()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a 
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.throw(exception)
+asyncGeneratorInstance.throw(exception)
 ```
 
 ### Parameters
@@ -77,4 +77,4 @@ asyncGen
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

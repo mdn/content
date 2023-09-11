@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-## Page includes
+## Page front matter
 
 ### Title and slug
 
@@ -25,7 +25,7 @@ In ARIA role or attribute subpages, you need to include the following tags (see 
 
 ### Specifications
 
-In the value of the `spec_urls` frontmatter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
+In the value of the `spec_urls` front matter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
 
 - [ARIA](https://w3c.github.io/aria/)
 - [ARIA Authoring Practices](https://w3c.github.io/aria-practices/)
