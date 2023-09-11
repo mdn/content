@@ -7,7 +7,7 @@ browser-compat: css.properties.transition
 
 {{CSSRef}}
 
-The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.
+The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 
@@ -17,6 +17,7 @@ Transitions enable you to define the transition between two states of an element
 
 This property is a shorthand for the following CSS properties:
 
+- [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior) {{experimental_inline}}
 - [`transition-delay`](/en-US/docs/Web/CSS/transition-delay)
 - [`transition-duration`](/en-US/docs/Web/CSS/transition-duration)
 - [`transition-property`](/en-US/docs/Web/CSS/transition-property)
@@ -37,6 +38,9 @@ transition: margin-right 4s ease-in-out;
 
 /* property name | duration | easing function | delay */
 transition: margin-right 4s ease-in-out 1s;
+
+/* property name | duration | behavior */
+transition: display 4s allow-discrete;
 
 /* Apply to 2 properties */
 transition:
@@ -66,6 +70,10 @@ Each single-property transition describes the transition that should be applied 
 
 - zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use
 - zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.
+- zero or one value declaring whether to start transitions for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete):
+
+  - the keyword `allow-discrete`
+  - the keyword `normal`
 
 See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.
 
