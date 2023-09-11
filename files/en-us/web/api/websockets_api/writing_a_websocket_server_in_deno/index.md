@@ -1,12 +1,6 @@
 ---
 title: Writing a WebSocket server in JavaScript (Deno)
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Deno
-tags:
-  - HTML5
-  - Handshaking
-  - Tutorial
-  - WebSockets
-  - Deno
 ---
 
 ## Introduction
