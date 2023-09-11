@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
-[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) is a two-dimensional layout system for the web. It lets you organize content in rows and columns and has many features that make building complex layouts straightforward. This article will explain all you need to know to get started with grid layout.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) is a two-dimensional layout system for the web. It lets you organize content into rows and columns and offers many features to simplify the creation of complex layouts. This article will explain all you need to know to get started with grid layout.
 
 <table>
   <tbody>
@@ -48,9 +48,9 @@ The following video provides a nice visual explanation of using CSS Grid:
 
 ### Defining a grid
 
-Let's try out grid layouts with an example. First download and open [the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/0-starting-point.html) in your text editor and browser (you can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). You will see an example with a container, which has some child items. These display in normal flow by default, so the boxes display one below the other. We'll be working with this file for the first part of this lesson, making changes to see how its grid behaves.
+Let's try out grid layouts with the help of an example. Download and open [the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/0-starting-point.html) in your text editor and browser (you can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). You will see an example with a container, which has some child items. By default, these items are displayed in a normal flow, causing them to appear one below the other. For the initial part of this lesson, we'll be using this file to see how its grid behaves.
 
-To define a grid we use the `grid` value of the {{cssxref("display")}} property. As with [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), this enables Grid Layout; all of the direct children of the container become grid items. Add this to the CSS inside your file:
+Similar to how you define flexbox, you define a grid layout by setting the value of the {{cssxref("display")}} property to `grid`. As in the case of flexbox, the `display: grid` property transforms all the direct children of the container into grid items. Add the following CSS to your file:
 
 ```css
 .container {
@@ -240,13 +240,13 @@ Change your track listing to the following:
 
 You'll now get three `1fr` tracks just as before. The first value passed to the `repeat()` function specifies the number of times you want the listing to repeat, while the second value is a track listing, which may be one or more tracks that you want to repeat.
 
-### The implicit and explicit grid
+### Implicit and explicit grids
 
-We've only specified column tracks so far, but rows are being created to hold our content. This is an example of _explicit_ versus _implicit_ grid.
-Here's a bit more about the difference:
+Up to this point, we've specified only column tracks, but rows are automatically created to hold the content. This concept highlights the distinction between explicit and implicit grids.
+Here's a bit more about the difference between the two types of grids:
 
 - **Explicit grid** is created using `grid-template-columns` or `grid-template-rows`.
-- **Implicit grid** extends the defined explicit grid when content is placed outside of that grid, such as into our rows by drawing additional grid lines.
+- **Implicit grid** extends the defined explicit grid when content is placed outside of that grid, such as into the rows by drawing additional grid lines.
 
 By default, tracks created in the implicit grid are `auto` sized, which in general means that they're large enough to contain their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
 
@@ -290,7 +290,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '100%', 400) }}
+{{ EmbedLiveSample('Implicit_and_explicit_grids', '100%', 400) }}
 
 ### The minmax() function
 
@@ -363,20 +363,20 @@ This works because grid is creating as many 200-pixel columns as will fit into t
 
 We now move on from creating a grid to placing things on the grid. Our grid always has lines — these are numbered beginning with 1 and relate to the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes) of the document. For example, column line 1 in English (written left-to-right) would be on the left-hand side of the grid and row line 1 at the top, while in Arabic (written right-to-left), column line 1 would be on the right-hand side.
 
-We can arrange things along these lines by specifying the start and end line of the grid area we want to use that an item should be placed into. There are four properties that we can use to do this:
+To position items along these lines, we can specify the start and end lines of the grid area where an item should be placed. There are four properties we can use to do this:
 
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
 
-These properties can have a line number as their value, so we can specify that an item should start on line 1 and end on line 3, for example.
-You can also use shorthand properties that let you specify the start and end lines at once, separated by a forward slash `/`:
+These properties accept line numbers as their values, so we can specify that an item should start on line 1 and end on line 3, for example.
+Alternatively, you can also use shorthand properties that let you specify the start and end lines simultaneously, separated by a forward slash `/`:
 
 - {{cssxref("grid-column")}} shorthand for `grid-column-start` and `grid-column-end`
 - {{cssxref("grid-row")}} shorthand for `grid-row-start` and `grid-row-end`
 
-To see this in action, download the [line-based placement starting point](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html) file or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and a simple article outlined. You can see that _auto-placement_ is placing each item into its own cell on the grid.
+To see this in action, download the [line-based placement starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html) or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and a simple article outlined. You can see that _auto-placement_ is placing each item into its own cell in the grid.
 
 Let's arrange all of the elements for our site by using the grid lines. Add the following rules to the bottom of your CSS:
 
@@ -586,12 +586,12 @@ You can play around with our layout, changing the footer to only sit underneath 
 
 ## Nesting grids and subgrid
 
-It's also possible to nest grids inside each other and create a [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
-You can do this by setting `display: grid` on a grid item.
+It's possible to nest a grid within another grid, creating a ["subgrid"](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
+You can do this by setting the `display: grid` property on a grid item.
 
-Let's expand on the example by adding a container for articles and use a nested grid to control how multiple articles are laid out.
-We're only using one column in the nested grid, but we can define that the rows should be split into a 2:1:1 ratio using the `grid-template-rows` property.
-This way, we can make a layout where one article at the top of the page has a large display, while others have a smaller, preview-like layout.
+Let's expand on the previous example by adding a container for articles and using a nested grid to control the layout of multiple articles.
+While we're using only one column in the nested grid, we can define the rows to be split in a 2:1:1 ratio by using the `grid-template-rows` property.
+This approach allows us to create a layout where one article at the top of the page has a large display, while the others have a smaller, preview-like layout.
 
 ```html hidden live-sample___nesting-grids
 <div class="container">
@@ -707,10 +707,10 @@ article {
 
 {{EmbedLiveSample('nesting-grids', '100%', 1100)}}
 
-To make it easier to work with layouts in nested grids, you can use `subgrid` on `grid-template-rows` and `grid-template-columns` properties to use the parent grid's tracks.
+To make it easier to work with layouts in nested grids, you can use `subgrid` on `grid-template-rows` and `grid-template-columns` properties. This allows you to leverage the tracks defined in the parent grid.
 
-In the following example, we're using [line-based placement](#line-based_placement) so the nested grid spans multiple columns and rows of the parent grid.
-We've added `subgrid` to use the tracks of the parent's columns, but added a different layout for rows of the nested grid.
+In the following example, we're using [line-based placement](#line-based_placement), enabling the nested grid to span multiple columns and rows of the parent grid.
+We've added `subgrid` to inherit the parent grid's column tracks while adding a different layout for the rows within the nested grid.
 
 ```css hidden live-sample___subgrid
 body {
@@ -768,10 +768,10 @@ body {
 
 {{ EmbedLiveSample('subgrid', '100%', 300) }}
 
-## Grid frameworks in CSS Grid
+## Grid frameworks
 
-There are many grid frameworks available that provide a 12 or 16-column grid to help lay out your content.
-The good news is that you probably don't need any third-party frameworks to help you build grid-based layouts — it's already in the spec and supported in most modern browsers.
+Numerous grid frameworks are available, offering a 12 or 16-column grid, to help with laying out your content.
+The good news is that you probably won't need any third-party frameworks to help you create grid-based layouts — grid functionality is already included in the specification and is supported by most modern browsers.
 
 [Download the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html). This has a container with a 12-column grid defined and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
@@ -881,10 +881,10 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 
 ## See also
 
-- [CSS Grid guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides)
-- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
-- [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [CSS-Tricks Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) — an article explaining everything about Grid in a visually appealing way
-- [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid
+- A [list of guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides) related to the CSS grid layout
+- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) guide
+- [CSS grid inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) on firefox-source-docs
+- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/), a visual guide on CSS-Tricks (2023)
+- [Grid Garden](https://cssgridgarden.com/), an educational game to learn and better understand the basics of grid  on cssgridgarden.com
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
