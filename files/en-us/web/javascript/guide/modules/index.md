@@ -171,8 +171,8 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
     "imports": {
       "shapes": "./shapes/square.js",
       "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
       "https://example.com/shapes/square.js": "./shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
       "../shapes/square": "./shapes/square.js"
     }
   }
@@ -192,7 +192,7 @@ import { name as squareNameOne } from "shapes";
 import { name as squareNameTwo } from "shapes/square";
 
 // Remap a URL to another URL
-import { name as squareNameThree } from "https://example.com/shapes/moduleshapes/square.js";
+import { name as squareNameThree } from "https://example.com/shapes/square.js";
 ```
 
 If the module specifier has a trailing forward slash then the value must have one as well, and the key is matched as a "path prefix".
@@ -200,7 +200,7 @@ This allows remapping of whole classes of URLs.
 
 ```js
 // Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/square.js";
+import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
 ```
 
 It is possible for multiple keys in an import map to be valid matches for a module specifier.
@@ -826,7 +826,7 @@ This is useful because the code within [`main.js`](https://github.com/mdn/js-exa
 
 ## Import declarations are hoisted
 
-Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the line that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
 
 So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
 

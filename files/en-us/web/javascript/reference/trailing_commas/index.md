@@ -226,4 +226,4 @@ export { A as B, C as D, E as F, };
 
 ## See also
 
-- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

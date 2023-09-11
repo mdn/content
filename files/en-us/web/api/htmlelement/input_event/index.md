@@ -30,7 +30,22 @@ oninput = (event) => {};
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+An {{domxref("InputEvent")}}. Inherits from {{domxref("UIEvent")}}.
+
+{{InheritanceDiagram("InputEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
+
+- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
+  - : Returns a string with the inserted characters. This may be an empty string if the change doesn't insert text (for example, when deleting characters).
+- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
+  - : Returns a {{DOMxRef("DataTransfer")}} object containing information about richtext or plaintext data being added to or removed from editable content.
+- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
+  - : Returns the type of change for editable content such as, for example, inserting, deleting, or formatting text.
+- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
+  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Examples
 

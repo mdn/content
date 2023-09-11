@@ -114,7 +114,7 @@ new Intl.DurationFormat(locales, options)
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `locales` or `options` contain invalid values.
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Description
 

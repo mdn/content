@@ -6,35 +6,31 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 117 that affect developers. Firefox 117 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [August 29, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 117 that affect developers. Firefox 117 was released on August 29, 2023.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
+- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
+
 - The [`math-style`](/en-US/docs/Web/CSS/math-style) and [`math-depth`](/en-US/docs/Web/CSS/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
 
-- The [`contain-intrinsic-size: auto none;`](/en-US/docs/Web/CSS/contain-intrinsic-size) syntax is now supported, which allows for using the last-remembered size of an element if possible and falls back to `contain-intrinsic-size: none` otherwise.
-  This is useful in layouts using proportional sizes, such as grid or multi-column ([Firefox bug 1835813](https://bugzil.la/1835813)).
-
-#### Removals
+- The [`contain-intrinsic-size: auto none`](/en-US/docs/Web/CSS/contain-intrinsic-size) syntax is now supported, which allows for using the last-remembered size of an element if possible and falls back to `contain-intrinsic-size: none` otherwise.
+  This is useful for grid and multi-column layouts to allow elements to be laid out as though they have no contents instead of 0px height ([Firefox bug 1835813](https://bugzil.la/1835813)).
 
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### SVG
 
 - Inline SVGs now support `<script>` elements with `type="module"`, `defer`, and `async` attributes.
   This allows SVGs to use modern JavaScript features, including ES modules, and to load scripts asynchronously ([Firefox bug 1839954](https://bugzil.la/1839954)).
-
-#### Removals
 
 ### HTTP
 
@@ -44,26 +40,12 @@ This article provides information about the changes in Firefox 117 that affect d
 - The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
   This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
 
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
 
 - The {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} method can now be used to get the 2D context attributes being used by the browser ([Firefox bug 1517786](https://bugzil.la/1517786)).
 - The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
-
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
+- [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running in a worker.
+  The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -78,11 +60,19 @@ This article provides information about the changes in Firefox 117 that affect d
 - `headers` and `cookies` in `network` events are now serialized as `network.BytesValue`, which will provide a better support for non-UTF8 values ([Firefox bug 1842619](https://bugzil.la/1842619)).
 - The `browsingContext.create` command will now wait until the created context has a valid size ([Firefox bug 1847044](https://bugzil.la/1847044)).
 
+### Developer tools
+
+- The Network Monitor now shows information about proxied requests, including the proxy address, the proxy status, and the proxy HTTP version in the [Headers tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) ([Firefox bug 1707192](https://bugzil.la/1707192)).
+
+- The area selected by the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) can now be resized and moved using keyboard shortcuts.
+  Pressing the arrow keys moves the selected area, while pressing <kbd>Ctrl</kbd> + arrow keys (or <kbd>Cmd</kbd> + arrow keys on a Mac) resizes the selected area.
+  Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
+
+- Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
+
 ## Changes for add-on developers
 
-### Removals
-
-### Other
+No notable changes.
 
 ## Older versions
 

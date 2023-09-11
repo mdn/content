@@ -17,9 +17,9 @@ The **`TypedArray.of()`** static method creates a new
 
 ```js-nolint
 TypedArray.of()
-TypedArray.of(element0)
-TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, /* …, */ elementN)
+TypedArray.of(element1)
+TypedArray.of(element1, element2)
+TypedArray.of(element1, element2, /* …, */ elementN)
 ```
 
 Where `TypedArray` is one of:
@@ -38,7 +38,7 @@ Where `TypedArray` is one of:
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : Elements used to create the typed array.
 
 ### Return value
@@ -75,7 +75,7 @@ Int16Array.of(undefined); // Int16Array [ 0 ]
 ## See also
 
 - [Polyfill of `TypedArray.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.from()")}}
 - {{jsxref("Array.of()")}}

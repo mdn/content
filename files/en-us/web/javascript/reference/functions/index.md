@@ -374,7 +374,7 @@ Note that in the `if` test, a reference to `noFunc` is used — there are no bra
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
