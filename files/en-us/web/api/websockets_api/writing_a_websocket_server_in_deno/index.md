@@ -61,7 +61,7 @@ Create an `index.html` file. This file will contain a script that will ping the
 server every five seconds after a connection has been made.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <h2>WebSocket Test</h2>
 <p>Sends a ping every five seconds</p>
 <div id="output"></div>
