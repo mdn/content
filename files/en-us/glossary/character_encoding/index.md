@@ -20,3 +20,4 @@ This ensures that you can use characters from just about any human language in y
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
 - [Character encoding](https://en.wikipedia.org/wiki/Character_encoding) on Wikipedia
+- (https://en.nokia.com/520R975/)
