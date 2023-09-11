@@ -1,12 +1,11 @@
 ---
-title: CustomEvent.detail
+title: "CustomEvent: detail property"
+short-title: detail
 slug: Web/API/CustomEvent/detail
-tags:
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CustomEvent.detail
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`detail`** property of the {{domxref("CustomEvent")}} interface
@@ -19,19 +18,26 @@ Whatever data the event was initialized with.
 ## Example
 
 ```js
-// add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
-
-// create and dispatch the event
-let event = new CustomEvent("cat", {
+// create custom events
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    hazcheeseburger: true
-  }
+    name: "cat",
+  },
 });
-obj.dispatchEvent(event);
+const dogFound = new CustomEvent("animalfound", {
+  detail: {
+    name: "dog",
+  },
+});
 
-// Will return an object containing the hazcheeseburger property
-let myDetail = event.detail;
+// add an appropriate event listener
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+
+// dispatch the events
+obj.dispatchEvent(catFound);
+obj.dispatchEvent(dogFound);
+
+// "cat" and "dog" logged in the console
 ```
 
 ## Specifications

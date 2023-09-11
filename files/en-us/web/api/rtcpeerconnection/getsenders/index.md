@@ -1,18 +1,11 @@
 ---
-title: RTCPeerConnection.getSenders()
+title: "RTCPeerConnection: getSenders() method"
+short-title: getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
-tags:
-  - Media
-  - Method
-  - RTCPeerConnection
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getSenders
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getSenders
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -24,8 +17,8 @@ track's data.
 
 ## Syntax
 
-```js
-var senders = rtcPeerConnection.getSenders();
+```js-nolint
+getSenders()
 ```
 
 ### Return value
@@ -49,9 +42,9 @@ iterates over every sender, setting the corresponding media track's
 function setMuting(pc, muting) {
   let senderList = pc.getSenders();
 
-  senderList.forEach(sender) {
+  senderList.forEach((sender) => {
     sender.track.enabled = !muting;
-  }
+  });
 }
 ```
 
@@ -65,5 +58,5 @@ function setMuting(pc, muting) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCRtpSender")}}

@@ -1,14 +1,10 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-tags:
-  - Conditional Requests
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.If-Modified-Since
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Modified-Since`** request HTTP header makes the
@@ -41,7 +37,7 @@ The most common use case is to update a cached entity that has no associated
 
 ## Syntax
 
-```
+```http
 If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -67,7 +63,7 @@ If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-```
+```http
 If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

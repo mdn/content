@@ -1,28 +1,22 @@
 ---
-title: HTMLSlotElement.assignedNodes()
+title: "HTMLSlotElement: assignedNodes() method"
+short-title: assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
-tags:
-  - API
-  - HTMLSlotElement
-  - Method
-  - Reference
-  - assignedNodes
-  - shadow dom
+page-type: web-api-instance-method
 browser-compat: api.HTMLSlotElement.assignedNodes
 ---
+
 {{APIRef("Shadow DOM API")}}
 
-The **`assignedNodes()`** method of the
-{{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to
-this slot, and if the `flatten` option is set to `true`, the
-assigned nodes of any other slots that are descendants of this slot. If no assigned
-nodes are found, it returns the slot's fallback content.
+The **`assignedNodes()`** method of the {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to this slot.
+
+If the `flatten` option is set to `true`, it returns a sequence of both the nodes assigned to this slot, as well as the nodes assigned to any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.
 
 ## Syntax
 
-```js
-HTMLSlotElement.assignedNodes()
-HTMLSlotElement.assignedNodes(options)
+```js-nolint
+assignedNodes()
+assignedNodes(options)
 ```
 
 ### Parameters
@@ -32,7 +26,7 @@ HTMLSlotElement.assignedNodes(options)
   - : An object that sets options for the nodes to be returned. The available options are:
 
     - `flatten`
-      - : A {{jsxref('Boolean')}} indicating whether to return the assigned nodes of any available child `<slot>` elements (`true`) or not (`false`). Defaults to `false`.
+      - : A boolean value indicating whether to return the assigned nodes of any available child `<slot>` elements (`true`) or not (`false`). Defaults to `false`.
 
 ### Return value
 
@@ -40,15 +34,15 @@ An array of nodes.
 
 ## Examples
 
-The following snippet is taken from our [slotchange
-example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see
-it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([See it live](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
+  let nodes = slots[1].assignedNodes();
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

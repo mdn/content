@@ -1,23 +1,14 @@
 ---
-title: WebGLRenderingContext.getUniformLocation()
+title: "WebGLRenderingContext: getUniformLocation() method"
+short-title: getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
-tags:
-  - API
-  - Method
-  - Reference
-  - Uniform Variables
-  - Uniforms
-  - Variables
-  - Variables in WebGL
-  - WebGL
-  - WebGLRenderingContext
-  - getUniformLocation
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
+
 {{APIRef("WebGL")}}
 
-Part of the [WebGL
-API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
+Part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
 **`getUniformLocation()`** returns the location of a
 specific **uniform** variable which is part of a given
 {{domxref("WebGLProgram")}}.
@@ -32,11 +23,13 @@ inputs:
 
 - {{domxref("WebGLRenderingContext.getUniform", "getUniform()")}}
   - : Returns the value of the uniform at the given location.
-- {{domxref("WebGLRenderingContext.uniform", "uniform[1234][fi][v]()")}}
+  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Sets the uniform's value to the specified value, which may be a single floating
     point or integer number, or a 2-4 component vector specified either as a list of
     values or as a {{jsxref("Float32Array")}} or {{jsxref("Int32Array")}}.
-- {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}
+    <!-- markdownlint-disable MD052 — text in code block is misidentified as image -->
+- [`WebGLRenderingContext.uniformMatrix[234][fv]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix)
   - : Sets the uniform's value to the specified matrix, possibly with transposition. The
     value is represented as a sequence of `GLfloat` values or as a
     `Float32Array`.
@@ -45,8 +38,8 @@ The uniform itself is declared in the shader program using GLSL.
 
 ## Syntax
 
-```js
-WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(program, name);
+```js-nolint
+getUniformLocation(program, name)
 ```
 
 ### Parameters
@@ -55,7 +48,7 @@ WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(program, name);
   - : The {{domxref("WebGLProgram")}} in which to locate the specified uniform variable.
 - `name`
 
-  - : A {{domxref("DOMString")}} specifying the name of the uniform variable whose
+  - : A string specifying the name of the uniform variable whose
     location is to be returned. The name can't have any whitespace in it, and you
     can't use this function to get the location of any uniforms starting with the
     reserved string `"gl_"`, since those are internal to the WebGL
@@ -79,7 +72,7 @@ WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(program, name);
 ### Return value
 
 A {{domxref("WebGLUniformLocation")}} value indicating the location of the named
-variable, if it exists. If the specified variable doesn't exist, {{jsxref("null")}} is
+variable, if it exists. If the specified variable doesn't exist, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is
 returned instead.
 
 The `WebGLUniformLocation` is an opaque value used to uniquely identify the
@@ -102,29 +95,24 @@ The following errors may occur; to check for errors after
   - : The `program` parameter doesn't correspond to a GLSL program generated
     by WebGL, or the specified program hasn't been linked successfully.
 
-## Example
+## Examples
 
-In this example, taken from the `animateScene()` method in the article [A
-basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene), obtains the locations of three uniforms from
+In this example, taken from the `animateScene()` method in the article [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene), obtains the locations of three uniforms from
 the shading program, then sets the value of each of the three uniforms.
 
 ```js
 gl.useProgram(shaderProgram);
 
-uScalingFactor =
-    gl.getUniformLocation(shaderProgram, "uScalingFactor");
-uGlobalColor =
-    gl.getUniformLocation(shaderProgram, "uGlobalColor");
-uRotationVector =
-    gl.getUniformLocation(shaderProgram, "uRotationVector")
+uScalingFactor = gl.getUniformLocation(shaderProgram, "uScalingFactor");
+uGlobalColor = gl.getUniformLocation(shaderProgram, "uGlobalColor");
+uRotationVector = gl.getUniformLocation(shaderProgram, "uRotationVector");
 
 gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
 ```
 
-> **Note:** This code snippet is taken from [the
-> function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
+> **Note:** This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
 > See that article for the full sample and to see the resulting animation in action.
 
 After setting the current shading program to `shaderProgram`, this code

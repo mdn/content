@@ -1,26 +1,11 @@
 ---
-title: XRViewport.width
+title: "XRViewport: width property"
+short-title: width
 slug: Web/API/XRViewport/width
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRViewport
-  - augmented
-  - size
-  - viewport
-  - width
+page-type: web-api-instance-property
 browser-compat: api.XRViewport.width
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} property

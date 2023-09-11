@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
+title: "CanvasRenderingContext2D: strokeRect() method"
+short-title: strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.strokeRect
 ---
+
 {{APIRef}}
 
 The
@@ -24,8 +21,8 @@ on it.
 
 ## Syntax
 
-```js
-void ctx.strokeRect(x, y, width, height);
+```js-nolint
+strokeRect(x, y, width, height)
 ```
 
 The `strokeRect()` method draws a stroked rectangle whose starting point is
@@ -42,6 +39,10 @@ at `(x, y)` and whose size is specified by `width` and
   - : The rectangle's width. Positive values are to the right, and negative to the left.
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -62,9 +63,9 @@ The rectangle's top-left corner is at (20, 10). It has a width of 160 and a heig
 100\.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.strokeStyle = 'green';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.strokeStyle = "green";
 ctx.strokeRect(20, 10, 160, 100);
 ```
 
@@ -85,13 +86,13 @@ This example draws a rectangle with a drop shadow and thick, beveled outlines.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.shadowColor = '#d53';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.shadowColor = "#d53";
 ctx.shadowBlur = 20;
-ctx.lineJoin = 'bevel';
+ctx.lineJoin = "bevel";
 ctx.lineWidth = 15;
-ctx.strokeStyle = '#38f';
+ctx.strokeStyle = "#38f";
 ctx.strokeRect(30, 30, 160, 90);
 ```
 

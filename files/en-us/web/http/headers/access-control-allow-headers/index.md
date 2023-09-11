@@ -1,14 +1,10 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Headers`** response header is used in response to a {{glossary("preflight request")}} which includes the {{HTTPHeader("Access-Control-Request-Headers")}} to indicate which HTTP headers can be used during the actual request.
@@ -32,7 +28,7 @@ This header is required if the request has an {{HTTPHeader("Access-Control-Reque
 
 ## Syntax
 
-```
+```http
 Access-Control-Allow-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Allow-Headers: *
 ```
@@ -50,7 +46,7 @@ Access-Control-Allow-Headers: *
 
 Here's an example of what an `Access-Control-Allow-Headers` header might look like. It indicates that a custom header named `X-Custom-Header` is supported by CORS requests to the server (in addition to the {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}).
 
-```
+```http
 Access-Control-Allow-Headers: X-Custom-Header
 ```
 
@@ -58,7 +54,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 This example shows `Access-Control-Allow-Headers` when it specifies support for multiple headers.
 
-```
+```http
 Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
 ```
 
@@ -66,21 +62,21 @@ Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
 
 Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in `Access-Control-Allow-Headers`, listing them anyway will circumvent the [additional restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions) that apply.
 
-```
+```http
 Access-Control-Allow-Headers: Accept
 ```
 
 ### Example preflight request
 
-Let's look at an example of a {{glossary("preflight request")}} involving `Access-Control-Allow-Headers`.
+Let's look at an example of a {{glossary("preflight request")}} involving `Access-Control-Allow-Headers`.
 
 #### Request
 
-First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.
+First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.
 
-The preflight request below tells the server that we want to send a CORS `GET` request with the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `x-requested-with`).
+The preflight request below tells the server that we want to send a CORS `GET` request with the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `x-requested-with`).
 
-```
+```http
 OPTIONS /resource/foo
 Access-Control-Request-Method: GET
 Access-Control-Request-Headers: Content-Type, x-requested-with
@@ -91,7 +87,7 @@ Origin: https://foo.bar.org
 
 If the CORS request indicated by the preflight request is authorized, the server will respond to the preflight request with a message that indicates the allowed origin, methods, and headers. Below we see that {{HTTPHeader("Access-Control-Allow-Headers")}} includes the headers that were requested.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 0
 Connection: keep-alive

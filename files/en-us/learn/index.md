@@ -1,16 +1,9 @@
 ---
 title: Learn web development
 slug: Learn
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Index
-  - Intro
-  - Landing
-  - Learn
-  - Web
+page-type: landing-page
 ---
+
 {{LearnSidebar}}
 
 Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites.
@@ -18,12 +11,6 @@ Welcome to the MDN learning area. This set of articles aims to guide complete be
 The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from [the rest of MDN](/en-US/), and other intermediate to advanced resources that assume a lot of previous knowledge.
 
 If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
-
-## What's new?
-
-The content in the learning area is being added to regularly. We have started keeping [Learning area release notes](/en-US/docs/Learn/Release_notes) to show what has changed — keep checking back frequently!
-
-If you have questions regarding topics you'd like to see covered or feel are missing, drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
 
 > **Callout:**
 >
@@ -47,8 +34,6 @@ If you have questions regarding topics you'd like to see covered or feel are mis
 
 > **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-{{LearnBox({"title":"Random glossary entry"})}}
-
 ## Topics covered
 
 The following is a list of all the topics we cover in the MDN learning area.
@@ -58,7 +43,7 @@ The following is a list of all the topics we cover in the MDN learning area.
 - [HTML — Structuring the web](/en-US/docs/Learn/HTML)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
 - [CSS — Styling the web](/en-US/docs/Learn/CSS)
-  - : CSS is the language that we can use to style and layout our web content, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
+  - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
@@ -67,6 +52,8 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
 - [Web Performance — making websites fast and responsive](/en-US/docs/Learn/Performance)
   - : Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.
+- [MathML](/en-US/docs/Learn/MathML)
+  - : MathML is the language that we can use to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. This topic covers MathML.
 - [Tools and testing](/en-US/docs/Learn/Tools_and_testing)
   - : This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.
 - [Server-side website programming](/en-US/docs/Learn/Server-side)
@@ -74,37 +61,37 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 ## Getting our code examples
 
-The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://github.com/mdn/learning-area/archive/master.zip).
+The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
-1.  [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
-2.  Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-3.  To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
+1. [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+2. Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
+3. To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
 
-    ```bash
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```bash
+   git clone https://github.com/mdn/learning-area
+   ```
 
-4.  You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
+4. You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
 You can update the `learning-area` repository with any changes made to the master version on GitHub with the following steps:
 
-1.  In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
+1. In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
-2.  Update the repository using the following command:
+2. Update the repository using the following command:
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## Contact us
 
-If you want to get in touch with us about anything, the best way is to drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
+If you want to get in touch with us about anything, use the [communication channels](/en-US/docs/MDN/Community/Communication_channels). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
 If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 
@@ -122,10 +109,10 @@ If you're interested in helping develop/improve the content, take a look at [how
   - : Basic coding theory with a gamified learning process. Mainly focused on beginners.
 - [Code.org](https://code.org/)
   - : Basic coding theory and practice, primarily aimed at children/complete beginners.
-- [EXLskills](https://exlskills.com/learn-en/courses)
-  - : Free and open courses for learning tech skills, with mentorship and project-based learning.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Interactive site with tutorials and projects to learn web development.
+- [The Odin Project](https://www.theodinproject.com/)
+  - : Features a free and open-source full-stack curriculum, from beginner to advanced.
 - [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
   - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
 - [Edabit](https://edabit.com/challenges/javascript)

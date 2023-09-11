@@ -1,16 +1,14 @@
 ---
-title: ContactsManager.getProperties()
+title: "ContactsManager: getProperties() method"
+short-title: getProperties()
 slug: Web/API/ContactsManager/getProperties
-tags:
-  - Contact Picker API
-  - Contacts
-  - ContactsManager
-  - Method
-  - PWA
-  - contact picker
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ContactsManager.getProperties
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`getProperties()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves
@@ -19,8 +17,8 @@ properties are available.
 
 ## Syntax
 
-```js
-var ContactProperties = ContactsManager.getProperties();
+```js-nolint
+getProperties()
 ```
 
 ### Parameters
@@ -53,7 +51,7 @@ whether the current system supports the `icon` property.
 ```js
 async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
-  if (!supportedProperties.includes('icon')) {
+  if (!supportedProperties.includes("icon")) {
     console.log("Your system does not support getting icons.");
   }
 }
@@ -68,10 +66,10 @@ const supportedProperties = await navigator.contacts.getProperties();
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(supportedProperties);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(supportedProperties);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

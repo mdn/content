@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.viewport()
+title: "WebGLRenderingContext: viewport() method"
+short-title: viewport()
 slug: Web/API/WebGLRenderingContext/viewport
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.viewport
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.viewport()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the viewport, which specifies
@@ -17,8 +14,8 @@ coordinates.
 
 ## Syntax
 
-```js
-void gl.viewport(x, y, width, height);
+```js-nolint
+viewport(x, y, width, height)
 ```
 
 ### Parameters
@@ -29,16 +26,16 @@ void gl.viewport(x, y, width, height);
 - `y`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
     of the viewport origin. Default value: 0.
-- width
+- `width`
   - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the viewport. Default
     value: width of the canvas.
-- height
+- `height`
   - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the viewport. Default
     value: height of the canvas.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Errors thrown
 

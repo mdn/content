@@ -1,32 +1,28 @@
 ---
 title: CSSTransition
 slug: Web/API/CSSTransition
-tags:
-  - API
-  - Animation
-  - CSSTransition
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.CSSTransition
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a [CSS Transition](/en-US/docs/Web/CSS/CSS_Transitions).
+{{APIRef("Web Animations")}}
 
-## Properties
+The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a [CSS Transition](/en-US/docs/Web/CSS/CSS_transitions).
 
-Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.
+{{InheritanceDiagram}}
 
-- {{domxref("CSSTransition.transitionProperty")}}{{readonlyinline}}
-  - : Returns the transition CSS property name as a {{domxref("CSSOMString")}}.
+## Instance properties
 
-### Event handlers
+_This interface inherits properties from its parent, {{domxref("Animation")}}._
 
-No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.
+- {{domxref("CSSTransition.transitionProperty")}} {{ReadOnlyInline}}
+  - : Returns the transition CSS property name as a string.
 
-## Methods
+## Instance methods
 
-No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.
+_This interface inherits methods from its parent, {{domxref("Animation")}}._
+
+No specific methods.
 
 ## Examples
 
@@ -50,7 +46,7 @@ The transition in the following example changes the width of the box on hover. C
 
 ```js
 const item = document.querySelector(".box");
-item.addEventListener('transitionrun', () => {
+item.addEventListener("transitionrun", () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0]);
 });

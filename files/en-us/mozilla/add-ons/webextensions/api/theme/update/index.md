@@ -1,24 +1,17 @@
 ---
 title: theme.update()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - Update
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.theme.update
 ---
+
 {{AddonSidebar()}}
 
 Updates the browser theme according to the content of given {{WebExtAPIRef("theme.Theme", "Theme")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.update(
   windowId,    // integer
   theme        // object
@@ -42,13 +35,13 @@ Sets the browser theme to use a sun graphic with complementary background color:
 
 ```js
 const suntheme = {
- images: {
-   theme_frame: 'sun.jpg',
- },
- colors: {
-   frame: '#CF723F',
-   tab_background_text: '#111',
- }
+  images: {
+    theme_frame: "sun.jpg",
+  },
+  colors: {
+    frame: "#CF723F",
+    tab_background_text: "#111",
+  },
 };
 
 browser.theme.update(suntheme);
@@ -58,19 +51,19 @@ Set the theme for just the currently focused window:
 
 ```js
 const day = {
-    images: {
-      theme_frame: 'sun.jpg',
-    },
-    colors: {
-      frame: '#CF723F',
-      tab_background_text: '#111',
-    }
+  images: {
+    theme_frame: "sun.jpg",
+  },
+  colors: {
+    frame: "#CF723F",
+    tab_background_text: "#111",
+  },
 };
 
 browser.menus.create({
   id: "set-theme",
   title: "set theme",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 async function updateThemeForCurrentWindow() {

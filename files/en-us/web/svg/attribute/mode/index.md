@@ -1,24 +1,24 @@
 ---
 title: mode
 slug: Web/SVG/Attribute/mode
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feBlend.mode
 ---
+
 {{SVGRef}}
 
 The **`mode`** attribute defines the blending mode on the {{SVGElement("feBlend")}} filter primitive.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feBlend")}}
+- {{SVGElement("feBlend")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -26,20 +26,38 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="blending1" x="0" y="0" width="100%" height="100%">
-    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-        flood-color="seagreen" flood-opacity="1"/>
-    <feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/>
+    <feFlood
+      result="floodFill"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      flood-color="seagreen"
+      flood-opacity="1" />
+    <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
   </filter>
   <filter id="blending2" x="0" y="0" width="100%" height="100%">
-    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-        flood-color="seagreen" flood-opacity="1"/>
-    <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge"/>
+    <feFlood
+      result="floodFill"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      flood-color="seagreen"
+      flood-opacity="1" />
+    <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge" />
   </filter>
 
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#blending1);"/>
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#blending2); transform:translateX(220px);"/>
+  <image
+    href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#blending1);" />
+  <image
+    href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#blending2); transform:translateX(220px);" />
 </svg>
 ```
 
@@ -68,31 +86,7 @@ For a description of the values, see {{cssxref("blend-mode")}}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feblend-mode", "mode")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feBlendModeAttribute", "mode")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

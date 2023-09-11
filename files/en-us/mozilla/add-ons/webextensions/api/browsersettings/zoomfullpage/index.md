@@ -1,17 +1,10 @@
 ---
 title: browserSettings.zoomFullPage
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - zoomFullPage
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.zoomFullPage
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
@@ -36,8 +29,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.zoomFullPage.set({value: false}).
-  then(logResult);
+browser.browserSettings.zoomFullPage.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

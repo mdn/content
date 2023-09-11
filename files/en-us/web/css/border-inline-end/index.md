@@ -1,20 +1,10 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - border-inline
-  - border-inline-end
-  - border-inline-end-color
-  - border-inline-end-style
-  - border-inline-end-width
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-inline-end
 ---
+
 {{CSSRef}}
 
 The **`border-inline-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline-end border property values in a single place in the style sheet.
@@ -40,6 +30,7 @@ border-inline-end: medium dashed blue;
 border-inline-end: inherit;
 border-inline-end: initial;
 border-inline-end: revert;
+border-inline-end: revert-layer;
 border-inline-end: unset;
 ```
 
@@ -55,8 +46,8 @@ The `border-inline-end` is specified with one or more of the following, in any o
   - : The width of the border. See {{cssxref("border-width")}}.
 - `<'border-style'>`
   - : The line style of the border. See {{cssxref("border-style")}}.
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -103,5 +94,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

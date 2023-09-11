@@ -1,17 +1,12 @@
 ---
-title: Range()
+title: "Range: Range() constructor"
+short-title: Range()
 slug: Web/API/Range/Range
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM Reference
-  - Experimental
-  - Range
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.Range.Range
 ---
-{{ APIRef("DOM") }} {{SeeCompatTable}}
+
+{{ APIRef("DOM") }}
 
 The **`Range()`** constructor returns a newly created
 {{domxref("Range")}} object whose start and end is the global {{domxref("Document")}}
@@ -19,11 +14,15 @@ object.
 
 ## Syntax
 
-```js
-range = new Range()
+```js-nolint
+new Range()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 In this example we create a new range with the `Range()` constructor, and
 set its beginning and end positions using the {{domxref("Range.setStartBefore()")}} and
@@ -42,7 +41,7 @@ set its beginning and end positions using the {{domxref("Range.setStartBefore()"
 ### JavaScript
 
 ```js
-const paragraphs = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll("p");
 
 // Create new range
 const range = new Range();
@@ -62,7 +61,7 @@ selection.addRange(range);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples", 400, 210)}}
 
 ## Specifications
 

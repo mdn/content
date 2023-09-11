@@ -1,15 +1,11 @@
 ---
-title: ResizeObserver()
+title: "ResizeObserver: ResizeObserver() constructor"
+short-title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - observers
+page-type: web-api-constructor
 browser-compat: api.ResizeObserver.ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserver`** constructor creates a
@@ -19,8 +15,8 @@ content or border box of an {{domxref('Element')}} or the bounding box of an
 
 ## Syntax
 
-```js
-var ResizeObserver = new ResizeObserver(callback)
+```js-nolint
+new ResizeObserver(callback)
 ```
 
 ### Parameters
@@ -42,8 +38,8 @@ var ResizeObserver = new ResizeObserver(callback)
     The callback will generally follow a pattern along the lines of:
 
     ```js
-    function(entries, observer) {
-      for (let entry of entries) {
+    function callback(entries, observer) {
+      for (const entry of entries) {
         // Do something to each entry
         // and possibly something to the observer itself
       }
@@ -53,27 +49,41 @@ var ResizeObserver = new ResizeObserver(callback)
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see
-source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example:
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
-      } else {
-        // legacy path
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
-      }
-    } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
-    }
-  }
-  console.log('Size changed');
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
+      if (entry.contentBoxSize[0]) {
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize[0].inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize[0].inlineSize / 600,
+        )}rem`;
+      } else {
+        // legacy path
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize.inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize.inlineSize / 600,
+        )}rem`;
+      }
+    } else {
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200,
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+    }
+  }
+  console.log("Size changed");
 });
 
 resizeObserver.observe(divElem);

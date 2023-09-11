@@ -1,19 +1,17 @@
 ---
-title: CSSPrimitiveValue.getCounterValue()
+title: "CSSPrimitiveValue: getCounterValue() method"
+short-title: getCounterValue()
 slug: Web/API/CSSPrimitiveValue/getCounterValue
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - getCounterValue
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getCounterValue()`** method of the
-{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 value. If this CSS value doesn't contain a counter value, a {{domxref("DOMException")}}
 is raised. Modification to the corresponding style property can be achieved using the
 {{domxref("Counter")}} interface.
@@ -28,9 +26,13 @@ is raised. Modification to the corresponding style property can be achieved usin
 
 ## Syntax
 
-```js
-var counterValue = cssPrimitiveValue.getCounterValue();
+```js-nolint
+getCounterValue()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -44,7 +46,7 @@ A {{domxref("Counter")}} object representing the counter value.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

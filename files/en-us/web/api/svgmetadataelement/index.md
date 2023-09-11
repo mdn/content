@@ -1,25 +1,21 @@
 ---
 title: SVGMetadataElement
 slug: Web/API/SVGMetadataElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGMetadataElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMetadataElement`** interface corresponds to the {{SVGElement("metadata")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 

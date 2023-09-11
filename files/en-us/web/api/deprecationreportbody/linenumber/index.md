@@ -1,27 +1,20 @@
 ---
-title: DeprecationReportBody.lineNumber
+title: "DeprecationReportBody: lineNumber property"
+short-title: lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
-tags:
-  - API
-  - Property
-  - Reference
-  - lineNumber
-  - DeprecationReportBody
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.lineNumber
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
 > **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.
 
-## Syntax
-
-```js
-let lineNumber = DeprecationReportBody.lineNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the line is not known.
 
@@ -31,11 +24,11 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile); // the source file

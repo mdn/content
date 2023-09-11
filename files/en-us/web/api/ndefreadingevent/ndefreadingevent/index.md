@@ -1,39 +1,40 @@
 ---
-title: NDEFReadingEvent.NDEFReadingEvent()
+title: "NDEFReadingEvent: NDEFReadingEvent() constructor"
+short-title: NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
-tags:
-  - API
-  - Constructor
-  - Reference
-  - NDEFReadingEvent
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+
+{{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
 
 The **`NDEFReadingEvent()`** constructor creates a new {{domxref("NDEFReadingEvent")}} object which represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 
 ## Syntax
 
-```js
-new NDEFReadingEvent(type, options);
+```js-nolint
+new NDEFReadingEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : Will always be `'type'`.
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `reading`.
 - `options`
 
-  - : An object with the following members:
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
 
-    - `serialNumber`
-      - : The serial number of the device a message was read from.
+    - `serialNumber` {{optional_inline}}
+      - : The serial number of the device a message was read from. It default to `""`, and can be set to `null`.
     - `message`
 
-      - : An array of objects with the following members:
+      - : An object with the following members:
 
         - `data` {{optional_inline}}
-          - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+          - : Contains the data to be transmitted. It can be a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}
           - : A string specifying the record's encoding.
         - `id` {{optional_inline}}
@@ -64,6 +65,10 @@ new NDEFReadingEvent(type, options);
               - : The record type is not known.
             - `"URL"`
               - : A URL as defined by the [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) specification.
+
+### Return value
+
+A new {{domxref("NDEFReadingEvent")}} object.
 
 ## Specifications
 

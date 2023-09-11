@@ -1,47 +1,32 @@
 ---
-title: SpeechSynthesisVoice.lang
+title: "SpeechSynthesisVoice: lang property"
+short-title: lang
 slug: Web/API/SpeechSynthesisVoice/lang
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - lang
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisVoice.lang
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`lang`** read-only property of the
-{{domxref("SpeechSynthesisVoice")}} interface returns a BCP 47 language tag indicating
-the language of the voice.
+{{APIRef("Web Speech API")}}
 
-## Syntax
+The **`lang`** read-only property of the {{domxref("SpeechSynthesisVoice")}} interface returns a BCP 47 language tag indicating the language of the voice.
 
-```js
-var myLang = speechSynthesisVoiceInstance.lang;
-```
+## Value
 
-### Value
-
-A {{domxref("DOMString")}} representing the language of the device.
+A string representing the language of the device.
 
 ## Examples
 
 ```js
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+for (let i = 0; i < voices.length; i++) {
+  const option = document.createElement("option");
+  option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-  if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+  if (voices[i].default) {
+    option.textContent += " — DEFAULT";
   }
 
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+  option.setAttribute("data-lang", voices[i].lang);
+  option.setAttribute("data-name", voices[i].name);
   voiceSelect.appendChild(option);
 }
 ```

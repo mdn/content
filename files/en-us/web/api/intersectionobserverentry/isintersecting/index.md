@@ -1,17 +1,11 @@
 ---
-title: IntersectionObserverEntry.isIntersecting
+title: "IntersectionObserverEntry: isIntersecting property"
+short-title: isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
-tags:
-  - API
-  - Experimental
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - isIntersecting
+page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.isIntersecting
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
@@ -22,20 +16,14 @@ observer's root. If this is `true`, then, the
 intersection; if it's `false`, then you know the transition is from
 intersecting to not-intersecting.
 
-## Syntax
-
-```js
-var isIntersecting = IntersectionObserverEntry.isIntersecting;
-```
-
-### Value
+## Value
 
 A Boolean value which indicates whether the
 {{domxref("IntersectionObserverEntry.target", "target")}} element has transitioned into
 a state of intersection (`true`) or out of a state of intersection
 (`false`).
 
-## Example
+## Examples
 
 In this simple example, an intersection callback is used to update a counter of how
 many targeted elements are currently intersecting with the
@@ -43,7 +31,7 @@ many targeted elements are currently intersecting with the
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       intersectingCount += 1;
     } else {
@@ -54,8 +42,7 @@ function intersectionCallback(entries) {
 ```
 
 To see a more concrete example, take a look at
-{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
-  "Handling intersection changes")}}.
+[Handling intersection changes](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes).
 
 ## Specifications
 

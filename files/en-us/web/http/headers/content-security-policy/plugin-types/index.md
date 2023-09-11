@@ -1,26 +1,20 @@
 ---
-title: 'CSP: plugin-types'
+title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Flash
-  - HTTP
-  - Java
-  - Plugin
-  - Plugins
-  - Security
-browser-compat: http.headers.csp.Content-Security-Policy.plugin-types
+page-type: http-csp-directive
+status:
+  - deprecated
+  - non-standard
+browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
-{{HTTPSidebar}}{{deprecated_header}}
+
+{{HTTPSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`plugin-types`** directive restricts the set of plugins that
 can be embedded into a document by limiting the types of resources which can be loaded.
 
-Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
-{{HTMLElement("applet")}} element will fail if:
+Instantiation of an {{HTMLElement("embed")}} or {{HTMLElement("object")}} element will fail if:
 
 - the element to load does not declare a valid MIME type,
 - the declared type does not match one of specified types in the
@@ -49,14 +43,13 @@ Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
 One or more [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can
 be set for the `plugin-types` policy:
 
-```
+```http
 Content-Security-Policy: plugin-types <type>/<subtype>;
 Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
 
 - \<type>/\<subtype>
-  - : A valid [MIME
-    type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
+  - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
 ## Examples
 
@@ -67,30 +60,7 @@ To disallow all plugins, the {{CSP("object-src")}} directive should be set to
 is only used if you are allowing plugins with `object-src` at all.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-```
-
-### Allowing Flash content
-
-The content security policy
-
-```
-Content-Security-Policy: plugin-types application/x-shockwave-flash
-```
-
-will allow to load flash objects:
-
-```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
-```
-
-### Allowing Java applets
-
-To load an {{HTMLElement("applet")}} you must specify
-`application/x-java-applet`:
-
-```
-Content-Security-Policy: plugin-types application/x-java-applet
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ## Specifications
@@ -106,5 +76,4 @@ Not part of any current specification. Used to be defined in [CSP 2](https://www
 - {{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}
 - {{HTMLElement("object")}}
 - {{HTMLElement("embed")}}
-- {{HTMLElement("applet")}}
 - {{HTTPHeader("X-Content-Type-Options")}}

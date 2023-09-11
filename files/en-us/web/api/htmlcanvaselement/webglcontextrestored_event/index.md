@@ -1,50 +1,59 @@
 ---
-title: 'HTMLCanvasElement: webglcontextrestored event'
+title: "HTMLCanvasElement: webglcontextrestored event"
+short-title: webglcontextrestored
 slug: Web/API/HTMLCanvasElement/webglcontextrestored_event
-tags:
-  - WebGL
+page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
 ---
+
 {{APIRef}}
 
 The **`webglcontextrestored`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent restores the drawing buffer for a {{domxref("WebGLRenderingContext")}} object.
 
 Once the context is restored, WebGL resources such as textures and buffers that were created before the context was lost are no longer valid. You need to reinitialize the state of your WebGL application and recreate resources.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("WebGLContextEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>none</td>
-    </tr>
-  </tbody>
-</table>
+This event does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("webglcontextrestored", (event) => {});
+
+onwebglcontextrestored = (event) => {};
+```
+
+## Event type
+
+A {{domxref("WebGLContextEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("WebGLContextEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its parent interface, {{domxref("Event")}}._
+
+- {{domxref("WebGLContextEvent.statusMessage")}}
+  - : A read-only property containing additional information about the event.
 
 ## Example
 
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the `webglcontextrestored` event:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextrestored', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextrestored",
+  (e) => {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').restoreContext();
+gl.getExtension("WEBGL_lose_context").restoreContext();
 
 // "webglcontextrestored" event is logged.
 ```

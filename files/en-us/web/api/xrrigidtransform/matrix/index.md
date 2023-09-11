@@ -1,25 +1,11 @@
 ---
-title: XRRigidTransform.matrix
+title: "XRRigidTransform: matrix property"
+short-title: matrix
 slug: Web/API/XRRigidTransform/matrix
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - matrix
-  - transform
+page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.matrix
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property
@@ -47,7 +33,7 @@ All 4x4 transform matrices used in WebGL are stored in 16-element
 into the array in column-major order; that is, each column is written into the array
 top-down before moving to the
 right one column and writing the next column into the array. Thus, for an array \[a0, a1,
-a2, ..., a13, a14, a15], the
+a2, …, a13, a14, a15], the
 matrix looks like this:
 
 <math display="block"><semantics><mrow><mo>[</mo>
@@ -416,8 +402,9 @@ to position and orient it.
 
 ```js
 let transform = new XRRigidTransform(
-                      {x: 0, y: 0.5, z: 0.5},
-                      {x: 0, y: -0.5, z: -0.5, w: 1});
+  { x: 0, y: 0.5, z: 0.5 },
+  { x: 0, y: -0.5, z: -0.5, w: 1 },
+);
 drawGLObject("magic-lamp", transform.matrix);
 ```
 

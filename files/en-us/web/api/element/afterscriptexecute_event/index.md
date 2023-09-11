@@ -1,12 +1,13 @@
 ---
-title: 'Element: afterscriptexecute event'
+title: "Element: afterscriptexecute event"
+short-title: afterscriptexecute
 slug: Web/API/Element/afterscriptexecute_event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+page-type: web-api-event
+status:
+  - non-standard
 browser-compat: api.Element.afterscriptexecute_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 > **Warning:** This event was a proposal in an early version of the specification. Do not rely on it.
@@ -15,26 +16,21 @@ The **`afterscriptexecute`** event is fired after a script has been executed.
 
 It is a proprietary event specific to Gecko (Firefox).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("afterscriptexecute", (event) => {});
+
+onafterscriptexecute = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Specifications
 

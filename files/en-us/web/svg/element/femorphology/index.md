@@ -1,15 +1,10 @@
 ---
 title: <feMorphology>
 slug: Web/SVG/Element/feMorphology
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsMobileBrowserCompatibility
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feMorphology
 ---
+
 {{SVGRef}}
 
 The **`<feMorphology>`** [SVG](/en-US/docs/Web/SVG) filter primitive is used to erode or dilate the input image. Its usefulness lies especially in fattening or thinning effects.
@@ -22,19 +17,19 @@ The **`<feMorphology>`** [SVG](/en-US/docs/Web/SVG) filter primitive is used to 
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("in")}}
-*   {{SVGAttr("operator")}}
-*   {{SVGAttr("radius")}}
+- {{SVGAttr("in")}}
+- {{SVGAttr("operator")}}
+- {{SVGAttr("radius")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 
@@ -47,10 +42,10 @@ This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
   <text y="1em">Normal text</text>
   <text id="thin" y="2em">Thinned text</text>
@@ -84,10 +79,10 @@ text {
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
 </svg>
 
@@ -126,22 +121,22 @@ p {
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

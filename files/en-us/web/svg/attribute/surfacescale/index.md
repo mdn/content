@@ -1,25 +1,27 @@
 ---
 title: surfaceScale
 slug: Web/SVG/Attribute/surfaceScale
-tags:
-  - Filters
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-surfacescale
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-surfacescale
 ---
+
 {{SVGRef}}
 
 The **`surfaceScale`** attribute represents the height of the surface for a light filter primitive.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -37,8 +39,18 @@ html, body, svg {
     </feDiffuseLighting>
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting1);" />
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#diffuseLighting1);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#diffuseLighting2); transform: translateX(220px);" />
 </svg>
 ```
 
@@ -88,46 +100,8 @@ For {{SVGElement("feDiffuseLighting")}}, `surfaceScale` defines the height of th
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fediffuselighting-surfacescale", "surfaceScale for &lt;feDiffuseLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespecularlighting-surfacescale", "surfaceScale for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feDiffuseLightingSurfaceScaleAttribute", "surfaceScale for &lt;feDiffuseLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feDiffuseLighting></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpecularLightingSurfaceScaleAttribute", "surfaceScale for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feSpecularLighting></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

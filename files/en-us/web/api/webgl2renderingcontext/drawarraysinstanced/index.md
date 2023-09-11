@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.drawArraysInstanced()
+title: "WebGL2RenderingContext: drawArraysInstanced() method"
+short-title: drawArraysInstanced()
 slug: Web/API/WebGL2RenderingContext/drawArraysInstanced
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.drawArraysInstanced
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.drawArraysInstanced()`** method
@@ -16,14 +13,14 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) renders primitives from
 array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}
 method. In addition, it can execute multiple instances of the range of elements.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
-    1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}},
+> the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax
 
-```js
-void gl.drawArraysInstanced(mode, first, count, instanceCount);
+```js-nolint
+drawArraysInstanced(mode, first, count, instanceCount)
 ```
 
 ### Parameters
@@ -42,17 +39,17 @@ void gl.drawArraysInstanced(mode, first, count, instanceCount);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- first
+- `first`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
-- instanceCount
+- `instanceCount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the range of elements
     to execute.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

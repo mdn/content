@@ -1,25 +1,21 @@
 ---
-title: ANGLE_instanced_arrays.vertexAttribDivisorANGLE()
+title: "ANGLE_instanced_arrays: vertexAttribDivisorANGLE() method"
+short-title: vertexAttribDivisorANGLE()
 slug: Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: web-api-instance-method
 browser-compat: api.ANGLE_instanced_arrays.vertexAttribDivisorANGLE
 ---
+
 {{APIRef("WebGL")}}
 
-The **ANGLE_instanced_arrays.vertexAttribDivisorANGLE()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API)  modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} and {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.
+The **ANGLE_instanced_arrays.vertexAttribDivisorANGLE()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} and {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.
 
 > **Note:** When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.vertexAttribDivisor()", "gl.vertexAttribDivisor()")}} by default.
 
 ## Syntax
 
-```js
-void ext.vertexAttribDivisorANGLE(index, divisor);
+```js-nolint
+vertexAttribDivisorANGLE(index, divisor)
 ```
 
 ### Parameters
@@ -31,12 +27,12 @@ void ext.vertexAttribDivisorANGLE(index, divisor);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.vertexAttribDivisorANGLE(0, 2);
 ```
 

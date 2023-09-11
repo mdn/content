@@ -1,16 +1,13 @@
 ---
 title: Class selectors
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.class
 ---
+
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their {{htmlattrxref("class")}} attribute.
+The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute.
 
 ```css
 /* All elements with class="spacious" */
@@ -65,7 +62,9 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ```html
 <p class="red">This paragraph has red text.</p>
-<p class="red yellow-bg">This paragraph has red text and a yellow background.</p>
+<p class="red yellow-bg">
+  This paragraph has red text and a yellow background.
+</p>
 <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
 <p>This is just a regular paragraph.</p>
 ```
@@ -76,12 +75,7 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ## Specifications
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | No changes         |
-| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                    |
-| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -89,5 +83,5 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
 - [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

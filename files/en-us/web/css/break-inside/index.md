@@ -1,19 +1,17 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.break-inside
 ---
+
 {{CSSRef}}
 
 The **`break-inside`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.
+
+{{EmbedInteractiveExample("pages/css/break-inside.html")}}
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,6 +25,7 @@ break-inside: avoid-region;
 break-inside: inherit;
 break-inside: initial;
 break-inside: revert;
+break-inside: revert-layer;
 break-inside: unset;
 ```
 
@@ -34,14 +33,10 @@ Each possible break point (in other words, each element boundary) is affected by
 
 To determine if a break must be done, the following rules are applied:
 
-1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the value of the element that appears the latest in the flow is used. Thus, the `break-before` value has precedence over the `break-after` value, which in turn has precedence over the `break-inside` value.
-2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
+1. If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the value of the element that appears the latest in the flow is used. Thus, the `break-before` value has precedence over the `break-after` value, which in turn has precedence over the `break-inside` value.
+2. If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
 Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
-
-## Syntax
-
-The `break-inside` property is specified as one of the keyword values from the list below.
 
 ### Values
 
@@ -87,16 +82,34 @@ By default, it is possible for you to get a break between the image and its capt
 <article>
   <h1>Main heading</h1>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+    fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
+    lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
+    Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
+    dapibus, eu lacinia lectus dictum.
+  </p>
 
   <figure>
-    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png">
+    <img
+      src="https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
     <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
   </figure>
 
-  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
+  <p>
+    Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
+    suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
+    a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
+    vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
+    nec nisi.
+  </p>
 
-  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+  <p>
+    In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
+    malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
+    risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
+    sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+  </p>
 </article>
 ```
 
@@ -155,7 +168,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.break-inside.multicol_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "test for equality (==) mistyped as assignment (=)?" occurs when
@@ -15,7 +12,7 @@ equality (`==`).
 
 ## Message
 
-```js
+```plain
 Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 ```
 
@@ -39,7 +36,7 @@ It is advisable to not use simple assignments in a conditional expression (such 
 because the assignment can be confused with equality when glancing over the code. For
 example, do not use the following code:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // do the right thing
 }
@@ -58,7 +55,7 @@ Otherwise, you probably meant to use a comparison operator (e.g. `==` or
 `===`):
 
 ```js
-if (x == y) {
+if (x === y) {
   // do the right thing
 }
 ```
@@ -66,5 +63,4 @@ if (x == y) {
 ## See also
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Equality
-  operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)
+- [Equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)

@@ -1,18 +1,9 @@
 ---
 title: Firefox workflow overview
 slug: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
-tags:
-  - Add-ons
-  - Code
-  - Extensions
-  - Firefox
-  - WebExtensions
-  - enhance
-  - prepare
-  - publish
-  - retire
-  - workflow
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 <table>
@@ -58,11 +49,6 @@ tags:
             <a
               href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/"
               >Install web-ext</a
-            >
-          </li>
-          <li>
-            <a href="https://webextensions.in/"
-              >Create your extension scaffold</a
             >
           </li>
           <li>
@@ -169,4 +155,4 @@ tags:
 
 \* Or distribute your extension for [sideloading](https://extensionworkshop.com/documentation/publish/distribute-sideloading/), [desktop apps](https://extensionworkshop.com/documentation/publish/distribute-for-desktop-apps/), or [in an enterprise](https://extensionworkshop.com/documentation/enterprise/).
 
-**Have an extension you want to bring to Firefox?**  We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+**Have an extension you want to bring to Firefox?** We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).

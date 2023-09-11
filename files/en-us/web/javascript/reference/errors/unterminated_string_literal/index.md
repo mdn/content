@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: unterminated string literal'
+title: "SyntaxError: unterminated string literal"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript error "unterminated string literal" occurs when there is an unterminated
@@ -15,7 +12,7 @@ The JavaScript error "unterminated string literal" occurs when there is an unter
 
 ## Message
 
-```js
+```plain
 SyntaxError: Unterminated string constant (Edge)
 SyntaxError: unterminated string literal (Firefox)
 ```
@@ -29,13 +26,14 @@ SyntaxError: unterminated string literal (Firefox)
 There is an unterminated
 [string literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals) somewhere. String literals must be
 enclosed by single (`'`) or double (`"`) quotes. JavaScript makes
-no distinction between single-quoted strings and double-quoted strings. [Escape
-sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) work in strings created with either single or double quotes. To fix this
-error, check if:
+no distinction between single-quoted strings and double-quoted strings.
+[Escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) work
+in strings created with either single or double quotes.
+To fix this error, check if:
 
 - you have opening and closing quotes (single or double) for your string literal,
 - you have escaped your string literal correctly,
-- your string literal isn't split across multiple lines.
+- your string literal isn't split across multiple lines.
 
 ## Examples
 
@@ -43,21 +41,22 @@ error, check if:
 
 You can't split a string across multiple lines like this in JavaScript:
 
-```js example-bad
-var longString = 'This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.';
+```js-nolint example-bad
+const longString = "This is a very long string which needs
+                    to wrap across multiple lines because
+                    otherwise my code is unreadable.";
 // SyntaxError: unterminated string literal
 ```
 
-Instead, use the [+
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition), a backslash, or [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
+Instead, use the [+ operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition),
+a backslash, or [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 The `+` operator variant looks like this:
 
 ```js example-good
-var longString = 'This is a very long string which needs ' +
-                 'to wrap across multiple lines because ' +
-                 'otherwise my code is unreadable.';
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Or you can use the backslash character ("\\") at the end of each line to indicate that
@@ -66,22 +65,21 @@ character after the backslash (except for a line break), or as an indent; otherw
 will not work. That form looks like this:
 
 ```js example-good
-var longString = 'This is a very long string which needs \
+const longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable.';
+otherwise my code is unreadable.";
 ```
 
-Another possibility is to use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
-which are supported in ECMAScript 2015 environments:
+Another possibility is to use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
 ```js example-good
-var longString = `This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.`;
+const longString = `This is a very long string which needs 
+to wrap across multiple lines because 
+otherwise my code is unreadable.`;
 ```
 
 ## See also
 
 - [string literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
-- [Template
-  literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)

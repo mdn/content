@@ -1,51 +1,42 @@
 ---
-title: The "codecs" parameter in common media types
+title: Codecs in common media types
 slug: Web/Media/Formats/codecs_parameter
-tags:
-  - Audio
-  - Codecs
-  - Containers
-  - MIME
-  - MIME Types
-  - Media
-  - Media Types
-  - Parameter
-  - Types
-  - Video
-  - Web
-  - formats
+page-type: guide
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
+At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
 
 For that reason, the `codecs` parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.
 
 This guide briefly examines the syntax of the media type `codecs` parameter and how it's used with the MIME type string to provide details about the contents of audio or video media beyond indicating the container type.
 
-## General syntax
+## Container format MIME types
 
-A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc), then a slash character (`/`), then the container format used to contain the media:
+The MIME type for a container format is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the format used to contain the media:
 
 - `audio/mpeg`
   - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.
 - `video/ogg`
   - : A video file using the [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file type.
 - `video/mp4`
-  - : A video file using the [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file type.
+  - : A video file using the [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file type.
 - `video/quicktime`
   - : A video file in Apple's [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) format. As noted elsewhere, this format was once commonly used on the web but no longer is, since it required a plugin to use.
 
-However, each of these MIME types is vague. All of these file types support a variety of codecs, and those codecs may have any number of profiles, levels, and other configuration factors. For this reason, you can add the `codecs` parameter to the media type.
+However, each of these MIME types is vague. All of these file types support a variety of codecs, and those codecs may have any number of profiles, levels, and other configuration factors. For this reason, you may want to include the `codecs` parameter along with the media type.
 
-To do so, append a semicolon (`;`) followed by `codecs=` and then the string describing the format of the contents of the file. Some media types only let you specify the names of the codecs to use, while others allow you to specify various constraints on those codecs as well. You can specify multiple codecs by separating them with commas.
+## Basic syntax
+
+You can add the `codecs` parameter to the media type. To do so, append a semicolon (`;`) followed by `codecs=` and then the string describing the format of the contents of the file. Some media types only let you specify the names of the codecs to use, while others allow you to specify various constraints on those codecs as well. You can specify multiple codecs by separating them with commas.
 
 - `audio/ogg; codecs=vorbis`
   - : An [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file containing a [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio track.
 - `video/webm; codecs="vp8, vorbis"`
   - : A [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) file containing [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) video and/or [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio.
 - `video/mp4; codecs="avc1.4d002a"`
-  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
+  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
 
 As is the case with any MIME type parameter, `codecs` must be changed to `codecs*` (note the asterisk character, `*`) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.
 
@@ -55,22 +46,24 @@ As is the case with any MIME type parameter, `codecs` must be changed to `codecs
 
 The containers below support extended codec options in their `codecs` parameters:
 
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "3GP")}}
-- {{anch("AV1")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "ISO BMFF")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "MPEG-4")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "QuickTime")}}
-- {{anch("WebM")}}
+- [3GP](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [AV1](#av1)
+- [ISO BMFF](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [MPEG-4](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [QuickTime](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [WebM](#webm)
 
 Several of the links above go to the same section; that's because those media types are all based on ISO Base Media File Format (ISO BMFF), so they share the same syntax.
 
 ### AV1
 
-The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
+The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff/) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
 
 ```plain
-av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
+av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
+
+> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
@@ -103,8 +96,7 @@ This codec parameter string's components are described in more detail in the tab
             <tr>
               <td>0</td>
               <td>
-                "Main" profile; supports YUV 4:2:0 or monochrome bitstreams with
-                bit depth of 8 or 10 bits per component.
+                "Main" profile; supports YUV 4:2:0 or monochrome bitstreams with bit depth of 8 or 10 bits per component.
               </td>
             </tr>
             <tr>
@@ -114,8 +106,7 @@ This codec parameter string's components are described in more detail in the tab
             <tr>
               <td>2</td>
               <td>
-                "Professional" profile adds support for 4:2:2 chroma subsampling
-                and 12 bit per component color.
+                "Professional" profile adds support for 4:2:2 chroma subsampling and 12-bit per component color.
               </td>
             </tr>
           </tbody>
@@ -125,55 +116,41 @@ This codec parameter string's components are described in more detail in the tab
     <tr>
       <td><code>LL</code></td>
       <td>
-        The two-digit level number, which is converted to the X.Y format level
-        format, where <code>X = 2 + (LL >> 2)</code> and
-        <code>Y = LL &#x26; 3</code>. See
-        <a href="https://aomediacodec.github.io/av1-spec/#levels"
-          >Appendix A, section 3</a
-        >
-        in the AV1 Specification for details.
+        The two-digit level number, which is converted to the X.Y format level format, where <code>X = 2 + (LL >> 2)</code> and <code>Y = LL &#x26; 3</code>.
+        See <a href="https://aomediacodec.github.io/av1-spec/#levels">Appendix A, section 3</a> in the AV1 Specification for details.
       </td>
     </tr>
     <tr>
       <td><code>T</code></td>
       <td>
-        The one-character tier indicator. For the Main tier (<code
-          >seq_tier</code
-        >
-        equals 0), this character is the letter <code>M</code>. For the High
-        tier (<code>seq_tier</code> is 1), this character is the letter
-        <code>H</code>. The High tier is only available for level 4.0 and up.
+        The one-character tier indicator. For the Main tier (<code>seq_tier</code> equals 0), this character is the letter <code>M</code>.
+        For the High tier (<code>seq_tier</code> is 1), this character is the letter <code>H</code>.
+        The High tier is only available for level 4.0 and up.
       </td>
     </tr>
     <tr>
       <td><code>DD</code></td>
       <td>
-        The two-digit component bit depth. This value must be one of 8, 10, or
-        12; which values are valid varies depending on the profile and other
-        properties.
+        The two-digit component bit depth. This value must be one of 8, 10, or 12; which values are valid varies depending on the profile and other properties.
       </td>
     </tr>
     <tr>
       <td><code>M</code></td>
       <td>
-        The one-digit monochrome flag; if this is 0, the video includes the U
-        and V planes in addition to the Y plane. Otherwise, the video data is
-        entirely in the Y plane and is therefore monochromatic. See
-        {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}}
-        for details on how the YUV color system works. The default value is 0
-        (not monochrome).
+        The one-digit monochrome flag; if this is 0, the video includes the U and V planes in addition to the Y plane.
+        Otherwise, the video data is entirely in the Y plane and is therefore monochromatic.
+        See [YUV](/en-US/docs/Web/Media/Formats/Video_concepts#yuv) for details on how the YUV color system works.
+        The default value is 0 (not monochrome).
       </td>
     </tr>
     <tr>
       <td><code>CCC</code></td>
       <td>
         <p>
-          <code>CCC</code> indicates the chroma subsampling as three digits. The
-          first digit is <code>subsampling_x</code>, the second is
-          <code>subsampling_y</code>. If both of those are 1, the third is the
-          value of <code>chroma_sample_position</code>; otherwise, the third
-          digit is always 0. This, combined with the <code>M</code> component,
-          can be used to construct the chroma subsampling format:
+          <code>CCC</code> indicates the chroma subsampling as three digits.
+          The first digit is <code>subsampling_x</code>, the second is <code>subsampling_y</code>.
+          If both of those are 1, the third is the value of <code>chroma_sample_position</code>; otherwise, the third digit is always 0.
+          This, combined with the <code>M</code> component, can be used to construct the chroma subsampling format:
         </p>
         <table class="standard-table">
           <caption>
@@ -215,12 +192,7 @@ This codec parameter string's components are described in more detail in the tab
           </tbody>
         </table>
         <p>
-          The third digit in <code>CCC</code> indicates the chroma sample
-          position, with a value of 0 indicating that the position is unknown
-          and must be separately provided during decoding; a value of 1
-          indicating that the sample position is horizontally colocated with the
-          (0, 0) luma sample; and a value of 2 indicating that the sample
-          position is colocated with (0, 0) luma.
+          The third digit in <code>CCC</code> indicates the chroma sample position, with a value of 0 indicating that the position is unknown and must be separately provided during decoding; a value of 1 indicating that the sample position is horizontally collocated with the (0, 0) luma sample; and a value of 2 indicating that the sample position is collocated with (0, 0) luma.
         </p>
         <p>The default value is <code>110</code> (4:2:0 chroma subsampling).</p>
       </td>
@@ -228,47 +200,33 @@ This codec parameter string's components are described in more detail in the tab
     <tr>
       <td><code>cp</code></td>
       <td>
-        The two-digit <code>color_primaries</code> value indicates the color
-        system used by the media. For example, BT.2020/BT.2100 color, as used
-        for HDR video, is <code>09</code>. The information for this—and for each
-        of the remaining components—is found in the
-        <a
-          href="https://aomediacodec.github.io/av1-spec/#color-config-semantics"
-          >Color config semantics section</a
-        >
-        of the AV1 specification. The default value is <code>01</code> (ITU-R
-        BT.709).
+        The two-digit <code>color_primaries</code> value indicates the color system used by the media.
+        For example, BT.2020/BT.2100 color, as used for HDR video, is <code>09</code>.
+        The information for this—and for each of the remaining components—is found in the <a href="https://aomediacodec.github.io/av1-spec/#color-config-semantics">Color config semantics section</a> of the AV1 specification.
+        The default value is <code>01</code> (ITU-R BT.709).
       </td>
     </tr>
     <tr>
       <td><code>tc</code></td>
       <td>
-        The two-digit <code>transfer_characteristics</code> value. This value
-        defines the function used to map the gamma (delightfully called the
-        "opto-electrical transfer function" in technical parlance) from the
-        source to the display. For example, 10-bit BT.2020 is <code>14</code>.
+        The two-digit <code>transfer_characteristics</code> value. This value defines the function used to map the gamma (delightfully called the "opto-electrical transfer function" in technical parlance) from the source to the display.
+        For example, 10-bit BT.2020 is <code>14</code>.
         The default value is <code>01</code> (ITU-R BT.709).
       </td>
     </tr>
     <tr>
       <td><code>mc</code></td>
       <td>
-        The two-digit <code>matrix_coefficients</code> constant selects the
-        matrix coefficients used to convert the red, blue, and green channels
-        into luma and chroma signals. For example, the standard coefficients
-        used for BT.709 are indicated using the value <code>01</code>. The
-        default value is <code>01</code> (ITU-R BT.709).
+        The two-digit <code>matrix_coefficients</code> constant selects the matrix coefficients used to convert the red, blue, and green channels into luma and chroma signals.
+        For example, the standard coefficients used for BT.709 are indicated using the value <code>01</code>.
+        The default value is <code>01</code> (ITU-R BT.709).
       </td>
     </tr>
     <tr>
       <td><code>F</code></td>
       <td>
-        A one-digit flag indicating whether the color should be allowed to use
-        the full range of possible values (<code>1</code>), or should be
-        constrained to those values considered legal for the specified color
-        configuration (that is, the
-        <strong>studio swing representation</strong>). The default is 0 (use the
-        studio swing representation).
+        A one-digit flag indicating whether the color should be allowed to use the full range of possible values (<code>1</code>), or should be constrained to those values considered legal for the specified color configuration (that is, the <strong>studio swing representation</strong>).
+        The default is 0 (use the studio swing representation).
       </td>
     </tr>
   </tbody>
@@ -283,17 +241,17 @@ All fields from `M` (monochrome flag) onward are optional; you may stop includin
 
 ### ISO Base Media File Format: MP4, QuickTime, and 3GP
 
-All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
+All media types based upon the [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_Base_Media_File_Format) (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
 
-| MIME type         | Description                                                                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MIME type         | Description                                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------ |
 | `audio/3gpp`      | 3GP audio ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
 | `video/3gpp`      | 3GP video ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
-| `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
-| `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `video/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                                                         |
+| `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `video/mp4`       | MP4 video ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                       |
 
 Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
 
@@ -304,12 +262,12 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see {{anch("MPEG-4 audio")}}.
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
-- `avc1.oo[.PPCCLL]` (AVC video)
+- `avc1[.PPCCLL]` (AVC video)
 
-  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See {{anch("AVC profiles")}} for the possible values of `PP`.
+  - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
 
@@ -319,30 +277,30 @@ Thus, the syntaxes for each of the supported codecs look like this:
 
 The following are the AVC profiles and their profile numbers for use in the `codecs` parameter, as well as the value to specify for the constraints component, `CC`.
 
-| Profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Number (Hex) | Constraints byte |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------- |
-| **Constrained Baseline Profile (CBP)** CBP is primarily a solution for scenarios in which resources are constrained, or resource use needs to be controlled to minimize the odds of the media performing poorly.                                                                                                                                                                                                                                                                                                                                           | `42`         | `40`             |
-| **Baseline Profile (BP)** Similar to CBP but with more data loss protections and recovery capabilities. This is not as widely used as it was before CBP was introduced. All CBP streams are considered to also be BP streams.                                                                                                                                                                                                                                                                                                                              | `42`         | `00`             |
-| **Extended Profile (XP)** Designed for streaming video over the network, with high compression capability and further improvements to data robustness and stream switching.                                                                                                                                                                                                                                                                                                                                                                                | `58`         | `00`             |
-| **Main Profile (MP)** The profile used for standard-definition digital television being broadcast in MPEG-4 format. _Not_ used for high-definition television broadcasts. This profile's importance has faded since the introduction of the High Profile—which was added for HDTV use—in 2004.                                                                                                                                                                                                                                                             | `4D`         | `00`             |
-| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for  Blu-Ray video.                                                                                                                                                                                                                                                                                                                                                                                       | `64`         | `00`             |
-| **Progressive High Profile (PHiP)** Essentially High Profile without support for field coding.                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `64`         | `08`             |
-| **Constrained High Profile** PHiP, but without support for bi-predictive slices ("B-slices").                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `64`         | `0C`             |
-| **High 10 Profile (Hi10P)** High Profile, but with support for up to 10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `6E`         | `00`             |
-| **High 4:2:2 Profile (Hi422P)** Expands upon Hi10P by adding support for 4:2:2 chroma subsampling along with up to10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                             | `7A`         | `00`             |
-| **High 4:4:4 Predictive Profile (Hi444PP)** In addition to the capabilities included in Hi422P, Hi444PP adds support for 4:4:4 chroma subsampling (in which no color information is discarded). Also includes support for up to 14 bits per color sample and efficient lossless region coding. The option to encode each frame as three separate color planes (that is, each color's data is stored as if it were a single monochrome frame).                                                                                                              | `F4`         | `00`             |
-| **High 10 Intra Profile** High 10 constrained to all-intra-frame use. Primarily used for professional apps.                                                                                                                                                                                                                                                                                                                                                                                                                                                | `6E`         | `10`             |
-| **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `7A`         | `10`             |
-| **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | `F4`         | `10`             |
-| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                                 | `44`         | `00`             |
-| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the {{interwiki("wikipedia", "SVC")}} Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
-| **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                                                                    | `53`         | `04`             |
-| **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                                                          | `56`         | `00`             |
-| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communticions.                                                                                                                                                                                                                                                                                                                                                                                                                                   | `56`         | `04`             |
-| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                             | `56`         | `20`             |
-| **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                                                         | `80`         | `00`             |
-| **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                                                                      | `76`         | `00`             |
-| **Multiview Depth High Profile** Based on the High Profile, to which the main substream must adhere. The remaining substreams must match the Stereo High Profile.                                                                                                                                                                                                                                                                                                                                                                                          | `8A`         | `00`             |
+| Profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Number (Hex) | Constraints byte |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | ---------------- |
+| **Constrained Baseline Profile (CBP)** CBP is primarily a solution for scenarios in which resources are constrained, or resource use needs to be controlled to minimize the odds of the media performing poorly.                                                                                                                                                                                                                                                                                                                                       | `42`         | `40`             |
+| **Baseline Profile (BP)** Similar to CBP but with more data loss protections and recovery capabilities. This is not as widely used as it was before CBP was introduced. All CBP streams are considered to also be BP streams.                                                                                                                                                                                                                                                                                                                          | `42`         | `00`             |
+| **Extended Profile (XP)** Designed for streaming video over the network, with high compression capability and further improvements to data robustness and stream switching.                                                                                                                                                                                                                                                                                                                                                                            | `58`         | `00`             |
+| **Main Profile (MP)** The profile used for standard-definition digital television being broadcast in MPEG-4 format. _Not_ used for high-definition television broadcasts. This profile's importance has faded since the introduction of the High Profile—which was added for HDTV use—in 2004.                                                                                                                                                                                                                                                         | `4D`         | `00`             |
+| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for Blu-Ray video.                                                                                                                                                                                                                                                                                                                                                                                    | `64`         | `00`             |
+| **Progressive High Profile (PHiP)** Essentially High Profile without support for field coding.                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `64`         | `08`             |
+| **Constrained High Profile** PHiP, but without support for bi-predictive slices ("B-slices").                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `64`         | `0C`             |
+| **High 10 Profile (Hi10P)** High Profile, but with support for up to 10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `6E`         | `00`             |
+| **High 4:2:2 Profile (Hi422P)** Expands upon Hi10P by adding support for 4:2:2 chroma subsampling along with up to10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                         | `7A`         | `00`             |
+| **High 4:4:4 Predictive Profile (Hi444PP)** In addition to the capabilities included in Hi422P, Hi444PP adds support for 4:4:4 chroma subsampling (in which no color information is discarded). Also includes support for up to 14 bits per color sample and efficient lossless region coding. The option to encode each frame as three separate color planes (that is, each color's data is stored as if it were a single monochrome frame).                                                                                                          | `F4`         | `00`             |
+| **High 10 Intra Profile** High 10 constrained to all-intra-frame use. Primarily used for professional apps.                                                                                                                                                                                                                                                                                                                                                                                                                                            | `6E`         | `10`             |
+| **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | `7A`         | `10`             |
+| **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `F4`         | `10`             |
+| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                             | `44`         | `00`             |
+| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the [SVC](https://en.wikipedia.org/wiki/SVC) Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
+| **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                                                                | `53`         | `04`             |
+| **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `56`         | `00`             |
+| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communication.                                                                                                                                                                                                                                                                                                                                                                                                                               | `56`         | `04`             |
+| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                         | `56`         | `20`             |
+| **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                                                     | `80`         | `00`             |
+| **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                                                                  | `76`         | `00`             |
+| **Multiview Depth High Profile** Based on the High Profile, to which the main substream must adhere. The remaining substreams must match the Stereo High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `8A`         | `00`             |
 
 #### MPEG-4 audio
 
@@ -360,7 +318,7 @@ Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the ful
 
 > **Note:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
 
-The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object ypes provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
+The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object types provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
 
 <table class="standard-table">
   <caption>
@@ -425,7 +383,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
       <td>Main, Scalable, Speech, LD</td>
     </tr>
     <tr>
-      <td><code>10</code> – <code>11</code></td>
+      <td><code>10</code> – <code>11</code></td>
       <td><em>Reserved</em></td>
       <td></td>
     </tr>
@@ -481,7 +439,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
     </tr>
     <tr>
       <td><code>22</code></td>
-      <td>ER BSAC (Error Reslient Bit-Sliced Arithmetic Coding)</td>
+      <td>ER BSAC (Error Resilient Bit-Sliced Arithmetic Coding)</td>
       <td>Mobile Internetworking</td>
     </tr>
     <tr>
@@ -605,10 +563,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
       <td>
         <p>LD MPEG Surround (Low Delay MPEG Surround)</p>
         <p>
-          Defined in
-          <a href="https://www.iso.org/standard/54838.html"
-            >ISO/IEC 14496-3:2009/Amd.2:2010(E)</a
-          >.
+          Defined in <a href="https://www.iso.org/standard/54838.html">ISO/IEC 14496-3:2009/Amd.2:2010(E)</a>.
         </p>
       </td>
       <td></td>
@@ -638,15 +593,16 @@ The strings `vp8.0` and `vp9.0` also work, but are not recommended.
 
 #### ISO Base Media File Format syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4/), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
 
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 
 ```plain
-cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
+cccc.PP.LL.DD
+cccc.PP.LL.DD.CC.cp.tc.mc.FF
 ```
 
-The first five components are required; everything from `cp` (color primaries) onward is optional; you can stop including components at any point from then onward. Each of these components is described in the following table. Following the table are some examples.
+The first four components are required; everything from `CC` (chroma subsampling) onward is optional, but all or nothing. Each of these components is described in the following table. Following the table are some examples.
 
 <table class="standard-table">
   <caption>
@@ -663,8 +619,8 @@ The first five components are required; everything from `cp` (color primaries) o
       <td><code>cccc</code></td>
       <td>
         <p>
-          A four-character code indicating which indicates which of the possible
-          codecs is being described. Potential values are:
+          A four-character code indicating which indicates which of the possible codecs is being described.
+          Potential values are:
         </p>
         <table class="standard-table">
           <caption>
@@ -697,8 +653,7 @@ The first five components are required; everything from `cp` (color primaries) o
       <td><code>PP</code></td>
       <td>
         <p>
-          The two-digit profile number, padded with leading zeroes if necessary
-          to be exactly two digits.
+          The two-digit profile number, padded with leading zeroes if necessary to be exactly two digits.
         </p>
         <table class="standard-table">
           <caption>
@@ -721,8 +676,8 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>01</code></td>
               <td>
-                All chroma subsampling formats are allowed. Allows only 8 bits
-                per color component.
+                All chroma subsampling formats are allowed.
+                Allows only 8 bits per color component.
               </td>
             </tr>
             <tr>
@@ -735,8 +690,8 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>03</code></td>
               <td>
-                All chroma subsampling formats are allowed. Supports 8, 10, or
-                12 bits per color sample component.
+                All chroma subsampling formats are allowed.
+                Supports 8, 10, or 12 bits per color sample component.
               </td>
             </tr>
           </tbody>
@@ -746,17 +701,16 @@ The first five components are required; everything from `cp` (color primaries) o
     <tr>
       <td><code>LL</code></td>
       <td>
-        The two-digit level number. The level number is a fixed-point notation,
-        where the first digit is the ones digit, and the second digit represents
-        tenths. For example, level 3 is <code>30</code> and level 6.1 is
-        <code>61</code>.
+        The two-digit level number.
+        The level number is a fixed-point notation, where the first digit is the ones digit, and the second digit represents
+        tenths.
+        For example, level 3 is <code>30</code> and level 6.1 is <code>61</code>.
       </td>
     </tr>
     <tr>
       <td><code>DD</code></td>
       <td>
-        The bit depth of the luma and color component values; permitted values
-        are 8, 10, and 12.
+        The bit depth of the luma and color component values; permitted values are 8, 10, and 12.
       </td>
     </tr>
     <tr>
@@ -764,9 +718,7 @@ The first five components are required; everything from `cp` (color primaries) o
       <td>
         <p>
           A two-digit value indicating which chroma subsampling format to use.
-          The following table lists permitted values; see
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
-          for additional information about this topic and others.
+          The following table lists permitted values; see [Chroma subsampling](/en-US/docs/Web/Media/Formats/Video_concepts#chroma_subsampling) in our "Digital video concepts" guide for additional information about this topic and others.
         </p>
         <table class="standard-table">
           <caption>
@@ -782,29 +734,25 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>00</code></td>
               <td>
-                4:2:0 with the chroma samples sited interstitially between the
-                pixels
+                4:2:0 with the chroma samples sited interstitially between the pixels
               </td>
             </tr>
             <tr>
               <td><code>01</code></td>
               <td>
-                4:2:0 chroma subsampling with the samples colocated with luma
-                (0, 0)
+                4:2:0 chroma subsampling with the samples collocated with luma (0, 0)
               </td>
             </tr>
             <tr>
               <td><code>02</code></td>
               <td>
-                4:2:2 chroma subsampling (4 out of each 4 horizontal pixels'
-                luminance are used)
+                4:2:2 chroma subsampling (4 out of each 4 horizontal pixels' luminance are used)
               </td>
             </tr>
             <tr>
               <td><code>03</code></td>
               <td>
-                4:4:4 chroma subsampling (every pixel's luminance and
-                chrominance are both retained)
+                4:4:4 chroma subsampling (every pixel's luminance and chrominance are both retained)
               </td>
             </tr>
             <tr>
@@ -819,12 +767,8 @@ The first five components are required; everything from `cp` (color primaries) o
       <td><code>cp</code></td>
       <td>
         <p>
-          A two-digit integer specifying which of the color primaries from
-          Section 8.1 of the
-          <a href="https://www.itu.int/rec/T-REC-H.273/en"
-            >ISO/IEC 23001-8:2016</a
-          >
-          standard. This component, and every component after it, is optional.
+          A two-digit integer specifying which of the color primaries from Section 8.1 of the <a href="https://www.itu.int/rec/T-REC-H.273/en" >ISO/IEC 23001-8:2016</a> standard.
+          This component, and every component after it, is optional.
         </p>
         <p>The possible values of the color primaries component are:</p>
         <table class="standard-table">
@@ -845,17 +789,14 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>01</code></td>
               <td>
-                BT.709, sRGB, sYCC. BT.709 is the standard for high definition
-                (HD) television; sRGB is the most common color space used for
-                computer displays. Broadcast BT.709 uses 8-bit color depth with
-                the legal range being from 16 (black) to 235 (white).
+                BT.709, sRGB, sYCC. BT.709 is the standard for high definition (HD) television; sRGB is the most common color space used for computer displays.
+                Broadcast BT.709 uses 8-bit color depth with the legal range being from 16 (black) to 235 (white).
               </td>
             </tr>
             <tr>
               <td><code>02</code></td>
               <td>
-                Image characteristics are unknown, or are to be determined by
-                the application
+                Image characteristics are unknown, or are to be determined by the application
               </td>
             </tr>
             <tr>
@@ -865,15 +806,13 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>04</code></td>
               <td>
-                BT.470 System M, NTSC (standard definition television in the
-                United States)
+                BT.470 System M, NTSC (standard definition television in the United States)
               </td>
             </tr>
             <tr>
               <td><code>05</code></td>
               <td>
-                BT.470 System B, G; BT.601; BT.1358 625; BT.1700 625 PAL and 625
-                SECAM
+                BT.470 System B, G; BT.601; BT.1358 625; BT.1700 625 PAL and 625 SECAM
               </td>
             </tr>
             <tr>
@@ -897,38 +836,33 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>09</code></td>
               <td>
-                BT.2020; BT.2100. Used for ultra-high definition (4K) High
-                Dynamic Range (HDR) video, these have a very wide color gamut
-                and support 10-bit and 12-bit color component depths.
+                BT.2020; BT.2100.
+                Used for ultra-high definition (4K) High Dynamic Range (HDR) video, these have a very wide color {{glossary("gamut")}} and support 10-bit and 12-bit color component depths.
               </td>
             </tr>
             <tr>
               <td><code>10</code></td>
               <td>
-                SMPTE ST 428 (D-Cinema Distribution Master: Image
-                characteristics). Defines the uncompressed image characteristics
-                for DCDM.
+                SMPTE ST 428 (D-Cinema Distribution Master: Image characteristics).
+                Defines the uncompressed image characteristics for DCDM.
               </td>
             </tr>
             <tr>
               <td><code>11</code></td>
               <td>
-                SMPTE RP 431 (D-Cinema Quality: Reference projector and
-                environment). Describes the reference projector and environment
-                conditions that provide a consistent film presentation
-                experience.
+                SMPTE RP 431 (D-Cinema Quality: Reference projector and environment).
+                Describes the reference projector and environment conditions that provide a consistent film presentation experience.
               </td>
             </tr>
             <tr>
               <td><code>12</code></td>
               <td>
-                SMPTE EG 432 (Digital Source Processing: Color Processing for
-                D-Cinema). Engineering guideline making color signal decoding
-                recommendations for digital movies.
+                SMPTE EG 432 (Digital Source Processing: Color Processing for D-Cinema).
+                Engineering guideline making color signal decoding recommendations for digital movies.
               </td>
             </tr>
             <tr>
-              <td><code>13</code> – <code>21</code></td>
+              <td><code>13</code> – <code>21</code></td>
               <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
             </tr>
             <tr>
@@ -936,7 +870,7 @@ The first five components are required; everything from `cp` (color primaries) o
               <td>EBU Tech 3213-E</td>
             </tr>
             <tr>
-              <td><code>23</code> – <code>255</code></td>
+              <td><code>23</code> – <code>255</code></td>
               <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
             </tr>
           </tbody>
@@ -947,36 +881,25 @@ The first five components are required; everything from `cp` (color primaries) o
       <td><code>tc</code></td>
       <td>
         A two-digit integer indicating the
-        <code>transferCharacteristics</code> for the video. This value is from
-        Section 8.2 of
-        <a href="https://www.itu.int/rec/T-REC-H.273/en">ISO/IEC 23001-8:2016</a
-        >, and indicates the transfer characteristics to be used when adapting
-        the decoded color to the render target.
+        <code>transferCharacteristics</code> for the video.
+        This value is from Section 8.2 of <a href="https://www.itu.int/rec/T-REC-H.273/en">ISO/IEC 23001-8:2016</a>, and indicates the transfer characteristics to be used when adapting the decoded color to the render target.
       </td>
     </tr>
     <tr>
       <td><code>mc</code></td>
       <td>
         The two-digit value for the <code>matrixCoefficients</code> property.
-        This value comes from the table in Section 8.3 of the
-        <a href="https://www.itu.int/rec/T-REC-H.273/en"
-          >ISO/IEC 23001-8:2016</a
-        >
-        specification. This value indicates which set of coefficients to use
-        when mapping from the native red, blue, and green primaries to the luma
-        and chroma signals. These coefficients are in turn used with the
-        equations found in that same section.
+        This value comes from the table in Section 8.3 of the <a href="https://www.itu.int/rec/T-REC-H.273/en">ISO/IEC 23001-8:2016</a> specification.
+        This value indicates which set of coefficients to use when mapping from the native red, blue, and green primaries to the luma and chroma signals.
+        These coefficients are in turn used with the equations found in that same section.
       </td>
     </tr>
     <tr>
       <td><code>FF</code></td>
       <td>
-        Indicates whether to restrict the black level and color range of each
-        color component to the legal range. For 8 bit color samples, the legal
-        range is 16-235. A value of <code>00</code> indicates that these
-        limitations should be enforced, while a value of <code>01</code> allows
-        the full range of possible values for each component, even if the
-        resulting color is out of bounds for the color system.
+        Indicates whether to restrict the black level and color range of each color component to the legal range.
+        For 8-bit color samples, the legal range is 16-235.
+        A value of <code>00</code> indicates that these limitations should be enforced, while a value of <code>01</code> allows the full range of possible values for each component, even if the resulting color is out of bounds for the color system.
       </td>
     </tr>
   </tbody>
@@ -985,7 +908,7 @@ The first five components are required; everything from `cp` (color primaries) o
 #### WebM media type examples
 
 - `video/webm;codecs="vp08.00.41.08,vorbis"`
-  - : VP8 video, profile 0 level 4.1, using 8-bit YUV with 4:2:0 chroma subsampling, using BT.709 color primaries, transfer function, and matrix coefficients, with the luminance and chroma values encoded within the legal ("studio") range. The video is Vorbis.
+  - : VP8 video, profile 0 level 4.1, using 8-bit YUV with 4:2:0 chroma subsampling, using BT.709 color primaries, transfer function, and matrix coefficients, with the luminance and chroma values encoded within the legal ("studio") range. The audio is in Vorbis format.
 - `video/webm;codecs="vp09.02.10.10.01.09.16.09.01,opus"`
   - : VP9 video, profile 2 level 1.0, with 10-bit YUV content using 4:2:0 chroma subsampling, BT.2020 primaries, ST 2084 EOTF (HDR SMPTE), BT.2020 non-constant luminance color matrix, and full-range chroma and luma encoding. The audio is in Opus format.
 
@@ -993,12 +916,14 @@ The first five components are required; everything from `cp` (color primaries) o
 
 You can use the `codecs` parameter in a few situations. Firstly, you can use it with the {{HTMLElement("source")}} element when creating an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, in order to establish a group of options for the browser to choose from when selecting the format of the media to present to the user in the element.
 
-You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
+You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource/isTypeSupported_static", "MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
 
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
+- The {{HTMLElement("source")}} element, child of the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Formats/Audio_codecs)
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Getting the correct HTML codecs parameter for an AV1 video](https://jakearchibald.com/2022/html-codecs-parameter-for-av1/)

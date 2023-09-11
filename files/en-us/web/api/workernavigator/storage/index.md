@@ -1,15 +1,11 @@
 ---
-title: WorkerNavigator.storage
+title: "WorkerNavigator: storage property"
+short-title: storage
 slug: Web/API/WorkerNavigator/storage
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
-  - Storage
+page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.storage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`WorkerNavigator.storage`**
@@ -19,13 +15,7 @@ The returned object lets you examine and configure persistence of data stores an
 learn approximately how much more space your browser has available for local storage
 use.
 
-## Syntax
-
-```js
-var storageManager = navigator.storage;
-```
-
-### Value
+## Value
 
 A {{domxref("StorageManager")}} object you can use to maintain persistence for stored
 data, as well as to determine roughly how much room there is for data to be stored.

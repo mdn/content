@@ -1,18 +1,11 @@
 ---
-title: RTCPeerConnection.removeTrack()
+title: "RTCPeerConnection: removeTrack() method"
+short-title: removeTrack()
 slug: Web/API/RTCPeerConnection/removeTrack
-tags:
-  - Audio
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - Tracks
-  - Video
-  - WebRTC
-  - removeTrack
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.removeTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The
@@ -31,8 +24,8 @@ let the local end know this negotiation must occur.
 
 ## Syntax
 
-```js
-pc.removeTrack(sender);
+```js-nolint
+removeTrack(sender)
 ```
 
 ### Parameters
@@ -55,17 +48,22 @@ This example adds a video track to a connection and sets up a listener on a clos
 button which removes the track when the user clicks the button.
 
 ```js
-var pc, sender;
-navigator.getUserMedia({video: true}, function(stream) {
+let pc;
+let sender;
+navigator.getUserMedia({ video: true }, (stream) => {
   pc = new RTCPeerConnection();
-  var track = stream.getVideoTracks()[0];
+  const [track] = stream.getVideoTracks();
   sender = pc.addTrack(track, stream);
 });
 
-document.getElementById("closeButton").addEventListener("click", function(event) {
-  pc.removeTrack(sender);
-  pc.close();
-}, false);
+document.getElementById("closeButton").addEventListener(
+  "click",
+  (event) => {
+    pc.removeTrack(sender);
+    pc.close();
+  },
+  false,
+);
 ```
 
 ## Specifications

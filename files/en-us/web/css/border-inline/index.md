@@ -1,15 +1,10 @@
 ---
 title: border-inline
 slug: Web/CSS/border-inline
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-inline
 ---
+
 {{CSSRef}}
 
 The **`border-inline`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline border property values in a single place in the style sheet.
@@ -39,6 +34,7 @@ border-inline: medium dashed blue;
 border-inline: inherit;
 border-inline: initial;
 border-inline: revert;
+border-inline: revert-layer;
 border-inline: unset;
 ```
 
@@ -50,8 +46,8 @@ The `border-inline` is specified with one or more of the following, in any order
   - : The width of the border. See {{cssxref("border-width")}}.
 - `<'border-style'>`
   - : The line style of the border. See {{cssxref("border-style")}}.
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -102,5 +98,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

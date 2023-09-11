@@ -1,12 +1,10 @@
 ---
 title: start_url
 slug: Web/Manifest/start_url
-tags:
-  - Manifest
-  - Web
-  - start_url
+page-type: web-manifest-member
 browser-compat: html.manifest.start_url
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -15,14 +13,10 @@ browser-compat: html.manifest.start_url
       <th scope="row">Type</th>
       <td><code>String</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
-The _`start_url`_ member is a string that represents the _start URL of the web application_ — the preferred URL that should be loaded when the user launches the web application (e.g., when the user taps on the web application's icon from a device's application menu or homescreen).
+The `start_url` member is a string that represents the _start URL of the web application_ — the preferred URL that should be loaded when the user launches the web application (e.g., when the user taps on the web application's icon from a device's application menu or homescreen).
 
 > **Note:** The `start_url` member is purely advisory, and a user agent may ignore it or allow the user to alter it at install time or afterwards.
 

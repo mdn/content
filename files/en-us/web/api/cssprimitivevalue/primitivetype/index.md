@@ -1,16 +1,14 @@
 ---
-title: CSSPrimitiveValue.primitiveType
+title: "CSSPrimitiveValue: primitiveType property"
+short-title: primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Property
-  - Read-only
-  - Reference
-  - primitiveValue
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
-{{APIRef("CSSOM")}}
+
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`primitiveType`** read-only property of the
 {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.
@@ -23,13 +21,7 @@ The **`primitiveType`** read-only property of the
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-type = cssPrimitiveValue.primitiveType;
-```
-
-### Value
+## Value
 
 An `unsigned short` representing the type of the value. Possible values are:
 
@@ -44,7 +36,7 @@ An `unsigned short` representing the type of the value. Possible values are:
     <tr>
       <td><code>CSS_ATTR</code></td>
       <td>
-        The value is an {{cssxref("attr()")}} function. The value can be
+        The value is an {{cssxref("attr", "attr()")}} function. The value can be
         obtained by using the <code>getStringValue()</code> method.
       </td>
     </tr>
@@ -229,24 +221,24 @@ An `unsigned short` representing the type of the value. Possible values are:
     <tr>
       <td><code>CSS_URI</code></td>
       <td>
-        The value is a {{cssxref("url()")}}. The value can be obtained
+        The value is a {{cssxref("url", "url()")}}. The value can be obtained
         by using the <code>getStringValue()</code> method.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("color");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("color");
 console.log(cssValue.primitiveType);
 ```
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

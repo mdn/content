@@ -1,12 +1,10 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feOffset
 ---
+
 {{SVGRef}}
 
 The **`<feOffset>`** SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the {{SVGAttr("dx")}} and {{SVGAttr("dy")}} attributes.
@@ -19,19 +17,19 @@ The **`<feOffset>`** SVG filter primitive allows to offset the input image. The 
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("in")}}
-*   {{SVGAttr("dx")}}
-*   {{SVGAttr("dy")}}
+- {{SVGAttr("in")}}
+- {{SVGAttr("dx")}}
+- {{SVGAttr("dy")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFEOffsetElement")}} interface.
 
@@ -47,8 +45,15 @@ This element implements the {{domxref("SVGFEOffsetElement")}} interface.
     </filter>
   </defs>
 
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green"/>
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" filter="url(#offset)"/>
+  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    stroke="black"
+    fill="green"
+    filter="url(#offset)" />
 </svg>
 ```
 
@@ -66,22 +71,22 @@ This element implements the {{domxref("SVGFEOffsetElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

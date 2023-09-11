@@ -1,20 +1,11 @@
 ---
-title: DOMPointReadOnly.toJSON()
+title: "DOMPointReadOnly: toJSON() method"
+short-title: toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - JSON
-  - Method
-  - Point
-  - Reference
-  - toJSON
+page-type: web-api-instance-method
 browser-compat: api.DOMPointReadOnly.toJSON
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("DOMPointReadOnly")}} method
@@ -23,8 +14,8 @@ The {{domxref("DOMPointReadOnly")}} method
 
 ## Syntax
 
-```js
-pointJSON = DOMPointReadOnly.toJSON();
+```js-nolint
+toJSON()
 ```
 
 ### Parameters
@@ -36,15 +27,15 @@ None.
 A new object whose properties are set to the values in the
 `DOMPoint` or `DOMPointReadOnly` on which the method was called.
 
-## Example
+## Examples
 
 This example creates a {{domxref("DOMPoint")}} object representing the top-left corner
 of the current window, in screen coordinates, then converts that to JSON.
 
 ```js
-var topLeft = new DOMPoint(window.screenX, window.screenY);
+const topLeft = new DOMPoint(window.screenX, window.screenY);
 
-var pointJSON = topLeft.toJSON();
+const pointJSON = topLeft.toJSON();
 ```
 
 ## Specifications

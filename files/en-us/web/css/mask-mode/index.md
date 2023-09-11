@@ -1,18 +1,15 @@
 ---
 title: mask-mode
 slug: Web/CSS/mask-mode
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-mode
 ---
+
 {{CSSRef}}
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,10 +24,9 @@ mask-mode: alpha, match-source;
 mask-mode: inherit;
 mask-mode: initial;
 mask-mode: revert;
+mask-mode: revert-layer;
 mask-mode: unset;
 ```
-
-## Syntax
 
 The `mask-mode` property is specified as one or more of the keyword values listed below, separated by commas.
 

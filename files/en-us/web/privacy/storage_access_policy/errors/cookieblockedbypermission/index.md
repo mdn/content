@@ -1,18 +1,18 @@
 ---
-title: 'Blocked: Custom cookie permission'
+title: "Blocked: Custom cookie permission"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedByPermission
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:
 
-    CookieBlockedByPermission=Request to access cookies or storage on “X” was blocked because of custom cookie permission.
+```plain
+CookieBlockedByPermission=Request to access cookies or storage on "X" was blocked because of custom cookie permission.
+```
 
 ## What went wrong?
 

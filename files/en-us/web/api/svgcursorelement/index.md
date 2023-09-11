@@ -1,21 +1,19 @@
 ---
 title: SVGCursorElement
 slug: Web/API/SVGCursorElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.SVGCursorElement
 ---
-{{deprecated_header}}{{APIRef("SVG")}}
+
+{{APIRef("SVG")}}{{Deprecated_Header}}
 
 The **`SVGCursorElement`** interface provides access to the properties of {{ SVGElement("cursor") }} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
@@ -24,7 +22,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGCursorElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given {{SVGElement("cursor")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGElement")}}._
 

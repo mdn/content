@@ -1,27 +1,25 @@
 ---
 title: SVG Styling Attributes
 slug: Web/SVG/Attribute/Styling
-tags:
-  - Attribute
-  - Beginner
-  - NeedsExample
-  - Reference
-  - SVG
+page-type: svg-attribute
 browser-compat: svg.attributes.style
 ---
+
+{{SVGRef}}
+
 The SVG styling attributes are all the attributes that can be specified on any SVG element to apply CSS styling effects.
 
-*   [`class`](#attr-class)
-*   [`style`](#attr-style)
+- [`class`](#class)
+- [`style`](#style)
 
 ## Attributes
 
-*   {{SVGAttr('class')}}
-    *   : Assigns a class name or set of class names to an element. It functions identically to the {{htmlattrxref('class')}} attribute in HTML.
-        *Value*: Any valid ID string; *Animatable*: **Yes**
-*   {{SVGAttr('style')}}
-    *   : It specifies style information for its element. It functions identically to the {{htmlattrxref('style')}} attribute in HTML.
-        *Value*: Any valid style string; *Animatable*: **No**
+- {{SVGAttr('class')}}
+  - : Assigns a class name or set of class names to an element. It functions identically to the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute in HTML.
+    _Value_: Any valid ID string; _Animatable_: **Yes**
+- {{SVGAttr('style')}}
+  - : It specifies style information for its element. It functions identically to the [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute in HTML.
+    _Value_: Any valid style string; _Animatable_: **No**
 
 ## Browser compatibility
 

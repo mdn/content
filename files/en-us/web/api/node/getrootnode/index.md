@@ -1,11 +1,11 @@
 ---
-title: Node.getRootNode()
+title: "Node: getRootNode() method"
+short-title: getRootNode()
 slug: Web/API/Node/getRootNode
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Node.getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`getRootNode()`** method of the {{domxref("Node")}} interface
@@ -14,9 +14,9 @@ which optionally includes the shadow root if it is available.
 
 ## Syntax
 
-```js
-getRootNode();
-getRootNode(options);
+```js-nolint
+getRootNode()
+getRootNode(options)
 ```
 
 ### Parameters
@@ -25,59 +25,89 @@ getRootNode(options);
 
   - : An object that sets options for getting the root node. The available options are:
 
-    - `composed`: A {{jsxref('Boolean')}} that indicates whether the shadow
+    - `composed`: A boolean value that indicates whether the shadow
       root should be returned (`false`, the default), or a root node beyond
       shadow root (`true`).
 
 ### Return value
 
 An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
-on where you called `getRootNode()`; for example:
+on where you call `getRootNode()`; for example:
 
 - Calling it on an element inside a standard web page will return an
-  {{domxref("HTMLDocument")}} object representing the entire page.
+  {{domxref("HTMLDocument")}} object representing the entire page (or {{HTMLElement("iframe")}}).
 - Calling it on an element inside a shadow DOM will return the associated
   {{domxref("ShadowRoot")}}.
+- Calling it on an element that is not attached to a document or a shadow tree will return
+  the root of the DOM tree it belongs to.
 
 ## Examples
+
+### Example 1
 
 The first simple example returns a reference to the HTML/document node:
 
 ```js
-rootNode = node.getRootNode();
+const rootNode = node.getRootNode();
 ```
 
+### Example 2
+
 This more complex example shows the difference between returning a normal root, and a
-root including the shadow root.
-(See the [full source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+root including the shadow root:
 
 ```html
-<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
-<div class="js-parent">
-  <div class="js-child"></div>
+<div class="parent">
+  <div class="child"></div>
 </div>
-<div class="js-shadowHost"></div>
-<script>
-  // works on Chrome 54+, Opera 41+
+<div class="shadowHost">shadowHost</div>
+<pre id="output">Output: </pre>
+```
 
-  const parent = document.querySelector('.js-parent'),
-      child = document.querySelector('.js-child'),
-      shadowHost = document.querySelector('.js-shadowHost');
+```js
+const parent = document.querySelector(".parent");
+const child = document.querySelector(".child");
+const shadowHost = document.querySelector(".shadowHost");
+const output = document.getElementById("output");
 
-  console.log(parent.getRootNode().nodeName); // #document
-  console.log(child.getRootNode().nodeName); // #document
+output.textContent += `\nparent's root: ${parent.getRootNode().nodeName} \n`; // #document
+output.textContent += `child's  root: ${child.getRootNode().nodeName} \n\n`; // #document
 
-  // create a ShadowRoot
-  const shadowRoot = shadowHost.attachShadow({mode:'open'});
-  shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-      + '<div class="js-shadowChild">content</div>';
-  const shadowChild = shadowRoot.querySelector('.js-shadowChild');
+// create a ShadowRoot
+const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+shadowRoot.innerHTML =
+  '<style>div{background:#2bb8aa;}</style><div class="shadowChild">shadowChild</div>';
+const shadowChild = shadowRoot.querySelector(".shadowChild");
 
-  // The default value of composed is false
-  console.log(shadowChild.getRootNode() === shadowRoot); // true
-  console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
-  console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
-</script>
+// The default value of composed is false
+output.textContent += `shadowChild.getRootNode() === shadowRoot : ${
+  shadowChild.getRootNode() === shadowRoot
+} \n`; // true
+output.textContent += `shadowChild.getRootNode({composed:false}) === shadowRoot : ${
+  shadowChild.getRootNode({ composed: false }) === shadowRoot
+} \n`; // true
+output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${
+  shadowChild.getRootNode({ composed: true }).nodeName
+} \n`; // #document
+```
+
+{{ EmbedLiveSample('Example 2', '100%', '200px') }}
+
+### Example 3
+
+This example returns the root of the unmounted tree.
+Note `element` here is the root of the tree (as it has no parent), so by definition its root is itself:
+
+```js
+const element = document.createElement("p");
+const child = document.createElement("span");
+
+element.append(child);
+
+const rootNode = child.getRootNode(); // <p><span></span></p>
+
+element === rootNode; // true
+element === element.getRootNode(); // true
 ```
 
 ## Specifications

@@ -1,20 +1,15 @@
 ---
-title: '<p>: The Paragraph element'
+title: "<p>: The Paragraph element"
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.p
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<p>`** [HTML](/en-US/docs/Web/HTML) element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
 
-Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements), and notably will automatically close if another block-level element is parsed before the closing `</p>` tag. See “Tag omission” below.
+Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content), and notably will automatically close if another block-level element is parsed before the closing `</p>` tag. See "Tag omission" below.
 
 {{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
 
@@ -22,12 +17,12 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -35,7 +30,7 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -50,9 +45,9 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
         {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
         {{HTMLElement("footer")}}, {{HTMLElement("form")}},
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, {{HTMLElement("h6")}},
+        {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}},
         {{HTMLElement("header")}}, {{HTMLElement("hr")}},
         {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
         {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
@@ -66,7 +61,7 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -74,8 +69,8 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+          >paragraph</a
         >
       </td>
     </tr>
@@ -96,24 +91,24 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 > **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
 
-## Example
+## Examples
 
 ### HTML
 
 ```html
-<p>This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.</p>
-<p>This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.</p>
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
+<p>
+  This is the second paragraph. This is the second paragraph. This is the second
+  paragraph. This is the second paragraph.
+</p>
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Styling paragraphs
 
@@ -122,22 +117,29 @@ By default, browsers separate paragraphs with a single blank line. Alternate sep
 ### HTML
 
 ```html
-<p>Separating paragraphs with blank lines is easiest
-for readers to scan, but they can also be separated
-by indenting their first lines. This is often used
-to take up less space, such as to save paper in print.</p>
+<p>
+  Separating paragraphs with blank lines is easiest for readers to scan, but
+  they can also be separated by indenting their first lines. This is often used
+  to take up less space, such as to save paper in print.
+</p>
 
-<p>Writing that is intended to be edited, such as school
-papers and rough drafts, uses both blank lines and
-indentation for separation. In finished works, combining
-both is considered redundant and amateurish.</p>
+<p>
+  Writing that is intended to be edited, such as school papers and rough drafts,
+  uses both blank lines and indentation for separation. In finished works,
+  combining both is considered redundant and amateurish.
+</p>
 
-<p>In very old writing, paragraphs were separated with a
-special character: ¶, the <i>pilcrow</i>. Nowadays, this
-is considered claustrophobic and hard to read.</p>
+<p>
+  In very old writing, paragraphs were separated with a special character: ¶,
+  the <i>pilcrow</i>. Nowadays, this is considered claustrophobic and hard to
+  read.
+</p>
 
-<p>How hard to read? See for yourself:
-  <button data-toggle-text="Oh no! Switch back!">Use pilcrow for paragraphs</button>
+<p>
+  How hard to read? See for yourself:
+  <button data-toggle-text="Oh no! Switch back!">
+    Use pilcrow for paragraphs
+  </button>
 </p>
 ```
 
@@ -150,8 +152,8 @@ p {
 }
 
 p.pilcrow {
-   text-indent: 0;
-   display: inline;
+  text-indent: 0;
+  display: inline;
 }
 p.pilcrow + p.pilcrow::before {
   content: " ¶ ";
@@ -161,14 +163,15 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
-    paragraph.classList.toggle('pilcrow');
-  });
-  var newButtonText = event.target.dataset.toggleText;
-  var oldText = event.target.innerText;
-  event.target.innerText = newButtonText;
-  event.target.dataset.toggleText = oldText;
+document.querySelector("button").addEventListener("click", (event) => {
+  document.querySelectorAll("p").forEach((paragraph) => {
+    paragraph.classList.toggle("pilcrow");
+  });
+
+  [event.target.innerText, event.target.dataset.toggleText] = [
+    event.target.dataset.toggleText,
+    event.target.innerText,
+  ];
 });
 ```
 
@@ -186,7 +189,7 @@ If extra space is desired, use {{glossary("CSS")}} properties like {{cssxref("ma
 
 ```css
 p {
-  margin-bottom: 2em; // increase white space after a paragraph
+  margin-bottom: 2em; /* increase white space after a paragraph */
 }
 ```
 

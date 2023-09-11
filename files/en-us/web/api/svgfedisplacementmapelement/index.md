@@ -1,19 +1,15 @@
 ---
 title: SVGFEDisplacementMapElement
 slug: Web/API/SVGFEDisplacementMapElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFEDisplacementMapElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement("feDisplacementMap")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 
@@ -56,7 +52,7 @@ The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement(
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -81,7 +77,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDisplacementMapElement.yChannelSelector")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("yChannelSelect")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

@@ -1,15 +1,11 @@
 ---
-title: XPathResult.stringValue
+title: "XPathResult: stringValue property"
+short-title: stringValue
 slug: Web/API/XPathResult/stringValue
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
+page-type: web-api-instance-property
 browser-compat: api.XPathResult.stringValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`stringValue`** property of the
@@ -18,13 +14,7 @@ The read-only **`stringValue`** property of the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var value = result.stringValue;
-```
-
-### Return value
+## Value
 
 The return value is the string value of the `XPathResult` returned by
 {{domxref("Document.evaluate()")}}.
@@ -36,7 +26,7 @@ The return value is the string value of the `XPathResult` returned by
 In case {{domxref("XPathResult.resultType")}} is not `STRING_TYPE`, an
 {{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `stringValue` property.
 
@@ -50,14 +40,20 @@ The following example shows the use of the `stringValue` property.
 ### JavaScript
 
 ```js
-var xpath = "//div/text()";
-var result = document.evaluate(xpath, document, null, XPathResult.STRING_TYPE, null);
+const xpath = "//div/text()";
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.STRING_TYPE,
+  null,
+);
 document.querySelector("output").textContent = result.stringValue;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

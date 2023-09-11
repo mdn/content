@@ -1,36 +1,35 @@
 ---
-title: AudioData.clone()
+title: "AudioData: clone() method"
+short-title: clone()
 slug: Web/API/AudioData/clone
-tags:
-  - API
-  - Method
-  - Reference
-  - clone
-  - AudioData
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioData.clone
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new `AudioData` object with reference to the same media resource as the original.
 
 ## Syntax
 
-```js
-AudioData.clone()
+```js-nolint
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 The cloned {{domxref("AudioData")}} object.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `AudioData` object has been {{domxref("Transferable","transfered")}}.
+  - : Thrown if the `AudioData` object has been [transferred](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Examples
 
@@ -47,4 +46,3 @@ let audioData2 = AudioData.clone();
 ## Browser compatibility
 
 {{Compat}}
-

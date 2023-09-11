@@ -1,48 +1,45 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.keys
 ---
+
 {{JSRef}}
 
-The **`keys()`** method returns a new
-**[Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** object
-that contains the keys for each element in the `Map` object in insertion order.
+The **`keys()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each element in this map in insertion order.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new {{jsxref("Map")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
 ### Using keys()
 
 ```js
-var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-var mapIter = myMap.keys();
+const mapIter = myMap.keys();
 
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // Object
+console.log(mapIter.next().value); // {}
 ```
 
 ## Specifications

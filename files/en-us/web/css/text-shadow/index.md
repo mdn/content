@@ -1,20 +1,10 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - CSS
-  - CSS Property
-  - CSS Styles
-  - CSS Text Decoration
-  - HTML Colors
-  - HTML Styles
-  - Reference
-  - Styles
-  - Styling HTML
-  - color
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-shadow
 ---
+
 {{CSSRef}}
 
 The **`text-shadow`** CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
@@ -44,12 +34,13 @@ text-shadow: 5px 10px;
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: revert;
+text-shadow: revert-layer;
 text-shadow: unset;
 ```
 
 This property is specified as a comma-separated list of shadows.
 
-Each shadow is specified as two or three `<length>` values, followed optionally by a `<color>` value. The first two `<length>` values are the `<offset-x>` and `<offset-y>` values. The third, optional, `<length>` value is the `<blur-radius>`. The`<color>` value is the shadow's color.
+Each shadow is specified as two or three `<length>` values, followed optionally by a `<color>` value. The first two `<length>` values are the `<offset-x>` and `<offset-y>` values. The third, optional, `<length>` value is the `<blur-radius>`. The `<color>` value is the shadow's color.
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
@@ -83,9 +74,10 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 ```
 
 ```html
-<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="red-text-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
@@ -94,16 +86,22 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ```css
 .white-text-with-blue-shadow {
-  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
   color: white;
-  font: 1.5em Georgia, serif;
+  font:
+    1.5em Georgia,
+    serif;
 }
 ```
 
 ```html
-<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="white-text-with-blue-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}
@@ -116,12 +114,9 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 {{Compat}}
 
-### Quantum CSS notes
-
-- Gecko has a bug whereby {{cssxref("transition")}}s will not work when transitioning from a `text-shadow` with a color specified to a `text-shadow` without a color specified ({{bug(726550)}}). This has been fixed in Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), planned for release in Firefox 57).
-
 ## See also
 
-- {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- {{cssxref("box-shadow")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

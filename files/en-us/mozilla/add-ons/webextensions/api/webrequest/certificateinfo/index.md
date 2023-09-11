@@ -1,22 +1,15 @@
 ---
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
-tags:
-  - API
-  - Add-ons
-  - CertificateInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.CertificateInfo
 ---
+
 {{AddonSidebar()}}
 
 An object describing a single [X.509 certificate](https://datatracker.ietf.org/doc/html/rfc5280).
 
-The {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API includes a `certificates` property which is an array of these objects.
+The {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API includes a `certificates` property which is an array of these objects.
 
 ## Type
 
@@ -40,7 +33,7 @@ Values of this type are objects. They contain the following properties:
     For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".
 
 - `rawDER`
-  - : `Array` of `Number`. If [`webRequest.getSecurityInfo()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo "Use this function to get detailed information about the TLS connection associated with a particular request.") was called with the `rawDER` option present and set to `true`, this will contain the DER encoding of the certificate.
+  - : `Array` of `Number`. If [`webRequest.getSecurityInfo()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) was called with the `rawDER` option present and set to `true`, this will contain the DER encoding of the certificate.
 - `serialNumber`
   - : `String`. The certificate's [serial number](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
 - `subject`

@@ -1,14 +1,11 @@
 ---
-title: DOMImplementation.createDocumentType()
+title: "DOMImplementation: createDocumentType() method"
+short-title: createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMImplementation.createDocumentType
 ---
+
 {{ ApiRef("DOM")}}
 
 The **`DOMImplementation.createDocumentType()`** method returns
@@ -19,25 +16,37 @@ into the document via methods like {{domxref("Node.insertBefore()")}} or
 
 ## Syntax
 
-```js
-var doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId);
+```js-nolint
+createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 
 ### Parameters
 
 - `qualifiedNameStr`
-  - : Is a {{domxref("DOMString")}} containing the qualified name, like
+  - : A string containing the qualified name, like
     `svg:svg`.
 - `publicId`
-  - : Is a {{domxref("DOMString")}} containing the `PUBLIC` identifier.
+  - : A string containing the `PUBLIC` identifier.
 - `systemId`
-  - : Is a {{domxref("DOMString")}} containing the `SYSTEM` identifiers.
+  - : A string containing the `SYSTEM` identifiers.
 
-## Example
+### Return value
+
+A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
+
+## Examples
 
 ```js
-var dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');
-var d = document.implementation.createDocument('http://www.w3.org/2000/svg', 'svg:svg', dt);
+const dt = document.implementation.createDocumentType(
+  "svg:svg",
+  "-//W3C//DTD SVG 1.1//EN",
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
+);
+const d = document.implementation.createDocument(
+  "http://www.w3.org/2000/svg",
+  "svg:svg",
+  dt,
+);
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 

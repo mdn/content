@@ -1,27 +1,19 @@
 ---
-title: PerformanceObserver.takeRecords()
+title: "PerformanceObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - observers
-  - takeRecords()
+page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.takeRecords
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`takeRecords()`** method of the
-{{domxref('PerformanceObserver')}} interface returns the current list of
-{{domxref("PerformanceEntry","performance entries")}} stored in the performance
-observer, emptying it out.
+{{APIRef("Performance API")}}
+
+The **`takeRecords()`** method of the {{domxref('PerformanceObserver')}} interface returns the current list of {{domxref("PerformanceEntry","performance entries")}} stored in the performance observer, emptying it out.
 
 ## Syntax
 
-```js
-var performanceEntryList = performanceObserver.takeRecords();
+```js-nolint
+takeRecords()
 ```
 
 ### Parameters
@@ -32,17 +24,20 @@ None.
 
 A list of {{domxref("PerformanceEntry")}} objects.
 
-## Example
+## Examples
+
+### Taking records
+
+The following example stores the current list of performance entries into `records` and empties the performance observer.
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
-  var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
+const observer = new PerformanceObserver((list, obj) => {
+  list.getEntries().forEach((entry) => {
+    // Process "mark" and "measure" events
+  });
 });
-observer.observe({entryTypes: ["mark", "frame"]});
-var records = observer.takeRecords();
+observer.observe({ entryTypes: ["mark", "measure"] });
+const records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);
 console.log(records[0].duration);

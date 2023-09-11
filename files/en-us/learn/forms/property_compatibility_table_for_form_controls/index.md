@@ -1,16 +1,9 @@
 ---
 title: CSS property compatibility table for form controls
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - Guide
-  - HTML
-  - Junk
-  - NeedsUpdate
-  - Web
+page-type: learn-module-chapter
 ---
+
 {{learnsidebar}}
 
 The following compatibility tables try to summarize the state of CSS support for HTML forms. Due to the complexity of CSS and HTML forms, these tables can't be considered a perfect reference. However, they will give you good insight into what can and can't be done, which will help you learn how to do things.
@@ -21,11 +14,11 @@ The following compatibility tables try to summarize the state of CSS support for
 
 For each property, there are four possible values:
 
-- Yes
+- ✅ Yes
   - : There's reasonably consistent support for the property across browsers. You may still face strange side effects in certain edge cases.
-- Partial
+- ⚠️ Partial
   - : While the property works, you may frequently face strange side effects or inconsistencies. You should probably avoid these properties unless you master those side effects first.
-- No
+- ❌ No
   - : The property doesn't work or is so inconsistent that it's not reliable.
 - n.a.
   - : The property has no meaning for this type of widget.
@@ -42,30 +35,13 @@ For each property there are two possible renderings:
 ```css
 * {
   /* Turn off the native look and feel */
-  -webkit-appearance: none;
   appearance: none;
-
-/* for Internet Explorer */
-  background: none;
 }
 ```
 
 ## Compatibility tables
 
-### Global behaviors
-
-Some behaviors are common to many browsers at a global level:
-
-- {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, {{cssxref("height")}}
-  - : Using one of these properties can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
-- {{cssxref("line-height")}}
-  - : This property is supported inconsistently across browsers and you should avoid it.
-- {{cssxref("text-decoration")}}
-  - : This property is not supported by Opera on form widgets.
-- {{cssxref("text-overflow")}}
-  - : Opera, Safari, and IE9 do not support this property on form widgets.
-- {{cssxref("text-shadow")}}
-  - : Opera does not support {{cssxref("text-shadow")}} on form widgets and IE9 does not support it at all.
+Altering the appearance of form controls with CSS, such as with {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, and {{cssxref("height")}} can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
 
 ### Text fields
 
@@ -89,22 +65,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("width")}}
       </th>
       <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+        style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -112,35 +77,19 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
           <li>
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
-            <code>-webkit-appearance:none</code> to be able to apply this
+            <code>appearance:none</code> to be able to apply this
             property to search fields.
-          </li>
-          <li>
-            On Windows 7, Internet Explorer 9 does not apply the border unless
-            <code>background:none</code> is applied.
           </li>
         </ol>
       </td>
@@ -149,35 +98,19 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
           <li>
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
-            <code>-webkit-appearance:none</code> to be able to apply this
+            <code>appearance:none</code> to be able to apply this
             property to search fields.
-          </li>
-          <li>
-            On Windows 7, Internet Explorer 9 does not apply the border unless
-            <code>background:none</code> is applied.
           </li>
         </ol>
       </td>
@@ -186,23 +119,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -210,35 +131,19 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
           <li>
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
-            <code>-webkit-appearance:none</code> to be able to apply this
+            <code>appearance:none</code> to be able to apply this
             property to search fields.
-          </li>
-          <li>
-            On Windows 7, Internet Explorer 9 does not apply the border unless
-            <code>background:none</code> is applied.
           </li>
         </ol>
       </td>
@@ -252,23 +157,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}<sup>[1]</sup>
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -285,23 +178,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>See the note about {{cssxref("line-height")}}</td>
     </tr>
@@ -309,23 +190,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -333,23 +202,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -357,23 +214,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td>See the note about Opera</td>
     </tr>
@@ -381,23 +226,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -413,23 +246,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -437,23 +258,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -461,23 +270,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -490,23 +287,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -514,8 +299,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
             <code>-webkit-appearance:none</code> to be able to apply this
-            property to search fields. On Windows 7, Internet Explorer 9 does
-            not apply the border unless <code>background:none</code> is applied.
+            property to search fields.
           </li>
         </ol>
       </td>
@@ -524,23 +308,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -548,12 +320,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
             <code>-webkit-appearance:none</code> to be able to apply this
-            property to search fields. On Windows 7, Internet Explorer 9 does
-            not apply the border unless <code>background:none</code> is applied.
-          </li>
-          <li>
-            On Opera the {{cssxref("border-radius")}} property is
-            applied only if an explicit border is set.
+            property to search fields.
           </li>
         </ol>
       </td>
@@ -562,23 +329,11 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -591,7 +346,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
 
 ### Buttons
 
-See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/submit", "submit")}}`, and `{{htmlelement("input/reset", "reset")}}` input types and the `{{htmlelement("button")}}` element.
+See the `{{htmlelement("input/button", "button")}}`, `{{htmlelement("input/submit", "submit")}}`, and `{{htmlelement("input/reset", "reset")}}` input types and the `{{htmlelement("button")}}` element.
 
 <table>
   <thead>
@@ -610,23 +365,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -634,23 +377,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -665,23 +396,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -689,23 +408,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -713,23 +420,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -749,23 +444,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -773,23 +456,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>See the note about {{cssxref("line-height")}}.</td>
     </tr>
@@ -797,23 +468,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -821,23 +480,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -845,23 +492,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -869,23 +504,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -893,23 +516,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -917,23 +528,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -941,23 +540,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -970,23 +557,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -994,23 +569,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1025,23 +588,11 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1054,7 +605,7 @@ See the `{{htmlelement("input/button", "button")}}`,  `{{htmlelement("input/sub
 
 ### Number
 
-See the  `{{htmlelement("input/number", "number")}}` input type. There is no standard way to change the style of spinners used to change the value of the field, with the spinners on Safari being outside the field.
+See the `{{htmlelement("input/number", "number")}}` input type. There is no standard way to change the style of spinners used to change the value of the field, with the spinners on Safari being outside the field.
 
 <table>
   <thead>
@@ -1073,23 +624,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1097,23 +636,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1128,23 +655,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1152,23 +667,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1176,23 +679,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1212,23 +703,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1236,23 +715,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>See the note about {{cssxref("line-height")}}.</td>
     </tr>
@@ -1260,23 +727,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1284,23 +739,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1308,23 +751,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -1332,23 +763,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1356,23 +775,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1380,23 +787,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
       <td></td>
     </tr>
@@ -1417,23 +812,11 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td rowspan="3">
         <p>
@@ -1446,46 +829,22 @@ See the  `{{htmlelement("input/number", "number")}}` input type. There is no st
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
     </tr>
   </tbody>
@@ -1512,23 +871,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1542,23 +889,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1572,23 +907,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1596,23 +919,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1621,22 +932,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
         {{cssxref("padding")}}
       </th>
       <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+       style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1726,23 +1026,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1750,23 +1038,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1774,23 +1050,11 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -1799,7 +1063,7 @@ See the `{{htmlelement("input/checkbox", "checkbox")}}` and `{{htmlelement("inpu
 
 ### Select boxes (single line)
 
-See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{htmlelement("option")}}` elements.
+See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlelement("option")}}` elements.
 
 <table>
   <thead>
@@ -1818,23 +1082,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1851,23 +1103,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1875,23 +1115,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1899,23 +1127,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -1923,23 +1139,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[2]</sup>
       </td>
       <td>
         <ol>
@@ -1966,23 +1170,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1999,23 +1191,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2032,23 +1212,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2066,62 +1234,18 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
-        {{cssxref("text-align")}}
-      </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
-      </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
-      </td>
-      <td>
-        <ol>
-          <li>
-            IE9 on Windows 7 and WebKit based browsers on Mac OSX do not support
-            this property on this widget.
-          </li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
           <li>
-            Only Firefox provides full support for this property. Opera does not
-            support this property at all and other browsers only support it on
+            Only Firefox provides full support for this property. Other browsers only support it on
             the <code>{{htmlelement("select")}}</code> element.
           </li>
         </ol>
@@ -2131,23 +1255,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2155,7 +1267,6 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
             Most of the browsers only support this property on the
             <code>{{htmlelement("select")}}</code> element.
           </li>
-          <li>IE9 does not support this property.</li>
         </ol>
       </td>
     </tr>
@@ -2163,23 +1274,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2187,23 +1286,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1][2]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2211,7 +1298,6 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
             Most of the browsers only support this property on the
             <code>{{htmlelement("select")}}</code> element.
           </li>
-          <li>IE9 does not support this property.</li>
         </ol>
       </td>
     </tr>
@@ -2219,23 +1305,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2255,23 +1329,11 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td rowspan="3">
         <ol>
@@ -2286,46 +1348,22 @@ See the `{{htmlelement("select")}}`,  `{{htmlelement("optgroup")}}` and  `{{ht
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -2335,7 +1373,7 @@ Note Firefox does not provide any way to change the down arrow on the `{{htmlele
 
 ### Select boxes (multiline)
 
-See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{htmlelement("option")}}` elements and the [`size` attribute](/en-US/docs/Web/HTML/Attributes/size).
+See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlelement("option")}}` elements and the [`size` attribute](/en-US/docs/Web/HTML/Attributes/size).
 
 <table>
   <thead>
@@ -2354,23 +1392,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2378,23 +1404,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2402,23 +1416,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2426,23 +1428,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2450,23 +1440,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2487,23 +1465,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2511,23 +1477,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>See the note about {{cssxref("line-height")}}.</td>
     </tr>
@@ -2535,23 +1489,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2571,28 +1513,16 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
           <li>
-            IE9 on Windows 7 and WebKit based browser on Mac OSX do not support
+            WebKit based browser on Mac OSX do not support
             this property on this widget.
           </li>
         </ol>
@@ -2602,23 +1532,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2630,23 +1548,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2654,23 +1560,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2678,23 +1572,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2702,23 +1584,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2738,23 +1608,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -2762,23 +1620,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2793,23 +1639,11 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -2822,7 +1656,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and  `{{html
 
 ### Datalist
 
-See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list` attribute](/en-US/docs/Web/HTML/Attributes/list).
+See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute.
 
 <table>
   <thead>
@@ -2841,23 +1675,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2865,23 +1687,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2889,23 +1699,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2913,23 +1711,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2937,23 +1723,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2966,23 +1740,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -2990,23 +1752,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3014,23 +1764,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3038,23 +1776,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3062,23 +1788,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3086,23 +1800,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3110,23 +1812,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3134,23 +1824,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3158,23 +1836,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3187,23 +1853,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3211,23 +1865,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3235,23 +1877,11 @@ See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements an
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3279,23 +1909,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3303,23 +1921,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3327,23 +1933,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3351,23 +1945,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -3375,23 +1957,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3404,23 +1974,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -3428,23 +1986,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3459,23 +2005,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3487,23 +2021,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3511,23 +2033,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3535,23 +2045,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3565,23 +2063,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3589,23 +2075,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3613,23 +2087,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3642,23 +2104,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3673,23 +2123,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3697,23 +2135,11 @@ See the `{{htmlelement("input/file", "file")}}` input type.
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3745,23 +2171,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3769,23 +2183,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3793,23 +2195,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3817,23 +2207,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -3841,23 +2219,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3870,23 +2236,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("color")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3894,23 +2248,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("font")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3918,23 +2260,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("letter-spacing")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3942,23 +2272,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-align")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3966,23 +2284,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -3990,23 +2296,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-indent")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4014,23 +2308,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-overflow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4038,23 +2320,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4062,23 +2332,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-transform")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4091,23 +2349,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4115,23 +2361,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4139,23 +2373,11 @@ See the `{{htmlelement("input/date", "date")}}` and `{{htmlelement("input/time",
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
       <td></td>
     </tr>
@@ -4183,23 +2405,11 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4207,23 +2417,11 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -4237,23 +2435,11 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4261,23 +2447,11 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4285,23 +2459,11 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -4397,23 +2559,11 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td rowspan="3">
         <ol>
@@ -4428,46 +2578,22 @@ See the `{{htmlelement("input/color", "color")}}` input type:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -4494,23 +2620,11 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4518,23 +2632,11 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4542,23 +2644,11 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4566,23 +2656,11 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4590,23 +2668,11 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -4706,23 +2772,11 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td rowspan="3">
         <ol>
@@ -4737,46 +2791,22 @@ See the `{{htmlelement("meter")}}` and `{{htmlelement("progress")}}` elements:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -4803,23 +2833,11 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4827,29 +2845,16 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
           <li>
-            Chrome and Opera add some extra space around the widget, whereas
-            Opera on Windows 7 stretches the range grip.
+            Chrome and Opera add some extra space around the widget.
           </li>
         </ol>
       </td>
@@ -4858,23 +2863,11 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No
+      <td style="text-align: center; vertical-align: top">
+        ❌ No
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4882,23 +2875,11 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -4906,23 +2887,11 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td>
         <ol>
@@ -5019,23 +2988,11 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
       <td rowspan="3">
         <ol>
@@ -5050,46 +3007,22 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 153, 153);
-          vertical-align: top;
-        "
-      >
-        No<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ❌ No<sup>[1]</sup>
       </td>
     </tr>
   </tbody>
@@ -5116,23 +3049,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("width")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5140,23 +3061,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("height")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5164,23 +3073,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("border")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5188,23 +3085,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("margin")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5212,23 +3097,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="vertical-align: top">
         {{cssxref("padding")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5318,23 +3191,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("background")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(204, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Yes
+      <td style="text-align: center; vertical-align: top">
+        ✅ Yes
       </td>
       <td></td>
     </tr>
@@ -5342,23 +3203,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("border-radius")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -5370,23 +3219,11 @@ See the `{{htmlelement("input/image", "image")}}` input type:
       <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("box-shadow")}}
       </th>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
-      <td
-        style="
-          text-align: center;
-          background-color: rgb(255, 255, 102);
-          vertical-align: top;
-        "
-      >
-        Partial<sup>[1]</sup>
+      <td style="text-align: center; vertical-align: top">
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -5417,4 +3254,4 @@ See the `{{htmlelement("input/image", "image")}}` input type:
 - [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- **Property compatibility table for form widgets**

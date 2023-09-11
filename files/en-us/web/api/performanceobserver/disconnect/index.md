@@ -1,49 +1,45 @@
 ---
-title: PeformanceObserver.disconnect()
+title: "PerformanceObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/PerformanceObserver/disconnect
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - disconnect()
-  - observers
+page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.disconnect
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`disconnect()`** method of the
-{{domxref('PerformanceObserver')}} interface is used to stop the performance observer
-from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}}
-events.
+{{APIRef("Performance API")}}
+
+The **`disconnect()`** method of the {{domxref('PerformanceObserver')}} interface is used to stop the performance observer from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}} events.
 
 ## Syntax
 
-```js
-performanceObserver.disconnect();
+```js-nolint
+disconnect()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
+
+### Stopping a performance observer
+
+The following example disconnects the performance observer to disable receiving any more performance entry events.
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
-  var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
+const observer = new PerformanceObserver((list, obj) => {
+  list.getEntries().forEach((entry) => {
+    // Process "measure" events
+    // …
+    // Disable additional performance events
+    observer.disconnect();
+  });
 });
-observer.observe({entryTypes: ["mark", "frame"]});
-
-function perf_observer(list, observer) {
-  // Process the "measure" event
-  // ...
-  // Disable additional performance events
-  observer.disconnect();
-}
-var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer.observe({ entryTypes: ["mark", "measure"] });
 ```
 
 ## Specifications

@@ -1,37 +1,23 @@
 ---
-title: SourceBuffer.buffered
+title: "SourceBuffer: buffered property"
+short-title: buffered
 slug: Web/API/SourceBuffer/buffered
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - buffered
+page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.buffered
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`buffered`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns the time ranges that are currently
-buffered in the `SourceBuffer` as a normalized {{domxref("TimeRanges")}}
+buffered in the `SourceBuffer` as a normalized {{domxref("TimeRanges")}}
 object.
 
-## Syntax
-
-```js
-var myBufferedRange = sourceBuffer.buffered;
-```
-
-### Value
+## Value
 
 A {{domxref("TimeRanges")}} object.
 
-## Example
+## Examples
 
 TBD
 

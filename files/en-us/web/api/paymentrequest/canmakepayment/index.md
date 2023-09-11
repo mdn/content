@@ -1,18 +1,11 @@
 ---
-title: PaymentRequest.canMakePayment()
+title: "PaymentRequest: canMakePayment() method"
+short-title: canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
-tags:
-  - API
-  - Experimental
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - canMakePayment
+page-type: web-api-instance-method
 browser-compat: api.PaymentRequest.canMakePayment
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -31,15 +24,15 @@ Request API (or even provide instructions for paying by mail or by phone).
 
 ## Syntax
 
-```js
-paymentRequest.canMakePayment()
-    .then( canPay => { ... })
-    .catch( error => { ... })
-
-canPay = await paymentRequest.canMakePayment();
+```js-nolint
+canMakePayment()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} to a boolean value that resolves to `true`
 if the user agent supports any of the payment methods supplied when instantiating the
@@ -50,20 +43,15 @@ constructor. If the payment can't be processed, the promise receives a value of
 > **Note:** If you call this too often, the browser may reject the
 > returned promise with a `DOMException`.
 
-### Parameters
-
-None
-
 ## Examples
 
-In the following example, is [excerpted
-from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
+In the following example, is [excerpted from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
 both Apple Pay and Example Pay. It wraps the call to `canMakePayment()` in
 feature detection, and calls an appropriate callback depending on the resolution of the
 `Promise`.
 
 ```js
-async function initPaymentRquest() {
+async function initPaymentRequest() {
   const details = {
     total: {
       label: "Total",
@@ -76,7 +64,7 @@ async function initPaymentRquest() {
 
   const supportsApplePay = new PaymentRequest(
     [{ supportedMethods: "https://apple.com/apple-pay" }],
-    details
+    details,
   ).canMakePayment();
 
   // Supports Apple Pay?
@@ -85,10 +73,10 @@ async function initPaymentRquest() {
     return;
   }
 
-  // Otherwise... let's see if we can use Example Pay
+  // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
-    details
+    details,
   ).canMakePayment();
 
   if (supportsExamplePay) {

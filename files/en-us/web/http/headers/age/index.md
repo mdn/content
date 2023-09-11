@@ -1,13 +1,10 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - Caching
-  - HTTP
-  - Response
-  - header
+page-type: http-header
 browser-compat: http.headers.Age
 ---
+
 {{HTTPSidebar}}
 
 The **`Age`** header contains the time in seconds the object was in a proxy cache.
@@ -30,7 +27,7 @@ a difference between the proxy's current date and the {{HTTPHeader("Date")}} gen
 
 ## Syntax
 
-```
+```http
 Age: <delta-seconds>
 ```
 
@@ -41,7 +38,7 @@ Age: <delta-seconds>
 
 ## Examples
 
-```
+```http
 Age: 24
 ```
 

@@ -1,14 +1,11 @@
 ---
-title: MessageChannel()
+title: "MessageChannel: MessageChannel() constructor"
+short-title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
-tags:
-  - API
-  - Channel messaging
-  - Constructor
-  - MessageChannel
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.MessageChannel.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}
@@ -19,35 +16,39 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 
 ## Syntax
 
-```js
-var channel = new MessageChannel();
+```js-nolint
+new MessageChannel()
 ```
 
-### Returns
+### Parameters
 
-A newly created {{domxref("MessageChannel")}} object.
+None ({{jsxref("undefined")}}).
 
-## Example
+### Return value
+
+A new {{domxref("MessageChannel")}} object.
+
+## Examples
 
 In the following code block, you can see a new channel being created using the
-{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the
-IFrame has loaded, we pass `port2` to the IFrame using
-{{domxref("MessagePort.postMessage")}} along with a message. The
-`handleMessage` handler then responds to a message being sent back from the
-IFrame (using {{domxref("MessagePort.onmessage")}}), putting it into a paragraph.
-{{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
+{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.
+When the {{HTMLElement("iframe")}} has loaded,
+we pass `port2` to the `<iframe>` using {{domxref("MessagePort.postMessage")}} along with a message.
+The `handleMessage` handler then responds to a message being sent back from the
+`<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it into a paragraph.
+The {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector("iframe");
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -56,9 +57,9 @@ function handleMessage(e) {
 }
 ```
 
-For a full working example, see our [channel
-messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live
-too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example,
+see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)
+on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 
@@ -70,5 +71,4 @@ too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

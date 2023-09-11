@@ -1,19 +1,15 @@
 ---
 title: SVGGradientElement
 slug: Web/API/SVGGradientElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGGradientElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinearGradientElement")}} and {{domxref("SVGRadialGradientElement")}}.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 
@@ -51,20 +47,20 @@ The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinear
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGGradientElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
 - {{domxref("SVGGradientElement.gradientUnits")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("gradientUnits")}} attribute on the given element. This property takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("gradientUnits")}} attribute on the given element. This property takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 - {{domxref("SVGGradientElement.gradientTransform")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("gradientTransform")}} attribute on the given element.
+  - : An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("gradientTransform")}} attribute on the given element.
 - {{domxref("SVGGradientElement.spreadMethod")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spreadMethod")}} attribute on the given element. One of the spread method types defined on this interface.
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spreadMethod")}} attribute on the given element. One of the spread method types defined on this interface.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

@@ -1,31 +1,28 @@
 ---
-title: VideoEncoder.flush()
+title: "VideoEncoder: flush() method"
+short-title: flush()
 slug: Web/API/VideoEncoder/flush
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - VideoEncoder
+page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.flush
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`flush()`** method of the {{domxref("VideoEncoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+
+The **`flush()`** method of the {{domxref("VideoEncoder")}} interface forces all pending encodes to complete.
 
 ## Syntax
 
-```js
-VideoEncoder.flush()
+```js-nolint
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-A {{jsxref("Promise")}} that resolves with undefined.
+A {{jsxref("Promise")}} that resolves once the encoder's initialization is completed and all pending {{domxref("EncodedVideoChunk")}}s are returned.
 
 ### Exceptions
 
@@ -47,4 +44,3 @@ VideoEncoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

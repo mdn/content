@@ -1,29 +1,21 @@
 ---
-title: XRSession.requestHitTestSource()
+title: "XRSession: requestHitTestSource() method"
+short-title: requestHitTestSource()
 slug: Web/API/XRSession/requestHitTestSource
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSession
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRSession.requestHitTestSource
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestHitTestSource()`** method of the
 {{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRHitTestSource")}} object that can be passed to {{domxref("XRFrame.getHitTestResults()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 requestHitTestSource(options)
 ```
 
@@ -31,12 +23,15 @@ requestHitTestSource(options)
 
 - `options`
   - : An object containing configuration options, specifically:
-    - `space`: The {{domxref("XRSpace")}} that will be tracked by the hit test source.
-    - `entityTypes`: {{optional_inline}} An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
-      - `point`: Compute hit test results based on characteristic points detected.
-      - `plane`: Compute hit test results based on real-world planes detected.
-      - `mesh`: Compute hit test results based on meshes detected.
-    - `offsetRay`: {{optional_inline}} The {{domxref("XRRay")}} object that will be used to perform hit test. If no `XRRay` object has been provided, a new `XRRay` object is constructed without any parameters.
+    - `space`
+      - : The {{domxref("XRSpace")}} that will be tracked by the hit test source.
+    - `entityTypes` {{Optional_Inline}}
+      - : An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
+        - `point`: Compute hit test results based on characteristic points detected.
+        - `plane`: Compute hit test results based on real-world planes detected.
+        - `mesh`: Compute hit test results based on meshes detected.
+    - `offsetRay` {{Optional_Inline}}
+      - : The {{domxref("XRRay")}} object that will be used to perform hit test. If no `XRRay` object has been provided, a new `XRRay` object is constructed without any parameters.
 
 ### Return value
 
@@ -61,19 +56,20 @@ returned promise with a {{domxref("DOMException")}}, specifically, one of the fo
 To request a hit test source, start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Next, configure the hit test source and store it for later use in the frame loop and call {{domxref("XRFrame.getHitTestResults()")}} to obtain the result.
 
 ```js
-
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"],
 });
 
 let hitTestSource = null;
 
-xrSession.requestHitTestSource({
-  space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  offsetRay : new XRRay({y: 0.5})
-}).then((viewerHitTestSource) => {
-  hitTestSource = viewerHitTestSource;
-});
+xrSession
+  .requestHitTestSource({
+    space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+    offsetRay: new XRRay({ y: 0.5 }),
+  })
+  .then((viewerHitTestSource) => {
+    hitTestSource = viewerHitTestSource;
+  });
 
 // frame loop
 function onXRFrame(time, xrFrame) {

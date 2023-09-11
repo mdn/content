@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.getTexParameter()
+title: "WebGLRenderingContext: getTexParameter() method"
+short-title: getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getTexParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getTexParameter()`** method of the
@@ -18,25 +14,26 @@ given texture.
 
 ## Syntax
 
-```js
-any gl.getTexParameter(target, pname);
+```js-nolint
+getTexParameter(target, pname)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.TEXTURE_3D`: A three-dimensional texture.
-      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
 
-- pname
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+
+- `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
@@ -174,7 +171,7 @@ any gl.getTexParameter(target, pname);
 ### Return value
 
 Returns the requested texture information (as specified with `pname`). If an
-error occurs, {{jsxref("null")}} is returned.
+error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
 ## Examples
 

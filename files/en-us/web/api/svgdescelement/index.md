@@ -1,25 +1,21 @@
 ---
 title: SVGDescElement
 slug: Web/API/SVGDescElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGDescElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGDescElement`** interface corresponds to the {{SVGElement("desc")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 

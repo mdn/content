@@ -1,22 +1,11 @@
 ---
-title: RTCIceTransport.getSelectedCandidatePair()
+title: "RTCIceTransport: getSelectedCandidatePair() method"
+short-title: getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - Gathering
-  - ICE
-  - Method
-  - Negotiation
-  - Pair
-  - RTCIceTransport
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getSelectedCandidatePair
+page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getSelectedCandidatePair
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceTransport")}} method
@@ -26,8 +15,8 @@ of {{Glossary("ICE")}} candidates describing the configuration of the endpoints 
 
 ## Syntax
 
-```js
-candidatePair = RTCIceTransport.getSelectedCandidatePair();
+```js-nolint
+getSelectedCandidatePair()
 ```
 
 ### Parameters
@@ -49,7 +38,7 @@ The return value is `null` if no pair of candidates has been selected yet.
 As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers
 and analyzes candidate configurations from each the two peers. As soon as it finds an
 acceptable matching pair of candidates, meeting the requirements for the connection, a
-{{event("selectedcandidatepairchange")}} event is fired at the
+{{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event is fired at the
 {{domxref("RTCIceTransport")}}. From that time forward, the best matching pair of
 candidates will always be available by calling
 `getSelectedCandidatePair()`.
@@ -62,7 +51,7 @@ previous pairing, and the `selectedcandidatepairchange` event is fired again.
 
 ## Examples
 
-See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example) for example code.
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#examples) for example code.
 
 ## Specifications
 

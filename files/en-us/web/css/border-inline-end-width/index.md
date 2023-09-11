@@ -1,19 +1,10 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/border-inline-end-width
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - border-inline
-  - border-inline-end
-  - border-inline-end-width
-  - border-inline-width
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-inline-end-width
 ---
+
 {{CSSRef}}
 
 The **`border-inline-end-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of the logical inline-end border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
@@ -31,6 +22,7 @@ border-inline-end-width: thick;
 border-inline-end-width: inherit;
 border-inline-end-width: initial;
 border-inline-end-width: revert;
+border-inline-end-width: revert-layer;
 border-inline-end-width: unset;
 ```
 
@@ -91,5 +83,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,31 +1,30 @@
 ---
 title: pointsAtY
 slug: Web/SVG/Attribute/pointsAtY
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feSpotLight.pointsAtY
 ---
+
 {{SVGRef}}
 
 The **`pointsAtY`** attribute represents the y location in the coordinate system established by attribute {{SVGAttr("primitiveUnits")}} on the {{SVGElement("filter")}} element of the point at which the light source is pointing.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-
   <filter id="lighting1" x="0" y="0" width="100%" height="100%">
     <feDiffuseLighting in="SourceGraphic">
       <feSpotLight x="60" y="60" z="50" pointsAtY="0" />
@@ -38,7 +37,12 @@ html, body, svg {
   </filter>
 
   <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting1);" />
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#lighting2); transform: translateX(220px);" />
 </svg>
 ```
 
@@ -65,31 +69,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespotlight-pointsaty", "pointsAtY")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpotLightPointsAtYAttribute", "pointsAtY")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

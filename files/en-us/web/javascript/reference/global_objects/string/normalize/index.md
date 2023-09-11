@@ -1,33 +1,27 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Unicode
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.normalize
 ---
+
 {{JSRef}}
 
-The **`normalize()`** method returns the Unicode Normalization
-Form of the string.
+The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
+Form of this string.
 
 {{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 normalize()
 normalize(form)
 ```
 
 ### Parameters
 
-- `form` {{optional_inline}}
+- `form` {{optional_inline}}
 
   - : One of `"NFC"`, `"NFD"`, `"NFKC"`, or
     `"NFKD"`, specifying the Unicode Normalization Form. If omitted or
@@ -48,10 +42,10 @@ normalize(form)
 
 A string containing the Unicode Normalization Form of the given string.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : A {{jsxref("RangeError")}} is thrown if `form` isn't one of the values
+  - : Thrown if `form` isn't one of the values
     specified above.
 
 ## Description
@@ -67,11 +61,11 @@ either of:
   combining tilde (U+0303).
 
 ```js
-let string1 = '\u00F1';
-let string2 = '\u006E\u0303';
+const string1 = "\u00F1";
+const string2 = "\u006E\u0303";
 
-console.log(string1);  //  ñ
-console.log(string2);  //  ñ
+console.log(string1); // ñ
+console.log(string2); // ñ
 ```
 
 However, since the code points are different, string comparison will not treat them as
@@ -79,12 +73,12 @@ equal. And since the number of code points in each version is different, they ev
 different lengths.
 
 ```js
-let string1 = '\u00F1';            // ñ
-let string2 = '\u006E\u0303';      // ñ
+const string1 = "\u00F1"; // ñ
+const string2 = "\u006E\u0303"; // ñ
 
 console.log(string1 === string2); // false
-console.log(string1.length);      // 1
-console.log(string2.length);      // 2
+console.log(string1.length); // 1
+console.log(string2.length); // 2
 ```
 
 The `normalize()` method helps solve this problem by converting a string
@@ -104,21 +98,21 @@ equivalent strings. In the example below we normalize two representations of the
 character `"ñ"`:
 
 ```js
-let string1 = '\u00F1';           // ñ
-let string2 = '\u006E\u0303';     // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
-string1 = string1.normalize('NFD');
-string2 = string2.normalize('NFD');
+string1 = string1.normalize("NFD");
+string2 = string2.normalize("NFD");
 
 console.log(string1 === string2); // true
-console.log(string1.length);      // 2
-console.log(string2.length);      // 2
+console.log(string1.length); // 2
+console.log(string2.length); // 2
 ```
 
 #### Composed and decomposed forms
 
 Note that the length of the normalized form under `"NFD"` is
-`2`. That's because `"NFD"` gives you the
+`2`. That's because `"NFD"` gives you the
 **decomposed** version of the canonical form, in which single code points
 are split into multiple combining ones. The decomposed canonical form for
 `"ñ"` is `"\u006E\u0303"`.
@@ -128,15 +122,15 @@ in which multiple code points are replaced with single code points where possibl
 composed canonical form for `"ñ"` is `"\u00F1"`:
 
 ```js
-let string1 = '\u00F1';                           // ñ
-let string2 = '\u006E\u0303';                     // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
-string1 = string1.normalize('NFC');
-string2 = string2.normalize('NFC');
+string1 = string1.normalize("NFC");
+string2 = string2.normalize("NFC");
 
-console.log(string1 === string2);                 // true
-console.log(string1.length);                      // 1
-console.log(string2.length);                      // 1
+console.log(string1 === string2); // true
+console.log(string1.length); // 1
+console.log(string2.length); // 1
 console.log(string2.codePointAt(0).toString(16)); // f1
 ```
 
@@ -164,23 +158,23 @@ You can use `normalize()` using the `"NFKD"` or
 all compatible strings:
 
 ```js
-let string1 = '\uFB00';
-let string2 = '\u0066\u0066';
+let string1 = "\uFB00";
+let string2 = "\u0066\u0066";
 
-console.log(string1);             // ﬀ
-console.log(string2);             // ff
+console.log(string1); // ﬀ
+console.log(string2); // ff
 console.log(string1 === string2); // false
-console.log(string1.length);      // 1
-console.log(string2.length);      // 2
+console.log(string1.length); // 1
+console.log(string2.length); // 2
 
-string1 = string1.normalize('NFKD');
-string2 = string2.normalize('NFKD');
+string1 = string1.normalize("NFKD");
+string2 = string2.normalize("NFKD");
 
-console.log(string1);             // ff <- visual appearance changed
-console.log(string2);             // ff
+console.log(string1); // ff <- visual appearance changed
+console.log(string2); // ff
 console.log(string1 === string2); // true
-console.log(string1.length);      // 2
-console.log(string2.length);      // 2
+console.log(string1.length); // 2
+console.log(string2.length); // 2
 ```
 
 When applying compatibility normalization it's important to consider what you intend to
@@ -194,40 +188,40 @@ forms by passing `"NFKD"` or `"NFKC"`, respectively.
 
 ## Examples
 
-### Using `normalize()`
+### Using normalize()
 
 ```js
 // Initial string
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
-let str = '\u1E9B\u0323';
+const str = "\u1E9B\u0323";
 
 // Canonically-composed form (NFC)
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
-str.normalize('NFC'); // '\u1E9B\u0323'
-str.normalize();      // same as above
+str.normalize("NFC"); // '\u1E9B\u0323'
+str.normalize(); // same as above
 
 // Canonically-decomposed form (NFD)
 
 // U+017F: LATIN SMALL LETTER LONG S
 // U+0323: COMBINING DOT BELOW
 // U+0307: COMBINING DOT ABOVE
-str.normalize('NFD'); // '\u017F\u0323\u0307'
+str.normalize("NFD"); // '\u017F\u0323\u0307'
 
 // Compatibly-composed (NFKC)
 
 // U+1E69: LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
-str.normalize('NFKC'); // '\u1E69'
+str.normalize("NFKC"); // '\u1E69'
 
 // Compatibly-decomposed (NFKD)
 
 // U+0073: LATIN SMALL LETTER S
 // U+0323: COMBINING DOT BELOW
 // U+0307: COMBINING DOT ABOVE
-str.normalize('NFKD'); // '\u0073\u0323\u0307'
+str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ```
 
 ## Specifications
@@ -240,6 +234,5 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 
 ## See also
 
-- [Unicode Standard Annex #15, Unicode
-  Normalization Forms](http://www.unicode.org/reports/tr15/)
-- [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence)
+- [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
+- [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) on Wikipedia

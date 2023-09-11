@@ -1,64 +1,67 @@
 ---
 title: SpeechSynthesisErrorEvent
 slug: Web/API/SpeechSynthesisErrorEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechSynthesisErrorEvent
-  - Web Speech API
-  - speech
-  - synthesis
+page-type: web-api-interface
 browser-compat: api.SpeechSynthesisErrorEvent
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.
 
-## Properties
+{{InheritanceDiagram}}
+
+## Constructor
+
+- {{domxref("SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent", "SpeechSynthesisErrorEvent()")}}
+  - : Creates a new `SpeechSynthesisErrorEvent`.
+
+## Instance properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("SpeechSynthesisErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns an error code indicating what has gone wrong with a speech synthesis attempt.
 
-## Methods
+## Instance methods
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits methods from its parent interface, {{domxref("Event")}}._
 
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
 
   synth.speak(utterThis);
 
-  utterThis.onerror = function(event) {
-    console.log('An error has occurred with the speech synthesis: ' + event.error);
-  }
+  utterThis.onerror = (event) => {
+    console.log(
+      `An error has occurred with the speech synthesis: ${event.error}`,
+    );
+  };
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

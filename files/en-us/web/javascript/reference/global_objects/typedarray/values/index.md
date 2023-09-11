@@ -1,101 +1,57 @@
 ---
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.values
 ---
+
 {{JSRef}}
 
-The **`values()`** method returns a new _array iterator_ object
-that contains the values for each index in the array.
+The **`values()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.values()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new _array iterator_ object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+
+## Description
+
+See {{jsxref("Array.prototype.values()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
 ### Iteration using for...of loop
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
-
-for (let letter of iterator) {
-  console.log(letter);
-}  //"a" "b" "c" "d" "e"
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const values = arr.values();
+for (const n of values) {
+  console.log(n);
+}
 ```
 
-`Array.prototype.values` is default implementation of
-`Array.prototype[Symbol.iterator]`.
+### Alternative iteration
 
 ```js
-Array.prototype.values === Array.prototype[Symbol.iterator]      //true
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const values = arr.values();
+console.log(values.next().value); // 10
+console.log(values.next().value); // 20
+console.log(values.next().value); // 30
+console.log(values.next().value); // 40
+console.log(values.next().value); // 50
 ```
-
-### Iteration using .next()
-
-```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
-iterator.next();               // Object { value: "a", done: false }
-iterator.next().value;         // "b"
-iterator.next()["value"];      // "c"
-iterator.next();               // Object { value: "d", done: false }
-iterator.next();               // Object { value: "e", done: false }
-iterator.next();               // Object { value: undefined, done: true }
-iteraror.next().value;         // undefined 
-```
-
-> **Warning:** One-use: the array iterator object is one use or temporary object
-
-example:
-
-```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
- var iterator = arr.values();
- for (let letter of iterator) {
- console.log(letter);
-} //"a" "b" "c" "d" "e"
-for (let letter of iterator) {
-console.log(letter);
-} // undefined
-```
-
-**reason:** When `next().done=true`  or 
-`currentIndex>length` the `for..of` loop ends. See [Iteration
-protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-
-**Value**: there are no values stored in the array Iterator
-object; instead it stores the address of the array used in its creation and so depends
-on the values stored in that array.
-
-```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
-console.log(iterator);        // Array Iterator {  }
-iterator.next().value;        // "a"
-arr[1]='n';
-iterator.next().value;        //  "n"
-```
-
-> **Note:** If the values in the array changed the array iterator object values change too.
 
 ## Specifications
 
@@ -107,9 +63,11 @@ iterator.next().value;        //  "n"
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.values` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- [Polyfill of `TypedArray.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.entries()")}}
+- {{jsxref("TypedArray.prototype.keys()")}}
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Array.prototype.values()")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

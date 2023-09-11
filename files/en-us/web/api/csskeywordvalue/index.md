@@ -1,39 +1,35 @@
 ---
 title: CSSKeywordValue
 slug: Web/API/CSSKeywordValue
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSKeywordValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.CSSKeywordValue
 ---
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSKeywordValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) creates an object to represent CSS keywords and other identifiers.
 
-The interface instance name is a stringifier meaning that when used anywhere a string is expected it will return the value of `CSSKeyword.value`.
+The interface instance name is a {{Glossary("stringifier")}} meaning that when used anywhere a string is expected it will return the value of `CSSKeyword.value`.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("CSSKeywordValue.CSSKeywordValue()")}}
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}}
   - : Creates a new `CSSKeywordValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSKeywordValue.value')}}
   - : Returns or sets the value of the `CSSKeywordValue`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from {{domxref('CSSStyleValue')}}._
 
 ## Examples
 
-The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element).
+The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden
 #myElement {
@@ -42,14 +38,17 @@ The following example resets the CSS {{cssxref('display')}} property to its defa
 ```
 
 ```html hidden
-<div id="myElement">Check the developer tools to see the log in the console and to inspect the style attribute on this div.</div>
+<div id="myElement">
+  Check the developer tools to see the log in the console and to inspect the
+  style attribute on this div.
+</div>
 ```
 
 ```js
-let myElement = document.getElementById('myElement').attributeStyleMap;
-    myElement.set('display', new CSSKeywordValue('initial'));
+let myElement = document.getElementById("myElement").attributeStyleMap;
+myElement.set("display", new CSSKeywordValue("initial"));
 
-console.log( myElement.get('display').value);  // 'initial'
+console.log(myElement.get("display").value); // 'initial'
 ```
 
 {{EmbedLiveSample("Examples", 120, 120)}}

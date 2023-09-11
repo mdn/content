@@ -1,28 +1,21 @@
 ---
-title: HTMLAnchorElement.pathname
+title: "HTMLAnchorElement: pathname property"
+short-title: pathname
 slug: Web/API/HTMLAnchorElement/pathname
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.pathname`** property is a
-{{domxref("USVString")}} containing an initial `'/'` followed by the path of
-the URL not including the query string or fragment (or the empty string if there is no
+string containing an initial `'/'` followed by the path of
+the URL not including the query string or fragment (or the empty string if there is no
 path).
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.pathname;
-// Setter
-anchor.pathname = string;
-```
+A string.
 
 ## Examples
 

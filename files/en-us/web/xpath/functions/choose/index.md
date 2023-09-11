@@ -1,20 +1,20 @@
 ---
 title: choose
 slug: Web/XPath/Functions/choose
-tags:
-  - Function
-  - XPath
-  - XSLT
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `choose` function returns one of the specified objects based on a boolean parameter.
 
-> **Note:** This method should be used instead of `if()`, which has been deprecated.
+> **Note:** This method should be used instead of `if ()`, which has been deprecated.
 
 ### Syntax
 
-    choose( boolean , object1, object2 )
+```plain
+choose( boolean, object1, object2 )
+```
 
 ### Arguments
 

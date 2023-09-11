@@ -1,19 +1,14 @@
 ---
 title: TCP handshake
 slug: Glossary/TCP_handshake
-tags:
-  - Glossary
-  - Networking
-  - SSL
-  - Security
-  - TCP
-  - TCP handshake
-  - TLS
-  - Web Performance
+page-type: glossary-definition
 ---
-{{glossary('Transmission Control Protocol (TCP)','TCP (Transmission Control Protocol)')}} uses a **three-way handshake** (aka TCP-handshake, three message handshake, and/or SYN-SYN-ACK) to set up a TCP/IP connection over an IP based network.
 
-The three messages transmitted by TCP to negotiate and start a TCP session are nicknamed SYN, _SYN-ACK_, and ACK for **SYN**chronize, **SYN**chronize-**ACK**nowledgement, and **ACK**nowledge respectively. The three message mechanism is designed so that two computers that want to pass information back and forth to each other can negotiate the parameters of the connection before transmitting data such as HTTP browser requests.
+{{GlossarySidebar}}
+
+{{glossary('TCP','TCP (Transmission Control Protocol)')}} uses a **three-way handshake** (aka TCP-handshake, three message handshake, and/or SYN-SYN-ACK) to set up a TCP/IP connection over an IP based network.
+
+The three messages transmitted by TCP to negotiate and start a TCP session are nicknamed SYN, _SYN-ACK_, and ACK for **SYN**chronize, **SYN**chronize-**ACK**nowledgement, and **ACK**nowledge respectively. The three message mechanism is designed so that two computers that want to pass information back and forth to each other can negotiate the parameters of the connection before transmitting data such as HTTP browser requests.
 
 The host, generally the browser, sends a TCP SYNchronize packet to the server. The server receives the SYN and sends back a SYNchronize-ACKnowledgement. The host receives the server's SYN-ACK and sends an ACKnowledge. The server receives ACK and the TCP socket connection is established.
 
@@ -23,4 +18,4 @@ This handshake step happens after a {{glossary('DNS', 'DNS lookup')}} and before
 
 - [Transport Layer Security (TLS) protocol](/en-US/docs/Web/Security/Transport_Layer_Security)
 - {{Glossary("HTTPS")}}
-- {{Interwiki("wikipedia", "Transport Layer Security")}} on Wikipedia
+- [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) on Wikipedia

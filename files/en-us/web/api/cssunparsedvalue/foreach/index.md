@@ -1,20 +1,12 @@
 ---
-title: CSSUnparsedValue.forEach()
+title: "CSSUnparsedValue: forEach() method"
+short-title: forEach()
 slug: Web/API/CSSUnparsedValue/forEach
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
-  - forEach()
+page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.forEach
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.forEach()`** method
 executes a provided function once for each element of the
@@ -22,33 +14,32 @@ executes a provided function once for each element of the
 
 ## Syntax
 
-```js
-CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
-    // your iterator
-}[, thisArg]);
+```js-nolint
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : The function to execute for each element, taking three arguments:
 
     - `currentValue`
       - : The value of the current element being processed.
-    - `index`{{optional_inline}}
+    - `index` {{optional_inline}}
       - : The index of the current element being processed.
-    - `array`{{optional_inline}}
+    - `array` {{optional_inline}}
       - : The `CSSUnparsedValue` that `forEach()` is being called
         on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference
+  - : Value to use as **`this`** (i.e., the reference
     `Object`) when executing `callback`.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -60,7 +51,7 @@ CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.keys")}}
 - {{domxref("CSSUnparsedValue.length")}}

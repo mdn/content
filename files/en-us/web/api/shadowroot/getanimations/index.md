@@ -1,32 +1,21 @@
 ---
-title: ShadowRoot.getAnimations()
+title: "ShadowRoot: getAnimations() method"
+short-title: getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - ShadowRoot
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
+page-type: web-api-instance-method
 browser-compat: api.ShadowRoot.getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`getAnimations()`** method of the {{domxref("ShadowRoot")}} interface
 returns an array of all {{domxref("Animation")}} objects currently in effect whose
-target elements are descendants of the shadow tree. This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
+target elements are descendants of the shadow tree. This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 
-```js
-getAnimations();
+```js-nolint
+getAnimations()
 ```
 
 ### Parameters
@@ -45,13 +34,11 @@ The following code snippet will slow down all animations in a shadow tree by hal
 {{domxref("Animation.playbackRate")}}.
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
-shadow.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+shadow.getAnimations().forEach((animation) => {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 ## Specifications
@@ -65,8 +52,8 @@ shadow.getAnimations().forEach(
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - {{domxref("Element.getAnimations()")}} - Fetch only the animations on a single
   {{domxref("Element")}} and its descendants.
 - {{domxref("Animation")}}

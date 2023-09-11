@@ -1,51 +1,39 @@
 ---
 title: XRView
 slug: Web/API/XRView
-tags:
-  - API
-  - AR
-  - Eye
-  - Interface
-  - Orientation
-  - Position
-  - Reference
-  - VR
-  - View
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - camera
+page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.XRView
 ---
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** interface describes a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
 
-## Properties
+## Instance properties
 
-- {{domxref("XRView.eye", "eye")}} {{ReadOnlyInline}}
-  - : Which of the two eyes (`left`) or (`right`) for which this `XRView` represents the perspective. This value is used to ensure that any content which is pre-rendered for presenting to a specific eye is distributed or positioned correctly. The value can also be `none` if the `XRView` is presenting monoscopic data (such as a 2D image, a full-screen view of text. or a close-up view of something that doesn't need to appear in 3D).
-- {{domxref("XRView.isFirstPersonObserver", "isFirstPersonObserver")}} {{ReadOnlyInline}}
+- {{domxref("XRView.eye", "eye")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Which of the two eyes (`left`) or (`right`) for which this `XRView` represents the perspective. This value is used to ensure that any content which is pre-rendered for presenting to a specific eye is distributed or positioned correctly. The value can also be `none` if the `XRView` is presenting monoscopic data (such as a 2D image, a fullscreen view of text, or a close-up view of something that doesn't need to appear in 3D).
+- {{domxref("XRView.isFirstPersonObserver", "isFirstPersonObserver")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating if the `XRView` is a first-person observer view.
-- {{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}}
+- {{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The projection matrix that will transform the scene to appear correctly given the point-of-view indicated by `eye`. This matrix should be used directly in order to avoid presentation distortions that may lead to potentially serious user discomfort.
-- {{domxref("XRView.recommendedViewportScale", "recommendedViewportScale")}} {{ReadOnlyInline}}
-  - : The recommended viewport scale value that you can use for `requestViewportScale()` if the user agent has such a recommendation; {{jsxref("null")}} otherwise.
-- {{domxref("XRView.transform", "transform")}} {{ReadOnlyInline}}
+- {{domxref("XRView.recommendedViewportScale", "recommendedViewportScale")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The recommended viewport scale value that you can use for `requestViewportScale()` if the user agent has such a recommendation; [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
+- {{domxref("XRView.transform", "transform")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("XRRigidTransform")}} which describes the current position and orientation of the viewpoint in relation to the {{domxref("XRReferenceSpace")}} specified when {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} was called on the {{domxref("XRFrame")}} being rendered.
 
-## Methods
+## Instance methods
 
-- {{domxref("XRView.requestViewportScale", "requestViewportScale()")}} {{ReadOnlyInline}}
+- {{domxref("XRView.requestViewportScale", "requestViewportScale()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Requests that the user agent should set the requested viewport scale for this viewport to the requested value.
 
 ## Usage notes
 
 ### Positions and number of XRViews per frame
 
-While rendering a scene, the set of views that are used to render the scene for the viewer as of the current frame are obtained by calling the {{domxref("XRFrame")}} object's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}  method to get the {{domxref("XRViewerPose")}} representing (in essence) the position of the viewer's head. That object's {{domxref("XRViewerPose.views", "views")}} property is a list of all of the `XRView` objects representing the viewpoints which can be used to construct the scene for presentation to the user.
+While rendering a scene, the set of views that are used to render the scene for the viewer as of the current frame are obtained by calling the {{domxref("XRFrame")}} object's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method to get the {{domxref("XRViewerPose")}} representing (in essence) the position of the viewer's head. That object's {{domxref("XRViewerPose.views", "views")}} property is a list of all of the `XRView` objects representing the viewpoints which can be used to construct the scene for presentation to the user.
 
 It's possible to have `XRView` objects which represent overlapping regions as well as entirely disparate regions; in a game, you might have views that can be presented to observe a remote site using a security camera or other device, for example. In other words, don't assume there are exactly two views on a given viewer; there can be as few as one (such as when rendering the scene in `inline` mode, and potentially many (especially if the field of view is very large). There might also be views representing observers watching the action, or other viewpoints not directly associated with a player's eye.
 
@@ -63,13 +51,13 @@ If in the future it becomes possible for each view to render into a different la
 
 ### Preparing to render every view for a pose
 
-To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's  {{domxref("XRViewerPose.views", "views")}} list:
+To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's {{domxref("XRViewerPose.views", "views")}} list:
 
 ```js
-for (let view of pose.views) {
-  let viewport = glLayer.getViewport(view);
+for (const view of pose.views) {
+  const viewport = glLayer.getViewport(view);
 
-  gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
+  gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
   // Draw the scene; the eye being drawn is identified
   // by view.eye.
@@ -82,7 +70,7 @@ There are a few special transforms that are used on the view while rendering and
 
 #### Model view matrix
 
-The **model view matrix** is a matrix which defines the position of an object relative to the space in which it's located: If `objectMatrix` is a transform applied to the object to provide its basic position and rotation, then the model view matrix can be computed by multiplying the object's matrix by the inverse of the view transform matrix, like this:
+The **model view matrix** is a matrix which defines the position of an object relative to the space in which it's located: If `objectMatrix` is a transform applied to the object to provide its basic position and rotation, then the model view matrix can be computed by multiplying the object's matrix by the inverse of the view transform matrix, like this:
 
 ```js
 mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
@@ -103,8 +91,13 @@ To programmatically move and/or rotate (often referred to as **teleporting**) an
 
 ```js
 function applyMouseMovement(refSpace) {
-  if (!mouseYaw && !mousePitch && !axialDistance &&
-      !transverseDistance && !verticalDistance) {
+  if (
+    !mouseYaw &&
+    !mousePitch &&
+    !axialDistance &&
+    !transverseDistance &&
+    !verticalDistance
+  ) {
     return refSpace;
   }
 
@@ -125,11 +118,15 @@ function applyMouseMovement(refSpace) {
   // later; otherwise we probably wouldn't need to save mouseMatrix
   // at all.
 
-  let newTransform = new XRRigidTransform({x: transverseDistance,
-                                           y: verticalDistance,
-                                           z: axialDistance},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: transverseDistance, y: verticalDistance, z: axialDistance },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
   // Create a new reference space that transforms the object to the new

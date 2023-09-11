@@ -1,13 +1,10 @@
 ---
 title: Web Audio API best practices
 slug: Web/API/Web_Audio_API/Best_practices
-tags:
-  - Audio
-  - Best practices
-  - Guide
-  - Web Audio API
+page-type: guide
 ---
-{{apiref("Web Audio API")}}
+
+{{DefaultAPISidebar("Web Audio API")}}
 
 There's no strict right or wrong way when writing creative code. As long as you consider security, performance, and accessibility, you can adapt to your own style. In this article, we'll share a number of _best practices_ — guidelines, tips, and tricks for working with the Web Audio API.
 
@@ -15,13 +12,13 @@ There's no strict right or wrong way when writing creative code. As long as you 
 
 There are four main ways to load sound with the Web Audio API and it can be a little confusing as to which one you should use.
 
-When working with files, you are looking at either the grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
+When working with files, you are looking at either grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
 You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
 
-If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Stream API](/en-US/docs/Web/API/Media_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
+If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
 
 The last way is to generate your own sound, which can be done with either an {{domxref("OscillatorNode")}} or by creating a buffer and populating it with your own data. Check out the [tutorial here for creating your own instrument](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques) for information on creating sounds with oscillators and buffers.
 
@@ -29,7 +26,7 @@ The last way is to generate your own sound, which can be done with either an {{d
 
 The Web Audio API specification is constantly evolving and like most things on the web, there are some issues with it working consistently across browsers. Here we'll look at options for getting around cross-browser problems.
 
-There's the [`standardised-audio-context`](https://github.com/chrisguttandin/standardized-audio-context) npm package, which creates API functionality consistently across browsers, filling holes as they are found. It's constantly in development and endeavours to keep up with the current specification.
+There's the [`standardized-audio-context`](https://github.com/chrisguttandin/standardized-audio-context) npm package, which creates API functionality consistently across browsers, filling holes as they are found. It's constantly in development and endeavors to keep up with the current specification.
 
 There is also the option of libraries, of which there are a few depending on your use case. For a good all-rounder, [howler.js](https://howlerjs.com/) is a good choice. It has cross-browser support and, provides a useful subset of functionality. Although it doesn't harness the full gamut of filters and other effects the Web Audio API comes with, you can do most of what you'd want to do.
 
@@ -50,24 +47,33 @@ When you create an audio context (either offline or online) it is created with a
 When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is a simple example of creating the context from inside a `click` event:
 
 ```js
-const button = document.querySelector('button');
-button.addEventListener('click', function() {
+const button = document.querySelector("button");
+button.addEventListener(
+  "click",
+  () => {
     const audioCtx = new AudioContext();
-}, false);
+    // Do something with the audio context
+  },
+  false,
+);
 ```
 
-If however, you create the context outside of a user gesture, its state will be set to `suspended` and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the [`resume()`](/en-US/docs/Web/API/BaseAudioContext/resume) method.
+If however, you create the context outside of a user gesture, its state will be set to `suspended` and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the [`resume()`](/en-US/docs/Web/API/AudioContext/resume) method.
 
 ```js
 const audioCtx = new AudioContext();
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', function() {
-      // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
+button.addEventListener(
+  "click",
+  () => {
+    // check if context is in suspended state (autoplay policy)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
     }
-}, false);
+  },
+  false,
+);
 ```
 
 You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the [`startRendering()`](/en-US/docs/Web/API/OfflineAudioContext/startRendering) method.
@@ -76,9 +82,9 @@ You might instead be working with an {{domxref("OfflineAudioContext")}}, in whic
 
 If your website or application contains sound, you should allow the user control over it, otherwise again, it will become annoying. This can be achieved by play/stop and volume/mute controls. The [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) tutorial goes over how to do this.
 
-If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
+If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`range input`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#attr-step) attribute.
+As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`range input`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
 
 ## Setting AudioParam values
 

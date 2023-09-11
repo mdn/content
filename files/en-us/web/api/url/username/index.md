@@ -1,38 +1,29 @@
 ---
-title: URL.username
+title: "URL: username property"
+short-title: username
 slug: Web/API/URL/username
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-  - username
+page-type: web-api-instance-property
 browser-compat: api.URL.username
 ---
+
 {{ApiRef("URL API")}}
 
 The **`username`** property of the {{domxref("URL")}} interface
-is a {{domxref("USVString")}} containing the username specified before the domain name.
+is a string containing the username specified before the domain name.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const usernameString = url.username
-url.username = newUsername
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
 ```js
-const url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username');
-console.log(url.username) // Logs "anonymous"
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username",
+);
+console.log(url.username); // Logs "anonymous"
 ```
 
 ## Specifications

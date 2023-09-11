@@ -1,40 +1,34 @@
 ---
-title: PushMessageData.arrayBuffer()
+title: "PushMessageData: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/PushMessageData/arrayBuffer
-tags:
-  - API
-  - ArrayBuffer
-  - Experimental
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
+page-type: web-api-instance-method
 browser-compat: api.PushMessageData.arrayBuffer
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The **`arrayBuffer()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.
 
 ## Syntax
 
-```js
-var myArrayBuffer = PushEvent.data.arrayBuffer();
+```js-nolint
+arrayBuffer()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An {{jsxref("ArrayBuffer")}}.
 
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
-  var buffer = event.data.arrayBuffer();
+self.addEventListener("push", (event) => {
+  const buffer = event.data.arrayBuffer();
 
   // do something with your array buffer
 });

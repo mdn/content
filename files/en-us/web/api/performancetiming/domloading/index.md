@@ -1,19 +1,14 @@
 ---
-title: PerformanceTiming.domLoading
+title: "PerformanceTiming: domLoading property"
+short-title: domLoading
 slug: Web/API/PerformanceTiming/domLoading
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Reference
-  - domxref
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.domLoading
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
@@ -23,13 +18,11 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the parser started its work, that is when its
 {{domxref("Document.readyState")}} changes to `'loading'` and the
-corresponding {{event("readystatechange")}} event is thrown.
+corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domLoading;
-```
+An `unsigned long long`.
 
 ## Specifications
 

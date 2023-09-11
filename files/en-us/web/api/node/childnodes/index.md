@@ -1,12 +1,11 @@
 ---
-title: Node.childNodes
+title: "Node: childNodes property"
+short-title: childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.Node.childNodes
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`childNodes`** property of the {{domxref("Node")}} interface returns a live
@@ -16,6 +15,12 @@ comments.
 
 > **Note:** The {{domxref("NodeList")}} being live means that its content is changed each time
 > new children are added or removed.
+>
+> Browsers insert text nodes into a document to represent whitespace in the source markup.
+> Therefore a node obtained, for example, using `Node.childNodes[0]`
+> may refer to a whitespace text node rather than the actual element the author intended to get.
+>
+> See [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace) for more information.
 
 The items in the collection of nodes are objects, not strings. To get data from node
 objects, use their properties. For example, to get the name of the first
@@ -40,14 +45,14 @@ A live {{domxref("NodeList")}} containing the children of the node.
 ### Simple usage
 
 ```js
-// parg is an object reference to a <p> element
+// Note that parg is an object reference to a <p> element
 
 // First check that the element has child nodes
 if (parg.hasChildNodes()) {
   let children = parg.childNodes;
 
-  for (let i = 0; i < children.length; i++) {
-    // do something with each child as children[i]
+  for (const node of children) {
+    // Do something with each child as children[i]
     // NOTE: List is live! Adding or removing children will change the list's `length`
   }
 }
@@ -58,10 +63,9 @@ if (parg.hasChildNodes()) {
 ```js
 // This is one way to remove all children from a node
 // box is an object reference to an element
-
 while (box.firstChild) {
-    //The list is LIVE so it will re-index each call
-    box.removeChild(box.firstChild);
+  // The list is LIVE so it will re-index each call
+  box.removeChild(box.firstChild);
 }
 ```
 

@@ -1,32 +1,28 @@
 ---
-title: Range.endContainer
+title: "Range: endContainer property"
+short-title: endContainer
 slug: Web/API/Range/endContainer
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
+page-type: web-api-instance-property
 browser-compat: api.Range.endContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.endContainer`** read-only property returns the
 {{domxref("Node")}} within which the {{domxref("Range")}} ends. To change the end
 position of a node, use the {{domxref("Range.setEnd()")}} method or a similar one.
 
-## Syntax
+## Value
+
+A {{domxref("Node")}} object.
+
+## Examples
 
 ```js
-endRangeNode = range.endContainer;
-```
+const range = document.createRange();
 
-## Example
-
-```js
-var range = document.createRange();
-
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeNode = range.endContainer;
 ```
 

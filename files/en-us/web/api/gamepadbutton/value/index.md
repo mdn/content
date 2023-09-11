@@ -1,14 +1,11 @@
 ---
-title: GamepadButton.value
+title: "GamepadButton: value property"
+short-title: value
 slug: Web/API/GamepadButton/value
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.GamepadButton.value
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadButton.value`** property of the
@@ -19,12 +16,12 @@ The values are normalized to the range `0.0` — `1.0`, with
 `0.0` representing a button that is not pressed, and 1.0 representing a
 button that is fully pressed.
 
-## Example
+## Examples
 
 ```js
 let gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value > 0) {
+if (gp.buttons[0].value > 0) {
   // respond to analog button being pressed in
 }
 ```

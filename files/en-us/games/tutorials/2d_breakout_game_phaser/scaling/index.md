@@ -1,22 +1,16 @@
 ---
 title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
 This is the **2nd step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html).
 
-Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.
+Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.
 
 ## The Phaser scale object
 
@@ -24,9 +18,9 @@ There's a special `scale` object available in Phaser with a few handy methods an
 
 ```js
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
 ```
 
@@ -45,7 +39,7 @@ The other two lines of code in the `preload()` function are responsible for alig
 We can also add a custom background color to our canvas, so it won't stay black. The `stage` object has a `backgroundColor` property for this purpose, which we can set using CSS color definition syntax. Add the following line below the other three you added earlier:
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## Compare your code

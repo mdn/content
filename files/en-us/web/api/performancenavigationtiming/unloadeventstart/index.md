@@ -1,58 +1,65 @@
 ---
-title: PerformanceNavigationTiming.unloadEventStart
+title: "PerformanceNavigationTiming: unloadEventStart property"
+short-title: unloadEventStart
 slug: Web/API/PerformanceNavigationTiming/unloadEventStart
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`unloadEventStart`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-time immediately before the user agent starts the unload event of the previous document.
-If there is no previous document, this property returns `0`.
+{{APIRef("Performance API")}}
 
-## Syntax
+The **`unloadEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
+
+## Value
+
+The `unloadEventStart` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
+- `0` if there is no previous document.
+- `0` if the previous page was on another origin.
+
+## Examples
+
+### Measuring `unload` event handler time
+
+The `unloadEventStart` property can be used to measure how long it takes process the[`unload`](/en-US/docs/Web/API/Window/unload_event) event handler.
+
+This is useful to measure the time of long running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
-perfEntry.unloadEventStart;
+window.addEventListener("unload", (event) => {
+  // Some long running code
+});
 ```
 
-### Return Value
-
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent starts the unload event of the previous
-document.
-
-## Example
-
-The following example illustrates this property's usage.
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-function print_nav_timing_data() {
-  // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+    if (unloadEventTime > 0) {
+      console.log(
+        `${entry.name}: unload event handler time: ${unloadEventTime}ms`,
+      );
+    }
+  });
+});
 
-  for (var i=0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
-    // dom Properties
-    console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.interactive);
+observer.observe({ type: "navigation", buffered: true });
+```
 
-    // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
 
-    // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  const loadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+  if (unloadEventTime > 0) {
+    console.log(`${entry.name}:
+      load event handler time: ${unloadEventTime}ms`);
   }
-}
+});
 ```
 
 ## Specifications
@@ -62,3 +69,7 @@ function print_nav_timing_data() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`unload`](/en-US/docs/Web/API/Window/unload_event) event

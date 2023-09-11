@@ -1,31 +1,21 @@
 ---
-title: BluetoothRemoteGATTService.uuid
+title: "BluetoothRemoteGATTService: uuid property"
+short-title: uuid
 slug: Web/API/BluetoothRemoteGATTService/uuid
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - uuid
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.uuid
 ---
-{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.uuid`** read-only property
-returns a {{domxref("DOMString")}} representing the UUID of this service.
+returns a string representing the UUID of this service.
 
-## Syntax
+## Value
 
-```js
-var uuid = BluetoothGATTService.uuid
-```
-
-### Returns
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

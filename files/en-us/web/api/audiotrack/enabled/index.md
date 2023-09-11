@@ -1,21 +1,11 @@
 ---
-title: AudioTrack.enabled
+title: "AudioTrack: enabled property"
+short-title: enabled
 slug: Web/API/AudioTrack/enabled
-tags:
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - enabled
-  - mute
-  - track
+page-type: web-api-instance-property
 browser-compat: api.AudioTrack.enabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("AudioTrack")}}** property
@@ -24,15 +14,7 @@ track is currently enabled for use. If the track is disabled by setting
 `enabled` to `false`, the track is muted and does not produce
 audio.
 
-## Syntax
-
-```js
-isAudioEnabled = AudioTrack.enabled;
-
-AudioTrack.enabled = true | false;
-```
-
-### Value
+## Value
 
 The `enabled` property is a Boolean whose value is `true` if the
 track is enabled; enabled tracks produce audio while the media is playing. Setting
@@ -45,20 +27,20 @@ This example switches between the main and commentary audio tracks of a media el
 
 ```js
 function swapCommentaryMain() {
-  var videoElem = document.getElementById("main-video");
-  var audioTrackMain;
-  var audioTrackCommentary;
+  const videoElem = document.getElementById("main-video");
+  let audioTrackMain;
+  let audioTrackCommentary;
 
-  videoElem.audioTracks.forEach(track) {
+  videoElem.audioTracks.forEach((track) => {
     if (track.kind === "main") {
       audioTrackMain = track;
     } else if (track.kind === "commentary") {
       audioTrackCommentary = track;
     }
-  }
+  });
 
   if (audioTrackMain && audioTrackCommentary) {
-    var commentaryEnabled = audioTrackCommentary.enabled;
+    const commentaryEnabled = audioTrackCommentary.enabled;
     audioTrackCommentary.enabled = audioTrackMain.enabled;
     audioTrackMain.enabled = commentaryEnabled;
   }

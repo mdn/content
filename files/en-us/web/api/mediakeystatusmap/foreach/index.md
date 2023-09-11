@@ -1,16 +1,12 @@
 ---
-title: MediaKeyStatusMap.forEach()
+title: "MediaKeyStatusMap: forEach() method"
+short-title: forEach()
 slug: Web/API/MediaKeyStatusMap/forEach
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - forEach()
+page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`forEach`** property of the
 {{domxref("MediaKeyStatusMap")}} interface calls callback once for each key-value pair
@@ -19,29 +15,30 @@ the callback.
 
 ## Syntax
 
-```js
-mediaKeyStatusMap.forEach(callback[, thisArg])
+```js-nolint
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : Function to execute for each element, taking three arguments:
 
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`
+    - `index` {{optional_inline}}
       - : The index of the current element being processed in the array.
-    - `array`
+    - `array` {{optional_inline}}
       - : Which array `forEach()` is being applied to.
 
-- `thisArg {{Optional_inline}}`
+- `thisArg` {{optional_inline}}
   - : Value used as `this` when executing `callback`.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

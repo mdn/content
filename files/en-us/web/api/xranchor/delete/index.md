@@ -1,23 +1,20 @@
 ---
-title: XRAnchor.delete()
+title: "XRAnchor: delete() method"
+short-title: delete()
 slug: Web/API/XRAnchor/delete
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRAnchor.delete
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the {{domxref("XRAnchor")}} interface removes an anchor. This can be useful when an application is no longer interested in receiving updates to an anchor.
 
 ## Syntax
 
-```js
+```js-nolint
 delete()
 ```
 
@@ -27,7 +24,7 @@ None.
 
 ### Return value
 
-Returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,13 +1,13 @@
 ---
 title: Data structure
 slug: Glossary/Data_structure
-tags:
-  - CodingScripting
-  - Data structure
-  - Glossary
+page-type: glossary-definition
 ---
-**Data structure** is a particular way of organizing *data* so that it can be used efficiently.
+
+{{GlossarySidebar}}
+
+**Data structure** is a particular way of organizing _data_ so that it can be used efficiently.
 
 ## See also
 
-- {{interwiki("wikipedia", "Data_structure", "Data structure")}} on Wikipedia
+- [Data structure](https://en.wikipedia.org/wiki/Data_structure) on Wikipedia

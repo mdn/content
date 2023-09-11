@@ -1,14 +1,10 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-top-style
 ---
+
 {{CSSRef}}
 
 The **`border-top-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's top {{CSSxRef("border")}}.
@@ -36,10 +32,11 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
+border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-The `border-top-style` property is specified as a single keyword chosen from those available for the {{CSSxRef("border-style")}} property.
+The `border-top-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 
@@ -82,23 +79,44 @@ The `border-top-style` property is specified as a single keyword chosen from tho
 /* Define look of the table */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-top-style example classes */
-.b1 {border-top-style: none;}
-.b2 {border-top-style: hidden;}
-.b3 {border-top-style: dotted;}
-.b4 {border-top-style: dashed;}
-.b5 {border-top-style: solid;}
-.b6 {border-top-style: double;}
-.b7 {border-top-style: groove;}
-.b8 {border-top-style: ridge;}
-.b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}
+.b1 {
+  border-top-style: none;
+}
+.b2 {
+  border-top-style: hidden;
+}
+.b3 {
+  border-top-style: dotted;
+}
+.b4 {
+  border-top-style: dashed;
+}
+.b5 {
+  border-top-style: solid;
+}
+.b6 {
+  border-top-style: double;
+}
+.b7 {
+  border-top-style: groove;
+}
+.b8 {
+  border-top-style: ridge;
+}
+.b9 {
+  border-top-style: inset;
+}
+.b10 {
+  border-top-style: outset;
+}
 ```
 
 #### Result

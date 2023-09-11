@@ -1,11 +1,10 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.core.id
 ---
+
 {{SVGRef}}
 
 The **`id`** attribute assigns a unique name to an element.
@@ -15,8 +14,12 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```html
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
     <![CDATA[
       #smallRect {
         stroke: #000066;
@@ -50,40 +53,17 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-*   \<id>
-    *   : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
+- \<id>
 
-        > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.
+  - : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
 
-        It must be valid in XML documents. A stand-alone SVG document uses XML 1.0 syntax, which specifies that valid IDs only include designated characters (letters, digits, and a few punctuation marks), and do not start with a digit, a full stop (.) character, or a hyphen-minus (-) character.
+    > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.
+
+    It must be valid in XML documents. A stand-alone SVG document uses XML 1.0 syntax, which specifies that valid IDs only include designated characters (letters, digits, and a few punctuation marks), and do not start with a digit, a full stop (.) character, or a hyphen-minus (-) character.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#IDAttribute", "id")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Defines the allowed values in more detail.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -91,5 +71,5 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-*   [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
-*   {{SVGAttr("class")}}
+- [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
+- {{SVGAttr("class")}}

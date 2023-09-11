@@ -1,65 +1,26 @@
 ---
-title: AuthenticatorAssertionResponse.userHandle
+title: "AuthenticatorAssertionResponse: userHandle property"
+short-title: userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
+page-type: web-api-instance-property
 browser-compat: api.AuthenticatorAssertionResponse.userHandle
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`userHandle`** read-only property of the
-{{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}}
-object which is an opaque identifier for the given user. Such an identifier can be used
-by the relying party's server to link the user account with its corresponding
-credentials and other data.
+The **`userHandle`** read-only property of the {{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}} object providing an opaque identifier for the given user. Such an identifier can be used by the relying party's server to link the user account with its corresponding credentials and other data.
 
-The same value may be found on the `id` property of the
-{{domxref("PublicKeyCredentialCreationOptions.user","options.user")}} object (used for
-the creation of the `PublicKeyCredential` instance).
+This value is specified as `user.id` in the options passed to the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call.
 
-> **Note:** An `AuthenticatorAssertionResponse` instance is
-> available on {{domxref("PublicKeyCredential.response")}} after calling
-> {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
+## Value
 
-> **Note:** This property may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
+An {{jsxref("ArrayBuffer")}} object representing an identifier for the current user. This is not intended to be human-readable. The relying party should make sure that the `user.id` passed into the originating `create()` call does **not** contain any personally identifying information (for example user name, email, or phone number).
 
-## Syntax
-
-```js
-userHandle = authenticatorAssertionResponse.userHandle
-```
-
-### Value
-
-An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
-This is not human-readable and does **not** contain any personally
-identifying information (e.g. username, e-mail, phone number, etc.)
+For {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} calls made with a non-empty `allowCredentials` properties, the returned `userHandle` may be null.
 
 ## Examples
 
-```js
-var options = {
-  challenge: new Uint8Array(26), // will be another value, provided by the relying party server
-  timeout: 60000
-};
-
-navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
-    var userHandle = assertionPKCred.response.userHandle;
-
-    // Send response and client extensions to the server so that it can
-    // go on with the authentication
-
-}).catch(function (err) {
-   console.error(err);
-});
-```
+See [User login using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/get#user_login_using_the_webauthn_api) for a detailed example.
 
 ## Specifications
 
@@ -71,5 +32,4 @@ navigator.credentials.get({  publicKey: options })
 
 ## See also
 
-- {{domxref("PublicKeyCredentialCreationOptions.user")}} and its `id`
-  property which contains the same data
+- {{domxref("CredentialsContainer.create()")}} that sets the value of this property

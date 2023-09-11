@@ -1,12 +1,9 @@
 ---
-title: 'TypeError: cannot use ''in'' operator to search for ''x'' in ''y'''
+title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "right-hand side of 'in' should be an object" occurs when the
@@ -16,10 +13,10 @@ used to check if a property is in an object.
 
 ## Message
 
-```js
-TypeError: Invalid operand to 'in' (Edge)
-TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```plain
+TypeError: Cannot use 'in' operator to search for 'x' in 'y' (V8-based & Firefox)
+TypeError: right-hand side of 'in' should be an object, got null (Firefox)
+TypeError: "y" is not an Object. (evaluating '"x" in "y"') (Safari)
 ```
 
 ## Error type
@@ -28,37 +25,36 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 
 ## What went wrong?
 
-The [`in`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can only be used to check if a property is in an object. You can't search
-in strings, or in numbers, or other primitive types.
+The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can only be used
+to check if a property is in an object.
+You can't search in strings, or in numbers, or other primitive types.
 
 ## Examples
 
 ### Searching in strings
 
 Unlike in other programming languages (e.g. Python), you can't search in strings using
-the [`in`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
+the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 
 ```js example-bad
 "Hello" in "Hello World";
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
 ```
 
-Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for example.
+Instead you will need to use {{jsxref("String.prototype.includes()")}}, for example.
 
 ```js example-good
-"Hello World".indexOf("Hello") !== -1;
+"Hello World".includes("Hello");
 // true
 ```
 
 ### The operand can't be null or undefined
 
-Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
+Make sure the object you are inspecting isn't actually [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
 {{jsxref("undefined")}}.
 
 ```js example-bad
-var foo = null;
+const foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo' (Chrome)
 // TypeError: right-hand side of 'in' should be an object, got null (Firefox)
@@ -67,7 +63,7 @@ var foo = null;
 The `in` operator always expects an object.
 
 ```js example-good
-var foo = { baz: "bar" };
+const foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
@@ -81,12 +77,11 @@ objects. The `in` operator checks the index number, not the value at that
 index.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```
 
 ## See also
 
-- [`in`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)

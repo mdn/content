@@ -1,35 +1,28 @@
 ---
-title: DocumentFragment.lastElementChild
+title: "DocumentFragment: lastElementChild property"
+short-title: lastElementChild
 slug: Web/API/DocumentFragment/lastElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment.lastElementChild`** read-only property
 returns the document fragment's last child {{domxref("Element")}}, or `null` if there
 are no child elements.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = fragment.lastElementChild;
+An {{domxref("Element")}} that is the last child `Element` of the object, or `null` if there are none.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```js
 let fragment = new DocumentFragment();
 fragment.lastElementChild; // null
 
-let paragraph = document.createElement('p');
+let paragraph = document.createElement("p");
 fragment.appendChild(paragraph);
 
 fragment.lastElementChild; // <p>

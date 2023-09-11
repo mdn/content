@@ -1,17 +1,16 @@
 ---
 title: Use HTML to solve common problems
 slug: Learn/HTML/Howto
-tags:
-  - CodingScripting
-  - HTML
+page-type: landing-page
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common everyday problems you'll need to solve with HTML.
 
 ### Basic structure
 
-The most basic application of HTML is document structure. If you're new to HTML you should start with this.
+The most basic application of HTML is document structure. If you're new to HTML you should start with this.
 
 - [How to create a basic HTML document](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)
 - [How to divide a webpage into logical sections](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
@@ -19,7 +18,7 @@ The most basic application of HTML is document structure. If you're new to HTM
 
 ### Basic text-level semantics
 
-HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.
+HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.
 
 - [How to create a list of items with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)
 - [How to stress or emphasize content](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
@@ -32,7 +31,7 @@ HTML specializes in providing semantic information for a document, so HTML answ
 
 ### Hyperlinks
 
-One of the main reasons for HTML is making navigation easy with {{Glossary("hyperlink", "hyperlinks")}}, which can be used in many different ways:
+One of the main reasons for HTML is making navigation easy with {{Glossary("hyperlink", "hyperlinks")}}, which can be used in many different ways:
 
 - [How to create a hyperlink](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [How to create a table of contents with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu)
@@ -46,13 +45,12 @@ One of the main reasons for HTML is making navigation easy with {{Glossary("hy
 
 HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
 
-- [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
+- [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)
 - [How to use JavaScript within a webpage](/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### Embedded content
 
 - [How to embed a webpage within another webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [How to add Flash content within a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#the_%3cembed%3e_and_%3cobject%3e_elements)
 
 ## Uncommon or advanced problems
 
@@ -60,7 +58,7 @@ Beyond the basics, HTML is very rich and offers advanced features for solving co
 
 ### Forms
 
-Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our [full dedicated guide](/en-US/docs/Learn/Forms). Here is where you should start:
+Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our [full dedicated guide](/en-US/docs/Learn/Forms). Here is where you should start:
 
 - [How to create a simple Web form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a Web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
@@ -90,7 +88,7 @@ Some information, called tabular data, needs to be organized into tables with co
 
 ### Internationalization
 
-HTML is not monolingual. It provides tools to handle common internationalization issues.
+HTML is not monolingual. It provides tools to handle common internationalization issues.
 
 - [How to add multiple languages into a single webpage](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document)
 - [How to display time and date with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#marking_up_times_and_dates)

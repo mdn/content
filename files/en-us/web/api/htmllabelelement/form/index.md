@@ -1,16 +1,11 @@
 ---
-title: HTMLLabelElement.form
+title: "HTMLLabelElement: form property"
+short-title: form
 slug: Web/API/HTMLLabelElement/form
-tags:
-  - Forms
-  - HTML DOM
-  - HTMLLabelElement
-  - Property
-  - Read-only
-  - Reference
-  - form
+page-type: web-api-instance-property
 browser-compat: api.HTMLLabelElement.form
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLLabelElement.form`** property returns an
@@ -20,13 +15,7 @@ that control isn't in a form.
 
 This property is just a shortcut for `HTMLLabelElement.control.form`.
 
-## Syntax
-
-```js
-form = HTMLLabelElement.form
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLFormElement")}} which represents the form with which the label's
 {{domxref("HTMLLabelElement.control", "control")}} is associated. If

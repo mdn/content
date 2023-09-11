@@ -1,19 +1,11 @@
 ---
-title: Document.querySelector()
+title: "Document: querySelector() method"
+short-title: querySelector()
 slug: Web/API/Document/querySelector
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - DOM Elements
-  - Document
-  - Method
-  - Reference
-  - Selector API
-  - Selectors
-  - querySelector
+page-type: web-api-instance-method
 browser-compat: api.Document.querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelector()`**
@@ -26,36 +18,34 @@ selector, or group of selectors. If no matches are found, `null` is returned.
 
 ## Syntax
 
-```js
-element = document.querySelector(selectors);
+```js-nolint
+querySelector(selectors)
 ```
 
 ### Parameters
 
-- _selectors_
-  - : A {{domxref("DOMString")}} containing one or more selectors to match. This string
+- `selectors`
+  - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
-    is thrown. See [Locating
-    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
+    is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
 
 > **Note:** Characters that are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping, be
 > especially careful when writing string literals using these characters. See
-> {{anch("Escaping special characters")}} for more information.
+> [Escaping special characters](#escaping_special_characters) for more information.
 
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS
-selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), or `null` is returned if there are no matches.
 
 If you need a list of all elements matching the specified selectors, you should use
 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified _selectors_ is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified _selectors_ is invalid.
 
 ## Usage notes
 
@@ -78,15 +68,15 @@ JavaScript, if you are entering a literal string, you must escape it _twice_
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-  document.querySelector('#foo\bar');    // Does not match anything
+  console.log("#foo\bar"); // "#fooar" (\b is the backspace control character)
+  document.querySelector("#foo\bar"); // Does not match anything
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar'); // Match the first div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // Match the first div
 
-  document.querySelector('#foo:bar');    // Does not match anything
-  document.querySelector('#foo\\:bar');  // Match the second div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 
@@ -98,10 +88,10 @@ In this example, the first element in the document with the class
 "`myclass`" is returned:
 
 ```js
-var el = document.querySelector(".myclass");
+const el = document.querySelector(".myclass");
 ```
 
-### A more complex selector
+### Complex selectors
 
 Selectors can also be really powerful, as demonstrated in the following example. Here,
 the first {{HTMLElement("input")}} element with the name "login"
@@ -110,7 +100,7 @@ class is "user-panel main" (`<div class="user-panel main">`) in the
 document is returned:
 
 ```js
-var el = document.querySelector("div.user-panel.main input[name='login']");
+const el = document.querySelector("div.user-panel.main input[name='login']");
 ```
 
 ### Negation
@@ -118,7 +108,9 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 As all CSS selector strings are valid, you can also negate selectors:
 
 ```js
-var el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+const el = document.querySelector(
+  "div.user-panel:not(.main) input[name='login']",
+);
 ```
 
 This will select an input with a parent div with the `user-panel` class but
@@ -134,8 +126,7 @@ not the `main` class.
 
 ## See also
 
-- [Locating
-  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
 - {{domxref("Element.querySelectorAll()")}}

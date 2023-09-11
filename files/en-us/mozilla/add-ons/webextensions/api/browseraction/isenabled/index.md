@@ -1,17 +1,10 @@
 ---
 title: browserAction.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browserAction
-  - isEnabled
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.isEnabled
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the browser action is enabled.
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingIsEnabled = browser.browserAction.isEnabled(
   details // object
 )
@@ -55,8 +48,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Check the global state:
 
 ```js
-browser.browserAction.isEnabled({}).then(result => {
-  console.log(result);
+browser.browserAction.isEnabled({}).then((result) => {
+  console.log(result);
 });
 ```
 
@@ -64,14 +57,14 @@ Check the state of the currently active tab:
 
 ```js
 async function enabledInActiveTab() {
-  let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+  let tabs = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
   });
-  let enabled = await browser.browserAction.isEnabled({
-    tabId: tabs[0].id
+  let enabled = await browser.browserAction.isEnabled({
+    tabId: tabs[0].id,
   });
-  console.log(enabled);
+  console.log(enabled);
 }
 ```
 

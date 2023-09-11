@@ -1,31 +1,21 @@
 ---
-title: KeyboardEvent.repeat
+title: "KeyboardEvent: repeat property"
+short-title: repeat
 slug: Web/API/KeyboardEvent/repeat
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.repeat
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`repeat`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns a boolean value that is
 `true` if the given key is being held down such that it is automatically
 repeating.
 
-## Syntax
+## Value
 
-```js
-var repeat = event.repeat;
-```
-
-### Return value
-
-A boolean value
+A boolean value.
 
 ## Specifications
 

@@ -1,17 +1,10 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - padding-inline
-  - padding-inline-start
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.padding-inline-start
 ---
+
 {{CSSRef}}
 
 The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
@@ -22,16 +15,17 @@ The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the l
 
 ```css
 /* <length> values */
-padding-inline-start: 10px;   /* An absolute length */
-padding-inline-start: 1em;    /* A length relative to the text size */
+padding-inline-start: 10px; /* An absolute length */
+padding-inline-start: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-inline-start: 5%;     /* A padding relative to the block container's width */
+padding-inline-start: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-start: inherit;
 padding-inline-start: initial;
 padding-inline-start: revert;
+padding-inline-start: revert-layer;
 padding-inline-start: unset;
 ```
 
@@ -40,11 +34,11 @@ padding-inline-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the _inline-size_ of the containing block. Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
 
 ## Description
 
-The `padding-inline-start` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}
+The `padding-inline-start` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}.
 
 It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
 
@@ -80,7 +74,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -98,5 +92,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

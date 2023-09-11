@@ -1,18 +1,17 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.orphans
 ---
+
 {{CSSRef}}
 
-The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
+The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/CSS_paged_media), region, or [column](/en-US/docs/Web/CSS/CSS_multicol_layout).
+
+In typography, an _orphan_ is the first line of a paragraph that appears alone at the bottom of a page. (The paragraph continues on a following page.)
+
+## Syntax
 
 ```css
 /* <integer> values */
@@ -23,12 +22,9 @@ orphans: 3;
 orphans: inherit;
 orphans: initial;
 orphans: revert;
+orphans: revert-layer;
 orphans: unset;
 ```
-
-In typography, an _orphan_ is the first line of a paragraph that appears alone at the bottom of a page. (The paragraph continues on a following page.)
-
-## Syntax
 
 ### Values
 
@@ -52,8 +48,14 @@ In typography, an _orphan_ is the first line of a paragraph that appears alone a
 ```html
 <div>
   <p>This is the first paragraph containing some text.</p>
-  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how orphans work.</p>
-  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+  <p>
+    This is the second paragraph containing some more text than the first one.
+    It is used to demonstrate how orphans work.
+  </p>
+  <p>
+    This is the third paragraph. It has a little bit more text than the first
+    one.
+  </p>
 </div>
 ```
 
@@ -91,4 +93,4 @@ p:first-child {
 ## See also
 
 - {{cssxref("widows")}}
-- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
+- [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)

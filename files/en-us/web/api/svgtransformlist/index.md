@@ -1,13 +1,10 @@
 ---
 title: SVGTransformList
 slug: Web/API/SVGTransformList
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGTransformList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG transform list interface
@@ -16,14 +13,14 @@ The `SVGTransformList` defines a list of {{ domxref("SVGTransform") }} objects.
 
 An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{Gecko("9.0") }},the `SVGTransformList` DOM interface is now indexable and can be accessed like Arrays
+An `SVGTransformList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -71,7 +68,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
             {{ domxref("SVGTransform") }}
             <code
               >createSVGTransformFromMatrix(in
-              {{ domxref("SVGMatrix") }})</code
+              {{ domxref("DOMMatrix") }})</code
             >
           </li>
           <li>
@@ -93,7 +90,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGTransformList"
@@ -104,14 +101,14 @@ An `SVGTransformList` object can be designated as read only, which means that at
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
-## Methods
+## Instance methods
 
 <table class="standard-table">
   <thead>
@@ -180,7 +177,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
         <p>
           Returns the specified item from the list. The returned item is the
           item itself and not a copy. Any changes made to the item are
-          immediately reflected in the list. The first item is number 0.
+          immediately reflected in the list. The first item is number 0.
         </p>
         <p><strong>Exceptions:</strong></p>
         <ul>
@@ -314,7 +311,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
       <td>
         <code
           ><strong>createSVGTransformFromMatrix</strong>(in
-          {{ domxref("SVGMatrix") }})</code
+          {{ domxref("DOMMatrix") }})</code
         >
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
@@ -358,45 +355,58 @@ An `SVGTransformList` object can be designated as read only, which means that at
 
 ### Using multiple SVGTransform objects
 
-In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation -- such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
+In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation — such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
 
-```html
-<svg id="my-svg" viewBox="0 0 300 280"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <desc>Example showing how to transform svg elements that using SVGTransform objects</desc>
-  <script type="application/ecmascript"> <![CDATA[
-    function transformMe(evt) {
-      // svg root element to access the createSVGTransform() function
-      var svgroot = evt.target.parentNode;
+```html-nolint
+<svg
+  id="my-svg"
+  viewBox="0 0 300 280"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
+  <desc>
+    Example showing how to transform svg elements that using SVGTransform
+    objects
+  </desc>
+  <script type="application/ecmascript">
+    <![CDATA[
+      function transformMe(evt) {
+        // svg root element to access the createSVGTransform() function
+        const svgroot = evt.target.parentNode;
+        // SVGTransformList of the element that has been clicked on
+        const tfmList = evt.target.transform.baseVal;
 
-      // SVGTransformList of the element that has been clicked on
-      var tfmList = evt.target.transform.baseVal;
+        // Create a separate transform object for each transform
+        const translate = svgroot.createSVGTransform();
+        translate.setTranslate(50,5);
+        const rotate = svgroot.createSVGTransform();
+        rotate.setRotate(10,0,0);
+        const scale = svgroot.createSVGTransform();
+        scale.setScale(0.8,0.8);
 
-      // Create a separate transform object for each transform
-      var translate = svgroot.createSVGTransform();
-      translate.setTranslate(50,5);
+        // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element
+        tfmList.appendItem(translate);
+        tfmList.appendItem(rotate);
+        tfmList.appendItem(scale);
+      }
+    ]]>
+  </script>
 
-      var rotate = svgroot.createSVGTransform();
-      rotate.setRotate(10,0,0);
-
-      var scale = svgroot.createSVGTransform();
-      scale.setScale(0.8,0.8);
-
-      // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element
-      tfmList.appendItem(translate);
-      tfmList.appendItem(rotate);
-      tfmList.appendItem(scale);
-    }
-  ]]> </script>
-
-  <polygon fill="orange" stroke="black" stroke-width="5"
-           points="100,225 100,115 130,115 70,15 70,15 10,115 40,115 40,225"
-           onclick="transformMe(evt)"/>
-  <rect x="200" y="100" width="100" height="100"
-        fill="yellow" stroke="black" stroke-width="5"
-        onclick="transformMe(evt)"/>
-  <text x="40" y="250"
-        font-family="Verdana" font-size="16" fill="green" >
+  <polygon
+    fill="orange"
+    stroke="black"
+    stroke-width="5"
+    points="100,225 100,115 130,115 70,15 70,15 10,115 40,115 40,225"
+    onclick="transformMe(evt)" />
+  <rect
+    x="200"
+    y="100"
+    width="100"
+    height="100"
+    fill="yellow"
+    stroke="black"
+    stroke-width="5"
+    onclick="transformMe(evt)" />
+  <text x="40" y="250" font-family="Verdana" font-size="16" fill="green">
     Click on a shape to transform it
   </text>
 </svg>

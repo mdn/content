@@ -1,29 +1,18 @@
 ---
-title: CSSMathMax.values
+title: "CSSMathMax: values property"
+short-title: values
 slug: Web/API/CSSMathMax/values
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMax
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSMathMax.values
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathMax.values read-only property of the
 {{domxref("CSSMathMax")}} interface returns a {{domxref('CSSNumericArray')}} object
 which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathMax.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

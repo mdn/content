@@ -1,22 +1,11 @@
 ---
-title: RTCInboundRtpStreamStats.averageRtcpInterval
+title: "RTCInboundRtpStreamStats: averageRtcpInterval property"
+short-title: averageRtcpInterval
 slug: Web/API/RTCInboundRtpStreamStats/averageRtcpInterval
-tags:
-  - API
-  - Packet
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTCP
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - averageRtcpInterval
-  - rate
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.averageRtcpInterval
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`averageRtcpInterval`** property
@@ -26,13 +15,7 @@ indicating the average {{Glossary("RTCP")}} transmission interval, in seconds.
 The RTCP interval is the amount of time that should elapse between transmissions of RTCP
 packets.
 
-## Syntax
-
-```js
-var averageRtcpInterval = rtcInboundRtpStreamStats.averageRtcpInterval;
-```
-
-### Value
+## Value
 
 A floating-point value indicating the average interval, in seconds, between
 transmissions of RTCP packets. This interval is computed following the formula outlined

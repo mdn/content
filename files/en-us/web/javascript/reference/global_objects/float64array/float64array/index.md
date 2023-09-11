@@ -1,63 +1,36 @@
 ---
 title: Float64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
+
 {{JSRef}}
 
-The **`Float64Array()`** typed array constructor creates a new
-{{jsxref("Float64Array")}} object, which is, an array of 64-bit floating point numbers
-(corresponding to the C `double` data type) in the platform byte order. If
-control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are
-initialized to `0`. Once established, you can reference elements in the array
-using the object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 
-```js
-new Float64Array(); // new in ES2017
-new Float64Array(length);
-new Float64Array(typedArray);
-new Float64Array(object);
+```js-nolint
+new Float64Array()
+new Float64Array(length)
+new Float64Array(typedArray)
+new Float64Array(object)
 
-new Float64Array(buffer);
-new Float64Array(buffer, byteOffset);
-new Float64Array(buffer, byteOffset, length);
+new Float64Array(buffer)
+new Float64Array(buffer, byteOffset)
+new Float64Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Float64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
-- `length`
-  - : When called with a `length` argument, an internal array buffer
-    is created in memory, of size `length` _multiplied by
-    `BYTES_PER_ELEMENT`_ bytes, containing zeros.
-- `typedArray`
-  - : When called with a `typedArray` argument, which can be an
-    object of any of the typed array types (such as `Int32Array`), the
-    `typedArray` gets copied into a new typed array. Each value in
-    `typedArray` is converted to the corresponding type of the
-    constructor before being copied into the new array. The length of the new typed array
-    will be same as the length of the `typedArray` argument.
-- `object`
-  - : When called with an `object` argument, a new typed array is
-    created as if by the `TypedArray.from()` method.
-- `buffer`, `byteOffset`,
-  `length`
-  - : When called with a `buffer`, and optionally a
-    `byteOffset` and a `length` argument, a
-    new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}.
-    The `byteOffset` and `length` parameters
-    specify the memory range that will be exposed by the typed array view. If both are
-    omitted, all of `buffer` is viewed; if only
-    `length` is omitted, the remainder of
-    `buffer` is viewed.
+See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters).
+
+### Exceptions
+
+See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions).
 
 ## Examples
 
@@ -65,29 +38,32 @@ new Float64Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var float64 = new Float64Array(2);
+const float64 = new Float64Array(2);
 float64[0] = 42;
 console.log(float64[0]); // 42
 console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Float64Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-var x = new Float64Array([21, 31]);
-var y = new Float64Array(x);
+const y = new Float64Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new Float64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(64);
+const z = new Float64Array(buffer, 8, 4);
+console.log(z.byteOffset); // 8
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var float64 = new Float64Array(iterable);
-// Float64Array[1, 2, 3]
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
+const float64FromIterable = new Float64Array(iterable);
+console.log(float64FromIterable);
+// Float64Array [1, 2, 3]
 ```
 
 ## Specifications
@@ -98,26 +74,10 @@ var float64 = new Float64Array(iterable);
 
 {{Compat}}
 
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Float64Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Float64Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-var dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Float64Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Float64Array([1, 2, 3]);
-```
-
 ## See also
 
-- A polyfill of `Float64Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

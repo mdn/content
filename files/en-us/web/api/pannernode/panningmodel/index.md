@@ -1,39 +1,27 @@
 ---
-title: PannerNode.panningModel
+title: "PannerNode: panningModel property"
+short-title: panningModel
 slug: Web/API/PannerNode/panningModel
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - panningModel
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.panningModel
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The `panningModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which spatialisation algorithm to use to position the audio in 3D space.
+The `panningModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which spatialization algorithm to use to position the audio in 3D space.
 
 The possible values are:
 
-- `equalpower`: Represents the equal-power panning algorithm, generally regarded as simple and efficient. `equalpower` is the default value.
+- `equalpower`: Represents the equal-power panning algorithm, generally regarded as simple and efficient. `equalpower` is the default value.
 - `HRTF`: Renders a stereo output of higher quality than `equalpower` — it uses a convolution with measured impulse responses from human subjects.
 
-## Syntax
+## Value
 
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.panningModel = 'HRTF';
-```
+An enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
 
-### Value
+## Examples
 
-A enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
-
-## Example
-
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

@@ -1,46 +1,38 @@
 ---
-title: 'EventSource: open event'
+title: "EventSource: open event"
+short-title: open
 slug: Web/API/EventSource/open_event
-tags:
-  - API
-  - Event
-  - EventSource
-  - Reference
-  - open
+page-type: web-api-event
 browser-compat: api.EventSource.open_event
 ---
+
 {{APIRef}}
 
 The `open` event of the {{domxref("EventSource")}} API is fired when a connection with an event source is opened.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("EventSource.onopen")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("open", (event) => {});
+
+onopen = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 ```js
-var evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 
 // addEventListener version
-evtSource.addEventListener('open', (e) => {
+evtSource.addEventListener("open", (e) => {
   console.log("The connection has been established.");
 });
 
@@ -61,6 +53,6 @@ evtSource.onopen = (e) => {
 ## See also
 
 - [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- {{event("open")}}
-- {{event("error")}}
-- {{event("message")}}
+- {{domxref("EventSource/open_event", "open")}}
+- {{domxref("EventSource/error_event", "error")}}
+- {{domxref("EventSource/message_event", "message")}}

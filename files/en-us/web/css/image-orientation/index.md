@@ -1,24 +1,17 @@
 ---
 title: image-orientation
 slug: Web/CSS/image-orientation
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - EXIF
-  - Experimental
-  - Image Correction
-  - Image Orientation
-  - Deprecated
-  - Orientation
-  - Reference
-  - image-orientation
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.image-orientation
 ---
+
+{{CSSRef}}
+
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
-> **Note:** Values other than `from-image` and `none` are described as deprecated in the specification.
+{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+
+## Syntax
 
 ```css
 /* keyword values */
@@ -29,26 +22,18 @@ image-orientation: from-image; /* Use EXIF data from the image */
 image-orientation: inherit;
 image-orientation: initial;
 image-orientation: revert;
+image-orientation: revert-layer;
 image-orientation: unset;
-
-/* Optional values, deprecated in CSS */
-image-orientation: 90deg; /* Rotate 90deg */
-image-orientation: 90deg flip; /* Rotate 90deg, and flip it horizontally */
-image-orientation: flip; /* No rotation, only applies a horizontal flip */
 ```
-
-## Syntax
 
 ### Values
 
 - `none`
   - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
 - `from-image`
-  - : Default initial value. The {{interwiki("wikipedia", "EXIF")}} information contained in the image is used to rotate the image appropriately.
-- {{cssxref("&lt;angle&gt;")}}{{deprecated_inline}}
-  - : The {{cssxref("&lt;angle&gt;")}} of rotation to apply to the image. It is rounded to the nearest `90deg` (`0.25turn`). Positive values cause the image to be rotated to the right (clockwise), negative values to the left (anti-clockwise).
-- `flip`{{deprecated_inline}}
-  - : The image is flipped horizontally (i.e., reflected) after the rotation given by the {{cssxref("&lt;angle&gt;")}} value is applied. If no {{cssxref("&lt;angle&gt;")}} is given, `0deg` is used.
+  - : Default initial value. The [EXIF](https://en.wikipedia.org/wiki/EXIF) information contained in the image is used to rotate the image appropriately.
+
+> **Warning:** `image-orientation: none;` **does not** override the orientation of non-secure-origin images as encoded by their [EXIF](https://en.wikipedia.org/wiki/EXIF) information, due to security concerns. Find out more from [the CSS working group draft issue](https://github.com/w3c/csswg-drafts/issues/5165).
 
 ## Description
 
@@ -68,6 +53,8 @@ If used in conjunction with other CSS properties, such as a {{cssxref("&lt;trans
 
 ### Orienting image from image data
 
+The following image has been rotated through 180 degrees, and the `image-orientation` property is used to correct its orientation based on the EXIF data in the image. By changing the `image-orientation` to `none` you can see the effect of the property.
+
 #### CSS
 
 ```css
@@ -76,25 +63,44 @@ If used in conjunction with other CSS properties, such as a {{cssxref("&lt;trans
 }
 ```
 
+```css hidden
+img {
+  margin: 0.5rem 0;
+}
+
+label {
+  font-family: monospace;
+}
+```
+
 ```html hidden
-<img id="image" src="mdn.svg"
-    alt="Orientation taken from the image">
-<select id="imageOrientation">
-  <option value="from-image">from-image</option>
-  <option value="none">none</option>
-</select>
+<img id="image" src="oriole.jpg" alt="Orientation taken from the image" />
+
+<div>
+  <input
+    type="radio"
+    id="from-image"
+    name="orientation"
+    value="from-image"
+    checked />
+  <label for="from-image">from-image</label>
+</div>
+
+<div>
+  <input type="radio" id="none" name="orientation" value="none" />
+  <label for="none">none</label>
+</div>
 ```
 
 ```js hidden
-var imageOrientation = document.getElementById("imageOrientation");
-imageOrientation.addEventListener("change", function (evt) {
+document.addEventListener("change", (evt) => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 240)}}
+{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 900)}}
 
 ## Specifications
 
@@ -108,5 +114,3 @@ imageOrientation.addEventListener("change", function (evt) {
 
 - Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
 - {{cssxref("transform")}} and {{cssxref("rotate")}}
-
-{{CSSRef}}

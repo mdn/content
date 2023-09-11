@@ -1,59 +1,57 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.entries
 ---
+
 {{JSRef}}
 
-The **`entries()`** method returns a new {{jsxref("Array")}}
-iterator object that contains the key/value pairs for each index in the array.
+The **`entries()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.entries()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new _array iterator_ object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+
+## Description
+
+See {{jsxref("Array.prototype.entries()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
 ### Iteration using for...of loop
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.entries();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (let n of eArray) {
-  console.log(n);
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+for (const element of arrayEntries) {
+  console.log(element);
 }
 ```
 
 ### Alternative iteration
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.entries();
-console.log(eArr.next().value); // [0, 10]
-console.log(eArr.next().value); // [1, 20]
-console.log(eArr.next().value); // [2, 30]
-console.log(eArr.next().value); // [3, 40]
-console.log(eArr.next().value); // [4, 50]
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+
+console.log(arrayEntries.next().value); // [0, 10]
+console.log(arrayEntries.next().value); // [1, 20]
+console.log(arrayEntries.next().value); // [2, 30]
+console.log(arrayEntries.next().value); // [3, 40]
+console.log(arrayEntries.next().value); // [4, 50]
 ```
 
 ## Specifications
@@ -66,10 +64,11 @@ console.log(eArr.next().value); // [4, 50]
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.entries` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Polyfill of `TypedArray.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Array.prototype.entries()")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
