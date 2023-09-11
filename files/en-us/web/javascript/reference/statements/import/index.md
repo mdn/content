@@ -235,7 +235,7 @@ setTimeout(() => {
 ## See also
 
 - {{JSxRef("Statements/export", "export")}}
-- [Dynamic imports](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+- [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/) on blogs.windows.com (2016)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
