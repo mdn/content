@@ -40,6 +40,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
+- The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped, and should be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
