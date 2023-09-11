@@ -11,7 +11,7 @@ Deno version at the time of writing: `1.36.4`.
 
 ## Code
 
-The code will consist in two files, one for the server, and one for the client.
+The code will be contained in two files, one for the server, and one for the client.
 
 ### Server
 
