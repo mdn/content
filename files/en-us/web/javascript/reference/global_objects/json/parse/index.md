@@ -63,7 +63,7 @@ const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
   return typeof value === "object" ? undefined : value;
 });
 
-console.log(transformedObj1) // undefined
+console.log(transformedObj1); // undefined
 ```
 
 Note that `reviver` is run after the value is parsed. So, for example, numbers in JSON text will have already been converted to JavaScript numbers, and may lose precision in the process. To transfer large numbers without loss of precision, serialize them as strings, and revive them to [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), or other appropriate arbitrary precision formats.
