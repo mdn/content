@@ -1,9 +1,10 @@
 ---
 name: Firefox Release Issue
-about: "Use this template to create an issue for a Firefox Release Project"
-labels: ""
-assignees:
-title: ""
+about: Use this template to create an issue for a Firefox Release Project
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## Acceptance Criteria
