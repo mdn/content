@@ -5,7 +5,7 @@ slug: WebAssembly/Reference/Memory/Copy
 
 {{WebAssemblySidebar}}
 
-The **`copy`** instruction copies data from one region of memory to another. 
+The **`copy`** instruction copies data from one region of memory to another.
 
 The **`copy`** instruction does not return a value. If either the source or destination range is out of bounds, the instruction traps.
 
