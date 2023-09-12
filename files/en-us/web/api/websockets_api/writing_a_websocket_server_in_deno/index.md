@@ -53,6 +53,8 @@ Deno.serve({
 });
 ```
 
+`Deno.upgradeWebSocket()` upgrades the connection to a WebSocket connection, which is explained further in [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
+
 `Deno.serve()` uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server (see the [API documentation](https://deno.land/api@v1.36.4?s=Deno.serve)). Without it, the code would look something like this.
 
 ```js
