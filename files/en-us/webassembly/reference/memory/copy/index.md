@@ -27,4 +27,4 @@ memory.copy
 
 | Instruction   | Binary opcode |
 | ------------- | ------------- |
-| `memory.copy` | `0xFC 0x10`   |
+| `memory.copy` | `0xFC`        |
