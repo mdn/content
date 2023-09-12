@@ -25,7 +25,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Function properties
 
-- {{jsxref("eval()")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("isFinite()")}}
 - {{jsxref("isNaN()")}}
 - {{jsxref("parseFloat()")}}

@@ -31,7 +31,7 @@ These global properties return a simple value. They have no properties or method
 
 These global functions—functions which are called globally, rather than on an object—directly return their results to the caller.
 
-- {{jsxref("eval()")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("isFinite()")}}
 - {{jsxref("isNaN()")}}
 - {{jsxref("parseFloat()")}}

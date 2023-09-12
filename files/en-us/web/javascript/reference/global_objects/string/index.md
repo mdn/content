@@ -137,7 +137,7 @@ console.log(typeof strObj); // "object"
 > **Warning:** You should rarely find yourself using `String` as a constructor.
 
 String primitives and `String` objects also give different results when
-using {{jsxref("eval()")}}. Primitives passed to
+using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 `eval` are treated as source code; `String` objects are treated as
 all other objects are, by returning the object. For example:
 

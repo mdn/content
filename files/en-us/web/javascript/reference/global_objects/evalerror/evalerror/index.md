@@ -71,4 +71,4 @@ try {
 ## See also
 
 - {{jsxref("Error")}}
-- {{jsxref("eval()")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}

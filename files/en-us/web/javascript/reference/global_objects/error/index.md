@@ -20,7 +20,7 @@ Runtime errors result in new `Error` objects being created and thrown.
 Besides the generic `Error` constructor, there are other core error constructors in JavaScript. For client-side exceptions, see [Exception handling statements](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
 
 - {{jsxref("EvalError")}}
-  - : Creates an instance representing an error that occurs regarding the global function {{jsxref("eval()")}}.
+  - : Creates an instance representing an error that occurs regarding the global function {{jsxref("Global_Objects/eval", "eval()")}}.
 - {{jsxref("RangeError")}}
   - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.
 - {{jsxref("ReferenceError")}}
