@@ -43,8 +43,7 @@ If the `radix` is smaller than `2` or bigger than
 
 ### Number.parseInt vs. parseInt
 
-This method has the same functionality as the global {{jsxref("parseInt",
-  "parseInt()")}} function:
+This method has the same functionality as the global {{jsxref("parseInt", "parseInt()")}} function:
 
 ```js
 Number.parseInt === parseInt; // true

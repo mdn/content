@@ -156,7 +156,7 @@ Where `TypedArray` is a constructor for one of the concrete types.
 ### Parameters
 
 - `typedArray`
-  - : When called with an instance of a `TypedArray` subclass, the `typedArray` gets copied into a new typed array. For a non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor, the `typedArray` parameter can only be of one of the non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types (such as {{JSxRef("Int32Array")}}). Similarly, for a [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor ({{JSxRef("BigInt64Array")}} or {{JSxRef("BigUint64Array")}}), the `typedArray` parameter can only be of one of the [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types. Each value in `typedArray` is converted to the corresponding type of the constructor before being copied into the new array. The length of the new typed array will be same as the length of the `typedArray` argument.
+  - : When called with an instance of a `TypedArray` subclass, the `typedArray` gets copied into a new typed array. For a non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor, the `typedArray` parameter can only be of one of the non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types (such as {{jsxref("Int32Array")}}). Similarly, for a [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor ({{jsxref("BigInt64Array")}} or {{jsxref("BigUint64Array")}}), the `typedArray` parameter can only be of one of the [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types. Each value in `typedArray` is converted to the corresponding type of the constructor before being copied into the new array. The length of the new typed array will be same as the length of the `typedArray` argument.
 - `object`
   - : When called with an object that's not a `TypedArray` instance, a new typed array is created in the same way as the [`TypedArray.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from) method.
 - `length` {{optional_inline}}
@@ -378,7 +378,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## See also
 
 - [Polyfill of typed arrays in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - {{domxref("TextDecoder")}}
