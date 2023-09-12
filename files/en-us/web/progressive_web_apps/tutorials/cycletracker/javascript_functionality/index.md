@@ -83,9 +83,9 @@ newPeriodFormEl.addEventListener("submit", (event) => {
 
 After preventing the form submission with [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), we:
 
-1. [Validate user input](#validate-user-input); exiting if invalid,
-2. store the new period by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve-append-sort-and-re-store-data) data in localStorage,
-3. [render the form data](#render-data-to-screen) along with the data of past menstrual cycles and a section header, and
+1. [Validate user input](#validate_user_input); exiting if invalid,
+2. store the new period by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve_append_sort_and_re-store_data) data in localStorage,
+3. [render the form data](#render_data_to_screen) along with the data of past menstrual cycles and a section header, and
 4. reset the form using the HTMLFormElement [`reset()`](/en-US/docs/Web/API/HTMLFormElement/reset) method
 
 ### Validate user input
@@ -167,7 +167,7 @@ function getAllStoredPeriods() {
 }
 ```
 
-### Render data
+### Render data to screen
 
 The last step of our application is to render the list of past periods to the screen along with a heading.
 
@@ -218,7 +218,7 @@ function formatDate(dateString) {
 
   // Format the date into a locale-specific string.
   // include your locale for better user experience
-  return date.toLocaleDateString("en-UK", { timeZone: "UTC" });
+  return date.toLocaleDateString("en-US", { timeZone: "UTC" });
 }
 ```
 
