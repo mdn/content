@@ -53,7 +53,7 @@ for (const letter of arr) {
 
 #### Result
 
-{{EmbedLiveSample('Iteration_using_for...of_loop', '', '')}}
+{{EmbedLiveSample("Iteration_using_for...of_loop", "", "")}}
 
 ### Manually hand-rolling the iterator
 

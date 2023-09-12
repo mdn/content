@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.encodeURIComponent
 
 {{jsSidebar("Objects")}}
 
-The **`encodeURIComponent()`** function encodes a {{glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURI()")}}, this function encodes more characters, including those that are part of the URI syntax.
+The **`encodeURIComponent()`** function encodes a {{Glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{Glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURI()")}}, this function encodes more characters, including those that are part of the URI syntax.
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html", "shorter")}}
 
 ## Syntax
 
@@ -82,7 +82,7 @@ function encodeRFC5987ValueChars(str) {
 
 ### Encoding for RFC3986
 
-The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL component format. It also encodes [ and ], which are part of the {{glossary("IPv6")}} URI syntax. An RFC3986-compliant `encodeURI` implementation should not escape them, which is demonstrated in the [`encodeURI()` example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986).
+The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL component format. It also encodes [ and ], which are part of the {{Glossary("IPv6")}} URI syntax. An RFC3986-compliant `encodeURI` implementation should not escape them, which is demonstrated in the [`encodeURI()` example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986).
 
 ```js
 function encodeRFC3986URIComponent(str) {

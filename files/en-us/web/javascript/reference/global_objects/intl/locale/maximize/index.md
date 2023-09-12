@@ -41,8 +41,7 @@ affects the main subtags that comprise the [language identifier](https://www.uni
 Other subtags after the "-u" in the locale identifier are called extension subtags and
 are not affected by the `maximize()` method. Examples of these subtags
 include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
-{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric",
-  "numeric")}}.
+{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric", "numeric")}}.
 
 ## Examples
 
