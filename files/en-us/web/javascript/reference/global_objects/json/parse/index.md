@@ -101,7 +101,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 // ""
 ```
 
-### Preserving Object's type while serializing it
+### Symmetry between reviver and the replacer of JSON.stringify()
 
 In order for a value to properly round-trip (that is, it gets deserialized to the same original object), the serialization process must preserve the type information. For example, you can use the `replacer` parameter of {{jsxref("JSON.stringify()")}} for this purpose:
 
