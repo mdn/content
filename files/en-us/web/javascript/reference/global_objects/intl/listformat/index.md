@@ -18,7 +18,7 @@ The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 
 ## Static methods
 
-- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl.ListFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

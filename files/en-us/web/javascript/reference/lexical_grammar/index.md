@@ -289,7 +289,7 @@ A few identifiers have a special meaning in some contexts without being reserved
 - {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
 - `as` ([`import * as ns from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import))
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- {{jsxref("eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
 - `from` ([`import x from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/import))
 - {{jsxref("Functions/get", "get")}}
 - [`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)

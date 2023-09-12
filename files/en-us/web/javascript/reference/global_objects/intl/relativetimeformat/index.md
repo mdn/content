@@ -18,7 +18,7 @@ The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative tim
 
 ## Static methods
 
-- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

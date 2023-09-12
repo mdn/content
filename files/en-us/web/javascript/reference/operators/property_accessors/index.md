@@ -132,7 +132,7 @@ A method is not bound to the object that it is a property of. Specifically, `thi
 
 ### Bracket notation vs. eval()
 
-JavaScript novices often make the mistake of using {{jsxref("Global_Objects/eval", "eval()")}} where the bracket notation can be used instead.
+JavaScript novices often make the mistake of using {{jsxref("eval()")}} where the bracket notation can be used instead.
 
 For example, the following syntax is often seen in many scripts.
 
