@@ -130,7 +130,7 @@ h2 + p + p {
 
 ### Creating complex selectors with CSS nesting
 
-All of the above combinators can be created by using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting). This can be done with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
+The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
 
 #### CSS
 
