@@ -7,11 +7,11 @@ browser-compat: javascript.statements.function
 
 {{jsSidebar("Statements")}}
 
-The **`function`** declaration creates a {{glossary("binding")}} of a new function to a given name.
+The **`function`** declaration creates a {{Glossary("binding")}} of a new function to a given name.
 
 You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-{{EmbedInteractiveExample("pages/js/statement-function.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/statement-function.html", "shorter")}}
 
 ## Syntax
 

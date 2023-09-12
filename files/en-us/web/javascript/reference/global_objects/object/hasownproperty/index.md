@@ -159,7 +159,7 @@ Note that in the first two cases there are no newly created objects.
 ### Objects created with Object.create(null)
 
 Objects created using
-{{jsxref("Object.create()","Object.create(null)")}} do not
+{{jsxref("Object.create()", "Object.create(null)")}} do not
 inherit from `Object.prototype`, making `hasOwnProperty()` inaccessible.
 
 ```js

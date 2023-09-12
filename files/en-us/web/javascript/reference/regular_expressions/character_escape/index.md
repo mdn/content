@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_escape
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **character escape** represents a character that may not be able to be conveniently represented in its literal form.
 

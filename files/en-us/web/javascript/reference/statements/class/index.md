@@ -7,7 +7,7 @@ browser-compat: javascript.statements.class
 
 {{jsSidebar("Statements")}}
 
-The **`class`** declaration creates a {{glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
+The **`class`** declaration creates a {{Glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
 
 You can also define classes using the [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 

@@ -103,7 +103,7 @@ f(5); // 5
 
 ### Passing undefined vs. other falsy values
 
-In the second call in this example, even if the first argument is set explicitly to `undefined` (though not `null` or other {{glossary("falsy")}} values), the value of the `num` argument is still the default.
+In the second call in this example, even if the first argument is set explicitly to `undefined` (though not `null` or other {{Glossary("falsy")}} values), the value of the `num` argument is still the default.
 
 ```js
 function test(num = 1) {
