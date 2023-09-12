@@ -138,7 +138,7 @@ if (Object.hasOwn(foo, "bar")) {
 ```
 
 It can also be used to test objects created using
-{{jsxref("Object.create()","Object.create(null)")}}. These do
+{{jsxref("Object.create()", "Object.create(null)")}}. These do
 not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 
 ```js
