@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.String.strike
 
 The **`strike()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("strike")}} element (`<strike>str</strike>`), which causes this string to be displayed as struck-out text.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `strike()`, the `<strike>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Web developers should use the {{HTMLElement("del")}} or {{HTMLElement("s")}} elements instead.
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `strike()`, the `<strike>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use the {{HTMLElement("del")}} or {{HTMLElement("s")}} elements instead.
 
 ## Syntax
 

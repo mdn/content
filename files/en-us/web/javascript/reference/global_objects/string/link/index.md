@@ -35,7 +35,7 @@ A string beginning with an `<a href="url">` start tag (double quotes in `url` ar
 The code below creates an HTML string and then replaces the document's body with it:
 
 ```js
-const contentString = "Hello, world";
+const contentString = "MDN Web Docs";
 
 document.body.innerHTML = contentString.link("https://developer.mozilla.org/");
 ```
@@ -43,13 +43,13 @@ document.body.innerHTML = contentString.link("https://developer.mozilla.org/");
 This will create the following HTML:
 
 ```html
-<a href="https://developer.mozilla.org/">Hello, world</a>
+<a href="https://developer.mozilla.org/">MDN Web Docs</a>
 ```
 
 Instead of using `link()` and creating HTML text directly, you should use DOM APIs such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement). For example:
 
 ```js
-const contentString = "Hello, world";
+const contentString = "MDN Web Docs";
 const elem = document.createElement("a");
 elem.href = "https://developer.mozilla.org/";
 elem.innerText = contentString;
