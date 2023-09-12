@@ -34,7 +34,7 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Note that if the response has an `Authorization` header, it cannot be stored in the shared cache by default unless some other explicit directives (e.g. `public`, `max-age` etc) are specified.
+Note that a response to a request with an `Authorization` header cannot be stored in the shared cache by default, unless public is specified.
 
 ### Shared cache
 
