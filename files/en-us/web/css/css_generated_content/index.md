@@ -7,9 +7,7 @@ spec-urls: https://drafts.csswg.org/css-content/
 
 {{CSSRef}}
 
-**CSS Generated Content** is a module of CSS that defines how to add content to an element. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.
-
-See the [how to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) to learn more, and the {{cssxref("content")}} and {{cssxref("quotes")}} properties for implementation information.
+The **CSS generated content** module defines how content can be added to a document with CSS. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.
 
 ## Reference
 
@@ -18,11 +16,49 @@ See the [how to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generat
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
+> **Note:** The CSS generated content module introduces four at-risk properties that have not been implented, including `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
+
+### Functions
+
+- `<content()>`
+- `<string()>`
+- `<leader()>`
+- `<target-counter()>`
+- `<target-counters()>`
+- `<target-text()>`
+
+### Data types
+
+- `<content-list>`
+- `<content-replacement>`
+- `<image>`
+- `<counter>`
+- `<quote>`
+- `<target>`
+- `<quote>`
+
+## Guides
+
+- [How to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) to l
+
+  - : Learn how to generated content with CSS, including the {{cssxref("content")}} and {{cssxref("quotes")}} properties.
+
+- [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+  - :
+
+## Related concepts
+
+- {{cssxref("::before")}} pseudo-element
+- {{cssxref("::after")}} pseudo-element
+- {{cssxref("::marker")}} pseudo-element
+
+- {{cssxref("counter-increment")}} property
+- {{cssxref("counter-reset")}} property
+
 ## Specifications
 
 {{Specifications}}
 
 ## See also
 
-- [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
-- Pseudo-elements: {{cssxref("::before")}}, {{cssxref("::after")}}, {{cssxref("::marker")}}
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
