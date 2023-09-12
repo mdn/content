@@ -22,7 +22,9 @@ getSenders()
 An array of {{domxref("RTCRtpSender")}} objects, one for each track on the connection.
 The array is empty if there are no RTP senders on the connection.
 
-The order of the returned `RTCRtpSender`s is not defined by the specification, and may change from one call to `getSenders()` to the next.
+The order of the returned `RTCRtpSender` instances is not defined by the specification, and may change from one call to `getSenders()` to the next.
+
+The array does not include senders associated with transceivers that have been [stopped](/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection) (following offer/answer).
 
 ## Example
 

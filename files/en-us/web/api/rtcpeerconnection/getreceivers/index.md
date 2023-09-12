@@ -24,6 +24,8 @@ The array is empty if there are no RTP receivers on the connection.
 
 The order of the returned `RTCRtpReceiver` instances is not defined by the specification, and may change from one call to `getReceivers()` to the next.
 
+The array does not include receivers associated with transceivers that have been [stopped](/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection) (following offer/answer).
+
 ## Example
 
 tbd

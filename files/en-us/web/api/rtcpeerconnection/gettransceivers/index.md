@@ -23,7 +23,8 @@ None.
 ### Return value
 
 An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transceivers handling sending and receiving all media on the `RTCPeerConnection`.
-The list is in the order in which the transceivers were added to the connection.
+The array is in the order in which the transceivers were added to the connection.
+The array does not include transceivers that have already been [stopped](/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection) (following offer/answer).
 
 ## Examples
 
