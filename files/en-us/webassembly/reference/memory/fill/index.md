@@ -9,7 +9,6 @@ The **`fill`** instruction sets all bytes in a memory region to a given byte.
 
 The **`fill`** instruction does not return a value. If the memory region indicated is out of bounds this instruction will trap.
 
-
 ## Syntax
 
 ```wasm
