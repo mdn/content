@@ -3,6 +3,7 @@ title: "AbortSignal: any() static method"
 short-title: any()
 slug: Web/API/AbortSignal/any_static
 page-type: web-api-static-method
+browser-compat: api.AbortSignal.any_static
 ---
 
 {{APIRef("DOM")}}
@@ -35,7 +36,7 @@ const button = document.getElementById("cancelDownloadButton");
 
 const userCancelController = new AbortController();
 cancelDownloadButton.addEventListener("click", () => {
-    userCancelController.abort();
+  userCancelController.abort();
 });
 
 // Timeout after 5 minutes
@@ -43,26 +44,33 @@ const timeoutSignal = AbortSignal.timeout(1_000 * 60 * 5);
 
 // This signal will abort when either the user clicks the cancel button or 5 minutes is up
 // whichever is sooner
-const combinedSignal = AbortSignal.any([userCancelController.signal, timeoutSignal]);
+const combinedSignal = AbortSignal.any([
+  userCancelController.signal,
+  timeoutSignal,
+]);
 
 try {
-    const res = await fetch(someUrlToDownload, {
-        // Stop the fetch when any of the
-        signal: combinedSignal,
-    });
-    const body = await res.blob();
-    // do something with downloaded content
+  const res = await fetch(someUrlToDownload, {
+    // Stop the fetch when any of the
+    signal: combinedSignal,
+  });
+  const body = await res.blob();
+  // do something with downloaded content
 } catch (e) {
-    if (e.name === "AbortError") {
-        // Cancelled by the user
-    } else if (e.name === "TimeoutError") {
-        // Show user that download timed out
-    } else {
-        // Other error, e.g. network error
-    }
+  if (e.name === "AbortError") {
+    // Cancelled by the user
+  } else if (e.name === "TimeoutError") {
+    // Show user that download timed out
+  } else {
+    // Other error, e.g. network error
+  }
 }
 ```
 
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
