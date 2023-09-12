@@ -29,9 +29,9 @@ getModifierState(key)
 
 A boolean.
 
-## Modifier keys on Gecko
+## Modifier keys on Firefox
 
-When `getModifierState()` returns true on Gecko?
+When `getModifierState()` returns true on Firefox?
 
 <table class="standard-table">
   <thead>
@@ -181,10 +181,8 @@ When `getModifierState()` returns true on Gecko?
 </table>
 
 - On the other platforms, "Alt", "Control" and "Shift" may be supported.
-- All modifiers (except `"FnLock"`, `"Hyper"`,
-  `"Super"` and `"Symbol"` which are defined after Gecko
-  implements this) are always supported for untrusted events on Gecko. This doesn't
-  depend on the platform.
+- All modifiers (except `"FnLock"`, `"Hyper"`, `"Super"` and `"Symbol"` which are defined after Firefox implements this) are always supported for untrusted events on Firefox.
+  This doesn't depend on the platform.
 
 ## `"Accel"` virtual modifier
 
@@ -259,21 +257,21 @@ function handleKeyboardEvent(event) {
   ) {
     switch (event.key) {
       case "ArrowDown":
-      case "Down": // hack for IE and old Gecko
+      case "Down": // hack for IE and old Firefox
         event.preventDefault(); // consume the key event
         break;
       case "ArrowLeft":
-      case "Left": // hack for IE and old Gecko
+      case "Left": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
       case "ArrowRight":
-      case "Right": // hack for IE and old Gecko
+      case "Right": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
       case "ArrowUp":
-      case "Up": // hack for IE and old Gecko
+      case "Up": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
