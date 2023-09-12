@@ -63,7 +63,7 @@ Since each conditional group may also contain nested statements, there may be an
 
 ## Nesting @layer with CSS nesting
 
-[Cascade Layers](/en-US/docs/Web/CSS/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.`(dot).
+[Cascade layers](/en-US/docs/Web/CSS/@layer) can be nested to [create nested layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.`(dot).
 
 This can also be achieved using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules#nesting_cascade_layers_layer).
 
