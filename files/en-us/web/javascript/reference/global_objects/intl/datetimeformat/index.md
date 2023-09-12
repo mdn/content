@@ -18,7 +18,7 @@ The **`Intl.DateTimeFormat`** object enables language-sensitive date and time fo
 
 ## Static methods
 
-- {{jsxref("Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

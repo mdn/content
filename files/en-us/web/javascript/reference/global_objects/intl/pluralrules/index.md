@@ -44,7 +44,7 @@ For a list of the rules and how they apply for different languages, see the [LDM
 
 ## Static methods
 
-- {{jsxref("Intl.PluralRules.supportedLocalesOf()")}}
+- {{jsxref("Intl/PluralRules/supportedLocalesOf", "Intl.PluralRules.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

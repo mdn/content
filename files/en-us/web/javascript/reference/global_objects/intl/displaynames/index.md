@@ -18,7 +18,7 @@ The **`Intl.DisplayNames`** object enables the consistent translation of languag
 
 ## Static methods
 
-- {{jsxref("Intl.DisplayNames.supportedLocalesOf()")}}
+- {{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

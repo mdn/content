@@ -18,7 +18,7 @@ The **`Intl.Collator`** object enables language-sensitive string comparison.
 
 ## Static methods
 
-- {{jsxref("Intl.Collator.supportedLocalesOf()")}}
+- {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

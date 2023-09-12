@@ -18,7 +18,7 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 
 ## Static methods
 
-- {{jsxref("Intl.Segmenter.supportedLocalesOf()")}}
+- {{jsxref("Intl/Segmenter/supportedLocalesOf", "Intl.Segmenter.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties

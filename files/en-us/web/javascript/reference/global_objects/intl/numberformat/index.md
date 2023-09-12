@@ -18,7 +18,7 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
 
 ## Static methods
 
-- {{jsxref("Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties
