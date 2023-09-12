@@ -6,15 +6,17 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The term **asynchronous** refers to two or more objects or events **not** existing or happening at the same time (or multiple related things happening without waiting for the previous one to complete). In computing, the word "asynchronous" is used in two major contexts.
+The term **asynchronous** refers to two or more objects or events that are **not** {{glossary("synchronous")}} that do not exist or happen at the same time. When multiple related things happen without any being dependent on the completion of previous happenings, they are asynchronous.
+
+In computing, the word "asynchronous" is used in two major contexts:
 
 - Networking and communications
 
-  - : Asynchronous communication is a method of exchanging messages between two or more parties in which each party receives and processes messages whenever it's convenient or possible to do so, rather than doing so immediately upon receipt. Additionally, messages may be sent without waiting for acknowledgement, with the understanding that if a problem occurs, the recipient will request corrections or otherwise handle the situation.
+  - : Asynchronous communication is a method of exchanging messages in which the sending, receiving, and processing of each message in not dependent on the sending, receipt, or processing of other messages. In asynchronous communication, each party receives and processes messages when convenient or possible to do so, rather than doing so immediately upon receipt. Additionally, messages may be sent without waiting for acknowledgement, with the understanding that if a problem occurs, the recipient will request corrections or otherwise handle the situation.
 
-    For humans, email is an asynchronous communication method; the sender sends an email and the recipient will read and reply to the message when it's convenient to do so, rather than doing so at once. And both sides can continue to send and receive messages whenever they wish, instead of having to schedule them around each other.
+    Email is a form of asynchronous human communication. A sender sends an email. The recipient reads the email and replies (or doesn't) when convenient, rather than immediately. All parties can continue to send and receive messages whenever they wish. Emails don't have to be scheduled in a particular sequence either.
 
-    When software communicates asynchronously, a program may make a request for information from another piece of software (such as a server), and continue to do other things while waiting for a reply. For example, the [AJAX](/en-US/docs/Web/Guide/AJAX) (Asynchronous JavaScript and {{Glossary("XML")}}) programming technique—now usually "Ajax", even though {{Glossary("JSON")}} is usually used rather than XML in modern applications—is a mechanism that requests relatively small amounts of data from the server using {{Glossary("HTTP")}}, with the result being returned when available rather than immediately.
+    With asynchronous software, when a request is made, such as to a server, processes aren't blocked during the time it takes for the requested response to be received. It can continue to do other things. For example, in [promise based APIs](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API), {{JSxRef("Promise")}}s are used when long operations are called, creating a Promise object. When the operation eventually completes, the promise is handled. With promises, software doesn't have to wait for the operation to complete.a notification is sent. This enables the code.
 
 - Software design
 
