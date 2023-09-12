@@ -84,21 +84,31 @@ This section is for interactive examples added using the `\{{EmbedInteractiveExa
 
 ## Syntax
 
-Include a CSS code block showing the main syntax forms, including the parameters that can be given. Only include the function itself, not a complete declaration in which it occurs.
+Include a CSS code block showing the main syntax forms, including the parameters that can be given. Only include the function itself, not a complete declaration in which it occurs. Lines should not end in semicolons: this should emphasize that we are not showing complete valid CSS code here, just the syntax form.
+
+You should show all the invocation patterns that the function can take, and include comments naming parameters, which should match the parameters listed in the "Parameters" section.
+
+The comment showing each invocation pattern should be followed by exactly one empty line.
 
 For example:
 
 ```css
 /* Without a fallback */
-var(--custom-prop);
+
+/* var( <custom-property-name> ) */
+var(--custom-prop)
 
 /* With fallback */
-var(--custom-prop,);  /* empty value as fallback */
-var(--custom-prop, initial); /* initial value of the property as fallback */
-var(--custom-prop, #FF0000);
-var(--my-background, linear-gradient(transparent, aqua), pink);
-var(--custom-prop, var(--default-value));
-var(--custom-prop, var(--default-value, red));
+
+/* var( <custom-property-name> , ) */
+var(--custom-prop,)
+
+/* var( <custom-property-name> , <declaration-value> ) */
+var(--custom-prop, initial)
+var(--custom-prop, #FF0000)
+var(--my-background, linear-gradient(transparent, aqua), pink)
+var(--custom-prop, var(--default-value))
+var(--custom-prop, var(--default-value, red))
 ```
 
 ### Parameters
@@ -106,9 +116,9 @@ var(--custom-prop, var(--default-value, red));
 Give the parameters that the function can accept, as a {{htmlelement("dl")}}.
 Include one term and definition for each parameter.
 
-- `parameter1name`
+- `<custom-property-name>`
   - : Include a description of the parameter, its data type, and what it represents.
-- `parameter2name`
+- `<declaration-value>`
   - : Include a description of the parameter, its data type, and what it represents.
 
 ### Return value
