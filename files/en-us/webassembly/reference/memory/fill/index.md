@@ -22,7 +22,7 @@ i32.const 255
 i32.const 100
 
 ;; Update the target region
-i32.fill
+memory.fill
 ```
 
 | Instruction    | Binary opcode |
