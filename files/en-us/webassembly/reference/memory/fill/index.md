@@ -12,7 +12,6 @@ The **`fill`** instruction does not return a value. If the memory region indicat
 ## Syntax
 
 ```wasm
-;; the offset from where to load the number
 ;; The pointer to the region to update
 i32.const 200
 ;; The value to set each byte to (must be < 256)
