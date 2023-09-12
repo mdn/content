@@ -24,6 +24,6 @@ i32.const 100
 memory.fill
 ```
 
-| Instruction    | Binary opcode |
-| -------------- | ------------- |
-| `memory.fill`  | `0xFC 0x0b`   |
+| Instruction   | Binary opcode |
+| ------------- | ------------- |
+| `memory.fill` | `0xFC 0x0b`   |
