@@ -40,6 +40,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
+- The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
