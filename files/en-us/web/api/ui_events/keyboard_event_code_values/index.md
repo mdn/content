@@ -946,13 +946,13 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0xE05B</code></th>
-      <td><code>"OSLeft"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chrome 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chrome 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE05C</code></th>
-      <td><code>"OSRight"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chrome 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chrome 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE05D</code></th>
@@ -1346,13 +1346,13 @@ In the cells,
     </tr>
     <tr>
       <th scope="row">right-command key (<code>0x36</code>)</th>
-      <td><code>"OSRight"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Command (0x37)</code></th>
-      <td><code>"OSLeft"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Shift (0x38)</code></th>
@@ -2337,13 +2337,13 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     </tr>
     <tr>
       <th scope="row"><code>0x0085</code></th>
-      <td><code>"OSLeft"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0086</code></th>
-      <td><code>"OSRight"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0087</code></th>
@@ -3136,13 +3136,13 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x007D</code></th>
       <td>
-        <p><code>"OSLeft"</code></p>
+        <p><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</p>
       </td>
     </tr>
     <tr>
       <th scope="row"><code>0x007E</code></th>
       <td>
-        <p><code>"OSRight"</code></p>
+        <p><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</p>
       </td>
     </tr>
     <tr>

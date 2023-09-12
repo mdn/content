@@ -41,7 +41,7 @@ When `getModifierState()` returns true on Firefox?
       <th scope="col">Linux (GTK)</th>
       <th scope="col">Mac</th>
       <th scope="col">Android 2.3</th>
-      <th scope="col">Android 3.0 or latter</th>
+      <th scope="col">Android 3.0 or later</th>
     </tr>
   </thead>
   <tbody>
@@ -114,7 +114,7 @@ When `getModifierState()` returns true on Firefox?
     </tr>
     <tr>
       <th scope="row"><code>"Meta"</code></th>
-      <td>❌ <em>Not supported</em></td>
+      <td><kbd>⊞ Windows Logo</kbd> key pressed (from Firefox 118)</td>
       <td><kbd>Meta</kbd> key pressed</td>
       <td><kbd>⌘ Command</kbd> key pressed</td>
       <td>❌ <em>Not supported</em></td>
@@ -129,7 +129,7 @@ When `getModifierState()` returns true on Firefox?
     </tr>
     <tr>
       <th scope="row"><code>"OS"</code></th>
-      <td><kbd>⊞ Windows Logo</kbd> key pressed</td>
+      <td><kbd>⊞ Windows Logo</kbd> key pressed (before Firefox 118)</td>
       <td>
         <kbd>Super</kbd> key or <kbd>Hyper</kbd> key pressed (typically, mapped
         to <kbd>⊞ Windows Logo</kbd> key)
