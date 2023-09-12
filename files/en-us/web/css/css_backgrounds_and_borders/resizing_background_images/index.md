@@ -69,7 +69,7 @@ As you can see, the CSS is actually essentially identical, save the name of the 
 
 ## Special values: `contain` and `cover`
 
-Besides {{cssxref("&lt;length&gt;")}} values, the {{cssxref("background-size")}} CSS property offers two special size values, `contain` and `cover`. Let's take a look at these.
+In addition to {{cssxref("&lt;length&gt;")}} values, the {{cssxref("background-size")}} CSS property offers two special size values, `contain` and `cover`. Let's take a look at these.
 
 ### `contain`
 
