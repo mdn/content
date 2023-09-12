@@ -96,7 +96,7 @@ In the example below we are selecting all `<p>` elements that come after the `<h
 
 ## Creating complex selectors with nesting
 
-The [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#combinators) allows you to write nested rules that use combinators to create [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector).
+The [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#combinators) allows you to write nested rules that use combinators to create [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector).
 
 ```css
 p {
