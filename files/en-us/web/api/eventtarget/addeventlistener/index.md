@@ -72,11 +72,11 @@ addEventListener(type, listener, useCapture)
         should be invoked at most once after being added. If `true`, the
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
-      - : A boolean value that, if `true`, indicates that the function
-        specified by `listener` will never call
-        {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
-        does call `preventDefault()`, the user agent will do nothing other than
-        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
+
+      - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener does call `preventDefault()`, the user agent will do nothing other than generate a console warning.
+
+        If this option is not specified it defaults to `false` – except that in browsers other than Safari, it defaults to `true` for {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Using passive listeners](#using_passive_listeners) to learn more.
+
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
@@ -559,6 +559,97 @@ addListener();
 
 {{EmbedLiveSample('Event_listener_with_multiple_options')}}
 
+### Improving scroll performance using passive listeners
+
+The following example shows the effect of setting `passive`. It includes a {{htmlelement("div")}} that contains some text, and a check box.
+
+#### HTML
+
+```html
+<div id="container">
+  <p>
+    But down there it would be dark now, and not the lovely lighted aquarium she
+    imagined it to be during the daylight hours, eddying with schools of tiny,
+    delicate animals floating and dancing slowly to their own serene currents
+    and creating the look of a living painting. That was wrong, in any case. The
+    ocean was different from an aquarium, which was an artificial environment.
+    The ocean was a world. And a world is not art. Dorothy thought about the
+    living things that moved in that world: large, ruthless and hungry. Like us
+    up here.
+  </p>
+</div>
+
+<div>
+  <input type="checkbox" id="passive" name="passive" checked />
+  <label for="passive">passive</label>
+</div>
+```
+
+```css hidden
+#container {
+  width: 150px;
+  height: 200px;
+  overflow: scroll;
+  margin: 2rem 0;
+  padding: 0.4rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+The code adds a listener to the container's {{domxref("Element/wheel_event", "wheel")}} event, which by default scrolls the container. The listener runs a long-running operation. Initially the listener is added with the `passive` option, and whenever the checkbox is toggled, the code toggles the `passive` option.
+
+```js
+const passive = document.querySelector("#passive");
+passive.addEventListener("change", (event) => {
+  container.removeEventListener("wheel", wheelHandler);
+  container.addEventListener("wheel", wheelHandler, {
+    passive: passive.checked,
+    once: true,
+  });
+});
+
+const container = document.querySelector("#container");
+container.addEventListener("wheel", wheelHandler, {
+  passive: true,
+  once: true,
+});
+
+function wheelHandler() {
+  function isPrime(n) {
+    for (let c = 2; c <= Math.sqrt(n); ++c) {
+      if (n % c === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const quota = 1000000;
+  const primes = [];
+  const maximum = 1000000;
+
+  while (primes.length < quota) {
+    const candidate = Math.floor(Math.random() * (maximum + 1));
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+
+  console.log(primes);
+}
+```
+
+#### Result
+
+The effect is that:
+
+- Initially, the listener is passive, so trying to scroll the container with the wheel is immediate.
+- If you uncheck "passive" and try to scroll the container using the wheel, then there is a noticeable delay before the container scrolls, because the browser has to wait for the long-running listener to finish.
+
+{{EmbedLiveSample("Improving scroll performance using passive listeners", 100, 300)}}
+
 ## Other notes
 
 ### The value of "this" within the handler
@@ -866,39 +957,13 @@ because `processEvent` is the function reference.
 Actually, regarding memory consumption, the lack of keeping a function reference is not
 the real issue; rather it is the lack of keeping a _static_ function reference.
 
-### Improving scrolling performance with passive listeners
+### Using passive listeners
 
-Setting the `passive` option to `true` — as shown in the following example — enables performance optimizations that can dramatically improve the performance of an application.
+If an event has a default action — for example, a {{domxref("Element/wheel_event", "wheel")}} event that scrolls the container by default — the browser is in general unable to start the default action until the event listener has finished, because it doesn't know in advance whether the event listener might cancel the default action by calling {{domxref("Event.preventDefault()")}}. If the event listener takes too long to execute, this can cause a noticeable delay, also known as {{glossary("jank")}}, before the default action can be executed.
 
-```js
-/* Feature detection */
-let passiveIfSupported = false;
+By setting the `passive` option to `true`, an event listener declares that it will not cancel the default action, so the browser can start the default action immediately, without waiting for the listener to finish. If the listener does then call {{domxref("Event.preventDefault()")}}, this will have no effect.
 
-try {
-  window.addEventListener(
-    "test",
-    null,
-    Object.defineProperty({}, "passive", {
-      get() {
-        passiveIfSupported = { passive: true };
-      },
-    }),
-  );
-} catch (err) {}
-
-window.addEventListener(
-  "scroll",
-  (event) => {
-    /* do something */
-    // can't use event.preventDefault();
-  },
-  passiveIfSupported,
-);
-```
-
-The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, that introduces the potential for event listeners handling touch events and wheel events to block the browser's main thread while the browser is attempting to handle scrolling — possibly resulting in an enormous reduction in performance during scroll handling.
-
-To prevent that problem, browsers other than Safari have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
+The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, to realize the scroll performance benefits of passive listeners in legacy code, browsers other than Safari have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
 
 > **Note:** See the compatibility table below if you need to know which
 > browsers (and/or which versions of those browsers) implement this altered behavior.
