@@ -13,7 +13,7 @@ used to check if a property is in an object.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot use 'in' operator to search for 'x' in 'y' (V8-based & Firefox)
 TypeError: right-hand side of 'in' should be an object, got null (Firefox)
 TypeError: "y" is not an Object. (evaluating '"x" in "y"') (Safari)
@@ -84,4 +84,4 @@ const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 
 ## See also
 
-- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)

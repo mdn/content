@@ -204,6 +204,7 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
+        "OTPCredential",
         "PasswordCredential",
         "PublicKeyCredential"
       ],
@@ -484,9 +485,9 @@
       "properties": [],
       "events": []
     },
-    "File System Access API": {
-      "overview": ["File System Access API"],
-      "guides": [],
+    "File System API": {
+      "overview": ["File System API"],
+      "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
         "FileSystemHandle",
         "FileSystemFileHandle",
@@ -1964,6 +1965,7 @@
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
+        "/docs/Web/API/WebRTC_API/Using_Encoded_Transforms",
         "/docs/Web/API/WebRTC_API/adapter.js",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
         "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
@@ -1987,7 +1989,12 @@
         "RTCDTMFSender",
         "RTCDTMFToneChangeEvent",
         "RTCStatsReport",
-        "RTCErrorEvent"
+        "RTCErrorEvent",
+        "RTCRtpScriptTransform",
+        "RTCRtpScriptTransformer",
+        "RTCEncodedVideoFrame",
+        "RTCEncodedAudioFrame",
+        "RTCTransformEvent"
       ],
       "dictionaries": [
         "RTCOAuthCredential",
@@ -2036,7 +2043,11 @@
         "RTCTransportStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
-      "properties": ["Navigator.mediaDevices"],
+      "properties": [
+        "Navigator.mediaDevices",
+        "RTCRtpReceiver.transform",
+        "RTCRtpSender.transform"
+      ],
       "events": [
         "RTCDataChannel: bufferedamountlow",
         "RTCDataChannel: close",
@@ -2060,7 +2071,8 @@
         "RTCIceTransport: statechange",
         "RTCDtlsTransport: statechange",
         "RTCDTMFSender: tonechange",
-        "RTCPeerConnection: track"
+        "RTCPeerConnection: track",
+        "DedicatedWorkerGlobalScope: rtctransform"
       ],
       "callbacks": [
         "RTCPeerConnectionErrorCallback",
@@ -2157,7 +2169,7 @@
     "WebOTP API": {
       "overview": ["WebOTP API"],
       "interfaces": ["OTPCredential"],
-      "methods": [],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },

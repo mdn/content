@@ -26,7 +26,7 @@ The **`Sec-GPC`** (**G**lobal **P**rivacy **C**ontrol) request header indicates 
 
 ## Syntax
 
-```
+```http
 Sec-GPC: 1
 ```
 

@@ -117,7 +117,6 @@ try {
 }
 ```
 
-
 ### Aborting a fetch with timeout or explicit abort
 
 If you want to abort from multiple signals, you can use {{domxref("AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
@@ -130,6 +129,7 @@ try {
     // This will abort the fetch when either signal is aborted
     signal: AbortSignal.any([controller.signal, timeoutSignal]),
   });
+  const res = await fetch(url, { signal: controller.signal });
   const body = await res.json();
 } catch (e) {
   if (e.name === "AbortError") {
@@ -140,8 +140,6 @@ try {
     // A network error, or some other problem.
     console.log(`Type: ${e.name}, Message: ${e.message}`);
   }
-} finally {
-  clearTimeout(timeoutId);
 }
 ```
 
@@ -157,7 +155,7 @@ The promise is rejected immediately if the signal is already aborted, or if the 
 Otherwise it completes normally and then resolves the promise.
 
 ```js
-function myCoolPromiseAPI(/* … ,*/ { signal }) {
+function myCoolPromiseAPI(/* …, */ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
@@ -186,7 +184,7 @@ const signal = controller.signal;
 
 startSpinner();
 
-myCoolPromiseAPI({ /* … ,*/ signal })
+myCoolPromiseAPI({ /* …, */ signal })
   .then((result) => {})
   .catch((err) => {
     if (err.name === "AbortError") return;

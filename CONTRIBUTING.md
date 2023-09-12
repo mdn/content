@@ -147,9 +147,9 @@ To fork and clone the repository:
 The previous sections describe how to get started using the GitHub UI to make small changes to a single file and how to create a fork and clone the repository to prepare for making larger changes.
 This section describes how to build the project locally and how to prepare your changes for submission.
 
-### Installing and running the project
+### Preparing the project
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
+To serve the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn 1 (Classic)](https://classic.yarnpkg.com/) installed.
 You can check if these are installed by running the following commands:
 
 ```bash
@@ -157,12 +157,19 @@ node -v
 yarn -v
 ```
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
+After you have installed Node.js and Yarn, you can install the dependencies using `yarn`:
 
 ```bash
 # Assuming your fork is in ~/repos/content
 cd ~/repos/content
 yarn
+```
+
+### Running the project
+
+After you have installed all dependencies, you can start the local preview using `yarn start`:
+
+```bash
 yarn start
 ```
 
@@ -184,9 +191,7 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note**
-> Open a discussion if your changes will contain large, complex or structural changes.
-> Ask for feedback before embarking on large tasks.
+> **Note:** Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
 
@@ -196,13 +201,13 @@ This will make it easier to submit a pull request for your changes.
 3. Check for errors by clicking `Show flaws` on each previewed page.
    You may be able to fix flaws by running:
 
-   ```sh
+   ```bash
    yarn content flaws <page_slug>
    ```
 
 4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
 
-   ```sh
+   ```bash
    # Adding all files to the commit
    git add .
    # Making a commit with a message describing the changes
@@ -211,6 +216,14 @@ This will make it easier to submit a pull request for your changes.
    git push
    # or "git push --set-upstream origin fix-typo" if you haven't pushed this branch before
    ```
+
+#### Linting edited files
+
+To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://www.prettier.io) and [Markdownlint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
+
+If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
+
+> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels) for help.
 
 ### Adding a new document
 
@@ -228,7 +241,7 @@ There are a few things to keep in mind:
 Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
 This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
-```sh
+```bash
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
@@ -244,7 +257,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 1. Starting from a fresh branch:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -257,13 +270,13 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 2. Move files with `yarn content move`.
    This will delete and modify existing files, as well as create new files.
 
-   ```sh
+   ```bash
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
 3. Commit all of the changes and push your branch to the remote:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push
@@ -279,14 +292,14 @@ Similar to moving files, you can delete documents or a tree of documents easily 
 
 You can use this command as shown below:
 
-```sh
+```bash
 yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
 If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
-```sh
+```bash
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
@@ -295,7 +308,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 1. Start from a fresh branch.
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -307,7 +320,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 2. Run the `yarn content delete` command and redirect all deleted documents.
 
-   ```sh
+   ```bash
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
@@ -317,7 +330,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 3. Commit all of the changes and push your branch to the remote.
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Delete Learn/Accessibility pages"
    git push
@@ -333,7 +346,7 @@ You may do this by using the `yarn content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -345,13 +358,13 @@ You may do this by using the `yarn content add-redirect` command.
 
 2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
-   ```sh
+   ```bash
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
 3. Commit all of the changed files and pushing your branch to your fork:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Adding redirect after deleting Learn/Accessibility pages"
    git push

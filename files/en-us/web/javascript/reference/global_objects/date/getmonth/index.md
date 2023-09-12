@@ -17,6 +17,10 @@ The **`getMonth()`** method of {{jsxref("Date")}} instances returns the month fo
 getMonth()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

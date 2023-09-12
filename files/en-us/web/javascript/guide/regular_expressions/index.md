@@ -55,13 +55,13 @@ In the string `"cbbabbbbcdebc"`, this pattern will match the substring `"abbbbc"
 
 The following pages provide lists of the different special characters that fit into each category, along with descriptions and examples.
 
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
   - : Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
   - : Distinguish different types of characters. For example, distinguishing between letters and digits.
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
   - : Groups group multiple patterns as a whole, and capturing groups provide extra submatch information when using a regular expression pattern to match against a string. Backreferences refer to a previously captured group in the same regular expression.
-- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
   - : Indicate numbers of characters or expressions to match.
 
 If you want to look at all the special characters that can be used in regular expressions in a single table, see the following:

@@ -10,7 +10,7 @@ The JavaScript exception "BigInt negative exponent" occurs when a {{jsxref("BigI
 
 ## Message
 
-```
+```plain
 RangeError: Exponent must be positive (V8-based)
 RangeError: BigInt negative exponent (Firefox)
 RangeError: Negative exponent is not allowed (Safari)
@@ -46,4 +46,4 @@ const quotient = b >= 0n ? a ** b : 0n;
 ## See also
 
 - [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [Exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

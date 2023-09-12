@@ -245,7 +245,7 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - {{jsxref("Statements/class", "class")}}

@@ -36,7 +36,7 @@ A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if one of the following is true:
+  - : Thrown in one of the following cases:
     - `length` or `maxByteLength` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
     - `length` is larger than `maxByteLength`.
 
@@ -75,5 +75,5 @@ buffer.resize(12);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("SharedArrayBuffer")}}

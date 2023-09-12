@@ -25,7 +25,7 @@ When interpolating `<hue>` values, the hue interpolation algorithm defaults to [
 
 A `<hue-interpolation-method>` value consists of the name of a hue interpolation algorithm followed by a literal token `hue`:
 
-```
+```plain
 shorter hue
 longer hue
 increasing hue
@@ -97,7 +97,7 @@ There are four algorithms to determine which arc is used:
 
 ### Comparing hue interpolation algorithms
 
-The following example shows the effect of using different hue interpolation algorithms in a {{CSSXref("linear-gradient()")}}.
+The following example shows the effect of using different hue interpolation algorithms in a {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
 
 #### HTML
 

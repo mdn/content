@@ -44,7 +44,7 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 
 You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
 
-```js example-bad
+```js-nolint example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
 ```
 
@@ -77,7 +77,7 @@ You use variables as symbolic names for values in your application. The names of
 
 A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0` – `9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
 
-You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6) or the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
+You can use most Unicode letters such as `å` and `ü` in identifiers. (For more details, see the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) to represent characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -105,7 +105,7 @@ In essence, `let x = 42` is equivalent to `let x; x = 42`.
 
 `const` declarations always need an initializer, because they forbid any kind of assignment after declaration, and implicitly initializing it with `undefined` is likely a programmer mistake.
 
-```js example-bad
+```js-nolint example-bad
 const x; // SyntaxError: Missing initializer in const declaration
 ```
 
@@ -205,7 +205,7 @@ A constant cannot change value through assignment or be re-declared while the sc
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js example-bad
+```js-nolint example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {}
 const f = 5;
@@ -214,8 +214,6 @@ const f = 5;
 function f() {
   const g = 5;
   var g;
-
-  //statements
 }
 ```
 
@@ -418,7 +416,7 @@ Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), h
 
 Some examples of integer literals are:
 
-```
+```plain
 0, 117, 123456789123456789n             (decimal, base 10)
 015, 0001, 0o777777777777n              (octal, base 8)
 0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
@@ -440,7 +438,7 @@ The exponent part is an `e` or `E` followed by an integer, which can be signed (
 
 More succinctly, the syntax is:
 
-```
+```plain
 [digits].[digits][(E|e)[(+|-)]digits]
 ```
 
@@ -488,7 +486,7 @@ Object property names can be any string, including the empty string. If the prop
 
 Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js example-bad
+```js-nolint example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
@@ -677,7 +675,7 @@ console.log(quote);
 
 The result of this would be:
 
-```
+```plain
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 
@@ -702,10 +700,10 @@ console.log(str); // this string is broken across multiple lines.
 
 This chapter focuses on basic syntax for declarations and types. To learn more about JavaScript's language constructs, see also the following chapters in this guide:
 
-- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) guide
 - [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) guide
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

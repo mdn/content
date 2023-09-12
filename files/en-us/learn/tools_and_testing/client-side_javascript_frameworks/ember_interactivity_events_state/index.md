@@ -129,7 +129,7 @@ ember generate service todo-data
 
 This should give you a terminal output like so:
 
-```
+```plain
 installing service
   create app/services/todo-data.js
 installing service-test

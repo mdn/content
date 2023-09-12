@@ -7,9 +7,8 @@ browser-compat: javascript.builtins.String.repeat
 
 {{JSRef}}
 
-The **`repeat()`** method constructs and returns a new string
-which contains the specified number of copies of the string on which it was called,
-concatenated together.
+The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
+which contains the specified number of copies of this string, concatenated together.
 
 {{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
 

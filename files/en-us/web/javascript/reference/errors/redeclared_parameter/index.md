@@ -12,7 +12,7 @@ variable name occurs as a function parameter and is then redeclared using a
 
 ## Message
 
-```
+```plain
 SyntaxError: Identifier "x" has already been declared (V8-based)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
 SyntaxError: Cannot declare a let variable twice: 'x'. (Safari)
@@ -35,7 +35,7 @@ allowed in JavaScript.
 
 In this case, the variable "arg" redeclares the argument.
 
-```js example-bad
+```js-nolint example-bad
 function f(arg) {
   let arg = "foo";
 }
@@ -63,4 +63,4 @@ function g(arg) {
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/var", "var")}}
-- [Declaring variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

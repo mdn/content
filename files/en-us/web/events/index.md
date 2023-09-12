@@ -1290,7 +1290,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [cut event](/en-US/docs/Web/API/Window/cut_event)
   - [devicemotion event](/en-US/docs/Web/API/Window.devicemotion_event)
   - [deviceorientation event](/en-US/docs/Web/API/Window.deviceorientation_event)
-  - [DOMContentLoaded event](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
   - [error event](/en-US/docs/Web/API/Window/error_event)
   - [focus event](/en-US/docs/Web/API/Window/focus_event)
   - [gamepadconnected event](/en-US/docs/Web/API/Window/gamepadconnected_event)

@@ -6,7 +6,11 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
-Every property used in CSS has a value type defining the set of values that are allowed for that property. Taking a look at any property page on MDN will help you understand the values associated with a value type that are valid for any particular property. In this lesson we will take a look at some of the most frequently used value types, and their most common values and units.
+CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), which in turn are composed of properties and values.
+Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
+In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
+
+> **Note:** Each [CSS property page](/en-US/docs/Web/CSS/Reference#index) has a syntax section that lists the value types you can use with that property.
 
 <table>
   <tbody>
@@ -42,9 +46,11 @@ Every property used in CSS has a value type defining the set of values that are 
 
 In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or [`<length>`](/en-US/docs/Web/CSS/length). When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-> **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
+> **Note:** You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
-> **Note:** Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the [`<color>`](/en-US/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
+> **Note:** CSS value types tend to be enclosed in angle brackets (`<`, `>`) to differentiate them from CSS properties.
+> For example there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type.
+> This is not to be confused with HTML elements, as they also use angle brackets, but this is something to keep in mind that the context should make clear.
 
 In the following example, we have set the color of our heading using a keyword, and the background using the `rgb()` function:
 
@@ -247,7 +253,7 @@ After following the instructions above, try playing with the values in other way
 
 `em` and `rem` are the two relative lengths you are likely to encounter most frequently when sizing anything from boxes to text. It's worth understanding how these work, and the differences between them, especially when you start getting on to more complex subjects like [styling text](/en-US/docs/Learn/CSS/Styling_text) or [CSS layout](/en-US/docs/Learn/CSS/CSS_layout). The below example provides a demonstration.
 
-The HTML illustrated below is a set of nested lists — we have three lists in total and both examples have the same HTML. The only difference is that the first has a class of _ems_ and the second a class of _rems_.
+The HTML illustrated below is a set of nested lists — we have two lists in total and both examples have the same HTML. The only difference is that the first has a class of _ems_ and the second a class of _rems_.
 
 To start with, we set 16px as the font size on the `<html>` element.
 
@@ -297,7 +303,7 @@ The standard color system available in modern computers supports 24-bit colors, 
 
 ### Color keywords
 
-Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are a simple and understandable way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the [`<color>`](/en-US/docs/Web/CSS/color_value) value type.
+Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are an intuitive way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the [`<color>`](/en-US/docs/Web/CSS/color_value) value type.
 
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
@@ -385,13 +391,38 @@ There are places where you use strings in CSS. For example, [when specifying gen
 
 ## Functions
 
-The final type of value we will take a look at is the group of values known as functions. In programming, a function is a reusable section of code that can be run multiple times to complete a repetitive task with minimum effort on the part of both the developer and the computer. Functions are usually associated with languages like JavaScript, Python, or C++, but they do exist in CSS too, as property values. We've already seen functions in action in the Colors section — `rgb()`, `hsl()`, etc. The value used to return an image from a file — `url()` — is also a function.
+In programming, a function is a piece of code that does a specific task.
+Functions are useful because you can write code once, then reuse it many times instead of writing the same logic over and over.
+Most programming languages not only support functions but also come with convenient built-in functions for common tasks so you don't have to write them yourself from scratch.
 
-A value that behaves more like something you might find in a traditional programming language is the `calc()` CSS function. This function gives you the ability to do simple calculations inside your CSS. It's particularly useful if you want to work out values that you can't define when writing the CSS for your project, and need the browser to work out for you at runtime.
+CSS also has [functions](/en-US/docs/Web/CSS/CSS_Functions), which work in a similar way to functions in other languages.
+In fact, we've already seen CSS functions in the [Color](#color) section above with [`rgb()`](/en-US/docs/Web/CSS/color_value#rgb_function) and [`hsl()`](/en-US/docs/Web/CSS/color_value#hsl_function) functions.
 
-For example, below we are using `calc()` to make the box `20% + 100px` wide. The 20% is calculated from the width of the parent container `.wrapper` and so will change if that width changes. We can't do this calculation beforehand because we don't know what 20% of the parent will be, so we use `calc()` to tell the browser to do it for us.
+Aside from applying colors, you can use functions in CSS to do a lot of other things.
+For example [Transform functions](/en-US/docs/Web/CSS/CSS_Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
+You might see [`translate()`](/en-US/docs/Web/CSS/transform-function/translate) for moving something horizontally or vertically, [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) to rotate something, or [`scale()`](/en-US/docs/Web/CSS/transform-function/scale) to make something bigger or smaller.
+
+### Math functions
+
+When you are creating styles for a project, you will probably start off with numbers like `300px` for lengths or `200ms` for durations.
+If you want to have these values change based on other values, you will need to do some math.
+You could calculate the percentage of a value or add a number to another number, then update your CSS with the result.
+
+CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions), which allow us to perform calculations instead of relying on static values or doing the math in JavaScript.
+One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/calc) which lets you do operations like addition, subtraction, multiplication, and division.
+
+For example, let's say we want to set the width of an element to be 20% of its parent container plus 100px.
+We can't specify this width with a static value — if the parent uses a percentage width (or a relative unit like `em` or `rem`) then it will vary depending on the context it is used in, and other factors such as the user's device or browser window width.
+However, we can use `calc()` to set the width of the element to be 20% of its parent container plus 100px.
+The 20% is based on the width of the parent container (`.wrapper`) and if that width changes, the calculation will change too:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 500)}}
+
+There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values.
+You can also use [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) like [`sin()`](/en-US/docs/Web/CSS/sin), [`cos()`](/en-US/docs/Web/CSS/cos), and [`tan()`](/en-US/docs/Web/CSS/tan) to calculate angles for rotating elements around a point, or choose colors that take a [hue angle](/en-US/docs/Web/CSS/hue) as a parameter.
+[Exponential functions](/en-US/docs/Web/CSS/CSS_Functions#exponential_functions) might also be used for animations and transitions, when you require very specific control over how something moves and looks.
+
+Knowing about CSS functions is useful so you recognize them when you see them. You should start experimenting with them in your projects — they will help you avoid writing custom or repetitive code to achieve results that you can get with regular CSS.
 
 ## Test your skills!
 

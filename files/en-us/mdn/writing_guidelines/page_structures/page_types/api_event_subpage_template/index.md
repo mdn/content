@@ -7,13 +7,13 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> **Note:** _Remove this whole explanatory note before publishing._
 >
 > ---
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular event.
 >
 > ```md
@@ -66,8 +66,9 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>
+> Samples of the **Experimental**, **Secure context**, and **Deprecated** banners are shown right after this note block.
 >
 > ---
 >
@@ -79,12 +80,12 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > If the parent object does not have an _Events_ section, then add one.
 > If this is a new "class" of event, then you should add link to this section of the parent from the [Event reference](/en-US/docs/Web/Events).
 >
-> _Remember to remove this whole explanatory note before publishing_
+> _Remember to remove this whole explanatory note before publishing._
 
-{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}{{APIRef("GroupDataName")}}
+{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
 
-The summary paragraph — start by naming the event, saying what interface it is part of, and saying what it does.
-This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the event, saying what interface it is part of, and saying what it does.
+This should ideally be one or two short sentences.
 You could copy most of this from the property's summary on the corresponding API reference page.
 
 ## Syntax
@@ -171,11 +172,15 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
@@ -183,3 +188,4 @@ Include links to reference pages and guides related to the current API. For more
 
 - link1
 - link2
+- external_link (year)

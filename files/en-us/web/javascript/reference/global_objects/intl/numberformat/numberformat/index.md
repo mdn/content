@@ -51,7 +51,7 @@ Intl.NumberFormat(locales, options)
     - `compactDisplay`
       - : Only used when `notation` is `"compact"`. Takes either `"short"` (default) or `"long"`.
     - `currency`
-      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
+      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes).
         There is no default value; if the `style` is `"currency"`, the `currency` property must be provided.
     - `currencyDisplay`
 
@@ -89,7 +89,7 @@ Intl.NumberFormat(locales, options)
         - `"auto"`: sign display for negative numbers only, including negative zero.
         - `"always"`: always display sign.
         - `"exceptZero"`: sign display for positive and negative numbers, but not zero.
-        - `"negative"`: sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
+        - `"negative"`: sign display for negative numbers only, excluding negative zero.
         - `"never"`: never display sign.
 
     - `style`
@@ -116,7 +116,7 @@ Intl.NumberFormat(locales, options)
         - `"short"` (e.g., `16 l`).
         - `"narrow"` (e.g., `16l`).
 
-    - `useGrouping` {{experimental_inline}}
+    - `useGrouping`
 
       - : Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is `auto`.
 
@@ -126,7 +126,7 @@ Intl.NumberFormat(locales, options)
         - `"min2"`: display grouping separators when there are at least 2 digits in a group.
         - `true`: alias for `always`.
 
-    - `roundingMode` {{experimental_inline}}
+    - `roundingMode`
 
       - : Options for rounding modes. The default is `halfExpand`.
 
@@ -163,7 +163,7 @@ Intl.NumberFormat(locales, options)
         These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and "DOWN", respectively.
         The [rounding modes](#rounding_modes) example below demonstrates how each mode works.
 
-    - `roundingPriority` {{experimental_inline}}
+    - `roundingPriority`
 
       - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
 
@@ -173,7 +173,7 @@ Intl.NumberFormat(locales, options)
 
         Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
-    - `roundingIncrement` {{experimental_inline}}
+    - `roundingIncrement`
 
       - : Specifies the rounding-increment precision.
         Must be one of the following integers:
@@ -201,7 +201,7 @@ Intl.NumberFormat(locales, options)
         >
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
 
-    - `trailingZeroDisplay` {{experimental_inline}}
+    - `trailingZeroDisplay`
 
       - : A string expressing the strategy for displaying trailing zeros on whole numbers.
         The default is `"auto"`.
@@ -266,6 +266,17 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 Note that there's only one actual `Intl.NumberFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)) would fail with "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
 
 This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.NumberFormat`. If you call it directly as `Intl.NumberFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.NumberFormat` instance is created normally.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - A property that takes enumerated values (such as `style`, `units`, `currency`, and so on) is set to an invalid value.
+    - Both `maximumFractionDigits` and `minimumFractionDigits` are set, and they are set to different values.
+      Note that depending on various formatting options, these properties can have default values.
+      It is therefore possible to get this error even if you only set one of the properties.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `options.style` property is set to "unit" or "currency", and no value has been set for the corresponding property `options.unit` or `options.currency`.
 
 ## Examples
 

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.String.toLowerCase
 
 {{JSRef}}
 
-The **`toLowerCase()`** method returns the calling string value
-converted to lower case.
+The **`toLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case.
 
 {{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}
 
@@ -17,6 +16,10 @@ converted to lower case.
 ```js-nolint
 toLowerCase()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

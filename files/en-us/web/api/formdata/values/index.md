@@ -41,7 +41,7 @@ for (const value of formData.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```
