@@ -42,7 +42,7 @@ Check out the MDN-specific [discussion guidelines](/en-US/docs/MDN/Community/Dis
 
 ## Forums
 
-You can use the forums listed below for discussing code problems. You can also request feedback here on your progress with the assessments in the [MDN learning area](/en-US/docs/Learn).
+You can use the forums listed below for discussing code problems.
 
 - [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236)
 - [MDN Discourse forum learning category](https://discourse.mozilla.org/c/mdn/learn/250)
