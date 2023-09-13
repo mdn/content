@@ -81,7 +81,7 @@ Create an `index.html` file. This file will contain a script that will ping the 
   let pingInterval;
 
   function writeToScreen(message) {
-    output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
+    output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
   }
 
   function sendMessage(message) {
@@ -103,11 +103,11 @@ Create an `index.html` file. This file will contain a script that will ping the 
   };
 
   websocket.onmessage = (e) => {
-    writeToScreen("RECEIVED: " + e.data);
+    writeToScreen(`RECEIVED: ${e.data}`);
   };
 
   websocket.onerror = (e) => {
-    writeToScreen("ERROR: " + e.data);
+    writeToScreen(`ERROR: ${e.data}`);
   };
 </script>
 ```
