@@ -2093,7 +2093,8 @@
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_server",
-        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java"
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java",
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno"
       ],
       "interfaces": ["WebSocket", "CloseEvent", "MessageEvent"],
       "methods": [],
