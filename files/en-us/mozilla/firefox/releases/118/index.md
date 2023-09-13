@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTML
 
-- Added support for the {{HTMLElement('search')}} element. This element is a group element that should contain all the elements relating to a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
+- The {{HTMLElement('search')}} element is now supported. The `<search>` element is a group element that serves to contain all the elements used in a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
 
 #### Removals
 
