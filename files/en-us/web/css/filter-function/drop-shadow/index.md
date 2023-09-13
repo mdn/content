@@ -49,7 +49,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 
 ## Formal syntax
 
-{{CSSSyntax("drop-shadow")}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -59,15 +59,16 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 <div>drop-shadow(16px 16px)</div>
 <div>drop-shadow(16px 16px red)</div>
 <div>drop-shadow(red 1rem 1rem 10px)</div>
+<div>drop-shadow(-16px -16px red)</div>
 ```
 
 ```css
 div {
   display: inline-block;
-  margin: 0.5rem;
+  margin: 0 0.5rem 2rem 1rem;
   padding: 0.5rem;
   height: 100px;
-  width: 200px;
+  width: 190px;
   vertical-align: top;
   background-color: #222;
 
@@ -85,11 +86,16 @@ div:nth-child(2) {
 div:nth-child(3) {
   filter: drop-shadow(red 1rem 1rem 10px);
 }
+
+div:nth-child(4) {
+  filter: drop-shadow(-16px -6px red);
+}
 ```
 
-{{EmbedLiveSample("Setting a drop shadow", 250, 250)}}
+{{EmbedLiveSample("Setting a drop shadow", "100%", "300px")}}
 
-In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The last shadow shows the blurring effect when a third `<length>` value is specified.
+In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The third shadow shows the blurring effect when a third `<length>` value is specified. The fourth shadow uses negative offsets which shifts shadow to the left and top.
+
 ## Specifications
 
 {{Specifications}}
