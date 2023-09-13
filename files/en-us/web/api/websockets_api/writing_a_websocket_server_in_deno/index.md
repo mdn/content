@@ -9,11 +9,11 @@ slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Deno
 
 This example shows you how to create a WebSocket API server using Deno, with an accompanying web page.
 
-Deno is a JavaScript runtime which supports TypeScript compiling and caching on the fly. Deno has built-in formatter, linter, test runner and more, and also follows the WebAPI standards. By being compliant with the WebAPIs, the only non-spec JS is the ones found in the global `Deno` namespace.
+Deno is a JavaScript runtime which supports TypeScript compiling and caching on the fly. Deno has built-in formatter, linter, test runner and more, and also implements many web APIs. By being compliant with the web standards, all Deno-specific APIs are implemented under the `Deno` namespace.
 
-To install Deno, go to the [website](https://deno.com/) and follow the steps there.
+The [Deno website](https://deno.com/) provides instructions for installing Deno.
 
-Deno version at the time of writing: `1.36.4`.
+Deno version at the time of writing: `1.36`.
 
 ## Code
 
@@ -55,7 +55,7 @@ Deno.serve({
 
 `Deno.upgradeWebSocket()` upgrades the connection to a WebSocket connection, which is explained further in [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
-`Deno.serve()` uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server (see the [API documentation](https://deno.land/api@v1.36.4?s=Deno.serve)). Without it, the code would look something like this.
+[`Deno.serve()`](https://deno.land/api@v1.36.4?s=Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
 
 ```js
 for await (const conn of Deno.listen({ port: 80 })) {
@@ -123,8 +123,8 @@ deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
 Deno requires us to give explicit permissions for what we can access on the host machine.
 
 - `--allow-net=0.0.0.0:80` allows the app to attach to localhost on port 80
-- `--allow-read=./index.html` allows access to the html file for the client
+- `--allow-read=./index.html` allows access to the HTML file for the client
 
-## Related
+## See also
 
 - [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
