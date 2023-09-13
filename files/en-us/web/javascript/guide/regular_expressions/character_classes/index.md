@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 page-type: guide
 ---
 
-{{JSSidebar("JavaScript Guide")}}
+{{jsSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
@@ -370,8 +370,8 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

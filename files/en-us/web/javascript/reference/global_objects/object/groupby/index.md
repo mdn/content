@@ -42,7 +42,7 @@ A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 `Object.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the object returned by `Map.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
 
-The elements in the returned object and the original iterable are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned object.
+The elements in the returned object and the original iterable are the same (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned object.
 
 ## Examples
 
@@ -120,7 +120,7 @@ const result2 = Object.groupBy(inventory, myCallback);
 ## See also
 
 - [Polyfill of `Object.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}
 - {{jsxref("Map.groupBy()")}}

@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Function.displayName
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The optional **`displayName`** property of a {{jsxref("Function")}} instance specifies the display name of the function.
 

@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.fontsize
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`fontsize()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font size="...">str</font>`), which causes this string to be displayed in the specified font size.
 

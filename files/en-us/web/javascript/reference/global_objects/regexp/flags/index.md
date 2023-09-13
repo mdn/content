@@ -39,4 +39,4 @@ The set accessor of `flags` is `undefined`. You cannot change this property dire
 ## See also
 
 - [Polyfill of `RegExp.prototype.flags` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{JSxRef("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.source")}}

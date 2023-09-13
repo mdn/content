@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 
 The **`ArrayBuffer()`** constructor creates {{jsxref("ArrayBuffer")}} objects.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html", "shorter")}}
 
 ## Syntax
 
@@ -44,8 +44,7 @@ A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer
 
 ### Creating an ArrayBuffer
 
-In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array",
-  "Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 const buffer = new ArrayBuffer(8);
@@ -75,5 +74,5 @@ buffer.resize(12);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("SharedArrayBuffer")}}
