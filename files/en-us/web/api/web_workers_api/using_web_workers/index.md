@@ -694,13 +694,20 @@ Workers are mainly useful for allowing your code to perform processor-intensive 
 The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.
 
 ```js
-self.onmessage = function (event) {
+self.onmessage = (event) => {
   const userNum = Number(event.data);
   self.postMessage(fibonacci(userNum));
 };
 
-function fibonacci(n) {
-  return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+function fibonacci(num) {
+  let a = 1;
+  let b = 0;
+  while (num > 0) {
+    [a, b] = [a + b, a];
+    num--;
+  }
+
+  return b;
 }
 ```
 
