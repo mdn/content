@@ -14,7 +14,7 @@ spec-urls:
 It's common to apply a media query based on the {{Glossary("viewport")}} size so that layout choices can be made for devices with different screen sizes.
 For example, you may have a smaller font size for devices with small screens, increase the padding between paragraphs when a page is viewed in portrait mode, or increase the size of buttons on touchscreens.
 
-![A laptop and a mobile device with different viewport sizes that can be queried using media queries.](media-queries.png)
+![A laptop and a mobile device with different viewport sizes that can be queried using media queries where we can see the content being laid out differently.](media-queries.png)
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query.
 To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
