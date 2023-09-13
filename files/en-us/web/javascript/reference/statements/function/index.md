@@ -1,5 +1,5 @@
 ---
-title: function declaration
+title: function
 slug: Web/JavaScript/Reference/Statements/function
 page-type: javascript-statement
 browser-compat: javascript.statements.function
@@ -7,11 +7,11 @@ browser-compat: javascript.statements.function
 
 {{jsSidebar("Statements")}}
 
-The **`function`** declaration creates a {{glossary("binding")}} of a new function to a given name.
+The **`function`** declaration creates a {{Glossary("binding")}} of a new function to a given name.
 
 You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-{{EmbedInteractiveExample("pages/js/statement-function.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/statement-function.html", "shorter")}}
 
 ## Syntax
 
@@ -221,8 +221,8 @@ function calcSales(unitsA, unitsB, unitsC) {
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Statements/function*", "function*")}}

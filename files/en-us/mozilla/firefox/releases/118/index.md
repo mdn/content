@@ -14,9 +14,13 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTML
 
+- The {{HTMLElement('search')}} element is now supported. The `<search>` element is a group element that serves to contain all the elements used in a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
+
 #### Removals
 
 ### CSS
+
+- Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
 
 #### Removals
 
@@ -37,6 +41,8 @@ This article provides information about the changes in Firefox 118 that affect d
 #### Removals
 
 ### APIs
+
+- The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
 
 #### DOM
 

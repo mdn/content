@@ -240,7 +240,7 @@ Now that we have all of our component structure files, we can cut and paste the 
    </section>
    ```
 
-   > **Note:** The only non-HTML in this new `todo-list.hbs` is the `<Todo />` component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with `<TodoList />` later on. The contents of the `todo.hbs` file below will replace `<Todo />` in the rendered page as our application loads.
+   > **Note:** The only non-HTML in this new `todo-list.hbs` is the `<Todo />` component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in {{Glossary("camel_case", "upper camel case")}}, as you'll see with `<TodoList />` later on. The contents of the `todo.hbs` file below will replace `<Todo />` in the rendered page as our application loads.
 
 3. Add the following into the `todo.hbs` file:
 

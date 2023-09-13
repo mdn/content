@@ -117,7 +117,7 @@ uint8.findLast((value, index) => {
 ## See also
 
 - [Polyfill of `TypedArray.prototype.findLast()` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

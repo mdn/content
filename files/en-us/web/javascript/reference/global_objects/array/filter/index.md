@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.filter
 
 The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-filter.html", "shorter")}}
 
 ## Syntax
 
@@ -216,7 +216,7 @@ console.log(deleteWords);
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
