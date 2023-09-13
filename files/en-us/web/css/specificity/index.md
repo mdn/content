@@ -284,32 +284,6 @@ As a special case for increasing specificity, you can duplicate weights from the
 }
 ```
 
-The same effect can be created using CSS nesting and using the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) with no whitespace between the `&` and the ID or CLASS.
-
-```css
-#myId {
-  &#myId {
-    &#myId {
-      span {
-        /* 3-0-1 */
-      }
-  }
-}
-/* the browser parses this as */
-#myId#myId#myId span {}
-
-#myClass {
-  &#myClass {
-    &#myClass {
-      span {
-        /* 3-0-1 */
-      }
-  }
-}
-/* the browser parses this as */
-.myClass.myClass.myClass span {}
-```
-
 Use this sparingly, if at all. If using selector duplication, always comment your CSS.
 
 By using `:is()` and `:not()` (and also `:has()`), you can increase specificity even if you can't add an `id` to a parent element:
