@@ -83,7 +83,7 @@ Create an `index.html` file. This file will contain a script that will ping the 
   }
 
   function sendMessage(message) {
-    writeToScreen("SENT: " + message);
+    writeToScreen(`SENT: ${message}`);
     websocket.send(message);
   }
 
