@@ -5,8 +5,6 @@ slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno
 
 {{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
-
 This example shows you how to create a WebSocket API server using Deno, with an accompanying web page.
 
 Deno is a JavaScript runtime which supports TypeScript compiling and caching on the fly. Deno has built-in formatter, linter, test runner and more, and also implements many web APIs. By being compliant with the web standards, all Deno-specific APIs are implemented under the `Deno` namespace.
