@@ -173,7 +173,7 @@ p,
 }
 ```
 
-In the above code block the complex selector `p, #fakeId` the specificity is taken from `#fakeId` and also the `span`, so this create a specificity of `1-0-1` for both `p span` and `#fakeId span`.
+In the above code block the complex selector `p, #fakeId` the specificity is taken from `#fakeId` and also the `span`, so this create a specificity of `1-0-1` for both `p span` and `#fakeId span`. This is the equivalent specificity as the `:is(p, #fakeId) span` selector.
 
 Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these three pseudo-classes can help.
 
