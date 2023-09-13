@@ -117,7 +117,7 @@ Give the parameters that the function can accept, as a {{htmlelement("dl")}}.
 Include one term and definition for each parameter.
 
 - `<custom-property-name>`
-  - : Include a description of the parameter, its data type, and what it represents.
+  - : Include parameter's data type, its description, and what it represents.
 - `<declaration-value>`
   - : Include a description of the parameter, its data type, and what it represents.
 
