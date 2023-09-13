@@ -20,7 +20,7 @@ Some browsers, such as Chrome, show elements placed in the top layer inside a sp
 
 ![An element in the top layer, as shown in the chrome devtools](top_layer_devtools.png)
 
-Bear in mind however that the top layer is an internal browser concept, and cannot be directly manipulated from code. You can target elements placed in the top layer using CSS and JavaScript, but you cannot target the top layer itself.
+Note that the top layer is an internal browser concept and cannot be directly manipulated from code. You can target elements placed in the top layer using CSS and JavaScript, but you cannot target the top layer itself.
 
 ## See also
 
@@ -28,3 +28,4 @@ Bear in mind however that the top layer is an internal browser concept, and cann
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - {{htmlelement("dialog")}} element, {{domxref("HTMLDialogElement")}} interface
 - [Popover API](/en-US/docs/Web/API/Popover_API)
+- {{CSSXref(":fullscreen")}} pseudo-class
