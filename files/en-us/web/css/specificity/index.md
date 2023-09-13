@@ -34,7 +34,7 @@ Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef(
 
 The `&` nesting combinator doesn't add specificity weight, but nested rules do. In terms of specificity, and functionality, nesting is very similar to the {{CSSxRef(":is", ":is()")}} pseudo-class.
 
-Like nesting, the {{CSSxRef(":is", ":is()")}}, {{CSSxRef(":has", ":has()")}}, and negation ({{CSSxRef(":not", ":not()")}}) pseudo-classes themselves add no weight. The parameters in these selectors, however, do. The values of each come from the parameter in the list of parameters, or selector in the list of nested selectors, with the highest specificity.
+Like nesting, the {{CSSxRef(":is", ":is()")}}, {{CSSxRef(":has", ":has()")}}, and negation ({{CSSxRef(":not", ":not()")}}) pseudo-classes themselves add no weight. The parameters in these selectors, however, do. The specificity weight of each comes from the selector parameter in the list of selectors with the highest specificity. Similarly, with nested selectors, the specificity weight added by the nested selector component is the selector in the comma-separated list of nested selectors with the highest specificity.
 
 The [`:not()`, `:is()`, `:has()` and CSS nesting exceptions](#the_is_not_has_and_css_nesting_exceptions) are discussed below.
 
