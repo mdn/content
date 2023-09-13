@@ -14,7 +14,7 @@ browser-compat: css.functions.NameOfTheFunction
 > **Page front matter:**
 >
 > The front matter at the top of the page is used to define "page metadata".
-> The values should be updated appropriately for the particular function.
+> The values should be updated appropriately for the particular function. Note the presence (or absence) of parenthesis.
 >
 > ```md
 > ---
@@ -133,7 +133,7 @@ This is an optional section to include a description of the function and explain
 
 Not all functions have formal syntax: if a function doesn't, omit this whole section.
 
-`\{CSSSyntax}}`
+`\{{CSSSyntax}}`
 
 _To use this macro, remove the backticks and backslash in the markdown file._
 
