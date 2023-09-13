@@ -110,5 +110,6 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.with()")}
 - {{jsxref("TypedArray.prototype.at()")}}
 - {{jsxref("String.prototype.at()")}}
