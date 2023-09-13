@@ -44,8 +44,8 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
   - : The vertical offset for the shadow, specified as a {{cssxref("&lt;length&gt;")}} value. Negative values place the shadow above the element.
 - `standard-deviation` {{optional_inline}}
   - : The value of the standard deviation to the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) function, specified as a {{cssxref("&lt;length&gt;")}}. The larger the value, the larger and more blurred the shadow becomes. If unspecified, it defaults to `0`, resulting in a sharp, unblurred edge. Negative values are not allowed.
-- `color` {{optional_inline}}
-  - : The color of the shadow, specified as a {{cssxref("&lt;color&gt;")}}. If unspecified, the value of the {{cssxref("color")}} property is used.
+- `<color>` {{optional_inline}}
+  - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 ## Formal syntax
 
@@ -89,6 +89,7 @@ div:nth-child(3) {
 
 {{EmbedLiveSample("Setting a drop shadow", 250, 250)}}
 
+In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The last shadow shows the blurring effect when a third `<length>` value is specified.
 ## Specifications
 
 {{Specifications}}

@@ -81,12 +81,11 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
 - `<color>` {{optional_inline}}
 
-  - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations.
-    If not specified, it defaults to {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}.
+  - : Specifies color for the shadow. See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations.
+    If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 - `inset` {{optional_inline}}
-  - : If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
-    The presence of the `inset` keyword changes the shadow to one inside the frame (as if the content was debossed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.
+  - : Changes the shadow from an outer box-shadow to an inner box-shadow (as if the content is pressed into the box). Inset shadows are drawn inside the box's border (even if the border is transparent), and they appear above the background but below the content. By default, the shadow behaves like a drop shadow, giving the appearance that the box is elevated above its content. This is the default behavior when `inset` is not specified.
 
 ### Interpolation
 
