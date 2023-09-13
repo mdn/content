@@ -15,6 +15,8 @@ This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_tr
 
 This enables the easy creation of entry animations that were previously complex to achieve, such as animating elements when they are changed from `display: none` (this includes elements shown in the [top layer](/en-US/docs/Glossary/Top_layer) such as [popovers](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} elements) or when they are first added to the DOM.
 
+> **Note:** `@starting-style` is only relevant to CSS transitions. When animating from `display: none` or animating elements as they are first added to the DOM, [CSS animations](/en-US/docs/Web/CSS/CSS_animations) do not need a `@starting-style` specified; instead you provide the starting style as an explicit starting keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
+
 ## Syntax
 
 ```css

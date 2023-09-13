@@ -87,7 +87,9 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_trans
 
 ## Examples
 
-### Simple example
+> **Note:** See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) guide for more `transition` examples.
+
+### Basic example
 
 In this example, when the user hovers over the element, there is a one-second delay before the four-second `font-size` transition occurs.
 
@@ -112,9 +114,29 @@ We include two {{cssxref("time")}} values. In the `transition` shorthand, the fi
 }
 ```
 
-{{EmbedLiveSample('Simple_example', 600, 100)}}
+{{EmbedLiveSample('Basic_example', 600, 100)}}
 
-There are several more examples of CSS transitions included in the [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) article.
+### Transitioning top layer elements
+
+The [`overlay`](/en-US/docs/Web/CSS/overlay) property can be added to the list of transition properties set on an element displayed in the [top layer](/en-US/docs/Glossary/Top_layer) — for example a [popover](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} element. This causes its removal from the top layer to be deferred so it can be animated instead of disappearing immediately.
+
+Sample CSS:
+
+```css
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition:
+    opacity 0.7s,
+    transform 0.7s,
+    overlay 0.7s allow-discrete,
+    display 0.7s allow-discrete;
+}
+```
+
+See the [`overlay`](/en-US/docs/Web/CSS/overlay) page for a full working example.
 
 ## Specifications
 

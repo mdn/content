@@ -301,4 +301,202 @@ The {{cssxref("::backdrop")}} pseudo-element is a full-screen element placed dir
 
 See our [Popover blur background example](https://mdn.github.io/dom-examples/popover-api/blur-background/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/blur-background)) for an idea of how this renders.
 
-Finally, animation needs a special mention, as a lot of people are going to want to animate popovers between showing and hiding. As it stands, [a few updates to CSS behavior](https://open-ui.org/components/popover.research.explainer/#animation-of-popovers) are required to get popovers to be animatable, most notably enabling animation of elements as they move to and from `display: none`. We'll update this article as soon as animation is available for popovers.
+## Animating popovers
+
+For popovers to be animated, several different features are required.
+
+First of all, popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}}. Therefore, `display` needs to be animatable. This is now the case; [supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So for example:
+
+- When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+
+### Transitioning a popover
+
+When animating popovers with transitions, these additional features are needed:
+
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on the popover that you want to transition from when it is shown. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
+- [`display`](/en-US/docs/Web/CSS/display) needs to be added to the transitions list so that the popover will remain as `display: block` for the duration of the animation, allowing the other animations to be seen.
+- [`overlay`](/en-US/docs/Web/CSS/overlay) needs to be added to the transitions list so that the removal of the popover from the top layer will be deferred until the animation is finished, again allowing the other animations to be seen.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the `display` and `overlay` transitions. This effectively enables discrete transitions.
+
+Let's have a look at an example so you can see what this looks like:
+
+The HTML contains a {{htmlelement("div")}} element declared as a popover, and a {{htmlelement("button")}} element designated as the popover's toggle control:
+
+```html
+<button popovertarget="mypopover">Toggle the popover</button>
+<div popover="auto" id="mypopover">I'm a Popover! I should animate.</div>
+```
+
+The CSS for the example looks like this:
+
+```css
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.5s,
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete;
+}
+
+@starting-style {
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+[popover]:popover-open {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition:
+    opacity 0.7s,
+    transform 0.7s,
+    overlay 0.7s allow-discrete,
+    display 0.7s allow-discrete;
+}
+
+/* Needs to be included after the previous [popover]:popover-open rule
+   to take effect, as the specificity is the same */
+@starting-style {
+  [popover]:popover-open {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+```
+
+The two properties we want to show animations for are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform) (specifically, a horizontally scaling transform): we want the popover to fade in and out, as well as growing/shrinking horizontally.To achieve this, we have set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two.
+
+And as discussed earlier, we have:
+
+- Set a starting state for the transition inside the `@starting-style` block.
+- Added `display` to the list of transitioned elements so that the animated element is visible (set to `display: block`) throughout both the entry and exit animation. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
+- Added `overlay` to the list of transitioned elements to make sure that the removal of the element from the top layer is deferred until the animation has been completed. This doesn't make a huge difference for simple animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective.
+- Set `allow-discrete` on both the above transitions to enable discrete transitions.
+
+You'll note that we have also done something similar for the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the popover when it opens, to provide a nice darkening animation.
+
+The code renders as follows:
+
+{{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
+
+### A popover keyframe animation
+
+When animating a popover with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), there are some differences to note:
+
+- You don't provide a starting state inside a `@starting-style` block; instead, you need to provide the starting `display` value in an explicit starting keyframe (for example using `0%` or `from`).
+- You don't need to enable discrete transitions; there is no equivalent to `allow-discrete` inside keyframes.
+- You can't set `overlay` inside keyframes either. The best solution we found at this time to defer removal from the top layer was to use JavaScript — animating the popover and then using {{domxref("setTimeout()")}} to defer removal of the popover until after the animation is finished.
+
+Let's look at an example. The HTML is contains a {{htmlelement("div")}} element declared as a popover, and a {{htmlelement("button")}} element designated as the popover's toggle control:
+
+```html
+<button id="toggle-button">Toggle the popover</button>
+<div popover="manual" id="mypopover">I'm a Popover! I should animate.</div>
+```
+
+The CSS is as follows:
+
+```css
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Transition the :backdrop when the popover is promoted to the top layer */
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.5s,
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete;
+}
+
+@starting-style {
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+/* Animation classes */
+
+.fade-in {
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.7s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+    display: none;
+  }
+}
+```
+
+We have defined keyframes that specify the desired entry and exit animations, and assigned those to CSS classes. Note also that the animation example includes the same [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) transition as the transition demo, to fade the backdrop in. This didn't seem possible to reproduce with a keyframe animation.
+
+We then use some rudimentary JavaScript to apply those classes to the popover as it is shown and hidden, triggering the animations at the right times. As mentioned earlier, we have used `setTimeout()` to defer the hiding of the popover until the animations have finished.
+
+```js
+const popover = document.getElementById("mypopover");
+const toggleBtn = document.getElementById("toggle-button");
+
+toggleBtn.addEventListener("click", () => {
+  if (!popover.matches(":popover-open")) {
+    popover.classList.remove("fade-out");
+    popover.classList.add("fade-in");
+    popover.showPopover();
+  } else if (popover.matches(":popover-open")) {
+    popover.classList.remove("fade-in");
+    popover.classList.add("fade-out");
+    setTimeout(() => {
+      popover.hidePopover();
+    }, 700);
+  }
+});
+```
+
+The code renders as follows:
+
+{{ EmbedLiveSample("A popover keyframe animation", "100%", "200") }}

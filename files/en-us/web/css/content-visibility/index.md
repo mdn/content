@@ -38,6 +38,24 @@ content-visibility: unset;
 - `auto`
   - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
 
+## Animating content-visibility
+
+Historically, the `content-visibility` property was not animatable/transitionable. The spec changed however, and [supporting browsers](#browser_compatibility) now animate `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Discrete animation generally means that the property will flip between two values `50%` through animating between the two.
+
+In the case of `content-visibility` however, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration. So for example:
+
+- When animating between `content-visibility` `hidden` and `visible`, the value will flip to `visible` at `0%` of the animation duration so it is visible throughout.
+- When animating between `content-visibility` `visible` and `hidden`, the value will flip to `hidden` at `100%` of the animation duration so it is visible throughout.
+
+This behavior is useful for creating entry/exit animations where you want to for example remove some content from the UI immediately with `content-visibility: hidden`, but have it animate (for example fade out) rather than disappearing immediately.
+
+When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit starting keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) section below.
+
+When animating `content-visibility` with transitions, two additional features are needed:
+
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`, to avoid unexpected behavior.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility` when it is transitioned. This effectively enables `content-visibility` transitions, enabling it to animate.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -148,6 +166,98 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 #### Result
 
 {{ EmbedLiveSample('Using hidden to manually manage visibility') }}
+
+### content-visibility animation example
+
+In this example, we have a {{htmlelement("div")}} element, the content of which can be toggled between shown and hidden by clicking or pressing any key. The HTML looks like this:
+
+```html
+<p>
+  Click anywhere on the screen or press any key to toggle the
+  <code>&lt;div&gt;</code> content between hidden and showing.
+</p>
+
+<div>
+  This is a <code>&lt;div&gt;</code> element that animates between
+  <code>content-visibility: hidden;</code>and
+  <code>content-visibility: visible;</code>. We've also animated the text color
+  to provide a smooth animation effect.
+</div>
+```
+
+In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframe` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` but also [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
+
+```css
+div {
+  font-size: 1.6rem;
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 20px;
+  width: 480px;
+
+  content-visibility: hidden;
+}
+
+/* Animation classes */
+
+.show {
+  animation: show 0.7s ease-in forwards;
+}
+
+.hide {
+  animation: hide 0.7s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes show {
+  0% {
+    content-visibility: hidden;
+    color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    content-visibility: visible;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+@keyframes hide {
+  0% {
+    content-visibility: visible;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  100% {
+    content-visibility: hidden;
+    color: rgba(0, 0, 0, 0);
+  }
+}
+```
+
+Finally, we use some JavaScript to apply the `.show` and `.hide` classes to the `<div>` as appropriate to apply the animations as it is toggled between shown and hidden.
+
+```js
+const divElem = document.querySelector("div");
+const htmlElem = document.querySelector(":root");
+
+htmlElem.addEventListener("click", showHide);
+document.addEventListener("keydown", showHide);
+
+function showHide() {
+  if (divElem.classList[0] === "show") {
+    divElem.classList.remove("show");
+    divElem.classList.add("hide");
+  } else {
+    divElem.classList.remove("hide");
+    divElem.classList.add("show");
+  }
+}
+```
+
+The rendered result looks like this:
+
+{{ EmbedLiveSample("content-visibility animation example", "100%", "250") }}
 
 ## Specifications
 

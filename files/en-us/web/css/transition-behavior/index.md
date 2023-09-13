@@ -11,7 +11,7 @@ browser-compat: css.properties.transition-behavior
 
 The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
-This is most significant in the cases of [`display`](/en-US/docs/Web/CSS/display), [`content-visibility`](/en-US/docs/Web/CSS/display), and [`overlay`](/en-US/docs/Web/CSS/overlay), the first two of which historically were not animatable at all to and from a hidden state (for example `display: none;`). The ability of these elements to be transitioned means that it is fairly easy to create entry and exit animations, where an element is transitioned to and from a hidden state (which includes elements appearing in the [top layer](/en-US/docs/Glossary/Top_layer) such as [popovers](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} elements), or transitioned as soon as it is added to the DOM.
+This is most significant in the cases of [`display`](/en-US/docs/Web/CSS/display), [`content-visibility`](/en-US/docs/Web/CSS/display), and [`overlay`](/en-US/docs/Web/CSS/overlay), the first two of which historically were not animatable. The ability of these elements to be transitioned means that it is fairly easy to create entry and exit animations, where an element is transitioned to and from a hidden state (which includes elements appearing in the [top layer](/en-US/docs/Glossary/Top_layer) such as [popovers](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} elements), or transitioned as soon as it is added to the DOM.
 
 ## Syntax
 
