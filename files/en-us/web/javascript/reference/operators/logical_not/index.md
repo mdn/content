@@ -59,8 +59,7 @@ conversion of any value to the corresponding [boolean primitive](/en-US/docs/Web
 The conversion is based on the "truthyness" or "falsyness" of the value (see
 {{Glossary("truthy")}} and {{Glossary("falsy")}}).
 
-The same conversion can be done through the {{jsxref("Global_Objects/Boolean/Boolean",
-  "Boolean")}} function.
+The same conversion can be done through the {{jsxref("Boolean/Boolean", "Boolean()")}} function.
 
 ```js
 !!true; // !!truthy returns true

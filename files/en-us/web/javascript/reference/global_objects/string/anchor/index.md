@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.anchor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`anchor()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 

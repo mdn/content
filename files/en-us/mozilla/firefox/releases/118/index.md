@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTML
 
+- The {{HTMLElement('search')}} element is now supported. The `<search>` element is a group element that serves to contain all the elements used in a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
+
 #### Removals
 
 ### CSS
@@ -39,6 +41,8 @@ This article provides information about the changes in Firefox 118 that affect d
 #### Removals
 
 ### APIs
+
+- The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
 
 #### DOM
 

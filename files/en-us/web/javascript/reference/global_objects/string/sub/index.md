@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.sub
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`sub()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("sub")}} element (`<sub>str</sub>`), which causes this string to be displayed as subscript.
 
