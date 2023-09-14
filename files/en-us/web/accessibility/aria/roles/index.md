@@ -103,12 +103,12 @@ Note that there is also a widget role (`role="widget"`), which is an abstract ro
 Landmark roles provide a way to identify the organization and structure of a web page. By classifying and labeling sections of a page, structural information conveyed visually through layout is represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. Use these sparingly. Too many landmark roles create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) (document {{HTMLElement('header')}})
-- [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role) (document {{HTMLElement('footer')}})
-- [main](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) ({{HTMLElement('main')}})
 - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role) ({{HTMLElement('aside')}})
-- [region](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) ({{HTMLElement('section')}})
-- [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role) ({{HTMLElement('nav')}})
+- [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role) (document {{HTMLElement('footer')}})
 - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) ({{HTMLElement('form')}})
+- [main](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) ({{HTMLElement('main')}})
+- [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role) ({{HTMLElement('nav')}})
+- [region](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) ({{HTMLElement('section')}})
 - [search](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role) ({{HTMLElement('search')}})
 
 ### 4. Live region roles
