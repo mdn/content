@@ -69,7 +69,7 @@ button {
 
 If you click each element in turn, you will see that when `:focus` is used to style the focus ring, the UA draws the focus ring when the user clicks the button. However, when `:focus-visible` is used to style the focus ring, the UA does not draw the focus ring when the user clicks the button, just like in the default case.
 
-If you then tab through each element, you will see that in all three cases — default, `:focus`, `:focus-visible` — the UA draws the focus ring around the button when the user navigates to it with the keyboard.
+If you then tab through each element, you will see that in all three cases — default, `:focus`, and `:focus-visible` — the UA draws the focus ring around the button when the user navigates to it with the keyboard.
 
 This shows how `:focus-visible` enables a designer to follow the browser's logic in determining when a focus ring should be shown.
 
