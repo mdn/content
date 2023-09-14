@@ -7,7 +7,7 @@ browser-compat: css.properties.font-synthesis-position
 
 {{CSSRef}}
 
-The **`font-synthesis-position`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize position typeface when it is missing in a font family. Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
+The **`font-synthesis-position`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize positions subscript and superscript typeface, while using {{cssxref("font-variant-position")}}, when it is missing in a font family.
 
 It is often convenient to use the shorthand property {{cssxref("font-synthesis")}} to control all typeface synthesis values.
 
@@ -43,21 +43,23 @@ font-synthesis-position: unset;
 
 ## Examples
 
-### Disabling synthesis of small-caps typeface
+### Disabling synthesis of position typeface
 
-This example shows turning off synthesis of the small-caps typeface by the browser in the `Montserrat` font.
+This example shows turning off synthesis of the superscript and subscript typefaces by the browser in the `Montserrat` font.
 
 #### HTML
 
 ```html
-<p class="english">
-  These are the default <span class="small-caps">small-caps</span>,
-  <strong>bold</strong>, and <em>oblique</em> typefaces.
+<p>
+  These are the default position <span class="super">superscript</span>,
+  position <span class="sub">subscript</span>, <strong>bold</strong> and
+  <em>oblique</em> typefaces.
 </p>
 
-<p class="english no-syn">
-  The <span class="small-caps">small-caps</span> typeface is turned off here but
-  not the <strong>bold</strong> and <em>oblique</em> typefaces.
+<p class="no-syn">
+  The positions <span class="super">superscript</span> and
+  <span class="sub">subscript</span> typeface is turned off here but not the
+  <strong>bold</strong> and <em>oblique</em> typefaces.
 </p>
 ```
 
@@ -66,20 +68,23 @@ This example shows turning off synthesis of the small-caps typeface by the brows
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-.english {
+* {
   font-family: "Montserrat", sans-serif;
 }
-.small-caps {
-  font-variant: small-caps;
+.super {
+  font-variant-position: super;
+}
+.sub {
+  font-variant-position: sub;
 }
 .no-syn {
-  font-synthesis-small-caps: none;
+  font-synthesis-position: none;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Disabling synthesis of small-caps typeface', '', '100')}}
+{{EmbedLiveSample('Disabling synthesis of position typeface', '', '100')}}
 
 ## Specifications
 
@@ -91,6 +96,5 @@ This example shows turning off synthesis of the small-caps typeface by the brows
 
 ## See also
 
-- [font-synthesis](/en-US/docs/Web/CSS/font-synthesis) shorthand, [font-synthesis-style](/en-US/docs/Web/CSS/font-synthesis-style), [font-synthesis-weight](/en-US/docs/Web/CSS/font-synthesis-weight)
-- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-weight")}}
-- [CanvasRenderingContext2D: fontVariantCaps property](/en-US/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps)
+- {{cssxref("font-synthesis")}} shorthand, {{cssxref("font-synthesis-style")}}, {{cssxref("font-synthesis-weight")}}
+- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-weight")}}
