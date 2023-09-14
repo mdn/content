@@ -42,9 +42,9 @@ The same is true when working with grid layout. Using `display: grid` will give 
 
 ## The multi-keyword syntax
 
-As you can see from the above explanation, the `display` property has gained considerable new powers. In addition to indicating whether something is block-level or inline-level in relationship to other boxes on the page, it now also indicates the formatting context inside the box it is applied to. In order to better describe this behavior, the `display` property has been refactored to allow for two values — an outer and inner value — to be set on it, as well as the single values we are used to.
+As you can see from the above explanation, the `display` property has considerable powers. In addition to indicating whether something is block-level or inline-level in relationship to other boxes on the page, it also indicates the formatting context inside the box it is applied to. To better describe this behavior, the `display` property allows for two values — an outer and inner value — to be set on it. The original single-value syntax is also valid.
 
-This means that instead of setting `display: flex` to create a block-level box with flex children, we will use `display: block flex`. Instead of `display: inline-flex` to create an inline-level box with flex children, we will use `display: inline flex`. The example below values.
+This means that instead of setting `display: flex` to create a block-level box with flex children, we use `display: block flex`. Instead of `display: inline-flex` to create an inline-level box with flex children, we use `display: inline flex`. The example below demonstrates these values.
 
 {{EmbedGHLiveSample("css-examples/display/multi-keyword/multi-keyword-flex.html", '100%', 640)}}
 
@@ -63,7 +63,7 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-In terms of how these new values help to clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a fairly recent single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. The most obvious use-case for creating a new BFC is to contain floats, and avoid the need for clearfix hacks.
+In terms of how this multi-value syntax helps clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a relatively recent single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. When `flow-root` was added as a `display` value, a common use case for creating a new BFC was to contain floats and avoid the need for clearfix hacks.
 
 In the example below we have a floated item inside a container. The float is contained by the bordered box, which wraps it and the text alongside. If you remove the line `display: flow-root` then the float will poke out of the bottom of the box. You can replace `display: flow-root` with the multi-value `display: block flow-root`, which will achieve the same as the single `flow-root` value.
 
