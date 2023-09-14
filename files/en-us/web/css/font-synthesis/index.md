@@ -50,7 +50,7 @@ font-synthesis: unset;
 - `small-caps`
   - : Indicates that the missing small-caps typeface may be synthesized by the browser if needed.
 - `position`
-  - : Indicates that the missing subscript and superscript typeface may be synthesized by the browser if needed.
+  - : Indicates that the missing subscript and superscript typeface may be synthesized by the browser, while using {{cssxref("font-variant-position")}}, if needed.
 
 ## Description
 
@@ -158,3 +158,5 @@ This example shows the browser's default font-synthesis behavior and compares it
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-position")}}
