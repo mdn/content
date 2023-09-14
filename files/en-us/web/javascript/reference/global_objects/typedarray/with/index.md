@@ -18,7 +18,7 @@ arrayInstance.with(index, value)
 ### Parameters
 
 - `index`
-  - : Zero-based index at which to change the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+  - : Zero-based index at which to change the typed array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
 - `value`
   - : Any value to be assigned to the given index.
 
