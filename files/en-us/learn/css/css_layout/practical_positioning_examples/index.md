@@ -169,7 +169,7 @@ Finally for this section we'll set some styles on the link states. First, we'll 
   color: white;
 }
 
-.info-box li a.active {
+.info-box li a:active {
   background-color: #a60000;
   color: white;
 }
