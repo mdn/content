@@ -77,7 +77,7 @@ The value `display: inline-block` has been around since the early days of CSS. T
 
 {{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-block.html", '100%', 440)}}
 
-An element with `display: inline-block` however, will also contain floats. It contains everything inside the inline-level box. Therefore `display: inline-block` does exactly what `display: flow-root` does, but with an inline-level, rather than a block-level box. The new syntax accurately describes what is happening with this value. In the example above, you can change `display: inline-block` to `display: inline flow-root` get the same result.
+An element with `display: inline-block` however, will also contain floats. It contains everything inside the inline-level box. Therefore `display: inline-block` does exactly what `display: flow-root` does, but with an inline-level, rather than a block-level box. The new syntax accurately describes what is happening with this value. In the example above, you can change `display: inline-block` to `display: inline flow-root` and get the same result.
 
 ## What about the old values of display?
 
