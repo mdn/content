@@ -33,7 +33,7 @@ browser-compat: css.functions.NameOfTheFunction
 >   - : The `title` value is displayed at the top of the page. The title format is _NameOfTheFunction()_.
 >     For example, the [`pow()`](/en-US/docs/Web/CSS/pow) function has a title of _pow()_.
 > - **slug**
->   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheFunction`.
+>   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheFunction`. Note the absence of parentheses in the slug.
 >     For example, the slug for the [`pow()`](/en-US/docs/Web/CSS/pow) function is `Web/CSS/pow`.
 > - **page-type**
 >   - : The `page-type` value for CSS functions is `css-function`.
@@ -84,9 +84,11 @@ This section is for interactive examples added using the `\{{EmbedInteractiveExa
 
 ## Syntax
 
-Include a CSS code block showing the main syntax forms, including the parameters that can be given. Only include the function itself, not a complete declaration in which it occurs. Lines should not end in semicolons: this should emphasize that we are not showing complete valid CSS code here, just the syntax form.
+Include a CSS code block to show the main use cases of the syntax, including examples of parameters that the function can accept. Only include the function itself, not a complete declaration in which it occurs. For example, use `minmax(200px, 1fr)`, not `grid-template-columns: minmax(min-content, 300px)`.
 
-You should show all the invocation patterns that the function can take, and include comments naming parameters, which should match the parameters listed in the "Parameters" section.
+Don't end the syntax lines with semicolons: this should emphasize that we are not showing complete valid CSS code here, just the syntax usage.
+
+Show all the invocation patterns that the function can take. Preceding all such cases, add a comment to describe the use case and another comment to name the parameters and highlight syntax punctuation and the order of parameters. The parameter names in the comment should match the parameters listed in the "Parameters" section.
 
 The comment showing each invocation pattern should be followed by exactly one empty line.
 
@@ -113,17 +115,19 @@ var(--custom-prop, var(--default-value, red))
 
 ### Parameters
 
-Give the parameters that the function can accept, as a {{htmlelement("dl")}}.
+List the parameters that the function can accept as a {{htmlelement("dl")}}. List them in the order that they appear in the _Formal syntax_ section. Indicate if a parameter is optional using the `optional_inline` badge.
 Include one term and definition for each parameter.
 
-- `<custom-property-name>`
-  - : Include parameter's data type, its description, and what it represents.
-- `<declaration-value>`
-  - : Include a description of the parameter, its data type, and what it represents.
+- `<parameter-name-1>`
+  - : Include a description of the parameter, its data type, and its default value if any
+- `<parameter-name-2>`
+  - : Include a description of the parameter, its data type, and its default value if any
+- `<parameter-name-3>` {{optional_inline}}
+  - : Include a description of the parameter, its data type, and its default value if any
 
 ### Return value
 
-Describe the value returned by the function.
+Describe the value returned by the function. Begin the description with the word "Returns"; for example, "Returns a `<number>` or `<dimension>`."
 
 ## Description
 
