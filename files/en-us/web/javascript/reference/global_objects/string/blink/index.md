@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.blink
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`blink()`** method of {{jsxref("String")}} values creates a string that embeds this string in a (`<blink>str</blink>`), which used to cause a string to blink in old browsers.
 

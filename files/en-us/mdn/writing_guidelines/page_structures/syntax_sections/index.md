@@ -274,7 +274,7 @@ HTTP header syntax (and Content-Security-Policy) is documented in two separate s
 
 The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:
 
-```plain
+```http
 If-None-Match: <etag_value>
 If-None-Match: <etag_value>, <etag_value>, …
 If-None-Match: *
@@ -290,7 +290,7 @@ The "Directive" section contains a description list containing the names and des
 
 Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the [GET method](/en-US/docs/Web/HTTP/Methods/GET) looks like this:
 
-```plain
+```http
 GET /index.html
 ```
 
@@ -298,7 +298,7 @@ GET /index.html
 
 Again, the syntax for HTTP response status codes is really simple — a syntax block including the code and name. For example:
 
-```plain
+```http
 404 Not Found
 ```
 
