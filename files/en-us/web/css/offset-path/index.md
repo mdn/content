@@ -52,7 +52,7 @@ offset-path: unset;
 
 ### Values
 
-The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}}, a {{cssxref("url","url()")}}, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
+The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","&lt;ray()&gt;")}}, a {{cssxref("url","&lt;url()&gt;")}}, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
 
 - `none`
 
@@ -60,15 +60,15 @@ The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`
 
 - `<offset-path>`
 
-  - : A `ray()`, a `url()`, or a `<basic-shape>` specifying the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : A `<ray()>`, a `<url()>`, or a `<basic-shape>` specifying the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
 
-    - {{cssxref("ray","ray()")}}
+    - {{cssxref("ray","&lt;ray()&gt;")}}
 
       - : Defines a line starting at a set position, of a set length, and extending at the specified angle. The `ray()` function accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
 
-    - {{cssxref("url","url()")}}
+    - {{cssxref("url","&lt;url()&gt;")}}
 
-      - : Specifies the URL reference of a shape element with an SVG. The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, or {{SVGElement("rect")}} element referenced by the`id` in the `url()` parameter. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
+      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by the`id` in the `url()` function parameter. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
     - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
 
@@ -76,7 +76,7 @@ The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
 
-  - : Specifies the size information of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
+  - : Specifies the size information of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box` in CSS contexts. In SVG contexts, the value is treated as `view-box`. If `<ray()>` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `<url()>` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
 
 ## Description
 
