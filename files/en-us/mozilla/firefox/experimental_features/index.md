@@ -970,7 +970,7 @@ The CSS {{cssxref("offset-path")}} property can be used to specify the ID of an 
       <td>No</td>
     </tr>
     <tr>
-      <th>Preference names</th>
+      <th>Preference name</th>
       <td colspan="2">
       <code>layout.css.motion-path-url.enabled</code>
     </td>
