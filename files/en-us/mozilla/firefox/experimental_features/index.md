@@ -936,6 +936,48 @@ For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `
   </tbody>
 </table>
 
+### url() function in offset-path property
+
+The CSS {{cssxref("offset-path")}} property can be used to specify the ID of an SVG shape element using `<url()>` to create the path shape. For more details, see [Firefox bug 1598158](https://bugzil.la/1598158).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>118</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference names</th>
+      <td colspan="2">
+      <code>layout.css.motion-path-url.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
