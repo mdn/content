@@ -40,7 +40,7 @@ These properties are available only on instances of the `Notification` object.
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.badge")}} {{ReadOnlyInline}}
-  - : The URL of the image used to represent the notification when there is not enough space to display the notification itself.
+  - : A string containing the URL of an image to represent the notification when there is not enough space to display the notification itself such as for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
