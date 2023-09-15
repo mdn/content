@@ -17,7 +17,7 @@ The majority of the URL standard is taken up by the [definition of a URL](/en-US
 
 ### Accessing URL components
 
-Creating an {{domxref("URL")}} object for a given URL parses the URL and provides quick access to its constituent parts through its properties.
+Creating an {{domxref("URL")}} object for a given URL, parses the URL and provides quick access to its constituent parts through its properties.
 
 ```js
 let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
