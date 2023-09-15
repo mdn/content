@@ -34,8 +34,6 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Note that a response to a request with an `Authorization` header cannot be stored in the shared cache by default, unless public is specified.
-
 ### Shared cache
 
 The shared cache is located between the client and the server and can store responses that can be shared among users. And shared caches can be further sub-classified into **proxy caches** and **managed caches**.
