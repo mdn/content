@@ -8,9 +8,7 @@ status:
 
 {{CSSRef}}
 
-[CSS Display Module Level 3](https://drafts.csswg.org/css-display/) describes the multi-keyword syntax for the [`display`](/en-US/docs/Web/CSS/display) property.
-
-This syntax is supported in the current versions of all major browsers. This guide explains the new syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the `display` property.
+[CSS Display Module Level 3](https://drafts.csswg.org/css-display/) introduced multi-keyword syntax for the [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
 > **Note:** this syntax may also be referred to as "two-value syntax" or "multi-value syntax."
 
