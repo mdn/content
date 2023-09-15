@@ -34,6 +34,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTTP
 
+- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
+
 #### Removals
 
 ### Security
