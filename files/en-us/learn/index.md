@@ -61,11 +61,12 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 ## Tasks and assessments
 
-In the [Learn web development](/en-US/docs/Learn) section of MDN, there are many self-contained modules that contain articles, tasks, examples, and assessments for you to complete. Here are some tips on how to get the most out of them.
+In the Learn web development section of MDN, there are many self-contained modules that contain articles, tasks, examples, and assessments for you to complete.
+Here are some tips on how to get the most out of them.
 There are two main types of tasks you'll encounter:
 
-- "test your skills" articles, for example in [Learn/JavaScript/Building_blocks/conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
-- more in-depth **assessments** at the end of some modules (e.g. see [/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+- "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
+- more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
 
 For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/master/learn).
 
