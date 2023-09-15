@@ -4,7 +4,7 @@ slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 page-type: guide
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 Every property in JavaScript objects can be classified by three factors:
 

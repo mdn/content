@@ -22,12 +22,12 @@ lastIndexOf(searchElement, fromIndex)
 
 - `searchElement`
   - : Element to locate in the typed array.
-- `fromIndex`
+- `fromIndex` {{optional_inline}}
   - : Zero-based index at which to start searching backwards, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
 
 ### Return value
 
-The last index of the element in the array; `-1` if not found.
+The last index of `searchElement` in the typed array; `-1` if not found.
 
 ## Description
 

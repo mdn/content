@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.strike
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`strike()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("strike")}} element (`<strike>str</strike>`), which causes this string to be displayed as struck-out text.
 
