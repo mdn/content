@@ -131,7 +131,7 @@ Describe the value returned by the function. Begin the description with the word
 
 ## Description
 
-This is an optional section to include a description of the function and explain how it works. Use this section to explain related terms and add use cases for the function.
+This section is optional but recommended. It contains a description of the function and explains how it works. Use this section to explain related terms and add use cases for the function.
 
 ## Formal syntax
 
