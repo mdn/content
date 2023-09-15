@@ -56,7 +56,7 @@ For an overview for the process of publishing your add-on see [Signing and distr
 
 In addition to extensions, there are a few other add-on types that allow users to customize Firefox. Those add-ons include:
 
-- [User dictionaries](/en-US/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) let you spell-check in different languages.
+- [User dictionaries](https://support.mozilla.org/en-US/kb/how-do-i-use-firefox-spell-checker) let you spell-check in different languages.
 - [Language packs](https://support.mozilla.org/en-US/kb/use-firefox-another-language) let you have more languages available for the user interface of Firefox.
 
 ## Contact us

@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTML
 
+- The {{HTMLElement('search')}} element is now supported. The `<search>` element is a group element that serves to contain all the elements used in a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
+
 #### Removals
 
 ### CSS
@@ -41,6 +43,7 @@ This article provides information about the changes in Firefox 118 that affect d
 ### APIs
 
 - The <kbd>⊞ Windows Logo</kbd> key on Windows and the <kbd>Command</kbd> key on macOS now return a value of `"Meta"` for [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key), instead of `"OS"`, and [`KeyboardEvent.code`](/en-US/docs/Web/API/KeyboardEvent/code) returns `MetaLeft`/`MetaRight` instead of `OSLeft`/`OSRight` (Firefox bug [1232918](https://bugzil.la/1232918)).
+- The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
 
 #### DOM
 
