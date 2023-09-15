@@ -89,7 +89,7 @@ h1 {
   color: blue;
 }
 
-..special {
+.special {
   color: blue;
 }
 ```
@@ -97,7 +97,7 @@ h1 {
 When combined however, neither the `h1` nor the class will be styled as the entire rule is deemed invalid.
 
 ```css-nolint
-h1, ..special {
+h1, .special {
   color: blue;
 }
 ```
