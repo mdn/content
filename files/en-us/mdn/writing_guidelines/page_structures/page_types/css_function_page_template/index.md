@@ -96,15 +96,14 @@ For example:
 
 ```css
 /* Without a fallback */
-
 /* var( <custom-property-name> ) */
 var(--custom-prop)
 
-/* With fallback */
-
+/* With an empty fallback */
 /* var( <custom-property-name> , ) */
 var(--custom-prop,)
 
+/* With a fallback value */
 /* var( <custom-property-name> , <declaration-value> ) */
 var(--custom-prop, initial)
 var(--custom-prop, #FF0000)
@@ -118,12 +117,10 @@ var(--custom-prop, var(--default-value, red))
 List the parameters that the function can accept as a {{htmlelement("dl")}}. List them in the order that they appear in the _Formal syntax_ section. Indicate if a parameter is optional using the `optional_inline` badge.
 Include one term and definition for each parameter.
 
-- `<parameter-name-1>`
-  - : Include a description of the parameter, its data type, and its default value if any
-- `<parameter-name-2>`
-  - : Include a description of the parameter, its data type, and its default value if any
-- `<parameter-name-3>` {{optional_inline}}
-  - : Include a description of the parameter, its data type, and its default value if any
+- `<custom-property-name>`
+  - : Include a description of the parameter, its data type, and its default value if any.
+- `<declaration-value>` {{optional_inline}}
+  - : Include a description of the parameter, its data type, and its default value if any.
 
 ### Return value
 
@@ -150,6 +147,34 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
+
+> **Note:** Sometimes you will want to link to examples given on another page.
+>
+> **Scenario 1:** If you have some examples on this page and some more examples on another page:
+>
+> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
+>
+> ```md
+> ## Examples
+>
+> ### Using the polygon() function
+>
+> Example of polygon()
+>
+> ### More examples
+>
+> Links to more examples on other pages
+> ```
+>
+> **Scenario 2:** If you _only_ have examples on another page and none on this page:
+>
+> Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
+>
+> ```md
+> ## Examples
+>
+> For examples of this function, see [the page on basic-shape](https://example.org).
+> ```
 
 ## Accessibility concerns
 
