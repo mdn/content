@@ -38,7 +38,7 @@ const obj = { key1: "value1" };
 const array = [...obj]; // TypeError: obj is not iterable
 ```
 
-On the other hand, spreading in object literals [enumerates](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties#traversing_object_properties) the own properties of the value. For typical arrays, all indices are enumerable own properties, so arrays can be spread into objects.
+On the other hand, spreading in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) [enumerates](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties#traversing_object_properties) the own properties of the value. For typical arrays, all indices are enumerable own properties, so arrays can be spread into objects.
 
 ```js
 const array = [1, 2, 3];
@@ -99,7 +99,7 @@ const d = new Date(...dateFields);
 
 #### A more powerful array literal
 
-Without spread syntax, to create a new array using an existing array as one part of it, the array literal syntax is no longer sufficient and imperative code must be used instead using a combination of {{jsxref("Array.prototype.push", "push()")}}, {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax this becomes much more succinct:
+Without spread syntax, the array literal syntax is no longer sufficient to create a new array using an existing array as one part of it. Instead, imperative code must be used using a combination of methods, including {{jsxref("Array.prototype.push", "push()")}}, {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax, this becomes much more succinct:
 
 ```js
 const parts = ["shoulders", "knees"];
@@ -111,7 +111,7 @@ Just like spread for argument lists, `...` can be used anywhere in the array lit
 
 #### Copying an array
 
-You can use spread syntax to make a shallow copy of an array. Each array element retains its identity without getting copied.
+You can use spread syntax to make a {{Glossary("shallow copy")}} of an array. Each array element retains its identity without getting copied.
 
 ```js
 const arr = [1, 2, 3];
@@ -188,12 +188,14 @@ You can make an element present or absent in an array literal, depending on a co
 ```js
 const isSummer = false;
 const fruits = ["apple", "banana", ...(isSummer ? ["watermelon"] : [])];
+// ['apple', 'banana']
 ```
 
 When the condition is `false`, we spread an empty array, so that nothing gets added to the final array. Note that this is different from the following:
 
 ```js
 const fruits = ["apple", "banana", isSummer ? "watermelon" : undefined];
+// ['apple', 'banana', undefined]
 ```
 
 In this case, an extra `undefined` element is added when `isSummer` is `false`, and this element will be visited by methods such as {{jsxref("Array.prototype.map()")}}.
@@ -221,7 +223,7 @@ const clonedObj = { ...obj1 };
 
 #### Overriding properties
 
-When an object is spread into another, or when multiple objects are spread into one, the property takes the last value that it receives, but stays in the position it was first specified.
+When one object is spread into another object, or when multiple objects are spread into one object, and properties with identical names are encountered, the property takes the last value assigned while remaining in the position it was originally set.
 
 ```js
 const obj1 = { foo: "bar", x: 42 };
@@ -241,6 +243,7 @@ const fruits = {
   banana: 5,
   ...(isSummer ? { watermelon: 30 } : {}),
 };
+// { apple: 10, banana: 5 }
 ```
 
 The case where the condition is `false` is an empty object, so that nothing gets spread into the final object. Note that this is different from the following:
@@ -251,6 +254,7 @@ const fruits = {
   banana: 5,
   watermelon: isSummer ? 30 : undefined,
 };
+// { apple: 10, banana: 5, watermelon: undefined }
 ```
 
 In this case, the `watermelon` property is always present and will be visited by methods such as {{jsxref("Object.keys()")}}.
