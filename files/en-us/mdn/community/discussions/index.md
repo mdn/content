@@ -66,8 +66,8 @@ If you're not sure whether to open an issue or start discussion, consider the fo
         Discussions related to the
         <a href="https://github.com/mdn/content">content</a> on MDN Web Docs.
         <em>Note:</em> This is not the place to ask for coding assistance.
-        For programming help, get in touch in one of our
-        <a href="/en-US/docs/MDN/Community/Communication_channels">Communication channels</a>.
+        If you're stuck, a good place to start is our
+        <a href="/en-US/docs/Learn">Learn Web Development</a> area.
       </td>
     </tr>
     <tr>
