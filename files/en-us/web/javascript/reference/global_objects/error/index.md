@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Error
 
 Runtime errors result in new `Error` objects being created and thrown.
 
-`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}} (where supported by the browser).
 
 ### Error types
 
