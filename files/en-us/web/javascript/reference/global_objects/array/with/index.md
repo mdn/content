@@ -101,6 +101,6 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
-- {{jsxref("Array.prototype.at()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.at()")}}
 - {{jsxref("TypedArray.prototype.with()")}}
