@@ -17,8 +17,10 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+  - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 - {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
@@ -65,6 +67,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+- {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
@@ -138,6 +142,8 @@ _Doesn't inherit any method._
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
+- {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}}
+  - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
 - {{domxref("Navigator.registerProtocolHandler()")}}
   - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.unregisterProtocolHandler()")}}

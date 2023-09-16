@@ -54,7 +54,7 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
 
 ## Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : Creates an object URL pointing to a `MediaSource` object that can then be specified as the `src` value of an HTML media element to play a media stream.
 - {{domxref("HTMLMediaElement.seekable")}}
   - : When a `MediaSource` object is played by an HTML media element, this property will return a {{domxref("TimeRanges")}} object that contains the time ranges that the user is able to seek to.

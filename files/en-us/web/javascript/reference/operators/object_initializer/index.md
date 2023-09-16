@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.operators.object_initializer
 ---
 
-{{JsSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or [by invoking a constructor function](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.
 
@@ -237,7 +237,7 @@ A property definition of the form `__proto__: value` or `"__proto__": value` doe
 
 Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
-```js
+```js-nolint
 const obj1 = {};
 console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 
@@ -301,6 +301,7 @@ const obj7 =  {
 ## See also
 
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

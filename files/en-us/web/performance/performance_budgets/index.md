@@ -1,6 +1,7 @@
 ---
 title: Performance budgets
 slug: Web/Performance/Performance_budgets
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

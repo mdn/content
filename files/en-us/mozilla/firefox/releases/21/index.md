@@ -1,6 +1,7 @@
 ---
 title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -24,7 +25,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - The `none` value of {{cssxref("user-select", "-moz-user-select")}} has now the same behavior than the `-moz-none` value, aligning Gecko on WebKit (Chrome, Safari), Presto (Opera) and Trident (Internet Explorer) ([Firefox bug 816298](https://bugzil.la/816298)).
 - On XHTML content, the `auto` value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ([Firefox bug 702121](https://bugzil.la/702121)).
 - An `auto` value has been added to the CSS {{cssxref("-moz-orient")}} property. The `auto` value is equivalent to `horizontal` when applied to {{HTMLElement("meter")}} and {{HTMLElement("progress")}} ([Firefox bug 835883](https://bugzil.la/835883)).
-- The media query [`-moz-windows-glass`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-glass) has been added on Windows 7 and earlier Windows system ([Firefox bug 816803](https://bugzil.la/816803)).
+- The media query [`-moz-windows-glass`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-glass) has been added on Windows 7 and earlier Windows system ([Firefox bug 816803](https://bugzil.la/816803)).
 
 ### DOM
 
@@ -55,7 +56,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Worker
 
-- The functions {{domxref("URL/createObjectURL", "URL.createObjectURL")}} and {{domxref("URL/revokeObjectURL", "URL.revokeObjectURL")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+- The functions {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Changes for add-on and Mozilla developers
 

@@ -1,6 +1,7 @@
 ---
 title: Collision detection
 slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+page-type: guide
 ---
 
 {{GamesSidebar}}

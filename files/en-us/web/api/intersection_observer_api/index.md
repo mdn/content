@@ -20,7 +20,7 @@ Implementing intersection detection in the past involved event handlers and loop
 
 Consider a web page that uses infinite scrolling. It uses a vendor-provided library to manage the advertisements placed periodically throughout the page, has animated graphics here and there, and uses a custom library that draws notification boxes and the like. Each of these has its own intersection detection routines, all running on the main thread. The author of the website may not even realize this is happening, since they may know very little about the inner workings of the two libraries they are using. As the user scrolls the page, these intersection detection routines are firing constantly during the scroll handling code, resulting in an experience that leaves the user frustrated with the browser, the website, and their computer.
 
-The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the {{Glossary("viewport")}}), or when the amount by which the two intersect changes by a requested amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
+The Intersection Observer API lets code register a callback function that is executed whenever a particular element enters or exits an intersection with another element (or the {{Glossary("viewport")}}), or when the intersection between two elements changes by a specified amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
 
 One thing the Intersection Observer API can't tell you: the exact number of pixels that overlap or specifically which ones they are; however, it covers the much more common use case of "If they intersect by somewhere around _N_%, I need to do something."
 
@@ -193,7 +193,10 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 }
 
 .label {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
   position: absolute;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
@@ -270,7 +273,7 @@ startup = () => {
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(
       intersectionCallback,
-      observerOptions
+      observerOptions,
     );
     observers[i].observe(document.querySelector(`#${boxID}`));
   }
@@ -355,13 +358,15 @@ The HTML for this example is very short, with a primary element which is the box
 
 ### CSS
 
-The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
+The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
 
 ```css
 #box {
   background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
-  transition: background-color 1s, border 1s;
+  transition:
+    background-color 1s,
+    border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -409,7 +414,7 @@ window.addEventListener(
 
     createObserver();
   },
-  false
+  false,
 );
 ```
 
@@ -557,12 +562,12 @@ function handleIntersect(entries, observer) {
     if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace(
         "ratio",
-        entry.intersectionRatio
+        entry.intersectionRatio,
       );
     } else {
       entry.target.style.backgroundColor = decreasingColor.replace(
         "ratio",
-        entry.intersectionRatio
+        entry.intersectionRatio,
       );
     }
 

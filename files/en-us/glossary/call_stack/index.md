@@ -4,6 +4,8 @@ slug: Glossary/Call_stack
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **call stack** is a mechanism for an interpreter (like the JavaScript interpreter in a web browser) to keep track of its place in a script that calls multiple {{glossary("function","functions")}} — what function is currently being run and what functions are called from within that function, etc.
 
 - When a script calls a function, the interpreter adds it to the call stack and then starts carrying out the function.

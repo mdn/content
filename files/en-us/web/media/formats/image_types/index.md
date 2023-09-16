@@ -1,6 +1,7 @@
 ---
 title: Image file type and format guide
 slug: Web/Media/Formats/Image_types
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -129,7 +130,7 @@ The following list includes image formats that appear on the web, but which shou
       <th scope="row">File format</th>
       <th scope="col">MIME type</th>
       <th scope="col">File extension(s)</th>
-      <th scope="col">Description</th>
+      <th scope="col">Supported browsers</th>
     </tr>
   </thead>
   <tbody>

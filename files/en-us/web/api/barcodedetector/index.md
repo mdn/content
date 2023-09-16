@@ -18,7 +18,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
 
 ## Static methods
 
-- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}} {{Experimental_Inline}}
+- {{domxref('BarcodeDetector/getSupportedFormats_static', 'getSupportedFormats()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ## Instance methods

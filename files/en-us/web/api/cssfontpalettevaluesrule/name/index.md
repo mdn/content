@@ -33,7 +33,9 @@ This example first defines an {{cssxref("@import")}} and an {{cssxref("@font-pal
 
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
-  override-colors: 0 #00ffbb, 1 #007744;
+  override-colors:
+    0 #00ffbb,
+    1 #007744;
 }
 
 .alternate {

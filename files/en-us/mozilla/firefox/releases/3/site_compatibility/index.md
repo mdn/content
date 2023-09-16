@@ -1,6 +1,7 @@
 ---
 title: Site compatibility for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Site_compatibility
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

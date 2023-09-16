@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.some
 
 {{JSRef}}
 
-The **`some()`** method tests whether
+The **`some()`** method of {{jsxref("Array")}} instances tests whether
 at least one element in the array passes the test implemented by the provided
 function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
 
@@ -35,7 +35,7 @@ some(callbackFn, thisArg)
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for at least one element in the array. Otherwise, `false`.
+`false` unless `callbackFn` returns a {{Glossary("truthy")}} value for an array element, in which case `true` is immediately returned.
 
 ## Description
 
@@ -126,7 +126,7 @@ console.log([1, undefined, 1].some((x) => x !== 1)); // true
 
 ### Calling some() on non-array objects
 
-The `some()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `true`.
+The `some()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length` until they all have been accessed or `callbackFn` returns `true`.
 
 ```js
 const arrayLike = {
@@ -134,6 +134,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: 3, // ignored by some() since length is 3
 };
 console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 // false
@@ -150,7 +151,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 ## See also
 
 - [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.forEach()")}}

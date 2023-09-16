@@ -47,7 +47,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const myArrayBuffer = audioCtx.createBuffer(
   2,
   audioCtx.sampleRate * 3,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 // Fill the buffer with white noise;

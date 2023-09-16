@@ -1,6 +1,7 @@
 ---
 title: JavaScript First Steps
 slug: Learn/JavaScript/First_steps
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

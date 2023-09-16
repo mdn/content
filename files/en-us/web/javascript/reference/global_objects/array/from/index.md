@@ -9,9 +9,7 @@ browser-compat: javascript.builtins.Array.from
 
 The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 
-To convert an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) to an array, use {{jsxref("Array.fromAsync()")}}.
-
-{{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
 
 ## Syntax
 
@@ -25,13 +23,13 @@ Array.from(arrayLike, mapFn, thisArg)
 
 - `arrayLike`
   - : An iterable or array-like object to convert to an array.
-- `mapFn` {{Optional_inline}}
+- `mapFn` {{optional_inline}}
   - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
-- `thisArg` {{Optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `mapFn`.
 
 ### Return value
@@ -44,6 +42,8 @@ A new {{jsxref("Array")}} instance.
 
 - [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}); or, if the object is not iterable,
 - array-like objects (objects with a `length` property and indexed elements).
+
+To convert an ordinary object that's not iterable or array-like to an array (by enumerating its property keys, values, or both), use {{jsxref("Object.keys()")}}, {{jsxref("Object.values()")}}, or {{jsxref("Object.entries()")}}. To convert an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) to an array, use {{jsxref("Array.fromAsync()")}}.
 
 `Array.from()` never creates a sparse array. If the `arrayLike` object is missing some index properties, they become `undefined` in the new array.
 
@@ -187,7 +187,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## See also
 
 - [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}

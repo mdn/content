@@ -233,7 +233,7 @@ The available `credentialProtectionPolicy` values are as follows:
 
 If the `create()` call is successful, the authenticator data will contain a representation of the `credProtect` value representing the set policy in the following form:
 
-```
+```js
 { "credProtect": 0x01 }
 ```
 
@@ -336,8 +336,8 @@ extensions: {
 
 If the relying party is authorized to receive the `minPinLength` value (if its `rpId` is present on the authenticator's authorized relying party list), the authenticator data will contain a representation of it in the following form:
 
-```
-"minPinLength": uint
+```js
+{"minPinLength": uint}
 ```
 
 If the relying party is not authorized, the extension is ignored, and no `"minPinLength"` output value is provided.

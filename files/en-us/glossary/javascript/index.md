@@ -4,6 +4,8 @@ slug: Glossary/JavaScript
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 JavaScript (or "JS") is a programming language used most often for dynamic client-side scripts on webpages, but it is also often used on the {{Glossary("Server","server")}}-side, using a runtime such as [Node.js](https://nodejs.org/).
 
 JavaScript **should not** be confused with the [Java programming language](<https://en.wikipedia.org/wiki/Java_(programming_language)>). Although _"Java"_ and _"JavaScript"_ are trademarks (or registered trademarks) of Oracle in the U.S. and other countries, the two programming languages are significantly different in their syntax, semantics, and use cases.
@@ -25,5 +27,5 @@ Recently, JavaScript's popularity has expanded even further through the successf
 - [The "javascripting" workshop on NodeSchool](https://nodeschool.io/#workshoppers)
 - [The JavaScript course on codecademy.com](https://www.codecademy.com/catalog/language/javascript)
 - [The latest ECMAScript standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-- The [JavaScript reference](/en-US/docs/Web/JavaScript/reference) on MDN
+- The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference) on MDN
 - [The _Eloquent JavaScript_ book](https://eloquentjavascript.net/)

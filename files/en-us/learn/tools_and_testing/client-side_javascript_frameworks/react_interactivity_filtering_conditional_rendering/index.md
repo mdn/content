@@ -1,6 +1,7 @@
 ---
 title: "React interactivity: Editing, filtering, conditional rendering"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -311,10 +312,8 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 
 With this:
 
-```jsx
-{
-  filterList;
-}
+```jsx-nolint
+{filterList}
 ```
 
 This won't work yet. We've got a bit more work to do first.

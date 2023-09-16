@@ -29,7 +29,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `row`: The header relates to all cells of the row it belongs to.
     - `col`: The header relates to all cells of the column it belongs to.
-    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute in the {{HTMLElement("table")}} element.
+    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells.
     - `colgroup`: The header belongs to a colgroup and relates to all of its cells.
 
     If the `scope` attribute is not specified, or its value is not `row`, `col`, or `rowgroup`, or `colgroup`, then browsers automatically select the set of cells to which the header cell applies.

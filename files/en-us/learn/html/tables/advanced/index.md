@@ -1,6 +1,7 @@
 ---
 title: HTML table advanced features and accessibility
 slug: Learn/HTML/Tables/Advanced
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
@@ -100,118 +101,9 @@ Let's put these new elements into action.
 
 Your finished table should look something like the following:
 
-```html hidden
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>My spending record</title>
-    <style>
-      html {
-        font-family: sans-serif;
-      }
+{{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
-      table {
-        border-collapse: collapse;
-        border: 4px solid rgb(200, 200, 200);
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-      }
-
-      td,
-      th {
-        border: 2px solid rgb(190, 190, 190);
-        padding: 10px 20px;
-      }
-
-      th {
-        background-color: rgb(235, 235, 235);
-      }
-
-      td {
-        text-align: center;
-      }
-
-      tr:nth-child(even) td {
-        background-color: rgb(250, 250, 250);
-      }
-
-      tr:nth-child(odd) td {
-        background-color: rgb(245, 245, 245);
-      }
-
-      caption {
-        padding: 10px;
-      }
-
-      tbody {
-        font-size: 90%;
-        font-style: italic;
-      }
-
-      tfoot {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <table>
-      <caption>
-        How I chose to spend my money
-      </caption>
-      <thead>
-        <tr>
-          <th>Purchase</th>
-          <th>Location</th>
-          <th>Date</th>
-          <th>Evaluation</th>
-          <th>Cost (€)</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <td colspan="4">SUM</td>
-          <td>118</td>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>Haircut</td>
-          <td>Hairdresser</td>
-          <td>12/09</td>
-          <td>Great idea</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>Lasagna</td>
-          <td>Restaurant</td>
-          <td>12/09</td>
-          <td>Regrets</td>
-          <td>18</td>
-        </tr>
-        <tr>
-          <td>Shoes</td>
-          <td>Shoeshop</td>
-          <td>13/09</td>
-          <td>Big regrets</td>
-          <td>65</td>
-        </tr>
-        <tr>
-          <td>Toothpaste</td>
-          <td>Supermarket</td>
-          <td>13/09</td>
-          <td>Good</td>
-          <td>5</td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
-</html>
-```
-
-{{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
-
-> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
 
 ## Nesting Tables
 

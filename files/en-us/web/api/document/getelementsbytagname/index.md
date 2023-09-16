@@ -117,7 +117,7 @@ nested {{HTMLElement("div")}} elements).
 ## Notes
 
 When called on an HTML document, `getElementsByTagName()` lower-cases its
-argument before proceeding. This is undesirable when trying to match camelCase SVG
+argument before proceeding. This is undesirable when trying to match {{Glossary("camel_case", "camel case")}} SVG
 elements in a subtree in an HTML document.
 {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also
 [Webkit bug 499656](https://bugzil.la/499656).

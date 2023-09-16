@@ -35,7 +35,7 @@ let d = document.getElementById("d1");
 d.setAttributeNS(
   "http://www.mozilla.org/ns/specialspace",
   "spec:align",
-  "center"
+  "center",
 );
 ```
 

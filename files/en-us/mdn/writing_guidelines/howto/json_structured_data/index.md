@@ -1,6 +1,7 @@
 ---
 title: How to use structured data
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
+page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}

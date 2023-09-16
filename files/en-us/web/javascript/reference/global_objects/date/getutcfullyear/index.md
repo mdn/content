@@ -17,6 +17,10 @@ The **`getUTCFullYear()`** method of {{jsxref("Date")}} instances returns the ye
 getUTCFullYear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer representing the year for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

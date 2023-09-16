@@ -1,6 +1,7 @@
 ---
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
