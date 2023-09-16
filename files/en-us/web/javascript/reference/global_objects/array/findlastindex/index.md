@@ -37,7 +37,7 @@ findLastIndex(callbackFn, thisArg)
 ### Return value
 
 The index of the last (highest-index) element in the array that passes the test.
-Otherwise -1 if no matching element is found.
+Otherwise `-1` if no matching element is found.
 
 ## Description
 
@@ -113,7 +113,8 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
