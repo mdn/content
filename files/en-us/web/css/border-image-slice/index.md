@@ -40,6 +40,7 @@ border-image-slice: 7 12 14 5;
 
 /* Using the `fill` keyword */
 border-image-slice: 10% fill;
+border-image-slice: fill 10%;
 
 /* Global values */
 border-image-slice: inherit;
