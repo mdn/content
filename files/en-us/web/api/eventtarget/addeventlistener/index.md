@@ -334,9 +334,8 @@ class SomeClass {
   }
 
   register() {
-    const that = this;
     window.addEventListener("keydown", (e) => {
-      that.someMethod(e);
+      this.someMethod(e);
     });
   }
 
