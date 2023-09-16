@@ -27,7 +27,7 @@ indexOf(searchElement, fromIndex)
 
 ### Return value
 
-The first index of the element in the array; `-1` if not found.
+The first index of `searchElement` in the typed array; `-1` if not found.
 
 ## Description
 

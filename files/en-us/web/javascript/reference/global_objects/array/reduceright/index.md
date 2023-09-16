@@ -31,7 +31,7 @@ reduceRight(callbackFn, initialValue)
     - `currentValue`
       - : The value of the current element. On the first call, its value is the last element if `initialValue` is specified; otherwise its value is the second-to-last element.
     - `currentIndex`
-      - : The index position of `currentValue` in the typed array. On the first call, its value is `array.length - 1` if `initialValue` is specified, otherwise `array.length - 2`.
+      - : The index position of `currentValue` in the array. On the first call, its value is `array.length - 1` if `initialValue` is specified, otherwise `array.length - 2`.
     - `array`
       - : The array `reduceRight()` was called upon.
 - `initialValue` {{optional_inline}}
