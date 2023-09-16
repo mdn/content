@@ -52,7 +52,6 @@ parent child {
 
 ### Examples
 
-The following examples shows the impact of omitting the `&` nesting selector with the pre-August 2023 version of the nesting spec. The output shown for the following two exmaples assumes the code is being run on Chrome or Safari. When the two examples below are run with the new nesting spec (in FireFox 117 and above) the output of both examples matches that of the second example.
 
 In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
 
