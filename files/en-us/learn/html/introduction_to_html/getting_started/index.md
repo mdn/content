@@ -245,22 +245,25 @@ An attribute should have:
 
 ### Active learning: Adding attributes to an element
 
-Another example of an element is {{htmlelement("a")}}. This stands for _anchor_. An anchor can make the text it encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
+The `<img>` element can take a number of attributes, but several are as follows:
 
-- `href`
-  - : This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
-- `title`
-  - : The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
-- `target`
-  - : The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+- `src`
+  - : The `src` attribute is a **required** attribute that specifies the location of the image. This can be a website or a file path. For example, from a website: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`
+- `alt`
+  - : The `alt` attribute specifies an alternative text description of the image. For a number of reasons, a browser may not display an image and will instead replace the image with the text. For example: `alt="The Firefox icon"`
+- `width`
+  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`
+- `height`
+  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`
 
-Edit the line below in the _Input_ area to turn it into a link to your favorite website.
+Edit the line below in the _Input_ area to turn it into an image. (Note: The sample window can only take in images from the web since it can't access files from your machine.)
 
-1. Add the `<a>` element.
-2. Add the `href` attribute and the `title` attribute.
-3. Specify the `target` attribute to open the link in the new tab.
+1. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
+2. Back in the area below, add the `src` attribute and fill it with the link from step 1.
+3. Change the `alt` attribute
+4. Add the `width` and `height` attributes.
 
-You will be able to see your changes live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name and between each attribute.
+You will be able to see your changes live in the _Output_ area.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -275,7 +278,7 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;A link to my favorite website.&lt;/p&gt;
+&lt;img alt="I should be an image" &gt;
 </textarea>
 
 <div class="playable-buttons">
@@ -319,7 +322,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+  '<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" width="100" height="100" />';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
