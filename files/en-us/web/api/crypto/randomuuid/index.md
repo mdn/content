@@ -1,4 +1,5 @@
----
+-![image](https://github.com/mdn/content/assets/134336103/9c317d18-5982-4ebc-8607-d6f35605c0a3)
+-
 title: "Crypto: randomUUID() method"
 short-title: randomUUID()
 slug: Web/API/Crypto/randomUUID
