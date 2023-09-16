@@ -53,7 +53,7 @@ button {
   text-transform: uppercase;
   text-align: center;
   border: 2px solid rgb(200 200 0 / 0.6);
-  background: rgba(0, 217, 217, 0.6);
+  background-color: rgb(0 217 217 / 0.6);
   color: rgb(100 0 0 / 1);
   box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
   border-radius: 10px;
