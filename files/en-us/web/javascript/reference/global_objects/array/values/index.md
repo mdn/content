@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
+The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -16,6 +16,10 @@ The **`values()`** method returns a new _[array iterator](/en-US/docs/Web/JavaSc
 ```js-nolint
 values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -129,7 +133,7 @@ for (const element of [, "a"].values()) {
 
 ### Calling values() on non-array objects
 
-The `values()` method reads the `length` property of `this` and then accesses each integer index.
+The `values()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -137,6 +141,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "d", // ignored by values() since length is 3
 };
 for (const entry of Array.prototype.values.call(arrayLike)) {
   console.log(entry);
@@ -157,7 +162,7 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}

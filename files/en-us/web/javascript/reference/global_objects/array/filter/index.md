@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Array.filter
 
 {{JSRef}}
 
-The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-filter.html", "shorter")}}
 
 ## Syntax
 
@@ -33,7 +33,7 @@ filter(callbackFn, thisArg)
 
 ### Return value
 
-A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of the given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. If no elements pass the test, an empty array will be returned.
+A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned.
 
 ## Description
 
@@ -55,7 +55,7 @@ The `filter()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_O
 
 ### Filtering out all small values
 
-The following example uses `filter()` to create a filtered array that has all elements with values less than `10` removed.
+The following example uses `filter()` to create a filtered array that has all elements with values less than 10 removed.
 
 ```js
 function isBigEnough(value) {
@@ -151,7 +151,7 @@ console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
 
 ### Calling filter() on non-array objects
 
-The `filter()` method reads the `length` property of `this` and then accesses each integer index.
+The `filter()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -159,6 +159,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "a", // ignored by filter() since length is 3
 };
 console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 // [ 'a', 'b' ]
@@ -215,7 +216,7 @@ console.log(deleteWords);
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}

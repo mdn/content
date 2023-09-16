@@ -44,13 +44,13 @@ function listener(details) {
     let encoder = new TextEncoder();
     filter.write(encoder.encode("preface text"));
     filter.disconnect();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

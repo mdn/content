@@ -1,6 +1,7 @@
 ---
 title: Create Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
@@ -94,7 +95,7 @@ exports.book_create_post = [
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genre._id) > -1) {
+        if (book.genre.includes(genre._id)) {
           genre.checked = "true";
         }
       }
@@ -145,13 +146,12 @@ We then use a wildcard (`*`) in the sanitizer to individually validate each of t
 ```
 
 The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form.
-In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked='true'` parameter to those that were in our post data (as reproduced in the code fragment below).
+In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked="true"` parameter to those that were in our post data (as reproduced in the code fragment below).
 
 ```js
 // Mark our selected genres as checked.
-for (const genre of results.genres) {
+for (const genre of allGenres) {
   if (book.genre.includes(genre._id)) {
-    // Current genre is selected. Set "checked" flag.
     genre.checked = "true";
   }
 }
@@ -207,8 +207,16 @@ The main differences are in how we implement the selection-type fields: `Author`
 
 - The set of genres are displayed as checkboxes, and use the `checked` value we set in the controller to determine whether or not the box should be selected.
 - The set of authors are displayed as a single-selection alphabetically ordered drop-down list. If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable).
+- The authors are ordered alphabetically before adding them as options in the drop-down list:
 
-  > **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
+  ```pug
+  - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+  ```
+
+  Note that the code starts with `-`.
+  In pug this is referred to as "unbuffered code", and doesn't add anything to the view (see [pug docs](https://pugjs.org/language/code.html) for more detail).
+
+> **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
 
 ## What does it look like?
 

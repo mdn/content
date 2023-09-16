@@ -1,6 +1,7 @@
 ---
 title: What are browser developer tools?
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -43,7 +44,7 @@ The developer tools usually open by default to the inspector, which looks someth
 If you _don't_ see the inspector,
 
 - Tap/click the _Inspector_ tab.
-- In Microsoft Edge, or Opera, tap/click Elements.
+- In Chrome, Microsoft Edge, or Opera, tap/click Elements.
 - In Safari, the controls are not so clearly presented, but you should see the HTML if you haven't selected something else to appear in the window. Press the _Style_ button to see the CSS.
 
 ### Exploring the DOM inspector
@@ -171,12 +172,12 @@ document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement("img");
-myWordmark.setAttribute(
+const loginImage = document.createElement("img");
+loginImage.setAttribute(
   "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
-document.querySelector("h1").appendChild(myWordmark);
+document.querySelector("h1").appendChild(loginImage);
 ```
 
 Now try entering the following incorrect versions of the code and see what you get.
@@ -190,12 +191,12 @@ document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const myWordmark = document.createElement("img");
-myBanana.setAttribute(
+const loginImage = document.createElement("img");
+banana.setAttribute(
   "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
-document.querySelector("h1").appendChild(myWordmark);
+document.querySelector("h1").appendChild(loginImage);
 ```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!

@@ -16,6 +16,7 @@ This enumerated attribute can have the following values:
 
 - '`true`' indicates that the element is `contenteditable`.
 - '`false`' indicates that the element cannot be edited.
+- '`plaintext-only`' indicates that the element's raw text is editable, but rich text formatting is disabled.
 - '`inherit`' indicates that the element inherits its parent's editable
   status.
 

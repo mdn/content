@@ -1,6 +1,7 @@
 ---
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -139,8 +140,8 @@ _No changes._
 
 - The non-standard [`Date.prototype.toLocaleFormat()`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#date_2) method has been removed ([Firefox bug 818634](https://bugzil.la/818634)).
 - The non-standard and deprecated {{jsxref("Object.prototype.watch()")}} and {{jsxref("Object.prototype.unwatch", "unwatch()")}} methods have been removed and will no longer work ([Firefox bug 638054](https://bugzil.la/638054)). Consider using [setters and getters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) or [proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) instead.
-- The [legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator), the [`StopIteration`](/en-US/docs/Archive/Web/StopIteration) object, the [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and standards-compliant [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) instead ([Firefox bug 1083482](https://bugzil.la/1083482), [Firefox bug 1413867](https://bugzil.la/1413867), [Firefox bug 1119777](https://bugzil.la/1119777)).
-- The non-standard [Array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) and [Generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) have been removed ([Firefox bug 1414340](https://bugzil.la/1414340)).
+- The [legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator), the [`StopIteration`](/en-US/docs/Archive/Web/StopIteration) object, the [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and standards-compliant [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) instead ([Firefox bug 1083482](https://bugzil.la/1083482), [Firefox bug 1413867](https://bugzil.la/1413867), [Firefox bug 1119777](https://bugzil.la/1119777)).
+- The non-standard [Array comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) and [Generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) have been removed ([Firefox bug 1414340](https://bugzil.la/1414340)).
 
 ### APIs
 

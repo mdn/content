@@ -7,12 +7,12 @@ browser-compat: javascript.builtins.Array.findIndex
 
 {{JSRef}}
 
-The **`findIndex()`** method returns the index of the first element in an array that satisfies the provided testing function.
+The **`findIndex()`** method of {{jsxref("Array")}} instances returns the index of the first element in an array that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-findindex.html", "shorter")}}
 
 ## Syntax
 
@@ -87,11 +87,12 @@ console.log([1, , 3].findIndex((x) => x === undefined)); // 1
 
 ### Calling findIndex() on non-array objects
 
-The `findIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
   length: 3,
+  "-1": 0.1, // ignored by findIndex() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,
@@ -112,7 +113,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findLast()")}}

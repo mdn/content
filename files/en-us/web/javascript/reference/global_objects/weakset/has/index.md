@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.WeakSet.has
 
 {{JSRef}}
 
-The **`has()`** method returns a boolean indicating whether an
-object exists in a `WeakSet` or not.
+The **`has()`** method of {{jsxref("WeakSet")}} instances returns a boolean indicating whether an
+object exists in this `WeakSet` or not.
 
 {{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
 

@@ -47,7 +47,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}} and
 {{domxref("DataTransfer.setData()","setData()")}} methods.
 
-### HTML Content
+### HTML
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -58,7 +58,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 #div1,

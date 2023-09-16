@@ -40,7 +40,7 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
 
-- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
+- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static", "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
 
 ## Instance methods

@@ -24,4 +24,4 @@ The CSS Counter Styles module allows to define custom counter styles, which can 
 
 ## See also
 
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)

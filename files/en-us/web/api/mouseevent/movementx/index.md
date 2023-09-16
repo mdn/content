@@ -33,7 +33,7 @@ This example logs the amount of mouse movement using `movementX` and {{domxref("
 function logMovement(event) {
   log.insertAdjacentHTML(
     "afterbegin",
-    `movement: ${event.movementX}, ${event.movementY}<br>`
+    `movement: ${event.movementX}, ${event.movementY}<br>`,
   );
   while (log.childNodes.length > 128) log.lastChild.remove();
 }

@@ -13,7 +13,6 @@ The **`stroke-linejoin`** attribute is a presentation attribute defining the sha
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('path')}}
 - {{SVGElement('polygon')}}
 - {{SVGElement('polyline')}}
@@ -101,10 +100,10 @@ svg {
     <circle cx="3" cy="2" r="0.05" fill="pink" />
     <circle cx="5" cy="5.5" r="0.05" fill="pink" />
   </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <use href="#highlight" x="6" />
+  <use href="#highlight" x="12" />
+  <use href="#highlight" x="2" y="6" />
+  <use href="#highlight" x="8" y="6" />
 </svg>
 ```
 

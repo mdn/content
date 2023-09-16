@@ -1,6 +1,6 @@
 ---
 title: Color picker tool
-slug: Web/CSS/CSS_Colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_picker_tool
 page-type: guide
 ---
 
@@ -20,7 +20,7 @@ The generated colors you create above can be used anywhere color is used in CSS 
 
 For more on using color, see:
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 - [Changing background styles using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
@@ -28,9 +28,9 @@ For more on using color, see:
 
 For additional tools, see:
 
-- [Border-image generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator)
+- [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
   - : This interactive tool lets you visually create border images (the {{cssxref("border-image")}} property).
-- [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
+- [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
   - : This interactive tool lets you visually create rounded corners (the {{cssxref("border-radius")}} property).
-- [Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
+- [Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
   - : This interactive tool lets you visually create shadows behind elements (the {{cssxref("box-shadow")}} property).

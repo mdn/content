@@ -24,7 +24,7 @@ element.addEventListener(
   (event) => {
     console.log(event.newValue);
   },
-  false
+  false,
 );
 ```
 

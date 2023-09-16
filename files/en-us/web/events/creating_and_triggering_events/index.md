@@ -1,6 +1,7 @@
 ---
 title: Creating and triggering events
 slug: Web/Events/Creating_and_triggering_events
+page-type: guide
 ---
 
 This article demonstrates how to create and dispatch DOM events. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
@@ -18,7 +19,7 @@ elem.addEventListener(
   (e) => {
     /* … */
   },
-  false
+  false,
 );
 
 // Dispatch the event.
@@ -63,7 +64,7 @@ elem.addEventListener(
   (e) => {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 // target can be any Element or other EventTarget.
@@ -120,7 +121,7 @@ textarea.addEventListener("input", function () {
     new CustomEvent("awesome", {
       bubbles: true,
       detail: { text: () => textarea.value },
-    })
+    }),
   );
 });
 ```

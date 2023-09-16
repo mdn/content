@@ -87,7 +87,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`: the table is displayed in the center of the document;
     - `right`: the table is displayed on the right side of the document.
 
-    Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to `auto` or {{cssxref("margin")}} to `0 auto` to achieve an effect that is similar to the align attribute.
+    Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to achieve an effect that is similar to the align attribute:
+
+    - `left`: `margin-right: auto; margin-left: 0;`
+    - `center`: `margin-right: auto; margin-left: auto;`
+    - `right`: `margin-right: 0; margin-left: auto;`
 
 - `bgcolor` {{Deprecated_inline}}
 
@@ -135,6 +139,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead.
 - `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
+
+> **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the height of the parent container.
 
 ## Examples
 

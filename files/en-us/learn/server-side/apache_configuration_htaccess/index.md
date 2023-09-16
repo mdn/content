@@ -1,6 +1,7 @@
 ---
 title: "Apache Configuration: .htaccess"
 slug: Learn/Server-side/Apache_Configuration_htaccess
+page-type: guide
 ---
 
 {{LearnSidebar}}
@@ -156,7 +157,7 @@ For example, the filename extensions of content files often define the content's
 
 Associates media types with one or more extensions to make sure the resources will be served appropriately.
 
-Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
+Servers should use `text/javascript` for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
 ```apacheconf
 <IfModule mod_expires.c>

@@ -1,6 +1,7 @@
 ---
 title: Insecure certificate
 slug: Web/WebDriver/Errors/InsecureCertificate
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
@@ -23,12 +24,12 @@ session = webdriver.Firefox()
 try:
     session.get("https://self-signed.badssl.com/")
 except exceptions.InsecureCertificateException as e:
-    print("Hit insecure cert on {}".format(session.current_url)
+    print("Hit insecure cert on {}".format(session.current_url))
 ```
 
 Output:
 
-```
+```plain
 Hit an insecure cert on https://self-signed.badssl.com/
 ```
 

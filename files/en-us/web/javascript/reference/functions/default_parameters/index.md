@@ -14,7 +14,7 @@ browser-compat: javascript.functions.default_parameters
 ## Syntax
 
 ```js-nolint
-function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) {
+function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {
   // …
 }
 ```
@@ -103,7 +103,7 @@ f(5); // 5
 
 ### Passing undefined vs. other falsy values
 
-In the second call in this example, even if the first argument is set explicitly to `undefined` (though not `null` or other {{glossary("falsy")}} values), the value of the `num` argument is still the default.
+In the second call in this example, even if the first argument is set explicitly to `undefined` (though not `null` or other {{Glossary("falsy")}} values), the value of the `num` argument is still the default.
 
 ```js
 function test(num = 1) {
@@ -183,6 +183,7 @@ function withDefaults(
 
 function withoutDefaults(a, b, c, d, e, f, g) {
   switch (arguments.length) {
+    case 0:
     case 1:
       b = 5;
     case 2:
@@ -210,7 +211,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax.
 
-A common way of doing that is to set an empty object/array as the default value the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
+A common way of doing that is to set an empty object/array as the default value for the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
 
 ```js
 function preFilledArray([x = 1, y = 2] = []) {
@@ -242,7 +243,7 @@ preFilledObject({ z: 2 }); // 2
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

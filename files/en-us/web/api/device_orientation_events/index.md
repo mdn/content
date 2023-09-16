@@ -30,6 +30,8 @@ Some typical features for which you might want to use the device orientation eve
 
 - for gesture recognition — for example, recognizing a "shake" gesture and using it to perform some action such as clearing an input area when the user shakes the device
 
+> **Note:** This API is widely supported on mobile browsers. While some desktop-only browsers may have limitations due to hardware differences, these constraints are rarely significant given the API's primary usage on sensor-equipped devices.
+
 ## Interfaces
 
 - {{domxref("DeviceOrientationEvent")}}
@@ -60,4 +62,4 @@ Some typical features for which you might want to use the device orientation eve
 
 ## See also
 
-- [Device Orientation & Motion](https://web.dev/native-hardware-device-orientation/) at web.dev
+- [Device Orientation & Motion](https://web.dev/device-orientation/) at web.dev

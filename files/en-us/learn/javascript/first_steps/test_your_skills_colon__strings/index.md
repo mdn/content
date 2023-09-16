@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Strings"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

@@ -122,13 +122,13 @@ async function onStartedXRSession(xrSession) {
       case AbortError:
         showSimpleMessageBox(
           "Unable to transfer the game to your XR headset.",
-          "Cancel"
+          "Cancel",
         );
         break;
       case InvalidStateError:
         showSimpleMessageBox(
           "You don't appear to have a compatible XR headset available.",
-          "Cancel"
+          "Cancel",
         );
         break;
       default:

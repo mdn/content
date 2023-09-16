@@ -79,7 +79,7 @@ myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
 
   console.log(
     "buf.byteLength in main AFTER transfer back from worker:",
-    bufTransferredBackFromWorker.byteLength
+    bufTransferredBackFromWorker.byteLength,
   );
 });
 
@@ -88,7 +88,7 @@ const myBuf = new ArrayBuffer(8);
 
 console.log(
   "buf.byteLength in main BEFORE transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 
 // send myBuf to myWorker and transfer the underlying ArrayBuffer
@@ -96,7 +96,7 @@ myWorker.postMessage(myBuf, [myBuf]);
 
 console.log(
   "buf.byteLength in main AFTER transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 ```
 
@@ -111,7 +111,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker BEFORE transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 
   // send buf back to main and transfer the underlying ArrayBuffer
@@ -119,7 +119,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker AFTER transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 };
 ```
