@@ -1,6 +1,6 @@
 ---
 title: Applying color to HTML elements using CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 page-type: guide
 ---
 
@@ -147,7 +147,11 @@ Here are some sample colors in HSL notation:
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -254,7 +258,7 @@ The HTML responsible for creating the above example is shown here:
 
 This is pretty simple, using a {{HTMLElement("div")}} as a wrapper around the contents, which consists of two more `<div>`s, each styled differently with a single paragraph ({{HTMLElement("p")}}) in each box.
 
-The magic happens, as usual, in the CSS, where we'll apply colors define the layout for the HTML above.
+The magic happens, as usual, in the CSS, where we'll apply colors and define the layout for the HTML above.
 
 #### CSS
 
@@ -282,14 +286,17 @@ Our two colored boxes share a number of properties in common, so next we establi
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 ```
 
-In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
+In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
 
 ```css
 .boxLeft {
@@ -362,7 +369,11 @@ The CSS establishes a size for the box and some basic styling for appearances. T
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -382,7 +393,7 @@ colorPicker.addEventListener(
   (event) => {
     box.style.borderColor = event.target.value;
   },
-  false
+  false,
 );
 
 colorPicker.addEventListener(
@@ -390,7 +401,7 @@ colorPicker.addEventListener(
   (event) => {
     output.innerText = `Color set to ${colorPicker.value}.`;
   },
-  false
+  false,
 );
 ```
 
@@ -424,7 +435,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](https://paletton.com/)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
@@ -505,4 +516,4 @@ With this set, the browser won't tamper with the appearance of the element, and 
 
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)

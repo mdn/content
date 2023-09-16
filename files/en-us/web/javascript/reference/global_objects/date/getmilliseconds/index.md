@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.getMilliseconds
 
 The **`getMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 getMilliseconds()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -28,7 +32,7 @@ An integer, between 0 and 999, representing the milliseconds for the given date 
 The `milliseconds` variable has value `0`, based on the value of the {{jsxref("Date")}} object `xmas95`, which doesn't specify the milliseconds component, so it defaults to 0.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const milliseconds = xmas95.getMilliseconds();
 
 console.log(milliseconds); // 0

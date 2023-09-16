@@ -1,6 +1,7 @@
 ---
 title: launch_handler
 slug: Web/Manifest/launch_handler
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.launch_handler
@@ -57,7 +58,7 @@ The `launch_handler` member defines values that control the launch of a web appl
 }
 
 "launch_handler": {
-    "client_mode": ["focus-existing, auto"]
+    "client_mode": ["focus-existing", "auto"]
 }
 ```
 

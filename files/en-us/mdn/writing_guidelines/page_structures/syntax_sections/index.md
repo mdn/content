@@ -153,9 +153,30 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 
 ```js-nolint
 unshift()
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
+```
+
+Prefer starting numbering from 1, which allows writing description like "`unshift` adds N elements to the beginning of the array", as well as "the first element" (instead of "the zeroth element").
+
+Note that the case of passing zero rest parameters is always included, even when it doesn't make much sense. Then, in the "Parameters" section, write this:
+
+```md
+- `element1`, …, `elementN`
+  - : The elements to add to the front of the array.
+```
+
+Add `\{{optional_inline}}` here when passing zero rest parameters makes sense.
+
+Another example with some positional parameters before the rest parameter:
+
+```js-nolint
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 #### Parameters section
@@ -253,7 +274,7 @@ HTTP header syntax (and Content-Security-Policy) is documented in two separate s
 
 The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:
 
-```plain
+```http
 If-None-Match: <etag_value>
 If-None-Match: <etag_value>, <etag_value>, …
 If-None-Match: *
@@ -269,7 +290,7 @@ The "Directive" section contains a description list containing the names and des
 
 Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the [GET method](/en-US/docs/Web/HTTP/Methods/GET) looks like this:
 
-```plain
+```http
 GET /index.html
 ```
 
@@ -277,7 +298,7 @@ GET /index.html
 
 Again, the syntax for HTTP response status codes is really simple — a syntax block including the code and name. For example:
 
-```plain
+```http
 404 Not Found
 ```
 

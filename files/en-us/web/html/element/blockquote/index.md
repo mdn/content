@@ -24,7 +24,7 @@ To change the indentation applied to the quoted text, use the {{Glossary("CSS")}
 
 To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.
 
-## Example
+## Examples
 
 This example demonstrates the use of the `<blockquote>` element to quote a passage from {{RFC(1149)}}, _A Standard for the Transmission of IP Datagrams on Avian Carriers_.
 
@@ -34,17 +34,17 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
     Avian carriers can provide high delay, low throughput, and low altitude
     service. The connection topology is limited to a single point-to-point path
     for each carrier, used with standard carriers, but many carriers can be used
-    without significant interference with each other, outside early spring.
-    This is because of the 3D ether space available to the carriers, in contrast
-    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    without significant interference with each other, outside early spring. This
+    is because of the 3D ether space available to the carriers, in contrast to
+    the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
     avoidance system, which increases availability.
   </p>
 </blockquote>
 ```
 
-The output from this HTML snippet looks like this:
+### Result
 
-{{EmbedLiveSample("Example", 640, 180)}}
+{{EmbedLiveSample("Examples", 640, 180)}}
 
 ## Technical summary
 

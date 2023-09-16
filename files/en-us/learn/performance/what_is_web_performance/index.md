@@ -1,6 +1,7 @@
 ---
 title: What is web performance?
 slug: Learn/Performance/What_is_web_performance
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}

@@ -1,6 +1,7 @@
 ---
 title: Firefox 51 for developers
 slug: Mozilla/Firefox/Releases/51
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -33,7 +34,7 @@ slug: Mozilla/Firefox/Releases/51
 - Using {{jsxref("Statements/const", "const")}} in [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now has a fresh binding for each iteration and no longer throws a {{jsxref("SyntaxError")}} ([Firefox bug 1101653](https://bugzil.la/1101653)).
 - The deprecated [for each...in](/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in) loop now presents a [warning in the console](/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) ([Firefox bug 1293205](https://bugzil.la/1293205)). Please migrate your code to use the standardized [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
 - [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can't have a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label) anymore and "`let`" as a label name is disallowed now ([Firefox bug 1288459](https://bugzil.la/1288459)).
-- Deprecated [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) will now throw when used in [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) ([Firefox bug 1199296](https://bugzil.la/1199296)).
+- Deprecated [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) will now throw when used in [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) ([Firefox bug 1199296](https://bugzil.la/1199296)).
 - The `next()` method of the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) will now throw a {{jsxref("TypeError")}} if the returned value is not an object ([Firefox bug 1016936](https://bugzil.la/1016936)).
 - Child-indexed pseudo-class selectors should match without a parent ([Firefox bug 1300374](https://bugzil.la/1300374)).
 
@@ -80,12 +81,12 @@ slug: Mozilla/Firefox/Releases/51
 
 - Added {{SVGAttr("tabindex")}} attribute ([Firefox bug 778654](https://bugzil.la/778654)).
 - Added {{SVGAttr("href")}} attribute, which renders {{SVGAttr("xlink:href")}} obsolete ([Firefox bug 1245751](https://bugzil.la/1245751)).
-- You can now use custom data attributes on SVG elements through the {{domxref("SVGElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ([Firefox bug 921834](https://bugzil.la/921834)).
+- You can now use custom data attributes on SVG elements through the {{domxref("HTMLElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ([Firefox bug 921834](https://bugzil.la/921834)).
 - CSS Animations used in an SVG image which is presented in an {{HTMLElement("img")}} element now work again; this was an old regression ([Firefox bug 1190881](https://bugzil.la/1190881)).
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("DedicatedWorkerGlobalScope.close")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 
@@ -116,10 +117,10 @@ slug: Mozilla/Firefox/Releases/51
 
 - The {{domxref("DOMImplementation.hasFeature()")}} now returns `true` in all cases ([Firefox bug 984778](https://bugzil.la/984778)).
 - The {{domxref("HTMLInputElement")}} and {{domxref("HTMLTextAreaElement")}} properties `selectionStart` and `selectionEnd` now correctly return the current position of the text input cursor when there's no selection, instead of returning 0 ([Firefox bug 1287655](https://bugzil.la/1287655)).
-- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the `onerror` event handler, sending {{domxref("Element/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
+- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the `onerror` event handler, sending {{domxref("HTMLElement/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
 - You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ([Firefox bug 1049975](https://bugzil.la/1049975)).
 - The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (`dom.permissions.revoke.enable`) and disabled by default since its design and even its very existence is under discussion in the [Web Application Security Working Group](https://www.w3.org/2011/webappsec/).
-- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See [Firefox bug 1267941](https://bugzil.la/1267941).
+- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("Navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See [Firefox bug 1267941](https://bugzil.la/1267941).
 - For privacy reasons, both {{domxref("BatteryManager.chargingTime")}} and {{domxref("BatteryManager.dischargingTime")}} now round the returned value to the closest 15 minutes ([Firefox bug 1292655](https://bugzil.la/1292655)).
 
 ### Events

@@ -114,7 +114,7 @@ insert.addEventListener("click", () => {
   const positionSelect = document.querySelector("#position");
   subject.insertAdjacentHTML(
     positionSelect.value,
-    "<strong>inserted text</strong>"
+    "<strong>inserted text</strong>",
   );
 });
 

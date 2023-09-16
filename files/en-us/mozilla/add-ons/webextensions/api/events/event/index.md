@@ -16,9 +16,9 @@ Values of this type are objects.
 ## Methods
 
 - {{WebExtAPIRef("events.Event.addListener","events.Event.addListener()")}}
-  - : Registers an event listener callback to an event.
+  - : Registers an event listener to an event.
 - {{WebExtAPIRef("events.Event.removeListener","events.Event.removeListener()")}}
-  - : Deregisters an event listener callback from an event.
+  - : Deregisters an event listener from an event.
 - {{WebExtAPIRef("events.Event.hasListener","events.Event.hasListener()")}}
   - : Tests registration status of a listener.
 - {{WebExtAPIRef("events.Event.hasListeners","events.Event.hasListeners()")}}

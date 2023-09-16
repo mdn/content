@@ -4,6 +4,8 @@ slug: Glossary/Boolean
 page-type: glossary-disambiguation
 ---
 
+{{GlossarySidebar}}
+
 In computer science, a **Boolean** is a logical data type that can have only the values `true` or `false`.
 
 For example, in JavaScript, Boolean conditionals are often used to decide which sections of code to execute (such as in [if statements](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) or repeat (such as in [for loops](/en-US/docs/Web/JavaScript/Reference/Statements/for)).

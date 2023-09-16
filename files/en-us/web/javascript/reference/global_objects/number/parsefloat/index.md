@@ -20,7 +20,7 @@ Number.parseFloat(string)
 ### Parameters
 
 - `string`
-  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{Glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
@@ -53,5 +53,5 @@ See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 ## See also
 
 - [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}: The object this method belongs to.
-- The global {{jsxref("parseFloat", "parseFloat()")}} method.
+- {{jsxref("Number")}}
+- {{jsxref("parseFloat", "parseFloat()")}}

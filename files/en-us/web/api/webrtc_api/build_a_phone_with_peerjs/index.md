@@ -35,7 +35,7 @@ Before you get started, you'll want to make sure you've [installed node](https:/
    3. [Create a Peer Connection](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
    4. [Creating a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
    5. [Answer a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
-   6. [End a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call)
+   6. [End a Call](/en-US/docs/Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call)
 
 3. [Deployment and Further Reading](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading)
 

@@ -1,6 +1,7 @@
 ---
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -80,7 +81,7 @@ This turns the heading into a link:
 
 ### Image links
 
-If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the image file referenced with the {{htmlelement("img")}} element.
+If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the image file referenced with the {{htmlelement("img")}} element. The example below uses a relative path to reference a locally stored SVG image file.
 
 ```css hidden
 img {
@@ -92,7 +93,7 @@ img {
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
-  <img src="mdn_logo.svg" alt="MDN Web Docs homepage" />
+  <img src="mdn_logo.svg" alt="MDN Web Docs" />
 </a>
 ```
 

@@ -5,9 +5,9 @@ page-type: javascript-language-feature
 browser-compat: javascript.classes.public_class_fields
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
-Both static and instance **public fields** are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
+**Public fields** are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
 
 ## Syntax
 
@@ -101,7 +101,7 @@ const instance2 = new C();
 console.log(instance1.obj === instance2.obj); // false
 ```
 
-The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
 
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor. However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
 
@@ -245,9 +245,9 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - {{jsxref("Statements/class", "class")}}
-- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (May 2, 2018)
-- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (December 13, 2018)
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)

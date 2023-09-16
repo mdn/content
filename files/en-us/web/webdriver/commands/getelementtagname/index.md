@@ -1,6 +1,7 @@
 ---
 title: Get Element Tag Name
 slug: Web/WebDriver/Commands/GetElementTagName
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementTagName
 ---
 
@@ -46,7 +47,7 @@ print(search_box.tag_name)
 
 Output:
 
-```
+```plain
 INPUT
 ```
 

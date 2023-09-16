@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.toLocaleTimeString
 
 {{JSRef}}
 
-The **`toLocaleTimeString()`** method returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleTimeString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 
 When formatting large numbers of dates, it is better to create an {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method.
 
@@ -65,7 +65,7 @@ console.log(date.toLocaleTimeString());
 
 ### Checking for support for locales and options parameters
 
-The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleTimeString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internationalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleTimeString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
 
 ```js
 function toLocaleTimeStringSupportsLocales() {

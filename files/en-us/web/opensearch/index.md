@@ -1,6 +1,7 @@
 ---
 title: OpenSearch description format
 slug: Web/OpenSearch
+page-type: guide
 ---
 
 {{AddonSidebar}}

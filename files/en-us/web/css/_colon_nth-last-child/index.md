@@ -45,7 +45,8 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 By passing a selector argument, we can select the **nth-last** element that matches that selector. For example, the following selector matches the last three _important_ list items, which are assigned with `class="important"`.
 
 ```css
-:nth-last-child(-n+3 of li.important) ;
+:nth-last-child(-n + 3 of li.important) {
+}
 ```
 
 > **Note:** This is different from moving the selector outside of the function, like:

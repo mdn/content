@@ -13,7 +13,6 @@ The **`stroke-opacity`** attribute is a presentation attribute defining the opac
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}

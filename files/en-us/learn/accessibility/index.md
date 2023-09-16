@@ -1,6 +1,7 @@
 ---
 title: Accessibility
 slug: Learn/Accessibility
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

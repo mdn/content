@@ -26,7 +26,7 @@ where:
 
 ### Basic usage example
 
-In JavaScript, we register the [paint worklet](/en-US/docs/Web/API/PaintWorklet):
+In JavaScript, we register the [paint worklet](/en-US/docs/Web/API/PaintWorkletGlobalScope):
 
 ```js
 CSS.paintWorklet.addModule("boxbg.js");
@@ -84,7 +84,7 @@ You can pass additional arguments via the CSS paint() function. In this example,
 
 ```js hidden
 CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js"
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
 );
 ```
 
@@ -119,7 +119,7 @@ We've included a custom property in the selector block defining a boxColor. Cust
 
 ## See also
 
-- {{domxref('PaintWorklet')}}
+- {{domxref('PaintWorkletGlobalScope')}}
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - {{cssxref("&lt;image&gt;")}}

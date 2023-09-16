@@ -1,6 +1,7 @@
 ---
 title: Client-Server Overview
 slug: Learn/Server-side/First_steps/Client-Server_overview
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

@@ -98,5 +98,5 @@ console.log(
 
 ## See also
 
+- [Polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat/)
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat/)

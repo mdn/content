@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Values and units"
 slug: Learn/CSS/Building_blocks/Values_tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Positioning"
 slug: Learn/CSS/CSS_layout/Position_skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}
