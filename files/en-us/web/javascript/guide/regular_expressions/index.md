@@ -159,7 +159,7 @@ For instance, to match the string "C:\\" where "C" can be any letter, you'd use 
 If using the `RegExp` constructor with a string literal, remember that the backslash is an escape in string literals, so to use it in the regular expression, you need to escape it at the string literal level.
 `/a\*b/` and `new RegExp("a\\*b")` create the same expression, which searches for "a" followed by a literal "\*" followed by "b".
 
-If escape strings are not already part of your pattern you can add them using {{jsxref('String.prototype.replace()')}}:
+If escape strings are not already part of your pattern you can add them using {{jsxref("String.prototype.replace()")}}:
 
 ```js
 function escapeRegExp(string) {
@@ -453,7 +453,7 @@ form.addEventListener("submit", (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Using_special_characters_to_verify_input') }}
+{{EmbedLiveSample("Using_special_characters_to_verify_input")}}
 
 ## Tools
 

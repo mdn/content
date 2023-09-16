@@ -14,6 +14,12 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTML
 
+- The {{HTMLElement('search')}} element is now supported. The `<search>` element is a group element that serves to contain all the elements used in a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
+
+### MathML
+
+- The `mathml.legacy_maction_and_semantics_implementations.disabled` preference is now removed, which means that the [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default (Firefox bug [1788223](https://bugzil.la/1788223)).
+
 #### Removals
 
 ### CSS
@@ -39,6 +45,8 @@ This article provides information about the changes in Firefox 118 that affect d
 #### Removals
 
 ### APIs
+
+- The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
 
 #### DOM
 

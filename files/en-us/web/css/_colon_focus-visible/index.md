@@ -33,17 +33,23 @@ When the [`:focus`](/en-US/docs/Web/CSS/:focus) pseudo-class is used, it always 
 
 ## Examples
 
-### Basic example
+### Comparing :focus and :focus-visible
 
-In this example, the `:focus-visible` selector uses the UA's behavior to determine when to match. Compare what happens when you click on the different controls with a mouse, versus when you tab through them using a keyboard. Note the difference in behavior from elements styled with `:focus`.
+This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Element/input/text) input and a button.
+
+- The first pair does not add any custom styles for focus states, and shows the default case.
+- The second pair adds styles using the `:focus` pseudo-class.
+- The third pair add styles using the `:focus-visible` pseudo-class.
 
 ```html
-<input value="Default styles" /><br />
+<input type="text" value="Default styles" /><br />
 <button>Default styles</button><br />
-<input class="focus-only" value=":focus only" /><br />
-<button class="focus-only">:focus only</button><br />
-<input class="focus-visible-only" value=":focus-visible only" /><br />
-<button class="focus-visible-only">:focus-visible only</button>
+
+<input class="focus-only" type="text" value=":focus" /><br />
+<button class="focus-only">:focus</button><br />
+
+<input class="focus-visible-only" type="text" value=":focus-visible" /><br />
+<button class="focus-visible-only">:focus-visible</button>
 ```
 
 ```css
@@ -61,7 +67,13 @@ button {
 }
 ```
 
-{{EmbedLiveSample("Basic_example", "100%", 300)}}
+If you click each element in turn, you will see that when `:focus` is used to style the focus ring, the UA draws the focus ring when the user clicks the button. However, when `:focus-visible` is used to style the focus ring, the UA does not draw the focus ring when the user clicks the button, just like in the default case.
+
+If you then tab through each element, you will see that in all three cases — default, `:focus`, and `:focus-visible` — the UA draws the focus ring around the button when the user navigates to it with the keyboard.
+
+This shows how `:focus-visible` enables a designer to follow the browser's logic in determining when a focus ring should be shown.
+
+{{EmbedLiveSample("Comparing :focus and :focus-visible", "100%", 300)}}
 
 ### Providing a :focus fallback
 

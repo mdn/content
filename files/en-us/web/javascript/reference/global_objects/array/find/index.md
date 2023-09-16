@@ -17,7 +17,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
   Again, it checks each element for equality with the value instead of using a testing function.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
 
 ## Syntax
 
