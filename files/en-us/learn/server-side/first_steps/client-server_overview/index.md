@@ -222,7 +222,7 @@ The diagram below shows the main elements of the "team coach" website, along wit
 
 ![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
-After the coach submits the form with the team name and number of players, the sequence of operations is:
+The coach first visits the home page of the "team coach" website and navigates to some "form page" (a sequence of `GET` requests). This is usually the first point of call and the views presented to the visitor is from the static resources of the website. The coach then fills the form and submit it, and the following sequence of operations takes place:
 
 1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11`) or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
 2. The _Web Server_ detects that the request is "dynamic" and forwards it to the _Web Application_ for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
