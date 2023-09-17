@@ -83,21 +83,12 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `alink` {{deprecated_inline}}
-  - : Color of text for hyperlinks when selected.
-    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.**
 - `background` {{deprecated_inline}}
   - : URI of an image to use as a background.
     **Do not use this attribute! Use the CSS {{cssxref("background")}} property on the element instead.**
 - `bgcolor` {{deprecated_inline}}
   - : Background color for the document.
     **Do not use this attribute! Use the CSS {{cssxref("background-color")}} property on the element instead.**
-- `bottommargin` {{deprecated_inline}}
-  - : The margin of the bottom of the body.
-    **Do not use this attribute! Use the CSS {{cssxref("margin-bottom")}} property on the element instead.**
-- `leftmargin` {{deprecated_inline}}
-  - : The margin of the left of the body.
-    **Do not use this attribute! Use the CSS {{cssxref("margin-left")}} property on the element instead.**
 - `link` {{deprecated_inline}}
   - : Color of text for unvisited hypertext links.
     **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.**
@@ -137,18 +128,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when the user has moved backward in undo transaction history.
 - `onunload`
   - : Function to call when the document is going away.
-- `rightmargin` {{deprecated_inline}}
-  - : The margin of the right of the body.
-    **Do not use this attribute! Use the CSS {{cssxref("margin-right")}} property on the element instead.**
 - `text` {{deprecated_inline}}
   - : Foreground color of text.
     **Do not use this attribute! Use CSS {{cssxref("color")}} property on the element instead.**
-- `topmargin` {{deprecated_inline}}
-  - : The margin of the top of the body.
-    **Do not use this attribute! Use the CSS {{cssxref("margin-top")}} property on the element instead.**
-- `vlink` {{deprecated_inline}}
-  - : Color of text for visited hypertext links.
-    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.**
 
 ## Examples
 
