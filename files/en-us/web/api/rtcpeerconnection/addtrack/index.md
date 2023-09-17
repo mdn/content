@@ -160,16 +160,12 @@ The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "tra
 pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 ```
 
-This sets the video element's current stream to the one that contains the track that's
-been added to the connection.
+This sets the video element's current stream to the one that contains the track that's been added to the connection.
 
 ### Reused senders
 
-This method may return either a new `RTCRtpSender` or, under very specific
-circumstances, an existing compatible sender which has not yet been used to transmit
-data.
-
-Compatible reusable `RTCRtpSender` instances meet these criteria:
+This method returns a new `RTCRtpSender` or an existing instance for reuse.
+An `RTCRtpSender` instance is only compatible for reuse if it meets the following criteria:
 
 - There is no track already associated with the sender.
 - The {{domxref("RTCRtpTransceiver")}} associated with the sender has a
