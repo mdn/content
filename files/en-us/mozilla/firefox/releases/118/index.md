@@ -46,6 +46,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
+- The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped, and should be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
+- The array returned by {{domxref("RTCPeerConnection.getTransceivers()")}} now omits stopped transcievers. Similarly, {{domxref("RTCPeerConnection.getReceivers()")}} and {{domxref("RTCPeerConnection.getSenders()")}} omit the receivers and senders associated with a stopped transceiver ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
 
 #### DOM
