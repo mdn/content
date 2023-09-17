@@ -118,10 +118,13 @@ aligns with the timeStamp argument, so the zero value is equivalent to the
 
 ```js
 const zero = document.timeline.currentTime;
-requestAnimationFrame(raf);
-function raf(timeStamp) {
-  animateValue(timeStamp - zero);
-  requestAnimationFrame(raf);
+requestAnimationFrame(animate);
+function animate(timeStamp) {
+  const value = (timeStamp - zero) / duration; // animation-timing-function: linear
+  if (value < 1) {
+    element.style.opacity = value;
+    requestAnimationFrame((t) => animate(t));
+  } else element.style.opacity = 1;
 }
 ```
 
@@ -131,14 +134,17 @@ example on this page.
 
 ```js
 let zero;
-requestAnimationFrame(rafZero);
-function rafZero(timeStamp) {
+requestAnimationFrame(firstFrame);
+function firstFrame(timeStamp) {
   zero = timeStamp;
-  raf(timeStamp);
+  animate(timeStamp);
 }
-function raf(timeStamp) {
-  animateValue(timeStamp - zero);
-  requestAnimationFrame(raf);
+function animate(timeStamp) {
+  const value = (timeStamp - zero) / duration;
+  if (value < 1) {
+    element.style.opacity = value;
+    requestAnimationFrame((t) => animate(t));
+  } else element.style.opacity = 1;
 }
 ```
 
@@ -149,9 +155,13 @@ Note: This example does not allow you to reliably synchronize animation callback
 
 ```js
 const zero = performance.now();
-function raf() {
-  animateValue(performance.now() - zero);
-  requestAnimationFrame(raf);
+requestAnimationFrame(animate);
+function animate() {
+  const value = (performance.now() - zero) / duration;
+  if (value < 1) {
+    element.style.opacity = value;
+    requestAnimationFrame((t) => animate(t));
+  } else element.style.opacity = 1;
 }
 ```
 
