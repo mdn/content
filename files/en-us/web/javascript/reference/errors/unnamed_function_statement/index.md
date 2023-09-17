@@ -137,5 +137,5 @@ promise.then(
 - [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- {{glossary("IIFE")}}
+- {{Glossary("IIFE")}}
 - [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)

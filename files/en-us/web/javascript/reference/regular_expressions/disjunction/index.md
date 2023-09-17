@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.disjunction
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **disjunction** specifies multiple alternatives. Any alternative matching the input causes the entire disjunction to be matched.
 

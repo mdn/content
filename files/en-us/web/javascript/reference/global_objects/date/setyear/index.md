@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Date.setYear
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 
