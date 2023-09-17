@@ -185,7 +185,7 @@ If all of those criteria are met, the sender gets reused, which results in these
   the specified track.
 - The sender's set of associated streams is set to the list of streams passed into
   this method, `stream...`.
-- The associated {{domxref("RTCRtpTransceiver")}} has its `currentDirection` updated to include sending;
+- The associated {{domxref("RTCRtpTransceiver")}} has its `currentDirection` updated to indicate that it is sending;
   if its current value is `"recvonly"`, it becomes `"sendrecv"`, and if its current value is `"inactive"`, it becomes `"sendonly"`.
 
 ### New senders
