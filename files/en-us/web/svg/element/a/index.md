@@ -79,9 +79,6 @@ svg|a:active {
 - [`ping`](/en-US/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
     _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
-- [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy)
-  - : Which [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
-    _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
 - [`rel`](/en-US/docs/Web/HTML/Element/a#rel)
   - : The relationship of the target object to the link object.
     _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Attributes/rel)** ; _Default value_: _none_; _Animatable_: **yes**
