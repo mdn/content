@@ -63,7 +63,7 @@ In order to use _Express_ you will have to install _Nodejs_ and the [Node Packag
 To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
 > **Note:** You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager/) (nodejs.org).
-> We highly recommend using a node version manager as these make it easier to install, upgrade, and switch between any particular version of node and npm.
+> We highly recommend using a node version manager ([fnm](https://github.com/Schniz/fnm#installation) or [nvm](https://github.com/coreybutler/nvm-windows#installation--upgrades)) as these make it easier to install, upgrade, and switch between any particular version of node and npm.
 
 ### Windows
 
