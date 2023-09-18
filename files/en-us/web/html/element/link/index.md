@@ -446,3 +446,4 @@ the rendering of the page will be blocked till the resource is fetched. For exam
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- [Implementing the `integrity` attribute](https://150daysofhtml.com/book/day010/) 150daysofhtml.com (2023)
