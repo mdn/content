@@ -108,7 +108,7 @@ The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
 `identity` can contain the following properties:
 
 - `context` {{optional_inline}}
-  - : An enumerated value specifying the context in which the user is authenticating with FedCM. The browser uses this to vary the text in its FedCM UI so that it better suits the context. Possible values are:
+  - : An enumerated value specifying the context in which the user is authenticating with FedCM. The browser uses this value to vary the text in its FedCM UI to better suit the context. Possible values are:
     - `continue`: Suitable for situations where the user is choosing an identity to continue to the next page in the flow, which requires a sign-in. Browsers will provide a text string similar to "Continue to \<page-origin\> with \<IdP\>".
     - `signin`: The default value, which is appropriate for general situations where the user is signing in with an IdP account they've already used on this origin. Browsers will provide a text string similar to "Sign in to \<page-origin\> with \<IdP\>".
     - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
