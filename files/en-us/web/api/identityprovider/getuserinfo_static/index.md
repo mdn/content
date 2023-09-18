@@ -51,7 +51,7 @@ A {{jsxref("Promise")}} that fulfills with an array of objects, each containing 
 - `name`
   - : A string representing the user's full name.
 - `givenName`
-  - : A string representing the user's given (nick, or abbreviated) name.
+  - : A string representing the user's given (nick or abbreviated) name.
 - `picture`
   - : A string representing the URL of the user's profile picture.
 
