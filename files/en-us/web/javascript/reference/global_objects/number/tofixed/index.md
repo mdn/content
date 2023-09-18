@@ -71,7 +71,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 // it rounds down as it can't be represented exactly by a float and the
 // closest representable float is lower
 (2.449999999999999999).toFixed(1); // '2.5'
-// it rounds up as it's less than NUMBER.EPSILON away from 2.45.
+// it rounds up as it's less than Number.EPSILON away from 2.45.
 // This literal actually encodes the same number value as 2.45
 
 (6.02 * 10 ** 23).toFixed(50); // 6.019999999999999e+23; large numbers still use exponential notation

@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors the file size can also be reduced.
+The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
 CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor. Also, in CSS nesting, the [specificity of the `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) is similar to the {{cssxref(':is',':is()')}} function; it is calculated using the highest specificity in the associated selector list.
 
@@ -52,9 +52,13 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
 
-#### HTML
+> **Note:** This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
+
+#### Without nesting selector
+
+##### HTML
 
 ```html-nolint
 <form>
@@ -65,8 +69,6 @@ In these examples, one without and one with the `&` nesting selector, the `<inpu
   <input type="text" id="email" />
 </form>
 ```
-
-#### Without `&` nesting selector
 
 ##### CSS
 
@@ -97,9 +99,21 @@ label {
 
 ##### Result
 
-{{EmbedLiveSample('Without_&_nesting_selector','100%','120')}}
+{{EmbedLiveSample('Without_nesting_selector','100%','120')}}
 
-#### With `&` nesting selector
+#### With nesting selector
+
+##### HTML
+
+```html-nolint
+<form>
+  <label for="name">Name:
+    <input type="text" id="name" />
+  </label>
+  <label for="email">email:</label>
+  <input type="text" id="email" />
+</form>
+```
 
 ##### CSS
 
@@ -130,7 +144,7 @@ label {
 
 ##### Result
 
-{{EmbedLiveSample('With_&_nesting_selector','100%','120')}}
+{{EmbedLiveSample('With_nesting_selector','100%','120')}}
 
 ## Combinators
 
@@ -310,7 +324,7 @@ As opposed to:
 .foo {
   /* .foo styles */
   .bar & {
-    /* .bar .for styles */
+    /* .bar .foo styles */
   }
 }
 ```
@@ -362,7 +376,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured .card` */
+      /* equivalent to `.featured .card h2` */
       color: tomato;
     }
   }
