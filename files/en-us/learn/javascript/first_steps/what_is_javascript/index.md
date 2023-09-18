@@ -36,45 +36,44 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 - {{glossary("CSS")}} is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 - {{glossary("JavaScript")}} is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-The three layers build on top of one another nicely. Let's take a simple text label as an example. We can mark it up using HTML to give it structure and purpose:
+The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
 ```html
-<p>Player 1: Chris</p>
+<button type="button">Player 1: Chris</button>
 ```
 
-![Paragraph of Player 1: Chris as plain text](just-html.png)
+![Button showing Player 1: Chris with no styling](just-html.png)
 
 Then we can add some CSS into the mix to get it looking nice:
 
 ```css
-p {
+button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgb(0 0 200 / 0.6);
-  background: rgb(0 0 200 / 0.6);
-  color: rgb(255 255 255 / 1);
+  border: 2px solid rgb(200 200 0 / 0.6);
+  background-color: rgb(0 217 217 / 0.6);
+  color: rgb(100 0 0 / 1);
   box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
   border-radius: 10px;
   padding: 3px 10px;
-  display: inline-block;
   cursor: pointer;
 }
 ```
 
-![Styled paragraph of Player 1: Chris](html-and-css.png)
+![Button showing Player 1: Chris with styling](html-and-css.png)
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js
-const para = document.querySelector("p");
+const button = document.querySelector("button");
 
-para.addEventListener("click", updateName);
+button.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
+  button.textContent = `Player 1: ${name}`;
 }
 ```
 
@@ -151,20 +150,20 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const para = document.querySelector("p");
+const button = document.querySelector("button");
 
-para.addEventListener("click", updateName);
+button.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
+  button.textContent = `Player 1: ${name}`;
 }
 ```
 
-Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.
+Here we are selecting a button (line 1), then attaching an event listener to it (line 3) so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`.
-This means that the `para` object does not exist yet, so we can't add an event listener to it.
+If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: button is undefined`.
+This means that the `button` object does not exist yet, so we can't add an event listener to it.
 
 > **Note:** This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 
