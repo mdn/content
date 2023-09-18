@@ -26,6 +26,9 @@ slice(start, end)
 ```
 ````
 
+> **Note:** The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
+> For JavaScript syntax sections `-nolint` is also required because the sytnax section is deliberatively not "quite" JavaScript and we don't want the linter to "fix" it (return values and end-of-line semicolons are omitted).
+
 ### General style rules
 
 A few rules to follow in terms of markup within the syntax block:
