@@ -130,7 +130,7 @@ This includes the following information:
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
 - `login_hints` {{optional_inline}}
-  - : An array of strings representing the account, which are used to filter the list of account options the browser provides for the user to sign in with when the `loginHint` property is provided inside [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#identity_object_structure) within an associated `get()` call. Each account that has a string in its `login_hints` array matching the provided `loginHint` is included.
+  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#identity_object_structure) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
 > **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
