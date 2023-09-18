@@ -27,10 +27,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of `{{WebExtAPIRef('commands.Command')}}` objects, one for each command registered for the extension. If no commands were registered, the array will be empty.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -45,5 +41,9 @@ getCommands.then(logCommands);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
