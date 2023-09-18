@@ -112,7 +112,7 @@ The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
     - `continue`: Suitable for situations where the user is choosing an identity to continue to the next page in the flow, which requires a sign-in. Browsers will provide a text string similar to "Continue to \<page-origin\> with \<IdP\>".
     - `signin`: Suitable for general situations where the user is signing in with an IdP account they've already used on this origin. Browsers will provide a text string similar to "Sign in to \<page-origin\> with \<IdP\>". This is the default value.
     - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
-    - `use`: Suitable for situations where a different action is being performed such as validating a payment. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
+    - `use`: Suitable for situations where a different action, such as validating a payment, is being performed. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
 - `providers`
   - : An array of objects specifying details of the different IdPs to be used to sign in. Each object can contain the following properties:
     - `configURL`
