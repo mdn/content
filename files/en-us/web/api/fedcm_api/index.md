@@ -26,7 +26,7 @@ Affected identity federation use cases that rely on third-party cookies:
 
 FedCM aims to work around this problem, providing a dedicated mechanism for federated identity flows on the web, and enabling supporting browsers to provide special UI elements on RPs, allowing users to choose an IdP account to use for sign-in.
 
-There are two parts to using the FedCM API — IdP integration with FedCM, and RP sign-in using the JavaScript API.
+There are two parts to using the FedCM API: IdP integration with FedCM and RP sign-in using the JavaScript API.
 
 ## IdP integration with FedCM
 
