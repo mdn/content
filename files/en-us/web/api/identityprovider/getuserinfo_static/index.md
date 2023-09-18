@@ -38,7 +38,7 @@ IdentityProvider.getUserInfo(config)
 - `config`
   - : A configuation object, which can contain the following properties:
     - `configURL`
-      - : The URL of the [configuration file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for the identity provider you want to get user information from.
+      - : The URL of the [configuration file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for the identity provider from which you want to get user information.
     - `clientId`
       - : The RP's client identifier issued by the IdP.
 
