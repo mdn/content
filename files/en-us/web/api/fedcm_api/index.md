@@ -53,7 +53,7 @@ The `provider_urls` member should contain an array of URLs pointing to valid IdP
 
 ### Provide a config file
 
-The IdP config file provides a list of the endpoints required by the browser to process the identity federation flow and handle sign-in. IdPs will host this config file and the required endpoints.
+The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. IdPs will host both this config file and the required endpoints.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
