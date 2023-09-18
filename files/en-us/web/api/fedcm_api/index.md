@@ -294,7 +294,7 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 - {{domxref("IdentityCredential")}}
   - : Represents a user identity credential arising from successful federated authentication. A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an {{domxref("IdentityCredential")}} instance.
 - {{domxref("IdentityProvider")}}
-  - : Represents an IdP and provides access to related information. The static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method returns information about a previously signed in user on their return to an IdP, which can be used to provide a personalized welcome message and sign-in button.
+  - : Represents an IdP and provides access to related information. The static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method returns information about a user who was previously signed in, when they return to an IdP. This information can be used to display a personalized welcome message and sign-in button.
 
 ## Extensions to other interfaces
 
