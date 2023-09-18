@@ -12,7 +12,7 @@ The **`get()`** method of the {{domxref("CredentialsContainer")}} interface retu
 
 - The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) uses `get()` to authenticate using basic federated credentials or username/password credentials.
 - The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `get()` to authenticate or provide additional factors during MFA with public key credentials (based on asymmetric cryptography).
-- The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) uses `get()` to authenticate with federated identity providers (IdPs).
+- The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) uses `get()` to authenticate with federated identity providers (IdPs).
 - The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) uses `get()` to request retrieval of a one-time password (OTP) from a specially-formatted SMS message sent by an app server.
 
 The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
@@ -99,7 +99,7 @@ navigator.credentials
 
 ## Federated Credential Management API
 
-The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers to make identity federation services available on the web in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated authentication for purposes such as signing in or signing up to a website. Check out the linked API landing page for more usage information.
+The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers to make identity federation services available on the web in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated authentication for purposes such as signing in or signing up to a website. Check out the linked API landing page for more usage information.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
@@ -116,13 +116,13 @@ The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
 - `providers`
   - : An array of objects specifying details of the different IdPs to be used to sign in. Each object can contain the following properties:
     - `configURL`
-      - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for more information.
+      - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) section on the _FedCM API_ landing page for more information.
     - `clientId`
-      - : A string specifying the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
+      - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
     - `loginHint` {{optional_inline}}
-      - : A string that provides a hint as to which account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate, which can be confusing when they have multiple accounts and can't remember which one they previously used. The value to use in the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API#the_accounts_list_endpoint).
+      - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API#the_accounts_list_endpoint).
     - `nonce` {{optional_inline}}
-      - : A random string that can be included to ensure the response is issued for this specific request, and prevent {{glossary("replay attack", "replay attacks")}}.
+      - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
 ### Return value
 
@@ -155,7 +155,7 @@ async function signIn() {
 }
 ```
 
-Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
 
 A similar call including the `context` and `loginHint` extensions would look like so:
 
@@ -177,7 +177,7 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on their return to get information about them. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
 
 ## WebOTP API
 

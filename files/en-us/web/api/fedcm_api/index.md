@@ -1,5 +1,5 @@
 ---
-title: Federated Credential Management API (FedCM)
+title: Federated Credential Management (FedCM) API
 slug: Web/API/FedCM_API
 page-type: web-api-overview
 status:
@@ -9,7 +9,7 @@ browser-compat: api.IdentityCredential
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
 
-The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated authentication for purposes such as signing in or signing up to a website.
+The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to make identity federation services available on the web in a privacy-preserving way, without the need for third-party cookies and redirects. This includes a JavaScript API enabling the use of federated authentication for activities such as signing in or signing up on a website.
 
 ## FedCM concepts
 
