@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.functions.method_definitions
 ---
 
-{{JsSidebar("Functions")}}
+{{jsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
@@ -242,7 +242,7 @@ const obj2 = {
 
 ## See also
 
-- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)

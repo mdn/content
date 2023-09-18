@@ -34,7 +34,7 @@ A locale identifier is a string that consists of:
 5. One or more BCP 47 extension sequences {{optional_inline}}
 6. A private-use extension sequence {{optional_inline}}
 
-Each subtag and sequence are separated by hyphens. Locale identifiers are case-insensitive ASCII. However, it's conventional to use title case (the first letter is capitalized, successive letters are lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
+Each subtag and sequence are separated by hyphens. Locale identifiers are case-insensitive {{Glossary("ASCII")}}. However, it's conventional to use title case (the first letter is capitalized, successive letters are lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
 
 - `"hi"`: Hindi (language)
 - `"de-AT"`: German (language) as used in Austria (region)
@@ -76,7 +76,7 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive date and time formatting.
 - {{jsxref("Intl.DisplayNames")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Intl.DurationFormat")}} {{Experimental_Inline}}
+- {{jsxref("Intl.DurationFormat")}} {{experimental_inline}}
   - : Constructor for objects that enable locale-sensitive duration formatting.
 - {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.

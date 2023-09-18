@@ -78,7 +78,7 @@ For features specific to array or object destructuring, refer to the individual 
 
 ### Binding and assignment
 
-For both object and array destructuring, there are two kinds of destructuring patterns: _{{glossary("binding")}} pattern_ and _assignment pattern_, with slightly different syntaxes.
+For both object and array destructuring, there are two kinds of destructuring patterns: _{{Glossary("binding")}} pattern_ and _assignment pattern_, with slightly different syntaxes.
 
 In binding patterns, the pattern starts with a declaration keyword (`var`, `let`, or `const`). Then, each individual property must either be bound to a variable or further destructured.
 
@@ -569,7 +569,7 @@ console.log(foo); // "bar"
 
 #### Invalid JavaScript identifier as a property name
 
-Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
+Destructuring can be used with property names that are not valid JavaScript {{Glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
 
 ```js
 const foo = { "fizz-buzz": true };
@@ -644,4 +644,4 @@ console.log(prot); // "456"
 ## See also
 
 - [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
-- ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
+- [ES6 in Depth: Destructuring](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) on hacks.mozilla.org (2015)

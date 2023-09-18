@@ -17,6 +17,10 @@ The **`entries()`** method of {{jsxref("Map")}} instances returns a new _[map it
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).

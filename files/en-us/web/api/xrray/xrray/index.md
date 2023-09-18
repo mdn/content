@@ -82,4 +82,4 @@ let ray5 = new XRRay(rigidTransform);
 ## See also
 
 - {{domxref("DOMPoint")}}
-- {{domxref("DOMPoint.fromPoint()")}}
+- {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}}
