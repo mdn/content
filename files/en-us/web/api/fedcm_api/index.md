@@ -179,9 +179,9 @@ async function signIn() {
 
 The `identity.providers` property takes an array of objects containing the path to an IdP config file and the RP's client identifier issued by the IdP; the example above also includes a couple of optional features:
 
-- `identity.context` specifies the context in which the user is authenticating with FedCM (for example is it a first-time signup for this account, or a sign-in with an existing account?). The browser uses this to vary the text in its FedCM UI so that it better suits the context.
+- `identity.context` specifies the context in which the user is authenticating with FedCM. For example, is it a first-time signup for this account, or a sign-in with an existing account?. The browser uses this information to vary the text in its FedCM UI to better suit the context.
 - `identity.providers.nonce` provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
-- `identity.providers.loginHint` provides a hint as to which account option(s) the browser should provide for the user to sign in with, which is matched against the `login_hints` values provided by the IdP from the [accounts list endpoint](#the_accounts_list_endpoint).
+- `identity.providers.loginHint` provides a hint about which account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides from the [accounts list endpoint](#the_accounts_list_endpoint).
 
 The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developer.chrome.com/docs/privacy-sandbox/fedcm/#sign-into-rp).
 
