@@ -58,11 +58,11 @@ A {{jsxref("Promise")}} that fulfills with an array of objects, each containing 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the provided `configURL` is invalid, or the embedded document's origin does not match the `configURL`.
+  - : Thrown if the provided `configURL` is invalid or if the embedded document's origin does not match the `configURL`.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Thrown if the browser is unable to connect to the IdP, or if `getUserInfo()` is invoked from the top-level document.
+  - : Thrown if the browser is unable to connect to the IdP or if `getUserInfo()` is invoked from the top-level document.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the embedding `<iframe>` does not have a {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set to allow the use of `getUserInfo()`, or if the FedCM API is disabled globally by a policy set on the top-level document.
+  - : Thrown if the embedding `<iframe>` does not have a {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set to allow the use of `getUserInfo()` or if the FedCM API is disabled globally by a policy set on the top-level document.
 
 ## Examples
 
