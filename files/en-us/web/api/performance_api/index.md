@@ -1,101 +1,80 @@
----
-title: Performance API
-slug: Web/API/Performance_API
-page-type: web-api-overview
-spec-urls:
-  - https://wicg.github.io/element-timing/
-  - https://w3c.github.io/event-timing/
-  - https://w3c.github.io/hr-time/
-  - https://w3c.github.io/largest-contentful-paint/
-  - https://wicg.github.io/layout-instability/
-  - https://w3c.github.io/longtasks/
-  - https://w3c.github.io/navigation-timing/
-  - https://w3c.github.io/paint-timing/
-  - https://w3c.github.io/performance-timeline/
-  - https://w3c.github.io/resource-timing/
-  - https://w3c.github.io/server-timing/
-  - https://w3c.github.io/user-timing/
----
+# Performance API Overview
 
-{{DefaultAPISidebar("Performance API")}}
+The Performance API is a suite of web standards designed to measure and assess the performance of web applications. In this comprehensive guide, we'll explore the key concepts, usage, reference materials, and related guides to help you leverage the Performance API effectively.
 
-The Performance API is a group of standards used to measure the performance of web applications.
+## Concepts and Usage
 
-## Concepts and usage
+To ensure that web applications deliver a fast and smooth user experience, it's crucial to measure and analyze various performance metrics. The Performance API equips developers with a set of built-in metrics and the capability to add custom measurements to the browser's performance timeline. This timeline contains high-precision timestamps and can be visualized in developer tools. Additionally, you can transmit this data to analytics endpoints to monitor performance metrics over time.
 
-To ensure web applications are fast, it's important to measure and analyze various performance metrics. The Performance API provides important built-in metrics and the ability to add your own measurements to the browser's performance timeline. The performance timeline contains high precision timestamps and can be displayed in developer tools. You can also send its data to analytics end points to record performance metrics over time.
+Each performance metric is represented by a `PerformanceEntry`, which includes essential properties such as `name`, `duration`, `startTime`, and `type`. Various performance metrics extend the `PerformanceEntry` interface, further categorizing them based on their specific characteristics.
 
-Each performance metric is represented by a single {{domxref("PerformanceEntry")}}. A performance entry has a `name`, a `duration`, a `startTime`, and a `type`. All performance metrics extend the `PerformanceEntry` interface and qualify it further.
+While many performance entries are automatically recorded without manual intervention and can be accessed using `Performance.getEntries()`, the preferred method is through the use of the `PerformanceObserver` interface. For instance, `PerformanceEventTiming` entries are automatically recorded for events that surpass a predefined threshold. However, the Performance API empowers developers to define and record custom events using the `PerformanceMark` and `PerformanceMeasure` interfaces.
 
-Most of the performance entries are recorded for you without you having to do anything, and are then accessible either through {{domxref("Performance.getEntries()")}} or (preferably) through {{domxref("PerformanceObserver")}}. For example, {{domxref("PerformanceEventTiming")}} entries are recorded for events that take longer than a set threshold. But the Performance API also enables you to define and record your own custom events, using the {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}} interfaces.
+The main `Performance` interface is available for each global context via `self.performance`. It allows you to add custom performance entries, clear existing entries, and retrieve performance data programmatically.
 
-The main {{domxref("Performance")}} interface is available for each global using {{domxref("performance_property", "self.performance")}} and enables you to add custom performance entries, to clear performance entries, and to retrieve performance entries.
+The `PerformanceObserver` interface offers the ability to listen for various types of performance entries as they are recorded, providing real-time insights into your web application's performance.
 
-The {{domxref("PerformanceObserver")}} interface enables you to listen for various types of performance entry as they are recorded.
-
-For more conceptual information, see the [Performance API guides](#guides) below.
+For further conceptual information, refer to the [Performance API guides](#guides) below.
 
 ![UML diagram of Performance APIs](diagram.svg)
 
 ## Reference
 
-The following interfaces are present in the Performance API:
+The Performance API comprises several key interfaces, each serving specific purposes:
 
-- {{domxref("EventCounts")}}
-  - : A read-only map returned by {{domxref("performance.eventCounts")}} containing the number of events which have been dispatched per event type.
-- {{domxref("LargestContentfulPaint")}}
-  - : Measures the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
-- {{domxref("LayoutShift")}}
-  - : Provides insights into the layout stability of web pages based on movements of the elements on the page.
-- {{domxref("LayoutShiftAttribution")}}
-  - : Provides debugging information about elements which have shifted.
-- {{domxref("Performance")}}
-  - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("performance_property", "self.performance")}}.
-- {{domxref("PerformanceElementTiming")}}
-  - : Measures rendering timestamps of specific elements.
-- {{domxref("PerformanceEntry")}}
-  - : An entry on the performance timeline encapsulating a single performance metric. All performance metrics inherit from this interface.
-- {{domxref("PerformanceEventTiming")}}
-  - : Measures latency of events and first input delay (FID).
-- {{domxref("PerformanceLongTaskTiming")}}
-  - : Detects long tasks that occupy rendering and block other tasks from being executed.
-- {{domxref("PerformanceMark")}}
-  - : Custom marker for your own entry on the performance timeline.
-- {{domxref("PerformanceMeasure")}}
-  - : Custom time measurement between two performance entries.
-- {{domxref("PerformanceNavigationTiming")}}
-  - : Measures document navigation events, like how much time it takes to load a document.
-- {{domxref("PerformanceObserver")}}
-  - : Listens for new performance entries as they are recorded in the performance timeline.
-- {{domxref("PerformanceObserverEntryList")}}
-  - : List of entries that were observed in a performance observer.
-- {{domxref("PerformancePaintTiming")}}
-  - : Measures render operations during web page construction.
-- {{domxref("PerformanceResourceTiming")}}
-  - : Measures network loading metrics such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times for resources such as images, scripts, fetch calls, etc.
-- {{domxref("PerformanceServerTiming")}}
-  - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
-- {{domxref("TaskAttributionTiming")}}
-  - : Identifies the type of task and the container that is responsible for the long task.
-- {{domxref("VisibilityStateEntry")}}
-  - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
+- `EventCounts`: A read-only map returned by `performance.eventCounts`, providing the count of dispatched events per event type.
+- `LargestContentfulPaint`: Measures the render time of the largest image or text block visible within the viewport, recorded from the page's initial load.
+- `LayoutShift`: Offers insights into the layout stability of web pages based on element movements.
+- `LayoutShiftAttribution`: Provides debugging information about elements that have shifted.
+- `Performance`: The primary interface for accessing performance measurements, available in both window and worker contexts via `self.performance`.
+- `PerformanceElementTiming`: Measures rendering timestamps of specific elements.
+- `PerformanceEntry`: Represents an entry on the performance timeline encapsulating a single performance metric, serving as the base interface for all performance metrics.
+- `PerformanceEventTiming`: Measures latency of events and first input delay (FID).
+- `PerformanceLongTaskTiming`: Detects long tasks that occupy rendering resources and block other tasks from executing.
+- `PerformanceMark`: Allows you to create custom markers on the performance timeline.
+- `PerformanceMeasure`: Enables custom time measurements between two performance entries.
+- `PerformanceNavigationTiming`: Measures document navigation events, such as document load times.
+- `PerformanceObserver`: Listens for new performance entries as they are recorded in the performance timeline.
+- `PerformanceObserverEntryList`: Provides a list of entries observed by a performance observer.
+- `PerformancePaintTiming`: Measures render operations during web page construction.
+- `PerformanceResourceTiming`: Measures network loading metrics, including redirect times, DNS lookup, response times for resources like images and scripts.
+- `PerformanceServerTiming`: Exposes server metrics sent with the response via the `Server-Timing` HTTP header.
+- `TaskAttributionTiming`: Identifies the type of task and its responsible container for long tasks.
+- `VisibilityStateEntry`: Measures the timing of page visibility state changes, such as when a tab switches between foreground and background.
 
 ## Guides
 
-The following guides help you to understand key concepts of the Performance API and provide an overview about its abilities:
+To deepen your understanding of the Performance API and its capabilities, explore the following guides:
 
-- [Performance data](/en-US/docs/Web/API/Performance_API/Performance_data): Collecting, accessing, and working with performance data.
-- [High precision timing](/en-US/docs/Web/API/Performance_API/High_precision_timing): Measuring with high precision time and monotonic clocks.
-- [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing): Measuring network timing for fetched resources, such as images, CSS, and JavaScript.
-- [Navigation timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Measuring navigation timing of a document.
-- [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
-- [Server timing](/en-US/docs/Web/API/Performance_API/Server_timing): Collecting server-side metrics.
+- [Performance Data](/en-US/docs/Web/API/Performance_API/Performance_data): Learn how to collect, access, and work with performance data.
+- [High-Precision Timing](/en-US/docs/Web/API/Performance_API/High_precision_timing): Explore the use of high-precision time measurements and monotonic clocks.
+- [Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing): Understand how to measure network timing for fetched resources, such as images, CSS, and JavaScript.
+- [Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Learn how to measure navigation timing events in a document.
+- [User Timing](/en-US/docs/Web/API/Performance_API/User_timing): Discover how to measure and record custom performance data tailored to your application.
+- [Server Timing](/en-US/docs/Web/API/Performance_API/Server_timing): Gain insights into collecting server-side metrics.
 
 ## Specifications
 
-{{Specifications}}
+For detailed technical specifications of the Performance API, refer to the following documents:
 
-## See also
+- [W3C Element Timing Specification](https://wicg.github.io/element-timing/)
+- [W3C Event Timing Specification](https://w3c.github.io/event-timing/)
+- [W3C High-Resolution Time Level 3 Specification](https://w3c.github.io/hr-time/)
+- [W3C Largest Contentful Paint Specification](https://w3c.github.io/largest-contentful-paint/)
+- [W3C Layout Instability Specification](https://wicg.github.io/layout-instability/)
+- [W3C Long Tasks Specification](https://w3c.github.io/longtasks/)
+- [W3C Navigation Timing Specification](https://w3c.github.io/navigation-timing/)
+- [W3C Paint Timing Specification](https://w3c.github.io/paint-timing/)
+- [W3C Performance Timeline Specification](https://w3c.github.io/performance-timeline/)
+- [W3C Resource Timing Specification](https://w3c.github.io/resource-timing/)
+- [W3C Server Timing Specification](https://w3c.github.io/server-timing/)
+- [W3C User Timing Specification](https://w3c.github.io/user-timing/)
 
-- [Web performance](/en-US/docs/Web/Performance)
-- [Learn: Web performance](/en-US/docs/Learn/Performance)
+## See Also
+
+For further information on web performance and learning resources, explore the following links:
+
+- [Web Performance](/en-US/docs/Web/Performance)
+- [Learn: Web Performance](/en-US/docs/Learn/Performance)
+
+With the Performance API and the wealth of information provided in this guide, you can effectively monitor, optimize, and enhance the performance of your web applications, ensuring a seamless and responsive user experience.
