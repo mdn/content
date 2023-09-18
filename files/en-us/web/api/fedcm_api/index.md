@@ -299,7 +299,7 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 ## Extensions to other interfaces
 
 - {{domxref("CredentialsContainer.get()")}}, the `identity` option.
-  - : `identity` is an object containing details of federated IdPs that a relying party (RP) website can use to sign users in. Causes a `get()` call to initiate a request for a user to sign in to a RP with an IdP.
+  - : `identity` is an object containing details of federated IdPs that a relying party (RP) website can use to sign users in. It causes a `get()` call to initiate a request for a user to sign in to an RP with an IdP.
 
 ## Examples
 
