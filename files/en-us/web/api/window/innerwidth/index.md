@@ -8,14 +8,9 @@ browser-compat: api.Window.innerWidth
 
 {{APIRef}}
 
-The read-only {{domxref("Window")}} property
-**`innerWidth`** returns the interior width of the window in
-pixels. This includes the width of the vertical scroll bar, if one is present.
+The read-only {{domxref("Window")}} property **`innerWidth`** returns the interior width of the window (a.k.a. width of the window's {{Glossary("layout viewport")}}) in pixels. This includes the width of the vertical scroll bar, if one is present.
 
-More precisely, `innerWidth` returns the width of the window's
-{{Glossary("layout viewport")}}. The interior height of the window—the height of the
-layout viewport—can be obtained from the {{domxref("Window.innerHeight",
-  "innerHeight")}} property.
+Similarly, the interior height of the window (a.k.a. height of the layout viewport) can be obtained using the {{domxref("Window.innerHeight", "innerHeight")}} property. This measurement also accounts for the height of the horizontal scroll bar, if it is visible.
 
 ## Value
 
