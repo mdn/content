@@ -46,7 +46,6 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
-
 - The <kbd>⊞ Windows Logo</kbd> key on Windows and the <kbd>Command</kbd> key on macOS now return a value of `"Meta"` for [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key), instead of `"OS"`, and [`KeyboardEvent.code`](/en-US/docs/Web/API/KeyboardEvent/code) returns `MetaLeft`/`MetaRight` instead of `OSLeft`/`OSRight` (Firefox bug [1232918](https://bugzil.la/1232918)).
 - The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped, and should be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The array returned by {{domxref("RTCPeerConnection.getTransceivers()")}} now omits stopped transcievers. Similarly, {{domxref("RTCPeerConnection.getReceivers()")}} and {{domxref("RTCPeerConnection.getSenders()")}} omit the receivers and senders associated with a stopped transceiver ([Firefox bug 1568296](https://bugzil.la/1568296)).
