@@ -88,7 +88,7 @@ let parent = document.getElementById("parent");
 let child = document.getElementById("child");
 
 // Throws Uncaught TypeError
-let garbage = d.removeChild(child);
+let garbage = parent.removeChild(child);
 ```
 
 ### Causing a NotFoundError
