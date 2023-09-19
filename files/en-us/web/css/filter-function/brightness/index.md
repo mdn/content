@@ -67,7 +67,7 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #000000;
+  color: #000;
   font-size: 2rem;
   font-family: sans-serif;
 }
