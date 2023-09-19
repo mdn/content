@@ -93,9 +93,11 @@ Consider this example to see how the adjusted font size is calculated. A first-c
 
 ## Examples
 
-### Normalizing font size by lowercase letters
+### Normalizing font size by lowercase and uppercase letters
 
 As shown in this example, the Verdana font has a relatively high aspect value of `0.545`, which means that the lowercase letters are relatively tall compared to uppercase letters. This makes the text in small font sizes appear legible. However, the Times font has a lower aspect value of `0.447`, so the text is less legible at small sizes. If Verdana is the first-choice font and Times is the fallback font, specifying the `font-size-adjust` property can help to retain the same aspect value in Times. So if the font falls back to Times, the text will maintain a similar level of legibility as it would have with Verdana.
+
+Similarly, the cap-height to font size ratio in Verdana is `0.73` and that in Times is `0.66`. When `font-size-adjust` property is applied to Times to adjust its uppercase letters to match the ratio in Verdana, the Times font displays in adjusted font size ((0.73 / 0.66) \* 14) `15.48px`.
 
 ```html
 <p class="verdana">
@@ -132,11 +134,11 @@ As shown in this example, the Verdana font has a relatively high aspect value of
 }
 
 .adjtimescapheight {
-  font-size-adjust: cap-height 0.76;
+  font-size-adjust: cap-height 0.73;
 }
 ```
 
-{{ EmbedLiveSample('Normalizing font size by lowercase letters', 500, 200) }}
+{{ EmbedLiveSample('Normalizing font size by lowercase and uppercase letters', 500, 200) }}
 
 Without `font-size-adjust` in `B`, the switch from Verdana font to Times font could result in a noticeable decrease in legibility due to its lower aspect value.
 In `C`, notice that only one value is specified for the `font-size-adjust` property, so the default `<font-metric>` value `ex-height` is used. `D` shows how the font would look compared to `A` if its uppercase letter height is adjusted.
