@@ -45,23 +45,23 @@ removeChild(child)
 Given this HTML:
 
 ```html
-<div id="top">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
 To remove a specified element when knowing its parent node:
 
 ```js
-let d = document.getElementById("top");
-let d_nested = document.getElementById("nested");
-let throwawayNode = d.removeChild(d_nested);
+let parent = document.getElementById("parent");
+let child = document.getElementById("child");
+let throwawayNode = parent.removeChild(child);
 ```
 
 To remove a specified element without having to specify its parent node:
 
 ```js
-let node = document.getElementById("nested");
+let node = document.getElementById("child");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
@@ -80,35 +80,35 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"></div>
+<div id="parent"></div>
 ```
 
 ```js
-let d = document.getElementById("top");
-let d_nested = document.getElementById("nested");
+let parent = document.getElementById("parent");
+let child = document.getElementById("child");
 
 // Throws Uncaught TypeError
-let garbage = d.removeChild(d_nested);
+let garbage = d.removeChild(child);
 ```
 
 ### Causing a NotFoundError
 
 ```html
 <!--Sample HTML code-->
-<div id="top">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
 ```js
-let d = document.getElementById("top");
-let d_nested = document.getElementById("nested");
+let parent = document.getElementById("parent");
+let child = document.getElementById("child");
 
 // This first call correctly removes the node
-let garbage = d.removeChild(d_nested);
+let garbage = parent.removeChild(child);
 
 // Throws NotFoundError
-garbage = d.removeChild(d_nested);
+garbage = parent.removeChild(child);
 ```
 
 ## Specifications
