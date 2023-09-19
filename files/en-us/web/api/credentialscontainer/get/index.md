@@ -99,7 +99,7 @@ navigator.credentials
 
 ## Federated Credential Management API
 
-The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers to make identity federation services available on the web in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated authentication for purposes such as signing in or signing up to a website. Check out the linked API landing page for more usage information.
+The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
