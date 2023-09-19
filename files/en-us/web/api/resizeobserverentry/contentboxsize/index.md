@@ -63,7 +63,7 @@ const resizeObserver = new ResizeObserver((entries) => {
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications
