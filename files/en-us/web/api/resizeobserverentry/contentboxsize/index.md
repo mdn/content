@@ -61,8 +61,11 @@ const resizeObserver = new ResizeObserver((entries) => {
           ) + "px";
       }
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
