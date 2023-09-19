@@ -487,7 +487,7 @@ Let's play with some browser objects a bit.
 
    The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
-5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
+5. Now try typing `guesses` into the console and pressing enter. The console shows you that the variable contains a {{htmlelement("p")}} element.
 6. Now try entering the following line:
 
    ```js
