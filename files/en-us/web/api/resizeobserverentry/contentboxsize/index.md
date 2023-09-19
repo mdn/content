@@ -53,8 +53,12 @@ const resizeObserver = new ResizeObserver((entries) => {
           ) + "px";
       } else {
         // ...but old versions of Firefox treat it as a single item
-        entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
-                                                        (entry.contentBoxSize.blockSize/10)) + 'px';
+        entry.target.style.borderRadius =
+          Math.min(
+            100,
+            entry.contentBoxSize.inlineSize / 10 +
+              entry.contentBoxSize.blockSize / 10,
+          ) + "px";
       }
     } else {
       entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
