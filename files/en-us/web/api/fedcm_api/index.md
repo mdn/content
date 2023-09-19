@@ -181,7 +181,7 @@ The `identity.providers` property takes an array of objects containing the path 
 
 - `identity.context` specifies the context in which the user is authenticating with FedCM. For example, is it a first-time signup for this account, or a sign-in with an existing account?. The browser uses this information to vary the text in its FedCM UI to better suit the context.
 - `identity.providers.nonce` provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
-- `identity.providers.loginHint` provides a hint about which account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides from the [accounts list endpoint](#the_accounts_list_endpoint).
+- `identity.providers.loginHint` provides a hint about the account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides from the [accounts list endpoint](#the_accounts_list_endpoint).
 
 The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developer.chrome.com/docs/privacy-sandbox/fedcm/#sign-into-rp).
 
