@@ -23,28 +23,26 @@ The **CSS generated content** module defines how content can be added to a docum
 - `<content()>`
 - `<string()>`
 - `<leader()>`
-- `<target-counter()>`
-- `<target-counters()>`
-- `<target-text()>`
+
+> **Note:** The CSS generated content module introduces three experimental [`<target>`](/en-US/docs/Web/CSS/content#target) functions that have not been implented, including `<target-counter()>`, `<target-counters()>`, and `<target-text()>`.
 
 ### Data types
 
-- `<content-list>`
-- `<content-replacement>`
-- `<image>`
-- `<counter>`
-- `<quote>`
-- `<target>`
-- `<quote>`
+- [`<content-list>`](/en-US/docs/Web/CSS/content#content-list)
+- `<content-replacement>` (see {{cssxref("image")}})
+- {{cssxref("image")}}
+- {{cssxref("counter")}}
+- [`<quote>`](/en-US/docs/Web/CSS/content#quote)
+- [`<target>`](/en-US/docs/Web/CSS/content#target)
 
 ## Guides
 
-- [How to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) to l
+- [How to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
-  - : Learn how to generated content with CSS, including the {{cssxref("content")}} and {{cssxref("quotes")}} properties.
+  - : Learn how to add text or image content to a document using the {{cssxref("content")}} property.
 
 - [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
-  - :
+  - : How to
 
 ## Related concepts
 
