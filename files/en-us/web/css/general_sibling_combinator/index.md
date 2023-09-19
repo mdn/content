@@ -21,14 +21,14 @@ img ~ p {
 
 ```css-nolint
 /* The white space around the ~ combinator is optional but recommended. */
-compound_selector1 ~ compound_selector2 { style properties }
+former_element ~ target_element { style properties }
 ```
 
 ## Examples
 
 ### Using the combinator with simple selectors
 
-This example shows the use of the `~` combinator when both the selectors are simple (`p` and `span`).
+This example shows the use of the `~` combinator when both the selectors are simple selectors (`p` and `span`).
 
 ```html
 <article>
@@ -59,11 +59,11 @@ p ~ span {
 
 {{EmbedLiveSample("Using the combinator with simple selectors", "auto", 300)}}
 
-### Using the combinator with compound selectors
+### Using the combinator with complex selectors
 
-Elements represented by the two compound selectors share the same parent in the document tree. The element represented by the first compound selector precedes (not necessarily immediately) the element represented by the second one.
+In this example, elements represented by the two complex selectors share the same parent in the document tree. The element represented by the first complex selector precedes (not necessarily immediately) the element represented by the target selector.
 
-The example below shows that the second compound selector must match the parent of the first compound selector.
+The example below shows that the target complex selector must share the same parent of the first complex selector.
 
 ```html
 <h1>Dream big</h1>
@@ -87,12 +87,12 @@ The example below shows that the second compound selector must match the parent 
 }
 ```
 
-{{EmbedLiveSample("Using the combinator with compound selectors", "auto", 200)}}
+{{EmbedLiveSample("Using the combinator with complex selectors", "auto", 200)}}
 
 In the above HTML, the two siblings of `.foo p` are `span` and `.foo span`.
 
-- When the second compound selector is `span`, it selects the `span` element that is a sibling of `p` and both are descendants of `.foo`.
-- When the second compound selector is `.foo span`, it selects the `span` element that's a descendant of `.foo` if that `.foo` is a sibling of `p`; essentially, both are nested in an ancestor of `.foo`.
+- When the target selector is `span`, the `span` element that is a sibling of `p` is selected. The `p` element is a descendant of `.foo`, so are its `span` siblings.
+- In `.foo p ~ .foo span`, the target selector is `span` that is a descendant of `.foo`. In this case, the `span` element that's a descendent of `.foo` is selected if that `.foo` is a sibling of `p`; essentially, both are nested in an ancestor of `.foo`.
 
 ## Specifications
 
@@ -105,4 +105,3 @@ In the above HTML, the two siblings of `.foo p` are `span` and `.foo span`.
 ## See also
 
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
--
