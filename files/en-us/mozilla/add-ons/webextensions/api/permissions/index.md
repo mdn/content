@@ -51,15 +51,15 @@ For advice on designing your request for runtime permissions, to maximize the li
 - {{WebExtAPIRef("permissions.onRemoved")}}
   - : Fired when a permission is removed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - `manifest.json` [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) property
 - `manifest.json` [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) property
 
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.

@@ -25,10 +25,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('cookies.CookieStore')}} objects representing all the existing cookie stores.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In the following snippet, the `getAllCookieStores()` method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
@@ -46,6 +42,10 @@ browser.cookies.getAllCookieStores().then(logStores);
 Each member of the `cookieStores` array is a {{WebExtAPIRef("cookies.CookieStore")}} object.
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAllCookieStores) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

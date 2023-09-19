@@ -67,13 +67,13 @@ Events have three functions:
               </tbody>
             </table>
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 

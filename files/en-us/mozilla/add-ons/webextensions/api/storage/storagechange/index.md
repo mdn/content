@@ -18,11 +18,13 @@ browser-compat: webextensions.api.storage.StorageChange
 - `newValue` {{optional_inline}}
   - : The new value of the item, if there is a new value. This can be any data type.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#type-StorageChange) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 

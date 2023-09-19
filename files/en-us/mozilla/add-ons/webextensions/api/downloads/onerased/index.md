@@ -39,10 +39,6 @@ Events have three functions:
     - `downloadId`
       - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Add a listener for `onErased` events, then erase the most recent download:
@@ -61,6 +57,10 @@ let erasing = browser.downloads.erase({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onErased) API.
 

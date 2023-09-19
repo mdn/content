@@ -36,10 +36,6 @@ let uninstallingSelf = browser.management.uninstallSelf(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Uninstall the add-on, asking the user to confirm. In the callback, check whether the user canceled uninstallation.
@@ -74,6 +70,10 @@ uninstalling.then(null, onCanceled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:**
 >

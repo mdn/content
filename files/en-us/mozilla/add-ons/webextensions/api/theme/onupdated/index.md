@@ -49,10 +49,6 @@ Events have three functions:
         - `windowId` {{optional_inline}}
           - : `integer`. The ID of the window for which theme has been updated. If this property is not present, it means that the theme was updated globally.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -68,3 +64,7 @@ browser.theme.onUpdated.addListener(handleUpdated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

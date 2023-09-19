@@ -139,10 +139,6 @@ Events have three functions:
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -167,6 +163,10 @@ browser.webRequest.onCompleted.addListener(logResponse, { urls: [target] });
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onCompleted) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 

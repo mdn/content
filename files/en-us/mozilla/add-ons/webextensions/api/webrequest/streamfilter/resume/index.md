@@ -25,10 +25,6 @@ None.
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example uses suspend/resume to delay a web request.
@@ -55,3 +51,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

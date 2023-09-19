@@ -25,10 +25,6 @@ Values of this type are objects, which can contain the following properties:
 - `tabIds`
   - : An `array` of `integers`, which identifies all of the browser tabs that share this cookie store.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
@@ -55,6 +51,10 @@ browser.cookies.getAllCookieStores().then((stores) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-CookieStore) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

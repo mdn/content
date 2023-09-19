@@ -13,10 +13,6 @@ When the user focuses the address bar and starts typing, the browser offers auto
 
 If set to `true`, then when the user selects one of these items, the item is opened in a new tab. If set to `false` (the default) the item is opened in the current tab.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to `true`:
@@ -32,3 +28,7 @@ browser.browserSettings.openUrlbarResultsInNewTabs
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

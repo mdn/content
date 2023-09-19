@@ -36,10 +36,6 @@ let storing = browser.sessions.setTabValue(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with no arguments if the call succeeded. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set a value on the active tab when the user selects a menu item. Note that you'll need the "menus" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to run this example:
@@ -64,3 +60,7 @@ browser.menus.onClicked.addListener(setOnActiveTab);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -30,11 +30,13 @@ let prompting = browser.downloads.acceptDanger(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). When the dialog closes, the promise will be fulfilled with no arguments.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-acceptDanger) API.
 

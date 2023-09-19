@@ -13,10 +13,6 @@ If set to `true`, then when the user selects a term in the browser's search box,
 
 Note that this does not affect the behavior when selecting items from the omnibox/awesomebar,only the dedicated search box.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to `true`:
@@ -32,3 +28,7 @@ browser.browserSettings.openSearchResultsInNewTabs
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -38,10 +38,6 @@ let uninstalling = browser.management.uninstall(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.
@@ -60,6 +56,10 @@ uninstalling.then(null, onCanceled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstall) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 

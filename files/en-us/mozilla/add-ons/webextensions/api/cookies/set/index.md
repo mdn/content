@@ -61,10 +61,6 @@ let setting = browser.cookies.set(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been set. If the call fails for any reason, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example sets a cookie for the document hosted by the currently active tab:
@@ -83,6 +79,10 @@ function setCookie(tabs) {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

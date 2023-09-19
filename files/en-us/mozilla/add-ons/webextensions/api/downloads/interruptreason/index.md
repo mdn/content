@@ -54,11 +54,13 @@ Miscellaneous:
 
 - `"CRASH"`
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-InterruptReason) API.
 

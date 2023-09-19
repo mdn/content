@@ -30,11 +30,13 @@ Values of this type are objects.
 - {{WebExtAPIRef("events.Event.removeRules","events.Event.removeRules()")}}
   - : Unregisters currently registered rules.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-Event) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 

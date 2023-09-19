@@ -24,10 +24,12 @@ Values of this type are objects. They contain these properties:
 - `tabId`
   - : `number`. The ID of the tab to inject into.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#type-InjectionTarget) API.

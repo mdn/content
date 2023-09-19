@@ -37,10 +37,6 @@ Events have three functions:
     - `window`
       - : `object`. The {{DOMxRef("window")}} object of the sidebar page, if a page was set with {{WebExtAPIRef("devtools.panels.ExtensionSidebarPane.setPage()","setPage()")}}.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Create a sidebar pane, and log show and hide events.
@@ -60,5 +56,9 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.

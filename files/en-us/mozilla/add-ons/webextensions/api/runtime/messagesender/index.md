@@ -34,11 +34,13 @@ Values of this type are objects. They contain the following properties:
 - `tlsChannelId` {{optional_inline}}
   - : `string`. The TLS channel ID of the page or frame that opened the connection, if requested by the extension, and if available.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-MessageSender) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 

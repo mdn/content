@@ -44,10 +44,10 @@ The notification looks the same on all desktop operating systems. Something like
 - {{WebExtAPIRef("notifications.onShown")}}
   - : Fired immediately after a notification has been shown.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

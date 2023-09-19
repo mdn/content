@@ -16,10 +16,12 @@ Values of this type are objects. They contain these properties:
 - `ids`
   - : `array` of `string`. Array of scripts IDs.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#type-ContentScriptFilter) API.

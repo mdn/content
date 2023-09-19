@@ -66,10 +66,6 @@ Events have three functions:
 - `extraInfoSpec` {{optional_inline}}
   - : `array` of `string`. Extra options for the event. Pass `"requestHeaders"` to include the request headers in the `details` object passed to the listener.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code intercepts requests to `<all_urls>`, and proxies them if they are not for a top-level frame.
@@ -93,3 +89,7 @@ browser.proxy.onRequest.addListener(handleProxyRequest, {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -19,11 +19,13 @@ let isPrivate = browser.extension.inIncognitoContext;  // true or false
 
 A _boolean_ value indicate if the current script is running in a private tab or process.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#property-inIncognitoContext) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 

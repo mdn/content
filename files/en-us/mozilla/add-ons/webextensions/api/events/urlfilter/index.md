@@ -88,11 +88,13 @@ However, note that these last two patterns will not match the last component of 
 
     - For example: `[80, 443, [1000, 1200]]` matches all requests on ports 80, 443, and in the range 1000-1200.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 

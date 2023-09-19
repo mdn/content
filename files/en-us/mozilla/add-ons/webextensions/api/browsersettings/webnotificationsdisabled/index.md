@@ -19,10 +19,6 @@ Setting `browserSettings.webNotificationsDisabled` to `false` switches the globa
 
 Note that this setting has no effect on notifications created by extensions using the [`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Toggle the setting:
@@ -42,3 +38,7 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

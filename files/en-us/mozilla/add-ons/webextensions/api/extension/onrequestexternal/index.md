@@ -47,11 +47,13 @@ Events have three functions:
     - `sendResponse`
       - : `function`. Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#event-onRequestExternal) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 

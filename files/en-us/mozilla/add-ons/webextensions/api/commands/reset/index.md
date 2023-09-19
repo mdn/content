@@ -30,10 +30,6 @@ browser.commands.reset(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the shortcut has been reset.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Resets the command named "my-command" when the user clicks the "reset" button:
@@ -49,3 +45,7 @@ document.querySelector("#reset").addEventListener("click", resetShortcut);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -28,10 +28,6 @@ filter.write(
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example uses `write()`, to replace "Example" in the first chunk of the response with "WebExtension Example".
@@ -62,3 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

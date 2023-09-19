@@ -35,6 +35,8 @@ await browser.storage.<storageType>.setAccessLevel(
 
 A {{jsxref("Promise")}} that is fulfilled with no arguments if the operation succeeded. If the operation failed, the promise is rejected with an error message.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

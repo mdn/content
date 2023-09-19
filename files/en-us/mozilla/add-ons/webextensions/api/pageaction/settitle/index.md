@@ -31,10 +31,6 @@ browser.pageAction.setTitle(
 
         If `null` is passed here, the title is reset to the title that was specified in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Whenever a tab is updated, show the page action for that tab, and set its title to show the tab's ID:
@@ -50,6 +46,10 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-setTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 

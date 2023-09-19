@@ -40,10 +40,6 @@ If managed storage is not set, `undefined` will be returned.
 >
 > When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Suppose storage contains two items:
@@ -151,5 +147,9 @@ let gettingItem = new Promise((resolve) =>
 );
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

@@ -20,11 +20,13 @@ Values of this type are strings. Possible values are:
 - "manual"
   - : The extension will handle zoom changes itself, by listening for the {{WebExtAPIRef("tabs.onZoomChange")}} event and scaling the page accordingly. This mode does not support `per-origin` zooming: it will ignore the `scope` {{WebExtAPIRef("tabs.zoomSettings", "zoom setting")}} and always use `per-tab`.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#type-ZoomSettingsMode) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 

@@ -20,11 +20,13 @@ Values of this type are objects, which contain the following properties:
 - `nacl_arch`
   - : {{WebExtAPIRef('runtime.PlatformNaclArch')}}. The native client architecture. This may be different from `arch` on some platforms.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-PlatformInfo) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 

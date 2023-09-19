@@ -62,10 +62,6 @@ Events have three functions:
 - `transitionQualifiers`
   - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Logs the target URLs and extra transition information for `onHistoryStateUpdated`, if the target URL's hostname contains "example.com" or starts with "developer".
@@ -88,6 +84,10 @@ browser.webNavigation.onHistoryStateUpdated.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 

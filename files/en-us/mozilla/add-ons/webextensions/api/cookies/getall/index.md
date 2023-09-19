@@ -63,10 +63,6 @@ let getting = browser.cookies.getAll(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In the following snippet, we are making a call to get all of the cookies the browser currently has stored that have a name of "favorite-color". When the result is returned, we are printing the value of each result to the console.
@@ -86,6 +82,10 @@ browser.cookies
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

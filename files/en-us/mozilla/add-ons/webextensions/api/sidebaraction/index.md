@@ -41,13 +41,13 @@ The sidebarAction API is based on Opera's [sidebarAction API](https://dev.opera.
 - {{WebExtAPIRef("sidebarAction.toggle()")}}
   - : Toggles the visibility of the sidebar.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Example add-ons
 
 - [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page)
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
 

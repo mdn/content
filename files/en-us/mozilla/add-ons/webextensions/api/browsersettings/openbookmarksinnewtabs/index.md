@@ -11,10 +11,6 @@ A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underl
 
 If set to `true`, then when the user selects a bookmark, it will be opened in a new tab. If set to `false` (the default) bookmarks are opened in the current tab.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to `true`:
@@ -30,3 +26,7 @@ browser.browserSettings.openBookmarksInNewTabs
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

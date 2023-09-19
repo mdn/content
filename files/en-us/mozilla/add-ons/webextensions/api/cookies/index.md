@@ -108,11 +108,11 @@ When first-party isolation is off, the `firstPartyDomain` parameter is optional 
 - {{WebExtAPIRef("cookies.onChanged")}}
   - : Fired when a cookie is set or removed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

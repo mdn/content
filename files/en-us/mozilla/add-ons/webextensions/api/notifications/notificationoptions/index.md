@@ -66,10 +66,12 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
 
 Note that `appIconMaskUrl` and `isClickable` are not supported.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

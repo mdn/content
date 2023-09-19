@@ -47,10 +47,6 @@ let removing = browser.cookies.remove(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`. If the call fails for any reason, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example tries to remove the cookie named "favorite-color", whose URL matches the URL of the document hosted by the currently active tab:
@@ -77,6 +73,10 @@ getActive.then(removeCookie);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-remove) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

@@ -71,11 +71,13 @@ It is an object with the following properties:
 - `versionName`
   - : `string`. Descriptive name for this add-on's version, taken from the manifest.json [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#type-ExtensionInfo) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 

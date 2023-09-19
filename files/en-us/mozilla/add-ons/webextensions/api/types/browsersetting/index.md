@@ -27,11 +27,13 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 - {{WebExtAPIRef("types.BrowserSetting.onChange")}}
   - : Fired when the setting's value changes.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 

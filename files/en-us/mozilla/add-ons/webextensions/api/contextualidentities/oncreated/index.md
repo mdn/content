@@ -37,10 +37,6 @@ Events have three functions:
     - `changeInfo`
       - : `object`. An object that contains a single property, `contextualIdentity`, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object, representing the identity that was created.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -52,6 +48,10 @@ browser.contextualIdentities.onCreated.addListener(handleCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

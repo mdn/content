@@ -39,10 +39,6 @@ Events have three functions:
     - `info`
       - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was uninstalled.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the names of add-ons when they are uninstalled:
@@ -54,6 +50,10 @@ browser.management.onUninstalled.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#event-onUninstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 

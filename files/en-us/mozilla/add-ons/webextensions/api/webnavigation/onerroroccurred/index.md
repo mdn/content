@@ -76,10 +76,6 @@ Events have three functions:
 
     If you omit this parameter, the event fires for all transitions.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Logs the target URLs for `onErrorOccurred`, if the target URL's `hostname` contains `"example.com"` or starts with `"developer"`.
@@ -98,6 +94,10 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 

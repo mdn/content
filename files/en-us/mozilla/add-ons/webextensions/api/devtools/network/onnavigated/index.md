@@ -37,10 +37,6 @@ Events have three functions:
     - `url`
       - : `string`. The new URL for the window.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -52,6 +48,10 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 

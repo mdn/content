@@ -32,10 +32,6 @@ let getting = browser.history.getVisits(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of `{{WebExtAPIRef('history.VisitItem')}}` objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 List all visits to the most recently-visited page:
@@ -68,6 +64,10 @@ searching.then(listVisits);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 

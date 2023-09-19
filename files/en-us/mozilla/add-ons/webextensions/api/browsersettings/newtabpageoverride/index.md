@@ -11,10 +11,6 @@ A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be 
 
 Note that this is a read-only setting.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the current value of the new tab URL:
@@ -26,3 +22,7 @@ browser.browserSettings.newTabPageOverride.get({}).then((result) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

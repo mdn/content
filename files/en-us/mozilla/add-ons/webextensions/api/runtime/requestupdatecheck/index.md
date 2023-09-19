@@ -34,10 +34,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
     - `version`
       - : `string`. The update's version.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Request an update, and log the new version if one is available:
@@ -59,6 +55,10 @@ requestingCheck.then(onRequested, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 

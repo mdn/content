@@ -145,10 +145,6 @@ Events have three functions:
     - `NS_ERROR_CRYPTOMINING_URI` indicating a cryptomining URI.
     - `NS_ERROR_SOCIALTRACKING_URI` indicating a social tracking URI.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -169,6 +165,10 @@ browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onErrorOccurred) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 

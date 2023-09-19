@@ -26,11 +26,13 @@ This API is also available as `browser.downloads.setShelfEnabled()`.
 - `enabled`
   - : A `boolean` representing the state that you want to set `setShelfEnabled()` to — `true` for enable, and `false` for disable.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-setShelfEnabled) API.
 

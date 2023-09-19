@@ -104,10 +104,6 @@ Events have three functions:
     > });
     > ```
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ### Simple example
@@ -272,6 +268,10 @@ browser.runtime.onMessage.addListener(handleMessage);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 

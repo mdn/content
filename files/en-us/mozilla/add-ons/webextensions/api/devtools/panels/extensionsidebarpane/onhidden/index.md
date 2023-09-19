@@ -33,10 +33,6 @@ Events have three functions:
 - `listener`
   - : Function called when this event occurs. This function will be passed no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Create a sidebar pane, and log show and hide events.
@@ -56,5 +52,9 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.

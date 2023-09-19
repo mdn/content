@@ -36,10 +36,6 @@ let requesting = browser.permissions.request(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the extension is now granted all the permissions listed in the `permissions` argument, or `false` otherwise.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code adds a click handler that asks for various permissions, then logs the result of the request and the extension's permissions after the request completed.
@@ -72,6 +68,10 @@ document
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** Currently has a [bug with requesting origins](https://bugzil.la/1411873) and [requesting permissions on the about:addons page](https://bugzil.la/1382953).
 

@@ -39,10 +39,6 @@ Events have three functions:
     - `name`
       - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Given a manifest.json entry like this:
@@ -69,5 +65,9 @@ browser.commands.onCommand.addListener((command) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.

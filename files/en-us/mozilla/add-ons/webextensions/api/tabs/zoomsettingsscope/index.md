@@ -22,11 +22,13 @@ Values of this type are strings. Possible values are:
     - in Firefox the zoom level persists across page loads and navigation within the tab.
     - in Chrome-based browsers zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#type-ZoomSettingsScope) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 

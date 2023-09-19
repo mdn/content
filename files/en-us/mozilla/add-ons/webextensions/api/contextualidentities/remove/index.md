@@ -28,10 +28,6 @@ let removeContext = browser.contextualIdentities.remove(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the identity that was removed. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example tries to remove the contextual identity whose ID is "firefox-container-1":
@@ -55,3 +51,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

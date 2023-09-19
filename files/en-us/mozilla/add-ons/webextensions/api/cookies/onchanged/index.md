@@ -54,10 +54,6 @@ Events have three functions:
         - `cause`
           - : A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for `onChanged` events and logs details from the `changeInfo` argument:
@@ -74,6 +70,10 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#event-onChanged) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

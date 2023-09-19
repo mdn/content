@@ -33,10 +33,6 @@ browser.pageAction.setPopup(
 
         If `null` is passed here, the popup is reset to the popup that was specified in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Listen for {{WebExtAPIRef("tabs.onUpdated")}} events, and switch the popup if the loading status changes:
@@ -61,6 +57,10 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-setPopup) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 

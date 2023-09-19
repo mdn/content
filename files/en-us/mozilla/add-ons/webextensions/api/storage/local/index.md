@@ -42,6 +42,8 @@ The `local` object implements the events defined on the {{WebExtAPIRef("storage.
 - {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.local.onChanged")}}
   - : Fires when one or more items in the storage area change.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

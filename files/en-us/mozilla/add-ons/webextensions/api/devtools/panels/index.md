@@ -47,11 +47,11 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 - [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels)
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 

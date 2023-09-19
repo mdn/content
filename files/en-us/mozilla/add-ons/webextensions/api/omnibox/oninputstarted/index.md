@@ -35,10 +35,6 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs. The function is passed no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -48,5 +44,9 @@ browser.omnibox.onInputStarted.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.

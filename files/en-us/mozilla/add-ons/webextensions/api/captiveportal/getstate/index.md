@@ -19,6 +19,8 @@ let state = browser.captivePortal.getState()
 
 A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a string containing one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

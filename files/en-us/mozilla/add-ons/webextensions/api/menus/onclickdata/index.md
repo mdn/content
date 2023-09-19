@@ -50,11 +50,13 @@ Values of this type are objects. They contain the following properties:
 - `wasChecked` {{optional_inline}}
   - : `boolean`. A flag indicating whether a checkbox or radio item was checked before it was clicked.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-OnClickData) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 

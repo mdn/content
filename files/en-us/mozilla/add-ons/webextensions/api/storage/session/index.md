@@ -38,6 +38,8 @@ The `session` object implements the events defined on the {{WebExtAPIRef("storag
 - {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.session.onChanged")}}
   - : Fires when one or more items in the storage area change.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

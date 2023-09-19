@@ -60,10 +60,6 @@ Events have three functions:
         - keep a reference to the `sendResponse` argument and return `true` from the listener function. You can then call `sendResponse` after the listener function has returned.
         - return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) from the listener function and resolve the promise when the response is ready.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In this example the extension "blue\@mozilla.org" sends a message to the extension "red\@mozilla.org":
@@ -89,6 +85,10 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessageExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 

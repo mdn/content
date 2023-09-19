@@ -25,10 +25,6 @@ browser.theme.update(
 - `theme`
   - : `object`. A {{WebExtAPIRef("theme.Theme", "Theme")}} object specifying values for the UI elements you want to modify.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Sets the browser theme to use a sun graphic with complementary background color:
@@ -75,3 +71,7 @@ browser.menus.onClicked.addListener(updateThemeForCurrentWindow);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

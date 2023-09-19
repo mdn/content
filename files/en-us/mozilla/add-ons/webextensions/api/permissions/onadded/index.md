@@ -37,10 +37,6 @@ Events have three functions:
     - `permissions`
       - : {{WebExtAPIRef("permissions.Permissions")}} object containing the permissions that were granted.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -53,5 +49,9 @@ browser.permissions.onAdded.addListener(handleAdded);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.

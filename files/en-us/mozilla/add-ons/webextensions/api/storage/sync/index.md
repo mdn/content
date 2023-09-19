@@ -94,6 +94,8 @@ The `sync` object implements the events defined on the {{WebExtAPIRef("storage.S
 - {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.sync.onChanged")}}
   - : Fires when one or more items in the storage area change.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

@@ -76,10 +76,6 @@ If an error occurred, element 0 will be `undefined`, and element 1 will contain 
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.
@@ -162,6 +158,10 @@ inspectButton.addEventListener("click", () => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 

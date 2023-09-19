@@ -44,8 +44,10 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : `string`. Target of the request.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

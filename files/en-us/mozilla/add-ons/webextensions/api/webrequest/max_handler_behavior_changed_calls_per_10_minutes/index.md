@@ -11,11 +11,13 @@ The maximum number of times that `{{WebExtAPIRef("webRequest.handlerBehaviorChan
 
 This property is read-only.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#property-MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 

@@ -27,10 +27,6 @@ None.
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example will prepend "preface text" to the response body. It then disconnects, so the original response body will load normally:
@@ -55,3 +51,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

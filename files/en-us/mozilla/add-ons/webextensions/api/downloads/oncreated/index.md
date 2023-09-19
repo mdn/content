@@ -39,10 +39,6 @@ Events have three functions:
     - `downloadItem`
       - : The {{WebExtAPIRef('downloads.DownloadItem')}} object in question.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the URL of items as they are downloaded:
@@ -56,6 +52,10 @@ browser.downloads.onCreated.addListener(handleCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onCreated) API.
 

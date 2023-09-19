@@ -33,10 +33,6 @@ let retrieving = browser.sessions.getTabValue(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with the value if it exists, or `undefined` if it does not exist. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the value of "my-key" for all newly created tabs (this will include any tabs that have been restored):
@@ -58,3 +54,7 @@ browser.tabs.onCreated.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

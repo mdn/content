@@ -24,10 +24,6 @@ A string that describes the current status of the request. It will be one of the
 - `"failed"`
   - : An error has occurred and the filter has been disconnected from the request. The extension can find an error message in {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, and may not call any filter functions.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -60,3 +56,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

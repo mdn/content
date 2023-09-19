@@ -24,11 +24,13 @@ Values of this type are strings. Possible values are:
 
 > **Note:** These string constants will never change, but new constants may be added.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-State) API.
 

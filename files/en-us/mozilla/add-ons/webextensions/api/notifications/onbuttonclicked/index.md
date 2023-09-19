@@ -39,10 +39,12 @@ Events have three functions:
     - `buttonIndex`
       - : `integer`. The [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) index of the button that was clicked.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

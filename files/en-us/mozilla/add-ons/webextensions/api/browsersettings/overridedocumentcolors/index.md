@@ -17,10 +17,6 @@ Its underlying value is a string that may take any one of the following values:
 - "never": Never apply the user's choices.
 - "always": Always apply the user's choices.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to "always":
@@ -36,3 +32,7 @@ browser.browserSettings.overrideDocumentColors
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

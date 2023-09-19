@@ -45,10 +45,6 @@ Values of this type are objects, which can contain the following properties:
 - `value`
   - : A `string` representing the value of the cookie.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Most methods in the cookies API involve a `Cookie` object being used either as an input parameter or as part of the return value. For example, a call to {{WebExtAPIRef("cookies.getAll()")}} returns an array of `Cookie` objects.
@@ -70,6 +66,10 @@ gettingAll.then(logCookies);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-Cookie) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

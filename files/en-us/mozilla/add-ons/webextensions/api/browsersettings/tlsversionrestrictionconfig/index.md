@@ -18,10 +18,6 @@ The object has these properties:
 
 This is a read-only setting.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the highest TLS version supported by the browser:
@@ -35,3 +31,7 @@ browser.browserSettings.tlsVersionRestrictionConfig.maximum
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

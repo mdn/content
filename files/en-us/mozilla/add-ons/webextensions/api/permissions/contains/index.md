@@ -30,10 +30,6 @@ let getContains = browser.permissions.contains(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -73,5 +69,9 @@ console.log(testResult4); // false: "https://example.org/", `origins` doesn't ma
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.

@@ -32,8 +32,8 @@ To use this API, an extension must request the "theme" [permission](/en-US/docs/
 - {{WebExtAPIRef("theme.onUpdated")}}
   - : Fired when the browser theme has been changed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

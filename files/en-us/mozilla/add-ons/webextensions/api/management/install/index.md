@@ -28,10 +28,6 @@ browser.management.install(options)
 
 A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object, containing the `ExtensionID` defined for the theme in manifest.json.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Cycle through a list of themes:
@@ -73,3 +69,7 @@ for (const url of themes) {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

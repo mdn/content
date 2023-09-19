@@ -76,10 +76,6 @@ let settingIcon = browser.pageAction.setIcon(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the icon for the page action when the user clicks it:
@@ -94,6 +90,10 @@ browser.pageAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:**
 >

@@ -32,10 +32,12 @@ Values of this type are objects. They contain these properties:
 - `world` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in. The default value is `ISOLATED`.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#type-RegisteredContentScript) API.

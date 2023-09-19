@@ -61,10 +61,6 @@ let authorizing = browser.identity.launchWebAuthFlow(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the extension is authorized successfully, this will be fulfilled with a string containing the redirect URL. The URL will include a parameter that either is an access token or can be exchanged for an access token, using the documented flow for the particular service provider.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This function authorizes an extension to access a user's Google data, according to the documentation at <https://developers.google.com/identity/protocols/OAuth2UserAgent>. Validation of the returned access token isn't shown here:
@@ -97,5 +93,9 @@ function getAccessToken() {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.

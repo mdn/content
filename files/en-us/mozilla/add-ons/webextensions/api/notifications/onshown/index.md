@@ -37,10 +37,6 @@ Events have three functions:
     - `notificationId`
       - : `string`. ID of the notification that has been shown.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Add a listener to the {{WebExtAPIRef("notifications.onShown")}} event and log its details:
@@ -57,5 +53,9 @@ browser.notifications.onShown.addListener(logShown);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

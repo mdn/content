@@ -31,10 +31,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
@@ -58,3 +54,7 @@ browser.menus.onShown.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

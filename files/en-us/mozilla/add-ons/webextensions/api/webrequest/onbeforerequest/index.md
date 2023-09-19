@@ -167,10 +167,6 @@ Events have three functions:
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
 
-## Browser compatibility
-
-{{Compat}}
-
 ### DNS resolution ordering when BlockingResponse is used
 
 Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzil.la/1466099)
@@ -319,6 +315,10 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 

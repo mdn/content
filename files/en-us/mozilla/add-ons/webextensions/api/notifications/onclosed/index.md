@@ -39,10 +39,6 @@ Events have three functions:
     - `byUser`
       - : `boolean`. `true` if the notification was closed by the user, or `false` if it was closed by the system. This argument is not supported in Firefox.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClosed")}} event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.
@@ -54,5 +50,9 @@ browser.notifications.onClosed.addListener((notificationId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

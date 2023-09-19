@@ -22,11 +22,13 @@ Values of this type are strings. Possible values are:
 - `"prompt"`
   - : The browser will prompt the user, asking them to choose whether to uniquify or overwrite.
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-FilenameConflictAction) API.
 

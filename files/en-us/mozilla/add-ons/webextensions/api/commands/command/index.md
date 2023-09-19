@@ -22,10 +22,12 @@ Values of this type are objects. They contain the following properties:
 - `shortcut` {{optional_inline}}
   - : `string`. Key(s) used to execute this command, specified as a string like "Ctrl+Shift+Y".
 
+## Examples
+
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.

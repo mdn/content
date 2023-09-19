@@ -50,10 +50,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `isTRR`
   - : `boolean`: `true` if the record was retrieved using a Trusted Recursive Resolver (TRR).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -86,3 +82,7 @@ resolving.then(resolved);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

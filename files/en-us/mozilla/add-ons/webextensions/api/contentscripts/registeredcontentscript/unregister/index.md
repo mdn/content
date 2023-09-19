@@ -23,10 +23,6 @@ None.
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code toggles a registered content script on a browser action click:
@@ -59,3 +55,7 @@ browser.browserAction.onClicked.addListener(toggle);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

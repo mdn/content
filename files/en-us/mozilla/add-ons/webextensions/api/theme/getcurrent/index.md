@@ -28,10 +28,6 @@ let getting = browser.theme.getCurrent(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise will be fulfilled with a {{WebExtAPIRef("theme.Theme")}} object representing the theme applied to the given window. If no extension-supplied theme has been applied to the given window, it will be fulfilled with an empty object.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Gets the properties `frame` and `toolbar` colors of the current theme
@@ -53,3 +49,7 @@ getCurrentThemeInfo();
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

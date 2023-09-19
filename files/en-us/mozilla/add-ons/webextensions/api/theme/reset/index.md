@@ -24,10 +24,6 @@ browser.theme.reset(
 - `windowId` {{optional_inline}}
   - : `integer`. The ID of a window. If this is provided, the theme applied to that window will be reset. If it is omitted the theme will be reset on all windows.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code applies a theme, then removes it when the user clicks a browser action:
@@ -41,6 +37,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

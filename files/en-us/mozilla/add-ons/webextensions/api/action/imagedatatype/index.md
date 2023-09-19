@@ -13,6 +13,8 @@ Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData)
 
 An [`ImageData`](/en-US/docs/Web/API/ImageData) object.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

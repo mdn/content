@@ -29,10 +29,6 @@ let clearing = setting.clear(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `boolean`: `true` if the setting was cleared, `false` otherwise.
 
-## Browser compatibility
-
-See {{WebExtAPIRef("types.BrowserSetting")}}.
-
 ## Example
 
 Clear the `webRTCIPHandlingPolicy` setting:
@@ -51,6 +47,10 @@ clearing.then(onCleared);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
 > **Note:**
 >

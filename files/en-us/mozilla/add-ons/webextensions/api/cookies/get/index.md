@@ -47,10 +47,6 @@ let getting = browser.cookies.get(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or `null` if the cookie was not found.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example tries to get the cookie named "favorite-color", associated with the URL for the currently active tab:
@@ -78,6 +74,10 @@ getActive.then(getCookie);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-get) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 

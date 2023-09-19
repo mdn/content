@@ -19,6 +19,8 @@ let state = browser.captivePortal.getLastChecked()
 
 A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer representing time in milliseconds.
 
+## Examples
+
 {{WebExtExamples}}
 
 ## Browser compatibility

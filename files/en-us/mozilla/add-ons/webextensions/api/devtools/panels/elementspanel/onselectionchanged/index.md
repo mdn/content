@@ -33,10 +33,6 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs. The function is passed no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Listen for selection changed events, and log the text content of the newly selected element:
@@ -54,5 +50,9 @@ browser.devtools.panels.elements.onSelectionChanged.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.

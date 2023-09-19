@@ -14,10 +14,6 @@ The {{WebExtAPIRef("privacy.services")}} property contains privacy-related setti
 - `passwordSavingEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser's password manager will offer to store passwords when the user enters them. Defaults to `true`.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Disable the password manager if possible.
@@ -49,5 +45,9 @@ getting.then((got) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API.
