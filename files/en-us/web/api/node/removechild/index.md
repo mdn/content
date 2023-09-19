@@ -84,11 +84,11 @@ while (element.firstChild) {
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+let d = document.getElementById("top");
+let d_nested = document.getElementById("nested");
 
 // Throws Uncaught TypeError
-let garbage = top.removeChild(nested);
+let garbage = d.removeChild(d_nested);
 ```
 
 ### Causing a NotFoundError
@@ -101,14 +101,14 @@ let garbage = top.removeChild(nested);
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+let d = document.getElementById("top");
+let d_nested = document.getElementById("nested");
 
 // This first call correctly removes the node
-let garbage = top.removeChild(nested);
+let garbage = d.removeChild(d_nested);
 
 // Throws NotFoundError
-garbage = top.removeChild(nested);
+garbage = d.removeChild(d_nested);
 ```
 
 ## Specifications
