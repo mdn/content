@@ -40,7 +40,7 @@ elliptical corners; this solution gives you nice square corners that scale with 
 size.
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
     if (entry.contentBoxSize) {
       // The standard makes contentBoxSize an array...
