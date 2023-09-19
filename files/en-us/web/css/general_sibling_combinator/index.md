@@ -61,7 +61,7 @@ p ~ span {
 
 ### Using the combinator with complex selectors
 
-In this example, elements represented by the two complex selectors share the same parent in the document tree. The element represented by the first complex selector precedes (not necessarily immediately) the element represented by the target selector.
+In this example, elements represented by the two [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) share the same parent in the document tree. The element represented by the first complex selector precedes (not necessarily immediately) the element represented by the target selector.
 
 The example below shows that the target complex selector must share the same parent of the first complex selector.
 
