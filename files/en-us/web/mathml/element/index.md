@@ -18,7 +18,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### A
 
-- {{MathMLElement("maction")}} (Bound actions to sub-expressions)  {{deprecated_inline}}
+- {{MathMLElement("maction")}} (Bound actions to sub-expressions) {{deprecated_inline}}
 - {{MathMLElement("annotation")}} (Data annotations)
 - {{MathMLElement("annotation-xml")}} (XML annotations)
 
@@ -29,7 +29,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### F
 
-- {{MathMLElement("mfenced")}} (Parentheses)  {{non-standard_inline}}{{deprecated_inline}}
+- {{MathMLElement("mfenced")}} (Parentheses) {{non-standard_inline}}{{deprecated_inline}}
 - {{MathMLElement("mfrac")}} (Fraction)
 
 ### I
