@@ -12,7 +12,7 @@ The syntax section of an MDN reference page contains a syntax box defining the e
 
 Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
 The section starts with a heading (typically level two heading `##`) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-Below the heading is a code block showing the feature's exact syntax, demarcated using code fence ` ``` [markup-language] ` class.
+Below the heading is a code block showing the feature's exact syntax, demarcated using code fence ` ```[markup-language] ` class.
 
 The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
@@ -26,6 +26,9 @@ slice(start, end)
 ```
 ````
 
+> **Note:** The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
+> For JavaScript syntax sections `-nolint` is also required because the sytnax section is deliberatively not "quite" JavaScript and we don't want the linter to "fix" it (return values and end-of-line semicolons are omitted).
+
 ### General style rules
 
 A few rules to follow in terms of markup within the syntax block:
@@ -36,7 +39,7 @@ A few rules to follow in terms of markup within the syntax block:
 
   ```js-nolint
   querySelector(selector)
-  //responseStr = element.querySelector(selector)
+  // responseStr = element.querySelector(selector)
 
   new IntersectionObserver(callback, options)
   // const observer = new IntersectionObserver(callback, options)
@@ -183,7 +186,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
 Next, include a "Parameters" subsection, which explains what each parameter should be, in a description list. Parameters that are objects containing multiple members can include a nested description list, which itself includes an explanation of what each member should be. Optional parameters should be marked with an \\{{optional_inline}} macro call next to their name in the description term.
 
-The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.
+The name of each parameter in the list should be contained in markdown code fence notation `` ` ` ``.
 
 > **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
