@@ -289,7 +289,7 @@ The [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
 ```js
 let myArray = ["a", "b", "c", "d", "e"];
-myArray = myArray.slice(1, 4); // [ "b", "c", "d"]
+myArray = myArray.slice(1, 3); // [ "b", "c", "d"]
 // starts at index 1 and extracts all elements
 // until index 3
 ```
