@@ -29,11 +29,11 @@ sort(compareFn)
     - `b`
       - : The second element for comparison. Will never be `undefined`.
 
-    If omitted, the array elements are sorted according to numeric value.
+    If omitted, the typed array elements are sorted according to numeric value.
 
 ### Return value
 
-The reference to the original array, now sorted. Note that the array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
+The reference to the original typed array, now sorted. Note that the typed array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
 
 ## Description
 
