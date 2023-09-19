@@ -70,7 +70,7 @@ _The screenshot below shows a text input in default, focused, and disabled state
 
 ![Screenshot of the default, focused and disabled states text input in Chrome on macOS](disabled.png)
 
-_Screenshots used in this document are taken in Chrome 115 on macOS. There could be little changes when these fields/buttons are displayed in different browser with different versions, but basic highlighting technique is similar._
+The screenshots used in this document were taken in the Chrome browser on macOS. There may be minor variations in these fields/buttons across different browsers, but the basic highlighting technique remains similar.
 
 > **Note:** We discuss values for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
@@ -149,7 +149,7 @@ Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element
 </fieldset>
 ```
 
-The following screenshot shows default, focused and disabled checkboxes. Default and disabled checkboxes are in checked state where as focused checkbox is in unchecked state with focus ring around it.
+The following screenshot shows checkboxes in the default, focused, and disabled states. Checkboxes in the default and disabled states appear checked, whereas in the focused state, the checkbox is unchecked, with focus ring around it.
 
 ![Default, focused and disabled Checkboxes in chrome 115 on macOS](checkboxes.png)
 
@@ -187,9 +187,9 @@ Several radio buttons can be tied together. If they share the same value for the
 </fieldset>
 ```
 
-The following screenshot shows default and disabled radio buttons in checked state along with focused radio button in unchecked state.
+The following screenshot shows default and disabled radio buttons in the checked state, along with focused a radio button in the unchecked state.
 
-![Radio buttons in chrome 115 on macOS](radios.png)
+![Default, focused and disabled Radio buttons in chrome 115 on macOS](radios.png)
 
 ## Actual buttons
 
@@ -276,9 +276,9 @@ Below you can find examples of each button `<input>` type, along with the equiva
 
 Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are {{glossary("void element", "void elements")}}; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
 
-The following examples show default, focused, and disabled button input types.
+The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is greyed out.
 
-![Default, focused and disabled button input types in chrome 115 on macOS](buttons.png)
+![Default, focus, and disabled button states in chrome 115 on macOS](buttons.png)
 
 ### Image button
 
@@ -325,9 +325,9 @@ On some mobile devices, the file picker can access photos, videos, and audio cap
 <input type="file" accept="audio/*;capture=microphone" />
 ```
 
-The following screenshot shows File picker widget in default, focused and disabled state when no file is selected.
+The following screenshot shows the file picker widget in the default, focus, and disabled states when no file is selected.
 
-![File picker widget in chrome 115 on macOS](filepickers.png)
+![File picker widget in default, focus, and disabled states in chrome 115 on macOS](filepickers.png)
 
 ## Common attributes
 
