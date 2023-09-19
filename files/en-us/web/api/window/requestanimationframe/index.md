@@ -57,7 +57,8 @@ requestAnimationFrame(callback)
     all windows that run on the same agent (i.e. all same origin windows, and more
     importantly same-origin iframes), which allows synchronizing an animation across
     multiple `requestAnimationFrame` callbacks. The timestamp value is also similar to
-    {{domxref('performance.now()')}}, but never the same value.
+    calling {{domxref('performance.now()')}} at the start of the callback function,
+    but it is never the same value.
 
 ### Return value
 
