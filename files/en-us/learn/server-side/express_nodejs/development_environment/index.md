@@ -102,14 +102,14 @@ nvm install --lts
 
 At the time of writing, the LTS version of nodejs is 18.15.0.
 The command `nvm list` shows the downloaded set of version and the current version.
-You can set a particular version as the _current version_ with the command below (the same as for `npm-windows`)
+You can set a particular version as the _current version_ with the command below (the same as for `nvm-windows`)
 
 ```bash
 nvm use 18.15.0
 ```
 
 Use the command `nvm --help` to find out other command line options.
-These are often similar to, or the same as, those offered by `npm-windows`.
+These are often similar to, or the same as, those offered by `nvm-windows`.
 
 ### Testing your Nodejs and npm installation
 

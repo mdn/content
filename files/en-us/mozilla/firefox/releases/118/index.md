@@ -25,6 +25,7 @@ This article provides information about the changes in Firefox 118 that affect d
 ### CSS
 
 - Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
+- A new keyword `from-font` in the CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
 
 #### Removals
 
@@ -46,7 +47,10 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
+- The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped, and should be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
+- The array returned by {{domxref("RTCPeerConnection.getTransceivers()")}} now omits stopped transcievers. Similarly, {{domxref("RTCPeerConnection.getReceivers()")}} and {{domxref("RTCPeerConnection.getSenders()")}} omit the receivers and senders associated with a stopped transceiver ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
+- [`CSSStyleRule`](/en-US/docs/Web/API/CSSStyleRule) now inherits from [`CSSGroupingRule`](/en-US/docs/Web/API/CSSGroupingRule) instead of directly from [`CSSRule`](/en-US/docs/Web/API/CSSRule), with the result that it additionally implements the property [`cssRules`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and the methods [`deleteRule()`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and [`insertRule()`](/en-US/docs/Web/API/CSSGroupingRule/insertRule) (Firefox bug [1846251](https://bugzil.la/1846251)).
 
 #### DOM
 
