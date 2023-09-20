@@ -121,7 +121,7 @@ Intl.DateTimeFormat(locales, options)
     - `"shortOffset"`
       - : Short localized GMT format (e.g., `GMT-8`)
     - `"longOffset"`
-      - : Long localized GMT format (e.g., `GMT-0800`)
+      - : Long localized GMT format (e.g., `GMT-08:00`)
     - `"shortGeneric"`
       - : Short generic non-location format (e.g.: `PT`, `Los Angeles Zeit`).
     - `"longGeneric"`

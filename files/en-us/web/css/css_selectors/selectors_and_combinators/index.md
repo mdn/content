@@ -78,7 +78,7 @@ The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinato
 
 ### Column combinator
 
-There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters (`||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
 ### Namespace separator
 
