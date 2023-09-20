@@ -94,6 +94,8 @@ console.log(`nullProtoObj is: ${nullProtoObj}`); // shows "nullProtoObj is: [obj
 
 Unlike normal objects, in which `toString()` is on the object's prototype, the `toString()` method here is an own property of `nullProtoObj`. This is because `nullProtoObj` has no (`null`) prototype.
 
+You can also revert a null-prototype object back to an ordinary object using [`Object.setPrototypeOf(nullProtoObj, Object.prototype)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
+
 In practice, objects with `null` prototype are usually used as a cheap substitute for [maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). The presence of `Object.prototype` properties will cause some bugs:
 
 ```js
