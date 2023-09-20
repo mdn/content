@@ -53,15 +53,15 @@ Given this HTML:
 To remove a specified element when knowing its parent node:
 
 ```js
-let parent = document.getElementById("parent");
-let child = document.getElementById("child");
-let throwawayNode = parent.removeChild(child);
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+const throwawayNode = parent.removeChild(child);
 ```
 
 To remove a specified element without having to specify its parent node:
 
 ```js
-let node = document.getElementById("child");
+const node = document.getElementById("child");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
@@ -70,7 +70,7 @@ if (node.parentNode) {
 To remove all children from an element:
 
 ```js
-let element = document.getElementById("idOfParent");
+const element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
@@ -84,11 +84,11 @@ while (element.firstChild) {
 ```
 
 ```js
-let parent = document.getElementById("parent");
-let child = document.getElementById("child");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
 // Throws Uncaught TypeError
-let garbage = parent.removeChild(child);
+const garbage = parent.removeChild(child);
 ```
 
 ### Causing a NotFoundError
@@ -101,11 +101,11 @@ let garbage = parent.removeChild(child);
 ```
 
 ```js
-let parent = document.getElementById("parent");
-let child = document.getElementById("child");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
 // This first call correctly removes the node
-let garbage = parent.removeChild(child);
+const garbage = parent.removeChild(child);
 
 // Throws NotFoundError
 garbage = parent.removeChild(child);
