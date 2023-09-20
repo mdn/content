@@ -142,6 +142,7 @@ p {
 
 /* Fallback styles */
 .hsl,
+.hsl-shorter,
 .hsl-named {
   background: linear-gradient(
     to right,
@@ -186,9 +187,6 @@ p {
     hsl(60 100% 50%)
   );
 }
-.hsl-shorter {
-  background: linear-gradient(to right, hsl(190 100% 50%), hsl(180 100% 50%));
-}
 ```
 
 ```css
@@ -216,8 +214,8 @@ p {
 .hsl-shorter {
   background: linear-gradient(
     to right in hsl shorter hue,
-    hsl(190deg 100% 50%),
-    hsl(180deg 100% 50%)
+    hsl(39deg 100% 50%),
+    hsl(60deg 100% 50%)
   );
 }
 .hsl-longer {
@@ -237,7 +235,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 400)}}
+{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 500)}}
 
 ## Specifications
 
