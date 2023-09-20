@@ -34,11 +34,11 @@ decreasing hue
 
 ### Values
 
-Any pair of hue angles `θ1` and `θ2` correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
+Any pair of hue angles correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
 
 > **Note:** The following descriptions and illustrations are based on color wheels in which hue angles increase in a clockwise direction. Be aware that there are color wheels where an increase in angles will be a counterclockwise operation.
 
-There are four algorithms to determine which arc is used:
+For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)`, there are four algorithms to determine which arc is used when interpolating from `θ1` to `θ2`:
 
 - `shorter`
 
@@ -47,9 +47,9 @@ There are four algorithms to determine which arc is used:
     - If `θ1 < θ2`, use the clockwise arc;
     - If `θ1 > θ2`, use the counterclockwise arc.
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = -225deg`, `θ2 = 45deg`                                        |
-    | ------------------------------------------------------------------ | ------------------------------------------------------------------- |
-    | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = -225deg and θ2 = 45deg](shorter_decreasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = 135deg`, `θ2 = 45deg`                                        |
+    | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+    | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
 
@@ -63,25 +63,32 @@ There are four algorithms to determine which arc is used:
     - If `θ1 < θ2`, use the clockwise arc;
     - If `θ1 > θ2`, use the counterclockwise arc.
 
-    | `θ1 = 45deg`, `θ2 = -225deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
-    | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
-    | ![longer with θ1 = 45deg and θ2 = -225deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
+    | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+    | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
 
   - : Use the clockwise arc. When the two radii coincide, the arc degenerates to a single point.
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 495deg`, `θ2 = 45deg`                                          |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
     | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-    | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 495deg and θ2 = 45deg](longer_increasing.png) |
+    | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
 
   - : Use the counterclockwise arc. When the two radii coincide, the arc degenerates to a single point.
 
-    | `θ1 = 45deg`, `θ2 = 495deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
     | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | ![decreasing with θ1 = 45deg and θ2 = 495deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+    | ![decreasing with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+
+As there are only two arcs to choose from, these algorithms are pairwise equivalent under certain circumstances. Specifically:
+
+- If `0deg < θ2 - θ1 < 180deg` or `θ2 - θ1 < -180deg`, `shorter` and `increasing` are equivalent, whereas `longer` and `decreasing` are equivalent.
+- If `-180deg < θ2 - θ1 < 0deg` or `θ2 - θ1 > 180deg`, `shorter` and `decreasing` are equivalent, whereas `longer` and `increasing` are equivalent.
+
+A notable feature of `increasing` and `decreasing` is that when the hue angle difference passes through `180deg` during transition or animation, the arc will not flip to the other side like `shorter` and `longer` do.
 
 ## Formal syntax
 
@@ -104,6 +111,9 @@ The following example shows the effect of using different hue interpolation algo
 </div>
 <div class="hsl-decreasing">
   <p>HSL decreasing</p>
+</div>
+<div class="hsl-shorter">
+  <p>HSL shorter</p>
 </div>
 <div class="hsl-longer">
   <p>HSL longer</p>
@@ -176,6 +186,9 @@ p {
     hsl(60 100% 50%)
   );
 }
+.hsl-shorter {
+  background: linear-gradient(to right, hsl(190 100% 50%), hsl(180 100% 50%));
+}
 ```
 
 ```css
@@ -198,6 +211,13 @@ p {
     to right in hsl decreasing hue,
     hsl(39deg 100% 50%),
     hsl(60deg 100% 50%)
+  );
+}
+.hsl-shorter {
+  background: linear-gradient(
+    to right in hsl shorter hue,
+    hsl(190deg 100% 50%),
+    hsl(180deg 100% 50%)
   );
 }
 .hsl-longer {
