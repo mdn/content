@@ -1,9 +1,7 @@
----
 title: <svg>
 slug: Web/SVG/Element/svg
 page-type: svg-element
 browser-compat: svg.elements.svg
----
 
 {{SVGRef}}
 
