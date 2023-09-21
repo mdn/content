@@ -32,7 +32,7 @@ postMessage(message, transfer)
 
 - `options` {{optional_inline}}
 
-  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from, and becomes available only to the worker it was sent to.
 
 - `transfer` {{optional_inline}}
 
