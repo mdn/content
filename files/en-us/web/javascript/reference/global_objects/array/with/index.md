@@ -37,7 +37,7 @@ A new array with the element at `index` replaced with `value`.
 
 The `with()` method changes the value of a given index in the array, returning a new array with the element at the given index replaced with the given value. The original array is not modified. This allows you to chain array methods while doing manipulations.
 
-By combining `with()` with {{jsxref("Arra/at", "at()")}}, you can both write and read (respectively) an array using negative indices.
+By combining `with()` with {{jsxref("Array/at", "at()")}}, you can both write and read (respectively) an array using negative indices.
 
 The `with()` method never produces a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). If the source array is sparse, the empty slots will be replaced with `undefined` in the new array.
 
