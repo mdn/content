@@ -23,11 +23,11 @@ reduce(callbackFn, initialValue)
 - `callbackFn`
   - : A function to execute for each element in the typed array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
+      - : The value resulting from the previous call to `callbackFn`. On the first call, its value is `initialValue` if the latter is specified; otherwise its value is `array[0]`.
     - `currentValue`
-      - : The value of the current element. On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`.
+      - : The value of the current element. On the first call, its value is `array[0]` if `initialValue` is specified; otherwise its value is `array[1]`.
     - `currentIndex`
-      - : The index position of `currentValue` in the typed array. On first call, `0` if `initialValue` was specified, otherwise `1`.
+      - : The index position of `currentValue` in the typed array. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
     - `array`
       - : The typed array `reduce()` was called upon.
 - `initialValue` {{optional_inline}}
@@ -37,7 +37,7 @@ reduce(callbackFn, initialValue)
 
 ### Return value
 
-The value that results from running the "reducer" callback function to completion over the entire array.
+The value that results from running the "reducer" callback function to completion over the entire typed array.
 
 ### Exceptions
 
@@ -68,12 +68,10 @@ const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
 ## See also
 
 - [Polyfill of `TypedArray.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.group()")}}
-- {{jsxref("TypedArray.prototype.groupToMap()")}}
 - {{jsxref("TypedArray.prototype.map()")}}
-- {{jsxref("TypedArray.prototype.flat()")}}
-- {{jsxref("TypedArray.prototype.flatMap()")}}
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

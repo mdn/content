@@ -73,7 +73,8 @@ The `font-size` property is specified in one of the following ways:
     > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 - `math`
-  - : Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) are applied when determining the computed value of the `font-size` property.
+  - : [Scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) are applied when determining the computed value of the `font-size` property for math elements relative to the `font-size` of the containing parent.
+    See the [math-depth](/en-US/docs/Web/CSS/math-depth) property for more information.
 
 ## Description
 

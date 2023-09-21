@@ -96,9 +96,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** The `nohref` attribute is not necessary, as omitting the `href` attribute is sufficient.
 
-- `type` {{deprecated_inline}}
-  - : Hint for the type of the referenced resource. Ignored by browsers.
-
 ## Examples
 
 ```html

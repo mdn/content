@@ -35,7 +35,7 @@ be a simple typo.
 
 For example, when chaining expressions, trailing commas are not allowed.
 
-```js example-bad
+```js-nolint example-bad
 for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
@@ -54,7 +54,7 @@ for (let i = 0; i < 5; ++i) {
 
 Sometimes, you leave out brackets around `if` statements:
 
-```js example-bad
+```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
   if (n > upperBound) || (n < lowerBound) { // Not enough brackets here!
     throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);

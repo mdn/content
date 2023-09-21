@@ -19,6 +19,10 @@ array.
 pop()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The removed element from the array; {{jsxref("undefined")}} if the array is empty.
@@ -115,7 +119,7 @@ console.log(collection.length); // 2
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}

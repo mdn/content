@@ -223,9 +223,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which are a superset of the allowed values of HTML 4.
     > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
-- `prefetch` {{secureContext_inline}} {{experimental_inline}}
-  - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
-    This allows the user agent to respond faster when the resource is requested in the future.
 - `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:

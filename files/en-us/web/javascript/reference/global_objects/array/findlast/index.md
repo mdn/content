@@ -20,7 +20,7 @@ If you need to find:
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
 
 ## Syntax
 
@@ -44,7 +44,7 @@ findLast(callbackFn, thisArg)
 
 ### Return value
 
-The value of the element in the array with the highest index value that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
+The last (highest-index) element in the array that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
 
 ## Description
 
@@ -191,8 +191,8 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}

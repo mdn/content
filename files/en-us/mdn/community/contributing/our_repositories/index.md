@@ -39,7 +39,7 @@ These are repository used for project planning, documenting the project itself, 
 
 - [mdn-community](https://github.com/mdn/mdn-community)
 - [mdn/mdn](https://github.com/mdn/mdn)
-- [content-team-projects](https://github.com/mdn/content-team-projects).
+- [content-team-projects](https://github.com/mdn/content-team-projects)
 
 A Tier 3 project needs 1 admin.
 

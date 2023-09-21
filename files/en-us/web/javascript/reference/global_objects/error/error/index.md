@@ -44,7 +44,7 @@ Error(message, fileName, lineNumber)
 
 ### Function call or new construction
 
-When `Error` is used like a function, that is without {{JSxRef("Operators/new", "new")}}, it will return an `Error` object.
+When `Error` is used like a function, that is without {{jsxref("Operators/new", "new")}}, it will return an `Error` object.
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js
@@ -97,7 +97,7 @@ console.log("cause" in error3); // false
 
 ## See also
 
-- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
-- {{JSxRef("Statements/throw", "throw")}}
-- {{JSxRef("Statements/try...catch", "try...catch")}}
-- [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}
+- [Error causes](https://v8.dev/features/error-cause) on v8.dev (2021)
