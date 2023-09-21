@@ -29,7 +29,7 @@ const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
-    console.log('response.url =', response.url); // response.url = https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg
+    console.log("response.url =", response.url); // response.url = https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg
     return response.blob();
   })
   .then((myBlob) => {

@@ -42,13 +42,13 @@ const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
-    console.log('response.type =', response.type); // response.type = 'basic'
+    console.log("response.type =", response.type); // response.type = 'basic'
     return response.blob();
   })
   .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
-  })
+  });
 ```
 
 ## Specifications

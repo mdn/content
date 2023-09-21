@@ -32,13 +32,13 @@ const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
-    console.log('response.headers =', response.headers);
+    console.log("response.headers =", response.headers);
     return response.blob();
   })
   .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
-  })
+  });
 ```
 
 ## Specifications
