@@ -39,6 +39,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTTP
 
+- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
+
 #### Removals
 
 ### Security
@@ -47,6 +49,7 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
+- The <kbd>⊞ Windows Logo</kbd> key on Windows and the <kbd>Command</kbd> key on macOS now return a value of `"Meta"` for [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key), instead of `"OS"`, and [`KeyboardEvent.code`](/en-US/docs/Web/API/KeyboardEvent/code) returns `MetaLeft`/`MetaRight` instead of `OSLeft`/`OSRight` (Firefox bug [1232918](https://bugzil.la/1232918)).
 - The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped, and should be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The array returned by {{domxref("RTCPeerConnection.getTransceivers()")}} now omits stopped transcievers. Similarly, {{domxref("RTCPeerConnection.getReceivers()")}} and {{domxref("RTCPeerConnection.getSenders()")}} omit the receivers and senders associated with a stopped transceiver ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
