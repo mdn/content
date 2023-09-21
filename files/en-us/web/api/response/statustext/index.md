@@ -34,7 +34,7 @@ const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
-    console.log('response.statusText =', response.statusText); // response.statusText is "OK" if the response returned successfully
+    console.log('response.statusText =', response.statusText); // response.statusText = "OK"
     return response.blob();
   })
   .then((myBlob) => {

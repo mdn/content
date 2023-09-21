@@ -42,7 +42,7 @@ const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
-    console.log('response.type =', response.type); // response.type is 'basic' by default
+    console.log('response.type =', response.type); // response.type = 'basic'
     return response.blob();
   })
   .then((myBlob) => {

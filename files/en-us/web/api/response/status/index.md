@@ -32,7 +32,7 @@ const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
-    console.log('response.status =', response.status); // response.status is 200 if requested successfully
+    console.log('response.status =', response.status); // response.status = 200
     return response.blob();
   })
   .then((myBlob) => {
