@@ -27,11 +27,9 @@ postMessage(message, transferables)
 - `message`
   - : The message to send to the client. This can be any [structured-cloneable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `options` {{optional_inline}}
-  - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
-    The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 - `transferables` {{optional_inline}}
-  - : An optional sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) with the message. The
-    ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
 
