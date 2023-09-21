@@ -493,7 +493,7 @@ This builds the array of thresholds—each of which is a ratio between 0.0 and 1
         <th>0</th>
         <td>0.05</td>
         <th>11</th>
-        <td>0.6&nbsp;</td>
+        <td>0.6</td>
       </tr>
       <tr>
         <th>1</th>
