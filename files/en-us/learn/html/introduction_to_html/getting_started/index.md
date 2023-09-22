@@ -245,22 +245,22 @@ An attribute should have:
 
 ### Active learning: Adding attributes to an element
 
-The `<img>` element can take a number of attributes, but several are as follows:
+The `<img>` element can take a number of attributes, including:
 
 - `src`
-  - : The `src` attribute is a **required** attribute that specifies the location of the image. This can be a website or a file path. For example, from a website: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`
+  - : The `src` attribute is a **required** attribute that specifies the location of the image. For example: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`.
 - `alt`
-  - : The `alt` attribute specifies an alternative text description of the image. For a number of reasons, a browser may not display an image and will instead replace the image with the text. For example: `alt="The Firefox icon"`
+  - : The `alt` attribute specifies a text description of the image. For example: `alt="The Firefox icon"`.
 - `width`
-  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`
+  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`.
 - `height`
-  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`
+  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`.
 
-Edit the line below in the _Input_ area to turn it into an image. (Note: The sample window can only take in images from the web since it can't access files from your machine.)
+Edit the line below in the _Input_ area to turn it into an image.
 
 1. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
 2. Back in the area below, add the `src` attribute and fill it with the link from step 1.
-3. Change the `alt` attribute
+3. Set the `alt` attribute.
 4. Add the `width` and `height` attributes.
 
 You will be able to see your changes live in the _Output_ area.
