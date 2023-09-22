@@ -419,7 +419,7 @@ For reference, the example above also includes a non-disabled form input element
 
 ### Omitting quotes around attribute values
 
-If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. The element below, `<a>` is called an anchor. Anchors enclose text and turn them into links and the link they point to is specified with the `href` attribute. You can write this basic version below with _only_ the `href` attribute, like this:
+If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. The element in the code snippet below, `<a>`, is called an anchor. Anchors enclose text and turn them into links. The `href` attribute specifies the web address the link points to. You can write this basic version below with _only_ the `href` attribute, like this:
 
 ```html
 <a href=https://www.mozilla.org/>favorite website</a>
