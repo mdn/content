@@ -13,11 +13,19 @@ The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref(
 
 ## Syntax
 
-```css
-clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%);
-clip-path: polygon(0px 0px, 200px 100px, 0px 200px);
-clip-path: polygon(0% 0px, 100% 100px, 0px 100%);
-clip-path: polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%);
+```css-nolint
+
+/* Specified as coordinate list */
+/* polygon(<length-percentage> <length-percentage>, ... )*/
+polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
+polygon(0px 0px, 200px 100px, 0px 200px)
+polygon(0% 0px, 100% 100px, 0px 100%)
+polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%)
+
+/* Specified as coordinate list and fill rule*/
+/* polygon(<fill-rule> <length-percentage> <length-percentage>, ... )*/
+polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
+polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ```
 
 ### Values
@@ -27,7 +35,7 @@ clip-path: polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%);
 - {{cssxref("length-percentage")}}
   - : Each vertex of the polygon is represented with a pair of `<length-percentage>` values, which give the coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box).
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 
