@@ -19,6 +19,7 @@ This article provides information about the changes in Firefox 118 that affect d
 ### MathML
 
 - The `mathml.legacy_maction_and_semantics_implementations.disabled` preference is now removed, which means that the [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default (Firefox bug [1788223](https://bugzil.la/1788223)).
+- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated, as is use with any other element than the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
 
 #### Removals
 
