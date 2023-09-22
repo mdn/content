@@ -218,10 +218,9 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
-      } else {
-        // Respond with a HTTP 404 response status.
-        return new Response(null, { status: 404 });
       }
+      // Respond with a HTTP 404 response status.
+      return new Response(null, { status: 404 });
     })(),
   );
 });
@@ -291,10 +290,9 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
-      } else {
-        // If resource isn't in the cache, return a 404.
-        return new Response(null, { status: 404 });
       }
+      // If resource isn't in the cache, return a 404.
+      return new Response(null, { status: 404 });
     })(),
   );
 });
