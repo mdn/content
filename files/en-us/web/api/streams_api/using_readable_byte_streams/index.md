@@ -423,7 +423,7 @@ The `close()` method does nothing: it is only provided to show where you might c
 ```js
 class MockUnderlyingFileHandle {
   constructor() {
-    this.maxdata = 1300; // "file size"
+    this.maxdata = 100; // "file size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
@@ -573,8 +573,8 @@ function makeReadableByteFileStream(filename) {
       const theView = controller.byobRequest.view;
       const { bytesRead, buffer } = await fileHandle.read(
         theView.buffer,
-        theView.offset,
-        theView.length,
+        theView.byteOffset,
+        theView.byteLength,
         position,
       );
       if (bytesRead === 0) {
@@ -608,7 +608,7 @@ When the underlying source signals that it has no more data, the `reader.read()`
 
 ```js
 const reader = stream.getReader({ mode: "byob" });
-let buffer = new ArrayBuffer(4000);
+let buffer = new ArrayBuffer(200);
 readStream(reader);
 
 function readStream(reader) {
@@ -809,8 +809,8 @@ function makeReadableByteFileStream(filename) {
       const theView = controller.byobRequest.view;
       const { bytesRead, buffer } = await fileHandle.read(
         theView.buffer,
-        theView.offset,
-        theView.length,
+        theView.byteOffset,
+        theView.byteLength,
         position,
       );
       if (bytesRead === 0) {
@@ -1038,8 +1038,8 @@ function makeReadableByteFileStream(filename) {
         const theView = controller.byobRequest.view;
         const { bytesRead, buffer } = await fileHandle.read(
           theView.buffer,
-          theView.offset,
-          theView.length,
+          theView.byteOffset,
+          theView.byteLength,
           position,
         );
         if (bytesRead === 0) {
@@ -1060,8 +1060,8 @@ function makeReadableByteFileStream(filename) {
         const mynewBuffer = new Uint8Array(DEFAULT_CHUNK_SIZE);
         const { bytesRead, buffer } = await fileHandle.read(
           mynewBuffer.buffer,
-          mynewBuffer.offset,
-          mynewBuffer.length,
+          mynewBuffer.byteOffset,
+          mynewBuffer.byteLength,
           position,
         );
         if (bytesRead === 0) {
