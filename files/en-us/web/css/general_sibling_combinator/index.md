@@ -61,9 +61,12 @@ p ~ span {
 
 ### Using the combinator with complex selectors
 
-In this example, elements represented by the two [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) share the same parent in the document tree. The element represented by the first complex selector precedes (not necessarily immediately) the element represented by the target selector.
+This example contains two [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector), both using the general sibling combinator: `.foo p ~ span` and `.foo p ~ .foo span`.
 
-The example below shows that the target complex selector must share the same parent of the first complex selector.
+- The first complex selector, `.foo p ~ span`, matches all spans that come after a paragraph _if_ the span and paragraph share the same parent **and** that parent or an ancestor of that parent has the class `.foo`.
+- The second complex selector, `.foo p ~ .foo span`, matches all spans that are a descendant of the element with class `.foo` _if_ that element is a sibling of the previously mentioned paragraph.
+
+The example below shows that the target element in the complex selector must share the same parent as the initial element in the complex selector.
 
 ```html
 <h1>Dream big</h1>
@@ -89,7 +92,7 @@ The example below shows that the target complex selector must share the same par
 
 {{EmbedLiveSample("Using the combinator with complex selectors", "auto", 200)}}
 
-In the above HTML, the two siblings of `.foo p` are `span` and `.foo span`.
+In the above HTML, the two siblings of `.foo p` are `span` and `.foo`. The green `span` is a descendant of `.foo`, which is a sibling of `.foo p`.
 
 - When the target selector is `span`, the `span` element that is a sibling of `p` is selected. The `p` element is a descendant of `.foo`, so are its `span` siblings.
 - In `.foo p ~ .foo span`, the target selector is `span` that is a descendant of `.foo`. In this case, the `span` element that's a descendent of `.foo` is selected if that `.foo` is a sibling of `p`; essentially, both are nested in an ancestor of `.foo`.
