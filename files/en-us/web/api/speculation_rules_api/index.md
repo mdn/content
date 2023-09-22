@@ -347,25 +347,25 @@ The Speculation Rules API does not define any interfaces of its own.
 ### Extensions to other interfaces
 
 - {{domxref("Document.prerendering")}}
-  - : xx
-- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}}
-  - : xx
+  - : A boolean property that returns `true` if the document is currently in the process of prerendering.
+- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event
+  - : Fires when a prerendered page is activated (i.e. the user views the page).
 - {{domxref("PerformanceNavigationTiming.activationStart")}}
-  - : xx
+  - : A number representing the time between when a document starts prerendering and when it is activated.
 - {{domxref("PerformanceResourceTiming.deliveryType")}}, `"navigational-prefetch"` value
-  - : xx
+  - : Signals that the type of a performance entry is a prefetch.
 
 ## HTTP headers
 
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) `"inline-speculation-rules"` value
-  - : xx
+  - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
 - [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode)
-  - : xx
+  - : Set by a destination origin to opt-in to using various higher-risk speculation rules modes, for example cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
 ## HTML features
 
 - [`<script type="speculationrules"> ... </script>`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)
-  - : xx
+  - : Used to define a set of prefetch and/or prerender speculation rules on the current document.
 
 ## Examples
 
