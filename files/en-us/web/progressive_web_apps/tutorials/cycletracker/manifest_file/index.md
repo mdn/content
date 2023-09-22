@@ -250,7 +250,7 @@ The Manifest App pane provides the name of the manifest file as a link, and iden
 
 ![The identity and presentation manifest members along with values, if present.](manifest_identity_and_presentation.jpg)
 
-Supported manifest members are displayed, along with all included values. In this screenshot, while we did not include the `orientation` or `id` members, they are listed. The App panel can be used to see the manifest members and even learn: in this example, we learn that to specify an App Id that matches the current identity, set the `id` field to /".
+Supported manifest members are displayed, along with all included values. In this screenshot, while we did not include the `orientation` or `id` members, they are listed. The App panel can be used to see the manifest members and even learn: in this example, we learn that to specify an App Id that matches the current identity, set the `id` field to "/".
 
 ![Installability shows that because we don't have a service worker, our app is not an installable PWA. yet.](manifest_installability.jpg)
 

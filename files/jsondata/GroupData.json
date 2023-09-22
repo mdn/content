@@ -437,7 +437,7 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential"],
+      "interfaces": ["IdentityCredential", "IdentityProvider"],
       "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
