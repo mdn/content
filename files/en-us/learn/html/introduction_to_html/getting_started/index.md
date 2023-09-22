@@ -419,13 +419,13 @@ For reference, the example above also includes a non-disabled form input element
 
 ### Omitting quotes around attribute values
 
-If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with _only_ the `href` attribute, like this:
+If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. The element below, `<a>` is called an anchor. Anchors enclose text and turn them into links and the link they point to is specified with the `href` attribute. You can write this basic version below with _only_ the `href` attribute, like this:
 
 ```html
 <a href=https://www.mozilla.org/>favorite website</a>
 ```
 
-However, as soon as we add the `title` attribute in this way, there are problems:
+Anchors can also have a `title` attribute, a description of the linked page. However, as soon as we add the `title` in the same fashion as the `href` attribute there are problems:
 
 ```html-nolint example-bad
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
