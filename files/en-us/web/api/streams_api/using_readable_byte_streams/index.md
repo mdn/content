@@ -447,7 +447,7 @@ class MockUnderlyingFileHandle {
       // Write the length of data specified
       for (let i = 0; i < length; i++) {
         myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i;
+        resultobj["bytesRead"] = i + 1;
         if (position + i >= this.maxdata) {
           break;
         }
@@ -697,7 +697,7 @@ class MockUnderlyingFileHandle {
       // Write the length of data specified
       for (let i = 0; i < length; i++) {
         myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i;
+        resultobj["bytesRead"] = i + 1;
         if (position + i >= this.maxdata) {
           break;
         }
@@ -923,7 +923,7 @@ class MockUnderlyingFileHandle {
       // Write the length of data specified
       for (let i = 0; i < length; i++) {
         myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i;
+        resultobj["bytesRead"] = i + 1;
         if (position + i >= this.maxdata) {
           break;
         }
