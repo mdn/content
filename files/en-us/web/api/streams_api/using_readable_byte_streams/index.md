@@ -448,7 +448,7 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i + 1;
-        if (position + i >= this.maxdata) {
+        if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
@@ -698,7 +698,7 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i + 1;
-        if (position + i >= this.maxdata) {
+        if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
@@ -924,7 +924,7 @@ class MockUnderlyingFileHandle {
       for (let i = 0; i < length; i++) {
         myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i + 1;
-        if (position + i >= this.maxdata) {
+        if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
