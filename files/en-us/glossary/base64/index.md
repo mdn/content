@@ -52,7 +52,7 @@ function base64ToBytes(base64) {
 }
 
 function bytesToBase64(bytes) {
-  const binString = String.fromCodePoint.apply(undefined, bytes);
+  const binString = String.fromCodePoint(...bytes);
   return btoa(binString);
 }
 
