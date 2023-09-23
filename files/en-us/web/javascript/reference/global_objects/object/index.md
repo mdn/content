@@ -161,14 +161,13 @@ Many built-in operations that expect objects first coerce their arguments to obj
 
 To achieve the same effect in JavaScript, use [`Object.prototype.valueOf.call(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), alternatively, you can use [`Object(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(value)` does the same except for `undefined` and 'null'; it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
 
-
 ```js
 const nullVar = null;
 Object.prototype.valueOf.call(nullVar); // TypeError: Cannot convert undefined or null to object
 Object(nullVar); // returns a plain object {}
 
 const undefinedVar = undefined;
-Object.prototype.valueOf.call(undefinedVar);  // TypeError: Cannot convert undefined or null to object
+Object.prototype.valueOf.call(undefinedVar); // TypeError: Cannot convert undefined or null to object
 Object(undefinedVar); // returns a plain object {}
 ```
 
