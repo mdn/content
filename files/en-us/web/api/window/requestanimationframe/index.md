@@ -9,36 +9,23 @@ browser-compat: api.Window.requestAnimationFrame
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the
-browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation right before the next repaint. The method takes a
-callback as an argument to be invoked before the repaint.
+browser that you wish to perform an animation. I requests that the browser call a
+user-supplied callback function prior to the next repaint.
 
-> **Note:** Your callback routine must itself call
-> `requestAnimationFrame()` again if you want to animate another frame at the
-> next repaint. `requestAnimationFrame()` is 1 shot.
-
-You should call this method whenever you're ready to update your animation onscreen.
-This will request that your animation function be called before the browser performs the
-next repaint. The number of callbacks is usually 60 times per second, but will generally
-match the display refresh rate in most web browsers as per W3C recommendation.
+The frequency of calls to the callback function will generally match the display
+refresh rate, per the W3C recommendation. The most common refresh rate is 60hz,
+(60 cycles/frames per second), though 75hz, 120hz and 144hz are also widely used.
 `requestAnimationFrame()` calls are paused in most browsers when running in
-background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance
-and battery life.
+background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve
+performance and battery life.
 
-The callback method is passed a single argument, a {{domxref("DOMHighResTimeStamp")}},
-which indicates the current time (based on the number of milliseconds since
-[time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)). When
-multiple callbacks queued by `requestAnimationFrame()` begin to fire in a
-single frame, each receives the same timestamp even though time has passed during the
-computation of every previous callback's workload (in the code example below we only
-animate the frame when the timestamp changes, i.e. on the first callback). This
-timestamp is a decimal number, in milliseconds, but with a minimal precision of 1ms
-(1000 µs).
+> **Note:** Your callback function must call `requestAnimationFrame()` again if
+> you want to animate another frame. `requestAnimationFrame()` is one-shot.
 
-> **Warning:** Be sure to always use the first argument (or some other method for getting the
-> current time) to calculate how much the animation will progress in a frame,
-> **otherwise the animation will run faster on high refresh rate screens**.
-> Check the example below for a way to do this.
+> **Warning:** Be sure to always use the first argument (or some other method for
+> getting the current time) to calculate how much the animation will progress in
+> a frame, **otherwise the animation will run faster on high refresh rate screens**.
+> See the examples belows for ways to do this.
 
 ## Syntax
 
@@ -49,16 +36,22 @@ requestAnimationFrame(callback)
 ### Parameters
 
 - `callback`
-  - : The function to call when it's time to update your animation for the next repaint.
-    The callback function is passed one single argument, a {{domxref("DOMHighResTimeStamp")}}
-    indicating end time of the previous frame's rendering.
-    For `Window` objects (not `Workers`), the timestamp's value is equal to
-    {{domxref("document.timeline.currentTime")}}. This value is shared between
-    all windows that run on the same agent (i.e. all same origin windows, and more
-    importantly same-origin iframes), which allows synchronizing an animation across
-    multiple `requestAnimationFrame` callbacks. The timestamp value is also similar to
-    calling {{domxref('performance.now()')}} at the start of the callback function,
-    but it is never the same value.
+  - The function to call when it's time to update your animation for the next
+    repaint. This callback function is passed a single argument, a
+    {{domxref("DOMHighResTimeStamp")}} indicating end time of the previous frame's
+    rendering (based on the number of milliseconds since
+    [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
+  - The timestamp is a decimal number, in milliseconds, but with a minimal
+    precision of 1ms. For `Window` objects (not `Workers`), it is equal to
+    {{domxref("document.timeline.currentTime")}}. This timestamp is shared
+    between all windows that run on the same agent (i.e. all same origin windows,
+    and more importantly same-origin iframes), which allows synchronizing
+    animations across multiple `requestAnimationFrame` callbacks. The timestamp
+    value is also similar to calling {{domxref('performance.now()')}} at the start
+    of the callback function, but it is never the same value.
+  - When multiple callbacks queued by `requestAnimationFrame()` begin to fire in
+    a single frame, each receives the same timestamp even though time has passed
+    during the computation of every previous callback's workload.
 
 ### Return value
 
