@@ -94,7 +94,7 @@ console.log(obj1); // { a: 1, b: { c: 0 } }
 console.log(obj2); // { a: 2, b: { c: 0 } }
 
 obj2.b.c = 3;
-console.log(obj1); // { a: 1, b: { c: 3 } }
+console.log(obj1); // { a: 1, b: { c: 0 } }
 console.log(obj2); // { a: 2, b: { c: 3 } }
 
 // Deep Clone
