@@ -363,7 +363,7 @@ Back in `App.js`, let's focus on line 8:
 <img src={logo} className="App-logo" alt="logo" />
 ```
 
-Here, the `<img />` tag's `src` attribute value is in curly braces. This is how JSX recognizes variables. React will see `{logo}`, know you are referring to the logo import on line 2 of our app, then retrieve the logo file and render it.
+Here, the `<img />` tag's `src` attribute value is in curly braces. This is how JSX recognizes variables. React will see `{logo}`, know you are referring to the logo import on the first line of our app, then retrieve the logo file and render it.
 
 Let's try making a variable of our own. Before the return statement of `App`, add `const subject = 'React';`. Your `App` component should now look like this:
 
