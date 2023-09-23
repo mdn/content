@@ -159,7 +159,7 @@ Many built-in operations that expect objects first coerce their arguments to obj
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
 - {{jsxref("Number")}}, {{jsxref("String")}}, {{jsxref("Boolean")}}, {{jsxref("Symbol")}}, {{jsxref("BigInt")}} primitives are wrapped into their corresponding object wrappers.
 
-To achieve the same effect in JavaScript, use [`Object.prototype.valueOf.call(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), alternatively, you can use [`Object(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(value)` does the same except for `undefined` and 'null'; it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
+To achieve the same effect in JavaScript, use [`Object.prototype.valueOf.call(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), alternatively, you can use [`Object(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(value)` does the same except for `undefined` and `null`; it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
 
 ```js
 const nullVar = null;
