@@ -381,7 +381,7 @@ function App() {
 }
 ```
 
-Change line 8 to use our `subject` variable instead of the word "World", like this:
+Change line 10 to use our `subject` variable instead of the word "World", like this:
 
 ```jsx
 function App() {
