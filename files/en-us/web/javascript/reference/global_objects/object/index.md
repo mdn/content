@@ -159,7 +159,7 @@ Many built-in operations that expect objects first coerce their arguments to obj
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
 - {{jsxref("Number")}}, {{jsxref("String")}}, {{jsxref("Boolean")}}, {{jsxref("Symbol")}}, {{jsxref("BigInt")}} primitives are wrapped into their corresponding object wrappers.
 
-The best way to achieve the same effect in JavaScript is through the [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(x)` converts `x` to an object, and for `undefined` or `null`, it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
+To achieve the same effect in JavaScript use [`Object.prototype.valueOf.call(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
 
 Places that use object coercion include:
 
