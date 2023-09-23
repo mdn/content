@@ -108,7 +108,7 @@ There are a few different groupings of selectors, and knowing which type of sele
 
 ### Type, class, and ID selectors
 
-Type selectors target an HTML element such as an `<h1>`:
+Type selectors target an HTML element such as an {{HTMLElement("h1")}}:
 
 ```css
 h1 {
