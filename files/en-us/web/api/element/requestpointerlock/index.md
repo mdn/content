@@ -19,21 +19,15 @@ To track the success or failure of the request, it is necessary to listen for th
 
 ```js-nolint
 requestPointerLock()
-requestPointerLock(options)
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
-  - : An options object that can contain the following properties:
-    - `unadjustedMovement` {{optional_inline}}
-      - : Disables OS-level adjustment for mouse acceleration, and accesses raw mouse input instead. The default value is `false`; setting it to `true` will disable mouse acceleration.
+None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
-
-> **Note:** Some browsers do not yet support the promise version of `requestPointerLock()`, just the older synchronous version.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
