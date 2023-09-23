@@ -424,7 +424,7 @@ function App() {
 }
 ```
 
-Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const.
+Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const along with its corresponding variable on line 10.
 Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
 
 ```jsx
