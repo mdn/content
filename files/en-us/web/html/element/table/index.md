@@ -135,7 +135,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `rules` {{Deprecated_inline}}
 
-  - : This enumerated attribute defines where rules, i.e. lines, should appear in a table. Lines can be set to appear between `rows`, `cols` (for columns), or `groups` (between  `<thead>`, `<tbody>`, and `<tfoot>` elements, and between `<col>` and `<colgroup>` elements), or `all` or `none` of the above.
+  - : This enumerated attribute defines where rules, i.e. lines, should appear in a table. Lines can be set to appear between `rows`, `cols` (for columns), or `groups` (between `<thead>`, `<tbody>`, and `<tfoot>` elements, and between `<col>` and `<colgroup>` elements), or `all` or `none` of the above.
 
     To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.
 
