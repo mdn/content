@@ -159,17 +159,10 @@ Many built-in operations that expect objects first coerce their arguments to obj
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
 - {{jsxref("Number")}}, {{jsxref("String")}}, {{jsxref("Boolean")}}, {{jsxref("Symbol")}}, {{jsxref("BigInt")}} primitives are wrapped into their corresponding object wrappers.
 
-To achieve the same effect in JavaScript, use [`Object.prototype.valueOf.call(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), alternatively, you can use [`Object(value)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) constructor. `Object(value)` does the same except for `undefined` and `null`; it returns a plain object instead of throwing a {{jsxref("TypeError")}}.
+There are two ways to achieve nearly the same effect in JavaScript.
 
-```js
-const nullVar = null;
-Object.prototype.valueOf.call(nullVar); // TypeError: Cannot convert undefined or null to object
-Object(nullVar); // returns a plain object {}
-
-const undefinedVar = undefined;
-Object.prototype.valueOf.call(undefinedVar); // TypeError: Cannot convert undefined or null to object
-Object(undefinedVar); // returns a plain object {}
-```
+- {{jsxref("Object.prototype.valueOf()")}}: `Object.prototype.valueOf.call(x)` does exactly the object coercion steps explained above to convert `x`.
+- The {{jsxref("Object/Object", "Object()")}} function: `Object(x)` uses the same algorithm to convert `x`, except that `undefined` and `null` don't throw a {{jsxref("TypeError")}}, but return a plain object.
 
 Places that use object coercion include:
 
