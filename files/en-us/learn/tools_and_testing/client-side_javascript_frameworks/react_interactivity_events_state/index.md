@@ -192,7 +192,7 @@ function handleChange(e) {
   autoComplete="off"
   value={name}
   onChange={handleChange}
-/>;
+/>
 ```
 
 Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
