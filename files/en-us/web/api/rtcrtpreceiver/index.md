@@ -15,6 +15,8 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
   - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
 - {{domxref("RTCRtpReceiver.transport")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.
+- {{domxref("RTCRtpReceiver.transform")}}
+  - : An {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} --> is used to insert a transform stream ({{domxref("TransformStream")}}) running in a worker thread into the receiver pipeline, allowing stream transforms to be applied to incoming encoded video and audio frames.
 
 ### Obsolete properties
 
@@ -23,7 +25,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ## Static methods
 
-- {{domxref("RTCRtpReceiver.getCapabilities()")}}
+- {{domxref("RTCRtpReceiver.getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}}
   - : Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.
 
 ## Instance methods

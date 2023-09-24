@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Generator
 
 {{JSRef}}
 
-The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
+The **`Generator`** object is returned by a {{jsxref("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
 `Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
 
@@ -51,7 +51,7 @@ These properties are defined on `Generator.prototype` and shared by all `Generat
 _Also inherits instance methods from its parent {{jsxref("Iterator")}}_.
 
 - {{jsxref("Generator.prototype.next()")}}
-  - : Returns a value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.
+  - : Returns a value yielded by the {{jsxref("Operators/yield", "yield")}} expression.
 - {{jsxref("Generator.prototype.return()")}}
   - : Acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 - {{jsxref("Generator.prototype.throw()")}}
@@ -90,7 +90,7 @@ console.log(generator.next().value); // 2
 
 ## See also
 
-- {{JSxRef("Statements/function*", "function*")}}
+- {{jsxref("Statements/function*", "function*")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
-- {{JSxRef("GeneratorFunction")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("GeneratorFunction")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

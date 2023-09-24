@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.TypedArray.every
 
 {{JSRef}}
 
-The **`every()`** method tests whether all elements in the
-typed array pass the test implemented by the provided function. This method has the same
-algorithm as {{jsxref("Array.prototype.every()")}}. _TypedArray_ is one
-of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+The **`every()`** method of {{jsxref("TypedArray")}} instances tests whether all elements in the typed array pass the test implemented by the provided function. It returns a Boolean value. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-every.html")}}
 
@@ -36,29 +33,11 @@ every(callbackFn, thisArg)
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for
-every array element; otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for a typed array element, in which case `false` is immediately returned.
 
 ## Description
 
-The `every` method executes the provided `callbackFn`
-function once for each element present in the typed array until it finds the one where
-`callbackFn` returns a {{Glossary("falsy")}} value. If such an
-element is found, the `every` method immediately returns `false`.
-Otherwise, if `callbackFn` returns a {{Glossary("truthy")}} value
-for all elements, `every` returns `true`.
-
-`callbackFn` is invoked with three arguments: the value of the
-element, the index of the element, and the typed array object being traversed.
-
-If a `thisArg` parameter is provided to `every`, it
-will be used as callback's `this` value. Otherwise, the value
-`undefined` will be used as its `this` value. The
-`this` value ultimately observable by `callbackFn` is
-determined according to
-[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
-
-`every` does not mutate the typed array on which it is called.
+See {{jsxref("Array.prototype.every()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -74,15 +53,6 @@ new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough); // false
 new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 ```
 
-### Testing typed array elements using arrow functions
-
-[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
-
-```js
-new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -94,5 +64,9 @@ new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
 ## See also
 
 - [Polyfill of `TypedArray.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("Array.prototype.every()")}}

@@ -161,5 +161,5 @@ const character = {
 ## See also
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))
+- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with)
 - [`Element.prototype.append()`](/en-US/docs/Web/API/Element/append)

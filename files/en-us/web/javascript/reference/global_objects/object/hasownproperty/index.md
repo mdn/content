@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.hasOwnProperty
 
 {{JSRef}}
 
-The **`hasOwnProperty()`** method returns a boolean indicating whether the
+The **`hasOwnProperty()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether this
 object has the specified property as its own property (as opposed to inheriting
 it).
 
@@ -159,7 +159,7 @@ Note that in the first two cases there are no newly created objects.
 ### Objects created with Object.create(null)
 
 Objects created using
-{{jsxref("Object.create()","Object.create(null)")}} do not
+{{jsxref("Object.create()", "Object.create(null)")}} do not
 inherit from `Object.prototype`, making `hasOwnProperty()` inaccessible.
 
 ```js
@@ -187,4 +187,4 @@ external object's `hasOwnProperty()`.
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

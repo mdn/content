@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.lastIndexOf
 
 {{JSRef}}
 
-The **`lastIndexOf()`** method returns the last index at which
+The **`lastIndexOf()`** method of {{jsxref("Array")}} instances returns the last index at which
 a given element can be found in the array, or -1 if it is not present. The array is
 searched backwards, starting at `fromIndex`.
 
@@ -32,7 +32,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ### Return value
 
-The last index of the element in the array; **-1** if not found.
+The last index of `searchElement` in the array; `-1` if not found.
 
 ## Description
 
@@ -127,7 +127,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

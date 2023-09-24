@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.non_capturing_group
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **non-capturing group** groups a subpattern, allowing you to apply a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) to the entire group or use [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) within it. It acts like the [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) in JavaScript expressions, and unlike [capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group), it does not memorize the matched text, allowing for better performance and avoiding confusion when the pattern also contains useful capturing groups.
 
@@ -101,7 +101,7 @@ parseTitle('name="foo"'); // 'foo'
 
 ## See also
 
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

@@ -33,6 +33,8 @@ schedule the loading of the image to optimize page performance. The possible val
 
 ## Usage notes
 
+> **Note:** In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
+
 ### Timing of the load event
 
 The {{domxref("Window.load_event", "load")}} event is fired when the document has been

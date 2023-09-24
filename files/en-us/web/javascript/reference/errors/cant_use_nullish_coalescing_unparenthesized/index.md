@@ -49,7 +49,7 @@ a ?? (b && c);
 
 When migrating legacy code that uses `||` and `&&` for guarding against `null` or `undefined`, you may often convert it partially:
 
-```js example-bad
+```js-nolint example-bad
 function getId(user, fallback) {
   // Previously: user && user.id || fallback
   return user && user.id ?? fallback; // SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions
@@ -74,6 +74,6 @@ function getId(user, fallback) {
 
 ## See also
 
-- [Original discussion of nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
-- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Issue about nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15) in the TC39 nullish-coalescing proposal
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
