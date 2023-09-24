@@ -240,9 +240,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
 ```js
 #!/usr/bin/env -S /full/path/to/node --max-old-space-size=6 --jitless --expose-gc --v8-pool-size=1
 // Node.js Native Messaging host
-import {
-  readSync
-} from 'node:fs';
+import { readSync } from "node:fs";
 const decoder = new TextDecoder();
 const encoder = new TextEncoder();
 // Node.js Native Messaging host constantly increases RSS during usage
@@ -260,7 +258,7 @@ function readFullSync(fd, buffer) {
   let offset = 0;
   while (offset < buffer.byteLength) {
     offset += readSync(fd, buffer, {
-      offset
+      offset,
     });
   }
   return buffer;
@@ -276,13 +274,14 @@ function getMessage() {
 
 function sendMessage(json) {
   let message = JSON.parse(decoder.decode(json));
-  if (message === 'ping') {
-    json = encoder.encode(JSON.stringify('pong'));
+  if (message === "ping") {
+    json = encoder.encode(JSON.stringify("pong"));
   }
   // Calculate message length
-  let header = Uint32Array.from({
-    length: 4,
-  }, (_, index) => (json.length >> (index * 8)) & 0xff);
+  let header = Uint32Array.from(
+    { length: 4 },
+    (_, index) => (json.length >> (index * 8)) & 0xff,
+  );
   let output = new Uint8Array(header.length + json.length);
   output.set(header, 0);
   output.set(json, 4);
