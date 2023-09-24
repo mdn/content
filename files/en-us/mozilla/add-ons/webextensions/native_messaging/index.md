@@ -25,7 +25,7 @@ Support for native messaging in extensions is mostly compatible with Chrome, wit
 - The app manifest lists `allowed_extensions` as an array of app IDs, while Chrome lists `allowed_origins`, as an array of `"chrome-extension"` URLs.
 - The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location).
 
-There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
+There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/main/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
 
 ## Setup
 
@@ -40,7 +40,6 @@ Example `manifest.json` file:
 
 ```json
 {
-
   "description": "Native messaging example add-on",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -65,7 +64,6 @@ Example `manifest.json` file:
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -89,7 +87,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -111,7 +109,7 @@ In the example above, the native application is a Python script. It can be diffi
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -224,9 +222,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  let sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -338,7 +334,7 @@ def get_message():
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
     # https://docs.python.org/3/library/json.html#basic-usage
-    # To get the most compact JSON representation, you should specify 
+    # To get the most compact JSON representation, you should specify
     # (',', ':') to eliminate whitespace.
     # We want the most compact representation because the browser rejects
     # messages that exceed 1 MB.
@@ -384,7 +380,7 @@ def getMessage():
 # given its content.
 def encodeMessage(messageContent):
     # https://docs.python.org/3/library/json.html#basic-usage
-    # To get the most compact JSON representation, you should specify 
+    # To get the most compact JSON representation, you should specify
     # (',', ':') to eliminate whitespace.
     # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
     encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
@@ -418,7 +414,7 @@ If something goes wrong, check the [browser console](https://extensionworkshop.c
 
 If you haven't managed to run the application, you should see an error message giving you a clue about the problem.
 
-```
+```plain
 "No such native application <name>"
 ```
 
@@ -428,19 +424,19 @@ If you haven't managed to run the application, you should see an error message g
 - Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.
 - Windows: check that the path given in the registry key points to the app manifest.
 
-  ```
+  ```plain
   "Error: Invalid application <name>"
   ```
 
 - Check that the application's name contains no invalid characters.
 
-  ```
+  ```plain
   "'python' is not recognized as an internal or external command, ..."
   ```
 
 - Windows: if your application is a Python script, check that you have Python installed and have your path set up for it.
 
-  ```
+  ```plain
   "File at path <path> does not exist, or is not executable"
   ```
 
@@ -450,19 +446,19 @@ If you haven't managed to run the application, you should see an error message g
 - Check that the app is at the location pointed to by the `"path"` property in the app's manifest.
 - Check that the app is executable.
 
-  ```
+  ```plain
   "This extension does not have permission to use native application <name>"
   ```
 
 - Check that the `"allowed_extensions"` key in the app manifest contains the add-on's ID.
 
-  ```
+  ```plain
       "TypeError: browser.runtime.connectNative is not a function"
   ```
 
 - Check that the extension has the `"nativeMessaging"` permission.
 
-  ```
+  ```plain
   "[object Object]       NativeMessaging.jsm:218"
   ```
 

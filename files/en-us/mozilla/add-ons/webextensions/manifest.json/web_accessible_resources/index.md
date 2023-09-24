@@ -40,7 +40,7 @@ Sometimes you want to package resources—for example, images, HTML, CSS, or Jav
 
 > **Note:** Until Firefox 105, extensions could access resources packaged in other extensions by default. From Firefox 105 onwards, to enable other extensions to access an extension's resources they must be included in this key.
 
-For example, the [Beastify example extension](https://github.com/mdn/webextensions-examples/tree/master/beastify) replaces a web page with an image of a beast selected by the user. The beast images are packaged with the extension. To make the selected image visible, the extension adds [`<img>`](/en-US/docs/Web/HTML/Element/img) elements whose `src` attribute points to the beast's image. For the web page to be able to load the images, they must be made web accessible.
+For example, the [Beastify example extension](https://github.com/mdn/webextensions-examples/tree/main/beastify) replaces a web page with an image of a beast selected by the user. The beast images are packaged with the extension. To make the selected image visible, the extension adds [`<img>`](/en-US/docs/Web/HTML/Element/img) elements whose `src` attribute points to the beast's image. For the web page to be able to load the images, they must be made web accessible.
 
 With the `web_accessible_resources` key, you list all the packaged resources that you want to make available to web pages. You specify them as paths relative to the manifest.json file.
 
@@ -67,14 +67,15 @@ In Manifest V3, the `web_accessible_resources` key is an array of objects like t
   // …
   "web_accessible_resources": [
     {
-      "resources": [ "test1.png", "test2.png" ],
-      "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
-    }, {
-      "resources": [ "test3.png", "test4.png" ],
-      "matches": [ "https://web-accessible-resources-2.glitch.me/*" ],
+      "resources": ["test1.png", "test2.png"],
+      "matches": ["https://web-accessible-resources-1.glitch.me/*"]
+    },
+    {
+      "resources": ["test3.png", "test4.png"],
+      "matches": ["https://web-accessible-resources-2.glitch.me/*"],
       "use_dynamic_url": true
     }
-  ],
+  ]
   // …
 }
 ```
@@ -219,10 +220,11 @@ For example, if the resource only needs to be accessible to web pages at example
 ```
 
 ## Example extensions
+
 <!-- Ideally we'd use the WebExtExamples template, but examples are not categorized by manifest keys yet - https://github.com/mdn/webextensions-examples/issues/524 -->
 
-- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/master/dnr-redirect-url)
+- [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/main/dnr-redirect-url)
 
 ## Browser compatibility
 

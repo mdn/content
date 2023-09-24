@@ -34,7 +34,7 @@ Additional examples are available on the {{jsxref("Proxy")}} reference page.
 
 The following terms are used when talking about the functionality of proxies.
 
-- {{jsxref("Global_Objects/Proxy/Proxy","handler","","true")}}
+- {{jsxref("Proxy/Proxy", "handler", "", "true")}}
   - : Placeholder object which contains traps.
 - traps
   - : The methods that provide property access. (This is analogous to the concept of _traps_ in operating systems.)
@@ -412,7 +412,7 @@ console.log(typeof proxy); // "object", typeof doesn't trigger any trap
 
 ## Reflection
 
-{{jsxref("Reflect")}} is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of the {{jsxref("Global_Objects/Proxy/Proxy","proxy handlers","","true")}}.
+{{jsxref("Reflect")}} is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of the [proxy handler's](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
 `Reflect` is not a function object.
 
@@ -450,7 +450,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 ### Checking if property definition has been successful
 
-With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a {{jsxref("Statements/try...catch","try...catch")}} block to catch any error that occurred while defining a property. Because {{jsxref("Reflect.defineProperty")}} returns a Boolean success status, you can just use an {{jsxref("Statements/if...else","if...else")}} block here:
+With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a {{jsxref("Statements/try...catch", "try...catch")}} block to catch any error that occurred while defining a property. Because {{jsxref("Reflect.defineProperty()")}} returns a Boolean success status, you can just use an {{jsxref("Statements/if...else", "if...else")}} block here:
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {

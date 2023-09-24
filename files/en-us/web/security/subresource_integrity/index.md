@@ -1,6 +1,7 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
+page-type: guide
 browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity
@@ -28,7 +29,7 @@ An `integrity` value begins with at least one string, with each string including
 
 Example `integrity` string with base64-encoded sha384 hash:
 
-```
+```plain
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 

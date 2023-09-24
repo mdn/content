@@ -1,6 +1,7 @@
 ---
 title: What went wrong? Troubleshooting JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

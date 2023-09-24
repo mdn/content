@@ -84,7 +84,7 @@ The {{cssxref("@container")}} then applies a new width, font-size and background
 
 The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its id, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
 From the `StyleSheet` we get the set of `cssRules` added to the sheet.
-Since we added added the `@container` as the second rule above, we can access the associated `CSSContainerRule` using the second entry (with index "1"), in the `cssRules`.
+Since we added the `@container` as the second rule above, we can access the associated `CSSContainerRule` using the second entry (with index "1"), in the `cssRules`.
 Last of all, we log the container name and query properties.
 
 ```js

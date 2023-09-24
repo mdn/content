@@ -1,6 +1,7 @@
 ---
 title: "Django Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Django/skeleton_website
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
@@ -336,16 +337,7 @@ During development, you can serve the website first using the _development web s
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
 ```bash
-$ python3 manage.py runserver
-
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-March 01, 2022 - 04:08:45
-Django version 4.0.2, using settings 'locallibrary.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+python3 manage.py runserver
 ```
 
 Once the server is running, you can view the site by navigating to `http://127.0.0.1:8000/` in your local web browser. You should see a site error page that looks like this:

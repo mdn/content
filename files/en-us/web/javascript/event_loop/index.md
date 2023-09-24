@@ -4,7 +4,7 @@ slug: Web/JavaScript/Event_loop
 page-type: guide
 ---
 
-{{JsSidebar("Advanced")}}
+{{jsSidebar("Advanced")}}
 
 JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
 
@@ -143,5 +143,5 @@ Legacy exceptions exist like `alert` or synchronous XHR, but it is considered go
 
 ## See also
 
-- [Event loops in the HTML standard](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)
-- [Node.js Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop)
+- [Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) in the HTML standard
+- [The Node.js Event Loop, Timers, and `process.nextTick()`](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop) in the Node.js docs

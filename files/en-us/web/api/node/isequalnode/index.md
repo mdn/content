@@ -65,13 +65,13 @@ let output = document.getElementById("output");
 let divList = document.getElementsByTagName("div");
 
 output.innerHTML += `div 0 equals div 0: ${divList[0].isEqualNode(
-  divList[0]
+  divList[0],
 )}<br/>`;
 output.innerHTML += `div 0 equals div 1: ${divList[0].isEqualNode(
-  divList[1]
+  divList[1],
 )}<br/>`;
 output.innerHTML += `div 0 equals div 2: ${divList[0].isEqualNode(
-  divList[2]
+  divList[2],
 )}<br/>`;
 ```
 

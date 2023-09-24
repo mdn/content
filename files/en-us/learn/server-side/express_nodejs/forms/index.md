@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 6: Working with forms"
 slug: Learn/Server-side/Express_Nodejs/forms
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
@@ -144,7 +145,7 @@ The functions are defined as below:
   ];
   ```
 
-  You can also daisy chain different validators, and add messages that are displayed if the preceding validators are true.
+  You can also daisy chain different validators, and add messages that are displayed if the preceding validators are false.
 
   ```js
   [

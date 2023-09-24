@@ -20,7 +20,7 @@ then(onFulfilled, onRejected)
 
 ### Parameters
 
-- `onFulfilled` {{optional_inline}}
+- `onFulfilled`
 
   - : A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
 
@@ -31,7 +31,7 @@ then(onFulfilled, onRejected)
 
 - `onRejected` {{optional_inline}}
 
-  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `catch()`. The function is called with the following arguments:
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
 
     - `reason`
       - : The value that the promise was rejected with.

@@ -22,8 +22,6 @@ The `text-overflow` property only affects content that is overflowing a block co
 
 ## Syntax
 
-The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
-
 ```css
 text-overflow: clip;
 text-overflow: ellipsis ellipsis;
@@ -37,6 +35,8 @@ text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
+The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
+
 - one of the keyword values: `clip`, `ellipsis`, `fade`
 - the function `fade()`, which is passed a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} to control the fade distance
 - a `<string>`.
@@ -44,11 +44,11 @@ text-overflow: unset;
 ### Values
 
 - `clip`
-  - : The default for this property. This keyword value will truncate the text at the limit of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`.
+  - : The default for this property. This keyword value will truncate the text at the limit of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`.
 - `ellipsis`
-  - : This keyword value will display an ellipsis (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) to represent clipped text. The ellipsis is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.
+  - : This keyword value will display an ellipsis (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) to represent clipped text. The ellipsis is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.
 - `<string>` {{experimental_inline}}
-  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.
+  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.
 - `fade` {{experimental_inline}}
   - : This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
 - `fade( <length> | <percentage> )` {{experimental_inline}}

@@ -93,7 +93,7 @@ someElement.addEventListener(
       process_target(ev.targetTouches[i].target);
     }
   },
-  false
+  false,
 );
 ```
 

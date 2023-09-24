@@ -31,7 +31,7 @@ unsubscribe(subscriptions)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subscription completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the service worker has been unsubscribed.
 
 ### Exceptions
 

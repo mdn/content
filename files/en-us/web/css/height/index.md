@@ -7,7 +7,7 @@ browser-compat: css.properties.height
 
 {{CSSRef}}
 
-The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
+The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/height.html")}}
 
@@ -43,7 +43,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the height as a percentage of the containing block's height.
+  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s height.
 - `auto`
   - : The browser will calculate and select a height for the specified element.
 - `max-content`
@@ -127,7 +127,7 @@ div {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("width")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}

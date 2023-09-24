@@ -46,9 +46,9 @@ Weak validation differs from strong validation, as it considers two versions of 
 Several HTTP headers, called conditional headers, lead to conditional requests. These are:
 
 - {{HTTPHeader("If-Match")}}
-  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is equal to one listed in this header. By default, unless the etag is prefixed with `'W/'`, it performs a strong validation.
+  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is equal to one listed in this header. It performs a strong validation.
 - {{HTTPHeader("If-None-Match")}}
-  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is different to each listed in this header. By default, unless the etag is prefixed with `'W/'`, it performs a strong validation.
+  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is different to each listed in this header. It performs a weak validation.
 - {{HTTPHeader("If-Modified-Since")}}
   - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is more recent than the one given in this header.
 - {{HTTPHeader("If-Unmodified-Since")}}

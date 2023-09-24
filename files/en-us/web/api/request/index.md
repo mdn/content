@@ -27,7 +27,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.credentials")}} {{ReadOnlyInline}}
   - : Contains the credentials of the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
-  - : Returns a string describing the request's destination. This is a string indicating the type of content being requested.
+  - : A string describing the type of content being requested.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : Contains the associated {{domxref("Headers")}} object of the request.
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
@@ -62,7 +62,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.text()")}}
   - : Returns a promise that resolves with a text representation of the request body.
 
-> **Note:** The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
+> **Note:** The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.
 
 ## Examples
 

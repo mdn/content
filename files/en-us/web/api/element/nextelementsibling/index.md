@@ -34,7 +34,7 @@ A {{domxref("Element")}} object, or `null`.
 
 This example outputs the following into the console when it loads:
 
-```
+```plain
 Siblings of div-01:
 DIV
 SCRIPT

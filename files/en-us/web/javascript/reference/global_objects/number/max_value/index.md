@@ -48,4 +48,4 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 ## See also
 
 - {{jsxref("Number.MIN_VALUE")}}
-- The {{jsxref("Number")}} object it belongs to
+- {{jsxref("Number")}}

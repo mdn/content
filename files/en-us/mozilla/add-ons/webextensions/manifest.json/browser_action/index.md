@@ -83,7 +83,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>Optional, defaulting to <code>false</code>.</p>
         <div class="notecard warning">
           <p>
-            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>
@@ -104,7 +104,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           The
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           example extension uses <code>browser_style</code> in its popup.
@@ -366,7 +366,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

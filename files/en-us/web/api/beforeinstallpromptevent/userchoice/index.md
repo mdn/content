@@ -33,4 +33,4 @@ A {{jsxref("Promise")}} which resolves to an object containing two properties:
 ## See also
 
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)
+- [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (2021)

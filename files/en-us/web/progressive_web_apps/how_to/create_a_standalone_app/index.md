@@ -1,6 +1,7 @@
 ---
 title: Create a standalone app
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
+page-type: how-to
 ---
 
 {{PWASidebar}}
@@ -64,7 +65,7 @@ In this example, the `.app-button` element will be hidden by default unless the 
 
 Here is another example showing how to use the {{domxref("window.matchMedia()")}} method to detect if the `standalone` display mode is enabled:
 
-```javascript
+```js
 function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }

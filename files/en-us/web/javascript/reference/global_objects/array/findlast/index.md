@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.findLast
 
 {{JSRef}}
 
-The **`findLast()`** method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
+The **`findLast()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 If you need to find:
@@ -20,7 +20,7 @@ If you need to find:
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
 
 ## Syntax
 
@@ -44,7 +44,7 @@ findLast(callbackFn, thisArg)
 
 ### Return value
 
-The value of the element in the array with the highest index value that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
+The last (highest-index) element in the array that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
 
 ## Description
 
@@ -103,9 +103,9 @@ console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 
-### Find last prime number in an array
+### Find the last prime number in an array
 
-The following example finds the last element in the array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number):
+The following example returns the last element in the array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element) {
@@ -166,7 +166,7 @@ array.findLast((value, index) => {
 
 ### Calling findLast() on non-array objects
 
-The `findLast()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLast()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -174,6 +174,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLast() since length is 3
 };
 console.log(
   Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
@@ -190,8 +191,8 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}

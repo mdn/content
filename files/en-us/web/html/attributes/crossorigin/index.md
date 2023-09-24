@@ -56,7 +56,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
   </tbody>
 </table>
 
-> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"`. There is also [an open issue for Chrome](https://crbug.com/1121645).
+> **Note:** The `crossorigin` attribute is not supported for [`rel="icon"`](/en-US/docs/Web/HTML/Attributes/rel#icon) in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
 ### Example: `crossorigin` with the `<script>` element
 

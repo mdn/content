@@ -143,7 +143,7 @@ function onRefSpaceCreated(refSpace) {
   let startPosition = vec3.fromValues(0, 1.5, 0);
   const startOrientation = vec3.fromValues(0, 0, 1.0);
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-    new XRRigidTransform(startPosition, startOrientation)
+    new XRRigidTransform(startPosition, startOrientation),
   );
 
   xrSession.requestAnimationFrame(onDrawFrame);

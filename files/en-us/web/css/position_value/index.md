@@ -7,7 +7,7 @@ browser-compat: css.types.position
 
 {{CSSRef}}
 
-The **`<position>`** (or **`<bg-position>`**) [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}} and {{cssxref("offset-anchor")}} properties.
+The **`<position>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}} {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}} and {{cssxref("transform-origin")}} properties.
 
 > **Note:** The final position described by the `<position>` value does not need to be inside the element's box.
 
@@ -42,7 +42,7 @@ keyword value keyword value /* Each value is an offset from the keyword that pre
 
 ## Interpolation
 
-When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [timing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
+When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [easing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
 
 ## Formal syntax
 
