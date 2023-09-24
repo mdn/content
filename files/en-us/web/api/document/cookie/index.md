@@ -40,7 +40,9 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
   pair, each preceded by a semicolon separator:
 
   - `;domain=domain` (e.g.,
-    '`example.com`' or '`subdomain.example.com`'): The host to which the cookie will be sent. If not specified, this defaults to the host portion of the current document location and the cookie is treated as [host-only](https://datatracker.ietf.org/doc/html/rfc6265#section-5.3) (i.e. subdomains are not included). Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
+    '`example.com`' or '`subdomain.example.com`'): The host to which the cookie will be sent. If not specified, this defaults to the host portion of the current document location and the cookie is not available on subdomains.
+     If a domain is specified, subdomains are always included.
+     Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots.
 
     > **Note:** The domain _must_ match
     > the domain of the JavaScript origin. Setting cookies to foreign
