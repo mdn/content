@@ -408,11 +408,11 @@ used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxr
 
 ```js
 const nullVar = null;
-nullVar.toString(); // TypeError: nullVar is null
+nullVar.toString(); // TypeError: Cannot read properties of null
 String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString(); // TypeError: undefinedVar is undefined
+undefinedVar.toString(); // TypeError: Cannot read properties of undefined
 String(undefinedVar); // "undefined"
 ```
 
