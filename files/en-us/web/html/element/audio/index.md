@@ -247,7 +247,7 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
     Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
@@ -316,7 +316,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 ```html
 <!-- Simple audio playback -->
 <audio src="AudioTest.ogg" autoplay>
-  <a href="AudioTest.ogg">Download OGG audio</a>.
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
 </audio>
 ```
 
@@ -329,7 +329,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 ```html
 <audio controls>
   <source src="foo.wav" type="audio/wav" />
-  <a href="foo.wav">Download WAV audio</a>.
+  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
 </audio>
 ```
 
@@ -377,7 +377,7 @@ Also it's a good practice to provide some content (such as the direct download l
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
     Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
