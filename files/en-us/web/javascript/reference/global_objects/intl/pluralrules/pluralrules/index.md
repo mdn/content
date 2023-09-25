@@ -36,7 +36,7 @@ new Intl.PluralRules(locales, options)
         - `"ordinal"`
           - : For ordinal number (referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).
 
-    `Intl.PluralRules` also supports the [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) of `Intl.NumberFormat()`. Read the `Intl.NumberFormat` page for details.
+    `Intl.PluralRules` also supports the `Intl.NumberFormat()` [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) (see `Intl.NumberFormat()` for details):
 
     - `minimumIntegerDigits`
     - `minimumFractionDigits`
