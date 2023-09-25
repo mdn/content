@@ -51,7 +51,7 @@ A `<script type="speculationrules">` element must contain a valid JSON structure
     "prerender": [
       {
         "source": "list",
-        "urls": ["extra.html", "extra2.html"]
+        "urls": ["next3.html", "next4.html"]
       }
     ]
   }
@@ -104,7 +104,7 @@ The earlier examples showed separate speculation rules defined for prefetch and 
     "prerender": [
       {
         "source": "list",
-        "urls": ["extra.html", "extra2.html"]
+        "urls": ["next3.html", "next4.html"]
       }
     ]
   }
@@ -131,7 +131,7 @@ It is also allowable to include multiple sets of rules in a single HTML file:
     "prerender": [
       {
         "source": "list",
-        "urls": ["extra.html", "extra2.html"]
+        "urls": ["next3.html", "next4.html"]
       }
     ]
   }

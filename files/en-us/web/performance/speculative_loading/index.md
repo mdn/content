@@ -119,6 +119,13 @@ For example:
 <link rel="prefetch" href="main.js" />
 ```
 
+Prefetching can be used to fetch both HTML and sub-resources for a possible next navigation. A common use case is to have a simple website landing page that fetches more "heavy-weight" resources used by the rest of the site.
+
+```html
+<link rel="prefetch" href="/app/style.css" />
+<link rel="prefetch" href="https://example.com/landing-page" />
+```
+
 The result is kept in the HTTP cache on disk. Because of this it is useful for prefetching subresources, even if they are not used by the current page. You could also use it to prefetch the next document the user will likely visit on the site. However, as a result you need to be careful with headers — for example certain [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) settings could block prefetching (for example `no-cache` or `no-store`).
 
 Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/en/blog/http-cache-partitioning/), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
@@ -130,6 +137,11 @@ Many browsers now implement some form of [cache partitioning](https://developer.
 Would not be accessible from `https://aggregator.example/`.
 
 > **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request.
+
+> **Note:** The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
+> The request should also include the {{HTTPHeader("Sec-Fetch-Dest")}} header with the value set to `empty`.
+> The {{HTTPHeader("Accept")}} header in the request should match the value used for normal navigation requests. This allows the browser to find the matching cached resources following navigation.
+> If a response is returned, it gets cached with the request in the HTTP cache.
 
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 

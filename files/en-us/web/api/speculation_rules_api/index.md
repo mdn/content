@@ -42,7 +42,7 @@ You specify a different array to contain the rules for each speculative loading 
 
 See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) for a full explanation of the available syntax.
 
-> **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
+> **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `'inline-speculation-rules'` source along with a hash- or nonce-source.
 
 ### Using prefetching
 
@@ -349,7 +349,7 @@ The Speculation Rules API does not define any interfaces of its own.
 - {{domxref("Document.prerendering")}}
   - : A boolean property that returns `true` if the document is currently in the process of prerendering.
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event
-  - : Fires when a prerendered page is activated (i.e. the user views the page).
+  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{domxref("PerformanceNavigationTiming.activationStart")}}
   - : A number representing the time between when a document starts prerendering and when it is activated.
 - {{domxref("PerformanceResourceTiming.deliveryType")}}, `"navigational-prefetch"` value
@@ -357,10 +357,10 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## HTTP headers
 
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) `"inline-speculation-rules"` value
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) `'inline-speculation-rules'` value
   - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
 - [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode)
-  - : Set by a destination origin to opt-in to using various higher-risk speculation rules modes, for example cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
+  - : Set by a destination origin to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
 ## HTML features
 
