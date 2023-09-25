@@ -51,10 +51,6 @@ In addition to the basic MathML global attributes, the following global attribut
 
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
-- [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
-
-  - : A logical classes of token elements.
-
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
 
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.

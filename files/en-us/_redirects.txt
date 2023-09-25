@@ -12679,6 +12679,7 @@
 /en-US/docs/Web/MathML/Element/mprescripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/Web/MathML/Element/none	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/Web/MathML/Fonts/Test	/en-US/docs/Web/MathML/Fonts
+/en-US/docs/Web/MathML/Global_attributes/mathvariant	/en-US/docs/Web/MathML/Element/mi#mathvariant
 /en-US/docs/Web/MathML/Index	/en-US/docs/Web/MathML
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs
 /en-US/docs/Web/Media/images/aspect_ratio_mapping	/en-US/docs/Learn/Performance/Multimedia
