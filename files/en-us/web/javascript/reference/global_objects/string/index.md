@@ -14,10 +14,10 @@ sequence of characters.
 
 Strings are useful for holding data that can be represented in text form. Some of the
 most-used operations on strings are to check their {{jsxref("String/length", "length")}}, to build and concatenate them using the
-[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
+[`+` and `+=` string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
 checking for the existence or location of substrings with the
-{{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
-with the {{jsxref("String.prototype.substring()", "substring()")}} method.
+{{jsxref("String/indexOf", "indexOf()")}} method, or extracting substrings
+with the {{jsxref("String/substring", "substring()")}} method.
 
 ### Creating strings
 
@@ -44,7 +44,7 @@ with this form you can interpolate expressions. For more information on the synt
 ### Character access
 
 There are two ways to access an individual character in a string. The first is the
-{{jsxref("String.prototype.charAt()", "charAt()")}} method:
+{{jsxref("String/charAt", "charAt()")}} method:
 
 ```js
 "cat".charAt(1); // gives value "a"
@@ -113,7 +113,7 @@ The `localeCompare()` method enables string comparison in a similar fashion as `
 
 Note that JavaScript distinguishes between `String` objects and
 {{Glossary("Primitive", "primitive string")}} values. (The same is true of
-{{jsxref("Boolean")}} and {{jsxref("Global_Objects/Number", "Numbers")}}.)
+{{jsxref("Boolean")}} and {{jsxref("Number", "Numbers")}}.)
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
@@ -153,7 +153,7 @@ when it expects a primitive string instead, although generally, authors need not
 about the distinction.
 
 A `String` object can always be converted to its primitive counterpart with
-the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
+the {{jsxref("String/valueOf", "valueOf()")}} method.
 
 ```js
 console.log(eval(s2.valueOf())); // returns the number 4
@@ -321,7 +321,7 @@ These properties are own properties of each `String` instance.
     current locale.
 
     For most languages, this will return the same as
-    {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
+    {{jsxref("String/toLowerCase", "toLowerCase()")}}.
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
@@ -329,7 +329,7 @@ These properties are own properties of each `String` instance.
     current locale.
 
     For most languages, this will return the same as
-    {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
+    {{jsxref("String/toUpperCase", "toUpperCase()")}}.
 
 - {{jsxref("String.prototype.toLowerCase()")}}
   - : Returns the calling string value converted to lowercase.

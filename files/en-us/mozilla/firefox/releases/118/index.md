@@ -19,6 +19,7 @@ This article provides information about the changes in Firefox 118 that affect d
 ### MathML
 
 - The `mathml.legacy_maction_and_semantics_implementations.disabled` preference is now removed, which means that the [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default (Firefox bug [1788223](https://bugzil.la/1788223)).
+- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated, as is use with any other element than the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
 
 #### Removals
 
@@ -67,9 +68,21 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
+- Fixed an internal race condition for Android which caused the returned user prompt text to be empty for both WebDriver BiDi and Marionette ([Firefox bug 1848167](https://bugzil.la/1848167)).
+- Both the `WebDriver:PerformActions` command in Marionette and the `browsingContext.performActions` command in WebDriver BiDi failed to correctly scroll for a `wheel` input source in environments that have a high-resolution display connected ([Firefox bug 1849229](https://bugzil.la/1849229)).
+
 #### WebDriver BiDi
 
+- Added the [`browsingContext.activate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-activate) command that allows users to bring the given background tab into foreground ([Firefox bug 1841004](https://bugzil.la/1841004)).
+- Added the [`browsingContext.handleUserPrompt`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-handleUserPrompt) command that allows users to accept or dismiss an open user prompt of type `alert`, `confirm`, or `prompt` ([Firefox bug 1824197](https://bugzil.la/1824197)).
+- Added the [`browsingContext.userPromptOpened`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptOpened) event which is emitted when a user prompt of type `alert`, `confirm`, or `prompt` was opened ([Firefox bug 1824224](https://bugzil.la/1824224)).
+- Added a `type` field to the JSON payload that is returned to clients to identify `event` messages, or the success state of a command, which can be one of `success` or `error` ([Firefox bug 1844009](https://bugzil.la/1844009)).
+
 #### Marionette
+
+- Added support for all the [Web Authentication extension commands](https://www.w3.org/TR/webauthn-2/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
 
 ## Changes for add-on developers
 
