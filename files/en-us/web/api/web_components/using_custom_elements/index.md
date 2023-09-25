@@ -6,9 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Web Components")}}
 
-One of the key features of the Web Components standard is the ability to create _custom elements_: that is, elements that extend the set of HTML elements that browsers provide and whose behavior is defined by the web developer.
-
-A custom element could be implemented as a tree of standard HTML elements (or other custom elements), and the custom element then serves to encapsulate this implementation.
+One of the key features of web components is the ability to create _custom elements_: that is, HTML elements whose behavior is defined by the web developer, that extend the set of elements available in the browser.
 
 This article introduces custom elements, and walks through some examples.
 
@@ -53,16 +51,48 @@ Once your custom element is registered, the browser will call certain methods of
 
 Custom element lifecycle callbacks include:
 
-- `connectedCallback()`: called each time the element is added to the document. The specification recommends delaying work until this callback.
+- `connectedCallback()`: called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
 - `disconnectedCallback()`: called each time the element is removed from the document.
-- `adoptedCallback()`: called each time the element is moved to a new document
-- `attributeChangedCallback()`: called each time any attributes are changed, added, removed, or replaced.
+- `adoptedCallback()`: called each time the element is moved to a new document.
+- `attributeChangedCallback()`: called each time any attributes that are listed in the `observedAttributes` static property are changed, added, removed, or replaced. This callback is passed the name of the attribute, its old value, and its new value.
+
+Here's a minimal custom element that logs these lifecycle events:
+
+```js
+// Create a class for the element
+class MyCustomElement extends HTMLElement {
+  static observedAttributes = ["color", "size"];
+
+  constructor() {
+    // Always call super first in constructor
+    super();
+  }
+
+  connectedCallback() {
+    console.log("Custom element added to page.");
+  }
+
+  disconnectedCallback() {
+    console.log("Custom element removed from page.");
+  }
+
+  adoptedCallback() {
+    console.log("Custom element moved to new page.");
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(`Attribute ${name} has changed.`);
+  }
+}
+
+customElements.define("my-custom-element", MyCustomElement);
+```
 
 ## Registering a custom element
 
-To make a custom element available in a page, call the {{domxref("CustomElementRegistry.define()", "define()")}} method of the {{domxref("CustomElementRegistry")}} interface, which is available as {{domxref("window.customElements")}}.
+To make a custom element available in a page, call the {{domxref("CustomElementRegistry.define()", "define()")}} method of {{domxref("Window.customElements")}}.
 
-This takes the following arguments:
+The `define()` method takes the following arguments:
 
 - `name`
   - : The name of the element. This must start with a lowercase letter, contain a hyphen, and satisfy certain other rules listed in the specification's [definition of a valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
@@ -448,7 +478,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should return an array containing the names of the attributes you want to observe:
+Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside the custom element class - this should return an array containing the names of the attributes you want to observe:
 
 ```js
 static get observedAttributes() {
