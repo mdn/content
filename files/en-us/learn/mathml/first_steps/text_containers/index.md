@@ -187,7 +187,7 @@ One typographic convention in mathematics is to use italic letters for variables
 
 ## Reverting automatic italicization of \<mi>
 
-It is sometimes needed to revert this default italic transformation. For that purpose, just attach a `mathvariant="normal"` attribute on the `<mi>` element.
+In order to revert this default italic transformation you can attach a `mathvariant="normal"` attribute on the `<mi>` element.
 Compare the rendering of the uppercase gamma letters in the following formula:
 
 ```html
