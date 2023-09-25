@@ -81,7 +81,7 @@ This article provides information about the changes in Firefox 118 that affect d
 
 #### Marionette
 
-- Added support for all the [`Web Authentication extension commands`](https://www.w3.org/TR/webauthn-2/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
+- Added support for all the [Web Authentication extension commands](https://www.w3.org/TR/webauthn-2/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
 
 ## Changes for add-on developers
 
