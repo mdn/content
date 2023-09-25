@@ -414,16 +414,18 @@ This live example shows how data might be read from an "pull" underlying byte so
 
 For the underlying pull source we use the following class to (_very_ superficially) mock a nodejs [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle), and in particular the [`read()`](https://nodejs.org/api/fs.html#filehandlereadbuffer-offset-length-position) method.
 The class generates random data to represent a file.
-The `read()` method reads from this data into a provided buffer from the specified position.
+The `read()` method reads a "semi-random" sized block of random data into a provided buffer from the specified position.
 The `close()` method does nothing: it is only provided to show where you might close the source when defining the constructor for the stream.
 
-> **Note:** This same class is used for all the "pull source" examples.
+> **Note:** A similar class is used for all the "pull source" examples.
 > It is shown here for information only (so that it is obvious that it is a mock).
 
 ```js
 class MockUnderlyingFileHandle {
   constructor() {
     this.maxdata = 100; // "file size"
+    this.maxReadChunk = 25; // "max read chunk size"
+    this.minReadChunk = 13; // "min read chunk size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
@@ -442,10 +444,18 @@ class MockUnderlyingFileHandle {
         return;
       }
 
+      // Simulate a file read that returns random numbers of bytes
+      // Read minimum of bytes requested and random bytes that can be returned
+      let readLength =
+        Math.floor(
+          Math.random() * (this.maxReadChunk - this.minReadChunk + 1),
+        ) + this.minReadChunk;
+      readLength = length > readLength ? readLength : length;
+
       // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, length);
+      const myview = new Uint8Array(buffer, offset, readLength);
       // Write the length of data specified
-      for (let i = 0; i < length; i++) {
+      for (let i = 0; i < readLength; i++) {
         myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i + 1;
         if (position + i + 1 >= this.maxdata) {
@@ -632,7 +642,9 @@ function readStream(reader) {
       offset += value.byteLength;
       bytesReceived += value.byteLength;
 
-      logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+      logConsumer(
+        `Read ${value.byteLength} (${bytesReceived}) bytes: ${value}`,
+      );
       result += value;
 
       // Read some more, and call this function again
@@ -659,7 +671,8 @@ The logging from the underlying pull source (left) and consumer (right) are show
 Of particular note are that the:
 
 - `start()` function is passed a `ReadableByteStreamController`
-- the buffer passed to the reader is large enough to encompass the whole "file", so the whole file is transferred in one operation.
+- the buffer passed to the reader is large enough to encompass the whole "file".
+  The underlying data source supplies the data in random-sized chunks.
 
 {{EmbedLiveSample("Underlying pull source","100%","500px")}}
 
