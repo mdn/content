@@ -28,12 +28,16 @@ polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ```
 
-### Values
+### Parameters
 
-- [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule)
+- [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
   - : An optional value of `nonzero` (the default when omitted) or `evenodd`, which specifies the filling rule.
 - {{cssxref("length-percentage")}}
   - : Each vertex of the polygon is represented with a pair of `<length-percentage>` values, which give the coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box).
+
+### Return value
+
+Returns a {{cssxref("basic-shape")}} value.
 
 ## Formal syntax
 
