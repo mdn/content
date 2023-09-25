@@ -796,4 +796,4 @@ If you need to change the number of digits, remember that `minimumFractionDigits
 
 - {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

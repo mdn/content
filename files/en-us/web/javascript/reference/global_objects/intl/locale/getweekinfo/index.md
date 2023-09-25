@@ -63,4 +63,4 @@ console.log(msBN.getWeekInfo()); // { firstDay: 7, weekend: [5, 7], minimalDays:
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}

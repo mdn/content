@@ -105,5 +105,5 @@ rtf.format(1, "day"); // "tomorrow"
 ## See also
 
 - {{jsxref("Intl.RelativeTimeFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}
 - [`Intl.RelativeTimeFormat`](https://v8.dev/features/intl-relativetimeformat) on v8.dev (2018)

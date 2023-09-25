@@ -26,16 +26,16 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 ### Function properties
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
+- {{jsxref("isFinite()")}}
+- {{jsxref("isNaN()")}}
+- {{jsxref("parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("escape()")}} {{deprecated_inline}}
+- {{jsxref("unescape()")}} {{deprecated_inline}}
 
 ### Fundamental objects
 
@@ -189,14 +189,14 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("Operators/this", "this")}}
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
 - {{jsxref("Operators/function", "function")}}
 - {{jsxref("Operators/class", "class")}}
 - {{jsxref("Operators/function*", "function*")}}
 - {{jsxref("Operators/async_function", "async function")}}
 - {{jsxref("Operators/async_function*", "async function*")}}
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
 - {{jsxref("Template_literals", "`string`")}}
 - {{jsxref("Operators/Grouping", "( )")}}
 
