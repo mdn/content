@@ -148,9 +148,9 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()")}}
-  - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
+  - : This is the same as the global {{jsxref("parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
-  - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+  - : This is the same as the global {{jsxref("parseInt()")}} function.
 
 ## Instance properties
 

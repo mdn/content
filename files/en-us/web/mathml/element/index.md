@@ -18,18 +18,18 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### A
 
-- {{MathMLElement("maction")}} (Bound actions to sub-expressions)
+- {{MathMLElement("maction")}} (Bound actions to sub-expressions) {{deprecated_inline}}
 - {{MathMLElement("annotation")}} (Data annotations)
 - {{MathMLElement("annotation-xml")}} (XML annotations)
 
 ### E
 
-- {{MathMLElement("menclose")}} (Enclosed contents)
+- {{MathMLElement("menclose")}} (Enclosed contents) {{non-standard_inline}}
 - {{MathMLElement("merror")}} (Enclosed syntax error messages)
 
 ### F
 
-- {{MathMLElement("mfenced")}} (Parentheses) {{deprecated_inline}}
+- {{MathMLElement("mfenced")}} (Parentheses) {{non-standard_inline}} {{deprecated_inline}}
 - {{MathMLElement("mfrac")}} (Fraction)
 
 ### I
@@ -100,9 +100,9 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### General layout
 
-- {{MathMLElement("menclose")}}
+- {{MathMLElement("menclose")}} {{non-standard_inline}}
 - {{MathMLElement("merror")}}
-- {{MathMLElement("mfenced")}} {{deprecated_inline}}
+- {{MathMLElement("mfenced")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{MathMLElement("mfrac")}}
 - {{MathMLElement("mpadded")}}
 - {{MathMLElement("mphantom")}}
@@ -130,7 +130,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### Uncategorized elements
 
-- {{MathMLElement("maction")}}
+- {{MathMLElement("maction")}} {{deprecated_inline}}
 
 ## Semantic annotations
 

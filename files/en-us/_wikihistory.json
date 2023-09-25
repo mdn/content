@@ -54608,10 +54608,6 @@
     "modified": "2020-10-15T22:17:15.823Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp": {
-    "modified": "2020-10-15T22:17:16.317Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCOutboundRtpStreamStats/nackCount": {
     "modified": "2020-10-15T22:17:14.809Z",
     "contributors": ["Sheppy"]

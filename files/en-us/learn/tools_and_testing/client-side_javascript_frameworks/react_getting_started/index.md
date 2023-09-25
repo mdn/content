@@ -274,7 +274,7 @@ The `App` function returns a JSX expression. This expression defines what your b
 
 Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
-Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
+Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) element on lines 6–8 so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) element and save; the "Learn React" link will be gone.
 
 Your `App` component should now look like this:
 
@@ -363,9 +363,9 @@ Back in `App.js`, let's focus on line 8:
 <img src={logo} className="App-logo" alt="logo" />
 ```
 
-Here, the `<img />` tag's `src` attribute value is in curly braces. This is how JSX recognizes variables. React will see `{logo}`, know you are referring to the logo import on line 2 of our app, then retrieve the logo file and render it.
+Here, the `<img />` tag's `src` attribute value is in curly braces. This is how JSX recognizes variables. React will see `{logo}`, know you are referring to the logo import on the first line of our app, then retrieve the logo file and render it.
 
-Let's try making a variable of our own. Before the return statement of `App`, add `const subject = 'React';`. Your `App` component should now look like this:
+Let's try making a variable of our own. Before the return statement of `App`, add `const subject = "React";`. Your `App` component should now look like this:
 
 ```jsx
 function App() {
@@ -381,7 +381,7 @@ function App() {
 }
 ```
 
-Change line 8 to use our `subject` variable instead of the word "World", like this:
+Change the `<p>` element to use our `subject` variable instead of the word "World", like this:
 
 ```jsx
 function App() {
@@ -436,7 +436,7 @@ function App(props) {
 }
 ```
 
-With this change, {subject} becomes undefined, so comment out the line `Hello, {subject}!` for now.
+With this change, `subject` becomes undefined, so comment out the line `Hello, {subject}!` for now.
 Save your file and check your browser's JavaScript console. You should see something like this logged:
 
 ```plain

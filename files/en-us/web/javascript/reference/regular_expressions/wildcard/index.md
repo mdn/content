@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.wildcard
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **wildcard** matches all characters except line terminators. It also matches line terminators if the `s` flag is set.
 
