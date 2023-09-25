@@ -316,7 +316,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 ```html
 <!-- Simple audio playback -->
 <audio src="AudioTest.ogg" autoplay>
-  <a href="AudioTest.ogg">Download OGG audio</a>.
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
 </audio>
 ```
 
@@ -329,7 +329,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 ```html
 <audio controls>
   <source src="foo.wav" type="audio/wav" />
-  <a href="foo.wav">Download WAV audio</a>.
+  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
 </audio>
 ```
 
