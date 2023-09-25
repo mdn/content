@@ -402,9 +402,7 @@ The only escaping they do is to replace `"` in the attribute value (for {{jsxref
 
 ### String conversion
 
-It's possible to use `String` as a more reliable way than calling
-`toString()` method of the value, as it works when
-used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
+The `String()` function is a more reliable way than calling `toString()` method of the value, as the former works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
 // This will produce an error since null and undefined are not auto boxed to be an object
