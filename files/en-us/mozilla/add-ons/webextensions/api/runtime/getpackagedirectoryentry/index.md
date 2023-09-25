@@ -9,7 +9,7 @@ browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
 
 Returns a `DirectoryEntry` object representing the package directory.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+This is an asynchronous function that takes a callback.
 
 ## Syntax
 
@@ -20,10 +20,6 @@ let gettingEntry = browser.runtime.getPackageDirectoryEntry()
 ### Parameters
 
 None.
-
-### Return value
-
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `DirectoryEntry` object representing the package directory.
 
 ## Browser compatibility
 
