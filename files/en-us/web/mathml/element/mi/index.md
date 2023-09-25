@@ -12,7 +12,7 @@ The **`<mi>`** [MathML](/en-US/docs/Web/MathML) element indicates that the conte
 By default `<mi>` elements that contain multiple characters are a rendered as normal text, while single character characters are rendered as italic: the same formatting behaviour as the [CSS `text-transform`](/en-US/docs/Web/CSS/text-transform) property with a value of `math-auto`.
 The `mathvariant` attribute with a value of `normal` can be used to reset a single character to the normal font.
 
-In order to use a particular form of a character such as bold/italic, serif, san-serif, script/calligraphy, monospaced, double-struck, and so on, you should use the appropriate [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
+In order to use a particular form of a character such as bold/italic, serif, sans-serif, script/calligraphy, monospaced, double-struck, and so on, you should use the appropriate [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 
 > **Note:** In a previous specification (MathML3), the `mathvariant` attribute was used to define logical classes that could apply the character formatting for mathematical alphanumeric symbols.
 > The associated values are now deprecated, and expected to be removed from browsers in future releases.
