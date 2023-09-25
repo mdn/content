@@ -14,12 +14,17 @@ This is an asynchronous function that takes a callback.
 ## Syntax
 
 ```js-nolint
-let gettingEntry = browser.runtime.getPackageDirectoryEntry()
+browser.runtime.getPackageDirectoryEntry(
+  // callback              // required callback function
+)
 ```
 
 ### Parameters
 
-None.
+- `callback` {{required_inline}}
+
+  - : `function`. The function that will be passed a [DirectoyEntry object](/en-US/docs/Web/API/FileSystemDirectoryEntry) object.
+
 
 ## Browser compatibility
 
@@ -28,12 +33,9 @@ None.
 ## Examples
 
 ```js
-function gotDirectoryEntry(directoryEntry) {
+browser.runtime.getPackageDirectoryEntry((directoryEntry) => {
   console.log(directoryEntry);
-}
-
-let gettingEntry = browser.runtime.getPackageDirectoryEntry();
-gettingEntry.then(gotDirectoryEntry);
+});
 ```
 
 {{WebExtExamples}}
