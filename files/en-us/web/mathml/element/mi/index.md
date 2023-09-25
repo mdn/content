@@ -74,7 +74,7 @@ This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/
 </math>
 <hr />
 <math display="block">
-  <!-- Single characters render as italic by default (i.e. "y" renders as "𝐴") -->
+  <!-- Single characters render as italic by default (i.e. "A" renders as "𝐴") -->
   <mi>A</mi>
 </math>
 <hr />
