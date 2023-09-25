@@ -684,12 +684,14 @@ This uses the same [mocked underlying file source](#mocked_underlying_file_sourc
 ```js hidden
 class MockUnderlyingFileHandle {
   constructor() {
-    this.maxdata = 1300; // "file size"
+    this.maxdata = 100; // "file size"
+    this.maxReadChunk = 25; // "max read chunk size"
+    this.minReadChunk = 13; // "min read chunk size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -698,15 +700,23 @@ class MockUnderlyingFileHandle {
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
-        // out of data
+        //out of data
         resolve(resultobj);
         return;
       }
 
+      // Simulate a file read that returns random numbers of bytes
+      // Read minimum of bytes requested and random bytes that can be returned
+      let readLength =
+        Math.floor(
+          Math.random() * (this.maxReadChunk - this.minReadChunk + 1),
+        ) + this.minReadChunk;
+      readLength = length > readLength ? readLength : length;
+
       // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, length);
+      const myview = new Uint8Array(buffer, offset, readLength);
       // Write the length of data specified
-      for (let i = 0; i < length; i++) {
+      for (let i = 0; i < readLength; i++) {
         myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i + 1;
         if (position + i + 1 >= this.maxdata) {
@@ -714,7 +724,9 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      setTimeout(() => resolve(resultobj), 1000);
+      setTimeout(() => {
+        resolve(resultobj);
+      }, 1000);
     });
   }
 
@@ -801,7 +813,7 @@ function logConsumer(result) {
 The only difference in our underlying source is that we must specify `autoAllocateChunkSize`, and that the size will be used as the view buffer size for `controller.byobRequest`, rather than one supplied by the consumer.
 
 ```js
-const DEFAULT_CHUNK_SIZE = 200;
+const DEFAULT_CHUNK_SIZE = 20;
 const stream = makeReadableByteFileStream("dummy file.txt");
 
 function makeReadableByteFileStream(filename) {
@@ -875,7 +887,9 @@ function readStream(reader) {
     }
 
     bytesReceived += value.length;
-    logConsumer(`Read ${bytesReceived} bytes so far. Current bytes = ${value}`);
+    logConsumer(
+      `Read ${value.length} (${bytesReceived}). Current bytes = ${value}`,
+    );
     result += value;
 
     // Read some more, and call this function again
@@ -896,9 +910,9 @@ button.addEventListener("click", () => {
 
 #### Result
 
-The logging from the underlying bye pull source (left) and consumer (right) are shown below.
+The logging from the underlying byte pull source (left) and consumer (right) are shown below.
 
-Note that the chunks are now 200-byte wide, as specified in the underlying byte source.
+Note that the chunks are now _at most_ 20-byte wide, as this is the size of the auto allocated buffer specified in the underlying byte source (`autoAllocateChunkSize`).
 These are made as zero-copy transfers.
 
 {{EmbedLiveSample("Underlying pull source with default reader","100%","500px")}}
@@ -910,7 +924,9 @@ For completeness, we can also use a default reader with a byte source that does 
 ```js hidden
 class MockUnderlyingFileHandle {
   constructor() {
-    this.maxdata = 1300; // "file size"
+    this.maxdata = 100; // "file size"
+    this.maxReadChunk = 25; // "max read chunk size"
+    this.minReadChunk = 13; // "min read chunk size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
@@ -929,10 +945,18 @@ class MockUnderlyingFileHandle {
         return;
       }
 
+      // Simulate a file read that returns random numbers of bytes
+      // Read minimum of bytes requested and random bytes that can be returned
+      let readLength =
+        Math.floor(
+          Math.random() * (this.maxReadChunk - this.minReadChunk + 1),
+        ) + this.minReadChunk;
+      readLength = length > readLength ? readLength : length;
+
       // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, length);
+      const myview = new Uint8Array(buffer, offset, readLength);
       // Write the length of data specified
-      for (let i = 0; i < length; i++) {
+      for (let i = 0; i < readLength; i++) {
         myview[i] = this.filedata[position + i];
         resultobj["bytesRead"] = i + 1;
         if (position + i + 1 >= this.maxdata) {
@@ -1030,7 +1054,7 @@ Note below that to support this case, in `pull()` we need to check if the `byobR
 
 ```js
 const stream = makeReadableByteFileStream("dummy file.txt");
-const DEFAULT_CHUNK_SIZE = 300;
+const DEFAULT_CHUNK_SIZE = 40;
 
 function makeReadableByteFileStream(filename) {
   let fileHandle;
