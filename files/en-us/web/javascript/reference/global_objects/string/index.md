@@ -405,7 +405,7 @@ The only escaping they do is to replace `"` in the attribute value (for {{jsxref
 The `String()` function is a more reliable way than calling `toString()` method of the value, as the former works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
-// This will produce an error since null and undefined are not auto boxed to be an object
+// You cannot access properties on null or undefined
 
 const nullVar = null;
 nullVar.toString(); // TypeError: Cannot read properties of null
