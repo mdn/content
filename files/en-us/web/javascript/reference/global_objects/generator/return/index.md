@@ -25,7 +25,7 @@ generatorInstance.return(value)
 
 ### Return value
 
-An {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+An {{jsxref("Object")}} with two properties:
 
 - `done`
   - : A boolean value:

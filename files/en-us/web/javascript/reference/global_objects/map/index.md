@@ -429,7 +429,7 @@ for (const [key, value] of myMap.entries()) {
 ### Iterating Map with forEach()
 
 Maps can be iterated using the
-{{jsxref("Map.prototype.forEach", "forEach()")}} method:
+{{jsxref("Map/forEach", "forEach()")}} method:
 
 ```js
 myMap.forEach((value, key) => {

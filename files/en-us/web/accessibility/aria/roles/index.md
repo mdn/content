@@ -109,7 +109,7 @@ Landmark roles provide a way to identify the organization and structure of a web
 - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) ({{HTMLElement('main')}})
 - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role) ({{HTMLElement('nav')}})
 - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) ({{HTMLElement('section')}})
-- [search](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [search](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role) ({{HTMLElement('search')}})
 
 ### 4. Live region roles
 

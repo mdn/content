@@ -200,4 +200,5 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
 - [CSS cascade and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

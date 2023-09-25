@@ -16,11 +16,17 @@ This article provides information about the changes in Firefox 118 that affect d
 
 - The {{HTMLElement('search')}} element is now supported. The `<search>` element is a group element that serves to contain all the elements used in a search or filtering operation ([Firefox bug 1824121](https://bugzil.la/1824121)).
 
+### MathML
+
+- The `mathml.legacy_maction_and_semantics_implementations.disabled` preference is now removed, which means that the [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default (Firefox bug [1788223](https://bugzil.la/1788223)).
+- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated, as is use with any other element than the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
+
 #### Removals
 
 ### CSS
 
 - Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
+- A new keyword `from-font` in the CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
 
 #### Removals
 
@@ -34,6 +40,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### HTTP
 
+- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
+
 #### Removals
 
 ### Security
@@ -42,7 +50,11 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### APIs
 
+- The <kbd>⊞ Windows Logo</kbd> key on Windows and the <kbd>Command</kbd> key on macOS now return a value of `"Meta"` for [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key), instead of `"OS"`, and [`KeyboardEvent.code`](/en-US/docs/Web/API/KeyboardEvent/code) returns `MetaLeft`/`MetaRight` instead of `OSLeft`/`OSRight` (Firefox bug [1232918](https://bugzil.la/1232918)).
+- The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped, and should be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
+- The array returned by {{domxref("RTCPeerConnection.getTransceivers()")}} now omits stopped transcievers. Similarly, {{domxref("RTCPeerConnection.getReceivers()")}} and {{domxref("RTCPeerConnection.getSenders()")}} omit the receivers and senders associated with a stopped transceiver ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
+- [`CSSStyleRule`](/en-US/docs/Web/API/CSSStyleRule) now inherits from [`CSSGroupingRule`](/en-US/docs/Web/API/CSSGroupingRule) instead of directly from [`CSSRule`](/en-US/docs/Web/API/CSSRule), with the result that it additionally implements the property [`cssRules`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and the methods [`deleteRule()`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and [`insertRule()`](/en-US/docs/Web/API/CSSGroupingRule/insertRule) (Firefox bug [1846251](https://bugzil.la/1846251)).
 
 #### DOM
 

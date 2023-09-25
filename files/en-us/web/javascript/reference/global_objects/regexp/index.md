@@ -101,15 +101,15 @@ Note that several of the {{jsxref("RegExp")}} properties have both long and shor
 
 - {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}} {{deprecated_inline}}
   - : Static read-only properties that contain parenthesized substring matches.
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}} {{deprecated_inline}}
+- {{jsxref("RegExp/input", "RegExp.input ($_)")}} {{deprecated_inline}}
   - : A static property that contains the last string against which a regular expression was successfully matched.
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
+- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
   - : A static read-only property that contains the last matched substring.
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
+- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
   - : A static read-only property that contains the last parenthesized substring match.
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
+- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
   - : A static read-only property that contains the substring preceding the most recent match.
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
+- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
   - : A static read-only property that contains the substring following the most recent match.
 - {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
@@ -171,7 +171,7 @@ These properties are own properties of each `RegExp` instance.
 
 ### Using a regular expression to change data format
 
-The following script uses the {{jsxref("String.prototype.replace()", "replace()")}} method of the {{jsxref("Global_Objects/String", "String")}} instance to match a name in the format _first last_ and output it in the format _last, first_.
+The following script uses the {{jsxref("String.prototype.replace()")}} method to match a name in the format _first last_ and output it in the format _last, first_.
 
 In the replacement text, the script uses `$1` and `$2` to indicate the results of the corresponding matching parentheses in the regular expression pattern.
 
@@ -210,7 +210,7 @@ s.match(/yes[^]*day/);
 
 ### Using a regular expression with the sticky flag
 
-The {{jsxref("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
+The {{jsxref("RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
 const str = "#foo#";
