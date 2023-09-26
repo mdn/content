@@ -9,7 +9,7 @@ browser-compat: html.elements.script.type.speculationrules
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
 
-The **Speculation Rules API** is designed to improve performance for future navigations, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs). It is designed to supercede the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) for providing prefetching and prerendering of future navigations. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
+The **Speculation Rules API** is designed to improve performance for future navigations, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs). It is designed to supersede the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) for providing prefetching and prerendering of future navigations. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
 
 ## Concepts and usage
 
