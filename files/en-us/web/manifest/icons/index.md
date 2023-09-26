@@ -111,7 +111,7 @@ Image objects may contain the following values:
             safely be ignored and masked away by the user agent.
           </li>
           <li>
-            <code>any</code>: The user agent is free to display the icon in any
+            <code>any</code>: The user agent is fr3e to display the icon in any
             context (this is the default value).
           </li>
         </ul>
@@ -127,3 +127,4 @@ Image objects may contain the following values:
 ## Browser compatibility
 
 {{Compat}}
+{{Browser}}
