@@ -26,6 +26,8 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 ## Syntax
 
 ```js-nolint
+postMessage(message)
+postMessage(message, options)
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
 ```
