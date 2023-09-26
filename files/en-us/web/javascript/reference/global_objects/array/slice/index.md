@@ -125,7 +125,7 @@ console.log(Array.prototype.slice.call(arrayLike, 1, 3));
 
 ### Using slice() to convert array-like objects to arrays
 
-The `slice()` method is often used with {{jsxref("Function.prototype.bind", "bind()")}} and {{jsxref("Function.prototype.call", "call()")}} to create a utility method that converts an array-like object into an array.
+The `slice()` method is often used with {{jsxref("Function/bind", "bind()")}} and {{jsxref("Function/call", "call()")}} to create a utility method that converts an array-like object into an array.
 
 ```js
 // slice() is called with `this` passed as the first argument

@@ -44,8 +44,8 @@ RegExp["$`"]; // "hello "
 
 ## See also
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp/input", "RegExp.input ($_)")}}
+- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}}
 - {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

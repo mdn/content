@@ -32,7 +32,7 @@ Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted
 
 ### Number.parseFloat vs. parseFloat
 
-This method has the same functionality as the global {{jsxref("parseFloat", "parseFloat()")}} function:
+This method has the same functionality as the global {{jsxref("parseFloat()")}} function:
 
 ```js
 Number.parseFloat === parseFloat; // true
@@ -40,7 +40,7 @@ Number.parseFloat === parseFloat; // true
 
 Its purpose is modularization of globals.
 
-See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
+See {{jsxref("parseFloat()")}} for more detail and examples.
 
 ## Specifications
 
@@ -54,4 +54,4 @@ See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 
 - [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat()")}}

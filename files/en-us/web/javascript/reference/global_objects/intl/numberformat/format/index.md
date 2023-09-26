@@ -113,5 +113,5 @@ console.log(numberFormat.format(`${bigNum}E-6`));
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

@@ -113,7 +113,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <div class="notecard note">
               <p>
                 <strong>Note:</strong> This value also requires
-                <code>&#x3C;link></code> to contain the crossorigin attribute.
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
               </p>
             </div>
           </td>
@@ -443,3 +443,4 @@ the rendering of the page will be blocked till the resource is fetched. For exam
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- [The `integrity` attribute](https://150daysofhtml.com/book/day010/) on 150daysofhtml.com (2021)
