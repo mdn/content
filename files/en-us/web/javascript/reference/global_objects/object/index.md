@@ -272,18 +272,15 @@ const o2 = new Object(undefined);
 const o3 = new Object(null);
 ```
 
-### Using Object to create Boolean objects
+### Using Object() constructor to create a specific type of object
+
+You can use the [`Object()`](http://en-us/docs/Web/JavaScript/Reference/Global_Objects/Object/Object#return_value) constructor to create an Object of a specific type.
 
 The following examples store {{jsxref("Boolean")}} objects in `o`:
 
 ```js
 // equivalent to const o = new Boolean(true)
 const o = new Object(true);
-```
-
-```js
-// equivalent to const o = new Boolean(false)
-const o = new Object(Boolean());
 ```
 
 ### Object prototypes
