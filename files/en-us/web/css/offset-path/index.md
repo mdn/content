@@ -52,7 +52,7 @@ offset-path: unset;
 
 ### Values
 
-The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}}, a {{cssxref("url","url()")}}, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
+The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url","&lt;url&gt;")}} value, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
 
 - `none`
 
@@ -60,15 +60,15 @@ The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`
 
 - `<offset-path>`
 
-  - : A `ray()`, a `url()`, or a `<basic-shape>` specifying the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
 
     - {{cssxref("ray","ray()")}}
 
       - : Defines a line starting at a set position, of a set length, and extending at the specified angle. The `ray()` function accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
 
-    - {{cssxref("url","url()")}}
+    - {{cssxref("url","&lt;url&gt;")}}
 
-      - : Specifies the URL reference of a shape element with an SVG. The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, or {{SVGElement("rect")}} element referenced by the`id` in the `url()` parameter. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
+      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
     - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
 
@@ -76,7 +76,7 @@ The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
 
-  - : Specifies the size information of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
+  - : Specifies the size information of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box` in CSS contexts. In SVG contexts, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `<url>` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
 
 ## Description
 
@@ -104,7 +104,7 @@ This example demonstrates using various `<coord-box>` values in the `offset-path
 <div class="box greenBox"></div>
 ```
 
-```css
+```css hidden
 body {
   width: 300px;
   height: 200px;
@@ -114,7 +114,9 @@ body {
   padding: 25px;
   margin: 50px;
 }
+```
 
+```css
 .box {
   width: 40px;
   height: 20px;
@@ -159,15 +161,11 @@ In this example, the margin, border, and padding have been purposely given large
 
 {{EmbedLiveSample('Creating an offset-path using box-edge positioning', '100%', 400)}}
 
-### Animating an element with offset-path
+### Creating an offset-path using path()
 
-In the CSS code in this example, the `offset-path` property defines a path that is identical to the `<path>` element in the SVG. The path of the SVG animation is a line drawing of a house with a chimney.
+In this example, the {{svgelement("svg")}} element creates a house with a chimney and also defines two halves of a scissor. The house and chimney are composed of rectangles and polygons, and the scissor halves are represented by two distinct path elements. In the CSS code, the `offset-path` property is used to specify a path to follow for the two scissor halves. This CSS-defined path is identical to the one represented by the `<path>` element in the SVG, which is the outline of the house including the chimney.
 
-#### SVG
-
-The top and bottom halves of the scissors would appear in the top left of the canvas were they not positioned along the starting point of the path defined by `offset-path`.
-
-```html
+```html live-sample___offset_path_path
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="700"
@@ -210,7 +208,7 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 </svg>
 ```
 
-```css
+```css live-sample___offset_path_path
 .scissorHalf {
   offset-path: path(
     "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
@@ -227,7 +225,60 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 
 #### Result
 
-{{EmbedLiveSample('Animating_an_element_with_offset-path', '100%', '450')}}
+Without the `offset-path` property, the two halves of the scissors would default to the top-left corner of the canvas. However, by using `offset-path`, the two scissor halves are aligned with the starting point of the SVG path, allowing them to move along it.
+
+{{EmbedLiveSample('offset_path_path', '100%', '450')}}
+
+### Creating an offset-path using url()
+
+This example illustrates how to refer to an SVG shape to define the shape of the path that an element can follow. The green circle (defined by `.target`) follows the path of a rectangle, which is defined by passing the SVG shape's ID (`svgRect`) to the `offset-path` property by using `url()`.
+
+The SVG rectangle that defines the path shape is shown here only to visually demonstrate that the green circle is indeed following the path defined by this rectangle.
+
+```html live-sample___offset_path_url
+<div class="outer">
+  <div class="target"></div>
+</div>
+  <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg" >
+    <rect id="svgRect" x="50" y="50" width="200" height="100" />
+  </svg>
+</div>
+```
+
+```css hidden live-sample___offset_path_url
+.outer {
+  position: absolute;
+}
+```
+
+```css live-sample___offset_path_url
+.target {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: green;
+  offset-path: url(#svgRect);
+  offset-anchor: auto;
+  animation: move 5s linear infinite;
+}
+
+#svgRect {
+  fill: antiquewhite;
+  stroke: black;
+  stroke-width: 2;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+```
+
+{{EmbedLiveSample('live-sample___offset_path_url', '100%', '250')}}
 
 ## Specifications
 

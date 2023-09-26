@@ -52,7 +52,9 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
+
+> **Note:** This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
 
 #### Without nesting selector
 

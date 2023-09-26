@@ -140,11 +140,11 @@ Each repository includes useful information to guide you on how to contribute.
 
 If you are a maintainer or an owner in the MDN Web Docs GitHub organization, you are responsible for triaging issues in one or more MDN Web Docs repository.
 
-The overall process for triaging includes some [general](#general_triaging_tasks) and some [issue-specific tasks](#issue_specific_triaging_tasks).
+The overall process for triaging includes some [general](#general_triaging_tasks) and some [issue-specific tasks](#issue-specific_triaging_tasks).
 
 ### General triaging tasks
 
-- When an issue is opened, the `needs triage` label is set on the issue automatically. You can search for this label to look for issues that [need to be triaged](#issue_specific_triaging_tasks). Contributors or anybody else should not work on the issue until the issue has been triaged. (Triagers should remember to remove the `needs triage` label after triaging the issue.)
+- When an issue is opened, the `needs triage` label is set on the issue automatically. You can search for this label to look for issues that [need to be triaged](#issue-specific_triaging_tasks). Contributors or anybody else should not work on the issue until the issue has been triaged. (Triagers should remember to remove the `needs triage` label after triaging the issue.)
 
 - In the [mdn/content repository](https://github.com/mdn/content/issues), an additional `Content:` label, such as `Content:CSS` or `Content:WebAPI`, is set on the issue automatically. This gets set based on the MDN URL mentioned in the issue. You can use the content-specific label to look for issues to be triaged in your specific topic area.
 
