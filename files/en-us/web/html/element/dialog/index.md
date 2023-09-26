@@ -46,7 +46,7 @@ The example below shows how to create a modeless dialog by using only HTML. Beca
 
 #### Result
 
-{{EmbedLiveSample("Basic_but_not_recommended_example", "100%", 200)}}
+{{EmbedLiveSample("HTML-only_example", "100%", 200)}}
 
 This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are modeless. In this example, when the dialog is dismissed, no method is provided to reopen it. The preferred method to display modeless dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. You can toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
 
