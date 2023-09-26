@@ -18,13 +18,13 @@ The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a
 content: normal;
 content: none;
 
-/* <image> values */
+/* <content-replacement> / <image> values */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
 content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
-/* alt text for generated content, added in the Level 3 specification */
-content: url("http://www.example.com/test.png") / "This is the alt text";
+/* speech output: alternative text after a "/"  */
+content: url("../img/test.png") / "This is the alt text";
 
 /* <string> value */
 content: "prefix";
@@ -43,7 +43,7 @@ content: counters(section_counter, ".", decimal-leading-zero);
 /* attr() value linked to the HTML attribute value */
 content: attr(value string);
 
-/* Language- and position-dependent keywords */
+/* <quote> values */
 content: open-quote;
 content: close-quote;
 content: no-open-quote;
@@ -63,42 +63,70 @@ content: unset;
 ### Values
 
 - `none`
+
   - : When applied to a pseudo-element, the pseudo-element is not generated. If applied to an element, the value has no effect.
+
 - `normal`
-  - : Computes to `none` for the `::before` and `::after` pseudo-elements.
-- {{cssxref("&lt;string&gt;")}}
-  - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
+
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, `normal` the content will be the initial, or normal, content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}.
+
 - `<content-list>`
-  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order).
-    This list can include strings, images, counters, and so on.
+
+  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order). Each `<content-list>` item is either content or of type `<string>`, `<image>`, `<counter>`, `<quote>`, `<target>`, or `<leader()>`.
+
+- {{cssxref("&lt;string&gt;")}}
+
+  - : A sequence of characters enclosed in matching single or double quotes. Multiple string values will be concatenated (there is no concatenation operator in CSS).
+
 - {{cssxref("&lt;image&gt;")}}
+
   - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("image/image-set", "image-set()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
-- {{cssxref("counter", "counter()")}}
 
-  - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.
+- `<counter>`
 
-    The {{cssxref("counter", "counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.
+    - {{cssxref("counter", "counter()")}}
+      - : The {{cssxref("counter", "counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+    - {{cssxref("counters", "counters()")}}
+      - : The {{cssxref("counters", "counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
-    The {{cssxref("counters", "counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+- `<quote>`
+
+  - : The `<quote>` data type includes language- and position-dependent keywords:
+    - `open-quote` and `close-quote`
+      - : These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.
+    - `no-open-quote` | `no-close-quote`
+      - : Introduces no content, but increments (decrements) the level of nesting for quotes.
+
+- `<target>` {{Experimental_Inline}}
+
+  - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-reference obtained from the target end of a link. See [Formal syntax](#formal_syntax).
+
+- `<leader>` {{Experimental_Inline}}
+
+  - : stuff
 
 - `attr(x)`
-  - : The value of the element's attribute `x` as a string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute names depends on the document language.
-- `open-quote` | `close-quote`
-  - : These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.
-- `no-open-quote` | `no-close-quote`
-  - : Introduces no content, but increments (decrements) the level of nesting for quotes.
-- `<content-list> / "Alternative text"`
-  - : Alternative text may be specified for an image (or list of content items) by appending a forward slash and then the text.
-    The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
-    Note that if the browser does not support alternative text, neither the content or alternative text will be used.
+
+  - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element or pseudo-element's originating element. The value of the element's attribute `x` as an unparsed string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute names depends on the document language.
+
+- `<content-list> / "<string> or <counter>"`
+
+  - : Alternative text may be specified for an image , or any of the `<content-list>` items, by appending a forward slash and then the string text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, neither the content or alternative text will be used.
+
+    - {{cssxref("string", "/ &lt;string>")}}
+      - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
 
 ## Accessibility concerns
 
 CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
 
-- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
-- [Explanation of WCAG, Guideline 1.3 – MDN](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
+
+- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
+- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
 
 ## Formal definition
 
@@ -110,14 +138,81 @@ CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_
 
 ## Examples
 
-### Headings and quotes
+### Adding text to list item counters
 
-This example inserts quotation marks around quotes, and adds the word "Chapter" before headings.
+This example combines the counters function and text to prepend all list items with a more detailed counter. We set the content of the the list marker to be a concatenated content-list containing a counter between two strings.
 
 #### HTML
 
 ```html
-<h1>5</h1>
+<ol>
+  <li>Dogs</li>
+  <li>Cats</li>
+  <li>
+    Birds
+    <ol>
+      <li>Owls</li>
+      <li>Ducks</li>
+      <li>Flightless</li>
+    </ol>
+  </li>
+</ol>
+```
+
+#### CSS
+
+```css
+ol {
+  counter-reset: items;
+}
+li {
+  counter-increment: items;
+}
+li::marker {
+  content: "item " counters(items, ".", numeric) ": ";
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
+
+The `counter()` function created a numeric `items` counter in which nested numbers are separated with a period (`.`).
+
+### Strings with attribute values
+
+This example adds a string of text after every fully qualified secure link. The text is the value of the `href` attribute, prepended by "URL:", followed by a space, all in parentheses.
+
+#### HTML
+
+```html
+<ul>
+  <li><a href="https://mozilla.com">Mozilla</a></li>
+  <li><a href="/">MDN</a></li>
+  <li><a href="https://openwebdocs.org">OpenWebDocs</a></li>
+</ul>
+```
+
+#### CSS
+
+```css
+a[href^="https://"]::after
+{
+  content: " (URL: " attr(href) ")";
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Strings_with_attribute_values', '100%', 200)}}
+
+### Quotes
+
+This example inserts quotation marks around quotes.
+
+#### HTML
+
+```html
 <p>
   According to Sir Tim Berners-Lee,
   <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
@@ -127,16 +222,9 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
   We must understand that there is nothing fundamentally wrong with building on
   the contributions of others.
 </p>
-
-<h1>6</h1>
-<p>
-  According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
-    Individuals must have the ability to shape the Internet and their own
-    experiences on the Internet.
-  </q>
-  Therefore, we can infer that contributing to the open web can protect our own
-  individual experiences on it.
+<p lang="fr-fr">
+  Mais c'est Magritte qui a dit,
+  <q lang="fr-fr"> Ceci n'est pas une pipe. </q>.
 </p>
 ```
 
@@ -154,17 +242,13 @@ q::before {
 q::after {
   content: close-quote;
 }
-
-h1::before {
-  content: "Chapter "; /* The trailing space creates separation
-                          between the added content and the
-                          rest of the content */
-}
 ```
 
 #### Result
 
-{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
+{{EmbedLiveSample('Quotes', '100%', 200)}}
+
+Note the type of quotes generated is language dependent.
 
 ### Image combined with alternative text
 
@@ -236,108 +320,76 @@ This example inserts additional text after special items in a list.
 
 {{EmbedLiveSample('Targeting_classes', '100%', 160)}}
 
-### Images and element attributes
-
-This example inserts an image before each link, and adds its `id` attribute after.
-
-#### HTML
-
-```html
-<ul>
-  <li><a id="moz" href="https://www.mozilla.org/">Mozilla Home Page</a></li>
-  <li>
-    <a id="mdn" href="https://developer.mozilla.org/">
-      Mozilla Developer Network
-    </a>
-  </li>
-</ul>
-```
-
-#### CSS
-
-```css
-a {
-  text-decoration: none;
-  border-bottom: 3px dotted navy;
-}
-
-a::after {
-  content: " (" attr(id) ")";
-}
-
-#moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
-}
-
-#mdn::before {
-  content: url("mdn-favicon16.png");
-}
-
-li {
-  margin: 1em;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
-
 ### Element replacement with `url()`
 
-This example replaces an element's content with an image {{cssxref("url", "url()")}}. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+This example replaces a regular element's contents with an image {{cssxref("url", "url()")}}. The `id` of the element, generated on `::after`, is not displayed if the element is replaced.
 
 #### HTML
 
 ```html
-<div id="replaced">Mozilla</div>
+<div id="replaced">I disappear</div>
+<hr />
+<div id="notReplaced">I am not replaced</div>
 ```
 
 #### CSS
 
 ```css
+div {
+  min-height: 50px;
+  background: palegoldenrod;
+}
+
 #replaced {
   content: url("mdn.svg");
 }
 
-/* will not show if element replacement is supported */
-#replaced::after {
+/* will not show if element is replaced */
+div::after {
   content: " (" attr(id) ")";
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Element_replacement_with_url', '100%', 200)}}
+{{EmbedLiveSample('Element_replacement_with_url', '100%',400)}}
+
+When generating content on regular elements (rather than just on pseudo-elements), the entire element is replaced; `::before` or `::after` pseudo-elements are not generated on replaced elements. In other words, only of the two CSS declarations is applied to each `<div>`.
 
 ### Element replacement with `<gradient>`
 
-This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}.
+This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}} if supported.
 
 #### HTML
 
 ```html
-<div id="replaced">Mozilla</div>
+<div id="replaced">I disappear</div>
+<hr />
+<div id="notReplaced">I am not replaced</div>
 ```
 
 #### CSS
 
-```css hidden
+```css
 div {
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 50px;
   border: 1px solid lightgrey;
 }
-```
 
-```css
 #replaced {
   content: linear-gradient(purple, yellow);
+}
+/* will not show if the element is replaced */
+div::after {
+  content: " (Gradients may be supported, but not as a value for <content>)";
+  background: linear-gradient(to right, yellow, pink);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Element_replacement_with_gradient', '100%', 110)}}
+{{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
 
 ### Element replacement with `image-set()`
 

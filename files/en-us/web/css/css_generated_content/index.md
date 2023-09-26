@@ -9,6 +9,14 @@ spec-urls: https://drafts.csswg.org/css-content/
 
 The **CSS generated content** module defines how content can be added to a document with CSS. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.
 
+### Generated content in action
+
+{{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%', 650)}}
+
+The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS background and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added by genarating content: the empty box with a wide orange {{cssxref("border-left", "left border")}} added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: the "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
+
+To see the code for this animation, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/generated_content.html).
+
 ## Reference
 
 ### Properties
@@ -20,18 +28,14 @@ The **CSS generated content** module defines how content can be added to a docum
 
 ### Functions
 
-- `<content()>`
-- `<string()>`
-- `<leader()>`
-
-> **Note:** The CSS generated content module introduces three experimental [`<target>`](/en-US/docs/Web/CSS/content#target) functions that have not been implented, including `<target-counter()>`, `<target-counters()>`, and `<target-text()>`.
+The CSS generated content module introduces six CSS functions including the not yet implented `content()`, `string()`, and `leader()` functions, and the three experimental [`<target>`](/en-US/docs/Web/CSS/content#target) functions, including `target-counter()`, `target-counters()`, and `target-text()`.
 
 ### Data types
 
 - [`<content-list>`](/en-US/docs/Web/CSS/content#content-list)
 - `<content-replacement>` (see {{cssxref("image")}})
 - {{cssxref("image")}}
-- {{cssxref("counter")}}
+- [`<counter>`](/en-US/docs/Web/CSS/content#counter)
 - [`<quote>`](/en-US/docs/Web/CSS/content#quote)
 - [`<target>`](/en-US/docs/Web/CSS/content#target)
 
@@ -41,17 +45,32 @@ The **CSS generated content** module defines how content can be added to a docum
 
   - : Learn how to add text or image content to a document using the {{cssxref("content")}} property.
 
-- [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
-  - : How to
+- [Create fancy boxes with generated content](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes)
+
+  - : Example of styling generated content for visual effects.
 
 ## Related concepts
 
-- {{cssxref("::before")}} pseudo-element
-- {{cssxref("::after")}} pseudo-element
-- {{cssxref("::marker")}} pseudo-element
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 
-- {{cssxref("counter-increment")}} property
-- {{cssxref("counter-reset")}} property
+  - {{cssxref("::before")}} pseudo-element
+  - {{cssxref("::after")}} pseudo-element
+  - {{cssxref("::marker")}} pseudo-element
+
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+
+  - {{cssxref("counter", "counter()")}} function
+  - {{cssxref("counters", "counters()")}} function
+  - {{cssxref("counter-increment")}} property
+  - {{cssxref("counter-reset")}} property
+
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+
+  - {{cssxref("string")}} data type
+  - {{cssxref("attr()")}} function
+  - {{cssxref("image")}} data type
+
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 
 ## Specifications
 
@@ -60,3 +79,4 @@ The **CSS generated content** module defines how content can be added to a docum
 ## See also
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
