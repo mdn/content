@@ -66,7 +66,6 @@ When a dialog opens, the browser, by default, gives focus to the first element t
 <button>Show the dialog</button>
 ```
 
-
 #### CSS
 
 We can style the backdrop of the dialog by using the {{cssxref('::backdrop')}} pseudo-element.
