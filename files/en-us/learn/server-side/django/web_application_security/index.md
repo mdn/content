@@ -160,16 +160,11 @@ Django also provides other forms of protection (most of which would be hard or n
 - Clickjacking protection
   - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking](/en-US/docs/Glossary/Clickjacking) protection in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/4.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing TLS/HTTPS
-
   - : TLS/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
-
-- [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.
-- [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT) is used to redirect all HTTP requests to HTTPS.
-- Use [HTTP Strict Transport Security](https://docs.djangoproject.com/en/4.0/ref/middleware/#http-strict-transport-security) (HSTS). This is an HTTP header that informs a browser that all future connections to a particular site should always use HTTPS. Combined with redirecting HTTP requests to HTTPS, this setting ensures that HTTPS is always used after a successful connection has occurred. HSTS may either be configured with [`SECURE_HSTS_SECONDS`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_HSTS_SECONDS) and [`SECURE_HSTS_INCLUDE_SUBDOMAINS`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS) or on the Web server.
-- Use 'secure' cookies by setting [`SESSION_COOKIE_SECURE`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE) and [`CSRF_COOKIE_SECURE`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE) to `True`. This will ensure that cookies are only ever sent over HTTPS.
-
-<!---->
-
+    - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.
+    - [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT) is used to redirect all HTTP requests to HTTPS.
+    - Use [HTTP Strict Transport Security](https://docs.djangoproject.com/en/4.0/ref/middleware/#http-strict-transport-security) (HSTS). This is an HTTP header that informs a browser that all future connections to a particular site should always use HTTPS. Combined with redirecting HTTP requests to HTTPS, this setting ensures that HTTPS is always used after a successful connection has occurred. HSTS may either be configured with [`SECURE_HSTS_SECONDS`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_HSTS_SECONDS) and [`SECURE_HSTS_INCLUDE_SUBDOMAINS`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS) or on the Web server.
+    - Use 'secure' cookies by setting [`SESSION_COOKIE_SECURE`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE) and [`CSRF_COOKIE_SECURE`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE) to `True`. This will ensure that cookies are only ever sent over HTTPS.
 - Host header validation
   - : Use [`ALLOWED_HOSTS`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-ALLOWED_HOSTS) to only accept requests from trusted hosts.
 
