@@ -48,7 +48,7 @@ font-synthesis: unset;
 - `style`
   - : Indicates that the italic typeface may be synthesized by the browser if needed.
 - `small-caps`
-  - : Indicates that the missing small-caps typeface may be synthesized by the browser if needed.
+  - : Indicates that the small-caps typeface may be synthesized by the browser if needed.
 - `position`
   - : Indicates that the missing subscript and superscript typeface may be synthesized by the browser, while using {{cssxref("font-variant-position")}}, if needed.
 
