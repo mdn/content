@@ -18,17 +18,14 @@ The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP he
 
 ## Value
 
-- `1`
-  - : User _does not_ provide consent to sell or share their data.
-- `0`
-  - : User either _does_ provide consent to sell or share their data, or has not indicated a preference.
+`true` if the user explicitly _does not_ grant consent to sell or share their data.
+`false` if the user either grants consent, or has not indicated a preference.
 
 ## Example
 
 ```js
 console.log(navigator.globalPrivacyControl);
-// prints "1" indicating user does not want their data shared or sold.
-// prints "0" if the user either consents or has not indicated a preference.
+// "true" if the user has specifically indicated they do not want their data shared or sold, otherwise "false".
 ```
 
 ## Specifications
