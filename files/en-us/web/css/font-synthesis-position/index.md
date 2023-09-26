@@ -31,7 +31,7 @@ font-synthesis-position: unset;
 - `auto`
   - : Indicates that a missing position typeface may be synthesized by the browser if needed.
 - `none`
-  - : Indicates that the synthesis of the missing position typeface by the browser is not allowed.
+  - : Indicates that the synthesis of a missing position typeface by the browser is not allowed.
 
 ## Formal definition
 
