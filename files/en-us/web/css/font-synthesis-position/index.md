@@ -59,7 +59,8 @@ This example shows turning off synthesis of the superscript and subscript typefa
 <p class="no-syn">
   The positions <span class="super">superscript</span> and
   <span class="sub">subscript</span> typeface is turned off here but not the
-  <strong>bold</strong> and <em>oblique</em> typefaces  (on browsers that support <code>font-synthesis-position</code>).
+  <strong>bold</strong> and <em>oblique</em> typefaces (on browsers that support
+  <code>font-synthesis-position</code>).
 </p>
 ```
 
