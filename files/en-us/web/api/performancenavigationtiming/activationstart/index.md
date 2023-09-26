@@ -14,13 +14,15 @@ The **`activationStart`** read-only property represents the time between when a 
 
 ## Value
 
-A number, representing the duration between document prerendering start and activation, in seconds.
+A {{domxref("DOMHighResTimeStamp")}} representing the duration between document prerendering start and activation in seconds.
+
+The value is `0` if the page has not prerendered or is still prerendering.
 
 ## Examples
 
 ### Detecting prerendered pages
 
-When a prerendered document is activated, `activationStart` is set to a non-zero time. The following function can check for prerendering _and_ prerendered pages:
+When a prerendered document is activated, `activationStart` is set to a non-zero time. The following function can check whether a page is {{DOMxRef("Document.prerendering","prerendering")}} or has already prerendered:
 
 ```js
 function pagePrerendered() {
@@ -33,17 +35,17 @@ function pagePrerendered() {
 
 ### Measuring user-perceived performance milestones
 
-With prerendered pages, a page may have been created long before it was actually navigated to. When conducting performance measurements on prerendered pages, it is vital to use `activationStart` to avoid misleading measurements.
+With prerendered pages, a page may have been created long before it was actually navigated to. When using the [Performance API](/en-US/docs/Web/API/Performance_API) on prerendered pages, it is vital to compare returned values with `activationStart` in order to avoid misleading measurements.
 
 ```js
-// When the activation navigation started
+// Time to when activation occurred
 let activationStart =
   performance.getEntriesByType("navigation")[0].activationStart;
 
-// When First Paint occurred
+// Time to first paint
 let firstPaint = performance.getEntriesByName("first-paint")[0].startTime;
 
-// When First Contentful Paint occurred
+// Time to first contentful paint
 let firstContentfulPaint = performance.getEntriesByName(
   "first-contentful-paint",
 )[0].startTime;

@@ -49,4 +49,4 @@ Developers can provide hints to the browser of navigations/resources that should
 
 - [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
 - {{Glossary("prerender")}}
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/#prerendering-from-the-address-bar) on developer.chrome.com (2023)
+- [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)

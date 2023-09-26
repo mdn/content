@@ -26,7 +26,7 @@ There are several mechanisms for speculative loading:
 
 Speculative loading is achieved in two main ways.
 
-First, some browsers will automatically prerender pages based on various heuristics to provide automatic performance improvements. Exactly how this is done depends on the browser implementation. Chrome, for example, automatically prerenders pages when matching strings are typed into the address bar if it has a high confidence that you will visit that page (see [Viewing Chrome's address bar predictions](https://developer.chrome.com/blog/prerender-pages/#viewing-chromes-address-bar-predictions) for more details). In addition, it may automatically prerender search results pages when search terms are typed into the address bar, when instructed to do so by the search engine. It does this using the same mechanism as the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+First, some browsers will automatically prerender pages based on various heuristics to provide automatic performance improvements. Exactly how this is done depends on the browser implementation. Chrome, for example, automatically prerenders pages when matching strings are typed into the address bar — if it has a high confidence that you will visit that page (see [Viewing Chrome's address bar predictions](https://developer.chrome.com/blog/prerender-pages/#viewing-chromes-address-bar-predictions) for more details). In addition, it may automatically prerender search results pages when search terms are typed into the address bar, when instructed to do so by the search engine. It does this using the same mechanism as the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 
 Second, there are several different platform features that developers can use to provide instructions on what speculative loading they want the browser to perform. These are reviewed in the next section.
 
@@ -54,7 +54,7 @@ Link: <https://example.com>; rel="preconnect"
 
 ### `<link rel="dns-prefetch">`
 
-[`<link rel="dns-prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch) provides a hint to browsers that the user is likely to need resources from the specified resource's origin, and therefore the browser can likely improve performance by preemptively performing DNS resolution for that origin. It is identical to `<link rel="preconnect">` except that it only handles the DNS part.
+[`<link rel="dns-prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch) provides a hint to browsers that the user is likely to need resources from the specified resource's origin, and therefore the browser may be able to improve performance by preemptively performing DNS resolution for that origin. It is identical to `<link rel="preconnect">` except that it only handles the DNS part.
 
 Again, browser support is widespread, and it has no benefit on same-origin requests because the connection is already open.
 

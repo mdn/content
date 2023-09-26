@@ -9,7 +9,9 @@ browser-compat: html.elements.script.type.speculationrules
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
 
-The **Speculation Rules API** is designed to improve performance for future navigations, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs). It is designed to supersede the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) for providing prefetching and prerendering of future navigations. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
+The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
+
+The Speculation Rules API provides an alternative to the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) feature and is designed to supersede the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) feature. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
 
 ## Concepts and usage
 
@@ -38,7 +40,7 @@ For example:
 </script>
 ```
 
-You specify a different array to contain the rules for each speculative loading type (for example `"prerender"` or `"prefetch"`). Each rule is contained in an object that specifies for example a list of resources to be fetched, plus options such as an explicit [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) setting for each rule.
+You specify a different array to contain the rules for each speculative loading type (for example `"prerender"` or `"prefetch"`). Each rule is contained in an object that specifies for example a list of resources to be fetched, plus options such as an explicit [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) setting for each rule. Note that prerendered URLs are also prefetched.
 
 See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) for a full explanation of the available syntax.
 
@@ -46,11 +48,11 @@ See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/typ
 
 ### Using prefetching
 
-Including `prefetch` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to download the response body of the referenced pages, but none of the subresources referenced by the page. The results are kept in a per-document in-memory cache. When a prefetched page is navigated to, it will render much more quickly than if it were not prefetched.
+Including `prefetch` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to download the response body of the referenced pages, but none of the subresources referenced by the page. When a prefetched page is navigated to, it will render much more quickly than if it were not prefetched.
 
-If you prefetch something the user doesn't navigate to, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow. That said, the upfront cost of a prefetch is much smaller than the upfront cost of a prerender, so you are encouraged to adopt prefetching broadly, for example prefetching all of the significant pages on your site, provided they are safe to prefetch (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details).
+The results are kept in a per-document in-memory cache. If you prefetch something the user doesn't navigate to, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow. That said, the upfront cost of a prefetch is much smaller than the upfront cost of a prerender, so you are encouraged to adopt prefetching broadly, for example prefetching all of the significant pages on your site, provided they are safe to prefetch (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details).
 
-Same-site and cross-site prefetches will work, but cross-site prefetches are limited, for security purposes — they will currently only work if the user has no cookies set for the destination site. In the future an opt-in will be provided via the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header, but this was not implemented at the time of writing.
+Same-site and cross-site prefetches will work, but cross-site prefetches are limited. For security reasons they will currently only work if the user has no cookies set for the destination site. In the future an opt-in will be provided via the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header, but this was not implemented at the time of writing.
 
 For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and {{domxref("fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
 
@@ -60,29 +62,31 @@ For browsers that support it, speculation rules prefetch should be preferred ove
 In addition, speculation rules prefetch:
 
 - Automatically lowers the priority when needed (`fetch()` doesn't).
-- Is respectful of the user's configuration, for example it doesn't happen when in the user's device is in Battery Saver or Data Saver mode.
+- Is respectful of the user's configuration. For example, prefetching doesn't happen when the user's device is in Battery Saver or Data Saver mode.
 - Stores the prefetched resources in a per-document in-memory cache as opposed to the HTTP cache, which may result in slightly faster prefetching.
 
 ### Using prerendering
 
-Including `prerender` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to render and load the content into an invisible tab, stored in a per-document in-memory cache. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript.
+Including `prerender` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to fetch, render, and load the content into an invisible tab, stored in a per-document in-memory cache. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript.
 
-Future navigations to that page will be instant. The browser activates the invisible tab instead of carrying out the usual navigation process, instantly replacing the old foreground page with the prerendered page. If a page is activated before it has fully prerendered, then its current state is "foregrounded" and continues to load, which means you can still see a significant performance improvement.
+Future navigations to that page will be near-instant. The browser activates the invisible tab instead of carrying out the usual navigation process, replacing the old foreground page with the prerendered page. If a page is activated before it has fully prerendered, it is activated in its current state and then continues to load, which means you will still see a significant performance improvement.
 
-Prerendering uses additional memory and network bandwidth. If you prerender something the user doesn't navigate to, it is a significant waste of resources, although the result may populate the HTTP cache if headers allow. The upfront cost of a prerender is much larger than the upfront cost of a prefetch, and there are more conditions that could make content unsafe to prerender (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details). As a result, you are encouraged to adopt prerendering more sparingly, carefully considering cases where there is a high likelihood of the page being navigated to, and you think the user experience benefit is worth the extra work.
+Prerendering uses memory and network bandwidth. If you prerender something the user doesn't navigate to, these are wasted (although the result may populate the HTTP cache if headers allow, allowing later use). The upfront cost of a prerender is much larger than the upfront cost of a prefetch, and there are more conditions that could make content unsafe to prerender (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details). As a result, you are encouraged to adopt prerendering more sparingly, carefully considering cases where there is a high likelihood of the page being navigated to, and you think the user experience benefit is worth the extra cost.
 
-Prerendering is restricted to same-site documents. Cross-origin, same-site prerendering is possible — it requires the destination origin to opt-in using the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header with a value of `credentialed-prerender`.
+> **Note:** Many APIs will be automatically deferred when prerendering/until activation. See [Platform features deferred or restricted during prerender](#platform_features_deferred_or_restricted_during_prerender) for more details.
+
+Prerendering is restricted to same-site documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation destination site to opt-in using the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header with a value of `credentialed-prerender`.
 
 For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
 
-- `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the proess of sunsetting it.
+- `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it.
 - It loads subresources loaded via JavaScript, whereas `<link rel="prerender">` doesn't.
 - It doesn't get blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) settings, whereas `<link rel="prerender">` often does.
 - Speculation rules prerender should be treated as a hint and a progressive enhancement. Unlike `<link rel="prerender">`, it is a speculative hint and the browser may choose not to act upon the hint based on user settings, current memory usage, or other heuristics.
 
 ### Speculation rules API feature detection
 
-You can feature detect the Speculation Rules API using the following snippet:
+You can check if the Speculation Rules API is supported using the following code:
 
 ```js
 if (
@@ -122,6 +126,10 @@ if (
 
 ## Detecting prefetched and prerendered pages
 
+This section looks at different ways to detect whether a requested page has bene prefetched or prerendered.
+
+### Server-side detection
+
 Prefetched and prerendered page requests are sent with the [Sec-Purpose](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) request header, for example:
 
 ```http
@@ -145,6 +153,8 @@ const observer = new PerformanceObserver((list) => {
 
 observer.observe({ type: "resource", buffered: true });
 ```
+
+This technique is useful when measuring performance, or when you want to defer actions that might cause problems if they occur during prefetching (see [Unsafe prefetching](#unsafe_prefetching)).
 
 ### JavaScript prerender detection
 
@@ -172,7 +182,7 @@ function pagePrerendered() {
 }
 ```
 
-When the prerendered page is activated by the user viewing the page, the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event will fire. This can be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
+When the prerendered page is activated by the user viewing the page, the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event will fire. This can be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user (see [Unsafe prerendering](#unsafe_prerendering)).
 
 ```js
 document.addEventListener("prerenderingchange", initializeView);
@@ -190,7 +200,7 @@ This section covers conditions to look out for, under which prefetching and/or p
 
 As mentioned earlier, we recommend adopting prefetching broadly, as the risk to reward ratio is fairly low — the potential for resource wastage is minimal, and the performance improvements can be significant. However, you need to make sure prefetched pages do not cause problems with the flow of your application.
 
-When a prefetch is done, the browser downloads the response body of the referenced page via a single GET request, which the user may navigate to at a future time. Problems can arise specifically when the URL of the request performs a server-initiated side effect that you don't want to happen until the URL is actually navigated to (which can also involve setting a cookie).
+When a prefetch is done, the browser downloads the response body of the referenced page via a single GET request, which the user may navigate to at a future time. Problems can arise specifically when the URL of the request performs a server-initiated side effect that you don't want to happen until the URL is actually navigated to.
 
 For example:
 
@@ -201,9 +211,11 @@ For example:
 - URLs that increment a user's usage allowance numbers, such as consuming their monthly free article allowance or starting the timer on their monthly minutes.
 - URLs that initiate server-side ad conversion tracking.
 
-Such issues can be mitigated by watching for the [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header on the server as the requests come in, and then running specific code to handle prefetch cases. When the page is actually navigated to, you can detect the prefetched nature using JavaScript and initiate the deferred functionality then. If the side effect only occurs when JavaScript runs, then prefetching is safe, since the JavaScript will not run until activation.
+Such issues can be mitigated on the server by watching for the [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header as the requests come in, and then running specific code to defer problematic functionality. Later on, when the page is actually navigated to, you can initiate the deferred functionality via JavaScript if needed.
 
-> **Note:** You can find more details about the detection code in the [Detecting prefetch and prerender](#detecting_prefetch_and_prerender) section.
+If the functionality only occurs under normal circumstances when JavaScript runs, then prefetching is safe, since the JavaScript will not run until activation.
+
+> **Note:** You can find more details about the detection code in the [Detecting prefetched and prerendered pages](#detecting_prefetched_and_prerendered_pages) section.
 
 It is also potentially risky to prefetch a document whose server-rendered contents will change due to actions the user can take on the current page. This could include, for example, flash sale pages or movie theater seat maps. Test such cases carefully, and mitigate such issues by updating content once the page is loaded. See [Server-rendered varying state](#server-rendered_varying_state) for more details about these cases.
 
@@ -213,17 +225,17 @@ One final tip is to audit the URLs listed as disallowed in your [`Robots.txt`](/
 
 ### Unsafe prerendering
 
-Prerendering is more risky to adopt than prefetching and should therefore be done more sparingly in cases where it is worth it. There are more unsafe conditions to watch out for with prerendering, and the risk to reward ratio is somewhat higher. Although the performance improvements can be larger, the potential for resource wastage is also larger.
+Prerendering is more risky to adopt than prefetching and should therefore be done more sparingly, in cases where it is worth it. There are more unsafe conditions to watch out for with prerendering, and the risk to reward ratio is somewhat higher. Although the performance improvements can be larger, the potential for resource wastage is also larger.
 
 When a prerender is done, the browser GETs the URL and renders and loads the content into an invisible tab. This includes running the content's JavaScript and loading all subresources, including those fetched by JavaScript. Content can be potentially unsafe to prerender if any of the following conditions are observed:
 
-- The URL is [unsafe to prefetch](#unsafe_prefetching). Read the previous section first if you haven't already, and understand that these conditions also equally apply to unsafe prerendering. Put another way, documents that are safe to prerender must also be safe to prefetch.
+- The URL is [unsafe to prefetch](#unsafe_prefetching). Read the previous section first if you haven't already, and understand that these conditions also equally apply to unsafe prerendering.
 - The page's JavaScript modifies clent-side storage (for example [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)) on load in a way that may cause the page to be out of date once the user actually views the page.
-- The page runs JavaScript or loads images that cause side effects such as sending analytics, recording ad impressions, or otherwise modifies the state of the application as if the user had already interacted with it. Again, this can cause the page to be out of date once the user actually views it, or affect the flow of the application. See [Server-rendered varying state](#server-rendered_varying_state) for more details about such use cases.
+- The page runs JavaScript or loads images that cause side effects such as sending analytics, recording ad impressions, or otherwise modifying the state of the application as if the user had already interacted with it. Again, this can cause the page to be out-of-date once the user actually views it, affect the flow of the application, or cause incorrect performance or usage reporting. See [Server-rendered varying state](#server-rendered_varying_state) for more details about such use cases.
 
 To mitigate such problems, you can use the following techniques:
 
-- Watch for the [`Sec-Purpose: prerender`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header on the server as the requests come in, and then run specific code to handle prerender cases.
+- Watch for the [`Sec-Purpose: prerender`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header on the server as the requests come in, and then run specific code to defer problematic functionality.
 - Use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when the prerendered page is actually activated and run code as a result. This is useful in two cases:
   - Deferring code that may cause problems if it is run before the page is viewed. For example, you may want to wait until after activation to update client-side storage or modify server-side state using JavaScript. This can avoid situations when the UI and the application state become out of sync with one another, for example a shopping cart showing no items even though the user has added some.
   - If the above is not possible, then you could still rerun code after the page is activated to bring the app up-to-date again. For example, a highly-dynamic flash sale page might rely on content updates coming in from a third-party library. If you can't delay the updates, you can always get fresh updates once the user views the page. Prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API). This guarantees that the user will see up-to-date content after prerendering activation, across multiple non-prerendered tabs if needed.
@@ -251,11 +263,11 @@ User-specific state problems can occur for other user settings, for example lang
 - The user clicks on the link to `https://site.example.com/cart`, which activates the prerendered page.
 - The user sees an empty cart, even though they just added something to it.
 
-The best mitigation for these cases is to perform client-side updates to the speculatively loaded pages. This means the user gets the benefit of the speculatively loaded content, which can be slightly out-of-date, then the state update can occur afterwards.
+The best mitigation for these cases is to perform client-side updates to the speculatively loaded pages. This means the user gets the benefit of the speculatively loaded content, which can be slightly out-of-date, then the state update can occur afterwards. As mentioned earlier, prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API). This guarantees that the user will see up-to-date content after prerendering activation, across multiple non-prerendered tabs if needed.
 
 ## Session history behavior for prerendered documents
 
-Activating a prerendering/prerendered document behaves like any conventional navigation, for the end-user perspective. The activated document is displayed in the tab and appended to session history, and any existing forward history entries are pruned. Any navigations taking place within the prerendering browsing context _before_ activation do not affect the session history.
+Activating a prerendering/prerendered document behaves like any conventional navigation, from the end-user perspective. The activated document is displayed in the tab and appended to session history, and any existing forward history entries are pruned. Any navigations taking place within the prerendering browsing context _before_ activation do not affect the session history.
 
 From the developer's perspective, a prerendering document can be thought of as having a **trivial session history** where only one entry — the current entry — exists. All navigations within the prerendering context are effectively replaced.
 
@@ -267,7 +279,7 @@ This design ensures that users get the expected experience when using the back b
 
 Because a prerendered page is opened in a hidden state, a number of APIs and other web platform features that cause potentially intrusive behaviors are not activated in this state, and are instead deferred until the page is activated or restricted altogether. In the small number of cases where this is not yet possible, the prerender is canceled.
 
-### Asynchronous API defferal
+### Asynchronous API deferral
 
 The following asynchronous features' results are deferred in prerendered documents until they are activated:
 
@@ -338,7 +350,8 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.
 - {{domxref("Window.print()")}}
-- Workers: Workers can be used, but their execution is deferred until the prerendered document is activated
+- Dedicated/shared worker scripts are loaded, but their execution is deferred until the prerendered document is activated.
+- Cross-origin {{htmlelement("iframe")}} loads are delayed while prerendering until after the page is activated.
 
 ## Interfaces
 
@@ -360,7 +373,7 @@ The Speculation Rules API does not define any interfaces of its own.
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) `'inline-speculation-rules'` value
   - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
 - [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode)
-  - : Set by a destination origin to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
+  - : Set by a navigation destination site to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
 ## HTML features
 
@@ -382,4 +395,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 ## See also
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) on developer.chrome.com (2023)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

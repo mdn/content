@@ -14,7 +14,7 @@ The `prerendering` read-only property of the {{domxref("Document")}} interface r
 
 ## Value
 
-A boolean. Returns `true` if the document is currently in the process of prerendering, and `false` if it is not. `false` will be returned for documents that were prerendered and have finished prerendering, and documents that were not prerendered.
+A boolean. Returns `true` if the document is currently in the process of prerendering, and `false` if it is not. `false` will be returned for documents that have finished prerendering, and documents that were not prerendered.
 
 ## Examples
 
@@ -51,6 +51,8 @@ function initializeView() {
   // Author-defined function
 }
 ```
+
+> **Note:** See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) landing page and particularly the [Unsafe speculative loading conditions](/en-US/docs/Web/API/Speculation_Rules_API#unsafe_speculative_loading_conditions) section for more information on the kinds of activities you might wish to delay.
 
 ## Specifications
 
