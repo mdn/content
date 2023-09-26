@@ -164,6 +164,7 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 - [CSS property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
 - [CSS selector page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
+- [CSS function page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template)
 
 ## HTTP header reference page
 

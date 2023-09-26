@@ -1,5 +1,5 @@
 ---
-title: block
+title: Block statement
 slug: Web/JavaScript/Reference/Statements/block
 page-type: javascript-statement
 browser-compat: javascript.statements.block

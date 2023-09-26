@@ -54608,10 +54608,6 @@
     "modified": "2020-10-15T22:17:15.823Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp": {
-    "modified": "2020-10-15T22:17:16.317Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCOutboundRtpStreamStats/nackCount": {
     "modified": "2020-10-15T22:17:14.809Z",
     "contributors": ["Sheppy"]
@@ -75247,10 +75243,6 @@
       "miken32"
     ]
   },
-  "Web/CSS/:nth-col": {
-    "modified": "2020-11-26T07:28:19.633Z",
-    "contributors": ["rachelandrew"]
-  },
   "Web/CSS/:nth-last-child": {
     "modified": "2020-10-15T21:09:22.146Z",
     "contributors": [
@@ -75276,10 +75268,6 @@
       "teoli",
       "McGurk"
     ]
-  },
-  "Web/CSS/:nth-last-col": {
-    "modified": "2020-11-26T07:28:40.507Z",
-    "contributors": ["rachelandrew"]
   },
   "Web/CSS/:nth-last-of-type": {
     "modified": "2020-10-15T21:09:23.189Z",

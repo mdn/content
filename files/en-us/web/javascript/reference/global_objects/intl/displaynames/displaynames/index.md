@@ -125,4 +125,4 @@ console.log(dnStd.of("en-GB")); // 'English (United Kingdom)'
 
 - {{jsxref("Intl.DisplayNames")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

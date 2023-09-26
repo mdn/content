@@ -71,8 +71,8 @@ It is better to use a {{jsxref("Statements/for", "for")}} loop with a numeric in
 
 If you only want to consider properties attached to the object itself, and not its prototypes, you can use one of the following techniques:
 
-- {{jsxref("Object.keys", "Object.keys(myObject)")}}
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObject)")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
 
 `Object.keys` will return a list of enumerable own string properties, while `Object.getOwnPropertyNames` will also contain non-enumerable ones.
 
@@ -99,7 +99,7 @@ for (const prop in obj) {
 
 ### Iterating own properties
 
-The following function illustrates the use of {{jsxref("Object.hasOwn", "Object.hasOwn()")}}: the inherited properties are not displayed.
+The following function illustrates the use of {{jsxref("Object.hasOwn()")}}: the inherited properties are not displayed.
 
 ```js
 const triangle = { a: 1, b: 2, c: 3 };

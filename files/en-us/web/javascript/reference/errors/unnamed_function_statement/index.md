@@ -134,8 +134,8 @@ promise.then(
 
 ## See also
 
-- [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- {{glossary("IIFE")}}
-- [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{Glossary("IIFE")}}
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)
