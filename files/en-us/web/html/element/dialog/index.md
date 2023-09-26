@@ -179,10 +179,11 @@ confirmBtn.addEventListener("click", (event) => {
 {{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
 
 This example demonstrates the following three methods of closing modal dialogs:
+
 - By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#creating_an_html-only_modeless_dialog)).
 - By pressing the <kbd>Esc</kbd> key.
 - By calling the {domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog).
-In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
+  In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 
 The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
 
