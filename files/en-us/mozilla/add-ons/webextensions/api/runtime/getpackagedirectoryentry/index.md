@@ -15,7 +15,7 @@ This is an asynchronous function that takes a callback.
 
 ```js-nolint
 browser.runtime.getPackageDirectoryEntry(
-  // callback              // required callback function
+  callback              // required callback function
 )
 ```
 
