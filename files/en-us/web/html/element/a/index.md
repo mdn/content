@@ -77,7 +77,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
-    - `_unfencedTop`: allows [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame.
+    - `_unfencedTop`: allows [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame. Note that the navigation will still succeed if this is used outside of a fenced frame context, just like with any other target name.
 
     > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
 

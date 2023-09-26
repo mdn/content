@@ -38,15 +38,15 @@ A `FencedFrameConfig` object instance has standard instance properties and metho
 A `FencedFrameConfig` object maps to internal config information not accessible from the embedding page's JavaScript. The internal information is as follows:
 
 - `urn`
-  - : A [URN](/en-US/docs/Glossary/URN) [UUID](/en-US/docs/Glossary/URN), which uniquely identifies the source of the content to be embedded inside the fenced frame.
+  - : A [URN](/en-US/docs/Glossary/URN) [UUID](/en-US/docs/Glossary/UUID), which uniquely identifies the source of the content to be embedded inside the fenced frame.
 - `config`
 
   - : An object containing internal config information, which has the following properties:
 
     - `mappedURL`
-      - : An object representing ... (NOT SURE WHAT THIS REPRESENTS), or `null` if it has not been specified. This object contains two properties:
+      - : An object representing the initial URL that the fenced frame will be navigated to when the config loads, or `null` if it has not been specified. This object contains two properties:
         - `url`: The URL.
-        - `visibility`: An enumerated value specifying whether the URL should be made available inside the fenced frame (`"transparent"`) or not (`"opaque"`).
+        - `visibility`: An enumerated value specifying whether the URL is visible to the embedder when they look at the `FencedFrameConfig` properties (`"transparent"`) or not (`"opaque"`).
     - `containerSize`
       - : An object specifying the size of the containing `<fencedframe>`, or `null` if it has not been specified. This object contains two properties:
         - `height`: A number specifying the height of the containing `<fencedframe>`.

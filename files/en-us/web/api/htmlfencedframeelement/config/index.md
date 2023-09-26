@@ -16,7 +16,7 @@ The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains 
 
 The value of `config` is initially `null`.
 
-When its value is set to a {{domxref("FencedFrameConfig")}} object instance, the content pointed to by the `FencedFrameConfig`'s internal `urn` property is loaded inside the `<fencedframe>`. In addition:
+When its value is set to a {{domxref("FencedFrameConfig")}} object instance, the `FencedFrameConfig`'s internal properties (for example `mappedURL`) determine what is loaded inside the associated `<fencedframe>`. In addition:
 
 - The navigation type will be `"replace"` (see {{domxref("NavigateEvent.navigationType")}}), meaning that the current history entry is replaced with the new entry, rather adding a new history entry for it.
 - The navigation's {{httpheader("Referrer-Policy")}} is set to `"no-referrer"`.

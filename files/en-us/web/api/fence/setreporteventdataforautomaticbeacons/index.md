@@ -26,7 +26,7 @@ setReportEventDataForAutomaticBeacons(event)
 - `event`
   - : an object representing the data to send. The required properties are as follows:
     - `eventType`
-      - : A string representing the type of event that is being reported — this is currently always the special event identifier `reserved.top_navigation`.
+      - : A string representing the type of event that is being reported. Currently the only available option is the special event identifier `reserved.top_navigation`.
     - `eventData`
       - : A string representing the data to be sent.
     - `destination`
@@ -34,8 +34,8 @@ setReportEventDataForAutomaticBeacons(event)
         - `"buyer"`: The bidder in the ad auction.
         - `"seller"`: The top-level seller running the ad auction.
         - `"component-seller"`: The seller for a component auction in a multi-level auction.
-        - `"direct-seller"`: The seller that ran the top-level or component auction that the buyer bid in.
-        - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL()")}} method call.
+        - `"direct-seller"`: The seller that directly ran the auction the buyer bid in. If the ad was a single-level auction, the value used will be `"seller"`. If the ad was a multi-level auction, the value used will be `"component-seller"`.
+        - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
 
 ### Return value
 

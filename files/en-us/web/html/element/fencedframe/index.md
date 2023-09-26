@@ -9,14 +9,14 @@ browser-compat: html.elements.fencedframe
 
 {{HTMLSidebar}}{{SeeCompatTable}}
 
-The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one. `<fencedframe>`s are very similar to `<iframe>`s in form and function, except that:
+The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one. `<fencedframe>`s are very similar to {{htmlelement("iframe")}} elements in form and function, except that:
 
 - Communication cannot be shared between the `<fencedframe>` content and its embedding site.
-- `<fencedframe>`s can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
-- `<fencedframes>`s cannot be manipulated or have their data accessed via regular scripting (for example reading or setting the source URL). They can only have content embedded via specific APIs, which we'll talk about below.
+- A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
+- A `<fencedframes>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](/en-US/docs/Web/API/Fenced_frame_API#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
 
-In effect, `<fencedframe>`s are a more privacy-respecting type of `<iframe>`, aimed at fulfilling different use cases that previously relied on third-party cookies or other mechanisms that were bad for privacy. See [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API) for more details.
+The `<fencedframe>` element is a type of `<iframe>` with more native privacy features built in. It addresses shortcomings of `<iframe>`s such as reliance on third-party cookies and other privacy risks. See [Fenced frame API](/en-US/docs/Web/API/Fenced_frame_API) for more details.
 
 ## Attributes
 
@@ -24,28 +24,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `allow`
 
-  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. Only [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features can be controlled via a policy set on a fenced frame. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details.
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details of which features can be controlled via a policy set on a fenced frame.
 
 - `height`
 
-  - : The height of the fenced frame in CSS pixels. The default is `150`.
+  - : A unitless integer representing the height of the fenced frame in CSS pixels. The default is `150`.
 
 - `width`
-  - : The width of the fenced frame in CSS pixels. The default is `300`.
+  - : A unitless integer representing the width of the fenced frame in CSS pixels. The default is `300`.
 
 ## Permissions policies available to fenced frames
 
-Standard web features that can have their availability controlled via [Permissions Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) (for example, [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera) or [`geolocation`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)) are **not available** within fenced frames. This is because permissions delegated from the top-level context to a fenced frame for allowing and denying features could be used as a communication channel, so constitute a privacy threat.
+Permissions delegated from the top-level context to a fenced frame for allowing and denying features could be used as a communication channel, so constitute a privacy threat. As a result, standard web features that can have their availability controlled via [Permissions Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) (for example, [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera) or [`geolocation`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)) are **not available** within fenced frames.
 
-The only features that can be controlled by a policy inside fenced frames are the [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features designed to be used inside fenced frames:
+The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
 | Feature                                                                                               | Permissions policy directive |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------- |
 | [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) | `attribution-reporting`      |
 
-> **Note:** More features will be added to the list and they will be better documented as more MDN docs are written on privacy sandbox features.
+> **Note:** More features will be added to the list as MDN is updated to cover more privacy sandbox features.
 
-Currently these are always enabled inside fenced frames. In the future, which ones are enabled will be controllable using the {{htmlelement("fencedframe")}} `allow` attribute. Blocking privacy sandbox features in this manner will also block the fenced frame from loading — there will be no communication channel at all.
+Currently these are always enabled inside fenced frames. In the future, which ones are enabled will be controllable using the `<fencedframe>` `allow` attribute. Blocking privacy sandbox features in this manner will also block the fenced frame from loading — there will be no communication channel at all.
 
 ## Focusing across fenced frame boundaries
 

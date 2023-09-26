@@ -20,6 +20,8 @@ The **`contentWidth`** property of the {{domxref("FencedFrameConfig")}} interfac
 - If `contentSize.visibility` is `"opaque"`, the value will be `"opaque"`.
 - If `contentSize` is `null`, the value will be `null`.
 
+> **Note:** `opaque` means that the property has a value, but the embedder isn't allowed to see it for privacy reasons.
+
 ## Examples
 
 ```js

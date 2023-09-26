@@ -18,7 +18,7 @@ It is available via {{domxref("Window.fence")}}, but only to documents embedded 
 ## Instance methods
 
 - {{domxref("Fence.getNestedConfigs", "getNestedConfigs()")}} {{Experimental_Inline}}
-  - : Returns the {{domxref("FencedFrameConfig")}}s of any `<fencedframe>` elements embedded inside the current `<fencedframe>`.
+  - : Returns the {{domxref("FencedFrameConfig")}}s that can be loaded into elements embedded inside the current `<fencedframe>`.
 - {{domxref("Fence.reportEvent", "reportEvent()")}} {{Experimental_Inline}}
   - : Triggers the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one ore more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/), for the purpose of collecting ad auction results.
 - {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} {{Experimental_Inline}}

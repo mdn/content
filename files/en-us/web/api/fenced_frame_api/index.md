@@ -22,9 +22,9 @@ Most modern browsers are working on mechanisms to partition storage so that cook
 `<fencedframe>` elements aim to solve another piece of this puzzle — they are very similar to `<iframe>`s in form and function, except that:
 
 - Communication cannot be shared between the `<fencedframe>` content and its embedding site.
-- `<fencedframe>`s can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
-- `<fencedframes>`s cannot be manipulated or have their data accessed via regular scripting (for example reading or setting the source URL). They can only have content embedded via specific APIs, which we'll talk about below.
-- The `<fencedframe>` cannot access the embedding context's DOM, or vice versa.
+- A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
+- A `<fencedframes>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](#use_cases).
+- A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
 
 ### Use cases
 
@@ -69,7 +69,7 @@ For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the su
 
 ### Permissions policy
 
-Only [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features can be controlled via a policy set on a fenced frame; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
+Only specific features designed to be used in `<fencedframes>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 
 ### HTTP headers
 

@@ -86,7 +86,7 @@ The following attributes control behavior during form submission.
     - `_blank`: Load into a new unnamed browsing context. This provides the same behavior as setting [`rel="noopener"`](#rel) which does not set [`window.opener`](/en-US/docs/Web/API/Window/opener).
     - `_parent`: Load into the parent browsing context of the current one. If no parent, behaves the same as `_self`.
     - `_top`: Load into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one and has no parent). If no parent, behaves the same as `_self`.
-    - `_unfencedTop`: allows [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to load a response in the top-level frame.
+    - `_unfencedTop`: Load into the top-level frame. Only available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
 
     This value can be overridden by a [`formtarget`](/en-US/docs/Web/HTML/Element/button#formtarget) attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
 

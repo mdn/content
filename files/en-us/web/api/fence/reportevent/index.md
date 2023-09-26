@@ -35,8 +35,8 @@ reportEvent(event)
           - `"buyer"`: The bidder in the ad auction.
           - `"seller"`: The top-level seller running the ad auction.
           - `"component-seller"`: The seller for a component auction in a multi-level auction.
-          - `"direct-seller"`: The seller that ran the top-level or component auction that the buyer bid in.
-          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL()")}} method call.
+          - `"direct-seller"`: The seller that directly ran the auction the buyer bid in. If the ad was a single-level auction, the value used will be `"seller"`. If the ad was a multi-level auction, the value used will be `"component-seller"`.
+          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
     - If the value is a string ... TODO
 
 ### Return value
