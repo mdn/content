@@ -7,7 +7,7 @@ browser-compat: css.properties.font-synthesis-position
 
 {{CSSRef}}
 
-The **`font-synthesis-position`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not a browser may synthesize the subscript and superscript "position" typefaces when they are missing in a font family, while using {{cssxref("font-variant-position")}}, 
+The **`font-synthesis-position`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not a browser may synthesize the subscript and superscript "position" typefaces when they are missing in a font family, while using {{cssxref("font-variant-position")}},
 
 It is often convenient to use the shorthand property {{cssxref("font-synthesis")}} to control all typeface synthesis values.
 
