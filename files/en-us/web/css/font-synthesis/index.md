@@ -46,7 +46,7 @@ font-synthesis: unset;
 - `weight`
   - : Indicates that the missing bold typeface may be synthesized by the browser if needed.
 - `style`
-  - : Indicates that the missing italic typeface may be synthesized by the browser if needed.
+  - : Indicates that the italic typeface may be synthesized by the browser if needed.
 - `small-caps`
   - : Indicates that the missing small-caps typeface may be synthesized by the browser if needed.
 - `position`
