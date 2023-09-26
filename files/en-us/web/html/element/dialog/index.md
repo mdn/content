@@ -9,7 +9,7 @@ browser-compat: html.elements.dialog
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 
-The native HTML `<dialog>` element is used to create modal and modalless boxes. The `<dialog>` element should be displayed using JavaScript, either via the {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} method to display a modal dialog or via the {{domxref("HTMLDialogElement.show()", ".show()")}} method to render th dialog modalless. The `<dialog>` should be closed via the {{domxref("HTMLDialogElement.close()", ".close()")}} method. Dialogs can be closed by submitting a `<form>` nested within the `<dialog>` via the `dialog` method. Modal dialogs can also be closed with the <kbd>Esc</kbd> key.
+The HTML `<dialog>` element is used to create both modal and modeless dialog boxes. Modal dialog boxes interrupt interaction with the rest of the page, while modeless dialog boxes allow interaction with the rest of the page. Use JavaScript to display the `<dialog>` element – use the {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} method to display a modal dialog and the {{domxref("HTMLDialogElement.show()", ".show()")}} method to display a modeless dialog. The dialog box can be closed using the {{domxref("HTMLDialogElement.close()", ".close()")}} method or using the `dialog` method when submitting a `<form>` that is nested within the `<dialog>` element. Modal dialogs can also be closed by pressing the <kbd>Esc</kbd> key.
 
 ## Attributes
 
@@ -18,22 +18,22 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 > **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
 
 - `open`
-  - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
-    It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it will be non-modal.
+  - : Indicates that the dialog box is active and is available for interaction. If the `open` attribute is not set, the dialog box will not be visible to the user.
+    It is recommended to use the `.show()` or `.showModal()` method to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it is modeless.
 
-> **Note:** Non-modal `<dialog>`s can be toggled open and closed by toggling the presence of the `open` attribute, but this is not recommended.
+> **Note:** While you can toggle between the open and closed states of modeless dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended.
 
 ## Usage notes
 
-- {{HTMLElement("form")}} elements can close a `<dialog>` if they have the attribute `method="dialog"` or if the button used to submit the form has `formmethod="dialog"` set. In this case, the `<dialog>` closes, the states of the form controls are saved, not submitted, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the `value` of the button that was used to save the form's state.
-- The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style modal dialog's backdrop, which is displayed behind a `<dialog>` element when a dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
-- The `autofocus` attribute should be added on the element that the user will expect to immediately interact with when a modal dialog opens, or the `<dialog>` element itself if there is no such element.
+- HTML {{HTMLElement("form")}} elements can be used to close a dialog box if they have the attribute `method="dialog"` or if the button used to submit the form has `formmethod` set to `"dialog"`. In this case, the dialog box closes, the states of the form controls are saved but not submitted, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the value of the button used to save the form's state.
+- The CSS {{cssxref('::backdrop')}} pseudo-element can be used to style the backdrop of a modal dialog, which is displayed behind the `<dialog>` element when the dialog is displayed using the {{domxref("HTMLDialogElement.showModal()")}} method. For example, you can use this pseudo-element to dim the content that becomes inaccessible behind the modal dialog.
+- The [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute should be added to the element with which a user is expected to interact immediately on opening a modal dialog. If there is no element involving immediate interaction, the `autofocus` attribute can be added to the `<dialog>` element itself.
 
 ## Examples
 
 ### HTML-only example
 
-The following will render a non-modal, or modal-less, dialog. The dialog is open when the page loads due to the inclusion of the boolean `open` attribute. Instead of using JavaScript, the "OK" button enables the dialog to be closed when activated due to the inclusion of a form with the [`method="dialog"`'](#method).
+The example below shows how to create a modeless dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
 
 ```html
 <dialog open>
@@ -48,11 +48,13 @@ The following will render a non-modal, or modal-less, dialog. The dialog is open
 
 {{EmbedLiveSample("Basic_but_not_recommended_example", "100%", 200)}}
 
-This dialog was opened via the `open` attribute. Dialogs displayed by the inclusion of the `open` attribute are non-modal. In this example, when the dialog is dismissed, no method is provided to re-open it. The {{domxref("HTMLDialogElement.show()")}} method is the preferred method of making non-modal dialogs visible. Toggling the presence of the boolean `open` attribute will toggle the display of the dialog, but is not the recommended method.
+This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are modeless. In this example, when the dialog is dismissed, no method is provided to reopen it. The preferred method to display modeless dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. You can toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
 
-### Modal example
+### Creating a modal dialog
 
-This example opens a modal dialog when the "Show the dialog" button is activated. Once made visible, the dialog can be dismissed by activating the "Close" button within the dialog, or via the <kbd>Esc</kbd> key.
+This example demonstrates how to open a modal dialog by using JavaScript. The modal dialog opens when the "Show the dialog" button is activated. The dialog can be closed by activating the "Close" button within the dialog or by pressing the <kbd>Esc</kbd> key.
+
+When a dialog opens, the browser, by default, gives focus to the first element that can be focused within the dialog. In this example, the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute is applied to the "Close" button, ensuring that it will receive focus when the dialog opens. This is also the element we expect the user will interact with immediately interact after the dialog opens.
 
 #### HTML
 
@@ -64,11 +66,10 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 <button>Show the dialog</button>
 ```
 
-By default, the user agent gives focus to the first focusable element in the dialog when it is opened. We included the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) on the element we expect the user will expect to immediately interact with when the dialog opens.
 
 #### CSS
 
-We can style the {{cssxref('::backdrop')}}.
+We can style the backdrop of the dialog by using the {{cssxref('::backdrop')}} pseudo-element.
 
 ```css
 ::backdrop {
@@ -79,19 +80,19 @@ We can style the {{cssxref('::backdrop')}}.
 
 #### JavaScript
 
-The dialog is opened modally with the `.showModal()` method and closed with the `.close()` method.
+The dialog is opened modally using the `.showModal()` method and closed using the `.close()` method.
 
 ```js
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("dialog + button");
 const closeButton = document.querySelector("dialog button");
 
-// "Show the dialog" button opens the <dialog> modally
+// "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
 
-// "Close" button close the <dialog>
+// "Close" button closes the dialog
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
@@ -101,13 +102,13 @@ closeButton.addEventListener("click", () => {
 
 {{EmbedLiveSample("Modal_example", "100%", 200)}}
 
-When a modal dialog is opened, it is opened over the top of any other dialogs that might be present. Everything outside the modal dialog are inert with interactions outside the dialog being blocked. You'll note when the dialog is opened, With the exception of the dialog, interacting with the document is not possible; the "Show the dialog" button is mostly obfuscated by the almost opaque backdrop and is inert.
+When the modal dialog is displayed, it appears above any other dialogs that might be present. Everything outside the modal dialog is inert and interactions outside the dialog are blocked. Notice that when the dialog is open, with the exception of the dialog itself, interaction with the document is not possible; the "Show the dialog" button is mostly obfuscated by the almost opaque backdrop of the dialog and is inert.
 
-### Return value example
+### Handling the return value from the dialog
 
-TThe value of the submitting button whose activation submits a form within a dialog is the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElement/returnValue) of the dialog.
+This example demonstrates how to open a modal dialog by using a form. The value of the button that submits the form within the `<dialog>` element is the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElement/returnValue) of the dialog.
 
-This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements which default to `type="submit"`. An eventlistener updates the value of the "confirm" button when the `<select>` changes. This is the return value. If the dialog is closed with the <kbd>Esc</kbd> key, there is no return value.
+This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. An eventlistener updates the value of the "Confirm" button when the select option changes. This is the return value. If the dialog is closed by pressing the <kbd>Esc</kbd> key, there is no return value.
 
 When the dialog is closed, the return value is displayed under the "Show the dialog" button.
 
@@ -176,11 +177,15 @@ confirmBtn.addEventListener("click", (event) => {
 
 ### Result
 
-{{EmbedLiveSample("Advanced_example", "100%", 300)}}
+{{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
 
-This example demonstrated three methods of closing modal dialogs; this dialog can be closed via an in-dialog form submitted using the `dialog` methode methods, as we also saw in the [HTML-only example](#html-only-example). This dialog can also be closed with the <kbd>Esc</kbd> key and via the {domxref("HTMLDialogElement.close()")}} method, also demonstrated in the [modal example](#modal-example). In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
+This example demonstrates the following three methods of closing modal dialogs:
+- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#creating_an_html-only_modeless_dialog)).
+- By pressing the <kbd>Esc</kbd> key.
+- By calling the {domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog).
+In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 
-The "Cancel" button includes a [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod), which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved, not submitted, and the dialog gets closed.
+The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
 
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
 
@@ -235,15 +240,15 @@ It is important to provide a closing mechanism within every `dialog` element. Th
 
 ## Accessibility considerations
 
-While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if using other elements for a similar purpose. If creating a custom dialog implementation, ensure all expected default behaviors are supported and proper labeling recommendations are followed.
+While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if you use other elements for a similar purpose. If you're creating a custom dialog implementation, ensure that all expected default behaviors are supported and proper labeling recommendations are followed.
 
-When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by use of the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set to the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
+When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by using the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set on the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
 
-Ensure a mechanism is provided to allow users to close a dialog. The most robust way to ensure all users can close a dialog is to include an explicit button to do so, sucha as a confirmation, cancel or close button.
+Ensure a mechanism is provided to allow users to close the dialog. The most robust way to ensure that all users can close the dialog is to include an explicit button to do so, such as a confirmation, cancellation, or close button.
 
-By default, a `<dialog>` invoked by the `showModal()` method will allow for its dismissal by the <kbd>Escape</kbd>. A non-modal dialog does not dismiss via the <kbd>Escape</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Escape</kbd> key to close modal dialogs; ensure this behavior is implemented and maintained. If multiple modal dialogs are open, <kbd>Escape</kbd> should only close the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
+By default, a dialog invoked by the `showModal()` method can be dismissed by pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is implemented and maintained. If multiple modal dialogs are open, pressing the <kbd>Esc</kbd> key should close only the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
 
-The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
+The `<dialog>` element is exposed by browsers in a a manner similar to custom dialogs that use the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method implicitly have [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method or displayed using the `open` attribute or by changing the default `display` of a `<dialog>` are exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
 
 ## Specifications
 
@@ -257,5 +262,4 @@ The `<dialog>` element is exposed by browsers similarly to custom dialogs using 
 
 - The {{domxref("HTMLDialogElement/close_event", "close")}} event
 - The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
-- [HTML forms guide](/en-US/docs/Learn/Forms).
-- The {{cssxref("::backdrop")}} pseudo-element
+- [Web forms](/en-US/docs/Learn/Forms) in the Learn area
