@@ -242,6 +242,51 @@ async function encrypt(plaintext, salt, iv) {
 }
 ```
 
+### HKDF
+
+In this example, we encrypt a message `plainText` given a shared secret `secret`, which might itself have been derived using an algorithm such as ECDH. Instead of using the shared secret directly, we use it as key material for the HKDF function, to derive an AES-GCM encryption key, which we then use to encrypt the message. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/hkdf.js)
+
+```js
+/*
+  Given some key material and some random salt,
+  derive an AES-GCM key using HKDF.
+  */
+function getKey(keyMaterial, salt) {
+  return window.crypto.subtle.deriveKey(
+    {
+      name: "HKDF",
+      salt: salt,
+      info: new Uint8Array("Encryption example"),
+      hash: "SHA-256",
+    },
+    keyMaterial,
+    { name: "AES-GCM", length: 256 },
+    true,
+    ["encrypt", "decrypt"],
+  );
+}
+
+async function encrypt(secret, plainText) {
+  const message = {
+    salt: window.crypto.getRandomValues(new Uint8Array(16)),
+    iv: window.crypto.getRandomValues(new Uint8Array(12)),
+  };
+
+  const key = await getKey(secret, message.salt);
+
+  message.ciphertext = await window.crypto.subtle.encrypt(
+    {
+      name: "AES-GCM",
+      iv: message.iv,
+    },
+    key,
+    plainText,
+  );
+
+  return message;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
