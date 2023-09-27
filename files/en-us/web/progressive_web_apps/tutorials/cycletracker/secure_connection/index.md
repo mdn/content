@@ -25,7 +25,7 @@ We are viewing our page using the `file://` protocol. This works for the current
 
 > **Note:** Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
 
-We need a local development environment to work thru the tutorial. Part of [making a PWA installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) is a secure server. The files will need to be served over a secure connection on the web to access the benefits PWAs provide and to distribute our application as a PWA.
+We need a local development environment to work through the tutorial. Part of [making a PWA installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) is a secure server. The files will need to be served over a secure connection on the web to access the benefits PWAs provide and to distribute our application as a PWA.
 
 ## localhost
 
@@ -69,7 +69,7 @@ In the above, you may need to prefix the install with `sudo`.
 
 ## Secure external server
 
-The previous options are fine, and necessary, for testing your application as you progress thru this PWA tutorial, or any web development project. While you can host your web app on your device and make it available to anyone with an Internet connection, this is not recommended.
+The previous options are fine, and necessary, for testing your application as you progress through this PWA tutorial, or any web development project. While you can host your web app on your device and make it available to anyone with an Internet connection, this is not recommended.
 
 To get the added features of PWAs, including single click installation, a standalone UI, and admission to app stores, it needs to be a PWA, which means it needs a service worker, which means we will need a secure connection. To distribute your app, enabling others to view, use, and install your PWA, you'll want to have your content hosted and available on a secure _remote_ server.
 
