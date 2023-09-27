@@ -166,13 +166,13 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 The CSS is as follows:
 
 ```css
-/* Open state of the dialog */
+/*   Open state of the dialog */
 dialog[open] {
   opacity: 1;
   transform: scaleY(1);
 }
 
-/* Closed state of the dialog */
+/*   Closed state of the dialog   */
 dialog {
   transition:
     opacity 0.5s ease-out,
@@ -183,9 +183,9 @@ dialog {
   transform: scaleY(0);
 }
 
-/* Before-open state  */
+/*   Before-open state  */
 /* Needs to be after the previous dialog[open] rule to take effect,
-   as the specificity is the same */
+    as the specificity is the same */
 @starting-style {
   dialog[open] {
     opacity: 0;
@@ -194,16 +194,23 @@ dialog {
 }
 
 /* Transition the :backdrop when the dialog modal is promoted to the top layer */
-::backdrop {
-  background-color: rgba(0, 0, 0, 0.1);
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0);
   transition:
-    background-color 0.5s,
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete;
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    background-color 0.7s;
 }
 
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
 @starting-style {
-  ::backdrop {
+  dialog[open]::backdrop {
     background-color: rgba(0, 0, 0, 0);
   }
 }
@@ -214,7 +221,7 @@ button {
 }
 ```
 
-Note the `@starting-style` block used to define the transition starting styles, and the `display` and `overlay` properties included in the transition list, each with `allow-discrete` set on them. Note that we've also included similar CSS to transition the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation.
+Note the `@starting-style` block used to define the transition starting styles, and the `display` and `overlay` properties included in the transition list, each with `allow-discrete` set on them. Note that we've also included similar CSS to transition the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. `dialog[open]::backdrop` is required to select the backdrop when the dialog is open.
 
 The JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`:
 
@@ -302,24 +309,9 @@ body,
 button {
   font-family: system-ui;
 }
-
-/* Transition the :backdrop when the dialog modal is promoted to the top layer */
-::backdrop {
-  background-color: rgba(0, 0, 0, 0.1);
-  transition:
-    background-color 0.5s,
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete;
-}
-
-@starting-style {
-  ::backdrop {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
 ```
 
-Note the keyframes defined to animate between the closed and open states, which are then applied to control classes. This includes animating `display` to make sure the actual visible animation effects remain visible for the whole duration. Note also that the animation example includes the same [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) transition as the transition demo, to fade the backdrop in. This didn't seem possible to reproduce with a keyframe animation.
+Note the keyframes defined to animate between the closed and open states, which are then applied to control classes. This includes animating `display` to make sure the actual visible animation effects remain visible for the whole duration. This example does not animate the backdrop like the above transition demo does; this didn't seem possible to reproduce with a keyframe animation in our experiments.
 
 Finally, the JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`, while also adding and removing the control classes as required to apply the entry and exit animations. In addition, note how {{domxref("setTimeout()")}} is used to defer closing the `<dialog>` until the exit animation is finished.
 

@@ -335,19 +335,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-::backdrop {
-  background-color: rgba(0, 0, 0, 0.1);
-  transition:
-    background-color 0.5s,
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete;
-}
-
-@starting-style {
-  ::backdrop {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
+/* Transition for the popover itself */
 
 [popover]:popover-open {
   opacity: 1;
@@ -366,17 +354,40 @@ html {
     display 0.7s allow-discrete;
 }
 
-/* Needs to be included after the previous [popover]:popover-open rule
-   to take effect, as the specificity is the same */
+/* Needs to be after the previous [popover]:popover-open rule to take effect,
+    as the specificity is the same */
 @starting-style {
   [popover]:popover-open {
     opacity: 0;
     transform: scaleX(0);
   }
 }
+
+/* Transition for the popover's backdrop */
+
+[popover]::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    background-color 0.7s;
+}
+
+[popover]:popover-open::backdrop {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
+@starting-style {
+  [popover]:popover-open::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
 ```
 
-The two properties we want to show animations for are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform) (specifically, a horizontally scaling transform): we want the popover to fade in and out, as well as growing/shrinking horizontally.To achieve this, we have set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two.
+The two popover properties we want to show animations for are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform) — specifically, a horizontally scaling transform. We want the popover to fade in and out, as well as growing/shrinking horizontally. To achieve this, we have set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two.
 
 And as discussed earlier, we have:
 
@@ -385,7 +396,7 @@ And as discussed earlier, we have:
 - Added `overlay` to the list of transitioned elements to make sure that the removal of the element from the top layer is deferred until the animation has been completed. This doesn't make a huge difference for simple animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective.
 - Set `allow-discrete` on both the above transitions to enable discrete transitions.
 
-You'll note that we have also done something similar for the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the popover when it opens, to provide a nice darkening animation.
+You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the popover when it opens, to provide a nice darkening animation. `[popover]:popover-open::backdrop` is needed to select the backdrop when the popover is open.
 
 The code renders as follows:
 
@@ -411,21 +422,6 @@ The CSS is as follows:
 ```css
 html {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Transition the :backdrop when the popover is promoted to the top layer */
-::backdrop {
-  background-color: rgba(0, 0, 0, 0.1);
-  transition:
-    background-color 0.5s,
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete;
-}
-
-@starting-style {
-  ::backdrop {
-    background-color: rgba(0, 0, 0, 0);
-  }
 }
 
 [popover] {
@@ -474,7 +470,7 @@ html {
 }
 ```
 
-We have defined keyframes that specify the desired entry and exit animations, and assigned those to CSS classes. Note also that the animation example includes the same [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) transition as the transition demo, to fade the backdrop in. This didn't seem possible to reproduce with a keyframe animation.
+We have defined keyframes that specify the desired entry and exit animations, and assigned those to CSS classes. This example doesn't animate the backdrop like the transitions example above did, as that didn't seem possible to reproduce with a keyframe animation in our experiments.
 
 We then use some rudimentary JavaScript to apply those classes to the popover as it is shown and hidden, triggering the animations at the right times. As mentioned earlier, we have used `setTimeout()` to defer the hiding of the popover until the animations have finished.
 
