@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_class_escape
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **character class escape** is an escape sequence that represents a set of characters.
 

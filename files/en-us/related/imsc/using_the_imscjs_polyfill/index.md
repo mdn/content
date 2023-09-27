@@ -182,9 +182,9 @@ for (let i = 0; i < timeEvents.length; i++) {
 
   let myCue;
   if (i < timeEvents.length - 1) {
-    myCue = Cue(timeEvents[i], myVideo.duration, "");
-  } else {
     myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
+  } else {
+    myCue = new Cue(timeEvents[i], myVideo.duration, "");
   }
 
   myCue.onenter = function () {

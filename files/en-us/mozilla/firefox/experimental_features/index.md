@@ -936,6 +936,48 @@ For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `
   </tbody>
 </table>
 
+### url() function in offset-path property
+
+The CSS {{cssxref("offset-path")}} property now supports using [`url()`](/en-US/docs/Web/CSS/offset-path#url) to specify the ID of an SVG shape element. The referenced shape defines the shape of the path that an element will follow ([Firefox bug 1598158](https://bugzil.la/1598158)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>118</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.motion-path-url.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -2248,7 +2290,9 @@ This also changes the console warning; if the upgrade succeeds, the message indi
 ### Permissions Policy / Feature policy
 
 [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-Note that this is implemented in Firefox as **Feature Policy**, the name used in an earlier version of the specification.
+This is implemented in Firefox as **Feature Policy**, the name used in an earlier version of the specification.
+
+Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute on `<iframe>` elements even if the user preference is not set.
 
 <table>
   <thead>
@@ -2327,6 +2371,51 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
       <th>Preference name</th>
       <td colspan="2">
         <code>privacy.clearsitedata.cache.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Global Privacy Control
+
+[Global Privacy Control](https://globalprivacycontrol.org/) is a mechanism that allows a user to indicate that they do not consent to a website or service selling or sharing their personal information with third parties.
+Firefox implements the {{HTTPHeader("Sec-GPC")}} header to indicate that consent is not granted, and the {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}} properties that allow JavaScript to check the user consent preference.
+
+Note that the `about:config` preference `privacy.globalprivacycontrol.enabled` must be set `true` to indicate the user preference to not grant consent ([Firefox bug 1830623](https://bugzil.la/1830623)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>118</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>privacy.globalprivacycontrol.functionality.enabled</code>
       </td>
     </tr>
   </tbody>
