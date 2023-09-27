@@ -53,20 +53,20 @@ The `define()` method adds a definition for a custom element to the custom eleme
 
 There are two types of custom element you can create:
 
-- _Autonomous custom element_ are standalone elements, that don't inherit from built-in HTML elements.
-- _Customized built-in element_ are elements that inherit from, and extend, built-in HTML elements.
+- _Autonomous custom elements_ are standalone elements, that don't inherit from built-in HTML elements.
+- _Customized built-in elements_ are elements that inherit from, and extend, built-in HTML elements.
 
 To define an autonomous custom element, you should omit the `options` parameter.
 
-To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
+To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits from. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
 
 ### Valid custom element names
 
 Custom element names must:
 
-- start with an ASCII lower-case letter (a-z)
-- contain a hypen
-- not contain any ASCII upper-case letters
+- start with an ASCII lowercase letter (a-z)
+- contain a hyphen
+- not contain any ASCII uppercase letters
 - not contain certain other characters, as documented in the [valid custom element names](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name) section of the Web Components specification
 - not be any of:
   - "annotation-xml"
