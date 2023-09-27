@@ -73,7 +73,7 @@ The following are examples of writable `Set`-like browser objects:
 
 These properties are defined on `Set.prototype` and shared by all `Set` instances.
 
-- {{jsxref("Object/constructor", "Set.prototype.constructor")}}
+- {{jsxref("Set/Set", "Set.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Set` instances, the initial value is the {{jsxref("Set/Set", "Set")}} constructor.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
