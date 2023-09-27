@@ -34,7 +34,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Caveats of creating a non-modal dialog using only HTML
+### Caveats of creating a dialog using only HTML
 
 This example demonstrates the create a non-modal dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
 
@@ -49,7 +49,7 @@ This example demonstrates the create a non-modal dialog by using only HTML. Beca
 
 #### Result
 
-{{EmbedLiveSample("HTML-only_example", "100%", 200)}}
+{{EmbedLiveSample("Caveats_of_creating_a_dialog_using_only_HTML", "100%", 200)}}
 
 This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are non-modal. You may notice that after clicking "OK", the dialog gets dismissed leaving the Result frame empty. When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
 
@@ -64,7 +64,7 @@ When a dialog opens, the browser, by default, gives focus to the first element t
 ```html
 <dialog>
   <button autofocus>Close</button>
-  <p>This is a dialog</p>
+  <p>This modal dialog has a groovy backdrop!</p>
 </dialog>
 <button>Show the dialog</button>
 ```
@@ -189,7 +189,7 @@ confirmBtn.addEventListener("click", (event) => {
 
 This example demonstrates the following three methods of closing modal dialogs:
 
-- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#html-only-example)).
+- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#caveats-of-creating-a-dialog-using-only-html)).
 - By pressing the <kbd>Esc</kbd> key.
 - By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog).
   In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
