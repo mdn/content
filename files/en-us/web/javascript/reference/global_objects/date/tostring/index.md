@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.toString
 
 The **`toString()`** method of {{jsxref("Date")}} instances returns a string representing this date interpreted in the local timezone.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-tostring.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -32,7 +36,7 @@ The {{jsxref("Date")}} object overrides the {{jsxref("Object/toString", "toStrin
 - If you only want to get the _date_ part, use {{jsxref("Date/toDateString", "toDateString()")}}.
 - If you only want to get the _time_ part, use {{jsxref("Date/toTimeString", "toTimeString()")}}.
 - If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
-- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toUTCString", "toUTCString()")}}.
+- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleString", "toLocaleString()")}}.
 
 ## Examples
 

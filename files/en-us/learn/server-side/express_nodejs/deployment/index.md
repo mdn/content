@@ -119,9 +119,17 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 
 ```js
 // Set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+
 const dev_db_url =
   "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 ```
 
 > **Note:** Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
@@ -402,7 +410,10 @@ The final step is to copy your application source files into the repo folder, an
    It should look a bit like the listing below.
 
    ```bash
-   > git status
+   git status
+   ```
+
+   ```plain
    On branch main
    Your branch is up-to-date with 'origin/main'.
    Changes to be committed:

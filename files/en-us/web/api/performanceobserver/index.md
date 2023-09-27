@@ -16,7 +16,7 @@ The **`PerformanceObserver`** interface is used to observe performance measureme
 
 ## Static properties
 
-- {{domxref("PerformanceObserver.supportedEntryTypes")}} {{ReadOnlyInline}}
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} {{ReadOnlyInline}}
   - : Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
 ## Instance methods

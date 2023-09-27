@@ -19,11 +19,6 @@ See also [Compositing and clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Comp
 
 A string identifying which of the compositing or blending mode operations to use.
 
-### Operations
-
-{{EmbedLiveSample("Compositing_example", 750, 6900, ""
-  ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
-
 ## Examples
 
 ### Changing the composite operation

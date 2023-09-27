@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Set.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in the `Set` object in insertion order.
+The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this set in insertion order.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
@@ -16,6 +16,10 @@ The **`values()`** method returns a new _[set iterator](/en-US/docs/Web/JavaScri
 ```js-nolint
 values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

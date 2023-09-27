@@ -86,13 +86,6 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.volume")}}
   - : A `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
 
-### Event handlers
-
-- {{domxref("HTMLMediaElement.onencrypted")}}
-  - : Sets the event handler called when the media is encrypted.
-- {{domxref("HTMLMediaElement.onwaitingforkey")}}
-  - : Sets the event handler called when playback is blocked while waiting for an encryption key.
-
 ## Obsolete properties
 
 These properties are obsolete and should not be used, even if a browser still supports them.

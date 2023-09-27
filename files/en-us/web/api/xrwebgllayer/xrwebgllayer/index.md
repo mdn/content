@@ -42,7 +42,7 @@ new XRWebGLLayer(session, context, options)
     - `depth`
       - : A Boolean value which, if `true`, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is `true`.
     - `framebufferScaleFactor`
-      - : A floating-point value which is used to scale the image during compositing, with a value of 1.0 represents the default pixel size for the frame buffer. The static {{domxref("XRWebGLLayer")}} function {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}} returns the scale that would result in a 1:1 pixel ratio, thereby ensuring that the rendering is occurring at the device's native resolution. The default is 1.0.
+      - : A floating-point value which is used to scale the image during compositing, with a value of 1.0 represents the default pixel size for the frame buffer. The static {{domxref("XRWebGLLayer")}} function {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor_static", "XRWebGLLayer.getNativeFramebufferScaleFactor()")}} returns the scale that would result in a 1:1 pixel ratio, thereby ensuring that the rendering is occurring at the device's native resolution. The default is 1.0.
     - `ignoreDepthValues`
       - : A Boolean value which indicates whether or not to ignore the contents of the depth buffer while compositing the scene. The default is `false`.
     - `stencil`

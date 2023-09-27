@@ -83,16 +83,16 @@ newPeriodFormEl.addEventListener("submit", (event) => {
 
 After preventing the form submission with [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), we:
 
-1. [Validate user input](#validate-user-input); exiting if invalid,
-2. store the new period by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve-append-sort-and-re-store-data) data in localStorage,
-3. [render the form data](#render-data-to-screen) along with the data of past menstrual cycles and a section header, and
+1. [Validate user input](#validate_user_input); exiting if invalid,
+2. store the new period by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve_append_sort_and_re-store_data) data in localStorage,
+3. [render the form data](#render_data_to_screen) along with the data of past menstrual cycles and a section header, and
 4. reset the form using the HTMLFormElement [`reset()`](/en-US/docs/Web/API/HTMLFormElement/reset) method
 
 ### Validate user input
 
 We check if the dates are invalid. We do minimal error checking. We make sure neither date is null, which the `required` attribute should prevent from happening. We also check that the start date is not greater than the end date. If there is an error, we clear the form.
 
-```javascript
+```js
 function checkDatesInvalid(startDate, endDate) {
   // Check that end date is after start date and neither is null.
   if (!startDate || !endDate || startDate > endDate) {
@@ -134,7 +134,7 @@ Because we're using localStorage, which comprises of a single string, we retriev
 
 This process requires the creation of a few functions:
 
-```javascript
+```js
 // Add the storage key as an app-wide constant
 const STORAGE_KEY = "period-tracker";
 
@@ -167,7 +167,7 @@ function getAllStoredPeriods() {
 }
 ```
 
-### Render data
+### Render data to screen
 
 The last step of our application is to render the list of past periods to the screen along with a heading.
 
@@ -179,9 +179,9 @@ Add the container element to the list of contents at the top of your script.
 const pastPeriodContainer = document.getElementById("past-periods");
 ```
 
-We retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create a header and an unordered list. We loop thru the past periods, adding list items containing formatted from and to dates.
+We retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create a header and an unordered list. We loop through the past periods, adding list items containing formatted from and to dates.
 
-```javascript
+```js
 function renderPastPeriods() {
   // get the parsed string of periods, or an empty array.
   const periods = getAllStoredPeriods();
@@ -218,7 +218,7 @@ function formatDate(dateString) {
 
   // Format the date into a locale-specific string.
   // include your locale for better user experience
-  return date.toLocaleDateString("en-UK", { timeZone: "UTC" });
+  return date.toLocaleDateString("en-US", { timeZone: "UTC" });
 }
 ```
 
@@ -226,7 +226,7 @@ function formatDate(dateString) {
 
 When the deferred JavaScript runs on page load, we render past periods, if any.
 
-```javascript
+```js
 // Start the app by rendering the past periods.
 renderPastPeriods();
 ```
@@ -235,7 +235,7 @@ renderPastPeriods();
 
 Your `app.js` file should look similar to this JavaScript:
 
-```javascript
+```js
 const newPeriodFormEl = document.getElementsByTagName("form")[0];
 const startDateInputEl = document.getElementById("start-date");
 const endDateInputEl = document.getElementById("end-date");
