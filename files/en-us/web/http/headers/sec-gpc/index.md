@@ -4,11 +4,10 @@ slug: Web/HTTP/Headers/Sec-GPC
 page-type: http-header
 status:
   - experimental
-  - non-standard
 browser-compat: http.headers.Sec-GPC
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{Non-standard_header}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The **`Sec-GPC`** (**G**lobal **P**rivacy **C**ontrol) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 
