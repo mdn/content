@@ -66,7 +66,7 @@ const stylesList = document.querySelector("#output");
 // Retrieve all computed styles with computedStyleMap()
 const stylePropertyMap = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of stylePropertyMap) {
   // properties
   const cssProperty = document.createElement("dt");

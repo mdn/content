@@ -402,9 +402,11 @@ The only escaping they do is to replace `"` in the attribute value (for {{jsxref
 
 ### String conversion
 
-Calling `String()` as a function is a more reliable alternative to calling a value's `toString()` method, as it works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
+The `String()` function is a more reliable way of converting values to strings than calling the `toString()` method of the value, as the former works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
+// You cannot access properties on null or undefined
+
 const nullVar = null;
 nullVar.toString(); // TypeError: Cannot read properties of null
 String(nullVar); // "null"
