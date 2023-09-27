@@ -18,7 +18,7 @@ The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a
 content: normal;
 content: none;
 
-/* <content-replacement> / <image> values */
+/* <content-replacement>: <image> values */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
 content: image-set("image1x.png" 1x, "image2x.png" 2x);
@@ -27,12 +27,7 @@ content: image-set("image1x.png" 1x, "image2x.png" 2x);
 content: url("../img/test.png") / "This is the alt text";
 
 /* <string> value */
-content: "prefix";
-
-/* list of content values */
-content: "prefix" url("http://www.example.com/test.png");
-content: "prefix" url("http://www.example.com/test.png") "suffix" /
-  "This is some alt text";
+content: "unparsed text";
 
 /* <counter> values, optionally with <list-style-type> */
 content: counter(chapter_counter);
@@ -41,7 +36,7 @@ content: counters(section_counter, ".");
 content: counters(section_counter, ".", decimal-leading-zero);
 
 /* attr() value linked to the HTML attribute value */
-content: attr(value string);
+content: attr(href);
 
 /* <quote> values */
 content: open-quote;
@@ -49,7 +44,10 @@ content: close-quote;
 content: no-open-quote;
 content: no-close-quote;
 
+/* list of content values */
 /* Except for normal and none, several values can be used simultaneously */
+content: "prefix" url(http://www.example.com/test.png);
+content: "prefix" url("/img/test.png") "suffix" / "Alt text";
 content: open-quote counter(chapter_counter);
 
 /* Global values */
@@ -72,7 +70,7 @@ content: unset;
 
 - `<content-list>`
 
-  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order). Each `<content-list>` item is either content or of type `<string>`, `<image>`, `<counter>`, `<quote>`, `<target>`, or `<leader()>`.
+  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order). Each `<content-list>` item is either content or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -102,20 +100,16 @@ content: unset;
 
   - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-reference obtained from the target end of a link. See [Formal syntax](#formal_syntax).
 
-- `<leader>` {{Experimental_Inline}}
+- `<leader()>` {{Experimental_Inline}}
 
-  - : stuff
+  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When used as a value for `content`, the leader-type provided will be inserted as a repeating pattern visually connecting content across a horizontal line.
 
 - `attr(x)`
 
-  - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element or pseudo-element's originating element. The value of the element's attribute `x` as an unparsed string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute names depends on the document language.
+  - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element or pseudo-element's originating element. The value of the element's attribute `x` as an unparsed string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute name parameter depends on the document language.
 
 - `<content-list> / "<string> or <counter>"`
-
-  - : Alternative text may be specified for an image , or any of the `<content-list>` items, by appending a forward slash and then the string text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, neither the content or alternative text will be used.
-
-    - {{cssxref("string", "/ &lt;string>")}}
-      - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
+  - : Alternative text may be specified for an image , or any of the `<content-list>` items, by appending a forward slash and then the string text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, the `content` declaration will be considered invalid and will be ignored. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} specifies the "alt text" for the element.
 
 ## Accessibility concerns
 
@@ -358,7 +352,7 @@ When generating content on regular elements (rather than just on pseudo-elements
 
 ### Element replacement with `<gradient>`
 
-This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}} if supported.
+This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The first element's contents are replaced with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. The second element, which is not replaced, includes generated text set on `::after`. This generated text includes a gradient image as a background.
 
 #### HTML
 
@@ -372,8 +366,8 @@ This example replaces an element's content with a {{cssxref("gradient/linear-gra
 
 ```css
 div {
-  min-width: 100px;
-  min-height: 50px;
+  width: 75%;
+  height: 75px;
   border: 1px solid lightgrey;
 }
 
@@ -382,7 +376,7 @@ div {
 }
 /* will not show if the element is replaced */
 div::after {
-  content: " (Gradients may be supported, but not as a value for <content>)";
+  content: " (Check the browser compatibility. A browser may support CSS gradients, but not as a `content` value)";
   background: linear-gradient(to right, yellow, pink);
 }
 ```
@@ -390,6 +384,8 @@ div::after {
 #### Result
 
 {{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
+
+Check the [browser compatibility chart](#browser-compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers correctly render gradients when set as a `content` value.
 
 ### Element replacement with `image-set()`
 
@@ -433,6 +429,7 @@ div {
 
 ## See also
 
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}

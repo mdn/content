@@ -51,26 +51,24 @@ The CSS generated content module introduces six CSS functions including the not 
 
 ## Related concepts
 
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+[CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 
-  - {{cssxref("::before")}} pseudo-element
-  - {{cssxref("::after")}} pseudo-element
-  - {{cssxref("::marker")}} pseudo-element
+- {{cssxref("::before")}} pseudo-element
+- {{cssxref("::after")}} pseudo-element
+- {{cssxref("::marker")}} pseudo-element
 
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+[CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
-  - {{cssxref("counter", "counter()")}} function
-  - {{cssxref("counters", "counters()")}} function
-  - {{cssxref("counter-increment")}} property
-  - {{cssxref("counter-reset")}} property
+- {{cssxref("counter", "counter()")}} function
+- {{cssxref("counters", "counters()")}} function
+- {{cssxref("counter-increment")}} property
+- {{cssxref("counter-reset")}} property
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+[CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 
-  - {{cssxref("string")}} data type
-  - {{cssxref("attr()")}} function
-  - {{cssxref("image")}} data type
-
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{cssxref("attr()")}} function
+- {{cssxref("string")}} data type
+- {{cssxref("image")}} data type
 
 ## Specifications
 
@@ -80,3 +78,4 @@ The CSS generated content module introduces six CSS functions including the not 
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
