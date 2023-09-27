@@ -59,9 +59,9 @@ The following operators may be used with BigInt values or object-wrapped BigInt 
 + * - % **
 ```
 
-[Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are supported as well, except `>>>` (zero-fill right shift), as every BigInt value is signed.
+However, the unary operator (`+`) cannot be supported on BigInt due to conflicting usage in asm.js, so it has been omitted [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
-Also unsupported is the unary operator (`+`), [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+All of the [Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are supported as well, except for `>>>` (zero-fill right shift), as every BigInt value is signed.
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
