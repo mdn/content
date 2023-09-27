@@ -164,7 +164,7 @@ For a menu to open, the user generally interacts with a menu button as the opene
 
 The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu.
 
-When the menu is open, the button itself generally does not received focus as users arrow thru the menuitems. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
+When the menu is open, the button itself generally does not received focus as users arrow through the menuitems. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
 
 The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` element as a menu.
 
