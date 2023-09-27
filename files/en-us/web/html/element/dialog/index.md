@@ -34,7 +34,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### HTML-only example
+### Caveats of creating a non-modal dialog using only HTML
 
 This example demonstrates the create a non-modal dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
 
@@ -57,7 +57,7 @@ This dialog is initially open because of the presence of the `open` attribute. D
 
 This example demonstrates a modal dialog with a [gradient](/en-US/docs/Web/CSS/gradient) backdrop. The `.showModal()` method opens the modal dialog when the "Show the dialog" button is activated. The dialog can be closed by pressing the <kbd>Esc</kbd> key or via the `close()` method when the "Close" button withing the dialog is activated.
 
-When a dialog opens, the browser, by default, gives focus to the first element that can be focused within the dialog. In this example, the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute is applied to the "Close" button, giving it focus when the dialog opens, as this is the element we expect the user will interact with immediately interact after the dialog opens.
+When a dialog opens, the browser, by default, gives focus to the first element that can be focused within the dialog. In this example, the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute is applied to the "Close" button, giving it focus when the dialog opens, as this is the element we expect the user will interact with immediately after the dialog opens.
 
 #### HTML
 
@@ -116,7 +116,7 @@ When the modal dialog is displayed, it appears above any other dialogs that migh
 
 This example demonstrates the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElement/returnValue) of the `<dialog>` element and how to close a modal dialog by using a form. By default, the `returnValue` is the empty string or the value of the button that submits the form within the `<dialog>` element, if there is one.
 
-This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. An eventlistener updates the value of the "Confirm" button when the select option changes. If the "confirm" button is activated to close the dialog, the current value of the button is the return value. If the dialog is closed by pressing the "Cancel" button, the `returnValue` is `cancel`.
+This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. An eventlistener updates the value of the "Confirm" button when the select option changes. If the "Confirm" button is activated to close the dialog, the current value of the button is the return value. If the dialog is closed by pressing the "Cancel" button, the `returnValue` is `cancel`.
 
 When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the `returnValue` is not updated and the `close` event doesn't occur so the text in the {{HTMLElement("output")}} is not updated.
 
@@ -191,10 +191,10 @@ This example demonstrates the following three methods of closing modal dialogs:
 
 - By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#html-only-example)).
 - By pressing the <kbd>Esc</kbd> key.
-- By calling the {domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog).
+- By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog).
   In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 
-The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
+The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method. When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
 
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
 
@@ -257,7 +257,7 @@ By default, a dialog invoked by the `showModal()` method can be dismissed by pre
 
 While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if you use other elements for a similar purpose. If you're creating a custom dialog implementation, ensure that all expected default behaviors are supported and proper labeling recommendations are followed.
 
-The `<dialog>` element is exposed by browsers in a a manner similar to custom dialogs that use the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method implicitly have [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method or displayed using the `open` attribute or by changing the default `display` of a `<dialog>` are exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
+The `<dialog>` element is exposed by browsers in a manner similar to custom dialogs that use the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method implicitly have [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method or displayed using the `open` attribute or by changing the default `display` of a `<dialog>` are exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
 
 ## Specifications
 
@@ -269,10 +269,10 @@ The `<dialog>` element is exposed by browsers in a a manner similar to custom di
 
 ## See also
 
-- The {{domxref("HTMLDialogElement/")}} Interface
-- The {{domxref("HTMLDialogElement/close_event", "close")}} event
-- The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
-- The {{domxref("HTMLDialogElement/open", "open")}} property
-- The {{CSSXref("::backdrop")}} pseudo-element
-- The [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute
+- {{domxref("HTMLDialogElement")}} interface
+- {{domxref("HTMLDialogElement/close_event", "close")}} event
+- {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
+- {{domxref("HTMLDialogElement/open", "open")}} property of the `HTMLDialogElement` interface
+- [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) global attribute for HTML elements
+- {{CSSXref("::backdrop")}} CSS pseudo-element
 - [Web forms](/en-US/docs/Learn/Forms) in the Learn area
