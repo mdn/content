@@ -50,11 +50,17 @@ configure(config)
     - `bitrateMode`
       - : A string containing a bitrate mode. One of:
         - `"constant"`
+          - : The encode will target constant bitrate.
         - `"variable"` (default)
+          - : The encode will target a variable bitrate, allowing more space to be used for complex signals and less space for less complex signals.
+        - `"quantizer"`
+          - : The encoder will disregard `bitrate` field and instead it will use a codec specific quantizer values specified for each frame in {{domxref("VideoEncoder.encode()")}} options.
     - `latencyMode`
       - : A string containing a value that configures the latency behavior of this codec. One of:
         - `"quality"` (default)
+          - : The encoder should optimize for encoding quality.
         - `"realtime"`
+          - : The encoder should optimize for low latency and may even drop frames to honor `framerate`.
 
 ### Return value
 
