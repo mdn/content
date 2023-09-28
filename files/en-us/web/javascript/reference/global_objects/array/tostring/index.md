@@ -10,13 +10,17 @@ browser-compat: javascript.builtins.Array.toString
 The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -97,7 +101,7 @@ console.log(Array.prototype.toString.call({ join: "not function" }));
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.toLocaleString()")}}

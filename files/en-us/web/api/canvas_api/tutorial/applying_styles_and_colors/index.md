@@ -445,7 +445,7 @@ The `setLineDash` method and the `lineDashOffset` property specify the dash patt
 In this example we are creating a marching ants effect. It is an animation technique often found in selection tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border. In a later part of this tutorial, you can learn how to do this and other [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations).
 
 ```html hidden
-<canvas id="canvas" width="110" height="110" role="presentation"></canvas>
+<canvas id="canvas" width="111" height="111" role="presentation"></canvas>
 ```
 
 ```js
@@ -461,7 +461,7 @@ function draw() {
 
 function march() {
   offset++;
-  if (offset > 16) {
+  if (offset > 5) {
     offset = 0;
   }
   draw();

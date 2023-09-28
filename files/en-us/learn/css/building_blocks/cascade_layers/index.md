@@ -81,7 +81,7 @@ One last thing to note before moving on: order of appearance becomes relevant on
 
 ## Overview of cascade layers
 
-We now understand "cascade origin precedence", but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover [regular layers](#creating_layers), [nested layers](#nested_layers), and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
+We now understand "cascade origin precedence", but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover [regular layers](#creating_cascade_layers), [nested layers](#overview_of_nested_cascade_layers), and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
 
 ### Cascade layer precedence order
 
@@ -117,7 +117,7 @@ For example, a component library may be imported into a `components` layer. A re
 
 The ability to nest layers is very useful for anybody who works on developing component libraries, frameworks, third-party widgets, and themes.
 
-The ability to create nested layers also removes the worry of having conflicting layer names. We'll cover this in the [nested layer](#nested-layers) section.
+The ability to create nested layers also removes the worry of having conflicting layer names. We'll cover this in the [nested layer](#overview_of_nested_cascade_layers) section.
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers."
 >
@@ -139,7 +139,7 @@ Let's cover the three ways of creating a layer in a little more detail before di
 
 ### The @layer statement at-rule for named layers
 
-The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#ordering-layers).
+The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#determining_the_precedence_based_on_the_order_of_layers).
 
 The [`@layer`](/en-US/docs/Web/CSS/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
 
@@ -288,7 +288,7 @@ In the first line, we import `components-lib.css` into the `components` layer. I
 
 The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
 
-Let's look at another example, where we import [`layers1.css`](#anonymous-and-named-layer-block-at-rule-assignment) into a named layer using the following statement:
+Let's look at another example, where we [import `layers1.css` into a named layer](#the_layer_block_at-rule_for_named_and_anonymous_layers) using the following statement:
 
 ```css
 @import url(layers1.css) layer(example);

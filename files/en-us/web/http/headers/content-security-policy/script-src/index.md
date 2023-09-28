@@ -150,7 +150,8 @@ The following {{HTMLElement("script")}} element will be allowed by the policy:
 ```
 
 Allowing all inline scripts is considered a security risk, so it's recommended to use a nonce-source or a hash-source instead.
-To allow inline scripts and styles with a nonce-source, you need to generate a random value and include it in the policy:
+To allow inline scripts and styles with a nonce-source, you need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'

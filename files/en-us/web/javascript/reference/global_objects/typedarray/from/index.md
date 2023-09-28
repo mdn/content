@@ -12,7 +12,7 @@ The **`TypedArray.from()`** static method creates a new
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
 
 ## Syntax
 
@@ -133,7 +133,7 @@ console.log(Int8Array.from.call(NotArray2, [1, 2, 3]));
 ## See also
 
 - [Polyfill of `TypedArray.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.of()")}}
 - {{jsxref("TypedArray.prototype.map()")}}
