@@ -62,12 +62,12 @@ Setting per-frame QP value for encoding individual frames.
 ```js
 const encoder = new VideoEncoder(init);
 const encoderConfig = {
-  codec: 'vp09.00.10.08',
+  codec: "vp09.00.10.08",
   width: 800,
   height: 600,
-  bitrateMode: 'quantizer',
+  bitrateMode: "quantizer",
   framerate: 30,
-  latencyMode: 'realtime'
+  latencyMode: "realtime",
 };
 encoder.configure(encoderConfig);
 
