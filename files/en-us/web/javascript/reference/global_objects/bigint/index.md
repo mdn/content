@@ -60,7 +60,7 @@ Most operators support BigInts, however most do not permit operands to be of mix
 - [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [Increment/decrement](/en-US/docs/Web/JavaScript/Reference/Operators#increment_and_decrement): `++`, `--`
 
-The boolean-returning operators allow mixing numbers and BigInts as operands: 
+The boolean-returning operators allow mixing numbers and BigInts as operands:
 
 - [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) and [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators): `>`, `<`, `>=`, `<=`, `==`, `!=`, `===`, `!==`
 - [Logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators) only rely on the [truthiness](/en-US/docs/Glossary/Truthy) of operands
