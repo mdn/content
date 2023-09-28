@@ -276,7 +276,7 @@ const o3 = new Object(null);
 
 You can use the {{jsxref("Object/Object", "Object()")}} constructor to create an object wrapper of a primitive value.
 
-The following examples store {{jsxref("Boolean")}} objects in `o`:
+The following examples create variables `o1` and `o2` which are objects storing {{jsxref("Boolean")}} and {{jsxref("BigInt")}} values:
 
 ```js
 // equivalent to const o = new Boolean(true)
