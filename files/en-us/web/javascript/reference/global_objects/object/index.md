@@ -274,7 +274,7 @@ const o3 = new Object(null);
 
 ### Using Object() constructor to create a specific type of object
 
-You can use the [`Object()`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Object/Object#return_value) constructor to create an Object of a specific type.
+You can use the {{jsxref("Object/Object", "Object()")}} constructor to create an object wrapper of a primitive value.
 
 The following examples store {{jsxref("Boolean")}} objects in `o`:
 
