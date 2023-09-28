@@ -14,9 +14,9 @@ browser UI.
 
 ## Value
 
-A string representing the
-language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language
-codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+A string representing the language version as defined in
+{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 
 Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:
 "en-us", "fr-fr" etc.
@@ -41,3 +41,4 @@ if (/^en\b/.test(navigator.language)) {
 
 - {{domxref("navigator.languages")}}
 - {{domxref("navigator")}}
+- {{jsxref("Intl")}}
