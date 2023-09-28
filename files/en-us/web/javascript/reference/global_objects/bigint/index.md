@@ -52,16 +52,23 @@ typeof Object(1n) === "object"; // true
 ```
 
 ### Operators
+Most operators support BigInts, however most do not permit operands to be of mixed types—both operands must be BigInt or neither:
+- [Arithmetic Operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators): `+`, `-`, `*`, `/`, `%`, `**`
+- [Bitwise Operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators): `>>`, `<<`, `&`, `|`, `^`, `~`
+- [Unary Negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Increment/Decrement](/en-US/docs/Web/JavaScript/Reference/Operators#increment_and_decrement): `++`, `--`
 
-The following operators may be used with BigInt values or object-wrapped BigInt values:
+Mixed operand types are allowed by the boolean-returning operators:
+- [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) and [Equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators): `>`, `<`, `>=`, `<=`, `==`, `!=`, `===`, `!==`
+- [Logical Operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators) all coerce operands to Boolean
 
-```plain
-+ * - % **
-```
+A couple of operators do not support BigInt at all:
+- [Unary Plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) cannot be supported due to conflicting usage in asm.js, so it has been omitted [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+- [Unsigned right shift (`>>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) is the only bitwise operator that's unsupported, as every BigInt value is signed.
 
-However, the unary operator (`+`) cannot be supported on BigInt due to conflicting usage in asm.js, so it has been omitted [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
-
-All of the [Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are supported as well, except for `>>>` (zero-fill right shift), as every BigInt value is signed.
+Special Cases:
+- Addition (`+`) involving a String and a BigInt coerces to String.
+- Division (`/`) truncates fractional components towards zero, since BigInt is unable to represent fractional quantities.
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
@@ -87,11 +94,7 @@ const bigN = 2n ** 54n;
 
 bigN * -1n;
 // -18014398509481984n
-```
 
-The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won't return any fractional digits.
-
-```js
 const expected = 4n / 2n;
 // 2n
 
