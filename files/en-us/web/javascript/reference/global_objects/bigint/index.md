@@ -53,7 +53,7 @@ typeof Object(1n) === "object"; // true
 
 ### Operators
 
-Most operators support BigInts, however most do not permit operands to be of mixed types—both operands must be BigInt or neither:
+Most operators support BigInts, however most do not permit operands to be of mixed types — both operands must be BigInt or neither:
 
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators): `+`, `-`, `*`, `/`, `%`, `**`
 - [Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators): `>>`, `<<`, `&`, `|`, `^`, `~`
