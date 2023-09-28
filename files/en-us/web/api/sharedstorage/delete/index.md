@@ -30,13 +30,13 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
-- In the case of {{domxref("WindowSharedStorage")}}, if the key/value pair doesn't exist in the shared storage, the operation is aborted silently, without rejecting.
 - In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if:
-  - The key/value pair doesn't exist in the shared storage.
   - The worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 - In both cases, the `Promise` rejects with a {{jsxref("TypeError")}} if:
   - The database was not cleared successfully due to shared storage not being available (for example it is disabled using a browser setting).
   - The `Promise` rejects with a {{jsxref("TypeError")}} if `key` exceeds the browser-defined maximum length.
+
+> **Note:** If the key/value pair doesn't exist in the shared storage, no error is thrown — the operation still fulfills with `undefined`.
 
 ## Examples
 

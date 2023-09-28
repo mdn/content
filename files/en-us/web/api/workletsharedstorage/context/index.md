@@ -15,7 +15,7 @@ The **`context`** read-only property of the
 
 ## Value
 
-A string representing the data. The value will match the value passed into the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
+A string representing the data. The value will match the latest value that was passed into the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method prior to navigation to the {{domxref("FencedFrameConfig")}}. If no value was set by `setSharedStorageContext()` prior to navigation, then `context` will return `undefined`.
 
 ## Examples
 

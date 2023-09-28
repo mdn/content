@@ -15,7 +15,7 @@ The **`remainingBudget()`** method of the
 
 The navigation budget is the number of bits of entropy permitted inside a {{htmlelement("fencedframe")}} as a result of {{domxref("WindowSharedStorage.selectURL()")}} calls, per origin, per 24-hour time period. This is not the same as the number of navigations; rather it is based on the number of potential navigations in each call. Each time a `selectURL()` navigation occurs, an amount equal to logarithm base 2 of the number of URL choices is deducted from the corresponding origin's budget.
 
-Navigation budget is a mechanism designed to limit the rate of leakage of cross-site data to the destination pages navigated to in [fenced frames](/en-US/docs/Web/API/Fenced_frames_API).
+Navigation budget is a mechanism designed to limit the rate of leakage of cross-site data to the destination pages navigated to in [fenced frames](/en-US/docs/Web/API/Fenced_Frame_API).
 
 ## Syntax
 

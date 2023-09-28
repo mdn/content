@@ -37,11 +37,12 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
-- In the case of {{domxref("WindowSharedStorage")}}, if the `set()` operation doesn't successfully write to the database for a reason other than shared storage not being available, then it fails silently without rejecting.
 - In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 - In both cases, the `Promise` rejects with a {{jsxref("TypeError")}} if:
   - The created entry was not successfully stored in the database due to shared storage not being available (for example it is disabled using a browser setting).
   - `key` and/or `value` exceed the browser-defined maximum length.
+
+> **Note:** In the case of {{domxref("WindowSharedStorage")}}, if the `set()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
 
 ## Examples
 
