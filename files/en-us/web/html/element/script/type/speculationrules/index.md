@@ -82,9 +82,12 @@ Specifically, each object can contain the following properties:
 - `"requires"` {{optional_inline}}
   - : An array of strings representing capabilities of the browser parsing the rule, which must be available if the rule is to be applied to the specified URLs. Possible values are:
     - `"anonymous-client-ip-when-cross-origin"`
-      - : `"prefetch"`-only. Specifies that the rule matches only if the user agent can prevent the client IP address from being visible to the origin server if a cross-origin prefetch request is issued. Exactly how this works is dependent on browser implementation specifics. For example, Chrome's implementation hides the IP address using a Google-owned proxy, therefore by default it only works for Google-controlled referrers (since in that case, sending the URLs of the destination to Google is not an additional privacy leak). When used on a non-Google-owned site, rules that include this will only match for users that turn on "Enhanced preloading" in `chrome://settings/preloading`.
-- `"referrer"` {{optional_inline}}
-  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the URL itself.
+      - : `"prefetch"`-only. Specifies that the rule matches only if the user agent can prevent the client IP address from being visible to the origin server if a cross-origin prefetch request is issued. Exactly how this works is dependent on browser implementation specifics. For example:
+        - Chrome's implementation hides the IP address using a Google-owned proxy, therefore by default it only works for Google-controlled referrers (since in that case, sending the URLs of the destination to Google is not an additional privacy leak). When used on a non-Google-owned site, rules that include this will only match for users that turn on "Enhanced preloading" in `chrome://settings/preloading`.
+        - A future Safari implementation may possibly use something along the lines of [iCloud Private Relay](https://support.apple.com/en-us/102602).
+        - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
+- `"referrer_policy"` {{optional_inline}}
+  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
 
 > **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
 
@@ -170,7 +173,7 @@ if (
 ) {
   const specScript = document.createElement("script");
   specScript.type = "speculationrules";
-  specRules = {
+  const specRules = {
     prerender: [
       {
         source: "list",

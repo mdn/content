@@ -18,20 +18,15 @@ A boolean. Returns `true` if the document is currently in the process of prerend
 
 ## Examples
 
-To delay an activity while the page is prerendering, you can check for the `prerendering` property. You could for example wait until a page is prerendered before running some analytics:
+To run an activity while the page is prerendering, you can check for the `prerendering` property. You could for example run some analytics:
 
 ```js
-const intervalID = setInterval(() => {
-  if (!document.prerendering) {
-    initAnalytics(); // Author-defined function
-    clearInterval(intervalID);
-  } else {
-    // Still prerendering
-  }
-}, 50);
+if (document.prerendering) {
+  analytics.sendInfo("got this far during prerendering!");
+}
 ```
 
-When a prerendered document is activated, {{domxref("PerformanceNavigationTiming.activationStart")}} is set to a non-zero time representing the time between when the prerender was started and the document was actually activated. The following function can check for prerendering _and_ prerendered pages:
+When a prerendered document is activated, {{domxref("PerformanceNavigationTiming.activationStart")}} is set to a {{domxref("DOMHighResTimeStamp")}} value representing the time between when the prerender was started and the document was actually activated. The following function can check for prerendering _and_ prerendered pages:
 
 ```js
 function pagePrerendered() {
@@ -42,13 +37,15 @@ function pagePrerendered() {
 }
 ```
 
-When the prerendered page is activated by the user viewing the page, the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event will fire. This can be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
+When the prerendered page is activated by the user viewing the page, the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event will fire. This can be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user. The following code sets up an event listener to run a function once prerendering has finished, on a prerendered page, or runs it immediately on a non-prerendered page:
 
 ```js
-document.addEventListener("prerenderingchange", initializeView);
-
-function initializeView() {
-  // Author-defined function
+if (document.prerendering) {
+  document.addEventListener("prerenderingchange", initAnalytics, {
+    once: true,
+  });
+} else {
+  initAnalytics();
 }
 ```
 

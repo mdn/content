@@ -14,7 +14,7 @@ The **`activationStart`** read-only property represents the time between when a 
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} representing the duration between document prerendering start and activation in seconds.
+A {{domxref("DOMHighResTimeStamp")}} representing the duration between document prerendering start and activation in milliseconds.
 
 The value is `0` if the page has not prerendered or is still prerendering.
 
@@ -22,7 +22,7 @@ The value is `0` if the page has not prerendered or is still prerendering.
 
 ### Detecting prerendered pages
 
-When a prerendered document is activated, `activationStart` is set to a non-zero time. The following function can check whether a page is {{DOMxRef("Document.prerendering","prerendering")}} or has already prerendered:
+When a prerendered document is activated, `activationStart` is set to the current time. The following function can check whether a page is {{DOMxRef("Document.prerendering","prerendering")}} or has already prerendered:
 
 ```js
 function pagePrerendered() {

@@ -28,15 +28,19 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-When a prerendered page is activated by the user viewing the page, the `prerenderingchange` event will fire. This can be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
+The following code sets up an event listener to run a function once prerendering has finished, on a prerendered page (the prerendering is detected via {{domxref("Document.prerendering")}}), or runs it immediately on a non-prerendered page:
 
 ```js
-document.addEventListener("prerenderingchange", initializeView);
-
-function initializeView() {
-  // Author-defined function
+if (document.prerendering) {
+  document.addEventListener("prerenderingchange", initAnalytics, {
+    once: true,
+  });
+} else {
+  initAnalytics();
 }
 ```
+
+> **Note:** See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) landing page and particularly the [Unsafe speculative loading conditions](/en-US/docs/Web/API/Speculation_Rules_API#unsafe_speculative_loading_conditions) section for more information on the kinds of activities you might wish to delay until after prerendering has finished.
 
 ## Specifications
 

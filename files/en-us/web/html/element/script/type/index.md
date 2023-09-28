@@ -19,7 +19,7 @@ The value of this attribute indicates the type of data represented by the script
     JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
 - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
   - : This value indicates that the body of the element contains an import map.
-    The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
+    The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
 - `module`
   - : This value causes the code to be treated as a JavaScript module.
     The processing of the script contents is deferred.
