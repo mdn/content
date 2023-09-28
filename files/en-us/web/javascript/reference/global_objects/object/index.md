@@ -279,7 +279,7 @@ You can use the {{jsxref("Object/Object", "Object()")}} constructor to create an
 The following examples create variables `o1` and `o2` which are objects storing {{jsxref("Boolean")}} and {{jsxref("BigInt")}} values:
 
 ```js
-// Equivalent to const o = new Boolean(true)
+// Equivalent to const o1 = new Boolean(true)
 const o1 = new Object(true);
 
 // No equivalent because BigInt() can't be called as a constructor,
