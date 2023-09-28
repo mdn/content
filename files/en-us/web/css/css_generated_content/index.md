@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/css-content/
 
 {{CSSRef}}
 
-The **CSS generated content** module defines how content can be added to a document with CSS. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.
+The **CSS generated content** module defines how content can be added to a document with CSS. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node with a CSS generated value.
 
 ### Generated content in action
 
-{{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%', 650)}}
+{{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%', 720)}}
 
 The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS background and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added by genarating content: the empty box with a wide orange {{cssxref("border-left", "left border")}} added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: the "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
 
@@ -28,7 +28,7 @@ To see the code for this animation, [view the source on GitHub](https://github.c
 
 ### Functions
 
-The CSS generated content module introduces six CSS functions including the not yet implented `content()`, `string()`, and `leader()` functions, and the three experimental [`<target>`](/en-US/docs/Web/CSS/content#target) functions, including `target-counter()`, `target-counters()`, and `target-text()`.
+The CSS generated content module introduces six yet-to-be implemented CSS functions including `content()`, `string()`, and `leader()` functions, and the three [`<target>`](/en-US/docs/Web/CSS/content#target) functions: `target-counter()`, `target-counters()`, and `target-text()`.
 
 ### Data types
 

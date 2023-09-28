@@ -44,8 +44,8 @@ content: close-quote;
 content: no-open-quote;
 content: no-close-quote;
 
-/* list of content values */
-/* Except for normal and none, several values can be used simultaneously */
+/* <content-list>: a list of content values. 
+Several values can be used simultaneously */
 content: "prefix" url(http://www.example.com/test.png);
 content: "prefix" url("/img/test.png") "suffix" / "Alt text";
 content: open-quote counter(chapter_counter);
@@ -60,17 +60,16 @@ content: unset;
 
 ### Values
 
+The value is `none` or `normal`, or a `<content-list>`, a list of anonymous inline boxes that will replace the content of the selected element (in the specified order). Each `<content-list>` item is either content or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader), with an optional alternative text value of a `<string>` or `<counter>`:
+
 - `none`
 
-  - : When applied to a pseudo-element, the pseudo-element is not generated. If applied to an element, the value has no effect.
+  - : When applied to a pseudo-element, the pseudo-element is not generated.
+    When applied to an element, the value has no effect.
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, `normal` the content will be the initial, or normal, content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}.
-
-- `<content-list>`
-
-  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order). Each `<content-list>` item is either content or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, `normal` the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -108,19 +107,8 @@ content: unset;
 
   - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element or pseudo-element's originating element. The value of the element's attribute `x` as an unparsed string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute name parameter depends on the document language.
 
-- `<content-list> / "<string> or <counter>"`
-  - : Alternative text may be specified for an image , or any of the `<content-list>` items, by appending a forward slash and then the string text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, the `content` declaration will be considered invalid and will be ignored. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} specifies the "alt text" for the element.
-
-## Accessibility concerns
-
-CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
-
-If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
-
-- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
-- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
+- alternative text `/ <string> <counter>`
+  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a string of text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, the `content` declaration will be considered invalid and will be ignored. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} specifies the "alt text" for the element.
 
 ## Formal definition
 
@@ -149,6 +137,7 @@ This example combines the counters function and text to prepend all list items w
       <li>Ducks</li>
       <li>Flightless</li>
     </ol>
+  <li>Marsupials</li>
   </li>
 </ol>
 ```
@@ -158,6 +147,7 @@ This example combines the counters function and text to prepend all list items w
 ```css
 ol {
   counter-reset: items;
+  margin-left: 2em;
 }
 li {
   counter-increment: items;
@@ -171,11 +161,11 @@ li::marker {
 
 {{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
 
-The `counter()` function created a numeric `items` counter in which nested numbers are separated with a period (`.`).
+The generated content on the marker adds the text "item ", with a space, followed by a counter, followed by a colon and an additional space. The `counter()` function created a numeric `items` counter in which nested numbers are separated with a period (`.`) in most browsers.
 
 ### Strings with attribute values
 
-This example adds a string of text after every fully qualified secure link. The text is the value of the `href` attribute, prepended by "URL:", followed by a space, all in parentheses.
+This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select every fully qualified secure link, adding the value of the `href` attribute after the link text as the content of the {{cssxref("::after")}} pseudo-element.
 
 #### HTML
 
@@ -199,6 +189,8 @@ a[href^="https://"]::after
 #### Result
 
 {{EmbedLiveSample('Strings_with_attribute_values', '100%', 200)}}
+
+The generated content is the value of the `href` attribute, prepended by "URL:", followed by a space, all in parentheses.
 
 ### Quotes
 
@@ -418,6 +410,17 @@ div {
 #### Result
 
 {{EmbedLiveSample('Element_replacement_with_image-set', '100%', 110)}}
+
+## Accessibility concerns
+
+CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
+
+If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
+
+- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
+- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
 
 ## Specifications
 
