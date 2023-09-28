@@ -272,7 +272,7 @@ const o2 = new Object(undefined);
 const o3 = new Object(null);
 ```
 
-### Using Object() constructor to create a specific type of object
+### Using Object() constructor to turn primitives into an Object of their respective type
 
 You can use the {{jsxref("Object/Object", "Object()")}} constructor to create an object wrapper of a primitive value.
 
