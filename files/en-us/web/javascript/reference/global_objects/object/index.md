@@ -280,7 +280,11 @@ The following examples create variables `o1` and `o2` which are objects storing 
 
 ```js
 // equivalent to const o = new Boolean(true)
-const o = new Object(true);
+const o1 = new Object(true);
+
+// No equivalent because BigInt() can't be called as a constructor,
+// and calling it as a regular function won't create an object
+const o2 = new Object(1n);
 ```
 
 ### Object prototypes
