@@ -23,18 +23,18 @@ encode(frame, options)
 - `frame`
   - : A {{domxref("VideoFrame")}} object.
 - `options` {{optional_inline}}
-  - : An object containing the following member:
-    - `keyFrame`
+  - : An object containing the following members:
+    - `keyFrame` {{optional_inline}}
       - : A {{jsxref("boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.
-    - `vp9`
+    - `vp9` {{optional_inline}}
       - : Encode options for the [VP9](/en-US/docs/Web/Media/Formats/Video_codecs#vp9) codec.
         - `quantizer`
-          - : Frame quantizer value 0 to 63
-    - `av1`
+          - : Frame quantizer value 0 to 63.
+    - `av1` {{optional_inline}}
       - : Encode options for the [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 51
-    - `avc`
+    - `avc` {{optional_inline}}
       - : Encode options for the [AVC (H.264)](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 63
@@ -57,7 +57,7 @@ In the following example `encode` is passed a `VideoFrame`, and the options para
 encoder.encode(frame, { keyFrame: true });
 ```
 
-Setting per-frame QP value for while encoding individual frames.
+Setting per-frame QP value for encoding individual frames.
 
 ```js
 let encode_options = { keyFrame: false };
