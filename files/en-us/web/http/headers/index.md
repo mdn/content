@@ -234,6 +234,11 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Via")}}
   - : Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.
 
+## Privacy
+
+- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}}{{experimental_inline}}
+  - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+
 ## Redirects
 
 - {{HTTPHeader("Location")}}
