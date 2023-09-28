@@ -22,7 +22,7 @@ symmetricDifference(other)
 
 ### Return value
 
-A new {{jsxref("Set")}} object containing elements which are in either this set or `other`, but not in both.
+A new {{jsxref("Set")}} object containing elements which are in either this set or the `other` set, but not in both.
 
 ## Description
 

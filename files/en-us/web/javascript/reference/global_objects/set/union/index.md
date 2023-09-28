@@ -22,7 +22,7 @@ union(other)
 
 ### Return value
 
-A new {{jsxref("Set")}} object containing elements which are in either or both of this set and `other`.
+A new {{jsxref("Set")}} object containing elements which are in either or both of this set and the `other` set.
 
 ## Description
 

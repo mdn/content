@@ -22,7 +22,7 @@ difference(other)
 
 ### Return value
 
-A new {{jsxref("Set")}} object containing elements in this set but not in `other`.
+A new {{jsxref("Set")}} object containing elements in this set but not in the `other` set.
 
 ## Description
 

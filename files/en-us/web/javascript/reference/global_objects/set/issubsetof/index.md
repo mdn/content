@@ -22,7 +22,7 @@ isSubsetOf(other)
 
 ### Return value
 
-`true` if all elements in this set are also in `other`, and `false` otherwise.
+`true` if all elements in this set are also in the `other` set, and `false` otherwise.
 
 ## Description
 

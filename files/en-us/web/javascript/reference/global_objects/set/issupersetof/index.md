@@ -22,7 +22,7 @@ isSupersetOf(other)
 
 ### Return value
 
-`true` if all elements in `other` are also in this set, and `false` otherwise.
+`true` if all elements in the `other` set are also in this set, and `false` otherwise.
 
 ## Description
 

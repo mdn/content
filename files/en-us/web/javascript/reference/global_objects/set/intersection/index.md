@@ -22,7 +22,7 @@ intersection(other)
 
 ### Return value
 
-A new {{jsxref("Set")}} object containing elements both in this set and in `other`.
+A new {{jsxref("Set")}} object containing elements in both this set and the `other` set.
 
 ## Description
 

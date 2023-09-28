@@ -22,7 +22,7 @@ isDisjointFrom(other)
 
 ### Return value
 
-`true` if this set has no elements in common with `other`, and `false` otherwise.
+`true` if this set has no elements in common with the `other` set, and `false` otherwise.
 
 ## Description
 
