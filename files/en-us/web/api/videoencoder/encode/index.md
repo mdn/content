@@ -38,6 +38,7 @@ encode(frame, options)
       - : Encode options for the [AVC (H.264)](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 51. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).
