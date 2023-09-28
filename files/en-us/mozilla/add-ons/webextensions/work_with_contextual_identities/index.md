@@ -8,7 +8,7 @@ page-type: guide
 
 Many people need or want to interact with the web using multiple personas. They may have accounts for web-based work and personal email. They might sign out of their social media accounts before accessing online shopping, to ensure that any tracking scripts on the shopping sites can't pick up their social media activity. To address these requirements, users often end up working with a standard and private browser window or two different browsers.
 
-To address this need, Firefox includes a feature known as contextual identities, container tabs or account containers. This feature enables the creation of a cookie container for each of the identities the user wants to use in their browser. Tabs can be associated with one of these identities, keeping cookies separate from those of other identities in the browser. The practical upshot of this is that, for example, a user could have a personal and work identity. They can then use the personal identity in one tab, where they sign into their personal web mail, and the work identity in another tab, where they sign into their work web mail.
+To address this need, Firefox includes a feature known as contextual identities, container tabs, or account containers. This feature enables the creation of a cookie container (store) for each of the identities the user wants to use in their browser. Tabs can be associated with one of these identities, keeping cookies separate from those of other identities in the browser. The practical upshot of this is that, for example, a user could have a personal and work identity. They can then, for example, use the personal identity in one tab, where they sign into their personal web mail, and the work identity in another tab, where they sign into their work web mail.
 
 For more background on this feature, see:
 
@@ -18,14 +18,22 @@ For more background on this feature, see:
 
 ## APIs for working with contextual identities
 
-To use the contextual identity features in extensions, you'll work with two APIs:
+To provide contextual identity features in an extension, you use {{WebExtAPIRef("contextualIdentities")}} to add, query, update, and delete contextual identities. When you create a contextual identity you obtain its `cookieStoreId`. You can then use the cookie store ID to work with entities related to the conceptual identity using these APIs:
 
-- {{WebExtAPIRef("contextualIdentities")}} which enable an extension to add, query, update, and delete contextual identities.
-- {{WebExtAPIRef("tabs")}} or more specifically {{WebExtAPIRef("tabs.create")}} which enables you to create a tab that uses a contextual identity's container (cookies store).
+- {{WebExtAPIRef("browsingData.removeCookies()")}} and {{WebExtAPIRef("browsingData.removeLocalStorage()")}} where you use {{WebExtAPIRef("browsingData.removalOptions")}} to set the cookie store items are removed from.
+- {{WebExtAPIRef("contentscripts.register")}} which enables you register a content script in the tabs that belong to one or more cookie store IDs.
+- {{WebExtAPIRef("downloads")}} where you can associate a download with a cookie store.
+- {{WebExtAPIRef("proxy")}} where the details passed into the {{WebExtAPIRef("proxy.onRequest")}} listener identify the cookie store associate the request.
+- {{WebExtAPIRef("tabs")}} where you can {{WebExtAPIRef("tabs.create","create")}} a tab to it uses a contextual identity's cookies store, {{WebExtAPIRef("tabs.tab","get")}} the cookie store ID for a tab, and {{WebExtAPIRef("tabs.query","query")}} tabs based on their associated cookie store.
+- {{WebExtAPIRef("userscripts.register")}} which enables you register a content script in the tabs that belong to one or more cookie store IDs.
+- {{WebExtAPIRef("webrequest")}} where all the events return the cookie store ID if request is associated with a contextual identities tab.
+- {{WebExtAPIRef("windows.create")}} where you can specify the cookie store for the tabs added to a window when its created.
 
 ## Permissions
 
-To use the {{WebExtAPIRef("contextualIdentities")}} API you need to include the "contextualIdentities" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. You don't need the "tabs" permission to use {{WebExtAPIRef("tabs.create")}} however; you do need the "cookies" permission to specify the cookie container you want the tab to use.
+To use the {{WebExtAPIRef("contextualIdentities")}} API you need to include the "contextualIdentities" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. You don't need the "tabs" permission to use {{WebExtAPIRef("tabs.create")}}.
+
+If an API enables cookies to be modified then you need the "cookies" permission. For example, in {{WebExtAPIRef("tabs.query")}}, use of`cookieStoreId` does not require the "cookies" API as reading the property doesn't affect the cookies in the containers. However, using {{WebExtAPIRef("tabs.create")}} requires the permission, because it enables the creation of cookies in a container.
 
 ## Example walkthrough
 
