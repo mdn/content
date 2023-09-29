@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 118 that affect d
 
 - Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
 - A new keyword `from-font` in the CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
-- The values `content-box` and `stroke-box` are now supported in the CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) which allows more granular positioning of the origin of SVGs when transforming, depending on the type of content within the SVG (Firefox bug [1819464](https://bugzil.la/1819464)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. These values enable more precise positioning of the origin of SVGs during transformations, depending on the type of content within the SVG (Firefox bug [1819464](https://bugzil.la/1819464)).
 
 #### Removals
 
