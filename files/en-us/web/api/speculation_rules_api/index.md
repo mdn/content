@@ -54,6 +54,8 @@ Including `prefetch` rules inside `<script type=speculationrules> ... </script>`
 
 The results are kept in a per-document in-memory cache. If you prefetch something the user doesn't navigate to, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow. That said, the upfront cost of a prefetch is much smaller than the upfront cost of a prerender, so you are encouraged to adopt prefetching broadly, for example prefetching all of the significant pages on your site, provided they are safe to prefetch (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details).
 
+> **Note:** Such is the nature of the per-document in-memory cache, any cached prefetches are discarded when you navigate away from the current page, except of course a prefetched document that you then navigate to.
+
 Same-site and cross-site prefetches will work, but cross-site prefetches are limited (see ["same-site" and "cross-site"](https://web.dev/same-site-same-origin/#same-site-cross-site) for an explanation of the difference between the two). For privacy reasons cross-site prefetches will currently only work if the user has no cookies set for the destination site — we don't want sites to be able to track user activity via prefetched pages (which they may never even actually visit) based on previously-set cookies.
 
 > **Note:** In the future an opt-in will be provided via the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header, but this was not implemented at the time of writing.
@@ -73,6 +75,8 @@ In addition, speculation rules prefetch:
 
 Including `prerender` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to fetch, render, and load the content into an invisible tab, stored in a per-document in-memory cache. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript.
 
+> **Note:** Such is the nature of the per-document in-memory cache, any cached prerenders and their subresources are discarded when you navigate away from the current page, except of course a prerendered document that you then navigate to.
+
 Future navigations to that page will be near-instant. The browser activates the invisible tab instead of carrying out the usual navigation process, replacing the old foreground page with the prerendered page. If a page is activated before it has fully prerendered, it is activated in its current state and then continues to load, which means you will still see a significant performance improvement.
 
 Prerendering uses memory and network bandwidth. If you prerender something the user doesn't navigate to, these are wasted (although the result may populate the HTTP cache if headers allow, allowing later use). The upfront cost of a prerender is much larger than the upfront cost of a prefetch, and there are more conditions that could make content unsafe to prerender (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details). As a result, you are encouraged to adopt prerendering more sparingly, carefully considering cases where there is a high likelihood of the page being navigated to, and you think the user experience benefit is worth the extra cost.
@@ -81,7 +85,7 @@ Prerendering uses memory and network bandwidth. If you prerender something the u
 
 > **Note:** Many APIs will be automatically deferred when prerendering/until activation. See [Platform features deferred or restricted during prerender](#platform_features_deferred_or_restricted_during_prerender) for more details.
 
-Prerendering is restricted to same-origin documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation destination site to opt-in using the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header with a value of `credentialed-prerender`. Cross-site prerendering is not possible at this time.
+Prerendering is restricted to same-origin documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation target to opt-in using the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header with a value of `credentialed-prerender`. Cross-site prerendering is not possible at this time.
 
 For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
 
@@ -271,7 +275,9 @@ User-specific state problems can occur for other user settings, for example lang
 - The user clicks on the link to `https://site.example.com/cart`, which activates the prerendered page.
 - The user sees an empty cart, even though they just added something to it.
 
-The best mitigation for these cases is to perform client-side updates to the speculatively loaded pages. This means the user gets the benefit of the speculatively loaded content, which can be slightly out-of-date, then the state update can occur afterwards. As mentioned earlier, prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. This guarantees that the user will see up-to-date content after prerendering activation. If your site already auto-updates across multiple tabs then you are probably OK as-is.
+The best mitigation for these cases is to perform client-side updates to the speculatively loaded pages. The user will get the performance benefit of the speculatively loaded content, which may be slightly out-of-date by the time the page is activated due to JavaScript running on the page while it is being prerendered. The state can then be brought up-to-date once the page is activated.
+
+As mentioned earlier, prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. This guarantees that the user will see up-to-date content after prerendering activation. If your site already auto-updates across multiple tabs then you are probably OK as-is.
 
 ## Session history behavior for prerendered documents
 
@@ -357,6 +363,10 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.
 - {{domxref("Window.print()")}}: Any calls to this method are ignored.
+- "Simple dialog methods" are restricted as follows:
+  - {{domxref("Window.alert()")}} immediately returns without showing a dialog.
+  - {{domxref("Window.confirm()")}} immediately returns `false` without showing a dialog.
+  - {{domxref("Window.prompt()")}} immediately returns an empty string (`""`) without showing a dialog.
 - Dedicated/shared worker scripts are loaded, but their execution is deferred until the prerendered document is activated.
 - Cross-origin {{htmlelement("iframe")}} loads are delayed while prerendering until after the page is activated.
 
@@ -380,7 +390,7 @@ The Speculation Rules API does not define any interfaces of its own.
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) `'inline-speculation-rules'` value
   - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
 - [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode)
-  - : Set by a navigation destination site to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
+  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
 ## HTML features
 

@@ -9,7 +9,7 @@ browser-compat: http.headers.Supports-Loading-Mode
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Supports-Loading-Mode`** response header is set by a navigation destination site to opt-in to using various higher-risk loading modes.
+The **`Supports-Loading-Mode`** response header is set by a navigation target to opt-in to using various higher-risk loading modes.
 
 <table class="properties">
   <tbody>
