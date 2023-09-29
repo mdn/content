@@ -79,7 +79,7 @@ Other formats improve on JPEG's capabilities regarding compression, but are not 
 
 - [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc. (but not progressive display.). Supported by all major browsers except Safari 14 on macOS desktop Big Sur or earlier.
 
-  > **Note:** Despite Apple [announcing support for WebP in Safari 14](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174), Safari versions 16.0 and earlier don't display `.webp` images successfully on macOS desktop (v11/Big Sur or earlier). On the other hand, Safari for iOS 14 _does_ display `.webp` images successfully.
+  > **Note:** Despite Apple [announcing support for WebP in Safari 14](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174), Safari versions earlier than 16.0 don't display `.webp` images successfully on macOS desktop (v11/Big Sur or earlier). On the other hand, Safari for iOS 14 _does_ display `.webp` images successfully.
 
 - [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
 - **JPEG2000** — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.
