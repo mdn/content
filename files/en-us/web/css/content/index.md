@@ -7,7 +7,7 @@ browser-compat: css.properties.content
 
 {{CSSRef}}
 
-The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. The `content` property is used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` controls whether the element renders at all, replacing the element with an image, text, or both.
+The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element's content with a generated value. The `content` property is used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` controls whether the element renders at all, replacing the element with an image, text, or both.
 
 Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
 
@@ -71,7 +71,7 @@ The value can be one of two keywords — `none` or `normal` — or, for DOM node
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, `normal` the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin box, this computes to `contents`.
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
 
 - `contents` {{Experimental_Inline}}
 
@@ -83,7 +83,7 @@ The value can be one of two keywords — `none` or `normal` — or, for DOM node
 
 - {{cssxref("&lt;image&gt;")}}
 
-  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("image/image-set", "image-set()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
+  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url", "url()")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
 
 - `<counter>`
 
@@ -98,23 +98,23 @@ The value can be one of two keywords — `none` or `normal` — or, for DOM node
   - : The `<quote>` data type includes language- and position-dependent keywords:
     - `open-quote` and `close-quote`
       - : These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.
-    - `no-open-quote` | `no-close-quote`
+    - `no-open-quote` and `no-close-quote`
       - : Introduces no content, but increments (decrements) the level of nesting for quotes.
 
 - `<target>` {{Experimental_Inline}}
 
-  - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-reference obtained from the target end of a link. See [Formal syntax](#formal_syntax).
+  - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-references obtained from the target end of a link. See [Formal syntax](#formal_syntax).
 
 - `<leader()>` {{Experimental_Inline}}
 
-  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern visually connecting content across a horizontal line.
+  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
 
 - `attr(x)`
 
-  - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element or pseudo-element's originating element. The value of the element's attribute `x` as an unparsed string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute name parameter depends on the document language.
+  - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element, or the pseudo-element's originating element. The value of the element's attribute `x` is an unparsed string representing the attribute name. If there is no attribute `x`, an empty string is returned. The case sensitivity of the attribute name parameter depends on the document language.
 
-- alternative text `/ <string> | <counter>`
-  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a string of text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, the `content` declaration will be considered invalid and will be ignored. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} specifies the "alt text" for the element.
+- alternative text: `/ <string> | <counter>`
+  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a string of text or a counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, the `content` declaration will be considered invalid and will be ignored. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} data types specify the "alt text" for the element.
 
 ## Formal definition
 
@@ -126,11 +126,11 @@ The value can be one of two keywords — `none` or `normal` — or, for DOM node
 
 ## Examples
 
-The first examples created generated content on pseudo-elements. The last three are [examples of element replacement](#element-replacement-with-url).
+The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element-replacement-with-url).
 
 ### Appending strings based on an element's class
 
-This example inserts generated text, coloring it red, after the text based on an element's class name.
+This example inserts generated text after the text of elements that have a particular class name. The text is colored red.
 
 #### HTML
 
@@ -208,7 +208,7 @@ q::after {
 
 {{EmbedLiveSample('Quotes', '100%', 200)}}
 
-Note the [type of quotes generated](/en-US/docs/Web/CSS/quotes#auto_quotes) is based on the language. Browsers add open- and close-quotes before and after {{HTMLElement("q")}} elements by default, so the quotes in this example would appear without them being explicitly set. They could have been turned off by setting `no-open-quote` and `no-close-quote`, or `none` value. They can also be turned off by setting the {{cssxref("quotes")}} property to `none` instead.
+Note the [type of quotes generated](/en-US/docs/Web/CSS/quotes#auto_quotes) is based on the language. Browsers add open- and close-quotes before and after {{HTMLElement("q")}} elements by default, so the quotes in this example would appear without them being explicitly set. They could have been turned off by setting the respective `content` property values to `no-open-quote` and `no-close-quote`, or by setting them both to `none`. They can also be turned off by setting the {{cssxref("quotes")}} property to `none` instead.
 
 ### Adding text to list item counters
 
@@ -285,7 +285,7 @@ The generated content is the value of the `href` attribute, prepended by "URL: "
 
 ### Adding an image with alternative text
 
-This example inserts an image before the link. Alternative text that a screen reader can output as speech in included,
+This example inserts an image before the link. Alternative text that a screen reader can output as speech is included,
 which some browsers may display. To indicate if alternative text after a content list is supported or not, a fallback `content`, the CSS includes the message " - no alt text - ".
 
 #### HTML

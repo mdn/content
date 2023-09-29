@@ -7,15 +7,15 @@ spec-urls: https://drafts.csswg.org/css-content/
 
 {{CSSRef}}
 
-The **CSS generated content** module defines an element' content can be replaced and content can be added to a document with CSS.
+The **CSS generated content** module defines how an element's content can be replaced and content can be added to a document with CSS.
 
-Generated content can be used for content replacement, in which case the content of a DOM node is replaced with a CSS `<image>`. The CSS generated content also enables generating language-specific quotes, create custom list item numbers and bullets, and visually adding content by generating content on select pseudo-elements as anonymous replaced elements.
+Generated content can be used for content replacement, in which case the content of a DOM node is replaced with a CSS `<image>`. The CSS generated content also enables generating language-specific quotes, creating custom list item numbers and bullets, and visually adding content by generating content on select pseudo-elements as anonymous replaced elements.
 
 ### Generated content in action
 
 {{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%', 720)}}
 
-The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS background and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added by genarating content: the empty box with a wide orange {{cssxref("border-left", "left border")}} added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: the "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
+The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange {{cssxref("border-left", "left border")}} added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
 
 To see the code for this animation, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/generated_content.html).
 
@@ -26,11 +26,11 @@ To see the code for this animation, [view the source on GitHub](https://github.c
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
-> **Note:** The CSS generated content module introduces four at-risk properties that have not been implented, including `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
+> **Note:** The CSS generated content module introduces four at-risk properties that have not been implemented: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
 
 ### Functions
 
-The CSS generated content module introduces six yet-to-be implemented CSS functions including `content()`, `string()`, and `leader()` functions, and the three [`<target>`](/en-US/docs/Web/CSS/content#target) functions: `target-counter()`, `target-counters()`, and `target-text()`.
+The CSS generated content module introduces six yet-to-be implemented CSS functions including `content()`, `string()`, and `leader()`, and the three [`<target>`](/en-US/docs/Web/CSS/content#target) functions `target-counter()`, `target-counters()`, and `target-text()`.
 
 ### Data types
 
@@ -43,7 +43,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ## Guides
 
-- [How to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+- ["How to" guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
   - : Learn how to add text or image content to a document using the {{cssxref("content")}} property.
 
