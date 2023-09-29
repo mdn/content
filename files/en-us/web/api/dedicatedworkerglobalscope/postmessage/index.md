@@ -23,7 +23,7 @@ The main scope that spawned the worker can send back information to the thread t
 
 ```js-nolint
 postMessage(message)
-postMessage(options)
+postMessage(message, options)
 postMessage(message, transfer)
 ```
 
