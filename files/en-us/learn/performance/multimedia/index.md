@@ -77,9 +77,9 @@ With photographic motifs that do not feature transparency there is a lot wider r
 
 Other formats improve on JPEG's capabilities regarding compression, but are not available on every browser:
 
-- [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. (but not progressive display.). Supported by all major browsers except Safari 14 on macOS desktop.
+- [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. (but not progressive display.). Supported by all major browsers except Safari 14 on macOS desktop Big Sur or earlier.
 
-  > **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
+  > **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 16.0 .webp images do not display natively on a macOS desktop Big Sur or earlier, whereas Safari on iOS 14 does display .webp images properly.
 
 - [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
 - **JPEG2000** — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.
