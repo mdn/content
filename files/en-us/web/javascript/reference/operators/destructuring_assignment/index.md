@@ -53,7 +53,7 @@ The object and array literal expressions provide an easy way to create _ad hoc_ 
 const x = [1, 2, 3, 4, 5];
 ```
 
-The destructuring assignment uses similar syntax, but on the left-hand side of the assignment to define what values to unpack from the sourced variable.
+The destructuring assignment uses similar syntax but uses it on the left-hand side of the assignment instead. It defines which values to unpack from the sourced variable.
 
 ```js
 const x = [1, 2, 3, 4, 5];
