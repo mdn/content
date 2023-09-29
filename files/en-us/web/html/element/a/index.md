@@ -365,8 +365,8 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 
   <header>…</header>
 
-  <main id="content"></main>
   <!-- The skip link jumps to here -->
+  <main id="content"></main>
 </body>
 ```
 
