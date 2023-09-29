@@ -170,7 +170,7 @@ This time, the JavaScript running in the page can access the shadow DOM internal
 
 So `{mode: "open"}` gives the page a way to break the encapsulation of your shadow DOM. If you don't want to give the page this ability, pass `{mode: "closed"}` instead, and then `shadowRoot` returns `null`.
 
-However, you should not consider this a strong security mechanism, because there are ways it can be evaded, for example by browser extensions running in the page. It's more of a hint that the page should not access the internals of your shadow DOM tree.
+However, you should not consider this a strong security mechanism, because there are ways it can be evaded, for example by browser extensions running in the page. It's more of an indication that the page should not access the internals of your shadow DOM tree.
 
 ## Encapsulation from CSS
 
