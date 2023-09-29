@@ -147,7 +147,6 @@ The folowing properties accept only physical values:
   - {{CSSxRef("offset-anchor")}}
   - {{CSSxRef("transform-origin")}}
   - {{CSSxRef("perspective-origin")}}
- 
 ## Guides
 
 - [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
