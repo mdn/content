@@ -10,7 +10,7 @@ Serving login forms over HTTP is especially dangerous because of the wide variet
 
 The [HTTPS](/en-US/docs/Glossary/HTTPS) protocol is designed to protect user data from eavesdropping (confidentiality) and from modification (integrity) on the network. Websites that handle user data should use HTTPS to protect their users from attackers. If a website uses HTTP instead of HTTPS, it is trivial to steal user information (such as their login credentials). This was famously demonstrated by [Firesheep](https://codebutler.github.io/firesheep/).
 
-To fix this issue, install and configure an SSL/[TLS](/en-US/docs/Glossary/TLS) certificate onto your server. There are various vendors offering free and paid certificates. If you are using a cloud platform, it may have its own ways of enabling HTTPS.
+To fix this issue, install and configure a [TLS](/en-US/docs/Glossary/TLS) certificate on your server. There are various vendors offering free and paid certificates. If you are using a cloud platform, it may have its own ways of enabling HTTPS.
 
 ## Note on password reuse
 

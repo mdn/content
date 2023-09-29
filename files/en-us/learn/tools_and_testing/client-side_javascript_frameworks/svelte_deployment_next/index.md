@@ -70,7 +70,7 @@ So far we've been running our app in development mode with `npm run dev`. As we 
 
 Your generated `bundle.js` and `bundle.css` files will be something like this (file size on the left):
 
-```
+```plain
   504 Jul 13 02:43 bundle.css
 95981 Jul 13 02:43 bundle.js
 ```
@@ -79,7 +79,7 @@ To compile our application for production we have to run `npm run build` instead
 
 So, after running `npm run build`, our generated `bundle.js` and `bundle.css` files will be more like this:
 
-```
+```plain
   504 Jul 13 02:43 bundle.css
 21782 Jul 13 02:43 bundle.js
 ```
@@ -291,7 +291,7 @@ In this section we'll give you some resources and projects to go and check out, 
 
 ### Svelte documentation
 
-To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://svelte.dev/tutorial/basics). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
+To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://learn.svelte.dev/). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
 
 You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples/hello-world).
 

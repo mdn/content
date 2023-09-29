@@ -50,7 +50,7 @@ The process works like so:
 
 A typical SMS message looks like so:
 
-```
+```plain
 Your verification code is 123456.
 
 @www.example.com #123456
@@ -66,7 +66,7 @@ Your verification code is 123456.
 
 If the `get()` method is invoked by a third-party site embedded in an {{htmlelement("iframe")}}, the SMS structure should be:
 
-```
+```plain
 Your verification code is 123456.
 
 @top-level.example.com #123456 @embedded.com

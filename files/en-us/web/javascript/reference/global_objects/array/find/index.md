@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.find
 
 {{JSRef}}
 
-The **`find()`** method returns the first element in the provided array that satisfies the provided testing function.
+The **`find()`** method of {{jsxref("Array")}} instances returns the first element in the provided array that satisfies the provided testing function.
 If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 - If you need the **index** of the found element in the array, use {{jsxref("Array/findIndex", "findIndex()")}}.
@@ -17,7 +17,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
   Again, it checks each element for equality with the value instead of using a testing function.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
 
 ## Syntax
 
@@ -179,7 +179,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## See also
 
 - [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLast()")}}

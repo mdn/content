@@ -34,7 +34,7 @@ Firefox 19 was released on February 19, 2013. This article lists key changes tha
 - The {{domxref("File")}} lastModifiedDate property returns the current date, when the date of the last modification is unknown. ([Firefox bug 793459](https://bugzil.la/793459)
 - The {{domxref("CanvasRenderingContext2D")}} `isPointInStroke` method has been implemented ([Firefox bug 803124](https://bugzil.la/803124)).
 - The {{domxref("HTMLCanvasElement")}} `toBlob` method has been implemented ([Firefox bug 648610](https://bugzil.la/648610)).
-- The {{domxref("Node.isSupported")}} and the {{domxref("document.implementation", "document.implementation.hasFeature()")}} methods have been changed to always return `true` ([Firefox bug 801425](https://bugzil.la/801425)).
+- The `Node.isSupported` and the {{domxref("document.implementation", "document.implementation.hasFeature()")}} methods have been changed to always return `true` ([Firefox bug 801425](https://bugzil.la/801425)).
 - When calling `document.createElement(null)`, `null` will now be stringified and works like `document.createElement("null")`.
 - The {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} interfaces have been updated to match the latest spec ([Firefox bug 801487](https://bugzil.la/801487)).
 

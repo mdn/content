@@ -7,14 +7,18 @@ browser-compat: javascript.builtins.Symbol.@@toPrimitive
 
 {{JSRef}}
 
-The **`[@@toPrimitive]()`** method converts a Symbol object to
-a primitive value.
+The **`[@@toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this symbol value.
 
 ## Syntax
 
 ```js-nolint
-Symbol()[Symbol.toPrimitive](hint)
+symbolValue[Symbol.toPrimitive](hint)
 ```
+
+### Parameters
+
+- `hint`
+  - : A string value indicating the primitive value to return. The value is ignored.
 
 ### Return value
 

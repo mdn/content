@@ -532,7 +532,7 @@ window.addEventListener("message", (event) => {
 
 In Chrome, this produces output like this:
 
-```
+```plain
 In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
@@ -541,7 +541,7 @@ In page script, window.y: undefined
 
 In Firefox, this produces output like this:
 
-```
+```plain
 In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1

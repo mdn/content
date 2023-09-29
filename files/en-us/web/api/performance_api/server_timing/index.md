@@ -47,7 +47,7 @@ The server timing metrics usually appear in the developer tools of the browser, 
 
 Given a {{HTTPHeader("Server-Timing")}} like this:
 
-```
+```http
 Server-Timing: cache;desc="Cache Read";dur=23.2,db;dur=53,app;dur=47.2
 ```
 

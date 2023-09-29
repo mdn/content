@@ -694,24 +694,24 @@ Workers are mainly useful for allowing your code to perform processor-intensive 
 The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.
 
 ```js
-self.onmessage = (e) => {
-  const userNum = Number(e.data);
-  fibonacci(userNum);
+self.onmessage = (event) => {
+  const userNum = Number(event.data);
+  self.postMessage(fibonacci(userNum));
 };
 
 function fibonacci(num) {
   let a = 1;
   let b = 0;
-  while (num >= 0) {
+  while (num > 0) {
     [a, b] = [a + b, a];
     num--;
   }
 
-  self.postMessage(b);
+  return b;
 }
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread.
+The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called. This performs the math and eventually returns the result back to the main thread.
 
 #### The HTML code
 
@@ -736,9 +736,10 @@ The worker sets the property `onmessage` to a function which will receive messag
     <form>
       <div>
         <label for="number"
-          >Enter a number that is an index position in the fibonacci sequence to
-          see what number is in that position (e.g. enter 5 and you'll get a
-          result of 8 — fibonacci index position 5 is 8).</label
+          >Enter a number that is a zero-based index position in the fibonacci
+          sequence to see what number is in that position. For example, enter 6
+          and you'll get a result of 8 — the fibonacci number at index position
+          6 is 8.</label
         >
         <input type="number" id="number" />
       </div>
