@@ -20,6 +20,16 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - Inline dimension
   - : The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
+### New properties and values
+
+CSS was originally designed with only physical coordinates in its controls. The module defines new flow–relative equivalents for [values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [properties](/en-US/docs/Glossary/Property/CSS).
+
+Some physical properties now have logical equivalents, while properties that accepted only physical values (`top`, `bottom`, `left`, `right`) now accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
+
+### Not support properties and values
+
+The transition to logical axes is not fully defined by the module, some properties don't yet have logical equivalents.
+
 ## Reference
 
 ### Properties for sizing
@@ -113,6 +123,31 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
 - `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
 
+### Unsupported properties
+
+The folowing properties doesn't have logical equivalents:
+
+- {{CSSxRef("background-position-x")}}
+- {{CSSxRef("background-position-y")}}
+
+### Unsupported values
+
+The folowing properties accept only physical values:
+
+- {{CSSxRef("text-underline-position")}}
+- {{CSSxRef("box-shadow")}
+- {{CSSxRef("text-shadow")}}
+- {{CSSxRef("clip-path")}}
+
+- {{CSSxRef("&lt;position&gt;")}}
+  - {{CSSxRef("background-position")}}
+  - {{CSSxRef("object-position")}}
+  - {{CSSxRef("mask-position")}}
+  - {{CSSxRef("offset-position")}}
+  - {{CSSxRef("offset-anchor")}}
+  - {{CSSxRef("transform-origin")}}
+  - {{CSSxRef("perspective-origin")}}
+ 
 ## Guides
 
 - [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
