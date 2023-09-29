@@ -25,7 +25,7 @@ To provide contextual identity features in an extension, you use {{WebExtAPIRef(
 - {{WebExtAPIRef("downloads")}} where you can associate a download with a cookie store.
 - {{WebExtAPIRef("proxy")}} where the details passed into the {{WebExtAPIRef("proxy.onRequest")}} listener identify the cookie store associate the request.
 - {{WebExtAPIRef("tabs")}} where you can {{WebExtAPIRef("tabs.create","create")}} a tab to it uses a contextual identity's cookies store, {{WebExtAPIRef("tabs.tab","get")}} the cookie store ID for a tab, and {{WebExtAPIRef("tabs.query","query")}} tabs based on their associated cookie store.
-- {{WebExtAPIRef("userscripts.register")}} which enables you register a content script in the tabs that belong to one or more cookie store IDs.
+- {{WebExtAPIRef("userscripts.register")}} which enables you to register a content script in the tabs that belong to one or more cookie store IDs.
 - {{WebExtAPIRef("webrequest")}} where all the events return the cookie store ID if request is associated with a contextual identities tab.
 - {{WebExtAPIRef("windows.create")}} where you can specify the cookie store for the tabs added to a window when its created.
 
