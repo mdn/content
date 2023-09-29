@@ -272,18 +272,19 @@ const o2 = new Object(undefined);
 const o3 = new Object(null);
 ```
 
-### Using Object to create Boolean objects
+### Using Object() constructor to turn primitives into an Object of their respective type
 
-The following examples store {{jsxref("Boolean")}} objects in `o`:
+You can use the {{jsxref("Object/Object", "Object()")}} constructor to create an object wrapper of a primitive value.
 
-```js
-// equivalent to const o = new Boolean(true)
-const o = new Object(true);
-```
+The following examples create variables `o1` and `o2` which are objects storing {{jsxref("Boolean")}} and {{jsxref("BigInt")}} values:
 
 ```js
-// equivalent to const o = new Boolean(false)
-const o = new Object(Boolean());
+// Equivalent to const o1 = new Boolean(true)
+const o1 = new Object(true);
+
+// No equivalent because BigInt() can't be called as a constructor,
+// and calling it as a regular function won't create an object
+const o2 = new Object(1n);
 ```
 
 ### Object prototypes
