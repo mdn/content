@@ -7,7 +7,9 @@ browser-compat: css.properties.content
 
 {{CSSRef}}
 
-The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. The `content` property is used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` controls whether the element renders at all, replacing the element with an image, text, or both.
+
+Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
 
 {{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
 
@@ -60,7 +62,7 @@ content: unset;
 
 ### Values
 
-The value is `none` or `normal`, or a `<content-list>`, a list of anonymous inline boxes that will replace the content of the selected element (in the specified order). Each `<content-list>` item is either content or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader), with an optional alternative text value of a `<string>` or `<counter>`:
+The value can be one of two keywords — `none` or `normal` — or, for DOM nodes, the content replacement can be an `<image>`, otherwise a list of of one or more anonymous inline boxes, called a `<content-list>`, that will replace the content of the selected element in the specified order. Each content-list item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader), with an optional alternative text value of a `<string>` or `<counter>`:
 
 - `none`
 
@@ -69,7 +71,11 @@ The value is `none` or `normal`, or a `<content-list>`, a list of anonymous inli
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, `normal` the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}.
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, `normal` the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin box, this computes to `contents`.
+
+- `contents` {{Experimental_Inline}}
+
+  - : When supported, the contents of the element itself.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -101,13 +107,13 @@ The value is `none` or `normal`, or a `<content-list>`, a list of anonymous inli
 
 - `<leader()>` {{Experimental_Inline}}
 
-  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When used as a value for `content`, the leader-type provided will be inserted as a repeating pattern visually connecting content across a horizontal line.
+  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern visually connecting content across a horizontal line.
 
 - `attr(x)`
 
   - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element or pseudo-element's originating element. The value of the element's attribute `x` as an unparsed string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute name parameter depends on the document language.
 
-- alternative text `/ <string> <counter>`
+- alternative text `/ <string> | <counter>`
   - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a string of text or counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. Note that if the browser does not support alternative text, the `content` declaration will be considered invalid and will be ignored. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} specifies the "alt text" for the element.
 
 ## Formal definition
@@ -120,9 +126,93 @@ The value is `none` or `normal`, or a `<content-list>`, a list of anonymous inli
 
 ## Examples
 
+The first examples created generated content on pseudo-elements. The last three are [examples of element replacement](#element-replacement-with-url).
+
+### Appending strings based on an element's class
+
+This example inserts generated text, coloring it red, after the text based on an element's class name.
+
+#### HTML
+
+```html
+<h2>Paperback Best Sellers</h2>
+<ol>
+  <li>Political Thriller</li>
+  <li class="new-entry">Halloween Stories</li>
+  <li>My Biography</li>
+  <li class="new-entry">Vampire Romance</li>
+</ol>
+```
+
+#### CSS
+
+```css
+.new-entry::after {
+  content: " New!"; /* The leading space creates separation
+                       between the DOM node's content and the generated content
+                       being added. */
+  color: red;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Appending_strings_based_on_an_elements_class', '100%', 160)}}
+
+### Quotes
+
+This example inserts differently colored quotation marks around quotes.
+
+#### HTML
+
+```html
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.
+  </q>
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
+</p>
+<p lang="fr-fr">
+  Mais c'est Magritte qui a dit,
+  <q lang="fr-fr"> Ceci n'est pas une pipe. </q>.
+</p>
+```
+
+#### CSS
+
+```css
+q {
+  color: #00f;
+}
+
+q::before,
+q::after {
+  font-size: larger;
+  color: #f00;
+  background: #ccc;
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Quotes', '100%', 200)}}
+
+Note the [type of quotes generated](/en-US/docs/Web/CSS/quotes#auto_quotes) is based on the language. Browsers add open- and close-quotes before and after {{HTMLElement("q")}} elements by default, so the quotes in this example would appear without them being explicitly set. They could have been turned off by setting `no-open-quote` and `no-close-quote`, or `none` value. They can also be turned off by setting the {{cssxref("quotes")}} property to `none` instead.
+
 ### Adding text to list item counters
 
-This example combines the counters function and text to prepend all list items with a more detailed counter. We set the content of the the list marker to be a concatenated content-list containing a counter between two strings.
+This example combines a counter sandwiched between two `<string>`s prepended to all list items, creating a more detailed marker for list items ({{HTMLElement("li")}}) within unordered lists ({{HTMLElement("ol")}}).
 
 #### HTML
 
@@ -161,11 +251,11 @@ li::marker {
 
 {{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
 
-The generated content on the marker adds the text "item ", with a space, followed by a counter, followed by a colon and an additional space. The `counter()` function created a numeric `items` counter in which nested numbers are separated with a period (`.`) in most browsers.
+The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
 
 ### Strings with attribute values
 
-This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select every fully qualified secure link, adding the value of the `href` attribute after the link text as the content of the {{cssxref("::after")}} pseudo-element.
+This example is useful for print stylesheets. It uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select every fully qualified secure link, adding the value of the `href` attribute after the link text as the content of the {{cssxref("::after")}} pseudo-element.
 
 #### HTML
 
@@ -183,6 +273,7 @@ This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selector
 a[href^="https://"]::after
 {
   content: " (URL: " attr(href) ")";
+  color: darkgreen;
 }
 ```
 
@@ -190,56 +281,12 @@ a[href^="https://"]::after
 
 {{EmbedLiveSample('Strings_with_attribute_values', '100%', 200)}}
 
-The generated content is the value of the `href` attribute, prepended by "URL:", followed by a space, all in parentheses.
+The generated content is the value of the `href` attribute, prepended by "URL: ", with a space, all in parentheses.
 
-### Quotes
+### Adding an image with alternative text
 
-This example inserts quotation marks around quotes.
-
-#### HTML
-
-```html
-<p>
-  According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
-    I was lucky enough to invent the Web at the time when the Internet already
-    existed - and had for a decade and a half.
-  </q>
-  We must understand that there is nothing fundamentally wrong with building on
-  the contributions of others.
-</p>
-<p lang="fr-fr">
-  Mais c'est Magritte qui a dit,
-  <q lang="fr-fr"> Ceci n'est pas une pipe. </q>.
-</p>
-```
-
-#### CSS
-
-```css
-q {
-  color: blue;
-}
-
-q::before {
-  content: open-quote;
-}
-
-q::after {
-  content: close-quote;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Quotes', '100%', 200)}}
-
-Note the type of quotes generated is language dependent.
-
-### Image combined with alternative text
-
-This example inserts an image before the link and provides alternative text that a screen reader can output as speech.
-Some browsers may also display the alternative text.
+This example inserts an image before the link. Alternative text that a screen reader can output as speech in included,
+which some browsers may display. To indicate if alternative text after a content list is supported or not, a fallback `content`, the CSS includes the message " - no alt text - ".
 
 #### HTML
 
@@ -251,10 +298,14 @@ Some browsers may also display the alternative text.
 
 The CSS to show the image and set the alternative text is shown below.
 This also sets the font and color for the content.
-This will only be used on browsers that _display_ the alternative text.
+This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the the fallback `content` value.
 
 ```css
 a::before {
+  /* fallback content */
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
+    " - no alt text - ";
+  /* content with alternative text */
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
     " MOZILLA: ";
   font:
@@ -266,71 +317,31 @@ a::before {
 
 #### Result
 
-The browser should display the icon before the link below.
-If using a screen reader, it should speak the word "MOZILLA" when it reaches the image.
+{{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
 
-{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
+If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "no alt text" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
 
 Note that on a browser that does not support the alternative text syntax, the whole line is invalid.
-In this case neither the image or alternative text will be used!
-You could partially address this issue by including CSS that adds the image before the line with them both.
-
-### Targeting classes
-
-This example inserts additional text after special items in a list.
-
-#### HTML
-
-```html
-<h2>Paperback Best Sellers</h2>
-<ol>
-  <li>Political Thriller</li>
-  <li class="new-entry">Halloween Stories</li>
-  <li>My Biography</li>
-  <li class="new-entry">Vampire Romance</li>
-</ol>
-```
-
-#### CSS
-
-```css
-.new-entry::after {
-  content: " New!"; /* The leading space creates separation
-                       between the added content and the
-                       rest of the content */
-  color: red;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Targeting_classes', '100%', 160)}}
+In this case, the previous `content` value, if supported, will be used.
 
 ### Element replacement with `url()`
 
-This example replaces a regular element's contents with an image {{cssxref("url", "url()")}}. The `id` of the element, generated on `::after`, is not displayed if the element is replaced.
+This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url", "url()")}} image function. We include generated content, attempting to add the `id` of the element generated on `::after`. This pseudo-element is not generated in browsers that support content replacement as the element is replaced.
 
 #### HTML
 
 ```html
-<div id="replaced">I disappear</div>
-<hr />
-<div id="notReplaced">I am not replaced</div>
+<div id="replaced">This content is replaced!</div>
 ```
 
 #### CSS
 
 ```css
-div {
-  min-height: 50px;
-  background: palegoldenrod;
-}
-
 #replaced {
   content: url("mdn.svg");
 }
 
-/* will not show if element is replaced */
+/* will not show if element replacement is supported */
 div::after {
   content: " (" attr(id) ")";
 }
@@ -340,36 +351,37 @@ div::after {
 
 {{EmbedLiveSample('Element_replacement_with_url', '100%',400)}}
 
-When generating content on regular elements (rather than just on pseudo-elements), the entire element is replaced; `::before` or `::after` pseudo-elements are not generated on replaced elements. In other words, only of the two CSS declarations is applied to each `<div>`.
+When generating content on regular elements (rather than just on pseudo-elements), the entire element is replaced. This means that `::before` and `::after` pseudo-elements are not generated.
 
 ### Element replacement with `<gradient>`
 
-This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The first element's contents are replaced with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. The second element, which is not replaced, includes generated text set on `::after`. This generated text includes a gradient image as a background.
+This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. With {{cssxref("@supports")}}, we provide alt text support and a {{cssxref("gradient/repeating-linear-gradient" ,"repeating-linear-gradient()")}} for browsers that support alt text with element content replacement.
 
 #### HTML
 
 ```html
 <div id="replaced">I disappear</div>
-<hr />
-<div id="notReplaced">I am not replaced</div>
 ```
 
 #### CSS
 
 ```css
 div {
-  width: 75%;
-  height: 75px;
-  border: 1px solid lightgrey;
+  border: 1px solid;
+  background-color: #ccc;
+  min-height: 100px;
+  min-width: 100px;
 }
 
 #replaced {
-  content: linear-gradient(purple, yellow);
+  content: linear-gradient(#639f, #c96a);
 }
-/* will not show if the element is replaced */
-div::after {
-  content: " (Check the browser compatibility. A browser may support CSS gradients, but not as a `content` value)";
-  background: linear-gradient(to right, yellow, pink);
+
+@supports (content: linear-gradient(#000, #fff) / "alt text") {
+  #replaced {
+    content: repeating-linear-gradient(blue 0, orange 10%) /
+      "Gradients and alt text are supported";
+  }
 }
 ```
 
@@ -377,7 +389,7 @@ div::after {
 
 {{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
 
-Check the [browser compatibility chart](#browser-compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers correctly render gradients when set as a `content` value.
+Check the [browser compatibility chart](#browser-compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
 
 ### Element replacement with `image-set()`
 

@@ -7,7 +7,9 @@ spec-urls: https://drafts.csswg.org/css-content/
 
 {{CSSRef}}
 
-The **CSS generated content** module defines how content can be added to a document with CSS. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node with a CSS generated value.
+The **CSS generated content** module defines an element' content can be replaced and content can be added to a document with CSS.
+
+Generated content can be used for content replacement, in which case the content of a DOM node is replaced with a CSS `<image>`. The CSS generated content also enables generating language-specific quotes, create custom list item numbers and bullets, and visually adding content by generating content on select pseudo-elements as anonymous replaced elements.
 
 ### Generated content in action
 
