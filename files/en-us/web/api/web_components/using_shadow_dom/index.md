@@ -66,18 +66,18 @@ Before shadow DOM was made available to web developers, browsers were already us
 
 ## Creating a shadow DOM
 
-The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `"root"`, and a {{htmlelement("span")}} element containing some text:
+The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `"host"`, and a {{htmlelement("span")}} element containing some text:
 
 ```html
-<div id="root"></div>
+<div id="host"></div>
 <span>I'm not in the shadow DOM</span>
 ```
 
-We're going to use the `"root"` element as the shadow root. We call {{domxref("Element.attachShadow()", "attachShadow()")}} on the root to create the shadow DOM, and can then add nodes to the shadow DOM just like we would to the main DOM. In this example we add a single `<span>` element:
+We're going to use the `"host"` element as the shadow host. We call {{domxref("Element.attachShadow()", "attachShadow()")}} on the host to create the shadow DOM, and can then add nodes to the shadow DOM just like we would to the main DOM. In this example we add a single `<span>` element:
 
 ```js
-const root = document.querySelector("#root");
-const shadow = root.attachShadow({ mode: "open" });
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
 const span = document.createElement("span");
 span.textContent = "I'm in the shadow DOM";
 shadow.appendChild(span);
@@ -94,7 +94,7 @@ So far this might not look like much. But let's see what happens if code running
 This page is just like the last one, except we've added two {{htmlelement("button")}} elements.
 
 ```html
-<div id="root"></div>
+<div id="host"></div>
 <span>I'm not in the shadow DOM</span>
 <br />
 
@@ -106,8 +106,8 @@ Clicking the "Uppercase span elements" button finds all `<span>` elements in the
 Clicking the "Reset" button just reloads the page, so you can try again.
 
 ```js
-const root = document.querySelector("#root");
-const shadow = root.attachShadow({ mode: "open" });
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
 const span = document.createElement("span");
 span.textContent = "I'm in the shadow DOM";
 shadow.appendChild(span);
@@ -132,10 +132,10 @@ If you click "Uppercase span elements", you'll see that {{domxref("Document.quer
 
 In the example above, we pass an argument `{ mode: "open" }` to `attachShadow()`. With `mode` set to `"open"`, then JavaScript in the page is able to access the internals of your shadow DOM through the {{domxref("Element.shadowRoot", "shadowRoot")}} property of the shadow host.
 
-In this example, as before, the HTML contains the shadow root, a `<span>` element in the main DOM tree, and two buttons:
+In this example, as before, the HTML contains the shadow host, a `<span>` element in the main DOM tree, and two buttons:
 
 ```html
-<div id="root"></div>
+<div id="host"></div>
 <span>I'm not in the shadow DOM</span>
 <br />
 
@@ -146,15 +146,15 @@ In this example, as before, the HTML contains the shadow root, a `<span>` elemen
 This time the "Uppercase" button uses `shadowRoot` to find the `<span>` elements in the DOM:
 
 ```js
-const root = document.querySelector("#root");
-const shadow = root.attachShadow({ mode: "open" });
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
 const span = document.createElement("span");
 span.textContent = "I'm in the shadow DOM";
 shadow.appendChild(span);
 
 const upper = document.querySelector("button#upper");
 upper.addEventListener("click", () => {
-  const spans = Array.from(root.shadowRoot.querySelectorAll("span"));
+  const spans = Array.from(host.shadowRoot.querySelectorAll("span"));
   for (const span of spans) {
     span.textContent = span.textContent.toUpperCase();
   }
@@ -177,15 +177,15 @@ However, you should not consider this a strong security mechanism, because there
 In this version of the page, the HTML is the same as the original:
 
 ```html
-<div id="root"></div>
+<div id="host"></div>
 <span>I'm not in the shadow DOM</span>
 ```
 
 In the JavaScript, we create the shadow DOM:
 
 ```js
-const root = document.querySelector("#root");
-const shadow = root.attachShadow({ mode: "open" });
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
 const span = document.createElement("span");
 span.textContent = "I'm in the shadow DOM";
 shadow.appendChild(span);
@@ -208,10 +208,10 @@ The page CSS does not affect nodes inside the shadow DOM:
 
 To style page elements in the shadow DOM, we can create a {{htmlelement("style")}} element and attach it to the shadow root. Rules defined in here will be scoped to the shadow DOM tree.
 
-Here, again, is the HTML containng our root and a `<span>`:
+Here, again, is the HTML containing our host and a `<span>`:
 
 ```html
-<div id="root"></div>
+<div id="host"></div>
 <span>I'm not in the shadow DOM</span>
 ```
 
@@ -227,9 +227,9 @@ span {
 This time we will create the shadow DOM and add a `<style>` element to it:
 
 ```js
-const root = document.querySelector("#root");
+const host = document.querySelector("#host");
 
-const shadow = root.attachShadow({ mode: "open" });
+const shadow = host.attachShadow({ mode: "open" });
 const style = document.createElement("style");
 style.textContent = `span { color: red; border: 2px dotted black;}`;
 shadow.appendChild(style);
