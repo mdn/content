@@ -135,7 +135,7 @@ The folowing properties doesn't have logical equivalents:
 The folowing properties accept only physical values:
 
 - {{CSSxRef("text-underline-position")}}
-- {{CSSxRef("box-shadow")}
+- {{CSSxRef("box-shadow")}}
 - {{CSSxRef("text-shadow")}}
 - {{CSSxRef("clip-path")}}
 
