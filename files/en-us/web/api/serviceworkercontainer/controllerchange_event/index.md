@@ -30,7 +30,9 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-// TBD
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+  console.log('The controller of current browsing context has changed.')
+})
 ```
 
 ## Specifications
