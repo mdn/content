@@ -35,7 +35,7 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1. Your client or server does not support range requests
+1. Your client or server does not support [range requests](/en-US/docs/Web/HTTP/Range_requests)
 2. Your server cannot cache range requests efficiently
 3. Your server cannot prefetch range requests efficiently
 4. The SIDX\* is large and having to load it first slows down startup a little

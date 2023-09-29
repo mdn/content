@@ -196,7 +196,7 @@ If you need to close the iterator, you need to use a {{jsxref("Statements/for...
 ## See also
 
 - [Polyfill of `Array.fromAsync` in `core-js`](https://github.com/zloirock/core-js#arrayfromasync)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}

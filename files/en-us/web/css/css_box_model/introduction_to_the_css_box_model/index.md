@@ -32,7 +32,7 @@ The thickness of the borders are determined by the {{cssxref("border-width")}} a
 
 ## Margin area
 
-The **margin area**, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the _margin-box width_ and the _margin-box height_.
+The **margin area**, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the _margin box width_ and the _margin box height_.
 
 The size of the margin area is determined by the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}, and shorthand {{cssxref("margin")}} properties. When [margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) occurs, the margin area is not clearly defined since margins are shared between boxes.
 

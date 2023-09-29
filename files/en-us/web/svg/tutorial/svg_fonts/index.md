@@ -105,7 +105,7 @@ The above mentioned `font-face-uri` element allows you to reference an external 
 <font>
   <font-face font-family="Super Sans">
     <font-face-src>
-      <font-face-uri xlink:href="fonts.svg#Super_Sans" />
+      <font-face-uri href="fonts.svg#Super_Sans" />
     </font-face-src>
   </font-face>
 </font>

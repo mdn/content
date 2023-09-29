@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.JSON
 
 {{JSRef}}
 
-The **`JSON`** namespace object contains static methods for parsing values from and converting values to [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}).
+The **`JSON`** namespace object contains static methods for parsing values from and converting values to [JavaScript Object Notation](https://json.org/) ({{Glossary("JSON")}}).
 
 ## Description
 
@@ -85,7 +85,7 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-Insignificant {{glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://unicode-table.com/en/0009/)), carriage return ([U+000D](https://unicode-table.com/en/000D/)), line feed ([U+000A](https://unicode-table.com/en/000A/)), and space ([U+0020](https://unicode-table.com/en/0020/)) characters are the only valid whitespace characters.
+Insignificant {{Glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://unicode-table.com/en/0009/)), carriage return ([U+000D](https://unicode-table.com/en/000D/)), line feed ([U+000A](https://unicode-table.com/en/000A/)), and space ([U+0020](https://unicode-table.com/en/0020/)) characters are the only valid whitespace characters.
 
 ## Static properties
 
@@ -156,7 +156,7 @@ console.log(JSON.parse(jsonText));
 ## See also
 
 - {{jsxref("Date.prototype.toJSON()")}}
-- [JSON Diff](https://json-diff.com/) checker
+- [JSON Diff](https://json-diff.com/)
 - [JSON Beautifier/editor](https://jsonbeautifier.org/)
 - [JSON Parser](https://jsonparser.org/)
 - [JSON Validator](https://tools.learningcontainer.com/json-validator/)

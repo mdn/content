@@ -19,7 +19,7 @@ The **`constructor`** method is a special method of a [class](/en-US/docs/Web/Ja
 constructor() { /* … */ }
 constructor(argument0) { /* … */ }
 constructor(argument0, argument1) { /* … */ }
-constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
+constructor(argument0, argument1, /* …, */ argumentN) { /* … */ }
 ```
 
 There are some additional syntax restrictions:
@@ -50,13 +50,13 @@ otto.introduce(); // Hello, my name is Otto
 If you don't provide your own constructor, then a default constructor will be supplied for you.
 If your class is a base class, the default constructor is empty:
 
-```js
+```js-nolint
 constructor() {}
 ```
 
 If your class is a derived class, the default constructor calls the parent constructor, passing along any arguments that were provided:
 
-```js
+```js-nolint
 constructor(...args) {
   super(...args);
 }
@@ -280,7 +280,7 @@ console.log(newInstance.name); // Rectangle
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 - {{jsxref("Statements/class", "class")}}

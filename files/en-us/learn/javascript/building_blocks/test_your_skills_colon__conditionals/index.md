@@ -62,18 +62,6 @@ Try updating the live code below to recreate the finished example. After you've 
 
 ## Conditionals 3
 
-In this task you need to take the code you wrote for the second task, and rewrite the inner `if...else if...else` to use a `switch` statement instead.
-
-Try updating the live code below to recreate the finished example:
-
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
-
-> **Callout:**
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals3-download.html) to work in your own editor or in an online editor.
-
-## Conditionals 4
-
 For the final task you are given four variables:
 
 - `machineActive` — contains an indicator of whether the login machine is switched on or not (`true`/`false`).
@@ -87,7 +75,7 @@ If the machine is on, we also want a second conditional to run that checks wheth
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals4.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
 
 > **Callout:**
 >

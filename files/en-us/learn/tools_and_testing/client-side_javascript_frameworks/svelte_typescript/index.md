@@ -348,7 +348,7 @@ Now we'll do the same for the `MoreActions.svelte` component.
 
 1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter((t) =>...)`.
 
-   ```
+   ```plain
    Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
      export let todos
 
@@ -406,17 +406,17 @@ Now we'll take care of the `FilterButton` component.
    </script>
 
    <div class="filters btn-group stack-exception">
-     <button class="btn toggle-btn" class:btn__primary={filter === "all"} aria-pressed={filter === "all"} on:click={()=> filter = "all"} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={()=> filter = Filter.ALL} >
        <span class="visually-hidden">Show</span>
        <span>All</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === "active"} aria-pressed={filter === "active"} on:click={()=> filter = "active"} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ACTIVE} aria-pressed={filter === Filter.ACTIVE} on:click={()=> filter = Filter.ACTIVE} >
        <span class="visually-hidden">Show</span>
        <span>Active</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === "completed"} aria-pressed={filter === "completed"} on:click={()=> filter = "completed"} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={()=> filter = Filter.COMPLETED} >
        <span class="visually-hidden">Show</span>
        <span>Completed</span>
        <span class="visually-hidden">tasks</span>
@@ -546,7 +546,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 
 We are encountering the following errors related to passing `todos` to the `TodosStatus.svelte` (and `Todo.svelte`) components:
 
-```
+```plain
 ./src/components/Todos.svelte:70:39
 Error: Type 'TodoType[]' is not assignable to type 'undefined'. (ts)
   <TodosStatus bind:this={todosStatus} {todos} />

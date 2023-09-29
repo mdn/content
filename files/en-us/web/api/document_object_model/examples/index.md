@@ -180,7 +180,7 @@ p {
 
 This script outputs the following:
 
-```
+```plain
 BODY
 P
 #LUMPY

@@ -12,17 +12,18 @@ The **`return()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.return(value)
+asyncGeneratorInstance.return()
+asyncGeneratorInstance.return(value)
 ```
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
   - : The value to return.
 
 ### Return value
 
-A {{jsxref("Promise")}} which resolves with an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+A {{jsxref("Promise")}} which resolves with an {{jsxref("Object")}} with two properties:
 
 - `done`
   - : A boolean value:
@@ -95,4 +96,4 @@ asyncGen.return(1).then((res) => console.log(res)); // { value: 1, done: true }
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

@@ -391,8 +391,7 @@ py -3 -m django --version
 
 Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
 
-Note that you should use a [Django aware linter](https://djangopackages.org/grids/g/linters/) like [pylint-django](https://pypi.org/project/pylint-django/).
-Commonly used Python linters, such as `pylint`, may incorrectly report errors in the standard files generated for Django.
+Note that you should use a Django-aware linter such as [pylint-django](https://pypi.org/project/pylint-django/), because some common Python linters (such as `pylint`) incorrectly report errors in the standard files generated for Django.
 
 ## Testing your installation
 
