@@ -13,7 +13,7 @@ Generated content can be used for content replacement, in which case the content
 
 ### Generated content in action
 
-{{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%', 720)}}
+{{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%',420)}}
 
 The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange {{cssxref("border-left", "left border")}} added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
 
@@ -53,24 +53,24 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ## Related concepts
 
-[CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 
-- {{cssxref("::before")}} pseudo-element
-- {{cssxref("::after")}} pseudo-element
-- {{cssxref("::marker")}} pseudo-element
+  - {{cssxref("::before")}} pseudo-element
+  - {{cssxref("::after")}} pseudo-element
+  - {{cssxref("::marker")}} pseudo-element
 
-[CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
-- {{cssxref("counter", "counter()")}} function
-- {{cssxref("counters", "counters()")}} function
-- {{cssxref("counter-increment")}} property
-- {{cssxref("counter-reset")}} property
+  - {{cssxref("counter", "counter()")}} function
+  - {{cssxref("counters", "counters()")}} function
+  - {{cssxref("counter-increment")}} property
+  - {{cssxref("counter-reset")}} property
 
-[CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
 
-- {{cssxref("attr", "attr()")}} function
-- {{cssxref("string")}} data type
-- {{cssxref("image")}} data type
+  - {{cssxref("attr", "attr()")}} function
+  - {{cssxref("string")}} data type
+  - {{cssxref("image")}} data type
 
 ## Specifications
 
