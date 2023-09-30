@@ -15,7 +15,7 @@ In other words, the value of the property is computed like this: `currentEvent.m
 
 ## Value
 
-A number.
+A number. Always zero on all {{domxref("MouseEvent")}} other than `mousemove`.
 
 ## Examples
 
