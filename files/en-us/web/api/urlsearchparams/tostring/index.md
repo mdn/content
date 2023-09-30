@@ -13,7 +13,8 @@ The **`toString()`** method of the
 URL.
 
 > **Note:** This method returns the query string without the question
-> mark. This is different from [window.location.search](/en-US/docs/Web/API/HTMLAnchorElement/search),
+> mark. This is different from [Location.search](/en-US/docs/Web/API/Location/search)
+> and [HTMLAnchorElement.search](/en-US/docs/Web/API/HTMLAnchorElement/search),
 > which includes it.
 
 {{availableinworkers}}
