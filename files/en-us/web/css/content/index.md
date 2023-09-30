@@ -7,7 +7,7 @@ browser-compat: css.properties.content
 
 {{CSSRef}}
 
-The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element's content with a generated value. The `content` property is used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` controls whether the element renders at all, replacing the element with an image, text, or both.
+The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` defines the content as images, text, both, or none, which determines whether the element renders at all.
 
 Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
 
@@ -62,7 +62,7 @@ content: unset;
 
 ### Values
 
-The value can be one of two keywords — `none` or `normal` — or, for DOM nodes, the content replacement can be an `<image>`, otherwise a list of of one or more anonymous inline boxes, called a `<content-list>`, that will replace the content of the selected element in the specified order. Each content-list item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader), with an optional alternative text value of a `<string>` or `<counter>`:
+The value can be one of two keywords — `none` or `normal` — or either `<content-replacement>` when replacing a DOM node or a `<content-list>` for pseudo-elements and margin boxes, with optional alternative text value of a `<string>` or `<counter>`. Content replacement is always an `<image>`. A content-list is a list of of one or more anonymous inline boxes appearing in the order specified. Each content-list item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader):
 
 - `none`
 
