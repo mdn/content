@@ -182,7 +182,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
 - {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
 - {{jsxref("Set.prototype.intersection()")}}
-  - : Takes a set and returns a new set containing elements both in this set and in the given set.
+  - : Takes a set and returns a new set containing elements in both this set and the given set.
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
   - : Takes a set and returns a boolean indicating if this set has no elements in common with the given set.
 - {{jsxref("Set.prototype.isSubsetOf()")}}
