@@ -32,7 +32,7 @@ In mathematical notation, _union_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diagram illustrating the union between set A and B](diagram.svg)
+![A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles.](diagram.svg)
 
 `union()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, it iterates over `other` by calling its `keys()` method, and constructs a new set with all elements in `this`, followed by all elements in `other` that are not present in `this`.
 

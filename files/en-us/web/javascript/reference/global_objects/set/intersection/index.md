@@ -32,7 +32,7 @@ In mathematical notation, _intersection_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diagram illustrating the intersection between set A and B](diagram.svg)
+![A Venn diagram where two circles overlap. The intersection of A and B is the part where they overlap.](diagram.svg)
 
 `intersection()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, its behavior depends on the sizes of `this` and `other`:
 

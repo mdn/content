@@ -32,7 +32,7 @@ Two sets are _disjoint_ if they have no elements in common. In mathematical nota
 
 And using Venn diagram:
 
-![A Venn diagram illustrating two sets A and B with no intersection](diagram.svg)
+![A Venn diagram with two circles. A and B are disjoint because the circles have no region of overlap.](diagram.svg)
 
 `isDisjointFrom()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, its behavior depends on the sizes of `this` and `other`:
 

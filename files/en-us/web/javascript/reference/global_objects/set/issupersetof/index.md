@@ -32,7 +32,7 @@ In mathematical notation, _superset_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diagram illustrating set A being a superset of B](diagram.svg)
+![A Venn diagram with two circles. A is a superset of B because B is completely contained in A.](diagram.svg)
 
 > **Note:** The _superset_ relationship is not _proper superset_, which means `isSupersetOf()` returns `true` if `this` and `other` contain the same elements.
 
