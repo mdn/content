@@ -324,7 +324,9 @@ In browsers that don't support the alternative text syntax the whole declaration
 
 ### Element replacement with `url()`
 
-This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url", "url()")}} image function. We include generated content, attempting to add the `id` of the element generated on `::after`. This pseudo-element is not generated in browsers that support content replacement as the element is replaced.
+This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url", "url()")}} image function.
+
+Pseudo-elements aren't rendered on replaced elements. As this element is replaced, any matching `::after` or `::before` are not generated or applied. To demonstrate this, we include an `::after` declaration block, attempting to add the `id` as generated content. This pseudo-element will not be generated as the element is replaced.
 
 #### HTML
 
