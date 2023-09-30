@@ -20,7 +20,7 @@ BigInt(value)
 ### Parameters
 
 - `value`
-  - : The value to be parsed as BigInt. It may be a string, an integer, a boolean, or another `BigInt`.
+  - : The value to be converted to a BigInt value. It may be a string, an integer, a boolean, or another `BigInt`.
 
 ### Return value
 
