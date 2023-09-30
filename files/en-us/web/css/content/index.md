@@ -75,7 +75,7 @@ The value can be one of two keywords — `none` or `normal` — or either `<cont
 
 - `contents` {{Experimental_Inline}}
 
-  - : When supported, the contents of the element itself.
+  - : Adds the contents of the element itself to the generated content value.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -285,8 +285,7 @@ The generated content is the value of the `href` attribute, prepended by "URL: "
 
 ### Adding an image with alternative text
 
-This example inserts an image before the link. Alternative text that a screen reader can output as speech is included,
-which some browsers may display. To indicate if alternative text after a content list is supported or not, a fallback `content`, the CSS includes the message " - no alt text - ".
+This example inserts an image before all links. Two `content` values are provided. The later `content` value includes an image with alternative text that a screen reader can output as speech. If a browser does not support alternative text, this declaration will be considered invalid, with the previous `content` value displaying. This fallback content list include an image and the message " - alt text is not supported - ".
 
 #### HTML
 
@@ -304,7 +303,7 @@ This will be used on browsers that _display_ the alternative text and in browser
 a::before {
   /* fallback content */
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
-    " - no alt text - ";
+    " - alt text is not supported - ";
   /* content with alternative text */
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
     " MOZILLA: ";
@@ -319,10 +318,9 @@ a::before {
 
 {{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
 
-If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "no alt text" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
+If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "alt text is not supported" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
 
-Note that on a browser that does not support the alternative text syntax, the whole line is invalid.
-In this case, the previous `content` value, if supported, will be used.
+In browsers that don't support the alternative text syntax the whole declaration containing the alt text is invalid. In this case, the previous `content` value will be used, showing the image and "alt text is not supported" text.
 
 ### Element replacement with `url()`
 
