@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods for grouping the elements of an iterable are now supported (See [Firefox bug 1792650](https://bugzil.la/1792650) for more details.)
+
 #### Removals
 
 ### SVG

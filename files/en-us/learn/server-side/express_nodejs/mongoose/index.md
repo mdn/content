@@ -412,7 +412,7 @@ const tennisPlayers = await Athlete.find(
 > **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application.
 > If your application expects a search to find a value you can check the number of entries returned in the result.
 
-Query APIs, such as [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>), return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js).
+Query APIs, such as [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>), return a variable of type [Query](https://mongoosejs.com/docs/api/query.html).
 You can use a query object to build up a query in parts before executing it with the [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec) method.
 `exec()` executes the query and returns a promise that you can `await` on for the result.
 
