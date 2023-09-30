@@ -152,10 +152,7 @@ The following example shows how to use those attributes, and includes basic even
   }
 </script>
 
-<p
-  id="target"
-  ondrop="dropHandler(event)"
-  ondragover="dragoverHandler(event)">
+<p id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
   Drop Zone
 </p>
 ```
