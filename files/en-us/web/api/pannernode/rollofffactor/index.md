@@ -1,16 +1,11 @@
 ---
-title: PannerNode.rolloffFactor
+title: "PannerNode: rolloffFactor property"
+short-title: rolloffFactor
 slug: Web/API/PannerNode/rolloffFactor
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - rollOffFactor
 browser-compat: api.PannerNode.rolloffFactor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models. The `rolloffFactor` property's default value is `1`.
@@ -55,8 +50,7 @@ const scheduleTestTone = (rolloffFactor, startTime) => {
   panner.positionZ.setValueAtTime(0, startTime);
   panner.positionZ.linearRampToValueAtTime(Z_DISTANCE, startTime + NOTE_LENGTH);
 
-  osc.connect(panner)
-     .connect(context.destination);
+  osc.connect(panner).connect(context.destination);
 
   osc.start(startTime);
   osc.stop(startTime + NOTE_LENGTH);

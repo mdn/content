@@ -1,28 +1,20 @@
 ---
-title: HTMLImageElement.longDesc
+title: "HTMLImageElement: longDesc property"
+short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Long description
-  - Property
-  - Reference
-  - description
-  - img
-  - longDesc
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _deprecated_ property **`longDesc`** on
 the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
 which contains a long-form description of the image. This can be used to
 provide optional added details beyond the short description provided in the
-{{htmlattrxref("title")}} attribute.
+[`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute.
 
 ## Value
 
@@ -44,7 +36,10 @@ encapsulate the image within a link using the {{HTMLElement("a")}} element.
 Consider the following older HTML:
 
 ```html
-<img src="taco-tuesday.jpg" alt="Taco Tuesday" longDesc="image-descriptions/taco-tuesday.html">
+<img
+  src="taco-tuesday.jpg"
+  alt="Taco Tuesday"
+  longdesc="image-descriptions/taco-tuesday.html" />
 ```
 
 Here, the `longDesc` is used to indicate that the user should be able to
@@ -55,7 +50,7 @@ This can be easily converted into modern HTML:
 
 ```html
 <a href="image-descriptions/taco-tuesday.html">
-  <img src="taco-tuesday.jpg" alt="Taco Tuesday" >
+  <img src="taco-tuesday.jpg" alt="Taco Tuesday" />
 </a>
 ```
 

@@ -1,17 +1,11 @@
 ---
-title: Element.ariaPlaceholder
+title: "Element: ariaPlaceholder property"
+short-title: ariaPlaceholder
 slug: Web/API/Element/ariaPlaceholder
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPlaceholder
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaPlaceholder
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface reflects the value of the `aria-placeholder` attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
@@ -28,13 +22,18 @@ In this example the `aria-placeholder` attribute on the element with an ID of `t
 
 ```html
 <div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="txtboxLabel"></div>
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaPlaceholder); // "5-digit zipcode"
-el.ariaPlaceholder = "12345"
+el.ariaPlaceholder = "12345";
 console.log(el.ariaPlaceholder); // "12345"
 ```
 

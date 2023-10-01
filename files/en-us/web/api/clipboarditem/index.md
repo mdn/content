@@ -2,18 +2,9 @@
 title: ClipboardItem
 slug: Web/API/ClipboardItem
 page-type: web-api-interface
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Interface
-  - Reference
-  - copy
-  - paste
 browser-compat: api.ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **`ClipboardItem`** interface of the {{domxref('Clipboard API')}} represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
@@ -31,7 +22,7 @@ Access to the contents of the clipboard is gated behind the [Permissions API](/e
 - {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
   - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value.
 
-## Properties
+## Instance properties
 
 _This interface provides the following properties._
 
@@ -40,7 +31,7 @@ _This interface provides the following properties._
 - {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
   - : Returns one of the following: `"unspecified"`, `"inline"` or `"attachment"`.
 
-## Methods
+## Instance methods
 
 _This interface defines the following methods._
 
@@ -56,16 +47,16 @@ Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = '/myimage.png';
+    const imgURL = "/myimage.png";
     const data = await fetch(imgURL);
     const blob = await data.blob();
 
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Fetched image copied.');
+    console.log("Fetched image copied.");
   } catch (err) {
     console.error(err.name, err.message);
   }
@@ -82,14 +73,11 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
         // we can now use blob here
       }
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

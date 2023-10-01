@@ -1,11 +1,9 @@
 ---
 title: Adapting XUL Applications for Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
-tags:
-  - Add-ons
-  - Extensions
-  - XUL
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This page contains a list of changes in [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5), affecting XUL developers.

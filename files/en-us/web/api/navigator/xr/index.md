@@ -1,23 +1,14 @@
 ---
-title: Navigator.xr
+title: "Navigator: xr property"
+short-title: xr
 slug: Web/API/Navigator/xr
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Getter
-  - Graphics
-  - Navigator
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - XR
+status:
+  - experimental
 browser-compat: api.Navigator.xr
 ---
-{{APIRef("WebXR Device API")}} {{SecureContext_Header}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The read-only **`xr`** property
 provided by the {{domxref("Navigator")}} interface returns an {{domxref("XRSystem")}} object

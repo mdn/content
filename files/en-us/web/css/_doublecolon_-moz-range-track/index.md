@@ -1,15 +1,12 @@
 ---
-title: '::-moz-range-track'
+title: "::-moz-range-track"
 slug: Web/CSS/::-moz-range-track
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-range-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _track_ (i.e., groove) in which the indicator slides in an {{HTMLElement("input")}} of `type="range"`.
@@ -18,8 +15,10 @@ The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-range-track
+```css
+::-moz-range-track {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -27,13 +26,13 @@ The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background-color: green;
 }
 ```
@@ -64,7 +63,6 @@ Not part of any standard.
 - Similar pseudo-elements used by other browsers:
 
   - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)
-  - {{cssxref("::-ms-track")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

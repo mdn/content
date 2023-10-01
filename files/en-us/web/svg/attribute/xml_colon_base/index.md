@@ -1,12 +1,12 @@
 ---
 title: xml:base
 slug: Web/SVG/Attribute/xml:base
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.core.xml_base
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xml:base`** attribute specifies a base {{Glossary("IRI")}} other than the base IRI of the document or external entity.

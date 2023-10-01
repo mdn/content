@@ -2,15 +2,10 @@
 title: Badging API
 slug: Web/API/Badging_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Badging API
-  - Experimental
 browser-compat: api.Navigator.setAppBadge
 ---
-{{DefaultAPISidebar("Badging API")}}{{SeeCompatTable}}
+
+{{DefaultAPISidebar("Badging API")}}
 
 The **Badging API** gives web developers a method of setting a badge on a document or application, to act as a notification that state has changed without displaying a more distracting notification. A common use case for this would be an application with a messaging feature displaying a badge on the app icon to show that new messages have arrived.
 
@@ -77,19 +72,19 @@ None.
 To set a notification badge on the current document with no value:
 
 ```js
-navigator.setClientBadge()
+navigator.setClientBadge();
 ```
 
 To clear a notification badge on the current document:
 
 ```js
-navigator.clearClientBadge()
+navigator.clearClientBadge();
 ```
 
 To set a notification badge on the current app with a value of 12:
 
 ```js
-navigator.setAppBadge(12)
+navigator.setAppBadge(12);
 ```
 
 ## Specifications

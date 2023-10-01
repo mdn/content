@@ -1,15 +1,13 @@
 ---
-title: Navigator.mimeTypes
+title: "Navigator: mimeTypes property"
+short-title: mimeTypes
 slug: Web/API/Navigator/mimeTypes
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Navigator
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Navigator.mimeTypes
 ---
+
 {{ ApiRef("HTML DOM") }}{{deprecated_header}}
 
 Returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized and supported by the browser.
@@ -37,10 +35,10 @@ The description and file suffixes supported by enabled plugins are hard coded to
 The code below tests whether PDF files can be viewed inline, and then prints the description of the plugin and the file suffixes it supports.
 
 ```js
-if ('application/pdf' in navigator.mimeTypes) {
+if ("application/pdf" in navigator.mimeTypes) {
   // browser supports inline viewing of PDF files.
 
-  const { description, suffixes } = navigator.mimeTypes['application/pdf'];
+  const { description, suffixes } = navigator.mimeTypes["application/pdf"];
   console.log(`Description: ${description}, Suffix: ${suffixes}`);
   // expected output: Description: Portable Document Format, Suffix: pdf
 }

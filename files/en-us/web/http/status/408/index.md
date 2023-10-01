@@ -1,14 +1,10 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.7
+page-type: http-status-code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
@@ -28,7 +24,7 @@ use HTTP pre-connection mechanisms to speed up surfing.
 
 ## Status
 
-```
+```http
 408 Request Timeout
 ```
 

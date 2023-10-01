@@ -1,16 +1,13 @@
 ---
-title: Window.scrollByLines()
+title: "Window: scrollByLines() method"
+short-title: scrollByLines()
 slug: Web/API/Window/scrollByLines
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.scrollByLines
 ---
+
 {{ ApiRef() }} {{Non-standard_header}}
 
 The **`Window.scrollByLines()`** method scrolls the document by
@@ -18,7 +15,7 @@ the specified number of lines.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollByLines(lines)
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: File.type
+title: "File: type property"
+short-title: type
 slug: Web/API/File/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.type
 ---
+
 {{APIRef("File API")}}
 
 Returns the media type ([MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) of the file represented by a {{domxref("File")}} object.
@@ -37,15 +33,15 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
-    output.textContent += `${file.name}: ${file.type || 'unknown'}\n`;
+    output.textContent += `${file.name}: ${file.type || "unknown"}\n`;
   }
 });
 ```

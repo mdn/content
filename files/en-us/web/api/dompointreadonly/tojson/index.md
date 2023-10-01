@@ -1,21 +1,11 @@
 ---
-title: DOMPointReadOnly.toJSON()
+title: "DOMPointReadOnly: toJSON() method"
+short-title: toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - JSON
-  - Method
-  - Point
-  - Reference
-  - toJSON
 browser-compat: api.DOMPointReadOnly.toJSON
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("DOMPointReadOnly")}} method
@@ -24,7 +14,7 @@ The {{domxref("DOMPointReadOnly")}} method
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

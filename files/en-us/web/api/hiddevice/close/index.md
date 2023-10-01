@@ -1,23 +1,20 @@
 ---
-title: HIDDevice.close()
+title: "HIDDevice: close() method"
+short-title: close()
 slug: Web/API/HIDDevice/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.close
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

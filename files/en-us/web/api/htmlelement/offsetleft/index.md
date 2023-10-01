@@ -1,16 +1,11 @@
 ---
-title: HTMLElement.offsetLeft
+title: "HTMLElement: offsetLeft property"
+short-title: offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLElement.offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetLeft`** read-only property returns the number of pixels that the _upper left corner_ of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.
@@ -36,16 +31,18 @@ if (tOLeft > 5) {
 
 This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
 
-![](offsetleft.jpg)
+![A sentence that reads: Short span. This text is completely within a div with a blue border. A sentence that reads: Long span that wraps within this div. The words "long span that wraps" is within a box with a red border. The words "within this div" are within the div with the blue border. ](offsetleft.jpg)
 
 ```html
-<div style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
+<div
+  style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
   <span>Short span. </span>
   <span id="longspan">Long span that wraps within this div.</span>
 </div>
 
-<div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10">
-</div>
+<div
+  id="box"
+  style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"></div>
 
 <script>
   const box = document.getElementById("box");

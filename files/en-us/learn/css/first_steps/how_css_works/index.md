@@ -1,12 +1,9 @@
 ---
 title: How CSS works
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - Learn
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
 
@@ -79,7 +76,7 @@ Take the following HTML code:
 
 In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
 
-```
+```plain
 P
 ├─ "Let's use:"
 ├─ SPAN
@@ -90,17 +87,19 @@ P
     └─ "Sheets"
 ```
 
-This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:
+This is how a browser interprets the previous HTML snippet — it renders the above DOM tree and then outputs it in the browser like so:
 
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Applying CSS to the DOM
 
-Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:
+Let's say we add some CSS to our document, to style it. Again, the HTML is as follows:
 
 ```html
 <p>
@@ -120,7 +119,7 @@ span {
 }
 ```
 
-The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS has a `span` selector, the browser will be able to sort the CSS very quickly! It will apply that rule to each one of the three `<span>`s, then paint the final visual representation to the screen.
+The browser parses the HTML and creates a DOM from it. Next, it parses the CSS. Since the only rule available in the CSS has a `span` selector, the browser sorts the CSS very quickly! It applies that rule to each one of the three `<span>`s, then paints the final visual representation to the screen.
 
 The updated output is as follows:
 
@@ -130,7 +129,7 @@ In our [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) arti
 
 ## What happens if a browser encounters CSS it doesn't understand?
 
-[In an earlier lesson](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support) I mentioned that browsers do not all implement new CSS at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
+The ["Browser support information" section in the "What is CSS" article](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support_information) mentioned that browsers do not necessarily implement new CSS features at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
 
 The answer is that it does nothing, and just moves on to the next bit of CSS!
 
@@ -141,7 +140,7 @@ Similarly, if a browser encounters a selector that it doesn't understand, it wil
 In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css
@@ -165,18 +164,10 @@ This works particularly well when you want to use a value that is quite new and 
 }
 ```
 
-We will look at many more ways to support varying browsers in later lessons.
+We will look at many more ways to support various browsers in later lessons.
 
 ## Summary
 
 You've nearly finished this module — we only have one more thing to do. In the [Styling a biography page assessment](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page) you'll use your new knowledge to restyle an example, testing out some CSS in the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

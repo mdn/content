@@ -1,21 +1,11 @@
 ---
-title: ClipboardItem.presentationStyle
+title: "ClipboardItem: presentationStyle property"
+short-title: presentationStyle
 slug: Web/API/ClipboardItem/presentationStyle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Property
-  - Read-only
-  - Reference
-  - presentationStyle
-  - copy
-  - paste
 browser-compat: api.ClipboardItem.presentationStyle
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The read-only
@@ -36,11 +26,8 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       console.log(clipboardItem.presentationStyle);
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

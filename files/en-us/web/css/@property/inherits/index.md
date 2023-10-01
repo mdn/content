@@ -1,15 +1,11 @@
 ---
 title: inherits
 slug: Web/CSS/@property/inherits
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.inherits
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and controls whether the custom property registration specified by `@property` inherits by default.
 
@@ -17,13 +13,13 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: true;
   initial-value: #c0ffee;
 }
@@ -42,9 +38,7 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Formal syntax
 
-```
-true | false
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -54,20 +48,20 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 ```
 
-Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}}:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

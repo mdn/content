@@ -1,17 +1,12 @@
 ---
-title: FileSystemDirectoryHandle.keys()
+title: "FileSystemDirectoryHandle: keys() method"
+short-title: keys()
 slug: Web/API/FileSystemDirectoryHandle/keys
 page-type: web-api-instance-method
-tags:
-  - Directories
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Files
-  - Iterable
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`keys()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
@@ -19,8 +14,8 @@ containing the keys for each item in `FileSystemDirectoryHandle`.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.keys();
+```js-nolint
+FileSystemDirectoryHandle.keys()
 ```
 
 ### Parameters
@@ -33,7 +28,13 @@ A new {{jsxref('Array')}}
 
 ## Examples
 
-Todo
+```js
+const dirHandle = await window.showDirectoryPicker();
+
+for await (const key of dirHandle.keys()) {
+  console.log(key);
+}
+```
 
 ## Specifications
 
@@ -45,5 +46,5 @@ Todo
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

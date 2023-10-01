@@ -2,11 +2,8 @@
 title: Proposing new content or features
 slug: MDN/Community/Issues/Content_suggestions_feature_proposals
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
+
 {{MDNSidebar}}
 
 We are always interested in hearing from our community about new content or feature suggestions you may have for MDN Web Docs. However, even though we are open to suggestions, we have to keep the following in mind:

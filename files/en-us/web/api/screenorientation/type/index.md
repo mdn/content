@@ -1,17 +1,11 @@
 ---
-title: ScreenOrientation.type
+title: "ScreenOrientation: type property"
+short-title: type
 slug: Web/API/ScreenOrientation/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Orientation
-  - Property
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - Type
 browser-compat: api.ScreenOrientation.type
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`type`** read-only property of the

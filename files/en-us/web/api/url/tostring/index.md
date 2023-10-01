@@ -1,16 +1,11 @@
 ---
-title: URL.toString()
+title: "URL: toString() method"
+short-title: toString()
 slug: Web/API/URL/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Stringifier
-  - URL
-  - URL API
 browser-compat: api.URL.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URL.toString()`** {{Glossary("stringifier")}} method returns a
@@ -21,7 +16,7 @@ of {{domxref("URL.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -36,7 +31,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString",
+);
 url.toString(); // should return the URL as a string
 ```
 

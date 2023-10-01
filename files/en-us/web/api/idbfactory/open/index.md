@@ -1,18 +1,11 @@
 ---
-title: IDBFactory.open()
+title: "IDBFactory: open() method"
+short-title: open()
 slug: Web/API/IDBFactory/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - open
 browser-compat: api.IDBFactory.open
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`open()`** method of the {{domxref("IDBFactory")}} interface requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
@@ -26,7 +19,7 @@ May trigger `upgradeneeded`, `blocked` or `versionchange` events.
 
 ## Syntax
 
-```js
+```js-nolint
 open(name)
 open(name, version)
 ```
@@ -43,6 +36,8 @@ open(name, version)
 
 A {{domxref("IDBOpenDBRequest")}} object on which subsequent events related to this request are fired.
 
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is a {{domxref("IDBDatabase")}} object representing the connection to the database.
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}
@@ -57,7 +52,7 @@ const request = window.indexedDB.open("toDoList", 4);
 ```
 
 In the following code snippet, we make a request to open a database, and include handlers for the success and error cases.
-For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([View the example live](https://mdn.github.io/to-do-notifications/)).
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const note = document.querySelector("ul");
@@ -68,11 +63,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being opened
 // successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on, for opening
@@ -92,10 +87,10 @@ DBOpenRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+- [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

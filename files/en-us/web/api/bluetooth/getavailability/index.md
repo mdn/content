@@ -1,15 +1,13 @@
 ---
-title: Bluetooth.getAvailability()
+title: "Bluetooth: getAvailability() method"
+short-title: getAvailability()
 slug: Web/API/Bluetooth/getAvailability
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - Reference
-  - Web Bluetooth API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Bluetooth.getAvailability
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
 The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface returns `true` if the device has a Bluetooth adapter, and false otherwise (unless the user has configured the browser to not expose a real value).
@@ -21,7 +19,7 @@ The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface ret
 
 ## Syntax
 
-```js
+```js-nolint
 getAvailability()
 ```
 

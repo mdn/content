@@ -1,16 +1,14 @@
 ---
-title: NavigatorUAData.getHighEntropyValues()
+title: "NavigatorUAData: getHighEntropyValues() method"
+short-title: getHighEntropyValues()
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getHighEntropyValues
-  - NavigatorUAData
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
-{{DefaultAPISidebar("")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
 
@@ -21,7 +19,7 @@ The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} in
 
 ## Syntax
 
-```js
+```js-nolint
 getHighEntropyValues(hints)
 ```
 
@@ -35,7 +33,7 @@ getHighEntropyValues(hints)
     - `"bitness"`
     - `"model"`
     - `"platformVersion"`
-    - `"uaFullVersion"` {{deprecated_inline}}
+    - `"uaFullVersion"` {{Deprecated_Inline}}
     - `"fullVersionList"`
 
 ### Return value
@@ -44,33 +42,33 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
 
 - `brands`
   - : Returns an array of objects containing `brand` and `version` specifying the browser brand and its version (the same information as provided by {{domxref("NavigatorUAData.brands")}}).
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
 - `mobile`
   - : Returns `true` if the user agent is running on a mobile device (the same information as provided by {{domxref("NavigatorUAData.mobile")}}).
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Mobile")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Mobile")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
 - `platform`
   - : Returns a string describing the platform the user agent is running on, like `"Windows"` (the same information as provided by {{domxref("NavigatorUAData.platform")}}).
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
 - `architecture`
   - : A string containing the platform architecture. For example, `"x86"`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Arch")}} header after the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Arch")}} header after the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `bitness`
   - : A string containing the architecture bitness. For example, `"32"` or `"64"`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `model`
   - : A string containing the model of mobile device. For example, `"Pixel 2XL"`. If device is not a mobile device or if device model is not known, `model` will be `""`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Model")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Model")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `platformVersion`
   - : A string containing the platform version. Platform name itself is always available as low-entropy hint `platform`. For example, `"10.0"`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
-- `uaFullVersion` {{deprecated_inline}}
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+- `uaFullVersion` {{Deprecated_Inline}}
   - : A string containing the full browser version. For example, `"103.0.5060.134"`. Deprecated in favor of `fullVersionList`.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `fullVersionList`
   - : An array of objects with properties `"brand"` and `"version"` representing the browser name and full version respectively.
-      For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
-      Please note that one object may intentionally contain invalid information to prevent sites from relying on a fixed list of browsers.
-      Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+    For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
+    Please note that one object may intentionally contain invalid information to prevent sites from relying on a fixed list of browsers.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 
 ### Exceptions
 
@@ -83,11 +81,13 @@ In the following example a number of hints are requested using the `getHighEntro
 When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platformVersion",
-  "fullVersionList"])
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platformVersion",
+    "fullVersionList",
+  ])
   .then((values) => console.log(values));
 ```
 

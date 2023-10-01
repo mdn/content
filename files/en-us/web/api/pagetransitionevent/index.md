@@ -2,24 +2,25 @@
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PageTransitionEvent
-  - Reference
 browser-compat: api.PageTransitionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`PageTransitionEvent`** event object is available inside handler functions for the [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) and [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events, fired when a document is being loaded or unloaded.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Constructor
+
+- {{domxref("PageTransitionEvent.PageTransitionEvent", "PageTransitionEvent()")}}
+  - : Creates a new `PageTransitionEvent` object.
+
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
 ## Example
@@ -27,17 +28,16 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<body>
-</body>
+  <body></body>
 </html>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener('pageshow', (event) => {
+window.addEventListener("pageshow", (event) => {
   if (event.persisted) {
     alert("The page was cached by the browser");
   } else {
@@ -56,5 +56,5 @@ window.addEventListener('pageshow', (event) => {
 
 ## See also
 
-- [`pageshow` event](/en-US/docs/Web/API/Window/pageshow_event)
-- [`pagehide` event](/en-US/docs/Web/API/Window/pagehide_event)
+- [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) event
+- [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event

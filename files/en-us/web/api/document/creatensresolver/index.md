@@ -1,22 +1,18 @@
 ---
-title: Document.createNSResolver()
+title: "Document: createNSResolver() method"
+short-title: createNSResolver()
 slug: Web/API/Document/createNSResolver
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Reference
 browser-compat: api.Document.createNSResolver
 ---
+
 {{ ApiRef("DOM") }}
 
 Creates an `XPathNSResolver` which resolves namespaces with respect to the definitions in scope for a specified node.
 
 ## Syntax
 
-```js
+```js-nolint
 createNSResolver(node)
 ```
 

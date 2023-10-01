@@ -1,16 +1,11 @@
 ---
-title: Screen.availHeight
+title: "Screen: availHeight property"
+short-title: availHeight
 slug: Web/API/Screen/availHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Screen size
-  - availHeight
 browser-compat: api.Screen.availHeight
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{DOMxRef("Screen")}} interface's
@@ -45,8 +40,12 @@ vertical space available, you can do so using code similar to what's seen here.
 
 In the main window, when it's time to open the panels, code like the following is used.
 
-```html
-let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
+```js
+const paletteWindow = window.open(
+  "panels.html",
+  "Panels",
+  "left=0, top=0, width=200",
+);
 ```
 
 The Panels window's HTML, in `panels.html`, has JavaScript code of its own,

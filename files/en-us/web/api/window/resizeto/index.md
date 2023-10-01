@@ -1,15 +1,11 @@
 ---
-title: Window.resizeTo()
+title: "Window: resizeTo() method"
+short-title: resizeTo()
 slug: Web/API/Window/resizeTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
 browser-compat: api.Window.resizeTo
 ---
+
 {{APIRef}}
 
 The **`Window.resizeTo()`** method dynamically resizes the
@@ -17,7 +13,7 @@ window.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeTo(width, height)
 ```
 
@@ -43,10 +39,7 @@ properties.
 
 ```js
 function quarter() {
-  window.resizeTo(
-    window.screen.availWidth / 2,
-    window.screen.availHeight / 2
-  );
+  window.resizeTo(window.screen.availWidth / 2, window.screen.availHeight / 2);
 }
 ```
 

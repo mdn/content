@@ -1,17 +1,11 @@
 ---
-title: Window.postMessage()
+title: "Window: postMessage() method"
+short-title: postMessage()
 slug: Web/API/Window/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cross-origin Communication
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - postMessage
 browser-compat: api.Window.postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`window.postMessage()`** method safely enables
@@ -31,7 +25,7 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
 ```
@@ -58,7 +52,7 @@ postMessage(message, targetOrigin, transfer)
     window's document should be located. Failing to provide a specific target discloses
     the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
-  - : A sequence of {{Glossary("transferable objects")}} that are transferred with the message.
+  - : A sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
@@ -71,12 +65,15 @@ A `window` can listen for dispatched messages by executing the following
 JavaScript:
 
 ```js
-window.addEventListener("message", (event) => {
-  if (event.origin !== "http://example.org:8080")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    if (event.origin !== "http://example.org:8080") return;
 
-  // …
-}, false);
+    // …
+  },
+  false,
+);
 ```
 
 The properties of the dispatched message are:
@@ -126,10 +123,10 @@ memory is gated behind two HTTP headers:
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value
   (protects your origin from attackers)
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` as
-  value (protects victims from your origin)
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` or
+  `credentialless` as value (protects victims from your origin)
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -139,16 +136,16 @@ To check if cross origin isolation has been successful, you can test against the
 property available to window and worker contexts:
 
 ```js
+const myWorker = new Worker("worker.js");
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
-
-See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes
-  to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
-example).
 
 ## Examples
 
@@ -162,22 +159,27 @@ const popup = window.open(/* popup details */);
 // When the popup has fully loaded, if not blocked by a popup blocker:
 
 // This does nothing, assuming the window hasn't changed its location.
-popup.postMessage("The user is 'bob' and the password is 'secret'",
-                  "https://secure.example.net");
+popup.postMessage(
+  "The user is 'bob' and the password is 'secret'",
+  "https://secure.example.net",
+);
 
 // This will successfully queue a message to be sent to the popup, assuming
 // the window hasn't changed its location.
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener("message", (event) => {
-  // Do we trust the sender of this message?  (might be
-  // different from what we originally opened, for example).
-  if (event.origin !== "http://example.com")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    // Do we trust the sender of this message?  (might be
+    // different from what we originally opened, for example).
+    if (event.origin !== "http://example.com") return;
 
-  // event.source is popup
-  // event.data is "hi there yourself!  the secret response is: rheeeeet!"
-}, false);
+    // event.source is popup
+    // event.data is "hi there yourself!  the secret response is: rheeeeet!"
+  },
+  false,
+);
 ```
 
 ```js
@@ -188,8 +190,7 @@ window.addEventListener("message", (event) => {
 // Called sometime after postMessage is called
 window.addEventListener("message", (event) => {
   // Do we trust the sender of this message?
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source is window.opener
   // event.data is "hello there!"
@@ -198,9 +199,10 @@ window.addEventListener("message", (event) => {
   // you must do in any case), a convenient idiom for replying to a
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 });
 ```
 

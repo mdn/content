@@ -1,15 +1,11 @@
 ---
-title: Document.head
+title: "Document: head property"
+short-title: head
 slug: Web/API/Document/head
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.head
 ---
+
 {{APIRef("DOM")}}
 
 The **`head`** read-only property of

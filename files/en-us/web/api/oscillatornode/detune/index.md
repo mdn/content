@@ -1,16 +1,11 @@
 ---
-title: OscillatorNode.detune
+title: "OscillatorNode: detune property"
+short-title: detune
 slug: Web/API/OscillatorNode/detune
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
 browser-compat: api.OscillatorNode.detune
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `detune` property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
@@ -32,7 +27,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
 oscillator.start();

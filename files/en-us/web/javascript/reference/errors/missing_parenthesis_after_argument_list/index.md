@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ) after argument list" occurs when there is an error
@@ -15,7 +12,7 @@ string.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing ) after argument list (V8-based & Firefox)
 SyntaxError: Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```
@@ -35,15 +32,15 @@ Because there is no "+" operator to concatenate the string, JavaScript expects t
 argument for the `log` function to be just `"PI: "`. In that case,
 it should be terminated by a closing parenthesis.
 
-```js example-bad
-console.log('PI: ' Math.PI);
+```js-nolint example-bad
+console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
 
 You can correct the `log` call by adding the `+` operator:
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
@@ -51,13 +48,13 @@ Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaS
 
 ```js example-good
 console.log(`PI: ${Math.PI}`);
-console.log('PI: ', Math.PI);
+console.log("PI:", Math.PI);
 ```
 
 ### Unterminated strings
 
-```js example-bad
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
+```js-nolint example-bad
+console.log('"Java" + "Script" = \"' + "Java" + 'Script\");
 // SyntaxError: missing ) after argument list
 ```
 
@@ -67,10 +64,10 @@ function `console.log`. To fix this, we could put a`'` after the
 "Script" string:
 
 ```js example-good
-console.log('"Java" + "Script" = "' + 'Java' + 'Script"');
+console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

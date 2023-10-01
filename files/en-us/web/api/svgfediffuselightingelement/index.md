@@ -2,21 +2,16 @@
 title: SVGFEDiffuseLightingElement
 slug: Web/API/SVGFEDiffuseLightingElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEDiffuseLightingElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDiffuseLightingElement`** interface corresponds to the {{SVGElement("feDiffuseLighting")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -41,7 +36,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDiffuseLightingElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

@@ -1,16 +1,11 @@
 ---
-title: Element.scrollTop
+title: "Element: scrollTop property"
+short-title: scrollTop
 slug: Web/API/Element/scrollTop
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsArtUpdate
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollTop`** property gets or sets the number of pixels that an element's content is scrolled vertically.
@@ -42,12 +37,14 @@ In this example, try scrolling the inner container with the dashed border, and s
 ```html
 <div id="container">
   <div id="scroller">
-      <p>Far out in the uncharted backwaters of the unfashionable end
-      of the western spiral arm of the Galaxy lies a small unregarded
-      yellow sun. Orbiting this at a distance of roughly ninety-two million
-      miles is an utterly insignificant little blue green planet whose
-      ape-descended life forms are so amazingly primitive that they still
-      think digital watches are a pretty neat idea.</p>
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
   </div>
 </div>
 

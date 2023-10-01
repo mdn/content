@@ -1,18 +1,11 @@
 ---
-title: CacheStorage.keys()
+title: "CacheStorage: keys() method"
+short-title: keys()
 slug: Web/API/CacheStorage/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - keys
 browser-compat: api.CacheStorage.keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`keys()`** method of the {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the order they were created.
@@ -22,7 +15,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -42,8 +35,8 @@ We return the keys of the caches in the {{domxref("CacheStorage")}} object using
 If not, we delete it using {{domxref("CacheStorage.delete()")}}.
 
 ```js
-this.addEventListener('activate', (event) => {
-  const cacheAllowlist = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cacheAllowlist = ["v2"];
 
   event.waitUntil(
     caches.keys().then((keyList) =>
@@ -52,9 +45,9 @@ this.addEventListener('activate', (event) => {
           if (!cacheAllowlist.includes(key)) {
             return caches.delete(key);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 ```

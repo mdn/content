@@ -1,72 +1,111 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.race
 ---
+
 {{JSRef}}
 
-The **`Promise.race()`** method returns a promise that fulfills
-or rejects as soon as one of the promises in an iterable fulfills or rejects, with the
-value or reason from that promise.
+The **`Promise.race()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
 
 {{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.race(iterable)
 ```
 
 ### Parameters
 
 - `iterable`
-  - : An iterable object, such as an {{jsxref("Array")}}. See [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
 
 ### Return value
 
-A **pending** {{jsxref("Promise")}} that **asynchronously**
-yields the value of the first promise in the given iterable to fulfill or reject.
+A {{jsxref("Promise")}} that **asynchronously settles** with the eventual state of the first promise in the `iterable` to settle. In other words, it fulfills if the first promise to settle is fulfilled, and rejects if the first promise to settle is rejected. The returned promise remains pending forever if the `iterable` passed is empty. If the `iterable` passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) settled.
 
 ## Description
 
-The `race` function returns a `Promise` that is settled the same
-way (and takes the same value) as the first promise that settles amongst the promises of
-the iterable passed as an argument.
+The `Promise.race()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It's useful when you want the first async task to complete, but do not care about its eventual state (i.e. it can either succeed or fail).
 
-If the iterable passed is empty, the promise returned will be forever pending.
-
-If the iterable contains one or more non-promise value and/or an already settled
-promise, then `Promise.race` will settle to the first of these values found
-in the iterable.
+If the iterable contains one or more non-promise values and/or an already settled promise, then `Promise.race()` will settle to the first of these values found in the iterable.
 
 ## Examples
 
-### Asynchronicity of Promise.race
+### Using Promise.race()
 
-This following example demonstrates the asynchronicity of `Promise.race`:
+This example shows how `Promise.race()` can be used to race several timers implemented with [`setTimeout()`](/en-US/docs/Web/API/setTimeout). The timer with the shortest time always wins the race and becomes the resulting promise's state.
 
 ```js
-// we are passing as argument an array of promises that are already resolved,
+function sleep(time, value, state) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (state === "fulfill") {
+        return resolve(value);
+      } else {
+        return reject(new Error(value));
+      }
+    }, time);
+  });
+}
+
+const p1 = sleep(500, "one", "fulfill");
+const p2 = sleep(100, "two", "fulfill");
+
+Promise.race([p1, p2]).then((value) => {
+  console.log(value); // "two"
+  // Both fulfill, but p2 is faster
+});
+
+const p3 = sleep(100, "three", "fulfill");
+const p4 = sleep(500, "four", "reject");
+
+Promise.race([p3, p4]).then(
+  (value) => {
+    console.log(value); // "three"
+    // p3 is faster, so it fulfills
+  },
+  (error) => {
+    // Not called
+  },
+);
+
+const p5 = sleep(500, "five", "fulfill");
+const p6 = sleep(100, "six", "reject");
+
+Promise.race([p5, p6]).then(
+  (value) => {
+    // Not called
+  },
+  (error) => {
+    console.error(error.message); // "six"
+    // p6 is faster, so it rejects
+  },
+);
+```
+
+### Asynchronicity of Promise.race
+
+This following example demonstrates the asynchronicity of `Promise.race`. Unlike other promise concurrency methods, `Promise.race` is always asynchronous: it never settles synchronously, even when the `iterable` is empty.
+
+```js
+// Passing an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 const resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
 const p = Promise.race(resolvedPromisesArray);
-// immediately logging the value of p
+// Immediately logging the value of p
 console.log(p);
 
-// using setTimeout we can execute code after the stack is empty
+// Using setTimeout, we can execute code after the stack is empty
 setTimeout(() => {
   console.log("the stack is now empty");
   console.log(p);
 });
 
-// logs, in order:
+// Logs, in order:
 // Promise { <state>: "pending" }
 // the stack is now empty
 // Promise { <state>: "fulfilled", <value>: 33 }
@@ -82,15 +121,13 @@ setTimeout(() => {
   console.log(foreverPendingPromise);
 });
 
-// logs, in order:
+// Logs, in order:
 // Promise { <state>: "pending" }
 // the stack is now empty
 // Promise { <state>: "pending" }
 ```
 
-If the iterable contains one or more non-promise value and/or an already settled
-promise, then `Promise.race` will settle to the first of these values found
-in the array:
+If the iterable contains one or more non-promise value and/or an already settled promise, then `Promise.race` will settle to the first of these values found in the array:
 
 ```js
 const foreverPendingPromise = Promise.race([]);
@@ -109,7 +146,7 @@ setTimeout(() => {
   console.log(p2);
 });
 
-// logs, in order:
+// Logs, in order:
 // Promise { <state>: "pending" }
 // Promise { <state>: "pending" }
 // the stack is now empty
@@ -117,57 +154,74 @@ setTimeout(() => {
 // Promise { <state>: "fulfilled", <value>: "non-Promise value" }
 ```
 
-### Using Promise.race – examples with setTimeout
+### Using Promise.race() to implement request timeout
+
+You can race a potentially long-lasting request with a timer that rejects, so that when the time limit has elapsed, the resulting promise automatically rejects.
 
 ```js
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("one"), 500);
-});
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("two"), 100);
-});
-
-Promise.race([p1, p2]).then((value) => {
-  console.log(value); // "two"
-  // Both fulfill, but p2 is faster
-});
-
-const p3 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("three"), 100);
-});
-const p4 = new Promise((resolve, reject) => {
-  setTimeout(() => reject(new Error("four")), 500);
-});
-
-Promise.race([p3, p4]).then(
-  (value) => {
-    console.log(value); // "three"
-    // p3 is faster, so it fulfills
-  },
-  (error) => {
-    // Not called
-  },
-);
-
-const p5 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("five"), 500);
-});
-const p6 = new Promise((resolve, reject) => {
-  setTimeout(() => reject(new Error("six")), 100);
-});
-
-Promise.race([p5, p6]).then(
-  (value) => {
-    // Not called
-  },
-  (error) => {
-    console.error(error.message); // "six"
-    // p6 is faster, so it rejects
-  },
-);
+const data = Promise.race([
+  fetch("/api"),
+  new Promise((resolve, reject) => {
+    // Reject after 5 seconds
+    setTimeout(() => reject(new Error("Request timed out")), 5000);
+  }),
+])
+  .then((res) => res.json())
+  .catch((err) => displayError(err));
 ```
 
-### Comparison with Promise.any
+If the `data` promise fulfills, it will contain the data fetched from `/api`; otherwise, it will reject if `fetch` remains pending for 5 seconds and loses the race with the `setTimeout` timer.
+
+### Using Promise.race() to detect the status of a promise
+
+Because `Promise.race()` resolves to the first non-pending promise in the iterable, we can check a promise's state, including if it's pending. This example is adapted from [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js).
+
+```js
+function promiseState(promise) {
+  const pendingState = { status: "pending" };
+
+  return Promise.race([promise, pendingState]).then(
+    (value) =>
+      value === pendingState ? value : { status: "fulfilled", value },
+    (reason) => ({ status: "rejected", reason }),
+  );
+}
+```
+
+In this function, if `promise` is pending, the second value, `pendingState`, which is a non-promise, becomes the result of the race; otherwise, if `promise` is already settled, we may know its state through the `onFulfilled` and `onRejected` handlers. For example:
+
+```js
+const p1 = new Promise((res) => setTimeout(() => res(100), 100));
+const p2 = new Promise((res) => setTimeout(() => res(200), 200));
+const p3 = new Promise((res, rej) => setTimeout(() => rej(300), 100));
+
+async function getStates() {
+  console.log(await promiseState(p1));
+  console.log(await promiseState(p2));
+  console.log(await promiseState(p3));
+}
+
+console.log("Immediately after initiation:");
+getStates();
+setTimeout(() => {
+  console.log("After waiting for 100ms:");
+  getStates();
+}, 100);
+
+// Logs:
+// Immediately after initiation:
+// { status: 'pending' }
+// { status: 'pending' }
+// { status: 'pending' }
+// After waiting for 100ms:
+// { status: 'fulfilled', value: 100 }
+// { status: 'pending' }
+// { status: 'rejected', reason: 300 }
+```
+
+> **Note:** The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
+
+### Comparison with Promise.any()
 
 `Promise.race` takes the first settled {{jsxref("Promise")}}.
 
@@ -188,7 +242,7 @@ Promise.race([promise1, promise2])
     // Only promise1 is fulfilled, but promise2 is faster
     console.error("failed with reason:", reason);
   });
-// expected output: "failed with reason: two"
+// failed with reason: two
 ```
 
 {{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.
@@ -210,7 +264,7 @@ Promise.any([promise1, promise2])
   .catch((reason) => {
     console.error("failed with reason:", reason);
   });
-// expected output: "succeeded with value: one"
+// succeeded with value: one
 ```
 
 ## Specifications
@@ -225,3 +279,5 @@ Promise.any([promise1, promise2])
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettled()")}}
+- {{jsxref("Promise.any()")}}

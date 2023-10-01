@@ -1,18 +1,11 @@
 ---
-title: IDBObjectStore.count()
+title: "IDBObjectStore: count() method"
+short-title: count()
 slug: Web/API/IDBObjectStore/count
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - count
-  - data
 browser-compat: api.IDBObjectStore.count
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBObjectStore")}}
@@ -25,7 +18,7 @@ of records in the store.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(query)
 ```
@@ -38,8 +31,9 @@ count(query)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the number of records that match the given query.
 
 ### Exceptions
 
@@ -59,13 +53,13 @@ the number of records in the store using `count()` — when the success handler
 fires, we log the count value (an integer) to the console.
 
 ```js
-const transaction = db.transaction(['fThings'], 'readonly');
-const objectStore = transaction.objectStore('fThings');
+const transaction = db.transaction(["fThings"], "readonly");
+const objectStore = transaction.objectStore("fThings");
 
 const countRequest = objectStore.count();
 countRequest.onsuccess = () => {
   console.log(countRequest.result);
-}
+};
 ```
 
 ## Specifications
@@ -84,4 +78,4 @@ countRequest.onsuccess = () => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,13 +1,10 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Browser
-  - Client error
-  - HTTP
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.404
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`404 Not Found`** response status code indicates that the server cannot find the requested resource.
@@ -18,7 +15,7 @@ If a resource is permanently removed, use the {{HTTPStatus("410")}} (Gone) statu
 
 ## Status
 
-```
+```http
 404 Not Found
 ```
 
@@ -26,7 +23,7 @@ If a resource is permanently removed, use the {{HTTPStatus("410")}} (Gone) statu
 
 You can display a custom 404 page to be more helpful to a user and provide guidance on what to do next. For example, for the Apache server, you can specify a path to a custom 404 page in an `.htaccess` file:
 
-```
+```apacheconf
 ErrorDocument 404 /notfound.html
 ```
 

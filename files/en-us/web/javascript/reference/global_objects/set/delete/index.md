@@ -1,26 +1,20 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.delete
 ---
+
 {{JSRef}}
 
-The **`delete()`** method removes a specified value from a
-`Set` object, if it is in the set.
+The **`delete()`** method of {{jsxref("Set")}} instances removes a specified value from this set, if it is in the set.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
 ## Syntax
 
-```js
-delete(value)
+```js-nolint
+setInstance.delete(value)
 ```
 
 ### Parameters
@@ -39,12 +33,12 @@ Returns `true` if `value` was already in
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
-mySet.delete('foo'); // Returns true. Successfully removed.
+console.log(mySet.delete("bar")); // false; no "bar" element found to be deleted.
+console.log(mySet.delete("foo")); // true; successfully removed.
 
-mySet.has('foo');    // Returns false. The "foo" element is no longer present.
+console.log(mySet.has("foo")); // false; the "foo" element is no longer present.
 ```
 
 ### Deleting an object from a set

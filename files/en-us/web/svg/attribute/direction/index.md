@@ -1,11 +1,10 @@
 ---
 title: direction
 slug: Web/SVG/Attribute/direction
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.direction
 ---
+
 {{SVGRef}}
 
 The **`direction`** attribute specifies the inline-base direction of a {{SVGElement("text")}} or {{SVGElement("tspan")}} element. It defines the start and end points of a line of text as used by the {{SVGAttr("text-anchor")}} and {{SVGAttr("inline-size")}} properties. It also may affect the direction in which characters are positioned if the {{SVGAttr("unicode-bidi")}} property's value is either `embed` or `bidi-override`.
@@ -18,7 +17,6 @@ In many cases, the bidirectional Unicode algorithm produces the desired result a
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}
@@ -27,16 +25,22 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
-<svg viewBox="0 0 600 72" xmlns="http://www.w3.org/2000/svg"
-    direction="rtl" lang="fa">
-  <text x="300" y="50" text-anchor="middle"
-      font-size="36">داستان SVG 1.1 SE طولا ني است.</text>
+<svg
+  viewBox="0 0 600 72"
+  xmlns="http://www.w3.org/2000/svg"
+  direction="rtl"
+  lang="fa">
+  <text x="300" y="50" text-anchor="middle" font-size="36">
+    داستان SVG 1.1 SE طولا ني است.
+  </text>
 </svg>
 ```
 

@@ -1,13 +1,10 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
+page-type: http-status-code
 browser-compat: http.status.307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} **`307 Temporary Redirect`** redirect
@@ -30,7 +27,7 @@ identical.
 
 ## Status
 
-```
+```http
 307 Temporary Redirect
 ```
 

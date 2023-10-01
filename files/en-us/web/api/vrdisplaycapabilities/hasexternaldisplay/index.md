@@ -1,20 +1,15 @@
 ---
-title: VRDisplayCapabilities.hasExternalDisplay
+title: "VRDisplayCapabilities: hasExternalDisplay property"
+short-title: hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - hasExternalDisplay
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities.hasExternalDisplay
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 

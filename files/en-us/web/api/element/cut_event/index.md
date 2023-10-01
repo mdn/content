@@ -1,17 +1,11 @@
 ---
-title: 'Element: cut event'
+title: "Element: cut event"
+short-title: cut
 slug: Web/API/Element/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Element
-  - Event
-  - Reference
-  - Web
 browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 The **`cut`** event is fired when the user has initiated a "cut" action through the browser's user interface.
@@ -33,9 +27,9 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', (event) => { });
+addEventListener("cut", (event) => {});
 
-oncut = (event) => { };
+oncut = (event) => {};
 ```
 
 ## Event type
@@ -56,25 +50,26 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const source = document.querySelector('div.source');
+const source = document.querySelector("div.source");
 
-source.addEventListener('cut', (event) => {
-    const selection = document.getSelection();
-    event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
-    selection.deleteFromDocument();
-    event.preventDefault();
+source.addEventListener("cut", (event) => {
+  const selection = document.getSelection();
+  event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
+  selection.deleteFromDocument();
+  event.preventDefault();
 });
 ```
 

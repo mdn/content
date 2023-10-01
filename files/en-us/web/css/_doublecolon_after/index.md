@@ -1,15 +1,10 @@
 ---
-title: '::after (:after)'
+title: "::after"
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-element
 browser-compat: css.selectors.after
 ---
+
 {{CSSRef}}
 
 In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property. It is inline by default.
@@ -20,8 +15,10 @@ In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elem
 
 ## Syntax
 
-```
-::after
+```css
+::after {
+  /* ... */
+}
 ```
 
 > **Note:** CSS introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:after`, introduced earlier.
@@ -72,12 +69,12 @@ We can style text or images in the {{CSSxRef("content")}} property almost any wa
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "This is a fancy orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -96,9 +93,15 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation">
+    text
+  </span>
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering">
+    tooltips</span
+  >.
 </p>
 ```
 
@@ -108,7 +111,7 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 

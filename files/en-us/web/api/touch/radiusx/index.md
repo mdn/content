@@ -1,15 +1,11 @@
 ---
-title: Touch.radiusX
+title: "Touch: radiusX property"
+short-title: radiusX
 slug: Web/API/Touch/radiusX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.radiusX
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`radiusX`** read-only property of the {{domxref("Touch")}} interface returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
@@ -27,15 +23,15 @@ This example illustrates using the {{domxref("Touch")}} interface's {{domxref("T
 The following simple code snippet, registers a single handler for the {{domxref("Document/touchstart_event", "touchstart")}}, {{domxref("Element/touchmove_event", "touchmove")}} and {{domxref("Element/touchend_event", "touchend")}} events. When the `src` element is touched, the element's width and height will be calculate based on the touch point's `radiusX` and `radiusY` values and the element will then be rotated using the touch point's `rotationAngle`.
 
 ```html
-<div id="src"> … </div>
+<div id="src">…</div>
 ```
 
 ```js
 const src = document.getElementById("src");
 
-src.addEventListener('touchstart', rotate);
-src.addEventListener('touchmove', rotate);
-src.addEventListener('touchend', rotate);
+src.addEventListener("touchstart", rotate);
+src.addEventListener("touchmove", rotate);
+src.addEventListener("touchend", rotate);
 
 function rotate(e) {
   const touch = e.changedTouches.item(0);
@@ -47,7 +43,7 @@ function rotate(e) {
   src.style.width = `${touch.radiusX * 2}px`;
   src.style.height = `${touch.radiusY * 2}px`;
   src.style.transform = `rotate(${touch.rotationAngle}deg)`;
-};
+}
 ```
 
 ## Specifications

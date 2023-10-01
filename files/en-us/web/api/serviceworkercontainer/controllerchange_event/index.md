@@ -1,18 +1,11 @@
 ---
-title: 'ServiceWorkerContainer: controllerchange event'
+title: "ServiceWorkerContainer: controllerchange event"
+short-title: controllerchange
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Interface
-  - Event
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - controllerchange
 browser-compat: api.ServiceWorkerContainer.controllerchange_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`controllerchange`** event of the
@@ -25,9 +18,9 @@ The **`controllerchange`** event of the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('controllerchange', (event) => { });
+addEventListener("controllerchange", (event) => {});
 
-oncontrollerchange = (event) => { };
+oncontrollerchange = (event) => {};
 ```
 
 ## Event type

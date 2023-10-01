@@ -1,22 +1,11 @@
 ---
-title: CanvasRenderingContext2D.strokeText()
+title: "CanvasRenderingContext2D: strokeText() method"
+short-title: strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - Drawing Strings
-  - Drawing Text
-  - Method
-  - Reference
-  - Stroke String
-  - Stroking Text
-  - strokeText
 browser-compat: api.CanvasRenderingContext2D.strokeText
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -36,7 +25,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 strokeText(text, x, y)
 strokeText(text, x, y, maxWidth)
 ```
@@ -85,11 +74,11 @@ First, we need a canvas to draw into. This code creates a context 400 pixels wid
 The JavaScript code for this example follows.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.strokeText('Hello world', 50, 90);
+ctx.font = "50px serif";
+ctx.strokeText("Hello world", 50, 90);
 ```
 
 This code obtains a reference to the {{HTMLElement("canvas")}}, then gets a reference
@@ -117,11 +106,11 @@ This example writes the words "Hello world," restricting its width to 140 pixels
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.strokeText('Hello world', 50, 90, 140);
+ctx.font = "50px serif";
+ctx.strokeText("Hello world", 50, 90, 140);
 ```
 
 #### Result

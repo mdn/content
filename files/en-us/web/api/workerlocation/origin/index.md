@@ -1,15 +1,11 @@
 ---
-title: WorkerLocation.origin
+title: "WorkerLocation: origin property"
+short-title: origin
 slug: Web/API/WorkerLocation/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.origin
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`origin`** property of a {{domxref("WorkerLocation")}} object returns the worker's {{domxref("URL.origin", "origin")}}.

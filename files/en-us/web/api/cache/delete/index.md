@@ -1,19 +1,11 @@
 ---
-title: Cache.delete()
+title: "Cache: delete() method"
+short-title: delete()
 slug: Web/API/Cache/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
 browser-compat: api.Cache.delete
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`delete()`** method of the {{domxref("Cache")}} interface finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the {{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to `true`.
@@ -21,7 +13,7 @@ If no {{domxref("Cache")}} entry is found, it resolves to `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(request)
 delete(request, options)
 ```
@@ -48,7 +40,7 @@ delete(request, options)
     - `ignoreVary`
       - : A boolean value that, when set to
         `true,` tells the matching operation not to perform `VARY`
-        header matching.  In other words, if the URL matches you will get a match
+        header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header. It defaults to `false`.
     - `cacheName`
@@ -62,11 +54,11 @@ deleted, or `false` otherwise.
 ## Examples
 
 ```js
-caches.open('v1').then((cache) => {
-  cache.delete('/images/image.png').then((response) => {
+caches.open("v1").then((cache) => {
+  cache.delete("/images/image.png").then((response) => {
     someUIUpdateFunction();
   });
-})
+});
 ```
 
 ## Specifications

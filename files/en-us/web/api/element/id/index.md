@@ -1,15 +1,11 @@
 ---
-title: Element.id
+title: "Element: id property"
+short-title: id
 slug: Web/API/Element/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Reference
 browser-compat: api.Element.id
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`id`** property of the {{domxref("Element")}} interface

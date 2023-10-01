@@ -1,16 +1,11 @@
 ---
-title: PannerNode.orientationY
+title: "PannerNode: orientationY property"
+short-title: orientationY
 slug: Web/API/PannerNode/orientationY
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - orientationY
 browser-compat: api.PannerNode.orientationY
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`orientationY`** property of the {{ domxref("PannerNode") }} interface

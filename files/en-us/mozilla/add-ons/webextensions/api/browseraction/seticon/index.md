@@ -1,18 +1,10 @@
 ---
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the browser action.
@@ -27,7 +19,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingIcon = browser.browserAction.setIcon(
   details         // object
 )
@@ -45,11 +37,13 @@ let settingIcon = browser.browserAction.setIcon(
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-        ```json
-        {
-          16: image16,
-          32: image32
-        }
+        ```js
+        let settingIcon = browser.action.setIcon({
+          imageData: {
+            16: image16,
+            32: image32,
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -60,11 +54,13 @@ let settingIcon = browser.browserAction.setIcon(
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-        ```json
-        {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
-        }
+        ```js
+        let settingIcon = browser.action.setIcon({
+          path: {
+            16: "path/to/image16.jpg",
+            32: "path/to/image32.jpg",
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -105,15 +101,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
-    ["responseHeaders"]
+    { urls: ["<all_urls>"] },
+    ["responseHeaders"],
   );
-  browser.browserAction.setIcon({path: "icons/listening-on.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.browserAction.setIcon({path: "icons/listening-off.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -141,7 +137,7 @@ function getImageData() {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setIcon({imageData: getImageData()});
+  browser.browserAction.setIcon({ imageData: getImageData() });
 });
 ```
 
@@ -150,7 +146,8 @@ The following snippet updates the icon when the user clicks it, but only for the
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```
@@ -158,10 +155,9 @@ browser.browserAction.onClicked.addListener((tab) => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -188,4 +184,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

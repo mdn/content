@@ -2,26 +2,9 @@
 title: XRSessionEvent
 slug: Web/API/XRSessionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Event
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - Session
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - XRSessionEvent
-  - augmented
 browser-compat: api.XRSessionEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent`** interface describes an event which indicates the change of the state of an {{domxref("XRSession")}}. These events occur, for example, when the session ends or the visibility of its context changes.
@@ -33,14 +16,14 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent
 - {{domxref("XRSessionEvent.XRSessionEvent", "XRSessionEvent()")}}
   - : Creates and returns a new `XRSessionEvent` object.
 
-## Properties
+## Instance properties
 
 _In addition to properties inherited from its parent interface, {{domxref("Event")}}, `XRSessionEvent` provides the following:_
 
 - {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which the event refers.
 
-## Methods
+## Instance methods
 
 _While `XRSessionEvent` defines no methods, it inherits methods from its parent interface, {{domxref("Event")}}._
 
@@ -59,7 +42,7 @@ This example creates a listener that watches for the visibility state of the ses
 
 ```js
 xrSession.addEventListener("visibilitystate", (e) => {
-  switch(e.session.visibilitystate) {
+  switch (e.session.visibilitystate) {
     case "visible":
     case "visible-blurred":
       mySessionVisible(true);

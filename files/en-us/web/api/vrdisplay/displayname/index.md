@@ -1,20 +1,15 @@
 ---
-title: VRDisplay.displayName
+title: "VRDisplay: displayName property"
+short-title: displayName
 slug: Web/API/VRDisplay/displayName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - displayName
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.displayName
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`displayName`** read-only property of the {{domxref("VRDisplay")}} interface returns a human-readable name to identify the `VRDisplay`.
 

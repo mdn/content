@@ -1,13 +1,8 @@
 ---
 title: XOR
 slug: WebAssembly/Reference/Numeric/XOR
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
 The **`xor`** instructions, are used for performing a bitwise XOR, similar to the **`^`** operator in other languages.

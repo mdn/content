@@ -1,17 +1,11 @@
 ---
-title: HTMLObjectElement.validationMessage
+title: "HTMLObjectElement: validationMessage property"
+short-title: validationMessage
 slug: Web/API/HTMLObjectElement/validationMessage
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - validationMessage
 browser-compat: api.HTMLObjectElement.validationMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`validationMessage`** read-only property

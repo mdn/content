@@ -1,16 +1,13 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - Save-Data
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Save-Data
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The **`Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header field is a boolean which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.
@@ -69,16 +66,16 @@ instance ensuring that the user is not served a lower-quality image from the cac
 
 Request:
 
-```
-GET /image.jpg HTTP/1.0
+```http
+GET /image.jpg HTTP/1.1
 Host: example.com
 Save-Data: on
 ```
 
 Response:
 
-```
-HTTP/1.0 200 OK
+```http
+HTTP/1.1 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -91,15 +88,15 @@ Content-Type: image/jpeg
 
 Request:
 
-```
-GET /image.jpg HTTP/1.0
+```http
+GET /image.jpg HTTP/1.1
 Host: example.com
 ```
 
 Response:
 
-```
-HTTP/1.0 200 OK
+```http
+HTTP/1.1 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -120,7 +117,7 @@ Content-Type: image/jpeg
 
 - [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Delivering Fast and Light Applications with Save-Data - web.dev](https://web.dev/optimizing-content-efficiency-save-data/)
-- {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses))
+- {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary))
 - CSS @media feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{domxref("NetworkInformation.saveData")}}

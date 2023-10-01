@@ -1,13 +1,11 @@
 ---
-title: Node.parentNode
+title: "Node: parentNode property"
+short-title: parentNode
 slug: Web/API/Node/parentNode
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.parentNode
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`parentNode`** property of the {{domxref("Node")}} interface

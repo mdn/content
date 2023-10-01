@@ -2,19 +2,13 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 page-type: web-api-overview
-tags:
-  - API
-  - Deprecated
-  - Experimental
-  - Landing
-  - Deprecated
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Navigator.getVRDisplays
 ---
-{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
+
+{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 > **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
 
@@ -95,7 +89,7 @@ The WebVR API extends the following APIs, adding the listed features.
 
 #### Navigator
 
-- {{DOMxRef("Navigator.activeVRDisplays")}} {{readonlyInline}}
+- {{DOMxRef("Navigator.activeVRDisplays")}} {{ReadOnlyInline}}
   - : Returns an array containing every {{DOMxRef("VRDisplay")}} object that is currently presenting ({{DOMxRef("VRDisplay.ispresenting")}} is `true`).
 - {{DOMxRef("Navigator.getVRDisplays()")}}
   - : Returns a promise that resolves to an array of {{DOMxRef("VRDisplay")}} objects representing any available VR displays connected to the computer.
@@ -112,10 +106,6 @@ The WebVR API extends the following APIs, adding the listed features.
   - : Fired when a display is able to be presented to.
 - {{DOMxRef("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
   - : Fired when a display can no longer be presented to.
-- {{DOMxRef("Window.vrdisplayblur_event", "vrdisplayblur")}}
-  - : Fired when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
-- {{DOMxRef("Window.vrdisplayfocus_event", "vrdisplayfocus")}}
-  - : Fired when presentation to a display has resumed after being blurred.
 
 ## Examples
 

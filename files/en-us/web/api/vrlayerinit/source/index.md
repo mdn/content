@@ -1,18 +1,12 @@
 ---
-title: VRLayerInit.source
+title: "VRLayerInit: source property"
+short-title: source
 slug: Web/API/VRLayerInit/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - source
+status:
+  - deprecated
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`source`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.

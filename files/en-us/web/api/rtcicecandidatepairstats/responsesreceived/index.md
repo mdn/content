@@ -1,25 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.responsesReceived
+title: "RTCIceCandidatePairStats: responsesReceived property"
+short-title: responsesReceived
 slug: Web/API/RTCIceCandidatePairStats/responsesReceived
 page-type: web-api-instance-property
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Received
-  - Reference
-  - Responses
-  - STUN
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - responsesReceived
 browser-compat: api.RTCIceCandidatePairStats.responsesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`responsesReceived`** property

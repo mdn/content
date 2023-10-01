@@ -1,17 +1,11 @@
 ---
-title: DocumentFragment.replaceChildren()
+title: "DocumentFragment: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/DocumentFragment/replaceChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - DocumentFragment
-  - Reference
-  - replaceChildren
 browser-compat: api.DocumentFragment.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.replaceChildren()`** method replaces the
@@ -20,10 +14,10 @@ can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* … ,*/ paramN)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -40,7 +34,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown when the nhe [constraints of the node tree](https://dom.spec.whatwg.org/#concept-node-tree) are violated.
+  - : Thrown when the [constraints of the node tree](https://dom.spec.whatwg.org/#concept-node-tree) are violated.
 
 ## Examples
 

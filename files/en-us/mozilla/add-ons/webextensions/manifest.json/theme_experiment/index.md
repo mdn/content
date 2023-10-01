@@ -1,18 +1,10 @@
 ---
 title: theme_experiment
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme_experiment
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -161,7 +153,7 @@ The stylesheet defines:
 
 where `#reload-button` is the Firefox internal CSS selector for the reload button and `--reload-button-color` is an arbitrary name.
 
-In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `theme` `colors` property:
+In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `colors` property of `theme`:
 
 ```json
 "theme_experiment": {

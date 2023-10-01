@@ -1,20 +1,15 @@
 ---
-title: VREyeParameters.maximumFieldOfView
+title: "VREyeParameters: maximumFieldOfView property"
+short-title: maximumFieldOfView
 slug: Web/API/VREyeParameters/maximumFieldOfView
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - maximumFieldOfView
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.maximumFieldOfView
 ---
-{{APIRef("WebVR API")}}{{deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`maximumFieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface describes the maximum supported field of view for the current eye.
 

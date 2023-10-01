@@ -1,23 +1,11 @@
 ---
-title: MutationObserver.takeRecords()
+title: "MutationObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Attribute Changes
-  - Changes
-  - DOM Changes
-  - DOM WHATWG
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - MutationObserver API
-  - Observer
-  - mutation
-  - takeRecords
 browser-compat: api.MutationObserver.takeRecords
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method
@@ -32,7 +20,7 @@ observer.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -59,8 +47,8 @@ disconnecting the observer.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
@@ -73,7 +61,7 @@ let mutations = observer.takeRecords();
 
 observer.disconnect();
 
-if (mutations) {
+if (mutations.length > 0) {
   callback(mutations);
 }
 ```

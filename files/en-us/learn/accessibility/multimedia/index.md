@@ -1,22 +1,9 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-tags:
-  - Accessibility
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Images
-  - JavaScript
-  - Learn
-  - Multimedia
-  - Video
-  - captions
-  - subtitles
-  - text tracks
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 Another category of content that can create accessibility problems is multimedia. Video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
@@ -27,7 +14,7 @@ Another category of content that can create accessibility problems is multimedia
       <th scope="row">Prerequisites:</th>
       <td>
         Basic computer literacy, a basic understanding of HTML, CSS, and
-        JavaScript, an understanding of
+        JavaScript, and an understanding of
         <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
           >what accessibility is</a
         >.
@@ -47,19 +34,20 @@ Another category of content that can create accessibility problems is multimedia
 
 So far in this module, we have looked at a variety of content and what needs to be done to ensure its accessibility, ranging from simple text content to data tables, images, native controls such as form elements and buttons, and even more complex markup structures (with [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) attributes).
 
-This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screenreaders or navigated by the keyboard, and we need to give them a helping hand.
+This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screen readers or navigated by the keyboard, and we need to give them a helping hand.
 
 But don't despair — here we will help you navigate through the techniques available for making multimedia more accessible.
 
 ## Simple images
 
-We already covered simple text alternatives for HTML images in our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article — you can refer back to there for the full details. In short, you should ensure that where possible visual content has an alternative text available for screenreaders to pick up and read to their users.
+We already covered simple text alternatives for HTML images in our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article — you can refer back to there for the full details. In short, you should ensure that where possible visual content has an alternative text available for screen readers to pick up and read to their users.
 
 For example:
 
 ```html
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 ```
 
 ## Accessible audio and video controls
@@ -72,17 +60,23 @@ HTML video and audio instances even come with a set of inbuilt controls that all
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -116,9 +110,12 @@ First of all, let's look at the HTML for the video player, in the HTML:
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -138,25 +135,25 @@ We've inserted some simple control buttons below our video. These controls of co
 We will first need to store references to each of the controls — add the following to the top of your JavaScript file:
 
 ```js
-const playPauseBtn = document.querySelector('.playpause');
-const stopBtn = document.querySelector('.stop');
-const rwdBtn = document.querySelector('.rwd');
-const fwdBtn = document.querySelector('.fwd');
-const timeLabel = document.querySelector('.time');
+const playPauseBtn = document.querySelector(".playpause");
+const stopBtn = document.querySelector(".stop");
+const rwdBtn = document.querySelector(".rwd");
+const fwdBtn = document.querySelector(".fwd");
+const timeLabel = document.querySelector(".time");
 ```
 
 Next, we need to grab a reference to the video/audio player itself — add this line below the previous lines:
 
 ```js
-const player = document.querySelector('video');
+const player = document.querySelector("video");
 ```
 
 This holds a reference to a {{domxref("HTMLMediaElement")}} object, which has several useful properties and methods available on it that can be used to wire up functionality to our buttons.
 
-Before moving onto creating our button functionality, let's remove the native controls so they don't get in the way of our custom controls. Add the following, again at the bottom of your JavaScript:
+Before moving on to creating our button functionality, let's remove the native controls so they don't get in the way of our custom controls. Add the following, again at the bottom of your JavaScript:
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 Doing it this way round rather than just not including the controls attribute in the first place has the advantage that if our JavaScript fails for any reason, the user still has some controls available.
@@ -169,10 +166,10 @@ First, let's set up the play/pause button. We can get this to toggle between pla
 playPauseBtn.onclick = () => {
   if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -183,7 +180,7 @@ Next, add this code to the bottom, which controls the stop button:
 stopBtn.onclick = () => {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
@@ -201,7 +198,7 @@ fwdBtn.onclick = () => {
   if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -216,20 +213,8 @@ Last of all, add the following to the end of the code, to control the time elaps
 player.ontimeupdate = () => {
   const minutes = Math.floor(player.currentTime / 60);
   const seconds = Math.floor(player.currentTime - minutes * 60);
-  let minuteValue;
-  let secondValue;
-
-  if (minutes < 10) {
-    minuteValue = `0${minutes}`;
-  } else {
-    minuteValue = minutes;
-  }
-
-  if (seconds < 10) {
-    secondValue = `0${seconds}`;
-  } else {
-    secondValue = seconds;
-  }
+  const minuteValue = minutes < 10 ? `0${minutes}` : minutes;
+  const secondValue = seconds < 10 ? `0${seconds}` : seconds;
 
   const mediaTime = `${minuteValue}:${secondValue}`;
   timeLabel.textContent = mediaTime;
@@ -250,7 +235,7 @@ We've also created an advanced example to show how you could create an object-or
 
 ## Audio transcripts
 
-To provide deaf people with access to audio content, you really need to create text transcripts. These can either be included on the same page as the audio in some way or included on a separate page and linked to.
+To provide deaf people with access to audio content, you need to create text transcripts. These can either be included on the same page as the audio in some way or included on a separate page and linked to.
 
 In terms of actually creating the transcript, your options are:
 
@@ -270,7 +255,7 @@ If you are creating your own user interface to present your audio and associated
 
 ### Audio descriptions
 
-On occasions where there are visuals accompanying your audio, you'll need to provide audio descriptions of some kind to describe that extra content.
+On occasions where visuals are accompanying your audio, you'll need to provide audio descriptions of some kind to describe that extra content.
 
 In many cases, this will take the form of video, in which case you can implement captions using the techniques described in the next section of the article.
 
@@ -280,7 +265,7 @@ However, there are some edge cases. You might for example have an audio recordin
 
 ## Video text tracks
 
-To make video accessible for deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
+To make video accessible for the deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
 
 > **Note:** Text tracks are also useful for potentially any user, not just those with disabilities. For example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library).
 
@@ -305,7 +290,7 @@ Text tracks for displaying with HTML video need to be written in WebVTT, a text 
 
 A typical WebVTT file will look something like this:
 
-```
+```plain
 WEBVTT
 
 1
@@ -322,15 +307,15 @@ This is the second.
 To get this displayed along with the HTML media playback, you need to:
 
 - Save it as a .vtt file in a sensible place.
-- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
+- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in.
 
 Here's an example:
 
 ```html
 <video controls>
-  <source src="example.mp4" type="video/mp4">
-  <source src="example.webm" type="video/webm">
-  <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 
@@ -352,18 +337,8 @@ We've not written a new set of assessments for this article, because there are a
 
 This chapter has provided a summary of accessibility concerns for multimedia content, along with some practical solutions.
 
-It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that visually impaired users are not really in the target audience bracket for such apps.
+It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it is quite difficult to provide text alternatives for such an experience, and you might argue that visually impaired users are not really in the target audience bracket for such apps.
 
 You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

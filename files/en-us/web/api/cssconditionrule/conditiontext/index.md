@@ -1,15 +1,11 @@
 ---
-title: CSSConditionRule.conditionText
+title: "CSSConditionRule: conditionText property"
+short-title: conditionText
 slug: Web/API/CSSConditionRule/conditionText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSConditionRule
-  - Property
-  - Reference
 browser-compat: api.CSSConditionRule.conditionText
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`conditionText`** property of
@@ -39,7 +35,7 @@ let myRules = document.styleSheets[0].cssRules;
 let text = myRules[0].conditionText;
 console.log(text); // "(min-width: 500px)"
 text = "(min-width: 400px)";
-console.log(text);  // "(min-width: 400px)"
+console.log(text); // "(min-width: 400px)"
 ```
 
 ## Specifications

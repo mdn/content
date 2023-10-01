@@ -1,19 +1,13 @@
 ---
-title: USBDevice.serialNumber
+title: "USBDevice: serialNumber property"
+short-title: serialNumber
 slug: Web/API/USBDevice/serialNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - serialNumber
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.serialNumber
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`serialNumber`** read only property of the

@@ -1,19 +1,11 @@
 ---
-title: MediaStreamTrack.enabled
+title: "MediaStreamTrack: enabled property"
+short-title: enabled
 slug: Web/API/MediaStreamTrack/enabled
 page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Muting a Media Track
-  - Muting a Track
-  - Property
-  - Reference
-  - WebRTC
-  - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`enabled`** property on the
@@ -67,7 +59,7 @@ pauseButton.onclick = (evt) => {
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 This creates a variable, `newState`, which is the opposite of the current
@@ -87,7 +79,7 @@ Finally, the new value of `enabled` is saved, making the change take effect.
 
 ## See also
 
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

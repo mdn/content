@@ -1,14 +1,10 @@
 ---
 title: <feFuncB>
 slug: Web/SVG/Element/feFuncB
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feFuncB
 ---
+
 {{SVGRef}}
 
 The **`<feFuncB>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the transfer function for the blue component of the input graphic of its parent {{SVGElement("feComponentTransfer")}} element.
@@ -26,7 +22,7 @@ The **`<feFuncB>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 ### Specific attributes
 
-*None*
+None.
 
 ## DOM Interface
 

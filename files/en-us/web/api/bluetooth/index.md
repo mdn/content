@@ -2,15 +2,11 @@
 title: Bluetooth
 slug: Web/API/Bluetooth
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.Bluetooth
 ---
+
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) returns a
@@ -19,17 +15,11 @@ options.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent {{domxref("EventTarget")}}._
 
-- {{domxref("Bluetooth.referringDevice")}} {{readonlyinline}} {{Experimental_Inline}}
-  - : Returns a reference to the device, if any, from which the user opened the current
-    page. For example, an Eddystone beacon might advertise a URL, which the user agent
-    allows the user to open. A BluetoothDevice representing the beacon would be available
-    through `navigator.bluetooth.referringDevice`.
-
-## Methods
+## Instance methods
 
 - {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolved to a boolean value indicating

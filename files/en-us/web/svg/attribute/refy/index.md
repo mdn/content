@@ -1,13 +1,12 @@
 ---
 title: refY
 slug: Web/SVG/Attribute/refY
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsExample
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefYAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefYAttribute
 ---
+
 {{SVGRef}}
 
 The **`refY`** attribute defines the y coordinate of an element's reference point.
@@ -43,9 +42,11 @@ For {{SVGElement("marker")}}, `refY` defines the y coordinate of the marker's re
 </table>
 
 - `<length-percentage>`
+
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
+
 - `<number>`
   - : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 - `top`
@@ -84,9 +85,11 @@ Unlike other positioning attributes, `refY` is interpreted as being in the coord
 </table>
 
 - `<length-percentage>`
+
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
+
 - `<number>`
   - : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 - `top`

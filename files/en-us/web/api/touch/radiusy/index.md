@@ -1,15 +1,11 @@
 ---
-title: Touch.radiusY
+title: "Touch: radiusY property"
+short-title: radiusY
 slug: Web/API/Touch/radiusY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.radiusY
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`radiusX`** read-only property of the {{domxref("Touch")}} interface returns the Y radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
@@ -22,7 +18,7 @@ A number.
 
 ## Examples
 
-The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#example) includes an example of this property's usage.
+The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#examples) includes an example of this property's usage.
 
 ## Specifications
 

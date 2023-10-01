@@ -1,18 +1,14 @@
 ---
-title: URLPattern.username
+title: "URLPattern: username property"
+short-title: username
 slug: Web/API/URLPattern/username
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.username
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`username`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the username part
@@ -32,7 +28,7 @@ the `username` part. This pattern matches only if the username part of the URL
 is `admin`.
 
 ```js
-const pattern = new URLPattern({ username: 'admin' });
+const pattern = new URLPattern({ username: "admin" });
 console.log(pattern.username); // 'admin'
 ```
 

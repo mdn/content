@@ -1,19 +1,12 @@
 ---
-title: SecurityPolicyViolationEvent.disposition
+title: "SecurityPolicyViolationEvent: disposition property"
+short-title: disposition
 slug: Web/API/SecurityPolicyViolationEvent/disposition
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - Disposition
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
-{{HTTPSidebar}}")}}
+
+{{HTTPSidebar}}
 
 The **`disposition`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated policy

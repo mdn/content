@@ -2,25 +2,9 @@
 title: XRReferenceSpaceEvent
 slug: Web/API/XRReferenceSpaceEvent
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Event
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpaceEvent
-  - augmented
 browser-compat: api.XRReferenceSpaceEvent
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRReferenceSpaceEvent`** represents an event sent to an {{domxref("XRReferenceSpace")}}. Currently, the only event that uses this type is the {{domxref("XRReferenceSpace.reset_event", "reset")}} event.
@@ -32,7 +16,7 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRRefe
 - {{domxref("XRReferenceSpaceEvent.XRReferenceSpaceEvent", "XRReferenceSpaceEvent()")}}
   - : Returns a new `XRReferenceSpaceEvent` with the specified type and configuration.
 
-## Properties
+## Instance properties
 
 _In addition to inheriting the properties available on the parent interface, {{domxref("Event")}}, `XRReferenceSpaceEvent` objects include the following properties:_
 
@@ -41,7 +25,7 @@ _In addition to inheriting the properties available on the parent interface, {{d
 - {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}}
   - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace`'s native origin after the event, defined relative to the coordinate system before the event.
 
-## Methods
+## Instance methods
 
 _While `XRReferenceSpaceEvent` does not define any methods, it inherits the methods of its parent interface, {{domxref("Event")}}._
 

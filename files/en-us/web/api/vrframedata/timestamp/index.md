@@ -1,20 +1,15 @@
 ---
-title: VRFrameData.timestamp
+title: "VRFrameData: timestamp property"
+short-title: timestamp
 slug: Web/API/VRFrameData/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - timeStamp
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.timestamp
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`timestamp`** read-only property of the {{domxref("VRFrameData")}} interface returns a constantly increasing timestamp value representing the time a frame update occurred.
 
@@ -36,9 +31,9 @@ let vrDisplay;
 
 navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
@@ -55,7 +50,7 @@ function drawVRScene() {
 
   // grab the current timestamp on each run of the rendering loop
   // and do something with it
-  framedata.timestamp
+  framedata.timestamp;
 
   // …
 

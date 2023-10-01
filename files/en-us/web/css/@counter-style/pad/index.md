@@ -1,15 +1,10 @@
 ---
 title: pad
 slug: Web/CSS/@counter-style/pad
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.pad
 ---
+
 {{CSSRef}}
 
 The **`pad`** descriptor can be used with custom counter style definitions when you need the marker representations to have a minimum length.
@@ -35,14 +30,7 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 ## Formal syntax
 
-```
-<integer> && <symbol>
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

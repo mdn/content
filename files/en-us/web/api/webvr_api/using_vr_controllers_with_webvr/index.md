@@ -2,16 +2,10 @@
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 page-type: guide
-tags:
-  - Experimental
-  - Gamepad API
-  - Guide
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
-  - controllers
+status:
+  - experimental
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/en-US/docs/Web/API/GamepadPose), [haptic actuators](/en-US/docs/Web/API/GamepadHapticActuator), and more. This article explains the basics.
@@ -43,7 +37,7 @@ There are two types of controller you'll encounter with VR hardware:
 
 Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.
 
-We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/master/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
+We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
 
 ### Getting the display information
 
@@ -53,10 +47,11 @@ The first notable code is as follows:
 let initialRun = true;
 
 if (navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = 'WebVR API and Gamepad API supported.'
+  info.textContent = "WebVR API and Gamepad API supported.";
   reportDisplays();
 } else {
-  info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
+  info.textContent =
+    "WebVR API and/or Gamepad API not supported by this browser.";
 }
 ```
 
@@ -69,8 +64,9 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+      const listItem = document.createElement("li");
+      listItem.innerHTML =
+        `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
@@ -97,20 +93,21 @@ The `reportGamepads()` function looks like this:
 
 ```js
 function reportGamepads() {
-    const gamepads = navigator.getGamepads();
-    console.log(`${gamepads.length} controllers`);
-    for (const gp of gamepads) {
-        const listItem = document.createElement('li');
-        listItem.classList = 'gamepad';
-        listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
-          `Associated with VR Display ID: ${gp.displayId}<br>` +
-          `Gamepad associated with which hand: ${gp.hand}<br>` +
-          `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
-          `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
-          `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
-        list.appendChild(listItem);
-    }
-    initialRun = false;
+  const gamepads = navigator.getGamepads();
+  console.log(`${gamepads.length} controllers`);
+  for (const gp of gamepads) {
+    const listItem = document.createElement("li");
+    listItem.classList = "gamepad";
+    listItem.innerHTML =
+      `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
+      `Associated with VR Display ID: ${gp.displayId}<br>` +
+      `Gamepad associated with which hand: ${gp.hand}<br>` +
+      `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
+      `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
+      `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    list.appendChild(listItem);
+  }
+  initialRun = false;
 }
 ```
 
@@ -134,7 +131,7 @@ At the end of our example we first include the `removeGamepads()` function:
 
 ```js
 function removeGamepads() {
-  const gpLi = document.querySelectorAll('.gamepad');
+  const gpLi = document.querySelectorAll(".gamepad");
   for (let i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
   }
@@ -147,14 +144,14 @@ This function grabs references to all list items with a class name of `gamepad`,
 `removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
 
 ```js
-window.addEventListener('gamepadconnected', (e) => {
+window.addEventListener("gamepadconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if (!initialRun) {
     setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', (e) => {
+window.addEventListener("gamepaddisconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });
@@ -166,11 +163,11 @@ But there's one more thing to note — you'll see that inside the `gamepadconnec
 
 ## Introducing a real demo
 
-Now let's look at the Gamepad API being used inside a real WebVR demo. You can find this demo at [raw-webgl-controller-example](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-controller-example) ([see it live here also](https://mdn.github.io/webvr-tests/raw-webgl-controller-example/)).
+Now let's look at the Gamepad API being used inside a real WebVR demo. You can find this demo at [raw-webgl-controller-example](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-controller-example) ([see it live here also](https://mdn.github.io/webvr-tests/webvr/raw-webgl-controller-example/)).
 
-In exactly the same way as our [raw-webgl-example](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) (see [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) for details), this renders a spinning 3D cube, which you can choose to present in a VR display. The only difference is that, while in VR presenting mode, this demo allows you to move the cube by moving a VR controller (the original demo moves the cube as you move your VR headset).
+In exactly the same way as our [raw-webgl-example](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) (see [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) for details), this renders a spinning 3D cube, which you can choose to present in a VR display. The only difference is that, while in VR presenting mode, this demo allows you to move the cube by moving a VR controller (the original demo moves the cube as you move your VR headset).
 
-We'll explore the code differences in this version below — see [webgl-demo.js](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-controller-example/webgl-demo.js).
+We'll explore the code differences in this version below — see [webgl-demo.js](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-controller-example/webgl-demo.js).
 
 ### Accessing the gamepad data
 
@@ -199,22 +196,14 @@ Slightly later in the code, you can find this block:
 ```js
 if (gp && gpPose.hasPosition) {
   mvTranslate([
-    0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
-    0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
-    -15.0 + (curPos[2] * 25)
+    0.0 + curPos[0] * 15 - curOrient[1] * 15,
+    0.0 + curPos[1] * 15 + curOrient[0] * 15,
+    -15.0 + curPos[2] * 25,
   ]);
 } else if (gp) {
-  mvTranslate([
-    0.0 + (curOrient[1] * 15),
-    0.0 + (curOrient[0] * 15),
-    -15.0
-  ]);
+  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
 } else {
-  mvTranslate([
-    0.0,
-    0.0,
-    -15.0
-  ]);
+  mvTranslate([0.0, 0.0, -15.0]);
 }
 ```
 
@@ -229,38 +218,32 @@ In the `displayPoseStats()` function, we grab all of the data we want to display
 ```js
 function displayPoseStats(pose) {
   const pos = pose.position;
-  const orient = pose.orientation;
-  const linVel = pose.linearVelocity;
-  const linAcc = pose.linearAcceleration;
-  const angVel = pose.angularVelocity;
-  const angAcc = pose.angularAcceleration;
 
-  if (pose.hasPosition) {
-    posStats.textContent = `Position: x ${pos[0].toFixed(3)}, y ${pos[1].toFixed(3)}, z ${pos[2].toFixed(3)}`;
-  } else {
-    posStats.textContent = 'Position not reported';
-  }
+  const formatCoords = ([x, y, z]) =>
+    `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
 
-  if (pose.hasOrientation) {
-    orientStats.textContent = `Orientation: x ${orient[0].toFixed(3)}, y ${orient[1].toFixed(3)}, z ${orient[2].toFixed(3)}`;
-  } else {
-    orientStats.textContent = 'Orientation not reported';
-  }
+  posStats.textContent = pose.hasPosition
+    ? `Position: ${formatCoords(pose.position)}`
+    : "Position not reported";
 
-  linVelStats.textContent = `Linear velocity: x ${linVel[0].toFixed(3)}, y ${linVel[1].toFixed(3)}, z ${linVel[2].toFixed(3)}`;
-  angVelStats.textContent = `Angular velocity: x ${angVel[0].toFixed(3)}, y ${angVel[1].toFixed(3)}, z ${angVel[2].toFixed(3)}`;
+  orientStats.textContent = pose.hasOrientation
+    ? `Orientation: ${formatCoords(pose.orientation)}`
+    : "Orientation not reported";
 
-  if (linAcc) {
-    linAccStats.textContent = `Linear acceleration: x ${linAcc[0].toFixed(3)}, y ${linAcc[1].toFixed(3)}, z ${linAcc[2].toFixed(3)}`;
-  } else {
-    linAccStats.textContent = 'Linear acceleration not reported';
-  }
+  linVelStats.textContent = `Linear velocity: ${formatCoords(
+    pose.linearVelocity,
+  )}`;
+  angVelStats.textContent = `Angular velocity: ${formatCoords(
+    pose.angularVelocity,
+  )}`;
 
-  if (angAcc) {
-    angAccStats.textContent = `Angular acceleration: x ${angAcc[0].toFixed(3)}, y ${angAcc[1].toFixed(3)}, z ${angAcc[2].toFixed(3)}`;
-  } else {
-    angAccStats.textContent = 'Angular acceleration not reported';
-  }
+  linAccStats.textContent = pose.linearAcceleration
+    ? `Linear acceleration: ${formatCoords(pose.linearAcceleration)}`
+    : "Linear acceleration not reported";
+
+  angAccStats.textContent = pose.angularAcceleration
+    ? `Angular acceleration: ${formatCoords(pose.angularAcceleration)}`
+    : "Angular acceleration not reported";
 }
 ```
 

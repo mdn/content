@@ -1,15 +1,11 @@
 ---
-title: RTCPeerConnection()
+title: "RTCPeerConnection: RTCPeerConnection() constructor"
+short-title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection()`**
@@ -18,7 +14,7 @@ a connection between the local device and a remote peer.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnection()
 new RTCPeerConnection(configuration)
 ```
@@ -26,6 +22,7 @@ new RTCPeerConnection(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
+
   - : An object providing options to configure the new connection:
 
     - `bundlePolicy` {{optional_inline}}
@@ -105,7 +102,7 @@ new RTCPeerConnection(configuration)
         - `"public"` {{deprecated_inline}}
           - : Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._
         - `"relay"`
-          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.
+          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered.
 
     - `peerIdentity` {{optional_inline}}
       - : A string
@@ -141,7 +138,7 @@ defaults.
 When you wish to provide your own certificates for use by an
 {{domxref("RTCPeerConnection")}} instead of having the `RTCPeerConnection`
 generate them automatically, you do so by calling the static
-{{domxref("RTCPeerConnection.generateCertificate()")}} function.
+{{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} function.
 
 The `certificates` property's value cannot be changed once it's first
 specified. If it's included in the configuration passed into a call to a connection's
@@ -157,8 +154,6 @@ If you don't provide certificates, new ones are generated automatically. One obv
 benefit to providing your own is identity key continuity—if you use the same certificate
 for subsequent calls, the remote peer can tell you're the same caller. This also avoids
 the cost of generating new keys.
-
-**<<<--- add link to information about identity --->>>**
 
 ## Specifications
 

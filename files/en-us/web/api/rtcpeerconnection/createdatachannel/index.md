@@ -1,17 +1,11 @@
 ---
-title: RTCPeerConnection.createDataChannel()
+title: "RTCPeerConnection: createDataChannel() method"
+short-title: createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - createDataChannel
 browser-compat: api.RTCPeerConnection.createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createDataChannel()`** method
@@ -27,7 +21,7 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 
 ## Syntax
 
-```js
+```js-nolint
 createDataChannel(label)
 createDataChannel(label, options)
 ```
@@ -130,11 +124,11 @@ This example shows how to create a data channel and set up handlers for the
 const pc = new RTCPeerConnection(options);
 const channel = pc.createDataChannel("chat");
 channel.onopen = (event) => {
-  channel.send('Hi you!');
-}
+  channel.send("Hi you!");
+};
 channel.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 ```js
@@ -143,13 +137,13 @@ channel.onmessage = (event) => {
 const pc = new RTCPeerConnection(options);
 pc.ondatachannel = (event) => {
   const channel = event.channel;
-    channel.onopen = (event) => {
-    channel.send('Hi back!');
-  }
+  channel.onopen = (event) => {
+    channel.send("Hi back!");
+  };
   channel.onmessage = (event) => {
     console.log(event.data);
-  }
-}
+  };
+};
 ```
 
 Alternatively, more symmetrical out-of-band negotiation can be used, using an
@@ -159,13 +153,13 @@ agreed-upon id (0 here):
 // Both sides
 
 const pc = new RTCPeerConnection(options);
-const channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
+const channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
 channel.onopen = (event) => {
-  channel.send('Hi!');
-}
+  channel.send("Hi!");
+};
 channel.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 For a more thorough example showing how the connection and channel are established, see

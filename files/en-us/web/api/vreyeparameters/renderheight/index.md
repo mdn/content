@@ -1,20 +1,15 @@
 ---
-title: VREyeParameters.renderHeight
+title: "VREyeParameters: renderHeight property"
+short-title: renderHeight
 slug: Web/API/VREyeParameters/renderHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - renderHeight
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.renderHeight
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`renderHeight`** read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended render target height of each eye viewport, in pixels.
 

@@ -1,13 +1,8 @@
 ---
 title: block
 slug: WebAssembly/Reference/Control_flow/block
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`block`** statement creates a label that can later be branched out of with a `br`.

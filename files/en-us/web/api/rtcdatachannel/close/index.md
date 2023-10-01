@@ -1,20 +1,11 @@
 ---
-title: RTCDataChannel.close()
+title: "RTCDataChannel: close() method"
+short-title: close()
 slug: Web/API/RTCDataChannel/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - close
 browser-compat: api.RTCDataChannel.close
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannel.close()`** method closes the
@@ -29,21 +20,21 @@ The sequence of events which occurs in response to this method being called:
 
 1. {{domxref("RTCDataChannel.readyState")}} is set to `closing`.
 2. A background task is established to handle the remainder of the steps below, and
-    `close()` returns to the caller.
+   `close()` returns to the caller.
 3. The transport layer deals with any buffered messages; the protocol layer decides
-    whether to send them or discard them.
+   whether to send them or discard them.
 4. The underlying data transport is closed.
 5. The {{domxref("RTCDataChannel.readyState")}} property is set to
-    `closed`.
+   `closed`.
 6. If the transport was closed with an error,
-    the `RTCDataChannel` is sent
-    an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
-    with its {{DOMxRef("DOMException.name", "name")}} set to `NetworkError`.
+   the `RTCDataChannel` is sent
+   an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
+   with its {{DOMxRef("DOMException.name", "name")}} set to `NetworkError`.
 7. A {{domxref("RTCDataChannel.close_event", "close")}} event is sent to the channel.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

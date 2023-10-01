@@ -1,14 +1,10 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.frequency
 ---
+
 {{CSSRef}}
 
 The **`<frequency>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties.

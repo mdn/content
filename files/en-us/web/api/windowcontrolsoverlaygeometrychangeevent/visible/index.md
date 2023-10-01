@@ -1,14 +1,14 @@
 ---
-title: WindowControlsOverlayGeometryChangeEvent.visible
+title: "WindowControlsOverlayGeometryChangeEvent: visible property"
+short-title: visible
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/visible
 page-type: web-api-instance-property
-tags:
-  - API
-  - WindowControlsOverlayGeometryChangeEvent
-  - Property
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.visible
 ---
-{{APIRef("Window Controls Overlay API")}}
+
+{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The **`visible`** read-only property of the {{domxref("WindowControlsOverlayGeometryChangeEvent")}} is a boolean flag that indicates whether the window controls overlay is visible or not in a desktop-installed Progressive Web App.
 

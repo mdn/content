@@ -1,16 +1,13 @@
 ---
-title: Navigator.productSub
+title: "Navigator: productSub property"
+short-title: productSub
 slug: Web/API/Navigator/productSub
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Read-only
+status:
+  - deprecated
 browser-compat: api.Navigator.productSub
 ---
+
 {{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
 The **`Navigator.productSub`** read-only property returns the

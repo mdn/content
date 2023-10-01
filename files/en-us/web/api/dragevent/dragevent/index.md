@@ -1,15 +1,11 @@
 ---
-title: DragEvent()
+title: "DragEvent: DragEvent() constructor"
+short-title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Reference
-  - drag and drop
 browser-compat: api.DragEvent.DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 This constructor is used to create a synthetic {{domxref("DragEvent")}} object.
@@ -24,7 +20,7 @@ This interface inherits properties from {{domxref("MouseEvent")}} and
 
 ## Syntax
 
-```js
+```js-nolint
 new DragEvent(type)
 new DragEvent(type, dragEventInit)
 ```
@@ -32,6 +28,7 @@ new DragEvent(type, dragEventInit)
 ### Parameters
 
 - `type`
+
   - : A string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 
 - `dragEventInit` {{optional_inline}}

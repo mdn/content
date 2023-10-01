@@ -1,16 +1,11 @@
 ---
-title: Client.type
+title: "Client: type property"
+short-title: type
 slug: Web/API/Client/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - Type
 browser-compat: api.Client.type
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`type`** read-only property of the {{domxref("Client")}}

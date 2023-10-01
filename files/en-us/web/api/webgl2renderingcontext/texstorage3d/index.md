@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.texStorage3D()
+title: "WebGL2RenderingContext: texStorage3D() method"
+short-title: texStorage3D()
 slug: Web/API/WebGL2RenderingContext/texStorage3D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.texStorage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.texStorage3D()`** method of the
@@ -18,7 +14,7 @@ three-dimensional texture or two-dimensional array texture.
 
 ## Syntax
 
-```js
+```js-nolint
 texStorage3D(target, levels, internalformat, width, height, depth)
 ```
 
@@ -63,6 +59,7 @@ texStorage3D(target, levels, internalformat, width, height, depth)
     - `gl.RGBA8UI`
 
     In addition if the {{domxref("WEBGL_compressed_texture_etc")}} extension is supported, the following values are also possible:
+
     - `gl.COMPRESSED_R11_EAC`
     - `gl.COMPRESSED_SIGNED_R11_EAC`
     - `gl.COMPRESSED_RG11_EAC`

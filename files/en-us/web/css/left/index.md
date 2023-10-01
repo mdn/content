@@ -1,14 +1,10 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.left
 ---
+
 {{CSSRef}}
 
 The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
@@ -61,7 +57,7 @@ left: unset;
 
 The effect of `left` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's left edge and the left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)
+- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's outer margin of left edge and the inner border of left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)
 - When `position` is set to `relative`, the `left` property specifies the distance the element's left edge is moved to the right from its normal position.
 - When `position` is set to `sticky`, the `left` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `left` property has _no effect_.
@@ -90,7 +86,10 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
       left: 20px;
       top: 20px;
     </pre>
-    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+    <p>
+      The only containing element for this div is the main window, so it
+      positions itself in relation to it.
+    </p>
   </div>
 
   <div id="example_2">
@@ -127,7 +126,8 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
         left: 0;
         top: 200px;
       </pre>
-      <p>Absolute position with both left and right declared</p> </div>
+      <p>Absolute position with both left and right declared</p>
+    </div>
   </div>
 </div>
 ```
@@ -138,7 +138,7 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -154,7 +154,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #example_2 {
@@ -163,8 +163,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #example_3 {
   width: 600px;
@@ -172,23 +171,23 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #example_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 #example_5 {
   position: absolute;
   right: 0;
   left: 0;
   top: 100px;
-  background-color: #D7FFC2;
+  background-color: #d7ffc2;
 }
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.lineTo()
+title: "CanvasRenderingContext2D: lineTo() method"
+short-title: lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -24,7 +20,7 @@ anything. To draw the path onto a canvas, you can use the
 
 ## Syntax
 
-```js
+```js-nolint
 lineTo(x, y)
 ```
 
@@ -56,13 +52,13 @@ This example draws a straight line using the `lineTo()` method.
 The line begins at (30, 50) and ends at (150, 100).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.beginPath();       // Start a new path
-ctx.moveTo(30, 50);    // Move the pen to (30, 50)
-ctx.lineTo(150, 100);  // Draw a line to (150, 100)
-ctx.stroke();          // Render the path
+ctx.beginPath(); // Start a new path
+ctx.moveTo(30, 50); // Move the pen to (30, 50)
+ctx.lineTo(150, 100); // Draw a line to (150, 100)
+ctx.stroke(); // Render the path
 ```
 
 #### Result
@@ -84,8 +80,8 @@ This example draws a letter 'M' with a single contiguous line.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.moveTo(90, 130);
 ctx.lineTo(95, 25);

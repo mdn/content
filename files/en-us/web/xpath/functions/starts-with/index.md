@@ -1,30 +1,29 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `starts-with` checks whether the first string starts with the second string and returns true or false.
 
 ### Syntax
 
-```
+```plain
 starts-with(haystack, needle)
 ```
 
 ### Arguments
 
-- _`haystack`_
+- `haystack`
   - : The string to look in.
-- _`needle`_
+- `needle`
   - : The string to look for.
 
 ### Returns
 
-`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
+`true` if `haystack` starts with `needle`. Otherwise, `false`.
 
 ### Defined
 

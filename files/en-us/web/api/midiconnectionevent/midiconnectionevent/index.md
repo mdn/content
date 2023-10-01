@@ -1,21 +1,18 @@
 ---
-title: MIDIConnectionEvent()
+title: "MIDIConnectionEvent: MIDIConnectionEvent() constructor"
+short-title: MIDIConnectionEvent()
 slug: Web/API/MIDIConnectionEvent/MIDIConnectionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MIDIConnectionEvent
 browser-compat: api.MIDIConnectionEvent.MIDIConnectionEvent
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIConnectionEvent()`** constructor creates a new {{domxref("MIDIConnectionEvent")}} object. Typically this constructor is not used as events are created when a new port becomes available, and the object is passed to the {{domxref("MIDIAccess.statechange_event", "statechange")}} event.
 
 ## Syntax
 
-```js
+```js-nolint
 new MIDIConnectionEvent(type)
 new MIDIConnectionEvent(type, midiConnectionEventInit)
 ```

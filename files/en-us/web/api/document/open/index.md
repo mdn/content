@@ -1,16 +1,11 @@
 ---
-title: Document.open()
+title: "Document: open() method"
+short-title: open()
 slug: Web/API/Document/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - open
 browser-compat: api.Document.open
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.open()`** method opens a document for
@@ -24,7 +19,7 @@ This does come with some side effects. For example:
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 
@@ -61,14 +56,14 @@ This method is subject to the same [same-origin policy](/en-US/docs/Web/Security
 ## Three-argument document.open()
 
 There is a lesser-known and little-used three-argument version of
-`document.open()` , which is an alias of {{domxref("Window.open()")}} (see
+`document.open()`, which is an alias of {{domxref("Window.open()")}} (see
 its page for full details).
 
 This call, for example opens github.com in a new window, with its opener set to
 `null`:
 
 ```js
-document.open('https://www.github.com','', 'noopener=true')
+document.open("https://www.github.com", "", "noopener=true");
 ```
 
 ## Two-argument document.open()
@@ -77,7 +72,7 @@ Browsers used to support a two-argument `document.open()`, with the
 following signature:
 
 ```js
-document.open(type, replace)
+document.open(type, replace);
 ```
 
 Where `type` specified the MIME type of the data you are writing (e.g.
@@ -87,7 +82,7 @@ entry of the document being written to.
 
 This form is now obsolete; it won't throw an error, but instead just forwards to
 `document.open()` (i.e. is the equivalent of just running it with no
-arguments).  The history-replacement behavior now always happens.
+arguments). The history-replacement behavior now always happens.
 
 ## Specifications
 

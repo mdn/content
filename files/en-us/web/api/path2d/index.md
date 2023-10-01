@@ -2,14 +2,9 @@
 title: Path2D
 slug: Web/API/Path2D
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Interface
-  - Path2D
-  - Reference
 browser-compat: api.Path2D
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D`** interface of the Canvas 2D API is used to declare a path that can then be used on a {{domxref("CanvasRenderingContext2D")}} object. The [path methods](/en-US/docs/Web/API/CanvasRenderingContext2D#paths) of the `CanvasRenderingContext2D` interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.
@@ -19,7 +14,7 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
 - {{domxref("Path2D.Path2D", "Path2D()")}}
   - : `Path2D` constructor. Creates a new `Path2D` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("Path2D.addPath()")}}
   - : Adds a path to the current path.
@@ -41,6 +36,8 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
   - : Adds an elliptical arc to the path which is centered at (`x, y`) position with the radii `radiusX` and `radiusY` starting at `startAngle` and ending at `endAngle` going in the given direction by `counterclockwise` (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}
   - : Creates a path for a rectangle at position (`x, y`) with a size that is determined by `width` and `height`.
+- {{domxref("CanvasRenderingContext2D.roundRect()", "Path2D.roundRect()")}}
+  - : Creates a path for a rounded rectangle at position (`x, y`) with a size that is determined by `width` and `height` and the radii of the circular arc to be used for the corners of the rectangle is determined by `radii`.
 
 ## Specifications
 

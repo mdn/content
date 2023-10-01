@@ -1,15 +1,10 @@
 ---
 title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
-tags:
-  - Add-ons
-  - Extensions
-  - Proxy
-  - RequestDetails
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.proxy.RequestDetails
 ---
+
 {{AddonSidebar()}}
 
 Contains information about a web request. An instance of this object is passed into the {{WebExtAPIRef("proxy.onRequest")}} listener.
@@ -27,11 +22,11 @@ Values of this type are objects. They contain the following properties:
 - `fromCache`
   - : `boolean`. Indicates if this response will be fetched from disk cache.
 - `incognito`
-  - : `boolean` `true` for private browsing requests.
+  - : `boolean`. `true` for private browsing requests.
 - `method`
   - : `string`. Standard HTTP method: for example, "GET" or "POST".
 - `originUrl`
-  - : `string`. URL of the resource that triggered the request. Note that this may not be the same as the URL of the page into which the requested resource will be loaded. For example, if a document triggers a load in a different window through the [target attribute of a link](/en-US/docs/Web/HTML/Element/a#attr-target), or a CSS document includes an image using the [`url()` functional notation](</en-US/docs/Web/CSS/url()#the_url()_functional_notation>), then this is the URL of the original document or of the CSS document, respectively.
+  - : `string`. URL of the resource that triggered the request. Note that this may not be the same as the URL of the page into which the requested resource will be loaded. For example, if a document triggers a load in a different window through the [target attribute of a link](/en-US/docs/Web/HTML/Element/a#target), or a CSS document includes an image using the [`url()` functional notation](/en-US/docs/Web/CSS/url), then this is the URL of the original document or of the CSS document, respectively.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.
 - `requestId`

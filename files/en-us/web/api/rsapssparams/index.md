@@ -2,19 +2,14 @@
 title: RsaPssParams
 slug: Web/API/RsaPssParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Reference
-  - RsaPssParams
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaPssParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}}, when using the [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss) algorithm.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `RSA-PSS`.
@@ -27,7 +22,7 @@ The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
     The maximum size of `saltLength` is given by:
 
     ```js
-    Math.ceil((keySizeInBits - 1)/8) - digestSizeInBytes - 2
+    Math.ceil((keySizeInBits - 1) / 8) - digestSizeInBytes - 2;
     ```
 
     So for a key length of 2048 bits and a digest output size of 32 bytes, the maximum size would be 222.

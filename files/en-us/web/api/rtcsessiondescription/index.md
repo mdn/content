@@ -2,24 +2,16 @@
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - Web
-  - WebRTC
 browser-compat: api.RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 
 The process of negotiating a connection between two peers involves exchanging `RTCSessionDescription` objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.
 
-## Properties
+## Instance properties
 
 _The `RTCSessionDescription` interface doesn't inherit any properties._
 
@@ -28,7 +20,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
   - : A string containing the {{Glossary("SDP")}} describing the session.
 
-## Methods
+## Instance methods
 
 _The `RTCSessionDescription` doesn't inherit any methods._
 
@@ -53,13 +45,13 @@ signalingChannel.onmessage = (evt) => {
           pc.createAnswer(localDescCreated, logError);
         }
       },
-      logError
+      logError,
     );
   } else {
     pc.addIceCandidate(
       new RTCIceCandidate(message.candidate),
       () => {},
-      logError
+      logError,
     );
   }
 };

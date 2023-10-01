@@ -1,12 +1,12 @@
 ---
 title: g1
 slug: Web/SVG/Attribute/g1
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.g1
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`g1`** attribute specifies a list of glyph names which identify a set of possible first glyphs in the kerning pair.

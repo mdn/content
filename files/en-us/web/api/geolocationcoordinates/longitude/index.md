@@ -1,30 +1,15 @@
 ---
-title: GeolocationCoordinates.longitude
+title: "GeolocationCoordinates: longitude property"
+short-title: longitude
 slug: Web/API/GeolocationCoordinates/longitude
 page-type: web-api-instance-property
-tags:
-  - API
-  - GPS
-  - Geolocation
-  - Geolocation API
-  - GeolocationCoordinates
-  - Global Positioning System
-  - Property
-  - Read-only
-  - Reference
-  - Secure context
-  - longitude
 browser-compat: api.GeolocationCoordinates.longitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The {{domxref("GeolocationCoordinates")}} interface's read-only
-**`longitude`** property is a double-precision floating point
-value which represents the longitude of a geographical position, specified in decimal
-degrees. Together with a {{domxref("DOMTimeStamp")}} indicating a time of measurement,
-the `GeolocationCoordinates` object is part of the
-{{domxref("GeolocationPosition")}} interface, which is the object type returned by
-Geolocation API functions that obtain and return a geographical position.
+The {{domxref("GeolocationCoordinates")}} interface's read-only **`longitude`** property is a number which represents the longitude of a geographical position, specified in decimal degrees.
+Together with a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, indicating a time of measurement, the `GeolocationCoordinates` object is part of the {{domxref("GeolocationPosition")}} interface, which is the object type returned by Geolocation API functions that obtain and return a geographical position.
 
 ## Value
 
@@ -88,12 +73,10 @@ The HTML used to present the results looks like this:
 
 ```html
 <p>
-  Your location is <span id="latitude">0.00</span>°
-  latitude by <span id="longitude">0.00</span>° longitude.
+  Your location is <span id="latitude">0.00</span>° latitude by
+  <span id="longitude">0.00</span>° longitude.
 </p>
-<button id="get-location">
-  Get My Location
-</button>
+<button id="get-location">Get My Location</button>
 ```
 
 ### Result

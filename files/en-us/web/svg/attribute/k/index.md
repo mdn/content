@@ -1,12 +1,12 @@
 ---
 title: k
 slug: Web/SVG/Attribute/k
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.k
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`k`** attribute specifies the amount for decreasing the spacing between the two glyphs in a kerning pair.

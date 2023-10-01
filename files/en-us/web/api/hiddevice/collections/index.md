@@ -1,16 +1,13 @@
 ---
-title: HIDDevice.collections
+title: "HIDDevice: collections property"
+short-title: collections
 slug: Web/API/HIDDevice/collections
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - collections
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.collections
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`collections`** read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats

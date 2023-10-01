@@ -1,13 +1,9 @@
 ---
 title: Updating plug-ins for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_plug-ins
-tags:
-  - Add-ons
-  - Firefox
-  - Firefox 3.6
-  - Gecko 1.9.2
-  - Plugins
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 Several changes were made in Gecko 1.9.2 that may impact plug-in developers in particular. This article provides a list of those changes.

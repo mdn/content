@@ -2,17 +2,9 @@
 title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Draft
-  - Guide
-  - Media
-  - Video
-  - WebRTC
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
 
@@ -28,7 +20,7 @@ Peer A who will be the initiator of the connection, will create an Offer. They w
 
 ### Session descriptions
 
-The configuration of an endpoint on a WebRTC connection is called a **session description**. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using **Session Description Protocol** ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(2327)}}.
+The configuration of an endpoint on a WebRTC connection is called a **session description**. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using **Session Description Protocol** ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(8866)}}.
 
 When a user starts a WebRTC call to another user, a special description is created called an **offer**. This description includes all the information about the caller's proposed configuration for the call. The recipient then responds with an **answer**, which is a description of their end of the call. In this way, both devices share with one another the information needed in order to exchange media data. This exchange is handled using Interactive Connectivity Establishment ({{Glossary("ICE")}}), a protocol which lets two devices use an intermediary to exchange offers and answers even if the two devices are separated by Network Address Translation ({{Glossary("NAT")}}).
 
@@ -124,11 +116,11 @@ Instead, you can initiate an **ICE rollback**. A rollback restores the SDP offer
 
 To programmatically initiate a rollback, send a description whose {{domxref("RTCSessionDescription.type", "type")}} is `rollback`. Any other properties in the description object are ignored.
 
-In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously *sent* an offer, calling `setRemoteDescription()` with a *received* offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
+In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously _sent_ an offer, calling `setRemoteDescription()` with a _received_ offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
 
 ### ICE restarts
 
-For now, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+Learn about the [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) process.
 
 ## The entire exchange in a complicated diagram
 

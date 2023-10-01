@@ -1,15 +1,10 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-optical-sizing
 ---
+
 {{CSSRef}}
 
 The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.
@@ -57,18 +52,21 @@ When optical sizing is used, small text sizes are often rendered with thicker st
 ### Disabling optical sizing
 
 ```html
-<p class="optical-sizing">This paragraph is optically sized.
- This is the default across browsers.</p>
+<p class="optical-sizing">
+  This paragraph is optically sized. This is the default across browsers.
+</p>
 
-<p class="no-optical-sizing">This paragraph is not optically sized.
- You should see a difference in supporting browsers.</p>
+<p class="no-optical-sizing">
+  This paragraph is not optically sized. You should see a difference in
+  supporting browsers.
+</p>
 ```
 
 ```css
 @font-face {
-    src: url('AmstelvarAlpha-VF.ttf');
-    font-family:'Amstelvar';
-    font-style: normal;
+  src: url("AmstelvarAlpha-VF.ttf");
+  font-family: "Amstelvar";
+  font-style: normal;
 }
 
 p {

@@ -1,12 +1,11 @@
 ---
-title: Node.normalize()
+title: "Node: normalize() method"
+short-title: normalize()
 slug: Web/API/Node/normalize
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.normalize
 ---
+
 {{APIRef("DOM")}}
 
 The **`normalize()`** method of the {{domxref("Node")}} interface puts the specified node
@@ -15,8 +14,8 @@ In a normalized sub-tree, no text nodes in the sub-tree are empty and there are 
 
 ## Syntax
 
-```js
-normalize();
+```js-nolint
+normalize()
 ```
 
 ### Parameters

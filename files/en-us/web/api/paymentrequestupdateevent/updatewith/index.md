@@ -1,22 +1,11 @@
 ---
-title: PaymentRequestUpdateEvent.updateWith()
+title: "PaymentRequestUpdateEvent: updateWith() method"
+short-title: updateWith()
 slug: Web/API/PaymentRequestUpdateEvent/updateWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - Change
-  - Method
-  - Payment Change
-  - Payment Details
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
-  - Web Payments
-  - payment
-  - updateWith
 browser-compat: api.PaymentRequestUpdateEvent.updateWith
 ---
+
 {{APIRef("Payment Request API")}}{{securecontext_header}}
 
 The **`updateWith()`** method of the
@@ -25,7 +14,7 @@ The **`updateWith()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 updateWith(details)
 ```
 
@@ -36,6 +25,7 @@ updateWith(details)
   - : An object specifying the changes applied to the payment request:
 
     - `displayItems` {{optional_inline}}
+
       - : An array of objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice, each with the following properties:
 
         - `amount`

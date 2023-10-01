@@ -1,12 +1,11 @@
 ---
 title: Insecure certificate
 slug: Web/WebDriver/Errors/InsecureCertificate
-tags:
-  - Error
-  - Reference
-  - WebDriver
-  - insecure certificate
+page-type: webdriver-error
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+
 The **insecure certificate** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when the remotely controlled browser hits a certificate warning of any kind. This is usually the result of [navigating](/en-US/docs/Web/WebDriver/Commands/NavigateTo) to a website with an expired or invalid [TLS certificate](/en-US/docs/Glossary/TLS). Examples of invalid certificates include self-signed, revoked, and cryptographically insecure certificates.
 
 Web browsers prevent and block traffic to domains with broken certificates since the communication with the server would be compromised. It is strongly recommended to fix the certificate situation instead of disabling certificate checks, even in test environments.
@@ -25,12 +24,12 @@ session = webdriver.Firefox()
 try:
     session.get("https://self-signed.badssl.com/")
 except exceptions.InsecureCertificateException as e:
-    print("Hit insecure cert on {}".format(session.current_url)
+    print("Hit insecure cert on {}".format(session.current_url))
 ```
 
 Output:
 
-```
+```plain
 Hit an insecure cert on https://self-signed.badssl.com/
 ```
 

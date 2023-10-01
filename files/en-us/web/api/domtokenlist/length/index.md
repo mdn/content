@@ -1,13 +1,11 @@
 ---
-title: DOMTokenList.length
+title: "DOMTokenList: length property"
+short-title: length
 slug: Web/API/DOMTokenList/length
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.DOMTokenList.length
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`length`** property of the {{domxref("DOMTokenList")}} interface is an `integer` representing the number

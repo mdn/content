@@ -1,14 +1,10 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
+page-type: http-header
 browser-compat: http.headers.Forwarded
 ---
+
 {{HTTPSidebar}}
 
 The **`Forwarded`** request header contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
@@ -50,6 +46,7 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 ## Directives
 
 - `by` {{optional_inline}}
+
   - : The interface where the request came in to the proxy server.
     The identifier can be:
 
@@ -89,8 +86,8 @@ If your application, server, or proxy supports the standardized `Forwarded` head
 Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
 
 ```http
-X-Forwarded-For: 123.34.567.89
-Forwarded: for=123.34.567.89
+X-Forwarded-For: 192.0.2.172
+Forwarded: for=192.0.2.172
 
 X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
 Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"

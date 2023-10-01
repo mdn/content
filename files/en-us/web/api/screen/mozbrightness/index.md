@@ -1,15 +1,14 @@
 ---
-title: Screen.mozBrightness
+title: "Screen: mozBrightness property"
+short-title: mozBrightness
 slug: Web/API/Screen/mozBrightness
 page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - Deprecated
-  - Non-standard
-  - Property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Screen.mozBrightness
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Indicates how bright the screen's backlight is, on a scale from 0 (very dim) to 1 (full

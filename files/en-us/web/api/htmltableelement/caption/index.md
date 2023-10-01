@@ -1,14 +1,11 @@
 ---
-title: HTMLTableElement.caption
+title: "HTMLTableElement: caption property"
+short-title: caption
 slug: Web/API/HTMLTableElement/caption
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.HTMLTableElement.caption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.caption`** property represents the

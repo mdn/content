@@ -1,12 +1,10 @@
 ---
 title: display
 slug: Web/Manifest/display
-tags:
-  - Manifest
-  - Web
-  - display
+page-type: web-manifest-member
 browser-compat: html.manifest.display
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -14,10 +12,6 @@ browser-compat: html.manifest.display
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

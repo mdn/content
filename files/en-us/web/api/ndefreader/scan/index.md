@@ -1,21 +1,20 @@
 ---
-title: NDEFReader.scan()
+title: "NDEFReader: scan() method"
+short-title: scan()
 slug: Web/API/NDEFReader/scan
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Method
+status:
+  - experimental
 browser-compat: api.NDEFReader.scan
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
+
+The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag read operation is scheduled or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Syntax
 
-```js
+```js-nolint
 scan(options)
 ```
 
@@ -56,17 +55,22 @@ This example shows what happens when a scan promise rejects and `readingerror` i
 
 ```js
 const ndef = new NDEFReader();
-ndef.scan().then(() => {
-  console.log("Scan started successfully.");
-  ndef.onreadingerror = (event) => {
-    console.log("Error! Cannot read data from the NFC tag. Try a different one?");
-  };
-  ndef.onreading = (event) => {
-    console.log("NDEF message read.");
-  };
-}).catch((error) => {
-  console.log(`Error! Scan failed to start: ${error}.`);
-});
+ndef
+  .scan()
+  .then(() => {
+    console.log("Scan started successfully.");
+    ndef.onreadingerror = (event) => {
+      console.log(
+        "Error! Cannot read data from the NFC tag. Try a different one?",
+      );
+    };
+    ndef.onreading = (event) => {
+      console.log("NDEF message read.");
+    };
+  })
+  .catch((error) => {
+    console.log(`Error! Scan failed to start: ${error}.`);
+  });
 ```
 
 ## Specifications

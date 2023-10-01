@@ -1,13 +1,12 @@
 ---
 title: accent-height
 slug: Web/SVG/Attribute/accent-height
-tags:
-  - Deprecated
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.accent-height
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`accent-height`** attribute defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.

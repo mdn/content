@@ -1,26 +1,16 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
-tags:
-  - CSS
-  - Cascading Style Sheets
-  - Design
-  - Guide
-  - Landing
-  - Layout
-  - Reference
-  - Style Sheets
-  - Styles
-  - Stylesheets
-  - l10n:priority
+page-type: landing-page
 ---
+
 {{CSSRef}}
 
 **Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
 CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://www.w3.org/Style/CSS/#specs). Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now CSS without a version number.
 
-After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/).
+After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/) and individual modules progress. CSS modules now have version numbers, or levels, such as [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/).
 
 ## Key resources
 
@@ -65,17 +55,17 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
 - CSS key concepts:
 
   - The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
   - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - The [containing block](/en-US/docs/Web/CSS/Containing_block)
-  - [Stacking](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) and [block-formatting](/en-US/docs/Web/Guide/CSS/Block_formatting_context) contexts
+  - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/Guide/CSS/Block_formatting_context) contexts
   - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
   - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
-  - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
-  - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
-  - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+  - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+  - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+  - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
+  - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
   - [Animation](/en-US/docs/Web/CSS/animation)
 
 ## Cookbook
@@ -90,7 +80,7 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 
 ## Meta bugs
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## See also
 

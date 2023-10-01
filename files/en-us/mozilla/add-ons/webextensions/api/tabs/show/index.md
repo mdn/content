@@ -1,17 +1,10 @@
 ---
 title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - show
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.show
 ---
+
 {{AddonSidebar()}}
 
 Shows one or more tabs that were previously hidden by a call to {{WebExtAPIRef("tabs.hide")}}.
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let showing = browser.tabs.show(
   tabIds          // integer or integer array
 )

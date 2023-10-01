@@ -1,20 +1,14 @@
 ---
-title: 'Element: mousewheel event'
+title: "Element: mousewheel event"
+short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Deprecated
-  - Event
-  - Interface
-  - Non-standard
-  - UI
-  - mouse
-  - mousewheel
-  - scrolling
-  - wheel
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.mousewheel_event
 ---
+
 {{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
 
 The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously at an {{domxref("Element")}} to provide updates while a mouse wheel or similar device is operated. The `mousewheel` event was never part of any standard, and while it was implemented by several browsers, it was never implemented by Firefox.
@@ -26,9 +20,9 @@ The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mousewheel', (event) => {});
+addEventListener("mousewheel", (event) => {});
 
-onmousewheel = (event) => { };
+onmousewheel = (event) => {};
 ```
 
 ## Event type
@@ -64,8 +58,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer representing the vertical scroll amount.
 
-> **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
-
 ## The detail property
 
 The value of the {{domxref("UIEvent/detail", "detail")}} property is always zero, except in Opera, which uses `detail` similarly to the Firefox-only {{domxref("Element.DOMMouseScroll_event", "DOMMouseScroll")}} event's `detail` value, which indicates the scroll distance in terms of lines, with negative values indicating the scrolling movement is either toward the bottom or toward the right, and positive values indicating scrolling to the top or left.
@@ -83,10 +75,6 @@ IE and Opera (Presto) only support `wheelDelta` attribute and do _not_ support h
 The `wheelDeltaX` attribute value indicates the `wheelDelta` attribute value along the horizontal axis. When a user operates the device for scrolling to right, the value is negative. Otherwise, i.e., if it's to left, the value is positive.
 
 The `wheelDeltaY` attribute value indicates the `wheelDelta` attribute value along the vertical axis. The sign of the value is the same as the `wheelDelta` attribute value.
-
-### Internet Explorer
-
-The value is the same as the delta value of Windows' `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. It means that if the mouse wheel doesn't support high resolution scroll, the value is 120 per notch. The value isn't changed even if the scroll amount of system settings is page scroll.
 
 ### Chrome
 
@@ -126,5 +114,4 @@ Not part of any specification.
 
 ## See also
 
-- Gecko's legacy mouse wheel events: `DOMMouseScroll`, `MozMousePixelScroll`
-- Standardized wheel event: `wheel`
+- The standard {{domxref("Element/wheel_event", "wheel")}} event to listen to instead.

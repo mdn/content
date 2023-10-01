@@ -1,22 +1,19 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
+
 {{JSRef}}
 
-The **`handler.apply()`** method is a trap for a function call.
+The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as function calls.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }
@@ -25,8 +22,7 @@ new Proxy(target, {
 
 ### Parameters
 
-The following parameters are passed to the `apply()` method.
-`this` is bound to the handler.
+The following parameters are passed to the `apply()` method. `this` is bound to the handler.
 
 - `target`
   - : The target callable object.
@@ -41,23 +37,21 @@ The `apply()` method can return any value.
 
 ## Description
 
-The **`handler.apply()`** method is a trap for a function call.
-
 ### Interceptions
 
 This trap can intercept these operations:
 
-- `proxy(...args)`
+- Function call: `proxy(...args)`
 - {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Reflect.apply()")}}
 
+Or any other operation that invokes the `[[Call]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}.
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
-The `target` must be a callable itself. That is, it must be a
-function object.
+- The `target` must be a callable itself. That is, it must be a function object.
 
 ## Examples
 
@@ -70,11 +64,11 @@ const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log(`called: ${argumentsList}`);
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1,2,3"
-                         // 6
+// 6
 ```
 
 ## Specifications

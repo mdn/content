@@ -1,23 +1,18 @@
 ---
-title: ChannelMergerNode()
+title: "ChannelMergerNode: ChannelMergerNode() constructor"
+short-title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - ChannelMergerNode
-  - Constructor
-  - Reference
-  - Web Audio API
 browser-compat: api.ChannelMergerNode.ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`ChannelMergerNode()`** constructor creates a new {{domxref("ChannelMergerNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ChannelMergerNode(context)
 new ChannelMergerNode(context, options)
 ```
@@ -30,7 +25,7 @@ new ChannelMergerNode(context, options)
   - : An object defining the properties you want the `ChannelMergerNode` to have:
     - `numberOfInputs` {{optional_inline}}
       - : A number defining the number of inputs the {{domxref("ChannelMergerNode")}} should have. If not specified, the default value used is 6.
-    - `channelCount`  {{optional_inline}}
+    - `channelCount` {{optional_inline}}
       - : An integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
         (See {{domxref("AudioNode.channelCount")}} for more information.)
         Its usage and precise definition depend on the value of `channelCountMode`.
@@ -60,8 +55,8 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 const ac = new AudioContext();
 
 const options = {
-  numberOfInputs : 2
-}
+  numberOfInputs: 2,
+};
 
 const myMerger = new ChannelMergerNode(ac, options);
 ```

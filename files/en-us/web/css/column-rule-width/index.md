@@ -1,15 +1,11 @@
 ---
 title: column-rule-width
 slug: Web/CSS/column-rule-width
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-rule-width
 ---
-{{ CSSRef}}
+
+{{CSSRef}}
 
 The **`column-rule-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the line drawn between columns in a multi-column layout.
 
@@ -57,10 +53,11 @@ The `column-rule-width` property is specified as a single `<'border-width'>` val
 #### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-width` property is used to change
-   the width of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-width`
+  property is used to change the width of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 #### CSS

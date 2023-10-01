@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.quadraticCurveTo()
+title: "CanvasRenderingContext2D: quadraticCurveTo() method"
+short-title: quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +18,7 @@ the quadratic Bézier curve.
 
 ## Syntax
 
-```js
+```js-nolint
 quadraticCurveTo(cpx, cpy, x, y)
 ```
 
@@ -56,8 +52,8 @@ This example shows how a quadratic Bézier curve is drawn.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Quadratic Bézier curve
 ctx.beginPath();
@@ -66,14 +62,14 @@ ctx.quadraticCurveTo(230, 30, 50, 100);
 ctx.stroke();
 
 // Start and end points
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.beginPath();
-ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Start point
-ctx.arc(50, 100, 5, 0, 2 * Math.PI);  // End point
+ctx.arc(50, 20, 5, 0, 2 * Math.PI); // Start point
+ctx.arc(50, 100, 5, 0, 2 * Math.PI); // End point
 ctx.fill();
 
 // Control point
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.arc(230, 30, 5, 0, 2 * Math.PI);
 ctx.fill();
@@ -103,8 +99,8 @@ The curve begins at the point specified by `moveTo()`: (20, 110). The
 control point is placed at (230, 150). The curve ends at (250, 20).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 110);

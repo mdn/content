@@ -1,16 +1,11 @@
 ---
-title: ReadableStreamDefaultController.desiredSize
+title: "ReadableStreamDefaultController: desiredSize property"
+short-title: desiredSize
 slug: Web/API/ReadableStreamDefaultController/desiredSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - desiredSize
 browser-compat: api.ReadableStreamDefaultController.desiredSize
 ---
+
 {{APIRef("Streams")}}
 
 The **`desiredSize`** read-only property of the
@@ -36,3 +31,8 @@ error if another part of the system it relies on fails.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

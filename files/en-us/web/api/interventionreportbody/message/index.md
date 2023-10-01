@@ -1,16 +1,13 @@
 ---
-title: InterventionReportBody.message
+title: "InterventionReportBody: message property"
+short-title: message
 slug: Web/API/InterventionReportBody/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - message
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.message
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`message`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a human-readable description of the intervention, including information such as how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
@@ -25,9 +22,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

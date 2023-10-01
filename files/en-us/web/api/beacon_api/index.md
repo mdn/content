@@ -2,12 +2,9 @@
 title: Beacon API
 slug: Web/API/Beacon_API
 page-type: web-api-overview
-tags:
-  - Guide
-  - Overview
-  - Web Performance
 browser-compat: api.Navigator.sendBeacon
 ---
+
 {{DefaultAPISidebar("Beacon")}}
 
 The **`Beacon`** API is used to send an asynchronous and non-blocking request to a web server. The request does not expect a response. Unlike requests made using {{domxref("XMLHttpRequest")}} or the [Fetch API](/en-US/docs/Web/API/Fetch_API), the browser guarantees to initiate beacon requests before the page is unloaded and to run them to completion.

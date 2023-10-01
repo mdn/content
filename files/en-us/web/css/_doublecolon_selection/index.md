@@ -1,14 +1,10 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
 browser-compat: css.selectors.selection
 ---
+
 {{CSSRef}}
 
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
@@ -23,14 +19,16 @@ Only certain CSS properties can be used with `::selection`:
 - {{CSSxRef("background-color")}}
 - {{CSSxRef("text-decoration")}} and its associated properties
 - {{CSSxRef("text-shadow")}}
-- {{SVGAttr("stroke-color")}}, {{SVGAttr("fill-color")}} and {{SVGAttr("stroke-width")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}} and {{CSSxRef("-webkit-text-stroke-width")}}
 
 In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```
-::selection
+```css
+::selection {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -89,8 +87,6 @@ Color contrast ratio is found by comparing the luminosity of the selected text a
 ## Specifications
 
 {{Specifications}}
-
-> **Note:** `::selection` was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved [(based on discussion in the W3C Style mailing list)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). It returned in [Pseudo-Elements Level 4](https://drafts.csswg.org/css-pseudo-4/).
 
 ## Browser compatibility
 

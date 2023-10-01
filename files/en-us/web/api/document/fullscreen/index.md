@@ -1,20 +1,13 @@
 ---
-title: Document.fullscreen
+title: "Document: fullscreen property"
+short-title: fullscreen
 slug: Web/API/Document/fullscreen
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - Fullscreen
-  - Fullscreen API
-  - Property
-  - Read-only
-  - Reference
-  - fullscreen
-  - screen
+status:
+  - deprecated
 browser-compat: api.Document.fullscreen
 ---
+
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in fullscreen mode.
@@ -25,7 +18,7 @@ Although this property is read-only, it will not throw if it is modified (even i
 
 ## Value
 
-A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false.`
+A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false`.
 
 ## Examples
 

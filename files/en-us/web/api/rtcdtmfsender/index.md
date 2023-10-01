@@ -2,20 +2,9 @@
 title: RTCDTMFSender
 slug: Web/API/RTCDTMFSender
 page-type: web-api-interface
-tags:
-  - Audio
-  - DTMF
-  - Interface
-  - Media
-  - PSTN
-  - RTCDTMFSender
-  - Reference
-  - Telephony
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDTMFSender
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDTMFSender`** interface provides a mechanism for transmitting {{Glossary("DTMF")}} codes on a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}. You gain access to the connection's `RTCDTMFSender` through the {{domxref("RTCRtpSender.dtmf")}} property on the audio track you wish to send DTMF with.
@@ -24,12 +13,12 @@ The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communica
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCDTMFSender.toneBuffer")}} {{ReadOnlyInline}}
   - : A string which contains the list of DTMF tones currently in the queue to be transmitted (tones which have already been played are no longer included in the string). See {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} for details on the format of the tone buffer.
 
-## Methods
+## Instance methods
 
 - {{domxref("RTCDTMFSender.insertDTMF()")}}
   - : Given a string describing a set of DTMF codes and, optionally, the duration of and inter-tone gap between the tones, `insertDTMF()` starts sending the specified tones. Calling `insertDTMF()` replaces any already-pending tones from the `toneBuffer`. You can abort sending queued tones by specifying an empty string (`""`) as the set of tones to play.

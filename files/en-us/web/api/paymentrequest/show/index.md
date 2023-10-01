@@ -1,30 +1,17 @@
 ---
-title: PaymentRequest.show()
+title: "PaymentRequest: show() method"
+short-title: show()
 slug: Web/API/PaymentRequest/show
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Payments
-  - Reference
-  - Secure context
-  - show
 browser-compat: api.PaymentRequest.show
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **{{domxref('PaymentRequest')}}** interface's
 **`show()`** method instructs the user agent to begin the
 process of showing and handling the user interface for the payment request to the
 user.
-
-For security reasons, the `PaymentRequest.show()` method can't just be
-initiated at any time. It may only be called while handling events that represent user
-interactions, such as {{domxref("Element/click_event", "click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
 
 Only one payment request can be in the process of being handled at once, across all
 documents. Once one `PaymentRequest`'s `show()` method has been
@@ -53,7 +40,7 @@ to wait asynchronously while results are validated and so forth.
 
 ## Syntax
 
-```js
+```js-nolint
 show()
 show(detailsPromise)
 ```
@@ -68,6 +55,7 @@ show(detailsPromise)
     resolve with an object containing the updated information:
 
     - `displayItems` {{optional_inline}}
+
       - : An array of objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice, each with the following properties:
 
         - `amount`
@@ -103,6 +91,7 @@ The promise is resolved when the user accepts the payment request (such as by cl
 Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
 - `AbortError` {{domxref("DOMException")}}
+
   - : Returned if the
     {{Glossary("user agent")}} is already showing a payment panel. Only one payment
     panel may be visible at a time _across all documents loaded by the user
@@ -110,6 +99,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
     The promise is also rejected with `AbortError` if the user cancels the
     payment request.
+
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the same payment has
     already been shown for this request (its state is `interactive` because it
@@ -125,6 +115,10 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
     are at the discretion of the user agent, and may include situations such as too many
     calls to `show()` being made in a short time or `show()` being
     called while payment requests are blocked by parental controls.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 
@@ -143,8 +137,10 @@ async function processPayment() {
   try {
     const payRequest = new PaymentRequest(methodData, details, options);
 
-    payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-    payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+    payRequest.onshippingaddresschange = (ev) =>
+      ev.updateWith(checkAddress(payRequest));
+    payRequest.onshippingoptionchange = (ev) =>
+      ev.updateWith(checkShipping(payRequest));
 
     const response = await payRequest.show();
     await validateResponse(response);
@@ -207,10 +203,13 @@ functions on the promise returned by `show()`:
 function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
-  payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-  payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+  payRequest.onshippingaddresschange = (ev) =>
+    ev.updateWith(checkAddress(payRequest));
+  payRequest.onshippingoptionchange = (ev) =>
+    ev.updateWith(checkShipping(payRequest));
 
-  payRequest.show()
+  payRequest
+    .show()
     .then((response) => validateResponse(response))
     .catch((err) => handleError(err));
 }
@@ -270,7 +269,7 @@ button.onclick = async function handlePurchase() {
   } catch (err) {
     console.error("Uh oh, something bad happened", err.message);
   }
-}
+};
 ```
 
 The following example shows how to update the payment sheet as it's being presented to
@@ -287,7 +286,7 @@ async function requestPayment() {
   };
   const request = new PaymentRequest(methods, initialDetails, options);
   // Check if the user supports the `methods`
-  if (!await request.canMakePayment()) {
+  if (!(await request.canMakePayment())) {
     return; // no, so use a web form instead.
   }
   // Let's update the total as the sheet is shown

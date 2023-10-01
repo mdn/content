@@ -1,15 +1,11 @@
 ---
-title: Range.getClientRects()
+title: "Range: getClientRects() method"
+short-title: getClientRects()
 slug: Web/API/Range/getClientRects
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.getClientRects
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.getClientRects()`** method returns a list of {{
@@ -18,7 +14,7 @@ The **`Range.getClientRects()`** method returns a list of {{
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 
@@ -28,15 +24,45 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) sequence of {{domxref("DOMRect")}} objects.
 
 ## Examples
 
-```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-rectList = range.getClientRects();
+### Logging selected client rect sizes
+
+#### HTML
+
+```html
+<div></div>
+<pre id="output"></pre>
 ```
+
+#### CSS
+
+```css
+div {
+  height: 80px;
+  width: 200px;
+  background-color: blue;
+}
+```
+
+#### JavaScript
+
+```js
+const range = document.createRange();
+range.selectNode(document.querySelector("div"));
+rectList = range.getClientRects();
+
+const output = document.querySelector("#output");
+for (const rect of rectList) {
+  output.textContent = `${output.textContent}\n${rect.width}:${rect.height}`;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample}}
 
 ## Specifications
 

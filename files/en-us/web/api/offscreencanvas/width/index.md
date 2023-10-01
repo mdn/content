@@ -1,27 +1,20 @@
 ---
-title: OffscreenCanvas.width
+title: "OffscreenCanvas: width property"
+short-title: width
 slug: Web/API/OffscreenCanvas/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - OffscreenCanvas
-  - Property
-  - Reference
 browser-compat: api.OffscreenCanvas.width
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`width`** property returns and sets the width of an
-{{domxref("OffscreenCanvas")}} object.
+{{APIRef("Canvas API")}}
+
+The **`width`** property returns and sets the width of an {{domxref("OffscreenCanvas")}} object.
 
 ## Value
 
 ## Examples
 
-Creating a new offscreen canvas and returning or setting the width of the offscreen
-canvas:
+Creating a new offscreen canvas and returning or setting the width of the offscreen canvas:
 
 ```js
 const offscreen = new OffscreenCanvas(256, 256);

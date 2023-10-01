@@ -1,14 +1,11 @@
 ---
-title: Document.createElementNS()
+title: "Document: createElementNS() method"
+short-title: createElementNS()
 slug: Web/API/Document/createElementNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.
@@ -18,7 +15,7 @@ To create an element without specifying a namespace URI, use the
 
 ## Syntax
 
-```js
+```js-nolint
 createElementNS(namespaceURI, qualifiedName)
 createElementNS(namespaceURI, qualifiedName, options)
 ```
@@ -48,7 +45,7 @@ The new {{DOMxRef("Element")}}.
 ### Exceptions
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI).
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
@@ -60,14 +57,10 @@ The new {{DOMxRef("Element")}}.
   - : `http://www.w3.org/2000/svg`
 - [MathML](/en-US/docs/Web/MathML)
   - : `http://www.w3.org/1998/Math/MathML`
-- [XUL](/en-US/docs/Mozilla/Tech/XUL) {{Non-standard_Inline}}
-  - : `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
-- [XBL](/en-US/docs/Mozilla/Tech/XBL) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : `http://www.mozilla.org/xbl`
 
 ## Examples
 
-This creates a new \<div> element in the {{Glossary("XHTML")}} namespace and
+This creates a new `<div>` element in the {{Glossary("XHTML")}} namespace and
 appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of
 elements from two different namespaces within a single document:
 

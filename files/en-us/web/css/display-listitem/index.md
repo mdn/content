@@ -1,16 +1,10 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-listitem
-  - list-item
+page-type: css-type
 browser-compat: css.properties.display.list-item
 ---
+
 {{CSSRef}}
 
 The `list-item` keyword causes the element to generate a `::marker` pseudo-element with the content specified by its {{CSSxRef("list-style")}} properties (for example a bullet point) together with a principal box of the specified type for its own contents.

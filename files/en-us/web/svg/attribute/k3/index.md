@@ -1,12 +1,10 @@
 ---
 title: k3
 slug: Web/SVG/Attribute/k3
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feComposite.k3
 ---
+
 {{SVGRef}}
 
 The **`k3`** attribute defines one of the values to be used within the `arithmetic` operation of the {{SVGElement("feComposite")}} filter primitive.
@@ -14,7 +12,7 @@ The **`k3`** attribute defines one of the values to be used within the `arithmet
 The pixel composition is computed using the following formula:
 
 ```js
-result = k1*i1*i2 + k2*i1 + k3*i2 + k4
+result = k1 * i1 * i2 + k2 * i1 + k3 * i2 + k4;
 ```
 
 You can use this attribute with the following SVG elements:
@@ -24,7 +22,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -32,16 +32,38 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="composite1" x="0" y="0" width="100%" height="100%">
-    <feComposite in2="SourceGraphic" operator="arithmetic" k1="1" k2="0" k3="1" k4="0" />
+    <feComposite
+      in2="SourceGraphic"
+      operator="arithmetic"
+      k1="1"
+      k2="0"
+      k3="1"
+      k4="0" />
   </filter>
   <filter id="composite2" x="0" y="0" width="100%" height="100%">
-    <feComposite in2="SourceGraphic" operator="arithmetic" k1="1" k2="0" k3="10" k4="0" />
+    <feComposite
+      in2="SourceGraphic"
+      operator="arithmetic"
+      k1="1"
+      k2="0"
+      k3="10"
+      k4="0" />
   </filter>
 
-  <image href="mdn.svg" x="0" y="0"
-      width="200" height="200" style="filter: url(#composite1);" />
-  <image href="mdn.svg" x="0" y="0"
-      width="200" height="200" style="filter: url(#composite2); transform: translateX(220px);" />
+  <image
+    href="mdn.svg"
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#composite1);" />
+  <image
+    href="mdn.svg"
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#composite2); transform: translateX(220px);" />
 </svg>
 ```
 

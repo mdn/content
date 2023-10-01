@@ -1,14 +1,11 @@
 ---
-title: Range.commonAncestorContainer
+title: "Range: commonAncestorContainer property"
+short-title: commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.commonAncestorContainer`** read-only property
@@ -40,10 +37,12 @@ triggers an animation to highlight them.
 
 ```html
 <ul>
-  <li>Strings
+  <li>
+    Strings
     <ul>
       <li>Cello</li>
-      <li>Violin
+      <li>
+        Violin
         <ul>
           <li>First Chair</li>
           <li>Second Chair</li>
@@ -51,7 +50,8 @@ triggers an animation to highlight them.
       </li>
     </ul>
   </li>
-  <li>Woodwinds
+  <li>
+    Woodwinds
     <ul>
       <li>Clarinet</li>
       <li>Oboe</li>
@@ -71,8 +71,12 @@ The `.highlight` class created below uses a set of CSS
 }
 
 @keyframes highlight {
-  from { outline: 1px solid #f00f; }
-  to   { outline: 1px solid #f000; }
+  from {
+    outline: 1px solid #f00f;
+  }
+  to {
+    outline: 1px solid #f000;
+  }
 }
 ```
 
@@ -85,10 +89,10 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', (e) => {
+document.addEventListener("pointerup", (e) => {
   const selection = window.getSelection();
 
-  if (selection.type === 'Range') {
+  if (selection.type === "Range") {
     for (let i = 0; i < selection.rangeCount; i++) {
       const range = selection.getRangeAt(i);
       playAnimation(range.commonAncestorContainer);
@@ -101,9 +105,9 @@ function playAnimation(el) {
     el = el.parentNode;
   }
 
-  el.classList.remove('highlight');
+  el.classList.remove("highlight");
   setTimeout(() => {
-    el.classList.add('highlight');
+    el.classList.add("highlight");
   }, 0);
 }
 ```

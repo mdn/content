@@ -1,12 +1,12 @@
 ---
 title: horiz-origin-x
 slug: Web/SVG/Attribute/horiz-origin-x
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.horiz-origin-x
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`horiz-origin-x`** attribute indicates the x-coordinate in the font coordinate system of the origin of a {{Glossary("glyph")}} to be used when drawing horizontally oriented text.

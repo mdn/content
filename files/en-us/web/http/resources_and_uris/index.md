@@ -1,17 +1,9 @@
 ---
 title: Resources and URIs
 slug: Web/HTTP/Resources_and_URIs
-tags:
-  - HTTP
-  - MIME
-  - MIME Type
-  - Overview
-  - Type
-  - URI
-  - URIs
-  - URL
-  - resources
+page-type: guide
 ---
+
 {{HTTPSidebar}}
 
 HTTP allows a browser, or another {{Glossary("user agent")}}, to communicate with different _resources_ on the Internet: to do this the browser needs both the _identity_ and the _location_ of the resources. These two bits of information are described by a {{glossary("URI")}}.

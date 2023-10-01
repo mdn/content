@@ -2,13 +2,9 @@
 title: Vibration API
 slug: Web/API/Vibration_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - Mobile
-  - Vibration
 browser-compat: api.Navigator.vibrate
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The **Vibration API** offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.
@@ -53,22 +49,22 @@ let vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
-    navigator.vibrate(duration);
+  navigator.vibrate(duration);
 }
 
 // Stops vibration
 function stopVibrate() {
-    // Clear interval and stop persistent vibrating
-    if (vibrateInterval) clearInterval(vibrateInterval);
-    navigator.vibrate(0);
+  // Clear interval and stop persistent vibrating
+  if (vibrateInterval) clearInterval(vibrateInterval);
+  navigator.vibrate(0);
 }
 
 // Start persistent vibration at given duration and interval
 // Assumes a number value is given
 function startPersistentVibrate(duration, interval) {
-    vibrateInterval = setInterval(() => {
-        startVibrate(duration);
-    }, interval);
+  vibrateInterval = setInterval(() => {
+    startVibrate(duration);
+  }, interval);
 }
 ```
 

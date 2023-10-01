@@ -1,14 +1,11 @@
 ---
-title: PannerNode.orientationZ
+title: "PannerNode: orientationZ property"
+short-title: orientationZ
 slug: Web/API/PannerNode/orientationZ
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - PannerNode
-  - Property
-  - Web Audio
 browser-compat: api.PannerNode.orientationZ
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`orientationZ`** property of the {{ domxref("PannerNode") }} interface

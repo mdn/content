@@ -1,22 +1,11 @@
 ---
-title: RTCRtpSender.replaceTrack()
+title: "RTCRtpSender: replaceTrack() method"
+short-title: replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
 page-type: web-api-instance-method
-tags:
-  - Audio
-  - Media
-  - Method
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - replace
-  - replaceTrack
-  - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method
@@ -34,8 +23,8 @@ the example [Switching cameras](#switching_cameras) below.
 
 ## Syntax
 
-```js
-trackReplacedPromise = sender.replaceTrack(newTrack);
+```js-nolint
+replaceTrack(newTrack)
 ```
 
 ### Parameters
@@ -74,19 +63,19 @@ rejection handler:
 
 ## Usage notes
 
-### Things that trigger negotiation
+### Things that require negotiation
 
-Not all track replacements require renegotiation. In fact, even changes that seem huge
-can be done without requiring negotiation. Here are the changes that can trigger
-negotiation:
+Most track replacements can be done without renegotiation. In fact, even changes that seem huge
+can be done without requiring negotiation. However, some changes may require
+negotiation and thus fail `replaceTrack()`:
 
-- The new track has a resolution which is outside the bounds of the current track;
-  that is, the new track is either wider or taller than the current one.
+- The new track has a resolution which is outside the bounds of the dimensions negotiated with the peer;
+  however, most browser end points allow resolution changes.
 - The new track's frame rate is high enough to cause the codec's block rate to be
   exceeded.
 - The new track is a video track and its raw or pre-encoded state differs from that of
   the original track.
-- The new track is an audio track with a different number of channels fom the
+- The new track is an audio track with a different number of channels from the
   original.
 - Media sources that have built-in encoders — such as hardware encoders — may not be
   able to provide the negotiated codec. Software sources may not implement the
@@ -97,27 +86,34 @@ negotiation:
 ### Switching video cameras
 
 ```js
-// example to change video camera, suppose selected value saved into window.selectedCamera
-
-navigator.mediaDevices
-  .getUserMedia({
-    video: {
-      deviceId: {
-        exact: window.selectedCamera
-      }
-    }
-  })
-  .then((stream) => {
-    const [videoTrack] = stream.getVideoTracks();
-    PCs.forEach((pc) => {
-      const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
-      console.log('Found sender:', sender);
-      sender.replaceTrack(videoTrack);
+const localConnection = new RTCPeerConnection();
+const remoteConnection = new RTCPeerConnection();
+// Configuring these to use the WebRTC API can be explored at
+// https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
+const connections = [localConnection, remoteConnection];
+function setCamera(selectedCamera) {
+  navigator.mediaDevices
+    .getUserMedia({
+      video: {
+        deviceId: {
+          exact: selectedCamera,
+        },
+      },
+    })
+    .then((stream) => {
+      const [videoTrack] = stream.getVideoTracks();
+      connections.forEach((pc) => {
+        const sender = pc
+          .getSenders()
+          .find((s) => s.track.kind === videoTrack.kind);
+        console.log("Found sender:", sender);
+        sender.replaceTrack(videoTrack);
+      });
+    })
+    .catch((err) => {
+      console.error(`Error happened: ${err}`);
     });
-  })
-  .catch((err) => {
-    console.error(`Error happened: ${err}`);
-  });
+}
 ```
 
 ## Specifications

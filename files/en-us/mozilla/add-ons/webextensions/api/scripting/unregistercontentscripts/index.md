@@ -1,17 +1,10 @@
 ---
 title: scripting.unregisterContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/unregisterContentScripts
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - unregisterContentScripts
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.unregisterContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Unregisters one or more content scripts.
@@ -24,7 +17,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 await browser.scripting.unregisterContentScripts(
   scripts         // object
 )
@@ -60,5 +53,3 @@ try {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-unregisterContentScripts) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

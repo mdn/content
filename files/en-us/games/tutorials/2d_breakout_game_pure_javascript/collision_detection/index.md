@@ -1,15 +1,9 @@
 ---
 title: Collision detection
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-  - collision
-  - detection
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
@@ -27,7 +21,7 @@ To kick this all off we want to create a collision detection function that will 
 ```js
 function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
-    for(let r = 0; r < brickRowCount; r++) {
+    for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
       // calculations
     }
@@ -49,7 +43,7 @@ function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
-      if (x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
         dy = -dy;
       }
     }
@@ -105,7 +99,12 @@ function collisionDetection() {
     for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
       if (b.status === 1) {
-        if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
           dy = -dy;
           b.status = 0;
         }

@@ -1,15 +1,15 @@
 ---
 title: v-hanging
 slug: Web/SVG/Attribute/v-hanging
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.v-hanging
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
-The **`v-hanging`** attribute indicates the alignment coordinate for {{Glossary("glyph", "glyphs")}} to achieve hanging {{Glossary("baseline")}} alignment. The value is an offset in the font coordinate system relative to the glyph-specific {{SVGAttr("vert-origin-x")}} attribute.
+The **`v-hanging`** attribute indicates the alignment coordinate for {{Glossary("glyph", "glyphs")}} to achieve hanging {{Glossary("baseline/typography", "baseline")}} alignment. The value is an offset in the font coordinate system relative to the glyph-specific {{SVGAttr("vert-origin-x")}} attribute.
 
 You can use this attribute with the following SVG elements:
 

@@ -1,13 +1,12 @@
 ---
 title: <tref>
 slug: Web/SVG/Element/tref
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.tref
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) element can be either character data directly embedded within the {{SVGElement("text")}} element or the character data content of a referenced element, where the referencing is specified with a **`<tref>`** element.
@@ -30,7 +29,7 @@ The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) elem
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
@@ -53,7 +52,7 @@ This element implements the {{domxref("SVGTRefElement")}} interface.
   </text>
 
   <text x="100" y="200" font-size="45" fill="red" >
-    <tref xlink:href="#ReferencedText"/>
+    <tref href="#ReferencedText"/>
   </text>
 
   <!-- Show outline of canvas using 'rect' element -->

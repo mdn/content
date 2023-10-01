@@ -1,13 +1,8 @@
 ---
 title: Extend
 slug: WebAssembly/Reference/Numeric/Extend
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
 ---
+
 {{WebAssemblySidebar}}
 
 The **`extend`** instructions, are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.

@@ -1,14 +1,11 @@
 ---
-title: HTMLButtonElement.labels
+title: "HTMLButtonElement: labels property"
+short-title: labels
 slug: Web/API/HTMLButtonElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.HTMLButtonElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLButtonElement.labels`** read-only property returns a

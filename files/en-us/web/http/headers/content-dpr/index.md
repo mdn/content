@@ -1,18 +1,14 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
-tags:
-  - Content-DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
-  - Experimental
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
 
 The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Web/HTTP/Client_hints) was used to select an image resource.
 
@@ -48,7 +44,7 @@ If the `Content-DPR` header appears more than once in a message the last occurre
 
 ## Syntax
 
-```
+```http
 Content-DPR: <number>
 ```
 
@@ -77,4 +73,4 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

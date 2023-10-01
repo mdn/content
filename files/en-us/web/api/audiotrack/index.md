@@ -2,24 +2,16 @@
 title: AudioTrack
 slug: Web/API/AudioTrack
 page-type: web-api-interface
-tags:
-  - Audio
-  - AudioTrack
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - track
 browser-compat: api.AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`AudioTrack`** interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 
 The most common use for accessing an `AudioTrack` object is to toggle its {{domxref("AudioTrack.enabled", "enabled")}} property in order to mute and unmute the track.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to `false` mutes the track's audio.
@@ -63,7 +55,7 @@ The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}
 
 ## Example
 
-See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#example) for a simple example that shows how to get a array of track kinds and labels for a specified media element, filtered by kind.
+See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#examples) for a simple example that shows how to get an array of track kinds and labels for a specified media element, filtered by kind.
 
 ## Specifications
 

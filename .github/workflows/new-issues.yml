@@ -1,4 +1,4 @@
-name: 'Mark new issues with needs-triage label'
+name: "Mark new issues with needs-triage label"
 
 on:
   issues:
@@ -13,4 +13,5 @@ jobs:
       - name: initial labelling
         uses: andymckay/labeler@master
         with:
-          add-labels: "needs-triage"
+          add-labels: "needs triage"
+          ignore-if-assigned: true

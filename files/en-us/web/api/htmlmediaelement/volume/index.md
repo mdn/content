@@ -1,16 +1,11 @@
 ---
-title: HTMLMediaElement.volume
+title: "HTMLMediaElement: volume property"
+short-title: volume
 slug: Web/API/HTMLMediaElement/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Reference
-  - Volume
 browser-compat: api.HTMLMediaElement.volume
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.volume`** property sets the volume at
@@ -24,7 +19,7 @@ loudest possible value.
 ## Examples
 
 ```js
-const obj = document.createElement('audio');
+const obj = document.createElement("audio");
 console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```
@@ -39,5 +34,5 @@ obj.volume = 0.75;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.volume` property
 - {{domxref("HTMLMediaElement.muted")}}

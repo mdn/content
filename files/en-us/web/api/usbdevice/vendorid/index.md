@@ -1,19 +1,13 @@
 ---
-title: USBDevice.vendorId
+title: "USBDevice: vendorId property"
+short-title: vendorId
 slug: Web/API/USBDevice/vendorID
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - vendorID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.vendorId
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`vendorId`** read only property of the

@@ -1,18 +1,11 @@
 ---
-title: MediaDeviceInfo.groupId
+title: "MediaDeviceInfo: groupId property"
+short-title: groupId
 slug: Web/API/MediaDeviceInfo/groupId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device
-  - Input
-  - Media
-  - MediaDevicesInfo
-  - Property
-  - groupId
-  - output
 browser-compat: api.MediaDeviceInfo.groupId
 ---
+
 {{APIRef("Media Capture")}}
 
 The **`groupId`** readonly property of
@@ -43,8 +36,7 @@ use the built-in camera and microphone on the same display at the same time.
 const getDeviceGroup = (mainDevInfo) => {
   let devList = [];
 
-  navigator.mediaDevices.enumerateDevices()
-  .then((devices) => {
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
     devices.forEach((device) => {
       if (device.groupId === mainDevInfo.groupId) {
         devList.push(device);
@@ -83,11 +75,12 @@ then adds any other members of the group that are found:
 const getDeviceGroup = (mainDevInfo) => {
   let devList = [mainDevInfo];
 
-  navigator.mediaDevices.enumerateDevices()
-  .then((devices) => {
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
     devices.forEach((device) => {
-      if ((device.groupId === mainDevInfo.groupId) &&
-          (device.deviceId !== mainDevInfo.deviceId)) {
+      if (
+        device.groupId === mainDevInfo.groupId &&
+        device.deviceId !== mainDevInfo.deviceId
+      ) {
         devList.push(device);
       }
     });

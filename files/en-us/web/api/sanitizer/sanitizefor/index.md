@@ -1,14 +1,14 @@
 ---
-title: Sanitizer.sanitizeFor()
+title: "Sanitizer: sanitizeFor() method"
+short-title: sanitizeFor()
 slug: Web/API/Sanitizer/sanitizeFor
 page-type: web-api-instance-method
-tags:
-  - HTML Sanitizer API
-  - Method
-  - sanitizeFor
+status:
+  - experimental
 browser-compat: api.Sanitizer.sanitizeFor
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`sanitizeFor()`** method of the {{domxref("Sanitizer")}} interface is used to parse and sanitize a string of HTML for insertion into the DOM at some later point.
 
@@ -26,7 +26,7 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 sanitizeFor(element, input)
 ```
 
@@ -53,8 +53,8 @@ None.
 The code below demonstrates how to sanitize a string of HTML into a `div` element.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // Unsanitized string of HTML
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Sanitize the string
 const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
@@ -62,7 +62,7 @@ const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 //We can verify the returned element type, and view sanitized HTML in string form:
 console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
-console.log(sanitizedDiv.innerHTML)
+console.log(sanitizedDiv.innerHTML);
 // "abc  def"
 
 // At some point later…

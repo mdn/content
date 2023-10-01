@@ -1,12 +1,11 @@
 ---
-title: WebGLRenderingContext.detachShader()
+title: "WebGLRenderingContext: detachShader() method"
+short-title: detachShader()
 slug: Web/API/WebGLRenderingContext/detachShader
 page-type: web-api-instance-method
-tags:
-  - Method
-  - WebGL
 browser-compat: api.WebGLRenderingContext.detachShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.detachShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) detaches a previously
@@ -14,8 +13,8 @@ attached {{domxref("WebGLShader")}} from a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
-void gl.detachShader(program, shader);
+```js-nolint
+detachShader(program, shader)
 ```
 
 ### Parameters

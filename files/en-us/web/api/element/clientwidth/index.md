@@ -1,15 +1,11 @@
 ---
-title: Element.clientWidth
+title: "Element: clientWidth property"
+short-title: clientWidth
 slug: Web/API/Element/clientWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientWidth
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientWidth`** property is zero for inline
@@ -30,7 +26,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![An example element with large padding, border and margin. clientWidth is the inner width of the element including its padding, and excluding its margin, border, and vertical scrollbar.](dimensions-client.png)
 
 ## Specifications
 

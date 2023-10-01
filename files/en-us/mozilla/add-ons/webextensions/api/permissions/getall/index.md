@@ -1,16 +1,10 @@
 ---
 title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - getAll
+page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieve a {{WebExtAPIRef("permissions.Permissions")}} object containing all the permissions currently granted to the extension.
@@ -19,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAll = browser.permissions.getAll()
 ```
 
@@ -41,14 +35,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 // Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
-browser.permissions.getAll().then((result) => {
-  console.log(result.permissions); // [ "webRequest", "tabs" ]
-  console.log(result.origins)      // [ "*://*.mozilla.org/*" ]
-});
+const currentPermissions = await browser.permissions.getAll();
+
+console.log(currentPermissions.permissions); // [ "webRequest", "tabs" ]
+console.log(currentPermissions.origins); // [ "*://*.mozilla.org/*" ]
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

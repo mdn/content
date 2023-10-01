@@ -1,16 +1,10 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - url()
+page-type: css-function
 browser-compat: css.types.url
 ---
+
 {{CSSRef}}
 
 The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
@@ -59,7 +53,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
 
 The **`url()`** function can be included as a value for
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}},
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
 [src](/en-US/docs/Web/CSS/@font-face/src) as part of a [@font-face](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/symbol](/en-US/docs/Web/CSS/@counter-style/symbols)
 
 ## Syntax
@@ -100,7 +94,7 @@ url( <string> <url-modifier>* )
 
 ```css
 .topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
+  background: url("topbanner.png") #00d no-repeat fixed;
 }
 ```
 
@@ -128,7 +122,7 @@ ul {
 
 ```css
 li::after {
-  content: ' - ' url(star.gif);
+  content: " - " url(star.gif);
 }
 ```
 

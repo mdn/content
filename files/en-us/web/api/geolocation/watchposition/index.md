@@ -1,16 +1,11 @@
 ---
-title: Geolocation.watchPosition()
+title: "Geolocation: watchPosition() method"
+short-title: watchPosition()
 slug: Web/API/Geolocation/watchPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
 browser-compat: api.Geolocation.watchPosition
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 The {{domxref("Geolocation")}} method **`watchPosition()`** method is used to register a handler function that will be called automatically each time the position of the device changes.
@@ -18,7 +13,7 @@ You can also, optionally, specify an error handling callback function.
 
 ## Syntax
 
-```js
+```js-nolint
 watchPosition(success)
 watchPosition(success, error)
 watchPosition(success, error, options)
@@ -50,7 +45,7 @@ function success(pos) {
   const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulations, you reached the target');
+    console.log("Congratulations, you reached the target");
     navigator.geolocation.clearWatch(id);
   }
 }
@@ -60,14 +55,14 @@ function error(err) {
 }
 
 target = {
-  latitude : 0,
-  longitude: 0
+  latitude: 0,
+  longitude: 0,
 };
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);

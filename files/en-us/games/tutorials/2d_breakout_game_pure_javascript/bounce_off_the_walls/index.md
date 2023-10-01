@@ -1,17 +1,9 @@
 ---
 title: Bounce off the walls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Animation
-  - Beginner
-  - Canvas
-  - Example
-  - Games
-  - Graphics
-  - Tutorial
-  - collision
-  - detection
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
@@ -93,10 +85,10 @@ Test your code at this point, and you will be impressed — now we have a ball t
 This is because we're calculating the collision point of the wall and the center of the ball, while we should be doing it for its circumference. The ball should bounce right after if touches the wall, not when it's already halfway in the wall, so let's adjust our statements a bit to include that. Update the last code you added to this:
 
 ```js
-if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
   dx = -dx;
 }
-if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
   dy = -dy;
 }
 ```

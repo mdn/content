@@ -1,16 +1,11 @@
 ---
-title: Range.collapsed
+title: "Range: collapsed property"
+short-title: collapsed
 slug: Web/API/Range/collapsed
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Property
-  - Range
-  - Reference
 browser-compat: api.Range.collapsed
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range.collapsed`** read-only property returns a

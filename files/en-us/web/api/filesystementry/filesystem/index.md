@@ -1,18 +1,11 @@
 ---
-title: FileSystemEntry.filesystem
+title: "FileSystemEntry: filesystem property"
+short-title: filesystem
 slug: Web/API/FileSystemEntry/filesystem
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - filesystem
 browser-compat: api.FileSystemEntry.filesystem
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`filesystem`**

@@ -1,21 +1,11 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() method"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch Headers
-  - Get Headers
-  - HTTP
-  - HTTP Header
-  - Method
-  - Reference
-  - Response Header
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -31,7 +21,7 @@ is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllResponseHeaders()
 ```
 
@@ -48,7 +38,7 @@ happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-```
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
@@ -81,7 +71,6 @@ request.send();
 
 request.onreadystatechange = () => {
   if (request.readyState === this.HEADERS_RECEIVED) {
-
     // Get the raw header string
     const headers = request.getAllResponseHeaders();
 
@@ -92,13 +81,13 @@ request.onreadystatechange = () => {
     // Create a map of header names to values
     const headerMap = {};
     arr.forEach((line) => {
-      const parts = line.split(': ');
+      const parts = line.split(": ");
       const header = parts.shift();
-      const value = parts.join(': ');
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 Once this is done, you can, for example:

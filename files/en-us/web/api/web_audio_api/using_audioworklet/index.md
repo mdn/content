@@ -2,19 +2,8 @@
 title: Background audio processing using AudioWorklet
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
 page-type: guide
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article explains how to create an audio worklet processor and use it in a Web Audio application.
@@ -29,7 +18,7 @@ It's worth noting that because audio processing can often involve substantial co
 
 Before we start looking at the use of AudioWorklet on a step-by-step basis, let's start with a brief high-level overview of what's involved.
 
-1. Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
+1. Create module that defines an audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
 2. Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.
 3. As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.
 4. Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.
@@ -73,7 +62,7 @@ class MyAudioProcessor extends AudioWorkletProcessor {
     // …
     return true;
   }
-};
+}
 
 registerProcessor("my-audio-processor", MyAudioProcessor);
 ```
@@ -105,7 +94,7 @@ const firstChannelByteCount = firstInputFirstChannel.length;
 const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0][0])
 ```
 
-The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is an array of `Float32Array` objects, which contain the samples for that channel.
+The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is a `Float32Array` object, which contains the samples for that channel.
 
 How you use the inputs and how you generate the outputs depends very much on your processor. If your processor is just a generator, it can ignore the inputs and just replace the contents of the outputs with the generated data. Or you can process each input independently, applying an algorithm to the incoming data on each channel of each input and writing the results into the corresponding outputs' channels (keeping in mind that the number of inputs and outputs may differ, and the channel counts on those inputs and outputs may also differ). Or you can take all the inputs and perform mixing or other computations that result in a single output being filled with data (or all the outputs being filled with the same data).
 
@@ -175,13 +164,13 @@ This is similar code to the previous sample in many ways, but only the first out
 
 The only means by which you can influence the lifespan of your audio worklet processor is through the value returned by `process()`, which should be a Boolean value indicating whether or not to override the {{Glossary("user agent")}}'s decision-making as to whether or not your node is still in use.
 
-In general, the lifetime policy of any audio node is simple: if the node is still considered to be actively processing audio, it will continue to be used. In the case of an {{domxref("AudioWorkletNode")}}, the node is considered to be active if its `process()` function returns `true` *and* the node is either generating content as a source for audio data, or is receiving data from one or more inputs.
+In general, the lifetime policy of any audio node is simple: if the node is still considered to be actively processing audio, it will continue to be used. In the case of an {{domxref("AudioWorkletNode")}}, the node is considered to be active if its `process()` function returns `true` _and_ the node is either generating content as a source for audio data, or is receiving data from one or more inputs.
 
 Specifying a value of `true` as the result from your `process()` function in essence tells the Web Audio API that your processor needs to keep being called even if the API doesn't think there's anything left for you to do. In other words, `true` overrides the API's logic and gives you control over your processor's lifetime policy, keeping the processor's owning {{domxref("AudioWorkletNode")}} running even when it would otherwise decide to shut down the node.
 
 Returning `false` from the `process()` method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, `process()` will not be called again.
 
-> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
+> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://crbug.com/921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
 
 ## Creating an audio processor worklet node
 
@@ -189,7 +178,7 @@ To create an audio node that pumps blocks of audio data through an {{domxref("Au
 
 1. Load and install the audio processor module
 2. Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name
-3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("AudioContext.destination", "destination")}} property.
+3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext/destination", "destination")}} property.
 
 To use an audio worklet processor, you can use code similar to the following:
 
@@ -267,9 +256,9 @@ process(inputList, outputList, parameters) {
   const output = outputList[0];
   const gain = parameters.gain;
 
-  for (let channelNum = 0; channelNum < input.length; channel++) {
-    const inputChannel = input[channel];
-    const outputChannel = output[channel];
+  for (let channelNum = 0; channelNum < input.length; channelNum++) {
+    const inputChannel = input[channelNum];
+    const outputChannel = output[channelNum];
 
     // If gain.length is 1, it's a k-rate parameter, so apply
     // the first entry to every frame. Otherwise, apply each

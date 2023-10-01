@@ -1,15 +1,10 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.paint-order
 ---
+
 {{CSSRef}}
 
 The **`paint-order`** [CSS](/en-US/docs/Web/CSS) property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.
@@ -32,6 +27,7 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 paint-order: inherit;
 paint-order: initial;
 paint-order: revert;
+paint-order: revert-layer;
 paint-order: unset;
 ```
 

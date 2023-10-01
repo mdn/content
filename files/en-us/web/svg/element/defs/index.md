@@ -1,11 +1,10 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
-tags:
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.defs
 ---
+
 {{SVGRef}}
 
 The **`<defs>`** element is used to store graphical objects that will be used at a later time. Objects created inside a `<defs>` element are not rendered directly. To display them you have to reference them (with a {{SVGElement("use")}} element for example).
@@ -15,7 +14,11 @@ Graphical objects can be referenced from anywhere, however, defining these objec
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -1,15 +1,10 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.last-of-type
 ---
+
 {{CSSRef}}
 
 The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type among a group of sibling elements.
@@ -18,8 +13,10 @@ The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 ## Syntax
 
-```
-:last-of-type
+```css
+:last-of-type {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -57,7 +54,9 @@ This example shows how nested elements can also be targeted. Note that the [univ
 <article>
   <div>This `div` is first.</div>
   <div>This <span>nested `span` is last</span>!</div>
-  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>
+    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+  </div>
   <p>This `p` qualifies!</p>
   <div>This is the final `div`!</div>
 </article>
@@ -74,6 +73,52 @@ article :last-of-type {
 #### Result
 
 {{EmbedLiveSample('Nested_elements', 500)}}
+
+### Multiple selectors elements
+
+This HTML example contains nested elements of different types. The CSS contains both type selectors and class selectors.
+
+#### HTML
+
+```html
+<p>This `p` is not selected.</p>
+<p>This `p` is not selected either.</p>
+<p>
+  This `p` is last `p` element of its parent e.g. `body` selected by `p` type
+  selector.
+</p>
+<div class="container">
+  <div class="item">This `div` is not selected.</div>
+  <div class="item">This `div` is not selected either.</div>
+  <div class="item">
+    This `div` is last `div` element of its parent `div` selected by `.container
+    .item` class selector.
+  </div>
+  <p class="item">
+    This `p` is last `p` element of its parent `div` selected by `.container
+    .item` class selector.
+  </p>
+</div>
+```
+
+#### CSS
+
+```css
+p:last-of-type {
+  background: skyblue;
+}
+
+.container .item:last-of-type {
+  color: red;
+  font-weight: bold;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Multiple_selectors_elements', 500)}}
+
+The last `<div>` and the last `<p>` are both red and bold as the `.item:last-of-type` selects the last of every type if that last element also has the `item` class.
 
 ## Specifications
 

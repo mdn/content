@@ -4,26 +4,40 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - files/**
-      - .github/workflows/pr-check_redirects.yml
 
 jobs:
-  check_redirects:
+  check-redirects:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
+      # This is a "required" workflow so path filtering can not be used:
+      # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
+      # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
+      - uses: dorny/paths-filter@v2
+        name: See if any file needs checking
+        id: filter
+        with:
+          filters: |
+            required_files :
+              - ".nvmrc"
+              - "files/**"
+              - ".github/workflows/pr-check_redirects_file.yml"
+
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        if: steps.filter.outputs.required_files == 'true'
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check redirects file(s)
+        if: steps.filter.outputs.required_files == 'true'
         run: yarn content validate-redirects en-us --strict

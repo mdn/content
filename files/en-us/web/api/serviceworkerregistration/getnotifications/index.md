@@ -1,19 +1,11 @@
 ---
-title: ServiceWorkerRegistration.getNotifications()
+title: "ServiceWorkerRegistration: getNotifications() method"
+short-title: getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Notifications
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - getNotifications
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getNotifications()`** method of
@@ -21,12 +13,12 @@ the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the
 notifications in the order that they were created from the current origin via the
 current service worker registration. Origins can have many active but
 differently-scoped service worker registrations. Notifications created by one service
-worker on the same origin will not be available to other active services workers on
+worker on the same origin will not be available to other active service workers on
 that same origin.
 
 ## Syntax
 
-```js
+```js-nolint
 getNotifications()
 getNotifications(options)
 ```
@@ -49,14 +41,14 @@ A {{jsxref("Promise")}} that resolves to a list of {{domxref("Notification")}} o
 ## Examples
 
 ```js
-navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register("sw.js");
 
-const options = { tag : 'user_alerts' };
+const options = { tag: "user_alerts" };
 
 navigator.serviceWorker.ready.then((registration) => {
   registration.getNotifications(options).then((notifications) => {
     // do something with your notifications
-  })
+  });
 });
 ```
 

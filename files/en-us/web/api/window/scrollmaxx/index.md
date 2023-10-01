@@ -1,16 +1,13 @@
 ---
-title: Window.scrollMaxX
+title: "Window: scrollMaxX property"
+short-title: scrollMaxX
 slug: Web/API/Window/scrollMaxX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Non-standard
-  - Property
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.scrollMaxX
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 The **`Window.scrollMaxX`** read-only property returns the

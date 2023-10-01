@@ -1,18 +1,11 @@
 ---
-title: console.countReset()
+title: "console: countReset() method"
+short-title: countReset()
 slug: Web/API/console/countReset
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.countReset
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.countReset()`** method resets counter used with
@@ -22,7 +15,7 @@ The **`console.countReset()`** method resets counter used with
 
 ## Syntax
 
-```js
+```js-nolint
 countReset()
 countReset(label)
 ```
@@ -61,7 +54,7 @@ console.countReset();
 
 Console output will look something like this:
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -95,7 +88,7 @@ console.count("alice");
 
 We will see output like this:
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"

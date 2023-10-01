@@ -1,15 +1,11 @@
 ---
 title: initial-value
 slug: Web/CSS/@property/initial-value
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.initial-value
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 The **`initial-value`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) unless the syntax accepts any valid token stream. It sets the initial-value for the property.
 
@@ -19,13 +15,13 @@ The value chosen as the `initial-value` must parse correctly according to the sy
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: true;
   initial-value: #c0ffee;
 }
@@ -41,9 +37,7 @@ A string with a value which is a correct value for the chosen `syntax`.
 
 ## Formal syntax
 
-```
-<string>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -53,20 +47,20 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 ```
 
-Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}}:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

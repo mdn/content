@@ -1,15 +1,11 @@
 ---
-title: RTCIceServers.urls
+title: "RTCIceServers: urls property"
+short-title: urls
 slug: Web/API/RTCIceServer/urls
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCIceServer
-  - Reference
-  - WebRTC
-  - urls
 browser-compat: api.RTCIceServer.urls
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`urls`**
@@ -18,7 +14,7 @@ are typically STUN and/or TURN servers.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
   username: "webrtc", // optional
@@ -45,9 +41,9 @@ connections.
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "stun:stunserver.example.org"
-    }
-  ]
+      urls: "stun:stunserver.example.org",
+    },
+  ],
 });
 ```
 
@@ -67,9 +63,9 @@ myPeerConnection = new RTCPeerConnection({
     {
       urls: "turn:turnserver.example.org",
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 
@@ -89,9 +85,9 @@ myPeerConnection = new RTCPeerConnection({
     {
       urls: ["turns:turnserver.example.org", "turn:turnserver.example.org"],
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 
@@ -107,12 +103,12 @@ myPeerConnection = new RTCPeerConnection({
     {
       urls: ["turns:turnserver.example.org", "turn:turnserver.example.org"],
       username: "webrtc",
-      credential: "turnpassword"
+      credential: "turnpassword",
     },
     {
-      urls: "stun: stunserver.example.org"
-    }
-  ]
+      urls: "stun: stunserver.example.org",
+    },
+  ],
 });
 ```
 

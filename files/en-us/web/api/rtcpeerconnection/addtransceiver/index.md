@@ -1,21 +1,11 @@
 ---
-title: RTCPeerConnection.addTransceiver()
+title: "RTCPeerConnection: addTransceiver() method"
+short-title: addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - RTCPeerConnection
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceivers
-  - Video
-  - addTransceiver
-  - Method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -27,7 +17,7 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 
 ## Syntax
 
-```js
+```js-nolint
 addTransceiver(trackOrKind)
 addTransceiver(trackOrKind, init)
 ```
@@ -51,15 +41,26 @@ addTransceiver(trackOrKind, init)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the media data.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
+
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
+    If the `sendEncodings` argument is used, this error may also be thrown if there is a badly formatted `rid` member, some but not all encodings contain a `rid` member, or different encodings have the same `rid` value.
+
 - {{jsxref("RangeError")}}
-  - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0.
+
+  - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0, or a {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} value of less than 1.0.
+
+- `InvalidStateError` {{domxref("DOMException")}}
+
+  - : Thrown if the method is called when the associated connection is closed.
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the `sendEncodings` argument is used, and contains a read-only parameter other than `rid`.
 
 ## Specifications
 

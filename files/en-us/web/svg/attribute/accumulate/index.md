@@ -1,13 +1,10 @@
 ---
 title: accumulate
 slug: Web/SVG/Attribute/accumulate
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#AccumulateAttribute
 ---
+
 {{SVGRef}}
 
 The **`accumulate`** attribute controls whether or not an animation is cumulative.
@@ -17,7 +14,6 @@ It is frequently useful for repeated animations to build upon the previous resul
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

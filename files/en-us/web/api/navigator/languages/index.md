@@ -1,16 +1,11 @@
 ---
-title: Navigator.languages
+title: "Navigator: languages property"
+short-title: languages
 slug: Web/API/Navigator/languages
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
 browser-compat: api.Navigator.languages
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Navigator.languages`** read-only property
@@ -36,8 +31,8 @@ A string.
 ## Examples
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Specifications

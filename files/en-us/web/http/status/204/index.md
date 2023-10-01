@@ -1,13 +1,10 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-tags:
-  - HTTP
-  - Reference
-  - Status code
-  - Success
+page-type: http-status-code
 browser-compat: http.status.204
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`204 No Content`** success status response code
@@ -22,7 +19,7 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 ## Status
 
-```
+```http
 204 No Content
 ```
 

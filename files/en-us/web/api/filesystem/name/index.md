@@ -1,17 +1,11 @@
 ---
-title: FileSystem.name
+title: "FileSystem: name property"
+short-title: name
 slug: Web/API/FileSystem/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Property
-  - Reference
-  - filesystem
-  - name
 browser-compat: api.FileSystem.name
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`name`** property of the

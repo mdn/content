@@ -1,16 +1,10 @@
 ---
 title: circle()
 slug: Web/CSS/basic-shape/circle
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - circle
-  - CSS Functions
-  - Data Type
-  - Reference
+page-type: css-function
 browser-compat: css.types.basic-shape.circle
 ---
+
 {{CSSRef}}
 
 The **`circle()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
@@ -36,7 +30,7 @@ clip-path: circle(6rem at 12rem 8rem);
       - : Uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the closest side in any dimension.
 
 - `<position>`
-  - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`.
+  - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`. The `<position>` value defaults to center if omitted.
 
 ## Examples
 
@@ -57,4 +51,4 @@ In the example below, the {{cssxref("shape-outside")}} property has a value of `
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)

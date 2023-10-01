@@ -1,12 +1,8 @@
 ---
 title: Drop
 slug: WebAssembly/Reference/Control_flow/Drop
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`drop`** instruction, pops a value from the stack, and discards it.

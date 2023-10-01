@@ -1,16 +1,11 @@
 ---
-title: ReadableStreamBYOBReader.cancel()
+title: "ReadableStreamBYOBReader: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - cancel
 browser-compat: api.ReadableStreamBYOBReader.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.
@@ -20,7 +15,7 @@ Calling this method signals a loss of interest in the stream by a consumer.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```
@@ -45,7 +40,7 @@ This example code calls the `cancel()` method when a button is pressed, passing 
 The promise resolves when cancellation completes.
 
 ```js
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   reader.cancel("user choice").then(() => console.log(`cancel complete`));
 });
 ```
@@ -62,4 +57,5 @@ Note that this code can be seen running in the [Using readable byte streams](/en
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

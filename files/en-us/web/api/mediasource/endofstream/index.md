@@ -1,19 +1,11 @@
 ---
-title: MediaSource.endOfStream()
+title: "MediaSource: endOfStream() method"
+short-title: endOfStream()
 slug: Web/API/MediaSource/endOfStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - endOfStream
 browser-compat: api.MediaSource.endOfStream
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`endOfStream()`** method of the
@@ -21,7 +13,7 @@ The **`endOfStream()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 endOfStream()
 endOfStream(endOfStreamError)
 ```
@@ -56,41 +48,41 @@ None ({{jsxref("undefined")}}).
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
-      `true`.)
+    `true`.)
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)  The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
-const assetURL = 'frag_bunny.mp4';
+const assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 let mediaSource;
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   mediaSource = getMediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
 function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
       console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 ```
 
 ## Specifications

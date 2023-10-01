@@ -1,19 +1,14 @@
 ---
-title: XRWebGLSubImage.colorTexture
+title: "XRWebGLSubImage: colorTexture property"
+short-title: colorTexture
 slug: Web/API/XRWebGLSubImage/colorTexture
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.XRWebGLSubImage.colorTexture
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`colorTexture`** property of the {{domxref("XRWebGLSubImage")}} interface represents the color {{domxref("WebGLTexture")}} object for the {{domxref("XRCompositionLayer")}} to render.
 
@@ -29,7 +24,9 @@ The `colorTexture` property can be passed to {{domxref("WebGL2RenderingContext.f
 
 ```js
 const xrGlBinding = new XRWebGLBinding(xrSession, gl);
-const layer = xrGlBinding.createProjectionLayer({ textureType: "texture-array" });
+const layer = xrGlBinding.createProjectionLayer({
+  textureType: "texture-array",
+});
 const framebuffer = gl.createFramebuffer();
 
 xrSession.updateRenderState({ layers: [layer] });
@@ -44,10 +41,20 @@ function onXRFrame(time, xrFrame) {
 
   for (const view in xrViewerPose.views) {
     const subImage = xrGlBinding.getViewSubImage(layer, view);
-    gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-      subImage.colorTexture, 0, subImage.imageIndex);
-    gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,
-      subImage.depthStencilTexture, 0, subImage.imageIndex);
+    gl.framebufferTextureLayer(
+      gl.FRAMEBUFFER,
+      gl.COLOR_ATTACHMENT0,
+      subImage.colorTexture,
+      0,
+      subImage.imageIndex,
+    );
+    gl.framebufferTextureLayer(
+      gl.FRAMEBUFFER,
+      gl.DEPTH_ATTACHMENT,
+      subImage.depthStencilTexture,
+      0,
+      subImage.imageIndex,
+    );
 
     // Render from the viewpoint of xrView
   }

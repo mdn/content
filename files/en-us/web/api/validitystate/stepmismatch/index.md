@@ -1,15 +1,11 @@
 ---
-title: ValidityState.stepMismatch
+title: "ValidityState: stepMismatch property"
+short-title: stepMismatch
 slug: Web/API/ValidityState/stepMismatch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.stepMismatch
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`stepMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's `step` attribute.
@@ -19,7 +15,7 @@ If the field is numeric in nature, including the {{HTMLElement("input/date", "da
 Given the following:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 if `(value - min) % 2 !== 0`, `stepMismatch` will be true.
@@ -36,6 +32,6 @@ If true, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)

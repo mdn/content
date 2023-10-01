@@ -1,22 +1,18 @@
 ---
-title: TrustedTypePolicyFactory.getAttributeType()
+title: "TrustedTypePolicyFactory: getAttributeType() method"
+short-title: getAttributeType()
 slug: Web/API/TrustedTypePolicyFactory/getAttributeType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getAttributeType
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getAttributeType
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeType(tagName, attribute)
 getAttributeType(tagName, attribute, elementNS)
 getAttributeType(tagName, attribute, elementNS, attrNS)
@@ -45,10 +41,10 @@ Or, null.
 
 ## Examples
 
-In this example, passing the {{htmlelement("script")}} element and {{htmlattrxref("src")}} attribute to `getAttributeType` returns "TrustedScriptURL".
+In this example, passing the {{htmlelement("script")}} element and [`src`](/en-US/docs/Web/HTML/Global_attributes#src) attribute to `getAttributeType` returns "TrustedScriptURL".
 
 ```js
-console.log(trustedTypes.getAttributeType('script', 'src')); // "TrustedScriptURL"
+console.log(trustedTypes.getAttributeType("script", "src")); // "TrustedScriptURL"
 ```
 
 ## Specifications

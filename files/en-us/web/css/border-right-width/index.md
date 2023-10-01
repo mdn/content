@@ -1,14 +1,10 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-right-width
 ---
+
 {{CSSRef}}
 
 The **`border-right-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the right border of an element.

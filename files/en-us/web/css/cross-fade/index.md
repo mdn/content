@@ -1,16 +1,10 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Experimental
-  - Function
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.types.image.cross-fade
 ---
+
 {{CSSRef}}
 
 The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to blend two or more images at a defined transparency.
@@ -50,10 +44,10 @@ A 25% value renders the first image at 25% and the second at 75%. The 75% value 
 The above could also have been written as:
 
 ```css
-cross-fade(url(white.png) 0%,   url(black.png)); /* fully black */
-cross-fade(url(white.png) 25%,  url(black.png)); /* 25% white, 75% black */
-cross-fade(url(white.png),      url(black.png)); /* 50% white, 50% black */
-cross-fade(url(white.png) 75%,  url(black.png)); /* 75% white, 25% black */
+cross-fade(url(white.png) 0%, url(black.png)); /* fully black */
+cross-fade(url(white.png) 25%, url(black.png)); /* 25% white, 75% black */
+cross-fade(url(white.png), url(black.png)); /* 50% white, 50% black */
+cross-fade(url(white.png) 75%, url(black.png)); /* 75% white, 25% black */
 cross-fade(url(white.png) 100%, url(black.png)); /* fully white */
 cross-fade(url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */
 ```
@@ -101,7 +95,7 @@ Browsers do not provide any special information on background images to assistiv
 If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 When using background images, make sure the contrast in color is great enough that any text is legible over the image as well as if the images are missing.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Formal syntax
@@ -122,16 +116,10 @@ When using background images, make sure the contrast in color is great enough th
 
 ```css
 .crossfade {
-    width: 300px;
-    height: 300px;
-    background-image: -webkit-cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
-    background-image: cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
+  width: 300px;
+  height: 300px;
+  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
+  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
 }
 ```
 
@@ -151,8 +139,8 @@ When using background images, make sure the contrast in color is great enough th
 
 - {{cssxref("image")}}
 - {{cssxref("url")}}
-- {{cssxref("_image", "image()")}}
-- {{cssxref("image-set")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}

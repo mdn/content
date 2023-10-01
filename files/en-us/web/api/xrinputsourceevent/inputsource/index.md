@@ -1,29 +1,11 @@
 ---
-title: XRInputSourceEvent.inputSource
+title: "XRInputSourceEvent: inputSource property"
+short-title: inputSource
 slug: Web/API/XRInputSourceEvent/inputSource
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Controller
-  - Input
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - inputSource
-  - source
 browser-compat: api.XRInputSourceEvent.inputSource
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRInputSourceEvent")}} interface's read-only

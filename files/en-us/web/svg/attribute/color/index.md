@@ -1,11 +1,10 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.color
 ---
+
 {{SVGRef}}
 
 The **`color`** attribute is used to provide a potential indirect value, `currentcolor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.
@@ -39,7 +38,9 @@ As a presentation attribute, it can be applied to any element, but as noted abov
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -48,7 +49,13 @@ html, body, svg {
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <g color="green">
     <rect width="50" height="50" fill="currentcolor" />
-    <circle r="25" cx="70" cy="70" stroke="currentcolor" fill="none" stroke-width="5" />
+    <circle
+      r="25"
+      cx="70"
+      cy="70"
+      stroke="currentcolor"
+      fill="none"
+      stroke-width="5" />
   </g>
 </svg>
 ```

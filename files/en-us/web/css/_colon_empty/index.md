@@ -1,16 +1,10 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - Layout
-  - NeedsUpdate
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.empty
 ---
+
 {{CSSRef}}
 
 The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.
@@ -21,8 +15,10 @@ The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:empty
+```css
+:empty {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -36,7 +32,9 @@ The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
   <!-- I will be pink in older browsers because of the whitespace around this comment. -->
 </div>
 <div class="box">
-  <p><!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. --></p>
+  <p>
+    <!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. -->
+  </p>
 </div>
 ```
 

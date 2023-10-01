@@ -1,18 +1,11 @@
 ---
-title: SecurityPolicyViolationEvent.columnNumber
+title: "SecurityPolicyViolationEvent: columnNumber property"
+short-title: columnNumber
 slug: Web/API/SecurityPolicyViolationEvent/columnNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - columnNumber
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
+
 {{HTTPSidebar}}
 
 The **`columnNumber`** read-only property of the

@@ -1,15 +1,11 @@
 ---
-title: Selection.toString()
+title: "Selection: toString() method"
+short-title: toString()
 slug: Web/API/Selection/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.toString
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.toString()`** method returns a string
@@ -17,7 +13,7 @@ currently being represented by the selection object, i.e. the currently selected
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -37,8 +33,8 @@ In [JavaScript](/en-US/docs/Web/JavaScript), this method is called automatically
 a function the selection object is passed to requires a string:
 
 ```js
-alert(window.getSelection()) // What is called
-alert(window.getSelection().toString())  // What is actually being effectively called.
+alert(window.getSelection()); // What is called
+alert(window.getSelection().toString()); // What is actually being effectively called.
 ```
 
 ## Specifications

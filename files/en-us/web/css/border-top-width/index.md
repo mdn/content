@@ -1,14 +1,10 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-top-width
 ---
+
 {{CSSRef}}
 
 The **`border-top-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the top border of an element.

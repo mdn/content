@@ -1,20 +1,17 @@
 ---
 title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior-y
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overscroll-behavior-y
 ---
+
 {{CSSRef}}
 
 The **`overscroll-behavior-y`** CSS property sets the browser's behavior when the vertical boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -29,8 +26,6 @@ overscroll-behavior-y: revert;
 overscroll-behavior-y: revert-layer;
 overscroll-behavior-y: unset;
 ```
-
-## Syntax
 
 The `overscroll-behavior-y` property is specified as a keyword chosen from the list of values below.
 

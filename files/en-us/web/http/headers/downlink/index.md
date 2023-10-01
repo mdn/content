@@ -1,16 +1,12 @@
 ---
 title: Downlink
 slug: Web/HTTP/Headers/Downlink
-tags:
-  - Downlink
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.downlink
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The **`Downlink`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.
@@ -31,15 +27,15 @@ The **`Downlink`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request head
   </tbody>
 </table>
 
-The `Downlink` value is given in Mbps and rounded to the nearest 25 kilobits per second to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar information.
+The `Downlink` value is given in Mbps and rounded to the nearest 25 kilobits per second to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting). There are many other mechanisms an attacker might use to obtain similar information.
 
 The hint allows a server to choose what information is sent based on the network bandwidth. For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.
 
-> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("Downlink")}} is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
+> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching Vary](/en-US/docs/Web/HTTP/Caching#vary)). Even if {{HTTPHeader("Downlink")}} is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
 
 ## Syntax
 
-```
+```http
 Downlink: <number>
 ```
 
@@ -52,13 +48,13 @@ Downlink: <number>
 
 A server first needs to opt in to receive the `Downlink` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `Downlink`.
 
-```
+```http
 Accept-CH: Downlink
 ```
 
 Then on subsequent requests the client might send a `Downlink` header back:
 
-```
+```http
 Downlink: 1.7
 ```
 
@@ -80,5 +76,5 @@ Downlink: 1.7
   - {{HTTPHeader("Save-Data")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
 - {{domxref("NetworkInformation.effectiveType")}}

@@ -2,27 +2,9 @@
 title: XRInputSourcesChangeEvent
 slug: Web/API/XRInputSourcesChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourcesChangeEvent
-  - augmented
-  - events
-  - inputsourceschange
 browser-compat: api.XRInputSourcesChangeEvent
 ---
+
 {{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
 The WebXR Device API interface **`XRInputSourcesChangeEvent`** is used to represent the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event sent to an {{domxref("XRSession")}} when the set of available WebXR input controllers changes.
@@ -34,7 +16,7 @@ The WebXR Device API interface **`XRInputSourcesChangeEvent`** is used to repres
 - {{domxref("XRInputSourcesChangeEvent.XRInputSourcesChangeEvent", "XRInputSourcesChangeEvent()")}}
   - : Creates and returns a new `XRInputSourcesChangeEvent` object. The specified type must be `inputsourceschange`, which is the only event that uses this interface.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}}
   - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been newly connected or enabled for use.
@@ -43,7 +25,7 @@ The WebXR Device API interface **`XRInputSourcesChangeEvent`** is used to repres
 - {{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which this input source change event is being directed.
 
-## Methods
+## Instance methods
 
 _While `XRInputSourcesChangeEvent` defines no methods of its own, it inherits methods from its parent interface, {{domxref("Event")}}._
 

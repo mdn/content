@@ -1,19 +1,13 @@
 ---
-title: BluetoothRemoteGATTDescriptor.writeValue()
+title: "BluetoothRemoteGATTDescriptor: writeValue() method"
+short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - writeValue()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
@@ -22,7 +16,7 @@ an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 writeValue(array)
 ```
 

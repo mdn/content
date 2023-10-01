@@ -2,14 +2,11 @@
 title: SVGFontFaceSrcElement
 slug: Web/API/SVGFontFaceSrcElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGFontFaceSrcElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGFontFaceSrcElement`** interface corresponds to the {{SVGElement("font-face-src")}} elements.
@@ -18,11 +15,11 @@ Object-oriented access to the attributes of the {{SVGElement("font-face-src")}} 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

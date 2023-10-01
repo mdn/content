@@ -1,16 +1,11 @@
 ---
-title: createImageBitmap()
+title: createImageBitmap() global function
+short-title: createImageBitmap()
 slug: Web/API/createImageBitmap
 page-type: web-api-global-function
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Method
-  - Reference
-  - createImageBitmap
 browser-compat: api.createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`createImageBitmap()`** method creates a bitmap from a
@@ -21,7 +16,7 @@ different image sources, and returns a {{jsxref("Promise")}} which resolves to a
 
 ## Syntax
 
-```js
+```js-nolint
 createImageBitmap(image)
 createImageBitmap(image, options)
 createImageBitmap(image, sx, sy, sw, sh)
@@ -31,12 +26,15 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 ### Parameters
 
 - `image`
-  - : An image source, which can be an {{HTMLElement("img")}}, SVG
-    {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}},
-    {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}},
-    {{domxref("HTMLVideoElement")}},
-    {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}},
-    {{domxref("ImageBitmap")}}, or {{domxref("OffscreenCanvas")}} object.
+  - : An image source, which can be any one of the following:
+    - {{domxref("HTMLImageElement")}}
+    - {{domxref("SVGImageElement")}}
+    - {{domxref("HTMLVideoElement")}}
+    - {{domxref("HTMLCanvasElement")}}
+    - {{domxref("Blob")}}
+    - {{domxref("ImageData")}}
+    - {{domxref("ImageBitmap")}}
+    - {{domxref("OffscreenCanvas")}}
 - `sx`
   - : The x coordinate of the reference point of the rectangle from which the
     `ImageBitmap` will be extracted.
@@ -89,25 +87,25 @@ sprite to the canvas. A sprite sheet is an image containing multiple smaller ima
 each of which you want to be able to render separately.
 
 ```js
-const canvas = document.getElementById('myCanvas'),
-ctx = canvas.getContext('2d'),
-image = new Image();
+const canvas = document.getElementById("myCanvas"),
+  ctx = canvas.getContext("2d"),
+  image = new Image();
 
 // Wait for the sprite sheet to load
 image.onload = () => {
   Promise.all([
     // Cut out two sprites from the sprite sheet
     createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32)
+    createImageBitmap(image, 32, 0, 32, 32),
   ]).then((sprites) => {
     // Draw each sprite onto the canvas
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);
   });
-}
+};
 
 // Load the sprite sheet from an image file
-image.src = 'sprites.png';
+image.src = "sprites.png";
 ```
 
 ## Specifications

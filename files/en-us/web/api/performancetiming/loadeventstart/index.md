@@ -1,20 +1,14 @@
 ---
-title: PerformanceTiming.loadEventStart
+title: "PerformanceTiming: loadEventStart property"
+short-title: loadEventStart
 slug: Web/API/PerformanceTiming/loadEventStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.loadEventStart
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface's {{domxref("PerformanceNavigationTiming.loadEventStart")}} read-only property instead.

@@ -3,7 +3,8 @@ title: Ending a call
 slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call
 page-type: guide
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
 
@@ -11,23 +12,23 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
 
 1. Add the following to the bottom of your `script.js` file:
 
-    ```js
-    const hangUpBtn = document.querySelector('.hangup-btn');
-    hangUpBtn.addEventListener('click', () => {
-      conn.close();
-      showCallContent();
-    })
-    ```
+   ```js
+   const hangUpBtn = document.querySelector(".hangup-btn");
+   hangUpBtn.addEventListener("click", () => {
+     conn.close();
+     showCallContent();
+   });
+   ```
 
 2. When the connection has been closed, you also want to display the correct HTML content so you can just call your `showCallContent()` function. Within the `call` event, you also want to ensure the remote browser is updated. To achieve this, add another event listener within the `peer.on('call', (stream) => { }` event listener, within the conditional block.
 
-    ```js
-    conn.on('close', () => {
-      showCallContent();
-    })
-    ```
+   ```js
+   conn.on("close", () => {
+     showCallContent();
+   });
+   ```
 
-    This way, if the person who initiated the call clicks "Hang up" first, both browsers are still updated with the new state.
+   This way, if the person who initiated the call clicks "Hang up" first, both browsers are still updated with the new state.
 
 3. Test out your app again, and try closing a call.
 

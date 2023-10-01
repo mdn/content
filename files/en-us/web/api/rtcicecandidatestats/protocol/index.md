@@ -1,27 +1,15 @@
 ---
-title: RTCIceCandidateStats.protocol
+title: "RTCIceCandidateStats: protocol property"
+short-title: protocol
 slug: Web/API/RTCIceCandidateStats/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - Property
-  - Protocol
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidateStats.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
-**`protocol`**  property specifies the protocol the specified
+**`protocol`** property specifies the protocol the specified
 candidate would use for communication with the remote peer.
 
 ## Value

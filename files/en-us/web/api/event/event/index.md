@@ -1,19 +1,18 @@
 ---
-title: Event()
+title: "Event: Event() constructor"
+short-title: Event()
 slug: Web/API/Event/Event
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
 browser-compat: api.Event.Event
 ---
+
 {{APIRef("DOM")}}
 
 The **`Event()`** constructor creates a new {{domxref("Event")}} object. An event created in this way is called a _synthetic event_, as opposed to an event fired by the browser, and can be [dispatched](/en-US/docs/Web/Events/Creating_and_triggering_events) by a script.
 
 ## Syntax
 
-```js
+```js-nolint
 new Event(type)
 new Event(type, options)
 ```
@@ -44,7 +43,7 @@ A new {{domxref("Event")}} object.
 ```js
 // create a look event that bubbles up and cannot be canceled
 
-const evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // event can be dispatched from any element, not only the document

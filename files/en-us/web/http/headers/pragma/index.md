@@ -1,16 +1,13 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Caching
-  - Deprecated
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Pragma
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The **`Pragma`** HTTP/1.0 general header is an
 implementation-specific header that may have various effects along the request-response
@@ -49,7 +46,7 @@ chain. This header serves for backwards compatibility with the HTTP/1.0 caches t
 
 ## Syntax
 
-```
+```http
 Pragma: no-cache
 ```
 
@@ -61,7 +58,7 @@ Pragma: no-cache
 
 ## Examples
 
-```
+```http
 Pragma: no-cache
 ```
 

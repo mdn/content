@@ -1,12 +1,10 @@
 ---
 title: <feImage>
 slug: Web/SVG/Element/feImage
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feImage
 ---
+
 {{SVGRef}}
 
 The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image data from an external source and provides the pixel data as output (meaning if the external source is an SVG image, it is rasterized.)
@@ -28,8 +26,9 @@ The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image da
 
 ### Specific attributes
 
+- {{SVGAttr("crossorigin")}}
 - {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
@@ -40,22 +39,25 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
 ### SVG
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200">
   <defs>
     <filter id="image">
-      <feImage xlink:href="mdn_logo_only_color.png"/>
+      <feImage href="mdn_logo_only_color.png" />
     </filter>
   </defs>
 
-  <rect x="10%" y="10%" width="80%" height="80%"
-      style="filter:url(#image);"/>
+  <rect x="10%" y="10%" width="80%" height="80%" style="filter:url(#image);" />
 </svg>
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example", 200, 200)}}
+{{EmbedLiveSample("Example", 200, 210)}}
 
 ## Specifications
 

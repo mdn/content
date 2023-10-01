@@ -1,17 +1,11 @@
 ---
-title: History.length
+title: "History: length property"
+short-title: length
 slug: Web/API/History/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.History.length
 ---
+
 {{APIRef("History API")}}
 
 The **`History.length`** read-only

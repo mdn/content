@@ -2,16 +2,9 @@
 title: Credential Management API
 slug: Web/API/Credential_Management_API
 page-type: web-api-overview
-tags:
-  - API
-  - Credential Management API
-  - Landing
-  - NeedsContent
-  - Overview
-  - Reference
-  - credential management
 browser-compat: api.Credential
 ---
+
 {{DefaultAPISidebar("Credential Management API")}}
 
 The Credential Management API lets a website store and retrieve password, public key, and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.
@@ -26,7 +19,7 @@ To address these problems, the Credential Management API provides ways for a web
 
 ### Subdomain-shared credentials
 
-Later version of the spec allow credentials to be retrieved from a different subdomain. For example, a password stored in `login.example.com` may be used to log in to `www.example.com`. To take advantage of this, a password must be explicitly stored by calling {{domxref("CredentialsContainer.store()")}}. This is sometimes referred to as public suffix list (PSL) matching; however the spec only _recommends_ using PSL to determine the effective scope of a credential. It does not require it. Hence browsers may vary in their implementation.
+Later versions of the spec allow credentials to be retrieved from a different subdomain. For example, a password stored in `login.example.com` may be used to log in to `www.example.com`. To take advantage of this, a password must be explicitly stored by calling {{domxref("CredentialsContainer.store()")}}. This is sometimes referred to as public suffix list (PSL) matching; however the spec only _recommends_ using PSL to determine the effective scope of a credential. It does not require it. Hence browsers may vary in their implementation.
 
 ## Interfaces
 

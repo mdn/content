@@ -1,25 +1,15 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.optional
 ---
-{{ CSSRef }}
 
-The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the {{ htmlattrxref("required", "input") }} attribute set on it.
+{{CSSRef}}
 
-```css
-/* Selects any optional <input> */
-input:optional {
-  border: 1px dashed black;
-}
-```
+The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute set on it.
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
 
 This pseudo-class is useful for styling fields that are not required to submit a form.
 
@@ -27,8 +17,10 @@ This pseudo-class is useful for styling fields that are not required to submit a
 
 ## Syntax
 
-```
-:optional
+```css
+:optional {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -41,12 +33,12 @@ This pseudo-class is useful for styling fields that are not required to submit a
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```
@@ -77,7 +69,7 @@ input:optional {
 
 ## Accessibility concerns
 
-If a [form](/en-US/docs/Web/HTML/Element/form) contains optional {{htmlelement("input")}}s, required inputs should be indicated using the {{ htmlattrxref("required", "input") }} attribute. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful form submission.
+If a [form](/en-US/docs/Web/HTML/Element/form) contains optional {{htmlelement("input")}}s, required inputs should be indicated using the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful form submission.
 
 Required inputs should also be indicated visually, using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 

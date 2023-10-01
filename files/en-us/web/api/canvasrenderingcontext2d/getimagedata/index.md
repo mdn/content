@@ -1,23 +1,11 @@
 ---
-title: CanvasRenderingContext2D.getImageData()
+title: "CanvasRenderingContext2D: getImageData() method"
+short-title: getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Canvas API
-  - CanvasRenderingContext2D
-  - Cut
-  - Graphics
-  - Image
-  - ImageData
-  - Method
-  - Reference
-  - copy
-  - getImageData
-  - img
 browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -37,8 +25,9 @@ manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/
 
 ## Syntax
 
-```js
+```js-nolint
 getImageData(sx, sy, sw, sh)
+getImageData(sx, sy, sw, sh, settings)
 ```
 
 ### Parameters
@@ -55,6 +44,9 @@ getImageData(sx, sy, sw, sh)
 - `sh`
   - : The height of the rectangle from which the `ImageData` will be extracted.
     Positive values are down, and negative are up.
+- `settings` {{optional_inline}}
+  - : An object with the following properties:
+    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
 
 ### Return value
 
@@ -92,12 +84,12 @@ We use `getImageData()` to extract a slice of the image, starting at `(10, 20)`,
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const image = new Image();
-image.src = 'plumeria.jpg';
-image.addEventListener('load', () => {
+image.src = "plumeria.jpg";
+image.addEventListener("load", () => {
   ctx.drawImage(image, 0, 0, 233, 320);
 
   const imageData = ctx.getImageData(10, 20, 80, 230);
@@ -110,6 +102,20 @@ image.addEventListener('load', () => {
 #### Result
 
 {{EmbedLiveSample("Getting_image_data_from_a_canvas", "", 420)}}
+
+### Color space conversion
+
+The optional `colorSpace` setting allows you to get image data in the desired format.
+
+```js
+const context = canvas.getContext("2d", { colorSpace: "display-p3" });
+context.fillStyle = "color(display-p3 0.5 0 0)";
+context.fillRect(0, 0, 10, 10);
+
+// Get ImageData converted to sRGB
+const imageData = context.getImageData(0, 0, 1, 1, { colorSpace: "srgb" });
+console.log(imageData.colorSpace); // "srgb"
+```
 
 ## Specifications
 

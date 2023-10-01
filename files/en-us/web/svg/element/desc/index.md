@@ -1,12 +1,10 @@
 ---
 title: <desc>
 slug: Web/SVG/Element/desc
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
+page-type: svg-element
 browser-compat: svg.elements.desc
 ---
+
 {{SVGRef}}
 
 The **`<desc>`** element provides an accessible, long-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
@@ -18,17 +16,19 @@ The hidden text of a `<desc>` element can also be concatenated with the visible 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <circle cx="5" cy="5" r="4">
     <desc>
-      I'm a circle and that description is here to
-      demonstrate how I can be described, but is it
-      really necessary to describe a simple circle
-      like me?
+      I'm a circle and that description is here to demonstrate how I can be
+      described, but is it really necessary to describe a simple circle like me?
     </desc>
   </circle>
 </svg>

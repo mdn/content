@@ -1,17 +1,11 @@
 ---
-title: RTCRtpContributingSource.timestamp
+title: "RTCRtpContributingSource: timestamp property"
+short-title: timestamp
 slug: Web/API/RTCRtpContributingSource/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpContributingSource
-  - Reference
-  - WebRTC
-  - timeStamp
 browser-compat: api.RTCRtpContributingSource.timestamp
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`timestamp`** property

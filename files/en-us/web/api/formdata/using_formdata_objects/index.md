@@ -2,15 +2,8 @@
 title: Using FormData Objects
 slug: Web/API/FormData/Using_FormData_Objects
 page-type: guide
-tags:
-  - AJAX
-  - Blob
-  - File
-  - FormData
-  - Forms
-  - XHR
-  - XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest). It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
@@ -30,7 +23,7 @@ formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object
 const content = '<q id="a"><span id="b">hey!</span></q>'; // the body of the new file…
-const blob = new Blob([content], { type: "text/xml"});
+const blob = new Blob([content], { type: "text/xml" });
 
 formData.append("webmasterfile", blob);
 
@@ -82,17 +75,27 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
   <p>
-    <label>Your email address:
-      <input type="email" autocomplete="on" name="userid" placeholder="email" required size="32" maxlength="64" />
+    <label
+      >Your email address:
+      <input
+        type="email"
+        autocomplete="on"
+        name="userid"
+        placeholder="email"
+        required
+        size="32"
+        maxlength="64" />
     </label>
   </p>
   <p>
-    <label>Custom file label:
+    <label
+      >Custom file label:
       <input type="text" name="filelabel" size="12" maxlength="32" />
     </label>
   </p>
   <p>
-    <label>File to stash:
+    <label
+      >File to stash:
       <input type="file" name="file" required />
     </label>
   </p>
@@ -100,33 +103,35 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
     <input type="submit" value="Stash the file!" />
   </p>
 </form>
-<div></div>
+<div id="output"></div>
 ```
 
 Then you can send it using code like the following:
 
 ```js
 const form = document.forms.namedItem("fileinfo");
-form.addEventListener('submit', (ev) => {
+form.addEventListener(
+  "submit",
+  (event) => {
+    const output = document.querySelector("#output");
+    const formData = new FormData(form);
 
-  const oOutput = document.querySelector("div"),
-      oData = new FormData(form);
+    formData.append("CustomField", "This is some extra data");
 
-  oData.append("CustomField", "This is some extra data");
+    const request = new XMLHttpRequest();
+    request.open("POST", "stash.php", true);
+    request.onload = (progress) => {
+      output.innerHTML =
+        request.status === 200
+          ? "Uploaded!"
+          : `Error ${request.status} occurred when trying to upload your file.<br />`;
+    };
 
-  const oReq = new XMLHttpRequest();
-  oReq.open("POST", "stash.php", true);
-  oReq.onload = (oEvent) => {
-    if (oReq.status === 200) {
-      oOutput.innerHTML = "Uploaded!";
-    } else {
-      oOutput.innerHTML = `Error ${oReq.status} occurred when trying to upload your file.<br />`;
-    }
-  };
-
-  oReq.send(oData);
-  ev.preventDefault();
-}, false);
+    request.send(formData);
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 > **Note:** If you pass in a reference to the form, the [request method](/en-US/docs/Web/HTTP/Methods) specified in the form will be used over the method specified in the open() call.
@@ -150,13 +155,13 @@ This allows a {{domxref("FormData")}} object to be quickly obtained in response 
 Typically this is used as shown in our [simple formdata event demo](https://long-impatiens.glitch.me/) — in the JavaScript we reference a form:
 
 ```js
-const formElem = document.querySelector('form');
+const formElem = document.querySelector("form");
 ```
 
 In our [`submit` event](/en-US/docs/Web/API/HTMLFormElement/submit_event) handler we use [`preventDefault`](/en-US/docs/Web/API/Event/preventDefault) to stop the default form submission, then invoke a {{domxref("FormData")}} constructor to trigger the `formdata` event:
 
 ```js
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener("submit", (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -168,8 +173,8 @@ formElem.addEventListener('submit', (e) => {
 When the `formdata` event fires we can access the {{domxref("FormData")}} object using {{domxref("FormDataEvent.formData")}}, then do what we like with it (below we post it to the server using {{domxref("XMLHttpRequest")}}).
 
 ```js
-formElem.addEventListener('formdata', (e) => {
-  console.log('formdata fired');
+formElem.addEventListener("formdata", (e) => {
+  console.log("formdata fired");
 
   // Get the form data from the event object
   const data = e.formData;
@@ -186,9 +191,9 @@ formElem.addEventListener('formdata', (e) => {
 
 > **Note:** The `formdata` event and {{domxref("FormDataEvent")}} object are available in Chrome from version 77 (and other equivalent Chromiums), and Firefox 72 (first available behind the `dom.formdata.event.enabled` pref in Firefox 71).
 
-## Submitting forms and uploading files via AJAX _without_ `FormData` objects
+## Submitting forms and uploading files via AJAX without `FormData` objects
 
-If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
+If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](https://github.com/mdn/content/blob/92435b5f26c680a2314d392ef06f479216f0b4dd/files/en-us/web/api/xmlhttprequest/using_xmlhttprequest/index.md#submitting-forms-and-uploading-files).
 
 ## Gotchas
 
@@ -199,4 +204,4 @@ The `FormData` object doesn't include data from the fields that are disabled or 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

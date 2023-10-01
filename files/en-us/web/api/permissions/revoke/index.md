@@ -1,17 +1,13 @@
 ---
-title: Permissions.revoke()
+title: "Permissions: revoke() method"
+short-title: revoke()
 slug: Web/API/Permissions/revoke
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Permissions
-  - Permissions API
-  - Reference
-  - revoke
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Permissions.revoke
 ---
+
 {{APIRef("Permissions API")}}{{deprecated_header}}
 
 The **`Permissions.revoke()`** method of the
@@ -22,7 +18,7 @@ This method is called on the global {{domxref("Permissions")}} object
 
 ## Syntax
 
-```js
+```js-nolint
 revoke(descriptor)
 ```
 
@@ -53,7 +49,7 @@ revoke(descriptor)
 > `notifications` and `push`.
 
 > **Note:** The `persistent-storage` permission allows an
-> origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
+> origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
 > storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
 ### Return value
@@ -75,7 +71,7 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
+  navigator.permissions.revoke({ name: "geolocation" }).then((result) => {
     report(result.state);
   });
 }

@@ -1,19 +1,13 @@
 ---
-title: console.profile()
+title: "console: profile() method"
+short-title: profile()
 slug: Web/API/console/profile
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Non-standard
-  - Reference
-  - Web Development
-  - profile
-  - web console
+status:
+  - non-standard
 browser-compat: api.console.profile
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 The **`console.profile()`** starts recording a performance profile (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
@@ -28,7 +22,7 @@ To stop recording call {{domxref("console.profileEnd()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 profile(profileName)
 ```
 

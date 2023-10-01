@@ -1,18 +1,11 @@
 ---
-title: Path2D()
+title: "Path2D: Path2D() constructor"
+short-title: Path2D()
 slug: Web/API/Path2D/Path2D
 page-type: web-api-constructor
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - Drawing
-  - Graphics
-  - Path2D
-  - Paths
-  - Reference
 browser-compat: api.Path2D.Path2D
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D()`** constructor returns a newly instantiated
@@ -21,7 +14,7 @@ copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/
 
 ## Syntax
 
-```js
+```js-nolint
 new Path2D()
 new Path2D(path)
 new Path2D(d)
@@ -47,11 +40,11 @@ This example creates and copies a `Path2D` path.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 let path1 = new Path2D();
-path1.rect(10, 10, 100,100);
+path1.rect(10, 10, 100, 100);
 
 let path2 = new Path2D(path1);
 path2.moveTo(220, 60);
@@ -74,10 +67,10 @@ point (`M10 10`) and then move horizontally 80 points to the right
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+let p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ctx.fill(p);
 ```
 

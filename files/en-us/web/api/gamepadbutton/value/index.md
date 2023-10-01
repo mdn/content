@@ -1,15 +1,11 @@
 ---
-title: GamepadButton.value
+title: "GamepadButton: value property"
+short-title: value
 slug: Web/API/GamepadButton/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
 browser-compat: api.GamepadButton.value
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadButton.value`** property of the

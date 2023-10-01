@@ -1,17 +1,11 @@
 ---
-title: MouseEvent.buttons
+title: "MouseEvent: buttons property"
+short-title: buttons
 slug: Web/API/MouseEvent/buttons
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Property
-  - Read-only
-  - Reference
-  - UIEvent
 browser-compat: api.MouseEvent.buttons
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.buttons`** read-only property indicates which buttons are pressed on the mouse (or other input device) when a mouse event is triggered.
@@ -51,17 +45,17 @@ This example logs the `buttons` property when you trigger a {{domxref("Element/m
 ### JavaScript
 
 ```js
-let log = document.createTextNode('?');   // let log = new Text('?');
+let log = document.createTextNode("?"); // let log = new Text('?');
 
 function logButtons(e) {
-  log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
+  log.data = `${e.buttons} (${e.type})`; // log.nodeValue= `${e.buttons} (${e.type})`;
 }
 
-document.addEventListener('mouseup', logButtons);
-document.addEventListener('mousedown', logButtons);
+document.addEventListener("mouseup", logButtons);
+document.addEventListener("mousedown", logButtons);
 // document.addEventListener('mousemove', logButtons);
 
-document.querySelector('#log').appendChild(log)
+document.querySelector("#log").appendChild(log);
 ```
 
 ### Result

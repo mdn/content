@@ -1,17 +1,10 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - launchWebAuthFlow
+page-type: webextension-api-function
 browser-compat: webextensions.api.identity.launchWebAuthFlow
 ---
+
 {{AddonSidebar()}}
 
 Performs the first part of an [OAuth2](https://oauth.net/2/) flow, including user authentication and client authorization.
@@ -38,7 +31,7 @@ If there's any error, the promise is rejected with an error message. Error condi
 
 ## Syntax
 
-```js
+```js-nolint
 let authorizing = browser.identity.launchWebAuthFlow(
   details   // object
 )
@@ -83,17 +76,18 @@ function validate(redirectURL) {
 
 function authorize() {
   const redirectURL = browser.identity.getRedirectURL();
-  const clientID = "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
+  const clientID =
+    "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
   const scopes = ["openid", "email", "profile"];
   let authURL = "https://accounts.google.com/o/oauth2/auth";
   authURL += `?client_id=${clientID}`;
   authURL += `&response_type=token`;
   authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(" "))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
-    url: authURL
+    url: authURL,
   });
 }
 
@@ -105,5 +99,3 @@ function getAccessToken() {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

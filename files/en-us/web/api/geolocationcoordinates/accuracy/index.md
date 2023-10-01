@@ -1,16 +1,11 @@
 ---
-title: GeolocationCoordinates.accuracy
+title: "GeolocationCoordinates: accuracy property"
+short-title: accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - accuracy
 browser-compat: api.GeolocationCoordinates.accuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.accuracy`** read-only property is

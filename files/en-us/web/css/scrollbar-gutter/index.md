@@ -1,11 +1,7 @@
 ---
 title: scrollbar-gutter
 slug: Web/CSS/scrollbar-gutter
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - scrollbar-gutter
+page-type: css-property
 browser-compat: css.properties.scrollbar-gutter
 ---
 
@@ -119,5 +115,8 @@ For reference, this image shows the same div as above, but with the user's syste
 
 ## See also
 
-- {{CSSxRef("scrollbar-width")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}

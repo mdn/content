@@ -1,17 +1,16 @@
 ---
 title: generate-id
 slug: Web/XPath/Functions/generate-id
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `generate-id` function generates a unique id for the first node in a given node-set and returns a string containing that id.
 
 ### Syntax
 
-```
+```plain
 generate-id( [node-set] )
 ```
 
@@ -27,9 +26,6 @@ A string containing the generated id.
 ### Notes
 
 - The same id must be generated every time for the same node in the current document in the current transformation.
-
-<!---->
-
 - The generated id may not be the same in subsequent transformations.
 
 This function is an XSLT-specific addition to XPath. It is not a part of the core XPath function library.

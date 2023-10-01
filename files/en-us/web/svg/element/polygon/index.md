@@ -1,13 +1,10 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.polygon
 ---
+
 {{SVGRef}}
 
 The **`<polygon>`** element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point.
@@ -17,7 +14,11 @@ For open shapes, see the {{SVGElement("polyline")}} element.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -26,8 +27,7 @@ html,body,svg { height:100% }
   <polygon points="0,100 50,25 50,75 100,0" />
 
   <!-- Example of the same polygon shape with stroke and no fill -->
-  <polygon points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 
@@ -37,10 +37,10 @@ html,body,svg { height:100% }
 
 - {{SVGAttr('points')}}
   - : This attribute defines the list of points (pairs of `x,y` absolute coordinates) required to draw the polygon.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)+ ; *Default value*: `""`; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)+ ; _Default value_: `""`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : This attribute lets specify the total length for the path, in user units.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: *none*; *Animatable*: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 

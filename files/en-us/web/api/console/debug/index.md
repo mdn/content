@@ -1,33 +1,23 @@
 ---
-title: console.debug()
+title: "console: debug() method"
+short-title: debug()
 slug: Web/API/console/debug
 page-type: web-api-instance-method
-tags:
-  - API
-  - Debug
-  - Debugging
-  - Developer Tools
-  - Logging
-  - Method
-  - Reference
-  - console
-  - log
-  - output
-  - print
 browser-compat: api.console.debug
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.debug()`** method outputs a message to the web console at
 the "debug" log level. The message is only displayed to the user if the console is configured to
 display debug output. In most cases, the log level is configured within the console UI. This log
-level might correspond to the \`Debug\` or \`Verbose\` log level.
+level might correspond to the `Debug` or `Verbose` log level.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
-```js
+```js-nolint
 debug(obj1)
 debug(obj1, /* …, */ objN)
 debug(msg)
@@ -45,7 +35,7 @@ debug(msg, subst1, /* …, */ substN)
 - `subst1` … `substN`
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This gives you additional control over the format of the output. See
-    {{SectionOnPage("/en-US/docs/Web/API/console", "Using string substitutions")}} for a
+    [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a
     description of how substitutions work.
 
 See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of the {{domxref("console")}} object for

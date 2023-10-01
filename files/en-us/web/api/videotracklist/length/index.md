@@ -1,21 +1,11 @@
 ---
-title: VideoTrackList.length
+title: "VideoTrackList: length property"
+short-title: length
 slug: Web/API/VideoTrackList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - length
-  - list
-  - track
 browser-compat: api.VideoTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**

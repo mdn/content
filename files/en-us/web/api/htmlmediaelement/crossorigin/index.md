@@ -1,18 +1,14 @@
 ---
-title: HTMLMediaElement.crossOrigin
+title: "HTMLMediaElement: crossOrigin property"
+short-title: crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
 browser-compat: api.HTMLMediaElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
+The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this media element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 
 ## Specifications
 
@@ -24,4 +20,4 @@ The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this ima
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.crossOrigin` property

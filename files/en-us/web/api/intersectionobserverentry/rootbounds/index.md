@@ -1,17 +1,11 @@
 ---
-title: IntersectionObserverEntry.rootBounds
+title: "IntersectionObserverEntry: rootBounds property"
+short-title: rootBounds
 slug: Web/API/IntersectionObserverEntry/rootBounds
 page-type: web-api-instance-property
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - rootBounds
 browser-compat: api.IntersectionObserverEntry.rootBounds
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

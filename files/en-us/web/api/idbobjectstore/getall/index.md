@@ -1,18 +1,11 @@
 ---
-title: IDBObjectStore.getAll()
+title: "IDBObjectStore: getAll() method"
+short-title: getAll()
 slug: Web/API/IDBObjectStore/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - getAll
 browser-compat: api.IDBObjectStore.getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the
@@ -31,13 +24,13 @@ This method produces the same result for:
 To tell these situations apart, you either call
 
 1. the {{domxref("IDBObjectStore.openCursor","openCursor()")}} method with the same
-    key. That method provides a cursor if the record exists, and no cursor if it does not.
+   key. That method provides a cursor if the record exists, and no cursor if it does not.
 2. the {{domxref("IDBObjectStore.count","count()")}} method with the same key, which
-    will return 1 if the row exists and 0 if it doesn't.
+   will return 1 if the row exists and 0 if it doesn't.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 getAll(query)
 getAll(query, count)
@@ -45,18 +38,19 @@ getAll(query, count)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to be queried. If nothing is passed, this will
     default to a key range that selects all the records in this object store.
-- *count* {{optional_inline}}
+- `count` {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of the values of all records matching the given query, up to the value of `count`, if `count` was supplied.
 
 ### Exceptions
 
@@ -87,4 +81,4 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

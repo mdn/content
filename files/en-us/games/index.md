@@ -1,15 +1,9 @@
 ---
 title: Game development
 slug: Games
-tags:
-  - Apps
-  - Game Development
-  - Gamedev
-  - Games
-  - HTML Games
-  - JavaScript Games
-  - Web
+page-type: landing-page
 ---
+
 {{GamesSidebar}}
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
@@ -34,7 +28,7 @@ To get started, see:
 
 ## Examples
 
-For a list of web game examples, see our [examples page](/en-US/docs/Games/Examples). Also, check out [games.mozilla.org](https://games.mozilla.org/) for more useful resources!
+For a list of web game examples, see our [tutorials page](/en-US/docs/Games/Tutorials). Also, check out [games.mozilla.org](https://games.mozilla.org/) for more useful resources!
 
 ## See also
 
@@ -58,7 +52,5 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
   - : JavaScript coding competition for HTML game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.
-
-## See also
-
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)
+  - : A wiki page with information about Mozilla's involvement in platform games.

@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.stencilMask()
+title: "WebGLRenderingContext: stencilMask() method"
+short-title: stencilMask()
 slug: Web/API/WebGLRenderingContext/stencilMask
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilMask
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.stencilMask()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) controls enabling and disabling of
@@ -20,7 +16,7 @@ back stencil writemasks to different values.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilMask(mask)
 ```
 

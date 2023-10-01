@@ -1,25 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.currentRoundTripTime
+title: "RTCIceCandidatePairStats: currentRoundTripTime property"
+short-title: currentRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/currentRoundTripTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Network
-  - Performance
-  - Ping
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - currentRoundTripTime
-  - rtc
-  - speed
 browser-compat: api.RTCIceCandidatePairStats.currentRoundTripTime
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -30,8 +16,8 @@ candidates.
 
 ## Syntax
 
-```js
-rtt = rtcIceCandidatePairStats.currentRoundTripTime;
+```js-nolint
+rtt = rtcIceCandidatePairStats.currentRoundTripTime
 ```
 
 ### Value

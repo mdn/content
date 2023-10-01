@@ -1,16 +1,11 @@
 ---
-title: AudioDestinationNode.maxChannelCount
+title: "AudioDestinationNode: maxChannelCount property"
+short-title: maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioDestinationNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxChannelCount
 browser-compat: api.AudioDestinationNode.maxChannelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `maxchannelCount` property of the {{ domxref("AudioDestinationNode") }} interface is an `unsigned long` defining the maximum amount of channels that the physical device can handle.
@@ -33,7 +28,7 @@ audioCtx.destination.maxChannelCount = 2;
 gainNode.connect(audioCtx.destination);
 ```
 
-To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) or [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/).
+To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) or [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/).
 
 ## Specifications
 

@@ -1,18 +1,11 @@
 ---
-title: SpeechRecognitionAlternative.transcript
+title: "SpeechRecognitionAlternative: transcript property"
+short-title: transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - recognition
-  - speech
-  - transcript
 browser-compat: api.SpeechRecognitionAlternative.transcript
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`transcript`** read-only property of the
@@ -30,7 +23,7 @@ A string.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {
@@ -46,7 +39,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

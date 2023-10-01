@@ -1,17 +1,11 @@
 ---
-title: Animation.currentTime
+title: "Animation: currentTime property"
+short-title: currentTime
 slug: Web/API/Animation/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Animations
-  - Property
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.Animation.currentTime
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`Animation.currentTime`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets the current time value of the animation in milliseconds, whether running or paused.
@@ -40,8 +34,8 @@ animation.currentTime =
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of `animation.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.currentTime` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 microseconds in Firefox 59; in 60 it will be 2 milliseconds.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

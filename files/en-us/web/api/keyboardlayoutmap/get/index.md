@@ -1,19 +1,13 @@
 ---
-title: KeyboardLayoutMap.get()
+title: "KeyboardLayoutMap: get() method"
+short-title: get()
 slug: Web/API/KeyboardLayoutMap/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Method
-  - Reference
-  - get()
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.get
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the
@@ -24,7 +18,7 @@ A list of valid keys is found in the [UI Events KeyboardEvent code Values](https
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 
@@ -44,9 +38,8 @@ associated with the key that corresponds to the 'W' key on an English QWERTY key
 
 ```js
 const keyboard = navigator.keyboard;
-keyboard.getLayoutMap()
-.then((keyboardLayoutMap) => {
-  const upKey = keyboardLayoutMap.get('KeyW');
+keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  const upKey = keyboardLayoutMap.get("KeyW");
   window.alert(`Press ${upKey} to move up.`);
 });
 ```

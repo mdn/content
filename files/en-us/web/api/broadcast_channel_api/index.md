@@ -2,14 +2,9 @@
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
 page-type: web-api-overview
-tags:
-  - API
-  - Broadcast Channel API
-  - HTML API
-  - Overview
-  - Reference
 browser-compat: api.BroadcastChannel
 ---
+
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
 The **Broadcast Channel API** allows basic communication between {{glossary("browsing context", "browsing contexts")}} (that is, _windows_, _tabs_, _frames_, or _iframes_) and workers on the same {{glossary("origin")}}.
@@ -28,7 +23,7 @@ A client joins a broadcast channel by creating a {{domxref("BroadcastChannel")}}
 
 ```js
 // Connection to a broadcast channel
-const bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel("test_channel");
 ```
 
 ### Sending a message
@@ -37,7 +32,7 @@ It is enough to call the {{domxref("BroadcastChannel.postMessage", "postMessage(
 
 ```js
 // Example of sending of a very simple message
-bc.postMessage('This is a test message.');
+bc.postMessage("This is a test message.");
 ```
 
 Data sent to the channel is serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). That means you can send a broad variety of data objects safely without having to serialize them yourself.
@@ -50,7 +45,9 @@ When a message is posted, a [`message`](/en-US/docs/Web/API/BroadcastChannel/mes
 
 ```js
 // A handler that only logs the event to the console:
-bc.onmessage = (event) => { console.log(event); }
+bc.onmessage = (event) => {
+  console.log(event);
+};
 ```
 
 ### Disconnecting a channel

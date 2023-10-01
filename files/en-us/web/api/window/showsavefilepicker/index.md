@@ -1,17 +1,14 @@
 ---
-title: Window.showSaveFilePicker()
+title: "Window: showSaveFilePicker() method"
+short-title: showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
+status:
+  - experimental
 browser-compat: api.Window.showSaveFilePicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showSaveFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to save a file.
@@ -19,13 +16,13 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ## Syntax
 
-```js
+```js-nolint
 showSaveFilePicker()
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object containing options, which are as follows:
 
@@ -37,6 +34,7 @@ showSaveFilePicker()
     - `suggestedName`
       - : A {{jsxref('String')}}. The suggested file name.
     - `types`
+
       - : An {{jsxref('Array')}} of allowed file types to save. Each
         item is an object with the following options:
 
@@ -57,6 +55,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
   - : Thrown if the user dismisses the file picker without selecting or inputting a file,
     or if the user agent deems any selected files too sensitive or dangerous.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 The following function shows a file picker, with text files highlighted for selection.
@@ -64,10 +66,12 @@ The following function shows a file picker, with text files highlighted for sele
 ```js
 async function getNewFileHandle() {
   const opts = {
-    types: [{
-      description: 'Text file',
-      accept: {'text/plain': ['.txt']},
-    }],
+    types: [
+      {
+        description: "Text file",
+        accept: { "text/plain": [".txt"] },
+      },
+    ],
   };
   return await window.showSaveFilePicker(opts);
 }
@@ -83,5 +87,5 @@ async function getNewFileHandle() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -2,20 +2,16 @@
 title: CSSCounterStyleRule
 slug: Web/API/CSSCounterStyleRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Counter Styles
-  - Interface
-  - Reference
 browser-compat: api.CSSCounterStyleRule
 ---
+
 {{APIRef("CSS Counter Styles")}}
 
 The **`CSSCounterStyleRule`** interface represents an {{CSSxRef("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent {{DOMxRef("CSSRule")}}._
 
@@ -42,7 +38,7 @@ _This interface also inherits properties from its parent {{DOMxRef("CSSRule")}}.
 - {{DOMxRef("CSSCounterStyleRule.fallback")}}
   - : A string object that contains the serialization of the {{CSSxRef("@counter-style/fallback", "fallback")}} descriptor defined for the associated rule. If the descriptor was not specified in the associated rule, the attribute returns an empty string.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific method but inherits methods from its parent {{DOMxRef("CSSRule")}}._
 

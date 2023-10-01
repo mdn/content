@@ -1,20 +1,14 @@
 ---
-title: PayerResponse.payerPhone
+title: "PayerResponse: payerPhone property"
+short-title: payerPhone
 slug: Web/API/PaymentResponse/payerPhone
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - payerPhone
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerPhone
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The `payerPhone` read-only property of the {{domxref("PaymentResponse")}}

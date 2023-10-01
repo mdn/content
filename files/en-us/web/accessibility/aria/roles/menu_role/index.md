@@ -1,14 +1,7 @@
 ---
-title: 'ARIA: menu role'
+title: "ARIA: menu role"
 slug: Web/Accessibility/ARIA/Roles/menu_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Menu role
-  - composite widget role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menu
   - https://w3c.github.io/aria-practices/#menu
@@ -34,7 +27,7 @@ Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessi
 
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu).
 
-Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
+Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. For horizontally oriented menu, use [`aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
 If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role instead.
 
@@ -43,38 +36,39 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) roles
   - : Roles of items contained in a containing `menu` or `menubar`, known collectively as "menu items". These must be able to receive focus.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-  - :  Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+  - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role
+
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
-- {{HTMLAttrXref('tabindex')}} attribute
+- [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute
   - : The `menu` container has `tabindex` set to `-1` or `0` and each item in the menu has `tabindex` set to `-1`.
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
   - : Set to the ID of the focused item, if there is one.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
   - : indicates whether the menu orientation is horizontal or vertical; defaults to `vertical` if omitted.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-  - : The `menu` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to a the `id` to the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
+  - : The `menu` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to a the `id` to the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
   - : Only set on the menu container to include elements that are not DOM children of the container. If set, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children. When managing focus, ensure the visual focus order matches this assistive technology reading order.
 
 ### Keyboard interactions
 
-- <kbd>Space</kdb> / <kbd>Enter</kdb>
+- <kbd>Space</kbd> / <kbd>Enter</kbd>
   - : If the item is a parent menu item, opens submenu and moves focus to first item in the submenu. Otherwise, activates the menu item, which loads new content and places focus on the heading that titles the content.
 - <kbd>Escape</kbd>
   - : When in a submenu, closes the submenu and moves focus to parent menu or menubar item.
-- <kbd>Right Arrow</kdb>
+- <kbd>Right Arrow</kbd>
   - : In a menubar, moves focus to the next item in the menubar. If focus is on the last item, moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, closes the submenu and moves focus to next item in the menubar. Otherwise, opens submenu of newly focused menubar item, keeping focus on that parent menubar item. If not in a menubar or submenu and not on a menuitem with a submenu, if focus is not the last focusable element in the menu, optionally moves focus to the next focusable element.
-- <kbd>Left Arrow </kdb>
+- <kbd>Left Arrow </kbd>
   - : Moves focus to the previous item in the menubar. If focus is on the first item, moves focus to the last item. If in a submenu, closes submenu and moves focus to parent menu item. If not in a menubar or submenu, if focus is not the first focusable element in the menu, optionally moves focus to the last focusable element.
-- <kbd>Down Arrow</kdb>
+- <kbd>Down Arrow</kbd>
   - : Opens submenu and moves focus to first item in the submenu.
-- <kbd>Up Arrow</kdb>
+- <kbd>Up Arrow</kbd>
   - : Opens submenu and moves focus to last item in the submenu.
-- <kbd>Home</kdb>
+- <kbd>Home</kbd>
   - : Moves focus to first item in the menubar.
-- <kbd>End</kdb>
+- <kbd>End</kbd>
   - : Moves focus to last item in the menubar.
 - Any character key
   - : Moves focus to next item in the menubar having a name that starts with the typed character. If none of the items have a name starting with the typed character, focus does not move.
@@ -88,16 +82,16 @@ Below are two example menu implementations.
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Page Sections">
+    <img src="hamburger.svg" alt="Page Sections" />
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description">
-        Description
-      </a>
+      <a role="menuitem" href="#description">Description</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#associated_wai-aria_roles_states_and_properties">
+      <a
+        role="menuitem"
+        href="#associated_wai-aria_roles_states_and_properties">
         Associated WAI-ARIA roles, states, and properties
       </a>
     </li>
@@ -107,19 +101,13 @@ Below are two example menu implementations.
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples">
-        Examples
-      </a>
+      <a role="menuitem" href="#examples">Examples</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications">
-        Specifications
-      </a>
+      <a role="menuitem" href="#specifications">Specifications</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also">
-        See Also
-      </a>
+      <a role="menuitem" href="#see_also">See Also</a>
     </li>
   </ul>
 </div>
@@ -135,14 +123,37 @@ The following snippet of code is a popup menu nested in a menubar. It is display
 
 ```html
 <div>
-  <button type="button" aria-haspopup="menu" aria-controls="colormenu" tabindex="0" aria-label="Text Color: purple">
+  <button
+    type="button"
+    aria-haspopup="menu"
+    aria-controls="colormenu"
+    tabindex="0"
+    aria-label="Text Color: purple">
     Purple
     <span></span>
   </button>
   <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
-    <li role="menuitemradio" aria-checked="true" style="color: purple" tabindex="-1">Purple</li>
-    <li role="menuitemradio" aria-checked="false" style="color: magenta" tabindex="-1">Magenta</li>
-    <li role="menuitemradio" aria-checked="false" style="color: black;" tabindex="-1">Black</li>
+    <li
+      role="menuitemradio"
+      aria-checked="true"
+      style="color: purple"
+      tabindex="-1">
+      Purple
+    </li>
+    <li
+      role="menuitemradio"
+      aria-checked="false"
+      style="color: magenta"
+      tabindex="-1">
+      Magenta
+    </li>
+    <li
+      role="menuitemradio"
+      aria-checked="false"
+      style="color: black;"
+      tabindex="-1">
+      Black
+    </li>
   </ul>
 </div>
 ```
@@ -153,7 +164,7 @@ For a menu to open, the user generally interacts with a menu button as the opene
 
 The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu.
 
-When the menu is open, the button itself generally does not received focus as users arrow thru the menuitems. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
+When the menu is open, the button itself generally does not received focus as users arrow through the menuitems. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
 
 The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` element as a menu.
 
@@ -186,6 +197,6 @@ The navigation example has a static button. In submenu example has a button that
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

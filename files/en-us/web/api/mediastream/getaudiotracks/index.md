@@ -1,21 +1,11 @@
 ---
-title: MediaStream.getAudioTracks()
+title: "MediaStream: getAudioTracks() method"
+short-title: getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - getAudioTracks
-  - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getAudioTracks()`** method of the
@@ -26,7 +16,7 @@ is `audio`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAudioTracks()
 ```
 
@@ -57,15 +47,16 @@ This example gets a webcam's audio and video in a stream using
 first audio track found on the stream.
 
 ```js
-navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then((mediaStream) => {
-  document.querySelector('video').srcObject = mediaStream;
-  // Stop the audio stream after 5 seconds
-  setTimeout(() => {
-    const tracks = mediaStream.getAudioTracks()
-    tracks[0].stop()
-  }, 5000)
-})
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
+    // Stop the audio stream after 5 seconds
+    setTimeout(() => {
+      const tracks = mediaStream.getAudioTracks();
+      tracks[0].stop();
+    }, 5000);
+  });
 ```
 
 ## Specifications

@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.getQuery()
+title: "WebGL2RenderingContext: getQuery() method"
+short-title: getQuery()
 slug: Web/API/WebGL2RenderingContext/getQuery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns the currently active
@@ -17,7 +13,7 @@ The **`WebGL2RenderingContext.getQuery()`** method of the [WebGL 2 API](/en-US/d
 
 ## Syntax
 
-```js
+```js-nolint
 getQuery(target, pname)
 ```
 

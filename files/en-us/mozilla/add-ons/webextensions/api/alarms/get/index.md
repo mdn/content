@@ -1,18 +1,10 @@
 ---
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - get
+page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.get
 ---
+
 {{AddonSidebar()}}
 
 Gets an alarm, given its name.
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getAlarm = browser.alarms.get(
   name                   // optional string
 )
@@ -56,5 +48,3 @@ getAlarm.then(gotAlarm);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

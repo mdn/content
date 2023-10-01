@@ -1,15 +1,11 @@
 ---
-title: DataTransfer.effectAllowed
+title: "DataTransfer: effectAllowed property"
+short-title: effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.effectAllowed`** property specifies the
@@ -56,9 +52,6 @@ possible values are:
 Assigning any other value to `effectAllowed` has no effect and the old value
 is retained.
 
-Internet Explorer will change the value to be lowercased; thus, `linkMove`
-will become `linkmove`, and so on.
-
 ## Examples
 
 ### Setting effectAllowed
@@ -70,7 +63,9 @@ In this example we set `effectAllowed` to `"move"` in the `dragstart` handler.
 ```html
 <div>
   <p id="source" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
 <div id="target">Drop Zone</div>
 <pre id="output"></pre>
@@ -116,9 +111,9 @@ function dropHandler(ev) {
   log(`drop: effectAllowed = ${ev.dataTransfer.effectAllowed}`);
 
   ev.preventDefault();
- // Get the id of the target and add the element to the target's DOM
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  // Get the id of the target and add the element to the target's DOM
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 
 function dragoverHandler(ev) {
@@ -129,9 +124,9 @@ function dragoverHandler(ev) {
 const source = document.querySelector("#source");
 const target = document.querySelector("#target");
 
-source.addEventListener("dragstart", dragstartHandler)
-target.addEventListener("dragover", dragoverHandler)
-target.addEventListener("drop", dropHandler)
+source.addEventListener("dragstart", dragstartHandler);
+target.addEventListener("dragover", dragoverHandler);
+target.addEventListener("drop", dropHandler);
 
 function log(message) {
   const output = document.querySelector("#output");
@@ -160,5 +155,4 @@ reset.addEventListener("click", () => document.location.reload());
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

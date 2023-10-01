@@ -1,14 +1,9 @@
 ---
-title: 'Test your skills: Form validation'
+title: "Test your skills: Form validation"
 slug: Learn/Forms/Test_your_skills:_Form_validation
-tags:
-  - Assessment
-  - Beginner
-  - Forms
-  - Learn
-  - Validation
-  - test your skills
+page-type: learn-module-assessment
 ---
+
 {{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article.
@@ -39,7 +34,7 @@ Now we want you to take the same form you saw in the previous task (use your pre
 2. All of the email addresses for our users consist of one or more letters (lower or upper case) or numbers, followed by "@bigcorp.eu".
 3. Remove the length validation from the phone number field if it is present, and set it so that it accepts 10 digits — either 10 digits in a row, or a pattern of three digits, three digits, then four digits, separated by either spaces, dashes, or dots.
 
-> **Note:** Regular expressions are really challenging if you are new to them, but don't despair — have a go and see where you get to; there is no shame in asking for some help. You can find everything you need to answer these questions at our [regular expression reference](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), and by searching on [Stack Overflow](https://stackoverflow.com/).
+> **Note:** Regular expressions are really challenging if you are new to them, but don't despair — have a go and see where you get to; there is no shame in asking for some help. You can find everything you need to answer these questions at our [regular expression reference](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), and by searching on [Stack Overflow](https://stackoverflow.com/).
 
 Again, to help you might want to consider adding some simple CSS to show when a form field is valid or invalid.
 
@@ -67,7 +62,7 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Form validation 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Form validation 1 skill test".
+   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.

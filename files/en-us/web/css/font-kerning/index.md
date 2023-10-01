@@ -1,14 +1,10 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-kerning
 ---
+
 {{CSSRef}}
 
 The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.
@@ -85,11 +81,11 @@ div {
 #### JavaScript
 
 ```js
-const input  = document.getElementById('input');
-const kern   = document.getElementById('kern');
-const nokern = document.getElementById('nokern');
+const input = document.getElementById("input");
+const kern = document.getElementById("kern");
+const nokern = document.getElementById("nokern");
 
-input.addEventListener('keyup', () => {
+input.addEventListener("keyup", () => {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

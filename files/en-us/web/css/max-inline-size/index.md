@@ -1,19 +1,10 @@
 ---
 title: max-inline-size
 slug: Web/CSS/max-inline-size
-tags:
-  - CSS
-  - CSS Logical Properties
-  - CSS Logical Property
-  - CSS Property
-  - Element size
-  - Reference
-  - Text Direction
-  - Writing Mode
-  - max-inline-size
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.max-inline-size
 ---
+
 {{CSSRef}}
 
 The **`max-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical maximum size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property, depending on the value of {{cssxref("writing-mode")}}.

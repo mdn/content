@@ -1,21 +1,11 @@
 ---
-title: MediaStreamAudioSourceNode.mediaStream
+title: "MediaStreamAudioSourceNode: mediaStream property"
+short-title: mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - MediaStream
-  - MediaStreamAudioSourceNode
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - stream
-  - Property
 browser-compat: api.MediaStreamAudioSourceNode.mediaStream
 ---
+
 {{APIRef("Web Audio API")}}
 
 The {{domxref("MediaStreamAudioSourceNode")}} interface's
@@ -44,8 +34,8 @@ need to have access to the track itself, you should use a
 ```js
 const audioCtx = new window.AudioContext();
 let options = {
-  mediaStream : stream
-}
+  mediaStream: stream,
+};
 
 let source = new MediaStreamAudioSourceNode(audioCtx, options);
 console.log(source.mediaStream);

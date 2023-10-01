@@ -2,18 +2,13 @@
 title: VRStageParameters
 slug: Web/API/VRStageParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRStageParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the values describing the stage area for devices that support room-scale experiences.
 
@@ -21,19 +16,19 @@ The **`VRStageParameters`** interface of the [WebVR API](/en-US/docs/Web/API/Web
 
 This interface is accessible through the {{domxref("VRDisplay.stageParameters")}} property.
 
-## Properties
+## Instance properties
 
-- {{domxref("VRStageParameters.sittingToStandingTransform")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRStageParameters.sittingToStandingTransform")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
-- {{domxref("VRStageParameters.sizeX")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRStageParameters.sizeX")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : _Returns the width_ of the play-area bounds in meters.
-- {{domxref("VRStageParameters.sizeY")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRStageParameters.sizeY")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : _Returns the depth_ of the play-area bounds in meters.
 
 ## Examples
 
 ```js
-const info = document.querySelector('p');
+const info = document.querySelector("p");
 let vrDisplay;
 
 navigator.getVRDisplays().then((displays) => {
@@ -42,9 +37,11 @@ navigator.getVRDisplays().then((displays) => {
   // stageParams is a VRStageParameters object
 
   if (stageParams === null) {
-    info.textContent = 'Your VR Hardware does not support room-scale experiences.'
+    info.textContent =
+      "Your VR Hardware does not support room-scale experiences.";
   } else {
-    info.innerHTML = `<strong>Display stage parameters</strong><br>` +
+    info.innerHTML =
+      `<strong>Display stage parameters</strong><br>` +
       `Sitting to standing transform: ${stageParams.sittingToStandingTransform}<br>` +
       `Play area width (m): ${stageParams.sizeX}<br>` +
       `Play area depth (m): ${stageParams.sizeY}`;

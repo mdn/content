@@ -1,18 +1,11 @@
 ---
-title: IDBTransaction.mode
+title: "IDBTransaction: mode property"
+short-title: mode
 slug: Web/API/IDBTransaction/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - mode
 browser-compat: api.IDBTransaction.mode
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`mode`** read-only property of the
@@ -48,10 +41,10 @@ In the following code snippet, we open a read/write transaction on our database 
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. At the end, we log the mode of the current transaction using `mode`.
-For a full working example, see our [To-do Notifications app](https://github.com/mdn/to-do-notifications/) ([view example live](https://mdn.github.io/to-do-notifications/).)
+For a full working example, see our [To-do Notifications app](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-const note = document.getElementById('notifications');
+const note = document.getElementById("notifications");
 
 // an instance of a db object for us to store the IDB data in
 let db;
@@ -60,7 +53,7 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -72,18 +65,30 @@ DBOpenRequest.onsuccess = (event) => {
 
 function addData() {
   // Create a new object ready for being inserted into the IDB
-  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+    note.innerHTML +=
+      "<li>Transaction completed: database modification finished.</li>";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // create an object store on the transaction
@@ -95,12 +100,12 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
   };
 
   // Return the mode this transaction has been opened in (should be "readwrite" in this case)
   transaction.mode;
-};
+}
 ```
 
 ## Specifications
@@ -119,4 +124,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

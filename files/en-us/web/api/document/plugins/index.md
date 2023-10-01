@@ -1,15 +1,11 @@
 ---
-title: Document.plugins
+title: "Document: plugins property"
+short-title: plugins
 slug: Web/API/Document/plugins
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Document.plugins
 ---
+
 {{APIRef("DOM")}}
 
 The **`plugins`** read-only property of the

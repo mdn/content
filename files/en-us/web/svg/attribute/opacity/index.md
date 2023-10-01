@@ -1,11 +1,10 @@
 ---
 title: opacity
 slug: Web/SVG/Attribute/opacity
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.opacity
 ---
+
 {{SVGRef}}
 
 The **`opacity`** attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid.
@@ -42,7 +41,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

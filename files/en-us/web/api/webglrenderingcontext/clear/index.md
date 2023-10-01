@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.clear()
+title: "WebGLRenderingContext: clear() method"
+short-title: clear()
 slug: Web/API/WebGLRenderingContext/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clear
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.clear()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) clears buffers to preset values.
@@ -23,7 +19,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 clear(mask)
 ```
 

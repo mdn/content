@@ -1,18 +1,11 @@
 ---
-title: SpeechSynthesisEvent.elapsedTime
+title: "SpeechSynthesisEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/SpeechSynthesisEvent/elapsedTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - elapsedTime
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent.elapsedTime
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`elapsedTime`** read-only property of the {{domxref("SpeechSynthesisEvent")}} returns the elapsed time in seconds, after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken, at which the [event](/en-US/docs/Web/API/SpeechSynthesisUtterance#events) was triggered.
@@ -28,8 +21,10 @@ A float containing the elapsed time, in seconds.
 
 ```js
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+  );
+};
 ```
 
 ## Specifications

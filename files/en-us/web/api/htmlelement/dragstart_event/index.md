@@ -1,14 +1,11 @@
 ---
-title: 'HTMLElement: dragstart event'
+title: "HTMLElement: dragstart event"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - drag and drop
 browser-compat: api.HTMLElement.dragstart_event
 ---
+
 {{APIRef}}
 
 The `dragstart` event is fired when the user starts dragging an element or text selection.
@@ -18,9 +15,9 @@ The `dragstart` event is fired when the user starts dragging an element or text 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragstart', (event) => {});
+addEventListener("dragstart", (event) => {});
 
-ondragstart = (event) => { };
+ondragstart = (event) => {};
 ```
 
 ## Event type
@@ -33,7 +30,7 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
@@ -50,9 +47,7 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -78,7 +73,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 

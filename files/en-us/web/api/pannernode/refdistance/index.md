@@ -1,16 +1,11 @@
 ---
-title: PannerNode.refDistance
+title: "PannerNode: refDistance property"
+short-title: refDistance
 slug: Web/API/PannerNode/refDistance
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - refDistance
 browser-compat: api.PannerNode.refDistance
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `refDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
@@ -50,8 +45,7 @@ const scheduleTestTone = (refDistance, startTime) => {
   panner.positionZ.setValueAtTime(0, startTime);
   panner.positionZ.linearRampToValueAtTime(Z_DISTANCE, startTime + NOTE_LENGTH);
 
-  osc.connect(panner)
-     .connect(context.destination);
+  osc.connect(panner).connect(context.destination);
 
   osc.start(startTime);
   osc.stop(startTime + NOTE_LENGTH);

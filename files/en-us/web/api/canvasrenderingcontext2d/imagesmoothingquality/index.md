@@ -1,16 +1,11 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingQuality
+title: "CanvasRenderingContext2D: imageSmoothingQuality property"
+short-title: imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - imageSmoothingQuality
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality
 ---
+
 {{APIRef}}
 
 The **`imageSmoothingQuality`** property of the
@@ -23,7 +18,7 @@ image smoothing.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `"low"`
   - : Low quality.
@@ -47,13 +42,13 @@ This example uses the `imageSmoothingQuality` property with a scaled image.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 let img = new Image();
-img.src = 'canvas_createpattern.png';
+img.src = "canvas_createpattern.png";
 img.onload = () => {
-  ctx.imageSmoothingQuality = 'low';
+  ctx.imageSmoothingQuality = "low";
   ctx.drawImage(img, 0, 0, 300, 150);
 };
 ```

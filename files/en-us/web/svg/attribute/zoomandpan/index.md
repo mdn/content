@@ -1,12 +1,12 @@
 ---
 title: zoomAndPan
 slug: Web/SVG/Attribute/zoomAndPan
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.zoomAndPan
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`zoomAndPan`** attribute specifies whether the SVG document can be magnified and panned.
@@ -23,20 +23,30 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" zoomAndPan="disable">
+<svg
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  zoomAndPan="disable">
   <filter id="diffuseLighting" x="0" y="0" width="100%" height="100%">
     <feDiffuseLighting in="SourceGraphic" zoomAndPan="1">
       <fePointLight x="60" y="60" z="20" />
     </feDiffuseLighting>
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#diffuseLighting);" />
 </svg>
 ```
 

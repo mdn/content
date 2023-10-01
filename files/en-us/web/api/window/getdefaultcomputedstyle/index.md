@@ -1,15 +1,14 @@
 ---
-title: Window.getDefaultComputedStyle()
+title: "Window: getDefaultComputedStyle() method"
+short-title: getDefaultComputedStyle()
 slug: Web/API/window/getDefaultComputedStyle
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - Method
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Window.getDefaultComputedStyle
 ---
-{{APIRef("CSSOM")}} {{Non-standard_header}}
+
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 The **`getDefaultComputedStyle()`** method gives the default [computed values](/en-US/docs/Web/CSS/computed_value) of all the CSS
 properties of an element, ignoring author styling. That is, only user-agent and user
@@ -17,7 +16,7 @@ styles are taken into account.
 
 ## Syntax
 
-```js
+```js-nolint
 getDefaultComputedStyle(element)
 getDefaultComputedStyle(element, pseudoElt)
 ```
@@ -50,12 +49,12 @@ const style = window.getDefaultComputedStyle(elem1);
 
 ```html
 <style>
-#elem-container {
-  position: absolute;
-  left:     100px;
-  top:      200px;
-  height:   100px;
-}
+  #elem-container {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 100px;
+  }
 </style>
 
 <div id="elem-container">dummy</div>
@@ -75,18 +74,18 @@ pseudo-elements (e.g., {{cssxref("::before")}} or {{cssxref("::after")}}).
 
 ```html
 <style>
- h3:after {
-   content: ' rocks!';
- }
+  h3:after {
+    content: " rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-  const h3 = document.querySelector('h3');
-  const result = getDefaultComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector("h3");
+  const result = getDefaultComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns 'none'
+  console.log("the generated content is: ", result); // returns 'none'
 </script>
 ```
 

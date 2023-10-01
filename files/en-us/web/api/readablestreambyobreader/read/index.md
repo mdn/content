@@ -1,16 +1,11 @@
 ---
-title: ReadableStreamBYOBReader.read()
+title: "ReadableStreamBYOBReader: read() method"
+short-title: read()
 slug: Web/API/ReadableStreamBYOBReader/read
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
+
 {{APIRef("Streams")}}
 
 The **`read()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface is used to read data into a view on a user-supplied buffer from an associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
@@ -32,7 +27,7 @@ The value is set `true` if the stream is closed or cancelled, and `false` otherw
 
 ## Syntax
 
-```js
+```js-nolint
 read(view)
 ```
 
@@ -49,7 +44,7 @@ The following are possible:
 
 - If a chunk is available and the stream is still active, the promise fulfills with an object of the form:
 
-  ```
+  ```js
   { value: theChunk, done: false }
   ```
 
@@ -59,13 +54,13 @@ The following are possible:
 
 - If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
 
-  ```
+  ```js
   { value: theChunk, done: true }
   ```
 
 - If the stream is cancelled, the promise fulfills with an object of the form:
 
-  ```
+  ```js
   { value: undefined, done: true }
   ```
 
@@ -104,11 +99,12 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that fulfills when a value has been received
-    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+    reader
+      .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
       .then(function processBytes({ done, value }) {
         // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
-        // value - some data. Always undefined when done is true.
+        // value - some data. 'undefined' if the reader is canceled.
 
         if (done) {
           // There is no more data in the stream
@@ -121,7 +117,9 @@ function readStream(reader) {
 
         // Read some more, and call this function again
         // Note that here we create a new view over the original buffer.
-        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processBytes);
+        return reader
+          .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+          .then(processBytes);
       });
   }
 }
@@ -139,4 +137,5 @@ When there is no more data in the stream, the `read()` method fulfills with an o
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

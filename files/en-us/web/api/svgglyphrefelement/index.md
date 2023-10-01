@@ -2,38 +2,35 @@
 title: SVGGlyphRefElement
 slug: Web/API/SVGGlyphRefElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGGlyphRefElement
 ---
-{{APIRef("SVG")}}{{deprecated_header}}
+
+{{APIRef("SVG")}}{{Deprecated_Header}}
 
 The **`SVGGlyphRefElement`** interface corresponds to the {{SVGElement("glyphRef")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-- {{domxref("SVGGlyphRefElement.glyphRef")}}
+- {{domxref("SVGGlyphRefElement.glyphRef")}} {{Deprecated_Inline}}
   - : A string corresponding to the {{SVGAttr("glyphRef")}} attribute of the given element.
-- {{domxref("SVGGlyphRefElement.format")}}
+- {{domxref("SVGGlyphRefElement.format")}} {{Deprecated_Inline}}
   - : A string corresponding to the {{SVGAttr("format")}} attribute of the given element.
-- {{domxref("SVGGlyphRefElement.x")}}
+- {{domxref("SVGGlyphRefElement.x")}} {{Deprecated_Inline}}
   - : A float corresponding to the {{SVGAttr("x")}} attribute of the given element.
-- {{domxref("SVGGlyphRefElement.y")}}
+- {{domxref("SVGGlyphRefElement.y")}} {{Deprecated_Inline}}
   - : A float corresponding to the {{SVGAttr("y")}} attribute of the given element.
-- {{domxref("SVGGlyphRefElement.dx")}}
+- {{domxref("SVGGlyphRefElement.dx")}} {{Deprecated_Inline}}
   - : A float corresponding to the {{SVGAttr("dx")}} attribute of the given element.
-- {{domxref("SVGGlyphRefElement.dy")}}
+- {{domxref("SVGGlyphRefElement.dy")}} {{Deprecated_Inline}}
   - : A float corresponding to the {{SVGAttr("dy")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

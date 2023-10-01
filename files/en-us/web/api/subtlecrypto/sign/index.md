@@ -1,16 +1,11 @@
 ---
-title: SubtleCrypto.sign()
+title: "SubtleCrypto: sign() method"
+short-title: sign()
 slug: Web/API/SubtleCrypto/sign
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - sign
 browser-compat: api.SubtleCrypto.sign
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`sign()`** method of the {{domxref("SubtleCrypto")}}
@@ -25,7 +20,7 @@ signature.
 
 ## Syntax
 
-```js
+```js-nolint
 sign(algorithm, key, data)
 ```
 
@@ -48,7 +43,7 @@ sign(algorithm, key, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the signature.
+{{jsxref("ArrayBuffer")}} containing the signature.
 
 ### Exceptions
 
@@ -125,7 +120,7 @@ that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -143,7 +138,7 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   "RSASSA-PKCS1-v1_5",
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -151,7 +146,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -172,7 +167,7 @@ let signature = await window.crypto.subtle.sign(
     saltLength: 32,
   },
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -180,7 +175,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -198,10 +193,10 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   {
     name: "ECDSA",
-    hash: {name: "SHA-384"},
+    hash: { name: "SHA-384" },
   },
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -209,7 +204,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a secret key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*
@@ -224,11 +219,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await window.crypto.subtle.sign(
-  "HMAC",
-  key,
-  encoded
-);
+let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 ```
 
 ## Specifications

@@ -1,21 +1,9 @@
 ---
-title: 'Django Tutorial Part 8: User authentication and permissions'
+title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Article
-  - Authentication
-  - Beginner
-  - Forms
-  - Learn
-  - Permissions
-  - Python
-  - Server
-  - Tutorial
-  - django
-  - django authentication
-  - server-side
-  - sessions
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
@@ -60,15 +48,15 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 ```python
 INSTALLED_APPS = [
     # …
-    'django.contrib.auth',  #Core authentication framework and its default models.
-    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
+    'django.contrib.auth',  # Core authentication framework and its default models.
+    'django.contrib.contenttypes',  # Django content type system (allows permissions to be associated with models).
     # …
 
 MIDDLEWARE = [
     # …
-    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Manages sessions across requests
     # …
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Associates users with requests using sessions.
     # …
 ```
 
@@ -87,12 +75,12 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
 >
 > # Update fields and then save again
-> user.first_name = 'John'
+> user.first_name = 'Tyrone'
 > user.last_name = 'Citizen'
 > user.save()
 > ```
 >
-> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/4.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
+> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/4.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
@@ -140,7 +128,7 @@ In this section, we show how to integrate the default system into the _LocalLibr
 Add the following to the bottom of the project urls.py file (**locallibrary/locallibrary/urls.py**) file:
 
 ```python
-#Add Django site authentication urls (for login, logout, password management)
+# Add Django site authentication urls (for login, logout, password management)
 
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
@@ -178,12 +166,12 @@ The next step is to create a registration directory on the search path and then 
 
 The URLs (and implicitly, views) that we just added expect to find their associated templates in a directory **/registration/** somewhere in the templates search path.
 
-For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
+For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
 >
-> ```
-> locallibrary/   #Django project folder
+> ```plain
+> locallibrary/   # Django project folder
 >   catalog/
 >   locallibrary/
 >   templates/
@@ -217,7 +205,7 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 Create a new HTML file called /**locallibrary/templates/registration/login.html** and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -278,7 +266,7 @@ If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) the
 
 Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -301,7 +289,7 @@ The following templates can be used as a starting point.
 
 This is the form used to get the user's email address (for sending the password reset email). Create **/locallibrary/templates/registration/password_reset_form.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -320,7 +308,7 @@ This is the form used to get the user's email address (for sending the password 
 
 This form is displayed after your email address has been collected. Create **/locallibrary/templates/registration/password_reset_done.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -332,16 +320,16 @@ This form is displayed after your email address has been collected. Create **/lo
 
 This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### Password reset confirm
 
 This page is where you enter your new password after clicking the link in the password reset email. Create **/locallibrary/templates/registration/password_reset_confirm.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -377,7 +365,7 @@ This page is where you enter your new password after clicking the link in the pa
 
 This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -403,7 +391,7 @@ You'll be able to test the password reset functionality from the link in the log
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/4.0/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/4.2/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -417,23 +405,23 @@ Typically you will first test against the `\{{ user.is_authenticated }}` templat
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
 
-```html
+```django
   <ul class="sidebar-nav">
 
     …
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+     <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
   </ul>
 ```
 
-As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
+As you can see, we use `if` / `else` / `endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{request.path}}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
+We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{ request.path }}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
 
 > **Note:** Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.
 
@@ -468,7 +456,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.0/topics/auth/default/#limiting-access-to-logged-in-users).
+For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.2/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Example — listing the current user's books
 
@@ -535,10 +523,10 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('book','imprint', 'id')
+            'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back','borrower')
+            'fields': ('status', 'due_back', 'borrower')
         }),
     )
 ```
@@ -561,11 +549,15 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     """Generic class-based view listing books on loan to current user."""
     model = BookInstance
-    template_name ='catalog/bookinstance_list_borrowed_user.html'
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
     paginate_by = 10
 
     def get_queryset(self):
-        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+        return (
+            BookInstance.objects.filter(borrower=self.request.user)
+            .filter(status__exact='o')
+            .order_by('due_back')
+        )
 ```
 
 In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that "o" is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
@@ -584,7 +576,7 @@ urlpatterns += [
 
 Now, all we need to do for this page is add a template. First, create the template file **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** and give it the following contents:
 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -595,7 +587,7 @@ Now, all we need to do for this page is add a template. First, create the templa
 
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{bookinst.book.title}}</a> (\{{ bookinst.due_back }})
+        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }})
       </li>
       {% endfor %}
     </ul>
@@ -617,16 +609,16 @@ The very last step is to add a link for this new page into the sidebar. We'll pu
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and add the "My Borrowed" line to the sidebar in the position shown below.
 
-```python
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
 
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
 
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+   <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+   <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
  </ul>
 ```
@@ -665,7 +657,7 @@ Open the **catalog/models.py**, and add the permission as shown above. You will 
 
 The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
 
-```python
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->
@@ -741,26 +733,8 @@ In our next article, we'll look at how you can use Django forms to collect user 
 
 ## See also
 
-- [User authentication in Django](https://docs.djangoproject.com/en/4.0/topics/auth/) (Django docs)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.0/topics/auth/default/) (Django docs)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [User authentication in Django](https://docs.djangoproject.com/en/4.2/topics/auth/) (Django docs)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.2/topics/auth/default/) (Django docs)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- **Django Tutorial Part 8: User authentication and permissions**
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

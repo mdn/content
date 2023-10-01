@@ -1,14 +1,11 @@
 ---
-title: Document.createAttributeNS()
+title: "Document: createAttributeNS() method"
+short-title: createAttributeNS()
 slug: Web/API/Document/createAttributeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createAttributeNS
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttributeNS()`** method creates a new attribute node
@@ -19,7 +16,7 @@ added to a particular element in this manner.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttributeNS(namespaceURI, qualifiedName)
 ```
 
@@ -27,11 +24,11 @@ createAttributeNS(namespaceURI, qualifiedName)
 
 - `namespaceURI`
   - : A string that specifies the [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the attribute.
-    The {{DOMxRef("attribute.namespaceURI", "namespaceURI")}} property of the created attribute is initialized with the value of `namespaceURI`.
+    The {{DOMxRef("Attr.namespaceURI", "namespaceURI")}} property of the created attribute is initialized with the value of `namespaceURI`.
     See [Valid Namespace URIs](#important_namespace_uris).
 - `qualifiedName`
   - : A string that specifies the name of attribute to be created.
-    The {{DOMxRef("attribute.name", "name")}} property of the created attribute is initialized with the value of `qualifiedName`.
+    The {{DOMxRef("Attr.name", "name")}} property of the created attribute is initialized with the value of `qualifiedName`.
 
 ### Return value
 
@@ -40,7 +37,7 @@ The new {{domxref("Attr")}} node.
 ### Exceptions
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI).
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 

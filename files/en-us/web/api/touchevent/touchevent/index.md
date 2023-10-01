@@ -1,16 +1,11 @@
 ---
-title: TouchEvent()
+title: "TouchEvent: TouchEvent() constructor"
+short-title: TouchEvent()
 slug: Web/API/TouchEvent/TouchEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Reference
-  - events
-  - touch
 browser-compat: api.TouchEvent.TouchEvent
 ---
+
 {{APIRef("Touch Events")}}
 
 The **`TouchEvent()`** constructor creates a new {{domxref("TouchEvent")}} object.
@@ -20,7 +15,7 @@ The **`TouchEvent()`** constructor creates a new {{domxref("TouchEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new TouchEvent(type)
 new TouchEvent(type, options)
 ```
@@ -35,7 +30,7 @@ new TouchEvent(type, options)
     - `touches` {{optional_inline}}
       - : A {{domxref("TouchList")}}, defaulting to an empty one, that is a list of objects for every point of contact currently touching the surface.
     - `targetTouches` {{optional_inline}}
-      - : A {{domxref("TouchList")}}, defaulting to to an empty one,, that is a list of objects for every point of contact that is touching the surface
+      - : A {{domxref("TouchList")}}, defaulting to an empty one,, that is a list of objects for every point of contact that is touching the surface
         _and_ started on the element that is the target of the current event.
     - `changedTouches` {{optional_inline}}
       - : and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact which contributed to the event.

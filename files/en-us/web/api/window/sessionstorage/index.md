@@ -1,17 +1,11 @@
 ---
-title: Window.sessionStorage
+title: "Window: sessionStorage property"
+short-title: sessionStorage
 slug: Web/API/Window/sessionStorage
 page-type: web-api-instance-property
-tags:
-  - APIs
-  - Property
-  - Reference
-  - Storage
-  - Window
-  - WindowSessionStorage
-  - sessionStorage
 browser-compat: api.Window.sessionStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The read-only **`sessionStorage`**
@@ -54,10 +48,13 @@ session storage space.
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
-    `file:` or `data:` scheme, for example). For example, the user
-    may have their browser configured to deny permission to persist data for the specified
-    origin.
+
+  - : Thrown in one of the following cases:
+
+    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
+    - The request violates a policy decision. For example, the user has configured the browsers to prevent the page from persisting data.
+
+    Note that if the user blocks cookies, browsers will probably interpret this as an instruction to prevent the page from persisting data.
 
 ## Examples
 
@@ -65,13 +62,13 @@ session storage space.
 
 ```js
 // Save data to sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // Get saved data from sessionStorage
-let data = sessionStorage.getItem('key');
+let data = sessionStorage.getItem("key");
 
 // Remove saved data from sessionStorage
-sessionStorage.removeItem('key');
+sessionStorage.removeItem("key");
 
 // Remove all saved data from sessionStorage
 sessionStorage.clear();

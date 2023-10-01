@@ -1,23 +1,14 @@
 ---
-title: XRRenderState.baseLayer
+title: "XRRenderState: baseLayer property"
+short-title: baseLayer
 slug: Web/API/XRRenderState/baseLayer
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRRenderState
-  - baseLayer
+status:
+  - experimental
 browser-compat: api.XRRenderState.baseLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`baseLayer`** property of the
 {{domxref("XRRenderState")}} interface returns the {{domxref("XRWebGLLayer")}} instance
@@ -53,9 +44,9 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
-};
+}
 ```
 
 Here, the canvas obtained in the first line is the canvas into which WebGL is going to

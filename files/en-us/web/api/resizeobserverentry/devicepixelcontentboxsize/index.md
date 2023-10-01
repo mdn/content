@@ -1,16 +1,11 @@
 ---
-title: ResizeObserverEntry.devicePixelContentBoxSize
+title: "ResizeObserverEntry: devicePixelContentBoxSize property"
+short-title: devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - devicePixelContentBoxSize
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`devicePixelContentBoxSize`** read-only property of
@@ -49,7 +44,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: 'device-pixel-content-box'});
+observer.observe(canvas, { box: "device-pixel-content-box" });
 ```
 
 ## Specifications

@@ -1,17 +1,13 @@
 ---
-title: NetworkInformation.downlink
+title: "NetworkInformation: downlink property"
+short-title: downlink
 slug: Web/API/NetworkInformation/downlink
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Reference
-  - downlink
+status:
+  - experimental
 browser-compat: api.NetworkInformation.downlink
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`downlink`** read-only property of the
@@ -24,7 +20,7 @@ of the underlying connection technology.
 
 ## Value
 
-A {{jsxref("double")}}.
+A number.
 
 ## Specifications
 

@@ -1,15 +1,11 @@
 ---
-title: HTMLStyleElement.disabled
+title: "HTMLStyleElement: disabled property"
+short-title: disabled
 slug: Web/API/HTMLStyleElement/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - Property
-  - Reference
 browser-compat: api.HTMLStyleElement.disabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
@@ -33,14 +29,17 @@ Note that you can also access any/all stylesheets in the document using [`Docume
 
 #### HTML
 
-The HTML contains an [HTML `<style>` element](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
+The HTML contains an HTML [`<style>`](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
 
 ```html
 <button>Enable</button>
 <style id="InlineStyle">
-  p { color: blue; }
+  p {
+    color: blue;
+  }
 </style>
-<p>Text is black when style is disabled; blue when enabled.<p>
+<p>Text is black when style is disabled; blue when enabled.</p>
+<p></p>
 ```
 
 #### JavaScript
@@ -49,20 +48,20 @@ The code below gets the `style` element using its id, and then sets it as disabl
 As the style already exists, as it is defined in the SVG, this should succeed.
 
 ```js
-const style = document.getElementById("InlineStyle")
-style.disabled = true;  
+const style = document.getElementById("InlineStyle");
+style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the `disabled` value and button text.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
-   });
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  const buttonText = style.disabled ? "Enable" : "Disable";
+  button.innerText = buttonText;
+});
 ```
 
 #### Result
@@ -82,7 +81,8 @@ The HTML is similar to the previous case, but the definition does not include an
 
 ```html
 <button>Enable</button>
-<p>Text is black when style is disabled; blue when enabled.<p>
+<p>Text is black when style is disabled; blue when enabled.</p>
+<p></p>
 ```
 
 #### JavaScript
@@ -92,8 +92,8 @@ This is done by first creating a style element using [`Document.createElement()`
 
 ```js
 // Create the `style` element
-const style = document.createElement('style')
-const node = document.createTextNode('p { color: blue; }');
+const style = document.createElement("style");
+const node = document.createTextNode("p { color: blue; }");
 style.appendChild(node);
 document.body.appendChild(style);
 ```
@@ -104,19 +104,19 @@ Before this point the document did not have an associated style, and so the valu
 
 ```js
 //Disable the style
-style.disabled=true; 
+style.disabled = true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
-   });
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  const buttonText = style.disabled ? "Enable" : "Disable";
+  button.innerText = buttonText;
+});
 ```
 
 #### Result

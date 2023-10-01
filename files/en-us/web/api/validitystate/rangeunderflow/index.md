@@ -1,15 +1,11 @@
 ---
-title: ValidityState.rangeUnderflow
+title: "ValidityState: rangeUnderflow property"
+short-title: rangeUnderflow
 slug: Web/API/ValidityState/rangeUnderflow
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.rangeUnderflow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`rangeUnderflow`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
@@ -19,7 +15,7 @@ If the field is numeric in nature, including the {{HTMLElement("input/date", "da
 Given the following:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 if `value < 20`, `rangeUnderflow` will be true. When `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
@@ -35,7 +31,7 @@ if `value < 20`, `rangeUnderflow` will be true. When `true`, the element matches
 ## See also
 
 - {{domxref("ValidityState.rangeOverflow")}}
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)
 - [`max` attribute](/en-US/docs/Web/HTML/Attributes/max)

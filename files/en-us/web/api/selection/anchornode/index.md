@@ -1,16 +1,11 @@
 ---
-title: Selection.anchorNode
+title: "Selection: anchorNode property"
+short-title: anchorNode
 slug: Web/API/Selection/anchorNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
 browser-compat: api.Selection.anchorNode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.anchorNode`** read-only property returns the

@@ -1,21 +1,11 @@
 ---
-title: MediaTrackSupportedConstraints.frameRate
+title: "MediaTrackSupportedConstraints: frameRate property"
+short-title: frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - frameRate
 browser-compat: api.MediaTrackSupportedConstraints.frameRate
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`frameRate`** property is a read-only Boolean value which is
@@ -40,27 +30,24 @@ This simple example looks to see if your browser supports constraining the frame
 ### JavaScript
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().frameRate;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### HTML
 
 ```html
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ### CSS
 
 ```css
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -83,7 +70,7 @@ While this example is trivial, you can replace the simple output of "Supported" 
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

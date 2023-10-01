@@ -1,17 +1,11 @@
 ---
-title: Notification.data
+title: "Notification: data property"
+short-title: data
 slug: Web/API/Notification/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - data
 browser-compat: api.Notification.data
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`data`** read-only property of the
@@ -34,13 +28,16 @@ constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  data: 'I like peas.'
-}
+  body: "Your code submission has received 3 new review comments.",
+  data: {
+    url: "https://example.com/review/12345",
+    status: "open",
+  },
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.data) // should return 'I like peas.'
+console.log(n.data); // Logs the data object
 ```
 
 ## Specifications

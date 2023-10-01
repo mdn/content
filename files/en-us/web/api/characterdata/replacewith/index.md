@@ -1,15 +1,11 @@
 ---
-title: CharacterData.replaceWith()
+title: "CharacterData: replaceWith() method"
+short-title: replaceWith()
 slug: Web/API/CharacterData/replaceWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - CharacterData
-  - Reference
 browser-compat: api.CharacterData.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`replaceWith()`** method of the {{domxref("CharacterData")}} interface
@@ -20,7 +16,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
+```js-nolint
 replaceWith(nodes)
 ```
 
@@ -47,7 +43,7 @@ None ({{jsxref("undefined")}}).
 ```
 
 ```js
-let text = document.getElementById('myText').firstChild;
+let text = document.getElementById("myText").firstChild;
 let em = document.createElement("em");
 em.textContent = "Italic text";
 

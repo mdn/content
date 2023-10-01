@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.getActiveUniform()
+title: "WebGLRenderingContext: getActiveUniform() method"
+short-title: getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveUniform
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getActiveUniform()`** method of
@@ -20,7 +16,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniform(program, index)
 ```
 
@@ -92,7 +88,7 @@ generates one or more entries in the list depending on the declared type of the 
 in the shader:
 
 - Single basic type: one entry with the name of the uniform. E.g.
-  `uniform vec4 a;` will result in  `a`.
+  `uniform vec4 a;` will result in `a`.
 - Array of basic type: one entry with the name of the uniform suffixed with
   `[0]`. E.g. `uniform vec4 b[];` will result in
   `b[0]`.
@@ -129,7 +125,7 @@ blocks instanced with arrays).
 const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
 for (let i = 0; i < numUniforms; ++i) {
   const info = gl.getActiveUniform(program, i);
-  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
+  console.log("name:", info.name, "type:", info.type, "size:", info.size);
 }
 ```
 

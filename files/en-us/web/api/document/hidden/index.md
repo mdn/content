@@ -1,17 +1,11 @@
 ---
-title: Document.hidden
+title: "Document: hidden property"
+short-title: hidden
 slug: Web/API/Document/hidden
 page-type: web-api-instance-property
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.Document.hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.hidden`** read-only property returns a Boolean
@@ -22,7 +16,7 @@ value indicating if the page is considered hidden or not.
 
 ## Syntax
 
-```js
+```js-nolint
 document.hidden
 ```
 

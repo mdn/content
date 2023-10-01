@@ -1,16 +1,11 @@
 ---
-title: RTCPeerConnection.iceGatheringState
+title: "RTCPeerConnection: iceGatheringState property"
+short-title: iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - iceGatheringState
 browser-compat: api.RTCPeerConnection.iceGatheringState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.iceGatheringState`** returns a string

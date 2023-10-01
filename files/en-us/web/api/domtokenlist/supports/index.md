@@ -1,12 +1,11 @@
 ---
-title: DOMTokenList.supports()
+title: "DOMTokenList: supports() method"
+short-title: supports()
 slug: Web/API/DOMTokenList/supports
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.supports
 ---
+
 {{APIRef("DOM")}}
 
 The **`supports()`** method of the {{domxref("DOMTokenList")}} interface
@@ -15,8 +14,8 @@ This method is intended to support feature detection.
 
 ## Syntax
 
-```js
-supports(token);
+```js-nolint
+supports(token)
 ```
 
 ### Parameters
@@ -31,15 +30,15 @@ A boolean value indicating whether the token was found.
 ## Example
 
 ```js
-const iframe = document.getElementById('display');
+const iframe = document.getElementById("display");
 
-if (iframe.sandbox.supports('an-upcoming-feature')) {
+if (iframe.sandbox.supports("an-upcoming-feature")) {
   // support code for mystery future feature
 } else {
   // fallback code
 }
 
-if (iframe.sandbox.supports('allow-scripts')) {
+if (iframe.sandbox.supports("allow-scripts")) {
   // instruct frame to run JavaScript
   //
   // (NOTE: This feature is well-supported; this is just an example!)

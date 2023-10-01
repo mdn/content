@@ -1,12 +1,12 @@
 ---
 title: cap-height
 slug: Web/SVG/Attribute/cap-height
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.cap-height
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`cap-height`** attribute defines the height of uppercase glyphs of the font within the font coordinate system.

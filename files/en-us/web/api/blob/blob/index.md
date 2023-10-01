@@ -1,15 +1,11 @@
 ---
-title: Blob()
+title: "Blob: Blob() constructor"
+short-title: Blob()
 slug: Web/API/Blob/Blob
 page-type: web-api-constructor
-tags:
-  - API
-  - Blob
-  - Constructor
-  - File API
-  - Reference
 browser-compat: api.Blob.Blob
 ---
+
 {{APIRef("File API")}}
 
 The **`Blob()`** constructor returns a
@@ -18,7 +14,7 @@ of the values given in the parameter `array`.
 
 ## Syntax
 
-```js
+```js-nolint
 new Blob(array)
 new Blob(array, options)
 ```
@@ -26,11 +22,12 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
+
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
-    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
+    Strings should be well-formed Unicode, and lone surrogates are sanitized using the same algorithm as {{jsxref("String.prototype.toWellFormed()")}}.
 
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:
@@ -51,7 +48,7 @@ A new {{domxref("Blob")}} object containing the specified data.
 
 ```js
 const array = ['<q id="a"><span id="b">hey!</span></q>']; // an array consisting of a single string
-const blob = new Blob(array, {type : 'text/html'}); // the blob
+const blob = new Blob(array, { type: "text/html" }); // the blob
 ```
 
 ## Specifications
@@ -61,7 +58,3 @@ const blob = new Blob(array, {type : 'text/html'}); // the blob
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The deprecated {{domxref("BlobBuilder")}} interface which this constructor replaces.

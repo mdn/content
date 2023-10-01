@@ -2,21 +2,16 @@
 title: SVGFEDropShadowElement
 slug: Web/API/SVGFEDropShadowElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEDropShadowElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDropShadowElement`** interface corresponds to the {{SVGElement("feDropShadow")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -41,7 +36,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDropShadowElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("SVGElement")}}._
 

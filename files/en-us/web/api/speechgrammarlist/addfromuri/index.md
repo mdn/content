@@ -1,19 +1,13 @@
 ---
-title: SpeechGrammarList.addFromURI()
+title: "SpeechGrammarList: addFromURI() method"
+short-title: addFromURI()
 slug: Web/API/SpeechGrammarList/addFromURI
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechGrammarList
-  - Web Speech API
-  - addFromURI
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.addFromURI
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`addFromURI()`** method of the
@@ -26,7 +20,7 @@ specified by URI.
 
 ## Syntax
 
-```js
+```js-nolint
 addFromURI(src)
 addFromURI(src, weight)
 ```
@@ -49,13 +43,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
-speechRecognitionList.addFromURI('http://www.example.com/grammar.txt'); // adds a second grammar to the list.
+speechRecognitionList.addFromURI("http://www.example.com/grammar.txt"); // adds a second grammar to the list.
 ```
 
 ## Specifications

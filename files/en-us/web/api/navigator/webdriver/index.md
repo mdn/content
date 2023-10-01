@@ -1,15 +1,11 @@
 ---
-title: Navigator.webdriver
+title: "Navigator: webdriver property"
+short-title: webdriver
 slug: Web/API/Navigator/webdriver
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - WebDriver
 browser-compat: api.Navigator.webdriver
 ---
+
 {{APIRef("WebDriver")}}
 
 The **`webdriver`** read-only property

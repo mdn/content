@@ -1,15 +1,11 @@
 ---
-title: HTMLCollection.namedItem()
+title: "HTMLCollection: namedItem() method"
+short-title: namedItem()
 slug: Web/API/HTMLCollection/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element Lists
-  - HTMLCollection
-  - Method
-  - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`namedItem()`** method of the {{domxref("HTMLCollection")}} interface returns
@@ -19,8 +15,8 @@ In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like 
 
 ## Syntax
 
-```js
-const item = collection.namedItem(key);
+```js-nolint
+namedItem(key)
 ```
 
 ### Parameters
@@ -38,8 +34,8 @@ const item = collection.namedItem(key);
 ```html
 <div id="personal">
   <span name="title">Dr.</span>
-  <span name="firstname">John</span>
-  <span name="lastname">Doe</span>
+  <span name="firstname">Carina</span>
+  <span name="lastname">Anand</span>
   <span id="degree">(MD)</span>
 </div>
 ```
@@ -47,22 +43,22 @@ const item = collection.namedItem(key);
 ### JavaScript
 
 ```js
-const container = document.getElementById('personal');
+const container = document.getElementById("personal");
 
 // Returns the HTMLSpanElement with the name "title" if no such element exists null is returned
-const titleSpan = container.children.namedItem('title');
+const titleSpan = container.children.namedItem("title");
 
 // The following variants return undefined instead of null if there's no element with a matching name or id
-const firstnameSpan = container.children['firstname'];
+const firstnameSpan = container.children["firstname"];
 const lastnameSpan = container.children.lastname;
 
 // Returns the span element with the id "degree"
-const degreeSpan = container.children.namedItem('degree');
+const degreeSpan = container.children.namedItem("degree");
 
-const output = document.createElement('div');
+const output = document.createElement("div");
 output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
 
-container.insertAdjacentElement('afterend', output);
+container.insertAdjacentElement("afterend", output);
 ```
 
 {{EmbedLiveSample("Example")}}

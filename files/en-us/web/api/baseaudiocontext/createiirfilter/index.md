@@ -1,19 +1,11 @@
 ---
-title: BaseAudioContext.createIIRFilter()
+title: "BaseAudioContext: createIIRFilter() method"
+short-title: createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - CreateIIRFilter
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
 browser-compat: api.BaseAudioContext.createIIRFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`createIIRFilter()`** method of the {{
@@ -27,7 +19,7 @@ of filter.
 
 ## Syntax
 
-```js
+```js-nolint
 createIIRFilter(feedforward, feedback)
 ```
 

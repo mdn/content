@@ -1,11 +1,10 @@
 ---
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.marker-mid
 ---
+
 {{SVGRef}}
 
 The **`marker-mid`** attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).
@@ -27,7 +26,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -36,11 +37,14 @@ html, body, svg {
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <marker id="circle" markerWidth="8" markerHeight="8" refX="4" refY="4">
-        <circle cx="4" cy="4" r="4" stroke="none" fill="#f00"/>
+      <circle cx="4" cy="4" r="4" stroke="none" fill="#f00" />
     </marker>
   </defs>
-  <polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20" marker-mid="url(#circle)"/>
+  <polyline
+    fill="none"
+    stroke="black"
+    points="20,100 40,60 70,80 100,20"
+    marker-mid="url(#circle)" />
 </svg>
 ```
 

@@ -1,23 +1,20 @@
 ---
-title: CustomStateSet.add()
+title: "CustomStateSet: add() method"
+short-title: add()
 slug: Web/API/CustomStateSet/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - add
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.add
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item to the `CustomStateSet`, after checking that the value is in the correct format.
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 
@@ -43,7 +40,7 @@ The following function adds the state `--checked` to a `CustomStateSet`.
 class MyCustomElement extends HTMLElement {
   set checked(flag) {
     if (flag) {
-      this._internals.states.add('--checked');
+      this._internals.states.add("--checked");
     }
   }
 }

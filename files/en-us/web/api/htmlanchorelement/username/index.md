@@ -1,14 +1,11 @@
 ---
-title: HTMLAnchorElement.username
+title: "HTMLAnchorElement: username property"
+short-title: username
 slug: Web/API/HTMLAnchorElement/username
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.username
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.username`** property is a

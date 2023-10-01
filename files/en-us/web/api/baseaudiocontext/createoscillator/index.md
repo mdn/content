@@ -1,17 +1,11 @@
 ---
-title: BaseAudioContext.createOscillator()
+title: "BaseAudioContext: createOscillator() method"
+short-title: createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createOscillator
 browser-compat: api.BaseAudioContext.createOscillator
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createOscillator()` method of the {{domxref("BaseAudioContext")}}
@@ -24,7 +18,7 @@ waveform. It basically generates a constant tone.
 
 ## Syntax
 
-```js
+```js-nolint
 createOscillator()
 ```
 
@@ -49,7 +43,7 @@ const audioCtx = new AudioContext();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
 oscillator.start();

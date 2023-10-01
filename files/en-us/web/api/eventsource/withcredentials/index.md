@@ -1,16 +1,11 @@
 ---
-title: EventSource.withCredentials
+title: "EventSource: withCredentials property"
+short-title: withCredentials
 slug: Web/API/EventSource/withCredentials
 page-type: web-api-instance-property
-tags:
-  - API
-  - EventSource
-  - Property
-  - Reference
-  - Server-sent events
-  - withCredentials
 browser-compat: api.EventSource.withCredentials
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`withCredentials`** read-only property of the
@@ -26,11 +21,11 @@ the default).
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.withCredentials);
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

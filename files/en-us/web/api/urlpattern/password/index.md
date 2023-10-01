@@ -1,18 +1,14 @@
 ---
-title: URLPattern.password
+title: "URLPattern: password property"
+short-title: password
 slug: Web/API/URLPattern/password
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.password
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`password`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the password part
@@ -32,7 +28,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
 
 ```js
-const pattern = new URLPattern({ password: 'correct-horse-battery{-staple}?' });
+const pattern = new URLPattern({ password: "correct-horse-battery{-staple}?" });
 console.log(pattern.password); // 'correct-horse-battery{-staple}?'
 ```
 

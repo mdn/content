@@ -1,12 +1,12 @@
 ---
 title: units-per-em
 slug: Web/SVG/Attribute/units-per-em
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.units-per-em
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`units-per-em`** attribute specifies the number of coordinate units on the "em square", an abstract square whose height is the intended distance between lines of type in the same type size. This is the size of the design grid on which {{Glossary("glyph", "glyphs")}} are laid out.

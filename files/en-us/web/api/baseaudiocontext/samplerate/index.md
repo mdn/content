@@ -1,17 +1,11 @@
 ---
-title: BaseAudioContext.sampleRate
+title: "BaseAudioContext: sampleRate property"
+short-title: sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - sampleRate
 browser-compat: api.BaseAudioContext.sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `sampleRate` property of the {{

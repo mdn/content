@@ -2,33 +2,29 @@
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLOutputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOutputElement`** interface provides properties and methods (beyond those inherited from {{domxref("HTMLElement")}}) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLOutputElement.defaultValue")}}
   - : A string representing the default value of the element, initially the empty string.
 - {{domxref("HTMLOutputElement.form")}} {{ReadOnlyInline}}
-  - : An {{domxref("HTMLFormElement")}} indicating the form associated with the control, reflecting the {{htmlattrxref("form", "output")}} HTML attribute if it is defined.
+  - : An {{domxref("HTMLFormElement")}} indicating the form associated with the control, reflecting the [`form`](/en-US/docs/Web/HTML/Element/output#form) HTML attribute if it is defined.
 - {{domxref("HTMLOutputElement.htmlFor")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} reflecting the {{htmlattrxref("for", "output")}} HTML attribute, containing a list of IDs of other elements in the same document that contribute to (or otherwise affect) the calculated `value`.
+  - : A {{domxref("DOMTokenList")}} reflecting the [`for`](/en-US/docs/Web/HTML/Element/output#for) HTML attribute, containing a list of IDs of other elements in the same document that contribute to (or otherwise affect) the calculated `value`.
 - {{domxref("HTMLOutputElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.
 - {{domxref("HTMLOutputElement.name")}}
-  - : A string reflecting the {{htmlattrxref("name", "output")}} HTML attribute, containing the name for the control that is submitted with form data.
+  - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Element/output#name) HTML attribute, containing the name for the control that is submitted with form data.
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
   - : The string "`output`".
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
@@ -40,7 +36,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLOutputElement.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the element is a candidate for constraint validation.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 

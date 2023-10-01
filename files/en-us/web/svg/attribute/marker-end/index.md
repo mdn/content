@@ -1,11 +1,10 @@
 ---
 title: marker-end
 slug: Web/SVG/Attribute/marker-end
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.marker-end
 ---
+
 {{SVGRef}}
 
 The **`marker-end`** attribute defines the arrowhead or polymarker that will be drawn at the final vertex of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).
@@ -27,7 +26,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,16 +36,23 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="triangle" viewBox="0 0 10 10"
-          refX="1" refY="5"
-          markerUnits="strokeWidth"
-          markerWidth="10" markerHeight="10"
-          orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00"/>
+    <marker
+      id="triangle"
+      viewBox="0 0 10 10"
+      refX="1"
+      refY="5"
+      markerUnits="strokeWidth"
+      markerWidth="10"
+      markerHeight="10"
+      orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00" />
     </marker>
   </defs>
-  <polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20" marker-end="url(#triangle)"/>
+  <polyline
+    fill="none"
+    stroke="black"
+    points="20,100 40,60 70,80 100,20"
+    marker-end="url(#triangle)" />
 </svg>
 ```
 

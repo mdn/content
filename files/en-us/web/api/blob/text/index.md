@@ -1,15 +1,11 @@
 ---
-title: Blob.text()
+title: "Blob: text() method"
+short-title: text()
 slug: Web/API/Blob/text
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
 browser-compat: api.Blob.text
 ---
+
 {{APIRef("File API")}}
 
 The **`text()`** method in the
@@ -18,7 +14,7 @@ string containing the contents of the blob, interpreted as UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

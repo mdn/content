@@ -1,17 +1,11 @@
 ---
-title: MessageChannel.port2
+title: "MessageChannel: port2 property"
+short-title: port2
 slug: Web/API/MessageChannel/port2
 page-type: web-api-instance-property
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - MessageChannel
-  - Property
-  - Reference
-  - port2
 browser-compat: api.MessageChannel.port2
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`port2`** read-only property of the
@@ -38,15 +32,15 @@ IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -55,7 +49,7 @@ function handleMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

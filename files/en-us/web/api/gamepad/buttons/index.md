@@ -1,17 +1,11 @@
 ---
-title: Gamepad.buttons
+title: "Gamepad: buttons property"
+short-title: buttons
 slug: Web/API/Gamepad/buttons
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.buttons
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.buttons`** property of the {{domxref("Gamepad")
@@ -79,12 +73,8 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = rAF(gameLoop);
-};
+}
 ```
-
-## Value
-
-An array of {{domxref("gamepadButton")}} objects.
 
 ## Specifications
 

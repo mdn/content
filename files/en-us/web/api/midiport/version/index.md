@@ -1,15 +1,11 @@
 ---
-title: MIDIPort.version
+title: "MIDIPort: version property"
+short-title: version
 slug: Web/API/MIDIPort/version
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - version
-  - MIDIPort
 browser-compat: api.MIDIPort.version
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`version`** read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.

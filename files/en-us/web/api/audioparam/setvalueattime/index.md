@@ -1,16 +1,11 @@
 ---
-title: AudioParam.setValueAtTime()
+title: "AudioParam: setValueAtTime() method"
+short-title: setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setValueAtTime()` method of the
@@ -20,7 +15,7 @@ The `setValueAtTime()` method of the
 
 ## Syntax
 
-```js
+```js-nolint
 setValueAtTime(value, startTime)
 ```
 
@@ -52,14 +47,14 @@ const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
-const pre = document.querySelector('pre');
-const myScript = document.querySelector('script');
+const myAudio = document.querySelector("audio");
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-const targetAtTimePlus = document.querySelector('.set-target-at-time-plus');
-const targetAtTimeMinus = document.querySelector('.set-target-at-time-minus');
+const targetAtTimePlus = document.querySelector(".set-target-at-time-plus");
+const targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -79,12 +74,12 @@ gainNode.connect(audioCtx.destination);
 targetAtTimePlus.onclick = () => {
   currGain += 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}
+};
 
 targetAtTimeMinus.onclick = () => {
   currGain -= 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}
+};
 ```
 
 ## Specifications

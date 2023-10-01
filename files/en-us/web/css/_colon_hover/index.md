@@ -1,16 +1,11 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.hover
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`:hover`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
 
@@ -22,8 +17,10 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-```
-:hover
+```css
+:hover {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -41,7 +38,7 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {
@@ -63,5 +60,5 @@ a:hover {
 
 ## See also
 
-- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://bugs.chromium.org/p/chromium/issues/detail?id=370155)
-- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://bugs.chromium.org/p/chromium/issues/detail?id=306581)
+- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://crbug.com/370155)
+- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://crbug.com/306581)

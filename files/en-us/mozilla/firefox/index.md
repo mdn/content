@@ -1,11 +1,9 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
+page-type: landing-page
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/) is Mozilla's popular Web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in Web technologies, and powerful development tools, Firefox is a great choice for both Web developers and end users.
@@ -21,7 +19,7 @@ Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how
 - Firefox add-on guide
   - : The [Add-on guide](/en-US/docs/Mozilla/Add-ons) provides information about developing and deploying Firefox extensions.
 - Developer release notes
-  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
+  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both websites and add-ons arrive in each version of Firefox.
 
 ## Firefox channels
 

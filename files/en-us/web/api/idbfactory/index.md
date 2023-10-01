@@ -2,23 +2,16 @@
 title: IDBFactory
 slug: Web/API/IDBFactory
 page-type: web-api-interface
-tags:
-  - API
-  - HTTP
-  - IndexedDB
-  - Interface
-  - Offline
-  - Reference
-  - Storage
 browser-compat: api.IDBFactory
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBFactory`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) lets applications asynchronously access the indexed databases. The object that implements the interface is `window.indexedDB`. You open — that is, create and access — and delete a database with this object, and not directly with `IDBFactory`.
 
 {{AvailableInWorkers}}
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBFactory.open")}}
   - : The current method to request opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
@@ -31,7 +24,7 @@ The **`IDBFactory`** interface of the [IndexedDB API](/en-US/docs/Web/API/Indexe
 
 ## Example
 
-In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open version 4 of our database
@@ -66,4 +59,4 @@ DBOpenRequest.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

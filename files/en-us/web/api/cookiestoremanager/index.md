@@ -2,14 +2,11 @@
 title: CookieStoreManager
 slug: Web/API/CookieStoreManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
 
 The **`CookieStoreManager`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) allows service workers to subscribe to cookie change events. Call {{domxref("CookieStoreManager.subscribe()","subscribe()")}} on a particular service worker registration to receive change events.
@@ -18,7 +15,7 @@ A `CookieStoreManager` has an associated {{domxref("ServiceWorkerRegistration")}
 
 To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("CookieStoreManager.getSubscriptions()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("promise")}} which resolves to a list of the cookie change subscriptions for this service worker registration.
@@ -32,7 +29,7 @@ To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies
 In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);
 ```
 

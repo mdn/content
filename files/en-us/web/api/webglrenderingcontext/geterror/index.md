@@ -1,22 +1,18 @@
 ---
-title: WebGLRenderingContext.getError()
+title: "WebGLRenderingContext: getError() method"
+short-title: getError()
 slug: Web/API/WebGLRenderingContext/getError
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getError
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getError()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns error information.
 
 ## Syntax
 
-```js
+```js-nolint
 getError()
 ```
 

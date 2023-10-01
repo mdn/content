@@ -1,17 +1,13 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.hover
 ---
+
 {{CSSRef}}
 
-The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the user's *primary* input mechanism can hover over elements.
+The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether the user's _primary_ input mechanism can hover over elements.
 
 ## Syntax
 
@@ -33,12 +29,14 @@ The `hover` feature is specified as a keyword value chosen from the list below.
 ### CSS
 
 ```css
-a:hover { /* default hover effect */
+/* default hover effect */
+a:hover {
   color: black;
   background: yellow;
 }
 
-@media (hover: hover) { /* when supported */
+@media (hover: hover) {
+  /* when hover is supported */
   a:hover {
     color: white;
     background: black;
@@ -60,5 +58,5 @@ a:hover { /* default hover effect */
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

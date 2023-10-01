@@ -1,23 +1,18 @@
 ---
-title: Navigator.setAppBadge()
+title: "Navigator: setAppBadge() method"
+short-title: setAppBadge()
 slug: Web/API/Navigator/setAppBadge
 page-type: web-api-instance-method
-tags:
-  - API
-  - Badging API
-  - Method
-  - Reference
-  - setAppBadge
-  - Navigator
 browser-compat: api.Navigator.setAppBadge
 ---
-{{DefaultAPISidebar("Badging API")}}
+
+{{APIRef("Badging API")}}
 
 The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
 ## Syntax
 
-```js
+```js-nolint
 setAppBadge()
 setAppBadge(contents)
 ```

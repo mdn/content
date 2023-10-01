@@ -1,18 +1,15 @@
 ---
-title: RTCPeerConnection.addStream()
+title: "RTCPeerConnection: addStream() method"
+short-title: addStream()
 slug: Web/API/RTCPeerConnection/addStream
 page-type: web-api-instance-method
-tags:
-  - Deprecated
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - addStream
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCPeerConnection")}} method
 **`addStream()`** adds a {{domxref("MediaStream")}} as a local
@@ -29,8 +26,8 @@ be repeated to consider the new stream.
 
 ## Syntax
 
-```js
-rtcPeerConnection.addStream(mediaStream);
+```js-nolint
+addStream(mediaStream)
 ```
 
 ### Parameters
@@ -49,13 +46,10 @@ This simple example adds the audio and video stream coming from the user's camer
 the connection.
 
 ```js
-navigator.mediaDevices.getUserMedia(
-  { video: true, audio: true },
-  (stream) => {
-    const pc = new RTCPeerConnection();
-    pc.addStream(stream);
-  }
-);
+navigator.mediaDevices.getUserMedia({ video: true, audio: true }, (stream) => {
+  const pc = new RTCPeerConnection();
+  pc.addStream(stream);
+});
 ```
 
 ## Migrating to addTrack()

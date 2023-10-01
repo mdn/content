@@ -1,22 +1,21 @@
 ---
-title: DOMTokenList.add()
+title: "DOMTokenList: add() method"
+short-title: add()
 slug: Web/API/DOMTokenList/add
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.add
 ---
+
 {{APIRef("DOM")}}
 
 The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given tokens to the list, omitting any that are already present.
 
 ## Syntax
 
-```js
-add(token0);
-add(token0, token1);
-add(token0, token1, /* … ,*/ tokenN)
+```js-nolint
+add(token1)
+add(token1, token2)
+add(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters

@@ -1,16 +1,11 @@
 ---
-title: XRPose.linearVelocity
+title: "XRPose: linearVelocity property"
+short-title: linearVelocity
 slug: Web/API/XRPose/linearVelocity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - XRPose
 browser-compat: api.XRPose.linearVelocity
 ---
+
 {{APIRef}}
 
 The `linearVelocity` read-only property of the

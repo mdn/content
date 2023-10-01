@@ -1,16 +1,13 @@
 ---
-title: WorkerNavigator.appVersion
+title: "WorkerNavigator: appVersion property"
+short-title: appVersion
 slug: Web/API/WorkerNavigator/appVersion
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - WorkerNavigator
-  - Property
-  - Reference
-  - appVersion
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.appVersion
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Returns either "`4.0`" or a string representing version information about

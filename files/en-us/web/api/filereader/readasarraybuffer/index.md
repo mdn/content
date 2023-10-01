@@ -1,18 +1,11 @@
 ---
-title: FileReader.readAsArrayBuffer()
+title: "FileReader: readAsArrayBuffer() method"
+short-title: readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - readAsArrayBuffer
 browser-compat: api.FileReader.readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} interface's
@@ -28,7 +21,7 @@ contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsArrayBuffer(blob)
 ```
 

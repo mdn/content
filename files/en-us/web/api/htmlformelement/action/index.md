@@ -1,18 +1,11 @@
 ---
-title: HTMLFormElement.action
+title: "HTMLFormElement: action property"
+short-title: action
 slug: Web/API/HTMLFormElement/action
 page-type: web-api-instance-property
-tags:
-  - API
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.action
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.action`** property represents the action
@@ -28,7 +21,7 @@ A string.
 ## Examples
 
 ```js
-form.action = '/cgi-bin/publish';
+form.action = "/cgi-bin/publish";
 ```
 
 ## Specifications

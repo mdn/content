@@ -1,16 +1,15 @@
 ---
-title: 'Window: vrdisplayconnect event'
+title: "Window: vrdisplayconnect event"
+short-title: vrdisplayconnect
 slug: Web/API/Window/vrdisplayconnect_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - WebVR
-  - Deprecated
-  - vrdisplayconnect
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.vrdisplayconnect_event
 ---
-{{APIRef("Window")}}{{Deprecated_Header}}
+
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplayconnect`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when a compatible VR display is connected to the computer.
 
@@ -23,14 +22,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplayconnect', (event) => { });
+addEventListener("vrdisplayconnect", (event) => {});
 
-onvrdisplayconnect = (event) => { };
+onvrdisplayconnect = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
 
@@ -38,9 +37,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples
@@ -48,8 +47,8 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplayconnect` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplayconnect', () => {
-  info.textContent = 'Display connected.';
+window.addEventListener("vrdisplayconnect", () => {
+  info.textContent = "Display connected.";
   reportDisplays();
 });
 ```
@@ -58,7 +57,7 @@ Or use the `onvrdisplayconnect` event handler property:
 
 ```js
 window.onvrdisplayconnect = () => {
-  info.textContent = 'Display connected.';
+  info.textContent = "Display connected.";
   reportDisplays();
 };
 ```

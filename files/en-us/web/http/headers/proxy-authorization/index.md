@@ -1,14 +1,10 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
-spec-urls: https://httpwg.org/specs/rfc7235.html#header.proxy-authorization
+page-type: http-header
+spec-urls: https://httpwg.org/specs/rfc9110.html#field.proxy-authorization
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Proxy-Authorization`** request header contains the
@@ -31,7 +27,7 @@ and the {{HTTPHeader("Proxy-Authenticate")}} header.
 
 ## Syntax
 
-```
+```http
 Proxy-Authorization: <type> <credentials>
 ```
 
@@ -56,7 +52,7 @@ Proxy-Authorization: <type> <credentials>
 
 ## Examples
 
-```
+```http
 Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 

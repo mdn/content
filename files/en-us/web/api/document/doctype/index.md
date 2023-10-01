@@ -1,15 +1,11 @@
 ---
-title: Document.doctype
+title: "Document: doctype property"
+short-title: doctype
 slug: Web/API/Document/doctype
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Returns the Document Type Declaration (DTD) associated with current document. The

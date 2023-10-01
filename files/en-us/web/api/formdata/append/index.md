@@ -1,15 +1,11 @@
 ---
-title: FormData.append()
+title: "FormData: append() method"
+short-title: append()
 slug: Web/API/FormData/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`append()`** method of the {{domxref("FormData")}} interface appends a new value onto an existing key inside a `FormData` object, or adds the key if it does not already exist.
@@ -20,7 +16,7 @@ The difference between {{domxref("FormData.set", "set()")}} and `append()` is th
 
 ## Syntax
 
-```js
+```js-nolint
 append(name, value)
 append(name, value, filename)
 ```
@@ -43,28 +39,28 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-formData.append('username', 'Chris');
+formData.append("username", "Chris");
 ```
 
 When the value is a {{domxref("Blob")}} (or a {{domxref("File")}}), you can specify its name with the `filename` parameter:
 
 ```js
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 As with regular form data, you can append multiple values with the same name:
 
 ```js
-formData.append('userpic', myFileInput.files[0], 'chris1.jpg');
-formData.append('userpic', myFileInput.files[1], 'chris2.jpg');
+formData.append("userpic", myFileInput.files[0], "chris1.jpg");
+formData.append("userpic", myFileInput.files[1], "chris2.jpg");
 ```
 
 If the value is not a string or a `Blob`, `append()` will convert it to a string automatically:
 
 ```js
-formData.append('name', true);
-formData.append('name', 72);
-formData.getAll('name'); // ["true", "72"]
+formData.append("name", true);
+formData.append("name", 72);
+formData.getAll("name"); // ["true", "72"]
 ```
 
 ## Specifications

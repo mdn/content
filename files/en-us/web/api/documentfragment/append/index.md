@@ -1,16 +1,11 @@
 ---
-title: DocumentFragment.append()
+title: "DocumentFragment: append() method"
+short-title: append()
 slug: Web/API/DocumentFragment/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - DocumentFragment
-  - Reference
 browser-compat: api.DocumentFragment.append
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.append()`** method
@@ -22,10 +17,10 @@ This method appends a child to a `DocumentFragment`. To append to an arbitrary e
 
 ## Syntax
 
-```js
+```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

@@ -1,18 +1,13 @@
 ---
-title: ':-moz-only-whitespace'
+title: ":-moz-only-whitespace"
 slug: Web/CSS/:-moz-only-whitespace
-tags:
-  - ':-moz-only-whitespace'
-  - CSS
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-only-whitespace
 ---
-{{CSSRef}}
 
-{{Non-standard_Header}}
+{{CSSRef}}{{Non-standard_header}}
 
 > **Note:** In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
 
@@ -20,8 +15,10 @@ The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 ## Syntax
 
-```
-:-moz-only-whitespace
+```css
+:-moz-only-whitespace {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -30,7 +27,7 @@ The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 #### HTML
 
-```html
+```html-nolint
 <div> </div>
 ```
 

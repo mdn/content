@@ -1,26 +1,11 @@
 ---
-title: MediaTrackConstraints.logicalSurface
+title: "MediaTrackConstraints: logicalSurface property"
+short-title: logicalSurface
 slug: Web/API/MediaTrackConstraints/logicalSurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - display
-  - logicalSurface
-  - screen
 browser-compat: api.MediaTrackConstraints.logicalSurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`logicalSurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.logicalSurface","logicalSurface")}} constrainable property.
@@ -40,7 +25,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 
 A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) which is `true` if logical surfaces should be permitted among the selections available to the user.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How constraints are defined")}} for an explanation of how to define constraints.
+See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined).
 
 ## Usage notes
 
@@ -55,10 +40,12 @@ For example, if your app needs to know if the selected display surface is a logi
 one:
 
 ```js
-let isLogicalSurface = displayStream.getVideoTracks()[0].getSettings().logicalSurface;
+let isLogicalSurface = displayStream
+  .getVideoTracks()[0]
+  .getSettings().logicalSurface;
 ```
 
-Following this code, `isLogicalSurface`  is `true` if the display
+Following this code, `isLogicalSurface` is `true` if the display
 surface contained in the stream is a logical surface; that is, one which may not be
 entirely onscreen, or may even be entirely offscreen.
 
@@ -74,7 +61,7 @@ entirely onscreen, or may even be entirely offscreen.
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

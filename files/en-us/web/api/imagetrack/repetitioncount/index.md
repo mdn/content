@@ -1,18 +1,16 @@
 ---
-title: ImageTrack.repetitionCount
+title: "ImageTrack: repetitionCount property"
+short-title: repetitionCount
 slug: Web/API/ImageTrack/repetitionCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - repetitionCount
-  - ImageTrack
+status:
+  - experimental
 browser-compat: api.ImageTrack.repetitionCount
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`repetitionCount`**  property of the {{domxref("ImageTrack")}} interface returns the number of repetitions of this track.
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+
+The **`repetitionCount`** property of the {{domxref("ImageTrack")}} interface returns the number of repetitions of this track.
 
 ## Value
 

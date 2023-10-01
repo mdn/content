@@ -1,18 +1,11 @@
 ---
-title: CanvasCaptureMediaStreamTrack.canvas
+title: "CanvasCaptureMediaStreamTrack: canvas property"
+short-title: canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
 page-type: web-api-instance-property
-tags:
-  - Canvas
-  - CanvasCaptureMediaStreamTrack
-  - Frame Capture
-  - Media Capture
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**

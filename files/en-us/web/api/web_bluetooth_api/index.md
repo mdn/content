@@ -2,14 +2,11 @@
 title: Web Bluetooth API
 slug: Web/API/Web_Bluetooth_API
 page-type: web-api-overview
-tags:
-  - API
-  - Bluetooth
-  - Overview
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.Bluetooth
 ---
+
 {{DefaultAPISidebar("Bluetooth API")}}{{SeeCompatTable}}
 
 The Web Bluetooth API provides the ability to connect and interact with Bluetooth Low Energy peripherals.

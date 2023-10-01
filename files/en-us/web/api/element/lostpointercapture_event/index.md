@@ -1,16 +1,11 @@
 ---
-title: 'Element: lostpointercapture event'
+title: "Element: lostpointercapture event"
+short-title: lostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.lostpointercapture_event
 page-type: web-api-event
+browser-compat: api.Element.lostpointercapture_event
 ---
+
 {{APIRef}}
 
 The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
@@ -20,9 +15,9 @@ The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/doc
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('lostpointercapture', (event) => {});
+addEventListener("lostpointercapture", (event) => {});
 
-onlostpointercapture = (event) => { };
+onlostpointercapture = (event) => {};
 ```
 
 ## Event type
@@ -35,25 +30,25 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
-- {{ domxref('PointerEvent.pointerId')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
-- {{ domxref('PointerEvent.width')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
   - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
-- {{ domxref('PointerEvent.height')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
   - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
-- {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
   - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
-- {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
-- {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
   - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
-- {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
   - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
-- {{ domxref('PointerEvent.twist')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
-- {{ domxref('PointerEvent.pointerType')}} {{readonlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
-- {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
+- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Examples
@@ -61,13 +56,13 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 This example listens for the `lostpointercapture` event for an element, and captures the pointer for the element on `pointerdown`. When the user subsequently releases the pointer, the `lostpointercapture` event will be fired.
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('lostpointercapture', () => {
-  console.log('I\'ve been released!')
+para.addEventListener("lostpointercapture", () => {
+  console.log("I've been released!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -75,13 +70,13 @@ para.addEventListener('pointerdown', (event) => {
 The same example, but using the `onlostpointercapture` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onlostpointercapture = () => {
-  console.log('I\'ve been released!')
+  console.log("I've been released!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -107,5 +102,3 @@ para.addEventListener('pointerdown', (event) => {
   - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`lostpointercapture`](/en-US/docs/Web/API/Document/lostpointercapture_event) event

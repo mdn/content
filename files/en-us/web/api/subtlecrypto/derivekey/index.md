@@ -1,17 +1,11 @@
 ---
-title: SubtleCrypto.deriveKey()
+title: "SubtleCrypto: deriveKey() method"
+short-title: deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web
-  - deriveKey
 browser-compat: api.SubtleCrypto.deriveKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`deriveKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -26,7 +20,7 @@ different characteristics and are appropriate in quite different situations. See
 
 ## Syntax
 
-```js
+```js-nolint
 deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 ```
 
@@ -134,7 +128,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 In this example Alice and Bob each generate an ECDH key pair, then exchange public
 keys. They then use `deriveKey()` to derive a shared AES key, that they could
-use to encrypt messages. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/ecdh.js)
+use to encrypt messages. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/ecdh.js)
 
 ```js
 /*
@@ -146,15 +140,15 @@ function deriveSecretKey(privateKey, publicKey) {
   return window.crypto.subtle.deriveKey(
     {
       name: "ECDH",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
     {
       name: "AES-GCM",
-      length: 256
+      length: 256,
     },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -165,26 +159,32 @@ async function agreeSharedSecretKey() {
   let alicesKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   let bobsKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   // Alice then generates a secret key using her private key and Bob's public key.
-  let alicesSecretKey = await deriveSecretKey(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  let alicesSecretKey = await deriveSecretKey(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey,
+  );
 
   // Bob generates the same secret key using his private key and Alice's public key.
-  let bobsSecretKey = await deriveSecretKey(bobsKeyPair.privateKey, alicesKeyPair.publicKey);
+  let bobsSecretKey = await deriveSecretKey(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey,
+  );
 
   // Alice can then use her copy of the secret key to encrypt a message to Bob.
   let encryptButton = document.querySelector(".ecdh .encrypt-button");
@@ -204,7 +204,7 @@ async function agreeSharedSecretKey() {
 
 In this example we ask the user for a password, then use it to derive an AES key using
 PBKDF2, then use the AES key to encrypt a message.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/pbkdf2.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/pbkdf2.js)
 
 ```js
 /*
@@ -233,16 +233,57 @@ async function encrypt(plaintext, salt, iv) {
       hash: "SHA-256",
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: "AES-GCM", length: 256 },
     true,
     ["encrypt", "decrypt"],
   );
 
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
-    key,
-    plaintext,
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
+}
+```
+
+### HKDF
+
+In this example, we encrypt a message `plainText` given a shared secret `secret`, which might itself have been derived using an algorithm such as ECDH. Instead of using the shared secret directly, we use it as key material for the HKDF function, to derive an AES-GCM encryption key, which we then use to encrypt the message. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/hkdf.js)
+
+```js
+/*
+  Given some key material and some random salt,
+  derive an AES-GCM key using HKDF.
+  */
+function getKey(keyMaterial, salt) {
+  return window.crypto.subtle.deriveKey(
+    {
+      name: "HKDF",
+      salt: salt,
+      info: new Uint8Array("Encryption example"),
+      hash: "SHA-256",
+    },
+    keyMaterial,
+    { name: "AES-GCM", length: 256 },
+    true,
+    ["encrypt", "decrypt"],
   );
+}
+
+async function encrypt(secret, plainText) {
+  const message = {
+    salt: window.crypto.getRandomValues(new Uint8Array(16)),
+    iv: window.crypto.getRandomValues(new Uint8Array(12)),
+  };
+
+  const key = await getKey(secret, message.salt);
+
+  message.ciphertext = await window.crypto.subtle.encrypt(
+    {
+      name: "AES-GCM",
+      iv: message.iv,
+    },
+    key,
+    plainText,
+  );
+
+  return message;
 }
 ```
 

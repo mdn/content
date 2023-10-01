@@ -1,22 +1,18 @@
 ---
-title: TrustedScript.toString()
+title: "TrustedScript: toString() method"
+short-title: toString()
 slug: Web/API/TrustedScript/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedScript
 browser-compat: api.TrustedScript.toString
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toString()`** method of the {{domxref("TrustedScript")}} interface returns a string which may safely inserted into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks).
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

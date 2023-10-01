@@ -1,12 +1,10 @@
 ---
 title: intercept
 slug: Web/SVG/Attribute/intercept
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
 ---
+
 {{SVGRef}}
 
 The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.
@@ -21,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -29,8 +29,13 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradient" gradientUnits="userSpaceOnUse"
-        x1="0" y1="0" x2="200" y2="0">
+    <linearGradient
+      id="gradient"
+      gradientUnits="userSpaceOnUse"
+      x1="0"
+      y1="0"
+      x2="200"
+      y2="0">
       <stop offset="0" stop-color="#ff0000" />
       <stop offset="0.5" stop-color="#00ff00" />
       <stop offset="1" stop-color="#0000ff" />
@@ -39,23 +44,33 @@ html, body, svg {
 
   <filter id="componentTransfer1" x="0" y="0" width="100%" height="100%">
     <feComponentTransfer>
-      <feFuncR type="linear" intercept="0"/>
-      <feFuncG type="linear" intercept="0"/>
-      <feFuncB type="linear" intercept="0"/>
+      <feFuncR type="linear" intercept="0" />
+      <feFuncG type="linear" intercept="0" />
+      <feFuncB type="linear" intercept="0" />
     </feComponentTransfer>
   </filter>
   <filter id="componentTransfer2" x="0" y="0" width="100%" height="100%">
     <feComponentTransfer>
-      <feFuncR type="linear" intercept="0.3"/>
-      <feFuncG type="linear" intercept="0.1"/>
-      <feFuncB type="linear" intercept="0.8"/>
+      <feFuncR type="linear" intercept="0.3" />
+      <feFuncG type="linear" intercept="0.1" />
+      <feFuncB type="linear" intercept="0.8" />
     </feComponentTransfer>
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
-      style="filter: url(#componentTransfer1);" />
-  <rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
-      style="filter: url(#componentTransfer2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    fill="url(#gradient)"
+    style="filter: url(#componentTransfer1);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    fill="url(#gradient)"
+    style="filter: url(#componentTransfer2); transform: translateX(220px);" />
 </svg>
 ```
 

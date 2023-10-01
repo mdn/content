@@ -1,17 +1,13 @@
 ---
-title: HTMLHtmlElement.version
+title: "HTMLHtmlElement: version property"
+short-title: version
 slug: Web/API/HTMLHtmlElement/version
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsContent
-  - NeedsLayout
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLHtmlElement.version
 ---
+
 {{ APIRef("HTML DOM") }} {{deprecated_header}}
 
 > **Note:** This property has been declared as deprecated by the W3C technical recommendation for HTML 4.01 in favor of use of the DTD for obtaining version information for a document.

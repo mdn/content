@@ -1,18 +1,11 @@
 ---
-title: MediaCapabilities.decodingInfo()
+title: "MediaCapabilities: decodingInfo() method"
+short-title: decodingInfo()
 slug: Web/API/MediaCapabilities/decodingInfo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media Capabilities API
-  - MediaCapabilities
-  - Method
-  - Reference
-  - Video
-  - decodingInfo()
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
+
 {{APIRef("MediaCapabilities")}}
 
 The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities info.
@@ -20,16 +13,18 @@ This contains the three boolean properties `supported`, `smooth`, and `powereffi
 
 ## Syntax
 
-```js
+```js-nolint
 decodingInfo(configuration)
 ```
 
 ### Parameters
 
 - `configuration`
+
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaDecodingConfiguration in the spec -->
 
     - `type`
+
       - : The type of media being tested. This takes one of three values:
 
         - `file`
@@ -40,6 +35,7 @@ decodingInfo(configuration)
           - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
 
     - `video`
+
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
@@ -75,7 +71,7 @@ A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attri
 - `supported`
   - : `true` if the media content can be decoded at all. Otherwise, it is `false`.
 - `smooth`
-  - : `true` if playback of the media will be smooth (of high quality). Otherwise is is `false`.
+  - : `true` if playback of the media will be smooth (of high quality). Otherwise it is `false`.
 - `powerEfficient`
   - : `true` if playback of the media will be power efficient. Otherwise, it is `false`.
 
@@ -94,20 +90,22 @@ This example shows how to create a media configuration for an audio file and the
 ```js
 //Create media configuration to be tested
 const mediaConfig = {
-    type : 'file', // or 'media-source' or 'webrtc'
-    audio : {
-        contentType : "audio/ogg; codecs=vorbis", // valid content type
-        channels : 2,     // audio channels used by the track
-        bitrate : 132700, // number of bits used to encode 1s of audio
-        samplerate : 5200 // number of audio samples making up that 1s.
-     },
+  type: "file", // or 'media-source' or 'webrtc'
+  audio: {
+    contentType: "audio/ogg; codecs=vorbis", // valid content type
+    channels: 2, // audio channels used by the track
+    bitrate: 132700, // number of bits used to encode 1s of audio
+    samplerate: 5200, // number of audio samples making up that 1s.
+  },
 };
 
 // check support and performance
 navigator.mediaCapabilities.decodingInfo(mediaConfig).then((result) => {
-    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
-    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
-    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
+  console.log(
+    `This configuration is ${result.supported ? "" : "not "}supported,`,
+  );
+  console.log(`${result.smooth ? "" : "not "}smooth, and`);
+  console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
 });
 ```
 
@@ -115,14 +113,14 @@ Similarly, the code below shows the configuration for a video file.
 
 ```js
 const mediaConfig = {
-    type : 'file',
-    video : {
-        contentType : "video/webm;codecs=vp8", // valid content type
-        width : 800,     // width of the video
-        height : 600,    // height of the video
-        bitrate : 10000, // number of bits used to encode 1s of video
-        framerate : 30   // number of frames making up that 1s.
-     }
+  type: "file",
+  video: {
+    contentType: "video/webm;codecs=vp8", // valid content type
+    width: 800, // width of the video
+    height: 600, // height of the video
+    bitrate: 10000, // number of bits used to encode 1s of video
+    framerate: 30, // number of frames making up that 1s.
+  },
 };
 ```
 
@@ -138,4 +136,4 @@ const mediaConfig = {
 
 - {{domxref("MediaCapabilities.encodingInfo()")}}
 - {{domxref("HTMLMediaElement.canPlayType()")}} for file
-- {{domxref("MediaSource.isTypeSupported()")}} for media-source
+- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} for media-source

@@ -1,14 +1,13 @@
 ---
-title: Attr.specified
+title: "Attr: specified property"
+short-title: specified
 slug: Web/API/Attr/specified
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Attr.specified
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 The read-only **`specified`** property of the {{domxref("Attr")}} interface always returns `true`.

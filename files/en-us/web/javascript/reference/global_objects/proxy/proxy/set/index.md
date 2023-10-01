@@ -1,23 +1,19 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.set
 ---
+
 {{JSRef}}
 
-The **`handler.set()`** method is a trap for setting a property
-value.
+The **`handler.set()`** method is a trap for the `[[Set]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to set a property's value.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   set(target, property, value, receiver) {
   }
@@ -57,23 +53,18 @@ The `set()` method should return a boolean value.
 
 ## Description
 
-The **`handler.set()`** method is a trap for setting property
-value.
-
 ### Interceptions
 
 This trap can intercept these operations:
 
-- Property assignment: `proxy[foo] = bar`
-  and `proxy.foo = bar`
-- Inherited property assignment:
-  `Object.create(proxy)[foo] = bar`
+- Property assignment: `proxy[foo] = bar` and `proxy.foo = bar`
 - {{jsxref("Reflect.set()")}}
+
+Or any other operation that invokes the `[[Set]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - Cannot change the value of a property to be different from the value of the
   corresponding target object property if the corresponding target object property is a
@@ -91,19 +82,22 @@ If the following invariants are violated, the proxy will throw a
 The following code traps setting a property value.
 
 ```js
-const p = new Proxy({}, {
-  set(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log(`property set: ${prop} = ${value}`);
-    return true;
-  }
-})
+const p = new Proxy(
+  {},
+  {
+    set(target, prop, value, receiver) {
+      target[prop] = value;
+      console.log(`property set: ${prop} = ${value}`);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## Specifications

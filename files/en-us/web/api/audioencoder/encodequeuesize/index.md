@@ -1,16 +1,13 @@
 ---
-title: AudioEncoder.encodeQueueSize
+title: "AudioEncoder: encodeQueueSize property"
+short-title: encodeQueueSize
 slug: Web/API/AudioEncoder/encodeQueueSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - encodeQueueSize
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.encodeQueueSize
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`encodeQueueSize`** read-only property of the {{domxref("AudioEncoder")}} interface returns the number of pending encode requests in the queue.

@@ -1,24 +1,18 @@
 ---
-title: SecurityPolicyViolationEvent()
+title: "SecurityPolicyViolationEvent: SecurityPolicyViolationEvent() constructor"
+short-title: SecurityPolicyViolationEvent()
 slug: Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - CSP
-  - Constructor
-  - HTTP
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
+
 {{HTTPSidebar}}
 
 The **`SecurityPolicyViolationEvent()`** constructor creates a new {{domxref("SecurityPolicyViolationEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new SecurityPolicyViolationEvent(type)
 new SecurityPolicyViolationEvent(type, options)
 ```
@@ -31,7 +25,7 @@ new SecurityPolicyViolationEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `blockedURI` {{optional_inline}}
-      - : The {{domxref("SecurityPolicyViolationEvent.blockedURI","blockedURI")}} of the  `SecurityPolicyViolationEvent`.
+      - : The {{domxref("SecurityPolicyViolationEvent.blockedURI","blockedURI")}} of the `SecurityPolicyViolationEvent`.
         If not included, the default value is `""`.
     - `columnNumber` {{optional_inline}}
       - : The {{domxref("SecurityPolicyViolationEvent.columnNumber","columnNumber")}} of the `SecurityPolicyViolationEvent`.
@@ -68,7 +62,9 @@ A new `SecurityPolicyViolationEvent` object.
 ## Examples
 
 ```js
-let SPVEvt = new SecurityPolicyViolationEvent('foo', { /* ... */ });
+let SPVEvt = new SecurityPolicyViolationEvent("foo", {
+  /* ... */
+});
 ```
 
 ## Specifications

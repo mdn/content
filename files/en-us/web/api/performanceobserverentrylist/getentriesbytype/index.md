@@ -1,31 +1,25 @@
 ---
-title: PerformanceObserverEntryList.getEntriesByType()
+title: "PerformanceObserverEntryList: getEntriesByType() method"
+short-title: getEntriesByType()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceObserverEntryList
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntriesByType
 ---
-{{APIRef("Performance Timeline API")}}
+
+{{APIRef("Performance API")}}
 
 The **`getEntriesByType()`** method of the {{domxref("PerformanceObserverEntryList")}} returns a list of explicitly _observed_ {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects for a given {{domxref("PerformanceEntry.entryType","performance entry type", '', 'true')}}. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).
 
-This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interfaces.
-
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByType(type)
 ```
 
 ### Parameters
 
 - `type`
-  - : The type of entry to retrieve such as "`frame`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.
+  - : The type of entry to retrieve such as `"mark"`. The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value
 
@@ -33,40 +27,35 @@ A list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects that hav
 
 ## Examples
 
+### Working with getEntries, getEntriesByName and getEntriesByType
+
+The following example shows the difference between the {{domxref("PerformanceObserverEntryList.getEntries", "getEntries()")}}, {{domxref("PerformanceObserverEntryList.getEntriesByName", "getEntriesByName()")}}, and `getEntriesByType()` methods.
+
 ```js
-function print_perf_entry(pe) {
-  console.log(`name: ${pe.name}`);
-  console.log(`entryType: ${pe.entryType}`);
-  console.log(`startTime: ${pe.startTime}`);
-  console.log(`duration: ${pe.duration}`);
-}
-
-// Create observer for all performance event types
-const observe_all = new PerformanceObserver((list, obs) => {
-  // Print all entries
+const observer = new PerformanceObserver((list, obs) => {
+  // Log all entries
   let perfEntries = list.getEntries();
-  perfEntries.forEach((entry) => print_perf_entry(entry));
+  perfEntries.forEach((entry) => {
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
+  });
 
-  // Print entries named "Begin" with type "mark"
-  perfEntries = list.getEntriesByName("Begin", "mark");
-  perfEntries.forEach((entry) => print_perf_entry(entry));
+  // Log entries named "debugging" with type "measure"
+  perfEntries = list.getEntriesByName("debugging", "measure");
+  perfEntries.forEach((entry) => {
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
+  });
 
-  // Print entries with type "mark"
+  // Log entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
-  perfEntries.forEach((entry) => print_perf_entry(entry));
+  perfEntries.forEach((entry) => {
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+  });
 });
 
-// Subscribe to all performance event types
-observe_all.observe({ entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'] });
-
-const observe_frame = new PerformanceObserver((list, obs) => {
-  const perfEntries = list.getEntries();
-  // Should only have 'frame' entries
-  perfEntries.forEach((entry) => print_perf_entry(entry));
+// Subscribe to various performance event types
+observer.observe({
+  entryTypes: ["mark", "measure", "navigation", "resource"],
 });
-
-// Subscribe to only the 'frame' event
-observe_frame.observe({entryTypes: ['frame']});
 ```
 
 ## Specifications

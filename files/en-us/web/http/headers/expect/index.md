@@ -1,13 +1,10 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Expect
 ---
+
 {{HTTPSidebar}}
 
 The **`Expect`** HTTP request header indicates expectations
@@ -15,11 +12,12 @@ that need to be met by the server to handle the request successfully.
 
 Upon `Expect: 100-continue`, the server responds with:
 
-- {{HTTPStatus("100")}} (Continue) if the information from the request header is sufficient to
-  cause immediate success
+- {{HTTPStatus("100")}} (Continue) if the information from the request header is insufficient to
+  resolve the response and the client should proceed with sending the body.
 - {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation
 
-or any other 4xx status otherwise.
+or any other status otherwise (e.g. a 4xx status for a client error, or a 2xx status if the
+request can be resolved successfully without further processing).
 
 For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
 too large.
@@ -42,7 +40,7 @@ cURL do so by default.
 
 ## Syntax
 
-```
+```http
 Expect: 100-continue
 ```
 
@@ -62,7 +60,7 @@ There is only one defined expectation:
 A client sends a request with `Expect` header and waits for the server to respond
 before sending the message body.
 
-```
+```http
 PUT /somewhere/fun HTTP/1.1
 Host: origin.example.com
 Content-Type: video/h264

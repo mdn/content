@@ -1,14 +1,11 @@
 ---
-title: 'Element: paste event'
+title: "Element: paste event"
+short-title: paste
 slug: Web/API/Element/paste_event
 page-type: web-api-event
-tags:
-  - Clipboard API
-  - Event
-  - NeedsUpdate
-  - Reference
 browser-compat: api.Element.paste_event
 ---
+
 {{APIRef}}
 
 The **`paste`** event is fired when the user has initiated a "paste" action through the browser's user interface.
@@ -26,9 +23,9 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -49,29 +46,31 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const target = document.querySelector('div.target');
+const target = document.querySelector("div.target");
 
-target.addEventListener('paste', (event) => {
-    event.preventDefault();
+target.addEventListener("paste", (event) => {
+  event.preventDefault();
 
-    let paste = (event.clipboardData || window.clipboardData).getData('text');
-    paste = paste.toUpperCase();
-    const selection = window.getSelection();
-    if (!selection.rangeCount) return;
-    selection.deleteFromDocument();
-    selection.getRangeAt(0).insertNode(document.createTextNode(paste));
+  let paste = (event.clipboardData || window.clipboardData).getData("text");
+  paste = paste.toUpperCase();
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return;
+  selection.deleteFromDocument();
+  selection.getRangeAt(0).insertNode(document.createTextNode(paste));
+  selection.collapseToEnd();
 });
 ```
 

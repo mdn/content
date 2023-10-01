@@ -1,17 +1,10 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - Blend modes
-  - CSS
-  - CSS Data Type
-  - Compositing
-  - Compositing and Blending
-  - Data Type
-  - Reference
-  - color
+page-type: css-type
 browser-compat: css.types.blend-mode
 ---
+
 {{CSSRef}}
 
 The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
@@ -96,8 +89,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
@@ -114,8 +106,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: multiply;
 }
 ```
@@ -132,8 +123,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
@@ -150,8 +140,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: overlay;
 }
 ```
@@ -168,8 +157,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: darken;
 }
 ```
@@ -186,8 +174,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: lighten;
 }
 ```
@@ -204,8 +191,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-dodge;
 }
 ```
@@ -222,8 +208,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-burn;
 }
 ```
@@ -240,8 +225,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hard-light;
 }
 ```
@@ -258,8 +242,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: soft-light;
 }
 ```
@@ -276,8 +259,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: difference;
 }
 ```
@@ -294,8 +276,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: exclusion;
 }
 ```
@@ -312,8 +293,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hue;
 }
 ```
@@ -330,8 +310,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: saturation;
 }
 ```
@@ -348,8 +327,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color;
 }
 ```
@@ -366,8 +344,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: luminosity;
 }
 ```
@@ -409,18 +386,20 @@ In the following example, we have a `<div>` with two background images set on it
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
-  linear-gradient(to bottom, blue, orange);
+  background:
+    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```
@@ -439,6 +418,7 @@ selectElem.addEventListener('change', () => {
 
 ## See also
 
+- The [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module that defines the `<blend-mode>` values.
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 Description to various blend modes on other website:

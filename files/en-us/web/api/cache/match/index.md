@@ -1,18 +1,11 @@
 ---
-title: Cache.match()
+title: "Cache: match() method"
+short-title: match()
 slug: Web/API/Cache/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
 browser-compat: api.Cache.match
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
@@ -20,7 +13,7 @@ If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined"
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```
@@ -29,15 +22,15 @@ match(request, options)
 
 - `request`
   - : The {{domxref("Request")}} for which you are attempting to find responses in the
-    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
+    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL string.
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.
-     The available options are:
+    The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to
-        ignore the query string in the URL.  For example, if set to
+        ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
@@ -80,16 +73,20 @@ response with an response code in the 4xx or 5xx range, the `catch()` will
 NOT be called.
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').includes('text/html')) {
-    console.log('Handling fetch event for', event.request.url);
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").includes("text/html")
+  ) {
+    console.log("Handling fetch event for", event.request.url);
     event.respondWith(
       fetch(event.request).catch((e) => {
-        console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then((cache) => cache.match(OFFLINE_URL));
-      })
+        console.error("Fetch failed; returning offline page instead.", e);
+        return caches
+          .open(OFFLINE_CACHE)
+          .then((cache) => cache.match(OFFLINE_URL));
+      }),
     );
   }
 });

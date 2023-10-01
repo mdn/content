@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.beginPath()
+title: "CanvasRenderingContext2D: beginPath() method"
+short-title: beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.beginPath
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +18,7 @@ this method when you want to create a new path.
 
 ## Syntax
 
-```js
+```js-nolint
 beginPath()
 ```
 
@@ -52,19 +48,19 @@ The `beginPath()` method is called before beginning each line, so that they
 may be drawn with different colors.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // First path
 ctx.beginPath();
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(200, 20);
 ctx.stroke();
 
 // Second path
 ctx.beginPath();
-ctx.strokeStyle = 'green';
+ctx.strokeStyle = "green";
 ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
 ctx.stroke();

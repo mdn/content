@@ -1,24 +1,11 @@
 ---
-title: XRJointPose.radius
+title: "XRJointPose: radius property"
+short-title: radius
 slug: Web/API/XRJointPose/radius
 page-type: web-api-instance-property
-tags:
-  - API
-  - Controller
-  - Hand
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRJointPose
-
 browser-compat: api.XRJointPose.radius
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only **`radius`** property of the {{domxref("XRJointPose")}} interface indicates the radius (distance from skin) for a joint.
@@ -46,7 +33,7 @@ function renderFrame(session, frame) {
       const indexFingerTipJoint = inputSource.hand.get("index-finger-tip");
       const radius = frame.getJointPose(
         indexFingerTipJoint,
-        referenceSpace
+        referenceSpace,
       ).radius;
     }
   }

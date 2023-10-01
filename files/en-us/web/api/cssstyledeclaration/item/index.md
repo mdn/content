@@ -1,14 +1,11 @@
 ---
-title: CSSStyleDeclaration.item()
+title: "CSSStyleDeclaration: item() method"
+short-title: item()
 slug: Web/API/CSSStyleDeclaration/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 The `CSSStyleDeclaration.item()`
@@ -21,7 +18,7 @@ arguments; the empty string is returned if the index is out of range and a
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -48,7 +45,7 @@ const propertyName = style[index];
 ## Examples
 
 ```js
-const style = document.getElementById('div1').style;
+const style = document.getElementById("div1").style;
 const propertyName = style.item(1); // or style[1] - returns the second style listed
 ```
 

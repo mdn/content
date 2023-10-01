@@ -1,22 +1,17 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.visited
 ---
+
 {{CSSRef}}
 
-The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.
+The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
-Styles defined by the `:visited` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":active")}}) that has at least equal specificity. To style links appropriately, put the `:visited` rule after the `:link` rule but before the `:hover` and `:active` rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
+Styles defined by the `:visited` and unvisited [`:link`](/en-US/docs/Web/CSS/:link) pseudo-classes can be overridden by any subsequent user-action pseudo-classes ({{cssxref(":hover")}} or {{cssxref(":active")}}) that have at least equal specificity. To style links appropriately, put the `:visited` rule after the `:link` rule but before the `:hover` and `:active` rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`. The `:visited` pseudo-class and `:link` pseudo-class are mutually exclusive.
 
 ## Privacy restrictions
 
@@ -32,8 +27,10 @@ For privacy reasons, browsers strictly limit which styles you can apply using th
 
 ## Syntax
 
-```
-visited
+```css
+:visited {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -43,7 +40,7 @@ Properties that would otherwise have no color or be transparent cannot be modifi
 ### HTML
 
 ```html
-<a href="#test-visited-link">Have you visited this link yet?</a><br>
+<a href="#test-visited-link">Have you visited this link yet?</a><br />
 <a href="">You've already visited this link.</a>
 ```
 

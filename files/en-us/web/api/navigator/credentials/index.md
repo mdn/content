@@ -1,15 +1,11 @@
 ---
-title: Navigator.credentials
+title: "Navigator: credentials property"
+short-title: credentials
 slug: Web/API/Navigator/credentials
 page-type: web-api-instance-property
-tags:
-  - API
-  - CredentialsContainer
-  - Property
-  - Reference
-  - credentials
 browser-compat: api.Navigator.credentials
 ---
+
 {{securecontext_header}}{{APIRef("")}}
 
 The **`credentials`** property of the {{domxref("Navigator")}}
@@ -25,14 +21,13 @@ The {{domxref("CredentialsContainer")}} interface.
 ## Examples
 
 ```js
-if ('credentials' in navigator) {
-  navigator.credentials.get({password: true})
-  .then((creds) => {
+if ("credentials" in navigator) {
+  navigator.credentials.get({ password: true }).then((creds) => {
     //Do something with the credentials.
   });
 } else {
   //Handle sign-in the way you did before.
-};
+}
 ```
 
 ## Specifications

@@ -1,29 +1,19 @@
 ---
-title: ':enabled'
+title: ":enabled"
 slug: Web/CSS/:enabled
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.enabled
 ---
+
 {{CSSRef}}
 
 The **`:enabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.
 
-```css
-/* Selects any enabled <input> */
-input:enabled {
-  color: blue;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-enabled.html", "tabbed-standard")}}
 
 ## Syntax
 
-```
+```plain
 :enabled
 ```
 
@@ -36,12 +26,12 @@ The following example makes the color of text and button {{htmlElement("input")}
 ```html
 <form action="url_of_form">
   <label for="FirstField">First field (enabled):</label>
-  <input type="text" id="FirstField" value="Lorem"><br>
+  <input type="text" id="FirstField" value="Lorem" /><br />
 
   <label for="SecondField">Second field (disabled):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br>
+  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
 
-  <input type="button" value="Submit">
+  <input type="button" value="Submit" />
 </form>
 ```
 

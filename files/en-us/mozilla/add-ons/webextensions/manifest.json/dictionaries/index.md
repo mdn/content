@@ -1,13 +1,10 @@
 ---
 title: dictionaries
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.dictionaries
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

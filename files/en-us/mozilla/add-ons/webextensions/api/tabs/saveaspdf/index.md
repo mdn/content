@@ -1,17 +1,10 @@
 ---
 title: tabs.saveAsPDF()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - saveAsPDF
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.saveAsPDF
 ---
+
 {{AddonSidebar()}}
 
 Saves the current page as a PDF file. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF file.
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let saving = browser.tabs.saveAsPDF(
   pageSettings   // object
 )
@@ -47,10 +40,9 @@ In this example a background script listens for a click on a [browser action](/e
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.saveAsPDF({})
-    .then((status) => {
-      console.log(status);
-    });
+  browser.tabs.saveAsPDF({}).then((status) => {
+    console.log(status);
+  });
 });
 ```
 

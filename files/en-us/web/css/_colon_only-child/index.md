@@ -1,15 +1,10 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.only-child
 ---
+
 {{CSSRef}}
 
 The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element without any siblings. This is the same as `:first-child:last-child` or `:nth-child(1):nth-last-child(1)`, but with a lower specificity.
@@ -20,8 +15,10 @@ The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 ## Syntax
 
-```
-:only-child
+```css
+:only-child {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -38,7 +35,10 @@ The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 <div>
   <div>I am the 1st sibling.</div>
   <div>I am the 2nd sibling.</div>
-  <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+  <div>
+    I am the 3rd sibling,
+    <div>but this is an only child.</div>
+  </div>
 </div>
 ```
 
@@ -66,12 +66,14 @@ div {
 
 ```html
 <ol>
-  <li>First
+  <li>
+    First
     <ul>
       <li>This list has just one element.</li>
     </ul>
   </li>
-  <li>Second
+  <li>
+    Second
     <ul>
       <li>This list has three elements.</li>
       <li>This list has three elements.</li>

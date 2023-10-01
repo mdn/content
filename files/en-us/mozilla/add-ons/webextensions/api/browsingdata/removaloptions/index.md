@@ -1,17 +1,10 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - RemovalOptions
-  - Type
-  - WebExtensions
-  - browsingData
+page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.RemovalOptions
 ---
+
 {{AddonSidebar()}}
 
 The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
@@ -25,8 +18,6 @@ Values of this type are objects. They contain the following properties:
   - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID.
 
     > **Note:** On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
-
-<!---->
 
 - `hostnames` {{optional_inline}}
 
@@ -56,7 +47,8 @@ Values of this type are objects. They contain the following properties:
 
 > **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,4 +75,4 @@ Values of this type are objects. They contain the following properties:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

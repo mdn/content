@@ -1,11 +1,11 @@
 ---
-title: MediaRecorder.videoBitsPerSecond
+title: "MediaRecorder: videoBitsPerSecond property"
+short-title: videoBitsPerSecond
 slug: Web/API/MediaRecorder/videoBitsPerSecond
 page-type: web-api-instance-property
-tags:
-- Property
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`videoBitsPerSecond`** read-only

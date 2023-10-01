@@ -1,17 +1,13 @@
 ---
-title: BarcodeDetector()
+title: "BarcodeDetector: BarcodeDetector() constructor"
+short-title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
 page-type: web-api-constructor
-tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Constructor
-  - barcode
-  - barcode detection
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector()`** constructor creates
@@ -20,7 +16,7 @@ barcodes in images.
 
 ## Syntax
 
-```js
+```js-nolint
 new BarcodeDetector()
 new BarcodeDetector(options)
 ```
@@ -44,13 +40,15 @@ and tests for browser compatibility.
 
 ```js
 // create new detector
-const barcodeDetector = new BarcodeDetector({ formats: ['code_39', 'codabar', 'ean_13'] });
+const barcodeDetector = new BarcodeDetector({
+  formats: ["code_39", "codabar", "ean_13"],
+});
 
 // check compatibility
 if (barcodeDetector) {
-  console.log('Barcode Detector supported!');
+  console.log("Barcode Detector supported!");
 } else {
-  console.log('Barcode Detector is not supported by this browser.');
+  console.log("Barcode Detector is not supported by this browser.");
 }
 ```
 

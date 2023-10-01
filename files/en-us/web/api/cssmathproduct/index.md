@@ -2,20 +2,12 @@
 title: CSSMathProduct
 slug: Web/API/CSSMathProduct
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathProduct
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
 browser-compat: api.CSSMathProduct
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+{{APIRef("CSS Typed Object Model API")}}
+
+The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 
@@ -24,14 +16,18 @@ The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_
 - {{domxref("CSSMathProduct.CSSMathProduct", "CSSMathProduct()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathProduct` object.
 
-## Properties
+## Instance properties
 
-- {{domxref('CSSMathProduct.values')}} {{Experimental_Inline}}
+- {{domxref('CSSMathProduct.values')}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Methods
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
 ## Specifications
 

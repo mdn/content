@@ -1,17 +1,11 @@
 ---
-title: Clients.claim()
+title: "Clients: claim() method"
+short-title: claim()
 slug: Web/API/Clients/claim
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - claim
 browser-compat: api.Clients.claim
 ---
+
 {{APIRef("Service Worker Clients")}}
 
 The **`claim()`** method of the {{domxref("Clients")}} interface allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
@@ -24,7 +18,7 @@ regularly over the network, or possibly via a different service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 claim()
 ```
 
@@ -41,7 +35,7 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 The following example uses `claim()` inside service worker's "`activate`" event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
 
 ```js
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 ```

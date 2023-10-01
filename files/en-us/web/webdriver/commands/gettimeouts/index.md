@@ -1,13 +1,12 @@
 ---
 title: Get Timeouts
 slug: Web/WebDriver/Commands/GetTimeouts
-tags:
-  - Command
-  - Get Timeouts
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetTimeouts
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+
 The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Timeouts#implicit).
 
 ## Syntax

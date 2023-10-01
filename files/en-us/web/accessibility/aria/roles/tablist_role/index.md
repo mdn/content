@@ -1,15 +1,7 @@
 ---
-title: 'ARIA: tablist role'
+title: "ARIA: tablist role"
 slug: Web/Accessibility/ARIA/Roles/tablist_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - tablist role
-  - composite widget role
-  - tablist
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tablist
 ---
 
@@ -46,7 +38,7 @@ Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/do
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
   - : When set to `true`, indicates the user may select more than one `tab` from the `tablist` descendants.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-  - :  If the tablist element is vertically oriented, set `aria-orientation="vertical"`. The default is `horizontal`.
+  - : If the tablist element is vertically oriented, set `aria-orientation="vertical"`. The default is `horizontal`.
 
 ### Keyboard interactions
 
@@ -87,14 +79,16 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 <!--
 ### Required JavaScript features
 
-## Examples
-
 ## Accessibility Concerns
 
 ## Best Practices
 
 ### Prefer HTML
 -->
+
+## Examples
+
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
 
 ## Specifications
 
@@ -109,6 +103,6 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -1,12 +1,12 @@
 ---
 title: contentStyleType
 slug: Web/SVG/Attribute/contentStyleType
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.contentStyleType
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`contentStyleType`** attribute specifies the style sheet language for the given document fragment on the {{SVGElement("svg")}} element.

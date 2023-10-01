@@ -1,16 +1,11 @@
 ---
-title: URL()
+title: "URL: URL() constructor"
+short-title: URL()
 slug: Web/API/URL/URL
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL
-  - URL API
-  - Polyfill
 browser-compat: api.URL.URL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL()`** constructor returns a newly created
@@ -23,7 +18,7 @@ If the given base URL or the resulting URL are not valid URLs, the JavaScript
 
 ## Syntax
 
-```js
+```js-nolint
 new URL(url)
 new URL(url, base)
 ```
@@ -48,34 +43,61 @@ new URL(url, base)
 
 ### Exceptions
 
-| Exception                        | Explanation                                                                                               |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Exception               | Explanation                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | {{jsxref("TypeError")}} | `url` (in the case of absolute URLs) or `base` + `url` (in the case of relative URLs) is not a valid URL. |
 
 ## Examples
 
 ```js
-// Base urls
-let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
+// Base URLs:
+let baseUrl = "https://developer.mozilla.org";
 
-        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
+let A = new URL("/", baseUrl);
+// => 'https://developer.mozilla.org/'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // => 'https://developer.mozilla.org/en-US/docs'
+let B = new URL(baseUrl);
+// => 'https://developer.mozilla.org/'
 
-        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
-        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-        new URL('http://www.example.com', );           // => 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
+new URL("en-US/docs", B);
+// => 'https://developer.mozilla.org/en-US/docs'
 
-        new URL("", "https://example.com/?query=1")    // => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
-        new URL("/a", "https://example.com/?query=1")  // => 'https://example.com/a' (see relative URLs)
-        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
+let D = new URL("/en-US/docs", B);
+// => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("/en-US/docs", D);
+// => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("/en-US/docs", A);
+// => 'https://developer.mozilla.org/en-US/docs'
+
+new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
+// => 'https://developer.mozilla.org/en-US/docs'
+
+// Invalid URLs:
+
+new URL("/en-US/docs", "");
+// Raises a TypeError exception as '' is not a valid URL
+
+new URL("/en-US/docs");
+// Raises a TypeError exception as '/en-US/docs' is not a valid URL
+
+// Other cases:
+
+new URL("http://www.example.com");
+// => 'http://www.example.com/'
+
+new URL("http://www.example.com", B);
+// => 'http://www.example.com/'
+
+new URL("", "https://example.com/?query=1");
+// => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
+
+new URL("/a", "https://example.com/?query=1");
+// => 'https://example.com/a' (see relative URLs)
+
+new URL("//foo.com", "https://example.com");
+// => 'https://foo.com/' (see relative URLs)
 ```
 
 ## Specifications

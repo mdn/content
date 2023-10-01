@@ -1,19 +1,11 @@
 ---
-title: AudioBufferSourceNode.buffer
+title: "AudioBufferSourceNode: buffer property"
+short-title: buffer
 slug: Web/API/AudioBufferSourceNode/buffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Buffer
-  - Media
-  - Property
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.AudioBufferSourceNode.buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`buffer`** property of the {{
@@ -39,13 +31,13 @@ button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   const nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (let i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // This gives us the actual ArrayBuffer that contains the data
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Get an AudioBufferSourceNode.
@@ -53,7 +45,7 @@ button.onclick = () => {
   const source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
   source.buffer = myArrayBuffer;
-}
+};
 ```
 
 ## Specifications

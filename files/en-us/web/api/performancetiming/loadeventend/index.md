@@ -1,21 +1,14 @@
 ---
-title: PerformanceTiming.loadEventEnd
+title: "PerformanceTiming: loadEventEnd property"
+short-title: loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Event Handler
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.loadEventEnd
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface's {{domxref("PerformanceNavigationTiming.loadEventEnd")}} read-only property instead.

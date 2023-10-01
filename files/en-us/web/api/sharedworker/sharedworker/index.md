@@ -1,15 +1,11 @@
 ---
-title: SharedWorker()
+title: "SharedWorker: SharedWorker() constructor"
+short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - SharedWorker
-  - Web Workers
 browser-compat: api.SharedWorker.SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`SharedWorker()`** constructor creates a
@@ -17,13 +13,13 @@ The **`SharedWorker()`** constructor creates a
 script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 > **Note:** there is disagreement among browser manufacturers about
-> whether a data URL is of the same origin or not. Although Gecko 10.0
-> {{geckoRelease("10.0")}} and later accept data URLs, that's not the case in all other
+> whether a data URL is of the same origin or not. Although Firefox 10.0
+> and later accept data URLs, that's not the case in all other
 > browsers.
 
 ## Syntax
 
-```js
+```js-nolint
 new SharedWorker(aURL)
 new SharedWorker(aURL, name)
 new SharedWorker(aURL, options)
@@ -36,8 +32,7 @@ new SharedWorker(aURL, options)
     execute. It must obey the same-origin policy.
 - `name` {{optional_inline}}
   - : A string specifying an identifying name for the
-    {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
-    mainly useful for debugging purposes.
+    {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is useful for creating new instances of the same SharedWorker and debugging.
 - `options` {{optional_inline}}
 
   - : An object containing option properties that can set when creating the object
@@ -62,9 +57,9 @@ new SharedWorker(aURL, options)
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the document is not allowed to start workers, for example if the URL has an invalid syntax or if the same-origin policy is violated.
-- `NetworkError`  {{domxref("DOMException")}}
+- `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect. It should _always_ be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) may be accepted).
-- `SyntaxError`  {{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if `aURL` cannot be parsed.
 
 ## Examples
@@ -73,27 +68,27 @@ The following code snippet shows creation of a {{domxref("SharedWorker")}} objec
 the `SharedWorker()` constructor and subsequent usage of the object:
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 
 myWorker.port.start();
 
 first.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
-For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
+For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ## Specifications
 

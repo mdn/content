@@ -1,13 +1,10 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
+page-type: http-header
 browser-compat: http.headers.Location
 ---
+
 {{HTTPSidebar}}
 
 The **`Location`** response header indicates the URL to
@@ -54,7 +51,7 @@ with the entity returned.
 
 ## Syntax
 
-```
+```http
 Location: <url>
 ```
 
@@ -65,7 +62,7 @@ Location: <url>
 
 ## Examples
 
-```
+```http
 Location: /index.html
 ```
 

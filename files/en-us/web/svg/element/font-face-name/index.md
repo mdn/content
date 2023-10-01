@@ -1,15 +1,12 @@
 ---
 title: <font-face-name>
 slug: Web/SVG/Element/font-face-name
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.font-face-name
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<font-face-name>`** element points to a locally installed copy of this font, identified by its name.
@@ -26,7 +23,7 @@ The **`<font-face-name>`** element points to a locally installed copy of this fo
 
 ### Specific attributes
 
-- {{SVGATTR("name")}}
+- {{SVGATTR("name")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

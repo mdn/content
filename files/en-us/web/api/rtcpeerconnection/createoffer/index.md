@@ -1,18 +1,11 @@
 ---
-title: RTCPeerConnection.createOffer()
+title: "RTCPeerConnection: createOffer() method"
+short-title: createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - WebRTC
-  - createOffer
 browser-compat: api.RTCPeerConnection.createOffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createOffer()`** method
@@ -34,17 +27,18 @@ offer.
 
 ## Syntax
 
-```js
+```js-nolint
 createOffer()
 createOffer(options)
 
-createOffer(successCallback, failureCallback)
-createOffer(successCallback, failureCallback, options)
+createOffer(successCallback, failureCallback) // deprecated
+createOffer(successCallback, failureCallback, options) // deprecated
 ```
 
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An object providing the following options requested for the offer:
 
     - `iceRestart` {{optional_inline}}
@@ -63,7 +57,7 @@ createOffer(successCallback, failureCallback, options)
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`createOffer()` instead. The parameters for this form of
+`createOffer()` instead. The parameters for the older form of
 `createOffer()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}
@@ -112,14 +106,15 @@ offer and sends it to the remote system over a signaling channel.
 > fulfillment handler, depend entirely on your design.
 
 ```js
-myPeerConnection.createOffer()
+myPeerConnection
+  .createOffer()
   .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
       type: "video-offer",
-      sdp: myPeerConnection.localDescription
+      sdp: myPeerConnection.localDescription,
     });
   })
   .catch((reason) => {

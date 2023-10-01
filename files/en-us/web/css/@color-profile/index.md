@@ -1,16 +1,10 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Color
-  - color-profile
+page-type: css-at-rule
 browser-compat: css.at-rules.color-profile
 ---
+
 {{CSSRef}}
 
 The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
@@ -19,7 +13,7 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -50,14 +44,16 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 .header {
-  background-color:   color(--swop5c 0% 70% 20% 0%);
+  background-color: color(--swop5c 0% 70% 20% 0%);
 }
 ```
 
 ## Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

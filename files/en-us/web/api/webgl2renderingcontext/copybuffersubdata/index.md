@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.copyBufferSubData()
+title: "WebGL2RenderingContext: copyBufferSubData() method"
+short-title: copyBufferSubData()
 slug: Web/API/WebGL2RenderingContext/copyBufferSubData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.copyBufferSubData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.copyBufferSubData()`** method of
@@ -18,7 +14,7 @@ buffer to another buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 ```
 

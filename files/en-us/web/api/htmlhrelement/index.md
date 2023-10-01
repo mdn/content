@@ -2,21 +2,16 @@
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLHRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLHRElement`** interface provides special properties (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("hr")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -31,7 +26,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLHRElement.width")}} {{deprecated_inline}}
   - : A string representing the width of the rule on the page.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

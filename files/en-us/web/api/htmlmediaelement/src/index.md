@@ -1,16 +1,11 @@
 ---
-title: HTMLMediaElement.src
+title: "HTMLMediaElement: src property"
+short-title: src
 slug: Web/API/HTMLMediaElement/src
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Reference
-  - src
 browser-compat: api.HTMLMediaElement.src
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.src`** property reflects the value of
@@ -33,7 +28,7 @@ attribute.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.src); // ""
 ```
 
@@ -47,4 +42,4 @@ console.log(obj.src); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.src` property

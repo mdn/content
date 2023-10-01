@@ -2,62 +2,58 @@
 title: VRFieldOfView
 slug: Web/API/VRFieldOfView
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - VR
-  - VRFieldOfView
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFieldOfView
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}{{Deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a field of view defined by 4 different degree values describing the view from a center point.
 
 > **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Properties
+## Instance properties
 
-- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees upwards that the field of view extends in.
-- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees to the right that the field of view extends in.
-- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees downwards that the field of view extends in.
-- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees to the left that the field of view extends in.
 
 ## Examples
 
 ```js
-const info = document.querySelector('p');
-const list = document.querySelector('ul');
+const info = document.querySelector("p");
+const list = document.querySelector("ul");
 let vrDisplay;
 
 if (navigator.getVRDisplays) {
-    reportFieldOfView();
+  reportFieldOfView();
 } else {
-  info.textContent = 'WebVR API not supported by this browser.'
+  info.textContent = "WebVR API not supported by this browser.";
 }
 
 function reportFieldOfView() {
   navigator.getVRDisplays().then((displays) => {
     vrDisplay = displays[0];
-    const lEye = vrDisplay.getEyeParameters('left');
-    const rEye = vrDisplay.getEyeParameters('right');
+    const lEye = vrDisplay.getEyeParameters("left");
+    const rEye = vrDisplay.getEyeParameters("right");
     // lEye and rEye are VREyeParameters objects
 
     const lFOV = lEye.fieldOfView;
     const rFOV = rEye.fieldOfView;
     // lFOV and rFOV are VRFieldOfView objects
 
-    const listitem1 = document.createElement('li');
-    const listitem2 = document.createElement('li');
+    const listitem1 = document.createElement("li");
+    const listitem2 = document.createElement("li");
 
-    listitem1.innerHTML = `<strong>Left eye parameters</strong><br>` +
+    listitem1.innerHTML =
+      `<strong>Left eye parameters</strong><br>` +
       `Offset: ${lEye.offset}<br>` +
       `Render width: ${lEye.renderWidth}<br>` +
       `Render height: ${lEye.renderHeight}<br>` +
@@ -66,7 +62,8 @@ function reportFieldOfView() {
       `Down degrees: ${lFOV.downDegrees}<br>` +
       `Left degrees: ${lFOV.leftDegrees}`;
 
-    listitem2.innerHTML = `<strong>Right eye parameters</strong><br>` +
+    listitem2.innerHTML =
+      `<strong>Right eye parameters</strong><br>` +
       `Offset: ${rEye.offset}<br>` +
       `Render width: ${rEye.renderWidth}<br>` +
       `Render height: ${rEye.renderHeight}<br>` +

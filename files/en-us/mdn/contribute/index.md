@@ -1,11 +1,9 @@
 ---
 title: Contributing to MDN
 slug: MDN/Contribute
-tags:
-  - Guide
-  - Landing
-  - MDN Meta
+page-type: landing-page
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs needs your help! We have a large number of typos to fix, examples to write, bugs to fix, people to talk to, and more, and the number is growing as more people start using the site. This page outlines what you can do to help.
@@ -14,20 +12,21 @@ MDN Web Docs needs your help! We have a large number of typos to fix, examples t
 
 ## What can I do to help?
 
-There are multiple avenues you can take to contribute to MDN depending on your skillset and interests. Along with each task we provide a short description and an approximate time that each type of task typically takes.
+There are multiple avenues you can take to contribute to MDN depending on your skill set and interests. Along with each task we provide a short description and an approximate time that each type of task typically takes.
 
-If you are not sure what to do, you are always welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you are not sure what to do, you are always welcome to [ask for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ### Primary contribution types
 
 The links in this section lead to detailed guides explaining how to do a particular contribution task that we are most interested in getting community help with, either because they are a critical function, and/or because they have a large backlog associated with them. Please consider helping out with these tasks before you consider contributing in other ways.
 
 <table class="standard-table">
+  <caption>Contribution Categories</caption>
   <thead>
     <tr>
       <th scope="col">Tasks</th>
       <th scope="col">Description</th>
-      <th scope="col">Skillset required</th>
+      <th scope="col">Skill set required</th>
     </tr>
   </thead>
   <tbody>
@@ -122,15 +121,9 @@ The links in this section lead to detailed guides explaining how to do a particu
 
 We will add more tasks here as time goes on.
 
-#### Priority ratings
-
-You can also look at priority ratings to give you an idea of what the most important work is to work on — we've started giving content bug issues labels of P0, P1, P2, P3, and P4 to signify how important they are, with lower numbers being more important than higher numbers.
-
-These are figured out during the regular MDN bug triage process, based on the [MDN documentation priority list](https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/).
-
 ### Other task types
 
-If our main priorities listed above don't interest you, you can find a number of other, more general task types to get involved with below, split up by skillset.
+If our main priorities listed above don't interest you, you can find a number of other, more general task types to get involved with below, split up by skill set.
 
 If you are more interested in words, you could do the following:
 

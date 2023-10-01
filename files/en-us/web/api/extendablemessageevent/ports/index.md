@@ -1,16 +1,11 @@
 ---
-title: ExtendableMessageEvent.ports
+title: "ExtendableMessageEvent: ports property"
+short-title: ports
 slug: Web/API/ExtendableMessageEvent/ports
 page-type: web-api-instance-property
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ports
 browser-compat: api.ExtendableMessageEvent.ports
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ports`** read-only property of the
@@ -32,19 +27,19 @@ object of `onmessage` will be a `ExtendableMessageEvent`.
 ```js
 let port;
 
-self.addEventListener('push', (e) => {
+self.addEventListener("push", (e) => {
   const obj = e.data.json();
 
-  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     port.postMessage(obj);
-  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });
 
 self.onmessage = (e) => {
   port = e.ports[0];
-}
+};
 ```
 
 ## Specifications
@@ -58,6 +53,6 @@ self.onmessage = (e) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

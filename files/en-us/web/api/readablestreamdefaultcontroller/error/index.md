@@ -1,16 +1,11 @@
 ---
-title: ReadableStreamDefaultController.error()
+title: "ReadableStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/ReadableStreamDefaultController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the
@@ -22,7 +17,7 @@ with the associated stream to error.
 
 ## Syntax
 
-```js
+```js-nolint
 error(e)
 ```
 
@@ -55,3 +50,8 @@ manually trigger a stream error if another part of the system it relies on fails
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

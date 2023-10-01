@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.miterLimit
+title: "CanvasRenderingContext2D: miterLimit property"
+short-title: miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.miterLimit
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.miterLimit`** property of the
@@ -27,50 +23,6 @@ A number specifying the miter limit ratio, in coordinate space units. Zero, nega
 
 See the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#a_demo_of_the_miterlimit_property) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) for more information.
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineWidth = 15;
-ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
-```
-
-```js hidden
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", () => {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180",
-  "canvas_miterlimit.png",
-  "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
-
 ## Specifications
 
 {{Specifications}}
@@ -78,17 +30,6 @@ window.addEventListener("load", drawCanvas);
 ## Browser compatibility
 
 {{Compat}}
-
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-  `ctx.setMiterLimit()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a
-  negative value no longer throws an exception; instead, it properly ignores
-  non-positive values.
 
 ## See also
 

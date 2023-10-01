@@ -1,23 +1,19 @@
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
-tags:
-  - Manifest
-  - Web
-  - shortcuts
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.shortcuts
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
+      <td><code>Array</code></td>
     </tr>
   </tbody>
 </table>
@@ -100,3 +96,7 @@ The following is a list of shortcuts a calendar app might have:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Creating shortcut action menus for PWAs](en-US/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)

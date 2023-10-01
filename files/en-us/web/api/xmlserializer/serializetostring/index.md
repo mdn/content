@@ -1,22 +1,11 @@
 ---
-title: XMLSerializer.serializeToString()
+title: "XMLSerializer: serializeToString() method"
+short-title: serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - DOM to HTML
-  - DOM to XML
-  - Parsing
-  - Reference
-  - Serialize
-  - Serializing DOM
-  - XML
-  - XMLSerializer
-  - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
+
 {{APIRef("DOM Parsing")}}
 
 The {{domxref("XMLSerializer")}} method
@@ -25,7 +14,7 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
 ## Syntax
 
-```js
+```js-nolint
 serializeToString(rootNode)
 ```
 

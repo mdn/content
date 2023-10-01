@@ -1,14 +1,10 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Informational
-  - Reference
-  - WebSockets
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.2.2
+page-type: http-status-code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`101 Switching Protocols`** response code indicates
@@ -21,7 +17,7 @@ indicate the protocol it switched to. The process is described in the following 
 
 ## Status
 
-```
+```http
 101 Switching Protocols
 ```
 
@@ -29,7 +25,7 @@ indicate the protocol it switched to. The process is described in the following 
 
 Switching protocols might be used with [WebSockets](/en-US/docs/Web/API/WebSockets_API).
 
-```
+```http
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade

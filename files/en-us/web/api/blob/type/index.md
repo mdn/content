@@ -1,15 +1,11 @@
 ---
-title: Blob.type
+title: "Blob: type property"
+short-title: type
 slug: Web/API/Blob/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Blob
-  - File API
-  - Property
-  - Reference
 browser-compat: api.Blob.type
 ---
+
 {{APIRef("File API")}}
 
 The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
@@ -27,7 +23,7 @@ sure it's one of a given set of image file types.
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">Choose image files…</output>
 ```
 
@@ -41,25 +37,26 @@ output {
 ### JavaScript
 
 ```js
-// our application only allows GIF, PNG, and JPEG images
+// Our application only allows GIF, PNG, and JPEG images
 const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-const input = document.getElementById('input');
-const output = document.getElementById('output');
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 
-input.addEventListener('change', (event) => {
+input.addEventListener("change", (event) => {
   const files = event.target.files;
 
   if (files.length === 0) {
-    output.innerText = 'Choose image files…';
+    output.innerText = "Choose image files…";
     return;
   }
 
-  if (Array.from(files).every((file) => allowedFileTypes.includes(file.type))) {
-    output.innerText = 'All files clear!';
-  } else {
-    output.innerText = 'Please choose image files only.';
-  }
+  const allAllowed = Array.from(files).every((file) =>
+    allowedFileTypes.includes(file.type),
+  );
+  output.innerText = allAllowed
+    ? "All files clear!"
+    : "Please choose image files only.";
 });
 ```
 

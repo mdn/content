@@ -1,19 +1,17 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Non-standard
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -28,10 +26,10 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 /* Global values */
 -webkit-mask-attachment: inherit;
 -webkit-mask-attachment: initial;
+-webkit-mask-attachment: revert;
+-webkit-mask-attachment: revert-layer;
 -webkit-mask-attachment: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -46,7 +44,10 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-mask-attachment =
+  <attachment>#
+```
 
 ## Examples
 
@@ -54,7 +55,7 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```

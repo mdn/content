@@ -1,16 +1,12 @@
 ---
-title: Headers.delete()
+title: "Headers: delete() method"
+short-title: delete()
 slug: Web/API/Headers/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - delete
 browser-compat: api.Headers.delete
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`delete()`** method of the {{domxref("Headers")}}
 interface deletes a header from the current `Headers` object.
@@ -21,13 +17,12 @@ This method throws a {{jsxref("TypeError")}} for the following reasons:
 - The value of {{Glossary("Guard")}} is `immutable`.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 ```
 
@@ -51,15 +46,15 @@ const myHeaders = new Headers(); // Currently empty
 You could add a header to this using {{domxref("Headers.append")}}:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 You can then delete it again:
 
 ```js
-myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+myHeaders.delete("Content-Type");
+myHeaders.get("Content-Type"); // Returns null, as it has been deleted
 ```
 
 ## Specifications

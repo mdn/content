@@ -1,18 +1,13 @@
 ---
-title: ContentIndexEvent.id
+title: "ContentIndexEvent: id property"
+short-title: id
 slug: Web/API/ContentIndexEvent/id
 page-type: web-api-instance-property
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - Property
-  - content indexing
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndexEvent.id
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The read-only **`id`** property of the
@@ -33,11 +28,10 @@ The {{domxref('ContentIndexEvent')}} is only available to the
 {{domxref('ServiceWorker')}}.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 

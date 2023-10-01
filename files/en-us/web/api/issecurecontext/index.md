@@ -1,17 +1,11 @@
 ---
-title: isSecureContext
+title: isSecureContext global property
+short-title: isSecureContext
 slug: Web/API/isSecureContext
 page-type: web-api-global-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - Workers
-  - isSecureContext
 browser-compat: api.isSecureContext
 ---
+
 {{APIRef}}
 
 The global **`isSecureContext`** read-only property returns a boolean indicating whether

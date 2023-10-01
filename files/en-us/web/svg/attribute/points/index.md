@@ -1,13 +1,12 @@
 ---
 title: points
 slug: Web/SVG/Attribute/points
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#PolygonElementPointsAttribute
   - https://svgwg.org/svg2-draft/shapes.html#PolylineElementPointsAttribute
 ---
+
 {{SVGRef}}
 
 The **`points`** attribute defines a list of points. Each point is defined by a pair of number representing a X and a Y coordinate in the user coordinate system. If the attribute contains an odd number of coordinates, the last one will be ignored.
@@ -20,18 +19,24 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 
   <!-- polygon is a closed shape -->
-  <polygon stroke="black" fill="none" transform="translate(100,0)"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    stroke="black"
+    fill="none"
+    transform="translate(100,0)"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   It is usually considered best practices to separate a X and Y
@@ -67,14 +72,17 @@ For {{SVGElement('polyline')}}, `points` defines a list of points, each represen
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
@@ -104,14 +112,17 @@ For {{SVGElement('polygon')}}, `points` defines a list of points, each represent
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polygon is an closed shape -->
-  <polygon stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90" />
+  <polygon stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 

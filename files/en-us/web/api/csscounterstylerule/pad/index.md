@@ -1,15 +1,11 @@
 ---
-title: CSSCounterStyleRule.pad
+title: "CSSCounterStyleRule: pad property"
+short-title: pad
 slug: Web/API/CSSCounterStyleRule/pad
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - pad
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.pad
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`pad`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/pad", "pad")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.

@@ -1,22 +1,18 @@
 ---
-title: WebGLRenderingContext.drawElements()
+title: "WebGLRenderingContext: drawElements() method"
+short-title: drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawElements
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
 ## Syntax
 
-```js
+```js-nolint
 drawElements(mode, count, type, offset)
 ```
 
@@ -52,9 +48,10 @@ drawElements(mode, count, type, offset)
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
+
     When using the {{domxref("OES_element_index_uint")}} extension:
 
-      - `gl.UNSIGNED_INT`
+    - `gl.UNSIGNED_INT`
 
 - `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying a byte offset in the element array buffer. Must

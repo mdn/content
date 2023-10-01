@@ -1,12 +1,12 @@
 ---
 title: u2
 slug: Web/SVG/Attribute/u2
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.u2
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`u2`** attribute specifies list of {{Glossary("Unicode")}} characters (refer to the description of the {{SVGAttr("unicode")}} attribute of the {{SVGElement("glyph")}} element for a description of how to express individual Unicode characters) and/or ranges of Unicode characters, which identify a set of possible second {{Glossary("glyphs")}} in a kerning pair.

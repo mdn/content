@@ -1,18 +1,13 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.value
+title: "BluetoothRemoteGATTCharacteristic: value property"
+short-title: value
 slug: Web/API/BluetoothRemoteGATTCharacteristic/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - value
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.value
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.value`** read-only

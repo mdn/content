@@ -1,16 +1,13 @@
 ---
-title: HIDDevice.sendFeatureReport()
+title: "HIDDevice: sendFeatureReport() method"
+short-title: sendFeatureReport()
 slug: Web/API/HIDDevice/sendFeatureReport
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - sendFeatureReport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.sendFeatureReport
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`sendFeatureReport()`** method of the {{domxref("HIDDevice")}} interface sends a feature report to the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
@@ -19,7 +16,7 @@ The `reportId` for each of the report formats that this device supports can be r
 
 ## Syntax
 
-```js
+```js-nolint
 sendFeatureReport(reportId, data)
 ```
 

@@ -1,14 +1,12 @@
 ---
-title: '::-webkit-outer-spin-button'
+title: "::-webkit-outer-spin-button"
 slug: Web/CSS/::-webkit-outer-spin-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-outer-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the outer part of the spinner button of number picker {{htmlelement("input")}} elements.
@@ -16,7 +14,9 @@ The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the ou
 ## Syntax
 
 ```css
-::-webkit-outer-spin-button
+::-webkit-outer-spin-button {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -30,7 +30,7 @@ This example uses `input::-webkit-outer-spin-button` to find {{HTMLElement("inpu
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS

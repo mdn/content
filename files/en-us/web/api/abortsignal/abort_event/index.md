@@ -1,13 +1,11 @@
 ---
-title: 'AbortSignal: abort event'
+title: "AbortSignal: abort event"
+short-title: abort
 slug: Web/API/AbortSignal/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.AbortSignal.abort_event
 ---
+
 {{APIRef("DOM")}}
 
 The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
@@ -16,7 +14,7 @@ The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associ
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
+```js-nolint
 addEventListener('abort', (event) => { })
 
 onabort = (event) => { }
@@ -36,8 +34,8 @@ You can detect the `abort` event using an [`addEventListener`](/en-US/docs/Web/A
 const controller = new AbortController();
 const signal = controller.signal;
 
-signal.addEventListener('abort', () => {
-  console.log('Request aborted');
+signal.addEventListener("abort", () => {
+  console.log("Request aborted");
 });
 ```
 
@@ -48,7 +46,7 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 signal.onabort = () => {
-  console.log('Request aborted');
+  console.log("Request aborted");
 };
 ```
 

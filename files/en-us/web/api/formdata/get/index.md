@@ -1,15 +1,11 @@
 ---
-title: FormData.get()
+title: "FormData: get() method"
+short-title: get()
 slug: Web/API/FormData/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`get()`** method of the {{domxref("FormData")}} interface
@@ -21,7 +17,7 @@ object. If you expect multiple values and want all of them, use the
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 
@@ -39,14 +35,14 @@ A value whose key matches the specified `name`. Otherwise, [`null`](/en-US/docs/
 If we add two `username` values to a {{domxref("FormData")}} using {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 The following `get()` method will only return the first `username` value:
 
 ```js
-formData.get('username'); // Returns "Chris"
+formData.get("username"); // Returns "Chris"
 ```
 
 ## Specifications

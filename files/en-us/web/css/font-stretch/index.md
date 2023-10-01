@@ -1,14 +1,10 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-stretch
 ---
+
 {{CSSRef}}
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
@@ -18,12 +14,12 @@ The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, con
 ## Syntax
 
 ```css
-/* Keyword values */
+/* <font-stretch-css3> keyword values */
+font-stretch: normal;
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
 font-stretch: semi-condensed;
-font-stretch: normal;
 font-stretch: semi-expanded;
 font-stretch: expanded;
 font-stretch: extra-expanded;
@@ -42,7 +38,7 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-This property may be specified as a single keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
+This property may be specified as a single `<font-stretch-css3>` keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
 
 ### Values
 
@@ -58,7 +54,7 @@ This property may be specified as a single keyword value or a single {{cssxref("
 
 ### Keyword to numeric mapping
 
-The table below shows the mapping between keyword values and numeric percentages:
+The table below shows the mapping between the `<font-stretch-css3>` keyword values and numeric percentages:
 
 | Keyword           | Percentage |
 | ----------------- | ---------- |
@@ -84,6 +80,73 @@ The face selected for a given value of `font-stretch` depends on the faces suppo
 
 The table below demonstrates the effect of supplying various different percentage values of `font-stretch` on two different fonts:
 
+```css hidden
+@font-face {
+  font-family: "Inconsolata";
+  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
+    format("woff2");
+  font-stretch: 50% 200%;
+}
+
+@font-face {
+  font-family: "Anek Malayalam";
+  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
+    format("woff2");
+  font-stretch: 75% 125%;
+}
+
+td {
+  border: solid;
+  border-width: 1px;
+}
+
+#inconsolata td {
+  font:
+    90px Inconsolata,
+    sans-serif;
+}
+#anek-malayalam td {
+  font: 90px "Anek Malayalam";
+}
+#inconsolata td:nth-child(2),
+#anek-malayalam td:nth-child(2) {
+  font-stretch: 50%;
+}
+#inconsolata td:nth-child(3),
+#anek-malayalam td:nth-child(3) {
+  font-stretch: 62.5%;
+}
+#inconsolata td:nth-child(4),
+#anek-malayalam td:nth-child(4) {
+  font-stretch: 75%;
+}
+#inconsolata td:nth-child(5),
+#anek-malayalam td:nth-child(5) {
+  font-stretch: 87.5%;
+}
+#inconsolata td:nth-child(6),
+#anek-malayalam td:nth-child(6) {
+  font-stretch: 100%;
+}
+#inconsolata td:nth-child(7),
+#anek-malayalam td:nth-child(7) {
+  font-stretch: 112.5%;
+}
+#inconsolata td:nth-child(8),
+#anek-malayalam td:nth-child(8) {
+  font-stretch: 125%;
+}
+#inconsolata td:nth-child(9),
+#anek-malayalam td:nth-child(9) {
+  font-stretch: 150%;
+}
+#inconsolata td:nth-child(10),
+#anek-malayalam td:nth-child(10) {
+  font-stretch: 200%;
+}
+```
+
+```html hidden
 <table class="standard-table">
   <thead>
     <tr>
@@ -100,35 +163,38 @@ The table below demonstrates the effect of supplying various different percentag
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Helvetica Neue</th>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 50%" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 62.5%" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 75%" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 87.5%" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 100%" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 112.5%" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 125%" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 150%" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 200%" src="screenshot_2018-06-06_example_page1.png" /></td>
+    <tr id="inconsolata">
+      <th scope="row">Inconsolata</th>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
     </tr>
-    <tr>
-      <th scope="row">League Mono Variable</th>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 50%" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 62.5%" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 75%" src="screenshot_2018-06-06_example_page2.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 87.5%" src="screenshot_2018-06-06_example_page3.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 100%" src="l-100.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 112.5%" src="l-112.5.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 125%" src="l-125.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 150%" src="l-150.png" /></td>
-      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 200%" src="l-200.png" /></td>
+    <tr id="anek-malayalam">
+      <th scope="row">Anek Malayalam</th>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
     </tr>
   </tbody>
 </table>
+```
 
-- **Helvetica Neue**, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of `font-stretch` less than 100% select the condensed face, while all other values select the normal face.
-- **[League Mono Variable](https://demos.tyfromtheinternet.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
+{{EmbedLiveSample('Font_face_selection', "100%", "300px")}}
+
+- [Anek Malayalam](https://fonts.google.com/specimen/Anek+Malayalam) is a variable google font that supports widths from 75% to 125%. Values below and above this range select the closest matching font.
+- [Inconsolata](https://fonts.google.com/specimen/Inconsolata) is a variable font that offers a continuous range of widths from 50% to 200%. <!-- Note, dynamically obtained woff2 from Google fonts using query: https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200 -->
 
 ## Formal definition
 
@@ -159,3 +225,4 @@ The table below demonstrates the effect of supplying various different percentag
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

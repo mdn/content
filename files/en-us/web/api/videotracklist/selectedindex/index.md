@@ -1,19 +1,11 @@
 ---
-title: VideoTrackList.selectedIndex
+title: "VideoTrackList: selectedIndex property"
+short-title: selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - track
 browser-compat: api.VideoTrackList.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**

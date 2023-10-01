@@ -1,23 +1,22 @@
 ---
 title: string-length
 slug: Web/XPath/Functions/string-length
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `string-length` function returns a number equal to the number of characters in a given string.
 
 ### Syntax
 
-```
+```plain
 string-length( [string] )
 ```
 
 ### Arguments
 
-- _`string`_(optional)
+- `string` (optional)
   - : The string to evaluate. If omitted, string used will be the same as the context node converted to a string.
 
 ### Returns

@@ -1,12 +1,12 @@
 ---
 title: horiz-adv-x
 slug: Web/SVG/Attribute/horiz-adv-x
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.horiz-adv-x
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`horiz-adv-x`** attribute indicates the horizontal advance after rendering a {{Glossary("glyph")}} in horizontal orientation.

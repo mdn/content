@@ -1,16 +1,11 @@
 ---
-title: BiquadFilterNode.Q
+title: "BiquadFilterNode: Q property"
+short-title: Q
 slug: Web/API/BiquadFilterNode/Q
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Q
-  - Reference
-  - Web Audio API
 browser-compat: api.BiquadFilterNode.Q
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `Q` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](https://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
@@ -25,7 +20,8 @@ An {{domxref("AudioParam")}}.
 
 ## Examples
 
-The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look at the [source code](https://github.com/mdn/voice-change-o-matic) too).
+The following example shows basic usage of an AudioContext to create a Biquad filter node.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
 const audioCtx = new AudioContext();

@@ -1,16 +1,11 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element: releasePointerCapture() method"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.releasePointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`releasePointerCapture()`** method of the
@@ -23,7 +18,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 releasePointerCapture(pointerId)
 ```
 
@@ -85,7 +80,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

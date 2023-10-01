@@ -1,16 +1,9 @@
 ---
-title: Ordering Flex Items
-slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-tags:
-  - Accessibility
-  - CSS
-  - Flex
-  - Guide
-  - direction
-  - flexbox
-  - order
-  - reverse
+title: Ordering flex items
+slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
+page-type: guide
 ---
+
 {{CSSRef}}
 
 New layout methods such as Flexbox and Grid bring with them the possibility of controlling the order of content. In this article, we will take a look at ways in which you can change the visual order of your content when using Flexbox. We will also consider the implications of reordering items from an accessibility point of view.

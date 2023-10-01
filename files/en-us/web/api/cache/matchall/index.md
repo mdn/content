@@ -1,17 +1,11 @@
 ---
-title: Cache.matchAll()
+title: "Cache: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Cache/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - matchAll
 browser-compat: api.Cache.matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`matchAll()`** method of the {{domxref("Cache")}}
@@ -20,7 +14,7 @@ responses in the {{domxref("Cache")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll()
 matchAll(request)
 matchAll(request, options)
@@ -67,14 +61,14 @@ A {{jsxref("Promise")}} that resolves to an array of all matching responses in t
 
 ## Examples
 
-The following example deletes all cached entries in the `v1` cache matching the URL `/`, even including potential query parameters. By using `{ ignoreSearch: true }`, using `matchAll` would retrieve `/` as well as `/?value=bar`.
+The following example retrieves all responses in the `v1` cache matching the URL `/`, even including potential query parameters. By using `{ ignoreSearch: true }`, using `matchAll` would retrieve `/` as well as `/?value=bar`.
+
+It then logs the number of matching responses.
 
 ```js
-caches.open('v1').then((cache) => {
-  cache.matchAll('/', { ignoreSearch: true }).then((responses) => {
-    for (const response of responses) {
-      cache.delete(response);
-    }
+caches.open("v1").then((cache) => {
+  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
+    console.log(`Found ${responses.length} matching responses`);
   });
 });
 ```

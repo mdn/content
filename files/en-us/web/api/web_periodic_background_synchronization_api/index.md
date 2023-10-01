@@ -2,22 +2,12 @@
 title: Web Periodic Background Synchronization API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background
-  - Landing
-  - Offline
-  - Overview
-  - PWA
-  - Service Workers
-  - Sync
-  - Web Periodic Background Synchronization API
-  - periodic
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager
 ---
-{{securecontext_header}}
 
-{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The Web Periodic Background Synchronization API provides a way to register tasks to be run in a {{domxref('Service Worker API','service worker')}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 
@@ -44,7 +34,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 The following additions to the {{domxref('Service Worker API')}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
 
-- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
 - {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "onperiodicsync")}}
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
@@ -61,11 +51,11 @@ The following asynchronous function registers a periodic background sync at a mi
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('get-latest-news', {
+    await registration.periodicSync.register("get-latest-news", {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
-    console.log('Periodic Sync could not be registered!');
+    console.log("Periodic Sync could not be registered!");
   }
 }
 ```
@@ -77,8 +67,7 @@ This code checks to see if a Periodic Background Sync task with a given tag is r
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes('get-latest-news'))
-      skipDownloadingLatestNewsOnPageLoad();
+    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
@@ -89,7 +78,7 @@ The following code removes a Periodic Background Sync task to stop articles sync
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 
@@ -98,8 +87,8 @@ navigator.serviceWorker.ready.then((registration) => {
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'get-latest-news') {
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "get-latest-news") {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

@@ -1,17 +1,11 @@
 ---
-title: WebGLRenderingContext.bufferData()
+title: "WebGLRenderingContext: bufferData() method"
+short-title: bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Buffer
-  - Graphics
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bufferData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
@@ -19,7 +13,7 @@ buffer object's data store.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 bufferData(target, usage)
 bufferData(target, size, usage)
@@ -41,21 +35,23 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-      - :  Buffer used for element indices.
+
+      - : Buffer used for element indices.
+
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-      - `gl.COPY_READ_BUFFER`
-        - : Buffer for copying from one buffer object to another.
-      - `gl.COPY_WRITE_BUFFER`
-        - : Buffer for copying from one buffer object to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`
-        - : Buffer for transform feedback operations.
-      - `gl.UNIFORM_BUFFER`
-        - : Buffer used for storing uniform blocks.
-      - `gl.PIXEL_PACK_BUFFER`
-        - : Buffer used for pixel transfer operations.
-      - `gl.PIXEL_UNPACK_BUFFER`
-        - : Buffer used for pixel transfer operations.
+    - `gl.COPY_READ_BUFFER`
+      - : Buffer for copying from one buffer object to another.
+    - `gl.COPY_WRITE_BUFFER`
+      - : Buffer for copying from one buffer object to another.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+      - : Buffer for transform feedback operations.
+    - `gl.UNIFORM_BUFFER`
+      - : Buffer used for storing uniform blocks.
+    - `gl.PIXEL_PACK_BUFFER`
+      - : Buffer used for pixel transfer operations.
+    - `gl.PIXEL_UNPACK_BUFFER`
+      - : Buffer used for pixel transfer operations.
 
 - `size`
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
@@ -134,8 +130,8 @@ None ({{jsxref("undefined")}}).
 ### Using bufferData
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);

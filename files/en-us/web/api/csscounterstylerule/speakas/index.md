@@ -1,15 +1,11 @@
 ---
-title: CSSCounterStyleRule.speakAs
+title: "CSSCounterStyleRule: speakAs property"
+short-title: speakAs
 slug: Web/API/CSSCounterStyleRule/speakAs
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - speakAs
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.speakAs
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`speakAs`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/speak-as","speak-as")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
@@ -26,8 +22,8 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 @counter-style box-corner {
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
-  suffix: ': ';
-  speak-as: "bullets";
+  suffix: ": ";
+  speak-as: bullets;
 }
 ```
 

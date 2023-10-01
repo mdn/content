@@ -1,14 +1,11 @@
 ---
-title: CSSStyleDeclaration.cssFloat
+title: "CSSStyleDeclaration: cssFloat property"
+short-title: cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSStyleDeclaration
-  - Reference
 browser-compat: api.CSSStyleDeclaration.cssFloat
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`cssFloat`** property of the {{domxref("CSSStyleDeclaration")}} interface returns the result of invoking {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} with `float` as an argument.

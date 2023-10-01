@@ -1,22 +1,15 @@
 ---
 title: proxy.settings
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Proxy
-  - Reference
-  - Settings
-  - WebExtensions
+page-type: webextension-api-property
 browser-compat: webextensions.api.proxy.settings
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the browser's proxy settings.
 
-> **Note:** The ability to change proxy settings requires private window access because proxy settings affect both private and non-private windows. Therefore, if an extension has not been granted private window permission, calls to `proxy.settings.set()` will throw an exception.
+> **Note:** Changing proxy settings requires private browsing window access because proxy settings affect private and non-private windows. Whether an extension can access private browsing windows is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}. If your extension does not have private window permission, calls to `proxy.settings.set()` throw an exception.
 
 The underlying value is an object with the properties listed below.
 
@@ -43,7 +36,7 @@ When setting this object, all properties are optional. Note that any properties 
 - `socksVersion` {{optional_inline}}
   - : `integer`. The version of the SOCKS proxy. May be 4 or 5. Defaults to 5.
 - `ssl` {{optional_inline}}
-  - : `string`. The address of the SSL proxy. Can include a port.
+  - : `string`. The address of the TLS/SSL proxy. Can include a port.
 
 ## Examples
 
@@ -52,10 +45,10 @@ let proxySettings = {
   proxyType: "manual",
   http: "http://proxy.org:8080",
   socksVersion: 4,
-  passthrough: ".example.org"
+  passthrough: ".example.org",
 };
 
-browser.proxy.settings.set({value: proxySettings});
+browser.proxy.settings.set({ value: proxySettings });
 ```
 
 {{WebExtExamples}}

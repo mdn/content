@@ -2,14 +2,9 @@
 title: SVGLengthList
 slug: Web/API/SVGLengthList
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGLengthList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG length list interface
@@ -18,7 +13,7 @@ The `SVGLengthList` defines a list of {{ domxref("SVGLength") }} objects.
 
 An `SVGLengthList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-> **Note:** Starting in {{Gecko("5.0") }},the `SVGLengthList` DOM interface is now indexable and can be accessed like arrays
+An `SVGLengthList` is indexable and can be accessed like an array.
 
 ### Interface overview
 
@@ -95,14 +90,14 @@ An `SVGLengthList` object can be designated as read only, which means that attem
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
-| Name                                          | Type          | Description                      |
-| --------------------------------------------- | ------------- | -------------------------------- |
-| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| Name                                 | Type          | Description                      |
+| ------------------------------------ | ------------- | -------------------------------- |
+| `numberOfItems`                      | unsigned long | The number of items in the list. |
 | `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
-## Methods
+## Instance methods
 
 <table class="standard-table">
   <thead>

@@ -1,18 +1,11 @@
 ---
-title: BiquadFilterNode.getFrequencyResponse()
+title: "BiquadFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - BiquadFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.BiquadFilterNode.getFrequencyResponse
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")
@@ -26,7 +19,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
@@ -83,13 +76,12 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>Biquad filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>Biquad filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js
-const freqResponseOutput = document.querySelector('.freq-response-output');
+const freqResponseOutput = document.querySelector(".freq-response-output");
 ```
 
 Finally, after creating our biquad filter, we use `getFrequencyResponse()`
@@ -105,10 +97,14 @@ biquadFilter.gain.value = range.value;
 // …
 
 function calcFrequencyResponse() {
-  biquadFilter.getFrequencyResponse(myFrequencyArray,magResponseOutput,phaseResponseOutput);
+  biquadFilter.getFrequencyResponse(
+    myFrequencyArray,
+    magResponseOutput,
+    phaseResponseOutput,
+  );
 
-  for (i = 0; i <= myFrequencyArray.length-1;i++){
-    const listItem = document.createElement('li');
+  for (let i = 0; i <= myFrequencyArray.length - 1; i++) {
+    const listItem = document.createElement("li");
     listItem.innerHTML = `<strong>${myFrequencyArray[i]}Hz</strong>: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }

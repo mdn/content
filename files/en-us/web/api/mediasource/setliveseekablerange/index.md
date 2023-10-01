@@ -1,20 +1,11 @@
 ---
-title: MediaSource.setLiveSeekableRange()
+title: "MediaSource: setLiveSeekableRange() method"
+short-title: setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Extensions
-  - Media
-  - MediaSource
-  - MediaSource Extensions
-  - Method
-  - Reference
-  - Video
-  - setLiveSeekableRange()
 browser-compat: api.MediaSource.setLiveSeekableRange
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`setLiveSeekableRange()`** method of the
@@ -23,7 +14,7 @@ media element.
 
 ## Syntax
 
-```js
+```js-nolint
 setLiveSeekableRange(start, end)
 ```
 

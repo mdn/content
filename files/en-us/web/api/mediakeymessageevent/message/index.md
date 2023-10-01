@@ -1,16 +1,11 @@
 ---
-title: MediaKeyMessageEvent.message
+title: "MediaKeyMessageEvent: message property"
+short-title: message
 slug: Web/API/MediaKeyMessageEvent/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyMessageEvent
-  - Property
-  - Reference
-  - message
 browser-compat: api.MediaKeyMessageEvent.message
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent.message`** read-only property

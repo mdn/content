@@ -1,22 +1,18 @@
 ---
-title: FormDataEvent()
+title: "FormDataEvent: FormDataEvent() constructor"
+short-title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - FormDataEvent
-  - Forms
-  - Reference
 browser-compat: api.FormDataEvent.FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new FormDataEvent(type, formEventInit)
 ```
 
@@ -39,9 +35,9 @@ A new {{domxref("FormDataEvent")}} object.
 
 ```js
 const fd = new FormData();
-fd.append('test', 'test');
+fd.append("test", "test");
 
-const fdEv = new FormDataEvent('formdata', { formData: fd });
+const fdEv = new FormDataEvent("formdata", { formData: fd });
 
 for (const value of fdEv.formData.values()) {
   console.log(value);

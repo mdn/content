@@ -1,16 +1,11 @@
 ---
-title: GeolocationCoordinates.speed
+title: "GeolocationCoordinates: speed property"
+short-title: speed
 slug: Web/API/GeolocationCoordinates/speed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - speed
 browser-compat: api.GeolocationCoordinates.speed
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.speed`** read-only property is a

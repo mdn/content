@@ -1,36 +1,38 @@
 ---
-title: NDEFReadingEvent()
+title: "NDEFReadingEvent: NDEFReadingEvent() constructor"
+short-title: NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - NDEFReadingEvent
+status:
+  - experimental
 browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
 ---
+
 {{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
 
 The **`NDEFReadingEvent()`** constructor creates a new {{domxref("NDEFReadingEvent")}} object which represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new NDEFReadingEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :  A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `reading`.
 - `options`
+
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+
     - `serialNumber` {{optional_inline}}
       - : The serial number of the device a message was read from. It default to `""`, and can be set to `null`.
     - `message`
+
       - : An object with the following members:
+
         - `data` {{optional_inline}}
           - : Contains the data to be transmitted. It can be a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}

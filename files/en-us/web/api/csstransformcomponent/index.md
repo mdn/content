@@ -2,27 +2,19 @@
 title: CSSTransformComponent
 slug: Web/API/CSSTransformComponent
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
 browser-compat: api.CSSTransformComponent
 ---
+
 {{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformComponent`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.
 
-## Properties
+## Instance properties
 
 - {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}
   - : Returns a boolean indicting whether the transform is 2D or 3D.
 
-## Methods
+## Instance methods
 
 - {{domxref("CSSTransformComponent.toMatrix()")}}
   - : Returns a new {{domxref('DOMMatrix')}} object.

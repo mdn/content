@@ -2,14 +2,9 @@
 title: Web Animations API
 slug: Web/API/Web_Animations_API
 page-type: web-api-overview
-tags:
-  - API
-  - Animation
-  - Landing
-  - Reference
-  - Web Animations
 spec-urls: https://drafts.csswg.org/web-animations/
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.

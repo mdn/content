@@ -1,15 +1,11 @@
 ---
-title: HTMLSelectElement.remove()
+title: "HTMLSelectElement: remove() method"
+short-title: remove()
 slug: Web/API/HTMLSelectElement/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.remove
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.remove()`** method removes the element
@@ -17,7 +13,7 @@ at the specified index from the options collection for this select element.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(index)
 ```
 
@@ -34,9 +30,9 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
+  <option value="1">Option: Value 1</option>
+  <option value="2">Option: Value 2</option>
+  <option value="3">Option: Value 3</option>
 </select>
 ```
 
@@ -49,8 +45,8 @@ HTML is now:
 
 ```html
 <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
+  <option value="1">Option: Value 1</option>
+  <option value="3">Option: Value 3</option>
 </select>
 ```
 

@@ -1,17 +1,11 @@
 ---
-title: AudioContext.suspend()
+title: "AudioContext: suspend() method"
+short-title: suspend()
 slug: Web/API/AudioContext/suspend
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - suspend
 browser-compat: api.AudioContext.suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `suspend()` method of the {{ domxref("AudioContext") }} Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.
@@ -20,7 +14,7 @@ This method will cause an `INVALID_STATE_ERR` exception to be thrown if called o
 
 ## Syntax
 
-```js
+```js-nolint
 suspend()
 ```
 
@@ -38,16 +32,16 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 
 ```js
 susresBtn.onclick = () => {
-  if (audioCtx.state === 'running') {
+  if (audioCtx.state === "running") {
     audioCtx.suspend().then(() => {
-      susresBtn.textContent = 'Resume context';
+      susresBtn.textContent = "Resume context";
     });
-  } else if (audioCtx.state === 'suspended') {
+  } else if (audioCtx.state === "suspended") {
     audioCtx.resume().then(() => {
-      susresBtn.textContent = 'Suspend context';
+      susresBtn.textContent = "Suspend context";
     });
   }
-}
+};
 ```
 
 ## Specifications

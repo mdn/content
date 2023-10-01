@@ -2,25 +2,18 @@
 title: XRJointSpace
 slug: Web/API/XRJointSpace
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
 browser-compat: api.XRJointSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the position and orientation of an {{domxref("XRHand")}} joint.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("XRJointSpace.jointName")}} {{readonlyInline}}
+- {{domxref("XRJointSpace.jointName")}} {{ReadOnlyInline}}
   - : The name of the joint that is tracked. See {{domxref("XRHand")}} for possible hand joint names.
 
 ## Examples

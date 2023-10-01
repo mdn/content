@@ -1,13 +1,12 @@
 ---
 title: Set Window Rect
 slug: Web/WebDriver/Commands/SetWindowRect
-tags:
-  - Command
-  - Reference
-  - Set Window Rect
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.SetWindowRect
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/commands")}}
+
 The _Set Window Rect_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API alters the size and position of the operating system window associated with the current [`window`](/en-US/docs/Web/API/Window). The command acts as the setter of [Get Window Rect](/en-US/docs/Web/WebDriver/Commands/GetWindowRect), which return object you can pass directly as this command's payload.
 
 Certain subsets of devices do not support setting the window dimensions or its position. On these configurations the command will return an [unsupported operating](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation) error. To avoid running into situations where calling this might error it is possible to call it conditionally on whether the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect) is set to true for the session.
@@ -37,9 +36,7 @@ The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
 
 - `x`
 
-  - : Horizontal position of the [`window`](/en-US/docs/Web/API/Window), which equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX). Must be a number in the −(2^31
-
-    <!--) to 2^31 − 1 range, null, or undefined.</dd-->
+  - : Horizontal position of the [`window`](/en-US/docs/Web/API/Window), which equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX). Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.
 
 - `y`
   - : Vertical position of the [`window`](/en-US/docs/Web/API/Window), which is equivalent to [`Window.screenY`](/en-US/docs/Web/API/Window/screenY). Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.
@@ -50,7 +47,7 @@ The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
 
 ### Response
 
-The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow)[:](/en-US/docs/Web/WebDriver/WebWindow)
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 
 - `x`
   - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).
@@ -94,5 +91,3 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow)[:]
   - [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle)
   - [Get Window Handles](/en-US/docs/Web/WebDriver/Commands/GetWindowHandles)
   - [Close Window](/en-US/docs/Web/WebDriver/Commands/CloseWindow)
-
-{{QuickLinksWithSubpages}}

@@ -1,18 +1,11 @@
 ---
-title: CanvasCaptureMediaStreamTrack.requestFrame()
+title: "CanvasCaptureMediaStreamTrack: requestFrame() method"
+short-title: requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 page-type: web-api-instance-method
-tags:
-  - Canvas
-  - CanvasCaptureMediaStream
-  - DOM
-  - Frame Capture
-  - Media
-  - Method
-  - Reference
-  - requestFrame
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} method
@@ -30,8 +23,8 @@ the stream.
 
 ## Syntax
 
-```js
-stream.requestFrame();
+```js-nolint
+stream.requestFrame()
 ```
 
 ### Return value

@@ -1,16 +1,11 @@
 ---
-title: WritableStreamDefaultController.error()
+title: "WritableStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/WritableStreamDefaultController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the
@@ -24,7 +19,7 @@ the underlying sink.
 
 ## Syntax
 
-```js
+```js-nolint
 error(message)
 ```
 
@@ -51,7 +46,7 @@ const writableStream = new WritableStream({
     // do stuff with controller
 
     // error stream if necessary
-    controller.error('My error is broken');
+    controller.error("My error is broken");
   },
   write(chunk, controller) {
     // ...
@@ -61,7 +56,7 @@ const writableStream = new WritableStream({
   },
   abort(err) {
     // ...
-  }
+  },
 });
 ```
 

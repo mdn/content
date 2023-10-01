@@ -1,12 +1,8 @@
 ---
 title: Local
 slug: WebAssembly/Reference/Variables/Local
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`local`** instruction declares a new local variable.

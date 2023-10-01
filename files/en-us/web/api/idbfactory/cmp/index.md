@@ -1,18 +1,11 @@
 ---
-title: IDBFactory.cmp()
+title: "IDBFactory: cmp() method"
+short-title: cmp()
 slug: Web/API/IDBFactory/cmp
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - cmp
 browser-compat: api.IDBFactory.cmp
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`cmp()`** method of the {{domxref("IDBFactory")}}
@@ -30,7 +23,7 @@ operations, such as storing and iterating.
 
 ## Syntax
 
-```js
+```js-nolint
 cmp(first, second)
 ```
 
@@ -82,4 +75,4 @@ console.log(`Comparison results: ${result}`);
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

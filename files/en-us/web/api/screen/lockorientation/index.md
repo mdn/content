@@ -1,17 +1,13 @@
 ---
-title: Screen.lockOrientation()
+title: "Screen: lockOrientation() method"
+short-title: lockOrientation()
 slug: Web/API/Screen/lockOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsUpdate
-  - Screen Orientation
-  - screen
+status:
+  - deprecated
 browser-compat: api.Screen.lockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 The **`lockOrientation()`** method of the {{DOMxRef("Screen")}}
@@ -24,7 +20,7 @@ interface locks the screen into a specified orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 lockOrientation(orientation)
 ```
 
@@ -45,6 +41,7 @@ lockOrientation(orientation)
         normal position and that position is in portrait, or if the normal position of the
         device is in landscape and the device held turned by 90° clockwise. The normal
         position is device dependent.
+
     - `portrait-secondary`
       - : It represents the orientation of the screen when it is in its secondary portrait
         mode. A screen is considered in its secondary portrait mode if the device is held 180°
@@ -92,7 +89,10 @@ doesn't indicate that the screen orientation is indeed locked: there may be a de
 ### Usage with a string argument
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // Orientation was locked
@@ -104,9 +104,14 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 ### Usage with an `Array` argument
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
-if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
+if (
+  screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])
+) {
   // Orientation was locked
 } else {
   // Orientation lock failed

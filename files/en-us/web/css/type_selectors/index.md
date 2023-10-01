@@ -1,15 +1,10 @@
 ---
 title: Type selectors
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - HTML
-  - Node
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.type
 ---
+
 {{CSSRef}}
 
 The CSS **type selector** matches elements by node name. In other words, it selects all elements of the given type within a document.
@@ -61,7 +56,9 @@ In this example the selector will only match `<h1>` elements in the example name
 
 ```css
 @namespace example url(http://www.example.com);
-example|h1 { color: blue }
+example|h1 {
+  color: blue;
+}
 ```
 
 ## Specifications
@@ -74,5 +71,5 @@ example|h1 { color: blue }
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
 - [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

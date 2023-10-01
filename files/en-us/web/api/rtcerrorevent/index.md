@@ -2,19 +2,9 @@
 title: RTCErrorEvent
 slug: Web/API/RTCErrorEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Error
-  - Error Handling
-  - ICE
-  - Interface
-  - RTCErrorEvent
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - rtc
 browser-compat: api.RTCErrorEvent
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The WebRTC API's **`RTCErrorEvent`** interface represents an error sent to a WebRTC object. It's based on the standard {{domxref("Event")}} interface, but adds RTC-specific information describing the error, as shown below.
@@ -26,14 +16,14 @@ The WebRTC API's **`RTCErrorEvent`** interface represents an error sent to a Web
 - {{domxref("RTCErrorEvent.RTCErrorEvent", "RTCErrorEvent()")}}
   - : Creates and returns a new `RTCErrorEvent` object.
 
-## Properties
+## Instance properties
 
 _In addition to the standard properties available on the {{domxref("Event")}} interface, `RTCErrorEvent` also includes the following:_
 
 - {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
   - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
 
-## Methods
+## Instance methods
 
 _No additional methods are provided beyond any found on the parent interface, {{domxref("Event")}}._
 

@@ -1,24 +1,11 @@
 ---
-title: XRJointSpace.jointName
+title: "XRJointSpace: jointName property"
+short-title: jointName
 slug: Web/API/XRJointSpace/jointName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Controller
-  - Hand
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRJointSpace
-
 browser-compat: api.XRJointSpace.jointName
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only **`jointName`** property of the {{domxref("XRJointSpace")}} interface contains the name of the joint it tracks.

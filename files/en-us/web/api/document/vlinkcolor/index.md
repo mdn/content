@@ -1,18 +1,13 @@
 ---
-title: Document.vlinkColor
+title: "Document: vlinkColor property"
+short-title: vlinkColor
 slug: Web/API/Document/vlinkColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - NeedsExample
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.vlinkColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`Document.vlinkColor`** property gets/sets the color of

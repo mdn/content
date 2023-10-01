@@ -1,16 +1,13 @@
 ---
-title: UIEvent.initUIEvent()
+title: "UIEvent: initUIEvent() method"
+short-title: initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Event
-  - Method
-  - UIEvent
+status:
+  - deprecated
 browser-compat: api.UIEvent.initUIEvent
 ---
+
 {{APIRef("UI Events")}} {{deprecated_header}}
 
 The **`UIEvent.initUIEvent()`** method initializes a UI event
@@ -23,12 +20,11 @@ dispatched, it doesn't do anything anymore.
 
 > **Warning:** Do not use this method anymore as it is deprecated.
 >
-> Instead use specific event constructors, like {{domxref("UIEvent.UIEvent",
-    "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> Instead use specific event constructors, like {{domxref("UIEvent.UIEvent", "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
 ## Syntax
 
-```js
+```js-nolint
 initUIEvent(type, canBubble, cancelable, view, detail)
 ```
 
@@ -44,9 +40,9 @@ initUIEvent(type, canBubble, cancelable, view, detail)
   - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
 - `view`
-  - : Is the {{domxref("WindowProxy")}} associated with the event.
+  - : Is the {{glossary("WindowProxy")}} associated with the event.
 - `detail`
-  - : An `unsigned long`  specifying some detail information about the
+  - : An `unsigned long` specifying some detail information about the
     event, depending on the type of event. For mouse events, it indicates how many times
     the mouse has been clicked on a given screen location.
 

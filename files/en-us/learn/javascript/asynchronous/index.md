@@ -1,21 +1,9 @@
 ---
 title: Asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
+page-type: learn-module
 ---
+
 {{LearnSidebar}}
 
 In this module, we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.

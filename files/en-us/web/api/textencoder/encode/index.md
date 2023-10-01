@@ -1,26 +1,18 @@
 ---
-title: TextEncoder.encode()
+title: "TextEncoder: encode() method"
+short-title: encode()
 slug: Web/API/TextEncoder/encode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Encoding
-  - Method
-  - Reference
-  - TextEncoder
-  - encode
 browser-compat: api.TextEncoder.encode
 ---
+
 {{APIRef("Encoding API")}}
 
-The **`TextEncoder.encode()`** method takes a
-string as input, and returns a {{jsxref("Global_Objects/Uint8Array",
-  "Uint8Array")}} containing the text given in parameters encoded with the specific method
-for that {{domxref("TextEncoder")}} object.
+The **`TextEncoder.encode()`** method takes a string as input, and returns a {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} containing the text given in parameters encoded with the specific method for that {{domxref("TextEncoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(string)
 ```
 
@@ -37,12 +29,12 @@ A {{jsxref("Uint8Array")}} object.
 
 ```html
 <p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result: </p>
+<p class="result">Encoded result:</p>
 ```
 
 ```js
-const sourcePara = document.querySelector('.source');
-const resultPara = document.querySelector('.result');
+const sourcePara = document.querySelector(".source");
+const resultPara = document.querySelector(".result");
 const string = sourcePara.textContent;
 
 const textEncoder = new TextEncoder();

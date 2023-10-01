@@ -1,15 +1,11 @@
 ---
-title: HTMLInputElement.showPicker()
+title: "HTMLInputElement: showPicker() method"
+short-title: showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.showPicker()`** method displays the browser picker for an `input` element.
@@ -23,7 +19,7 @@ More generally, this method should ideally display the picker for any input elem
 
 ## Syntax
 
-```js
+```js-nolint
 showPicker()
 ```
 
@@ -44,6 +40,10 @@ None ({{jsxref("undefined")}}).
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe, except for file and color pickers (exempt for historical reasons).
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 ### Feature Detection
@@ -51,7 +51,7 @@ None ({{jsxref("undefined")}}).
 The code below shows how to check if `showPicker()` is supported:
 
 ```js
-if ('showPicker' in HTMLInputElement.prototype) {
+if ("showPicker" in HTMLInputElement.prototype) {
   // showPicker() is supported.
 }
 ```
@@ -67,13 +67,13 @@ This example shows how this feature can be used for `color` and `file` input pic
 
 ```html
 <p>
-<input type="color">
-<button id ="color">Show the color picker</button>
+  <input type="color" />
+  <button id="color">Show the color picker</button>
 </p>
 
 <p>
-<input type="file">
-<button id ="file">Show the file picker</button>
+  <input type="file" />
+  <button id="file">Show the file picker</button>
 </p>
 ```
 
@@ -108,30 +108,30 @@ First we define a `<datalist>` in HTML consisting of a number of internet browse
 
 ```html
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
-<input type="text" list="browsers">
+
+<input type="text" list="browsers" />
 <button>Select browser</button>
 ```
 
 The code below adds an event listener that calls `showPicker()` when the button is clicked.
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ### showPicker() for autocomplete
@@ -141,23 +141,22 @@ The code below adds an event listener that calls `showPicker()` when the button 
 Here we define an input that takes an autocomplete option of "name".
 
 ```html
-<input autocomplete="name">
-<button>Show autocomplete options</button>
+<input autocomplete="name" /> <button>Show autocomplete options</button>
 ```
 
 The code below shows the picker for the input when the button is clicked.
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ## Specifications

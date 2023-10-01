@@ -1,12 +1,10 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-tags:
-  - HTTP
-  - Reference
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.406
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`406 Not Acceptable`**
@@ -31,7 +29,7 @@ among them.
 
 ## Status
 
-```
+```http
 406 Not Acceptable
 ```
 

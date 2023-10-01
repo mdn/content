@@ -1,12 +1,11 @@
 ---
 title: Expando
 slug: Glossary/Expando
-tags:
-  - CodingScripting
-  - JavaScript
-  - Reference
-  - expando
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 Expando properties are properties added to {{glossary("DOM")}} nodes with {{glossary("JavaScript")}}, where those properties are not part of the {{glossary("object","object's")}} DOM specification:
 
 ```js

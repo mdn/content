@@ -1,16 +1,11 @@
 ---
-title: AudioWorkletNode.port
+title: "AudioWorkletNode: port property"
+short-title: port
 slug: Web/API/AudioWorkletNode/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioWorkletNode
-  - Property
-  - Reference
-  - Web Audio API
-  - port
 browser-compat: api.AudioWorkletNode.port
 ---
+
 {{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the
@@ -39,19 +34,19 @@ Note that this should be done in a separate file.
 ```js
 // ping-pong-processor.js
 class PingPongProcessor extends AudioWorkletProcessor {
-  constructor (...args) {
-    super(...args)
+  constructor(...args) {
+    super(...args);
     this.port.onmessage = (e) => {
-      console.log(e.data)
-      this.port.postMessage('pong')
-    }
+      console.log(e.data);
+      this.port.postMessage("pong");
+    };
   }
-  process (inputs, outputs, parameters) {
-    return true
+  process(inputs, outputs, parameters) {
+    return true;
   }
 }
 
-registerProcessor('ping-pong-processor', PingPongProcessor)
+registerProcessor("ping-pong-processor", PingPongProcessor);
 ```
 
 Now in our main scripts file we'll load the processor, create an instance of
@@ -59,14 +54,14 @@ Now in our main scripts file we'll load the processor, create an instance of
 an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('ping-pong-processor.js')
-const pingPongNode = new AudioWorkletNode(audioContext, 'ping-pong-processor')
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("ping-pong-processor.js");
+const pingPongNode = new AudioWorkletNode(audioContext, "ping-pong-processor");
 // send the message containing 'ping' string
 // to the AudioWorkletProcessor from the AudioWorkletNode every second
-setInterval(() => pingPongNode.port.postMessage('ping'), 1000)
-pingPongNode.port.onmessage = (e) => console.log(e.data)
-pingPongNode.connect(audioContext.destination)
+setInterval(() => pingPongNode.port.postMessage("ping"), 1000);
+pingPongNode.port.onmessage = (e) => console.log(e.data);
+pingPongNode.connect(audioContext.destination);
 ```
 
 This will output `"ping"` and `"pong"` strings to the console

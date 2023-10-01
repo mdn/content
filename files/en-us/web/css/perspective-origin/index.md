@@ -1,20 +1,10 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-tags:
-  - 3D
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Graphics
-  - Property
-  - Reference
-  - Transforms
-  - perspective
-  - perspective-origin
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.perspective-origin
 ---
+
 {{CSSRef}}
 
 The **`perspective-origin`** [CSS](/en-US/docs/Web/CSS) property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the {{cssxref("perspective")}} property.
@@ -76,7 +66,7 @@ perspective-origin: unset;
 
 ### Changing the perspective origin
 
-An example showing how to change `perspective-origin` is given in [Using CSS transforms > Changing the perspective origin](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms#changing_the_perspective_origin).
+An example showing how to change `perspective-origin` is given in [Using CSS transforms > Changing the perspective origin](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#changing_the_perspective_origin).
 
 ## Specifications
 
@@ -88,7 +78,7 @@ An example showing how to change `perspective-origin` is given in [Using CSS tra
 
 ## See also
 
-- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}

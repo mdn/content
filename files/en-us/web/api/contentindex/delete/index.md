@@ -1,20 +1,13 @@
 ---
-title: ContentIndex.delete()
+title: "ContentIndex: delete() method"
+short-title: delete()
 slug: Web/API/ContentIndex/delete
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content index
-  - content indexing
-  - delete
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.delete
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the
@@ -26,8 +19,8 @@ content.
 
 ## Syntax
 
-```js
-ContentIndex.delete(id).then(/* … */);
+```js-nolint
+ContentIndex.delete(id).then(/* … */)
 ```
 
 ### Parameters
@@ -44,21 +37,18 @@ No exceptions are thrown.
 
 ## Examples
 
-Below is an asynchronous function, that removes an item from the {{domxref('Content
-  Index API','content index')}}. We receive a reference to the current
+Below is an asynchronous function, that removes an item from the [content index](/en-US/docs/Web/API/Content_Index_API). We receive a reference to the current
 {{domxref('ServiceWorkerRegistration')}}, which allows us to access the
 {{domxref('ServiceWorkerRegistration.index','index')}} property and thus access the
 `delete` method.
 
 ```js
 async function unregisterContent(article) {
-
   // reference registration
   const registration = await navigator.serviceWorker.ready;
 
   // feature detect Content Index
-  if (!registration.index)
-    return;
+  if (!registration.index) return;
 
   // unregister content from index
   await registration.index.delete(article.id);
@@ -69,7 +59,7 @@ The `delete` method can also be used within the
 [service worker](/en-US/docs/Web/API/ServiceWorker) scope.
 
 ```js
-self.registration.index.delete('my-id');
+self.registration.index.delete("my-id");
 ```
 
 ## Specifications

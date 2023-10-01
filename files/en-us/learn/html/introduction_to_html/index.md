@@ -1,17 +1,9 @@
 ---
 title: Introduction to HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - CodingScripting
-  - HTML
-  - Introduction to HTML
-  - Landing
-  - Links
-  - Structure
-  - Text
-  - head
-  - semantics
+page-type: learn-module
 ---
+
 {{LearnSidebar}}
 
 At its heart, {{glossary("HTML")}} is a language made up of {{Glossary("Element","elements")}}, which can be applied to pieces of text to give them different meaning in a document (Is it a paragraph? Is it a bulleted list? Is it part of a table?), structure a document into logical sections (Does it have a header? Three columns of content? A navigation menu?), and embed content such as images and videos into a page. This module will introduce the first two of these and introduce fundamental concepts and syntax you need to know to understand HTML.

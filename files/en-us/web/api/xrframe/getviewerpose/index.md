@@ -1,24 +1,14 @@
 ---
-title: XRFrame.getViewerPose()
+title: "XRFrame: getViewerPose() method"
+short-title: getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - getViewerPose
-  - pose
+status:
+  - experimental
 browser-compat: api.XRFrame.getViewerPose
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getViewerPose()`** method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object which describes the viewer's pose (position and orientation) relative to the specified reference space.
 
@@ -26,7 +16,7 @@ See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calculat
 
 ## Syntax
 
-```js
+```js-nolint
 getViewerPose(referenceSpace)
 ```
 

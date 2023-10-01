@@ -1,14 +1,10 @@
 ---
 title: skewX()
 slug: Web/CSS/transform-function/skewX
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.skewX
 ---
+
 {{CSSRef}}
 
 The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element in the
@@ -17,7 +13,7 @@ horizontal direction on the 2D plane. Its result is a {{cssxref("&lt;transform-f
 {{EmbedInteractiveExample("pages/css/function-skewX.html")}}
 
 This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
-each point within an element by a certain angle in the horizontal direction. The abscissa coordinate of each point is
+each point within an element by a certain angle in the horizontal direction. The abscissa (horizontal, x-coordinate) of each point is
 modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
 origin a point is, the greater will be the value added it.
 
@@ -33,15 +29,15 @@ skewX(a)
 ### Values
 
 - `a`
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the abscissa.
+  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the abscissa (horizontal, x-coordinate).
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^2</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
-      <th scope="col">Cartesian coordinates on ℝ^3</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
+      <th scope="col"><a href="/en-US/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
   </thead>
   <tbody>
@@ -184,3 +180,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

@@ -1,18 +1,10 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.connect
 ---
+
 {{AddonSidebar()}}
 
 Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) that belong to this extension and are running in the specified tab. This function returns a {{WebExtAPIRef("runtime.Port")}} object.
@@ -23,7 +15,7 @@ For more details, see [connection-based messaging](/en-US/docs/Mozilla/Add-ons/W
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.connect(
   tabId,      // integer
   connectInfo // optional object
@@ -54,11 +46,10 @@ In this example a background script listens for a click on a [browser action](/e
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    let examplePort = browser.tabs.connect(
-      tabs[0].id,
-      {name: "tabs-connect-example"}
-    );
-    examplePort.postMessage({greeting: "Hi from background script"});
+    let examplePort = browser.tabs.connect(tabs[0].id, {
+      name: "tabs-connect-example",
+    });
+    examplePort.postMessage({ greeting: "Hi from background script" });
   }
 }
 
@@ -68,7 +59,8 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
-    currentWindow: true, active: true
+    currentWindow: true,
+    active: true,
   });
   gettingActive.then(connectToTab, onError);
 });
@@ -81,10 +73,9 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-connect) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +102,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

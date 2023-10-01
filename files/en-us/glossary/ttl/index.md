@@ -1,19 +1,16 @@
 ---
 title: TTL
 slug: Glossary/TTL
-tags:
-  - Caching
-  - Domain Name System
-  - Glossary
-  - Infrastructure
-  - Networking
-  - Performance
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 Time To Live (TTL) can refer to either the lifetime of a packet in a network, or the expiry time of cached data.
 
 ## Networking
 
-In networking, the TTL, embedded in the packet, is a usually defined as a number of hops or as an expiration timestamp after which the packet is dropped. It provides a way to avoids network congestion, but releasing packets after they roamed the network too long.
+In networking, the TTL, embedded in the packet, is a usually defined as a number of hops or as an expiration timestamp after which the packet is dropped. It provides a way to avoid network congestion, but releasing packets after they roamed the network too long.
 
 ## Caching
 

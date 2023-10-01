@@ -1,16 +1,11 @@
 ---
-title: 'Document: selectionchange event'
+title: "Document: selectionchange event"
+short-title: selectionchange
 slug: Web/API/Document/selectionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
 browser-compat: api.Document.selectionchange_event
 ---
+
 {{APIRef}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the current {{domxref("Selection")}} of a {{domxref("Document")}} is changed.
@@ -26,9 +21,9 @@ The event can be handled by adding an event listener for `selectionchange` or us
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## Event type
@@ -39,7 +34,7 @@ A generic {{domxref("Event")}}.
 
 ```js
 // addEventListener version
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   console.log(document.getSelection());
 });
 
@@ -59,6 +54,6 @@ document.onselectionchange = () => {
 
 ## See also
 
-- {{domxref("Document/selectstart_event", "selectstart")}}
+- {{domxref("Node/selectstart_event", "selectstart")}}
 - {{domxref("Document.getSelection()")}}
 - {{domxref("Selection", "Selection")}}

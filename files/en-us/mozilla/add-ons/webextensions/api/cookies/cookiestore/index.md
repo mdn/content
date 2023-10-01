@@ -1,23 +1,17 @@
 ---
 title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
-tags:
-  - API
-  - Add-ons
-  - CookieStore
-  - Cookies
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.CookieStore
 ---
+
 {{AddonSidebar()}}
 
 The `CookieStore` type of the {{WebExtAPIRef("cookies")}} API represents a cookie store in the browser.
 
-Windows in different browsing modes may use different cookie stores — a private browsing/incognito mode window, for instance, will use a separate cookie store from a non-incognito/private window.
+Windows in different browsing modes may use different cookie stores. For example, a private browsing/incognito mode window uses a separate cookie store from a non-incognito/private window. Also, a window may have several cookie stores when using [container tabs](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) in Firefox.
+
+See [Work with the Cookies API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API#cookie_stores) for more information about cookie stores.
 
 ## Type
 
@@ -25,8 +19,9 @@ Values of this type are objects, which can contain the following properties:
 
 - `id`
   - : A `string` representing the unique identifier for the cookie store.
-- `incognito`
+- `incognito` {{optional_inline}}
   - : A boolean value that indicates whether this is an incognito cookie store.
+    This property is not supported in Chrome or Safari. However, you can identify incognito cookie stores in Chrome because their `id` is always "1".
 - `tabIds`
   - : An `array` of `integers`, which identifies all of the browser tabs that share this cookie store.
 
@@ -40,31 +35,31 @@ In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} m
 
 ```js
 function logStores(cookieStores) {
-  for (store of cookieStores) {
+  for (const store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
-let getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
+browser.cookies.getAllCookieStores().then(logStores);
 ```
 
 The following code snippet gets all cookie stores and then logs the total number of stores and how many of those stores are incognito.
 
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
-  let incognitoStores = stores.map((store) => store.incognito);
-  console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
+  const incognitoStores = stores.map((store) => store.incognito);
+  console.log(
+    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`,
+  );
 });
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-CookieStore) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,4 +86,4 @@ browser.cookies.getAllCookieStores().then((stores) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

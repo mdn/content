@@ -1,13 +1,7 @@
 ---
-title: 'ARIA: generic role'
+title: "ARIA: generic role"
 slug: Web/Accessibility/ARIA/Roles/generic_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#generic
 ---
 
@@ -49,6 +43,6 @@ This role is for use by user agents and not by developers. As such, no appropria
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

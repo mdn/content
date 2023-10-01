@@ -1,18 +1,10 @@
 ---
 title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
-tags:
-  - API
-  - Add-ons
-  - BlockingResponse
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.BlockingResponse
 ---
+
 {{AddonSidebar()}}
 
 An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument.
@@ -40,7 +32,7 @@ Values of this type are objects. They contain the following properties:
 
   - : `string`. This is a URL, and if set, the original request is redirected to that URL. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} or {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
 
-    Redirections to non-HTTP schemes such as data: are allowed, but they are not currently supported ({{bug("707624")}}). Redirects use the same request method as the original request unless initiated from `onHeadersReceived` stage, in which case the redirect uses the GET method.
+    Redirections to non-HTTP schemes such as data: are allowed, but they are not currently supported ([Firefox bug 707624](https://bugzil.la/707624)). Redirects use the same request method as the original request unless initiated from `onHeadersReceived` stage, in which case the redirect uses the GET method.
 
     If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
@@ -59,7 +51,8 @@ Values of this type are objects. They contain the following properties:
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-BlockingResponse) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -86,4 +79,4 @@ Values of this type are objects. They contain the following properties:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

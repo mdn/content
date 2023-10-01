@@ -1,15 +1,11 @@
 ---
-title: TransformStream.readable
+title: "TransformStream: readable property"
+short-title: readable
 slug: Web/API/TransformStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - TransformStream
 browser-compat: api.TransformStream.readable
 ---
+
 {{APIRef("Streams")}}
 
 The **`readable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("ReadableStream")}} instance controlled by this `TransformStream`.
@@ -24,7 +20,7 @@ The following example creates a new {{domxref("TransformStream")}} as `textEncod
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable) // a ReadableStream
+console.log(textEncoderStream.readable); // a ReadableStream
 ```
 
 ## Specifications

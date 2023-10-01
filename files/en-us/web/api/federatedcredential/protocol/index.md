@@ -1,18 +1,13 @@
 ---
-title: FederatedCredential.protocol
+title: "FederatedCredential: protocol property"
+short-title: protocol
 slug: Web/API/FederatedCredential/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - Experimental
-  - FederatedCredential
-  - NeedsExample
-  - Property
-  - Reference
-  - credential management
+status:
+  - experimental
 browser-compat: api.FederatedCredential.protocol
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 The **`protocol`** property of the

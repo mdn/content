@@ -1,24 +1,18 @@
 ---
-title: AnalyserNode()
+title: "AnalyserNode: AnalyserNode() constructor"
+short-title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 page-type: web-api-constructor
-tags:
-  - API
-  - AnalyserNode
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.AnalyserNode
 ---
+
 {{APIRef("'Web Audio API'")}}
 
 The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("AnalyserNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new AnalyserNode(context)
 new AnalyserNode(context, options)
 ```
@@ -28,6 +22,7 @@ new AnalyserNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
 - `options` {{optional_inline}}
+
   - : An object with the following properties, all optional:
 
     - `fftSize`
@@ -46,7 +41,7 @@ new AnalyserNode(context, options)
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
         definition depend on the value of `channelCountMode`.
     - `channelCountMode`
-      - : Represents an enumerated value describing the way channels must be matched between
+      - : Represents an [enumerated](/en-US/docs/Glossary/Enumerated) value describing the way channels must be matched between
         the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
         information including default values.)
     - `channelInterpretation`

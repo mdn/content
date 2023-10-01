@@ -2,14 +2,9 @@
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
 page-type: web-api-interface
-tags:
-  - API
-  - AudioDestinationNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `AudioDestinationNode` interface represents the end destination of an audio graph in a given context — usually the speakers of your device. It can also be the node that will "record" the audio data when used with an `OfflineAudioContext`.
@@ -45,14 +40,14 @@ The `AudioDestinationNode` of a given `AudioContext` can be retrieved using the 
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AudioDestinationNode.maxChannelCount")}}
   - : An `unsigned long` defining the maximum number of channels that the physical device can handle.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -67,7 +62,7 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) or [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin).
+To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) or [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin).
 
 ## Specifications
 

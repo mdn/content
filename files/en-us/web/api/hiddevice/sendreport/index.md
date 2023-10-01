@@ -1,16 +1,13 @@
 ---
-title: HIDDevice.sendReport()
+title: "HIDDevice: sendReport() method"
+short-title: sendReport()
 slug: Web/API/HIDDevice/sendReport
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - sendReport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.sendReport
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`sendReport()`** method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.
@@ -19,7 +16,7 @@ The `reportId` for each of the report formats that this device supports can be r
 
 ## Syntax
 
-```js
+```js-nolint
 sendReport(reportId, data)
 ```
 
@@ -50,8 +47,10 @@ const enableVibrationData = [1, 0, 1, 64, 64, 0, 1, 64, 64, 0x48, 0x01];
 await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // Then, send a command to make the Joy-Con device rumble.
-// Actual bytes are available in the sample below.
-const rumbleData = [ /* … */ ];
+// Actual bytes are available in the sample.
+const rumbleData = [
+  /* … */
+];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```
 

@@ -2,125 +2,39 @@
 title: MutationRecord
 slug: Web/API/MutationRecord
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - DOM
-  - DOM Reference
-  - NeedsContent
-  - Reference
 browser-compat: api.MutationRecord
 ---
+
 {{APIRef("DOM")}}
 
-A **`MutationRecord`** represents an individual DOM mutation. It is the object that is inside the array passed to {{domxref("MutationObserver")}}'s callback.
+The {{domxref("MutationRecord")}} is a read-only interface that represents an individual DOM mutation observed by a {{domxref("MutationObserver")}}. It is the object inside the array passed to the callback of a {{domxref("MutationObserver")}}.
 
-## Properties
+## Instance properties
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{domxref("MutationRecord.type")}}</td>
-      <td><code>String</code></td>
-      <td>
-        Returns <code>"attributes"</code> if the mutation was an attribute
-        mutation,<br /><code>"characterData"</code> if it was a mutation to a
-        <code>CharacterData</code> node,<br />and <code>"childList"</code> if it
-        was a mutation to the tree of nodes.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.target")}}</td>
-      <td>{{domxref("Node")}}</td>
-      <td>
-        Returns the node the mutation affected, depending on the
-        {{domxref("MutationRecord.type")}}.<br />For
-        <code>attributes</code>, it is the element whose attribute changed.<br />For
-        <code>characterData</code>, it is the
-        <code>CharacterData</code> node.<br />For <code>childList</code>, it is
-        the node whose children changed.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.addedNodes")}}</td>
-      <td>{{domxref("NodeList")}}</td>
-      <td>
-        Return the nodes added. Will be an empty
-        {{domxref("NodeList")}} if no nodes were added.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.removedNodes")}}</td>
-      <td>{{domxref("NodeList")}}</td>
-      <td>
-        Return the nodes removed. Will be an empty
-        {{domxref("NodeList")}} if no nodes were removed.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.previousSibling")}}</td>
-      <td>{{domxref("Node")}}</td>
-      <td>
-        Return the previous sibling of the added or removed nodes, or
-        <code>null</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.nextSibling")}}</td>
-      <td>{{domxref("Node")}}</td>
-      <td>
-        Return the next sibling of the added or removed nodes, or
-        <code>null</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.attributeName")}}</td>
-      <td><code>String</code></td>
-      <td>
-        Returns the local name of the changed attribute, or <code>null</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.attributeNamespace")}}</td>
-      <td><code>String</code></td>
-      <td>
-        Returns the namespace of the changed attribute, or <code>null</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.oldValue")}}</td>
-      <td><code>String</code></td>
-      <td>
-        <p>
-          The return value depends on the
-          {{domxref("MutationRecord.type")}}.<br />For
-          <code>attributes</code>, it is the value of the changed attribute
-          before the change.<br />For <code>characterData</code>, it is the data
-          of the changed node before the change.<br />For
-          <code>childList</code>, it is <code>null</code>.
-        </p>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> For this to work as expected, <code
-              >attributeOldValue</code
-            >
-            or <code>characterDataOldValue</code> must be set to
-            <code>true</code> in the corresponding parameter of the <code>MutationObserver</code>
-            <a href="/en-US/docs/Web/API/MutationObserver/observe">observe</a>
-            method
-          </p>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("MutationRecord.addedNodes")}} {{ReadOnlyInline}}
+  - : The nodes added by a mutation. Will be an empty {{domxref("NodeList")}} if no nodes were added.
+- {{domxref("MutationRecord.attributeName")}} {{ReadOnlyInline}}
+  - : The name of the changed attribute as a string, or `null`.
+- {{domxref("MutationRecord.attributeNamespace")}} {{ReadOnlyInline}}
+  - : The namespace of the changed attribute as a string, or `null`.
+- {{domxref("MutationRecord.nextSibling")}} {{ReadOnlyInline}}
+  - : The next sibling of the added or removed nodes, or `null`.
+- {{domxref("MutationRecord.oldValue")}} {{ReadOnlyInline}}
+  - : The value depends on the {{domxref("MutationRecord.type")}}:
+    - For `attributes`, it is the value of the changed attribute before the change.
+    - For `characterData`, it is the data of the changed node before the change.
+    - For `childList`, it is `null`.
+- {{domxref("MutationRecord.previousSibling")}} {{ReadOnlyInline}}
+  - : The previous sibling of the added or removed nodes, or `null`.
+- {{domxref("MutationRecord.removedNodes")}} {{ReadOnlyInline}}
+  - : The nodes removed by a mutation. Will be an empty {{domxref("NodeList")}} if no nodes were removed.
+- {{domxref("MutationRecord.target")}} {{ReadOnlyInline}}
+  - : The node the mutation affected, depending on the `MutationRecord.type`.
+    - For `attributes`, it is the element whose attribute changed.
+    - For `characterData`, it is the `CharacterData` node.
+    - For `childList`, it is the node whose children changed.
+- {{domxref("MutationRecord.type")}} {{ReadOnlyInline}}
+  - : A string representing the type of mutation: `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.
 
 ## Specifications
 

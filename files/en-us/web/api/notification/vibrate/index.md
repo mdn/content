@@ -1,19 +1,14 @@
 ---
-title: Notification.vibrate
+title: "Notification: vibrate property"
+short-title: vibrate
 slug: Web/API/Notification/vibrate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - vibrate
+status:
+  - experimental
 browser-compat: api.Notification.vibrate
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `vibrate` read-only property of the {{domxref("Notification")}}
 interface specifies a [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns)
@@ -33,13 +28,13 @@ fired using the `Notification()` constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  vibrate: [200, 100, 200]
-}
+  body: "Your code submission has received 3 new review comments.",
+  vibrate: [200, 100, 200],
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.vibrate) // should log [200,100,200]
+console.log(n.vibrate); // "[200, 100, 200]"
 ```
 
 ## Specifications

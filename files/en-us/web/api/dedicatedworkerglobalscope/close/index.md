@@ -1,24 +1,18 @@
 ---
-title: DedicatedWorkerGlobalScope.close()
+title: "DedicatedWorkerGlobalScope: close() method"
+short-title: close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DedicatedWorkerGlobalScope
-  - Method
-  - Reference
-  - Web Workers
-  - close
 browser-compat: api.DedicatedWorkerGlobalScope.close
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`close()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface discards any tasks queued in the `DedicatedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

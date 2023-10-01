@@ -1,20 +1,15 @@
 ---
-title: VRFrameData.pose
+title: "VRFrameData: pose property"
+short-title: pose
 slug: Web/API/VRFrameData/pose
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - pose
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.pose
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`pose`** read-only property of the {{domxref("VRFrameData")}} interface returns the {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.
 

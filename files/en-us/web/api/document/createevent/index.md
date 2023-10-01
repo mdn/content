@@ -1,18 +1,15 @@
 ---
-title: Document.createEvent()
+title: "Document: createEvent() method"
+short-title: createEvent()
 slug: Web/API/Document/createEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createEvent
 ---
+
+{{APIRef("DOM")}}
+
 > **Warning:** Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.
 > Use [event constructors](/en-US/docs/Web/API/CustomEvent) instead.
-
-{{ApiRef("DOM")}}
 
 Creates an [event](/en-US/docs/Web/API/Event) of the type specified. The
 returned object should be first initialized and can then be passed to
@@ -20,7 +17,7 @@ returned object should be first initialized and can then be passed to
 
 ## Syntax
 
-```js
+```js-nolint
 createEvent(type)
 ```
 
@@ -37,15 +34,19 @@ An [Event](/en-US/docs/Web/API/Event) object.
 
 ```js
 // Create the event.
-const event = document.createEvent('Event');
+const event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // Listen for the event.
-elem.addEventListener('build', (e) => {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "build",
+  (e) => {
+    // e.target matches elem
+  },
+  false,
+);
 
 // Target can be any Element or other EventTarget.
 elem.dispatchEvent(event);

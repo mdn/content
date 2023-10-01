@@ -1,13 +1,11 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclose event'
+title: "ServiceWorkerGlobalScope: notificationclose event"
+short-title: notificationclose
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`notificationclose`** event fires when a user closes a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
@@ -29,14 +27,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('notificationclose', (event) => { });
+addEventListener("notificationclose", (event) => {});
 
-onnotificationclose = (event) => { };
+onnotificationclose = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
 
@@ -44,9 +42,9 @@ An {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
+- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
-- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
+- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
   - : Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button.
 
 ## Example
@@ -54,7 +52,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 ```js
 //Inside a service worker.
 self.onnotificationclose = (event) => {
-  console.log('On notification close: ', event.notification.tag);
+  console.log("On notification close: ", event.notification.tag);
 };
 ```
 

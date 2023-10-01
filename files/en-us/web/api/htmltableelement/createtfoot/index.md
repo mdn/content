@@ -1,16 +1,11 @@
 ---
-title: HTMLTableElement.createTFoot()
+title: "HTMLTableElement: createTFoot() method"
+short-title: createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.createTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTFoot()`** method of
@@ -25,7 +20,7 @@ method creates it, and then returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createTFoot()
 ```
 

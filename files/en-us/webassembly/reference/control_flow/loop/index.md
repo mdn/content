@@ -1,13 +1,8 @@
 ---
 title: loop
 slug: WebAssembly/Reference/Control_flow/loop
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`loop`** statement creates a label that can later be branched to with a `br`. The loop instruction doesn't loop by itself; you need to branch to it to actually create a loop.

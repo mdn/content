@@ -1,15 +1,9 @@
 ---
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-tags:
-  - CSS
-  - Contribute
-  - Guide
-  - Layout
-  - Templates
-  - cookbook
-  - recipes
+page-type: guide
 ---
+
 {{CSSRef}}
 
 If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.
@@ -24,15 +18,15 @@ A recipe consists of:
 
 1. A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
 2. A downloadable version of that example, also stored in the CSS Examples repo.
-3. A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
+3. A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that includes:
 
-    1. Requirements
-    2. The recipe
-    3. The choices made
-    4. Any useful fallbacks or alternative methods
-    5. Any accessibility concerns
-    6. Browser compatibility
-    7. Additional resources
+   1. Requirements
+   2. The recipe
+   3. The choices made
+   4. Any useful fallbacks or alternative methods
+   5. Any accessibility concerns
+   6. Browser compatibility
+   7. Additional resources
 
 ### 1. Build your pattern
 
@@ -56,7 +50,7 @@ You need to add the HTML for your component twice. First inside the section with
 
 Your editable CSS, from the second block in the head, also needs to be copied into the `playable-css` section.
 
-A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.
 
@@ -76,13 +70,11 @@ Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This 
 
 ### 5. Create your page
 
-Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Once your example is merged you can [open a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) to create a new page for it in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook).
+There is [a template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1) that you should use.
+The template explains what should be part of each section, and you can refer to other cookbook examples for more help.
 
-The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
-
-If you need general guidance on using the MDN wiki, see the help pages available here.
-
-If you need to ask any questions, or want someone to take a look at your page then the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236) is a good place to do this, or [chat with us on Matrix](/en-US/docs/MDN/Community/Conversations#synchronous_chat).
+If you need to ask any questions, or want someone to take a look at your page, get in touch with us on any of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 

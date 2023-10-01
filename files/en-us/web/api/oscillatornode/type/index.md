@@ -1,16 +1,11 @@
 ---
-title: OscillatorNode.type
+title: "OscillatorNode: type property"
+short-title: type
 slug: Web/API/OscillatorNode/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Type
-  - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`type`** property of the {{ domxref("OscillatorNode")
@@ -40,7 +35,7 @@ available values are:
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the value `custom` was specified. To set a custom waveform, just call
     {{domxref("OscillatorNode.setPeriodicWave", "setPeriodicWave()")}}. Doing so
     automatically sets the type for you.
@@ -57,7 +52,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.start();
 ```

@@ -2,12 +2,9 @@
 title: VTTCue
 slug: Web/API/VTTCue
 page-type: web-api-interface
-tags:
-  - VTTCue
-  - text track
-  - vtt
 browser-compat: api.VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
@@ -19,7 +16,7 @@ The `VTTCue` interface—part of the API for handling WebVTT (text tracks on med
 - {{domxref("VTTCue.VTTCue", "VTTCue()")}}
   - : Returns a newly created `VTTCue` object that covers the given time range and has the given text.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 
@@ -44,7 +41,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.text")}}
   - : Returns a string with the contents of the cue.
 
-## Methods
+## Instance methods
 
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}}
   - : Returns the cue text as a {{domxref("DocumentFragment")}}.
@@ -56,7 +53,9 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using the {{domxref("TextTrack.addCue()")}} method, with a `VTTCue` object as the value.
 
 ```html
-<video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
 ```
 
 ### CSS
@@ -71,14 +70,14 @@ video {
 ### JavaScript
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
-track.addCue(new VTTCue(0, 0.9, 'Hildy!'));
-track.addCue(new VTTCue(1, 1.4, 'How are you?'));
-track.addCue(new VTTCue(1.5, 2.9, 'Tell me, is the lord of the universe in?'));
-track.addCue(new VTTCue(3, 4.2, 'Yes, he\'s in - in a bad humor'));
-track.addCue(new VTTCue(4.3, 6, 'Somebody must\'ve stolen the crown jewels'));
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(new VTTCue(1.5, 2.9, "Tell me, is the lord of the universe in?"));
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(new VTTCue(4.3, 6, "Somebody must've stolen the crown jewels"));
 console.log(track.cues);
 ```
 

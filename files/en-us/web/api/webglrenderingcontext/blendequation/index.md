@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.blendEquation()
+title: "WebGLRenderingContext: blendEquation() method"
+short-title: blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendEquation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendEquation()`** method of the
@@ -21,7 +17,7 @@ The blend equation determines how a new pixel is combined with a pixel already i
 
 ## Syntax
 
-```js
+```js-nolint
 blendEquation(mode)
 ```
 
@@ -35,16 +31,17 @@ blendEquation(mode)
     - `gl.FUNC_ADD`: source + destination (default value)
     - `gl.FUNC_SUBTRACT`: source - destination
     - `gl.FUNC_REVERSE_SUBTRACT`: destination - source
+
     When using the {{domxref("EXT_blend_minmax")}} extension:
 
-      - `ext.MIN_EXT`: Minimum of source and destination
-      - `ext.MAX_EXT`: Maximum of source and destination
+    - `ext.MIN_EXT`: Minimum of source and destination
+    - `ext.MAX_EXT`: Maximum of source and destination
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
-    - `gl.MIN`:  Minimum of source and destination
-    - `gl.MAX`:  Maximum of source and destination
+    - `gl.MIN`: Minimum of source and destination
+    - `gl.MAX`: Maximum of source and destination
 
 ### Exception
 

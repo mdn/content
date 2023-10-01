@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.getUniformBlockIndex()
+title: "WebGL2RenderingContext: getUniformBlockIndex() method"
+short-title: getUniformBlockIndex()
 slug: Web/API/WebGL2RenderingContext/getUniformBlockIndex
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getUniformBlockIndex
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getUniformBlockIndex()`** method
@@ -18,7 +14,7 @@ a uniform block within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformBlockIndex(program, uniformBlockName)
 ```
 
@@ -43,7 +39,7 @@ A {{domxref("WebGL_API/Types", "GLuint")}} indicating the uniform block index.
 // } instanceName;
 
 // use the block name, not the instance name:
-const blockIndex = gl.getUniformBlockIndex(program, 'UBOData');
+const blockIndex = gl.getUniformBlockIndex(program, "UBOData");
 ```
 
 ## Specifications

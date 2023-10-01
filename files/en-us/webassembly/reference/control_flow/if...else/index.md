@@ -1,13 +1,8 @@
 ---
 title: if...else
 slug: WebAssembly/Reference/Control_flow/if...else
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`if`** statement executes a statement if the last item on the stack is true (1). If the condition is false (0), another statement can be executed

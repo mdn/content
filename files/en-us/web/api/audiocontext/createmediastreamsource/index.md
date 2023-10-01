@@ -1,23 +1,11 @@
 ---
-title: AudioContext.createMediaStreamSource()
+title: "AudioContext: createMediaStreamSource() method"
+short-title: createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - AudioNode
-  - Media
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - createMediastreamSource
 browser-compat: api.AudioContext.createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaStreamSource()` method of the {{ domxref("AudioContext") }}
@@ -30,7 +18,7 @@ For more details about media stream audio source nodes, check out the {{
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamSource(stream)
 ```
 
@@ -61,54 +49,55 @@ sound more bass heavy!
 > **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
 
 ```js
-const pre = document.querySelector('pre');
-const video = document.querySelector('video');
-const myScript = document.querySelector('script');
-const range = document.querySelector('input');
+const pre = document.querySelector("pre");
+const video = document.querySelector("video");
+const myScript = document.querySelector("script");
+const range = document.querySelector("input");
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
 // also output the visuals into a video element
 
 if (navigator.mediaDevices) {
-    console.log('getUserMedia supported.');
-    navigator.mediaDevices.getUserMedia ({audio: true, video: true})
+  console.log("getUserMedia supported.");
+  navigator.mediaDevices
+    .getUserMedia({ audio: true, video: true })
     .then((stream) => {
-        video.srcObject = stream;
-        video.onloadedmetadata = (e) => {
-            video.play();
-            video.muted = true;
-        };
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+        video.play();
+        video.muted = true;
+      };
 
-        // Create a MediaStreamAudioSourceNode
-        // Feed the HTMLMediaElement into it
-        const audioCtx = new AudioContext();
-        const source = audioCtx.createMediaStreamSource(stream);
+      // Create a MediaStreamAudioSourceNode
+      // Feed the HTMLMediaElement into it
+      const audioCtx = new AudioContext();
+      const source = audioCtx.createMediaStreamSource(stream);
 
-        // Create a biquadfilter
-        const biquadFilter = audioCtx.createBiquadFilter();
-        biquadFilter.type = "lowshelf";
-        biquadFilter.frequency.value = 1000;
+      // Create a biquadfilter
+      const biquadFilter = audioCtx.createBiquadFilter();
+      biquadFilter.type = "lowshelf";
+      biquadFilter.frequency.value = 1000;
+      biquadFilter.gain.value = range.value;
+
+      // connect the AudioBufferSourceNode to the gainNode
+      // and the gainNode to the destination, so we can play the
+      // music and adjust the volume using the mouse cursor
+      source.connect(biquadFilter);
+      biquadFilter.connect(audioCtx.destination);
+
+      // Get new mouse pointer coordinates when mouse is moved
+      // then set new gain value
+
+      range.oninput = () => {
         biquadFilter.gain.value = range.value;
-
-        // connect the AudioBufferSourceNode to the gainNode
-        // and the gainNode to the destination, so we can play the
-        // music and adjust the volume using the mouse cursor
-        source.connect(biquadFilter);
-        biquadFilter.connect(audioCtx.destination);
-
-        // Get new mouse pointer coordinates when mouse is moved
-        // then set new gain value
-
-        range.oninput = () => {
-            biquadFilter.gain.value = range.value;
-        }
+      };
     })
     .catch((err) => {
-        console.log(`The following gUM error occurred: ${err}`);
+      console.log(`The following gUM error occurred: ${err}`);
     });
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.log("getUserMedia not supported on your browser!");
 }
 
 // dump script to pre element

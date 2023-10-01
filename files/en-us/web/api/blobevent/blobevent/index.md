@@ -1,25 +1,19 @@
 ---
-title: BlobEvent()
+title: "BlobEvent: BlobEvent() constructor"
+short-title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - BlobEvent
-  - Constructor
-  - DOM
-  - DOM Reference
-  - Media Stream Encoding
-  - Reference
 browser-compat: api.BlobEvent.BlobEvent
 ---
-{{APIRef("Media Recorder API")}}
+
+{{APIRef("MediaStream Recording")}}
 
 The **`BlobEvent()`** constructor returns a newly created
 {{domxref("BlobEvent")}} object with an associated {{domxref("Blob")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new BlobEvent(type, options)
 ```
 

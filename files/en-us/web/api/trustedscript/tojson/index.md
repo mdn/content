@@ -1,22 +1,18 @@
 ---
-title: TrustedScript.toJSON()
+title: "TrustedScript: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TrustedScript/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - TrustedScript
 browser-compat: api.TrustedScript.toJSON
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toJSON()`** method of the {{domxref("TrustedScript")}} interface returns a JSON representation of the stored data.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -34,7 +30,7 @@ The constant `sanitized` is an object created via a Trusted Types policy. The `t
 
 ```js
 const sanitized = scriptPolicy.createScript("eval('2 + 2')");
-  console.log(sanitized.toJSON());
+console.log(sanitized.toJSON());
 ```
 
 ## Specifications

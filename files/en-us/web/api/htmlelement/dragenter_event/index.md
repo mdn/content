@@ -1,19 +1,11 @@
 ---
-title: 'HTMLElement: dragenter event'
+title: "HTMLElement: dragenter event"
+short-title: dragenter
 slug: Web/API/HTMLElement/dragenter_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragenter
 browser-compat: api.HTMLElement.dragenter_event
 ---
+
 {{APIRef}}
 
 The `dragenter` event is fired when a dragged element or text selection enters a valid drop target.
@@ -25,9 +17,9 @@ The target object is the _immediate user selection_ (the element directly indica
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragenter', (event) => {});
+addEventListener("dragenter", (event) => {});
 
-ondragenter = (event) => { };
+ondragenter = (event) => {};
 ```
 
 ## Event type
@@ -40,7 +32,7 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
@@ -57,9 +49,7 @@ Note though that in this partial example we haven't implemented dropping: for a 
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```

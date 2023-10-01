@@ -1,17 +1,11 @@
 ---
-title: Element.assignedSlot
+title: "Element: assignedSlot property"
+short-title: assignedSlot
 slug: Web/API/Element/assignedSlot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Slottable
-  - Web Components
-  - assignedSlot
-  - shadow DOM
 browser-compat: api.Element.assignedSlot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`assignedSlot`** read-only
@@ -48,7 +42,7 @@ then log a reference to the original `<slot>` element the
 `<span>` was inserted in.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.assignedSlot); // logs '<slot name="my-text">'
 ```
 

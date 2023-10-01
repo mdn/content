@@ -1,28 +1,17 @@
 ---
-title: 'WebGL: 2D and 3D graphics for the web'
+title: "WebGL: 2D and 3D graphics for the web"
 slug: Web/API/WebGL_API
 page-type: web-api-overview
-tags:
-  - 3D
-  - 3D Graphics
-  - API
-  - Advanced
-  - Graphics
-  - JavaScript
-  - Media
-  - Overview
-  - Reference
-  - WebGL
-  - WebGL API
 browser-compat:
   - api.WebGLRenderingContext
   - api.WebGL2RenderingContext
 ---
-{{WebGLSidebar}}
 
-**WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML5 {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
+{{DefaultAPISidebar("WebGL")}}
 
-Support for WebGL is present in [Firefox](/en-US/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, [Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2) 11+, and [Microsoft Edge](https://www.microsoft.com/en-us/edge) build 10240+; however, the user's device must also have hardware that supports these features.
+**WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
+
+Support for WebGL is present in all modern browsers (see the [compatibility tables](#browser_compatibility) below); however, the user's device must also have hardware that supports these features.
 
 The [WebGL 2](#webgl_2) API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
 
@@ -66,6 +55,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 - {{domxref("EXT_texture_filter_anisotropic")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_draw_buffers_indexed")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}
@@ -148,7 +138,7 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 
 ## Resources
 
-- [Khronos WebGL site](https://www.khronos.org/webgl/) The main web site for WebGL at the Khronos Group.
+- [Khronos WebGL site](https://www.khronos.org/webgl/) The main website for WebGL at the Khronos Group.
 - [WebGL Fundamentals](https://web.dev/webgl-fundamentals/) A basic tutorial with fundamentals of WebGL.
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) A talk by Nick Desaulniers that introduces the basics of WebGL.
 - [WebGL playground](http://webglplayground.net) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.
@@ -184,7 +174,7 @@ In addition to the browser, the GPU itself also needs to support the feature. So
 
 #### WebGL debugging and testing
 
-Starting with Gecko 10.0 {{geckoRelease("10.0")}}, there are two preferences available which let you control the capabilities of WebGL for testing purposes:
+Firefox provides two preferences available which let you control the capabilities of WebGL for testing purposes:
 
 - `webgl.min_capability_mode`
   - : A Boolean property that, when `true`, enables a minimum capability mode. When in this mode, WebGL is configured to only support the bare minimum feature set and capabilities required by the WebGL specification. This lets you ensure that your WebGL code will work on any device or browser, regardless of their capabilities. This is `false` by default.

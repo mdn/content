@@ -1,17 +1,13 @@
 ---
-title: PasswordCredential.password
+title: "PasswordCredential: password property"
+short-title: password
 slug: Web/API/PasswordCredential/password
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - NeedsExample
-  - PasswordCredential
-  - Property
-  - Reference
-  - credential management
+status:
+  - experimental
 browser-compat: api.PasswordCredential.password
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`password`** read-only property

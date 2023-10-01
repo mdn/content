@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.clientWaitSync()
+title: "WebGL2RenderingContext: clientWaitSync() method"
+short-title: clientWaitSync()
 slug: Web/API/WebGL2RenderingContext/clientWaitSync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.clientWaitSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.clientWaitSync()`** method of the
@@ -18,7 +14,7 @@ The **`WebGL2RenderingContext.clientWaitSync()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 clientWaitSync(sync, flags, timeout)
 ```
 

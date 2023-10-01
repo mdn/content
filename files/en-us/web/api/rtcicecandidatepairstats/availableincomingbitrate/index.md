@@ -1,27 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.availableIncomingBitrate
+title: "RTCIceCandidatePairStats: availableIncomingBitrate property"
+short-title: availableIncomingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableIncomingBitrate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bandwidth
-  - Bit Rate
-  - Bitrate
-  - Candidate
-  - Connection
-  - Network
-  - Pair
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - availableIncomingBitrate
-  - priority
-  - speed
 browser-compat: api.RTCIceCandidatePairStats.availableIncomingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -36,8 +20,8 @@ You can get the outgoing available bitrate from
 
 ## Syntax
 
-```js
-availableIncomingBitrate = rtcIceCandidatePairStats.availableIncomingBitrate;
+```js-nolint
+availableIncomingBitrate = rtcIceCandidatePairStats.availableIncomingBitrate
 ```
 
 ### Value

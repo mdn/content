@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exceptions "unexpected token" occur when a specific language construct
@@ -14,7 +11,7 @@ was expected, but something else was provided. This might be a simple typo.
 
 ## Message
 
-```
+```plain
 SyntaxError: expected expression, got "x"
 SyntaxError: expected property name, got "x"
 SyntaxError: expected target, got "x"
@@ -38,7 +35,7 @@ be a simple typo.
 
 For example, when chaining expressions, trailing commas are not allowed.
 
-```js example-bad
+```js-nolint example-bad
 for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
@@ -57,7 +54,7 @@ for (let i = 0; i < 5; ++i) {
 
 Sometimes, you leave out brackets around `if` statements:
 
-```js example-bad
+```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
   if (n > upperBound) || (n < lowerBound) { // Not enough brackets here!
     throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
@@ -72,10 +69,12 @@ function round(n, upperBound, lowerBound) {
 The brackets may look correct at first, but note how the `||` is outside the
 brackets. Correct would be putting brackets around the `||`:
 
-```js example-good
+```js-nolint example-good
 function round(n, upperBound, lowerBound) {
   if ((n > upperBound) || (n < lowerBound)) {
-    throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
+    throw new Error(
+      `Number ${n} is more than ${upperBound} or less than ${lowerBound}`,
+    );
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
   } else {

@@ -1,18 +1,11 @@
 ---
-title: RTCDTMFToneChangeEvent.tone
+title: "RTCDTMFToneChangeEvent: tone property"
+short-title: tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
 page-type: web-api-instance-property
-tags:
-  - Media
-  - Property
-  - RTCDTMFToneChangeEvent
-  - Reference
-  - Touch
-  - WebRTC
-  - WebRTC API
-  - tone
 browser-compat: api.RTCDTMFToneChangeEvent.tone
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCDTMFToneChangeEvent.tone`**
@@ -34,7 +27,7 @@ played, the string "\<none>".
 dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&lt;none&gt;"
+    tone = "&lt;none&gt;";
   }
 
   document.getElementById("playingTone").innerText = tone;

@@ -1,18 +1,11 @@
 ---
-title: AudioNode.connect()
+title: "AudioNode: connect() method"
+short-title: connect()
 slug: Web/API/AudioNode/connect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - connect
 browser-compat: api.AudioNode.connect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `connect()` method of the {{ domxref("AudioNode") }} interface lets
@@ -23,7 +16,7 @@ change the value of that parameter over time.
 
 ## Syntax
 
-```js
+```js-nolint
 connect(destination)
 connect(destination, outputIndex)
 connect(destination, outputIndex, inputIndex)

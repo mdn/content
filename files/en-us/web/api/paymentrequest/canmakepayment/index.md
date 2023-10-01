@@ -1,18 +1,11 @@
 ---
-title: PaymentRequest.canMakePayment()
+title: "PaymentRequest: canMakePayment() method"
+short-title: canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - canMakePayment
 browser-compat: api.PaymentRequest.canMakePayment
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -31,7 +24,7 @@ Request API (or even provide instructions for paying by mail or by phone).
 
 ## Syntax
 
-```js
+```js-nolint
 canMakePayment()
 ```
 
@@ -71,7 +64,7 @@ async function initPaymentRequest() {
 
   const supportsApplePay = new PaymentRequest(
     [{ supportedMethods: "https://apple.com/apple-pay" }],
-    details
+    details,
   ).canMakePayment();
 
   // Supports Apple Pay?
@@ -83,7 +76,7 @@ async function initPaymentRequest() {
   // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
-    details
+    details,
   ).canMakePayment();
 
   if (supportsExamplePay) {

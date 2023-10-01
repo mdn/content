@@ -1,20 +1,11 @@
 ---
-title: RTCIceTransport.gatheringState
+title: "RTCIceTransport: gatheringState property"
+short-title: gatheringState
 slug: Web/API/RTCIceTransport/gatheringState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gatherer
-  - Property
-  - RTCIceTransport
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - gatheringState
-  - state
 browser-compat: api.RTCIceTransport.gatheringState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`gatheringState`** property of the {{domxref("RTCIceTransport")}} interface returns a string that indicates the current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.

@@ -1,17 +1,11 @@
 ---
-title: BaseAudioContext.createAnalyser()
+title: "BaseAudioContext: createAnalyser() method"
+short-title: createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createAnalyser
 browser-compat: api.BaseAudioContext.createAnalyser
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createAnalyser()` method of the
@@ -27,7 +21,7 @@ can be used to expose audio time and frequency data and create data visualizatio
 
 ## Syntax
 
-```js
+```js-nolint
 createAnalyser()
 ```
 
@@ -44,8 +38,8 @@ An {{domxref("AnalyserNode")}}.
 The following example shows basic usage of an AudioContext to create an Analyser node,
 then use requestAnimationFrame() to collect time domain data repeatedly and draw an
 "oscilloscope style" output of the current audio input. For more complete applied
-examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see
-[app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see
+[app.js lines 108-193](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -61,41 +55,39 @@ analyser.getByteTimeDomainData(dataArray);
 // draw an oscilloscope of the current audio source
 
 function draw() {
+  drawVisual = requestAnimationFrame(draw);
 
-      drawVisual = requestAnimationFrame(draw);
+  analyser.getByteTimeDomainData(dataArray);
 
-      analyser.getByteTimeDomainData(dataArray);
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.beginPath();
 
-      canvasCtx.beginPath();
+  const sliceWidth = (WIDTH * 1.0) / bufferLength;
+  let x = 0;
 
-      const sliceWidth = WIDTH * 1.0 / bufferLength;
-      let x = 0;
+  for (let i = 0; i < bufferLength; i++) {
+    const v = dataArray[i] / 128.0;
+    const y = (v * HEIGHT) / 2;
 
-      for (let i = 0; i < bufferLength; i++) {
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
 
-        const v = dataArray[i] / 128.0;
-        const y = v * HEIGHT/2;
+    x += sliceWidth;
+  }
 
-        if (i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
+  canvasCtx.stroke();
+}
 
-        x += sliceWidth;
-      }
-
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
+draw();
 ```
 
 ## Specifications

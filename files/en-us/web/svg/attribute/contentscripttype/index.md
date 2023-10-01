@@ -1,12 +1,12 @@
 ---
 title: contentScriptType
 slug: Web/SVG/Attribute/contentScriptType
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.contentScriptType
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`contentScriptType`** attribute specifies the default scripting language for the given document fragment on the {{SVGElement("svg")}} element.

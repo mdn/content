@@ -1,14 +1,11 @@
 ---
-title: RTCPeerConnection.setIdentityProvider()
+title: "RTCPeerConnection: setIdentityProvider() method"
+short-title: setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
 page-type: web-api-instance-method
-tags:
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnection.setIdentityProvider
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setIdentityProvider()`** method sets
@@ -21,7 +18,7 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 
 ## Syntax
 
-```js
+```js-nolint
 setIdentityProvider(domainname)
 setIdentityProvider(domainname, protocol)
 setIdentityProvider(domainname, protocol, username)

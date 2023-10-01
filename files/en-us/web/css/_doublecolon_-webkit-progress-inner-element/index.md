@@ -1,14 +1,12 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: "::-webkit-progress-inner-element"
 slug: Web/CSS/::-webkit-progress-inner-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the outermost container of the {{HTMLElement("progress")}} element. It is the parent of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.
@@ -18,7 +16,9 @@ The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-el
 ## Syntax
 
 ```css
-::-webkit-progress-inner-element
+::-webkit-progress-inner-element {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -32,7 +32,7 @@ In this example, a 2px black border is added around the progress bar.
 #### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 #### CSS
@@ -73,4 +73,3 @@ Not part of any standard.
   - {{cssxref("::-webkit-progress-value")}}
 
 - {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}

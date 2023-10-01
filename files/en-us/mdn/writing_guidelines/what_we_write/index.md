@@ -2,11 +2,9 @@
 title: What we write
 slug: MDN/Writing_guidelines/What_we_write
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
-{{MDNSidebar}}  
+
+{{MDNSidebar}}
 
 MDN Web Docs contains _browser-neutral_ documentation that enables web developers to write _browser-agnostic_ code. In this article, you'll find information about whether or not a given topic and/or type of content should be included on MDN Web Docs.
 
@@ -24,7 +22,7 @@ Outbound links to commercial sites that are relevant to the topic from which the
 
 Articles on MDN Web Docs must maintain a [neutral point-of-view](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), reporting on browser variations without editorial bias. Derogatory comments about any browser or user agent is not acceptable.
 
-### Open web topics
+### Standardization
 
 Web technologies to be documented on MDN Web Docs should be on a standards track and must be implemented by at least one rendering engine. Variations in browser support are documented in the [browser compatibility](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) section of an article.
 
@@ -32,7 +30,7 @@ Web technologies to be documented on MDN Web Docs should be on a standards track
 
 If you'd like to suggest content for MDN Web Docs, please make sure you read this page before submitting to ensure what you are suggesting is appropriate.
 
-For new reference pages or guides, please open a discussion on [our community repository](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) outlining what content you are suggesting and why (please be as explicit as possible).
+For new reference pages or guides, please open a [new issue](https://github.com/mdn/mdn/issues/new/choose) outlining what content you are suggesting and why (please be as explicit as possible).
 
 For suggesting larger projects that involve new sections of content, please refer to the [Criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion) page, which also outlines the application process.
 
@@ -70,9 +68,7 @@ For more details about the criteria for whether or not a technology can be docum
 On MDN Web Docs, we are constantly looking to document new web standards technologies as appropriate.
 We try to strike a balance between publishing the documentation early enough so that developers can learn about new features as soon as they need to and publishing it late enough so that the technology is mature and stable so that the documentation won't need constant updates or rapid removal.
 
-In general, our definition of the earliest we'll consider documenting a new technology is:
-
-_"When the feature is on a standards track and is implemented somewhere."_
+In general, our definition of the earliest we'll consider documenting a new technology is: _When the feature is on a standards track and is implemented somewhere._
 
 We consider documenting a new technology if it is:
 

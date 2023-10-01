@@ -1,17 +1,11 @@
 ---
-title: console.timeEnd()
+title: "console: timeEnd() method"
+short-title: timeEnd()
 slug: Web/API/console/timeEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeEnd()`** stops a timer that was previously started by calling {{domxref("console.time()")}}.
@@ -23,16 +17,17 @@ details and examples.
 
 ## Syntax
 
-```js
+```js-nolint
+timeEnd()
 timeEnd(label)
 ```
 
 ### Parameters
 
-- `label`
-  - : The name of the timer to stop. Once stopped, the elapsed time is automatically
+- `label` {{optional_inline}}
+  - : A `string` representing the name of the timer to stop. Once stopped, the elapsed time is automatically
     displayed in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) along
-    with an indicator that the time has ended.
+    with an indicator that the time has ended. If omitted, the label "default" is used.
 
 ### Return value
 
@@ -49,9 +44,9 @@ console.timeEnd("answer time");
 ```
 
 The output from the example above shows the time taken by the user to dismiss the first
-alert box, followed by the time it took for the user to dismiss the second alert:
+alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
-![](timer_output.png)
+![Timer output in Firefox console](timer_output.png)
 
 Notice that the timer's name is displayed when the timer value is logged using
 `timeLog()` and again when it's stopped. In addition, the call to timeEnd()

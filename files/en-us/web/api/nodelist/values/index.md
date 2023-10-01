@@ -1,17 +1,11 @@
 ---
-title: NodeList.values()
+title: "NodeList: values() method"
+short-title: values()
 slug: Web/API/NodeList/values
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterator
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.values
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.values()`** method returns an
@@ -20,8 +14,8 @@ in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-nodeList.values();
+```js-nolint
+values()
 ```
 
 ### Return value
@@ -42,7 +36,7 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-// Using for..of
+// Using for...of
 for (const value of list.values()) {
   console.log(value);
 }
@@ -50,7 +44,7 @@ for (const value of list.values()) {
 
 The result is:
 
-```
+```plain
 <p>
 #text "hey"
 <span>

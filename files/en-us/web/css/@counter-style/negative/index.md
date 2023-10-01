@@ -1,14 +1,10 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.negative
 ---
+
 {{CSSRef}}
 
 When defining custom counter styles, the **`negative`** descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
@@ -17,8 +13,8 @@ When defining custom counter styles, the **`negative`** descriptor lets you alte
 
 ```css
 /* <symbol> values */
-negative: "-";       /* Prepends '-' if value is negative */
-negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
+negative: "-"; /* Prepends '-' if value is negative */
+negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
 ```
 
 ### Values
@@ -38,14 +34,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-```
-<symbol> <symbol>?
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

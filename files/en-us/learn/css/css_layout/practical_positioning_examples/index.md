@@ -1,21 +1,12 @@
 ---
 title: Practical positioning examples
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Learn
-  - absolute
-  - fixed
-  - relative
+page-type: guide
 ---
+
 {{LearnSidebar}}
 
-This article shows how to build some real world examples to illustrate what kinds of things you can do with positioning.
+This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 
 <table>
   <tbody>
@@ -40,7 +31,7 @@ This article shows how to build some real world examples to illustrate what kind
 
 The first example we'll look at is a classic tabbed info box — a very common feature used when you want to pack a lot of information into a small area. This includes information-heavy apps like strategy/war games, mobile versions of websites where the screen is narrow and space is limited, and compact information boxes where you might want to make lots of information available without having it fill the whole UI. Our simple example will look like this once we are finished:
 
-![](tabbed-info-box.png)
+![Tab 1 is selected. 'Tab 2' and 'Tab 3' are the other two tabs. Only the contents of the selected tab are visible. When a tab is selected, it's text-color changes from black to white and it's background-color changes from orange-red to saddle-brown.](tabbed-info-box.png)
 
 > **Note:** You can see the finished example running live at [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -53,7 +44,7 @@ To start with, we'd like you to make a local copy of the starting HTML file — 
 ```html
 <section class="info-box">
   <ul>
-    <li><a href="#" class="active">Tab 1</a></li>
+    <li><a href="#" class="active-tab">Tab 1</a></li>
     <li><a href="#">Tab 2</a></li>
     <li><a href="#">Tab 3</a></li>
   </ul>
@@ -61,17 +52,32 @@ To start with, we'd like you to make a local copy of the starting HTML file — 
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -154,15 +160,16 @@ Add the following CSS:
 }
 ```
 
-Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
+Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active-tab` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
 
-.info-box li a.active {
+.info-box li a.active-tab {
   background-color: #a60000;
   color: white;
 }
@@ -207,8 +214,8 @@ The second rule we'll add here makes it so that a panel with a `class` of `activ
 The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
 
 ```js
-const tabs = document.querySelectorAll('.info-box li a');
-const panels = document.querySelectorAll('.info-box article');
+const tabs = document.querySelectorAll(".info-box li a");
+const panels = document.querySelectorAll(".info-box article");
 
 for (let i = 0; i < tabs.length; i++) {
   setTabHandler(tabs[i], i);
@@ -217,17 +224,17 @@ for (let i = 0; i < tabs.length; i++) {
 function setTabHandler(tab, tabPos) {
   tab.onclick = () => {
     for (const tab of tabs) {
-      tab.className = '';
+      tab.className = "";
     }
 
-    tab.className = 'active';
+    tab.className = "active-tab";
 
     for (const panel of panels) {
-      panel.className = '';
+      panel.className = "";
     }
 
-    panels[tabPos].className = 'active-panel';
-  }
+    panels[tabPos].className = "active-panel";
+  };
 }
 ```
 
@@ -238,7 +245,7 @@ This code does the following:
 - In the `setTabHandler()` function, the tab has an `onclick` event handler set on it, so that when the tab is clicked, the following occurs:
 
   - A `for` loop is used to cycle through all the tabs and remove any classes that are present on them.
-  - A `class` of `active` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
+  - A `class` of `active-tab` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
   - A `for` loop is used to cycle through all the panels and remove any classes that are present on them.
   - A class of `active-panel` is set on the panel that corresponds to the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets its {{cssxref("z-index")}} to 1, making it appear over the top of the other panels.
 
@@ -248,7 +255,7 @@ That's it for the first example. Keep your code open, as we'll be adding to it i
 
 In our second example, we will take our first example — our info-box — and add it into the context of a full web page. But not only that — we'll give it fixed position so that it stays in the same position in the browser window. When the main content scrolls, the info-box will stay in the same position on the screen. Our finished example will look like this:
 
-![](fixed-info-box.png)
+![Info-box is a container with 3 tabs with the first tab selected and only the contents of the first tab are displayed. It is given a fixed position. The info-box is positioned at the top left corner of the window with a width of 452 pixels. A container of fake content occupies the rest right half of the window; the fake content container is taller than the window and is scrollable. When the page is scrolled, the right-hand side container moves while the info-box stays fixed in the same position on the screen. ](fixed-info-box.png)
 
 > **Note:** You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -256,19 +263,35 @@ As a starting point, you can use your completed example from the first section o
 
 ### HTML additions
 
-First of all, we need some additional HTML to represent the web site main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
+First of all, we need some additional HTML to represent the website main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
 
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
@@ -313,15 +336,15 @@ The final example we'll present here is a panel that slides on and off the scree
 
 Our finished example will look like this:
 
-![](hidden-sliding-panel.png)
+![A blank screen on the left 60% of the screen with a 40% width panel displaying information on the right. A 'question mark' icon is in the top-right corner. The panel slides on and off the screen at the press of this 'question mark' icon.](hidden-sliding-panel.png)
 
 > **Note:** You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
-```css
+```html-nolint
 <label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
+<input type="checkbox" id="toggle" />
 <aside>
 
 …
@@ -400,7 +423,7 @@ There's a lot going on here — let's discuss it bit by bit:
 There is one final bit of CSS to add — put the following at the bottom of your CSS:
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```
@@ -412,18 +435,3 @@ So there you have it — a rather clever JavaScript-free way to create a togglin
 ## Summary
 
 So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to build some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding.
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

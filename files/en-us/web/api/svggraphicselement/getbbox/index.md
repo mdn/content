@@ -1,16 +1,11 @@
 ---
-title: SVGGraphicsElement.getBBox()
+title: "SVGGraphicsElement: getBBox() method"
+short-title: getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGGraphicsElement
 browser-compat: api.SVGGraphicsElement.getBBox
 ---
+
 {{APIRef}}
 
 The **`SVGGraphicsElement.getBBox()`** method allows us to determine
@@ -28,7 +23,7 @@ geometry attributes on all the elements contained in the target element).
 
 ## Syntax
 
-```js
+```js-nolint
 getBBox()
 getBBox(options)
 ```
@@ -65,35 +60,37 @@ elements.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <g id="group_text_1">
-        <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
-        <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">Hello World Again!</text>
-    </g>
-    <!-- Shows BBox in green -->
-    <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"> </rect>
-    <!-- Shows BoundingClientRect in red -->
-    <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
+  <g id="group_text_1">
+    <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
+    <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">
+      Hello World Again!
+    </text>
+  </g>
+  <!-- Shows BBox in green -->
+  <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"></rect>
+  <!-- Shows BoundingClientRect in red -->
+  <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
 </svg>
 ```
 
 ### JavaScript
 
 ```js
-const rectBBox = document.querySelector('#rect_1');
-const rectBoundingClientRect = document.querySelector('#rect_2');
-const groupElement = document.querySelector('#group_text_1');
+const rectBBox = document.querySelector("#rect_1");
+const rectBoundingClientRect = document.querySelector("#rect_2");
+const groupElement = document.querySelector("#group_text_1");
 
 const bboxGroup = groupElement.getBBox();
-rectBBox.setAttribute('x', bboxGroup.x);
-rectBBox.setAttribute('y', bboxGroup.y);
-rectBBox.setAttribute('width', bboxGroup.width);
-rectBBox.setAttribute('height', bboxGroup.height);
+rectBBox.setAttribute("x", bboxGroup.x);
+rectBBox.setAttribute("y", bboxGroup.y);
+rectBBox.setAttribute("width", bboxGroup.width);
+rectBBox.setAttribute("height", bboxGroup.height);
 
 const boundingClientRectGroup = groupElement.getBoundingClientRect();
-rectBoundingClientRect.setAttribute('x', boundingClientRectGroup.x);
-rectBoundingClientRect.setAttribute('y', boundingClientRectGroup.y);
-rectBoundingClientRect.setAttribute('width', boundingClientRectGroup.width);
-rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
+rectBoundingClientRect.setAttribute("x", boundingClientRectGroup.x);
+rectBoundingClientRect.setAttribute("y", boundingClientRectGroup.y);
+rectBoundingClientRect.setAttribute("width", boundingClientRectGroup.width);
+rectBoundingClientRect.setAttribute("height", boundingClientRectGroup.height);
 ```
 
 ## Specifications

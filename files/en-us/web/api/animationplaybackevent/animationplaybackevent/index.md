@@ -1,25 +1,18 @@
 ---
-title: AnimationPlaybackEvent()
+title: "AnimationPlaybackEvent: AnimationPlaybackEvent() constructor"
+short-title: AnimationPlaybackEvent()
 slug: Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - AnimationPlaybackEvent
-  - AnimationPlaybackEvent()
-  - Constructor
-  - Reference
-  - waapi
-  - web animations api
 browser-compat: api.AnimationPlaybackEvent.AnimationPlaybackEvent
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("AnimationPlaybackEvent")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new AnimationPlaybackEvent(type)
 new AnimationPlaybackEvent(type, options)
 ```

@@ -1,15 +1,11 @@
 ---
-title: MIDIPort.id
+title: "MIDIPort: id property"
+short-title: id
 slug: Web/API/MIDIPort/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - MIDIPort
 browser-compat: api.MIDIPort.id
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`id`** read-only property of the {{domxref("MIDIPort")}} interface returns the unique ID of the port.

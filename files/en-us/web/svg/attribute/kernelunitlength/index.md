@@ -1,17 +1,13 @@
 ---
 title: kernelUnitLength
 slug: Web/SVG/Attribute/kernelUnitLength
-tags:
-  - Filters
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-kernelunitlength
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-kernelunitlength
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-kernelunitlength
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`kernelUnitLength`** attribute has two meanings based on the context it's used in. For lighting filter primitives, it indicates the intended distance for the x and y coordinates, for {{SVGElement("feConvolveMatrix")}}, it indicates the intended distance between successive columns and rows in the kernel matrix.

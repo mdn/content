@@ -1,17 +1,11 @@
 ---
-title: NodeList.length
+title: "NodeList: length property"
+short-title: length
 slug: Web/API/NodeList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Gecko
-  - NeedsSpecTable
-  - NodeList
-  - Property
-  - Reference
 browser-compat: api.NodeList.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.length`** property returns the number of items
@@ -34,8 +28,8 @@ const items = document.getElementsByTagName("p");
 // For each item in the list,
 // append the entire element as a string of HTML
 let gross = "";
-for (const item of items) {
-  gross += item.innerHTML;
+for (let i = 0; i < items.length; i++) {
+  gross += items[i].innerHTML;
 }
 
 // gross is now all the HTML for the paragraphs

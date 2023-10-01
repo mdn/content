@@ -1,17 +1,11 @@
 ---
-title: VisualViewport.pageTop
+title: "VisualViewport: pageTop property"
+short-title: pageTop
 slug: Web/API/VisualViewport/pageTop
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - pageLeft
-  - viewport
 browser-compat: api.VisualViewport.pageTop
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`pageTop`** read-only property of the

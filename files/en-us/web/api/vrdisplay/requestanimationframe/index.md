@@ -1,20 +1,15 @@
 ---
-title: VRDisplay.requestAnimationFrame()
+title: "VRDisplay: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - requestAnimationFrame()
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.requestAnimationFrame
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered:
 
@@ -25,7 +20,7 @@ The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 
@@ -46,9 +41,9 @@ let vrDisplay;
 
 navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
@@ -75,18 +70,29 @@ function drawVRScene() {
   // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
-  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  const projectionMatrixLocation = gl.getUniformLocation(
+    shaderProgram,
+    "projMatrix",
+  );
   const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
   // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
+  gl.uniformMatrix4fv(
+    projectionMatrixLocation,
+    false,
+    frameData.leftProjectionMatrix,
+  );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
   drawGeometry();
 
   // WebVR: Render the right eye's view to the right half of the canvas
   gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
+  gl.uniformMatrix4fv(
+    projectionMatrixLocation,
+    false,
+    frameData.rightProjectionMatrix,
+  );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
   drawGeometry();
 
@@ -101,7 +107,7 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

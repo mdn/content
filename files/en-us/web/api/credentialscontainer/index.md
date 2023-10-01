@@ -2,21 +2,14 @@
 title: CredentialsContainer
 slug: Web/API/CredentialsContainer
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Interface
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer
 ---
+
 {{APIRef("Credential Management API")}}{{securecontext_header}}
 
 The **`CredentialsContainer`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}.
 
-## Properties
+## Instance properties
 
 None.
 
@@ -24,7 +17,7 @@ None.
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("CredentialsContainer.create()")}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a new {{domxref("Credential")}} instance based on the provided options, or `null` if no `Credential` object can be created. In exceptional circumstances, the {{jsxref("Promise")}} may reject.

@@ -1,18 +1,11 @@
 ---
-title: BaseAudioContext.state
+title: "BaseAudioContext: state property"
+short-title: state
 slug: Web/API/BaseAudioContext/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - state
 browser-compat: api.BaseAudioContext.state
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `state` read-only property of the {{ domxref("BaseAudioContext") }}
@@ -41,7 +34,7 @@ current state to the console every time it changes.
 ```js
 audioCtx.onstatechange = () => {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ### Resuming interrupted play states in iOS Safari
@@ -52,7 +45,7 @@ the audio context's state changes to "interrupted" and needs to be resumed. For 
 
 ```js
 function play() {
-  if (audioCtx.state === 'interrupted') {
+  if (audioCtx.state === "interrupted") {
     audioCtx.resume().then(() => play());
     return;
   }

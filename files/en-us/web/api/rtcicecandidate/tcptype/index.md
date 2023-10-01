@@ -1,22 +1,11 @@
 ---
-title: RTCIceCandidate.tcpType
+title: "RTCIceCandidate: tcpType property"
+short-title: tcpType
 slug: Web/API/RTCIceCandidate/tcpType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - Property
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - tcpType
 browser-compat: api.RTCIceCandidate.tcpType
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`tcpType`** property is included on TCP candidates to provide additional details about the candidate type.
@@ -44,7 +33,7 @@ and `tcpType` are used to adjust the user interface for simultaneous-open TCP ca
 
 ```js
 if (candidate.protocol === "tcp" && candidate.tcpType === "so") {
-    adjustForSimultaneousOpen(candidate);
+  adjustForSimultaneousOpen(candidate);
 }
 ```
 

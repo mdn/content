@@ -1,16 +1,11 @@
 ---
-title: 'Window: storage event'
+title: "Window: storage event"
+short-title: storage
 slug: Web/API/Window/storage_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
 browser-compat: api.Window.storage_event
 ---
+
 {{APIRef}}
 
 The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage`) has been modified in the context of another document.
@@ -22,8 +17,8 @@ The **`storage`** event of the {{domxref("Window")}} interface fires when a stor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('storage', (event) => { });
-onstorage = (event) => { };
+addEventListener("storage", (event) => {});
+onstorage = (event) => {};
 ```
 
 ## Event type
@@ -65,10 +60,10 @@ In addition to the `Window` interface, the event handler property `onstorage` is
 Log the `sampleList` item to the console when the `storage` event fires:
 
 ```js
-window.addEventListener('storage', () => {
+window.addEventListener("storage", () => {
   // When local storage changes, dump the list to
   // the console.
-  console.log(JSON.parse(window.localStorage.getItem('sampleList')));
+  console.log(JSON.parse(window.localStorage.getItem("sampleList")));
 });
 ```
 
@@ -78,7 +73,7 @@ The same action can be achieved using the `onstorage` event handler property:
 window.onstorage = () => {
   // When local storage changes, dump the list to
   // the console.
-  console.log(JSON.parse(window.localStorage.getItem('sampleList')));
+  console.log(JSON.parse(window.localStorage.getItem("sampleList")));
 };
 ```
 

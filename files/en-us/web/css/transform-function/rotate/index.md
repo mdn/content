@@ -1,14 +1,10 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.rotate
 ---
+
 {{CSSRef}}
 
 The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
@@ -35,16 +31,16 @@ rotate(a)
 
 - _a_
   - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. The direction of rotation depends on the writing direction.
-      In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
-      a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
+    In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
+    a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^2</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
-      <th scope="col">Cartesian coordinates on ℝ^3</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
+      <th scope="col"><a href="/en-US/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
   </thead>
   <tbody>
@@ -236,7 +232,7 @@ div {
 
 ### Combining rotation with another transformation
 
-If you want apply multiple transformations to an element, be careful about the order in which you specify your
+If you want to apply multiple transformations to an element, be careful about the order in which you specify your
 transformations. For example, if you rotate before translating, the translation will be along the new axis of
 rotation!
 
@@ -292,6 +288,7 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

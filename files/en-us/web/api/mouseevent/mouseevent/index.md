@@ -1,23 +1,18 @@
 ---
-title: MouseEvent()
+title: "MouseEvent: MouseEvent() constructor"
+short-title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constructor
-  - DOM
-  - MouseEvent
-  - Reference
-  - events
+page-type: web-api-constructor
 browser-compat: api.MouseEvent.MouseEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent()`** constructor creates a new {{domxref("MouseEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new MouseEvent(type)
 new MouseEvent(type, options)
 ```
@@ -28,7 +23,9 @@ new MouseEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers set it to `dblclick`, `mousedown`, `mouseenter`, `mouseleave`, `mousemove`, `mouseout`, `mouseover`, or `mouseup`.
 - `options` {{optional_inline}}
+
   - : An object that, _in addition of the properties defined in {{domxref("UIEvent/UIEvent", "UIEvent()")}}_, can have the following properties:
+
     - `screenX` {{optional_inline}}
       - : A number, defaulting to `0`, that is the horizontal position of the mouse event on the user's screen;
         setting this value doesn't move the mouse pointer.
@@ -50,7 +47,9 @@ new MouseEvent(type, options)
     - `metaKey` {{optional_inline}}
       - : A boolean value indicating if the <kbd>meta</kbd> key was simultaneously pressed. It defaults to `false`.
     - `button` {{optional_inline}}
+
       - : A number, defaulting to `0`, that describes which button is pressed during events related to the press or release of a button:
+
         | Value | Meaning                                                         |
         | ----- | --------------------------------------------------------------- |
         | `0`   | Main button pressed (usually the left button) or un-initialized |
@@ -58,7 +57,9 @@ new MouseEvent(type, options)
         | `2`   | Secondary button pressed (usually the right button)             |
 
     - `buttons` {{optional_inline}}
+
       - : A number, defaulting to `0`, that describes which buttons are pressed when the event is launched:
+
         | Bit-field value | Meaning                                              |
         | --------------- | ---------------------------------------------------- |
         | `0`             | No button pressed                                    |

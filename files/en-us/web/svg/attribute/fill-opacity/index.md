@@ -1,20 +1,18 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.fill-opacity
 ---
+
 {{SVGRef}}
 
-The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc) applied to a shape.
+The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (_color_, _gradient_, _pattern_, etc.) applied to a shape.
 
 > **Note:** As a presentation attribute `fill-opacity` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}
@@ -29,7 +27,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -38,16 +40,13 @@ html,body,svg { height:100% }
   <circle cx="50" cy="50" r="40" />
 
   <!-- Fill opacity as a number -->
-  <circle cx="150" cy="50" r="40"
-          fill-opacity="0.7" />
+  <circle cx="150" cy="50" r="40" fill-opacity="0.7" />
 
   <!-- Fill opacity as a percentage -->
-  <circle cx="250" cy="50" r="40"
-          fill-opacity="50%" />
+  <circle cx="250" cy="50" r="40" fill-opacity="50%" />
 
   <!-- Fill opacity as a CSS property -->
-  <circle cx="350" cy="50" r="40"
-          style="fill-opacity: .25;" />
+  <circle cx="350" cy="50" r="40" style="fill-opacity: .25;" />
 </svg>
 ```
 
@@ -79,7 +78,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (*See [Browser compatibility](#browser_compatibility) below*) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
+> **Note:** SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (_See [Browser compatibility](#browser_compatibility) below_) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
 
 ## Specifications
 

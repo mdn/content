@@ -1,18 +1,14 @@
 ---
-title: Presentation.receiver
+title: "Presentation: receiver property"
+short-title: receiver
 slug: Web/API/Presentation/receiver
 page-type: web-api-instance-property
-tags:
-  - API
-  - Presentation
-  - Presentation API
-  - Property
-  - Read-only
-  - Reference
-  - receiver
+status:
+  - experimental
 browser-compat: api.Presentation.receiver
 ---
-{{APIRef("Presentation")}}
+
+{{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **read-only** {{domxref("Presentation")}} attribute
 `receiver`, which is only available in browser contexts which are
@@ -41,11 +37,7 @@ the context is indeed receiving a presentation. If it's `null`, there's no
 incoming presentation.
 
 ```js
-if (navigator.receiver) {
-  footer.innerHTML = "Receiving presentation";
-} else {
-  footer.innerHTML = "(idle)";
-}
+footer.textContent = navigator.receiver ? "Receiving presentation" : "(idle)";
 ```
 
 ### Accessing the connection list

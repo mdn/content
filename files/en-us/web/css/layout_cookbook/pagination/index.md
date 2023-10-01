@@ -1,17 +1,12 @@
 ---
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
-tags:
-  - CSS
-  - CSS Cookbook
-  - Guide
-  - css layout
-  - flexbox
-  - pagination
+page-type: guide
 browser-compat:
   - css.properties.justify-content
   - css.properties.column-gap.flex_context
 ---
+
 {{CSSRef}}
 
 This cookbook pattern demonstrates the navigation pattern used to display pagination, where the user can move between pages of content such as search results.
@@ -20,7 +15,7 @@ This cookbook pattern demonstrates the navigation pattern used to display pagina
 
 ## Requirements
 
-The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
+The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screen reader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
 
 Typically, the pagination component will be centered horizontally underneath the content.
 
@@ -34,7 +29,7 @@ Typically, the pagination component will be centered horizontally underneath the
 
 ## Choices made
 
-This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
+This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
 
 The list itself also becomes a flex container to lay the items out as a row. To space the items out we will use a {{cssxref("margin")}} on the flex items.
 
@@ -54,9 +49,9 @@ Once the {{cssxref("column-gap")}} property has implementation in browsers this 
 
 ## Accessibility concerns
 
-We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added [`aria-label="pagination"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) on the `<nav>` element.
+We want to ensure that a person using a screen reader understands what this navigation does, and where they will go when clicking a link. To help with this we have added [`aria-label="pagination"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) on the `<nav>` element.
 
-We have also added some additional content that would be read by a screenreader but is hidden visually, and set the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the paging arrows.
+We have also added some additional content that would be read by a screen reader but is hidden visually, and set the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the paging arrows.
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 

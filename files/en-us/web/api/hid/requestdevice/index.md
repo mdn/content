@@ -1,16 +1,13 @@
 ---
-title: HID.requestDevice()
+title: "HID: requestDevice() method"
+short-title: requestDevice()
 slug: Web/API/HID/requestDevice
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestDevice
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.requestDevice
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
@@ -19,7 +16,7 @@ The user agent will present a permission dialog including a list of connected de
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice(options)
 ```
 
@@ -53,6 +50,10 @@ A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDD
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the page does not allow access to the HID feature.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 ### Matching a device with all four filter rules
@@ -61,30 +62,30 @@ In the following example a HID device is requested that has a vendor ID of `0xAB
 
 ```js
 let requestButton = document.getElementById("request-hid-device");
-  requestButton.addEventListener("click", async () => {
-    let device;
-    try {
-      const devices = await navigator.hid.requestDevice({
-        filters: [
-          {
-            vendorId: 0xabcd,
-            productId: 0x1234,
-            usagePage: 0x0c,
-            usage: 0x01,
-          },
-        ],
-      });
-      device = devices[0];
-    } catch (error) {
-      console.log("An error occurred.");
-    }
+requestButton.addEventListener("click", async () => {
+  let device;
+  try {
+    const devices = await navigator.hid.requestDevice({
+      filters: [
+        {
+          vendorId: 0xabcd,
+          productId: 0x1234,
+          usagePage: 0x0c,
+          usage: 0x01,
+        },
+      ],
+    });
+    device = devices[0];
+  } catch (error) {
+    console.log("An error occurred.");
+  }
 
-    if (!device) {
-      console.log("No device was selected.");
-    } else {
-      console.log(`HID: ${device.productName}`);
-    }
-  });
+  if (!device) {
+    console.log("No device was selected.");
+  } else {
+    console.log(`HID: ${device.productName}`);
+  }
+});
 ```
 
 ### An example with two filters
@@ -93,19 +94,19 @@ This next example includes two filters. Devices will be shown if they match eith
 
 ```js
 // Filter on devices with the Nintendo Switch Joy-Con USB Vendor/Product IDs.
-  const filters = [
-    {
-      vendorId: 0x057e, // Nintendo Co., Ltd
-      productId: 0x2006 // Joy-Con Left
-    },
-    {
-      vendorId: 0x057e, // Nintendo Co., Ltd
-      productId: 0x2007 // Joy-Con Right
-    }
-  ];
+const filters = [
+  {
+    vendorId: 0x057e, // Nintendo Co., Ltd
+    productId: 0x2006, // Joy-Con Left
+  },
+  {
+    vendorId: 0x057e, // Nintendo Co., Ltd
+    productId: 0x2007, // Joy-Con Right
+  },
+];
 
-  // Prompt user to select a Joy-Con device.
-  const [device] = await navigator.hid.requestDevice({ filters });
+// Prompt user to select a Joy-Con device.
+const [device] = await navigator.hid.requestDevice({ filters });
 ```
 
 ## Specifications

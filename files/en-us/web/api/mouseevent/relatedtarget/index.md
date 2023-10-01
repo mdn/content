@@ -1,17 +1,11 @@
 ---
-title: MouseEvent.relatedTarget
+title: "MouseEvent: relatedTarget property"
+short-title: relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.relatedTarget
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.
@@ -137,14 +131,14 @@ Try moving your mouse cursor into and out of the red and blue boxes.
 ### JavaScript
 
 ```js
-const mouseoutLog = document.getElementById('log'),
-      red = document.getElementById('red'),
-      blue = document.getElementById('blue');
+const mouseoutLog = document.getElementById("log"),
+  red = document.getElementById("red"),
+  blue = document.getElementById("blue");
 
-red.addEventListener('mouseover', overListener);
-red.addEventListener('mouseout', outListener);
-blue.addEventListener('mouseover', overListener);
-blue.addEventListener('mouseout', outListener);
+red.addEventListener("mouseover", overListener);
+red.addEventListener("mouseout", outListener);
+blue.addEventListener("mouseover", overListener);
+blue.addEventListener("mouseout", outListener);
 
 function outListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";

@@ -1,17 +1,11 @@
 ---
-title: 'PaymentRequest: paymentmethodchange event'
+title: "PaymentRequest: paymentmethodchange event"
+short-title: paymentmethodchange
 slug: Web/API/PaymentRequest/paymentmethodchange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Payment Request
-  - Payment Request API
-  - PaymentMethodChangeEvent
-  - events
-  - payment
-  - paymentmethodchange
 browser-compat: api.PaymentRequest.paymentmethodchange_event
 ---
+
 {{APIRef}}
 
 The **`paymentmethodchange`** event is delivered the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when the user changes the payment method within a given payment handler.
@@ -25,14 +19,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paymentmethodchange', (event) => { });
+addEventListener("paymentmethodchange", (event) => {});
 
-onpaymentmethodchange = (event) => { };
+onpaymentmethodchange = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentMethodChangeEvent")}}
 
@@ -53,17 +47,25 @@ The code assumes the existence of a method `detailsForShipping()`, which returns
 
 ```js
 const options = {
-  requestShipping: true
+  requestShipping: true,
 };
 
-const paymentRequest = new PaymentRequest(paymentMethods,
-      detailsForShipping("ground"), options);
+const paymentRequest = new PaymentRequest(
+  paymentMethods,
+  detailsForShipping("ground"),
+  options,
+);
 
-paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange, false);
+paymentRequest.addEventListener(
+  "paymentmethodchange",
+  handlePaymentChange,
+  false,
+);
 
-paymentRequest.show()
-.then((response) => response.complete("success"))
-.catch((err) => console.error(`Error handling payment request: ${err}`));
+paymentRequest
+  .show()
+  .then((response) => response.complete("success"))
+  .catch((err) => console.error(`Error handling payment request: ${err}`));
 ```
 
 The event handler function itself, `handlePaymentChange()`, looks like this:

@@ -1,13 +1,8 @@
 ---
 title: Nearest
 slug: WebAssembly/Reference/Numeric/Nearest
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`nearest`** instructions, are used for getting the value of a number rounded to the nearest integer.
@@ -23,7 +18,7 @@ f32.const -2.7
 ;; round to the nearest integer
 f32.nearest
 
-;; the top item on the stack will now be -2
+;; the top item on the stack will now be -3
 ```
 
 | Instruction   | Binary opcode |

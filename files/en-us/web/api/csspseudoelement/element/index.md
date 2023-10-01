@@ -1,16 +1,13 @@
 ---
-title: CSSPseudoElement.element
+title: "CSSPseudoElement: element property"
+short-title: element
 slug: Web/API/CSSPseudoElement/element
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPseudoElement
-  - Element
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.element
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the
@@ -27,16 +24,16 @@ The example below demonstrates the relationship between
 `CSSPseudoElement.element` and {{DOMxRef('Element.pseudo()')}}:
 
 ```js
-const myElement = document.querySelector('q');
-const cssPseudoElement = myElement.pseudo('::after');
+const myElement = document.querySelector("q");
+const cssPseudoElement = myElement.pseudo("::after");
 const originatingElement = cssPseudoElement.element;
 
-console.log(myElement === originatingElement);                  // Outputs true
-console.log(myElement.parentElement === originatingElement);    // Outputs false
-console.log(myElement.lastElementChild === cssPseudoElement);   // Outputs false
-console.log(myElement.lastChild === cssPseudoElement);          // Outputs false
+console.log(myElement === originatingElement); // Outputs true
+console.log(myElement.parentElement === originatingElement); // Outputs false
+console.log(myElement.lastElementChild === cssPseudoElement); // Outputs false
+console.log(myElement.lastChild === cssPseudoElement); // Outputs false
 console.log(myElement.nextElementSibling === cssPseudoElement); // Outputs false
-console.log(myElement.nextSibling === cssPseudoElement);        // Outputs false
+console.log(myElement.nextSibling === cssPseudoElement); // Outputs false
 ```
 
 ## Specifications

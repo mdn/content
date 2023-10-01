@@ -1,12 +1,12 @@
 ---
 title: u1
 slug: Web/SVG/Attribute/u1
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.u1
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`u1`** attribute specifies list of {{Glossary("Unicode")}} characters (refer to the description of the {{SVGAttr("unicode")}} attribute of the {{SVGElement("glyph")}} element for a description of how to express individual Unicode characters) and/or ranges of Unicode characters, which identify a set of possible first {{Glossary("glyphs")}} in a kerning pair.

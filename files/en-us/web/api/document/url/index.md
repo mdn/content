@@ -1,15 +1,11 @@
 ---
-title: Document.URL
+title: "Document: URL property"
+short-title: URL
 slug: Web/API/Document/URL
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.URL
 ---
+
 {{APIRef("DOM")}}
 
 The **`URL`** read-only property of the {{domxref("Document")}}
@@ -31,7 +27,7 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL goes here</span>
 </p>
 ```

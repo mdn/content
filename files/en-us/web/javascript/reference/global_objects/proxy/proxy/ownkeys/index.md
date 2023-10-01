@@ -1,23 +1,19 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
 ---
+
 {{JSRef}}
 
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
+The **`handler.ownKeys()`** method is a trap for the `[[OwnPropertyKeys]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}}, etc.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   ownKeys(target) {
   }
@@ -38,9 +34,6 @@ The `ownKeys()` method must return an enumerable object.
 
 ## Description
 
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
-
 ### Interceptions
 
 This trap can intercept these operations:
@@ -50,10 +43,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Reflect.ownKeys()")}}
 
+Or any other operation that invokes the `[[OwnPropertyKeys]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - The result of `ownKeys()` must be an array.
 - The type of each array element is either a {{jsxref("String")}} or a
@@ -70,31 +64,35 @@ If the following invariants are violated, the proxy will throw a
 The following code traps {{jsxref("Object.getOwnPropertyNames()")}}.
 
 ```js
-const p = new Proxy({}, {
-  ownKeys(target) {
-    console.log('called');
-    return ['a', 'b', 'c'];
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    ownKeys(target) {
+      console.log("called");
+      return ["a", "b", "c"];
+    },
+  },
+);
 
-console.log(Object.getOwnPropertyNames(p)); // "called"
-                                            // [ 'a', 'b', 'c' ]
+console.log(Object.getOwnPropertyNames(p));
+// "called"
+// [ 'a', 'b', 'c' ]
 ```
 
 The following code violates an invariant.
 
 ```js example-bad
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: true,
-  value: 10 }
-);
+  value: 10,
+});
 
 const p = new Proxy(obj, {
   ownKeys(target) {
     return [123, 12.5, true, false, undefined, null, {}, []];
-  }
+  },
 });
 
 console.log(Object.getOwnPropertyNames(p));

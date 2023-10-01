@@ -1,24 +1,11 @@
 ---
-title: CSSStyleSheet.deleteRule()
+title: "CSSStyleSheet: deleteRule() method"
+short-title: deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Rule
-  - StyleSheet
-  - delete
-  - deleteRule
-  - remove
 browser-compat: api.CSSStyleSheet.deleteRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The {{domxref("CSSStyleSheet")}} method
@@ -27,7 +14,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRule(index)
 ```
 
@@ -46,7 +33,7 @@ None ({{jsxref("undefined")}}).
 This example removes the first rule from the stylesheet `myStyles`.
 
 ```js
- myStyles.deleteRule(0);
+myStyles.deleteRule(0);
 ```
 
 ## Specifications

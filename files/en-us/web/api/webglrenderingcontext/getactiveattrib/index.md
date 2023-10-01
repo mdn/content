@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.getActiveAttrib()
+title: "WebGLRenderingContext: getActiveAttrib() method"
+short-title: getActiveAttrib()
 slug: Web/API/WebGLRenderingContext/getActiveAttrib
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveAttrib
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getActiveAttrib()`** method of the
@@ -20,7 +16,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveAttrib(program, index)
 ```
 
@@ -44,7 +40,7 @@ A {{domxref("WebGLActiveInfo")}} object.
 const numAttribs = gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES);
 for (let i = 0; i < numAttribs; ++i) {
   const info = gl.getActiveAttrib(program, i);
-  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
+  console.log("name:", info.name, "type:", info.type, "size:", info.size);
 }
 ```
 

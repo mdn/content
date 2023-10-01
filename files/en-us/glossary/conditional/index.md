@@ -1,11 +1,11 @@
 ---
 title: Conditional
 slug: Glossary/Conditional
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 A **condition** is a set of rules that can interrupt normal code execution or change it, depending on whether the condition is completed or not.
 
 An instruction or a set of instructions is executed if a specific condition is fulfilled. Otherwise, another instruction is executed. It is also possible to repeat the execution of an instruction, or set of instructions, while a condition is not yet fulfilled.

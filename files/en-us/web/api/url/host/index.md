@@ -1,15 +1,11 @@
 ---
-title: URL.host
+title: "URL: host property"
+short-title: host
 slug: Web/API/URL/host
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
 browser-compat: api.URL.host
 ---
+
 {{ApiRef("URL API")}}
 
 The **`host`** property of the {{domxref("URL")}} interface is
@@ -26,14 +22,14 @@ A string.
 ## Examples
 
 ```js
-let url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
+let url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
 
-url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
+url = new URL("https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
 // The port number is not included because 443 is the scheme's default port
 
-url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
+url = new URL("https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org:4097"
 ```
 

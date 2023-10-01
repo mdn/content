@@ -1,16 +1,11 @@
 ---
-title: XPathResult.numberValue
+title: "XPathResult: numberValue property"
+short-title: numberValue
 slug: Web/API/XPathResult/numberValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.numberValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`numberValue`** property of the
@@ -46,7 +41,13 @@ The following example shows the use of the `numberValue` property.
 
 ```js
 const xpath = "count(//div)";
-const result = document.evaluate(xpath, document, null, XPathResult.NUMBER_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.NUMBER_TYPE,
+  null,
+);
 document.querySelector("output").textContent = result.numberValue;
 ```
 

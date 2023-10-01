@@ -1,11 +1,10 @@
 ---
 title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.text-rendering
 ---
+
 {{SVGRef}}
 
 The **`text-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering text.
@@ -19,7 +18,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

@@ -1,16 +1,11 @@
 ---
-title: MediaList.mediaText
+title: "MediaList: mediaText property"
+short-title: mediaText
 slug: Web/API/MediaList/mediaText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - MediaList
-  - Property
-  - Reference
-  - mediaText
 browser-compat: api.MediaList.mediaText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`mediaText`** property of the {{domxref("MediaList")}}

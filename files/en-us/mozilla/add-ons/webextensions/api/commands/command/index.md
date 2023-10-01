@@ -1,18 +1,10 @@
 ---
 title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
-tags:
-  - API
-  - Add-ons
-  - Command
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - commands
+page-type: webextension-api-type
 browser-compat: webextensions.api.commands.Command
 ---
+
 {{AddonSidebar()}}
 
 Information about a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).

@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.filter
+title: "CanvasRenderingContext2D: filter property"
+short-title: filter
 slug: Web/API/CanvasRenderingContext2D/filter
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
+
 {{APIRef}}
 
 The
@@ -102,12 +99,12 @@ This example blurs a piece of text using the `filter` property.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.filter = 'blur(4px)';
-ctx.font = '48px serif';
-ctx.fillText('Hello world', 50, 100);
+ctx.filter = "blur(4px)";
+ctx.font = "48px serif";
+ctx.fillText("Hello world", 50, 100);
 ```
 
 #### Result
@@ -125,25 +122,24 @@ photo of a rhino.
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg">
+  <img id="source" src="rhino.jpg" />
 </div>
 ```
 
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const image = document.getElementById('source');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const image = document.getElementById("source");
 
-image.addEventListener('load', (e) => {
+image.addEventListener("load", (e) => {
   // Draw unfiltered image
-  ctx.drawImage(image, 0, 0, image.width * .6, image.height * .6);
+  ctx.drawImage(image, 0, 0, image.width * 0.6, image.height * 0.6);
 
   // Draw image with filter
-  ctx.filter = 'contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #e81)';
-  ctx.drawImage(image, 400, 0, -image.width * .6, image.height * .6);
+  ctx.filter = "contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #e81)";
+  ctx.drawImage(image, 400, 0, -image.width * 0.6, image.height * 0.6);
 });
 ```
 

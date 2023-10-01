@@ -1,21 +1,15 @@
 ---
-title: VRDisplayEvent.reason
+title: "VRDisplayEvent: reason property"
+short-title: reason
 slug: Web/API/VRDisplayEvent/reason
 page-type: web-api-instance-property
-tags:
-  - API
-
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-  - reason
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.reason
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`reason`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns a human-readable reason why the event was fired.
 
@@ -33,9 +27,11 @@ A string representing the reason why the event was fired. The available reasons 
 ## Examples
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-    console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
-  })
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+  );
+});
 ```
 
 ## Specifications

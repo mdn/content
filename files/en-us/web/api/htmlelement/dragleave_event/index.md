@@ -1,19 +1,11 @@
 ---
-title: 'HTMLElement: dragleave event'
+title: "HTMLElement: dragleave event"
+short-title: dragleave
 slug: Web/API/HTMLElement/dragleave_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragleave
 browser-compat: api.HTMLElement.dragleave_event
 ---
+
 {{APIRef}}
 
 The `dragleave` event is fired when a dragged element or text selection leaves a valid drop target.
@@ -25,9 +17,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragleave', (event) => {});
+addEventListener("dragleave", (event) => {});
 
-ondragleave = (event) => { };
+ondragleave = (event) => {};
 ```
 
 ## Event type
@@ -40,7 +32,7 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
@@ -57,9 +49,7 @@ Note though that in this partial example we haven't implemented dropping: for a 
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```

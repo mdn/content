@@ -2,18 +2,13 @@
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) describes the capabilities of a {{domxref("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
 
@@ -21,17 +16,17 @@ The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API
 
 This interface is accessible through the {{domxref("VRDisplay.capabilities")}} property.
 
-## Properties
+## Instance properties
 
-- {{domxref("VRDisplayCapabilities.canPresent")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.canPresent")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
-- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean value stating whether the VR display is separate from the device's primary display.
-- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean value stating whether the VR display can track and return orientation information.
-- {{domxref("VRDisplayCapabilities.hasPosition")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasPosition")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a boolean value stating whether the VR display can track and return position information.
-- {{domxref("VRDisplayCapabilities.maxLayers")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.maxLayers")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns a number indicating the maximum number of {{domxref("VRLayerInit")}}s that the VR display can present at once (e.g. the maximum length of the array that {{domxref("VRDisplay.requestPresent()")}} can accept.)
 
 ## Examples
@@ -42,8 +37,9 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+      const listItem = document.createElement("li");
+      listItem.innerHTML =
+        `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +

@@ -1,17 +1,10 @@
 ---
 title: userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
-tags:
-  - Add-ons
-  - Customization
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - WebExtensions
-  - userScripts
+page-type: webextension-api
 browser-compat: webextensions.api.userScripts
 ---
+
 {{AddonSidebar}}
 
 Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.

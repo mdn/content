@@ -1,19 +1,16 @@
 ---
-title: HIDInputReportEvent.device
+title: "HIDInputReportEvent: device property"
+short-title: device
 slug: Web/API/HIDInputReportEvent/device
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - device
-  - HIDInputReportEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent.device
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-The **`device`**  property of the {{domxref("HIDInputReportEvent")}} interface returns the {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
+The **`device`** property of the {{domxref("HIDInputReportEvent")}} interface returns the {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
 
 ## Value
 

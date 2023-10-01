@@ -1,17 +1,11 @@
 ---
-title: RTCRtpContributingSource.source
+title: "RTCRtpContributingSource: source property"
+short-title: source
 slug: Web/API/RTCRtpContributingSource/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpContributingSource
-  - Reference
-  - WebRTC
-  - source
 browser-compat: api.RTCRtpContributingSource.source
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`source`** property of
@@ -20,7 +14,7 @@ a particular stream of RTP packets.
 
 The value is the contributing source (CSRC)
 or synchronization source (SSRC) identifier, depending on whether the object is an
-`RTCRtpContributingSource` or {{domxref("RTCRtpSynchronizationSource")}},
+`RTCRtpContributingSource` or `RTCRtpSynchronizationSource`,
 which is based on the former.
 
 ## Value

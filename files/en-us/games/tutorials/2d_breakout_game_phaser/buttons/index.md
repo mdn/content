@@ -1,16 +1,9 @@
 ---
 title: Buttons
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-tags:
-  - 2D
-  - Beginner
-  - Buttons
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
@@ -33,7 +26,7 @@ let startButton;
 We can load the button spritesheet the same way we loaded the ball's wobble animation. Add the following to the bottom of the `preload()` function:
 
 ```js
-game.load.spritesheet('button', 'img/button.png', 120, 40);
+game.load.spritesheet("button", "img/button.png", 120, 40);
 ```
 
 A single button frame is 120 pixels wide and 40 pixels high.
@@ -48,12 +41,12 @@ Adding the new button to the game is done by using the `add.button` method. Add 
 startButton = game.add.button(
   game.world.width * 0.5,
   game.world.height * 0.5,
-  'button',
+  "button",
   startGame,
   this,
   1,
   0,
-  2
+  2,
 );
 startButton.anchor.set(0.5);
 ```

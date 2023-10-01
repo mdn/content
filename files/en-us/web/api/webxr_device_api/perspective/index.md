@@ -2,22 +2,8 @@
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Guide
-  - Mixed
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR Device API
-  - XR
-  - augmented
-  - perspective
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Because [WebXR](/en-US/docs/Web/API/WebXR_Device_API) uses [WebGL](/en-US/docs/Web/API/WebGL_API) to render the views that form the 3D environment displayed using the XR hardware, it's easy to think that the perspective-related matters are identical to those found in any WebGL project. This is largely true, but there are a few specific topics that need to be revisited and some minor additional guidelines considered in order to ensure that your app looks right and, more importantly, that your 3D world doesn't cause people to become ill from vertigo or other effects that can be caused when what's being seen doesn't match what the brain expects from reality.
@@ -60,10 +46,22 @@ function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
   const rangeInv = 1 / (near - far);
 
   return [
-    f / aspectRatio, 0,                          0,   0,
-    0,               f,                          0,   0,
-    0,               0,    (near + far) * rangeInv,  -1,
-    0,               0,  near * far * rangeInv * 2,   0
+    f / aspectRatio,
+    0,
+    0,
+    0,
+    0,
+    f,
+    0,
+    0,
+    0,
+    0,
+    (near + far) * rangeInv,
+    -1,
+    0,
+    0,
+    near * far * rangeInv * 2,
+    0,
   ];
 }
 ```

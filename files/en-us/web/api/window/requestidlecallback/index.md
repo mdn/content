@@ -1,19 +1,12 @@
 ---
-title: window.requestIdleCallback()
+title: "window: requestIdleCallback() method"
+short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - requestIdleCallback
-  - polyfill
 browser-compat: api.Window.requestIdleCallback
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`window.requestIdleCallback()`** method queues a function
 to be called during a browser's idle periods. This enables developers to perform
@@ -32,7 +25,7 @@ loop.
 
 ## Syntax
 
-```js
+```js-nolint
 requestIdleCallback(callback)
 requestIdleCallback(callback, options)
 ```
@@ -76,4 +69,3 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 - {{domxref("setTimeout()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

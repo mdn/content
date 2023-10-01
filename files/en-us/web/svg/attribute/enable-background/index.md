@@ -1,12 +1,12 @@
 ---
 title: enable-background
 slug: Web/SVG/Attribute/enable-background
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.enable-background
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`enable-background`** attribute specifies how the accumulation of the background image is managed.
@@ -51,10 +51,13 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `accumulate`
+
   - : If an ancestor container element has a property value of `enable-background: new`, then all graphics elements within the current container element are rendered both onto the parent container element's background image canvas and onto the target device.
 
     Otherwise, there is no current background image canvas, so graphics elements are only rendered onto the target device.
+
 - `new [ <x> <y> <width> <height> ]?`
+
   - : This value enables the ability of children of the current container element to access the background image.
 
     It also indicates that a new (i.e., initially transparent black) background image canvas is established and that in effect all children of the current container element shall be rendered into the new background image canvas in addition to being rendered onto the target device.

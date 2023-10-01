@@ -1,18 +1,13 @@
 ---
-title: BluetoothRemoteGATTDescriptor.uuid
+title: "BluetoothRemoteGATTDescriptor: uuid property"
+short-title: uuid
 slug: Web/API/BluetoothRemoteGATTDescriptor/uuid
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - uuid
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.uuid
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.uuid`** read-only property returns the {{Glossary("UUID")}} of the characteristic descriptor.

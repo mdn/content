@@ -1,20 +1,15 @@
 ---
-title: VRDisplayEvent.display
+title: "VRDisplayEvent: display property"
+short-title: display
 slug: Web/API/VRDisplayEvent/display
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-  - display
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.display
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`display`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns the {{domxref("VRDisplay")}} associated with this event.
 
@@ -27,9 +22,11 @@ A {{domxref("VRDisplay")}} object.
 ## Examples
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-    console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
-  })
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+  );
+});
 ```
 
 ## Specifications

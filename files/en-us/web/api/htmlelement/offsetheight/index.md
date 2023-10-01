@@ -1,16 +1,11 @@
 ---
-title: HTMLElement.offsetHeight
+title: "HTMLElement: offsetHeight property"
+short-title: offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsNonDHMLImage
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetHeight`** read-only property returns
@@ -36,7 +31,7 @@ A number.
 
 ## Examples
 
-![](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetHeight` is the layout height of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 The example image above shows a scrollbar and an `offsetHeight` which fits
 on the window. However, non-scrollable elements may have large `offsetHeight`

@@ -1,24 +1,11 @@
 ---
-title: XRSessionEvent()
+title: "XRSessionEvent: XRSessionEvent() constructor"
+short-title: XRSessionEvent()
 slug: Web/API/XRSessionEvent/XRSessionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Mixed
-  - Reality
-  - Reference
-  - Session
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSessionEvent
-  - augmented
-  - events
 browser-compat: api.XRSessionEvent.XRSessionEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The WebXR Device API's
@@ -29,14 +16,14 @@ reality session.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRSessionEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :  A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers set it to `end` or `visibilitychange`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:

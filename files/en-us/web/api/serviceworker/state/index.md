@@ -1,22 +1,17 @@
 ---
-title: ServiceWorker.state
+title: "ServiceWorker: state property"
+short-title: state
 slug: Web/API/ServiceWorker/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - state
 browser-compat: api.ServiceWorker.state
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`state`** read-only property of the
 {{domxref("ServiceWorker")}} interface returns a string representing the current state
 of the service worker. It can be one of the following values: `parsed`, `installing`,
-`installed,` `activating`, `activated`, or
+`installed`, `activating`, `activated`, or
 `redundant`.
 
 ## Value
@@ -46,18 +41,18 @@ and returns its value.
 let serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
-  document.querySelector('#kind').textContent = 'installing';
+  document.querySelector("#kind").textContent = "installing";
 } else if (registration.waiting) {
   serviceWorker = registration.waiting;
-  document.querySelector('#kind').textContent = 'waiting';
+  document.querySelector("#kind").textContent = "waiting";
 } else if (registration.active) {
   serviceWorker = registration.active;
-  document.querySelector('#kind').textContent = 'active';
+  document.querySelector("#kind").textContent = "active";
 }
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', (e) => {
+  serviceWorker.addEventListener("statechange", (e) => {
     logState(e.target.state);
   });
 }

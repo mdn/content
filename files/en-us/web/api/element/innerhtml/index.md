@@ -1,18 +1,11 @@
 ---
-title: Element.innerHTML
+title: "Element: innerHTML property"
+short-title: innerHTML
 slug: Web/API/Element/innerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing HTML
-  - Property
-  - Reference
-  - innerHTML
 browser-compat: api.Element.innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} property
@@ -60,7 +53,7 @@ This lets you look at the HTML markup of the element's content nodes.
 Setting the value of `innerHTML` lets you easily replace the existing contents of an element with new content.
 
 > **Note:** This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
-> When inserting user-supplied data you should always consider using {{domxref("Element.SetHTML()")}} instead, in order to sanitize the content before it is inserted.
+> When inserting user-supplied data you should always consider using {{domxref("Element.setHTML()")}} instead, in order to sanitize the content before it is inserted.
 
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
 
@@ -74,7 +67,10 @@ Then the value of `innerHTML` is changed to this new string.
 As a result, the document contents are replaced with a display of the page's entire source code.
 
 ```js
-document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(/</g,"&lt;")}</pre>`;
+document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
+  /</g,
+  "&lt;",
+)}</pre>`;
 ```
 
 #### Operational details
@@ -132,7 +128,7 @@ el.innerHTML = name; // harmless in this case
 ```
 
 Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
-attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag
+attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag
 inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements,
@@ -146,7 +142,7 @@ el.innerHTML = name; // shows the alert
 
 For that reason, it is recommended that instead of `innerHTML` you use:
 
-- {{domxref("Element.SetHTML()")}} to sanitize the text before it is inserted into the DOM.
+- {{domxref("Element.setHTML()")}} to sanitize the text before it is inserted into the DOM.
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
 
 > **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.

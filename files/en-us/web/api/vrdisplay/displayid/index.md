@@ -1,20 +1,15 @@
 ---
-title: VRDisplay.displayId
+title: "VRDisplay: displayId property"
+short-title: displayId
 slug: Web/API/VRDisplay/displayId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - displayId
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.displayId
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`displayId`** read-only property of the {{domxref("VRDisplay")}} interface returns an identifier for this particular `VRDisplay`, which is also used as an association point in the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) (see {{domxref("Gamepad.displayId")}}).
 

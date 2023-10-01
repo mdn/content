@@ -1,10 +1,9 @@
 ---
 title: Touch Event Horizon
 slug: Games/Tutorials/Touch_Event_Horizon
-tags:
-  - NeedsContent
-  - NeedsExample
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 This article is for Touch Event Horizon and A Game Related To It
@@ -15,9 +14,9 @@ This article is for Touch Event Horizon and A Game Related To It
 
 ## The example game
 
-![](touch-to-start.png)
+![Box with the text touch to start](touch-to-start.png)
 
-![](tapping.png)
+![Two circles placed side-by-side, one bigger than the other. The size of the circle represents a player's score. The scores are written above each circle.](tapping.png)
 
 [GitHub repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 

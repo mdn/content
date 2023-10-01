@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.direction
+title: "CanvasRenderingContext2D: direction property"
+short-title: direction
 slug: Web/API/CanvasRenderingContext2D/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.direction
 ---
+
 {{APIRef}}
 
 The
@@ -46,13 +42,13 @@ is right-to-left. Note that "Hi!" in `ltr` becomes "!Hi" in `rtl`.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.fillText('Hi!', 150, 50);
-ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);
+ctx.font = "48px serif";
+ctx.fillText("Hi!", 150, 50);
+ctx.direction = "rtl";
+ctx.fillText("Hi!", 150, 130);
 ```
 
 #### Result

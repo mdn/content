@@ -1,20 +1,11 @@
 ---
-title: MediaQueryList.matches
+title: "MediaQueryList: matches property"
+short-title: matches
 slug: Web/API/MediaQueryList/matches
 page-type: web-api-instance-property
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM
-  - CSSOM View
-  - DOM
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - matches
 browser-compat: api.MediaQueryList.matches
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`matches`** read-only property of the
@@ -38,23 +29,14 @@ This example detects viewport orientation changes by creating a media query usin
 feature:
 
 ```js
-function addMQListener(mq, callback) {
-  if (mq.addEventListener) {
-    mq.addEventListener("change", callback);
+const mql = window.matchMedia("(orientation:landscape)");
+mql.addEventListener("change", (event) => {
+  if (event.matches) {
+    console.log("Now in landscape orientation");
   } else {
-    mq.addListener(callback);
+    console.log("Now in portrait orientation");
   }
-}
-
-addMQListener(window.matchMedia("(orientation:landscape)"),
-  (event) => {
-    if (event.matches) {
-      /* now in landscape orientation */
-    } else {
-      /* now in portrait orientation */
-    }
-  }
-);
+});
 ```
 
 ## Specifications
@@ -67,8 +49,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -1,18 +1,11 @@
 ---
-title: AudioParam.cancelAndHoldAtTime()
+title: "AudioParam: cancelAndHoldAtTime() method"
+short-title: cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelAndHoldAtTime
-  - cancelValuesAndHoldAtTime
 browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`cancelAndHoldAtTime()`** property of the
@@ -22,7 +15,7 @@ made using other methods.
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAndHoldAtTime(cancelTime)
 ```
 

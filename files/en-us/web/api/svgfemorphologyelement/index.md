@@ -2,14 +2,9 @@
 title: SVGFEMorphologyElement
 slug: Web/API/SVGFEMorphologyElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEMorphologyElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMorphology")}} element.
@@ -47,7 +42,7 @@ The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMo
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -70,7 +65,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEMorphologyElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

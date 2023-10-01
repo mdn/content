@@ -1,14 +1,11 @@
 ---
-title: Range.setStartBefore()
+title: "Range: setStartBefore() method"
+short-title: setStartBefore()
 slug: Web/API/Range/setStartBefore
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.setStartBefore
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStartBefore()`** method sets the start position
@@ -18,7 +15,7 @@ for the `referenceNode`.
 
 ## Syntax
 
-```js
+```js-nolint
 setStartBefore(referenceNode)
 ```
 

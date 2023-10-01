@@ -1,19 +1,9 @@
 ---
 title: Explaining basic 3D theory
 slug: Games/Techniques/3D_on_the_web/Basic_theory
-tags:
-  - 3D
-  - Coordinates
-  - Textures
-  - basics
-  - fragment
-  - lighting
-  - primitives
-  - rendering
-  - theory
-  - vertex
-  - vertices
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 This article explains all of the basic theory that's useful to know when you are getting started working with 3D.

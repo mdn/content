@@ -1,31 +1,14 @@
 ---
-title: XRView.transform
+title: "XRView: transform property"
+short-title: transform
 slug: Web/API/XRView/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - View
-  - Viewpoint
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - augmented
-  - camera
-  - transform
+status:
+  - experimental
 browser-compat: api.XRView.transform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`transform`** property of the
 {{domxref("XRView")}} interface is an {{domxref("XRRigidTransform")}} object which

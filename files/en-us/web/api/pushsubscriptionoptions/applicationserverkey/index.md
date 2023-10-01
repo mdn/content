@@ -1,15 +1,11 @@
 ---
-title: PushSubscriptionOptions.applicationServerKey
+title: "PushSubscriptionOptions: applicationServerKey property"
+short-title: applicationServerKey
 slug: Web/API/PushSubscriptionOptions/applicationServerKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - applicationServerKey
-  - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.applicationServerKey
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 The **`applicationServerKey`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface contains the public key used by the push server.
@@ -27,7 +23,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options.applicationServerKey); // the public key
-  })
+  });
 });
 ```
 

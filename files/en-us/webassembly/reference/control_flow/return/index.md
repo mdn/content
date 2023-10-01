@@ -1,13 +1,8 @@
 ---
 title: return
 slug: WebAssembly/Reference/Control_flow/return
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 **`return`** returns from a function.

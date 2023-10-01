@@ -1,14 +1,11 @@
 ---
-title: Window.scrollBy()
+title: "Window: scrollBy() method"
+short-title: scrollBy()
 slug: Web/API/Window/scrollBy
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
 browser-compat: api.Window.scrollBy
 ---
+
 {{ APIRef() }}
 
 The **`Window.scrollBy()`** method scrolls the document in the
@@ -16,7 +13,7 @@ window by the given amount.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollBy(x-coord, y-coord)
 scrollBy(options)
 ```
@@ -61,7 +58,7 @@ Using `options`:
 window.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

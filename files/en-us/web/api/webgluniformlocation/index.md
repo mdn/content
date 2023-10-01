@@ -2,12 +2,9 @@
 title: WebGLUniformLocation
 slug: Web/API/WebGLUniformLocation
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLUniformLocation
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLUniformLocation** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the location of a uniform variable in a shader program.
@@ -24,10 +21,10 @@ The `WebGLUniformLocation` object does not define any methods or properties of i
 ### Getting an uniform location
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-const location = gl.getUniformLocation(WebGLProgram, 'uniformName');
+const location = gl.getUniformLocation(WebGLProgram, "uniformName");
 ```
 
 ## Specifications

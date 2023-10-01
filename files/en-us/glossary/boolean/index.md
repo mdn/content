@@ -1,14 +1,11 @@
 ---
 title: Boolean
 slug: Glossary/Boolean
-tags:
-  - Boolean
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Programming Languages
-  - data types
+page-type: glossary-disambiguation
 ---
+
+{{GlossarySidebar}}
+
 In computer science, a **Boolean** is a logical data type that can have only the values `true` or `false`.
 
 For example, in JavaScript, Boolean conditionals are often used to decide which sections of code to execute (such as in [if statements](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) or repeat (such as in [for loops](/en-US/docs/Web/JavaScript/Reference/Statements/for)).
@@ -35,8 +32,10 @@ for (control variable; boolean conditional; counter) {
 
 The Boolean value is named after English mathematician [George Boole](https://en.wikipedia.org/wiki/George_Boole), who pioneered the field of mathematical logic.
 
+Above is a general introduction. The term **Boolean** can have more specific meanings depending on the context. It may refer to:
+
+{{GlossaryDisambiguation}}
+
 ## See also
 
 - [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia
-- The JavaScript global object: {{jsxref("Boolean")}}
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

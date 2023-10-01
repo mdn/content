@@ -1,22 +1,18 @@
 ---
-title: Element.setAttributeNodeNS()
+title: "Element: setAttributeNodeNS() method"
+short-title: setAttributeNodeNS()
 slug: Web/API/Element/setAttributeNodeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` adds a new namespaced attribute node to an element.
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNodeNS(attributeNode)
 ```
 
@@ -40,7 +36,7 @@ const d1 = document.getElementById("one");
 const d2 = document.getElementById("two");
 const a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a.cloneNode(true));
-alert(d2.attributes[1].value) // returns: `utterleft'
+alert(d2.attributes[1].value); // returns: `utterleft'
 ```
 
 ## Notes

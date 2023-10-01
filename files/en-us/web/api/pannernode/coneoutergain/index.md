@@ -1,16 +1,11 @@
 ---
-title: PannerNode.coneOuterGain
+title: "PannerNode: coneOuterGain property"
+short-title: coneOuterGain
 slug: Web/API/PannerNode/coneOuterGain
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - coneOuterGain
 browser-compat: api.PannerNode.coneOuterGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `coneOuterGain` property of the {{ domxref("PannerNode") }} interface is a double value, describing the amount of volume reduction outside the cone, defined by the {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} attribute.

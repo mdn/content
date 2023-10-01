@@ -1,11 +1,10 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.core.id
 ---
+
 {{SVGRef}}
 
 The **`id`** attribute assigns a unique name to an element.
@@ -15,8 +14,12 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```html
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
     <![CDATA[
       #smallRect {
         stroke: #000066;
@@ -51,6 +54,7 @@ You can use this attribute with any SVG element.
 </table>
 
 - \<id>
+
   - : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
 
     > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.

@@ -1,16 +1,13 @@
 ---
-title: InterventionReportBody.id
+title: "InterventionReportBody: id property"
+short-title: id
 slug: Web/API/InterventionReportBody/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - id
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.id
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.
@@ -25,9 +22,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

@@ -1,11 +1,9 @@
 ---
-title: Browser Extensions
+title: Browser extensions
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Landing
-  - WebExtensions
+page-type: landing-page
 ---
+
 {{AddonSidebar}}
 
 Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.

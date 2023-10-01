@@ -1,18 +1,11 @@
 ---
-title: BaseAudioContext.listener
+title: "BaseAudioContext: listener property"
+short-title: listener
 slug: Web/API/BaseAudioContext/listener
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - listener
-  - spatialization
 browser-compat: api.BaseAudioContext.listener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `listener` property of the {{ domxref("BaseAudioContext") }} interface

@@ -2,14 +2,12 @@
 title: User-Agent Client Hints API
 slug: Web/API/User-Agent_Client_Hints_API
 page-type: web-api-overview
-tags:
-  - API
-  - User-Agent Client Hints API
-  - Overview
-  - Reference
+status:
+  - experimental
 browser-compat: api.NavigatorUAData
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
+
+{{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
 
@@ -17,7 +15,7 @@ The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Clie
 
 Parsing the User-Agent string has historically been the way to get information about the user's browser or device. A typical user agent string looks like the following example, identifying Chrome 92 on Windows:
 
-```
+```plain
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36
 ```
 
@@ -60,13 +58,17 @@ console.log(navigator.userAgentData.brands);
 In the following example a number of hints are requested using the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## Specifications

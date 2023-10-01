@@ -1,17 +1,13 @@
 ---
-title: Gamepad.pose
+title: "Gamepad: pose property"
+short-title: pose
 slug: Web/API/Gamepad/pose
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - pose
+status:
+  - experimental
 browser-compat: api.Gamepad.pose
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 The **`pose`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).

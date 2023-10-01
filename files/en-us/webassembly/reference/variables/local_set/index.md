@@ -1,12 +1,8 @@
 ---
 title: Local set
 slug: WebAssembly/Reference/Variables/Local_set
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`local.set`** instruction sets the values of a local variable.

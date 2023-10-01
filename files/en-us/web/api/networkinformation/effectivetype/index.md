@@ -1,18 +1,13 @@
 ---
-title: NetworkInformation.effectiveType
+title: "NetworkInformation: effectiveType property"
+short-title: effectiveType
 slug: Web/API/NetworkInformation/effectiveType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-  - effectiveType
+status:
+  - experimental
 browser-compat: api.NetworkInformation.effectiveType
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`effectiveType`** read-only property of the
@@ -22,7 +17,7 @@ combination of recently observed, round-trip time and downlink values.
 
 ## Value
 
-A {{jsxref("String")}} containing one of 'slow-2g', '2g', '3g', or '4g'.
+A string that is either 'slow-2g', '2g', '3g', or '4g'.
 
 ## Specifications
 

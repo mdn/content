@@ -1,23 +1,19 @@
 ---
-title: MediaStreamTrackEvent()
+title: "MediaStreamTrackEvent: MediaStreamTrackEvent() constructor"
+short-title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Media Streams API
-  - MediaStreamTrackEvent
-  - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
-{{APIRef("Media Streams API")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrackEvent()`** constructor returns a new {{domxref("MediaStreamTrackEvent")}} object,
 which represents an event signaling that a {{domxref("MediaStreamTrack")}} has been added to or removed from a {{domxref("MediaStream")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackEvent(type, options)
 ```
 
@@ -48,4 +44,4 @@ A new {{domxref("MediaStreamTrackEvent")}} object, initialized based on the prov
 - {{domxref("MediaStream/addtrack_event", "addtrack")}} and {{domxref("MediaStream/removetrack_event", "removetrack")}} events
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)

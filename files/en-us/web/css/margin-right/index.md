@@ -1,28 +1,25 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-right
 ---
+
 {{CSSRef}}
 
-The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
 {{EmbedInteractiveExample("pages/css/margin-right.html")}}
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 ## Syntax
 
 ```css
 /* <length> values */
-margin-right: 20px;  /* An absolute length */
-margin-right: 1em;   /* relative to the text size */
-margin-right: 5%;    /* relative to the nearest block container's width */
+margin-right: 20px; /* An absolute length */
+margin-right: 1em; /* relative to the text size */
+margin-right: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-right: auto;
@@ -151,9 +148,15 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 ### Setting right margin using pixels and percentages
 
 ```css
-.content { margin-right: 5%; }
-.sidebox { margin-right: 10px; }
-.logo    { margin-right: -5px; }
+.content {
+  margin-right: 5%;
+}
+.sidebox {
+  margin-right: 10px;
+}
+.logo {
+  margin-right: -5px;
+}
 ```
 
 ## Specifications

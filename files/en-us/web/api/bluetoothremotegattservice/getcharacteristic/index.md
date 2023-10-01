@@ -1,18 +1,13 @@
 ---
-title: BluetoothRemoteGATTService.getCharacteristic()
+title: "BluetoothRemoteGATTService: getCharacteristic() method"
+short-title: getCharacteristic()
 slug: Web/API/BluetoothRemoteGATTService/getCharacteristic
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - getCharacteristic()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.getCharacteristic()`** method
@@ -22,7 +17,7 @@ returns a {{jsxref("Promise")}} to an instance of
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristic(characteristic)
 ```
 

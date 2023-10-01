@@ -1,16 +1,14 @@
 ---
-title: EncodedAudioChunk.byteLength
+title: "EncodedAudioChunk: byteLength property"
+short-title: byteLength
 slug: Web/API/EncodedAudioChunk/byteLength
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - byteLength
-  - EncodedAudioChunk
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk.byteLength
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`byteLength`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns the length in bytes of the encoded audio data.
 
@@ -24,10 +22,10 @@ In the following example the `byteLength` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: audioBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedAudioChunk(init);
 

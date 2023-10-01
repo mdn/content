@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.stencilMaskSeparate()
+title: "WebGLRenderingContext: stencilMaskSeparate() method"
+short-title: stencilMaskSeparate()
 slug: Web/API/WebGLRenderingContext/stencilMaskSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilMaskSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.stencilMaskSeparate()`** method of
@@ -21,7 +17,7 @@ and back stencil writemasks to one value at the same time.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilMaskSeparate(face, mask)
 ```
 

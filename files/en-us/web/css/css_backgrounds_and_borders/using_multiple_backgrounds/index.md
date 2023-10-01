@@ -1,13 +1,9 @@
 ---
 title: Using multiple backgrounds
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Reference
+slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
+page-type: guide
 ---
+
 {{CSSRef}}
 
 You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
@@ -16,7 +12,10 @@ Specifying multiple backgrounds is easy:
 
 ```css
 .myclass {
-  background: background1, background2, /* … ,*/ backgroundN;
+  background:
+    background1,
+    background2,
+    /* …, */ backgroundN;
 }
 ```
 
@@ -38,15 +37,12 @@ In this example, three backgrounds are stacked: the Firefox logo, an image of bu
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png),
-      url(bubbles.png),
-      linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat,
-      no-repeat,
-      no-repeat;
-  background-position: bottom right,
-      left,
-      right;
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left,
+    right;
 }
 ```
 
@@ -60,4 +56,4 @@ As you can see here, the Firefox logo (listed first within {{ cssxref("backgroun
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)

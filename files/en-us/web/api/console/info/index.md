@@ -1,15 +1,11 @@
 ---
-title: console.info()
+title: "console: info() method"
+short-title: info()
 slug: Web/API/console/info
 page-type: web-api-instance-method
-tags:
-  - API
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.info
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.info()`** method outputs an
@@ -20,7 +16,7 @@ next to these items in the Web console's log.
 
 ## Syntax
 
-```js
+```js-nolint
 info(obj1)
 info(obj1, /* …, */ objN)
 info(msg)
@@ -54,4 +50,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)

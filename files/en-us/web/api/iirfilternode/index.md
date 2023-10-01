@@ -2,15 +2,9 @@
 title: IIRFilterNode
 slug: Web/API/IIRFilterNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.IIRFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is a {{domxref("AudioNode")}} processor which implements a general **[infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response)** (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
@@ -59,11 +53,11 @@ However, if you need to create an odd-ordered IIR filter, you'll need to use `II
 - {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
   - : Creates a new instance of an IIRFilterNode object.
 
-## Properties
+## Instance properties
 
 _This interface has no properties of its own; however, it inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the following additional methods:_
 

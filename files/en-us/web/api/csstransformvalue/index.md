@@ -2,18 +2,10 @@
 title: CSSTransformValue
 slug: Web/API/CSSTransformValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
 browser-compat: api.CSSTransformValue
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents `transform-list` values as used by the CSS {{CSSxref('transform')}} property.
 
@@ -37,14 +29,14 @@ Below is a list of interfaces based on the `CSSTransformValue` interface.
 - {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}}
   - : Creates a new `CSSTransformValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}}
   - : Returns how many transform components are contained within the `CSSTransformValue`.
 - {{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the transform is 2D or 3D.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
 

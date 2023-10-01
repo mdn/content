@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.getQueryParameter()
+title: "WebGL2RenderingContext: getQueryParameter() method"
+short-title: getQueryParameter()
 slug: Web/API/WebGL2RenderingContext/getQueryParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getQueryParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getQueryParameter()`** method of
@@ -18,7 +14,7 @@ information of a {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryParameter(query, pname)
 ```
 

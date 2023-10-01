@@ -2,13 +2,9 @@
 title: DOMImplementation
 slug: Web/API/DOMImplementation
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
 browser-compat: api.DOMImplementation
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`DOMImplementation`** interface represents an object providing methods which are not dependent on any particular document. Such an object is returned by the {{domxref("Document.implementation")}} property.
@@ -17,7 +13,7 @@ The **`DOMImplementation`** interface represents an object providing methods whi
 
 _This interface has no specific property and doesn't inherit any._
 
-## Methods
+## Instance methods
 
 _No inherited method._
 

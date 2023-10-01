@@ -1,13 +1,12 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
-tags:
-  - Deprecated
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`attributeType`** attribute specifies the namespace in which the target attribute and its associated values are defined.
@@ -15,14 +14,15 @@ The **`attributeType`** attribute specifies the namespace in which the target at
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -30,8 +30,13 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="5s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```

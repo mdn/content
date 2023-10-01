@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: Unexpected ''#'' used outside of class body'
+title: "SyntaxError: Unexpected '#' used outside of class body"
 slug: Web/JavaScript/Reference/Errors/Hash_outside_class
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "Unexpected '#' used outside of class body" occurs when a hash
@@ -18,7 +15,7 @@ the quotation marks when trying to access a DOM identifier as well.
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected '#' used outside of class body.
 ```
 
@@ -38,37 +35,36 @@ line of a file, or accidentally forgetting the quotation marks around a DOM iden
 
 For each case, there might be something slightly wrong. For example
 
-```js example-bad
+```js-nolint example-bad
 document.querySelector(#some-element)
 ```
 
 This can be fixed via
 
 ```js example-good
-document.querySelector("#some-element")
+document.querySelector("#some-element");
 ```
 
 ### Outside of a class
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
-  #privateField
+  #privateField;
 
-  constructor() {
-  }
+  constructor() {}
 }
 
-this.#privateField = 42
+this.#privateField = 42;
 ```
 
 This can be fixed by moving the private field back into the class
 
 ```js example-good
 class ClassWithPrivateField {
-  #privateField
+  #privateField;
 
   constructor() {
-    this.#privateField = 42
+    this.#privateField = 42;
   }
 }
 ```

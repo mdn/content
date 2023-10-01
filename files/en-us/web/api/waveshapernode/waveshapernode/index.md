@@ -1,17 +1,11 @@
 ---
-title: WaveShaperNode()
+title: "WaveShaperNode: WaveShaperNode() constructor"
+short-title: WaveShaperNode()
 slug: Web/API/WaveShaperNode/WaveShaperNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - WaveShaperNode
-  - Web Audio API
 browser-compat: api.WaveShaperNode.WaveShaperNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`WaveShaperNode()`** constructor
@@ -21,7 +15,7 @@ represents a non-linear distorter.
 
 ## Syntax
 
-```js
+```js-nolint
 new WaveShaperNode(context, options)
 ```
 

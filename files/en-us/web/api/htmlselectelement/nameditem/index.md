@@ -1,15 +1,11 @@
 ---
-title: HTMLSelectElement.namedItem()
+title: "HTMLSelectElement: namedItem() method"
+short-title: namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.namedItem
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.namedItem()`** method returns the
@@ -21,7 +17,7 @@ In JavaScript, using `selectElt.namedItem('value')` is equivalent to `selectElt.
 
 ## Syntax
 
-```js
+```js-nolint
 namedItem(str)
 ```
 
@@ -49,16 +45,16 @@ namedItem(str)
 ### JavaScript
 
 ```js
-let selectElt = document.getElementById('myFormControl');
-elem1 = selectElt.namedItem('o1'); // Returns the HTMLOptionElement representing #o1
+let selectElt = document.getElementById("myFormControl");
+elem1 = selectElt.namedItem("o1"); // Returns the HTMLOptionElement representing #o1
 ```
 
 But, you cannot write:
 
 ```js
-let selectElt = document.getElementById('myFormControl');
+let selectElt = document.getElementById("myFormControl");
 elem1 = selectElt.o1; // Returns undefined
-elem1 = selectElt['o1']; // Returns undefined
+elem1 = selectElt["o1"]; // Returns undefined
 ```
 
 ## Specifications

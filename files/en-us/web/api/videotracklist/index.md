@@ -2,19 +2,9 @@
 title: VideoTrackList
 slug: Web/API/VideoTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - list
 browser-compat: api.VideoTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`VideoTrackList`** interface is used to represent a list of the video tracks contained within a {{HTMLElement("video")}} element, with each track represented by a separate {{domxref("VideoTrack")}} object in the list.
@@ -23,7 +13,7 @@ Retrieve an instance of this object with {{domxref('HTMLMediaElement.videoTracks
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
@@ -32,7 +22,7 @@ _This interface also inherits properties from its parent interface, {{domxref("E
 - {{domxref("VideoTrackList.selectedIndex", "selectedIndex")}} {{ReadOnlyInline}}
   - : The index of the currently selected track, if any, or `−1` otherwise.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

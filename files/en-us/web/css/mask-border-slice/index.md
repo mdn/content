@@ -1,16 +1,10 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-border-slice
 ---
+
 {{CSSRef}}
 
 The **`mask-border-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image set by {{cssxref("mask-border-source")}} into regions. These regions are used to form the components of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
@@ -21,10 +15,10 @@ The **`mask-border-slice`** [CSS](/en-US/docs/Web/CSS) property divides the imag
 /* All sides */
 mask-border-slice: 30%;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-slice: 10% 30%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 mask-border-slice: 30 30% 45;
 
 /* top | right | bottom | left */

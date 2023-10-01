@@ -1,12 +1,12 @@
 ---
 title: stemv
 slug: Web/SVG/Attribute/stemv
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.stemv
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`stemv`** attribute indicates the vertical stem width of the font.

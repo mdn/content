@@ -1,13 +1,11 @@
 ---
-title: Attr.prefix
+title: "Attr: prefix property"
+short-title: prefix
 slug: Web/API/Attr/prefix
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.prefix
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`prefix`** property of the {{domxref("Attr")}} returns the namespace prefix of the attribute, or `null` if no prefix is specified.
@@ -24,7 +22,7 @@ A string containing the prefix of the namespace the attribute belongs too. If no
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -41,7 +39,7 @@ A string containing the prefix of the namespace the attribute belongs too. If no
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");

@@ -1,17 +1,11 @@
 ---
-title: MouseEvent.clientY
+title: "MouseEvent: clientY property"
+short-title: clientY
 slug: Web/API/MouseEvent/clientY
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.clientY
 ---
+
 {{APIRef("UI Events")}}
 
 The **`clientY`** read-only property of the {{domxref("MouseEvent")}} interface provides the vertical coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
@@ -36,8 +30,8 @@ This example displays your mouse's coordinates whenever you trigger the {{domxre
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `

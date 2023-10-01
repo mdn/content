@@ -1,18 +1,11 @@
 ---
-title: InputEvent.data
+title: "InputEvent: data property"
+short-title: data
 slug: Web/API/InputEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - data
-  - events
 browser-compat: api.InputEvent.data
 ---
+
 {{APIRef("UI Events")}}
 
 The **`data`** read-only property of the
@@ -35,16 +28,16 @@ property.
 ```html
 <p>Some text to copy and paste.</p>
 
-<input type="text">
+<input type="text" />
 
 <p class="result"></p>
 ```
 
 ```js
-const editable = document.querySelector('input');
-const result = document.querySelector('.result');
+const editable = document.querySelector("input");
+const result = document.querySelector(".result");
 
-editable.addEventListener('input', (e) => {
+editable.addEventListener("input", (e) => {
   result.textContent = `Inputted text: ${e.data}`;
 });
 ```

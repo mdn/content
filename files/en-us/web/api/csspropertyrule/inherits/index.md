@@ -1,18 +1,11 @@
 ---
-title: CSSPropertyRule.inherits
+title: "CSSPropertyRule: inherits property"
+short-title: inherits
 slug: Web/API/CSSPropertyRule/inherits
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Houdini
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.CSSPropertyRule.inherits
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The read-only **`inherits`** property of the {{domxref("CSSPropertyRule")}} interface returns the inherit flag of the custom property registration represented by the {{cssxref("@property")}} rule, a boolean describing whether or not the property inherits by default.
@@ -27,7 +20,7 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

@@ -1,21 +1,19 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - attr
+page-type: css-function
 browser-compat: css.types.attr
 ---
+
 {{CSSRef}}
 
 > **Note:** The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
 
 The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the value of the attribute on the pseudo-element's originating element is returned.
+
+{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Simple usage */
@@ -33,8 +31,6 @@ attr(src url, "");
 attr(data-width px, inherit);
 attr(data-something, "default");
 ```
-
-## Syntax
 
 ### Values
 
@@ -179,7 +175,10 @@ attr(data-something, "default");
 #### HTML
 
 ```html
-<div class="background" data-background="lime">background expected to be red if your browser does not support advanced usage of attr()</div>
+<div class="background" data-background="lime">
+  background expected to be red if your browser does not support advanced usage
+  of attr()
+</div>
 ```
 
 #### CSS

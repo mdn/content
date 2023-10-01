@@ -1,11 +1,11 @@
 ---
-title: HTMLImageElement.y
+title: "HTMLImageElement: y property"
+short-title: "y"
 slug: Web/API/HTMLImageElement/y
 page-type: web-api-instance-property
-tags:
-- Property
 browser-compat: api.HTMLImageElement.y
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
