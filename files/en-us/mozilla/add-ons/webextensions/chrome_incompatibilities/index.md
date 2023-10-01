@@ -12,15 +12,15 @@ However, there are significant differences between Chrome (and Chromium-based br
 
 - Support for WebExtension APIs differs across browsers. See [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for details.
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) on the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
-- Namespace:
+- Extension API namespace:
 
-  - **In Firefox and Safari:** JavaScript APIs are accessed under the `browser` namespace. To support browser compatibility, Firefox also supports the `chrome` namespace.
-  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
+  - **In Firefox and Safari:** Extension APIs are accessed under the `browser` namespace. The `chrome` namespace is also supported for compatibility with Chrome.
+  - **In Chrome:** Extension APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
 
 - Asynchronous APIs:
 
   - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
-  - **In Chrome:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932))
+  - **In Chrome:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932)) Callbacks are supported in Manifest V3 for backward compatibility.
 
 The rest of this page details these and other incompatibilities.
 
@@ -42,7 +42,7 @@ The rest of this page details these and other incompatibilities.
 
 ### Callbacks and promises
 
-- **In Firefox and Safari:** Asynchronous APIs use [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to return values.
+- **In Firefox and Safari (all versions), and Chrome (starting from Manifest Version 3):** Asynchronous APIs use [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to return values.
 
   ```js
   function logCookie(c) {
@@ -59,7 +59,7 @@ The rest of this page details these and other incompatibilities.
   setCookie.then(logCookie, logError);
   ```
 
-- **In Chrome:** In Manifest V2, asynchronous APIs use callbacks to return values and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
+- **In Chrome:** In Manifest V2, asynchronous APIs use callbacks to return values and {{WebExtAPIRef("runtime.lastError")}} to communicate errors. In Manifest V3, callbacks are supported for backward compatibility, along with support for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods.
 
   ```js
   function logCookie(c) {
@@ -73,13 +73,12 @@ The rest of this page details these and other incompatibilities.
   chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
   ```
 
-  In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods.
 
 ### Firefox supports both the chrome and browser namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome` using callbacks and `browser` using promises. This means that many Chrome extensions work in Firefox without changes.
 
-> **Note:** However, this is _not_ part of the WebExtensions standard and may not be supported by all compliant browsers.
+> **Note:** The `browser` namespace is supported by Firefox and Safari. Chrome does not offer the `browser` namespace, until [Chrome bug 798169](https://crbug.com/798169) is resolved.
 
 If you choose to write your extension to use `browser` and promises, Firefox provides a polyfill that should enable it to run in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 
@@ -185,7 +184,7 @@ When calling `tabs.remove()`:
 
 #### Manifest "key" property
 
-- **In Firefox:** As Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported.
+- **In Firefox:** As Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported. Firefox extensions can fix their extension ID through the `browser_specific_settings.gecko.id` manifest key (see [browser_specific_settings.gecko](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#firefox_gecko_properties)).
 - **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/docs/extensions/mv3/manifest/key/) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
 
 #### Content script HTTP(S) requests
