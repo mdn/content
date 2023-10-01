@@ -18,18 +18,18 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### A
 
-- {{MathMLElement("maction")}} (Bound actions to sub-expressions) {{deprecated_inline}}
+- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
 - {{MathMLElement("annotation")}} (Data annotations)
 - {{MathMLElement("annotation-xml")}} (XML annotations)
 
 ### E
 
-- {{MathMLElement("menclose")}} (Enclosed contents) {{non-standard_inline}}
+- {{MathMLElement("menclose")}} {{non-standard_inline}} (Enclosed contents)
 - {{MathMLElement("merror")}} (Enclosed syntax error messages)
 
 ### F
 
-- {{MathMLElement("mfenced")}} (Parentheses) {{non-standard_inline}} {{deprecated_inline}}
+- {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}} (Parentheses)
 - {{MathMLElement("mfrac")}} (Fraction)
 
 ### I
@@ -100,9 +100,9 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### General layout
 
-- {{MathMLElement("menclose")}} (Enclosed contents) {{non-standard_inline}}
+- {{MathMLElement("menclose")}} {{non-standard_inline}} (Enclosed contents)
 - {{MathMLElement("merror")}} (Enclosed syntax error messages)
-- {{MathMLElement("mfenced")}} (Parentheses) {{non-standard_inline}} {{deprecated_inline}}
+- {{MathMLElement("mfenced")}} {{non-standard_inline}} {{deprecated_inline}} (Parentheses)
 - {{MathMLElement("mfrac")}} (Fraction)
 - {{MathMLElement("mpadded")}} (Space around content)
 - {{MathMLElement("mphantom")}} (Invisible content with reserved space)
@@ -130,7 +130,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### Uncategorized elements
 
-- {{MathMLElement("maction")}} (Bound actions to sub-expressions) {{deprecated_inline}}
+- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
 
 ## Semantic annotations
 
