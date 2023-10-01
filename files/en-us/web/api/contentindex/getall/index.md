@@ -36,22 +36,21 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
     - `id`
       - : A unique {{jsxref('String')}} identifier.
     - `title`
-      - : A {{jsxref('String')}} title for the item. Used in
-        user-visible lists of content.
+      - : A {{jsxref('String')}} title for the item.
+        Used in user-visible lists of content.
     - `title`
-      - : A {{jsxref('String')}} title of the item. Used in
-        user-visible lists of content.
+      - : A {{jsxref('String')}} title of the item.
+        Used in user-visible lists of content.
     - `description`
-      - : A {{jsxref('String')}} description of the item. Used
-        in user-visible lists of content.
+      - : A {{jsxref('String')}} description of the item.
+        Used in user-visible lists of content.
     - `url`
-      - : A {{jsxref('String')}} containing the URL of the corresponding
-        HTML document. Needs to be under the scope of the current
-        {{domxref('ServiceWorker','service worker')}}.
+      - : A {{jsxref('String')}} containing the URL of the corresponding HTML document.
+        Needs to be under the scope of the current {{domxref('ServiceWorker','service worker')}}.
     - `category` {{Optional_Inline}}
 
-      - : A {{jsxref('String')}} defining the
-        category of content. Can be:
+      - : A {{jsxref('String')}} defining the category of content.
+        Can be:
 
         - `''` An empty {{jsxref('String')}}, this is the default.
         - `homepage`
