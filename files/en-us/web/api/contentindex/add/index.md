@@ -30,9 +30,6 @@ add(contentDescription)
     - `title`
       - : A {{jsxref('String')}} title for the item. Used in
         user-visible lists of content.
-    - `title`
-      - : A {{jsxref('String')}} title of the item. Used in
-        user-visible lists of content.
     - `description`
       - : A {{jsxref('String')}} description of the item. Used
         in user-visible lists of content.
