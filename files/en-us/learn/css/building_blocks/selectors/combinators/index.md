@@ -80,9 +80,9 @@ If you insert some other element such as a `<h2>` in between the `<h1>` and the 
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
 
-## General sibling combinator
+## Subsequent-sibling combinator
 
-If you want to select siblings of an element even if they are not directly adjacent, then you can use the general sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
 p ~ img

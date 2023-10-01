@@ -78955,31 +78955,6 @@
       "Wjjohnst"
     ]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2020-10-15T21:04:16.746Z",
-    "contributors": [
-      "nko6",
-      "wbamberg",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "Sheppy",
-      "erikadoyle",
-      "mikelew42",
-      "cvrebert",
-      "MusikAnimal",
-      "Sebastianz",
-      "DanSorahan",
-      "SphinxKnight",
-      "FredB",
-      "teoli",
-      "ethertank",
-      "tiffon",
-      "dhar",
-      "miken32"
-    ]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-12-14T11:20:33.993Z",
     "contributors": [
@@ -79473,6 +79448,31 @@
       "MattBrubeck",
       "fryn",
       "jwalker"
+    ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2020-10-15T21:04:16.746Z",
+    "contributors": [
+      "nko6",
+      "wbamberg",
+      "mfuji09",
+      "ExE-Boss",
+      "fscholz",
+      "mfluehr",
+      "Sheppy",
+      "erikadoyle",
+      "mikelew42",
+      "cvrebert",
+      "MusikAnimal",
+      "Sebastianz",
+      "DanSorahan",
+      "SphinxKnight",
+      "FredB",
+      "teoli",
+      "ethertank",
+      "tiffon",
+      "dhar",
+      "miken32"
     ]
   },
   "Web/CSS/Syntax": {
