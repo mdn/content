@@ -60,8 +60,7 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
 
     - `icons` {{Optional_Inline}}
 
-      - : An {{jsxref('Array')}} of image
-        resources, defined as an {{jsxref('Object')}} with the following data:
+      - : An {{jsxref('Array')}} of image resources, defined as an {{jsxref('Object')}} with the following data:
 
         - `src`
           - : A URL {{jsxref('String')}} of the source image.
