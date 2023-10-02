@@ -285,7 +285,7 @@ The generated content is the value of the `href` attribute, prepended by "URL: "
 
 ### Adding an image with alternative text
 
-This example inserts an image before all links. Two `content` values are provided. The later `content` value includes an image with alternative text that a screen reader can output as speech. If a browser does not support alternative text, this declaration will be considered invalid, with the previous `content` value displaying. This fallback content list include an image and the message " - alt text is not supported - ".
+This example inserts an image before all links. Two `content` values are provided. The later `content` value includes an image with alternative text that a screen reader can output as speech. If a browser does not support alternative text, this declaration will be considered invalid, with the previous `content` value displaying. This fallback content list includes an image and the message " - alt text is not supported - ".
 
 #### HTML
 
