@@ -52,9 +52,9 @@ See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/typ
 
 Including `prefetch` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to download the response body of the referenced pages, but none of the subresources referenced by the page. When a prefetched page is navigated to, it will render much more quickly than if it were not prefetched.
 
-The results are kept in a per-document in-memory cache. If you prefetch something the user doesn't navigate to, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow. That said, the upfront cost of a prefetch is much smaller than the upfront cost of a prerender, so you are encouraged to adopt prefetching broadly, for example prefetching all of the significant pages on your site, provided they are safe to prefetch (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details).
+The results are kept in a per-document in-memory cache. Any cached prefetches are discarded when you navigate away from the current page, except of course a prefetched document that you then navigate to.
 
-> **Note:** Such is the nature of the per-document in-memory cache, any cached prefetches are discarded when you navigate away from the current page, except of course a prefetched document that you then navigate to.
+This means that if you prefetch something the user doesn't navigate to, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow. That said, the upfront cost of a prefetch is much smaller than the upfront cost of a prerender, so you are encouraged to adopt prefetching broadly, for example prefetching all of the significant pages on your site, provided they are safe to prefetch (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details).
 
 Same-site and cross-site prefetches will work, but cross-site prefetches are limited (see ["same-site" and "cross-site"](https://web.dev/same-site-same-origin/#same-site-cross-site) for an explanation of the difference between the two). For privacy reasons cross-site prefetches will currently only work if the user has no cookies set for the destination site — we don't want sites to be able to track user activity via prefetched pages (which they may never even actually visit) based on previously-set cookies.
 
@@ -73,11 +73,9 @@ In addition, speculation rules prefetch:
 
 ### Using prerendering
 
-Including `prerender` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to fetch, render, and load the content into an invisible tab, stored in a per-document in-memory cache. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript.
+Including `prerender` rules inside `<script type=speculationrules> ... </script>` will cause supporting browsers to fetch, render, and load the content into an invisible tab, stored in a per-document in-memory cache. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript. Any cached prerenders and their subresources are discarded when you navigate away from the current page, except of course a prerendered document that you then navigate to.
 
-> **Note:** Such is the nature of the per-document in-memory cache, any cached prerenders and their subresources are discarded when you navigate away from the current page, except of course a prerendered document that you then navigate to.
-
-Future navigations to that page will be near-instant. The browser activates the invisible tab instead of carrying out the usual navigation process, replacing the old foreground page with the prerendered page. If a page is activated before it has fully prerendered, it is activated in its current state and then continues to load, which means you will still see a significant performance improvement.
+Future navigations to a prerendered page will be near-instant. The browser activates the invisible tab instead of carrying out the usual navigation process, replacing the old foreground page with the prerendered page. If a page is activated before it has fully prerendered, it is activated in its current state and then continues to load, which means you will still see a significant performance improvement.
 
 Prerendering uses memory and network bandwidth. If you prerender something the user doesn't navigate to, these are wasted (although the result may populate the HTTP cache if headers allow, allowing later use). The upfront cost of a prerender is much larger than the upfront cost of a prefetch, and there are more conditions that could make content unsafe to prerender (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details). As a result, you are encouraged to adopt prerendering more sparingly, carefully considering cases where there is a high likelihood of the page being navigated to, and you think the user experience benefit is worth the extra cost.
 
@@ -275,9 +273,7 @@ User-specific state problems can occur for other user settings, for example lang
 - The user clicks on the link to `https://site.example.com/cart`, which activates the prerendered page.
 - The user sees an empty cart, even though they just added something to it.
 
-The best mitigation for these cases is to perform client-side updates to the speculatively loaded pages. The user will get the performance benefit of the speculatively loaded content, which may be slightly out-of-date by the time the page is activated due to JavaScript running on the page while it is being prerendered. The state can then be brought up-to-date once the page is activated.
-
-As mentioned earlier, prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. This guarantees that the user will see up-to-date content after prerendering activation. If your site already auto-updates across multiple tabs then you are probably OK as-is.
+The best mitigation for these cases, and indeed any time when content can get out of sync with the server, is for pages to refresh themselves as needed. For example, a server might use the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. Pages can then update themselves appropriately, including speculatively loaded pages that have not yet activated.
 
 ## Session history behavior for prerendered documents
 
