@@ -74,7 +74,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
       contain a {{domxref('FetchEvent')}}.
     - The `id`, `title`, `description` or
       `url` are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
-    - The items referenced by `icons` are not of image type.
+    - One of the items in `icons` are not an image type, or fetching one of the items in `icons` failed with a network error.
 
 ## Examples
 
