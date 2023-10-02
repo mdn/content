@@ -107,4 +107,4 @@ In the above HTML, the two siblings of `.foo p` are `span` and `.foo`. The green
 
 ## See also
 
-- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
+- [Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator)
