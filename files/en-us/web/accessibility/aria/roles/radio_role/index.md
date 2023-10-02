@@ -253,7 +253,7 @@ let handleKeydown = function (event) {
 
 setChecked = function () {
   // uncheck all the radios in group
-  // iterated thru all the radios in radio group
+  // iterated through all the radios in radio group
   // eachRadio.tabIndex = -1;
   // eachRadio.setAttribute('aria-checked', 'false');
   // set the selected radio to checked

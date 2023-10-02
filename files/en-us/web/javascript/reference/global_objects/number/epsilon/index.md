@@ -91,4 +91,4 @@ In addition to magnitude, it is important to consider the _accuracy_ of your inp
 ## See also
 
 - [Polyfill of `Number.EPSILON` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to
+- {{jsxref("Number")}}

@@ -121,7 +121,7 @@ const wrapper = document.createElement("span");
 wrapper.setAttribute("class", "wrapper");
 const icon = document.createElement("span");
 icon.setAttribute("class", "icon");
-icon.setAttribute("tabindex", 0);
+icon.setAttribute("tabindex", "0");
 const info = document.createElement("span");
 info.setAttribute("class", "info");
 

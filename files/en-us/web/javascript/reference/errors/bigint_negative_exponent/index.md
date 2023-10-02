@@ -46,4 +46,4 @@ const quotient = b >= 0n ? a ** b : 0n;
 ## See also
 
 - [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [Exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

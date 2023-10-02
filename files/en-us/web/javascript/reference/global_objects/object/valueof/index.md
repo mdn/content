@@ -106,5 +106,5 @@ box.valueOf();
 ## See also
 
 - {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Symbol.toPrimitive")}}

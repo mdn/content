@@ -22,6 +22,6 @@ This therefore allows users to use websites without loading whole new pages from
 
 - Popular SPA frameworks:
 
-  - [React](https://reactjs.org/)
+  - [React](https://react.dev/)
   - [Angular](https://angular.io/)
   - [Vue.JS](https://vuejs.org/)

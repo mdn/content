@@ -50,7 +50,6 @@ fetch(resource, options)
         a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, string object or literal,
         or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
         Note that a request using the `GET` or `HEAD` method cannot have a body.
-
     - `browsingTopics` {{experimental_inline}}
 
       - : A boolean that specifies whether observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
@@ -58,7 +57,6 @@ fetch(resource, options)
     - `cache`
 
       - : A string indicating how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
-
     - `credentials`
 
       - : Controls what browsers do with credentials ([cookies](/en-US/docs/Web/HTTP/Cookies), [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) entries, and TLS client certificates). Must be one of the following strings:
@@ -98,17 +96,23 @@ fetch(resource, options)
         `no-cors`, or `same-origin`.
     - `priority`
       - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
-        - `high`: A high priority fetch request relative to other requests of the same type.
-        - `low`: A low priority fetch request relative to other requests of the same type.
-        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
+        - `high`
+          - : A high priority fetch request relative to other requests of the same type.
+        - `low`
+          - : A low priority fetch request relative to other requests of the same type.
+        - `auto`
+          - : Automatically determine the priority of the fetch request relative to other requests of the same type (default).
     - `redirect`
 
       - : How to handle a `redirect` response:
 
-        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
-        - `error`: Abort with an error if a redirect occurs.
-        - `manual`: Caller intends to process the response in another context.
-          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
+        - `follow`
+          - : Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
+        - `error`
+          - : Abort with an error if a redirect occurs.
+        - `manual`
+          - : Caller intends to process the response in another context.
+            See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
 
     - `referrer`
 

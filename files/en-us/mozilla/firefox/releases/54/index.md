@@ -45,7 +45,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ### Web Workers and Service Workers
 
-- {{domxref("WorkerGlobalScope.close")}} is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see [Firefox bug 1336043](https://bugzil.la/1336043)).
+- `WorkerGlobalScope.close` is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see [Firefox bug 1336043](https://bugzil.la/1336043)).
 - The {{domxref("origin")}} property has been implemented (see [Firefox bug 1306170](https://bugzil.la/1306170)).
 - The {{domxref("Client.type")}} property has been implemented (see [Firefox bug 1339844](https://bugzil.la/1339844)).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see [Firefox bug 1266747](https://bugzil.la/1266747)).
@@ -62,7 +62,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 #### Media Capture and Streams API
 
-- Usage of a {{domxref("MediaStream")}} object as the input parameter to {{domxref("URL.createObjectURL()")}} has been deprecated — the console will now show a warning (see [Firefox bug 1334564](https://bugzil.la/1334564)). You are advised to use {{domxref("HTMLMediaElement.srcObject")}} instead.
+- Usage of a {{domxref("MediaStream")}} object as the input parameter to {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} has been deprecated — the console will now show a warning (see [Firefox bug 1334564](https://bugzil.la/1334564)). You are advised to use {{domxref("HTMLMediaElement.srcObject")}} instead.
 
 #### Web Audio API
 

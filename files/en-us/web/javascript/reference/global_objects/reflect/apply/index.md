@@ -82,4 +82,4 @@ Reflect.apply("".charAt, "ponies", [3]);
 - [Polyfill of `Reflect.apply` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [`Proxy`'s `apply` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply)
+- [`handler.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply)

@@ -28,7 +28,7 @@ A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement i
 
 ### Missing curly brackets
 
-```js example-bad
+```js-nolint example-bad
 function cheer(score) {
   if (score === 147)
     return "Maximum!";
