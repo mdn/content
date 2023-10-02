@@ -40,7 +40,7 @@ postMessage(message, targetOrigin, transfer)
     algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the
     destination window without having to serialize them yourself.
 - `options` {{optional_Inline}}
-  - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of and a optional `targetOrigin` field with a string which restricts the message to the limited targets only.
+  - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of, and a optional `targetOrigin` field with a string which restricts the message to the limited targets only.
 - `targetOrigin` {{optional_Inline}}
   - : Specifies what the origin of this window must be for the event to be
     dispatched, either as the literal string `"*"` (indicating no preference)
