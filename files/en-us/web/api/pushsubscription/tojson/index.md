@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A JSON object. It contains the subscription endpoint, expirationTime and public keys, as an
+A JSON object. It contains the subscription endpoint, `expirationTime` and public keys, as an
 `endpoint` member, an `expirationTime` member and a `keys` member.
 
 ## Examples
