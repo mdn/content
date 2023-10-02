@@ -58,6 +58,7 @@ fetch(resource, options)
     - `cache`
 
       - : A string indicating how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
+
     - `credentials`
 
       - : Controls what browsers do with credentials ([cookies](/en-US/docs/Web/HTTP/Cookies), [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) entries, and TLS client certificates). Must be one of the following strings:
