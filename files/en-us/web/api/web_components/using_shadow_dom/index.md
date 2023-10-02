@@ -247,7 +247,7 @@ So the encapsulation of CSS works both ways: page styles don't affect the shadow
 
 Without the encapsulation provided by shadow DOM, [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) would be impossibly fragile. It would be too easy for a page to accidentally break a custom element's behavior or layout by running some page JavaScript or CSS. As a custom element developer, you'd never know whether the selectors applicable inside your custom element conflicted with those that applied in a page that chose to use your custom element.
 
-Custom elements are implemented as a class which extends either the base {{domxref("HTMLElement")}} or a built-in HTML element such as {{domxref("HTMLParagraphElement")}}. Typically, the custom element itself is a shadow host, and the element creates multiple elements under that root, that provide the internal implementation of the element.
+Custom elements are implemented as a class which extends either the base {{domxref("HTMLElement")}} or a built-in HTML element such as {{domxref("HTMLParagraphElement")}}. Typically, the custom element itself is a shadow host, and the element creates multiple elements under that root, to provide the internal implementation of the element.
 
 The example below creates a `<filled-circle>` custom element that just renders a circle filled with a solid color.
 
