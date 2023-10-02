@@ -42,8 +42,6 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### DOM
 
-- The deprecated Firefox-only property {{domxref("Window.sidebar")}}, which was disabled by default in version 102, has been removed ([Firefox bug 1768486](https://bugzil.la/1768486)).
-
 #### Media, WebRTC, and Web Audio
 
 #### Removals
