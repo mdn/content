@@ -57,4 +57,4 @@ li:first-of-type + li {
 
 ## See also
 
-- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator)
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator)

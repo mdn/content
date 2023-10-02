@@ -499,7 +499,7 @@
 /en-US/docs/CSS/Flexbox-redirect-3	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/CSS/Flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/CSS/Flexible_boxes-redirect-1	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/en-US/docs/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/General_sibling_combinator
+/en-US/docs/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
 /en-US/docs/CSS/Getting_Started	/en-US/docs/Learn/CSS/First_steps
 /en-US/docs/CSS/Getting_Started/Boxes	/en-US/docs/Learn/CSS/Building_blocks
 /en-US/docs/CSS/Getting_Started/Cascading_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -11439,7 +11439,8 @@
 /en-US/docs/Web/CSS/Filter_Effects/Using_filter_effects	/en-US/docs/Web/CSS/CSS_filter_effects/Using_filter_effects
 /en-US/docs/Web/CSS/Filters_Effects	/en-US/docs/Web/CSS/CSS_filter_effects
 /en-US/docs/Web/CSS/Flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/General_sibling_combinator
+/en-US/docs/Web/CSS/General_sibling_combinator	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
+/en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects

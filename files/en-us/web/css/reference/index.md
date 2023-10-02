@@ -83,7 +83,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.
-- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : Specifies that the elements selected by both `A` and `B` share the same parent and that the element selected by `A` comes before—but not necessarily immediately before—the element selected by `B`.
 - [Child combinator](/en-US/docs/Web/CSS/Child_combinator) `A > B`
   - : Specifies that the element selected by `B` is the direct child of the element selected by `A`.

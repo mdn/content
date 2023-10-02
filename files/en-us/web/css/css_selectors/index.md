@@ -20,7 +20,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - `+` ([Adjacent or next sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
 - `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
-- `~` ([General or subsequent sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator))
+- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
 
