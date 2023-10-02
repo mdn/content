@@ -73,7 +73,6 @@ The rest of this page details these and other incompatibilities.
   chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
   ```
 
-
 ### Firefox supports both the chrome and browser namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome` using callbacks and `browser` using promises. This means that many Chrome extensions work in Firefox without changes.
@@ -127,11 +126,6 @@ To work cross-browser, you can specify the path as an absolute URL, starting at 
 ```plain
 /path/to/script.js
 ```
-
-When querying tabs by URL, with `tabs.query()`:
-
-- **In Firefox**: Extensions must have the `"tabs"` permission.
-- **In Chrome**: Extensions do not need the `"tabs"` permission, but only tabs whose URLs match the extension's host permissions are included in the results.
 
 When calling `tabs.remove()`:
 
