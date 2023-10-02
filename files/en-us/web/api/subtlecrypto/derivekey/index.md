@@ -30,8 +30,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : An object defining the [derivation algorithm](#supported_algorithms) to use.
     - To use [ECDH](#ecdh), pass an
       [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object.
-    - To use [HKDF](#hkdf), pass
-      an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    - To use [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
     - To use [PBKDF2](#pbkdf2), pass
       a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 - `baseKey`
@@ -48,6 +47,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw): pass an
       [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
+    - For [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
 - `extractable`
   - : A boolean value indicating whether it
     will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
