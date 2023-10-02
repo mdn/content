@@ -50,6 +50,7 @@ fetch(resource, options)
         a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, string object or literal,
         or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
         Note that a request using the `GET` or `HEAD` method cannot have a body.
+
     - `browsingTopics` {{experimental_inline}}
 
       - : A boolean that specifies whether observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
