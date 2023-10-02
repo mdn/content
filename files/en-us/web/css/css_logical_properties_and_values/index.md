@@ -20,6 +20,14 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - Inline dimension
   - : The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
+### New properties and values
+
+CSS was initially designed with only physical coordinates in its controls. The module defines new flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [properties](/en-US/docs/Glossary/Property/CSS).
+
+Some physical properties now have logical equivalents. Properties that accept physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
+
+The transition to logical axes is ongoing and not fully defined by the module; some properties don't yet have logical equivalents.
+
 ## Reference
 
 ### Properties for sizing
@@ -112,6 +120,31 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - `offset-block-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}})
 - `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
 - `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
+
+### Unsupported properties
+
+The following properties don't have logical equivalents:
+
+- {{CSSxRef("background-position-x")}}
+- {{CSSxRef("background-position-y")}}
+
+### Unsupported values
+
+The following properties accept only physical values:
+
+- {{CSSxRef("text-underline-position")}}
+- {{CSSxRef("box-shadow")}}
+- {{CSSxRef("text-shadow")}}
+- {{CSSxRef("clip-path")}}
+
+- {{CSSxRef("&lt;position&gt;")}}
+  - {{CSSxRef("background-position")}}
+  - {{CSSxRef("object-position")}}
+  - {{CSSxRef("mask-position")}}
+  - {{CSSxRef("offset-position")}}
+  - {{CSSxRef("offset-anchor")}}
+  - {{CSSxRef("transform-origin")}}
+  - {{CSSxRef("perspective-origin")}}
 
 ## Guides
 
