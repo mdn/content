@@ -282,7 +282,6 @@ this purpose:
 
 - [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
-  and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
 ### throw statement
 

@@ -22,7 +22,7 @@ repeat(count)
 
 - `count`
   - : An integer between `0` and
-    {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
+    {{jsxref("Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
     number of times to repeat the string.
 
 ### Return value
