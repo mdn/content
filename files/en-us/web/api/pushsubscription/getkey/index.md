@@ -34,7 +34,7 @@ getKey(name)
 
 ### Return value
 
-An {{jsxref("ArrayBuffer")}}.
+An {{jsxref("ArrayBuffer")}} or `null` if no public key can be found.
 
 ## Examples
 
