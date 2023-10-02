@@ -205,7 +205,7 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
   - : Returns an array of all symbol properties found directly upon a given object.
 - {{jsxref("Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
-- {{jsxref("Object.groupBy()")}} {{experimental_inline}}
+- {{jsxref("Object.groupBy()")}}
   - : Groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group, containing arrays with the elements in the group.
 - {{jsxref("Object.hasOwn()")}}
   - : Returns `true` if the specified object has the indicated property as its _own_ property, or `false` if the property is inherited or does not exist.
@@ -272,18 +272,19 @@ const o2 = new Object(undefined);
 const o3 = new Object(null);
 ```
 
-### Using Object to create Boolean objects
+### Using Object() constructor to turn primitives into an Object of their respective type
 
-The following examples store {{jsxref("Boolean")}} objects in `o`:
+You can use the {{jsxref("Object/Object", "Object()")}} constructor to create an object wrapper of a primitive value.
 
-```js
-// equivalent to const o = new Boolean(true)
-const o = new Object(true);
-```
+The following examples create variables `o1` and `o2` which are objects storing {{jsxref("Boolean")}} and {{jsxref("BigInt")}} values:
 
 ```js
-// equivalent to const o = new Boolean(false)
-const o = new Object(Boolean());
+// Equivalent to const o1 = new Boolean(true)
+const o1 = new Object(true);
+
+// No equivalent because BigInt() can't be called as a constructor,
+// and calling it as a regular function won't create an object
+const o2 = new Object(1n);
 ```
 
 ### Object prototypes

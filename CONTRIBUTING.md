@@ -59,7 +59,7 @@ If you are comfortable working with git and GitHub, you can skip ahead to [Contr
 If you've created a new GitHub account and want to know what to do next, you can choose one of the following ways to manage changes:
 
 - [GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files) -
-  This is the easiest way to contribute **small changes** described in [Simple changes](#simple_changes).
+  This is the easiest way to contribute **small changes** described in [Simple changes](#simple-changes).
 - [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) - A desktop app for managing interaction with GitHub.
 - [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli) - A command-line wrapper for interacting with GitHub.
 - [`git`](https://git-scm.com/downloads) - You can use `git` from the command line to interact with GitHub.
@@ -339,7 +339,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 ### Redirecting a document
 
-If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
+If you are [moving a document](#moving-documents) as shown above you don't need to create a redirect.
 However, you may need to do so when fixing a broken link or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
 
 You may do this by using the `yarn content add-redirect` command.
