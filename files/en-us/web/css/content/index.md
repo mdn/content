@@ -62,7 +62,14 @@ content: unset;
 
 ### Values
 
-The value can be one of two keywords — `none` or `normal` — or either `<content-replacement>` when replacing a DOM node or a `<content-list>` for pseudo-elements and margin boxes, with optional alternative text value of a `<string>` or `<counter>`. Content replacement is always an `<image>`. A content-list is a list of of one or more anonymous inline boxes appearing in the order specified. Each content-list item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader):
+The value can be:
+
+- One of two keywords — `none` or `normal`
+- `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
+- A `<content-list>` when replacing pseudo-elements and margin boxes. A content-list is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
+- An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
+
+The keywords and data types mentioned above are described in more detail below:
 
 - `none`
 
