@@ -10,7 +10,7 @@ browser-compat: api.Document.browsingTopics
 
 {{APIRef("Topics API")}}{{SeeCompatTable}}
 
-The `browsingTopics()` method of the {{domxref("Document")}} interface returns an array of objects representing observed topics for the current user and site. It also triggers the browser to observe topics for the current user and site.
+The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing observed topics for the current user and site. It also triggers the browser to observe topics for the current user and site.
 
 ## Syntax
 
@@ -28,22 +28,24 @@ browsingTopics(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an array of objects representing the current user's top topics of interest for the current observing domain. Each object contains the following properties:
+A {{jsxref("Promise")}} that fulfills with an array of up to three objects representing the current user's top topics of interest for the current observing domain. Each object contains the following properties:
 
 - `configVersion`
-  - : A number representing the algorithm used to calculate the topic from keywords obtained from hostnames the user visits.
+  - : A string identifying the algorithm (other than the model part) used to calculate the topic.
 - `modelVersion`
-  - : A number representing the model used to classify a string into topic IDs.
+  - : A string representing the model used to classify a string into topic IDs.
 - `taxonomyVersion`
-  - : A number representing the taxonomy version used.
+  - : A string representing the taxonomy version used.
 - `topic`
   - : A number representing the ID of the topic, which can be used by the browser to retrieve the topic from the taxonomy (see an example [taxonomy of interests](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md)).
 - `version`
   - : The `configVersion`, `modelVersion`, and `taxonomyVersion`, concatenated with colons (`:`) between each.
 
+> **Note:** The method returns a random topic from the top five for each of the three most recent epochs (an epoch is a week by default), with a 5% chance that any of these may be randomly chosen from the full [taxonomy of topics](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md).
+
 The exact property values may vary by browser implementation. An example object from Chrome might look as follows:
 
-```
+```js
 {
   configVersion: "chrome.1",
   modelVersion: "1",
