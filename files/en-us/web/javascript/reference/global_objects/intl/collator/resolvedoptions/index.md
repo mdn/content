@@ -18,6 +18,10 @@ computed during initialization of this collator object.
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new object with properties reflecting the locale and collation options computed

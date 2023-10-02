@@ -56,12 +56,12 @@ Note that in a normal property access, `target` and `receiver` would observably 
 
 ```js
 // Object
-let obj = {};
+const obj = {};
 Reflect.set(obj, "prop", "value"); // true
 obj.prop; // "value"
 
 // Array
-let arr = ["duck", "duck", "duck"];
+const arr = ["duck", "duck", "duck"];
 Reflect.set(arr, 2, "goose"); // true
 arr[2]; // "goose"
 
@@ -70,7 +70,6 @@ Reflect.set(arr, "length", 1); // true
 arr; // ["duck"]
 
 // With just one argument, propertyKey and value are "undefined".
-let obj = {};
 Reflect.set(obj); // true
 Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
@@ -114,4 +113,4 @@ Reflect.set(target, "a", 2, receiver); // true
 - [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`Proxy`'s `set` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)
+- [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)

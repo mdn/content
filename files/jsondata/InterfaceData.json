@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -321,7 +325,11 @@
       "impl": []
     },
     "CaptureController": {
-      "inh": "",
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "CapturedMouseEvent": {
+      "inh": "Event",
       "impl": []
     },
     "CaretPosition": {
@@ -374,10 +382,6 @@
     },
     "CloseEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "CloseWatcher": {
-      "inh": "EventTarget",
       "impl": []
     },
     "Comment": {
@@ -656,6 +660,10 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
+    "CSSPositionFallbackRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSPropertyRule": {
       "inh": "CSSRule",
       "impl": []
@@ -700,12 +708,16 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
+    "CSSStartingStyleRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSStyleDeclaration": {
       "inh": "",
       "impl": []
     },
     "CSSStyleRule": {
-      "inh": "CSSRule",
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSStyleSheet": {
@@ -734,6 +746,10 @@
     },
     "CSSTranslate": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSTryRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSUnitValue": {
@@ -822,6 +838,14 @@
     },
     "DocumentFragment": {
       "inh": "Node",
+      "impl": []
+    },
+    "DocumentPictureInPicture": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "DocumentPictureInPictureEvent": {
+      "inh": "Event",
       "impl": []
     },
     "DocumentTimeline": {
@@ -1018,6 +1042,14 @@
     },
     "FederatedCredential": {
       "inh": "Credential",
+      "impl": []
+    },
+    "Fence": {
+      "inh": "",
+      "impl": []
+    },
+    "FencedFrameConfig": {
+      "inh": "",
       "impl": []
     },
     "FetchEvent": {
@@ -1460,6 +1492,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLFencedFrameElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLFieldSetElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1740,6 +1776,10 @@
       "inh": "Credential",
       "impl": []
     },
+    "IdentityProvider": {
+      "inh": "",
+      "impl": []
+    },
     "IdleDeadline": {
       "inh": "",
       "impl": []
@@ -1801,6 +1841,22 @@
       "impl": []
     },
     "Instance": {
+      "inh": "",
+      "impl": []
+    },
+    "InterestGroupBiddingScriptRunnerGlobalScope": {
+      "inh": "InterestGroupScriptRunnerGlobalScope",
+      "impl": []
+    },
+    "InterestGroupReportingScriptRunnerGlobalScope": {
+      "inh": "InterestGroupScriptRunnerGlobalScope",
+      "impl": []
+    },
+    "InterestGroupScoringScriptRunnerGlobalScope": {
+      "inh": "InterestGroupScriptRunnerGlobalScope",
+      "impl": []
+    },
+    "InterestGroupScriptRunnerGlobalScope": {
       "inh": "",
       "impl": []
     },
@@ -2284,6 +2340,10 @@
       "inh": "",
       "impl": []
     },
+    "PageRevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "PageTransitionEvent": {
       "inh": "Event",
       "impl": []
@@ -2636,6 +2696,10 @@
       "inh": "",
       "impl": []
     },
+    "RestrictionTarget": {
+      "inh": "",
+      "impl": []
+    },
     "RTCCertificate": {
       "inh": "",
       "impl": []
@@ -2833,7 +2897,7 @@
       "impl": []
     },
     "SFrameTransform": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "SFrameTransformErrorEvent": {
@@ -2846,6 +2910,30 @@
     },
     "ShadowRoot": {
       "inh": "DocumentFragment",
+      "impl": []
+    },
+    "SharedStorage": {
+      "inh": "",
+      "impl": []
+    },
+    "SharedStorageOperation": {
+      "inh": "",
+      "impl": []
+    },
+    "SharedStorageRunOperation": {
+      "inh": "SharedStorageOperation",
+      "impl": []
+    },
+    "SharedStorageSelectURLOperation": {
+      "inh": "SharedStorageOperation",
+      "impl": []
+    },
+    "SharedStorageWorklet": {
+      "inh": "Worklet",
+      "impl": []
+    },
+    "SharedStorageWorkletGlobalScope": {
+      "inh": "WorkletGlobalScope",
       "impl": []
     },
     "SharedWorker": {
@@ -2925,6 +3013,14 @@
       "impl": []
     },
     "Storage": {
+      "inh": "",
+      "impl": []
+    },
+    "StorageBucket": {
+      "inh": "",
+      "impl": []
+    },
+    "StorageBucketManager": {
       "inh": "",
       "impl": []
     },
@@ -3050,6 +3146,10 @@
     },
     "SVGDescElement": {
       "inh": "SVGElement",
+      "impl": []
+    },
+    "SVGDiscardElement": {
+      "inh": "SVGAnimationElement",
       "impl": []
     },
     "SVGElement": {
@@ -3620,6 +3720,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "VisibilityStateEntry": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "VisualViewport": {
       "inh": "EventTarget",
       "impl": []
@@ -3801,7 +3905,7 @@
       "impl": []
     },
     "WebTransport": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "WebTransportBidirectionalStream": {
@@ -3816,16 +3920,16 @@
       "inh": "DOMException",
       "impl": []
     },
-    "WebTransportRateControlFeedback": {
-      "inh": "",
-      "impl": []
-    },
     "WebTransportReceiveStream": {
       "inh": "ReadableStream",
       "impl": []
     },
     "WebTransportSendStream": {
       "inh": "WritableStream",
+      "impl": []
+    },
+    "WGSLLanguageFeatures": {
+      "inh": "",
       "impl": []
     },
     "WheelEvent": {
@@ -3846,6 +3950,10 @@
     },
     "WindowControlsOverlayGeometryChangeEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "WindowSharedStorage": {
+      "inh": "SharedStorage",
       "impl": []
     },
     "Worker": {
@@ -3882,6 +3990,10 @@
     },
     "WorkletGroupEffect": {
       "inh": "",
+      "impl": []
+    },
+    "WorkletSharedStorage": {
+      "inh": "SharedStorage",
       "impl": []
     },
     "WritableStream": {
@@ -4025,6 +4137,14 @@
       "impl": []
     },
     "XRMediaBinding": {
+      "inh": "",
+      "impl": []
+    },
+    "XRMesh": {
+      "inh": "",
+      "impl": []
+    },
+    "XRMeshSet": {
       "inh": "",
       "impl": []
     },

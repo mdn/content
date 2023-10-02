@@ -47,7 +47,7 @@ While changing any character may technically suffice, a PWA best practice is to 
 
 Start a JavaScript file by including a version number:
 
-```JavaScript
+```js
 const VERSION = "v1";
 ```
 
@@ -57,13 +57,13 @@ Save the file as `sw.js`
 
 For a good offline experience, the list of cached files should include all the resources used within the PWA's offline experience. While the manifest file may have a multitude of icons listed in various sizes, the application cache only needs to include the assets used by the app in offline mode.
 
-```JavaScript
+```js
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
   "/styles.css",
   "/app.js",
-  "/icon-512x512.png"
+  "/icon-512x512.png",
 ];
 ```
 
@@ -79,7 +79,7 @@ Add the list of resources to be cached for the CycleTracker PWA to `sw.js`.
 
 We include the static resources created in other sections of this tutorial that CycleTracker needs to function when offline. Our current `sw.js` file is:
 
-```JavaScript
+```js
 const VERSION = "v1";
 
 const APP_STATIC_RESOURCES = [
@@ -106,7 +106,7 @@ Use the `VERSION` number to create a versioned `CACHE_NAME`, adding it as a cons
 
 We name our cache `period-tracker-` with the current `VERSION` appended. As the constant declaration is on a single line, we put it before the array of resources constant for better legibility.
 
-```JavaScript
+```js
 const VERSION = "v1";
 const CACHE_NAME = `period-tracker-${VERSION}`;
 
@@ -125,7 +125,7 @@ Only available in secure contexts, the [`caches`](/en-US/docs/Web/API/caches) gl
 
 The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, retrieves them, then adds the responses to the given cache. The [`waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete. While browsers are responsible for executing and terminating service workers when necessary, the `waitUntil` method is a request to the browser to not terminate the service worker while a task is being executed.
 
-```JavaScript
+```js
 self.addEventListener("install", (e) => {
   e.waitUntil((async () => {
       const cache = await caches.open("cacheName_identifier");
@@ -146,13 +146,13 @@ Add an install event listener that retrieves and stores the files listed in `APP
 
 #### Example solution
 
-```JavaScript
+```js
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       cache.addAll(APP_STATIC_RESOURCES);
-    })()
+    })(),
   );
 });
 ```
@@ -165,11 +165,11 @@ We listen for the current service worker's global scope [`activate`](/en-US/docs
 
 We get the names of the existing named caches. We use the {{domxref("CacheStorage.keys()")}} method (again accessing `CacheStorage` through the global {{domxref("caches")}} property) which returns a {{jsxref("Promise")}} that resolves with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects in the order they were created.
 
-We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate thru that list of name cache promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named caches, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
+We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate through that list of name cache promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named caches, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
 
 The last line, the `await clients.claim()` uses the [`claim()`](/en-US/docs/Web/API/Clients/claim) method of the [`Clients`](/en-US/docs/Web/API/Clients) interface to enable our service worker to set itself as the controller for our client; the "client" referring to a running instance of the PWA. The `claim()` method enables the service worker to "claim control" of all clients within its scope. This way, clients loaded in the same scope don't need to be reloaded.
 
-```JavaScript
+```js
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
@@ -179,10 +179,10 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
-        })
+        }),
       );
       await clients.claim();
-    })()
+    })(),
   );
 });
 ```
@@ -201,7 +201,7 @@ For all other request modes, we open the caches as done in the [install event re
 
 Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to pass a `null` body and a `status: 404` as options, doesn't mean there is an error in our PWA. Rather, everything we need should already be in the cache, and if it isn't, we're not going to the server to resolve this non-issue.
 
-```JavaScript
+```js
 self.addEventListener("fetch", (event) => {
   // when seeking an HTML page
   if (event.request.mode === "navigate") {
@@ -214,15 +214,14 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      const cachedResponse = await cache.match(event.request);
+      const cachedResponse = await cache.match(event.request.url);
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
-      } else {
-        // Respond with a HTTP 404 response status.
-        return new Response(null, { status: 404 });
       }
-    })()
+      // Respond with a HTTP 404 response status.
+      return new Response(null, { status: 404 });
+    })(),
   );
 });
 ```
@@ -231,7 +230,7 @@ self.addEventListener("fetch", (event) => {
 
 Your `sw.js` file should look similar to the following JavaScript. Note that when updating any of the resources listed in the `APP_STATIC_RESOURCES` array, the only constant or function that must be updated within this service worker is the value of `VERSION`.
 
-```JavaScript
+```js
 // The version of the cache.
 const VERSION = "v1";
 
@@ -253,7 +252,7 @@ self.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       cache.addAll(APP_STATIC_RESOURCES);
-    })()
+    })(),
   );
 });
 
@@ -267,10 +266,10 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
-        })
+        }),
       );
       await clients.claim();
-    })()
+    })(),
   );
 });
 
@@ -287,15 +286,14 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      const cachedResponse = await cache.match(event.request);
+      const cachedResponse = await cache.match(event.request.url);
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
-      } else {
-        // If resource isn't in the cache, return a 404.
-        return new Response(null, { status: 404 });
       }
-    })()
+      // If resource isn't in the cache, return a 404.
+      return new Response(null, { status: 404 });
+    })(),
   );
 });
 ```
@@ -333,7 +331,7 @@ If the property is supported, we can then use the [`register()`](/en-US/docs/Web
 
 While the above suffices for the CycleTracker app needs, the `register()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:
 
-```javascript
+```js
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").then(
     (registration) => {

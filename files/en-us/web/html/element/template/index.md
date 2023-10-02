@@ -17,7 +17,7 @@ The only standard attributes that the `<template>` element supports are the [glo
 
 In Chromium-based browsers, the `<template>` element also supports a non-standard [`shadowrootmode` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://developer.chrome.com/articles/declarative-shadow-dom/) proposal. In supporting browsers, a `<template>` element with the `shadowrootmode` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element. `shadowrootmode` can take a value of `open` or `closed`; these are equivalent to the `open` and `closed` values of the {{domxref("Element.attachShadow()")}} `mode` option.
 
-Also, the corresponding {{domxref("HTMLTemplateElement")}} interface has a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute), which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} property could lead to unexpected behavior; for details, see the [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
+Also, the corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
 ## Examples
 
@@ -91,9 +91,9 @@ table td {
 
 {{EmbedLiveSample("Examples", 500, 120)}}
 
-## Avoiding DocumentFragment pitfall
+## Avoiding DocumentFragment pitfalls
 
-A {{domxref("DocumentFragment")}} is not a valid target for various events, as such it is often preferable to clone or refer to the elements within it.
+When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
 
 Consider the following HTML and JavaScript:
 
@@ -121,14 +121,14 @@ const firstClone = template.content.cloneNode(true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.firstElementChild.cloneNode(true);
-secondClone.addEventListener("click", clickHandler);
+const secondClone = template.content.cloneNode(true);
+secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
 
 ### Result
 
-`firstClone` is a DocumentFragment instance, so while it gets appended inside the container as expected, clicking on it does not trigger the click event. `secondClone` is an [HTMLDivElement](/en-US/docs/Web/API/HTMLDivElement) instance, clicking on it works as one would expect.
+Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
@@ -215,3 +215,4 @@ container.appendChild(secondClone);
 
 - Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

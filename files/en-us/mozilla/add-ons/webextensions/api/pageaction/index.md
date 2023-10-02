@@ -11,11 +11,13 @@ A [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_ac
 
 ![Paw print icon representing a page action](page-action.png)
 
-You can listen for clicks on the icon, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that will open when the icon is clicked.
+You can listen for clicks on the icon or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that opens when the icon is clicked.
 
-If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript—just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.
+If you specify a popup, you define its contents and behavior using HTML, CSS, and JavaScript, like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.
 
-You can define most of a page action's properties declaratively using the [`page_action` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), but can also redefine them programmatically using this API.
+The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `page_action` {{WebExtAPIRef("menus.ContextType")}}.
+
+You can define most of a page action's properties declaratively using the [`page_action` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), and redefine them programmatically using this API.
 
 Page actions are for actions that are only relevant to particular pages (such as "bookmark the current tab"). If they are relevant to the browser as a whole (such as "show all bookmarks"), use a browser action instead.
 

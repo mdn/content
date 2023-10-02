@@ -15,7 +15,7 @@ The **`DocumentType.replaceWith()`** method replaces the document type with a se
 ```js-nolint
 replaceWith(node1)
 replaceWith(node1, node2)
-replaceWith(node1, node2, /* … ,*/ nodeN)
+replaceWith(node1, node2, /* …, */ nodeN)
 ```
 
 ### Parameters

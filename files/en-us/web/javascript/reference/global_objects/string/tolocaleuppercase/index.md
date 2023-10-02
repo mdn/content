@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.String.toLocaleUpperCase
 
 {{JSRef}}
 
-The **`toLocaleUpperCase()`** method returns the calling string
-value converted to upper case, according to any locale-specific case mappings.
+The **`toLocaleUpperCase()`** method of {{jsxref("String")}} values returns this string converted to upper case, according to any locale-specific case mappings.
 
 {{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
 
@@ -25,7 +24,7 @@ toLocaleUpperCase(locales)
 
   - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to upper case according to any locale-specific case mappings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
-    Unlike other methods that use the `locales` argument, `toLocaleLowerCase()` does not allow locale matching. Therefore, after checking the validity of the `locales` argument, `toLocaleLowerCase()` always uses the first locale in the list (or the default locale if the list is empty), even if this locale is not supported by the implementation.
+    Unlike other methods that use the `locales` argument, `toLocaleUpperCase()` does not allow locale matching. Therefore, after checking the validity of the `locales` argument, `toLocaleUpperCase()` always uses the first locale in the list (or the default locale if the list is empty), even if this locale is not supported by the implementation.
 
 ### Return value
 
@@ -37,8 +36,7 @@ locale-specific case mappings.
 The `toLocaleUpperCase()` method returns the value of the string converted
 to upper case according to any locale-specific case mappings.
 `toLocaleUpperCase()` does not affect the value of the string itself. In most
-cases, this will produce the same result as {{jsxref("String.prototype.toUpperCase()",
-  "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not
+cases, this will produce the same result as {{jsxref("String/toUpperCase", "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not
 follow the default case mappings in Unicode, there may be a different result.
 
 Also notice that conversion is not necessarily a 1:1 character mapping, as some

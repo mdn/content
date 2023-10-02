@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `as`
 
-  - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set, and otherwise should not be used.
+  - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
 
     Furthermore, `rel="preload"` uses this as a signal for request prioritization.
@@ -113,7 +113,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <div class="notecard note">
               <p>
                 <strong>Note:</strong> This value also requires
-                <code>&#x3C;link></code> to contain the crossorigin attribute.
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
               </p>
             </div>
           </td>
@@ -223,9 +223,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which are a superset of the allowed values of HTML 4.
     > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
-- `prefetch` {{secureContext_inline}} {{experimental_inline}}
-  - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
-    This allows the user agent to respond faster when the resource is requested in the future.
 - `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:
@@ -446,3 +443,4 @@ the rendering of the page will be blocked till the resource is fetched. For exam
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- [The `integrity` attribute](https://150daysofhtml.com/book/day010/) on 150daysofhtml.com (2021)

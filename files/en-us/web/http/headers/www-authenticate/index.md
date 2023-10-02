@@ -65,10 +65,9 @@ WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ...
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) allows for optional `realm` and `charset` keys, but does not support `token68`.
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires `realm` and allows for optional use of `charset` key, but does not support `token68`.
 
 ```http
-WWW-Authenticate: Basic
 WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
@@ -83,7 +82,9 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.
+    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning).
+    Some clients show this value to the user to inform them about which particular credentials are required — though most browsers stopped doing so to counter phishing.
+    The only reliably supported character set for this value is `us-ascii`.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.
@@ -94,8 +95,9 @@ Generally you will need to check the relevant specifications for these (keys for
 
 ### Basic
 
-- `<realm>` {{optional_inline}}
-  - : As above.
+- `<realm>`
+  - : As [above](#realm).
+    Note that the realm is mandatory for basic authentication.
 - `charset="UTF-8"` {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
     The only allowed value is the case-insensitive string "UTF-8".

@@ -7,9 +7,8 @@ browser-compat: javascript.builtins.Array.join
 
 {{JSRef}}
 
-The **`join()`** method creates and
-returns a new string by concatenating all of the elements in an array
-(or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)),
+The **`join()`** method of {{jsxref("Array")}} instances creates and
+returns a new string by concatenating all of the elements in this array,
 separated by commas or a specified separator string. If the array has
 only one item, then that item will be returned without using the separator.
 
@@ -25,15 +24,11 @@ join(separator)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : Specifies a string to separate each pair of adjacent elements of the array. The
-    separator is converted to a string if necessary. If omitted, the array elements are
-    separated with a comma (","). If `separator` is an empty string, all
-    elements are joined without any characters in between them.
+  - : A string to separate each pair of adjacent elements of the array. If omitted, the array elements are separated with a comma (",").
 
 ### Return value
 
-A string with all array elements joined. If `arr.length` is
-`0`, the empty string is returned.
+A string with all array elements joined. If `array.length` is `0`, the empty string is returned.
 
 ## Description
 
@@ -120,7 +115,7 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 ## See also
 
 - [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.prototype.join()")}}

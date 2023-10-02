@@ -25,7 +25,8 @@ ContentIndex.delete(id).then(/* … */)
 
 ### Parameters
 
-This method receives no parameters.
+- `id`
+  - : The unique identifier of the indexed content you want the {{domxref("ContentIndex")}} object to remove.
 
 ### Return value
 
