@@ -1024,48 +1024,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array (iterable) grouping methods
-
-The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods are used to group the elements of an iterable using a string or value returned by a test function (respectively).
-The first method should be used when strings can be used to represent element groups, while the method in `Map` might be used when elements are associated with a particular object.
-(See [Firefox bug 1841518](https://bugzil.la/1841518) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.array_grouping</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Array transfer
 
 The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
@@ -1107,48 +1065,6 @@ After transfer, the original buffer is detached from the original memory and hen
       <th>Preference name</th>
       <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
     </tr>
-    </tr>
-  </tbody>
-</table>
-
-### String isWellFormed() and toWellFormed() methods
-
-Strings in JavaScript are represented by sequences of unsigned 16-bit integers, and it's possible to have valid string values that are not well-formed Unicode text.
-The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods are used to check if a string is well-formed Unicode text and to convert a string to well-formed Unicode text, respectively.
-See [tc39/proposal-is-usv-string](https://github.com/tc39/proposal-is-usv-string) and [Firefox bug 1825005](https://bugzil.la/1825005) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>115</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.well_formed_unicode_strings</code></td>
     </tr>
   </tbody>
 </table>
