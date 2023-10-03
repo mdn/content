@@ -539,8 +539,8 @@ The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that cont
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>103</td>
-      <td>No</td>
+      <td>119</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
