@@ -18,7 +18,13 @@ For more background on this feature, see:
 
 ## APIs for working with contextual identities
 
-To provide contextual identity features in an extension, you use {{WebExtAPIRef("contextualIdentities")}} to add, query, update, and delete contextual identities. When you create a contextual identity you obtain its `cookieStoreId`. You can then use the cookie store ID to work with entities related to the conceptual identity using these APIs:
+### contextualIdentities API
+When contextual identities are a core part of your extension, request the "contextualIdentities" permission to ensure its availability. This permission also unlocks the `contextualIdentities` API that enables the extension to manage contextual identities: use {{WebExtAPIRef("contextualIdentities")}} to add, query, update, and delete contextual identities. When you create a contextual identity you obtain its `cookieStoreId`. You can then use the cookie store ID to work with entities related to the conceptual identity using these APIs.
+
+### Using `cookieStoreId`
+
+Several extension APIs include the `cookieStoreId` in objects to enable extensions to associate these objects with specific contextual identities.
+
 
 - {{WebExtAPIRef("browsingData.removeCookies()")}} and {{WebExtAPIRef("browsingData.removeLocalStorage()")}} where you use {{WebExtAPIRef("browsingData.removalOptions")}} to set the cookie store items are removed from.
 - {{WebExtAPIRef("contentscripts.register")}} which enables you register a content script in the tabs that belong to one or more cookie store IDs.
@@ -31,9 +37,9 @@ To provide contextual identity features in an extension, you use {{WebExtAPIRef(
 
 ## Permissions
 
-To use the {{WebExtAPIRef("contextualIdentities")}} API you need to include the "contextualIdentities" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. You don't need the "tabs" permission to use {{WebExtAPIRef("tabs.create")}}.
+To use the {{WebExtAPIRef("contextualIdentities")}} API you need to include the "contextualIdentities" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-If an API enables cookies to be modified then you need the "cookies" permission. For example, in {{WebExtAPIRef("tabs.query")}}, use of`cookieStoreId` does not require the "cookies" API as reading the property doesn't affect the cookies in the containers. However, using {{WebExtAPIRef("tabs.create")}} requires the permission, because it enables the creation of cookies in a container.
+If an API enables cookies to be modified then you need the "cookies" permission. For example, in {{WebExtAPIRef("tabs.query")}}, use of`cookieStoreId` does not require the "cookies" API as reading the property doesn't affect the cookies in the containers. However, using {{WebExtAPIRef("tabs.create")}} requires the permission, because the opened tab can read and modify cookies in a container.
 
 ## Example walkthrough
 
