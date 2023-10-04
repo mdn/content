@@ -11,6 +11,8 @@ The [CSS](/en-US/docs/Web/CSS) **`quotes`** property sets how the browser should
 
 {{EmbedInteractiveExample("pages/css/quotes.html")}}
 
+Browsers insert quotation marks at the opening and closing of `<q>` elements and for the `open-quote` and `close-quote` values of the `content` property. Each opening or closing quote is replaced by one of the strings from the value of `quotes`, based on the depth of nesting, or, if `quotes` is explicity set to or otherwise resolves to `auto`, the quotation marks used are language dependent.
+
 ## Syntax
 
 ```css
@@ -37,7 +39,14 @@ quotes: unset;
 - `auto`
   - : Quotation marks that are typographically appropriate for the inherited language (i.e. via the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute set on the parent or other ancestor).
 - `[{{cssxref("&lt;string&gt;")}} <string>]+`
-  - : Defines one or more pairs of quotation mark values for opening and closing quotes. These strings are used as the values for the `open-quote` and `close-quote` values of the `content` property. The first pair represents the outer level of quotation, the second pair is for the first nested level, next pair for third level and so on.
+
+  - : Defines one or more pairs of quotation mark values for opening and closing quotes. In each pair, the first of each pair of quotes are used as the values for the `open-quote` and the second of each pair is the `close-quote`.
+
+    The first pair represents the quotation's outer level. The second pair, if present, represents the first nested level. The next pair is used for doubly nested levels, and so on. If the depth of quote nesting is greater than the number of pairs, the last pair in the `quotes` value is repeated.
+
+    Which pair of quotes is used depends on the depth, or nesting level, of quotes: the number of occurrences of `<q>` quotes or `open-quote` (or `no-open-quote`) in all generated text before the current occurrence, minus the number of occurrences of closing quotes, either as `</q>`, `close-quote`, or `no-close-quote`. If the depth is 0, the first pair is used, if the depth is 1, the second pair is used, etc.
+
+> **Note:** The CSS `content` property value `open-quote` increments and `no-close-quote` decrements the quoting level, but does not insert a quotation marks.
 
 ## Formal definition
 
@@ -147,6 +156,8 @@ li {
 
 {{EmbedLiveSample('Auto_quotes', "100%", 200)}}
 
+Note that the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute was placed on an ancestor of the `<q>`, not the `<q>` itself. If a quotation is in a different language than the surrounding text, it is customary to quote the text with the quote marks of the language of the surrounding text, not the language of the quotation itself.
+
 ### With generated content
 
 In this example, instead of using the `<q>` element, we are adding quotation marks to the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements before and after the content of each element with a specific class name.
@@ -183,15 +194,15 @@ In this example, instead of using the `<q>` element, we are adding quotation mar
 
 ### Text as quotes and empty quotes
 
-This example demonstrates using a string of words instead of quotation marks. Instead of quotation marks, the open-quote indicates the speaker and , as there is not opening quotation mark, the close-quote is empty. Nested quotes employ regular quotation marks.
+This example demonstrates using something other than quotation marks as the `<string>` values. The open-quote indicates the speaker and, as there is not opening quotation mark, the close-quote is the empty. (Mixing a `<string>` with an enumerated keyword to create a pair is not supported). We set `auto` for the nested quotes. These nested quotes will be book-ended by whatever the language dictates is normal for nested quotes.
 
 #### HTML
 
 ```html
 <ul>
-  <li><q data-speaker="jane">Hello</q></li>
-  <li><q data-speaker="john">Hi</q></li>
-  <li><q data-speaker="jane">this converstaion is not interesting</q></li>
+  <li><q data-speaker="karen">Hello</q></li>
+  <li><q data-speaker="chad">Hi</q></li>
+  <li><q data-speaker="karen">this conversation is not interesting</q></li>
   <li>
     <q data-speaker="pat"
       >OMG! <q>Hi</q>? Seriously? at least <q>hello</q> is five letters long.</q
@@ -203,10 +214,10 @@ This example demonstrates using a string of words instead of quotation marks. In
 #### CSS
 
 ```css
-[data-speaker="jane" i] {
+[data-speaker="karen" i] {
   quotes: "She said: " "";
 }
-[data-speaker="john" i] {
+[data-speaker="chad" i] {
   quotes: "He said: " "";
 }
 [data-speaker="pat" i] {
