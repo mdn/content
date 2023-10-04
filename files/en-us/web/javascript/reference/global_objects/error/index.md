@@ -30,7 +30,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("TypeError")}}
   - : Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.
 - {{jsxref("URIError")}}
-  - : Creates an instance representing an error that occurs when {{jsxref("encodeURI", "encodeURI()")}} or {{jsxref("decodeURI", "decodeURI()")}} are passed invalid parameters.
+  - : Creates an instance representing an error that occurs when {{jsxref("encodeURI()")}} or {{jsxref("decodeURI()")}} are passed invalid parameters.
 - {{jsxref("AggregateError")}}
   - : Creates an instance representing several errors wrapped in a single error when multiple errors need to be reported by an operation, for example by {{jsxref("Promise.any()")}}.
 - {{jsxref("InternalError")}} {{non-standard_inline}}
@@ -44,7 +44,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 ## Static methods
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
-  - : A non-standard V8 function that creates the {{jsxref("Error.prototype.stack", "stack")}} property on an Error instance.
+  - : A non-standard V8 function that creates the {{jsxref("Error/stack", "stack")}} property on an Error instance.
 - `Error.stackTraceLimit` {{non-standard_inline}}
   - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
@@ -96,7 +96,7 @@ try {
 
 ### Handling a specific error type
 
-You can choose to handle only specific error types by testing the error type with the error's {{jsxref("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{jsxref("Operators/instanceof", "instanceof")}} keyword:
+You can choose to handle only specific error types by testing the error type with the {{jsxref("Operators/instanceof", "instanceof")}} keyword:
 
 ```js
 try {

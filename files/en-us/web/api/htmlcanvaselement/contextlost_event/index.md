@@ -14,7 +14,7 @@ The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) 
 Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
 
 By default the user agent will attempt to restore the context and then fire the [`contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event).
-User code can the context from being restored by calling [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) during event handling.
+User code can prevent the context from being restored by calling [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) during event handling.
 
 ## Syntax
 

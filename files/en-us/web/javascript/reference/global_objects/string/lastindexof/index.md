@@ -66,7 +66,7 @@ expression returns `-1`:
 
 ### Using indexOf() and lastIndexOf()
 
-The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}} and
+The following example uses {{jsxref("String/indexOf", "indexOf()")}} and
 `lastIndexOf()` to locate values in the string
 `"Brave, Brave New World"`.
 
