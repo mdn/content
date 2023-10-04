@@ -46,7 +46,7 @@ Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes r
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
