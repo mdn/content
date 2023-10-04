@@ -157,7 +157,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 #### Cons
 
-- This method is only suitable if you're using the SVG in only one place. Duplication makes for resource-intensive maintenance.
+- This method is only suitable if you're using the SVG in only one place. Duplication makes resource-intensive for maintenance.
 - Extra SVG code increases the size of your HTML file.
 - The browser cannot cache inline SVG as it would cache regular image assets, so pages that include the image will not load faster after the first page containing the image is loaded.
 - You may include fallback in a {{svgelement("foreignObject")}} element, but browsers that support SVG still download any fallback images. You need to weigh whether the extra overhead is really worthwhile, just to support obsolescent browsers.
