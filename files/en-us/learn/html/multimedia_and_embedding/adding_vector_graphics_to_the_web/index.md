@@ -115,7 +115,7 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 - If you want to control the SVG content with CSS, you must include inline CSS styles in your SVG code. (External stylesheets invoked from the SVG file take no effect.)
 - You cannot restyle the image with CSS pseudoclasses (like `:focus`).
 
-### Troubleshooting and cross-browser support
+### Troubleshooting browsers support
 
 For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
