@@ -28,7 +28,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
 - {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} {{ReadOnlyInline}}
-  - : Contains the {{domxref("ServiceWorker")}} object that represents current service worker.
+  - : Contains the {{domxref("ServiceWorker")}} object that represents the service worker.
 
 ### Instance properties inherited from WorkerGlobalScope
 
