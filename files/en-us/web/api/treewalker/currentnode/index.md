@@ -25,7 +25,7 @@ const treeWalker = document.createTreeWalker(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 root = treeWalker.currentNode; // the root element as it is the first element!
 ```
