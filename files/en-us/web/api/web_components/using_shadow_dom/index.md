@@ -206,7 +206,13 @@ The page CSS does not affect nodes inside the shadow DOM:
 
 ## Applying styles inside the shadow DOM
 
-To style page elements in the shadow DOM, we can create a {{htmlelement("style")}} element and attach it to the shadow root. Rules defined in here will be scoped to the shadow DOM tree.
+To style page elements in the shadow DOM, we can:
+
+- Create an empty {{domxref("CSSStyleSheet")}} object
+- Set its content using {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}}
+- Add it to the shadow root by assigning it to {{domxref("ShadowRoot.adoptedStyleSheets")}}
+
+Rules defined in the `CSSStyleSheet` will be scoped to the shadow DOM tree, as well as any other DOM trees to which we have assigned it.
 
 Here, again, is the HTML containing our host and a `<span>`:
 
@@ -224,15 +230,16 @@ span {
 }
 ```
 
-This time we will create the shadow DOM and add a `<style>` element to it:
+This time we will create the shadow DOM and assign a `CSSStyleSheet` object to it:
 
 ```js
+const sheet = new CSSStyleSheet();
+sheet.replaceSync("span { color: red; border: 2px dotted black;}");
+
 const host = document.querySelector("#host");
 
 const shadow = host.attachShadow({ mode: "open" });
-const style = document.createElement("style");
-style.textContent = `span { color: red; border: 2px dotted black;}`;
-shadow.appendChild(style);
+shadow.adoptedStyleSheets = [sheet];
 
 const span = document.createElement("span");
 span.textContent = "I'm in the shadow DOM";
@@ -242,6 +249,12 @@ shadow.appendChild(span);
 {{EmbedLiveSample("Applying styles inside the shadow DOM")}}
 
 So the encapsulation of CSS works both ways: page styles don't affect the shadow DOM tree, and shadow DOM styles don't affect elements outside the shadow DOM.
+
+You can also apply styles inside a shadow DOM by creating a {{htmlelement("style")}} element and adding it to the shadow DOM tree. However, this is inefficient if you have many shadow DOM trees in a document, because the browser may need to parse the rules within every `<style>` element.
+
+Creating a `CSSStyleSheet` and assigning it to the shadow root using `adoptedStyleSheets` allows us to create a single stylesheet and share it among many DOM trees.
+
+For example, a component library could create a single stylesheet and then share it among all the custom elements belonging to that library.
 
 ## Shadow DOM and custom elements
 
@@ -292,3 +305,7 @@ For more examples, illustrating different aspects of custom element implementati
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+- {{domxref("Element.attachShadow()")}}
+- {{domxref("ShadowRoot.adoptedStyleSheets")}}
+- {{domxref("CSSStyleSheet.replace()")}}
+- {{domxref("CSSStyleSheet.replaceSync()")}}
