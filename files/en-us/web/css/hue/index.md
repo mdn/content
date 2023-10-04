@@ -113,7 +113,7 @@ A `<hue>` can be either an `<angle>` or a `<number>`.
 - `<number>`
   - : A real number, representing degrees of the hue angle.
 
-As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg]`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
+As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg)`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
 
 ### Interpolation
 

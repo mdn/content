@@ -21,7 +21,7 @@ Basic keywords and general expressions in JavaScript. These expressions have the
   - : The `this` keyword refers to a special property of an execution context.
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
   - : Basic `null`, boolean, number, and string literals.
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
   - : Array initializer/literal syntax.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Object initializer/literal syntax.
@@ -35,7 +35,7 @@ Basic keywords and general expressions in JavaScript. These expressions have the
   - : The `async function` defines an async function expression.
 - {{jsxref("Operators/async_function*", "async function*")}}
   - : The `async function*` keywords define an async generator function expression.
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
   - : Regular expression literal syntax.
 - {{jsxref("Template_literals", "`string`")}}
   - : Template literal syntax.
