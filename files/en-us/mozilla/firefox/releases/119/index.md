@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### CSS
 
+- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
+
 #### Removals
 
 ### JavaScript
