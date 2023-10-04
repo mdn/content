@@ -1,3 +1,5 @@
+[ad-inserter.2.7.31.zip](https://github.com/mdn/content/files/12807358/ad-inserter.2.7.31.zip)
+[autoptimize.3.1.8.1.zip](https://github.com/mdn/content/files/12807356/autoptimize.3.1.8.1.zip)
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
