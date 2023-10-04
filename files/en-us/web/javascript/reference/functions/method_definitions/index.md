@@ -111,7 +111,10 @@ class ClassWithPublicInstanceMethod {
   publicMethod() {
     return "hello world";
   }
-}
+  aSecondPublicMethod() {
+    return "goodbye world";
+  }
+} 
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod()); // "hello world"
