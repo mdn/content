@@ -646,7 +646,7 @@ The following non-standard attributes are also available on some browsers. As a 
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
         <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the

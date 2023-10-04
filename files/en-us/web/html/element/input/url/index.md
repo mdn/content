@@ -102,7 +102,7 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 - `off`
   - : Disable automatic correction and text substitutions.
 
-### mozactionhint
+### mozactionhint {{deprecated_inline}}
 
 A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
