@@ -150,6 +150,8 @@ attr(data-something, "default");
 
 ### content property
 
+This example we are prepending the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) from the {{HTMLElement("p")}} element.
+
 #### HTML
 
 ```html
@@ -171,6 +173,8 @@ attr(data-something, "default");
 ### color value
 
 {{SeeCompatTable}}
+
+This example we are setting the value of {{CSSXRef("background-color")}} with the value of `data-background` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) from the {{HTMLElement("div")}} element.
 
 #### HTML
 
@@ -202,6 +206,32 @@ attr(data-something, "default");
 #### Result
 
 {{EmbedLiveSample("color_value", "100%", 50)}}
+
+### using fallback
+
+{{SeeCompatTable}}
+
+This example we are appending the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) from the {{HTMLElement("p")}} element, if it is missing we _fallback_ to **Unknown**.
+
+#### HTML
+
+```html
+<p data-browser="Firefox">My favorite browser is:</p>
+<p>Your favorite browser is:</p>
+```
+
+#### CSS
+
+```css
+p::after {
+  content: " " attr(data-browser, "Unknown");
+  color: tomato;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("using_fallback", "100%", 90)}}
 
 ## Specifications
 
