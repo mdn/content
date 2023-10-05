@@ -117,7 +117,7 @@ byte 1 0 FIN
        6
        7
 byte 2 0 MASK
-       1 -> Next 7 bits is Payload length(7) 
+       1 -> Next 7 bits is Payload length(7)
        2
        3
        4
