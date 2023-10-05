@@ -72,7 +72,7 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 
 ## Examples
 
-```http
+```https
 Origin: https://developer.mozilla.org
 ```
 
