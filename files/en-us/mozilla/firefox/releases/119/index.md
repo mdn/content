@@ -16,6 +16,8 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### Removals
 
+- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
+
 ### CSS
 
 #### Removals
