@@ -818,7 +818,7 @@ Our stores have already been ported to TypeScript, but we can do better. We shou
 
 ### Understanding TypeScript generics
 
-Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle-brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
+Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
 
 Let's see a quick example, a simple `Stack` class that lets us `push` and `pop` elements, like this:
 
