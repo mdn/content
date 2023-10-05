@@ -111,7 +111,7 @@ class ClassWithPublicInstanceMethod {
   publicMethod() {
     return "hello world";
   }
-  aSecondPublicMethod() {
+  secondPublicMethod() {
     return "goodbye world";
   }
 }
