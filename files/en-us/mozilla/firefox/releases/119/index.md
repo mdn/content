@@ -50,7 +50,6 @@ This article provides information about the changes in Firefox 119 that affect d
 - The [`getAuthenticatorData()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData), [`getPublicKeyAlgorithm()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKeyAlgorithm), and [`getPublicKey()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKey) methods of the [`AuthenticatorAttestationResponse`](/en-US/docs/Web/API/AuthenticatorAttestationResponse) interface are now supported (see [Firefox bug 1816519](https://bugzil.la/1816519) and [Firefox bug 1816520](https://bugzil.la/1816520)).
 - The [Credential Properties Extension (`credProps`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing users to query if credentials are discoverable after creation/registration ([Firefox bug 1844437](https://bugzil.la/1844437)).
 
-
 #### DOM
 
 #### Media, WebRTC, and Web Audio
