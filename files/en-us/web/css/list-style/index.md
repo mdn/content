@@ -11,7 +11,7 @@ The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_prop
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-> **Note:** This property is applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
+The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
 
 ## Constituent properties
 
