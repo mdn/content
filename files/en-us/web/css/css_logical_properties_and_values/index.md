@@ -39,7 +39,27 @@ The transition to logical axes is ongoing and not fully defined by the module; s
 - {{CSSxRef("min-block-size")}}
 - {{CSSxRef("min-inline-size")}}
 
-### Properties for margins, borders, and padding
+### Properties for margins
+
+- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("margin-block")}}
+- {{CSSxRef("margin-block-end")}}
+- {{CSSxRef("margin-block-start")}}
+- {{CSSxRef("margin-inline")}}
+- {{CSSxRef("margin-inline-end")}}
+- {{CSSxRef("margin-inline-start")}}
+
+### Properties for paddings
+
+- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("padding-block")}}
+- {{CSSxRef("padding-block-end")}}
+- {{CSSxRef("padding-block-start")}}
+- {{CSSxRef("padding-inline")}}
+- {{CSSxRef("padding-inline-end")}}
+- {{CSSxRef("padding-inline-start")}}
+
+### Properties for borders
 
 - {{CSSxRef("border-block")}}
 - {{CSSxRef("border-block-color")}}
@@ -66,31 +86,19 @@ The transition to logical axes is ongoing and not fully defined by the module; s
 - {{CSSxRef("border-inline-start-width")}}
 - {{CSSxRef("border-inline-style")}}
 - {{CSSxRef("border-inline-width")}}
+- {{CSSxRef("border-style")}}
+- {{CSSxRef("border-width")}}
+
+### Properties for border radius
+
+- {{CSSxRef("border-radius")}}
 - {{CSSxRef("border-start-start-radius")}}
 - {{CSSxRef("border-start-end-radius")}}
 - {{CSSxRef("border-end-start-radius")}}
 - {{CSSxRef("border-end-end-radius")}}
-- {{CSSxRef("border-style")}}
-- {{CSSxRef("border-width")}}
-- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("margin-block")}}
-- {{CSSxRef("margin-block-end")}}
-- {{CSSxRef("margin-block-start")}}
-- {{CSSxRef("margin-inline")}}
-- {{CSSxRef("margin-inline-end")}}
-- {{CSSxRef("margin-inline-start")}}
-- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("padding-block")}}
-- {{CSSxRef("padding-block-end")}}
-- {{CSSxRef("padding-block-start")}}
-- {{CSSxRef("padding-inline")}}
-- {{CSSxRef("padding-inline-end")}}
-- {{CSSxRef("padding-inline-start")}}
 
-### Properties for floating and positioning
+### Properties for positioning
 
-- {{CSSxRef("clear")}} (`inline-end` and `inline-start` keywords)
-- {{CSSxRef("float")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("inset")}}
 - {{CSSxRef("inset-block")}}
 - {{CSSxRef("inset-block-end")}}
@@ -104,13 +112,21 @@ The transition to logical axes is ongoing and not fully defined by the module; s
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
 
-### Other properties
+### Properties for scrolling
 
-- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-inline")}}
 - {{CSSxRef("overscroll-behavior-block")}}
 - {{CSSxRef("overscroll-behavior-inline")}}
+
+### Properties for floating
+
+- {{CSSxRef("clear")}} (`inline-end` and `inline-start` keywords)
+- {{CSSxRef("float")}} (`inline-end` and `inline-start` keywords)
+
+### Other properties
+
+- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("resize")}} (`block` and `inline` keywords)
 - {{CSSxRef("text-align")}} (`end` and `start` keywords)
 
