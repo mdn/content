@@ -45,7 +45,7 @@ This article provides information about the changes in Firefox 119 that affect d
 ### APIs
 
 - The relative priority for send streams can now be specified by including the `sendOrder` property inside an options argument passed to [`WebTransport.createBidirectionalStream()`](/en-US/docs/Web/API/WebTransport/createBidirectionalStream) and [`WebTransport.createUnidirectionalStream()`](/en-US/docs/Web/API/WebTransport/createUnidirectionalStream) ([Firefox bug 1816925](https://bugzil.la/1816925)).
-- The [Credential Properties Extension (`credProps`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing credentials to be discoverable after creation/registration ([Firefox bug 1844437](https://bugzil.la/1844437)).
+- The [Credential Properties Extension (`credProps`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing users to query if credentials are discoverable after creation/registration ([Firefox bug 1844437](https://bugzil.la/1844437)).
 
 #### DOM
 
