@@ -326,7 +326,7 @@ textarea.onkeyup = function () {
 
 This article has provided you with a quick tour of what vector graphics and SVG are, why they are useful to know about, and how to include SVG inside your webpages. It was never intended to be a full guide to learning SVG, just a pointer so you know what SVG is if you meet it in your travels around the Web. So don't worry if you don't feel like you are an SVG expert yet. We've included some links below that might help you if you wish to go and find out more about how it works.
 
-In the last article of this module, we'll explore [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) in detail, looking at the tools HTML has to allow you to make your images work better across different devices.
+In the next article we'll explore [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) in detail, looking at the tools HTML has to allow you to make your images work better across different devices.
 
 ## See also
 
