@@ -55,7 +55,7 @@ The `list-style` property is specified as one, two, or three keywords in any ord
 ### Values
 
 - {{cssxref("list-style-type")}}
-  - : A `<counter-style>, {{cssxref("string")}}, or `none`. If omitted in the shorthand, the default `disc` value is used. See {{cssxref("list-style-type")}}.
+  - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, the default `disc` value is used. See {{cssxref("list-style-type")}}.
 - {{cssxref("list-style-image")}}
   - : An {{cssxref("image")}} or `none`, which is the default. See {{cssxref("list-style-image")}}.
 - {{cssxref("list-style-position")}}
