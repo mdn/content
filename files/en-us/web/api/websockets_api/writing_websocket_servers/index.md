@@ -112,8 +112,8 @@ byte 1 0 FIN
        1 RSV1
        2 RSV2
        3 RSV3
-       4 -> Next 4 bits is OPCODE(4) 
-       5 
+       4 -> Next 4 bits is OPCODE(4)
+       5
        6
        7
 byte 2 0 MASK
