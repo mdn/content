@@ -1,3 +1,4 @@
+![16964909133712440827426006422256](https://github.com/mdn/content/assets/95999905/499ee849-29f2-4f69-813e-bd7a50daf3b2)
 ---
 title: Type conversion
 slug: Glossary/Type_Conversion
