@@ -268,7 +268,7 @@ With a dynamic `#each` block (which is basically syntactic sugar over the top of
 
 ```hbs
 \{{#each this.todos.all as |todo|}}
-<Todo @todo="\{{todo}}" />
+<Todo @todo=\{{todo}} />
 \{{/each}}
 ```
 
