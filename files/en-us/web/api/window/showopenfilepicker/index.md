@@ -58,7 +58,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
 
