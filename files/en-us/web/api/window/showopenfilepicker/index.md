@@ -61,6 +61,8 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
 - `AbortError` {{domxref("DOMException")}}
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
+- `SecurityError` {{domxref("DOMException")}}
+  - : An SecurityError is thrown if it was blocked by Same-Origin policy or it was not called via a user interaction such as a button press.
 
 ## Security
 
