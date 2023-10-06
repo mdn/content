@@ -13,7 +13,7 @@ Regular web servers will normally not return this status code. But some other pr
 
 ## Status
 
-```plain
+```http
 424 Failed Dependency
 ```
 
