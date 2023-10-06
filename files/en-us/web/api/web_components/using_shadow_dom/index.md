@@ -130,7 +130,7 @@ If you click "Uppercase span elements", you'll see that {{domxref("Document.quer
 
 ## Element.shadowRoot and the "mode" option
 
-In the example above, we pass an argument `{ mode: "open" }` to `attachShadow()`. With `mode` set to `"open"`, then JavaScript in the page is able to access the internals of your shadow DOM through the {{domxref("Element.shadowRoot", "shadowRoot")}} property of the shadow host.
+In the example above, we pass an argument `{ mode: "open" }` to `attachShadow()`. With `mode` set to `"open"`, the JavaScript in the page is able to access the internals of your shadow DOM through the {{domxref("Element.shadowRoot", "shadowRoot")}} property of the shadow host.
 
 In this example, as before, the HTML contains the shadow host, a `<span>` element in the main DOM tree, and two buttons:
 
@@ -168,7 +168,7 @@ This time, the JavaScript running in the page can access the shadow DOM internal
 
 {{EmbedLiveSample("Element.shadowRoot and the \"mode\" option")}}
 
-So `{mode: "open"}` gives the page a way to break the encapsulation of your shadow DOM. If you don't want to give the page this ability, pass `{mode: "closed"}` instead, and then `shadowRoot` returns `null`.
+The `{mode: "open"}` argument gives the page a way to break the encapsulation of your shadow DOM. If you don't want to give the page this ability, pass `{mode: "closed"}` instead, and then `shadowRoot` returns `null`.
 
 However, you should not consider this a strong security mechanism, because there are ways it can be evaded, for example by browser extensions running in the page. It's more of an indication that the page should not access the internals of your shadow DOM tree.
 
