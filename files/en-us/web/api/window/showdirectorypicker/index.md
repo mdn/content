@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.showDirectoryPicker
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
 {{domxref("Window")}} interface displays a directory picker which allows the user to
