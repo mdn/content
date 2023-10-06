@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### DOM
 
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is enabled for attributes that do not reference other elements; only non-IDREF attributes are reflected. This allows developers to get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `el.ariaPressed = "true";` is now supported in addition to `el.setAttribute("aria-pressed", "true");`. (See [Firefox bug 1785412](https://bugzil.la/1785412) for more details.)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is now supported by default for attributes that do not reference other elements; only non-IDREF attributes are reflected. You can now get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `buttonElement.ariaPressed = "true";` is now supported in addition to `buttonElement.setAttribute("aria-pressed", "true");` ([Firefox bug 1785412](https://bugzil.la/1785412)).
 
 #### Media, WebRTC, and Web Audio
 
