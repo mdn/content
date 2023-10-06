@@ -76,11 +76,11 @@ step-end
 
   - : One of the following keywords that indicate when the jumps occur:
     - `jump-start` denotes that the first step or jump happens when the interpolation begins.
-    - `jump-end` denotes that the last step or jump happens when the interpolation ends.
+    - `jump-end` denotes that the last step or jump happens when the interpolation ends. This is the default.
     - `jump-both` denotes that jumps occur at both the 0% and 100% marks, effectively adding a step during the interpolation iteration.
-    - `jump-none` denotes no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration.
+    - `jump-none` denotes no jump on either end, effectively removing a step during the interpolation iteration. Instead, it holds at both the 0% mark and the 100% mark, each for 1/n of the duration.
     - `start` is the equivalent of `jump-start`.
-    - `end` is the equivalent of `jump-end`. This is the default.
+    - `end` is the equivalent of `jump-end`.
 
 - `step-start`
 
