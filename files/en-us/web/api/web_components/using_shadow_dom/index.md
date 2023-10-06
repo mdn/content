@@ -99,11 +99,11 @@ This page is just like the last one, except we've added two {{htmlelement("butto
 <br />
 
 <button id="upper" type="button">Uppercase span elements</button>
-<button id="reset" type="button">Reset</button>
+<button id="reload" type="button">Reload</button>
 ```
 
 Clicking the "Uppercase span elements" button finds all `<span>` elements in the page and changes their text to uppercase.
-Clicking the "Reset" button just reloads the page, so you can try again.
+Clicking the "Reload" button just reloads the page, so you can try again.
 
 ```js
 const host = document.querySelector("#host");
@@ -120,8 +120,8 @@ upper.addEventListener("click", () => {
   }
 });
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => document.location.reload());
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
 ```
 
 If you click "Uppercase span elements", you'll see that {{domxref("Document.querySelectorAll()")}} doesn't find the elements in our shadow DOM: they are effectively hidden from JavaScript in the page:
@@ -140,7 +140,7 @@ In this example, as before, the HTML contains the shadow host, a `<span>` elemen
 <br />
 
 <button id="upper" type="button">Uppercase shadow DOM span elements</button>
-<button id="reset" type="button">Reset</button>
+<button id="reload" type="button">Reload</button>
 ```
 
 This time the "Uppercase" button uses `shadowRoot` to find the `<span>` elements in the DOM:
@@ -160,8 +160,8 @@ upper.addEventListener("click", () => {
   }
 });
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => document.location.reload());
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
 ```
 
 This time, the JavaScript running in the page can access the shadow DOM internals:
