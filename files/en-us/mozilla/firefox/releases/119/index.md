@@ -48,6 +48,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - The relative priority for send streams can now be specified by including the `sendOrder` property inside an options argument passed to [`WebTransport.createBidirectionalStream()`](/en-US/docs/Web/API/WebTransport/createBidirectionalStream) and [`WebTransport.createUnidirectionalStream()`](/en-US/docs/Web/API/WebTransport/createUnidirectionalStream) ([Firefox bug 1816925](https://bugzil.la/1816925)).
 - The [`getAuthenticatorData()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData), [`getPublicKeyAlgorithm()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKeyAlgorithm), and [`getPublicKey()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKey) methods of the [`AuthenticatorAttestationResponse`](/en-US/docs/Web/API/AuthenticatorAttestationResponse) interface are now supported (see [Firefox bug 1816519](https://bugzil.la/1816519) and [Firefox bug 1816520](https://bugzil.la/1816520)).
+- The [`SubtleCrypto.deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey) method now supports the [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf) algorithm as an option for its [`derivedKeyAlgorithm`](/en-US/docs/Web/API/SubtleCrypto/deriveKey#derivedkeyalgorithm) parameter (see [Firefox bug 1851928](https://bugzil.la/1851928)).
 
 #### DOM
 
