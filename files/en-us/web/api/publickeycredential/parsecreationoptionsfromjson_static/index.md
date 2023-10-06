@@ -26,7 +26,7 @@ PublicKeyCredential.parseCreationOptionsFromJSON(options)
 - `options`
 
   - : A JSON object with the same structure as the Web Authentication API the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
-    The only difference is that the JSON object use strings in place of buffers: for example in the `challenge`.
+    The only difference is that the JSON object uses strings in place of buffers: for example in the `challenge`.
 
 ### Return value
 
@@ -36,11 +36,11 @@ The attribute values will match the original JSON object passed into the method,
 ### Exceptions
 
 - `EncodingError` {{domxref("DOMException")}}
-  - : Raised if any part of the JSON options cannot be converted into the corresponding JSON object passed to [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create).
+  - : Thrown if any part of the JSON options cannot be converted into the corresponding JSON object passed to [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create).
 
 ## Examples
 
-Consider a server might create JSON credentials "something" like this (taken from the [`AuthenticatorResponse` example "getting an AuthenticatorAttestationResponse"](/en-US/docs/Web/API/AuthenticatorResponse#getting_an_authenticatorattestationresponse)):
+Consider a server might create JSON credentials something like this (taken from the [`AuthenticatorResponse` example "getting an AuthenticatorAttestationResponse"](/en-US/docs/Web/API/AuthenticatorResponse#getting_an_authenticatorattestationresponse)):
 
 ```js
 const publicKey = {
