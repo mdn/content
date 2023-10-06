@@ -61,6 +61,8 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the user dismisses the file picker without selecting or inputting a file,
     or if the user agent deems any selected files too sensitive or dangerous.
+- `SecurityError` {{domxref("DOMException")}}
+  - : An SecurityError is thrown if it was blocked by Same-Origin policy or it was not called via a user interaction such as a button press.
 
 ## Security
 
