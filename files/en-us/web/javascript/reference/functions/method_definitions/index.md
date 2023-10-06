@@ -82,7 +82,7 @@ const obj = {
   __proto__: {
     prop: "foo",
   },
-  method: function () {
+  notAMethod: function () {
     console.log(super.prop); // SyntaxError: 'super' keyword unexpected here
   },
 };
