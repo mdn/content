@@ -43,7 +43,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : Thrown if the user dismisses the prompt without making a selection, or if the user
     agent deems the selected content to be too sensitive or dangerous
 
