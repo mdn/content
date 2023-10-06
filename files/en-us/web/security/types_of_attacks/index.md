@@ -1,4 +1,4 @@
----
+---اريد تحرير وفتح صفحتي على تطبيق جواكر
 title: Types of attacks
 slug: Web/Security/Types_of_attacks
 page-type: guide
