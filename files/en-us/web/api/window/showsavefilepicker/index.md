@@ -58,7 +58,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : Thrown if the user dismisses the file picker without selecting or inputting a file,
     or if the user agent deems any selected files too sensitive or dangerous.
 
