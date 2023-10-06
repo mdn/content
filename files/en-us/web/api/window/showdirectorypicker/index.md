@@ -30,7 +30,7 @@ showDirectoryPicker()
       - : By specifying an ID, the browser can remember different directories for different
         IDs. If the same ID is used for another picker, the picker opens in the same
         directory.
-    - `mode`
+    - `mode` {{optional_inline}}
       - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
         and write access to the directory.
     - `startIn`
