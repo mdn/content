@@ -238,7 +238,7 @@ window.requestAnimationFrame(clock);
 
 ### Result
 
-> **Note:** Though the image appears to change only once every second, it is updated at 60 frames per second or at the display refresh rate of your web browser. See {{domxref("window.requestAnimationFrame()")}} for more information.
+> **Note:** Though the image appears to change only once every second, it is updated at 60 frames per second or at the display refresh rate of your web browser.
 
 {{EmbedLiveSample("An_animated_clock", "180", "200")}}
 
