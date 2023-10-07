@@ -24,12 +24,12 @@ _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 
+- {{domxref("WindowClient.ancestorOrigins")}} {{ReadOnlyInline}}
+  - : An array of string that indicates the ancestor origins of the current client.
 - {{domxref("WindowClient.focused")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the current client has focus.
 - {{domxref("WindowClient.visibilityState")}} {{ReadOnlyInline}}
   - : Indicates the visibility of the current client. This value can be one of `"hidden"`, `"visible"`, or `"prerender"`.
-- {{domxref("WindowClient.ancestorOrigins")}} {{ReadOnlyInline}}
-  - : An array of string that indicates the ancestor origins of the current client.
 
 ## Example
 
