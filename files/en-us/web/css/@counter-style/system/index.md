@@ -25,22 +25,25 @@ system: fixed;
 /* Combined values */
 system: fixed 3;
 system: extends decimal;
+system: extends customCounterName;
 ```
+
+## Values
 
 This may take one of three forms:
 
 - One of the keyword values `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, or `fixed`.
 - The keyword value `fixed` along with an integer.
-- The keyword value or `extends` along with a {{cssxref("@counter-style")}} name.
+- The keyword value or `extends` along with `<counter-style>`, which is a [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) or {{cssxref("symbols", "symbols()")}}.
 
-<!---->
+The values include:
 
 - `cyclic`
-  - : Cycles through the list of symbols provided. Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the `symbols` descriptor, or the counter style is not valid.
-- `fixed`
-  - : Defines a finite set of symbols are specified. Once the system has looped through all the specified symbols, it will fall back. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. Also an optional {{cssxref("&lt;integer&gt;")}} can be specified after the system, as the value of the first symbol. If this integer is omitted, value of the first integer is taken as `1`.
+  - : Cycles through the list of symbols provided in [the `symbols`` descriptor](/en-US/docs/Web/CSS/@counter-style/symbols). Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the`symbols` descriptor, or the counter style is not valid.
+- `fixed` or `fixed <integer>`
+  - : Defines a finite set of symbols are specified; iterating once through the list of symbols provided in the `symbols` descriptor. Once the system iterated through the symbols specified, the fallback counter style is used. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. The `fixed` value can include an optional {{cssxref("&lt;integer&gt;")}}. If specified, the value indicates which item will get the first symbol in the single iteration of the fixed list of symbols as its marker. By default, if the integer is omitted, the value of the first integer is taken as `1`.
 - `symbolic`
-  - : Cycles through the provided list of symbols. On each successive pass through the cycle, the symbols used for the counter representation are doubled, tripled, and so on. For example, if the original symbols provided were "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. This counter system works for positive counter values only.
+  - : Cycles through the symbols provided in the `symbols` descriptor list of symbols repeatedly, doubling, tripling, etc. the symbols on each successive pass through the list. For example, if there were are two symbols provided for the `symbols` descriptor, "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. This counter system works for positive counter values only.
 - `alphabetic`
 
   - : Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters `"a"` to `"z"` are specified as symbols in a counter style, with the `alphabetic` system, then the first 26 counter representations will be `"a"`, `"b"` up to `"z"`. Until this point, the behavior is the same as that of the `symbolic` system, described above. However, after `"z"`, it will continue as `"aa"`, `"ab"`, `"ac"`…
@@ -65,6 +68,8 @@ This may take one of three forms:
 
     It must not contain a `symbols` or `additive-symbols` descriptor, or else the counter style rule is invalid. If one or more counter styles definitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.
 
+> **Note:** The [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor is required when the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`. The [`additive-symbols`](/en-US/docs/Web/CSS/@counter-style/additive-symbols) descriptor is required if the `additive` value is set.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -77,13 +82,7 @@ This may take one of three forms:
 
 ### Cyclic counter
 
-If your browser supports it, this example will render a list like this:
-
-```plain
-◉ One
-◉ Two
-◉ Three
-```
+The `cyclic` value iterates through the list of symbols, repeating the list as necessary:
 
 #### CSS
 
@@ -92,14 +91,17 @@ If your browser supports it, this example will render a list like this:
   <li>One</li>
   <li>Two</li>
   <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
 </ul>
 ```
 
 ```css
 @counter-style fisheye {
   system: cyclic;
-  symbols: ◉;
-  suffix: " ";
+  symbols: ◉ ➀;
+  suffix: ": ";
 }
 
 ul {
@@ -113,15 +115,7 @@ ul {
 
 ### Fixed counter
 
-If your browser supports it, this example will render a list like this:
-
-```plain
-➀ One
-➁ Two
-➂ Three
-4 Four
-5 Five
-```
+The `fixed` value iterates through the list of symbols only once, starting the single cycle at the number indicated by the integer:
 
 #### CSS
 
@@ -137,7 +131,7 @@ If your browser supports it, this example will render a list like this:
 
 ```css
 @counter-style circled-digits {
-  system: fixed;
+  system: fixed 3;
   symbols: ➀ ➁ ➂;
   suffix: " ";
 }
