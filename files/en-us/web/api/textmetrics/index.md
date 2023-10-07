@@ -76,9 +76,17 @@ baselines.forEach((baseline, index) => {
   const y = 50 + index * 50;
   ctx.beginPath();
   ctx.fillText(text, 0, y);
-  let lineY = y - Math.abs(textMetrics[baseline]);
+
+  const baselineMetricValue = textMetrics[baseline];
+  if (baselineMetricValue === undefined) {
+    return;
+  }
+
+  let lineY;
   if (baselinesBelowAlphabetic.includes(baseline)) {
     lineY = y + Math.abs(textMetrics[baseline]);
+  } else {
+    lineY = y - Math.abs(textMetrics[baseline]);
   }
   ctx.moveTo(0, lineY);
   ctx.lineTo(550, lineY);
