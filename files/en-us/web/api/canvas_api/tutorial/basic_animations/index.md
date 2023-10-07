@@ -169,6 +169,8 @@ function clock() {
   ctx.restore();
 
   const sec = now.getSeconds();
+  // For a sweeping second hand, use:
+  // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
   const min = now.getMinutes();
   const hr = now.getHours() % 12;
 
