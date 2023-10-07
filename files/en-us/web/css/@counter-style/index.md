@@ -21,13 +21,18 @@ ul {
 }
 ```
 
-The initial version of CSS defined a set of useful counter styles. However, although more styles were added to this set of predefined styles over the years, this system proved too restrictive to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
+While CSS provides many useful pre-defined counter styles, the `@counter-style` at-rule addresses provides an open-ended method of creating counters to meet the needs of worldwide typography by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
 
 ## Syntax
 
-### Descriptors
+Each `@counter-style` is identified by a `<counter-style-name>` and has a set of [descriptors](#descriptors).
 
-Each `@counter-style` is identified by a name and has a set of descriptors.
+### Counter style name
+
+- `<counter-style-name>`
+  - : A {{cssxref("custom-ident")}}, an un-quoted case-sensitive string, that is not equal to `none`, that provides a name for your counter. Like all custom identifiers, the value can't be a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords). Avoid other enumerated CSS property values, including [CSS list](/en-US/docs/Web/css/CSS_list) and [CSS counter style](/en-US/docs/Web/css/CSS_Counter_Styles) property values and the non-overrideable {{cssxref("list-style-type")}} values of `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed`.
+
+### Descriptors
 
 - {{cssxref("@counter-style/system", "system")}}
   - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation.
