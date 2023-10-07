@@ -70,6 +70,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
 - `blocking` {{Experimental_Inline}}
+
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
     - `render`: The rendering of content on the screen is blocked.
 
