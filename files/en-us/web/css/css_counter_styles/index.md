@@ -7,7 +7,9 @@ spec-urls: https://drafts.csswg.org/css-counter-styles-3
 
 {{CSSRef}}
 
-The **CSS counter styles** module lets you define your own counter styles for use with CSS [list-markers](/en-US/docs/Web/CSS/::marker) and [generated-content](/en-US/docs/Web/CSS/CSS_generated_content) counters
+The **CSS counter styles** module lets you define your own counter styles for use with CSS [list-markers](/en-US/docs/Web/CSS/::marker) and [generated-content](/en-US/docs/Web/CSS/CSS_generated_content) counters.
+
+While we think of counters as numbers, they are actually strings with incrementable components. The counter style module defines the `@counter-style` rule with ten descriports that provide developers the ability to precisely define how counters are converted into strings with a prefix and postfix, along with a negative sign (that can be wrapped if needed). The module enables defining a range, limiting the values a counter style handles, while providing fallback styles for when the counter value is outside that range or otherwise can't render the counter value. The module also enables defining the how the counter is read out loud by speech synthesizers.
 
 ## Reference
 
@@ -22,9 +24,9 @@ The **CSS counter styles** module lets you define your own counter styles for us
 
 ### Data types
 
-- `<counter-style>`
-- `<symbol>`
-- `<symbols-type>`
+- [`<counter-style>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
+- [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values™)
+- [`<symbols-type>`](/en-US/docs/Web/CSS/symbols#syntax)
 
 ### At-rules and descriptors
 
