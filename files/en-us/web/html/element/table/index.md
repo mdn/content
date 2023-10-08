@@ -13,7 +13,7 @@ The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data â
 
 To provide additional control over how cells fit into (or span across) columns, both {{HTMLElement("th")}} and {{HTMLElement("td")}} support the `colspan` attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the `rowspan` attribute on cells to indicate they should span more than one table row.
 
-We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
+We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right formatting for your tabular data.
 
 <table class="properties">
   <tbody>
@@ -468,7 +468,7 @@ The HTML is where the action is here, and the action is pretty simple.
 </table>
 ```
 
-Wrapping the rows in {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} as additional semantic markup specifies table content groups.
+Wrapping the rows in {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} adds additional semantic markup by specifying table content groups.
 Also note the use of the `scope` attribute on the {{HTMLElement("th")}} elements within the body content of the table. This defines the cells to which the header element refers, which in our example are all the cells in the `row`.
 
 Once again, we haven't touched the CSS.
@@ -492,7 +492,7 @@ Visually, the output is unchanged. The additions provide useful contextual infor
 
 #### Basic styling
 
-Let's apply a basic style to the table to adjust the typeface being used, and add a background color to the header row.
+Let's apply a basic style to the table to adjust the typeface and add a background color to the header row.
 
 ##### Result
 
@@ -542,7 +542,7 @@ Again, let's take a look at the result first.
 
 ##### CSS
 
-This time, the HTML is unchanged, so let's dive right into the CSS.
+The HTML is unchanged this time, so let's dive right into the CSS.
 
 ```css
 table {
@@ -565,7 +565,7 @@ td {
 }
 ```
 
-While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style {{HTMLElement("tr")}} elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all the cells in the heading area at once.
+While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style, where we style {{HTMLElement("tr")}} elements located within the {{HTMLElement("thead")}} adding a light blue background color. This is a way to quickly apply a background color to all the cells in the heading area simultaneously.
 
 This does _not_ affect the style of the {{HTMLElement("th")}} elements in the first column, though, where we treat the member names as a row heading.
 
