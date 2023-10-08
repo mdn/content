@@ -103,7 +103,7 @@ You can also use the optional chaining operator with [bracket notation](/en-US/d
 const nestedProp = obj?.["prop" + "Name"];
 ```
 
-This is particularly useful for arrays, since array indices must be accessed with brackets.
+This is particularly useful for arrays, since array indices must be accessed with square brackets.
 
 ```js
 function printMagicIndex(arr) {
