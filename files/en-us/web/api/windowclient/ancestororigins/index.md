@@ -8,7 +8,7 @@ browser-compat: api.WindowClient.ancestorOrigins
 
 {{APIRef("Service Workers API")}}
 
-The **`ancestorOrigins`** read-only property of the {{domxref("WindowClient")}} interface is An array of string that indicates the ancestor origins of the current client.
+The **`ancestorOrigins`** read-only property of the {{domxref("WindowClient")}} interface is an array of string that indicates the ancestor origins of the current client.
 
 ## Value
 
