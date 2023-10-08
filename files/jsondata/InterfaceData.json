@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -378,10 +382,6 @@
     },
     "CloseEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "CloseWatcher": {
-      "inh": "EventTarget",
       "impl": []
     },
     "Comment": {
@@ -2340,6 +2340,10 @@
       "inh": "",
       "impl": []
     },
+    "PageRevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "PageTransitionEvent": {
       "inh": "Event",
       "impl": []
@@ -2689,6 +2693,10 @@
       "impl": []
     },
     "Response": {
+      "inh": "",
+      "impl": []
+    },
+    "RestrictionTarget": {
       "inh": "",
       "impl": []
     },
@@ -3460,14 +3468,6 @@
       "inh": "AbortSignal",
       "impl": []
     },
-    "TCPServerSocket": {
-      "inh": "",
-      "impl": []
-    },
-    "TCPSocket": {
-      "inh": "",
-      "impl": []
-    },
     "Text": {
       "inh": "CharacterData",
       "impl": []
@@ -3585,10 +3585,6 @@
       "impl": []
     },
     "TrustedTypePolicyFactory": {
-      "inh": "",
-      "impl": []
-    },
-    "UDPSocket": {
       "inh": "",
       "impl": []
     },

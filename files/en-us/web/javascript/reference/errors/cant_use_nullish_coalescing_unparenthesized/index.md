@@ -74,6 +74,6 @@ function getId(user, fallback) {
 
 ## See also
 
-- [Original discussion of nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
-- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Issue about nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15) in the TC39 nullish-coalescing proposal
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

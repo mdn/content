@@ -9,7 +9,7 @@ browser-compat: javascript.operators.nullish_coalescing_assignment
 
 The **nullish coalescing assignment (`??=`)** operator, also known as the **logical nullish assignment** operator, only evaluates the right operand and assigns to the left if the left operand is {{Glossary("nullish")}} (`null` or `undefined`).
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-nullish-coalescing-assignment.html")}}
 
 ## Syntax
 

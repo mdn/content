@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 
 The **`Intl.DateTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-supportedlocalesof.html", "shorter")}}
 
 ## Syntax
 

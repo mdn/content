@@ -145,9 +145,9 @@ const min = minOfArray([5, 6, 2, 3, 7]);
 
 ## See also
 
-- {{jsxref("Functions/arguments", "arguments")}} object
+- {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
 - {{jsxref("Reflect.apply()")}}
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

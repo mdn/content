@@ -64,7 +64,7 @@ This element implements the {{domxref("SVGFETileElement")}} interface.
 
   <!-- Use the MDN logo as input to the filter -->
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"

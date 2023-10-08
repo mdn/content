@@ -44,7 +44,7 @@ const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **Note:** In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created. Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in","for...in")}} loop will not find any property on the array.
+> **Note:** In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created. Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in", "for...in")}} loop will not find any property on the array.
 
 In addition to a newly defined variable as shown above, arrays can also be assigned as a property of a new or an existing object:
 
@@ -233,7 +233,7 @@ nonsparseArray.forEach((element) => {
 // fourth
 ```
 
-Since JavaScript array elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
+Since JavaScript array elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in", "for...in")}} loops, because normal elements and all enumerable properties will be listed.
 
 ### Array methods
 
@@ -517,17 +517,17 @@ const inventory = [
 ];
 ```
 
-To use `group()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
+To use `Object.groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
 
 The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object). The result is an object that has properties named after the unique strings returned by the callback. Each property is assigned an array containing the elements in the group.
 
 ```js
-const result = inventory.group(({ type }) => type);
+const result = Object.groupBy(inventory, ({ type }) => type);
 console.log(result.vegetables);
 // [{ name: "asparagus", type: "vegetables" }]
 ```
 
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+Note that the returned object references the _same_ elements as the original array (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
 If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Map.groupBy()")}}. This is very similar to `Object.groupBy()` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
 
@@ -632,7 +632,7 @@ For example, when an array is the result of a match between a regular expression
 
 ## Working with array-like objects
 
-Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName) or the {{jsxref("Functions/arguments","arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Global_Objects/Function/length","length")}} attribute but does not implement array methods like [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
+Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName) or the {{jsxref("Functions/arguments", "arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Function/length", "length")}} attribute but does not implement array methods like [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 
 Array methods cannot be called directly on array-like objects.
 
@@ -644,7 +644,7 @@ function printArguments() {
 }
 ```
 
-But you can call them indirectly using {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}}.
+But you can call them indirectly using {{jsxref("Function.prototype.call()")}}.
 
 ```js example-good
 function printArguments() {

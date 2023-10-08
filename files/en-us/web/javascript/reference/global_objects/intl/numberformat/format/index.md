@@ -25,9 +25,11 @@ format(number)
 > **Note:** Older versions of the specification parsed strings as a {{jsxref("Number")}}.
 > Check the compatibility table for your browser.
 
-## Description
+### Return value
 
-The `format()` method formats a number into a string according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+A string representing the given `number` formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+
+## Description
 
 {{jsxref("Number")}} values in JavaScript suffer from loss of precision if they are too big or too small, making the text representation inaccurate.
 If you are performing calculations with integers larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} you should use a {{jsxref("BigInt")}} instead, which will format correctly:
@@ -111,5 +113,5 @@ console.log(numberFormat.format(`${bigNum}E-6`));
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

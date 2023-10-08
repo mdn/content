@@ -29,7 +29,7 @@ test(str)
 - `str`
   - : The string against which to match the regular expression. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `test()` to search for the string `"undefined"`, which is rarely what you want.
 
-### Returns
+### Return value
 
 `true` if there is a match between the regular expression and the string
 `str`. Otherwise, `false`.
@@ -42,7 +42,7 @@ string. `test()` returns a boolean, unlike the
 `-1` if not found).
 
 To get more information (but with slower execution), use the
-{{jsxref("RegExp.prototype.exec()", "exec()")}} method. (This is similar to the
+{{jsxref("RegExp/exec", "exec()")}} method. (This is similar to the
 {{jsxref("String.prototype.match()")}} method.)
 
 As with `exec()` (or in combination with it), `test()` called
@@ -129,6 +129,5 @@ regex.test("foobarfoo"); // false
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the
-  [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("RegExp")}}

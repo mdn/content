@@ -190,7 +190,7 @@ For the time being, we temporarily hardcode some content within this `<section>`
 </section>
 ```
 
-This content, other than the container `<section id="past-periods"></section>`, is temporary. We will remove or comment-out this temporary data once we [complete the CSS](#css-content) and are satisfied with the app's appearance.
+This content, other than the container `<section id="past-periods"></section>`, is temporary. We will remove or comment-out this temporary data once we [complete the CSS](#css_content) and are satisfied with the app's appearance.
 
 ### JavaScript link
 
