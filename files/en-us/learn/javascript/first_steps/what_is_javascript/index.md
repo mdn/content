@@ -369,7 +369,7 @@ There are actually two modern features we can use to bypass the problem of the b
 Let's look at the difference between these two.
 
 Scripts loaded using the `async` attribute will download the script without blocking the page while the script is being fetched.
-However, once the download is complete, the script will execute, which blocks the page from rendering.
+However, once the download is complete, the script will execute, which blocks the page from rendering. This means that the rest of the content on the web page is prevented from being processed and displayed to the user until the script finishes executing.
 You get no guarantee that scripts will run in any specific order.
 It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
 

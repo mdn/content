@@ -22,7 +22,7 @@ for complete information about expressions.
 ## Block statement
 
 The most basic statement is a _block statement_, which is used to group
-statements. The block is delimited by a pair of curly brackets:
+statements. The block is delimited by a pair of curly braces:
 
 ```js
 {

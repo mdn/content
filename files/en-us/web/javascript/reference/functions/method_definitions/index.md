@@ -82,7 +82,7 @@ const obj = {
   __proto__: {
     prop: "foo",
   },
-  method: function () {
+  notAMethod: function () {
     console.log(super.prop); // SyntaxError: 'super' keyword unexpected here
   },
 };
@@ -110,6 +110,9 @@ You can use the exact same syntax to define public instance methods that are ava
 class ClassWithPublicInstanceMethod {
   publicMethod() {
     return "hello world";
+  }
+  secondPublicMethod() {
+    return "goodbye world";
   }
 }
 
