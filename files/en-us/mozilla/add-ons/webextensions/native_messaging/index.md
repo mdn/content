@@ -240,62 +240,57 @@ You can quickly get started sending and receiving messages with this NodeJS code
 ```js
 #!/usr/bin/env -S /full/path/to/node --max-old-space-size=6 --jitless --expose-gc --v8-pool-size=1
 // Node.js Native Messaging host
-import { readSync } from "node:fs";
-const decoder = new TextDecoder();
-const encoder = new TextEncoder();
-// Node.js Native Messaging host constantly increases RSS during usage
-// https://github.com/nodejs/node/issues/43654
+import { open } from "node:fs/promises";
 process.env.UV_THREADPOOL_SIZE = 1;
 // Process greater than 65535 length input
 // https://github.com/nodejs/node/issues/6456
 // https://github.com/nodejs/node/issues/11568#issuecomment-282765300
-// https://github.com/nodejs/node/blob/main/doc/api/process.md#a-note-on-process-io
-if (process.stdout._handle) {
-  process.stdout._handle.setBlocking(true);
-}
-// https://github.com/denoland/deno/discussions/17236#discussioncomment-4566134
-function readFullSync(fd, buffer) {
-  let offset = 0;
-  while (offset < buffer.byteLength) {
-    offset += readSync(fd, buffer, {
-      offset,
-    });
-  }
-  return buffer;
-}
+// https://www.reddit.com/r/node/comments/172fg10/comment/k3xcax5/
+process.stdout._handle.setBlocking(true);
 
-function getMessage() {
+async function getMessage() {
   const header = new Uint32Array(1);
-  readFullSync(0, header);
-  const content = new Uint8Array(header[0]);
-  readFullSync(0, content);
+  await readFullAsync(1, header);
+  const content = await readFullAsync(header[0]);
   return content;
 }
 
-function sendMessage(json) {
-  let message = JSON.parse(decoder.decode(json));
-  if (message === "ping") {
-    json = encoder.encode(JSON.stringify("pong"));
+// https://github.com/denoland/deno/discussions/17236#discussioncomment-4566134
+// https://github.com/saghul/txiki.js/blob/master/src/js/core/tjs/eval-stdin.js
+async function readFullAsync(length, buffer = new Uint8Array(65536)) {
+  const data = [];
+  while (data.length < length) {
+    const input = await open("/dev/stdin");
+    let { bytesRead } = await input.read({
+      buffer
+    });
+    await input.close();
+    if (bytesRead === 0) {
+      break;
+    }
+    data.push(...buffer.subarray(0, bytesRead));  
   }
-  // Calculate message length
-  let header = Uint32Array.from(
-    { length: 4 },
-    (_, index) => (json.length >> (index * 8)) & 0xff,
-  );
+  return new Uint8Array(data);
+}
+
+function sendMessage(json) {
+  let header = Uint32Array.from({
+    length: 4,
+  }, (_,index)=>(json.length >> (index * 8)) & 0xff);
   let output = new Uint8Array(header.length + json.length);
   output.set(header, 0);
   output.set(json, 4);
   process.stdout.write(output);
   // Mitigate RSS increasing expotentially for multiple messages
   // between client and host during same connectNative() connection
-  message = header = output = null;
+  header = output = null;
   global.gc();
 }
 
-function main() {
+async function main() {
   while (true) {
     try {
-      const message = getMessage();
+      const message = await getMessage();
       sendMessage(message);
     } catch (e) {
       process.exit();
