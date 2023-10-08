@@ -1,13 +1,13 @@
 ---
-title: Adjacent sibling combinator
-slug: Web/CSS/Adjacent_sibling_combinator
+title: Next-sibling combinator
+slug: Web/CSS/Next-sibling_combinator
 page-type: css-combinator
-browser-compat: css.selectors.adjacent_sibling
+browser-compat: css.selectors.next-sibling
 ---
 
 {{CSSRef("Selectors")}}
 
-The **adjacent sibling combinator** (`+`) separates two selectors and matches the second element only if it _immediately_ follows the first element, and both are children of the same parent {{DOMxRef("element")}}.
+The **next-sibling combinator** (`+`) separates two selectors and matches the second element only if it _immediately_ follows the first element, and both are children of the same parent {{DOMxRef("element")}}.
 
 ```css
 /* Paragraphs that come immediately after any image */
@@ -57,4 +57,4 @@ li:first-of-type + li {
 
 ## See also
 
-- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator)
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator)
