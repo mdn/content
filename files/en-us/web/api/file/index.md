@@ -35,9 +35,9 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
 
 `File` implements {{DOMxRef("Blob")}}, so it also has the following properties available to it:
 
-- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
   - : Returns the size of the file in bytes.
-- {{DOMxRef("File.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
   - : Returns the [MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) type of the file.
 
 ## Instance methods
