@@ -96,4 +96,4 @@ console.log(usedOptions.trailingZeroDisplay); // "auto"
 
 ## See also
 
-- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
+- {{jsxref("Intl.PluralRules")}}

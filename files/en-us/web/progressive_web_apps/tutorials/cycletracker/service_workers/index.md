@@ -165,7 +165,7 @@ We listen for the current service worker's global scope [`activate`](/en-US/docs
 
 We get the names of the existing named caches. We use the {{domxref("CacheStorage.keys()")}} method (again accessing `CacheStorage` through the global {{domxref("caches")}} property) which returns a {{jsxref("Promise")}} that resolves with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects in the order they were created.
 
-We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate thru that list of name cache promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named caches, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
+We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate through that list of name cache promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named caches, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
 
 The last line, the `await clients.claim()` uses the [`claim()`](/en-US/docs/Web/API/Clients/claim) method of the [`Clients`](/en-US/docs/Web/API/Clients) interface to enable our service worker to set itself as the controller for our client; the "client" referring to a running instance of the PWA. The `claim()` method enables the service worker to "claim control" of all clients within its scope. This way, clients loaded in the same scope don't need to be reloaded.
 
@@ -218,10 +218,9 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
-      } else {
-        // Respond with a HTTP 404 response status.
-        return new Response(null, { status: 404 });
       }
+      // Respond with a HTTP 404 response status.
+      return new Response(null, { status: 404 });
     })(),
   );
 });
@@ -291,10 +290,9 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
-      } else {
-        // If resource isn't in the cache, return a 404.
-        return new Response(null, { status: 404 });
       }
+      // If resource isn't in the cache, return a 404.
+      return new Response(null, { status: 404 });
     })(),
   );
 });

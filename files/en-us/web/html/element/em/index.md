@@ -35,7 +35,7 @@ An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there
 
 ## Examples
 
-In this example, the `<em>` element is used to hilite an implicit or explicit contrast between two ingredient lists:
+In this example, the `<em>` element is used to highlight an implicit or explicit contrast between two ingredient lists:
 
 ```html
 <p>
