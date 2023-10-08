@@ -31,8 +31,7 @@ requestPermission(fileSystemHandlePermissionDescriptor)
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
-`'denied'` or `'prompt'`.
+A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
 ### Exceptions
 
