@@ -268,7 +268,7 @@ async function readFullAsync(length, buffer = new Uint8Array(65536)) {
     if (bytesRead === 0) {
       break;
     }
-    data.push(...buffer.subarray(0, bytesRead));  
+    data.push(...buffer.subarray(0, bytesRead));
   }
   return new Uint8Array(data);
 }
