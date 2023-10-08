@@ -117,8 +117,8 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a
         >, or
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+          >generic</a
         >
         if a descendant of an
         <code><a href="/en-US/docs/Web/HTML/Element/article">article</a></code
