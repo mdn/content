@@ -21,15 +21,15 @@ In the same manner as `<link>` elements, `<style>` elements can include `media` 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
+- `blocking` {{Experimental_Inline}}
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
+    - `render`: The rendering of content on the screen is blocked.
 - `media`
   - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing.
 - `nonce`
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `title`
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
-- `blocking` {{Experimental_Inline}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
-    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 

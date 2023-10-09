@@ -61,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : For classic scripts, if the `async` attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.
 
-    For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available.
+    For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
 
@@ -95,6 +95,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - In the case of an attribution source registration, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` rather than the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header to complete registration.
       - In the case of an attribution trigger registration, the `attributionsrc` property can only contain a single URL, which the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to. This URL can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header to complete registration.
+
+- `blocking` {{Experimental_Inline}}
+
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+    - `render`: The rendering of content on the screen is blocked.
 
 - `crossorigin`
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
@@ -168,10 +173,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : The embedded content is treated as a data block, and won't be processed by the browser.
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
         All of the other attributes will be ignored, including the `src` attribute.
-
-- `blocking` {{Experimental_Inline}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
-    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
