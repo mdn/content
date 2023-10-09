@@ -3,17 +3,16 @@ title: "PublicKeyCredential: parseCreationOptionsFromJSON() static method"
 short-title: parseCreationOptionsFromJSON()
 slug: Web/API/PublicKeyCredential/parseCreationOptionsFromJSON_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.PublicKeyCredential.parseCreationOptionsFromJSON_static
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
 
-The **`parseCreationOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface deserializes a correpsonding JSON object into the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+The **`parseCreationOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface converts a particular JSON-friendly representation of the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) into the `publicKey` structure.
 
-Typically a server will create public key credential options, including a challenge that the client must sign and return in order to ensure the integrity of the registration process, serialize them to JSON, and then send them to the client.
-The client can then use this method to deserialize the JSON before passing it to [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) in order to create the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) credentials.
-
-The JSON object to be deserialized shares the same structure as the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) passed to `navigator.credentials.create()`, except that [base64url](/en-US/docs/Glossary/Base64) strings are used in attributes in place of buffers (for example in the `challenge`, and in the `user.id`).
+The method is a convenience function for deserializing information provided by a relying server to a web app in order to create a credential.
 
 ## Syntax
 
@@ -25,18 +24,25 @@ PublicKeyCredential.parseCreationOptionsFromJSON(options)
 
 - `options`
 
-  - : A JSON object with the same structure as the Web Authentication API the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
-    The only difference is that the JSON object uses strings in place of buffers: for example in the `challenge`.
+  - : An object with the same structure as the Web Authentication API [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64) encoded strings used in place of buffer properties.
 
 ### Return value
 
 An object with the Web Authentication API [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
-The attribute values will match the original JSON object passed into the method, except for buffers, which will be decoded from the corresponding [base64url](/en-US/docs/Glossary/Base64) encoded strings.
 
 ### Exceptions
 
 - `EncodingError` {{domxref("DOMException")}}
-  - : Thrown if any part of the JSON options cannot be converted into the corresponding JSON object passed to [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create).
+  - : Thrown if any part of the `options` object cannot be converted into the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+
+## Description
+
+The Web Authentication process for [creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) involves a relying party server sending the web app information needed to create a credential, including details about the user identity, the relying party, and a "challenge".
+The web app passes this information to an authenticator to create the credential, by calling [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) with an argument that contains the server-supplied data in the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+
+The specification does not define how the information needed for creating a credential is sent.
+A convenient approach is to first encapulate the information in an object that mirrors the structure of the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), encoding buffer properties such as the `challenge` and `user.id` as [base64url](/en-US/docs/Glossary/Base64) strings.
+This object can be serialized to [JSON](/en-US/docs/Glossary/JSON) and then deserialized by the web app to the [`publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) using **`parseCreationOptionsFromJSON()`**.
 
 ## Examples
 
@@ -62,14 +68,18 @@ const publicKey = {
     },
   ],
 };
+
+//Stringify to serialize/send
 const publicKeyJSON = JSON.stringify(publicKey);
 ```
 
-The `publicKeyJSON` can be converted to the correct form to use in `navigator.credentials.create()` as shown:
+The `publicKeyJSON` can be send to the web app, which will parse the JSON back into an object.
+Below we show how you might use `parseCreationOptionsFromJSON()` to convert this parsed object "`receivedPublicKeyJSON`" to the correct form to use in `navigator.credentials.create()`:
 
 ```js
-const publicKey =
-  PublicKeyCredential.parseCreationOptionsFromJSON(publicKeyJSON);
+const publicKey = PublicKeyCredential.parseCreationOptionsFromJSON(
+  receivedPublicKeyJSON,
+);
 
 navigator.credentials
   .create({ publicKey })
