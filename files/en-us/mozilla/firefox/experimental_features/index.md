@@ -486,7 +486,7 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
 ### :has() pseudo-class
 
 The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
-(See [Firefox bug 1771896](https://bugzil.la/1771896) for more details.)
+(See [Firefox bug 1771896](https://bugzil.la/1771896) and [Firefox bug 1853701](https://bugzil.la/1853701) for more details.)
 
 <table>
   <thead>
