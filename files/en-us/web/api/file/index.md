@@ -44,7 +44,7 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
 
 _The `File` interface doesn't define any methods, but inherits methods from the {{DOMxRef("Blob")}} interface:_
 
-- {{DOMxRef("Blob.slice()", "Blob.prototype.slice([start[, end[, contentType]]])")}}
+- {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the source `Blob`.
 - {{DOMxRef("Blob.stream()")}}
   - : Transforms the `File` into a {{DOMxRef("ReadableStream")}} that can be used to read the `File` contents.
