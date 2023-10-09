@@ -48,7 +48,7 @@ As there are several ways to define the character encoding of a style sheet, the
 @charset 'iso-8859-15'; /* Invalid, wrong quoting style used */
 @charset  "UTF-8"; /* Invalid, more than one space */
  @charset "UTF-8"; /* Invalid, there is a character (a space) before the at-rule */
-@charset UTF-8; /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
+@charset UTF-8; /* Invalid, without ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
 ```
 
 ## Specifications
