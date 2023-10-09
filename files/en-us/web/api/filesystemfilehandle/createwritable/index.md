@@ -42,7 +42,7 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemWritableFileStr
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not
     `'granted'` in `readwrite` mode.
 
