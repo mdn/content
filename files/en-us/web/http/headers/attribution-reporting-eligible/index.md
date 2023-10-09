@@ -39,15 +39,13 @@ Attribution-Reporting-Eligible: <allowed-registrations>
 - `<allowed-registrations>`
   - : A comma-separated list of keys representing the registrations allowed in the corresponding response. Possible keys are:
     - `event-source`
-      - : An [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered. The attribution source is not associated with a top-level navigation.
+      - : An image or script-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
     - `navigation-source`
-      - : An [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered. The attribution source is associated with a top-level navigation.
+      - : A click-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
     - `trigger`
       - : An [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_triggers) can be registered.
 
-EDITORIAL: "associated or not associated with a top-level navigation" IS HOW THE SPEC DESCRIBES THE DIFFERENCE BETWEEN THE FIRST TWO OPTIONS, BUT I'M NOT SURE WHAT THIS MEANS IN REAL TERMS OF HOW THIS RELATES TO CLICK- AND VIEW-BASED ATTRIBUTION SOURCES, WHICH IS HOW THE DCC DOCS DESCRIBE THEM.
-
-ALSO, IS IT POSSIBLE TO SEND MORE THAN ONE KEY AT ONCE - CAN AN ELEMENT/SCRIPT REGISTER AS AN EVEN SOURCE AND TRIGGER, FOR EXAMPLE?
+EDITORIAL: IS IT POSSIBLE TO SEND MORE THAN ONE KEY AT ONCE - CAN AN ELEMENT/SCRIPT REGISTER AS AN EVENT SOURCE AND TRIGGER, FOR EXAMPLE?
 
 ## Examples
 

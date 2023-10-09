@@ -11,7 +11,7 @@ browser-compat: api.XMLHttpRequest.setAttributionReporting
 {{APIRef("Attribution Reporting API")}}{{SeeCompatTable}}
 
 The **`setAttributionReporting()`** method of the
-{{domxref("XMLHttpRequest")}} interface indicates that you want the browser to send a {{httpheader("Attribution-Reporting-Eligible")}} header along with the request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete attribution source or trigger registration.
+{{domxref("XMLHttpRequest")}} interface indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -26,9 +26,9 @@ setAttributionReporting(options)
 - `options`
   - : An object providing attribution reporting options, which can include the following properties:
     - `eventSourceEligible` {{optional_inline}}
-      - : A boolean. If set to `true`, the associated {{htmlelement("script")}} element is eligible to be registered as an attribution source. If not set, the default value, `false`, is used.
+      - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If not set, the default value, `false`, is used.
     - `triggerEligible` {{optional_inline}}
-      - : A boolean. If set to `true`, the associated {{htmlelement("script")}} element is eligible to be registered as an attribution trigger. If not set, the default value, `false`, is used.
+      - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If not set, the default value, `false`, is used.
 
 ### Return value
 
@@ -47,10 +47,16 @@ const attributionReporting = {
   triggerEligible: false,
 };
 
-const req = new XMLHttpRequest();
-req.open("GET", "https://a.example/register-source");
-req.setAttributionReporting(attributionReporting);
-req.send();
+function triggerSourceInteraction() {
+  const req = new XMLHttpRequest();
+  req.open("GET", "https://shop.example.com/endpoint");
+  req.setAttributionReporting(attributionReporting);
+  req.send();
+}
+
+// Associate the interaction trigger with whatever
+// element and event makes sense for your code
+elem.addEventListener("click", triggerSourceInteraction);
 ```
 
 ## Specifications

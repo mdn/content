@@ -19,12 +19,21 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `attributionsrc`
 
-  - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the resource request once the link is clicked. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a click-based attribution source. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+  - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a click-based attribution source.
+
+    The browser stores the source data associated with the click-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the user clicks the link. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
     There are two versions of this attribute that you can set:
 
-    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `href` attribute points to. This is fine when you are handling the attribution source registration in the same place.
-    - Value containing one or more URLs, e.g. `attributionsrc="https://a.example/register-source https://b.example/register-source"`. This specifies that the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc`; this is required if the resource pointed to in `href` is not on a server you control, and you want to register the attribution source on separate servers that you _do_ control. `attributionsrc` instructs the browser to make the required extra requests and specifies their destinations.
+    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `href` attribute points to. This is fine when you are handling the attribution source registration oin the same server.
+    - Value containing one or more URLs, for example:
+
+      ```html
+      attributionsrc="https://a.example/register-source
+      https://b.example/register-source"
+      ```
+
+      This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` rather than the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
 
     > **Note:** `<a>` elements cannot be used as attribution triggers, only sources.
 

@@ -25,28 +25,35 @@ Traditionally on the web, conversion has been measured using third-party trackin
 
 This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page from the same domain can get access to that cookie, plus information from sites that embed those pages, and a surprisingly large number of parties can see that data, and infer other data about the user based on their browsing habits.
 
-To mitigate this problem, The Attribution Reporting API allows developers to register:
+The Attribution Reporting API provides a way to measure ad conversions in a way that protects user privacy.
 
-- **Attribution sources**: Ad-related features that can be used to measure a user interaction with ads. This can involve clicking links or viewing images or other assets associated with the ads, on the sites where they are published.
-- **Attribution triggers**. Event on the advertiser's own sites, for example clicking a "purchase" button on an e-commerce site.
+### How does it work?
 
-When an attribution source event occurs (for example, the user clicks the link in the ad), associated data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) — sites where you expect the associated conversion to occur (i.e, where the attribution triggers are).
+Let's illustrate how the Attribution Reporting API works via an example.
 
-Next, when the attribution trigger event occurs (for example the user clicks the "purchase" button), the browser attempts to match the attribution trigger to an entry in the private local storage. For a successful match, the trigger must be:
+Say we have a online shop, `shop.example.com` (aka the advertiser), which embeds an ad for one of its products (contained on `ad.example.com`) on a content site, `ads.com` (aka the publisher). The online shop wants to measure how many conversions they get between users interacting with the ad, and then viewing the product page on their site and putting the product into their shopping cart.
 
-1. On a `destination` specified in the source's associated {{httpheader("Attribution-Reporting-Register-Source")}} header.
-2. Same-origin with the request that specified the source registration.
+![Image representation of the steps described below](ara-flow.png)
 
-This provides privacy protection, but also flexibility — the source and trigger can potentially be situated on the top-level site, or embedded in a frame.
+The steps involved are as follows:
 
-If a successful match is found, the browser sends data to a reporting endpoint on a server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint.
+1. When a user visits the `ads.com` site, it can register an **Attribution source**. This is an ad-related feature that can be used to detect a user's interaction with the ad. This feature can be:
+   - A link. In this case, an interaction is detected by the user clicking the link.
+   - An image. In this case, an interaction is detected by the user viewing the image.
+   - A script. In this case you can use JavaScript to program any behavior detection you wish to use to indicate interaction with the ad.
+2. When the user performs the action that signifies interaction with the ad, as determined by the attribution source, associated source data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s). The destinations are sites where you expect the associated conversion to occur (`shop.example.com` in the example above).
+3. When the user later visits `shop.example.com`, it can register an **Attribution trigger**. This is a feature that can be used to indicate that a potential conversion has occurred. This feature can be:
+   - An image. In this case, a potential conversion is detected by the user viewing the image.
+   - A script. In this case you can use JavaScript to program any behavior detection you wish to use to indicate a potential conversion.
+4. When the user sets off the attribution trigger (for example, the user clicks the "Add to cart" button on `shop.example.com`), the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
+   - On a `destination` specified in the source's associated data.
+   - Same-origin with the request that specified the source registration.
+     > **Note:** These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be situated on the top-level site, or embedded in an {{htmlelement("iframe")}}.
+5. If a match is found successfully, the browser sends report data to an endpoint on a reporting server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint. These reports can be either:
+   - **Event-level reports**: Reports based on a single attribution source event, for example, "Click ID 200498 on `ad.example.com` by user bob_smith led to a purchase on `shop.example.com`". This is useful for simple reporting of coarse data such as what ad placements result in the most conversions.
+   - **Summary reports**: More detailed reports that combine data from multiple conversions on both the source and trigger side. For example "Campaign ID 774653 on `ads.com` has led to 654 sales of widgets on `shop.example.com` from users in Italy, with a total revenue of $9540." Compiling a summary report requires usage of an aggregation service (see for example the [Google aggregation service](https://github.com/privacysandbox/aggregation-service)).
 
-These reports can be either:
-
-- **Event-level reports**: Reports based on a single attribution source event, for example, "Click ID 200498 on publisher.example.com by user bob_smith led to a purchase on ourshop.example.com". This is useful for simple reporting of coarse data such as what ad placements result in the most conversions.
-- **Summary reports**: More detailed reports that combine data from multiple conversions on both the source and trigger side. For example "Campaign ID 774653 on publisher.example.com has led to 654 sales of widgets on ourshop.example.com from users in Italy, with a total revenue of $9540." Compiling a summary report requires usage of n aggregation service (see for example the [Google aggregation service](https://github.com/privacysandbox/aggregation-service)).
-
-The steps involved in using the Attribution Reporting API are:
+For more information on implementing the functionality required for the above steps, see:
 
 1. [Registering attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources)
 2. [Registering attribution triggers](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers)
@@ -54,23 +61,23 @@ The steps involved in using the Attribution Reporting API are:
 
 ## Interfaces
 
-The Attribution Reporting API has no distinct interfaces of its own.
+The Attribution Reporting API doesn't define any distinct interfaces of its own.
 
 ### Extensions to other interfaces
 
 - {{domxref("HTMLAnchorElement.attributionSrc")}}, {{domxref("HTMLImageElement.attributionSrc")}}, {{domxref("HTMLScriptElement.attributionSrc")}}
   - : The `attributionSrc` property allows you to get and set the `attributionsrc` attribute on {{htmlelement("a")}}, {{htmlelement("img")}}, and {{htmlelement("script")}} elements programmatically. It reflects the value of that attribute.
 - {{domxref("fetch()")}} and the {{domxref("Request.Request", "Request()")}} constructor, the `attributionReporting` option
-  - : When generating a request via {{domxref("fetch()")}}, this indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with it. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete attribution source or trigger registration.
+  - : When generating a request via {{domxref("fetch()")}}, this indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
 - {{domxref("XMLHttpRequest.setAttributionReporting()")}}
-  - : When generating a request via {{domxref("XMLHttpRequest")}}, this indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with it. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete attribution source or trigger registration.
+  - : When generating a request via {{domxref("XMLHttpRequest")}}, this indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
 - {{domxref("Window.open()")}}, the `attributionsrc` feature keyword
-  - : When generating a request via {{domxref("Window.open()")}}, this indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with it. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source. `Window.open()` calls cannot be used to register an attribution trigger.
+  - : Causes completion of the registration of an attribution source _and_ triggers the browser to store the associated source data (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method completes. Note that `Window.open()` calls cannot be used to register attribution triggers.
 
 ## HTML elements
 
 - {{htmlelement("a")}}, {{htmlelement("img")}}, and {{htmlelement("script")}} — the `attributionsrc` attribute
-  - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response. When registering an attribution source, this is required; when registering an attribution trigger it is only required if you want to specify a separate registration server to the resource the `href` or `src` attribute is pointing at.
+  - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the associated resource request. On the server-side this header is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response. When registering an attribution source, this is required; when registering an attribution trigger it is only required if you want to specify a separate registration server to the resource the `src` attribute is pointing at. Note that `<a>` elements cannot be used to register attribution triggers.
 
 ## HTTP headers
 
@@ -80,14 +87,12 @@ The Attribution Reporting API has no distinct interfaces of its own.
   - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to complete registration of an attribution source.
 - {{httpheader("Attribution-Reporting-Register-Trigger")}}
   - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to complete registration of an attribution trigger.
-- {{httpheader("Attribution-Reporting-Support")}}
-  - : xxx EDITORIAL: NEED TO FIND OUT WHETHER THE CROSS-WEB/PLATFORM-SPECIFIC APP ATTRIBUTION REPORTING FUNCTIONALITY IS SUPPORTED. SEE https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md
 - {{httpheader("Permissions-Policy")}} {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} directive
   - : Controls whether the current document is allowed to use attribution reporting.
 
 ## Examples
 
-There is a complete demo available at [Demo: Attribution Reporting API](https://arapi-home.web.app/)
+There is a complete demo available at [Demo: Attribution Reporting API](https://arapi-home.web.app/) (see the [source code also](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)).
 
 ## Specifications
 

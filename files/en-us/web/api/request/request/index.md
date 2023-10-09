@@ -41,14 +41,14 @@ new Request(input, options)
 
     - `attributionReporting`
 
-      - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} and/or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete an attribution source and/or trigger registration. `attributionReporting` is an object containing the following properties:
+      - : Indicates that you want the request to trigger the browser to set off an attribution source or trigger event. `attributionReporting` is an object containing the following properties:
 
         - `eventSourceEligible` {{optional_inline}}
-          - : A boolean. If set to `true`, the associated {{htmlelement("script")}} element is eligible to be registered as an attribution source. If not set, the default value, `false`, is used.
+          - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If not set, the default value, `false`, is used.
         - `triggerEligible` {{optional_inline}}
-          - : A boolean. If set to `true`, the associated {{htmlelement("script")}} element is eligible to be registered as an attribution trigger. If not set, the default value, `false`, is used.
+          - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If not set, the default value, `false`, is used.
 
-        See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+        > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
     - `method`
       - : The request method, e.g., `GET`,
