@@ -31,7 +31,7 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object.
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
     read mode.
 
