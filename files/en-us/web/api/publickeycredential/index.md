@@ -24,29 +24,29 @@ The **`PublicKeyCredential`** interface provides information about a public key 
   - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
 
 - {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-
   - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
-
 - {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
-
   - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
-
 - `PublicKeyCredential.type` {{ReadOnlyInline()}} {{securecontext_inline}}
   - : Inherited from {{domxref("Credential")}}. Always set to `public-key` for `PublicKeyCredential` instances.
 
 ## Static methods
 
 - {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} {{securecontext_inline}}
-
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
-
 - {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static", "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
+- {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "PublicKeyCredential.parseCreationOptionsFromJSON()")}} {{experimental_inline}}{{securecontext_inline}}
+  - : Convenience method for deserializing server-sent credential registration options data when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) (by converting a [credential options structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) from a server-supplied JSON-friendly object).
+- {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "PublicKeyCredential.parseRequestOptionsFromJSON()")}} {{experimental_inline}}{{securecontext_inline}}
+  - : Convenience method for deserializing server-sent credential request options data when [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) (by converting a [credential request options structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) from a server-supplied JSON-friendly object).
 
 ## Instance methods
 
 - {{domxref("PublicKeyCredential.getClientExtensionResults()")}} {{securecontext_inline}}
   - : If any extensions were requested, this method will return the results of processing those extensions.
+- {{domxref("PublicKeyCredential.toJSON()")}} {{experimental_inline}}{{securecontext_inline}}
+  - : Convenience method for creating a JSON-serializable version of a {{domxref("PublicKeyCredential")}} for sending to the server when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) and [authenticating a registered user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
 
 ## Examples
 

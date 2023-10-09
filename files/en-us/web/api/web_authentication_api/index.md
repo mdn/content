@@ -34,7 +34,11 @@ In their most basic forms, both `create()` and `get()` receive a very large rand
 
 To illustrate how the credential creation process works, let's describe the typical flow that occurs when a user wants to register a credential to a relying party:
 
-1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)).
+1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [Fetch](/en-US/docs/Web/API/Fetch_API) or [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)).
+
+   > **Note:** The data exchange format is also at the developer discretion.
+   > If you want to use JSON, the {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "PublicKeyCredential.parseCreationOptionsFromJSON()")}} static method is provided as a convenience method for deserializing a JSON representation of the credential options, which you can then pass to `create()` in the next step.
+   > Similarly {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "PublicKeyCredential.parseRequestOptionsFromJSON()")}} can convert serve-sent options for [authenticating a (registered) user](#authenticating_a_user) and [JSON.stringify()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) can serialize credential objects (via {{domxref("PublicKeyCredential.toJSON()")}}) for sending back to the server.
 
 2. The web app initiates generation of a new credential via the authenticator, on behalf of the relying party, via a {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} call. This call is passed a `publicKey` option specifying device capabilities, e.g., whether the device provides its own user authentication (for example with biometrics).
 

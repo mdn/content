@@ -101,5 +101,6 @@ navigator.credentials
 
 ## See also
 
+- [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
 - {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "PublicKeyCredential.parseRequestOptionsFromJSON()")}}
 - {{domxref("PublicKeyCredential.toJSON()")}}
