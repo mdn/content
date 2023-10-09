@@ -24,6 +24,7 @@ Logical AND assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/O
 ```js
 x && (x = y);
 ```
+Except that the expression x is only evaluated once.
 
 No assignment is performed if the left-hand side is not truthy, due to short-circuiting of the [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator. For example, the following does not throw an error, despite `x` being `const`:
 
