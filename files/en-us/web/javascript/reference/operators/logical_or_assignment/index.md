@@ -24,6 +24,7 @@ Logical OR assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Op
 ```js
 x || (x = y);
 ```
+Except that the expression x is only evaluated once.
 
 No assignment is performed if the left-hand side is not falsy, due to short-circuiting of the [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) operator. For example, the following does not throw an error, despite `x` being `const`:
 
