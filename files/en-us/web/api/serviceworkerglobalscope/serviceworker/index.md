@@ -17,7 +17,7 @@ A {{domxref("ServiceWorker")}} object.
 ## Examples
 
 ```js
-self.serviceWorker
+self.serviceWorker;
 ```
 
 ## Specifications

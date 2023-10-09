@@ -19,7 +19,7 @@ The {{domxref("Clients")}} object associated with the specific worker.
 ## Examples
 
 ```js
-self.clients
+self.clients;
 ```
 
 ## Specifications

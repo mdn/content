@@ -17,7 +17,7 @@ A {{domxref("ServiceWorkerRegistration")}} object.
 ## Examples
 
 ```js
-self.registration
+self.registration;
 ```
 
 ## Specifications
