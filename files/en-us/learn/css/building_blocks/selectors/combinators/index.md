@@ -64,9 +64,9 @@ If you remove the `>` that designates this as a child combinator, you end up wit
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/child.html", '100%', 600)}}
 
-## Adjacent sibling combinator
+## Next-sibling combinator
 
-The adjacent sibling selector (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
+The next-sibling selector (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
 ```css
 p + img
@@ -80,9 +80,9 @@ If you insert some other element such as a `<h2>` in between the `<h1>` and the 
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
 
-## General sibling combinator
+## Subsequent-sibling combinator
 
-If you want to select siblings of an element even if they are not directly adjacent, then you can use the general sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
 p ~ img
