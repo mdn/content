@@ -14,6 +14,12 @@ The **`serviceWorker`** read-only property of the {{domxref("ServiceWorkerGlobal
 
 A {{domxref("ServiceWorker")}} object.
 
+## Examples
+
+```js
+self.serviceWorker
+```
+
 ## Specifications
 
 {{Specifications}}
