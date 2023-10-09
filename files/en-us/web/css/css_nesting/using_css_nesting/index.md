@@ -238,7 +238,7 @@ In this example the `&` nesting selector is used to create compound selectors to
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice success">
-    <h2>Success</h2>
+    <h2 class="check">Success</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
@@ -269,8 +269,9 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  h2:before {
-    /* same as `.notice h2:before` */
+  & h2:before {
+    /* equivalent to `.notice h2:before` */
+    /* adding `& ` to this selector improves cross-browser compatibility */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -280,6 +281,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     color: white;
     h2:before {
       /* equivalent to `.notice.warning h2:before` */
+      /* note the lack of explicit `& ` in this selector */
+      /* this selector is the same as `& h2:before` in some browsers */
       content: "! ";
     }
   }
@@ -288,8 +291,10 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.success h2:before` */
+    .check:before {
+      /* equivalent to `.notice.success .check:before` */
+      /* not all browsers support implicitly-nested rules that start with a type selector */
+      /* we overcome this limitation by explicitly adding a class to this `h2` element in the HTML */
       content: "✓ ";
     }
   }
