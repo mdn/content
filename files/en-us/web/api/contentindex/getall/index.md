@@ -36,9 +36,6 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
     - `id`
       - : A unique {{jsxref('String')}} identifier.
     - `title`
-      - : A {{jsxref('String')}} title for the item.
-        Used in user-visible lists of content.
-    - `title`
       - : A {{jsxref('String')}} title of the item.
         Used in user-visible lists of content.
     - `description`
