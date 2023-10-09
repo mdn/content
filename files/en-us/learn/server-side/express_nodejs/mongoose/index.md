@@ -212,7 +212,7 @@ async function main() {
 }
 ```
 
-> **Note:** As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within a function declared using `async function` ( section).
+> **Note:** As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within an `async` function.
 > We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have called `main()` within a `try...catch` block.
 
 You can get the default `Connection` object with `mongoose.connection`.
