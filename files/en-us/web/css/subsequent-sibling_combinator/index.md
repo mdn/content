@@ -1,15 +1,15 @@
 ---
-title: General sibling combinator
-slug: Web/CSS/General_sibling_combinator
+title: Subsequent-sibling combinator
+slug: Web/CSS/Subsequent-sibling_combinator
 page-type: css-combinator
-browser-compat: css.selectors.general_sibling
+browser-compat: css.selectors.subsequent-sibling
 ---
 
 {{CSSRef("Selectors")}}
 
-The **general sibling combinator** (`~`) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
+The **subsequent-sibling combinator** (`~`) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
 
-In the following example, the general sibling combinator (`~`) helps to select and style paragraphs that are both siblings of an image and appear after any image.
+In the following example, the subsequent-sibling combinator (`~`) helps to select and style paragraphs that are both siblings of an image and appear after any image.
 
 ```css
 img ~ p {
@@ -61,7 +61,7 @@ p ~ span {
 
 ### Using the combinator with complex selectors
 
-This example contains two [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector), both using the general sibling combinator: `.foo p ~ span` and `.foo p ~ .foo span`.
+This example contains two [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector), both using the subsequent-sibling combinator: `.foo p ~ span` and `.foo p ~ .foo span`.
 
 - The first complex selector, `.foo p ~ span`, matches all spans that come after a paragraph _if_ the span and paragraph share the same parent **and** that parent or an ancestor of that parent has the class `.foo`.
 - The second complex selector, `.foo p ~ .foo span`, matches all spans that are a descendant of the element with class `.foo` _if_ that element is a sibling of the previously mentioned paragraph.
@@ -107,4 +107,4 @@ In the above HTML, the two siblings of `.foo p` are `span` and `.foo`. The green
 
 ## See also
 
-- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
+- [Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator)

@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -2334,6 +2338,10 @@
     },
     "OVR_multiview2": {
       "inh": "",
+      "impl": []
+    },
+    "PageRevealEvent": {
+      "inh": "Event",
       "impl": []
     },
     "PageTransitionEvent": {
