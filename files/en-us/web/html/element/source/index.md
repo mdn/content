@@ -99,9 +99,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `media`
 
-  - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
-
-    [Media query](/en-US/docs/Web/CSS/CSS_media_queries) of the resource's intended media.
+  - : [Media query](/en-US/docs/Web/CSS/CSS_media_queries) of the resource's intended media.
 
 - `height`
 
