@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.showDirectoryPicker
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
 {{domxref("Window")}} interface displays a directory picker which allows the user to
@@ -30,7 +30,7 @@ showDirectoryPicker()
       - : By specifying an ID, the browser can remember different directories for different
         IDs. If the same ID is used for another picker, the picker opens in the same
         directory.
-    - `mode`
+    - `mode` {{optional_inline}}
       - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
         and write access to the directory.
     - `startIn`
@@ -43,9 +43,11 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : Thrown if the user dismisses the prompt without making a selection, or if the user
-    agent deems the selected content to be too sensitive or dangerous
+    agent deems the selected content to be too sensitive or dangerous.
+- `SecurityError` {{domxref("DOMException")}}
+  - : An SecurityError is thrown if it was blocked by Same-Origin policy or it was not called via a user interaction such as a button press.
 
 ## Security
 
