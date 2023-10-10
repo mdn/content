@@ -43,12 +43,15 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ### Valid and invalid charset declarations
 
-```css-nolint
+```css-nolint example-good
 @charset "UTF-8"; /* Set the encoding of the style sheet to Unicode UTF-8 */
-@charset 'iso-8859-15'; /* Invalid, wrong quoting style used */
+```
+
+```css-nolint example-bad
+@charset 'iso-8859-15'; /* Invalid, wrong quotes used */
 @charset  "UTF-8"; /* Invalid, more than one space */
  @charset "UTF-8"; /* Invalid, there is a character (a space) before the at-rule */
-@charset UTF-8; /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
+@charset UTF-8; /* Invalid, the charset is a CSS <string> and requires double-quotes */
 ```
 
 ## Specifications
