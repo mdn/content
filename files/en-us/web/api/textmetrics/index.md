@@ -82,12 +82,9 @@ baselines.forEach((baseline, index) => {
     return;
   }
 
-  let lineY;
-  if (baselinesBelowAlphabetic.includes(baseline)) {
-    lineY = y + Math.abs(textMetrics[baseline]);
-  } else {
-    lineY = y - Math.abs(textMetrics[baseline]);
-  }
+  const lineY = baselinesBelowAlphabetic.includes(baseline)
+    ? y + Math.abs(baselineMetricValue)
+    : y - Math.abs(baselineMetricValue);
   ctx.moveTo(0, lineY);
   ctx.lineTo(550, lineY);
   ctx.stroke();
