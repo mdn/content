@@ -78,9 +78,10 @@ Below we will name this "reconstituted" object `createCredentialOptionsJSON` (th
 We use `parseCreationOptionsFromJSON()` to convert this to the correct form to use in `navigator.credentials.create()`:
 
 ```js
-const createCredentialOptions = PublicKeyCredential.parseCreationOptionsFromJSON(
-  receivedCreateCredentialOptions,
-);
+const createCredentialOptions =
+  PublicKeyCredential.parseCreationOptionsFromJSON(
+    receivedCreateCredentialOptions,
+  );
 
 navigator.credentials
   .create({ createCredentialOptions })
