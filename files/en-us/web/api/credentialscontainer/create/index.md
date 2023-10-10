@@ -253,9 +253,9 @@ The `publicKey` object can contain the following properties:
 
 - `hints` {{optional_inline}}
 
-  - : A array of "hint" strings that to guide the user-agent in what sort of UI it might use to interact with the user.
+  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
 
-    The value can be one of the following:
+    The values can be any of the following:
 
     - `"security-key"`
       - : Authentication requires a separate dedicated physical device to provide the key.

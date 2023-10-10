@@ -242,7 +242,7 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
     - `transports`
 
-      - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"` (see {{domxref("AuthenticatorAttestationResponse.getTransports", "getTransports()")}} for more details).
+      - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"`.
 
         > **Note:** This value is mirrored by the return value of the {{domxref("AuthenticatorAttestationResponse.getTransports", "PublicKeyCredential.response.getTransports()")}} method of the {{domxref("PublicKeyCredential")}} object returned by the `create()` call that originally created the credential.
         > At that point, it should be stored by the app for later use.
@@ -319,9 +319,9 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
 - `hints` {{optional_inline}}
 
-  - : A array of "hint" strings that to guide the user-agent in what sort of UI it might use to interact with the user.
+  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
 
-    The value can be one of the following:
+    The values can be any of the following:
 
     - `"security-key"`
       - : Authentication requires a separate dedicated physical device to provide the key.
