@@ -79,7 +79,7 @@ We use `parseCreationOptionsFromJSON()` to convert this to the correct form to u
 
 ```js
 const publicKey = PublicKeyCredential.parseCreationOptionsFromJSON(
-  receivedPublicKeyJSON,
+  receivedCreateCredentialOptions,
 );
 
 navigator.credentials
