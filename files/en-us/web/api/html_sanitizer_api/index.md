@@ -7,7 +7,11 @@ status:
 browser-compat: api.Sanitizer
 ---
 
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}
+
+> **Note:** Since the initial implementation of this API, the specification has changed significantly. As a result, it has been removed from Chrome and other Chromium-based browsers while the specification update stabilizes and a new implementation is worked on.
+
+{{securecontext_header}}
 
 The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
 
