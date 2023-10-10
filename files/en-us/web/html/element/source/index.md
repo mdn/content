@@ -140,7 +140,7 @@ This example demonstrates how to offer a video in in WebM format for users whose
 
 ### Video with media attribute example
 
-This example demonstrates how to offer an alternate source file for viewports at or above a certain width. When a user's browsing environment meets the specified `media` condition, the associated `<source>` element is chosen, and the contents of its `src` attribute are requested and rendered. If the `media` condition does not match, the user agent will move on to the next `<source>` in the source order—absent a `media` condition, this source will be selected for all other browsing contexts.
+This example demonstrates how to offer an alternate source file for viewports at or above a certain width. When a user's browsing environment meets the specified `media` condition, the associated `<source>` element is chosen, and the contents of its `src` attribute are requested and rendered. If the `media` condition does not match, the user agent will move on to the next `<source>` in the source order. The second source option in the below code has no `media` condition, so will be selected for all other browsing contexts.
 
 ```html
 <video controls>
