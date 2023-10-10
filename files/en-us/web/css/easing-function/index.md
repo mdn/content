@@ -49,9 +49,9 @@ step-end
 
     The `linear()` function specifies a list of points (`<linear-stop-list>`), separated by commas. Each point or linear stop in the list (`<linear-stop>`) is specified as a {{cssxref("&lt;number&gt;")}} and one or two {{cssxref("&lt;percentage&gt;")}} values (`<linear-stop-length>`).
 
-    `<number>`: Represents a point in time. The value should be between `0` and `1`.
+    - `<number>`: Represents a point in time. The value should be between `0` and `1`.
 
-    `<percentage>`: Represents the progress of the animation at the specified point in time. If two percentage values are specified, they represent a range for that specific point – the first percentage indicates the starting point and the second percentage indicates the ending point of the progress for that segment in the animation. If no `<percentage>` value is specified, the points are spread evenly along the timeline.
+    - `<percentage>`: Represents the progress of the animation at the specified point in time. If two percentage values are specified, they represent a range for that specific point – the first percentage indicates the starting point and the second percentage indicates the ending point of the progress for that segment in the animation. If no `<percentage>` value is specified, the points are spread evenly along the timeline.
 
 - `<cubic-bezier-easing-function>`
 
@@ -67,7 +67,9 @@ step-end
 
     ![Graphs of "Input progress" to "Output progress", of which "ease" shows a curved line quickly rising from the origin to (1, 1); "ease-in" shows a shallow curved line from the origin that straightens out as it approaches (1, 1); "ease-out" shows a straight diagonal line that slightly curves as it gets close to (1, 1); and "ease-in-out" shows a symmetrical, "S"-shaped line curving from the origin to (1, 1).](ease.svg)
 
-    `cubic-bezier()`: This function accepts four {{cssxref("&lt;number&gt;")}} values to specify the abscissas and ordinates of the [P1 and P2 points](#cubic_bézier_easing_function) of the curve (as `<x1>`, `<y1>`, `<x2>`, and `<y2>`). `<x1>` and `<x2>` must be in the range `[0, 1]`, otherwise the value is invalid.
+    `cubic-bezier()`: This function accepts four {{cssxref("&lt;number&gt;")}} values.
+
+    - `<number>`: Specifies the abscissas and ordinates of the [P1 and P2 points](#cubic_bézier_easing_function) of the curve (as `<x1>`, `<y1>`, `<x2>`, and `<y2>`). `<x1>` and `<x2>` must be in the range `[0, 1]`, otherwise the value is invalid.
 
 - `<step-easing-function>`
 
@@ -79,25 +81,18 @@ step-end
 
     ![Graphs of "Input progress" to "Output progress", of which "step-start" shows a hollow origin and a horizontal line extending from (0, 1) to (1, 1); and "step-end" shows a horizontal line extending from the origin to (1, 0) (hollow) and a point at (1, 1).](step.svg)
 
-    `steps()`: This function accepts a strictly positive {{cssxref("&lt;integer&gt;")}} and a second optional `<step-position>`. The `<integer>` value represents the number of equidistant intervals or 'steps' in the animation. It must be a positive integer greater than `0` unless the second parameter is `jump-none`, in which case, it must be a positive integer greater than `1`. The `<step-position>` keyword value indicates when the animation jumps from one step to the next. The possible keyword values include:
+    `steps()`: This function accepts a strictly positive {{cssxref("&lt;integer&gt;")}} and a second optional `<step-position>`.
 
-    - `jump-start` denotes that the first step or jump happens when the interpolation begins.
-    - `jump-end` denotes that the last step or jump happens when the interpolation ends. This is the default.
-    - `jump-none` denotes that no jump happens at the beginning or the end. Instead, the animation holds steady at both the 0% mark and the 100% mark. The duration of these holds is determined by dividing the total animation duration by the number of steps (1/n).
-    - `jump-both` denotes that jumps occur at both the 0% and 100% marks, effectively adding a step during the interpolation iteration.
-    - `jump-none` denotes no jump on either end, effectively removing a step during the interpolation iteration. Instead, it holds at both the 0% mark and the 100% mark, each for 1/n of the duration.
-    - `start` is the equivalent of `jump-start`.
-    - `end` is the equivalent of `jump-end`.
+    - `<integer>`: Represents the number of equidistant intervals or 'steps' in the animation. It must be a positive integer greater than `0` unless the second parameter is `jump-none`, in which case, it must be a positive integer greater than `1`.
+    - `<step-position>`: Indicates when the animation jumps from one step to the next. The possible keyword values include:
 
-- `step-start`
-
-  - : Indicates that the interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
-
-- `step-end`
-
-  - : Indicates that the interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
-
-![Graphs of "Input progress" to "Output progress", of which "step-start" shows a hollow origin and a horizontal line extending from (0, 1) to (1, 1); and "step-end" shows a horizontal line extending from the origin to (1, 0) (hollow) and a point at (1, 1).](step.svg)
+      - `jump-start` denotes that the first step or jump happens when the interpolation begins.
+      - `jump-end` denotes that the last step or jump happens when the interpolation ends. This is the default value when no `<step-position>` is specified.
+      - `jump-none` denotes that no jump happens at the beginning or the end, effectively removing a step during the interpolation iteration. Instead, the animation holds steady at both the 0% mark and the 100% mark. The duration of these holds is determined by dividing the total animation duration by the number of steps (1/n).
+      - `jump-both` denotes that jumps occur at both the 0% and 100% marks, effectively adding a step during the interpolation iteration.
+      - `jump-none` denotes no jump on either end, effectively removing a step during the interpolation iteration. Instead, it holds at both the 0% mark and the 100% mark, each for 1/n of the duration.
+      - `start` is the equivalent of `jump-start`.
+      - `end` is the equivalent of `jump-end`.
 
 ## Description
 
