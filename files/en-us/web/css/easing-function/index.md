@@ -39,7 +39,7 @@ step-end
 - `linear`
 
   - : Specifies a constant rate of interpolation, ensuring there is no change in the rate of progress of the animation throughout the duration. This also means that there is no acceleration or deceleration at any point during the animation's duration. It's important to not confuse this keyword value with the [linear() easing function](#linear_easing_function), although they are related: the `linear` keyword produces a `linear()` easing function with two points, `linear(0, 1)`.
-    > **Note:** The `linear` keyword always serializes as `linear`, whereas its function equivalent `linear(0, 1)` serializes to `linear(0 0%, 1 100%)`.
+    > **Note:** The `linear` keyword always serializes as `linear`, whereas its function equivalent `linear(0, 1)` serializes as `linear(0 0%, 1 100%)`.
 
 ![Graph of "Input progress" to "Output progress" showing a line extending from the origin to (1, 1).](linear.svg)
 
@@ -47,7 +47,7 @@ step-end
 
   - : Specifies a `linear()` function using multiple points, called linear stops, allowing you to control the movement of an animation at specific points along the path.
 
-    The `linear()` function specifies a list of points (`<linear-stop-list>`), separated by commas. Each point or linear stop in the list (`<linear-stop>`) is specified as a {{cssxref("&lt;number&gt;")}} and one or two {{cssxref("&lt;percentage&gt;")}} values (`<linear-stop-length>`).
+    The `linear()` function specifies a list of points (`<linear-stop-list>`), separated by commas. Each point or linear stop in the list (`<linear-stop>`) is specified as a {{cssxref("&lt;number&gt;")}} and optional one or two {{cssxref("&lt;percentage&gt;")}} values (`<linear-stop-length>`).
 
     - `<number>`: Represents a point in time. The value should be between `0` and `1`.
 
