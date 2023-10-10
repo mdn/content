@@ -74,7 +74,7 @@ const createCredentialOptionsString = JSON.stringify(createCredentialOptions);
 ```
 
 The `createCredentialOptionsString` string can be sent to the web app and parsed back from a JSON-formatted string into a JavaScript object.
-Below we will name this "reconstituted" object `createCredentialOptionsJSON` (though it is the same as `createCredentialOptions` on the server). 
+Below we will name this "reconstituted" object `createCredentialOptionsJSON` (though it is the same as `createCredentialOptions` on the server).
 We use `parseCreationOptionsFromJSON()` to convert this to the correct form to use in `navigator.credentials.create()`:
 
 ```js
