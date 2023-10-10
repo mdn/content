@@ -39,7 +39,7 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 - {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "PublicKeyCredential.parseCreationOptionsFromJSON()")}} {{experimental_inline}}{{securecontext_inline}}
   - : Convenience method for deserializing server-sent credential registration data when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) (creating a [credential options object](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) from a server-supplied JSON string).
 - {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "PublicKeyCredential.parseRequestOptionsFromJSON()")}} {{experimental_inline}}{{securecontext_inline}}
-  - : Convenience method for deserializing server-sent credential request options data when [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) (by converting a [credential request options structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) from a server-supplied JSON-friendly object).
+  - : Convenience method for deserializing server-sent credential request data when [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) (creating a [credential request options object](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) from a server-supplied JSON string).
 
 ## Instance methods
 
