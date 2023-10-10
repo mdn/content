@@ -21,7 +21,7 @@ copyWithin(target, start, end)
 ### Parameters
 
 - `target`
-  - : Zero-based index at which to copy the sequence to, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+  - : Zero-based index at which to copy the sequence to, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). This corresponds to where the element at `start` will be copied to, and all elements between `start` and `end` are copied to succeeding indices.
     - Negative index counts back from the end of the array — if `target < 0`, `target + array.length` is used.
     - If `target < -array.length`, `0` is used.
     - If `target >= array.length`, nothing is copied.
@@ -109,6 +109,6 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.copyWithin()")}}

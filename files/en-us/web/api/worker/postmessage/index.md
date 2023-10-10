@@ -18,6 +18,7 @@ The `Worker` can send back information to the thread that spawned it using the {
 
 ```js-nolint
 postMessage(message)
+postMessage(message, options)
 postMessage(message, transfer)
 ```
 
@@ -28,6 +29,10 @@ postMessage(message, transfer)
   - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.message_event")}} event. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
     If the `message` parameter is _not_ provided, a {{jsxref("SyntaxError")}} will be thrown by the parser. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
+
+- `options` {{optional_inline}}
+
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from, and becomes available only to the worker it was sent to.
 
 - `transfer` {{optional_inline}}
 

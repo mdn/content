@@ -71,7 +71,7 @@ vegetables.push(...moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.
+Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method.
 
 ### Calling push() on non-array objects
 
@@ -138,7 +138,7 @@ were dealing with an actual array.
 ## See also
 
 - [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}

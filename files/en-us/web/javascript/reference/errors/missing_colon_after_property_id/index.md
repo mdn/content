@@ -69,7 +69,7 @@ const obj = { "b"+"ar": "foo" };
 // SyntaxError: missing : after property id
 ```
 
-Put the expression in brackets `[]`:
+Put the expression in square brackets `[]`:
 
 ```js example-good
 const obj = { ["b" + "ar"]: "foo" };

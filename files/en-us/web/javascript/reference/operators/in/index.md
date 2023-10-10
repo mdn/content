@@ -1,5 +1,5 @@
 ---
-title: in operator
+title: in
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
 browser-compat: javascript.operators.in
@@ -131,7 +131,7 @@ delete trees[3];
 3 in trees; // returns false
 ```
 
-If you set a property to {{jsxref("Global_Objects/undefined", "undefined")}} but do not delete it, the `in` operator returns true for that property.
+If you set a property to {{jsxref("undefined")}} but do not delete it, the `in` operator returns true for that property.
 
 ```js
 const mycar = { make: "Honda", model: "Accord", year: 1998 };

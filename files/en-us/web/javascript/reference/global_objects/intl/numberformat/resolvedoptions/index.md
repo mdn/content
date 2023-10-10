@@ -137,4 +137,4 @@ console.log(usedOptions.useGrouping); // auto
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
