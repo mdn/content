@@ -44,7 +44,7 @@ The object properties are:
 - `type`
   - : The string `"public-key"`.
 - `clientExtensionResults`
-  - : The result of calling {{domxref("PublicKeyCredential.getClientExtensionResults()")}} and [base64url](/en-US/docs/Glossary/Base64) encoding the values of each array entry.
+  - : An array contaning [base64url](/en-US/docs/Glossary/Base64)-encoded versions of the values returned by {{domxref("PublicKeyCredential.getClientExtensionResults()")}}.
 - `response`
 
   - : The response property object depends on whether the credentials are returned following a registration or authentication operation.
