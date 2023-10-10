@@ -37,7 +37,7 @@ An object with the Web Authentication API [`publicKey` request credentials optio
 
 ## Description
 
-The Web Authentication process for [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) involves a relying party server sending the web app information needed to find an existing the credential, including details about the user identity, the relying party, a "challenge", and optionally where to look for the credential: for example on a local built-in authenticator, or on an external one over USB, BLE, and so on.
+The Web Authentication process for [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) involves a relying party server sending the web app information needed to find an existing credential, including details about the user identity, the relying party, a "challenge", and optionally where to look for the credential: for example on a local built-in authenticator, or on an external one over USB, BLE, and so on.
 The web app passes this information to an authenticator to find the credential, by calling [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) with an argument that contains the server-supplied data in the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure).
 
 The specification does not define how the information needed for requesting a credential is sent.
