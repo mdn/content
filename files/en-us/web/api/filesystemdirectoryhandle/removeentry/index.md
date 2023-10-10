@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`removeEntry()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
@@ -70,5 +70,5 @@ currentDirHandle.removeEntry(entryName).then(() => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -18,7 +18,7 @@ A **function definition** (also called a **function declaration**, or **function
 
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
-- The JavaScript statements that define the function, enclosed in curly brackets, `{ /* … */ }`.
+- The JavaScript statements that define the function, enclosed in curly braces, `{ /* … */ }`.
 
 For example, the following code defines a simple function named `square`:
 
@@ -28,11 +28,7 @@ function square(number) {
 }
 ```
 
-The function `square` takes one parameter, called `number`. The function consists of one statement that says to return the parameter of the function (that is, `number`) multiplied by itself. The statement [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) specifies the value returned by the function:
-
-```js
-return number * number;
-```
+The function `square` takes one parameter, called `number`. The function consists of one statement that says to return the parameter of the function (that is, `number`) multiplied by itself. The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement specifies the value returned by the function, which is `number * number`.
 
 Parameters are essentially passed to functions **by value** — so if the code within the body of a function assigns a completely new value to a parameter that was passed to the function, **the change is not reflected globally or in the code which called that function**.
 
@@ -702,32 +698,5 @@ function Person() {
 
 const p = new Person();
 ```
-
-## Predefined functions
-
-JavaScript has several top-level, built-in functions:
-
-- {{jsxref("Global_Objects/eval", "eval()")}}
-  - : The **`eval()`** method evaluates JavaScript code represented as a string.
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}} to determine if the value is Not-A-Number.
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-  - : The **`parseFloat()`** function parses a string argument and returns a floating point number.
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-  - : The **`parseInt()`** function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-  - : The **`decodeURI()`** function decodes a Uniform Resource Identifier (URI) previously created by {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or by a similar routine.
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : The **`decodeURIComponent()`** method decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} or by a similar routine.
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : The **`encodeURI()`** method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-  - : The **`encodeURIComponent()`** method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
-- {{jsxref("Global_Objects/escape", "escape()")}}
-  - : The deprecated **`escape()`** method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} instead.
-- {{jsxref("Global_Objects/unescape", "unescape()")}}
-  - : The deprecated **`unescape()`** method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape")}}. Because `unescape()` is deprecated, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} instead.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

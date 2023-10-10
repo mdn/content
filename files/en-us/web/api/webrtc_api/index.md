@@ -114,6 +114,8 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
   - : The state of the `RTCIceTransport` has changed.
 - {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
   - : The state of the `RTCSctpTransport` has changed.
+- {{DOMxRef("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
+  - : An encoded video or audio frame is ready to process using a transform stream in a worker.
 
 #### Types
 
@@ -135,7 +137,7 @@ These APIs are used to manage user identity and security, in order to authentica
 
 ### Telephony
 
-These interfaces and events are related to interactivity with Public-Switched Telephone Networks (PTSNs). They're primarily used to send tone dialing sounds—or packets representing those tones—across the network to the remote peer.
+These interfaces and events are related to interactivity with Public-Switched Telephone Networks (PSTNs). They're primarily used to send tone dialing sounds—or packets representing those tones—across the network to the remote peer.
 
 #### Interfaces
 
@@ -148,6 +150,33 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
   - : Either a new {{Glossary("DTMF")}} tone has begun to play over the connection, or the last tone in the `RTCDTMFSender`'s {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} has been sent and the buffer is now empty. The event's type is {{domxref("RTCDTMFToneChangeEvent")}}.
+
+### Encoded Transforms
+
+These interfaces and events are used to process incoming and outgoing encoded video and audio frames using a transform stream running in a worker.
+
+#### Interfaces
+
+- {{DOMxRef("RTCRtpScriptTransform")}}
+  - : An interface for inserting transform stream(s) running in a worker into the RTC pipeline.
+- {{DOMxRef("RTCRtpScriptTransformer")}}
+  - : The worker-side counterpart of an `RTCRtpScriptTransform` that passes options from the main thread, along with a readable stream and writeable stream that can be used to pipe encoded frames through a {{DOMxRef("TransformStream")}}.
+- {{DOMxRef("RTCEncodedVideoFrame")}}
+  - : Represents an encoded video frame to be transformed in the RTC pipeline.
+- {{DOMxRef("RTCEncodedAudioFrame")}}
+  - : Represents an encoded audio frame to be transformed in the RTC pipeline.
+
+#### Properties
+
+- {{DOMxRef("RTCRtpReceiver.transform")}}
+  - : A property used to insert a transform stream into the receiver pipeline for incoming encoded video and audio frames.
+- {{DOMxRef("RTCRtpSender.transform")}}
+  - : A property used to insert a transform stream into the sender pipeline for outgoing encoded video and audio frames.
+
+#### Events
+
+- {{DOMxRef("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
+  - : An RTC transform is ready to run in the worker, or an encoded video or audio frame is ready to process.
 
 ## Guides
 
@@ -167,10 +196,12 @@ These interfaces and events are related to interactivity with Public-Switched Te
   - : This guide covers how you can use a peer connection and an associated {{DOMxRef("RTCDataChannel")}} to exchange arbitrary data between two peers.
 - [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
   - : WebRTC's support for interacting with gateways that link to old-school telephone systems includes support for sending DTMF tones using the {{DOMxRef("RTCDTMFSender")}} interface. This guide shows how to do so.
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
+  - : This guide shows how a web application can modify incoming and outgoing WebRTC encoded video and audio frames, using a {{DOMxRef("TransformStream")}} running into a worker.
 
 ## Tutorials
 
-- [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API#interoperability)
+- [Improving compatibility using WebRTC adapter.js](#interoperability)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
 - [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : The {{DOMxRef("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.

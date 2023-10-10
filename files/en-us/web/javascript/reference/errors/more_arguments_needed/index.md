@@ -11,7 +11,7 @@ a function is called. More arguments need to be provided.
 
 ## Message
 
-```
+```plain
 TypeError: Object prototype may only be an Object or null: undefined (V8-based)
 TypeError: Object.create requires at least 1 argument, but only 0 were passed (Firefox)
 TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed (Firefox)
@@ -52,4 +52,4 @@ const obj2 = Object.setPrototypeOf({}, null);
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

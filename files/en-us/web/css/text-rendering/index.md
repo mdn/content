@@ -11,6 +11,12 @@ The **`text-rendering`** CSS property provides information to the rendering engi
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
 
+> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
+
+One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
+
+## Syntax
+
 ```css
 /* Keyword values */
 text-rendering: auto;
@@ -25,12 +31,6 @@ text-rendering: revert;
 text-rendering: revert-layer;
 text-rendering: unset;
 ```
-
-> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
-
-One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
-
-## Syntax
 
 ### Values
 

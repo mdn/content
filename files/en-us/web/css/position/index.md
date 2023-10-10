@@ -46,7 +46,7 @@ position: unset;
 
 - `fixed`
 
-  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
+  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block), which is the viewport in the case of visual media. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). In printed documents, the element is placed in the same position on _every page_.
 

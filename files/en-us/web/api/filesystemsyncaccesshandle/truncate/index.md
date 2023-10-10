@@ -6,10 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.truncate
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`truncate()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface resizes the file associated with the handle to a specified number of bytes.
+
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and `truncate()` were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Syntax
 
@@ -24,7 +26,7 @@ truncate(newSize)
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to undefined.
+None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
@@ -54,8 +56,6 @@ async function truncateFile() {
 }
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and `truncate()` were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
-
 ## Specifications
 
 {{Specifications}}
@@ -66,5 +66,5 @@ async function truncateFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

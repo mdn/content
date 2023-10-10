@@ -10,7 +10,7 @@ The `name` function returns a string representing the QName of the first node in
 
 ### Syntax
 
-```
+```plain
 name( [node-set] )
 ```
 

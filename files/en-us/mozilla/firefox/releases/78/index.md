@@ -60,7 +60,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### DOM
 
-- The {{DOMxRef("ParentNode.replaceChildren()")}} method has been implemented ([Firefox bug 1626015](https://bugzil.la/1626015)).
+- The {{DOMxRef("Element.replaceChildren")}} method has been implemented ([Firefox bug 1626015](https://bugzil.la/1626015)).
 
 #### Service workers
 

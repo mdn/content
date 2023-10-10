@@ -73,14 +73,14 @@ Here we use [nvm-windows](https://github.com/coreybutler/nvm-windows), which is 
 Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) page.
 After `nvm-windows` has installed, open a command prompt (or PowerShell) and enter the following command to download the most recent LTS version of nodejs and npm:
 
-```
+```bash
 nvm install lts
 ```
 
 At time of writing the LTS version of nodejs is 18.15.0.
 You can set this as the _current version_ to use with the command below:
 
-```
+```bash
 nvm use 18.15.0
 ```
 
@@ -96,20 +96,20 @@ See [nvm > Install & Update Script](https://github.com/nvm-sh/nvm#install--updat
 
 After `nvm` has installed, open a terminal enter the following command to download the most recent LTS version of nodejs and npm:
 
-```
+```bash
 nvm install --lts
 ```
 
 At the time of writing, the LTS version of nodejs is 18.15.0.
 The command `nvm list` shows the downloaded set of version and the current version.
-You can set a particular version as the _current version_ with the command below (the same as for `npm-windows`)
+You can set a particular version as the _current version_ with the command below (the same as for `nvm-windows`)
 
-```
+```bash
 nvm use 18.15.0
 ```
 
 Use the command `nvm --help` to find out other command line options.
-These are often similar to, or the same as, those offered by `npm-windows`.
+These are often similar to, or the same as, those offered by `nvm-windows`.
 
 ### Testing your Nodejs and npm installation
 
@@ -159,7 +159,12 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
    ```bash
-   >node hellonode.js
+   node hellonode.js
+   ```
+
+   Once the server starts, you will see console output indicating the IP address the server is running on:
+
+   ```plain
    Server running at http://127.0.0.1:3000/
    ```
 
@@ -260,7 +265,12 @@ The following steps show how you can use npm to download a package, save it into
 5. You can start the server by calling node with the script in your command prompt:
 
    ```bash
-   >node index.js
+   node index.js
+   ```
+
+   You will see the following console output:
+
+   ```plain
    Example app listening on port 3000
    ```
 

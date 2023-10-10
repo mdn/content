@@ -43,7 +43,7 @@ Some of the new features in Firefox 1.5:
 - [Preferences System](/en-US/docs/Preferences_System)
   - : Learn about the new widgets that allow you to create Options windows easier using less JavaScript code.
 - [International characters in XUL JavaScript](/en-US/docs/International_characters_in_XUL_JavaScript)
-  - : XUL JavaScript files can now contain non-ASCII characters.
+  - : XUL JavaScript files can now contain non-{{Glossary("ASCII")}} characters.
 - [Tree API changes](/en-US/docs/Tree_Widget_Changes)
   - : The interfaces for accessing XUL `<tree>` elements have changed.
 - [XUL Changes for Firefox 1.5](/en-US/docs/XUL_Changes_for_Firefox_1.5)

@@ -324,7 +324,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
 | [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
-| [`dirname`](#dirname)                         | `search`, `text`                                                        | Name of form field to use for sending the element's directionality in form submission |
+| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                       | Name of form field to use for sending the element's directionality in form submission |
 | [`disabled`](#disabled)                       | all                                                                     | Whether the form control is disabled                                                  |
 | [`form`](#form)                               | all                                                                     | Associates the control with a form element                                            |
 | [`formaction`](#formaction)                   | `image`, `submit`                                                       | URL to use for form submission                                                        |
@@ -345,7 +345,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`popovertarget`](#popovertarget)             | `button`                                                                | Designates an `<input type="button">` as a control for a popover element              |
 | [`popovertargetaction`](#popovertargetaction) | `button`                                                                | Specifies the action that a popover control should perform                            |
 | [`readonly`](#readonly)                       | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                    |
-| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be check for the form to be submittable          |
+| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be checked for the form to be submittable        |
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                   |
 | [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                     |
@@ -377,7 +377,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading (or when the {{HTMLElement("dialog")}} containing the element has been displayed).
 
-    > **Note:** An element with the `autofocus` attribute may gain focus before the {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
+    > **Note:** An element with the `autofocus` attribute may gain focus before the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
 
     No more than one element in the document may have the `autofocus` attribute. If put on more than one element, the first one with the attribute receives focus.
 
@@ -399,20 +399,21 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `dirname`
 
-  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.
+  - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
 
     ```html
     <form action="page.html" method="post">
-      <label
-        >Fruit:
-        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+      <label>
+        Fruit:
+        <input type="text" name="fruit" dirname="fruit-dir" value="cherry" />
       </label>
       <input type="submit" />
     </form>
-    <!-- page.html?fruit=cherry&fruit.dir=ltr -->
+    <!-- page.html?fruit=cherry&fruit-dir=ltr -->
     ```
 
-    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit-dir=ltr` to be sent.
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
 - `disabled`
 
@@ -522,7 +523,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `pattern`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}. No forward slashes should be specified around the pattern text.
 
     If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
 
@@ -645,13 +646,12 @@ The following non-standard attributes are also available on some browsers. As a 
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
         <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
         field; this is used to determine an appropriate label for that key on a
-        virtual keyboard.</p>
-        <p><strong>Deprecated: use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
+        virtual keyboard. <strong>Since this attribute is deprecated, use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
       </td>
     </tr>
     <tr>
@@ -739,6 +739,8 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
   - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
   - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+- {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
+  - : Displays the browser picker for the input element that would normally be displayed when the element is selected, but triggered from a button press or other user interaction.
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
   - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
@@ -1136,8 +1138,8 @@ In addition to the errors described in the table above, the `validityState` inte
 - {{domxref('validityState.rangeOverflow')}}
 - {{domxref('validityState.stepMismatch')}}
 - {{domxref('validityState.badInput')}}
-- {{domxref('validityState.valid')}}
-- {{domxref('validityState.customError')}}
+- {{domxref('validityState', 'validityState.valid')}}
+- {{domxref('validityState', 'validityState.customError')}}
 
 For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
 

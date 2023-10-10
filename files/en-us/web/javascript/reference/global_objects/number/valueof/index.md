@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Number.valueOf
 
 {{JSRef}}
 
-The **`valueOf()`** method returns the wrapped primitive value
-of a {{jsxref("Number")}} object.
+The **`valueOf()`** method of {{jsxref("Number")}} values returns the value of this number.
 
 {{EmbedInteractiveExample("pages/js/number-valueof.html")}}
 
@@ -17,6 +16,10 @@ of a {{jsxref("Number")}} object.
 ```js-nolint
 valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

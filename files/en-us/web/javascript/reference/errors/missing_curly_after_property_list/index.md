@@ -12,7 +12,7 @@ Might be in fact a missing curly bracket, but could also be a missing comma.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing } after property list (Firefox)
 SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
 ```
@@ -25,7 +25,7 @@ SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (
 
 There is a mistake in the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 syntax somewhere. Might be in fact a missing curly bracket, but could
-also be a missing comma, for example. Also check if any closing curly brackets or
+also be a missing comma, for example. Also check if any closing curly braces or
 parenthesis are in the correct order. Indenting or formatting the code a bit nicer might
 also help you to see through the jungle.
 
@@ -35,7 +35,7 @@ also help you to see through the jungle.
 
 Oftentimes, there is a missing comma in your object initializer code:
 
-```js example-bad
+```js-nolint example-bad
 const obj = {
   a: 1,
   b: { myProp: 2 }

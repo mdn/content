@@ -68,7 +68,7 @@ You are probably reading these words inside a web browser in this very moment (u
 
 Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where websites are stored). A typical conversation goes something like
 
-```
+```plain
 "Hello web server. Can you give me the files I need to render bbc.co.uk"?
 
 "Sure thing web browser — here you go"
@@ -111,9 +111,9 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
   pElem.textContent = "We changed the text!";
   ```
 
-  In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality
+  In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
 
-### Tooling
+### Tools
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 

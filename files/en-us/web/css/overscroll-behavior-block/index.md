@@ -11,6 +11,8 @@ The **`overscroll-behavior-block`** CSS property sets the browser's behavior whe
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 
+## Syntax
+
 ```css
 /* Keyword values */
 overscroll-behavior-block: auto; /* default */
@@ -25,8 +27,6 @@ overscroll-behavior-block: revert-layer;
 overscroll-behavior-block: unset;
 ```
 
-## Syntax
-
 The `overscroll-behavior-block` property is specified as a keyword chosen from the list of values below.
 
 ### Values
@@ -34,7 +34,7 @@ The `overscroll-behavior-block` property is specified as a keyword chosen from t
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no scroll chaining occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 

@@ -118,7 +118,7 @@ Enough talk — let's start looking at some terminal commands! Out of the box, h
 - View a file's contents page by page: `less`, `cat`
 - Manipulate and transform streams of text (for example changing all the instances of `<div>`s in an HTML file to `<article>`): `awk`, `tr`, `sed`
 
-> **Note:** There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!
+> **Note:** There are a number of good tutorials on the web that go much deeper into the command line — this is only a brief introduction!
 
 Let's move forward and look at using a few of these tools on the command line. Before you go any further, open your terminal program!
 
@@ -368,7 +368,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install prettier
 ```
 
-You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) tool.
+You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 

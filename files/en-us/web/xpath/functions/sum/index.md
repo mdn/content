@@ -10,7 +10,7 @@ The `sum` function returns a number that is the sum of the numeric values of eac
 
 ### Syntax
 
-```
+```plain
 sum(node-set)
 ```
 

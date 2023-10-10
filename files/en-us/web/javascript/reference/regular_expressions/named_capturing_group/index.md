@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.named_capturing_group
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **named capturing group** is a particular kind of [capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) that allows to give a name to the group. The group's matching result can later be identified by this name instead of by its index in the pattern.
 
@@ -32,8 +32,15 @@ Named capturing groups can be used just like capturing groups — they also have
 
 All names must be unique within the same pattern. Multiple named capturing groups with the same name result in a syntax error.
 
-```js
+```js-nolint example-bad
 /(?<name>)(?<name>)/; // SyntaxError: Invalid regular expression: Duplicate capture group name
+```
+
+This restriction is relaxed if the duplicate named capturing groups are not in the same [disjunction alternative](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction), so for any string input, only one named capturing group can actually be matched. This is a much newer feature, so check [browser compatibility](#browser_compatibility) before using it.
+
+```js
+/(?<year>\d{4})-\d{2}|\d{2}-(?<year>\d{4})/;
+// Works; "year" can either come before or after the hyphen
 ```
 
 Named capturing groups will all be present in the result. If a named capturing group is not matched (for example, it belongs to an unmatched alternative in a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)), the corresponding property on the `groups` object has value `undefined`.
@@ -79,8 +86,9 @@ parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM
 
 ## See also
 
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Polyfill of named capturing groups in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
 - [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)

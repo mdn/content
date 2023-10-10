@@ -10,7 +10,7 @@ The `true` function returns a boolean value of true.
 
 ### Syntax
 
-```
+```plain
 true()
 ```
 
