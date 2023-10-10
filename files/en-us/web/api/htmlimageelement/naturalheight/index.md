@@ -79,10 +79,10 @@ image will be drawn in is 200px wide, and the image will be drawn to fill its wi
 ### JavaScript
 
 ```js
-let output = document.querySelector(".output");
-let image = document.querySelector("img");
+const output = document.querySelector(".output");
+const image = document.querySelector("img");
 
-window.addEventListener("load", (event) => {
+image.addEventListener("load", (event) => {
   output.innerHTML +=
     `Natural size: ${image.naturalWidth} x ` +
     `${image.naturalHeight} pixels<br>`;
@@ -93,7 +93,7 @@ window.addEventListener("load", (event) => {
 
 The JavaScript code dumps the natural and as-displayed sizes into the
 {{HTMLElement("div")}} with the class `output`. This is done in response to
-the window's {{domxref("Window.load_event", "load")}} event handler, in order to ensure
+the images's {{domxref("HTMLElement.load_event", "load")}} event handler, in order to ensure
 that the image is available before attempting to examine its width and height.
 
 ### Result
