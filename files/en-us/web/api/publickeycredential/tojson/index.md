@@ -38,7 +38,7 @@ The object properties are:
 - `id`
   - : The value returned by {{domxref("PublicKeyCredential.id")}}.
 - `rawId`
-  - : The value returned by {{domxref("PublicKeyCredential.rawId")}} and then [base64url](/en-US/docs/Glossary/Base64) encoding the returned value.
+  - : A [base64url](/en-US/docs/Glossary/Base64)-encoded version of {{domxref("PublicKeyCredential.rawId")}}.
 - `authenticatorAttachment` {{optional_inline}}
   - : The value returned by {{domxref("PublicKeyCredential.authenticatorAttachment")}}.
 - `type`
