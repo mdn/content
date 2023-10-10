@@ -28,10 +28,6 @@ isSameEntry(fileSystemHandle)
 
 A Promise that fulfills with a {{jsxref('Boolean')}}.
 
-### Exceptions
-
-No exceptions are thrown.
-
 ## Examples
 
 The following function compares a single entry with an array of entries, and returns a
