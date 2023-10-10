@@ -41,12 +41,12 @@ The Web Authentication process for [creating a key pair and registering a user](
 The web app passes this information to an authenticator to create the credential, by calling [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) with an argument that contains the server-supplied data in the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
 
 The specification does not define how the information needed for creating a credential is sent.
-A convenient approach is to first encapulate the information in an object that mirrors the structure of the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), encoding buffer properties such as the `challenge` and `user.id` as [base64url](/en-US/docs/Glossary/Base64) strings.
-This object can be serialized to [JSON](/en-US/docs/Glossary/JSON) and then deserialized by the web app to the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) using **`parseCreationOptionsFromJSON()`**.
+A convenient approach is to first encapsulate the information in an object that mirrors the structure of the [`publicKey` create credentials options object](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), encoding buffer properties such as the `challenge` and `user.id` as [base64url](/en-US/docs/Glossary/Base64) strings.
+This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string and then deserialized by the web app to the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) using **`parseCreationOptionsFromJSON()`**.
 
 ## Examples
 
-Consider a server might create JSON credentials something like this (taken from the [`AuthenticatorResponse` example "getting an AuthenticatorAttestationResponse"](/en-US/docs/Web/API/AuthenticatorResponse#getting_an_authenticatorattestationresponse)):
+A server might create JSON credentials using something like this (taken from the [`AuthenticatorResponse` example "getting an AuthenticatorAttestationResponse"](/en-US/docs/Web/API/AuthenticatorResponse#getting_an_authenticatorattestationresponse)):
 
 ```js
 const publicKey = {
@@ -73,7 +73,7 @@ const publicKey = {
 const publicKeyJSON = JSON.stringify(publicKey);
 ```
 
-The `publicKeyJSON` can be send to the web app, which will parse the JSON back into an object.
+The `publicKeyJSON` can be sent to the web app, which will parse the JSON back into an object.
 Below we show how you might use `parseCreationOptionsFromJSON()` to convert this parsed object "`receivedPublicKeyJSON`" to the correct form to use in `navigator.credentials.create()`:
 
 ```js

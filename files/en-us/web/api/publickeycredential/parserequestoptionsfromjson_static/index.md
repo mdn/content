@@ -24,7 +24,7 @@ PublicKeyCredential.parseRequestOptionsFromJSON(options)
 
 - `options`
 
-  - : An object with the same structure as the Web Authentication API [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64) encoded strings used in place of buffer properties.
+  - : An object with the same structure as the Web Authentication API [`publicKey` request credentials options object](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
 
 ### Return value
 
@@ -41,12 +41,12 @@ The Web Authentication process for [authenticating a (registered) user](/en-US/d
 The web app passes this information to an authenticator to find the credential, by calling [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) with an argument that contains the server-supplied data in the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure).
 
 The specification does not define how the information needed for requesting a credential is sent.
-A convenient approach is to first encapulate the information in an object that mirrors the structure of the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure), encoding buffer properties such as the `challenge` as [base64url](/en-US/docs/Glossary/Base64) strings.
-This object can be serialized to [JSON](/en-US/docs/Glossary/JSON) and then deserialized by the web app to the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) using **`parseRequestOptionsFromJSON()`**.
+A convenient approach is to first encapsulate the information in an object that mirrors the structure of the [`publicKey` request credentials options object](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure), encoding buffer properties such as the `challenge` as [base64url](/en-US/docs/Glossary/Base64) strings.
+This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string and then deserialized by the web app to the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) using **`parseRequestOptionsFromJSON()`**.
 
 ## Examples
 
-Consider a server might create JSON credentials something like this (taken from the [`AuthenticatorResponse` example "getting an AuthenticatorAttestationResponse"](/en-US/docs/Web/API/AuthenticatorResponse#getting_an_authenticatorattestationresponse)):
+A server might create JSON credentials using something like this (taken from the [`AuthenticatorResponse` example "getting an AuthenticatorAttestationResponse"](/en-US/docs/Web/API/AuthenticatorResponse#getting_an_authenticatorattestationresponse)):
 
 ```js
 const publicRequestKey =  {
@@ -63,7 +63,7 @@ const publicRequestKey =  {
 const publicKeyJSON = JSON.stringify(publicRequestKey);
 ```
 
-The `publicKeypublicRequestKeyJSON` can be send to the web app, which will parse the JSON back into an object.
+The `publicKeyJSON` can be sent to the web app, which will parse the JSON back into an object.
 Below we show how you might use `parseRequestOptionsFromJSON()` to convert this parsed object "`receivedPublicKeyJSON`" to the correct form to use in `navigator.credentials.get()`:
 
 ```js

@@ -31,12 +31,12 @@ None.
 
 A JSON-friendly representation of a [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential) object, with included properties that depend on whether the credential was returned by [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) on registration or [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) when [authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
 
-The values and types are the same as for [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential), with the exception that [base64url](/en-US/docs/Glossary/Base64) encoded strings used in place of buffer properties.
+The values and types are the same as for [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential), with the exception that [base64url](/en-US/docs/Glossary/Base64)-encoded strings are used in place of buffer properties.
 
 The object properties are:
 
 - `id`
-  - : The value returned by {{domxref("PublicKeyCredential.id")}}
+  - : The value returned by {{domxref("PublicKeyCredential.id")}}.
 - `rawId`
   - : The value returned by {{domxref("PublicKeyCredential.rawId")}} and then [base64url](/en-US/docs/Glossary/Base64) encoding the returned value.
 - `authenticatorAttachment` {{optional_inline}}
