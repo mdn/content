@@ -134,16 +134,14 @@ It is important to provide a closing mechanism within every `dialog` element. Th
 
 ### Animating dialogs
 
-For `<dialog>` elements to be animated, several different features are required.
-
-First of all, `<dialog>`s are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}}. Therefore, `display` needs to be animatable. This is now the case; [supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So for example:
+`<dialog>`s are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}}. Therefore, for `<dialog>` elements to be animated `display` needs to be animatable. This is now the case; [supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So for example:
 
 - When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 #### Transitioning dialog elements
 
-When animating `<dialog>`s with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), these additional features are needed:
+When animating `<dialog>`s with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), the following are required:
 
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on the `<dialog>` that you want to transition from when it is shown. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
 - [`display`](/en-US/docs/Web/CSS/display) needs to be added to the transitions list so that the `<dialog>` will remain as `display: block` for the duration of the animation, allowing the other animations to be seen.
@@ -311,7 +309,7 @@ button {
 }
 ```
 
-Note the keyframes defined to animate between the closed and open states, which are then applied to control classes. This includes animating `display` to make sure the actual visible animation effects remain visible for the whole duration. This example does not animate the backdrop like the above transition demo does; this didn't seem possible to reproduce with a keyframe animation in our experiments.
+Note the keyframes defined to animate between the closed and open states, which are then applied to control classes. This includes animating `display` to make sure the actual visible animation effects remain visible for the whole duration. This example doesn't animate the backdrop like the transitions example above does — that wasn't possible to reproduce with a keyframe animation at the time of writing.
 
 Finally, the JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`, while also adding and removing the control classes as required to apply the entry and exit animations. In addition, note how {{domxref("setTimeout()")}} is used to defer closing the `<dialog>` until the exit animation is finished.
 
