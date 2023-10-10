@@ -127,7 +127,7 @@ For information about image formats supported by web browsers and guidance on se
 
 ### Video with type attribute example
 
-This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats) for details on what media file formats you can use and how well they're supported by browsers.
+This example demonstrates how to offer a video in in WebM format for users whose browsers support WebM format, Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats) for details on what media file formats you can use and how well they're supported by browsers.
 
 ```html
 <video controls>
