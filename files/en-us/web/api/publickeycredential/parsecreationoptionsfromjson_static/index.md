@@ -24,7 +24,7 @@ PublicKeyCredential.parseCreationOptionsFromJSON(options)
 
 - `options`
 
-  - : An object with the same structure as the Web Authentication API [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64) encoded strings used in place of buffer properties.
+  - : An object with the same structure as the Web Authentication API [`publicKey` create credentials options object](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
 
 ### Return value
 
