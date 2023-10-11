@@ -37,7 +37,7 @@ The following `103` early hint response indicates origins to preconnect to so th
 
 ```http
 103 Early Hint
-Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=preconnect crossorigin
+Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=preconnect; crossorigin
 ```
 
 This example includes a additional origin used to load resources and also a [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) connection to that same origin for loading fonts or other [CORS](/en-US/docs/Web/HTTP/CORS)-protected resources.
