@@ -40,7 +40,7 @@ showSaveFilePicker()
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
     - `suggestedName` {{Optional_Inline}}
       - : A {{jsxref('String')}}. The suggested file name.
-    - `types`
+    - `types` {{Optional_Inline}}
 
       - : An {{jsxref('Array')}} of allowed file types to save. Each
         item is an object with the following options:
