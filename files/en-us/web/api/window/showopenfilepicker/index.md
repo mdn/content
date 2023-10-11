@@ -47,7 +47,7 @@ showOpenFilePicker()
         item is an object with the following options:
 
         - `description` {{Optional_Inline}}
-          - : An optional description of the category of files types allowed. Default to be an empty string.
+          - : An optional description of the category of files types allowed. Defaults to an empty string.
         - `accept`
           - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
             for an example).
@@ -62,7 +62,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
 - `SecurityError` {{domxref("DOMException")}}
-  - : An SecurityError is thrown if it was blocked by Same-Origin policy or it was not called via a user interaction such as a button press.
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
 
 ## Security
 
