@@ -32,6 +32,8 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### SVG
 
+- The {{SVGElement("svg")}} element now supports [length](/en-US/docs/Web/CSS/length) [CSS data types](/en-US/docs/Web/CSS/CSS_Types) for the {{SVGAttr("height")}} and {{SVGAttr("width")}} attributes. This enables the sizing of SVGs based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.) or absolute lengths (`px`, `cm`, etc.). (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
+
 #### Removals
 
 ### HTTP
