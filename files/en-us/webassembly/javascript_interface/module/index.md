@@ -34,7 +34,7 @@ See the `index-compile.html` [source code](https://github.com/mdn/webassembly-ex
 const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod)
+  worker.postMessage(mod),
 );
 ```
 

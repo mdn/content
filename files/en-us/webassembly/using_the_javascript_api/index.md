@@ -47,7 +47,7 @@ Add the following to your script, below the first block:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 
@@ -251,17 +251,17 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq(
       "getting initial value from wasm",
       instance.exports.getGlobal(),
-      0
+      0,
     );
     global.value = 42;
     assertEq(
       "getting JS-updated value from wasm",
       instance.exports.getGlobal(),
-      42
+      42,
     );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-  }
+  },
 );
 ```
 
