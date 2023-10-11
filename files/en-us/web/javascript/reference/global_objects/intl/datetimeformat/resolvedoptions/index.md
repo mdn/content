@@ -42,8 +42,7 @@ The resulting object has the following properties:
     `"nu"` or filled in as default values.
 - `timeZone`
   - : The value provided for this property in the `options` argument;
-    A {{jsxref("String")}} value identifying the runtime's default time
-    zone instead, if none was provided.
+    defaults to the runtime's default time zone. Should never be `undefined`.
 - `hour12`
   - : The value provided for this property in the `options` argument or
     filled in as a default.
