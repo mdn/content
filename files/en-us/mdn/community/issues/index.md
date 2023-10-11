@@ -220,7 +220,7 @@ Next, set the following labels as appropriate:
 - `good first issue`: Set this label on the issue if the fix for the issue is really simple and if fixing the issue would provide good practice for a newcomer who is getting used to the process.
 - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
 - `broken link external`: Set this label if the issue involves a broken link to an external page.
-- `document not written`: Set this label if the issue involves a necessary document that has not been written yet.
+- `document not written`: Set this label if the issue involves a necessary document that has not been written yet, usually because a link points to it.
 - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
 
   > **Note:** After the triage process is complete, remove the `needs triage` label.
