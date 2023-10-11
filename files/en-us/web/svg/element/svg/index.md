@@ -11,7 +11,11 @@ The `svg` element is a container that defines a new coordinate system and [viewp
 
 > **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
 
-## Example
+## Examples
+
+### Nested `svg` element
+
+This example shows that nested `svg` elements do not need the `xmlns` attribute.
 
 ```css hidden
 html,
@@ -36,7 +40,39 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 300, 100)}}
+{{EmbedLiveSample('nested_svg-elements', 300, 100)}}
+
+### Using dynamic viewport lengths
+
+This example the `height` and `width` attributes, on the `svg` element, are set using the dynamic viewport values `vmin`
+
+```html
+<svg
+  viewbox="0 0 500 500"
+  xmlns="http://www.w3.org/2000/svg"
+  height="80vmin"
+  width="80vmin">
+  <rect x="0" y="0" width="50%" height="50%" fill="tomato" opacity="0.75" />
+  <rect
+    x="25%"
+    y="25%"
+    width="50%"
+    height="50%"
+    fill="slategrey"
+    opacity="0.75" />
+  <rect x="50%" y="50%" width="50%" height="50%" fill="olive" opacity="0.75" />
+  <rect
+    x="0"
+    y="0"
+    width="100%"
+    height="100%"
+    stroke="cadetblue"
+    stroke-width="0.5%"
+    fill="none" />
+</svg>
+```
+
+{{EmbedLiveSample('using_dynamic_viewport_lengths', 300, 100)}}
 
 ## Attributes
 
