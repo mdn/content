@@ -31,7 +31,31 @@ Preloaded resources from the early hint are effectively pre-pended to the `Docum
 
 ## Examples
 
-### Basic example
+### Preconnect example
+
+The following `103` early hint response indicates an additional origin to preconnect to so it is available to be used to load the site resources with minimal delay:
+
+```http
+103 Early Hint
+Link: <https://cdn.example.com>; rel=preconnect;
+```
+
+Subsequently the server sends the final response.
+This includes a `<img>` loaded from the additional origin:
+
+```http
+200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+...
+<img src="https://cdn.example.com/image.jpg" alt="">
+...
+```
+
+### Preload example
+
+> **Warning:** Some browsers only support `preconnect` over 103 Early Hints. See the implementation notes in the [browser compatibility](#browser-compatibility) section below.
 
 The following `103` early hint response indicates a stylesheet `style.css` might be preloaded by the final response.
 
