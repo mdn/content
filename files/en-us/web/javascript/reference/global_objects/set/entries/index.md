@@ -14,7 +14,7 @@ The **`entries()`** method of {{jsxref("Set")}} instances returns a new _[set it
 ## Syntax
 
 ```js-nolint
-entries()
+setInstance.entries()
 ```
 
 ### Parameters

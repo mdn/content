@@ -17,7 +17,7 @@ modify it inside the `Map` object.
 ## Syntax
 
 ```js-nolint
-get(key)
+mapInstance.get(key)
 ```
 
 ### Parameters

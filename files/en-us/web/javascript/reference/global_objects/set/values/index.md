@@ -14,7 +14,7 @@ The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set ite
 ## Syntax
 
 ```js-nolint
-values()
+setInstance.values()
 ```
 
 ### Parameters

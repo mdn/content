@@ -15,7 +15,7 @@ specified key exists in this map or not.
 ## Syntax
 
 ```js-nolint
-has(key)
+mapInstance.has(key)
 ```
 
 ### Parameters

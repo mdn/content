@@ -15,8 +15,8 @@ pair in this map, in insertion order.
 ## Syntax
 
 ```js-nolint
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+mapInstance.forEach(callbackFn)
+mapInstance.forEach(callbackFn, thisArg)
 ```
 
 ### Parameters

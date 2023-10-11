@@ -14,7 +14,7 @@ The **`clear()`** method of {{jsxref("Set")}} instances removes all elements fro
 ## Syntax
 
 ```js-nolint
-clear()
+setInstance.clear()
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ console.log(mySet.has("foo")); // true
 mySet.clear();
 
 console.log(mySet.size); // 0
-console.log(mySet.has("bar")); // false
+console.log(mySet.has("foo")); // false
 ```
 
 ## Specifications

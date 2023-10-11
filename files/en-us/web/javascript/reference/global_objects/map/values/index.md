@@ -14,7 +14,7 @@ The **`values()`** method of {{jsxref("Map")}} instances returns a new _[map ite
 ## Syntax
 
 ```js-nolint
-values()
+mapInstance.values()
 ```
 
 ### Parameters

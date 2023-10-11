@@ -16,7 +16,7 @@ The initial value of this property is the same function object as the initial va
 ## Syntax
 
 ```js-nolint
-set[Symbol.iterator]()
+setInstance[Symbol.iterator]()
 ```
 
 ### Parameters
@@ -58,7 +58,7 @@ const setIter = mySet[Symbol.iterator]();
 
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // Object
+console.log(setIter.next().value); // {}
 ```
 
 ## Specifications

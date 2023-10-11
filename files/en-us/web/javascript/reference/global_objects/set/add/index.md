@@ -14,7 +14,7 @@ The **`add()`** method of {{jsxref("Set")}} instances inserts a new element with
 ## Syntax
 
 ```js-nolint
-add(value)
+setInstance.add(value)
 ```
 
 ### Parameters

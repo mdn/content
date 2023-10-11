@@ -14,7 +14,7 @@ The **`keys()`** method of {{jsxref("Map")}} instances returns a new _[map itera
 ## Syntax
 
 ```js-nolint
-keys()
+mapInstance.keys()
 ```
 
 ### Parameters

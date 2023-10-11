@@ -15,8 +15,8 @@ for each value in this set, in insertion order.
 ## Syntax
 
 ```js-nolint
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+setInstance.forEach(callbackFn)
+setInstance.forEach(callbackFn, thisArg)
 ```
 
 ### Parameters

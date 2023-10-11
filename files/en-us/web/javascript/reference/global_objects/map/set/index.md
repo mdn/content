@@ -14,7 +14,7 @@ The **`set()`** method of {{jsxref("Map")}} instances adds or updates an entry i
 ## Syntax
 
 ```js-nolint
-set(key, value)
+mapInstance.set(key, value)
 ```
 
 ### Parameters

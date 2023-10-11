@@ -13,7 +13,7 @@ The **`keys()`** method of {{jsxref("Set")}} instances is an alias for the [`val
 ## Syntax
 
 ```js-nolint
-keys()
+setInstance.keys()
 ```
 
 ### Parameters

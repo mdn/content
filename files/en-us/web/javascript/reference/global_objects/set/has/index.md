@@ -15,7 +15,7 @@ element with the specified value exists in this set or not.
 ## Syntax
 
 ```js-nolint
-has(value)
+setInstance.has(value)
 ```
 
 ### Parameters

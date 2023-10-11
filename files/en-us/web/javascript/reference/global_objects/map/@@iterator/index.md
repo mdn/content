@@ -16,7 +16,7 @@ The initial value of this property is the same function object as the initial va
 ## Syntax
 
 ```js-nolint
-map[Symbol.iterator]()
+mapInstance.map[Symbol.iterator]()
 ```
 
 ### Parameters

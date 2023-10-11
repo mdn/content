@@ -14,7 +14,7 @@ The **`clear()`** method of {{jsxref("Map")}} instances removes all elements fro
 ## Syntax
 
 ```js-nolint
-clear()
+mapInstance.clear()
 ```
 
 ### Parameters

@@ -14,7 +14,7 @@ The **`entries()`** method of {{jsxref("Map")}} instances returns a new _[map it
 ## Syntax
 
 ```js-nolint
-entries()
+mapInstance.entries()
 ```
 
 ### Parameters
