@@ -174,7 +174,7 @@ In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/W
 
 {{SeeCompatTable}}
 
-This example we are setting the value of {{CSSXRef("background-color")}} with the value of `data-background` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) from the {{HTMLElement("div")}} element.
+In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) assigned to the {{HTMLElement("div")}} element.
 
 #### HTML
 
