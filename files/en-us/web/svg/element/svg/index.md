@@ -92,6 +92,52 @@ svg {
 
 {{svginfo}}
 
+## Examples
+
+### Height and width relative to viewport
+
+```html
+<div class="resizer">
+  <iframe class="resized" srcdoc="
+    <h1>Using dynamic viewport lengths</h1>
+    <p>This example the <code>height</code> and <code>width</code> attributes, on the <code>svg</code> element, are set using the dynamic viewport values <code>vmin</code>. Try resizing the results frame to see the svg respond dynamically.</p>
+
+    <svg viewbox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'
+     height='60vmin' width='60vmin'>
+
+      <rect x='0' y='0' width='50%' height='50%' fill='tomato' opacity='0.75' />
+      <rect x='25%' y='25%' width='50%' height='50%' fill='slategrey' opacity='0.75' />
+      <rect x='50%' y='50%' width='50%' height='50%' fill='olive' opacity='0.75' />
+      <rect x='0' y='0' width='100%' height='100%' stroke='cadetblue' stroke-width='0.5%' fill='none' />
+
+    </svg>
+  </iframe>
+  ">
+</div>
+```
+
+```css hidden
+.resizer {
+  display: flex;
+  margin: 1rem;
+  padding: 0;
+  resize: both;
+  overflow: hidden;
+  border: 5px dotted red;
+  height: 400px;
+}
+.resizer > .resized {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+```
+
+To change the iframe's dimentions try resizing the dotted red border from bottom right corner.
+
+{{ EmbedLiveSample('Examples', '100%', 500) }}
+
 ## Specifications
 
 {{Specifications}}
