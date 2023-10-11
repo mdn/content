@@ -138,10 +138,10 @@ div {
 
 ```css
 [data-color="red"] {
-  background-color: oklab(50% 130 20);
+  background-color: oklab(0.628 0.225 0.126);
 }
 [data-color="red-alpha"] {
-  background-color: oklab(50% 130 20 / 0.4);
+  background-color: oklab(0.628 0.225 0.126 / 0.4);
 }
 ```
 
