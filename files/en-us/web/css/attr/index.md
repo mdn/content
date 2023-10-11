@@ -150,7 +150,7 @@ attr(data-something, "default");
 
 ### content property
 
-This example we are prepending the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) from the {{HTMLElement("p")}} element.
+In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
 
 #### HTML
 
