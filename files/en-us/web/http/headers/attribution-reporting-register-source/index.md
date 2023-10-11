@@ -76,7 +76,7 @@ res.set(
   "Attribution-Reporting-Register-Source",
   JSON.stringify({
     source_event_id: "412444888111012",
-    destination: "https://shop.example.com",
+    destination: "https://shop.example",
     expiry: "604800",
     priority: "100",
     debug_key: "122939999",
@@ -94,7 +94,7 @@ res.set(
   "Attribution-Reporting-Register-Source",
   JSON.stringify({
     source_event_id: "412444888111012",
-    destination: "https://shop.example.com",
+    destination: "https://shop.example",
     expiry: "604800",
     priority: "100",
     debug_key: "122939999",

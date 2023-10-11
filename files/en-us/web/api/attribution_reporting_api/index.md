@@ -39,20 +39,20 @@ Say we have a online shop, `shop.example` (aka the advertiser), which embeds an 
 
 The steps involved are as follows:
 
-1. When a user visits the `news.example` site, it can register an **Attribution source**. This is an ad-related feature that can be used to detect a user's interaction with the ad. This feature can be:
-   - A link. In this case, an interaction is detected by the user clicking the link.
-   - An image. In this case, an interaction is detected by the user viewing the image.
-   - A script. In this case you can use JavaScript to program any behavior detection you wish to use to indicate interaction with the ad.
-2. When the user performs the action that signifies interaction with the ad, as determined by the attribution source, associated source data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s). The destinations are sites where you expect the associated conversion to occur (`shop.example` in the example above).
-3. When the user later visits `shop.example`, it can register an **Attribution trigger**. This is a feature that can be used to indicate that a potential conversion has occurred. This feature can be:
-   - An image. In this case, a potential conversion is detected by the user viewing the image.
-   - A script. In this case you can use JavaScript to program any behavior detection you wish to use to indicate a potential conversion.
-4. When the user sets off the attribution trigger (for example, the user clicks the "Add to cart" button on `shop.example`), the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
+1. When a user visits the `news.example` site, the site can register an **Attribution source**. This is an ad-related feature that can be used to detect an interaction with the ad. This feature can be:
+   - A link. In this case, an interaction is detected by the user clicking the link (directly via an {{htmlelement("a")}} element, or via a {{domxref("Window.open()")}} call).
+   - An image such as a 1x1 transparent pixel. The source is registered when the server responds to the image resource network request.
+   - A script. In this case you can indicate interaction with the ad via whatever resource request makes sense for your app (i.e. a {{domxref("fetch")}} or {{domxref("XMLHttpRequest")}}).
+2. When the action occurs, as determined by the attribution source, associated source data is stored in a private local cache accessible only by the browser. This data includes the contextual and first-party data available to the page and the advertiser, origin of the ad creative, and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) where you expect the conversion from that ad to occur.
+3. When the user later visits `shop.example`, this site can register an **Attribution trigger**. Attribution triggers can be registered by loading:
+   - An image, for example a 1x1 conversion pixel.
+   - Any network resource (via {{domxref("fetch")}} or {{domxref("XMLHttpRequest")}}).
+4. When the attribution trigger is set off (for example, the user clicks the "Add to cart" button on `shop.example`), the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
    - On a `destination` specified in the source's associated data.
    - Same-origin with the request that specified the source registration.
      > **Note:** These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be situated on the top-level site, or embedded in an {{htmlelement("iframe")}}.
 5. If a match is found successfully, the browser sends report data to an endpoint on a reporting server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint. These reports can be either:
-   - **Event-level reports**: Reports based on a single attribution source event, for example, "Click ID 200498 on `ad.shop.example` by user bob_smith led to a purchase on `shop.example`". This is useful for simple reporting of coarse data such as what ad placements result in the most conversions.
+   - **Event-level reports**: Reports based on a single attribution source event, for example, "Click ID 200498 on `ad.shop.example` by user `bob_smith` led to a purchase on `shop.example`". This is useful for simple reporting of coarse data such as what ad placements result in the most conversions.
    - **Summary reports**: More detailed reports that combine data from multiple conversions on both the source and trigger side. For example "Campaign ID 774653 on `news.example` has led to 654 sales of widgets on `shop.example` from users in Italy, with a total revenue of $9540." Compiling a summary report requires usage of an aggregation service (see for example the [Google aggregation service](https://github.com/privacysandbox/aggregation-service)).
 
 For more information on implementing the functionality required for the above steps, see:
@@ -94,7 +94,7 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 
 ## Examples
 
-There is a complete demo available at [Demo: Attribution Reporting API](https://arapi-home.web.app/) (see the [source code also](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)).
+See [Demo: Attribution Reporting API](https://arapi-home.web.app/) for an example implementation (see the [source code also](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)).
 
 ## Specifications
 

@@ -49,7 +49,7 @@ const attributionReporting = {
 
 function triggerSourceInteraction() {
   const req = new XMLHttpRequest();
-  req.open("GET", "https://shop.example.com/endpoint");
+  req.open("GET", "https://shop.example/endpoint");
   req.setAttributionReporting(attributionReporting);
   req.send();
 }

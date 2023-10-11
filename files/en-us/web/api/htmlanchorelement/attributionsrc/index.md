@@ -38,7 +38,7 @@ A string. There are two versions of this property that you can get and set:
 ### Setting an empty attributionSrc
 
 ```html
-<a href="https://shop.example.com"> Click to visit our shop </a>
+<a href="https://shop.example"> Click to visit our shop </a>
 ```
 
 ```js
@@ -49,7 +49,7 @@ aElem.attributionSrc = "";
 ### Setting an attributionSrc containing URLs
 
 ```html
-<a href="https://ourshop.example.com"> Click to visit our shop </a>
+<a href="https://ourshop.example"> Click to visit our shop </a>
 ```
 
 ```js

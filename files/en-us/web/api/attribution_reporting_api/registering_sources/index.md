@@ -8,11 +8,11 @@ status:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
 
-This article explains how to register attribution sources for users to interact with.
+This article explains how to register attribution sources.
 
 ## Basic methodology
 
-Attribution sources take the form of links, images, or scripts contained within an embedded ad. These cause the browser to store source data in a private local cache (accessible only by the browser) when users interact with them in a specific way. All of the different attribution source types are registered and signal user interaction in different ways, which are are detailed in the sections below — see [Click-based attribution sources](#click-based_attribution_sources), [Image-based attribution sources](#image-based_attribution_sources), and [Script-based attribution sources](#script-based_attribution_sources).
+Attribution sources take the form of links, images, or scripts contained within an embedded ad. These cause the browser to store source data in a private local cache (accessible only by the browser) when specific actions occur. All of the different attribution source types are registered and signal actions in different ways, which are are detailed in the sections below — see [Click-based attribution sources](#click-based_attribution_sources), [Image-based attribution sources](#image-based_attribution_sources), and [Script-based attribution sources](#script-based_attribution_sources).
 
 However, what happens behind the scenes to register sources and retrieve and store the source data is the same in all cases.
 
@@ -64,14 +64,14 @@ However, what happens behind the scenes to register sources and retrieve and sto
 
    > **Note:** See {{httpheader("Attribution-Reporting-Register-Source")}} for a detailed description of all the available fields.
 
-3. When a user interacts with the registered attribution source in the specified way, the browser stores the provided source data in its private local cache.
+3. When the specified action occurs on the registered attribution source, the browser stores the provided source data in its private local cache.
 
 ## Click-based attribution sources
 
 To register a click-based attribution source you can add the `attributionsrc` attribute to an appropriate {{htmlelement("a")}} element, either declaratively:
 
 ```html
-<a href="https://shop.example.com" attributionsrc target="_blank">
+<a href="https://shop.example" attributionsrc target="_blank">
   Click to visit our shop
 </a>
 ```
@@ -106,19 +106,19 @@ Bear in mind that users might not necessarily be able to perceive the image at a
 
 ## Script-based attribution sources
 
-Script-based attribution sources are by far the most versatile. You can set up a script to act as an attribution source and write whatever functionality you like to trigger the browser to store the associated source data. There are a couple of different ways to set up a script-based attribution source.
+Script-based attribution sources are by far the most versatile. You can set up a script to act as an attribution source and trigger the browser to store the associated source data based on whatever request suits your app. There are a couple of different ways to set up a script-based attribution source.
 
 1. Add the `attributionsrc` feature keyword to the features property of a {{domxref("Window.open()")}} call. The `open()` call can be triggered by any event; in this example we run it in response to a `click` event being fired:
 
    ```js
    elem.addEventListener("click", () => {
-     window.open("https://shop.example.com", "_blank", "attributionsrc");
+     window.open("https://shop.example", "_blank", "attributionsrc");
    });
    ```
 
    In this case, the registration is completed _and_ the browser stores the source data associated with the attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method is invoked.
 
-   > **Note:** When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessibility to both screenreader and keyboard users.
+   > **Note:** When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screenreader and keyboard users.
 
    > **Note:** To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handler such as `click`) within five seconds of user interaction.
 
@@ -147,7 +147,7 @@ Script-based attribution sources are by far the most versatile. You can set up a
 
    // Optionally set keepalive to ensure the request outlives the page
    function triggerSourceInteraction() {
-     fetch("https://shop.example.com/endpoint", {
+     fetch("https://shop.example/endpoint", {
        keepalive: true,
        attributionReporting,
      });
@@ -168,7 +168,7 @@ Script-based attribution sources are by far the most versatile. You can set up a
 
    function triggerSourceInteraction() {
      const req = new XMLHttpRequest();
-     req.open("GET", "https://shop.example.com/endpoint");
+     req.open("GET", "https://shop.example/endpoint");
      req.setAttributionReporting(attributionReporting);
      req.send();
    }
@@ -177,6 +177,8 @@ Script-based attribution sources are by far the most versatile. You can set up a
    // element and event makes sense for your code
    elem.addEventListener("click", triggerSourceInteraction);
    ```
+
+> **Note:** The request can be for any resource. It doesn't need to have anything directly to do with the Attribution Reporting API, and can be a request for JSON, plain text, an image blob, or whatever else makes sense for your app.
 
 ## Specifying URLs inside attributionsrc
 
@@ -188,7 +190,7 @@ For example, in the case of an `<a>` element you could declare the URL(s) in the
 
 ```html
 <a
-  href="https://shop.example.com"
+  href="https://shop.example"
   attributionsrc="https://a.example/register-source">
   Click to visit our shop
 </a>
@@ -216,7 +218,7 @@ const encodedUrlB = encodeURIComponent("https://b.example/register-source");
 
 elem.addEventListener("click", () => {
   window.open(
-    "https://ourshop.example.com",
+    "https://ourshop.example",
     "_blank",
     `attributionsrc=${encodedUrlA},attributionsrc=${encodedUrlB}`,
   );
