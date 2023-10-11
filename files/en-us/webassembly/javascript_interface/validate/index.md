@@ -36,7 +36,7 @@ a {{jsxref("TypeError")}} is thrown.
 
 ### Using validate
 
-The following example (see the validate.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html),
+The following example (see the validate.html [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/validate.html),
 and [see it live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html))
 fetches a Wasm module and converts it into a typed array.
 The `validate()` method is then used to check whether the module is valid.
@@ -47,7 +47,7 @@ fetch("simple.wasm")
   .then((bytes) => {
     const valid = WebAssembly.validate(bytes);
     console.log(
-      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`,
+      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`
     );
   });
 ```
