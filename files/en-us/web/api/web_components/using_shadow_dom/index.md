@@ -208,9 +208,9 @@ The page CSS does not affect nodes inside the shadow DOM:
 
 To style page elements in the shadow DOM, we can:
 
-- Create an empty {{domxref("CSSStyleSheet")}} object
-- Set its content using {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}}
-- Add it to the shadow root by assigning it to {{domxref("ShadowRoot.adoptedStyleSheets")}}
+1. Create an empty {{domxref("CSSStyleSheet")}} object
+2. Set its content using {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}}
+3. Add it to the shadow root by assigning it to {{domxref("ShadowRoot.adoptedStyleSheets")}}
 
 Rules defined in the `CSSStyleSheet` will be scoped to the shadow DOM tree, as well as any other DOM trees to which we have assigned it.
 
