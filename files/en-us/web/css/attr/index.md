@@ -211,7 +211,7 @@ In this example, we set the CSS value of {{CSSXRef("background-color")}} to the 
 
 {{SeeCompatTable}}
 
-This example we are appending the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) from the {{HTMLElement("p")}} element, if it is missing we _fallback_ to **Unknown**.
+In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
 
 #### HTML
 
