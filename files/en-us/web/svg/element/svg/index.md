@@ -46,12 +46,19 @@ svg {
 
 This example the `height` and `width` attributes, on the `svg` element, are set using the dynamic viewport values `vmin`
 
+```html hidden
+<div class="resizer">
+  <iframe
+    class="resized"
+    srcdoc="
+```
+
 ```html
 <svg
-  viewbox="0 0 500 500"
+  viewbox="0 0 400 400"
   xmlns="http://www.w3.org/2000/svg"
-  height="80vmin"
-  width="80vmin">
+  height="60vmin"
+  width="60vmin">
   <rect x="0" y="0" width="50%" height="50%" fill="tomato" opacity="0.75" />
   <rect
     x="25%"
@@ -72,7 +79,32 @@ This example the `height` and `width` attributes, on the `svg` element, are set 
 </svg>
 ```
 
-{{EmbedLiveSample('using_dynamic_viewport_lengths', 300, 100)}}
+```html hidden
+  "></iframe>
+</div>
+```
+
+```css hidden
+.resizer {
+  display: flex;
+  margin: 1rem;
+  padding: 0;
+  resize: vertical;
+  overflow: hidden;
+  border: 5px dotted red;
+  height: 400px;
+}
+.resizer > .resized {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+```
+
+{{EmbedLiveSample('using_dynamic_viewport_lengths', '100%', 500)}}
+
+To change the iframe's dimensions try resizing, the vertical size, using the dotted red border from bottom right corner.
 
 ## Attributes
 
