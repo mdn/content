@@ -33,15 +33,17 @@ Preloaded resources from the early hint are effectively pre-pended to the `Docum
 
 ### Preconnect example
 
-The following `103` early hint response indicates an additional origin to preconnect to so it is available to be used to load the site resources with minimal delay:
+The following `103` early hint response indicates origins to preconnect to so they are available to be used to load the site resources with minimal delay:
 
 ```http
 103 Early Hint
-Link: <https://cdn.example.com>; rel=preconnect;
+Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=preconnect crossorigin
 ```
 
+This example includes a additional origin used to load resources and also a [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) connection to that same origin for loading fonts or other [CORS](/en-US/docs/Web/HTTP/CORS)-protected resources.
+
 Subsequently the server sends the final response.
-This includes a `<img>` loaded from the additional origin:
+This includes a crossorigin font preload and an `<img>` loaded from the additional origin.
 
 ```http
 200 OK
@@ -49,7 +51,9 @@ Content-Type: text/html
 
 <!DOCTYPE html>
 ...
-<img src="https://cdn.example.com/image.jpg" alt="">
+<link rel="preload" href="https://cdn.example.com/fonts/myfont.woff2" as="font" type="font/woff2" crossorigin>
+...
+<img src="https://cdn.example.com/images/image.jpg" alt="">
 ...
 ```
 
