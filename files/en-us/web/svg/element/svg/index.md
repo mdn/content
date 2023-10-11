@@ -98,7 +98,9 @@ svg {
 
 ```html
 <div class="resizer">
-  <iframe class="resized" srcdoc="
+  <iframe
+    class="resized"
+    srcdoc="
     <h1>Using dynamic viewport lengths</h1>
     <p>This example the <code>height</code> and <code>width</code> attributes, on the <code>svg</code> element, are set using the dynamic viewport values <code>vmin</code>. Try resizing the results frame to see the svg respond dynamically.</p>
 
