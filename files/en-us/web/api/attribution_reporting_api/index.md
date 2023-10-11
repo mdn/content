@@ -21,9 +21,11 @@ Advertisers commonly want to measure conversions so that they can figure out wha
 - How many products were sold, services were signed up for, etc.
 - How much revenue was generated.
 
-Traditionally on the web, conversion has been measured using third-party tracking cookies. an ad will typically be contained on a web page embedded in an {{htmlelement("iframe")}}, which can set a cookie containing information about the user and their interaction with the ad. Later on, when the user decides to visit the advertiser's site, provided it is from the same domain as the ad it can access that cookie and associate data from there with its own data. For example, did the user purchase a product after coming from the other site?
+Traditionally on the web, conversion has been measured using third-party tracking cookies. An ad will typically be embedded on a web page in an {{htmlelement("iframe")}}, which can set a cookie containing information about the user and their interaction with the ad.
 
-This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page from the same domain can get access to that cookie, plus information from sites that embed those pages, and a surprisingly large number of parties can see that data, and infer other data about the user based on their browsing habits.
+Later on, when the user decides to visit the advertiser's site, provided it is from the same domain as the ad, that site can access the third-party cookie set previously by the ad. The advertiser can then associate the data from the ad with their own first-party data to answer questions such as "did the user purchase a product after interacting with an ad for the product from another site?"
+
+This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page from the same domain can get access to that cookie, plus information from sites that embed those pages. A surprisingly large number of parties will be able to access that data, and infer other data about the user based on their browsing habits.
 
 The Attribution Reporting API provides a way to measure ad conversions in a way that protects user privacy.
 
@@ -31,27 +33,27 @@ The Attribution Reporting API provides a way to measure ad conversions in a way 
 
 Let's illustrate how the Attribution Reporting API works via an example.
 
-Say we have a online shop, `shop.example.com` (aka the advertiser), which embeds an ad for one of its products (contained on `ad.example.com`) on a content site, `ads.com` (aka the publisher). The online shop wants to measure how many conversions they get between users interacting with the ad, and then viewing the product page on their site and putting the product into their shopping cart.
+Say we have a online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products (contained on `ad.shop.example`) on a content site, `news.example` (aka the publisher). The online shop wants to measure how many conversions they get between users interacting with the ad, and then viewing the product page on their site and putting the product into their shopping cart.
 
 ![Image representation of the steps described below](ara-flow.png)
 
 The steps involved are as follows:
 
-1. When a user visits the `ads.com` site, it can register an **Attribution source**. This is an ad-related feature that can be used to detect a user's interaction with the ad. This feature can be:
+1. When a user visits the `news.example` site, it can register an **Attribution source**. This is an ad-related feature that can be used to detect a user's interaction with the ad. This feature can be:
    - A link. In this case, an interaction is detected by the user clicking the link.
    - An image. In this case, an interaction is detected by the user viewing the image.
    - A script. In this case you can use JavaScript to program any behavior detection you wish to use to indicate interaction with the ad.
-2. When the user performs the action that signifies interaction with the ad, as determined by the attribution source, associated source data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s). The destinations are sites where you expect the associated conversion to occur (`shop.example.com` in the example above).
-3. When the user later visits `shop.example.com`, it can register an **Attribution trigger**. This is a feature that can be used to indicate that a potential conversion has occurred. This feature can be:
+2. When the user performs the action that signifies interaction with the ad, as determined by the attribution source, associated source data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s). The destinations are sites where you expect the associated conversion to occur (`shop.example` in the example above).
+3. When the user later visits `shop.example`, it can register an **Attribution trigger**. This is a feature that can be used to indicate that a potential conversion has occurred. This feature can be:
    - An image. In this case, a potential conversion is detected by the user viewing the image.
    - A script. In this case you can use JavaScript to program any behavior detection you wish to use to indicate a potential conversion.
-4. When the user sets off the attribution trigger (for example, the user clicks the "Add to cart" button on `shop.example.com`), the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
+4. When the user sets off the attribution trigger (for example, the user clicks the "Add to cart" button on `shop.example`), the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
    - On a `destination` specified in the source's associated data.
    - Same-origin with the request that specified the source registration.
      > **Note:** These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be situated on the top-level site, or embedded in an {{htmlelement("iframe")}}.
 5. If a match is found successfully, the browser sends report data to an endpoint on a reporting server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint. These reports can be either:
-   - **Event-level reports**: Reports based on a single attribution source event, for example, "Click ID 200498 on `ad.example.com` by user bob_smith led to a purchase on `shop.example.com`". This is useful for simple reporting of coarse data such as what ad placements result in the most conversions.
-   - **Summary reports**: More detailed reports that combine data from multiple conversions on both the source and trigger side. For example "Campaign ID 774653 on `ads.com` has led to 654 sales of widgets on `shop.example.com` from users in Italy, with a total revenue of $9540." Compiling a summary report requires usage of an aggregation service (see for example the [Google aggregation service](https://github.com/privacysandbox/aggregation-service)).
+   - **Event-level reports**: Reports based on a single attribution source event, for example, "Click ID 200498 on `ad.shop.example` by user bob_smith led to a purchase on `shop.example`". This is useful for simple reporting of coarse data such as what ad placements result in the most conversions.
+   - **Summary reports**: More detailed reports that combine data from multiple conversions on both the source and trigger side. For example "Campaign ID 774653 on `news.example` has led to 654 sales of widgets on `shop.example` from users in Italy, with a total revenue of $9540." Compiling a summary report requires usage of an aggregation service (see for example the [Google aggregation service](https://github.com/privacysandbox/aggregation-service)).
 
 For more information on implementing the functionality required for the above steps, see:
 

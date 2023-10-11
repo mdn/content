@@ -12,7 +12,7 @@ This article explains how reports are generated — both attribution reports and
 
 ## Basic process
 
-When a match occurs between a conversion trigger and a source, the browser generates a report and sends it via an uncredentialled [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request to a specific endpoint on the reporting origin:
+When a match occurs between a conversion trigger and a source, the browser generates a report and sends it via an uncredentialed [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request to a specific endpoint on the reporting origin:
 
 - For event-level reports, this is `https://<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`.
 - For summary reports, this is `https://<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`.
