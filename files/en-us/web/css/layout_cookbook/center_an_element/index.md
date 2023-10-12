@@ -53,7 +53,7 @@ div {
 }
 ```
 
-We included a height on the container to demonstrate that the item is indeed vertically centered.
+We included a height on the container to demonstrate that the item is, in fact, vertically centered.
 
 ### Result
 
