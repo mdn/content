@@ -161,5 +161,5 @@ div {
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - {{cssxref("color_value/oklch",'oklch()')}}: Another functional notation using the same color space as `oklab()` but in a polar coordinate system
-- [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
-- [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel)
+- [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) on bottosson.github.io (2023)
+- [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) on observablehq.com
