@@ -12,7 +12,7 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 
 ## The Recipes
 
-| Recipe                                                                               | Description                                                                                                  | Layout Methods                                                                                                                                               |
+| Recipe | Description | Layout Methods |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Media objects](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)                   | A two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet. | [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout), {{cssxref("float")}} fallback, {{cssxref("fit-content")}} sizing                                            |
 | [Columns](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts)                        | When to choose multi-column layout, flexbox or grid for your columns.                                        | [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout), [Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout), [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) |
