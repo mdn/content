@@ -9,6 +9,8 @@ browser-compat: webextensions.api.theme
 
 Enables browser extensions to get details of the browser's theme and update the theme.
 
+You can use this API to include a theme in your extension, which you define as a {{WebExtAPIRef("theme.Theme")}} and apply using {{WebExtAPIRef("theme.update()")}}. You cannot include a static theme in your extension, defined with the ["theme"](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key. The "theme" manifest key is used to define static themes only. See [Themes](https://extensionworkshop.com/documentation/themes/) on Extension Workshop for more information.
+
 ## Types
 
 - {{WebExtAPIRef("theme.Theme")}}

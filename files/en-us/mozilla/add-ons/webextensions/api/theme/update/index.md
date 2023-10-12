@@ -11,8 +11,6 @@ Updates the browser theme according to the content of the {{WebExtAPIRef("theme.
 
 To use this method, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-> **Note:** An extension using the "theme" permission cannot use the manifest [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) key to define a theme.
-
 ## Syntax
 
 ```js-nolint

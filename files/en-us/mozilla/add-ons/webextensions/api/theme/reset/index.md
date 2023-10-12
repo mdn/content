@@ -11,8 +11,6 @@ Resets any theme applied using the {{WebExtAPIRef("theme.update()")}} method.
 
 To use this method, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-> **Note:** An extension using the "theme" permission cannot use the manifest [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) key to define a theme.
-
 Note that this always reset the theme back to the original default theme, even if the user selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzil.la/1415267)).
 
 ## Syntax
