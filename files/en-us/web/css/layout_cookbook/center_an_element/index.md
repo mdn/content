@@ -27,7 +27,7 @@ To place an item into the center of another box horizontally and vertically.
 
 ## Using flexbox
 
-To center one box inside another we make the containing box a flex container. Then set {{cssxref("align-items")}} to center to perform centering on the block axis, and {{cssxref("justify-content")}} to center to perform centering on the inline axis. That's it!
+To center one box inside another, we make the containing box a flex container. Then set {{cssxref("align-items")}} to center to perform centering on the block axis, and {{cssxref("justify-content")}} to center to perform centering on the inline axis. That's it!
 
 ### HTML
 
@@ -59,9 +59,9 @@ We included a height on the container to demonstrate that the item is indeed ver
 
 {{ EmbedLiveSample('Using_flexbox', 400, 200) }}
 
-## Using grid layout
+## Using grid
 
-To center one box inside another we make the containing box a grid container. Then set {{cssxref("place-items")}} on the containter to center its items on both the block axis and inline axis.
+Another method of centering one box inside another is to make the containing box a grid container and set {{cssxref("place-items", "place-items: center" )}} on it to center its items on both the block axis and inline axis.
 
 ### HTML
 
@@ -88,7 +88,7 @@ div {
 
 ### Result
 
-{{ EmbedLiveSample('Using_grid_layout', 400, 200) }}
+{{ EmbedLiveSample('Using_grid', 400, 200) }}
 
 Alternatively, we could have set {{cssxref("place-content", "place-content: center;")}} on the container instead or set either {{cssxref("place-self", "place-self: center")}} or {{cssxref("margin", "margin: auto;")}} on the item itself.
 
