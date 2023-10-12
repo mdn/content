@@ -50,16 +50,16 @@ list-style: revert-layer;
 list-style: unset;
 ```
 
-The `list-style` property is specified as one, two, or three keywords in any order. If {{cssxref("list-style-type")}} and {{cssxref("list-style-image")}} are both set, the `list-style-type` is used as a fallback if the image is unavailable.
+The `list-style` property is specified as one, two, or three values in any order. If {{cssxref("list-style-type")}} and {{cssxref("list-style-image")}} are both set, the `list-style-type` is used as a fallback if the image is unavailable.
 
 ### Values
 
 - {{cssxref("list-style-type")}}
   - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, the default `disc` value is used. See {{cssxref("list-style-type")}}.
 - {{cssxref("list-style-image")}}
-  - : An {{cssxref("image")}} or `none`, which is the default. See {{cssxref("list-style-image")}}.
+  - : An {{cssxref("image")}} or `none`. If omitted, the default `none` value is used. See {{cssxref("list-style-image")}}.
 - {{cssxref("list-style-position")}}
-  - : Either `inside` or `outside`, which is the default. See {{cssxref("list-style-position")}}.
+  - : Either `inside` or `outside`. If omitted, the default `outside` value is used. See {{cssxref("list-style-position")}}.
 - `none`
   - : No list style is used.
 
@@ -121,7 +121,7 @@ To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/
 </ul>
 ```
 
-When unable to add a `role`, CSS can be used. Adding non-empty [pseudo-content](/en-US/docs/Web/CSS/content), such as text or images, before each list item can restore list semantics, but impacts the visual appearance. Safari determines if the added pseudo-content suffices as accessible content, restoring list semantics if so. Generally, Safari considers text and images as sufficient, which is why this `content: "+ ";` works.
+If an ARIA `role` is not an option for your code, CSS can be used instead. Adding non-empty [pseudo-content](/en-US/docs/Web/CSS/content) such as text or images before each list item can restore list semantics, but impacts the visual appearance. Safari determines if the added pseudo-content suffices as accessible content, restoring list semantics if so. Generally, Safari considers text and images as sufficient, which is why the `content: "+ ";` shown below works.
 
 ```css
 ul {
