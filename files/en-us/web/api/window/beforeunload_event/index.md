@@ -15,9 +15,10 @@ The main use case for this event is to trigger a browser-generated confirmation 
 The dialog can be triggered in the following ways:
 
 - Calling the event object's {{domxref("Event.preventDefault()", "preventDefault()")}} method.
-- Setting the event object's {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} property to a non-empty string value.
+- Setting the event object's {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} property to a non-empty string value or any other [truthy](/en-US/docs/Glossary/Truthy) value.
+- Returning any truthy value from the event handler function, e.g. `return "string"`. Note that this only works when the function is attached via the `onbeforeunload` property, not the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. This behavior is consistent across modern versions of Firefox, Safari, and Chrome.
 
-The `returnValue` property is a legacy feature, and best practice is to trigger the dialog by invoking `preventDefault()` on the event object.
+The last two machanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object.
 
 ## Syntax
 
@@ -36,9 +37,8 @@ A {{domxref("BeforeUnloadEvent")}}. Inherits from {{domxref("Event")}}.
 
 To trigger the dialog being shown when the user closes or navigates the tab, a `beforeunload` event handler function should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event object. You should note that modern implementations:
 
-- Only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction.
+- Require [sticky activation](/en-US/docs/Glossary/Sticky_activation) for the dialog to be displayed. In other words, the browser will only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction. If the user has never interacted with the page, then there is no user data to save, so no legitimate use case for the dialog.
 - Only show a generic browser-specified string in the displayed dialog. This cannot be controlled by the webpage code.
-- Require [sticky activation](/en-US/docs/Glossary/Sticky_activation) for the dialog to be displayed. In other words, the browser requires a page interaction from the user for the feature to work.
 
 The `beforeunload` event suffers from some problems:
 
@@ -81,6 +81,9 @@ The `beforeunload` event handler function invokes `preventDefault()` to trigger 
 ```js
 const beforeUnloadHandler = (event) => {
   event.preventDefault();
+  // Equivalent to the following legacy mechanisms
+  //   event.returnValue = "string";
+  //   return "string"; (only works with onbeforeunload)
 };
 
 const nameInput = document.querySelector("#name");
