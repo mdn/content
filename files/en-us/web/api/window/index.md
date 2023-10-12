@@ -283,6 +283,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
