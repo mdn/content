@@ -46,10 +46,10 @@ div {
   max-width: 75%;
 }
 .container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8em;
 }
 ```
 
@@ -80,9 +80,9 @@ div {
   max-width: 75%;
 }
 .container {
-   display: grid;
-   place-items: center;
-   height: 8em;
+  display: grid;
+  place-items: center;
+  height: 8em;
 }
 ```
 
@@ -90,7 +90,7 @@ div {
 
 {{ EmbedLiveSample('Using_grid_layout', 400, 200) }}
 
-Alternatively, we could have set {{cssxref("place-content", "place-content: center;")}} on the container instead or set either {{cssxref("place-self", "place-self: center")}} or {{cssxref("margin", "margin: auto;")}} on the item itself. 
+Alternatively, we could have set {{cssxref("place-content", "place-content: center;")}} on the container instead or set either {{cssxref("place-self", "place-self: center")}} or {{cssxref("margin", "margin: auto;")}} on the item itself.
 
 ## Browser compatibility
 
