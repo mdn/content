@@ -7,9 +7,13 @@ browser-compat: webextensions.api.theme.reset
 
 {{AddonSidebar()}}
 
-Resets any theme that was applied using the {{WebExtAPIRef("theme.update()")}} method.
+Resets any theme applied using the {{WebExtAPIRef("theme.update()")}} method.
 
-Note that this will always reset the theme back to the original default theme, even if the user had selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzil.la/1415267)).
+To use this method, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+
+> **Note:** An extension using the "theme" permission cannot use the manifest [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) key to define a theme.
+
+Note that this always reset the theme back to the original default theme, even if the user selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzil.la/1415267)).
 
 ## Syntax
 
@@ -22,11 +26,7 @@ browser.theme.reset(
 ### Parameters
 
 - `windowId` {{optional_inline}}
-  - : `integer`. The ID of a window. If this is provided, the theme applied to that window will be reset. If it is omitted the theme will be reset on all windows.
-
-## Browser compatibility
-
-{{Compat}}
+  - : `integer`. The ID of a window. If this is provided, the theme applied to that window is reset. If it is omitted, the theme is reset on all windows.
 
 ## Examples
 
@@ -41,6 +41,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
