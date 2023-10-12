@@ -60,7 +60,7 @@ When the `<input>` value is non-empty, if you try to close, navigate, or reload 
 
 {{EmbedLiveSample("Examples", "100%", 50)}}
 
-> **Note:** The browser-generated confirmation dialog can also be triggered by setting the {{domxref("BeforeUnloadEvent.returnValue", "event.returnValue")}} property to a truthy value on the `beforeunload` event object. However, `returnValue` is a legacy feature, and best practice is to trigger the dialog by invoking `event.preventDefault()` as shown in the example above.
+> **Note:** The browser-generated confirmation dialog can also be triggered by setting the {{domxref("BeforeUnloadEvent.returnValue", "event.returnValue")}} property to a truthy value on the `beforeunload` event object, or by returning a truthy value from the event handler function. However, these are legacy mechanisms, and best practice is to trigger the dialog by invoking `event.preventDefault()` as shown in the example above.
 
 ## Specifications
 

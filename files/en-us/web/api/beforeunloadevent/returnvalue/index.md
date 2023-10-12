@@ -25,7 +25,7 @@ Setting it to just about any [truthy](/en-US/docs/Glossary/Truthy) value will ca
 
 ## Examples
 
-See the main {{domxref("BeforeUnloadEvent")}} reference page for an illustrative usage example.
+See the {{domxref("Window/beforeunload_event", "beforeunload")}} event reference page for a best practice example.
 
 ## Specifications
 
