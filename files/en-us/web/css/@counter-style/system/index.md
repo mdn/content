@@ -39,7 +39,7 @@ This may take one of three forms:
 The values include:
 
 - `cyclic`
-  - : Cycles through the list of symbols provided in [the `symbols`` descriptor](/en-US/docs/Web/CSS/@counter-style/symbols). Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the`symbols` descriptor, or the counter style is not valid.
+  - : Cycles through the list of symbols provided in [the `symbols` descriptor](/en-US/docs/Web/CSS/@counter-style/symbols). Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the `symbols` descriptor, or the counter style is not valid.
 - `fixed` or `fixed <integer>`
   - : Defines a finite set of symbols are specified; iterating once through the list of symbols provided in the `symbols` descriptor. Once the system iterated through the symbols specified, the fallback counter style is used. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. The `fixed` value can include an optional {{cssxref("&lt;integer&gt;")}}. If specified, the value indicates which item will get the first symbol in the single iteration of the fixed list of symbols as its marker. By default, if the integer is omitted, the value of the first integer is taken as `1`.
 - `symbolic`
@@ -126,6 +126,7 @@ The `fixed` value iterates through the list of symbols only once, starting the s
   <li>Three</li>
   <li>Four</li>
   <li>Five</li>
+  <li>Six</li>
 </ul>
 ```
 
@@ -133,7 +134,7 @@ The `fixed` value iterates through the list of symbols only once, starting the s
 @counter-style circled-digits {
   system: fixed 3;
   symbols: ➀ ➁ ➂;
-  suffix: " ";
+  suffix: ": ";
 }
 
 ul {
@@ -147,18 +148,7 @@ ul {
 
 ### Symbolic counter
 
-If your browser supports it, this example will render a list like this:
-
-```plain
-  a. One
-  b. Two
-  c. Three
- aa. Four
- bb. Five
- cc. Six
-aaa. Seven
-bbb. Eight
-```
+The `symbolic` value loops throught the list defined in the `symbols` descriptor, doubling and tripling the number of symbols for the second and third cycles through the list, respectively:
 
 #### CSS
 
@@ -193,19 +183,6 @@ ul {
 
 ### Alphabetic counter
 
-If your browser supports it, this example will render a list like this:
-
-```plain
- a. One
- b. Two
- c. Three
-aa. Four
-ab. Five
-ac. Six
-ba. Seven
-bb. Seven
-```
-
 #### CSS
 
 ```html hidden
@@ -238,19 +215,6 @@ ul {
 {{ EmbedLiveSample('Alphabetic_counter') }}
 
 ### Numeric counter
-
-If your browser supports it, this example will render a list like this:
-
-```plain
- b. One
- c. Two
-ba. Three
-bb. Four
-bc. Five
-ca. Six
-cb. Seven
-cc. Eight
-```
 
 The first symbol provided in the `symbols` descriptor is interpreted as `0` here.
 
