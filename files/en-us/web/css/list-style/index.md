@@ -33,11 +33,12 @@ list-style: url("../img/shape.png");
 /* position */
 list-style: inside;
 
-/* type | position */
-list-style: georgian inside;
+/* two values */
+list-style: georgian outside;
+list-style: url("img/pip.svg") inside;
 
-/* type | image | position */
-list-style: lower-roman url("../img/shape.png") outside;
+/* three values */
+list-style: lower-roman url("img/shape.png") outside;
 
 /* Keyword value */
 list-style: none;
@@ -106,13 +107,13 @@ List 2
 
 #### Result
 
-{{EmbedLiveSample('Setting_list_style_type_and_position', 'auto', 220)}}
+{{EmbedLiveSample('Setting_list_style_type_and_position', 'auto', 240)}}
 
 ## Accessibility concerns
 
 Safari does not recognize ordered or unordered lists as lists in the accessibility tree if they have a `list-style` value of `none`, unless the list is nested within the {{HTMLElement("nav")}} navigation element. This [behavior is intentional](https://webkit.org/b/170179#c1) and is not considered a bug.
 
-To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) to {{HTMLElement("ol")}} and {{HTMLElement("ul")}} elements. This restores list semantics without:
+To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) to {{HTMLElement("ol")}} and {{HTMLElement("ul")}} elements. This restores list semantics without affecting the design:
 
 ```html
 <ul role="list">
@@ -121,7 +122,7 @@ To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/
 </ul>
 ```
 
-If an ARIA `role` is not an option for your code, CSS can be used instead. Adding non-empty [pseudo-content](/en-US/docs/Web/CSS/content) such as text or images before each list item can restore list semantics, but impacts the visual appearance. Safari determines if the added pseudo-content suffices as accessible content, restoring list semantics if so. Generally, Safari considers text and images as sufficient, which is why the `content: "+ ";` shown below works.
+If an ARIA `role` is not an option for your code, CSS can be used instead. Adding non-empty [pseudo-content](/en-US/docs/Web/CSS/content) such as text or images before each list item can restore list semantics, but impacts the visual appearance. Safari determines if the added pseudo-content suffices as accessible content, restoring list semantics if so. Generally, Safari considers text and images as sufficient, which is why the `content: "+ ";` shown below works (but requires additional styling to not affect the design).
 
 ```css
 ul {
