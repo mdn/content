@@ -59,6 +59,8 @@ We included a height on the container to demonstrate that the item is, in fact, 
 
 {{ EmbedLiveSample('Using_flexbox', 400, 200) }}
 
+Alternatively, we could have set {{cssxref("align-self", "align-self: center;")}} on the flex item instead of `align-items: center;` on the container.
+
 ## Using grid
 
 Another method of centering one box inside another is to make the containing box a grid container and set {{cssxref("place-items", "place-items: center" )}} on it to center its items on both the block axis and inline axis.
