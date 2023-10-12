@@ -206,7 +206,16 @@ The page CSS does not affect nodes inside the shadow DOM:
 
 ## Applying styles inside the shadow DOM
 
-To style page elements in the shadow DOM, we can:
+In this section we'll look at two different ways to apply styles inside a shadow DOM tree:
+
+- [_Programmatically_](#constructable_stylesheets), by constructing a {{domxref("CSSStyleSheet")}} object and attaching to to the shadow root.
+- [_Declaratively_](#adding_style_elements_in_template_declarations), by adding a {{htmlelement("style")}} element in a {{htmlelement("template")}} element's declaration.
+
+In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the page.
+
+### Constructable stylesheets
+
+To style page elements in the shadow DOM with constructable stylesheets, we can:
 
 1. Create an empty {{domxref("CSSStyleSheet")}} object
 2. Set its content using {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}}
@@ -219,15 +228,6 @@ Here, again, is the HTML containing our host and a `<span>`:
 ```html
 <div id="host"></div>
 <span>I'm not in the shadow DOM</span>
-```
-
-Again, we will add a page style targeting `<span>` elements:
-
-```css
-span {
-  color: blue;
-  border: 1px solid black;
-}
 ```
 
 This time we will create the shadow DOM and assign a `CSSStyleSheet` object to it:
@@ -246,15 +246,52 @@ span.textContent = "I'm in the shadow DOM";
 shadow.appendChild(span);
 ```
 
-{{EmbedLiveSample("Applying styles inside the shadow DOM")}}
+The styles defined in the shadow DOM tree are not applied in the rest of the page:
 
-So the encapsulation of CSS works both ways: page styles don't affect the shadow DOM tree, and shadow DOM styles don't affect elements outside the shadow DOM.
+{{EmbedLiveSample("Constructable stylesheets")}}
 
-You can also apply styles inside a shadow DOM by creating a {{htmlelement("style")}} element and adding it to the shadow DOM tree. However, this is inefficient if you have many shadow DOM trees in a document, because the browser may need to parse the rules within every `<style>` element.
+### Adding `<style>` elements in `<template>` declarations
 
-Creating a `CSSStyleSheet` and assigning it to the shadow root using `adoptedStyleSheets` allows us to create a single stylesheet and share it among many DOM trees.
+An alternative to constructing `CSSStyleSheet` objects is to include a {{htmlelement("style")}} element inside the {{htmlelement("template")}} element used to define a web component.
 
-For example, a component library could create a single stylesheet and then share it among all the custom elements belonging to that library.
+In this case the HTML includes the `<template>` declaration
+
+```html
+<template id="my-element">
+  <style>
+    span {
+      color: red;
+      border: 2px dotted black;
+    }
+  </style>
+  <span>I'm in the shadow DOM</span>
+</template>
+
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+```
+
+In the JavaScript, we will create the shadow DOM and add the content of the `<template>` to it:
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const template = document.getElementById("my-element");
+
+shadow.appendChild(template.content);
+```
+
+Again, the styles defined in the `<template>` are applied only within the shadow DOM tree, and not in the rest of the page:
+
+{{EmbedLiveSample("adding_style_elements_in_template_declarations")}}
+
+### Choosing between programmatic and declarative options
+
+Which of these options to use is dependent on your application and personal preference.
+
+Creating a `CSSStyleSheet` and assigning it to the shadow root using `adoptedStyleSheets` allows you to create a single stylesheet and share it among many DOM trees. For example, a component library could create a single stylesheet and then share it among all the custom elements belonging to that library. The browser will parse that stylesheet once. Also, you can make dynamic changes to the stylesheet and have them propagate to all components that use the sheet.
+
+The approach of attaching a `<style>` element is great if you want to be declarative, have few styles, and don't need to share styles across different components.
 
 ## Shadow DOM and custom elements
 
