@@ -22,7 +22,7 @@ let getting = browser.theme.getCurrent(
 ### Parameters
 
 - `windowId` {{optional_inline}}
-  - : `integer`. The ID of a window. If this is provided, the theme applied on that window is provided. If it is omitted, the theme applied on the last focused window is provided.
+  - : `integer`. The ID of a window. If this is provided, the theme resolved is the one applied to that window. If it is omitted, the theme resolved is the one applied to the most recently focused window.
 
 ### Return value
 
