@@ -52,7 +52,9 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
+
+> **Note:** This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
 
 #### Without nesting selector
 
@@ -152,7 +154,7 @@ label {
 
 #### Nesting the sibling combinator
 
-In this example, the first paragraph after each `<h2>` is targeted with the [adjacent sibling combinator (`+`)](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) using CSS nesting.
+In this example, the first paragraph after each `<h2>` is targeted with the [next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Next-sibling_combinator) using CSS nesting.
 
 ##### HTML
 
@@ -322,7 +324,7 @@ As opposed to:
 .foo {
   /* .foo styles */
   .bar & {
-    /* .bar .for styles */
+    /* .bar .foo styles */
   }
 }
 ```
@@ -374,7 +376,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured .card` */
+      /* equivalent to `.featured .card h2` */
       color: tomato;
     }
   }

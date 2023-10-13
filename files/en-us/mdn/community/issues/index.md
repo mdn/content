@@ -140,11 +140,11 @@ Each repository includes useful information to guide you on how to contribute.
 
 If you are a maintainer or an owner in the MDN Web Docs GitHub organization, you are responsible for triaging issues in one or more MDN Web Docs repository.
 
-The overall process for triaging includes some [general](#general_triaging_tasks) and some [issue-specific tasks](#issue_specific_triaging_tasks).
+The overall process for triaging includes some [general](#general_triaging_tasks) and some [issue-specific tasks](#issue-specific_triaging_tasks).
 
 ### General triaging tasks
 
-- When an issue is opened, the `needs triage` label is set on the issue automatically. You can search for this label to look for issues that [need to be triaged](#issue_specific_triaging_tasks). Contributors or anybody else should not work on the issue until the issue has been triaged. (Triagers should remember to remove the `needs triage` label after triaging the issue.)
+- When an issue is opened, the `needs triage` label is set on the issue automatically. You can search for this label to look for issues that [need to be triaged](#issue-specific_triaging_tasks). Contributors or anybody else should not work on the issue until the issue has been triaged. (Triagers should remember to remove the `needs triage` label after triaging the issue.)
 
 - In the [mdn/content repository](https://github.com/mdn/content/issues), an additional `Content:` label, such as `Content:CSS` or `Content:WebAPI`, is set on the issue automatically. This gets set based on the MDN URL mentioned in the issue. You can use the content-specific label to look for issues to be triaged in your specific topic area.
 
@@ -193,7 +193,7 @@ For each bug, set a priority label based on the severity of the issue to help pe
 
   - Labels: `p1` (will be addressed soon) and `p2` (will be addressed soon, but higher priority items will take precedence)
 
-- Minor issue — This is a type of improvement issue that can make the existing content better but does not affect learning or only has a minor effect on learning. Since these types of issues are not actively planned for, help from contributors to fix these issues is welcome and much appreciated. Fixing some of these issues can also provide the necessary practice to beginner contributors who are starting to get familiar with the contribution process. Examples include typos, bad grammar, a broken link, a small amount of out-of-date information or badly-written prose, or a code snippet that doesn't work.
+- Minor issue: This is a type of improvement issue that can make the existing content better but does not affect learning or only has a minor effect on learning. Since these types of issues are not actively planned for, help from contributors to fix these issues is welcome and much appreciated. Fixing some of these issues can also provide the necessary practice to beginner contributors who are starting to get familiar with the contribution process. Examples include typos, bad grammar, a broken link, a small amount of out-of-date information or badly-written prose, or a code snippet that doesn't work.
   - Labels: `p3` (no visibility when the issue will be addressed)
 
 In general, critical issues should be fixed immediately and are most likely handled by MDN Web Docs staff and peers.
@@ -204,12 +204,12 @@ If possible, add information that can help contributors to fix the issue. The in
 
 For example, as a triager, you can add the following information to the issue you are triaging:
 
-```plain
+```md
 To whoever fixes this issue, it looks like the following is needed:
 
-* Update the first paragraph below heading X to correct the problem with Y
-* Add a description of X
-* Update the compatibility data at Link-X
+- Update the first paragraph below heading X to correct the problem with Y
+- Add a description of X
+- Update the compatibility data at Link-X
 ```
 
 #### Set other labels
@@ -219,7 +219,8 @@ Next, set the following labels as appropriate:
 - `effort: small`, `effort: medium`, `effort: large`: Some contributors like to search for bugs based on the time and effort that will be needed to fix the bug. So where possible, you should try to provide an estimate of the required effort.
 - `good first issue`: Set this label on the issue if the fix for the issue is really simple and if fixing the issue would provide good practice for a newcomer who is getting used to the process.
 - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
-- `broken link internal`, `broken link external` — Set the appropriate label if the issue involves a broken link to an internal or external page.
+- `broken link external`: Set this label if the issue involves a broken link to an external page.
+- `document not written`: Set this label if the issue involves a necessary document that has not been written yet, usually because a link points to it.
 - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
 
   > **Note:** After the triage process is complete, remove the `needs triage` label.

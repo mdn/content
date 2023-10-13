@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 page-type: guide
 ---
 
-{{JSSidebar("JavaScript Guide")}}
+{{jsSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
@@ -57,7 +57,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <td>
         <p>
           A negated or complemented character class. That is, it matches
-          anything that is not enclosed in the brackets. You can specify a range
+          anything that is not enclosed in the square brackets. You can specify a range
           of characters by using a hyphen, but if the hyphen appears as the
           first character after the <code>^</code> or the last character enclosed in the square brackets, it is taken as
           a literal hyphen to be included in the character class as a normal

@@ -54,12 +54,12 @@ Search engine robots and other crawlers don't memorize the new, temporary URL. T
 
 ### Special redirections
 
-{{HTTPStatus("304")}} (Not Modified) redirects a page to the locally cached copy (that was stale), and {{HTTPStatus("300")}} (Multiple Choice) is a manual redirection: the body, presented by the browser as a Web page, lists the possible redirections and the user clicks on one to select it.
+{{HTTPStatus("304")}} (Not Modified) redirects a page to the locally cached copy (that was stale), and {{HTTPStatus("300")}} (Multiple Choices) is a manual redirection: the body, presented by the browser as a Web page, lists the possible redirections and the user clicks on one to select it.
 
-| Code  | Text              | Typical use case                                                                                                                                                         |
-| ----- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `300` | `Multiple Choice` | Not many: the choices are listed in an HTML page in the body. Machine-readable choices are encouraged to be sent as {{HTTPHeader("Link")}} headers with `rel=alternate`. |
-| `304` | `Not Modified`    | Sent for revalidated conditional requests. Indicates that the cached response is still fresh and can be used.                                                            |
+| Code  | Text               | Typical use case                                                                                                                                                         |
+| ----- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `300` | `Multiple Choices` | Not many: the choices are listed in an HTML page in the body. Machine-readable choices are encouraged to be sent as {{HTTPHeader("Link")}} headers with `rel=alternate`. |
+| `304` | `Not Modified`     | Sent for revalidated conditional requests. Indicates that the cached response is still fresh and can be used.                                                            |
 
 ## Alternative way of specifying redirections
 

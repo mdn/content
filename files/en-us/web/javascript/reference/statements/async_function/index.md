@@ -7,7 +7,7 @@ browser-compat: javascript.statements.async_function
 
 {{jsSidebar("Statements")}}
 
-The **`async function`** declaration creates a {{glossary("binding")}} of a new async function to a given name. The `await` keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
+The **`async function`** declaration creates a {{Glossary("binding")}} of a new async function to a given name. The `await` keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
 
 You can also define async functions using the [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function).
 
