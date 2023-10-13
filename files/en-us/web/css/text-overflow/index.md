@@ -35,10 +35,8 @@ text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
-The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
+The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line. The property accepts either a keyword value (`clip` or `ellipsis`) or a `<string>` value.
 
-- one of the keyword values `clip` or `ellipsis`
-- a `<string>`.
 
 ### Values
 
