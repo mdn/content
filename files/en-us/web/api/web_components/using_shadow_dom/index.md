@@ -211,7 +211,7 @@ In this section we'll look at two different ways to apply styles inside a shadow
 - [_Programmatically_](#constructable_stylesheets), by constructing a {{domxref("CSSStyleSheet")}} object and attaching it to the shadow root.
 - [_Declaratively_](#adding_style_elements_in_template_declarations), by adding a {{htmlelement("style")}} element in a {{htmlelement("template")}} element's declaration.
 
-In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the page.
+In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the rest of the page.
 
 ### Constructable stylesheets
 
