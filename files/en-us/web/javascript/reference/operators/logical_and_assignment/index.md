@@ -19,11 +19,7 @@ x &&= y
 
 ## Description
 
-Logical AND assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x &&= y` is equivalent to:
-
-```js
-x && (x = y);
-```
+Logical AND assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x &&= y` is equivalent to `x && (x = y)`, except that the expression `x` is only evaluated once.
 
 No assignment is performed if the left-hand side is not truthy, due to short-circuiting of the [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator. For example, the following does not throw an error, despite `x` being `const`:
 
