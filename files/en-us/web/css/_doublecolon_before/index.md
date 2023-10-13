@@ -15,11 +15,14 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 
 ## Syntax
 
-```css
+```css-nolint
 ::before {
-  /* ... */
+  content: /* value */;
+  /* properties */
 }
 ```
+
+If [`content`](/en-US/docs/Web/CSS/content) property is not specified or it has invalid, `normal`, or `none` value then the `::before` pseudo-element is not rendered. It behaves as if `display: none` is set.
 
 > **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introduced the double-colon notation `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation`:before`, introduced in CSS2.
 
