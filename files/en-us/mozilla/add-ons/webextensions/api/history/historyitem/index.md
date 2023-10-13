@@ -26,9 +26,7 @@ This is an object with the following properties:
 - `typedCount` {{optional_inline}}
   - : `number`. The number of times the user has navigated to this page by typing in the address.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

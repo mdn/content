@@ -33,9 +33,7 @@ Values of this type are objects.
 - {{WebExtAPIRef("storage.StorageArea.onChanged")}}
   - : Fires when one or more items in the storage area change.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -19,9 +19,7 @@ An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. 
 - [`devtools.panels.ElementsPanel.onSelectionChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged)
   - : Fired when the user selects a different element in the page, for example using the "Inspect element" context menu item.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -21,9 +21,7 @@ A `DownloadTime` can be one of three different types:
 
 - a number: this is interpreted as the number of milliseconds since the UNIX epoch.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

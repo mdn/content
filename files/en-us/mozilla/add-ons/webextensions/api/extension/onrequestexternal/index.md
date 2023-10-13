@@ -47,9 +47,7 @@ Events have three functions:
     - `sendResponse`
       - : `function`. Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

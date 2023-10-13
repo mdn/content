@@ -13,9 +13,7 @@ The native client architecture. This may be different from arch on some platform
 
 Values of this type are strings. Possible values are: `"arm"`, `"x86-32"`, `"x86-64"`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

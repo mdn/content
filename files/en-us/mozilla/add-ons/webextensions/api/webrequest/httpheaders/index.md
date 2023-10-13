@@ -20,9 +20,7 @@ An `array` of `object`s. Each object has the following properties:
 - `binaryValue` {{optional_inline}}
   - : `array` of `integer`. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or `value` must be present.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

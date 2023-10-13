@@ -24,9 +24,7 @@ Values of this type are strings. Possible values are:
 
 > **Note:** These string constants will never change, but new constants may be added.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

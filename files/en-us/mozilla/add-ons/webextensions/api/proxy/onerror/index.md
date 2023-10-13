@@ -39,9 +39,7 @@ Events have three functions:
     - `newState`
       - : `Object`. An [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object representing the error.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

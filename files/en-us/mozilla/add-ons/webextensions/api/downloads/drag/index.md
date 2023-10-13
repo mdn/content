@@ -24,9 +24,7 @@ This API is also available as `browser.downloads.drag()`.
 - `downloadId`
   - : An `integer` representing the `id` of the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} in question.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

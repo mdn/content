@@ -24,9 +24,7 @@ An {{jsxref("object")}} containing some combination of the following fields:
 - `url` {{optional_inline}}
   - : `string`. A {{jsxref("string")}} which specifies the URL of the page to bookmark. If this is omitted or is `null`, a folder is created instead of a bookmark.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

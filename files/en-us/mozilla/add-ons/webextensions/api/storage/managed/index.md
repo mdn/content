@@ -53,9 +53,7 @@ The `managed` object implements the events defined on the {{WebExtAPIRef("storag
 - {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.managed.onChanged")}}
   - : Fires when one or more items in the storage area change.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

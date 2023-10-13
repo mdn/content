@@ -28,9 +28,7 @@ Values of this type are strings. Possible values are:
 - `"fuchsia"`
   - : The underlying operating system is Fuchsia.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

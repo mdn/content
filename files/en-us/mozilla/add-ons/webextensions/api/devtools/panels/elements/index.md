@@ -9,9 +9,7 @@ browser-compat: webextensions.api.devtools.panels.elements
 
 An [`ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) object, which represents the browser's HTML/CSS inspector.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

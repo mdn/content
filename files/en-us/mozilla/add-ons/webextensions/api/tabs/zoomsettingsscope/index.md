@@ -22,9 +22,7 @@ Values of this type are strings. Possible values are:
     - in Firefox the zoom level persists across page loads and navigation within the tab.
     - in Chrome-based browsers zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

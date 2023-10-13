@@ -24,9 +24,7 @@ Values of this type are objects. They contain the following properties:
 - `priority` {{optional_inline}}
   - : `integer`. Optional priority of this rule. Defaults to 100.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

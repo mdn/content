@@ -19,9 +19,7 @@ Values of this type are strings. Possible values are: `"document_start"`, `"docu
 
 The default value is `"document_idle"`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

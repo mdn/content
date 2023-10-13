@@ -13,9 +13,7 @@ Its value is `6` on Firefox and Chrome.
 
 For compatibility with other browsers, Firefox makes this property available via the `contextMenus` namespace as well as the `menus` namespace.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

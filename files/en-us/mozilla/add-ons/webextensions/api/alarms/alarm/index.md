@@ -20,9 +20,7 @@ Values of this type are objects. They contain the following properties:
 - `periodInMinutes` {{optional_inline}}
   - : `double`. If this is not `null`, then the alarm is periodic, and this represents its period in minutes.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

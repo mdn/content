@@ -54,9 +54,7 @@ Values of this type are strings. The item is displayed when the given context ap
 
 Note that "launcher" is not supported.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

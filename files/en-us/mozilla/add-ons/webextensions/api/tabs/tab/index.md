@@ -76,9 +76,7 @@ Values of this type are objects. They contain the following properties:
 - `windowId`
   - : `integer`. The ID of the window that hosts this tab.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

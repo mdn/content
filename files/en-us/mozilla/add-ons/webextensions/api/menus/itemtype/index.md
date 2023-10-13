@@ -22,9 +22,7 @@ Values of this type are strings. Possible values are:
 - separator
   - : A line separating a group of items.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

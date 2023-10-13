@@ -56,9 +56,7 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : A `string` representing the absolute URL from which the file was downloaded.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

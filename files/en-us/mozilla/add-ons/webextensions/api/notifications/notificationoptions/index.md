@@ -66,9 +66,7 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
 
 Note that `appIconMaskUrl` and `isClickable` are not supported.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

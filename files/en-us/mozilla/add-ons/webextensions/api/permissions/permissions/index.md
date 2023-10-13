@@ -18,9 +18,7 @@ An {{jsxref("object")}} with the following properties:
 - `permissions` {{optional_inline}}
   - : An array of named permissions, including [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and [clipboard permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboard_access).
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

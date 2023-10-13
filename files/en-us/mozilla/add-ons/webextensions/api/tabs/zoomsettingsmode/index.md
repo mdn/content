@@ -20,9 +20,7 @@ Values of this type are strings. Possible values are:
 - "manual"
   - : The extension will handle zoom changes itself, by listening for the {{WebExtAPIRef("tabs.onZoomChange")}} event and scaling the page accordingly. This mode does not support `per-origin` zooming: it will ignore the `scope` {{WebExtAPIRef("tabs.zoomSettings", "zoom setting")}} and always use `per-tab`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

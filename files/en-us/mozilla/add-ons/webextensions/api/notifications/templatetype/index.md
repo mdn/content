@@ -37,9 +37,7 @@ Values of this type are strings. Possible values are:
 
 Currently Firefox only supports "basic" here.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

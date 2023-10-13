@@ -43,9 +43,7 @@ Values of this type are objects. They contain the following properties:
 - `upgradeToSecure` {{optional_inline}}
   - : `boolean`. If set to `true` and the original request is an HTTP request, this will prevent the original request from being sent and instead make a secure (HTTPS) request. If any extension returns `redirectUrl` in `onBeforeRequest`, then `upgradeToSecure` will be ignored for that request. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

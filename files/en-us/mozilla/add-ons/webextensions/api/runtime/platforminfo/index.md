@@ -20,9 +20,7 @@ Values of this type are objects, which contain the following properties:
 - `nacl_arch`
   - : {{WebExtAPIRef('runtime.PlatformNaclArch')}}. The native client architecture. This may be different from `arch` on some platforms.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

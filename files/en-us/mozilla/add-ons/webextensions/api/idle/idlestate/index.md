@@ -13,9 +13,7 @@ String describing the device's idle state.
 
 Values of this type are strings. Possible values are: `"active"`, `"idle"`, `"locked"`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

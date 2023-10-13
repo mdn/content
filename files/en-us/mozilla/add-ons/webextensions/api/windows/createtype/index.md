@@ -18,9 +18,7 @@ Values of this type are `strings`. Possible values are:
 - `"panel"`
 - `"detached_panel"`
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

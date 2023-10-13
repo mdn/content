@@ -13,9 +13,7 @@ The type of extension view.
 
 Values of this type are strings. Possible values are: `"tab"`, `"popup"`, `"sidebar"`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

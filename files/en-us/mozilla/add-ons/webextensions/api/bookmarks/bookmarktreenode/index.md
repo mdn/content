@@ -35,9 +35,7 @@ An {{jsxref("object")}} with the following properties:
 - `url` {{optional_inline}}
   - : A {{jsxref("string")}} which represents the URL for the bookmark. If the node represents a folder, this property is omitted.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

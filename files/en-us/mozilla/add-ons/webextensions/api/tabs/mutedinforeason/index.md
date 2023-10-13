@@ -20,9 +20,7 @@ Values of this type are strings. Possible values are:
 - "user"
   - : The user set the muted state.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

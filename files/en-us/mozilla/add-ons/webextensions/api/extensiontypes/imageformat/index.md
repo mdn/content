@@ -13,9 +13,7 @@ The format of an image.
 
 Values of this type are strings. Possible values are: `"jpeg"`, `"png"`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

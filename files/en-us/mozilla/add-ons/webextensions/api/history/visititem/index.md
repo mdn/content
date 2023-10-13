@@ -24,9 +24,7 @@ Values of this type are objects. They contain the following properties:
 - `transition`
   - : {{WebExtAPIRef('history.TransitionType')}}. Describes how the browser navigated to the page on this occasion.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -18,9 +18,7 @@ browser-compat: webextensions.api.storage.StorageChange
 - `newValue` {{optional_inline}}
   - : The new value of the item, if there is a new value. This can be any data type.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

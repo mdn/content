@@ -11,9 +11,7 @@ browser-compat: webextensions.api.extension.lastError
 
 An alias for {{WebExtAPIRef("runtime.lastError")}}.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

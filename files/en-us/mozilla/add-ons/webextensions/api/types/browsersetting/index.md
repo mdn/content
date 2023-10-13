@@ -27,9 +27,7 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 - {{WebExtAPIRef("types.BrowserSetting.onChange")}}
   - : Fired when the setting's value changes.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

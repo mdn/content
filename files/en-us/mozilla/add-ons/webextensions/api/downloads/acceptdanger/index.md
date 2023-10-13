@@ -30,9 +30,7 @@ let prompting = browser.downloads.acceptDanger(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). When the dialog closes, the promise will be fulfilled with no arguments.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

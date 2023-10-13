@@ -20,9 +20,7 @@ Values of this type are objects. They contain the following properties:
 - `scope` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}. Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

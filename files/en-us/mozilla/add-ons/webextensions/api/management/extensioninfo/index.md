@@ -71,9 +71,7 @@ It is an object with the following properties:
 - `versionName`
   - : `string`. Descriptive name for this add-on's version, taken from the manifest.json [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

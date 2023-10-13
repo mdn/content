@@ -9,9 +9,7 @@ browser-compat: webextensions.api.windows.WINDOW_ID_NONE
 
 The `windowId` value that represents the absence of a browser window.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

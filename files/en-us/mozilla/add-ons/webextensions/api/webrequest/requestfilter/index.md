@@ -24,9 +24,7 @@ Values of this type are objects. They contain the following properties:
 - `incognito` {{optional_inline}}
   - : `boolean`. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

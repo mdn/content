@@ -32,9 +32,7 @@ Values of this type are objects. They contain these properties:
 - `world` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in. The default value is `ISOLATED`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

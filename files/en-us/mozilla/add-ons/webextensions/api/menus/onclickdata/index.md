@@ -50,9 +50,7 @@ Values of this type are objects. They contain the following properties:
 - `wasChecked` {{optional_inline}}
   - : `boolean`. A flag indicating whether a checkbox or radio item was checked before it was clicked.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

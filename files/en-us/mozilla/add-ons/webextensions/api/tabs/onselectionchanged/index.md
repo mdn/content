@@ -50,9 +50,7 @@ Events have three functions:
 - `windowId`
   - : `integer`. The ID of the window the selected tab changed in.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

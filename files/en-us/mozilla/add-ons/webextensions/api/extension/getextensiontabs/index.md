@@ -30,9 +30,7 @@ This API is also available as `browser.extension.getExtensionTabs()`.
 
 `array` of `object`. Array of global window objects
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

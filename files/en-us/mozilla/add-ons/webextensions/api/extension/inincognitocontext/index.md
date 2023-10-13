@@ -19,9 +19,7 @@ let isPrivate = browser.extension.inIncognitoContext;  // true or false
 
 A _boolean_ value indicate if the current script is running in a private tab or process.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

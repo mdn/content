@@ -36,9 +36,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

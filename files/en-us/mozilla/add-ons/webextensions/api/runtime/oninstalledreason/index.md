@@ -22,9 +22,7 @@ Values of this type are strings. Possible values are:
 - `"shared_module_update"`
   - : Another extension, which contains a module used by this extension, was updated.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

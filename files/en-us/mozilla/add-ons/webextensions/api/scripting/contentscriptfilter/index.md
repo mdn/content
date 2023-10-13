@@ -16,9 +16,7 @@ Values of this type are objects. They contain these properties:
 - `ids`
   - : `array` of `string`. Array of scripts IDs.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

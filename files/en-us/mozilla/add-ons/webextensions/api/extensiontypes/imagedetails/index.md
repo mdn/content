@@ -31,9 +31,7 @@ Values of this type are objects. They contain the following properties:
 - `scale` {{optional_inline}}
   - : `number`. The scale to render at, defaults to [`devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio). This option was introduced in Firefox 82.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

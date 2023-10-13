@@ -20,9 +20,7 @@ Values of this type are strings. Possible values are:
 - `"x86-64"`
   - : The platform is based on x86 64-bit architecture.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

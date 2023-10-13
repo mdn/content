@@ -19,9 +19,7 @@ let myAddonId = browser.runtime.id;
 
 A `string` representing the add-on ID. If the extension specifies an ID in its [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key, `runtime.id` contains that value. Otherwise, `runtime.id` contains the ID that was generated for the extension.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -34,9 +34,7 @@ Values of this type are objects. They contain the following properties:
 - `tlsChannelId` {{optional_inline}}
   - : `string`. The TLS channel ID of the page or frame that opened the connection, if requested by the extension, and if available.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

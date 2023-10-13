@@ -13,9 +13,7 @@ A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10)
 
 Values of this type are strings.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -32,9 +32,7 @@ let gettingSelected = browser.tabs.getSelected(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object containing information about the selected tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

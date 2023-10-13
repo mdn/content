@@ -24,9 +24,7 @@ Values of this type are objects. They contain these properties:
 - `tabId`
   - : `number`. The ID of the tab to inject into.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

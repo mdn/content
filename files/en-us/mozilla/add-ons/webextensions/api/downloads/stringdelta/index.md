@@ -18,9 +18,7 @@ Values of this type are objects. They contain the following properties:
 - `previous` {{optional_inline}}
   - : A `string` representing the previous string value.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

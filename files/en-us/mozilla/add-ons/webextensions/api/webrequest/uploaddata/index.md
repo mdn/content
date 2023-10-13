@@ -18,9 +18,7 @@ Values of this type are objects. They contain the following properties:
 - `file` {{optional_inline}}
   - : `string`. A string with the file's path and name.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

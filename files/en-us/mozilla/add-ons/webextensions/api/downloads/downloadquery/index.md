@@ -68,9 +68,7 @@ Values of this type are objects. They contain the following properties:
 - `exists` {{optional_inline}}
   - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `exists` value.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -88,9 +88,7 @@ However, note that these last two patterns will not match the last component of 
 
     - For example: `[80, 443, [1000, 1200]]` matches all requests on ports 80, 443, and in the range 1000-1200.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

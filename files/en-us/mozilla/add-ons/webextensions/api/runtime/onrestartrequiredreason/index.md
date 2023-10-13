@@ -17,9 +17,7 @@ Values of this type are strings. Possible values are:
 - `"os_update"`: The browser/OS is updated to a newer version.
 - `"periodic"`: The system has run for more than the permitted uptime set in the enterprise policy.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

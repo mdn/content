@@ -22,9 +22,7 @@ Values of this type are strings. Possible values are:
 - `"prompt"`
   - : The browser will prompt the user, asking them to choose whether to uniquify or overwrite.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -11,9 +11,7 @@ The maximum number of times that `{{WebExtAPIRef("webRequest.handlerBehaviorChan
 
 This property is read-only.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

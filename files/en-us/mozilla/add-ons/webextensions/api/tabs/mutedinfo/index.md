@@ -20,9 +20,7 @@ Values of this type are objects. They contain the following properties:
 - `reason` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. The reason the tab was muted or unmuted. Not set if the tab's muted state has never been changed.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

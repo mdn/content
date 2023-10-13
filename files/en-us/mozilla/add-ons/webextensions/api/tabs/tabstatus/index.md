@@ -13,9 +13,7 @@ Indicates whether the tab has finished loading.
 
 Values of this type are strings. Possible values are: `"loading"` and `"complete"`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

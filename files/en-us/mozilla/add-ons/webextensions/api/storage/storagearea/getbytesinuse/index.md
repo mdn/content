@@ -34,9 +34,7 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects that were specified in `keys`. If the operation failed, the promise will be rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

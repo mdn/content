@@ -18,9 +18,7 @@ An `array` of four integers in the range 0-255, defining an RGBA color. The four
 
 For example, opaque red is `[255, 0, 0, 255]`.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

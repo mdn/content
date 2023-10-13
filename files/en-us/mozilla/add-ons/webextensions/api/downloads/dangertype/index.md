@@ -34,9 +34,7 @@ Values of this type are strings. Possible values are:
 - `accepted`
   - : The user has accepted the dangerous download.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

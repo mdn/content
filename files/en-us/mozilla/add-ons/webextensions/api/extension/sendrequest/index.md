@@ -38,9 +38,7 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
     - `response`
       - : `any`. The JSON response object sent by the handler of the request. If an error occurs while connecting to the extension, the callback will be called with no arguments and {{WebExtAPIRef('runtime.lastError')}} will be set to the error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

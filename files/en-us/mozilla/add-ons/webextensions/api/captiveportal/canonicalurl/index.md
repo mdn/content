@@ -9,9 +9,7 @@ browser-compat: webextensions.api.captivePortal.canonicalURL
 
 Return the canonical URL of the captive-portal detection page. Read-only.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

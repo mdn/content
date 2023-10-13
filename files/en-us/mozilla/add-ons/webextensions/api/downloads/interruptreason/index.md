@@ -54,9 +54,7 @@ Miscellaneous:
 
 - `"CRASH"`
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

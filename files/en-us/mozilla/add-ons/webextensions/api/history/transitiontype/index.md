@@ -36,9 +36,7 @@ Values of this type are strings. Possible values are:
 - "keyword_generated"
   - : Corresponds to a visit generated for a keyword.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

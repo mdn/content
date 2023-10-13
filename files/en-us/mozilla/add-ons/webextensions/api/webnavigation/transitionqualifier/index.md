@@ -22,9 +22,7 @@ Values of this type are strings. Possible values are:
 - "from_address_bar"
   - : The user triggered the navigation from the address bar.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

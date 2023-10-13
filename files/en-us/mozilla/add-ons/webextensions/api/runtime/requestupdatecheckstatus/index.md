@@ -20,9 +20,7 @@ Values of this type are strings. Possible values are:
 - `"update_available"`
   - : An update of the extension is available.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

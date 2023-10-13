@@ -30,9 +30,7 @@ Values of this type are objects.
 - {{WebExtAPIRef("events.Event.removeRules","events.Event.removeRules()")}}
   - : Unregisters currently registered rules.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

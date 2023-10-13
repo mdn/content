@@ -40,9 +40,7 @@ Values of this type are `objects`. They contain the following properties:
 - `width` {{optional_inline}}
   - : `integer`. The width of the window, including the frame, in pixels.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
