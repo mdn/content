@@ -32,10 +32,10 @@ BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE B
         g. "License Elements" means the following high-level license attributes as selected by Licensor and indicated in the title of this License: Attribution, ShareAlike.
     2. Fair Use Rights. Nothing in this license is intended to reduce, limit, or restrict any rights arising from fair use, first sale or other limitations on the exclusive rights of the copyright owner under copyright law or other applicable laws.
     3. License Grant. Subject to the terms and conditions of this License, Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below:
-        a. to reproduce the Work, to incorporate the Work into one or more Collective Works, and to reproduce the Work as incorporated in the Collective Works;
-        b. to create and reproduce Derivative Works;
-        c. to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission the Work including as incorporated in Collective Works;
-        d. to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission Derivative Works.
+        a. To reproduce the Work, to incorporate the Work into one or more Collective Works, and to reproduce the Work as incorporated in the Collective Works;
+        b. To create and reproduce Derivative Works;
+        c. To distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission the Work including as incorporated in Collective Works;
+        d. To distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission Derivative Works.
         e. For the avoidance of doubt, where the work is a musical composition:
             i. Performance Royalties Under Blanket Licenses. Licensor waives the exclusive right to collect, whether individually or via a performance rights society (e.g. ASCAP, BMI, SESAC), royalties for the public performance or public digital performance (e.g. webcast) of the Work.
             ii. Mechanical Rights and Statutory Royalties. Licensor waives the exclusive right to collect, whether individually or via a music rights society or designated agent (e.g. Harry Fox Agency), royalties for any phonorecord You create from the Work ("cover version") and distribute, subject to the compulsory license created by 17 USC Section 115 of the US Copyright Act (or the equivalent in other jurisdictions).
@@ -126,21 +126,21 @@ protected by copyright and related or neighboring rights ("Copyright and
 Related Rights"). Copyright and Related Rights include, but are not
 limited to, the following:
 
-  i. the right to reproduce, adapt, distribute, perform, display,
+  i. The right to reproduce, adapt, distribute, perform, display,
      communicate, and translate a Work;
- ii. moral rights retained by the original author(s) and/or performer(s);
-iii. publicity and privacy rights pertaining to a person's image or
+ ii. Moral rights retained by the original author(s) and/or performer(s);
+iii. Publicity and privacy rights pertaining to a person's image or
      likeness depicted in a Work;
- iv. rights protecting against unfair competition in regards to a Work,
+ iv. Rights protecting against unfair competition in regards to a Work,
      subject to the limitations in paragraph 4(a), below;
-  v. rights protecting the extraction, dissemination, use and reuse of data
+  v. Rights protecting the extraction, dissemination, use and reuse of data
      in a Work;
- vi. database rights (such as those arising under Directive 96/9/EC of the
+ vi. Database rights (such as those arising under Directive 96/9/EC of the
      European Parliament and of the Council of 11 March 1996 on the legal
      protection of databases, and under any national implementation
      thereof, including any amended or successor version of such
      directive); and
-vii. other similar, equivalent or corresponding rights throughout the
+vii. Other similar, equivalent or corresponding rights throughout the
      world based on applicable law or treaty, and any national
      implementations thereof.
 
@@ -174,14 +174,12 @@ time extensions), (iii) in any current or future medium and for any number
 of copies, and (iv) for any purpose whatsoever, including without
 limitation commercial, advertising or promotional purposes (the
 "License"). The License shall be deemed effective as of the date CC0 was
-applied by Affirmer to the Work. Should any part of the License for any
-reason be judged legally invalid or ineffective under applicable law, such
-partial invalidity or ineffectiveness shall not invalidate the remainder
-of the License, and in such case Affirmer hereby affirms that he or she
-will not (i) exercise any of his or her remaining Copyright and Related
-Rights in the Work or (ii) assert any associated claims and causes of
-action with respect to the Work, in either case contrary to Affirmer's
-express Statement of Purpose.
+applied by Affirmer to the Work. Should any part of the License, for any reason,
+be judged legally invalid or ineffective under applicable law, such partial invalidity
+or ineffectiveness shall not invalidate the remainder of the License. In such a case,
+Affirmer hereby affirms that they will not (i) exercise any of their remaining Copyright
+and Related Rights in the Work or (ii) assert any associated claims and causes of action
+with respect to the Work, in either case contrary to Affirmer's express Statement of Purpose.
 
 4. Limitations and Disclaimers.
 
