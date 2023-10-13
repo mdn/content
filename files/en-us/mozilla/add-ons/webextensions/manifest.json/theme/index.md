@@ -483,12 +483,32 @@ All these properties can be specified as either a string containing any valid [C
 "theme": {
   "colors": {
      "ntp_background": "red",
+     "ntp_card_background": "gray",
      "ntp_text": "white"
   }
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles." src="ntp_colors.png" /></p>
+        <p><img alt="Browser firefox is white. The new tab page shows a red background. On the page, Google search is at the top, followed by top site shortcuts, all with gray backgrounds. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>ntp_card_background</code></td>
+      <td>
+        <p>The new tab page card background color.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "ntp_background": "red",
+     "ntp_card_background": "gray",
+     "ntp_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Browser firefox is white. The new tab page shows a red background. On the page, Google search is at the top, followed by top site shortcuts, all with gray backgrounds. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -507,12 +527,13 @@ All these properties can be specified as either a string containing any valid [C
 "theme": {
   "colors": {
      "ntp_background": "red",
+     "ntp_card_background": "gray",
      "ntp_text": "white"
   }
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
+        <p><img alt="Browser firefox is white. The new tab page shows a red background. On the page, Google search is at the top, followed by top site shortcuts, all with gray backgrounds. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
