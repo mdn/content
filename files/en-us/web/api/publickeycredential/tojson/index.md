@@ -10,12 +10,12 @@ browser-compat: api.PublicKeyCredential.toJSON
 
 {{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
 
-The **`toJSON()`** method of the {{domxref("PublicKeyCredential")}} interface returns a JSON-friendly representation of a {{domxref("PublicKeyCredential")}}.
-
-The method is a convenient way for a web app to create credential objects that can be serialized and sent to the relying party server as an application/json payload.
-Note that `toJSON()` is called when [JSON.stringify()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) is used to serialize an object: in this case a credential.
+The **`toJSON()`** method of the {{domxref("PublicKeyCredential")}} interface returns a {{glossary("JSON type representation")}} of a {{domxref("PublicKeyCredential")}}.
 
 The properties of the returned object depend on whether the credential is returned by [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) when [creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user), or [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) when [authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
+
+This method is automatically invoked when web app code calls [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) to serialize a {{domxref("PublicKeyCredential")}} so that it can be sent to relying party server when registering or authenticating a user.
+It not intended to be called directly in web app code.
 
 ## Syntax
 
@@ -29,9 +29,10 @@ None.
 
 ### Return value
 
-A JSON-friendly representation of a [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential) object, with included properties that depend on whether the credential was returned by [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) on registration or [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) when [authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
+A {{glossary("JSON type representation")}} of a [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential) object.
 
-The values and types are the same as for [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential), with the exception that [base64url](/en-US/docs/Glossary/Base64)-encoded strings are used in place of buffer properties.
+The included properties depend on whether the credential was returned by [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) on registration, or [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) when authenticating a user.
+The values and types of included properties are the same as for [`PublicKeyCredential`](/en-US/docs/Web/API/PublicKeyCredential), with the exception that [base64url](/en-US/docs/Glossary/Base64)-encoded strings are used in place of buffer properties.
 
 The object properties are:
 
@@ -49,21 +50,22 @@ The object properties are:
 
   - : The response property object depends on whether the credentials are returned following a registration or authentication operation.
 
-    - When registering a new user `response` will be a JSON-friendly version of {{domxref("AuthenticatorAttestationResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
+    - When registering a new user `response` will be a JSON-type representation of {{domxref("AuthenticatorAttestationResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
 
-    - When authenticating a user the returned value will be a JSON-friendly version of {{domxref("AuthenticatorAssertionResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
+    - When authenticating a user the returned value will be a JSON-type representation version of {{domxref("AuthenticatorAssertionResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
 
 ## Examples
 
-When registering a new user the server will supply information about the expected credentials (below shown as the already parsed object `publicKey`).
-First we pass these to [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create), which returns a promise that eventually resolves to a {{domxref("PublicKeyCredential")}}.
+When registering a new user, a relying party server will supply information about the expected credentials to the web app.
+The web app calls [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) with the received information (`createCredentialOptions` below), which returns a promise that fulfills with the new credential (a {{domxref("PublicKeyCredential")}}).
 
 ```js
-const newCredentialInfo = await navigator.credentials.create({ publicKey });
+const newCredentialInfo = await navigator.credentials.create({
+  createCredentialOptions,
+});
 ```
 
-The credentials are then posted back to the server as JSON data.
-We call [JSON.stringify()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) to serialize the credential object (which in turn calls `toJSON()`).
+The web app then serializes the returned credential using `JSON.stringify()` (which in turn calls `toJSON()`) and posts it back to the server.
 
 ```js
 const registration_url = "https://example.com/registration";
