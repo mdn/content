@@ -468,7 +468,7 @@ function createCalendar(days, choice) {
   }
 }
 
-createCalendar(31,'January');
+createCalendar(31, 'January');
 </textarea>
 
 <div class="playable-buttons">
@@ -507,17 +507,22 @@ const textarea = document.getElementById("code");
 const initialCode = textarea.value;
 let userCode = textarea.value;
 
-const solutionCode = `const select = document.querySelector('select');
-const list = document.querySelector('ul');
-const h1 = document.querySelector('h1');
+const solutionCode = `const select = document.querySelector("select");
+const list = document.querySelector("ul");
+const h1 = document.querySelector("h1");
 
-select.addEventListener('change', () => {
+select.addEventListener("change", () => {
   const choice = select.value;
 
   let days = 31;
-  if (choice === 'February') {
+  if (choice === "February") {
     days = 28;
-  } else if (choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {
+  } else if (
+    choice === "April" ||
+    choice === "June" ||
+    choice === "September" ||
+    choice === "November"
+  ) {
     days = 30;
   }
 
@@ -525,20 +530,20 @@ select.addEventListener('change', () => {
 });
 
 function createCalendar(days, choice) {
-  list.innerHTML = '';
+  list.innerHTML = "";
   h1.textContent = choice;
   for (let i = 1; i <= days; i++) {
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = i;
     list.appendChild(listItem);
   }
 }
 
-createCalendar(31,'January');`;
+createCalendar(31, "January");`;
 
 function outputDocument(code) {
   const outputBody = `
-<div class="output" style="height: 500px;overflow: auto;">
+<div class="output" style="height: 500px; overflow: auto">
   <label for="month">Select month: </label>
   <select id="month">
     <option value="January">January</option>
@@ -592,7 +597,9 @@ h2 {
   <head>
     <style>${outputStyle}</style>
   </head>
-  <body>${outputBody}<script>${code}</script>
+  <body>
+    ${outputBody}
+    <script>${code}</script>
   </body>
 </html>`;
 }
@@ -605,14 +612,14 @@ update();
 
 textarea.addEventListener("input", update);
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = initialCode;
   userEntry = textarea.value;
   solution.value = "Show solution";
   update();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     // remember the state of the user's code
     // so we can restore it
@@ -628,7 +635,7 @@ solution.addEventListener("click", function () {
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-textarea.onkeydown = function (e) {
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret("\t");
