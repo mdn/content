@@ -396,8 +396,9 @@ The example looks like this; have a play:
     <tr>
       <td><strong>Events</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("HTMLElement/input_event", "input")}} and 
+        {{domxref("HTMLElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
