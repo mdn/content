@@ -170,6 +170,24 @@ The `accept` attribute doesn't validate the types of the selected files; it prov
 
 Because of this, you should make sure that the `accept` attribute is backed up by appropriate server-side validation.
 
+### Detecting cancellations
+
+Event `cancel` is fired when the user does not change their selection.
+
+For example, the following code will log to console if the user closes the popup without selecting files:
+
+```
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  console.log("File selected: ", );
+});
+elem.click();
+```
+
 ### Notes
 
 1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
