@@ -22,7 +22,7 @@ In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elem
 }
 ```
 
-If [`content`](/en-US/docs/Web/CSS/content) property is not specified or it has invalid, `normal`, or `none` value then the `::after` pseudo-element is not rendered. It behaves as if `display: none` is set.
+If the [`content`](/en-US/docs/Web/CSS/content) property is not specified, has an invalid value, or has `normal` or `none` as a value, then the `::after` pseudo-element is not rendered. It behaves as if `display: none` is set.
 
 > **Note:** CSS introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:after`, introduced earlier.
 
