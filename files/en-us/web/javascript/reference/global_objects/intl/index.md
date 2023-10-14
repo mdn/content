@@ -123,6 +123,16 @@ log("en-US"); // 5/24/2012 26,254.39
 log("de-DE"); // 24.5.2012 26.254,39
 ```
 
+### Using the browser's preferred language
+
+Instead of passing a hardcoded locale name to the `Intl` methods, you can use the user's preferred language provided by {{domxref("navigator.language")}}:
+
+```js
+const date = new Date("2012-05-24");
+
+const formattedDate = new Intl.DateTimeFormat(navigator.language).format(date);
+```
+
 ## Specifications
 
 {{Specifications}}
