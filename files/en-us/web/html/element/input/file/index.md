@@ -176,7 +176,7 @@ Event `cancel` is fired when the user does not change their selection.
 
 For example, the following code will log to console if the user closes the popup without selecting files:
 
-```
+```js
 const elem = document.createElement("input");
 elem.type = "file";
 elem.addEventListener("cancel", () => {
