@@ -132,7 +132,7 @@ There are, however, some key differences between providing sources for images an
 
 ### Lazy loading images
 
-A very useful technique for improving performance is **lazy loading**. This refers to the practice of not loading all images immediately when the HTML is rendered, but instead only loading them when they are actually visible to the user in the viewport (or imminently visible). This means that the immediately visible/usable content is ready to use more quickly, whereas subsequent content only has its images rendered when scrolled to, and the browser won't waste bandwith loading images that the user will never see.
+A very useful technique for improving performance is **lazy loading**. This refers to the practice of not loading all images immediately when the HTML is rendered, but instead only loading them when they are actually visible to the user in the viewport (or imminently visible). This means that the immediately visible/usable content is ready to use more quickly, whereas subsequent content only has its images rendered when scrolled to, and the browser won't waste bandwidth loading images that the user will never see.
 
 Lazy loading has historically been handled using JavaScript, but browsers now have a `loading` attribute available that can instruct the browser to lazy load images automatically:
 
@@ -223,7 +223,7 @@ pElem.addEventListener("click", () => {
 });
 ```
 
-We can apply this script to the page by refering to it in a `<script>` element like this:
+We can apply this script to the page by referring to it in a `<script>` element like this:
 
 ```html
 <script src="index.js"></script>
