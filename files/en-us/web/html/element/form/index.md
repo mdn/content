@@ -7,7 +7,7 @@ browser-compat: html.elements.form
 
 {{HTMLSidebar}}
 
-The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
+The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information. The form is not exposed as a landmark region unless it has an [accessible name](/en-US/docs/Glossary/Accessible_name).
 
 {{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
