@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A new asynchronous iterator containing the key of each entry within the `FileSystemDirectoryHandle`.
+A new asynchronous iterator containing the keys of each entry within the `FileSystemDirectoryHandle`.
 
 ## Examples
 
