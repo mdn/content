@@ -11,7 +11,7 @@ browser-compat: api.FileSystemDirectoryHandle.values
 The **`values()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
 for the iteration of the value of the entries within the `FileSystemDirectoryHandle`
-on which this method is called. The order of iteration is uncertain.
+on which this method is called. The order of iteration is vague.
 
 ## Syntax
 
@@ -25,13 +25,7 @@ None.
 
 ### Return value
 
-A new asynchronous iterator provides a {{jsxref('Promise')}} which fulfills with
-an object with the following properties:
-
-- `done`
-  - : A boolean value, representing if the iteration has ended.
-- `value`
-  - : A {{domxref("FileSystemHandle")}} object. The handle of the entry. If the iteration has ended, this property would be `undefined`.
+A new asynchronous iterator containing the handles of each entry within the `FileSystemDirectoryHandle`.
 
 ## Examples
 
