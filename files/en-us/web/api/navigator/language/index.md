@@ -8,35 +8,29 @@ browser-compat: api.Navigator.language
 
 {{APIRef("HTML DOM")}}
 
-The **`Navigator.language`** read-only property returns
-a string representing the preferred language of the user, usually the language of the
-browser UI.
+The **`Navigator.language`** read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
 
 ## Value
 
-A string representing the language version as defined in
-{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+A string representing the language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 
-Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:
-"en-us", "fr-fr" etc.
+Note that in Safari on iOS prior to 10.2, the country code returned is lowercase: "en-us", "fr-fr" etc.
 
 ## Examples
 
 ### Automatically switching a site's interface to the user's preferred language
 
-Assuming your website has a function called, say, `doLanguageSelect()`, to switch the interface to a given language, you can pass `navigator.language` to it and have the site automatically adapt to the user's preferred language:
+Assuming your website has a function called, say, `selectLang()`, to switch the interface to a given language, you can pass `navigator.language` to it and have the site automatically adapt to the user's preferred language:
 
 ```js
 if (/^en\b/.test(navigator.language)) {
-  doLangSelect(navigator.language);
+  selectLang(navigator.language);
 }
 ```
 
-### Using the `Intl` methods to do language-specific formatting
+### Using Intl constructors to do language-specific formatting
 
-The {{jsxref("Intl")}} methods allow formatting content to match the rules of a given locale.
-You can pass `navigator.language` to them to format content in the locale corresponding to the user's preferred language:
+The {{jsxref("Intl")}} constructors allow formatting content to match the rules of a given locale. You can pass `navigator.language` to them to format content in the locale corresponding to the user's preferred language:
 
 ```js
 const date = new Date("2012-05-24");
