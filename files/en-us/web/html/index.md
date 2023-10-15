@@ -12,7 +12,7 @@ page-type: landing-page
 
 HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} and many others.
 
-An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`". The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`". The name of an element inside a tag is case-insensitive. It can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
 
 The articles below can help you learn more about HTML.
 
@@ -36,7 +36,7 @@ The articles below can help you learn more about HTML.
 
 ## Beginner's tutorials
 
-Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that teach HTML from the ground up — no previous knowledge required.
+Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that teach HTML from the ground up — no previous knowledge is required.
 
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
   - : This module sets the stage, getting you used to important concepts and syntax such as looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a web page.
@@ -47,7 +47,7 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 - [HTML forms](/en-US/docs/Learn/Forms)
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
 - [Use HTML to solve common problems](/en-US/docs/Learn/HTML/Howto)
-  - : Provides links to sections of content explaining how to use HTML to solve very common problems when creating a web page: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
+  - : Provides links to sections of content explaining how to use HTML to solve widespread problems when creating a web page: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
 
 ## Advanced topics
 
@@ -65,9 +65,9 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 - [HTML element reference](/en-US/docs/Web/HTML/Element)
   - : Browse a list of all {{glossary("HTML")}} {{glossary("Element", "elements")}}.
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
-  - : Elements in HTML have **attributes**. These are additional values that configure the elements or adjust their behavior in various ways.
+  - : Elements in HTML have **attributes**. These additional values configure the elements or adjust their behavior in various ways.
 - [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
-  - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
+  - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5 non-compliant.
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content) and [block-level elements](/en-US/docs/Glossary/Block-level_content)
   - : HTML elements are usually "inline-level" or "block-level" elements. An inline-level element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block box".
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
