@@ -18,16 +18,6 @@ Note that in Safari on iOS prior to 10.2, the country code returned is lowercase
 
 ## Examples
 
-### Automatically switching a site's interface to the user's preferred language
-
-Assuming your website has a function called, say, `selectLang()`, to switch the interface to a given language, you can pass `navigator.language` to it and have the site automatically adapt to the user's preferred language:
-
-```js
-if (/^en\b/.test(navigator.language)) {
-  selectLang(navigator.language);
-}
-```
-
 ### Using Intl constructors to do language-specific formatting
 
 The {{jsxref("Intl")}} constructors allow formatting content to match the rules of a given locale. You can pass `navigator.language` to them to format content in the locale corresponding to the user's preferred language:
