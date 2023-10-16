@@ -25,6 +25,7 @@ While we think of counters as numbers, they are actually strings with incrementa
 ### Data types
 
 - [`<counter-style>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
+- [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
 - [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values™)
 - [`<symbols-type>`](/en-US/docs/Web/CSS/symbols#syntax)
 
@@ -45,8 +46,7 @@ While we think of counters as numbers, they are actually strings with incrementa
 
 ### Interfaces and APIs
 
-CSSRule interface
-CSSCounterStyleRule interface
+- {{domxref("CSSCounterStyleRule")}} interface
 
 ## Guides
 
@@ -74,5 +74,6 @@ CSSCounterStyleRule interface
 
 ## See also
 
-- CSS generated content module
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [Ready-made counter styles](https://w3c.github.io/predefined-counter-styles/) via W3C
