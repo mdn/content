@@ -130,10 +130,10 @@ div {
 
 ```css
 [data-color="red"] {
-  background-color: oklch(50% 130 20);
+  background-color: oklch(50% 0.5 20);
 }
 [data-color="red-alpha"] {
-  background-color: oklch(50% 130 20 / 0.4);
+  background-color: oklch(50% 0.5 20 / 0.4);
 }
 ```
 

@@ -35,11 +35,7 @@ text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
-The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
-
-- one of the keyword values: `clip`, `ellipsis`, `fade`
-- the function `fade()`, which is passed a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} to control the fade distance
-- a `<string>`.
+The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line. The property accepts either a keyword value (`clip` or `ellipsis`) or a `<string>` value.
 
 ### Values
 
@@ -49,13 +45,6 @@ The `text-overflow` property may be specified using one or two values. If one va
   - : This keyword value will display an ellipsis (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) to represent clipped text. The ellipsis is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.
 - `<string>` {{experimental_inline}}
   - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.
-- `fade` {{experimental_inline}}
-  - : This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
-- `fade( <length> | <percentage> )` {{experimental_inline}}
-
-  - : This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
-
-    The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than `0` are clipped to `0`. Values greater than the width of the line box are clipped to the width of the line box.
 
 ## Formal definition
 

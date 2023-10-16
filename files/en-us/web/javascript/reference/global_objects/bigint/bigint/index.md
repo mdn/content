@@ -20,7 +20,7 @@ BigInt(value)
 ### Parameters
 
 - `value`
-  - : The numeric value of the object being created. It may be a string, an integer, a boolean, or another `BigInt`.
+  - : The value to be converted to a BigInt value. It may be a string, an integer, a boolean, or another `BigInt`.
 
 ### Return value
 

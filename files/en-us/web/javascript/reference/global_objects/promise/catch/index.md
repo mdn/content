@@ -83,7 +83,7 @@ p1.then((value) => {
     console.error(e.message); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 
@@ -96,7 +96,7 @@ p1.then((value) => {
     console.error(e); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 ```
