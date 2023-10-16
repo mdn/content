@@ -39,11 +39,17 @@ This may take one of three forms:
 The values include:
 
 - `cyclic`
+
   - : Cycles through the list of symbols provided in [the `symbols` descriptor](/en-US/docs/Web/CSS/@counter-style/symbols). Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the `symbols` descriptor, or the counter style is not valid.
+
 - `fixed` or `fixed <integer>`
+
   - : Defines a finite set of symbols are specified; iterating once through the list of symbols provided in the `symbols` descriptor. Once the system iterated through the symbols specified, the fallback counter style is used. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. The `fixed` value can include an optional {{cssxref("&lt;integer&gt;")}}. If specified, the value indicates which item will get the first symbol in the single iteration of the fixed list of symbols as its marker. By default, if the integer is omitted, the value of the first integer is taken as `1`.
+
 - `symbolic`
+
   - : Cycles through the symbols provided in the `symbols` descriptor list of symbols repeatedly, doubling, tripling, etc. the symbols on each successive pass through the list. For example, if there were are two symbols provided for the `symbols` descriptor, "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. This counter system works for positive counter values only.
+
 - `alphabetic`
 
   - : Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters `"a"` to `"z"` are specified as symbols in a counter style, with the `alphabetic` system, then the first 26 counter representations will be `"a"`, `"b"` up to `"z"`. Until this point, the behavior is the same as that of the `symbolic` system, described above. However, after `"z"`, it will continue as `"aa"`, `"ab"`, `"ac"`…
@@ -64,7 +70,7 @@ The values include:
 
 - `extends`
 
-  - : Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the `extends` system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.
+  - : Allows authors to use extend the algorithm of another browser or author defined counter style by altering its other aspects. Any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.
 
     It must not contain a `symbols` or `additive-symbols` descriptor, or else the counter style rule is invalid. If one or more counter styles definitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.
 
@@ -292,20 +298,24 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 
 #### HTML
 
+We included the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute on the {{HTMLElement("ol")}} to demonstrate that counting doesn't need to start with `1` and the [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that counters you define using `@counter-style` behave just like native counters.
+
 ```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+<ol start="48">
+  <li>48</li>
+  <li>49</li>
+  <li>50</li>
+  <li>51</li>
+  <li value="109">109</li>
+  <li>110</li>
+  <ol></ol>
+</ol>
 ```
 
 #### CSS
 
 ```css
-@counter-style upper-roman {
+@counter-style uppercase-roman {
   system: additive;
   range: 1 3999;
   additive-symbols:
@@ -324,8 +334,8 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
     1 I;
 }
 
-ul {
-  list-style: upper-roman;
+ol {
+  list-style: uppercase-roman;
 }
 ```
 
@@ -335,7 +345,7 @@ ul {
 
 ### Extends example
 
-This example will use the algorithm, symbols, and other properties of the `lower-alpha` counter style, but will remove the period (`'.'`) after the counter representation, and enclose the characters in parenthesis; like `(a)`, `(b)`, etc.
+This example will use the algorithm, symbols, and other properties of [`lower-alpha`](/en-US/docs/Web/CSS/list-style-type#lower-alpha), one of the several native {{CSSXref(list-style-type")}} counter values, but extends it, removing the period (`'.'`) after the counter representation, and enclosing the characters in parenthesis; like `(a)`, `(b)`, etc.
 
 #### HTML
 
