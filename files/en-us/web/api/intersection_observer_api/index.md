@@ -31,7 +31,7 @@ The Intersection Observer API allows you to configure a callback that is called 
 - A **target** element intersects either the device's viewport or a specified element. That specified element is called the **root element** or **root** for the purposes of the Intersection Observer API.
 - The first time the observer is initially asked to watch a target element.
 
-Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for `root` option. Keep reading for a more detailed explanation about intersection observer options.
+Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for the `root` option. Keep reading for a more detailed explanation about intersection observer options.
 
 Whether you're using the viewport or some other element as the root, the API works the same way, executing a callback function you provide whenever the visibility of the target element changes so that it crosses desired amounts of intersection with the root.
 
@@ -480,74 +480,80 @@ function buildThresholdList() {
 This builds the array of thresholds—each of which is a ratio between 0.0 and 1.0, by pushing the value `i/numSteps` onto the `thresholds` array for each integer `i` between 1 and `numSteps`. It also pushes 0 to include that value. The result, given the default value of `numSteps` (20), is the following list of thresholds:
 
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <th>#</th>
-      <th>Ratio</th>
-      <th>#</th>
-      <th>Ratio</th>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.05</td>
-      <th>11</th>
-      <td>0.55</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.1</td>
-      <th>12</th>
-      <td>0.6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.15</td>
-      <th>13</th>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.2</td>
-      <th>14</th>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.25</td>
-      <th>15</th>
-      <td>0.75</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.3</td>
-      <th>16</th>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.35</td>
-      <th>17</th>
-      <td>0.85</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.4</td>
-      <th>18</th>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.45</td>
-      <th>19</th>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.5</td>
-      <th>20</th>
-      <td>1.0</td>
-    </tr>
-  </tbody>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ratio</th>
+        <th>#</th>
+        <th>Ratio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>0</th>
+        <td>0.05</td>
+        <th>11</th>
+        <td>0.6</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td>0.1</td>
+        <th>12</th>
+        <td>0.65</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>0.15</td>
+        <th>13</th>
+        <td>0.7</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>0.2</td>
+        <th>14</th>
+        <td>0.75</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>0.25</td>
+        <th>15</th>
+        <td>0.8</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>0.3</td>
+        <th>16</th>
+        <td>0.85</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>0.35</td>
+        <th>17</th>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>0.4</td>
+        <th>18</th>
+        <td>0.95</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>0.45</td>
+        <th>19</th>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>0.5</td>
+        <th>20</th>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>0.55</td>
+      </tr>
+    </tbody>
 </table>
 
 We could, of course, hard-code the array of thresholds into our code, and often that's what you'll end up doing. But this example leaves room for adding configuration controls to adjust the granularity, for example.

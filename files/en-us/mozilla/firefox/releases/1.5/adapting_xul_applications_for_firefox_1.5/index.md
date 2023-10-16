@@ -16,7 +16,7 @@ This page contains a list of changes in [Firefox 1.5](/en-US/docs/Mozilla/Firefo
 - [XUL Changes for Firefox 1.5](/en-US/docs/XUL_Changes_for_Firefox_1.5)
 - [XPCNativeWrappers](/en-US/docs/XPCNativeWrapper) are on by default, and the behavior changed somewhat compared to 1.0.x
 - A simpler method of [Chrome Registration](/en-US/docs/Chrome_Registration) deprecates contents.rdf.
-- For overlayed context menus: the function `gContextMenu.linkURL()` has been renamed to `gContextMenu.getLinkURL()`, and `linkURL` is now a property. To use it in a backwards-compatible way:
+- For overlaid context menus: the function `gContextMenu.linkURL()` has been renamed to `gContextMenu.getLinkURL()`, and `linkURL` is now a property. To use it in a backwards-compatible way:
   `url = 'getLinkURL' in gContextMenu ? gContextMenu.getLinkURL() : gContextMenu.linkURL();`
 
 ### Other Information

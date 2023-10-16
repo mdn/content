@@ -96,9 +96,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** The `nohref` attribute is not necessary, as omitting the `href` attribute is sufficient.
 
-- `type` {{deprecated_inline}}
-  - : Hint for the type of the referenced resource. Ignored by browsers.
-
 ## Examples
 
 ```html
@@ -154,7 +151,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <a href="/en-US/docs/Web/HTML/Element/area#href"><code>href</code></a> attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <a href="/en-US/docs/Web/HTML/Element/area#href"><code>href</code></a> attribute is present, otherwise
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

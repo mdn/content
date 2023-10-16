@@ -28,9 +28,11 @@ oncontextmenu = (event) => {};
 
 ## Event type
 
-A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
-{{InheritanceDiagram("MouseEvent")}}
+{{InheritanceDiagram("PointerEvent")}}
+
+> **Note:** In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
 
 ## Event properties
 
@@ -83,6 +85,26 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : Alias for {{domxref("MouseEvent.clientX")}}.
 - {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
   - : Alias for {{domxref("MouseEvent.clientY")}}.
+- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+  - : A unique identifier for the pointer causing the event.
+- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
+- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+  - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
+- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
+- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
+- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
+- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+  - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Examples
 

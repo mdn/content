@@ -10,7 +10,7 @@ browser-compat: mathml.elements.mfenced
 
 {{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression.
+The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing brackets (such as parenthese) and separators (such as commas or semicolons) to an expression.
 
 > **Note:** Historically, the `<mfenced>` element was defined as a shorthand for writing fenced expressions and equivalent to an expanded form involving {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements. Nowadays, it is recommended to use that equivalent form instead.
 

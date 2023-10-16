@@ -88,7 +88,7 @@ Let's walk through how this works:
 
 ### Different transitions for different elements
 
-At the moment, all of the different elements that change when then DOM updates are transitioned using the same animation. If you want different elements to animate differently from the default "root" animation, you can separate them out using the {{cssxref("view-transition-name")}} property. For example:
+At the moment, all of the different elements that change when the DOM updates are transitioned using the same animation. If you want different elements to animate differently from the default "root" animation, you can separate them out using the {{cssxref("view-transition-name")}} property. For example:
 
 ```css
 figcaption {

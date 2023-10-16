@@ -36,8 +36,7 @@ locale-specific case mappings.
 The `toLocaleUpperCase()` method returns the value of the string converted
 to upper case according to any locale-specific case mappings.
 `toLocaleUpperCase()` does not affect the value of the string itself. In most
-cases, this will produce the same result as {{jsxref("String.prototype.toUpperCase()",
-  "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not
+cases, this will produce the same result as {{jsxref("String/toUpperCase", "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not
 follow the default case mappings in Unicode, there may be a different result.
 
 Also notice that conversion is not necessarily a 1:1 character mapping, as some
