@@ -14,7 +14,7 @@ user-supplied callback function prior to the next repaint.
 
 The frequency of calls to the callback function will generally match the display
 refresh rate. The most common refresh rate is 60hz,
-(60 cycles/frames per second), though 75hz, 120hz and 144hz are also widely used.
+(60 cycles/frames per second), though 75hz, 120hz, and 144hz are also widely used.
 `requestAnimationFrame()` calls are paused in most browsers when running in
 background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve
 performance and battery life.
