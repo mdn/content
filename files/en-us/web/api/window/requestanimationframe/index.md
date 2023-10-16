@@ -16,7 +16,7 @@ The frequency of calls to the callback function will generally match the display
 refresh rate. The most common refresh rate is 60hz,
 (60 cycles/frames per second), though 75hz, 120hz, and 144hz are also widely used.
 `requestAnimationFrame()` calls are paused in most browsers when running in
-background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve
+background tabs or hidden {{ HTMLElement("iframe") }}s, in order to improve
 performance and battery life.
 
 > **Note:** Your callback function must call `requestAnimationFrame()` again if
@@ -24,8 +24,8 @@ performance and battery life.
 
 > **Warning:** Be sure to always use the first argument (or some other method for
 > getting the current time) to calculate how much the animation will progress in
-> a frame, **otherwise the animation will run faster on high refresh rate screens**.
-> See the examples belows for ways to do this.
+> a frame — **otherwise the animation will run faster on high refresh-rate screens**.
+> For ways to do that, see the examples below.
 
 ## Syntax
 
