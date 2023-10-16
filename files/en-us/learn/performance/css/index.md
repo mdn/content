@@ -274,7 +274,7 @@ article {
 
 The {{cssxref("content-visibility")}} property is a useful shortcut, which allows authors to apply a strong set of containments on a set of containers and specify that the browser should not lay out and render those containers until needed.
 
-A second property, {{cssxref("contain-intrinsic-size")}}, is also available, which allows you to provide a placeholder size for containers while they are under the effects of containment. This means that the containers will take up space even if their contents have not yet been renderered, allowing containment to do its performance magic without the risk of scroll bar shift and jank as elements render and come into view. This improves the quality of the user experience as the content is loaded.
+A second property, {{cssxref("contain-intrinsic-size")}}, is also available, which allows you to provide a placeholder size for containers while they are under the effects of containment. This means that the containers will take up space even if their contents have not yet been rendered, allowing containment to do its performance magic without the risk of scroll bar shift and jank as elements render and come into view. This improves the quality of the user experience as the content is loaded.
 
 ```css
 article {

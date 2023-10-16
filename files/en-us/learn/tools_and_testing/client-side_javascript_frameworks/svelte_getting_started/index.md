@@ -240,7 +240,7 @@ Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/expor
 
 ### The markup section
 
-In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly brackets (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
+In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly braces (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
 
 ```html
 <main>

@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -758,6 +762,10 @@
     },
     "CSSVariableReferenceValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSViewTransitionRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -2692,6 +2700,10 @@
       "inh": "",
       "impl": []
     },
+    "RevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "RTCCertificate": {
       "inh": "",
       "impl": []
@@ -3914,6 +3926,10 @@
     },
     "WebTransportReceiveStream": {
       "inh": "ReadableStream",
+      "impl": []
+    },
+    "WebTransportSendGroup": {
+      "inh": "",
       "impl": []
     },
     "WebTransportSendStream": {

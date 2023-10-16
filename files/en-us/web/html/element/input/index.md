@@ -646,13 +646,12 @@ The following non-standard attributes are also available on some browsers. As a 
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
         <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
         field; this is used to determine an appropriate label for that key on a
-        virtual keyboard.</p>
-        <p><strong>Deprecated: use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
+        virtual keyboard. <strong>Since this attribute is deprecated, use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
       </td>
     </tr>
     <tr>
@@ -740,6 +739,8 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
   - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
   - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+- {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
+  - : Displays the browser picker for the input element that would normally be displayed when the element is selected, but triggered from a button press or other user interaction.
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
   - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
