@@ -316,9 +316,9 @@ The built-in validators include:
 - [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
 - [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
 
-  - [enum](https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()): specifies the set of allowed values for the field.
-  - [match](https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()): specifies a regular expression that the string must match.
-  - [maxLength](https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()) and [minLength](https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()) for the string.
+  - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): specifies the set of allowed values for the field.
+  - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): specifies a regular expression that the string must match.
+  - [maxLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()>) and [minLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()>) for the string.
 
 The example below (slightly modified from the Mongoose documents) shows how you can specify some of the validator types and error messages:
 
