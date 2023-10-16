@@ -313,7 +313,7 @@ Mongoose provides built-in and custom validators, and synchronous and asynchrono
 The built-in validators include:
 
 - All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
-- [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()) and [max](https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()) validators.
+- [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
 - [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
 
   - [enum](https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()): specifies the set of allowed values for the field.
