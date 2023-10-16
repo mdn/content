@@ -3,6 +3,7 @@ title: Object.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.groupBy
+status: experimental
 ---
 
 {{JSRef}}
