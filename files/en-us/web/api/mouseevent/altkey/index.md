@@ -1,44 +1,27 @@
 ---
-title: MouseEvent.altKey
+title: "MouseEvent: altKey property"
+short-title: altKey
 slug: Web/API/MouseEvent/altKey
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.altKey
 ---
-{{APIRef("DOM Events")}}
 
-The **`MouseEvent.altKey`** read-only property is a
-boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not
-when a given mouse event occurs.
+{{APIRef("UI Events")}}
 
-Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating
-systems. On some Linux variants, for example, a left mouse click combined with
-the <kbd>alt</kbd> key is used to move or resize windows.
+The **`MouseEvent.altKey`** read-only property is a boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not when a given mouse event occurs.
 
-> **Note:** On Macintosh keyboards, this key is also known as
-> the <kbd>option</kbd> key.
+Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating systems.
+On some Linux variants, for example, a left mouse click combined with the <kbd>alt</kbd> key is used to move or resize windows.
 
-## Syntax
+> **Note:** On Macintosh keyboards, this key is also known as the <kbd>option</kbd> key.
 
-```js
-var altKeyPressed = instanceOfMouseEvent.altKey
-```
+## Value
 
-### Return value
+A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-A boolean value, where `true` indicates that the key is pressed, and
-`false` indicates that the key is _not_ pressed.
+## Examples
 
-## Example
-
-This example logs the `altKey` property when you trigger a
-{{Event("click")}} event.
+This example logs the `altKey` property when you trigger a {{domxref("Element/click_event", "click")}} event.
 
 ### HTML
 
@@ -50,8 +33,8 @@ This example logs the `altKey` property when you trigger a
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The alt key is pressed: ${e.altKey}`;
@@ -60,7 +43,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

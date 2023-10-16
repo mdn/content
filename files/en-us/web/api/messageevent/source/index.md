@@ -1,41 +1,30 @@
 ---
-title: MessageEvent.source
+title: "MessageEvent: source property"
+short-title: source
 slug: Web/API/MessageEvent/source
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - messaging
-  - source
+page-type: web-api-instance-property
 browser-compat: api.MessageEvent.source
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`source`** read-only property of the
 {{domxref("MessageEvent")}} interface is a `MessageEventSource` (which can be
-a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or
+a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or
 {{domxref("ServiceWorker")}} object) representing the message emitter.
 
-## Syntax
+## Value
 
-```js
-let mySource = messageEvent.source;
-```
-
-### Value
-
-a `MessageEventSource` (which can be a {{domxref("WindowProxy")}},
+a `MessageEventSource` (which can be a {{glossary("WindowProxy")}},
 {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the
 message emitter.
 
-## Example
+## Examples
 
 ```js
-myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Message received from worker');
+myWorker.onmessage = (e) => {
+  result.textContent = e.data;
+  console.log("Message received from worker");
   console.log(e.source);
 };
 ```

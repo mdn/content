@@ -1,13 +1,13 @@
 ---
 title: Information architecture
 slug: Glossary/Information_architecture
-tags:
-  - Design
-  - Glossary
-  - information architecture
+page-type: glossary-definition
 ---
-Information architecture, as applied to web design and development, is the practice of organizing the information / content / functionality of a web site so that it presents the best user experience it can, with information and services being easily usable and findable.
+
+{{GlossarySidebar}}
+
+Information architecture, as applied to web design and development, is the practice of organizing the information / content / functionality of a website so that it presents the best user experience it can, with information and services being easily usable and findable.
 
 ## See also
 
-- {{interwiki("wikipedia", "Information_architecture", "Information architecture")}} on Wikipedia
+- [Information architecture](https://en.wikipedia.org/wiki/Information_architecture) on Wikipedia

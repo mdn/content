@@ -1,20 +1,11 @@
 ---
-title: MediaTrackSettings.sampleRate
+title: "MediaTrackSettings: sampleRate property"
+short-title: sampleRate
 slug: Web/API/MediaTrackSettings/sampleRate
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - sampleRate
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.sampleRate
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
@@ -31,13 +22,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleRate")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var sampleRate = MediaTrackSettings.sampleRate;
-```
-
-### Value
+## Value
 
 An integer value indicating how many samples each second of audio data includes. Common
 values include 44,100 (standard CD audio), 48,000 (standard digital audio), 96,000
@@ -47,10 +32,9 @@ values are often used to reduce bandwidth requirements; 8,000 samples per second
 adequate for comprehensible albeit imperfect human speech, and both 11,025 FPS and
 22,050 FPS are often used for low-bandwidth, reduced quality sound and music.
 
-## Example
+## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -62,8 +46,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.sampleRate")}}
 - {{domxref("MediaTrackSettings")}}

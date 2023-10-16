@@ -1,25 +1,16 @@
 ---
-title: SVGMarkerElement.viewBox
+title: "SVGMarkerElement: viewBox property"
+short-title: viewBox
 slug: Web/API/SVGMarkerElement/viewBox
-tags:
-  - API
-  - Property
-  - Reference
-  - viewBox
-  - SVGMarkerElement
+page-type: web-api-instance-property
 browser-compat: api.SVGMarkerElement.viewBox
 ---
+
 {{APIRef("SVG")}}
 
 The **`viewBox`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedRect")}} object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
 
-## Syntax
-
-```js
-let viewBox = SVGMarkerElement.viewBox;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedRect")}} object. The `baseVal` property of this object returns an {{domxref("SVGRect")}} object, from which can be returned the `x` and `y` co-ordinates, plus the `width` and `height` of the {{SVGElement("marker")}} {{SVGattr("viewBox")}} attribute.
 
@@ -30,10 +21,15 @@ This example demonstrates how to return the value of the `width` set for the {{S
 ```html
 <svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        viewBox="xMidYMid meet"
-        markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      viewBox="xMidYMid meet"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
   </defs>

@@ -1,21 +1,22 @@
 ---
-title: BackgroundFetchRegistration.abort()
+title: "BackgroundFetchRegistration: abort() method"
+short-title: abort()
 slug: Web/API/BackgroundFetchRegistration/abort
-tags:
-  - API
-  - Method
-  - Reference
-  - abort
-  - BackgroundFetchRegistration
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.abort
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.
 
 ## Syntax
 
-    let status = BackgroundFetchRegistration.abort();
+```js-nolint
+abort()
+```
 
 ### Parameters
 
@@ -23,7 +24,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `true` if the fetch is successfulled aborted.
+A {{jsxref("Promise")}} that resolves with `true` if the fetch is successfully aborted.
 
 ## Examples
 

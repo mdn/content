@@ -1,15 +1,12 @@
 ---
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - box alignment
-  - cookbook
-  - flexbox
-  - lists
+page-type: guide
+browser-compat:
+  - css.properties.justify-content
+  - css.properties.align-items
 ---
+
 {{CSSRef}}
 
 In this recipe we will create a list group pattern with badges that indicate a count.
@@ -26,7 +23,7 @@ Our list items should be displayed with the badges lined up on the right, no mat
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/list-group-badges--download.html)
 
 ## Choices made
 
@@ -38,17 +35,9 @@ To align the content horizontally, I use the {{cssxref("align-items")}} property
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-#### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-#### align-items
-
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## See also
 
-- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

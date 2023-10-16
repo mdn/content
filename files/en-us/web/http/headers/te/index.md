@@ -1,21 +1,20 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.TE
 ---
+
 {{HTTPSidebar}}
 
 The **`TE`** request header specifies the transfer encodings
 the user agent is willing to accept. (you could informally call it
-_`Accept-Transfer-Encoding`_, which would be more intuitive).
+`Accept-Transfer-Encoding`, which would be more intuitive).
 
-> **Note:** [In HTTP/2,
-> the `TE` header field is only accepted
-> if the `trailers` value is set.](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)
+> **Note:** In
+> [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
+> [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting), the `TE`
+> header field is only accepted if the `trailers` value is set.
 
 See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on
 transfer encodings. Note that `chunked` is always acceptable for HTTP/1.1
@@ -38,7 +37,7 @@ trailer fields in a chunked transfer coding using the "trailers" value.
 
 ## Syntax
 
-```
+```http
 TE: compress
 TE: deflate
 TE: gzip

@@ -1,47 +1,87 @@
 ---
-title: PerformanceElementTiming.toJSON()
+title: "PerformanceElementTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceElementTiming/toJSON
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON()
-  - PerformanceElementTiming
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.toJSON
 ---
-{{DefaultAPISidebar("Element Timing")}}
 
-The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interface is a standard serializer. It returns a JSON representation of the object's properties.
+{{APIRef("Performance API")}}{{SeeCompatTable}}
+
+The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceElementTiming")}} object.
 
 ## Syntax
 
-    var json = PerformanceElementTiming.toJSON();
+```js-nolint
+toJSON()
+```
+
+### Parameters
+
+None.
 
 ### Return value
 
-- json
-  - : A JSON object that is the serialization of the `PerformanceElementTiming` object.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceElementTiming")}} object.
+
+The JSON doesn't contain the {{domxref("PerformanceElementTiming.element", "element")}} property because it is of type {{domxref("Element")}}, which doesn't provide a `toJSON()` operation. The {{domxref("PerformanceElementTiming.id", "id")}} of the element is provided, though.
 
 ## Examples
 
-In this example calling `entry.toJSON()` returns a JSON representation of the `PerformanceElementTiming` object, with the information about the image element.
+### Using the toJSON method
+
+In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceElementTiming` object, with the information about the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.toJSON());
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+observer.observe({ type: "element", buffered: true });
 ```
 
-> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
+This would log a JSON object like so:
+
+```json
+{
+  "name": "image-paint",
+  "entryType": "element",
+  "startTime": 670894.1000000238,
+  "duration": 0,
+  "renderTime": 0,
+  "loadTime": 670894.1000000238,
+  "intersectionRect": {
+    "x": 299,
+    "y": 76,
+    "width": 135,
+    "height": 155,
+    "top": 76,
+    "right": 434,
+    "bottom": 231,
+    "left": 299
+  },
+  "identifier": "big-image",
+  "naturalWidth": 135,
+  "naturalHeight": 155,
+  "id": "myImage",
+  "url": "https://en.wikipedia.org/static/images/project-logos/enwiki.png"
+}
+```
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 
@@ -50,3 +90,7 @@ observer.observe({ entryTypes: ["element"] });
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}

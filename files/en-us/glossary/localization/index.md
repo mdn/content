@@ -1,13 +1,11 @@
 ---
 title: Localization
 slug: Glossary/Localization
-tags:
-  - Collaborating
-  - Glossary
-  - Intro
-  - Localization
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 **Localization** (l10n) is the process of adapting a software user interface to a specific culture.
 
 The following are common factors to consider:
@@ -30,4 +28,4 @@ The following are common factors to consider:
 
 ## See also
 
-- {{interwiki("wikipedia", "Language localisation", "Localization")}} on Wikipedia
+- [Localization](https://en.wikipedia.org/wiki/Language_localisation) on Wikipedia

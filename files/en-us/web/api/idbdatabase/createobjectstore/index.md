@@ -1,20 +1,15 @@
 ---
-title: IDBDatabase.createObjectStore()
+title: "IDBDatabase: createObjectStore() method"
+short-title: createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
+page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.createObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`createObjectStore()`** method of the
-{{domxref("IDBDatabase")}} interface creates and returns a new object store or index.
+{{domxref("IDBDatabase")}} interface creates and returns a new {{domxref("IDBObjectStore")}}.
 
 The method takes the name of the store as well as a parameter object that lets you
 define important optional properties. You can use the property to uniquely identify
@@ -28,9 +23,9 @@ transaction.
 
 ## Syntax
 
-```js
-IDBDatabase.createObjectStore(name);
-IDBDatabase.createObjectStore(name, options);
+```js-nolint
+createObjectStore(name)
+createObjectStore(name, options)
 ```
 
 ### Parameters
@@ -38,130 +33,67 @@ IDBDatabase.createObjectStore(name, options);
 - `name`
   - : The name of the new object store to be created. Note that it is possible to create
     an object store with an empty name.
-- `optionalParameters` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object whose attributes are optional parameters to the method. It
     includes the following properties:
+    - `keyPath` {{optional_inline}}
+      - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path)
+        to be used by the new object store. If empty or not specified, the
+        object store is created without a key path and uses
+        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key).
+        You can also pass in an array as a `keyPath`.
+    - `autoIncrement` {{optional_inline}}
+      - : If `true`, the object store has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator).
+        Defaults to <code>false</code>.
 
-    <table class="no-markdown">
-      <thead>
-        <tr>
-          <th scope="col">Attribute</th>
-          <th scope="col">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>keyPath</code></td>
-          <td>
-            The
-            <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path"
-              >key path</a
-            >
-            to be used by the new object store. If empty or not specified, the
-            object store is created without a key path and uses
-            <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key"
-              >out-of-line keys</a
-            >. You can also pass in an array as a <code>keyPath</code>.
-          </td>
-        </tr>
-        <tr>
-          <td><code>autoIncrement</code></td>
-          <td>
-            If <code>true</code>, the object store has a
-            <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator"
-              >key generator</a
-            >. Defaults to <code>false</code>.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    Unknown parameters are ignored.
-
-### Returns
+### Return value
 
 A new {{domxref("IDBObjectStore")}}.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
+This method may raise a {{domxref("DOMException")}} with a `name` of
 one of the following types:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        Occurs if the method was not called from a
-        <code>versionchange</code> transaction callback. For older WebKit
-        browsers, you must call
-        {{
-        APIRef("IDBVersionChangeRequest.setVersion")}}
-        first.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        Occurs if a request is made on a source database that doesn't exist
-        (e.g. has been deleted or removed.) In Firefox previous to version 41,
-        an <code>InvalidStateError</code> was raised in this case as well, which
-        was misleading; this has now been fixed (see {{Bug("1176165")}}.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>ConstraintError</code></td>
-      <td>
-        An object store with the given name (based on case-sensitive comparison)
-        already exists in the connected database.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err"
-            >InvalidAccessError</a
-          ></code
-        >
-      </td>
-      <td>
-        If <code>autoIncrement</code> is set to true and <code>keyPath</code> is
-        either an empty string or an array containing an empty string.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the method was not called from a
+    `versionchange` transaction callback.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if a request is made on a source database that does not exist
+    (for example, when the database has been deleted or removed). In Firefox previous to version 41,
+    an `InvalidStateError` was raised in this case as well, which
+    was misleading; this has now been fixed (see [Webkit bug 1176165](https://bugzil.la/1176165)).
+- `ConstraintError` {{domxref("DOMException")}}
+  - : Thrown if an object store with the given name (based on a case-sensitive comparison)
+    already exists in the connected database.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if `autoIncrement` is set to true and `keyPath` is
+    either an empty string or an array containing an empty string.
 
-## Example
+## Examples
 
 ```js
 // Let us open our database
-var request = window.indexedDB.open("toDoList", 4);
+const request = window.indexedDB.open("toDoList", 4);
 
 // This handler is called when a new version of the database
 // is created, either when one has not been created before
 // or when a new version number is submitted by calling
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
-request.onupgradeneeded = function(event) {
-  var db = event.target.result;
+request.onupgradeneeded = (event) => {
+  const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 
@@ -193,5 +125,4 @@ request.onupgradeneeded = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

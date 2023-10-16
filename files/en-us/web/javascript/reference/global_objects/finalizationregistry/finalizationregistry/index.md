@@ -1,35 +1,28 @@
 ---
 title: FinalizationRegistry() constructor
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-tags:
-  - Constructor
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
+slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+page-type: javascript-constructor
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
+
 {{JSRef}}
 
-The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegistry")}} object that uses the given callback.
+The **`FinalizationRegistry()`** constructor creates {{jsxref("FinalizationRegistry")}} objects.
 
 ## Syntax
 
-```js
-// Arrow callback function
-new FinalizationRegistry(heldValue => { ... } )
-
-// Callback function
+```js-nolint
 new FinalizationRegistry(callbackFn)
-
-// Inline callback function
-new FinalizationRegistry(function callbackFn(heldValue) { ... })
 ```
+
+> **Note:** `FinalizationRegistry()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `callback`
-  - : The callback function this registry should use.
+  - : A function to be invoked each time a registered target value is garbage collected. Its return value is ignored. The function is called with the following arguments:
+    - `heldValue`
+      - : The value that was passed to the second parameter of the {{jsxref("FinalizationRegistry/register", "register()")}} method when the `target` object was registered.
 
 ## Examples
 
@@ -38,8 +31,8 @@ new FinalizationRegistry(function callbackFn(heldValue) { ... })
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
-  // ....
+const registry = new FinalizationRegistry((heldValue) => {
+  // …
 });
 ```
 

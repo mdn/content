@@ -1,41 +1,29 @@
 ---
-title: AudioBufferSourceNode.detune
+title: "AudioBufferSourceNode: detune property"
+short-title: detune
 slug: Web/API/AudioBufferSourceNode/detune
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
+page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.detune
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`detune`** property of the
-{{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
+{{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
 For example, values of +100 and -100 detune the source up or down by one semitone,
 while +1200 and -1200 detune it up or down by one octave.
 
-## Syntax
-
-```js
-var source = audioCtx.createBufferSource();
-source.detune.value = 100; // value in cents
-```
-
-> **Note:** Though the `AudioParam` returned is read-only, the
-> value it represents is not.
-
-### Value
+## Value
 
 A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-## Example
+> **Note:** Though the `AudioParam` returned is read-only, the
+> value it represents is not.
+
+## Examples
 
 ```js
 const audioCtx = new AudioContext();
@@ -43,7 +31,11 @@ const audioCtx = new AudioContext();
 const channelCount = 2;
 const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
 
-const myArrayBuffer = audioCtx.createBuffer(channelCount, frameCount, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  channelCount,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
 for (let channel = 0; channel < channelCount; channel++) {
   const nowBuffering = myArrayBuffer.getChannelData(channel);

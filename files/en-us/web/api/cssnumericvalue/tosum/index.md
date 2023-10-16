@@ -1,18 +1,12 @@
 ---
-title: CSSNumericValue.toSum()
+title: "CSSNumericValue: toSum() method"
+short-title: toSum()
 slug: Web/API/CSSNumericValue/toSum
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - toSum()
+page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.toSum
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`toSum()`** method of the
 {{domxref("CSSNumericValue")}} interface converts the object's value to a
@@ -20,13 +14,13 @@ The **`toSum()`** method of the
 
 ## Syntax
 
-```js
-var cssMathSum = CSSNumericValue.toSum(units);
+```js-nolint
+toSum(units)
 ```
 
 ### Parameters
 
-- units
+- `units`
   - : The units to convert to.
 
 ### Return value
@@ -35,17 +29,15 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions
 
-- SyntaxError
-  - : undefined
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 
 ```js
 let v = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
-v.toString() // => "calc(23px + 4% + 3cm + 9in)"
-v.toSum("px", "percent").toString() // => "calc(1000.39px + 4%)"
+v.toString(); // => "calc(23px + 4% + 3cm + 9in)"
+v.toSum("px", "percent").toString(); // => "calc(1000.39px + 4%)"
 ```
 
 ## Specifications

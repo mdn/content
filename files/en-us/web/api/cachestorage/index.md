@@ -1,26 +1,17 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
+page-type: web-api-interface
 browser-compat: api.CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
 The interface:
 
-- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers).
-
-  > **Note:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("caches")}} will be undefined unless an SSL certificate is configured.
-
+- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you're not limited to only using it with service workers).
 - Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
 Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.
@@ -37,7 +28,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 {{securecontext_header}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CacheStorage.match()")}}
   - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
@@ -52,57 +43,62 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Examples
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).) This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
+This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/).)
+This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
-1.  Check whether a match for the request is found in the CacheStorage. If so, serve that.
-2.  If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3.  If this fails (e.g. because the network is down), return a fallback response.
+1. Check whether a match for the request is found in the CacheStorage. If so, serve that.
+2. If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
+3. If this fails (e.g. because the network is down), return a fallback response.
 
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ]),
+      ),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    // caches.match() always resolves
-    // but in case of success response will have value
-    if (response !== undefined) {
-      return response;
-    } else {
-      return fetch(event.request).then(function (response) {
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
-        let responseClone = response.clone();
-
-        caches.open('v1').then(function (cache) {
-          cache.put(event.request, responseClone);
-        });
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // caches.match() always resolves
+      // but in case of success response will have value
+      if (response !== undefined) {
         return response;
-      }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
-    }
-  }));
+      } else {
+        return fetch(event.request)
+          .then((response) => {
+            // response may be used only once
+            // we need to save clone to put one copy in cache
+            // and serve second one
+            let responseClone = response.clone();
+
+            caches.open("v1").then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+            return response;
+          })
+          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+      }
+    }),
+  );
 });
 ```
 
@@ -111,58 +107,56 @@ This snippet shows how the API can be used outside of a service worker context, 
 ```js
 // Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
-   const cacheVersion = 1;
-   const cacheName    = `myapp-${ cacheVersion }`;
-   const url          = 'https://jsonplaceholder.typicode.com/todos/1';
-   let cachedData     = await getCachedData( cacheName, url );
+  const cacheVersion = 1;
+  const cacheName = `myapp-${cacheVersion}`;
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  let cachedData = await getCachedData(cacheName, url);
 
-   if ( cachedData ) {
-      console.log( 'Retrieved cached data' );
-      return cachedData;
-   }
+  if (cachedData) {
+    console.log("Retrieved cached data");
+    return cachedData;
+  }
 
-   console.log( 'Fetching fresh data' );
+  console.log("Fetching fresh data");
 
-   const cacheStorage = await caches.open( cacheName );
-   await cacheStorage.add( url );
-   cachedData = await getCachedData( cacheName, url );
-   await deleteOldCaches( cacheName );
+  const cacheStorage = await caches.open(cacheName);
+  await cacheStorage.add(url);
+  cachedData = await getCachedData(cacheName, url);
+  await deleteOldCaches(cacheName);
 
-   return cachedData;
+  return cachedData;
 }
 
 // Get data from the cache.
-async function getCachedData( cacheName, url ) {
-   const cacheStorage   = await caches.open( cacheName );
-   const cachedResponse = await cacheStorage.match( url );
+async function getCachedData(cacheName, url) {
+  const cacheStorage = await caches.open(cacheName);
+  const cachedResponse = await cacheStorage.match(url);
 
-   if ( ! cachedResponse || ! cachedResponse.ok ) {
-      return false;
-   }
+  if (!cachedResponse || !cachedResponse.ok) {
+    return false;
+  }
 
-   return await cachedResponse.json();
+  return await cachedResponse.json();
 }
 
 // Delete any old caches to respect user's disk space.
-async function deleteOldCaches( currentCache ) {
-   const keys = await caches.keys();
+async function deleteOldCaches(currentCache) {
+  const keys = await caches.keys();
 
-   for ( const key of keys ) {
-      const isOurCache = 'myapp-' === key.substr( 0, 6 );
-
-      if ( currentCache === key || ! isOurCache ) {
-         continue;
-      }
-
-      caches.delete( key );
-   }
+  for (const key of keys) {
+    const isOurCache = key.startsWith("myapp-");
+    if (currentCache === key || !isOurCache) {
+      continue;
+    }
+    caches.delete(key);
+  }
 }
 
 try {
-   const data = await getData();
-   console.log( { data } );
-} catch ( error ) {
-   console.error( { error } );
+  const data = await getData();
+  console.log({ data });
+} catch (error) {
+  console.error({ error });
 }
 ```
 

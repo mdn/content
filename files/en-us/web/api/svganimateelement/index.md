@@ -1,25 +1,21 @@
 ---
 title: SVGAnimateElement
 slug: Web/API/SVGAnimateElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGAnimateElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimateElement`** interface corresponds to the {{SVGElement("animate")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGAnimationElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGAnimationElement")}}._
 

@@ -1,61 +1,72 @@
 ---
-title: Attr.namespaceURI
+title: "Attr: namespaceURI property"
+short-title: namespaceURI
 slug: Web/API/Attr/namespaceURI
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Attr.namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
-The **`Attr.namespaceURI`** read-only property returns the
-namespace URI of the attribute, or `null` if the element is not in a
-namespace.
+The read-only **`namespaceURI`** property of the {{domxref("Attr")}} interface returns the namespace URI of the attribute,
+or `null` if the element is not in a namespace.
 
-## Syntax
+The namespace URI is set at the {{domxref("Attr")}} creation and cannot be changed.
+An attribute with a namespace can be created using {{domxref("Element.setAttributeNS()")}}.
 
-```js
-namespace = attribute.namespaceURI
-```
+> **Note:** an attribute does not inherit its namespace from the element it is attached to.
+> If an attribute is not explicitly given a namespace, it has no namespace.
+
+The browser does not handle or enforce namespace validation per se. It is up to the JavaScript
+application to do any necessary validation. Note, too, that the namespace prefix, once it
+is associated with a particular attribute node, cannot be changed.
+
+## Value
+
+A string containing the URI of the namespace, or `null` if the attribute is not in a namespace.
 
 ## Example
 
-In this snippet, an attribute is being examined for its {{domxref("localName")}} and
-its `namespaceURI`. If the `namespaceURI` returns the XUL
-namespace and the `localName` returns "browser", then the node is understood
-to be a XUL `<browser/>`.
+The following example shows the results for a prefixed attribute in a case of an HTML element, and of a SVG element.
+As HTML doesn't handle namespaces, it will always return `null` in that case.
+In the case of the SVG element, it will return the URI of the XML namespace, `http://www.w3.org/XML/1998/namespace`.
+
+### HTML
+
+```html
+<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
+<label xml:lang="en-US" class="struct"></label>
+
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Namespace URI of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
+```
+
+### JavaScript
 
 ```js
-if (attribute.localName == "value" &&
-    attribute.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
-  // this is a XUL value
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
+
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.namespaceURI;
+  });
+  i++;
 }
 ```
 
-## Notes
-
-This is not a computed value that is the result of a namespace lookup based on an
-examination of the namespace declarations in scope. The namespace URI of an attribute is
-frozen at the attribute creation time.
-
-In Firefox 3.5 and earlier, the namespace URI for HTML attributes in HTML documents is
-`null`. In later versions, in compliance with HTML5, it is
-[`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
-as in XHTML.
-
-You can create an attribute with the specified `namespaceURI` using the DOM
-Level 2 method {{domxref("Element.setAttributeNS")}}.
-
-Per the [Namespaces in
-XML](https://www.w3.org/TR/xml-names11/) specification, an attribute does not inherit its namespace from the element it
-is attached to. If an attribute is not explicitly given a namespace, it has no
-namespace.
-
-The DOM does not handle or enforce namespace validation per se. It is up to the DOM
-application to do any validation necessary. Note too that the namespace prefix, once it
-is associated with a particular node, cannot be changed.
+{{ EmbedLiveSample('Example','100%',100) }}
 
 ## Specifications
 
@@ -67,6 +78,6 @@ is associated with a particular node, cannot be changed.
 
 ## See also
 
-- {{domxref("Attr.localName")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Element.namespaceURI")}}
+- The properties {{domxref("Attr.name")}}, returning the qualified name of the attribute, {{domxref("Attr.localName")}}, the local part of the name, and {{domxref("Attr.prefix")}}, the namespace prefix.
+- The {{domxref("Element.namespaceURI")}} property, equivalent to this one but for an {{domxref("Element")}}.
+- The {{domxref("Element.setAttributeNS()")}} method, creating an attribute with a given namespace.

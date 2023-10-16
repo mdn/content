@@ -1,17 +1,9 @@
 ---
 title: Bounce off the walls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Animation
-  - Beginner
-  - Canvas
-  - Example
-  - Games
-  - Graphics
-  - Tutorial
-  - collision
-  - detection
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
@@ -27,13 +19,13 @@ To detect the collision we will check whether the ball is touching (colliding wi
 To make the calculations easier let's define a variable called `ballRadius` that will hold the radius of the drawn circle and be used for calculations. Add this to your code, somewhere below the existing variable declarations:
 
 ```js
-var ballRadius = 10;
+const ballRadius = 10;
 ```
 
 Now update the line that draws the ball inside the `drawBall()` function to this:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ### Bouncing off the top and bottom
@@ -41,8 +33,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 There are four walls to bounce the ball off — let's focus on the top one first. We need to check, on every frame, whether the ball is touching the top edge of the Canvas — if yes, we'll reverse the ball movement so it will start to move in the opposite direction and stay within the visible boundaries. Remembering that the coordinate system starts from the top left, we can come up with something like this:
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -51,8 +43,8 @@ If the `y` value of the ball position is lower than zero, change the direction o
 The code above would deal with the ball bouncing off the top edge, so now let's think about the bottom edge:
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -61,8 +53,8 @@ If the ball's `y` position is greater than the height of the Canvas (remember th
 We could merge those two statements into one to save on code verbosity:
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -73,12 +65,12 @@ If either of the two statements is `true`, reverse the movement of the ball.
 We have the top and bottom edge covered, so let's think about the left and right ones. It is very similar actually, all you have to do is to repeat the statements for `x` instead of `y`:
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -88,16 +80,16 @@ At this point you should insert the above code block into the draw() function, j
 
 Test your code at this point, and you will be impressed — now we have a ball that bounced off all four edges of the canvas! We have another problem however — when the ball hits each wall it sinks into it slightly before changing direction:
 
-![](ball-in-wall.png)
+![skyblue ball disappearing into the top of the white wall.](ball-in-wall.png)
 
 This is because we're calculating the collision point of the wall and the center of the ball, while we should be doing it for its circumference. The ball should bounce right after if touches the wall, not when it's already halfway in the wall, so let's adjust our statements a bit to include that. Update the last code you added to this:
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -105,7 +97,7 @@ When the distance between the center of the ball and the edge of the wall is exa
 
 ## Compare your code
 
-Lets again check the finished code for this part against what you've got, and have a play:
+Let's again check the finished code for this part against what you've got, and have a play:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
 

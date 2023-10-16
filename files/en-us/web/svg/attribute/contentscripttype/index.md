@@ -1,17 +1,17 @@
 ---
 title: contentScriptType
 slug: Web/SVG/Attribute/contentScriptType
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.contentScriptType
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`contentScriptType`** attribute specifies the default scripting language for the given document fragment on the {{SVGElement("svg")}} element.
 
-This attribute sets the default scripting language used to process the value strings in [event attributes](/en-US/docs/Web/SVG/Attribute#Document_Event_Attributes). This language must be used for all instances of script that do not specify their own scripting language. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt).
+This attribute sets the default scripting language used to process the value strings in [event attributes](/en-US/docs/Web/SVG/Attribute#document_event_attributes). This language must be used for all instances of script that do not specify their own scripting language. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt).
 
 ## Usage notes
 
@@ -21,7 +21,7 @@ This attribute sets the default scripting language used to process the value str
       <th scope="row">Value</th>
       <td>
         One of the content types specified in the
-        <a href="http://www.ietf.org/rfc/rfc2046.txt">Media Types</a>
+        <a href="https://www.ietf.org/rfc/rfc2046.txt">Media Types</a>
       </td>
     </tr>
     <tr>
@@ -37,24 +37,7 @@ This attribute sets the default scripting language used to process the value str
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "script.html#ContentScriptTypeAttribute", "contentScriptType")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -62,5 +45,5 @@ This attribute sets the default scripting language used to process the value str
 
 ## See also
 
-*   [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt)
-*   {{SVGElement("script")}}
+- [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt)
+- {{SVGElement("script")}}

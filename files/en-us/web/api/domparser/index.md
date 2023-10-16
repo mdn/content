@@ -1,17 +1,10 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Document
-  - HTML
-  - HTMLDocument
-  - Parsing
-  - Reference
+page-type: web-api-interface
 browser-compat: api.DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMParser`** interface provides
@@ -30,7 +23,7 @@ Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly
 from a URL-addressable resource, returning a `Document` in its
 {{domxref("XMLHttpRequest.response", "response")}} property.
 
-> **Note:** Be aware that [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+> **Note:** Be aware that [block-level elements](/en-US/docs/Glossary/Block-level_content)
 > like `<p>` will be automatically closed if another
 > block-level element is nested inside and therefore parsed before the closing `</p>` tag.
 
@@ -39,7 +32,7 @@ from a URL-addressable resource, returning a `Document` in its
 - {{domxref("DOMParser.DOMParser","DOMParser()")}}
   - : Creates a new `DOMParser` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMParser.parseFromString()")}}
   - : Parses a string using either the HTML parser or the XML parser, returning an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}}.

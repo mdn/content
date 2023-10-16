@@ -1,22 +1,18 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after function body" occurs when there is a syntax
-mistake when creating a function somewhere. Check if any closing curly brackets or
+mistake when creating a function somewhere. Check if any closing curly braces or
 parenthesis are in the correct order.
 
 ## Message
 
-```js
-SyntaxError: Expected '}' (Edge)
+```plain
 SyntaxError: missing } after function body (Firefox)
 ```
 
@@ -27,7 +23,7 @@ SyntaxError: missing } after function body (Firefox)
 ## What went wrong?
 
 There is a syntax mistake when creating a function somewhere. Also check if any closing
-curly brackets or parenthesis are in the correct order. Indenting or formatting the code
+curly braces or parenthesis are in the correct order. Indenting or formatting the code
 a bit nicer might also help you to see through the jungle.
 
 ## Examples
@@ -36,45 +32,49 @@ a bit nicer might also help you to see through the jungle.
 
 Oftentimes, there is a missing curly bracket in your function code:
 
-```js example-bad
-var charge = function() {
+```js-nolint example-bad
+function charge() {
   if (sunny) {
     useSolarCells();
   } else {
     promptBikeRide();
-};
+}
 ```
 
 Correct would be:
 
 ```js example-good
-var charge = function() {
+function charge() {
   if (sunny) {
     useSolarCells();
   } else {
     promptBikeRide();
   }
-};
+}
 ```
 
-It can be more obscure when using [IIFE](/en-US/docs/Glossary/IIFE), [Closures](/en-US/docs/Web/JavaScript/Closures), or other constructs that use
-a lot of different parenthesis and curly brackets, for example.
+It can be more obscure when using [IIFEs](/en-US/docs/Glossary/IIFE) or other constructs that use
+a lot of different parenthesis and curly braces, for example.
 
-```js example-bad
-(function() { if (true) { return false; } );
+```js-nolint example-bad
+(function () {
+  if (Math.random() < 0.01) {
+    doSomething();
+  }
+)();
 ```
 
 Oftentimes, indenting differently or double checking indentation helps to spot these
 errors.
 
 ```js example-good
-(function() {
-  if (true) {
-    return false;
+(function () {
+  if (Math.random() < 0.01) {
+    doSomething();
   }
-});
+})();
 ```
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

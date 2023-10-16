@@ -1,14 +1,11 @@
 ---
-title: WEBGL_lose_context.loseContext()
+title: "WEBGL_lose_context: loseContext() method"
+short-title: loseContext()
 slug: Web/API/WEBGL_lose_context/loseContext
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension-method
 browser-compat: api.WEBGL_lose_context.loseContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context.loseContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate losing
@@ -20,9 +17,17 @@ called.
 
 ## Syntax
 
-```js
-gl.getExtension('WEBGL_lose_context').loseContext();
+```js-nolint
+loseContext()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -31,14 +36,18 @@ With this method, you can simulate the
 event:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  (e) => {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
 ```

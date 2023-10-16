@@ -1,28 +1,20 @@
 ---
-title: HTMLAreaElement.href
+title: "HTMLAreaElement: href property"
+short-title: href
 slug: Web/API/HTMLAreaElement/href
-tags:
-  - API
-  - HTMLAreaElement
-  - Location
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.href
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.href`** property is a
-stringifier that returns a {{domxref("USVString")}} containing the whole URL, and allows
+{{Glossary("stringifier")}} that returns a string containing the whole URL, and allows
 the href to be updated.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.href;
-// Setter
-area.href = string;
-```
+A string.
 
 ## Examples
 

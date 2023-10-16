@@ -1,29 +1,23 @@
 ---
-title: CSSTransformValue.entries()
+title: "CSSTransformValue: entries() method"
+short-title: entries()
 slug: Web/API/CSSTransformValue/entries
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Entries
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.entries
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-The **`CSSTransformValue.entries()`** method
+{{APIRef("CSS Typed OM")}}
+
+The **`CSSTransformValue.entries()`** method
 returns an array of a given object's own enumerable
-property `[key, value]` pairs in the same order as that provided by a
-{{jsxref("for...in")}} loop (the difference being that a for-in loop enumerates
+property `[key, value]` pairs in the same order as that provided by a
+[`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop (the difference being that a for-in loop enumerates
 properties in the prototype chain as well).
 
 ## Syntax
 
-```js
-CSSTransformValue.entries(obj);
+```js-nolint
+entries(obj)
 ```
 
 ### Parameters

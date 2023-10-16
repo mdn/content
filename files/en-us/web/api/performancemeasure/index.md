@@ -1,15 +1,11 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - Reference
-  - Web Performance
+page-type: web-api-interface
 browser-compat: api.PerformanceMeasure
 ---
-{{APIRef("User Timing API")}}
+
+{{APIRef("Performance API")}}
 
 **`PerformanceMeasure`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`". Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _measure_) between two _marks_ to the browser's _performance timeline_.
 
@@ -17,9 +13,14 @@ browser-compat: api.PerformanceMeasure
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constrainting the properties as follows:
+This interface defines:
+
+- {{domxref("PerformanceMeasure.detail")}}
+  - : Contains arbitrary metadata about the measure.
+
+In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns "`measure`".
@@ -30,13 +31,13 @@ This interface has no properties but it extends the following {{domxref("Perform
 - {{domxref("PerformanceEntry.duration")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
 
-## Methods
+## Instance methods
 
 This interface has no methods.
 
 ## Example
 
-See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
+See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
 
 ## Specifications
 
@@ -48,5 +49,5 @@ See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_A
 
 ## See also
 
-- [User Timing (Overview)](/en-US/docs/Web/API/User_Timing_API)
-- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [User Timing (Overview)](/en-US/docs/Web/API/Performance_API/User_timing)
+- [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)

@@ -1,13 +1,11 @@
 ---
-title: NodeIterator.previousNode()
+title: "NodeIterator: previousNode() method"
+short-title: previousNode()
 slug: Web/API/NodeIterator/previousNode
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
+page-type: web-api-instance-method
 browser-compat: api.NodeIterator.previousNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.previousNode()`** method returns the
@@ -24,18 +22,29 @@ throw.
 
 ## Syntax
 
-```js
-node = nodeIterator.previousNode();
+```js-nolint
+previousNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} representing the node before the current node in the set represented by this `NodeIterator`, or `null` if the current node is the first node in the set.
+
+## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false // this optional argument is not used any more
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 previousNode = nodeIterator.previousNode(); // same result, since we backtracked to the previous node

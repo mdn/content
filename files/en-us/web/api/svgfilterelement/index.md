@@ -1,24 +1,20 @@
 ---
 title: SVGFilterElement
 slug: Web/API/SVGFilterElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFilterElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFilterElement`** interface provides access to the properties of {{SVGElement("filter")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGFilterElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} that corresponds to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("filter")}} element.
+  - : An {{domxref("SVGAnimatedString")}} that corresponds to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("filter")}} element.
 - {{domxref("SVGFilterElement.filterUnits")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} that corresponds to the {{SVGAttr("filterUnits")}} attribute of the given {{SVGElement("filter")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 - {{domxref("SVGFilterElement.primitiveUnits")}} {{ReadOnlyInline}}
@@ -36,7 +32,7 @@ The **`SVGFilterElement`** interface provides access to the properties of {{SVGE
 - {{domxref("SVGFilterElement.filterResY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An {{domxref("SVGAnimatedInteger")}} that contains the Y component of the {{SVGAttr("filterRes")}} attribute of the given {{SVGElement("filter")}} element.
 
-## Methods
+## Instance methods
 
 - {{domxref("SVGFilterElement.setFilterRes()")}} {{deprecated_inline}}
   - : Sets the values of the {{SVGAttr("filterRes")}} attribute.

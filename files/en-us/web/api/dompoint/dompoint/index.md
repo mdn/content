@@ -1,18 +1,11 @@
 ---
-title: DOMPoint()
+title: "DOMPoint: DOMPoint() constructor"
+short-title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.DOMPoint.DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint()`** constructor
@@ -20,13 +13,17 @@ creates and returns a new {{domxref("DOMPoint")}} object, given the values for s
 all of its properties.
 
 You can also create a `DOMPoint` by calling the
-{{domxref("DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
+{{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
 {{domxref("DOMPointReadOnly")}}.
 
 ## Syntax
 
-```js
-point = new DOMPoint(x, y, z, w);
+```js-nolint
+new DOMPoint()
+new DOMPoint(x)
+new DOMPoint(x, y)
+new DOMPoint(x, y, z)
+new DOMPoint(x, y, z, w)
 ```
 
 ### Parameters
@@ -47,8 +44,8 @@ current window, then creates a second point based on the first, which is then of
 100 pixels both vertically and horizontally.
 
 ```js
-var windTopLeft = new DOMPoint(window.screenX, window.screenY);
-var newTopLeft = DOMPoint.fromPoint(windTopLeft);
+const windTopLeft = new DOMPoint(window.screenX, window.screenY);
+const newTopLeft = DOMPoint.fromPoint(windTopLeft);
 newTopLeft.x += 100;
 newTopLeft.y += 100;
 ```
@@ -63,6 +60,6 @@ newTopLeft.y += 100;
 
 ## See also
 
-- {{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}
+- {{domxref("DOMPointReadOnly.DOMPointReadOnly", "DOMPointReadOnly()")}}
 - {{domxref("DOMRect")}}
 - {{domxref("DOMMatrix")}}

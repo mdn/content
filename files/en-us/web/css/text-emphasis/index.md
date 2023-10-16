@@ -1,14 +1,10 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-emphasis
 ---
+
 {{CSSRef}}
 
 The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
@@ -17,7 +13,7 @@ The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis mar
 
 The `text-emphasis` property is quite different from {{cssxref("text-decoration")}}. The `text-decoration` property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
 
-The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
+The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
 
 > **Note:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, use the property {{cssxref("text-emphasis-position")}}.
 
@@ -35,11 +31,11 @@ This property is a shorthand for the following CSS properties:
 text-emphasis: none; /* No emphasis marks */
 
 /* <string> value */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* Should NOT use. It may be computed to or rendered as 'f' only */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
 
 /* Keywords value */
 text-emphasis: filled;
@@ -54,6 +50,7 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 
@@ -98,8 +95,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  -webkit-text-emphasis: triangle #D55;
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 

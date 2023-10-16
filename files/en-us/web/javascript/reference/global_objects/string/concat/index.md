@@ -1,32 +1,29 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.concat
 ---
+
 {{JSRef}}
 
-The **`concat()`** method concatenates
-the string arguments to the calling string and returns a new string.
+The **`concat()`** method of {{jsxref("String")}} values concatenates
+the string arguments to this string and returns a new string.
 
 {{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
+concat()
 concat(str1)
 concat(str1, str2)
-concat(str1, str2, ... , strN)
+concat(str1, str2, /* …, */ strN)
 ```
 
 ### Parameters
 
-- `strN`
+- `str1`, …, `strN`
   - : One or more strings to concatenate to `str`.
 
 ### Return value
@@ -42,11 +39,7 @@ don't affect the other.
 If the arguments are not of the type string, they are converted to string values before
 concatenating.
 
-## Performance
-
-It is strongly recommended that the {{jsxref("Operators/Assignment_Operators",
-  "assignment operators", "", 1)}} (`+`, `+=`) are used instead of
-the `concat()` method.
+The `concat()` method is very similar to the [addition/string concatenation operators](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (`+`, `+=`), except that `concat()` [coerces its arguments directly to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), while addition coerces its operands to primitives first. For more information, see the reference page for the [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition).
 
 ## Examples
 
@@ -55,18 +48,18 @@ the `concat()` method.
 The following example combines strings into a new string.
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+const hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
-"".concat(...greetList)  // "Hello Venkat!"
+const greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // "[object Object]"
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
 ## Specifications
@@ -80,4 +73,4 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

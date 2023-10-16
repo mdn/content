@@ -1,18 +1,16 @@
 ---
 title: str:concat()
 slug: Web/EXSLT/str/concat
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:concat()` returns a string containing all the string values in a node-set concatenated together.
 
 ## Syntax
 
-```js
+```plain
 str:concat(nodeSet)
 ```
 
@@ -27,4 +25,4 @@ A string whose value is all the string values of the nodes in `nodeSet` concaten
 
 ## Specifications
 
-[EXSLT - STR:CONCAT](http://www.exslt.org/str/functions/concat/index.html)
+[EXSLT - STR:CONCAT](https://exslt.github.io/str/functions/concat/index.html)

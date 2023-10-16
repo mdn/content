@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.bindTexture()
+title: "WebGLRenderingContext: bindTexture() method"
+short-title: bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindTexture()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
@@ -17,30 +13,30 @@ The **`WebGLRenderingContext.bindTexture()`** method of the [WebGL API](/en-US/d
 
 ## Syntax
 
-```js
-void gl.bindTexture(target, texture);
+```js-nolint
+bindTexture(target, texture)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.TEXTURE_3D`: A three-dimensional texture.
       - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object to bind.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -53,9 +49,9 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
 ```

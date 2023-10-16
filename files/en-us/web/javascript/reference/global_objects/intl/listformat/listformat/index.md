@@ -1,61 +1,55 @@
 ---
 title: Intl.ListFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
+
 {{JSRef}}
 
-The **`Intl.ListFormat()`** constructor creates
-{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} objects that enable language-sensitive list
-formatting.
+The **`Intl.ListFormat()`** constructor creates {{jsxref("Intl.ListFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 new Intl.ListFormat()
 new Intl.ListFormat(locales)
 new Intl.ListFormat(locales, options)
 ```
 
+> **Note:** `Intl.ListFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form and interpretation of the `locales` argument, see the
-    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation",
-      1)}} page.
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-
-  - : An object with some or all of the following properties:
-
+  - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are "`lookup`"
-        and "`best fit`"; the default is "`best fit`". For
-        information about this option, see the {{jsxref("Global_Objects/Intl", "Intl",
-        "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `type`
-      - : The format of output message. Possible values are "`conjunction`"
-        that stands for "and"-based lists (default, e.g., "`A, B, and C`"), or
-        "`disjunction`" that stands for "or"-based lists (e.g.,
-        "`A, B, or C`"). "`unit`" stands for lists of values with
-        units (e.g., "`5 pounds, 12 ounces`").
+      - : Indicates the type of grouping. Possible values are:
+        - `"conjunction"` (default)
+          - : For "and"-based grouping of the list items: "A, B, and C"
+        - `"disjunction"`
+          - : For "or"-based grouping of the list items: "A, B, or C"
+        - `"unit"`
+          - : For grouping the list items as a unit (neither "and"-based nor "or"-based): "A, B, C"
     - `style`
-      - : The length of the formatted message. Possible values are: "`long`"
-        (default, e.g., "`A, B, and C`"); "`short`" (e.g.,
-        "`A, B, C`"), or "`narrow`" (e.g., "`A B C`").
-        When `style` is "`short`" or "`narrow`",
-        "`unit`" is the only allowed value for the type option.
+      - : The grouping style (for example, whether list separators and conjunctions are included). Possible values are:
+        - `"long"` (default)
+          - : E.g. "A, B, and C"
+        - `"short"`
+          - : E.g. "A, B, C"
+        - `"narrow"`
+          - : E.g. "A B C"
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -64,16 +58,97 @@ new Intl.ListFormat(locales, options)
 The following example shows how to create a List formatter using the English language.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// > Motorcycle, Bus and Car
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// > Motorcycle, Bus or Car
+console.log(new Intl.ListFormat("en-GB", { style: "long" }).format(list));
+// Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// > Motorcycle Bus Car
+console.log(new Intl.ListFormat("en-US", { style: "long" }).format(list));
+// Motorcycle, Bus, and Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "conjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus and Car
+
+console.log(
+  new Intl.ListFormat("en-US", { style: "short", type: "conjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus, & Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "conjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus, Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "disjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus or Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus or Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "disjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus or Car
+
+console.log(new Intl.ListFormat("en-US", { style: "narrow" }).format(list));
+// Motorcycle, Bus, Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
+// Motorcycle Bus Car
+
+console.log(
+  new Intl.ListFormat("en-US", { style: "long" }).format([
+    "30 degrees",
+    "15 minutes",
+    "50 seconds",
+  ]),
+);
+// 30 degrees, 15 minutes, and 50 seconds
+
+console.log(
+  new Intl.ListFormat("en-US", { style: "narrow" }).format([
+    "30 degrees",
+    "15 minutes",
+    "50 seconds",
+  ]),
+);
+// 30 degrees, 15 minutes, 50 seconds
+
+console.log(
+  new Intl.ListFormat("en-US", { style: "narrow", type: "unit" }).format([
+    "30°",
+    "15′",
+    "50″",
+  ]),
+);
+// 30° 15′ 50″
 ```
 
 ## Specifications
@@ -87,4 +162,4 @@ const list = ['Motorcycle', 'Bus', 'Car'];
 ## See also
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

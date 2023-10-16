@@ -1,18 +1,15 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Location
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Location`** header indicates an alternate
 location for the returned data. The principal use is to indicate the URL of a resource
-transmitted as the result of [content
-negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
 `Location` indicates the URL of a redirect, while
@@ -36,15 +33,15 @@ data returned. This distinction may seem abstract without [examples](#examples).
 
 ## Syntax
 
-```
+```http
 Content-Location: <url>
 ```
 
 ## Directives
 
 - \<url>
-  - : A [relative](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls)
+  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls)
+    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls)
     URL.
 
 ## Examples
@@ -52,7 +49,7 @@ Content-Location: <url>
 ### Requesting data from a server in different formats
 
 Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
-[CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values") formats. If the URL for a particular document
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formats. If the URL for a particular document
 is at `https://example.com/documents/foo`, the site could return different
 URLs for `Content-Location` depending on the request's
 {{HTTPHeader("Accept")}} header:
@@ -64,12 +61,11 @@ URLs for `Content-Location` depending on the request's
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
 These URLs are examples — the site could serve the different filetypes with any URL
-patterns it wishes, such as a [query string
-parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
+patterns it wishes, such as a [query string parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
 `/documents/foo?format=xml`, and so on.
 
 Then the client could remember that the JSON version is available at that particular
-URL, skipping content negotation the next time it requests that document.
+URL, skipping content negotiation the next time it requests that document.
 
 The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.
@@ -78,8 +74,8 @@ as {{HTTPHeader("Accept-Language")}}.
 
 Say you're creating a new blog post through a site's API:
 
-```
-PUT /new/post
+```http
+POST /new/post
 Host: example.com
 Content-Type: text/markdown
 
@@ -88,15 +84,16 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-The site returns a generic success message confirming the post was published. The
-server specifies _where_ the new post is with `Content-Location`:
+The site returns the published post in the response body. The server specifies _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
-```
+```http
 HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
+Content-Type: text/markdown
 Content-Location: /my-first-blog-post
 
-✅ Success!
+# My first blog post
+
+I made this through `example.com`'s API. I hope it worked.
 ```
 
 ### Indicating the URL of a transaction's result
@@ -108,14 +105,16 @@ money to another user of a site.
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+    <label
+      >Who do you want to send the money to?
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label>How much?
-      <input type="number" name="amount">
+    <label
+      >How much?
+      <input type="number" name="amount" />
     </label>
   </p>
 
@@ -127,7 +126,7 @@ When the form is submitted, the site generates a receipt for the transaction. Th
 server could use `Content-Location` to indicate that receipt's URL for future
 access.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Location: /my-receipts/38

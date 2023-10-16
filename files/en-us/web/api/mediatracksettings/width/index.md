@@ -1,20 +1,11 @@
 ---
-title: MediaTrackSettings.width
+title: "MediaTrackSettings: width property"
+short-title: width
 slug: Web/API/MediaTrackSettings/width
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - width
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.width
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`width`**
@@ -30,21 +21,13 @@ the value of {{domxref("MediaTrackSupportedConstraints.width")}} as returned by 
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
+## Value
 
-```js
-var width = MediaTrackSettings.width;
-```
+An integer value indicating the width, in pixels, of the video track as currently configured.
 
-### Value
+## Examples
 
-An integer value indicating the width, in pixels, of the video track as currently
-configured.
-
-## Example
-
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -56,8 +39,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.width")}}
 - {{domxref("MediaTrackSettings")}}

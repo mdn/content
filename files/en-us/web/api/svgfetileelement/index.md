@@ -1,21 +1,17 @@
 ---
 title: SVGFETileElement
 slug: Web/API/SVGFETileElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFETileElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFETileElement`** interface corresponds to the {{SVGElement("feTile")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -32,7 +28,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFETileElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

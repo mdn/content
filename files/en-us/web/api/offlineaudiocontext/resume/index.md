@@ -1,45 +1,38 @@
 ---
-title: OfflineAudioContext.resume()
+title: "OfflineAudioContext: resume() method"
+short-title: resume()
 slug: Web/API/OfflineAudioContext/resume
-tags:
-  - API
-  - Method
-  - NeedsExample
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-  - resume
+page-type: web-api-instance-method
 browser-compat: api.OfflineAudioContext.resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`resume()`** method of the
 {{domxref("OfflineAudioContext")}} interface resumes the progression of time in an audio
 context that has been suspended. The promise resolves immediately because the
-`OfflineAudioContext` does not require the audio hardware. If the context is
-not currently suspended or the rendering has not started, the promise is rejected with
-{{exception("InvalidStateError")}}.
+`OfflineAudioContext` does not require the audio hardware.
 
 ## Syntax
 
-```js
-OfflineAudioContext.resume().then(function() { ... });
+```js-nolint
+resume()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-A {{jsxref("Promise")}} resolving to void.
+A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 
 ### Exceptions
 
-The promise is rejected when the following exception is encountered.
+The promise is rejected when an exception is encountered.
 
-- {{exception("InvalidStateError")}}  if the context is not currently suspended or the
-  rendering has not started.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the context is not currently suspended or the rendering has not started.
 
 ## Specifications
 

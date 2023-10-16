@@ -1,27 +1,30 @@
 ---
-title: BackgroundFetchRegistration.matchAll()
+title: "BackgroundFetchRegistration: matchAll() method"
+short-title: matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
-tags:
-  - API
-  - Method
-  - Reference
-  - matchAll
-  - BackgroundFetchRegistration
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.
 
 ## Syntax
 
-    let records = BackgroundFetchRegistration.matchAll(request,options);
+```js-nolint
+matchAll()
+matchAll(request)
+matchAll(request,options)
+```
 
 ### Parameters
 
-- `request`
+- `request` {{optional_inline}}
   - : The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.
+    This can be a {{domxref("Request")}} object or a URL. If this parameter is omitted, all records are included in the result.
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation. The available
@@ -48,8 +51,8 @@ A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("B
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : If the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is not a fetch in progress, return a promise that resolves with an `InvalidStateError` {{domxref("DOMException")}}.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is no fetch in progress.
 
 ## Examples
 

@@ -1,21 +1,11 @@
 ---
-title: RTCPeerConnection.restartIce()
+title: "RTCPeerConnection: restartIce() method"
+short-title: restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
-tags:
-  - API
-  - ICE
-  - ICE Restarts
-  - Media
-  - Method
-  - Negotiation
-  - RTCPeerConnection
-  - Reference
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - restartIce
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.restartIce
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's
@@ -47,8 +37,8 @@ This process continues until an ICE restart has been successfully completed.
 
 ## Syntax
 
-```js
-rtcPeerConnection.restartIce();
+```js-nolint
+restartIce()
 ```
 
 ### Parameters
@@ -57,7 +47,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -68,10 +58,10 @@ resets ICE so that it creates all new candidates using new credentials. Existing
 transmissions continue uninterrupted during this process.
 
 For details about how ICE restart works, see
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} and
+[ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) and
 {{RFC(5245, "ICE specification", "9.1.1.1")}}.
 
-## Example
+## Examples
 
 This example creates a handler for the
 {{domxref("RTCPeerConnection.iceconnectionstatechange_event",
@@ -79,7 +69,7 @@ This example creates a handler for the
 state by restarting ICE in order to try again.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */
@@ -107,7 +97,5 @@ just a regular renegotiation.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

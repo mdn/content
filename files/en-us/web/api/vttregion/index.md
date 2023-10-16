@@ -1,25 +1,23 @@
 ---
 title: VTTRegion
 slug: Web/API/VTTRegion
-tags:
-  - API
-  - VTTRegion
-  - WebVTT
+page-type: web-api-interface
 browser-compat: api.VTTRegion
 ---
+
 {{APIRef("WebVTT")}}
 
-The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.
+The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.
 
 ## Constructor
 
 - {{domxref("VTTRegion.VTTRegion", "VTTRegion()")}}
   - : Returns a newly created `VTTRegion` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("VTTRegion.id")}}
-  - : A {{domxref("DOMString")}} that identifies the region.
+  - : A string that identifies the region.
 - {{domxref("VTTRegion.width")}}
   - : A `double` representing the width of the region, as a percentage of the video.
 - {{domxref("VTTRegion.lines")}}
@@ -38,12 +36,12 @@ The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on
 ## Examples
 
 ```js
-var region = new VTTRegion();
-region.width = 50;  // Use 50% of the video width
-region.lines = 4;  // Use 4 lines of height.
-region.viewportAnchorX = 25;  // Have the region start at 25% from the left.
-var cue = new VTTCue(2, 3, 'Cool text to be displayed');
-cue.region = region;  // This cue will be drawn only within this region.
+const region = new VTTRegion();
+region.width = 50; // Use 50% of the video width
+region.lines = 4; // Use 4 lines of height.
+region.viewportAnchorX = 25; // Have the region start at 25% from the left.
+const cue = new VTTCue(2, 3, "Cool text to be displayed");
+cue.region = region; // This cue will be drawn only within this region.
 ```
 
 ## Specifications

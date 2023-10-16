@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.getLineDash()
+title: "CanvasRenderingContext2D: getLineDash() method"
+short-title: getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.getLineDash
 ---
+
 {{APIRef}}
 
 The **`getLineDash()`** method of the Canvas 2D API's
@@ -16,9 +13,13 @@ The **`getLineDash()`** method of the Canvas 2D API's
 
 ## Syntax
 
-```js
-ctx.getLineDash();
+```js-nolint
+getLineDash()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -47,11 +48,11 @@ strokes consist of lines that are 10 units wide, with spaces of 20 units in betw
 line.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([10, 20]);
-console.log(ctx.getLineDash());  // [10, 20]
+console.log(ctx.getLineDash()); // [10, 20]
 
 // Draw a dashed line
 ctx.beginPath();

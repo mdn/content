@@ -1,19 +1,16 @@
 ---
 title: MathML element reference
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
+page-type: landing-page
 ---
+
 {{MathMLRef}}
 
-This is an alphabetical list of MathML **presentation** elements.
+This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
 
-The term **presentation markup** is used to describe the layout structure of mathematical notation whereas **content markup** provides the underlying mathematical meaning and is not supposed to be rendered by the MathML parser (see {{ bug(276028) }}). If you want to learn more about content markup you should consider [Chapter 4](https://www.w3.org/TR/MathML3/chapter4.html) in the [MathML 3 specification](https://www.w3.org/TR/MathML3/).
+> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification. However, legacy features that are still implemented by some browsers are also documented. You can find further details for these and other features in [MathML 4](https://w3c.github.io/mathml/).
 
-MathML elements implement the {{domxref("MathMLElement")}} class.
-
-## MathML presentation elements A  to Z
+## MathML elements A to Z
 
 ### math
 
@@ -21,27 +18,23 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 
 ### A
 
-- {{MathMLElement("maction")}} (Bound actions to sub-expressions)
-- {{MathMLElement("maligngroup")}} (Alignment group)
-- {{MathMLElement("malignmark")}} (Alignment points)
+- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
+- {{MathMLElement("annotation")}} (Data annotations)
+- {{MathMLElement("annotation-xml")}} (XML annotations)
 
 ### E
 
-- {{MathMLElement("menclose")}} (Enclosed contents)
+- {{MathMLElement("menclose")}} {{non-standard_inline}} (Enclosed contents)
 - {{MathMLElement("merror")}} (Enclosed syntax error messages)
 
 ### F
 
-- {{MathMLElement("mfenced")}} (Parentheses) {{deprecated_inline}}
+- {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}} (Parentheses)
 - {{MathMLElement("mfrac")}} (Fraction)
 
 ### I
 
 - {{MathMLElement("mi")}} (Identifier)
-
-### L
-
-- {{MathMLElement("mlongdiv")}} (Long division notation)
 
 ### M
 
@@ -60,6 +53,7 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 
 - {{MathMLElement("mpadded")}} (Space around content)
 - {{MathMLElement("mphantom")}} (Invisible content with reserved space)
+- {{MathMLElement("mprescripts")}} (delimiter for prescripts)
 
 ### R
 
@@ -69,14 +63,9 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 ### S
 
 - {{MathMLElement("ms")}} (String literal)
-- {{MathMLElement("mscarries")}} (Annotations such as carries)
-- {{MathMLElement("mscarry")}} (Single carry, child element of {{MathMLElement("mscarries")}})
-- {{MathMLElement("msgroup")}} (Grouped rows of {{MathMLElement("mstack")}} and {{MathMLElement("mlongdiv")}} elements)
-- {{MathMLElement("msline")}} (Horizontal lines inside {{MathMLElement("mstack")}} elements)
+- {{MathMLElement("semantics")}} (Container for semantic annotations)
 - {{MathMLElement("mspace")}} (Space)
 - {{MathMLElement("msqrt")}} (Square root without an index)
-- {{MathMLElement("msrow")}} (Rows in {{MathMLElement("mstack")}} elements)
-- {{MathMLElement("mstack")}} (Stacked alignment)
 - {{MathMLElement("mstyle")}} (Style change)
 - {{MathMLElement("msub")}} (Subscript)
 - {{MathMLElement("msup")}} (Superscript)
@@ -94,79 +83,60 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 - {{MathMLElement("munder")}} (Underscript)
 - {{MathMLElement("munderover")}} (Underscript-overscript pair)
 
-### Other elements
-
-- {{MathMLElement("semantics")}} (Container for semantic annotations)
-- [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation) (Data annotations)
-- [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml) (XML annotations)
-
-## MathML presentation elements by category
+## MathML elements by category
 
 ### Top-level elements
 
-- {{MathMLElement("math")}}
+- {{MathMLElement("math")}} (Top-level element)
 
 ### Token elements
 
-- {{MathMLElement("mi")}}
-- {{MathMLElement("mn")}}
-- {{MathMLElement("mo")}}
-- {{MathMLElement("ms")}}
-- {{MathMLElement("mspace")}}
-- {{MathMLElement("mtext")}}
+- {{MathMLElement("mi")}} (Identifier)
+- {{MathMLElement("mn")}} (Number)
+- {{MathMLElement("mo")}} (Operator)
+- {{MathMLElement("ms")}} (String literal)
+- {{MathMLElement("mspace")}} (Space)
+- {{MathMLElement("mtext")}} (Text)
 
 ### General layout
 
-- {{MathMLElement("menclose")}}
-- {{MathMLElement("merror")}}
-- {{MathMLElement("mfenced")}} {{deprecated_inline}}
-- {{MathMLElement("mfrac")}}
-- {{MathMLElement("mpadded")}}
-- {{MathMLElement("mphantom")}}
-- {{MathMLElement("mroot")}}
-- {{MathMLElement("mrow")}}
-- {{MathMLElement("msqrt")}}
-- {{MathMLElement("mstyle")}}
+- {{MathMLElement("menclose")}} {{non-standard_inline}} (Enclosed contents)
+- {{MathMLElement("merror")}} (Enclosed syntax error messages)
+- {{MathMLElement("mfenced")}} {{non-standard_inline}} {{deprecated_inline}} (Parentheses)
+- {{MathMLElement("mfrac")}} (Fraction)
+- {{MathMLElement("mpadded")}} (Space around content)
+- {{MathMLElement("mphantom")}} (Invisible content with reserved space)
+- {{MathMLElement("mroot")}} (Radical with specified index)
+- {{MathMLElement("mrow")}} (Grouped sub-expressions)
+- {{MathMLElement("msqrt")}} (Square root without an index)
+- {{MathMLElement("mstyle")}} (Style change)
 
 ### Script and limit elements
 
-- {{MathMLElement("mmultiscripts")}}
-- {{MathMLElement("mover")}}
-- {{MathMLElement("mprescripts")}}
-- {{MathMLElement("msub")}}
-- {{MathMLElement("msubsup")}}
-- {{MathMLElement("msup")}}
-- {{MathMLElement("munder")}}
-- {{MathMLElement("munderover")}}
-- {{MathMLElement("none")}}
+- {{MathMLElement("mmultiscripts")}} (Prescripts and tensor indices)
+- {{MathMLElement("mover")}} (Overscript)
+- {{MathMLElement("mprescripts")}} (Delimiter for prescripts)
+- {{MathMLElement("msub")}} (Subscript)
+- {{MathMLElement("msubsup")}} (Subscript-superscript pair)
+- {{MathMLElement("msup")}} (Superscript)
+- {{MathMLElement("munder")}} (Underscript)
+- {{MathMLElement("munderover")}} (Underscript-overscript pair)
 
 ### Tabular math
 
-- {{MathMLElement("maligngroup")}}
-- {{MathMLElement("malignmark")}}
-- {{MathMLElement("mtable")}}
-- {{MathMLElement("mtd")}}
-- {{MathMLElement("mtr")}}
-
-### Elementary math
-
-- {{MathMLElement("mlongdiv")}}
-- {{MathMLElement("mscarries")}}
-- {{MathMLElement("mscarry")}}
-- {{MathMLElement("msgroup")}}
-- {{MathMLElement("msline")}}
-- {{MathMLElement("msrow")}}
-- {{MathMLElement("mstack")}}
+- {{MathMLElement("mtable")}} (Table or matrix)
+- {{MathMLElement("mtd")}} (Cell in a table or a matrix)
+- {{MathMLElement("mtr")}} (Row in a table or a matrix)
 
 ### Uncategorized elements
 
-- {{MathMLElement("maction")}}
+- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
 
 ## Semantic annotations
 
-- [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation)
-- [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml)
-- {{MathMLElement("semantics")}}
+- {{MathMLElement("annotation")}} (Data annotations)
+- {{MathMLElement("annotation-xml")}} (XML annotations)
+- {{MathMLElement("semantics")}} (Container for semantic annotations)
 
 ## See also
 

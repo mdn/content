@@ -1,19 +1,17 @@
 ---
 title: line-height-step
 slug: Web/CSS/line-height-step
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.line-height-step
 ---
-{{CSSRef}}
 
-{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
+
+## Syntax
 
 ```css
 /* Point values */
@@ -23,10 +21,9 @@ line-height-step: 18pt;
 line-height-step: inherit;
 line-height-step: initial;
 line-height-step: revert;
+line-height-step: revert-layer;
 line-height-step: unset;
 ```
-
-## Syntax
 
 The `line-height-step` property is specified as any one of the following:
 

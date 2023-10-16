@@ -1,13 +1,11 @@
 ---
-title: EXT_texture_compression_rgtc
+title: EXT_texture_compression_rgtc extension
+short-title: EXT_texture_compression_rgtc
 slug: Web/API/EXT_texture_compression_rgtc
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extensions
+page-type: webgl-extension
 browser-compat: api.EXT_texture_compression_rgtc
 ---
+
 {{APIRef("WebGL")}}
 
 The `EXT_texture_compression_rgtc` extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes 4 RGTC compressed texture formats. RGTC is a block-based texture compression format suited for unsigned and signed red and red-green textures (**R**ed-**G**reen **T**exture **C**ompression).
@@ -23,23 +21,31 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 The compressed texture formats are exposed by 4 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.
 
 - `ext.COMPRESSED_RED_RGTC1_EXT`
-  - : Each 4x4 block of texels consists of 64 bits of unsigned red image data. See also [BC4 unsigned](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
+  - : Each 4x4 block of texels consists of 64 bits of unsigned red image data. See also [BC4 unsigned](https://docs.microsoft.com/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
 - `ext.COMPRESSED_SIGNED_RED_RGTC1_EXT`
-  - : Each 4x4 block of texels consists of 64 bits of signed red image data. See also [BC4 signed](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
+  - : Each 4x4 block of texels consists of 64 bits of signed red image data. See also [BC4 signed](https://docs.microsoft.com/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
 - `ext.COMPRESSED_RED_GREEN_RGTC2_EXT`
-  - : Each 4x4 block of texels consists of  64 bits of compressed unsigned red image data followed by 64 bits of compressed unsigned green image data. See also [BC5 unsigned](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
+  - : Each 4x4 block of texels consists of 64 bits of compressed unsigned red image data followed by 64 bits of compressed unsigned green image data. See also [BC5 unsigned](https://docs.microsoft.com/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
 - `ext.COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT`
-  - : Each 4x4 block of texels consists of 64 bits of compressed signed red image data followed by 64 bits of compressed signed green image data. See also [BC5 signed](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
+  - : Each 4x4 block of texels consists of 64 bits of compressed signed red image data followed by 64 bits of compressed signed green image data. See also [BC5 signed](https://docs.microsoft.com/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
 
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_texture_compression_rgtc');
+const ext = gl.getExtension("EXT_texture_compression_rgtc");
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RED_RGTC1_EXT, 128, 128, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RED_RGTC1_EXT,
+  128,
+  128,
+  0,
+  textureData,
+);
 ```
 
 ## Specifications

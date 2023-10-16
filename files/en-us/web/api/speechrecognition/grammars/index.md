@@ -1,33 +1,19 @@
 ---
-title: SpeechRecognition.grammars
+title: "SpeechRecognition: grammars property"
+short-title: grammars
 slug: Web/API/SpeechRecognition/grammars
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - grammars
-  - recognition
-  - speech
+page-type: web-api-instance-property
 browser-compat: api.SpeechRecognition.grammars
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`grammars`** property of the
 {{domxref("SpeechRecognition")}} interface returns and sets a collection of
 {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood
 by the current `SpeechRecognition`.
 
-## Syntax
-
-```js
-var myGrammars = mySpeechRecognition.grammars;
-mySpeechRecognition.grammars = mySpeechGrammarList;
-```
-
-### Value
+## Value
 
 A {{domxref("SpeechGrammarList")}} containing the {{domxref("SpeechGrammar")}} objects
 that represent your grammar for your app.
@@ -35,20 +21,21 @@ that represent your grammar for your app.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
+const recognition = new SpeechRecognition();
+const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 //recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-...
+// ...
 ```
 
 ## Specifications

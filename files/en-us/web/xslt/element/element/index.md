@@ -1,20 +1,20 @@
 ---
 title: <xsl:element>
 slug: Web/XSLT/Element/element
-tags:
-  - Element
-  - Reference
-  - XSLT
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:element>` element creates an element in the output document.
 
 ### Syntax
 
-    <xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
-    	TEMPLATE
-    </xsl:element>
+```xml
+<xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
+  TEMPLATE
+</xsl:element>
+```
 
 ### Required Attributes
 
@@ -26,7 +26,7 @@ The `<xsl:element>` element creates an element in the output document.
 - `namespace`
   - : Specifies the namespace of the output element.
 - `use-attribute-sets`
-  - : A whitespace‐separated list of [`attribute-set` element](/en-US/docs/Web/XSLT/Element/attribute-set) names to be applied to the `element` element’s output element. Applied attributes can be overridden via nested `attribute` elements.
+  - : A whitespace‐separated list of [`attribute-set` element](/en-US/docs/Web/XSLT/Element/attribute-set) names to be applied to the `element` element's output element. Applied attributes can be overridden via nested `attribute` elements.
 
 ### Type
 

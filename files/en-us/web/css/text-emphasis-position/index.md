@@ -1,17 +1,17 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-emphasis-position
 ---
+
 {{CSSRef}}
 
 The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.
+
+{{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
+
+## Syntax
 
 ```css
 /* Initial value */
@@ -29,11 +29,10 @@ text-emphasis-position: left under;
 /* Global values */
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
-text-emphasis-postition: revert;
+text-emphasis-position: revert;
+text-emphasis-position: revert-layer;
 text-emphasis-position: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -124,7 +123,6 @@ Some editors prefer to hide emphasis marks when they conflict with ruby. In HTML
 
 ```css
 ruby {
-  -webkit-text-emphasis: none;
   text-emphasis: none;
 }
 ```
@@ -135,7 +133,6 @@ Some other editors prefer to hide ruby when they conflict with emphasis marks. I
 
 ```css
 em {
-  -webkit-text-emphasis: dot;
   text-emphasis: dot; /* Set text-emphasis for <em> elements */
 }
 

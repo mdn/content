@@ -1,13 +1,10 @@
 ---
 title: Text
 slug: Web/API/Text
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.Text
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Text`** interface represents a text {{domxref("Node", "node")}} in a DOM tree.
@@ -17,41 +14,44 @@ The **`Text`** interface represents a text {{domxref("Node", "node")}} in a DOM 
 To understand what a text node is, consider the following document:
 
 ```html
-<html class="e"><head><title>Aliens?</title></head>
- <body>Why yes.
-</body></html>
+<html lang="en" class="e">
+  <head>
+    <title>Aliens?</title>
+  </head>
+  <body>
+    Why yes.
+  </body>
+</html>
 ```
 
-In that document, there are three text nodes, with the following contents:
+In that document, there are five text nodes, with the following contents:
 
-- "`Aliens?`" (the contents of the `title` element)
-- "`\n`" (after the `</head>` end tag, a newline followed by a space)
-- "`Why yes.\n`" (the contents of the `body` element)
+- `"\n    "` (after the `<head>` start tag, a newline followed by four spaces)
+- `"Aliens?"` (the contents of the `title` element)
+- `"\n  "` (after the `</head>` end tag, a newline followed by two spaces)
+- `"\n  "` (after the `<body>` start tag, a newline followed by two spaces)
+- `"\n Why yes.\n \n\n"` (the contents of the `body` element)
 
 Each of those text nodes is an object that has the properties and methods documented in this article.
 
 ## Constructor
 
-- {{domxref("Text.Text", "Text()")}} {{experimental_inline}}
-  - : Returns a `Text` node with the parameter as its textual content.
+- {{domxref("Text.Text", "Text()")}}
+  - : Returns a new `Text` node with the parameter as its textual content.
 
-## Properties
+## Instance properties
 
-_Inherits properties from its parent, {{domxref("CharacterData")}}._
+_Inherits properties from its parents, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("Text.assignedSlot")}} {{readonlyInline}}
+- {{domxref("Text.assignedSlot")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
-- {{domxref("Text.wholeText")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
+- {{domxref("Text.wholeText")}} {{ReadOnlyInline}}
+  - : Returns a string containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
 
-## Methods
+## Instance methods
 
-_Inherits methods from its parent, {{domxref("CharacterData")}}._
+_Inherits methods from its parent, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("Text.getBoxQuads()")}} {{experimental_inline}}
-  - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
-- {{domxref("Text.replaceWholeText")}} {{deprecated_inline}}
-  - : Replaces the text of the current node and all logically adjacent nodes with the specified text.
 - {{domxref("Text.splitText")}}
   - : Breaks the node into two nodes at a specified offset.
 
@@ -65,4 +65,4 @@ _Inherits methods from its parent, {{domxref("CharacterData")}}._
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model).
+- [The DOM API](/en-US/docs/Web/API/Document_Object_Model)

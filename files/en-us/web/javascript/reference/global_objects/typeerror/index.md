@@ -1,14 +1,10 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - TypeError
+page-type: javascript-class
 browser-compat: javascript.builtins.TypeError
 ---
+
 {{JSRef}}
 
 The **`TypeError`** object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.
@@ -19,25 +15,29 @@ A `TypeError` may be thrown when:
 - when attempting to modify a value that cannot be changed; or
 - when attempting to use a value in an inappropriate way.
 
+`TypeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+
+`TypeError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+- {{jsxref("TypeError/TypeError", "TypeError()")}}
   - : Creates a new `TypeError` object.
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("TypeError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
-- {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `TypeError.prototype` and shared by all `TypeError` instances.
+
+- {{jsxref("Object/constructor", "TypeError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `TypeError` instances, the initial value is the {{jsxref("TypeError/TypeError", "TypeError")}} constructor.
+- {{jsxref("Error/name", "TypeError.prototype.name")}}
+  - : Represents the name for the type of error. For `TypeError.prototype.name`, the initial value is `"TypeError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
@@ -45,15 +45,12 @@ A `TypeError` may be thrown when:
 
 ```js
 try {
-  null.f()
+  null.f();
 } catch (e) {
-  console.log(e instanceof TypeError)  // true
-  console.log(e.message)               // "null has no properties"
-  console.log(e.name)                  // "TypeError"
-  console.log(e.fileName)              // "Scratchpad/1"
-  console.log(e.lineNumber)            // 2
-  console.log(e.columnNumber)          // 2
-  console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "null has no properties"
+  console.log(e.name); // "TypeError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
@@ -61,15 +58,12 @@ try {
 
 ```js
 try {
-  throw new TypeError('Hello', "someFile.js", 10)
+  throw new TypeError("Hello");
 } catch (e) {
-  console.log(e instanceof TypeError)  // true
-  console.log(e.message)               // "Hello"
-  console.log(e.name)                  // "TypeError"
-  console.log(e.fileName)              // "someFile.js"
-  console.log(e.lineNumber)            // 10
-  console.log(e.columnNumber)          // 0
-  console.log(e.stack)                 // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "TypeError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 

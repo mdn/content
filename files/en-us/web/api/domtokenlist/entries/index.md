@@ -1,26 +1,22 @@
 ---
-title: DOMTokenList.entries()
+title: "DOMTokenList: entries() method"
+short-title: entries()
 slug: Web/API/DOMTokenList/entries
-tags:
-  - DOM
-  - DOMTokenList
-  - Iterable
-  - Method
-  - Reference
-  - Web
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.entries
 ---
+
 {{APIRef("DOM")}}
 
-The **`DOMTokenList.entries()`**
-method returns an {{jsxref("Iteration_protocols",'iterator')}} allowing you to go
-through all key/value pairs contained in this object. The values are
-{{domxref("DOMString")}} objects, each representing a single token.
+The **`entries()`** method of the {{domxref("DOMTokenList")}} interface
+returns an {{jsxref("Iteration_protocols",'iterator')}} allowing you
+to go through all key/value pairs contained in this object. The values are
+{{jsxref("Array")}}s which have [key, value] pairs, each representing a single token.
 
 ## Syntax
 
-```js
-tokenList.entries();
+```js-nolint
+entries()
 ```
 
 ### Return value
@@ -45,12 +41,12 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
-let iterator = classes.entries();
+const span = document.querySelector("span");
+const classes = span.classList;
+const iterator = classes.entries();
 
-for (let value of iterator) {
-  span.textContent += value + ' ++ ';
+for (const value of iterator) {
+  span.textContent += `(${value})`;
 }
 ```
 
@@ -68,5 +64,4 @@ The output looks like this:
 
 ## See also
 
-- {{domxref("DOMSettableTokenList")}} (object that extends DOMTokenList with settable
-  _.value_ property)
+- {{domxref("DOMTokenList.foreach()")}}, {{domxref("DOMTokenList.keys")}} and {{domxref("DOMTokenList.values")}}.

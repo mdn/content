@@ -1,32 +1,26 @@
 ---
-title: CSSTransformValue.keys()
+title: "CSSTransformValue: keys() method"
+short-title: keys()
 slug: Web/API/CSSTransformValue/keys
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - keys
+page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.keys
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-The **`CSSTransformValue.keys()`** method
+{{APIRef("CSS Typed OM")}}
+
+The **`CSSTransformValue.keys()`** method
 returns a new _array iterator_ object that contains the keys
 for each index in the array.
 
 ## Syntax
 
-```js
-CSSTransformValue.keys();
+```js-nolint
+keys()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

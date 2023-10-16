@@ -1,25 +1,20 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
+The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
 to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified.
 
 ## Message
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```plain
+TypeError: Cannot set property x of #<Object> which has only a getter (V8-based)
 TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
@@ -36,7 +31,8 @@ While this will be silently ignored in non-strict mode, it will throw a
 
 ### Property with no setter
 
-The example below shows how to set a getter for a property. It doesn't specify a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), so a
+The example below shows how to set a getter for a property.
+It doesn't specify a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), so a
 `TypeError` will be thrown upon trying to set the `temperature`
 property to `30`. For more details see also the
 {{jsxref("Object.defineProperty()")}} page.
@@ -45,16 +41,16 @@ property to `30`. For more details see also the
 "use strict";
 
 function Archiver() {
-  var temperature = null;
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  const temperature = null;
+  Object.defineProperty(this, "temperature", {
+    get() {
+      console.log("get!");
       return temperature;
-    }
+    },
   });
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 
 arc.temperature = 30;
@@ -69,24 +65,26 @@ example like this:
 "use strict";
 
 function Archiver() {
-  var temperature = null;
-  var archive = [];
+  let temperature = null;
+  const archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get() {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set(value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;

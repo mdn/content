@@ -1,20 +1,10 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-tags:
-  - Boundaries
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Float Area
-  - Opacity
-  - Property
-  - Reference
-  - Shape
-  - recipe:css-property
-  - shape-image-threshold
+page-type: css-property
 browser-compat: css.properties.shape-image-threshold
 ---
+
 {{CSSRef}}
 
 The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.
@@ -33,6 +23,7 @@ shape-image-threshold: 0.7;
 shape-image-threshold: inherit;
 shape-image-threshold: initial;
 shape-image-threshold: revert;
+shape-image-threshold: revert-layer;
 shape-image-threshold: unset;
 ```
 
@@ -63,14 +54,14 @@ This example creates a {{HTMLElement("div")}} block with a gradient background i
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
   voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
-  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat
-  adipisci, libero quae nihil porro debitis laboriosam inventore animi
-  impedit nostrum nesciunt quisquam expedita! Dolores consectetur iure atque
-  a mollitia dicta repudiandae illum exercitationem aliquam repellendus
-  ipsum porro modi, id nemo eligendi, architecto ratione quibusdam iusto
-  nisi soluta? Totam inventore ea eum sed velit et eligendi suscipit
-  accusamus iusto dolore, at provident eius alias maxime pariatur non
-  deleniti ipsum sequi rem eveniet laboriosam magni expedita?
+  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat adipisci,
+  libero quae nihil porro debitis laboriosam inventore animi impedit nostrum
+  nesciunt quisquam expedita! Dolores consectetur iure atque a mollitia dicta
+  repudiandae illum exercitationem aliquam repellendus ipsum porro modi, id nemo
+  eligendi, architecto ratione quibusdam iusto nisi soluta? Totam inventore ea
+  eum sed velit et eligendi suscipit accusamus iusto dolore, at provident eius
+  alias maxime pariatur non deleniti ipsum sequi rem eveniet laboriosam magni
+  expedita?
 </p>
 ```
 
@@ -81,10 +72,8 @@ This example creates a {{HTMLElement("div")}} block with a gradient background i
   width: 150px;
   height: 150px;
   float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%,
-      transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%,
-      transparent);
+  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
+  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
   shape-image-threshold: 0.2;
 }
 ```
@@ -107,8 +96,8 @@ The 20% opacity threshold for treating gradient pixels as part of the shape is t
 
 ## See also
 
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

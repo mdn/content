@@ -1,23 +1,20 @@
 ---
 title: CompressionStream
 slug: Web/API/CompressionStream
-tags:
-  - API
-  - Interface
-  - Reference
-  - CompressionStream
+page-type: web-api-interface
 browser-compat: api.CompressionStream
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+
+{{APIRef("Compression Streams API")}}
 
 The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.
 
 ## Constructor
 
-- {{domxref("CompressionStream.CompressionStream()")}}
+- {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
   - : Creates a new `CompressionStream`
 
-## Properties
+## Instance properties
 
 - {{domxref("CompressionStream.readable")}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
@@ -29,7 +26,9 @@ The **`CompressionStream`** interface of the {{domxref('Compression Streams API'
 In this example a stream is compressed using gzip compression.
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+const compressedReadableStream = inputReadableStream.pipeThrough(
+  new CompressionStream("gzip"),
+);
 ```
 
 ## Specifications

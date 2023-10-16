@@ -1,22 +1,17 @@
 ---
 title: Contact Picker API
 slug: Web/API/Contact_Picker_API
-tags:
-  - API
-  - Contact Picker API
-  - Contacts
-  - Landing
-  - Overview
-  - PWA
-  - contact picker
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.ContactsManager
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}{{SeeCompatTable}}
 
 The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
-
-> **Note:** The Contact Picker API should not be confused with the deprecated [Contact API](/docs/Archive/B2G_OS/API/Contacts_API).
 
 ## Contact Picker API Concepts and Usage
 
@@ -30,8 +25,10 @@ This API is only available from a secure top-level browsing context and very car
 
 ## Interfaces
 
+- {{domxref("ContactAddress")}}
+  - : Represents a physical address.
 - {{domxref("ContactsManager")}}
-  - : The **`ContactsManager`** interface provides a way for users to select and share limited details of contacts with a web application.
+  - : Provides a way for users to select and share limited details of contacts with a web application.
 - {{domxref("Navigator.contacts")}}
   - : Returns a {{domxref("ContactsManager")}} object instance, from which all other functionality can be accessed.
 
@@ -42,7 +39,7 @@ This API is only available from a secure top-level browsing context and very car
 The following code checks whether the Contact Picker API is supported.
 
 ```js
-const supported = 'contacts' in navigator;
+const supported = "contacts" in navigator;
 ```
 
 ### Checking for Supported Properties
@@ -52,19 +49,19 @@ The following asynchronous function uses the `getProperties()` method to check f
 ```js
 async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
-  if (supportedProperties.includes('name')) {
+  if (supportedProperties.includes("name")) {
     // run code for name support
   }
-  if (supportedProperties.includes('email')) {
+  if (supportedProperties.includes("email")) {
     // run code for email support
   }
-  if (supportedProperties.includes('tel')) {
+  if (supportedProperties.includes("tel")) {
     // run code for telephone number support
   }
-  if (supportedProperties.includes('address')) {
+  if (supportedProperties.includes("address")) {
     // run code for address support
   }
-  if (supportedProperties.includes('icon')) {
+  if (supportedProperties.includes("icon")) {
     // run code for avatar support
   }
 }
@@ -77,15 +74,15 @@ The following example sets an array of properties to be retrieved for each conta
 An asynchronous function is then defined which uses the `select()` method to present the user with a contact picker interface and handle the chosen results.
 
 ```js
-const props = ['name', 'email', 'tel', 'address', 'icon'];
-const opts = {multiple: true};
+const props = ["name", "email", "tel", "address", "icon"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, opts);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(props, opts);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```
@@ -94,11 +91,11 @@ async function getContacts() {
 
 ## Specifications
 
-{{Specifications("api.ContactsManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ContactsManager")}}
+{{Compat}}
 
 ## See also
 

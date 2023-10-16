@@ -1,24 +1,25 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `substring-after` function returns a string that is the rest of a given string after a given substring.
 
 ### Syntax
 
-    substring-after(haystack ,needle )
+```plain
+substring-after( haystack, needle )
+```
 
 ### Arguments
 
-- _`haystack`_
+- `haystack`
   - : The string to be evaluated. Part of this string will be returned.
-- _`needle`_
-  - : The substring to search for. Everything after the first occurrence of*`needle`* in*`haystack`* will be returned.
+- `needle`
+  - : The substring to search for. Everything after the first occurrence of `needle` in `haystack` will be returned.
 
 ### Returns
 
@@ -35,7 +36,7 @@ A string.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-after)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-substring-after)
 
 ### Gecko support
 

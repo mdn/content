@@ -1,22 +1,19 @@
 ---
-title: VideoDecoder.decode()
+title: "VideoDecoder: decode() method"
+short-title: decode()
 slug: Web/API/VideoDecoder/decode
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - VideoDecoder
+page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.decode
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`decode()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to decode a given chunk of video.
 
 ## Syntax
 
-```js
-VideoDecoder.decode(chunk)
+```js-nolint
+decode(chunk)
 ```
 
 ### Parameters
@@ -24,15 +21,15 @@ VideoDecoder.decode(chunk)
 - `chunk`
   - : An {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the {{domxref("VideoDecoder.state","state")}} is not `"configured"`.
-- {{domxref("DOMException")}} `DataError`
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("VideoDecoder.state","state")}} is not `configured`.
+- `DataError` {{domxref("DOMException")}}
   - : Thrown if the `chunk` is unable to be decoded due to relying on other frames for decoding.
 
 ## Examples
@@ -40,11 +37,12 @@ VideoDecoder.decode(chunk)
 The following example demonstrates how to use the `decode()` method to decode {{domxref("EncodedVideoChunk")}} objects created from encoded video data.
 
 ```js
-let responses = await downloadVideoChunksFromServer(timestamp);
-for (let i = 0; i < responses.length; i++) {
-  let chunk = new EncodedVideoChunk({
-    timestamp: responses[i].timestamp,
-    data: new Uint8Array ( responses[i].body )
+const responses = await downloadVideoChunksFromServer(timestamp);
+for (const response of responses) {
+  const chunk = new EncodedVideoChunk({
+    timestamp: response.timestamp,
+    type: response.key ? "key" : "delta",
+    data: new Uint8Array(response.body),
   });
   decoder.decode(chunk);
 }
@@ -57,4 +55,3 @@ for (let i = 0; i < responses.length; i++) {
 ## Browser compatibility
 
 {{Compat}}
-

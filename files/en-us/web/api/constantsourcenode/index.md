@@ -1,21 +1,17 @@
 ---
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
-tags:
-  - API
-  - Audio
-  - ConstantSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
+page-type: web-api-interface
 browser-compat: api.ConstantSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ConstantSourceNode` interface—part of the Web Audio API—represents an audio source (based upon {{domxref("AudioScheduledSourceNode")}}) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible {{domxref("AudioParam")}} by automating the value of its {{domxref("ConstantSourceNode.offset", "offset")}} or by connecting another node to it; see [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
 
 A `ConstantSourceNode` has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the {{domxref("ConstantSourceNode.offset", "offset")}} parameter.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -35,23 +31,23 @@ A `ConstantSourceNode` has no inputs and exactly one monaural (one-channel) outp
 - {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
   - : Creates and returns a new `ConstantSourceNode` instance, optionally specifying an object which establishes initial values for the object's properties. As an alternative, you can use the {{domxref("BaseAudioContext.createConstantSource()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:_
 
 - {{domxref("ConstantSourceNode.offset", "offset")}}
   - : An {{domxref("AudioParam")}} which specifies the value that this source continuously outputs. The default value is 1.0.
 
-### Event handlers
+### Events
 
-_Inherits event handlers from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
+_Inherits events from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
 
-> **Note:** Some browsers' implementations of this event handler are part of the  {{domxref("AudioScheduledSourceNode")}} interface.
+> **Note:** Some browsers' implementations of these events are part of the {{domxref("AudioScheduledSourceNode")}} interface.
 
-- {{domxref("AudioScheduledSourceNode.onended()","onended")}}
+- {{domxref("AudioScheduledSourceNode.ended_event","ended")}}
   - : Fired whenever the {{domxref('ConstantSourceNode')}} data has stopped playing.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
 

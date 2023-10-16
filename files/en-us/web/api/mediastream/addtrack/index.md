@@ -1,15 +1,11 @@
 ---
-title: MediaStream.addTrack()
+title: "MediaStream: addTrack() method"
+short-title: addTrack()
 slug: Web/API/MediaStream/addTrack
-tags:
-  - API
-  - Media Streams API
-  - Method
-  - NeedsExample
-  - Reference
-  - addTrack
+page-type: web-api-instance-method
 browser-compat: api.MediaStream.addTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream.addTrack()`** method adds a new track to the
@@ -20,8 +16,8 @@ stream. The track is specified as a parameter of type {{domxref("MediaStreamTrac
 
 ## Syntax
 
-```js
-stream.addTrack(track);
+```js-nolint
+addTrack(track)
 ```
 
 ### Parameters
@@ -31,9 +27,9 @@ stream.addTrack(track);
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ## Specifications
 

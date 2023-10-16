@@ -1,30 +1,20 @@
 ---
-title: Element.ariaReadOnly
+title: "Element: ariaReadOnly property"
+short-title: ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaReadOnly
-  - AriaAttributes
-  - AriaMixin
-  - Element
+page-type: web-api-instance-property
 browser-compat: api.Element.ariaReadOnly
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects the value of the `aria-readonly` attribute, which indicates that the element is not editable, but is otherwise operable.
+The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
+## Value
 
-    var ariaReadOnly = element.ariaReadOnly;
-    element.ariaReadOnly = ariaReadOnly
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The user cannot change the value of the element.
@@ -37,14 +27,19 @@ In this example the `aria-readonly` attribute on the element with an ID of `txtB
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel" aria-readonly="true"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-readonly="true"></div>
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaReadOnly); // "true"
-el.ariaReadOnly = "false"
+el.ariaReadOnly = "false";
 console.log(el.ariaReadOnly); // "false"
 ```
 

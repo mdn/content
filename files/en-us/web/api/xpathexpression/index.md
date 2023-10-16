@@ -1,18 +1,10 @@
 ---
 title: XPathExpression
 slug: Web/API/XPathExpression
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Document
-  - Interface
-  - Reference
-  - XML
-  - XPath
-  - XPathExpression
+page-type: web-api-interface
 browser-compat: api.XPathExpression
 ---
+
 {{APIRef("DOM")}}
 
 This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its {{Glossary("DOM")}} tree.
@@ -21,7 +13,7 @@ This is useful when an expression will be reused in an application, because it i
 
 Objects of this type are created by calling {{domxref("XPathEvaluator.createExpression", "XPathEvaluator.createExpression()")}}.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("XPathExpression.evaluate()")}}
   - : Evaluates the XPath expression on the given node or document.
@@ -40,10 +32,13 @@ The following example shows the use of the `XPathExpression` interface.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression(xpath);
-var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const xpath = "//div";
+const evaluator = new XPathEvaluator();
+const expression = evaluator.createExpression(xpath);
+const result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

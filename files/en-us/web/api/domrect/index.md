@@ -1,23 +1,15 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - DOMRect
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Rectangle
-  - Reference
+page-type: web-api-interface
 browser-compat: api.DOMRect
 ---
-{{draft}}{{APIRef("Geometry Interfaces")}}
+
+{{APIRef("Geometry Interfaces")}}
 
 A **`DOMRect`** describes the size and position of a rectangle.
 
-The type of box represented by the `DOMRect` is specified by the method or property that returned it. For example, {{domxref("VREyeParameters.renderRect")}} from the WebVR API specifies the viewport of a [canvas](/en-US/docs/Web/API/HTMLCanvasElement) into which visuals for one eye of a head mounted display should be rendered.
+The type of box represented by the `DOMRect` is specified by the method or property that returned it. For example, {{domxref("Range.getBoundingClientRect()")}} specifies the rectangle that bounds the content of the range using such objects.
 
 It inherits from its parent, {{domxref("DOMRectReadOnly")}}.
 
@@ -28,7 +20,7 @@ It inherits from its parent, {{domxref("DOMRectReadOnly")}}.
 - {{domxref("DOMRect.DOMRect","DOMRect()")}}
   - : Creates a new `DOMRect` object.
 
-## Properties
+## Instance properties
 
 _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. The difference is that they are not read-only anymore._
 
@@ -41,22 +33,24 @@ _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. 
 - {{domxref("DOMRectReadOnly.height")}}
   - : The height of the `DOMRect`.
 - {{domxref("DOMRectReadOnly.top")}}
-  - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative.)
+  - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative).
 - {{domxref("DOMRectReadOnly.right")}}
-  - : Returns the right coordinate value of the `DOMRect` (has the same value as `x + width`, or `x` if `width` is negative.)
+  - : Returns the right coordinate value of the `DOMRect` (has the same value as `x + width`, or `x` if `width` is negative).
 - {{domxref("DOMRectReadOnly.bottom")}}
-  - : Returns the bottom coordinate value of the `DOMRect` (has the same value as `y + height`, or `y` if `height` is negative.)
+  - : Returns the bottom coordinate value of the `DOMRect` (has the same value as `y + height`, or `y` if `height` is negative).
 - {{domxref("DOMRectReadOnly.left")}}
-  - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative.)
-
-## Methods
-
-_`DOMRect` inherits methods from its parent, {{domxref("DOMRectReadOnly")}}._
+  - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative).
 
 ## Static methods
 
-- {{domxref("DOMRectReadOnly.fromRect()")}}
-  - : Creates a new `DOMRect` object with a given location and dimensions.
+_`DOMRect` may also inherit static methods from its parent, {{domxref("DOMRectReadOnly")}}._
+
+- {{domxref("DOMRect/fromRect_static", "DOMRect.fromRect()")}}
+  - : Creates a new `DOMRect` object with a given location and dimensions.
+
+## Instance methods
+
+_`DOMRect` may inherit methods from its parent, {{domxref("DOMRectReadOnly")}}._
 
 ## Specifications
 

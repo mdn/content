@@ -1,35 +1,35 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.test
 ---
+
 {{JSRef}}
 
-The **`test()`** method executes a search for a match between a
-regular expression and a specified string. Returns `true` or
-`false`.
+The **`test()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match between a regular expression and a specified string. Returns `true` if there is a match; `false` otherwise.
+
+JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
+the {{jsxref("RegExp/global", "global")}} or {{jsxref("RegExp/sticky", "sticky")}} flags
+set (e.g., `/foo/g` or `/foo/y`). They store a
+{{jsxref("RegExp/lastIndex", "lastIndex")}} from the previous match. Using this
+internally, `test()` can be used to iterate over multiple matches in a string
+of text (with capture groups).
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 test(str)
 ```
 
 ### Parameters
 
 - `str`
-  - : The string against which to match the regular expression.
+  - : The string against which to match the regular expression. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `test()` to search for the string `"undefined"`, which is rarely what you want.
 
-### Returns
+### Return value
 
 `true` if there is a match between the regular expression and the string
 `str`. Otherwise, `false`.
@@ -42,7 +42,7 @@ string. `test()` returns a boolean, unlike the
 `-1` if not found).
 
 To get more information (but with slower execution), use the
-{{jsxref("RegExp.prototype.exec()", "exec()")}} method. (This is similar to the
+{{jsxref("RegExp/exec", "exec()")}} method. (This is similar to the
 {{jsxref("String.prototype.match()")}} method.)
 
 As with `exec()` (or in combination with it), `test()` called
@@ -53,11 +53,11 @@ previous match.
 
 ### Using test()
 
-Simple example that tests if "`hello`" is contained at the very beginning of
+Simple example that tests if `"hello"` is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js
-const str = 'hello world!';
+const str = "hello world!";
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -67,22 +67,16 @@ The following example logs a message which depends on the success of the test:
 
 ```js
 function testInput(re, str) {
-  let midstring;
-  if (re.test(str)) {
-    midstring = 'contains';
-  } else {
-    midstring = 'does not contain';
-  }
+  const midstring = re.test(str) ? "contains" : "does not contain";
   console.log(`${str} ${midstring} ${re.source}`);
 }
 ```
 
 ### Using test() on a regex with the "global" flag
 
-When a regex has the [global
-flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2) set, `test()` will advance the {{jsxref("RegExp.lastIndex",
-  "lastIndex")}} of the regex. ({{jsxref("RegExp.prototype.exec()")}} also advances the
-`lastIndex` property.)
+When a regex has the [global flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) set,
+`test()` will advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} of the regex.
+({{jsxref("RegExp.prototype.exec()")}} also advances the `lastIndex` property.)
 
 Further calls to `test(str)` will resume searching
 `str` starting from `lastIndex`. The
@@ -101,16 +95,25 @@ The following example demonstrates this behavior:
 const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
-regex.test('foo')     // true
+regex.test("foo"); // true
 
 // regex.lastIndex is now at 3
-regex.test('foo')     // false
+regex.test("foo"); // false
 
 // regex.lastIndex is at 0
-regex.test('barfoo')  // true
+regex.test("barfoo"); // true
 
 // regex.lastIndex is at 6
-regex.test('foobar')  //false
+regex.test("foobar"); // false
+
+// regex.lastIndex is at 0
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 3
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 9
+regex.test("foobarfoo"); // false
 
 // regex.lastIndex is at 0
 // (...and so on)
@@ -126,8 +129,5 @@ regex.test('foobar')  //false
 
 ## See also
 
-- [Regular
-  Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
-  Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype")}}

@@ -1,13 +1,11 @@
 ---
-title: WEBGL_debug_renderer_info
+title: WEBGL_debug_renderer_info extension
+short-title: WEBGL_debug_renderer_info
 slug: Web/API/WEBGL_debug_renderer_info
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension
 browser-compat: api.WEBGL_debug_renderer_info
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_debug_renderer_info`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes two constants with information about the graphics driver for debugging purposes.
@@ -32,12 +30,12 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 With the help of this extension, privileged contexts are able to retrieve debugging information about the user's graphic driver:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
-var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
 
 console.log(vendor);
 console.log(renderer);

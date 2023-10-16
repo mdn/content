@@ -1,31 +1,24 @@
 ---
-title: AbstractRange.collapsed
+title: "AbstractRange: collapsed property"
+short-title: collapsed
 slug: Web/API/AbstractRange/collapsed
-tags:
-  - API
-  - AbstractRange
-  - DOM
-  - DOM API
-  - Empty
-  - Property
-  - Range
-  - Reference
-  - collapsed
+page-type: web-api-instance-property
 browser-compat: api.AbstractRange.collapsed
 ---
-{{APIRef("DOM WHATWG")}}
 
-The **`collapsed`** read-only property of the {{domxref("AbstractRange")}} interface returns `true` if the range's start position and end position are the same.
+{{APIRef("DOM")}}
 
-## Syntax
+The read-only **`collapsed`** property of the {{domxref("AbstractRange")}} interface returns `true` if the range's start position and end position are the same.
+
+## Value
+
+A boolean value which is `true` if the range is _collapsed_. A collapsed range is one in which the start and end positions are the same, resulting in a zero-character-long range.
+
+## Example
 
 ```js
-var isCollapsed = range.collapsed
+let isCollapsed = range.collapsed;
 ```
-
-### Value
-
-A boolean value which is `true` if the range is **collapsed**. A collapsed range is one in which the start and end positions are the same, resulting in a zero-character-long range..
 
 ## Specifications
 

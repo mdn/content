@@ -1,39 +1,29 @@
 ---
-title: Request.body
+title: "Request: body property"
+short-title: body
 slug: Web/API/Request/body
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Streams
-  - Request
+page-type: web-api-instance-property
 browser-compat: api.Request.body
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The read-only **`body`** property of the {{domxref("Request")}}
 interface contains a {{domxref("ReadableStream")}} with the body contents
 that have been added to the request. Note that a request using the
 `GET` or `HEAD` method cannot have a body
-and `null` is return in these cases.
+and `null` is returned in these cases.
 
-## Syntax
+## Value
 
-```js
-request.body
-```
-
-### Value
-
-A {{domxref("ReadableStream")}} or {{jsxref("null")}}.
+A {{domxref("ReadableStream")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.body; // ReadableStream

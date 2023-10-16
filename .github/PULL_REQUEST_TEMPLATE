@@ -1,23 +1,22 @@
-<!-- 👀 Thanks for opening a PR! Read comments like this one to get your PR merged faster. -->
-#### Summary
-<!-- ✍️ In a sentence or two, describe your changes -->
+<!-- 🙌 Thanks for contributing to MDN Web Docs. Adding details below will help us to merge your PR faster. -->
 
-#### Motivation
-<!-- ❓ Why are you making this change? Help us understand how your changes help readers. -->
+### Description
 
-#### Supporting details
-<!-- 🔗 Link to supporting information, such as bug trackers, source control, release notes, and vendor docs. -->
+<!-- ✍️ Summarize your changes in one or two sentences -->
 
-#### Related issues
-<!-- 🔨 If applicable, use "Fixes #XYZ" -->
+### Motivation
 
-#### Metadata
-<!-- ✅ Check a box if applicable, like this: [x]
+<!-- ❓ Why are you making these changes and how do they help readers? -->
 
-This PR…
--->
-- [ ] Adds a new document
-- [ ] Rewrites (or significantly expands) a document
-- [ ] Fixes a typo, bug, or other error
+### Additional details
 
-<!-- 👷‍♀️ After submitting, review the results of the "Checks" tab! -->
+<!-- 🔗 Link to release notes, vendor docs, bug trackers, source control, or other places providing more context -->
+
+### Related issues and pull requests
+
+<!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
+<!-- 👉 Highlight related pull requests using "Relates to #123" -->
+<!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
+
+
+<!-- 👷‍♀️ After submitting, go to the "Checks" tab of your PR for the build status -->

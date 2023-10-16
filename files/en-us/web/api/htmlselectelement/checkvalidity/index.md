@@ -1,27 +1,31 @@
 ---
-title: HTMLSelectElement.checkValidity()
+title: "HTMLSelectElement: checkValidity() method"
+short-title: checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-tags:
-  - API
-  - Constraint Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.checkValidity()`** method checks
 whether the element has any constraints and whether it satisfies them. If the element
-fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the
+fails its constraints, the browser fires a cancelable {{domxref("HTMLSelectElement/invalid_event", "invalid")}} event at the
 element, and then returns `false`.
 
 ## Syntax
 
-```js
-var result = selectElt.checkValidity();
+```js-nolint
+checkValidity()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -33,4 +37,4 @@ var result = selectElt.checkValidity();
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Form validation](/en-US/docs/Web/HTML/Constraint_validation)

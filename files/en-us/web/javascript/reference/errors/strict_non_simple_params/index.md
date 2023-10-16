@@ -1,15 +1,12 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
-slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "`'use strict'` not allowed in function" occurs
+The JavaScript exception "`"use strict"` not allowed in function" occurs
 when a `"use strict"` directive is used at the top of a function with
 {{jsxref("Functions/Default_parameters", "default parameters", "", 1)}},
 {{jsxref("Functions/rest_parameters", "rest parameters", "", 1)}}, or
@@ -17,17 +14,12 @@ when a `"use strict"` directive is used at the top of a function with
 
 ## Message
 
-```js
-Edge:
-Cannot apply strict mode on functions with non-simple parameter list
-
-Firefox:
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
-
-Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+```plain
+SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list (V8-based)
+SyntaxError: "use strict" not allowed in function with default parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with rest parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with destructuring parameter (Firefox)
+SyntaxError: 'use strict' directive not allowed inside a function with a non-simple parameter list. (Safari)
 ```
 
 ## Error type
@@ -53,10 +45,10 @@ the ECMAScript specification.
 In this case, the function `sum` has default parameters `a=1` and
 `b=2`:
 
-```js example-bad
+```js-nolint example-bad
 function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
-  'use strict';
+  "use strict";
   return a + b;
 }
 ```
@@ -66,7 +58,7 @@ entire script or enclosing function is also okay to be in strict mode, you can m
 `"use strict"` directive outside of the function:
 
 ```js example-good
-'use strict';
+"use strict";
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -76,10 +68,10 @@ function sum(a = 1, b = 2) {
 
 A function expression can use yet another workaround:
 
-```js example-bad
-var sum = function sum([a, b]) {
+```js-nolint example-bad
+const sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
-  'use strict';
+  "use strict";
   return a + b;
 };
 ```
@@ -87,8 +79,8 @@ var sum = function sum([a, b]) {
 This can be converted to the following expression:
 
 ```js example-good
-var sum = (function() {
-  'use strict';
+const sum = (function () {
+  "use strict";
   return function sum([a, b]) {
     return a + b;
   };
@@ -100,10 +92,10 @@ var sum = (function() {
 If an arrow function needs to access the `this` variable, you can use the
 arrow function as the enclosing function:
 
-```js example-bad
-var callback = (...args) => {
+```js-nolint example-bad
+const callback = (...args) => {
   // SyntaxError: "use strict" not allowed in function with rest parameter
-  'use strict';
+  "use strict";
   return this.run(args);
 };
 ```
@@ -111,8 +103,8 @@ var callback = (...args) => {
 This can be converted to the following expression:
 
 ```js example-good
-var callback = (() => {
-  'use strict';
+const callback = (() => {
+  "use strict";
   return (...args) => {
     return this.run(args);
   };

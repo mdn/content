@@ -1,29 +1,24 @@
 ---
-title: StyleSheet.type
+title: "StyleSheet: type property"
+short-title: type
 slug: Web/API/StyleSheet/type
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.StyleSheet.type
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`type`** property of the {{domxref("StyleSheet")}}
 interface specifies the style sheet language for the given style sheet.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-string = stylesheet.type
-```
-
-## Example
-
-```js
- myStyleSheet.type = 'text/css';
+myStyleSheet.type = "text/css";
 ```
 
 ## Specifications

@@ -1,19 +1,10 @@
 ---
 title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - border-inline
-  - border-inline-color
-  - border-inline-end
-  - border-inline-end-color
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-inline-end-color
 ---
+
 {{CSSRef}}
 
 The **`border-inline-end-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical inline-end border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
@@ -30,17 +21,16 @@ border-inline-end-color: #663399;
 border-inline-end-color: inherit;
 border-inline-end-color: initial;
 border-inline-end-color: revert;
+border-inline-end-color: revert-layer;
 border-inline-end-color: unset;
 ```
 
 Related properties are {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, and {{cssxref("border-inline-start-color")}}, which define the other border colors of the element.
 
-{{cssinfo}}
-
 ### Values
 
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -88,5 +78,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

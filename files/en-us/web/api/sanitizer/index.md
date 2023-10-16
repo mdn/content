@@ -1,40 +1,39 @@
 ---
 title: Sanitizer
 slug: Web/API/Sanitizer
-tags:
-  - HTML Sanitizer API
-  - Interface
-  - sanitize
+page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.Sanitizer
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} allows developers to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.
+{{APIRef("Sanitizer")}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} provides methods to sanitize untrusted strings of HTML, {{domxref("Document")}} and {{domxref("DocumentFragment")}} objects.
+After sanitization, unwanted elements or attributes are removed, and the returned objects can safely be inserted into a document's DOM.
+
+A **`Sanitizer`** object is also used by the {{domxref('Element.setHTML()')}} method to parse and sanitize a string of HTML, and immediately insert it into an element.
+
+The default configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
+This configuration may be customized using constructor options.
 
 ## Constructors
 
-- {{domxref('Sanitizer.Sanitizer')}}
-  - : Creates and returns a `Sanitizer` object.
+- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}}
+  - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
-## Methods
+## Instance methods
 
-- {{domxref('Sanitizer.sanitizeToString()')}}
-  - : Returns a sanitized {{jsxref('String')}} from an input, removing any offending elements or attributes.
-- {{domxref('Sanitizer.sanitize()')}}
-  - : Returns a sanitized {{domxref('DocumentFragment')}} from an input, removing any offending elements or attributes.
+- {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}}
+
+  - : Returns a sanitized {{domxref('DocumentFragment')}} from an input {{domxref('Document')}} or {{domxref('DocumentFragment')}}
+
+- {{domxref('Sanitizer.sanitizeFor()')}} {{Experimental_Inline}}
+  - : Parses a string of HTML in the context a particular element, and returns an HTML element of that type containing the sanitized subtree.
 
 ## Examples
 
-This example shows the result of sanitizing a string using the {{domxref('Sanitizer.sanitizeToString()')}} method. Disallowed `script` and `blink` elements are removed from the input.
-
-```js
-// our input string to clean
-const stringToClean = 'Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script <script>alert(1)</script> def.';
-
-const result = new Sanitizer().sanitizeToString(stringToClean);
-console.log(result);
-// Logs: "Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script def."
-```
+For examples see the {{domxref('HTML Sanitizer API')}} and the individual methods.
 
 ## Specifications
 

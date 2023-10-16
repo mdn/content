@@ -1,12 +1,9 @@
 ---
-title: 'RangeError: repeat count must be less than infinity'
+title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "repeat count must be less than infinity" occurs when the
@@ -15,10 +12,12 @@ argument that is infinity.
 
 ## Message
 
-```js
-RangeError: argument out of range (Edge)
+```plain
+RangeError: Invalid string length (V8-based)
+RangeError: Invalid count value: Infinity (V8-based)
 RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
-RangeError: Invalid count value (Chrome)
+RangeError: Out of memory (Safari)
+RangeError: String.prototype.repeat argument must be greater than or equal to 0 and not be Infinity (Safari)
 ```
 
 ## Error type
@@ -34,24 +33,24 @@ number. The range of allowed values can be described like this: \[0, +∞).
 
 The resulting string can also not be larger than the maximum string size, which can
 differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size is
-2^28 - 1 (`0xFFFFFFF`).
+2<sup>30</sup> - 2 (\~2GiB).
 
 ## Examples
 
 ### Invalid cases
 
 ```js example-bad
-'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+"abc".repeat(Infinity); // RangeError
+"a".repeat(2 ** 30); // RangeError
 ```
 
 ### Valid cases
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## See also

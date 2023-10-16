@@ -1,21 +1,16 @@
 ---
-title: XRDepthInformation.width
+title: "XRDepthInformation: width property"
+short-title: width
 slug: Web/API/XRDepthInformation/width
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRDepthInformation.width
 ---
-{{APIRef("WebXR Device API")}}
 
-The *read-only* **`width`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the width of the depth buffer (number of columns).
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The _read-only_ **`width`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the width of the depth buffer (number of columns).
 
 ## Value
 

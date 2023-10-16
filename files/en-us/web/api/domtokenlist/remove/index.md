@@ -1,35 +1,33 @@
 ---
-title: DOMTokenList.remove()
+title: "DOMTokenList: remove() method"
+short-title: remove()
 slug: Web/API/DOMTokenList/remove
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Method
-  - Reference
-  - remove
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.remove
 ---
+
 {{APIRef("DOM")}}
 
-The **`remove()`** method of the {{domxref("DOMTokenList")}}
-interface removes the specified _tokens_ from the list.
+The **`remove()`** method of the {{domxref("DOMTokenList")}} interface
+removes the specified _tokens_ from the list.
 
 ## Syntax
 
-```js
-tokenList.remove(token1[, token2[, ...tokenN]]);
+```js-nolint
+remove(token1)
+remove(token1, token2)
+remove(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters
 
-- `tokenN`
-  - : A {{domxref("DOMString")}} representing the token you want to remove from the list.
+- `token1`, …, `tokenN`
+  - : A string representing the token you want to remove from the list.
     If the string is not in the list, no error is thrown, and nothing happens.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -48,8 +46,8 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-let span = document.getElementById("ab");
-let classes = span.classList;
+const span = document.getElementById("ab");
+const classes = span.classList;
 classes.remove("c");
 span.textContent = classes;
 ```
@@ -58,8 +56,8 @@ To remove multiple classes at once, you can supply multiple tokens. The order yo
 supply the tokens doesn't have to match the order they appear in the list:
 
 ```js
-let span2 = document.getElementById("a")
-let classes2 = span2.classList;
+const span2 = document.getElementById("a");
+const classes2 = span2.classList;
 
 classes2.remove("c", "b");
 span2.textContent = classes2;

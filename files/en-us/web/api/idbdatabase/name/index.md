@@ -1,55 +1,43 @@
 ---
-title: IDBDatabase.name
+title: "IDBDatabase: name property"
+short-title: name
 slug: Web/API/IDBDatabase/name
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - name
+page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.name
 ---
+
 {{ APIRef("IndexedDB") }}
 
-The **`name`** read-only property of the
-`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
+The **`name`** read-only property of the
+`IDBDatabase` interface is a string that contains the
 name of the connected database.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var dbName = IDBDatabase.name;
-```
+A string containing the name of the connected database.
 
-### Value
-
-A {{ domxref("DOMString")}} containing the name of the connected database.
-
-## Example
+## Examples
 
 This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
-then being logged. For a full example, see our 
-[To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages)
- app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/)).
+then being logged. For a full example, see our
+[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being
 // opened successfully, or not
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+DBOpenRequest.onerror = (event) => {
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = (event) => {
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
@@ -75,5 +63,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

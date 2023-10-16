@@ -1,19 +1,10 @@
 ---
 title: border-block-end-style
 slug: Web/CSS/border-block-end-style
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - border-block
-  - border-block-end
-  - border-block-end-style
-  - border-block-style
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-block-end-style
 ---
+
 {{CSSRef}}
 
 The **`border-block-end-style`** [CSS](/en-US/docs/Web/CSS) property defines the style of the logical block-end border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
@@ -32,6 +23,7 @@ border-block-end-style: groove;
 border-block-end-style: inherit;
 border-block-end-style: initial;
 border-block-end-style: revert;
+border-block-end-style: revert-layer;
 border-block-end-style: unset;
 ```
 
@@ -92,5 +84,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, and {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

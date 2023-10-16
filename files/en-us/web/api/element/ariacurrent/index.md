@@ -1,28 +1,18 @@
 ---
-title: Element.ariaCurrent
+title: "Element: ariaCurrent property"
+short-title: ariaCurrent
 slug: Web/API/Element/ariaCurrent
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaCurrent
-  - AriaAttributes
-  - AriaMixin
-  - Element
+page-type: web-api-instance-property
 browser-compat: api.Element.ariaCurrent
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects the value of the `aria-current` attribute, which indicates the element that represents the current item within a container or set of related elements.
+The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
 
-## Syntax
+## Value
 
-    var ariaCurrent = element.ariaCurrent;
-    element.ariaCurrent = ariaCurrent
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"page"`
   - : Represents the current page within a set of pages.
@@ -41,7 +31,7 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screenreader announcement. Using `ariaCurrent` we can update that value.
+In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screen reader announcement. Using `ariaCurrent` we can update that value.
 
 ```html
 <nav>
@@ -54,9 +44,9 @@ In this example a set of links are used for site navigation. The `aria-current` 
 ```
 
 ```js
-let el = document.getElementById('link-home');
+let el = document.getElementById("link-home");
 console.log(el.ariaCurrent); // "page"
-el.ariaCurrent = "tab"
+el.ariaCurrent = "tab";
 console.log(el.ariaCurrent); // "tab"
 ```
 

@@ -1,32 +1,26 @@
 ---
-title: Bluetooth.getAvailability()
+title: "Bluetooth: getAvailability() method"
+short-title: getAvailability()
 slug: Web/API/Bluetooth/getAvailability
-tags:
-  - API
-  - Bluetooth
-  - Reference
-  - Web Bluetooth API
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Bluetooth.getAvailability
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
-The **`getAvailability()`** method of
-{{DOMxRef("Bluetooth")}} interface of [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) interface exposes
-the Bluetooth capabilities of the current device. For a returns a
-{{JSxRef("Boolean")}} which is `true` if the device has a Bluetooth
-adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to
-expose a real value).
+The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface returns `true` if the device has a Bluetooth adapter, and false otherwise (unless the user has configured the browser to not expose a real value).
 
-> **Note:** User might not allow use of Web Bluetooth API, even if
-> `getAvailability()` returned `true`
+> **Note:** A user might not allow use of Web Bluetooth API, even if
+> `getAvailability()` returns `true`
 > ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might
-> not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, user can configure User
-> Agent to return a fixed value instead of a real one.
+> not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, a user can configure their browser to return a fixed value instead of a real one.
 
 ## Syntax
 
-```js
-var readerPromise = Bluetooth.getAvailability();
+```js-nolint
+getAvailability()
 ```
 
 ### Parameters
@@ -47,11 +41,12 @@ The following snippet prints out a message in the console specifying whether or 
 Bluetooth is supported:
 
 ```js
-navigator.bluetooth.getAvailability().then(available => {
-  if (available)
-      console.log("This device supports Bluetooth!");
-  else
-      console.log("Doh! Bluetooth is not supported");
+navigator.bluetooth.getAvailability().then((available) => {
+  if (available) {
+    console.log("This device supports Bluetooth!");
+  } else {
+    console.log("Doh! Bluetooth is not supported");
+  }
 });
 ```
 

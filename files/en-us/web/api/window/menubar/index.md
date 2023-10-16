@@ -1,43 +1,25 @@
 ---
-title: Window.menubar
+title: "Window: menubar property"
+short-title: menubar
 slug: Web/API/Window/menubar
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.menubar
 ---
+
 {{ APIRef() }}
 
-The **`Window.menubar`** property returns the
-`menubar` object, whose visibility can be checked.
+Returns the `menubar` object.
 
-## Syntax
+This is one of a group of `Window` properties that contain a boolean `visible` property, that used to represent whether or not a particular part of a web browser's user interface was visible.
 
-```js
-objRef = window.menubar
-```
+For privacy and interoperability reasons, the value of the `visible` property is now `false` if this `Window` is a popup, and `true` otherwise.
 
-## Example
+## Value
 
-The following complete HTML example demonstrates how the `visible` property
-of the `menubar` object is used.
+An object containing a single property:
 
-```html
-<html>
-<head>
-  <title>Various DOM Tests</title>
-  <script>
-    var visible = window.menubar.visible;
-  </script>
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
-</html>
-```
+- `visible` {{ReadOnlyInline}}
+  - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications
 
@@ -49,8 +31,8 @@ of the `menubar` object is used.
 
 ## See also
 
-- {{domxref("Window.locationbar")}}
-- {{domxref("Window.personalbar")}}
-- {{domxref("Window.scrollbars")}}
-- {{domxref("Window.statusbar")}}
-- {{domxref("Window.toolbar")}}
+- {{domxref("window.locationbar")}}
+- {{domxref("window.personalbar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.statusbar")}}
+- {{domxref("window.toolbar")}}

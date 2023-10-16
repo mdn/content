@@ -1,31 +1,20 @@
 ---
-title: KeyboardLayoutMap.size
+title: "KeyboardLayoutMap: size property"
+short-title: size
 slug: Web/API/KeyboardLayoutMap/size
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Property
-  - Reference
-  - keyboard
-  - size
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.size
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`size`** read-only property of
 the {{domxref("KeyboardLayoutMap")}} interface returns the number of elements in the
 map.
 
-## Syntax
-
-```js
-var size = KeyboardLayoutMap.size()
-```
-
-### Value
+## Value
 
 A number.
 

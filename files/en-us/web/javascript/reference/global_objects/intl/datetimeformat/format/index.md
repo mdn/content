@@ -1,31 +1,19 @@
 ---
 title: Intl.DateTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 ---
+
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.format()`** method formats
-a date according to the locale and formatting options of this
-{{jsxref("Intl.DateTimeFormat")}} object.
+The **`format()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a date according to the locale and formatting options of this `Intl.DateTimeFormat` object.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html",
-	"taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 format(date)
 ```
 
@@ -34,10 +22,9 @@ format(date)
 - `date`
   - : The date to format.
 
-## Description
+### Return value
 
-The `format` getter formats a date into a string according to the locale and
-formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
+A string representing the given `date` formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
 
 ## Examples
 
@@ -47,26 +34,31 @@ Use the `format` getter function for formatting a single date, here for
 Serbia:
 
 ```js
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-var dateTimeFormat = new Intl.DateTimeFormat('sr-RS', options);
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
-// → "недеља, 7. април 2013."
+// "недеља, 7. април 2013."
 ```
 
 ### Using format with map
 
 Use the `format` getter function for formatting all dates in an array. Note
-that the function is bound to the {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+that the function is bound to the {{jsxref("Intl.DateTimeFormat")}}
 from which it was obtained, so it can be passed directly to
 {{jsxref("Array.prototype.map()")}}.
 
 ```js
-var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = { year: 'numeric', month: 'long' };
-var dateTimeFormat = new Intl.DateTimeFormat('pt-BR', options);
-var formatted = a.map(dateTimeFormat.format);
-console.log(formatted.join('; '));
-// → "setembro de 2012; dezembro de 2012; abril de 2012"
+const a = [new Date(2012, 8), new Date(2012, 11), new Date(2012, 3)];
+const options = { year: "numeric", month: "long" };
+const dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
+const formatted = a.map(dateTimeFormat.format);
+console.log(formatted.join("; "));
+// "setembro de 2012; dezembro de 2012; abril de 2012"
 ```
 
 ### Avoid comparing formatted date values to static values
@@ -83,12 +75,12 @@ For this reason you cannot expect to be able to compare the results of
 ```js example-bad
 let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric'
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
 }).format(d);
 
 "1.1.2019, 01:00:00" === formattedDate;
@@ -96,8 +88,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **Note:** See also this [StackOverflow
-> thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> **Note:** See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
+> for more details and examples.
 
 ## Specifications
 

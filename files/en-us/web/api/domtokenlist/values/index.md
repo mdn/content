@@ -1,27 +1,22 @@
 ---
-title: DOMTokenList.values()
+title: "DOMTokenList: values() method"
+short-title: values()
 slug: Web/API/DOMTokenList/values
-tags:
-  - DOM
-  - DOMTokenList
-  - Iterable
-  - Method
-  - Reference
-  - Web
-  - values
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.values
 ---
+
 {{APIRef("DOM")}}
 
-The **`values()`** method of the {{domxref("DOMTokenList")}}
-interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing developers to
-go through all values contained in the `DOMTokenList`. The individual values
-are {{domxref("DOMString")}} objects.
+The **`values()`** method of the {{domxref("DOMTokenList")}} interface
+returns an {{jsxref("Iteration_protocols",'iterator')}}
+allowing the caller to go through all values contained in the `DOMTokenList`.
+The individual values are strings.
 
 ## Syntax
 
-```js
-tokenList.values();
+```js-nolint
+tokenList.values()
 ```
 
 ### Parameters
@@ -37,7 +32,7 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 In the following example we retrieve the list of classes set on a
 {{htmlelement("span")}} element as a `DOMTokenList` using
 {{domxref("Element.classList")}}. We when retrieve an iterator containing the values
-using `values()`, then iterate through those values using a [for ... of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop,
+using `values()`, then iterate through those values using a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop,
 writing each one to the `<span>`'s {{domxref("Node.textContent")}}.
 
 First, the HTML:
@@ -49,12 +44,12 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var iterator = classes.values();
+const span = document.querySelector("span");
+const classes = span.classList;
+const iterator = classes.values();
 
-for(var value of iterator) {
-  span.textContent += value + ' ++ ';
+for (const value of iterator) {
+  span.textContent += `(${value}) `;
 }
 ```
 

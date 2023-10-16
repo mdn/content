@@ -1,43 +1,44 @@
 ---
-title: AudioDecoder.flush()
+title: "AudioDecoder: flush() method"
+short-title: flush()
 slug: Web/API/AudioDecoder/flush
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - AudioDecoder
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioDecoder.flush
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`flush()`** method of the {{domxref("AudioDecoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
-```js
-AudioDecoder.flush()
+```js-nolint
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : The Promise rejected because the {{domxref("AudioDecoder.state","state")}} is not `"configured"`.
+If an error occurs, the promise will resolve with one of the following exceptions:
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the Promise is rejected because the {{domxref("AudioDecoder.state","state")}} is not `configured`.
 
 ## Examples
 
 The following example flushes the `AudioDecoder`.
 
 ```js
-AudioDecoder.flush();
+await audioDecoder.flush();
 ```
 
 ## Specifications
@@ -47,4 +48,3 @@ AudioDecoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

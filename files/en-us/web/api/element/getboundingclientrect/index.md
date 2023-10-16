@@ -1,29 +1,11 @@
 ---
-title: Element.getBoundingClientRect()
+title: "Element: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - Boundary
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Client
-  - Containing
-  - DOM
-  - Element
-  - Enclosing
-  - Method
-  - Minimum
-  - Rectangle
-  - Reference
-  - Smallest
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
+page-type: web-api-instance-method
 browser-compat: api.Element.getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getBoundingClientRect()`** method returns a
@@ -32,11 +14,15 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 
 ## Syntax
 
-```js
-domRect = element.getBoundingClientRect();
+```js-nolint
+getBoundingClientRect()
 ```
 
-### Value
+### Parameters
+
+None.
+
+### Return value
 
 The returned value is a {{domxref("DOMRect")}} object which is the smallest rectangle
 which contains the entire element, including its padding and border-width. The
@@ -45,15 +31,15 @@ which contains the entire element, including its padding and border-width. The
 describe the position and size of the overall rectangle in pixels. Properties other than
 `width` and `height` are relative to the top-left of the viewport.
 
-![](element-box-diagram.png)
+![DOMRect object that is the smallest rectangle containing the entire element.](element-box-diagram.png)
 
-The `width` and `height` properties of the {{domxref("DOMRect")}}
+The `width` and `height` properties of the {{domxref("DOMRect")}}
 object returned by the method include the `padding` and
 `border-width`, not only the content width/height. In the standard box model,
-this would be equal to the `width` or `height` property of the
-element + `padding` + `border-width`. But
-if [`box-sizing: border-box`](/en-US/docs/Web/CSS/box-sizing) is
-set for the element this would be directly equal to its `width` or
+this would be equal to the `width` or `height` property of the
+element + `padding` + `border-width`. But
+if [`box-sizing: border-box`](/en-US/docs/Web/CSS/box-sizing) is
+set for the element this would be directly equal to its `width` or
 `height`.
 
 The returned value can be thought of as the union of the rectangles returned by
@@ -73,25 +59,9 @@ position changes (because their values are relative to the viewport and not abso
 
 If you need the bounding rectangle relative to the top-left corner of the document,
 just add the current scrolling position to the `top` and `left`
-properties (these can be obtained using {{domxref("window.scrollX")}} and
-{{domxref("window.scrollY")}}) to get a bounding rectangle which is independent from the
+properties (these can be obtained using {{domxref("window.scrollY")}} and
+{{domxref("window.scrollX")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
-
-### Cross-browser fallback
-
-Scripts requiring high cross-browser compatibility can use
-{{domxref("window.pageXOffset")}} and {{domxref("window.pageYOffset")}} instead of
-`window.scrollX` and `window.scrollY.` Scripts without access to
-these properties can use code like this:
-
-```js
-// For scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// For scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
-```
 
 ## Examples
 
@@ -116,12 +86,12 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
-for (var key in rect) {
-  if(typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+for (const key in rect) {
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -137,7 +107,7 @@ Also note how the values of `x`/`left`,
 to the absolute distance from the relevant edge of the viewport to that side of the
 element, in each case.
 
-#### Scrolling
+### Scrolling
 
 This example demonstrates how bounding client rect is changing when document is scrolled.
 
@@ -155,8 +125,12 @@ div#example {
   background: purple;
 }
 
-body { padding-bottom: 1000px; }
-p { margin: 0; }
+body {
+  padding-bottom: 1000px;
+}
+p {
+  margin: 0;
+}
 ```
 
 ```js
@@ -165,17 +139,17 @@ function update() {
   const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = '';
-  for (let key in rect) {
-    if(typeof rect[key] !== 'function') {
-      let para = document.createElement('p');
-      para.textContent  = `${ key } : ${ rect[key] }`;
+  container.innerHTML = "";
+  for (const key in rect) {
+    if (typeof rect[key] !== "function") {
+      let para = document.createElement("p");
+      para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
 }
 
-document.addEventListener('scroll', update);
+document.addEventListener("scroll", update);
 update();
 ```
 
@@ -185,34 +159,6 @@ update();
 
 {{Specifications}}
 
-### Notes
-
-The returned `DOMRect` object can be modified in modern browsers. This was
-not true with older versions which effectively returned `DOMRectReadOnly`.
-With IE and Edge, not being able to add missing properties to their returned [`ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>),
-object prevents backfilling `x` and `y`.
-
-Due to compatibility problems (see below), it is safest to rely on only properties
-`left`, `top`, `right`, and `bottom`.
-
-Properties in the returned `DOMRect` object are not own properties. While
-the `in` operator and `for...in` will find returned properties,
-other APIs such as `Object.keys()` will fail. Moreover, and unexpectedly, the
-ES2015 and newer features such as `Object.assign()` and object rest/spread
-will fail to copy returned properties.
-
-```js
-rect = elt.getBoundingClientRect()
-// The result in emptyObj is {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
-```
-
-`DOMRect` properties `top`, `left`,
-`right`, and `bottom` are computed using the values of the
-object's other properties.
-
 ## Browser compatibility
 
 {{Compat}}
@@ -220,7 +166,5 @@ object's other properties.
 ## See also
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN:
-  `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
-- [MSDN:
-  `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`

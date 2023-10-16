@@ -1,19 +1,14 @@
 ---
-title: XRTransientInputHitTestResult.results
+title: "XRTransientInputHitTestResult: results property"
+short-title: results
 slug: Web/API/XRTransientInputHitTestResult/results
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestResult.results
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`results`** property of the {{DOMxRef("XRTransientInputHitTestResult")}} interface represents an array of {{domxref("XRHitTestResult")}} objects containing the hit test results for the input source, ordered by the distance along the ray used to perform the hit test, with the closest result at position 0.
 
@@ -30,16 +25,18 @@ Two arrays are used to access transient input hit test results. First, you get a
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource,
+  );
 
-  hitTestResults.forEach(resultsPerInputSource => {
-    resultsPerInputSource.results.forEach(hitTest => {
+  hitTestResults.forEach((resultsPerInputSource) => {
+    resultsPerInputSource.results.forEach((hitTest) => {
       // do something with the hit test
       hitTest.getPose(referenceSpace);
     });
   });
- }
- ```
+}
+```
 
 ## Specifications
 

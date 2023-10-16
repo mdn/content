@@ -1,17 +1,11 @@
 ---
-title: IDBFactory.deleteDatabase()
+title: "IDBFactory: deleteDatabase() method"
+short-title: deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteDatabase
+page-type: web-api-instance-method
 browser-compat: api.IDBFactory.deleteDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`deleteDatabase()`** method of the
@@ -32,26 +26,23 @@ particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/v
 
 ## Syntax
 
-For the current standard:
+```js-nolint
+// For the current standard:
+deleteDatabase(name)
 
-```js
-var request = indexedDB.deleteDatabase(name);
-```
-
-For the experimental version with `options` (see below):
-
-```js
-var request = indexedDB.deleteDatabase(name, options);
+// For the experimental version with `options` (see below):
+deleteDatabase(name)
+deleteDatabase(name, options)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the database you want to delete. Note that attempting to delete a
     database that doesn't exist does not throw an exception, in contrast to
     {{DOMxRef("IDBDatabase.deleteObjectStore()")}}, which does throw an exception if the
     named object store does not exist.
-- options{{NonStandardBadge}}
+- `options` {{optional_inline}} {{NonStandardBadge}}
   - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
     a non-standard optional storage parameter that specifies whether you want to delete a
     `permanent` (the default value) IndexedDB, or an indexedDB in
@@ -59,22 +50,23 @@ var request = indexedDB.deleteDatabase(name, options);
 
 ### Return value
 
-A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
-are fired.
+A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request are fired.
 
-## Example
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
+
+## Examples
 
 ```js
-var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
-  console.log("Error deleting database.");
+DBDeleteRequest.onerror = (event) => {
+  console.error("Error deleting database.");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
-  console.log("Database deleted successfully");
+DBDeleteRequest.onsuccess = (event) => {
+  console.log("Database deleted successfully");
 
-  console.log(event.result); // should be undefined
+  console.log(event.result); // should be undefined
 };
 ```
 
@@ -94,5 +86,4 @@ DBDeleteRequest.onsuccess = function(event) {
 - Setting a range of keys: {{DOMxRef("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{DOMxRef("IDBObjectStore")}}
 - Using cursors: {{DOMxRef("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

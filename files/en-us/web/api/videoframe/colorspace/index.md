@@ -1,19 +1,16 @@
 ---
-title: VideoFrame.colorSpace
+title: "VideoFrame: colorSpace property"
+short-title: colorSpace
 slug: Web/API/VideoFrame/colorSpace
-tags:
-  - API
-  - Property
-  - Reference
-  - colorSpace
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.colorSpace
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}
 
 The **`colorSpace`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("VideoColorSpace")}} object representing the color space of the video.
 
-### Value
+## Value
 
 A {{domxref("VideoColorSpace")}} object.
 
@@ -22,7 +19,11 @@ A {{domxref("VideoColorSpace")}} object.
 The following example prints the `colorSpace` to the console.
 
 ```js
-console.log(VideoFrame.colorSpace);
+const cnv = document.createElement("canvas");
+// draw something on the canvas
+// ...
+const videoFrame = new VideoFrame(cnv, { timestamp: 0 });
+console.log(videoFrame.colorSpace);
 ```
 
 ## Specifications
@@ -32,5 +33,3 @@ console.log(VideoFrame.colorSpace);
 ## Browser compatibility
 
 {{Compat}}
-
-

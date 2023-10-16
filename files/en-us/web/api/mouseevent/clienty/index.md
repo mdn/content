@@ -1,43 +1,24 @@
 ---
-title: MouseEvent.clientY
+title: "MouseEvent: clientY property"
+short-title: clientY
 slug: Web/API/MouseEvent/clientY
-tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.clientY
 ---
-{{APIRef("DOM Events")}}
 
-The **`clientY`** read-only property of the
-{{domxref("MouseEvent")}} interface provides the vertical coordinate within the
-application's {{glossary("viewport")}} at which the event occurred (as opposed to the
-coordinate within the page).
+{{APIRef("UI Events")}}
 
-For example, clicking on the top edge of the viewport will always result in a mouse
-event with a `clientY` value of `0`, regardless of whether the
-page is scrolled vertically.
+The **`clientY`** read-only property of the {{domxref("MouseEvent")}} interface provides the vertical coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
 
-## Syntax
+For example, clicking on the top edge of the viewport will always result in a mouse event with a `clientY` value of `0`, regardless of whether the page is scrolled vertically.
 
-```js
-var y = instanceOfMouseEvent.clientY
-```
+## Value
 
-### Return value
+A `double` floating point value.
 
-A `double` floating point value, as redefined by the CSSOM View Module.
-Originally, this property was defined as a `long` integer. See the "Browser
-compatibility" section for details.
+## Examples
 
-## Example
-
-This example displays your mouse's coordinates whenever you trigger the
-{{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 
@@ -49,8 +30,8 @@ This example displays your mouse's coordinates whenever you trigger the
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -61,7 +42,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -1,29 +1,18 @@
 ---
-title: GamepadPose.hasPosition
+title: "GamepadPose: hasPosition property"
+short-title: hasPosition
 slug: Web/API/GamepadPose/hasPosition
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - hasPosition
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadPose.hasPosition
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`hasPosition`** read-only property of the {{domxref("GamepadPose")}} interface returns a boolean value stating whether the {{domxref("Gamepad")}} can track and return position information.
 
-## Syntax
-
-```js
-var hasItGotPosition = gamepadPoseInstance.hasPosition;
-```
-
-### Value
+## Value
 
 A boolean value.
 

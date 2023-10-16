@@ -1,24 +1,11 @@
 ---
-title: '<title>: The Document Title element'
+title: "<title>: The Document Title element"
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Page Name
-  - Page Title
-  - Reference
-  - Tab Name
-  - Tab Title
-  - Title
-  - Web
-  - Window Name
-  - Window Title
+page-type: html-element
 browser-compat: html.elements.title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; tags within the element are ignored.
 
@@ -30,12 +17,12 @@ The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's ti
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >.
       </td>
@@ -99,7 +86,7 @@ A few guidelines and tips for composing good titles:
 - Don't use "keyword blobs." If your title is just a list of words, algorithms often reduce your page's position in the search results.
 - Try to make sure your titles are as unique as possible within your own site. Duplicate—or near-duplicate—titles can contribute to inaccurate search results.
 
-## Example
+## Examples
 
 ```html
 <title>Awesome interesting stuff</title>
@@ -109,22 +96,28 @@ This example establishes a page whose title (as displayed at the top of the wind
 
 ## Accessibility concerns
 
-It is important to provide a `title` value that describes the page's purpose.
+It is important to provide an accurate and concise title to describe the page's purpose.
 
-A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time consuming and potentially confusing process.
+A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time-consuming and potentially confusing process. Titles should be unique to every page of a website, ideally surfacing the primary purpose of the page first, followed by the name of the website. Following this pattern will help ensure that the primary purpose of the page is announced by a screen reader first. This provides a far better experience than having to listen to the name of a website before the unique page title, for every page a user navigates to in the same website.
 
-### Example
+### Examples
 
-    <title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```html
+<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```
 
-To help the user, update the page `title` value to reflect significant page state changes (such as form validation problems).
+If a form submission contains errors and the submission re-renders the current page, the title can be used to help make users aware of any errors with their submission. For instance, update the page `title` value to reflect significant page state changes (such as form validation problems).
 
-### Example
+```html
+<title>
+  2 errors - Your order - Sea Food Store - Food: Online takeout today!
+</title>
+```
 
-    <title>2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+> **Note:** Presently, dynamically updating a page's title will not be automatically announced by screen readers. If you are going to update the page title to reflect significant changes to a page's state, then the use of [ARIA Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) may be necessary, as well.
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## Specifications
 
@@ -133,3 +126,7 @@ To help the user, update the page `title` value to reflect significant page stat
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) element

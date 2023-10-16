@@ -1,24 +1,23 @@
 ---
 title: <xsl:sort>
 slug: Web/XSLT/Element/sort
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - sort
+page-type: xslt-element
 ---
-{{ XsltRef() }}
 
-The` <xsl:sort>` element defines a sort key for nodes selected by `<xsl:apply-templates>` or `<xsl:for-each>` and determines the order in which they are processed.
+{{XsltSidebar}}
+
+The `<xsl:sort>` element defines a sort key for nodes selected by `<xsl:apply-templates>` or `<xsl:for-each>` and determines the order in which they are processed.
 
 ### Syntax
 
-    <xsl:sort
-    	select=EXPRESSION
-    	order="ascending" | "descending"
-    	case-order="upper-first" | "lower-first"
-    	lang=XML:LANG-CODE
-    	data-type="text" | "number" />
+```xml
+<xsl:sort
+  select=EXPRESSION
+  order="ascending" | "descending"
+  case-order="upper-first" | "lower-first"
+  lang=XML:LANG-CODE
+  data-type="text" | "number" />
+```
 
 ### Required Attributes
 

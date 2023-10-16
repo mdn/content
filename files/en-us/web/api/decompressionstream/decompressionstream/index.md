@@ -1,20 +1,20 @@
 ---
-title: DecompressionStream()
+title: "DecompressionStream: DecompressionStream() constructor"
+short-title: DecompressionStream()
 slug: Web/API/DecompressionStream/DecompressionStream
-tags:
-  - API
-  - Constructor
-  - Reference
-  - DecompressionStream
+page-type: web-api-constructor
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+
+{{APIRef("Compression Streams API")}}
 
 The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 
 ## Syntax
 
-    let DecompressionStream = new DecompressionStream(format);
+```js-nolint
+new DecompressionStream(format)
+```
 
 ### Parameters
 
@@ -23,7 +23,12 @@ The **`DecompressionStream()`** constructor creates a new {{domxref("Decompressi
   - : One of the following compression formats:
 
     - `"gzip"`
+      - : Decompress the stream using the [GZIP](https://www.rfc-editor.org/rfc/rfc1952) format.
     - `"deflate"`
+      - : Decompress the stream using the [DEFLATE](https://www.rfc-editor.org/rfc/rfc1950) algorithm in ZLIB Compressed Data Format.
+        The ZLIB format includes a header with information about the compression method and the uncompressed size of the data, and a trailing checksum for verifying the integrity of the data
+    - `"deflate-raw"`
+      - : Decompress the stream using the [DEFLATE](https://www.rfc-editor.org/rfc/rfc1951) algorithm without a header and trailing checksum.
 
 ## Exceptions
 
@@ -32,10 +37,10 @@ The **`DecompressionStream()`** constructor creates a new {{domxref("Decompressi
 
 ## Examples
 
-In this example a blob is decompressed using gzip compression.
+In this example a gzip-compressed blob is decompressed.
 
 ```js
-const ds = new DecompressionStream('gzip');
+const ds = new DecompressionStream("gzip");
 const decompressedStream = blob.stream().pipeThrough(ds);
 ```
 

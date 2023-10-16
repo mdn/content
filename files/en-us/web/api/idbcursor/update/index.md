@@ -1,17 +1,11 @@
 ---
-title: IDBCursor.update()
+title: "IDBCursor: update() method"
+short-title: update()
 slug: Web/API/IDBCursor/update
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - Update
+page-type: web-api-instance-method
 browser-compat: api.IDBCursor.update
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`update()`** method of the {{domxref("IDBCursor")}}
@@ -28,67 +22,39 @@ Be aware that you can't call `update()` (or
 
 ## Syntax
 
-```js
-var anIDBRequest = myIDBCursor.update(value);
+```js-nolint
+update(value)
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : The new value to be stored at the current position.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the key for the updated record.
 
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBCursor's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
-      <td>The transaction mode is read only.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The cursor was created using
-        {{domxref("IDBIndex.openKeyCursor")}}, is currently being
-        iterated, or has iterated past its end.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        The underlying object store uses in-line keys and the property in the
-        value at the object store's key path does not match the key in this
-        cursor's position.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DataCloneError</code></td>
-      <td>
-        The data being stored could not be cloned by the internal structured
-        cloning algorithm.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this IDBCursor's transaction is inactive.
+- `ReadOnlyError` {{domxref("DOMException")}}
+  - : Thrown if the transaction mode is read-only.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor was created using {{domxref("IDBindex.openKeyCursor")}}, is currently being iterated, or has iterated past its end.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the underlying object store uses in-line keys and the property in the value at the object store's key path does not match the key in this
+    cursor's position.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the data being stored could not be cloned by the internal structured
+    cloning algorithm.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. If the
@@ -104,36 +70,36 @@ intermediary `updateData` variable.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
-you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function updateResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readwrite");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      if (cursor.value.albumTitle === 'A farewell to kings') {
+      if (cursor.value.albumTitle === "A farewell to kings") {
         const updateData = cursor.value;
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
-        request.onsuccess = function() {
-          console.log('A better album year?');
+        request.onsuccess = () => {
+          console.log("A better album year?");
         };
-      };
+      }
 
-      const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.continue();
     } else {
-      console.log('Entries displayed.');
+      console.log("Entries displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -152,5 +118,4 @@ function updateResult() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

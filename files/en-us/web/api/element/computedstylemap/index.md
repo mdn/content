@@ -1,19 +1,12 @@
 ---
-title: Element.computedStyleMap()
+title: "Element: computedStyleMap() method"
+short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Element
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - computedStyleMap()
+page-type: web-api-instance-method
 browser-compat: api.Element.computedStyleMap
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`computedStyleMap()`** method of
 the {{domxref("Element")}} interface returns a {{domxref("StylePropertyMapReadOnly")}}
@@ -22,8 +15,8 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 
 ## Syntax
 
-```js
-var stylePropertyMapReadOnly = element.computedStyleMap()
+```js-nolint
+computedStyleMap()
 ```
 
 ### Parameters
@@ -41,7 +34,7 @@ we will add all the CSS Property / Value pairs.
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -60,29 +53,29 @@ property values using `computedStyleMap().`
 
 ```js
 // get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // get the <dl> we'll be populating
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of allComputedStyles) {
-	// properties
-	const cssProperty = document.createElement('dt');
-	cssProperty.appendChild(document.createTextNode(prop));
-	stylesList.appendChild(cssProperty);
+  // properties
+  const cssProperty = document.createElement("dt");
+  cssProperty.appendChild(document.createTextNode(prop));
+  stylesList.appendChild(cssProperty);
 
-	// values
-	const cssValue = document.createElement('dd');
-	cssValue.appendChild(document.createTextNode(val));
-	stylesList.appendChild(cssValue);
+  // values
+  const cssValue = document.createElement("dd");
+  cssValue.appendChild(document.createTextNode(val));
+  stylesList.appendChild(cssValue);
 }
 ```
 
-In [browsers that support `computedStyleMap()`](#Browser_compatibility),
+In [browsers that support `computedStyleMap()`](#browser_compatibility),
 you'll see a list of all the CSS properties and values.
 In other browsers you'll just see a link.
 

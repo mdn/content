@@ -1,62 +1,45 @@
 ---
-title: MouseEvent.ctrlKey
+title: "MouseEvent: ctrlKey property"
+short-title: ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.ctrlKey
 ---
-{{APIRef("DOM Events")}}
 
-The **`MouseEvent.ctrlKey`** read-only property is a
-boolean value that indicates whether the <kbd>ctrl</kbd> key was pressed or not
-when a given mouse event occurs.
+{{APIRef("UI Events")}}
 
-> **Note:** On Macintosh keyboards, this key is the <kbd>control</kbd>
-> key.
+The **`MouseEvent.ctrlKey`** read-only property is a boolean value that indicates whether the <kbd>ctrl</kbd> key was pressed or not when a given mouse event occurs.
 
-## Syntax
+On Macintosh keyboards, this key is labeled the <kbd>control</kbd> key. Also, note that on a Mac, a click combined with the <kbd>control</kbd> key is intercepted by the operating system and used to open a context menu, so `ctrlKey` is not detectable on click events.
 
-```js
-var ctrlKeyPressed = instanceOfMouseEvent.ctrlKey
-```
+## Value
 
-### Return value
+A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-A boolean value, where `true` indicates that the key is pressed, and
-`false` indicates that the key is _not_ pressed.
+## Examples
 
-## Example
-
-This example logs the `ctrlKey` property when you trigger a
-{{Event("click")}} event.
+This example logs the `ctrlKey` property when you trigger a {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 
 ```html
-<p>Click anywhere to test the <code>ctrlKey</code> property.</p>
-<p id="log"></p>
+<p id="log">The ctrl key was pressed while the cursor was moving: false</p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+const log = document.querySelector("#log");
+window.addEventListener("mousemove", logKey);
 
 function logKey(e) {
-  log.textContent = `The ctrl key is pressed: ${e.ctrlKey}`;
+  log.textContent = `The ctrl key was pressed while the cursor was moving: ${e.ctrlKey}`;
 }
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

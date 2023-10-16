@@ -1,50 +1,50 @@
 ---
-title: TimeRanges.start()
+title: "TimeRanges: start() method"
+short-title: start()
 slug: Web/API/TimeRanges/start
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - NeedsBrowserCompatibility
-  - Reference
-  - TimeRanges
+page-type: web-api-instance-method
 browser-compat: api.TimeRanges.start
 ---
+
 {{APIRef("DOM")}}
 
-Returns the time offset at which a specified time range begins.
+The **`start()`** method of the {{domxref("TimeRanges")}} interface returns the time offset at which a specified time range begins.
 
 ## Syntax
 
-```js
-startTime = TimeRanges.start(index)
+```js-nolint
+start(index)
 ```
 
 ### Parameters
 
-- `index` is the range number to return the starting time for.
+- `index`
+  - : The range number to return the starting time for.
+
+### Return value
+
+A number.
 
 ### Exceptions
 
-- INDEX_SIZE_ERR
-  - : A `DOMException` thrown if the specified index doesn't correspond to an
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if the specified index doesn't correspond to an
     existing range.
 
-## Example
+## Examples
 
 Given a video element with the ID "myVideo":
 
 ```js
-var v = document.getElementById("myVideo");
+const v = document.getElementById("myVideo");
 
-var buf = v.buffered;
+const buf = v.buffered;
 
-var numRanges = buf.length;
+const numRanges = buf.length;
 
-if (buf.length == 1) {
+if (buf.length === 1) {
   // only one range
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
+  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
     // The one range starts at the beginning and ends at
     // the end of the video, so the whole thing is loaded
   }

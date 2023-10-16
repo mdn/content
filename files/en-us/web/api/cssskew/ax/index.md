@@ -1,30 +1,18 @@
 ---
-title: CSSSkew.ax
+title: "CSSSkew: ax property"
+short-title: ax
 slug: Web/API/CSSSkew/ax
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSSkew
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSSkew.ax
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`ax`** property of the
 {{domxref("CSSSkew")}} interface gets and sets the angle used to distort the element
 along the x-axis (or abscissa).
 
-## Syntax
-
-```js
-var skewax = CSSSkew.ax;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSNumericValue")}}.
 

@@ -1,14 +1,10 @@
 ---
 title: SVGAnimatedLengthList
 slug: Web/API/SVGAnimatedLengthList
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGAnimatedLengthList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated length list interface
@@ -20,7 +16,7 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -43,7 +39,7 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedLengthList"
@@ -54,7 +50,7 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -88,7 +84,7 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedLengthList` interface do not provide any specific methods.
 

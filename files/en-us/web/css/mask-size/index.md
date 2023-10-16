@@ -1,18 +1,17 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-size
 ---
+
 {{CSSRef}}
 
 The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
+
+> **Note:** If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
+
+## Syntax
 
 ```css
 /* Keywords syntax */
@@ -43,24 +42,21 @@ mask-size: 6px, auto, contain;
 mask-size: inherit;
 mask-size: initial;
 mask-size: revert;
+mask-size: revert-layer;
 mask-size: unset;
 ```
-
-> **Note:** If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
-
-## Syntax
 
 One or more `<bg-size>` values, separated by commas.
 
 A `<bg-size>` can be specified in one of three ways:
 
-- using the keyword [`contain`](#contain)
-- using the keyword [`cover`](#cover)
+- using the keyword `contain`
+- using the keyword `cover`
 - using width and height values
 
 To specify a size using width and height, you can supply one or two values:
 
-- If only one value is given it sets the width, with the height set to [`auto`](#auto).
+- If only one value is given it sets the width, with the height set to `auto`.
 - If two values are given, the first sets width and the second sets height.
 
 Each value can be a `<length>`, a `<percentage>`, or `auto`.

@@ -1,14 +1,11 @@
 ---
-title: RTCPeerConnection.getConfiguration()
+title: "RTCPeerConnection: getConfiguration() method"
+short-title: getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
-tags:
-  - API
-  - Method
-  - Reference
-  - WebRTC
-  - getConfiguration
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getConfiguration()`** method returns
@@ -24,8 +21,8 @@ identity information.
 
 ## Syntax
 
-```js
-var configuration = RTCPeerConnection.getConfiguration();
+```js-nolint
+getConfiguration()
 ```
 
 ### Parameters
@@ -36,7 +33,7 @@ This method takes no input parameters.
 
 An object describing the {{domxref("RTCPeerConnection")}}'s current configuration. See [`RTCPeerConnection()`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) for more information on what options are allowed.
 
-## Example
+## Examples
 
 This example adds a new certificate to an active connection if it doesn't already have
 one in use.
@@ -44,13 +41,13 @@ one in use.
 ```js
 let configuration = myPeerConnection.getConfiguration();
 
-if ((configuration.certificates != undefined) && (!configuration.certificates.length)) {
-   RTCPeerConnection.generateCertificate({
-      name: 'RSASSA-PKCS1-v1_5',
-      hash: 'SHA-256',
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1])
-  }).then(function(cert) {
+if (configuration.certificates?.length === 0) {
+  RTCPeerConnection.generateCertificate({
+    name: "RSASSA-PKCS1-v1_5",
+    hash: "SHA-256",
+    modulusLength: 2048,
+    publicExponent: new Uint8Array([1, 0, 1]),
+  }).then((cert) => {
     configuration.certificates = [cert];
     myPeerConnection.setConfiguration(configuration);
   });
@@ -63,7 +60,7 @@ configuration has a value for `certificates`, and (b) whether its length is
 zero.
 
 If it's determined that there are no certificates in place,
-{{domxref("RTCPeerConnection.generateCertificate()")}} is called to create a new
+{{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} is called to create a new
 certificate; we provide a fulfillment handler which adds a new array containing the one
 newly-created certificate to the current configuration and passes it to
 {{domxref("RTCPeerConnect.setConfiguration", "setConfiguration()")}} to add the
@@ -80,6 +77,5 @@ certificate to the connection.
 ## See also
 
 - {{domxref("RTCPeerConnection.setConfiguration()")}}
-- {{domxref("RTCPeerConnection.RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
 - {{domxref("RTCPeerConnection")}}
-

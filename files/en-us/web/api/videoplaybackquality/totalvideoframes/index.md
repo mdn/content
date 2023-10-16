@@ -1,23 +1,11 @@
 ---
-title: VideoPlaybackQuality.totalVideoFrames
+title: "VideoPlaybackQuality: totalVideoFrames property"
+short-title: totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
-tags:
-  - API
-  - Experimental
-  - Frames
-  - HTML DOM
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - totalVideoFrames
+page-type: web-api-instance-property
 browser-compat: api.VideoPlaybackQuality.totalVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's
@@ -25,13 +13,7 @@ The {{domxref("VideoPlaybackQuality")}} interface's
 number of video frames that have been displayed or dropped since the media was
 loaded.
 
-## Syntax
-
-```js
-value = videoPlaybackQuality.totalVideoFrames;
-```
-
-### Value
+## Value
 
 The total number of frames that the {{HTMLElement("video")}} element has displayed or
 dropped since the media was loaded into it. Essentially, this is the number of frames
@@ -39,7 +21,7 @@ the element _would have presented_ had no problems occurred.
 
 This value is reset when the media is reloaded or replaced.
 
-## Example
+## Examples
 
 This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
   "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
@@ -49,10 +31,14 @@ dropped. If that exceeds 10% (0.1), a function called
 indicator to show an increase in frame loss.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
+if (
+  (quality.corruptedVideoFrames + quality.droppedVideoFrames) /
+    quality.totalVideoFrames >
+  0.1
+) {
   lostFramesThresholdExceeded();
 }
 ```

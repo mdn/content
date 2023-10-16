@@ -1,32 +1,24 @@
 ---
-title: AbstractRange.startContainer
+title: "AbstractRange: startContainer property"
+short-title: startContainer
 slug: Web/API/AbstractRange/startContainer
-tags:
-  - API
-  - AbstractRange
-  - DOM
-  - DOM API
-  - Property
-  - Range
-  - Read-only
-  - Reference
-  - start
-  - startContainer
+page-type: web-api-instance-property
 browser-compat: api.AbstractRange.startContainer
 ---
+
 {{APIRef("DOM")}}
 
-The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} interface returns the start {{domxref("Node")}} for the range.
+The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} interface returns the start {{domxref("Node")}} for the range.
 
-## Syntax
+## Value
+
+The {{domxref("Node")}} inside which the start position of the range is found.
+
+## Example
 
 ```js
-var startNode = range.startContainer
+let startNode = range.startContainer;
 ```
-
-### Value
-
-The DOM {{domxref("Node")}} inside which the start position of the range is found.
 
 ## Specifications
 

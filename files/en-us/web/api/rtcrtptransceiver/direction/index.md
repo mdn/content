@@ -1,73 +1,71 @@
 ---
-title: RTCRtpTransceiver.direction
+title: "RTCRtpTransceiver: direction property"
+short-title: direction
 slug: Web/API/RTCRtpTransceiver/direction
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceiver
-  - Transceiver Direction
-  - WebRTC
-  - direction
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpTransceiver.direction
 ---
+
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCRtpTransceiver")}} property
-**`direction`** is a string which indicates the transceiver's
-preferred directionality.
+The {{domxref("RTCRtpTransceiver")}} property **`direction`** is a string that indicates the transceiver's _preferred_ directionality.
 
-Its value must be one of the strings defined by the
-{{domxref("RTCRtpTransceiverDirection")}} enumeration.
+The directionality indicates whether the transceiver will offer to send and/or receive {{Glossary("RTP")}} data, or whether it is inactive or stopped (terminated).
+When setting the transceiver's direction, the value is not applied immediately.
+The _current_ direction is indicated by the {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
 
-The transceiver's _current_ direction is indicated by the
-{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
+## Value
 
-## Syntax
+A string with one of the following values:
 
-```js
-var direction = RTCRtpTransceiver.direction
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the
-`RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's
-preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection",
-  "Values")}}
+- `"sendrecv"`
+  - : Transceiver offers to send and receive RTP data:
+    - `RTCRtpSender`: Offers to send RTP data, and will do so if the remote peer accepts the connection and at least one of the sender's encodings is active.
+    - `RTCRtpReceiver`: Offers to receive RTP data, and does so if the remote peer accepts.
+- `"sendonly"`
+  - : Transceiver offers to send but not receive RTP data:
+    - `RTCRtpSender`: Offers to send RTP data, and will do so if the remote peer accepts the connection and at least one of the sender's encodings is active.
+    - `RTCRtpReceiver`: Does _not_ offer to receive RTP data and will not do so.
+- `"recvonly"`
+  - : Transceiver offers to receive but not set RTP data:
+    - `RTCRtpSender`: Does _not_ offer to send RTP data, and will not do so.
+    - `RTCRtpReceiver`: Offers to receive RTP data, and will do so if the remote peer offers.
+- `"inactive"`
+  - : Transceiver is inactive:
+    - `RTCRtpSender`: Does _not_ offer to send RTP data, and will not do so.
+    - `RTCRtpReceiver`: Does _not_ offer to receive RTP data and will not do so.
+- `"stopped"`
+  - : This is the terminal state of the transceiver.
+    The transceiver is stopped and will not send or receive RTP data or offer to do so.
+    Setting this value when the transceiver is not already stopped raises a `TypeError`.
+    - `RTCRtpSender`: Does _not_ offer to send RTP data, and will not do so.
+    - `RTCRtpReceiver`: Does _not_ offer to receive RTP data and will not do so.
 
 ### Exceptions
 
-When setting the value of `direction`, the following exceptions can occur:
+When setting the value of `direction`, the following exception can occur:
 
-- `InvalidStateError`
-  - : Either the receiver's {{domxref("RTCPeerConnection")}} is closed or the
-    {{domxref("RTCRtpReceiver")}} is stopped.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : The receiver's {{domxref("RTCPeerConnection")}} is closed or the {{domxref("RTCRtpReceiver")}} is stopped.
+- `TypeError`
+  - : The value is being set to `stopped` when the current value is anything other than `stopped`.
 
-## Usage notes
+## Description
 
-### Setting the direction
+The **`direction`** property can be used to set or get the transceiver's _preferred_ directionality.
 
-When you change the value of `direction`, an `InvalidStateError`
-exception will occur if the connection is closed or the receiver is stopped.
+Updating the directionality does not take effect immediately.
+If the new value of `direction` is different from the existing value, renegotiation of the connection is required, so a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is sent to the {{domxref("RTCPeerConnection")}}.
+A `direction` value (other than `stopped`) is then used by {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer()")}} in order to generate the {{glossary("SDP")}} message created those methods.
+For example, if the `direction` is specified as `"sendrecv"`, the corresponding SDP a-line indicates the directionality:
 
-If the new value of `direction` is in fact different from the existing
-value, renegotiation of the connection is required, so a {{event("negotiationneeded")}}
-event is sent to the {{domxref("RTCPeerConnection")}}.
+```plain
+a=sendrecv
+```
 
-### Effect on offers and answers
+The new directionality takes effect once the negotiation process is completed and the new session description is successfully applied.
 
-The value of `direction` is used by
-{{domxref("RTCPeerConnection.createOffer()")}} or
-{{domxref("RTCPeerConnection.createAnswer()")}} in order to generate the SDP generated
-by each of those methods. The SDP contains an a-line which specifies the directionality.
-For example, if the `direction` is specified as `"sendrecv"`, the
-corresponding SDP a-line is:
-
-    a=sendrecv
+The transceiver's _current_ direction is indicated by the {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
 
 ## Specifications
 

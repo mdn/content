@@ -1,23 +1,17 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
-tags:
-  - Align
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - Experimental
-  - Graphics
-  - Layout
-  - NeedsL
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`initial-letter-align`** CSS property specifies the alignment of initial letters within a paragraph.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -30,10 +24,9 @@ initial-letter-align: ideographic;
 initial-letter-align: inherit;
 initial-letter-align: initial;
 initial-letter-align: revert;
+initial-letter-align: revert-layer;
 initial-letter-align: unset;
 ```
-
-## Syntax
 
 One of the keyword values listed below.
 
@@ -72,22 +65,22 @@ One of the keyword values listed below.
 #### CSS
 
 ```css
-.auto {
+.auto::first-letter {
   -webkit-initial-letter-align: auto;
   initial-letter-align: auto;
 }
 
-.alphabetic {
+.alphabetic::first-letter {
   -webkit-initial-letter-align: alphabetic;
   initial-letter-align: alphabetic;
 }
 
-.hanging {
+.hanging::first-letter {
   -webkit-initial-letter-align: hanging;
   initial-letter-align: hanging;
 }
 
-.ideographic {
+.ideographic::first-letter {
   -webkit-initial-letter-align: ideographic;
   initial-letter-align: ideographic;
 }
@@ -104,6 +97,8 @@ One of the keyword values listed below.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
 
 - {{cssxref("initial-letter")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

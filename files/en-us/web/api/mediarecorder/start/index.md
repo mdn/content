@@ -1,22 +1,11 @@
 ---
-title: MediaRecorder.start()
+title: "MediaRecorder: start() method"
+short-title: start()
 slug: Web/API/MediaRecorder/start
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - MediaRecorder
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Method
-  - NeedsExample
-  - Recording Media
-  - Reference
-  - Video
-  - start
+page-type: web-api-instance-method
 browser-compat: api.MediaRecorder.start
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The {{domxref("MediaRecorder")}} method
@@ -28,31 +17,32 @@ record the entire duration of the media into a single `Blob` (or until you
 call {{domxref("MediaRecorder.requestData", "requestData()")}}), or you can specify the
 number of milliseconds to record at a time. Then, each time that amount of media has
 been recorded, an event will be delivered to let you act upon the recorded media, while
-a new `Blob` is created to record the next slice of the media
+a new `Blob` is created to record the next slice of the media.
 
 Assuming the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}}
-is `inactive`, `start()` sets the `state`  to
+is `inactive`, `start()` sets the `state` to
 `recording`, then begins capturing media from the input stream. A
 `Blob` is created and the data is collected in it until the time slice period
 elapses or the source media ends. Each time a `Blob` is filled up to that
 point (the timeslice duration or the end-of-media, if no slice duration was provided), a
-{{event("dataavailable")}} event is sent to the `MediaRecorder` with the
+{{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the `MediaRecorder` with the
 recorded data. If the source is still playing, a new `Blob` is created and
 recording continues into that, and so forth.
 
 When the source stream ends, `state` is set to `inactive` and
-data gathering stops. A final {{event("dataavailable")}} event is sent to the
-`MediaRecorder`, followed by a {{event("stop")}} event.
+data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the
+`MediaRecorder`, followed by a {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
 > **Note:** If the browser is unable to start recording or continue
-> recording, it will raise a {{domxref("DOMError")}} event, followed by a
-> {{domxref("MediaRecorder.dataavailable")}} event containing the `Blob` it
-> has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.
+> recording, it will raise an {{domxref("MediaRecorder.error_event", "error")}} event, followed by a
+> {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing the `Blob` it
+> has gathered, followed by the {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
 ## Syntax
 
-```js
-mediaRecorder.start(timeslice)
+```js-nolint
+start()
+start(timeslice)
 ```
 
 ### Parameters
@@ -66,45 +56,41 @@ mediaRecorder.start(timeslice)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 Errors that can be detected immediately are thrown as DOM exceptions. All other errors
-are reported through {{event("error")}} events sent to the `MediaRecorder`
-object. You can implement the {{domxref("MediaRecorder.onerror", "onerror")}} event
+are reported through {{domxref("MediaRecorder.error_event", "error")}} events sent to the `MediaRecorder`
+object. You can implement the {{domxref("MediaRecorder.error_event", "onerror")}} event
 handler to respond to these errors.
 
 - `InvalidModificationError` {{domxref("DOMException")}}
-  - : The number of tracks on the stream being recorded has changed. You can't add or
+  - : Thrown if the number of tracks on the stream being recorded has changed. You cannot add or
     remove tracks while recording media.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : The `MediaRecorder` is not in the `inactive` state; you can't
-    start recording media if it's already being recorded. See the
+  - : Thrown if the `MediaRecorder` is not in the `inactive` state; you cannot
+    start recording media if it is already being recorded. See the
     {{domxref("MediaRecorder.state", "state")}} property.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : The media stream you're attempting to record is inactive, or one or more of the
-    stream's tracks is in a format that can't be recorded using the current configuration.
+  - : Thrown if the media stream you are attempting to record is inactive, or one or more of the
+    stream's tracks is in a format that cannot be recorded using the current configuration.
 - `SecurityError` {{domxref("DOMException")}}
-  - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
+  - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
     "getUserMedia()")}} when the user denies permission to use an input device. This
-    exception may also be delivered as an {{event("error")}} event if
+    exception may also be delivered as an {{domxref("MediaRecorder.error_event", "error")}} event if
     the security options for the source media change after recording begins.
 - `UnknownError` {{domxref("DOMException")}}
-  - : Something else went wrong during the recording process.
+  - : Thrown if something else went wrong during the recording process.
 
-## Example
+## Examples
 
 ```js
-...
-
-  record.onclick = function() {
-    mediaRecorder.start();
-    console.log("recorder started");
-  }
-
-...
+record.onclick = () => {
+  mediaRecorder.start();
+  console.log("recorder started");
+};
 ```
 
 ## Specifications
@@ -117,8 +103,8 @@ handler to respond to these errors.
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

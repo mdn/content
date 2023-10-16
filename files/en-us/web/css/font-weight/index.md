@@ -1,14 +1,10 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-weight
 ---
+
 {{CSSRef}}
 
 The **`font-weight`** [CSS](/en-US/docs/Web/CSS) property sets the weight (or boldness) of the font. The weights available depend on the {{cssxref("font-family")}} that is currently set.
@@ -18,50 +14,55 @@ The **`font-weight`** [CSS](/en-US/docs/Web/CSS) property sets the weight (or bo
 ## Syntax
 
 ```css
-/* Keyword values */
+/* <font-weight-absolute> keyword values */
 font-weight: normal;
 font-weight: bold;
+
+/* <font-weight-absolute> numeric values [1,1000] */
+font-weight: 100;
+font-weight: 200;
+font-weight: 300;
+font-weight: 400; /* normal */
+font-weight: 500;
+font-weight: 600;
+font-weight: 700; /* bold */
+font-weight: 800;
+font-weight: 900;
 
 /* Keyword values relative to the parent */
 font-weight: lighter;
 font-weight: bolder;
 
-/* Numeric keyword values */
-font-weight: 100;
-font-weight: 200;
-font-weight: 300;
-font-weight: 400;// normal
-font-weight: 500;
-font-weight: 600;
-font-weight: 700;// bold
-font-weight: 800;
-font-weight: 900;
-
 /* Global values */
 font-weight: inherit;
 font-weight: initial;
 font-weight: revert;
+font-weight: revert-layer;
 font-weight: unset;
 ```
 
-The `font-weight` property is specified using any one of the values listed below.
+The `font-weight` property is specified using either a `<font-weight-absolute>` value or a relative weight value, as listed below.
 
 ### Values
 
 - `normal`
+
   - : Normal font weight. Same as `400`.
+
 - `bold`
+
   - : Bold font weight. Same as `700`.
-- `lighter`
-  - : One relative font weight lighter than the parent element. Note that only four font weights are considered for relative weight calculation; see the {{anch("Meaning of relative weights")}} section below.
-- `bolder`
-  - : One relative font weight heavier than the parent element. Note that only four font weights are considered for relative weight calculation; see the {{anch("Meaning of relative weights")}} section below.
+
 - `<number>`
-  - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
 
-In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts using the {{anch("Fallback weights")}} system.
+  - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, both values included. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. This allows fine-grain control for [variable fonts](#variable_fonts). For non-variable fonts, if the exact specified weight is unavailable, a [fallback weight](#fallback-weights) algorithm is used — numeric values that are divisible by 100 correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
 
-CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000 and introduces {{anch("Variable fonts")}}, which can make use of this much finer-grained range of font weights.
+- `lighter`
+
+  - : One relative font weight lighter than the parent element. Note that only four font weights are considered for relative weight calculation; see the [Meaning of relative weights](#meaning_of_relative_weights) section below.
+
+- `bolder`
+  - : One relative font weight heavier than the parent element. Note that only four font weights are considered for relative weight calculation; see the [Meaning of relative weights](#meaning_of_relative_weights) section below.
 
 ### Fallback weights
 
@@ -74,13 +75,14 @@ If the exact weight given is unavailable, then the following rule is used to det
   - If no match is found, look for available weights greater than `500`, in ascending order.
 
 - If a weight less than `400` is given, look for available weights less than the target, in descending order. If no match is found, look for available weights greater than the target, in ascending order.
+
 - If a weight greater than `500` is given, look for available weights greater than the target, in ascending order. If no match is found, look for available weights less than the target, in descending order.
 
 ### Meaning of relative weights
 
 When `lighter` or `bolder` is specified, the below chart shows how the absolute font weight of the element is determined.
 
-Note that when using relative weights, only four font weights are considered — thin (100), normal (400), bold (700), and heavy (900). If a font-family has more weights available, they are ignored for the purposes of relative weight calculation.
+Note that when using relative weights, only four font weights are considered — thin (100), normal (400), bold (700), and heavy (900). If a font family has more weights available, they are ignored for the purposes of relative weight calculation.
 
 <table class="standard-table">
   <thead>
@@ -141,28 +143,28 @@ Note that when using relative weights, only four font weights are considered —
 
 ### Common weight name mapping
 
-The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)):
+The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass)):
 
-| Value | Common weight name                                                                                                                |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 100   | Thin (Hairline)                                                                                                                   |
-| 200   | Extra Light (Ultra Light)                                                                                                         |
-| 300   | Light                                                                                                                             |
-| 400   | Normal (Regular)                                                                                                                  |
-| 500   | Medium                                                                                                                            |
-| 600   | Semi Bold (Demi Bold)                                                                                                             |
-| 700   | Bold                                                                                                                              |
-| 800   | Extra Bold (Ultra Bold)                                                                                                           |
-| 900   | Black (Heavy)                                                                                                                     |
-| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| Value | Common weight name                                                                                                          |
+| ----- | --------------------------------------------------------------------------------------------------------------------------- |
+| 100   | Thin (Hairline)                                                                                                             |
+| 200   | Extra Light (Ultra Light)                                                                                                   |
+| 300   | Light                                                                                                                       |
+| 400   | Normal (Regular)                                                                                                            |
+| 500   | Medium                                                                                                                      |
+| 600   | Semi Bold (Demi Bold)                                                                                                       |
+| 700   | Bold                                                                                                                        |
+| 800   | Extra Bold (Ultra Bold)                                                                                                     |
+| 900   | Black (Heavy)                                                                                                               |
+| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### Variable fonts
 
-Most fonts have a particular weight which corresponds to one of the numbers in [Common weight name mapping](#common_weight_name_mapping). However some fonts, called variable fonts, can support a range of weights with a more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight.
+While many fonts have a particular weight corresponding to one of the numbers in [Common weight name mapping](#common_weight_name_mapping), most variable fonts support a range of weights providing much finer granularity, giving designers and developers more control over the chosen weight.
 
 For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying widths.
 
-> **Note:** For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-weight` can be any number between `1` and `1000`. The demo loads with `font-weight: 500;`. Change the value to see the weight of the text change.
+This demo loads with `font-weight: 500;` set. Change the value of the `font-weight` property to see the weight of the text change.
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
 
@@ -189,14 +191,14 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ```html
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the
-  bank, and of having nothing to do: once or twice she had peeped into the
-  book her sister was reading, but it had no pictures or conversations in
-  it, "and what is the use of a book," thought Alice "without pictures or
-  conversations?"
+  Alice was beginning to get very tired of sitting by her sister on the bank,
+  and of having nothing to do: once or twice she had peeped into the book her
+  sister was reading, but it had no pictures or conversations in it, "and what
+  is the use of a book," thought Alice "without pictures or conversations?"
 </p>
 
-<div>I'm heavy<br/>
+<div>
+  I'm heavy<br />
   <span>I'm lighter</span>
 </div>
 ```
@@ -212,7 +214,7 @@ p {
 /* Set div text to two steps heavier than
    normal but less than a standard bold. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Set span text to be one step lighter
@@ -234,8 +236,9 @@ span {
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-style")}}
 - {{cssxref("font-family")}}
+- {{cssxref("font-style")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

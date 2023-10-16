@@ -1,33 +1,32 @@
 ---
-title: NodeIterator.root
+title: "NodeIterator: root property"
+short-title: root
 slug: Web/API/NodeIterator/root
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.NodeIterator.root
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.root`** read-only property represents the
 {{DOMxref("Node")}} that is the root of what the {{DOMxref("NodeIterator")}}
 traverses.
 
-## Syntax
+## Value
+
+A {{DOMxref("Node")}}.
+
+## Examples
 
 ```js
-root = nodeIterator.root;
-```
-
-## Example
-
-```js
-var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
 );
 root = nodeIterator.root; // document.body in this case
 ```

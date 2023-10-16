@@ -1,16 +1,11 @@
 ---
-title: RTCPeerConnection.createDataChannel()
+title: "RTCPeerConnection: createDataChannel() method"
+short-title: createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - createDataChannel
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createDataChannel()`** method
@@ -26,8 +21,9 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 
 ## Syntax
 
-```js
-dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+```js-nolint
+createDataChannel(label)
+createDataChannel(label, options)
 ```
 
 ### Parameters
@@ -73,7 +69,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
         data channels are negotiated in-band,
         where one side calls `createDataChannel`, and
         the other side listens to the {{domxref("RTCDataChannelEvent")}} event
-        using the {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler.
+        using the {{DOMxRef("RTCPeerConnection.datachannel_event", "ondatachannel")}} event handler.
         Alternatively (`true`),
         they can be negotiated out of-band,
         where both sides call `createDataChannel`
@@ -96,26 +92,23 @@ included; otherwise, the defaults listed above are established.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The {{domxref("RTCPeerConnection")}} is closed.
-- `TypeError`
-
-  - : This can happen in a couple of situations:
-
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
+- {{jsxref("TypeError")}}
+  - : Thrown in the following situations:
     - The label and/or protocol string is too long; these cannot be longer than 65,535
       bytes (bytes, rather than characters).
     - The `id` is 65535. While this is a valid unsigned 16-bit value, it's
       not a permitted value for `id`.
-
-- `SyntaxError`
-  - : Values were specified for both the `maxPacketLifeTime` and
-    `maxRetransmits` options. You may only specify a non-`null`
-    value for one of these.
-- `ResourceInUse`
-  - : An `id` was specified, but another {{domxref("RTCDataChannel")}} is
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if values were specified for both the `maxPacketLifeTime` and
+    `maxRetransmits` options. You may specify a non-`null`
+    value for only one of these.
+- `ResourceInUse` {{domxref("DOMException")}}
+  - : Thrown if an `id` was specified, but another {{domxref("RTCDataChannel")}} is
     already using the same value.
-- `OperationError`
-  - : Either the specified `id` is already in use or, if no `id` was
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if either the specified `id` is already in use, or if no `id` was
     specified, the WebRTC layer was unable to automatically generate an ID because all IDs
     are in use.
 
@@ -123,34 +116,34 @@ included; otherwise, the defaults listed above are established.
 
 This example shows how to create a data channel and set up handlers for the
 {{DOMxRef("RTCDataChannel/open_event", "open")}} and {{DOMxRef("RTCDataChannel/message_event", "message")}} events to send and receive messages on it
-(For brievity, the example assumes onnegotiationneeded is set up).
+(For brevity, the example assumes onnegotiationneeded is set up).
 
 ```js
 // Offerer side
 
-var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat");
-channel.onopen = function(event) {
-  channel.send('Hi you!');
-}
-channel.onmessage = function(event) {
+const pc = new RTCPeerConnection(options);
+const channel = pc.createDataChannel("chat");
+channel.onopen = (event) => {
+  channel.send("Hi you!");
+};
+channel.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 ```js
 // Answerer side
 
-var pc = new RTCPeerConnection(options);
-pc.ondatachannel = function(event) {
-  var channel = event.channel;
-    channel.onopen = function(event) {
-    channel.send('Hi back!');
-  }
-  channel.onmessage = function(event) {
+const pc = new RTCPeerConnection(options);
+pc.ondatachannel = (event) => {
+  const channel = event.channel;
+  channel.onopen = (event) => {
+    channel.send("Hi back!");
+  };
+  channel.onmessage = (event) => {
     console.log(event.data);
-  }
-}
+  };
+};
 ```
 
 Alternatively, more symmetrical out-of-band negotiation can be used, using an
@@ -159,19 +152,18 @@ agreed-upon id (0 here):
 ```js
 // Both sides
 
-var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
-channel.onopen = function(event) {
-  channel.send('Hi!');
-}
-channel.onmessage = function(event) {
+const pc = new RTCPeerConnection(options);
+const channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
+channel.onopen = (event) => {
+  channel.send("Hi!");
+};
+channel.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 For a more thorough example showing how the connection and channel are established, see
-[A simple
-RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample).
+[A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample).
 
 ## Specifications
 
@@ -184,6 +176,5 @@ RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_samp
 ## See also
 
 - {{domxref("RTCDataChannel")}}
-- [A simple
-  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
 - {{domxref("RTCPeerConnection")}}

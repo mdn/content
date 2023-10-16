@@ -1,287 +1,227 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - dynamic import
-  - import
+page-type: javascript-statement
 browser-compat: javascript.statements.import
 ---
+
 {{jsSidebar("Statements")}}
 
-The static **`import`** statement is
-used to import read only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by
-another module.
+The static **`import`** declaration is used to import read-only live {{Glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
-Imported modules are in {{JSxRef("Strict_mode","strict mode")}}
-whether you declare them as such or not. The `import` statement cannot be
-used in embedded scripts unless such script has a `type="module"`. Bindings
-imported are called live bindings because they are updated by the module that exported
-the binding.
+In order to use the `import` declaration in a source file, the file must be interpreted by the runtime as a [module](/en-US/docs/Web/JavaScript/Guide/Modules). In HTML, this is done by adding `type="module"` to the {{HTMLElement("script")}} tag. Modules are automatically interpreted in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-There is also a function-like dynamic **`import()`**, which
-does not require scripts of `type="module"`.
-
-Backward compatibility can be ensured using attribute `nomodule` on the
-{{HTMLElement("script")}} tag.
+There is also a function-like dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), which does not require scripts of `type="module"`.
 
 ## Syntax
 
-```js
+```js-nolint
 import defaultExport from "module-name";
 import * as name from "module-name";
 import { export1 } from "module-name";
 import { export1 as alias1 } from "module-name";
-import { export1 , export2 } from "module-name";
-import { export1 , export2 as alias2 , [...] } from "module-name";
-import defaultExport, { export1 [ , [...] ] } from "module-name";
+import { default as alias } from "module-name";
+import { export1, export2 } from "module-name";
+import { export1, export2 as alias2, /* … */ } from "module-name";
+import { "string name" as alias } from "module-name";
+import defaultExport, { export1, /* … */ } from "module-name";
 import defaultExport, * as name from "module-name";
 import "module-name";
-var promise = import("module-name");
 ```
 
 - `defaultExport`
-  - : Name that will refer to the default export from the module.
+  - : Name that will refer to the default export from the module. Must be a valid JavaScript identifier.
 - `module-name`
-  - : The module to import from. This is often a relative or absolute path name to the
-    `.js` file containing the module. Certain bundlers may permit or require
-    the use of the extension; check your environment. Only single quoted and double
-    quoted Strings are allowed.
+  - : The module to import from. The evaluation of the specifier is host-specified. This is often a relative or absolute URL to the `.js` file containing the module. In Node, extension-less imports often refer to packages in `node_modules`. Certain bundlers may permit importing files without extensions; check your environment. Only single quoted and double quoted Strings are allowed.
 - `name`
-  - : Name of the module object that will be used as a kind of namespace when referring to
-    the imports.
+  - : Name of the module object that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
 - `exportN`
-  - : Name of the exports to be imported.
+  - : Name of the exports to be imported. The name can be either an identifier or a string literal, depending on what `module-name` declares to export. If it is a string literal, it must be aliased to a valid identifier.
 - `aliasN`
-  - : Names that will refer to the named imports.
+  - : Names that will refer to the named imports. Must be a valid JavaScript identifier.
 
 ## Description
 
-The `name` parameter is the name of the "module object" which will be used
-as a kind of namespace to refer to the exports. The `export` parameters
-specify individual named exports, while the `import * as name` syntax imports
-all of them. Below are examples to clarify the syntax.
+`import` declarations can only be present in modules, and only at the top-level (i.e. not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
-### Import an entire module's contents
+All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
 
-This inserts `myModule` into the current scope, containing all the exports
-from the module in the file located in `/modules/my-module.js`.
+`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
+
+### Forms of import declarations
+
+There are four forms of `import` declarations:
+
+- [Named import](#named_import): `import { export1, export2 } from "module-name";`
+- [Default import](#default_import): `import defaultExport from "module-name";`
+- [Namespace import](#namespace_import): `import * as name from "module-name";`
+- [Side effect import](#import_a_module_for_its_side_effects_only): `import "module-name";`
+
+Below are examples to clarify the syntax.
+
+#### Named import
+
+Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from "another.js"` or explicitly using the {{jsxref("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
-Here, accessing the exports means using the module name ("myModule" in this case) as a
-namespace. For example, if the module imported above includes an export
-`doAllTheAmazingThings()`, you would call it like this:
+You can import multiple names from the same module.
 
 ```js
-myModule.doAllTheAmazingThings();
+import { foo, bar } from "/modules/my-module.js";
 ```
 
-### Import a single export from a module
-
-Given an object or value named `myExport` which has been exported from the
-module `my-module` either implicitly (because the entire module is exported,
-for example using `export * from 'another.js'`) or explicitly (using the
-{{JSxRef("Statements/export", "export")}} statement), this inserts `myExport`
-into the current scope.
+You can rename an export when importing it. For example, this inserts `shortName` into the current scope.
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
-### Import multiple exports from module
-
-This inserts both `foo` and `bar` into the current scope.
+A module may also export a member as a string literal which is not a valid identifier, in which case you must alias it in order to use it in the current module.
 
 ```js
-import {foo, bar} from '/modules/my-module.js';
+// /modules/my-module.js
+const a = 1;
+export { a as "a-b" };
 ```
 
-### Import an export with a more convenient alias
-
-You can rename an export when importing it. For example, this inserts
-`shortName` into the current scope.
-
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-### Rename multiple exports during import
+> **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
 
-Import multiple exports from a module with convenient aliases.
+#### Default import
+
+Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
 
 ```js
-import {
-  reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
-### Import a module for its side effects only
+Since the default export doesn't explicitly specify a name, you can give the identifier any name you like.
 
-Import an entire module for side effects only, without importing anything. This runs
-the module's global code, but doesn't actually import any values.
-
-```js
-import '/modules/my-module.js';
-```
-
-This works with {{anch("Dynamic Imports", "dynamic imports")}} as well:
+It is also possible to specify a default import with namespace imports or named imports. In such cases, the default import will have to be declared first. For instance:
 
 ```js
-(async () => {
-  if (somethingIsTrue) {
-    // import module for side effects
-    await import('/modules/my-module.js');
-  }
-})();
-```
-
-If your project uses packages that export ESM, you can also import them for side
-effects only. This will run the code in the package entry point file (and any files it
-imports) only.
-
-### Importing defaults
-
-It is possible to have a default {{JSxRef("Statements/export", "export")}} (whether it
-is an object, a function, a class, etc.). The `import` statement may then be
-used to import such defaults.
-
-The simplest version directly imports the default:
-
-```js
-import myDefault from '/modules/my-module.js';
-```
-
-It is also possible to use the default syntax with the ones seen above (namespace
-imports or named imports). In such cases, the default import will have to be declared
-first. For instance:
-
-```js
-import myDefault, * as myModule from '/modules/my-module.js';
-// myModule used as a namespace
+import myDefault, * as myModule from "/modules/my-module.js";
+// myModule.default and myDefault point to the same binding
 ```
 
 or
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
-// specific, named imports
+import myDefault, { foo, bar } from "/modules/my-module.js";
 ```
 
-When importing a default export with {{anch("Dynamic Imports", "dynamic imports")}}, it
-works a bit differently. You need to destructure and rename the "default" key from the
-returned object.
+Importing a name called `default` has the same effect as a default import. It is necessary to alias the name because `default` is a reserved word.
 
 ```js
-(async () => {
-  if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
-  }
-})();
+import { default as myDefault } from "/modules/my-module.js";
 ```
 
-### Dynamic Imports
+#### Namespace import
 
-The standard import syntax is static and will always result in all code in the imported
-module being evaluated at load time. In situations where you wish to load a module
-conditionally or on demand, you can use a dynamic import instead. The following are some
-reasons why you might need to use dynamic import:
-
-- When importing statically significantly slows the loading of your code and there is
-  a low likelihood that you will need the code you are importing, or you will not need
-  it until a later time.
-- When importing statically significantly increases your program's memory usage and
-  there is a low likelihood that you will need the code you are importing.
-- When the module you are importing does not exist at load time
-- When the import specifier string needs to be constructed dynamically. (Static import
-  only supports static specifiers.)
-- When the module being imported has side effects, and you do not want those side
-  effects unless some condition is true. (It is recommended not to have any side effects
-  in a module, but you sometimes cannot control this in your module dependencies.)
-
-Use dynamic import only when necessary. The static form is preferable for loading
-initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
-
-To dynamically import a module, the `import` keyword may be called as a
-function. When used this way, it returns a promise.
+The following code inserts `myModule` into the current scope, containing all the exports from the module located at `/modules/my-module.js`.
 
 ```js
-import('/modules/my-module.js')
-  .then((module) => {
-    // Do something with the module.
-  });
+import * as myModule from "/modules/my-module.js";
 ```
 
-This form also supports the `await` keyword.
+Here, `myModule` represents a _namespace_ object which contains all exports as properties. For example, if the module imported above includes an export `doAllTheAmazingThings()`, you would call it like this:
 
 ```js
-let module = await import('/modules/my-module.js');
+myModule.doAllTheAmazingThings();
+```
+
+`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
+
+> **Note:** JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.
+
+#### Import a module for its side effects only
+
+Import an entire module for side effects only, without importing anything. This runs
+the module's global code, but doesn't actually import any values.
+
+```js
+import "/modules/my-module.js";
+```
+
+This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate the global variables.
+
+### Hoisting
+
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the identifiers the imports introduce are available in the entire module scope, and their side effects are produced before the rest of the module's code runs.
+
+```js
+myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
+
+import * as myModule from "/modules/my-module.js";
 ```
 
 ## Examples
 
 ### Standard Import
 
-The code below shows how to import from a secondary module to assist in processing an
-AJAX JSON request.
-
-#### The module: file.js
+In this example, we create a re-usable module that exports a function to get all primes within a given range.
 
 ```js
-function getJSON(url, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    callback(this.responseText)
-  };
-  xhr.open('GET', url, true);
-  xhr.send();
-}
-
-export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+// getPrimes.js
+/**
+ * Returns a list of prime numbers that are smaller than `max`.
+ */
+export function getPrimes(max) {
+  const isPrime = Array.from({ length: max }, () => true);
+  isPrime[0] = isPrime[1] = false;
+  isPrime[2] = true;
+  for (let i = 2; i * i < max; i++) {
+    if (isPrime[i]) {
+      for (let j = i ** 2; j < max; j += i) {
+        isPrime[j] = false;
+      }
+    }
+  }
+  return [...isPrime.entries()]
+    .filter(([, isPrime]) => isPrime)
+    .map(([number]) => number);
 }
 ```
 
-#### The main program: main.js
-
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getPrimes } from "/modules/getPrimes.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+console.log(getPrimes(10)); // [2, 3, 5, 7]
 ```
 
-### Dynamic Import
+### Imported values can only be modified by the exporter
 
-This example shows how to load functionality on to a page based on a user action, in
-this case a button click, and then call a function within that module. This is not the
-only way to implement this functionality. The `import()` function also
-supports `await`.
+The identifier being imported is a _live binding_, because the module exporting it may re-assign it and the imported value would change. However, the module importing it cannot re-assign it. Still, any module holding an exported object can mutate the object, and the mutated value can be observed by all other modules importing the same value.
+
+You can also observe the new value through the [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 ```js
-const main = document.querySelector("main");
-for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
-    e.preventDefault();
+// my-module.js
+export let myValue = 1;
+setTimeout(() => {
+  myValue = 2;
+}, 500);
+```
 
-    import('/modules/my-module.js')
-      .then(module => {
-        module.loadPageInto(main);
-      })
-      .catch(err => {
-        main.textContent = err.message;
-      });
-  });
-}
+```js
+// main.js
+import { myValue } from "/modules/my-module.js";
+import * as myModule from "/modules/my-module.js";
+
+console.log(myValue); // 1
+console.log(myModule.myValue); // 1
+setTimeout(() => {
+  console.log(myValue); // 2; my-module has updated its value
+  console.log(myModule.myValue); // 2
+  myValue = 3; // TypeError: Assignment to constant variable.
+  // The importing module can only read the value but can't re-assign it.
+}, 1000);
 ```
 
 ## Specifications
@@ -294,13 +234,11 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## See also
 
-- {{JSxRef("Statements/export", "export")}}
-- [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
-- Limin Zhu, Brian Terlson and Microsoft Edge Team: [Previewing
-  ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- Hacks blog post by Jason Orendorff: [ES6 in Depth:
-  Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-- Hacks blog post by Lin Clark: [ES modules:
-  A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
-- The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)
+- {{jsxref("Statements/export", "export")}}
+- [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+- [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
+- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/) on blogs.windows.com (2016)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
+- [Export and Import](https://javascript.info/import-export) on javascript.info

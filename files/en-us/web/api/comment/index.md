@@ -1,30 +1,28 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - API
-  - DOM
-  - Reference
+page-type: web-api-interface
 browser-compat: api.Comment
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Comment`** interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.
 
-Comments are represented in HTML and XML as content between '`<!--`' and '`-->`'. In XML, the character sequence '`--`' cannot be used within a comment.
+Comments are represented in HTML and XML as content between '`<!--`' and '`-->`'. In XML, like inside SVG or MathML markup, the character sequence '`--`' cannot be used within a comment.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no specific property, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}._
 
 ## Constructor
 
-- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
-  - : Returns a `Comment` object with the parameter as its textual content.
+- {{ domxref("Comment.Comment()", "Comment()") }}
+  - : Returns a new `Comment` object with the parameter as its textual content. If not present, its default value is the empty string, `''`.
 
-## Methods
+## Instance methods
 
 _This interface has no specific method, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}._
 
@@ -38,4 +36,4 @@ _This interface has no specific method, but inherits those of its parent, {{domx
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- [The DOM API](/en-US/docs/Web/API/Document_Object_Model)

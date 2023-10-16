@@ -1,58 +1,54 @@
 ---
-title: PerformanceNavigationTiming.domContentLoadedEventStart
+title: "PerformanceNavigationTiming: domContentLoadedEventStart property"
+short-title: domContentLoadedEventStart
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventStart
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventStart
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`domContentLoadedEventStart`** read-only property returns
-a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
-event at the current document.
+{{APIRef("Performance API")}}
 
-## Syntax
+The **`domContentLoadedEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler starts.
+
+Typically frameworks and libraries wait for the `DOMContentLoaded` event before starting to run their code. We can use the `domContentLoadedEventStart` and the [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd) properties to calculate how long this takes to run.
+
+## Value
+
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler starts.
+
+## Examples
+
+### Measuring `DOMContentLoaded` event handler time
+
+The `domContentLoadedEventStart` property can be used to measure how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-perfEntry.domContentLoadedEventStart;
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const domContentLoadedTime =
+      entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+    console.log(
+      `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`,
+    );
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
 ```
 
-### Return Value
-
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
-event at the current document.
-
-## Example
-
-The following example illustrates this property's usage.
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
-function print_nav_timing_data() {
-  // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
-
-  for (var i=0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
-    // dom Properties
-    console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.interactive);
-
-    // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
-
-    // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
-  }
-}
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  const domContentLoadedTime =
+    entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+  console.log(
+    `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`,
+  );
+});
 ```
 
 ## Specifications
@@ -62,3 +58,7 @@ function print_nav_timing_data() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)

@@ -1,37 +1,24 @@
 ---
-title: AudioListener.positionX
+title: "AudioListener: positionX property"
+short-title: positionX
 slug: Web/API/AudioListener/positionX
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - positionX
+page-type: web-api-instance-property
 browser-compat: api.AudioListener.positionX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `positionX` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the x position of the listener in 3D cartesian space.
 
 > **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "PannerNode")}} is set to equalpower, or _k-rate_ otherwise.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.positionX.value = 1;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}. Its default value is 0, and it can range between positive and negative infinity.
 
-## Example
+## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

@@ -1,25 +1,18 @@
 ---
-title: TrustedTypePolicyFactory.defaultPolicy
+title: "TrustedTypePolicyFactory: defaultPolicy property"
+short-title: defaultPolicy
 slug: Web/API/TrustedTypePolicyFactory/defaultPolicy
-tags:
-  - API
-  - Property
-  - Reference
-  - defaultPolicy
-  - TrustedTypePolicyFactory
+page-type: web-api-instance-property
 browser-compat: api.TrustedTypePolicyFactory.defaultPolicy
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`defaultPolicy`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.
 
 > **Note:** Information about the creation and use of default policies can be found in the [`createPolicy()`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#default_policy) documentation.
 
-## Syntax
-
-    var defaultPolicy = TrustedTypePolicyFactory.defaultPolicy;
-
-### Value
+## Value
 
 A {{domxref("TrustedTypePolicy")}} or null.
 
@@ -29,7 +22,7 @@ The first line below returns null as no default policy has been created. Once a 
 
 ```js
 console.log(trustedTypes.defaultPolicy); // null
-const dp = trustedTypes.createPolicy('default', {});
+const dp = trustedTypes.createPolicy("default", {});
 console.log(trustedTypes.defaultPolicy); // a TrustedTypePolicy object
 ```
 

@@ -1,16 +1,11 @@
 ---
-title: Window.sessionStorage
+title: "Window: sessionStorage property"
+short-title: sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - APIs
-  - Property
-  - Reference
-  - Storage
-  - Window
-  - WindowSessionStorage
-  - sessionStorage
+page-type: web-api-instance-property
 browser-compat: api.Window.sessionStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The read-only **`sessionStorage`**
@@ -41,17 +36,11 @@ page**. In particular, data stored by a script on a site accessed with HTTP
 put in a different `sessionStorage` object from the same site accessed with
 HTTPS (e.g., <https://example.com>).
 
-The keys and the values are _always_ in the UTF-16 {{domxref("DOMString")}}
+The keys and the values are _always_ in the UTF-16 string
 format, which uses two bytes per character. As with objects, integer keys are
 automatically converted to strings.
 
-## Syntax
-
-```js
-myStorage = window.sessionStorage;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 session storage space.
@@ -59,11 +48,13 @@ session storage space.
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid
-    scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
-    `file:` or `data:` scheme, for example). For example, the user
-    may have their browser configured to deny permission to persist data for the specified
-    origin.
+
+  - : Thrown in one of the following cases:
+
+    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
+    - The request violates a policy decision. For example, the user has configured the browsers to prevent the page from persisting data.
+
+    Note that if the user blocks cookies, browsers will probably interpret this as an instruction to prevent the page from persisting data.
 
 ## Examples
 
@@ -71,13 +62,13 @@ session storage space.
 
 ```js
 // Save data to sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // Get saved data from sessionStorage
-let data = sessionStorage.getItem('key');
+let data = sessionStorage.getItem("key");
 
 // Remove saved data from sessionStorage
-sessionStorage.removeItem('key');
+sessionStorage.removeItem("key");
 
 // Remove all saved data from sessionStorage
 sessionStorage.clear();
@@ -100,14 +91,13 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Listen for changes in the text field
-field.addEventListener("change", function() {
+field.addEventListener("change", () => {
   // And save the results into the session storage object
   sessionStorage.setItem("autosave", field.value);
 });
 ```
 
-> **Note:** Please refer to the [Using the Web
-> Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> **Note:** Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 
@@ -119,6 +109,5 @@ field.addEventListener("change", function() {
 
 ## See also
 
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{DOMxRef("Window.localStorage")}}

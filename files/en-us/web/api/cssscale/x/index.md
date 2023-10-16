@@ -1,30 +1,18 @@
 ---
-title: CSSScale.x
+title: "CSSScale: x property"
+short-title: x
 slug: Web/API/CSSScale/x
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSScale
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSScale.x
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`x`** property of the
 {{domxref("CSSScale")}} interface gets and sets the abscissa or x-axis of the
 translating vector.
 
-## Syntax
-
-```js
-var scaleX = CSSScale.x;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

@@ -1,23 +1,21 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "function statement requires a name" occurs when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+The JavaScript exception "function statement requires a name" occurs
+when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 in the code that requires a name.
 
 ## Message
 
-```js
-Syntax Error: Expected identifier (Edge)
-SyntaxError: function statement requires a name [Firefox]
-SyntaxError: Unexpected token ( [Chrome]
+```plain
+SyntaxError: Function statements require a function name (V8-based)
+SyntaxError: function statement requires a name (Firefox)
+SyntaxError: Function statements must have a name. (Safari)
 ```
 
 ## Error type
@@ -26,53 +24,44 @@ SyntaxError: Unexpected token ( [Chrome]
 
 ## What went wrong?
 
-There is a [function
-statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) in the code that requires a name. You'll need to check how functions are
-defined and if you need to provide a name for it, or if the function in question needs
-to be a function expression, an [IIFE](/en-US/docs/Glossary/IIFE), or if the
-function code is placed correctly in this context at all.
+There is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) in the code that requires a name.
+You'll need to check how functions are defined and if you need to provide a name for it, or if the function in question needs to be a function expression, an [IIFE](/en-US/docs/Glossary/IIFE), or if the function code is placed correctly in this context at all.
 
 ## Examples
 
-### Statements vs expressions
+### Statements vs. expressions
 
-A _[function
-statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)_ (or _function declaration_) requires a name, this won't
-work:
+A _[function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)_ (or _function declaration_) requires a name.
+This won't work:
 
-```js example-bad
+```js-nolint example-bad
 function () {
-  return 'Hello world';
+  return "Hello world";
 }
 // SyntaxError: function statement requires a name
 ```
 
-You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-(assignment) instead:
+You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) (assignment) instead:
 
 ```js example-good
-var greet = function() {
-  return 'Hello world';
+const greet = function () {
+  return "Hello world";
 };
 ```
 
-Or, you function is maybe intended to be an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately
-Invoked Function Expression), which is a function that runs as soon as it is defined.
-You will need a few more braces in this case:
+If your function is intended to be an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately Invoked Function Expression, which is a function that runs as soon as it is defined) you will need to add a few more braces:
 
 ```js example-good
 (function () {
-
+  // …
 })();
 ```
 
 ### Labeled functions
 
-If you are using function [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label), you will
-still need to provide a function name after the `function` keyword. This
-doesn't work:
+[Labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) are an entirely different feature from function names. You can't use a label as a function name.
 
-```js example-bad
+```js-nolint example-bad
 function Greeter() {
   german: function () {
     return "Moin";
@@ -81,11 +70,11 @@ function Greeter() {
 // SyntaxError: function statement requires a name
 ```
 
-This would work, for example:
+In addition, labeled function declarations themselves are a deprecated feature. Use regular function declarations instead.
 
 ```js example-good
 function Greeter() {
-  german: function g() {
+  function german() {
     return "Moin";
   }
 }
@@ -93,28 +82,38 @@ function Greeter() {
 
 ### Object methods
 
-If you intended to create a method of an object, you will need to create an object. The
-following syntax without a name after the `function` keyword is valid then.
+If you intended to create a method of an object, you will need to create an object.
+The following syntax without a name after the `function` keyword is valid then.
 
 ```js example-good
-var greeter = {
+const greeter = {
   german: function () {
     return "Moin";
-  }
+  },
+};
+```
+
+You can also use the [method syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+
+```js
+const greeter = {
+  german() {
+    return "Moin";
+  },
 };
 ```
 
 ### Callback syntax
 
-Also, check your syntax when using callbacks. Brackets and commas can get difficult
-easily.
+Also, check your syntax when using callbacks.
+Braces and commas can quickly get confusing.
 
-```js example-bad
+```js-nolint example-bad
 promise.then(
-  function() {
+  function () {
     console.log("success");
   });
-  function() {
+  function () {
     console.log("error");
 }
 // SyntaxError: function statement requires a name
@@ -122,24 +121,21 @@ promise.then(
 
 Correct would be:
 
-```json example-good
+```js example-good
 promise.then(
-  function() {
+  function () {
     console.log("success");
   },
-  function() {
+  function () {
     console.log("error");
-  }
+  },
 );
 ```
 
 ## See also
 
-- [Functions in the JavaScript
-  Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [function
-  statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [function
-  expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-- [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{Glossary("IIFE")}}
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)

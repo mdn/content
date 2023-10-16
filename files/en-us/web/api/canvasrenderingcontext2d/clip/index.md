@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.clip()
+title: "CanvasRenderingContext2D: clip() method"
+short-title: clip()
 slug: Web/API/CanvasRenderingContext2D/clip
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.clip
 ---
+
 {{APIRef}}
 
 The
@@ -21,7 +18,7 @@ In the image below, the red outline represents a clipping region shaped like a s
 Only those parts of the checkerboard pattern that are within the clipping region get
 drawn.
 
-![](canvas_clipping_path.png)
+![Star-shaped clipping region](canvas_clipping_path.png)
 
 > **Note:** Be aware that the clipping region is only constructed from
 > shapes added to the path. It doesn't work with shape primitives drawn directly to the
@@ -29,11 +26,15 @@ drawn.
 > Instead, you'd have to use {{domxref("CanvasRenderingContext2D.rect()","rect()")}} to
 > add a rectangular shape to the path before calling `clip()`.
 
+> **Note:** Clip paths cannot be reverted directly. You must save your canvas state using {{domxref("CanvasRenderingContext2D/save", "save()")}} before calling `clip()`, and restore it once you have finished drawing in the clipped area using {{domxref("CanvasRenderingContext2D/restore", "restore()")}}.
+
 ## Syntax
 
-```js
-void ctx.clip([fillRule]);
-void ctx.clip(path [, fillRule]);
+```js-nolint
+clip()
+clip(path)
+clip(fillRule)
+clip(path, fillRule)
 ```
 
 ### Parameters
@@ -43,13 +44,18 @@ void ctx.clip(path [, fillRule]);
   - : The algorithm by which to determine if a point is inside or outside the clipping
     region. Possible values:
 
-    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
-    - **`"evenodd"`**: The [even-odd winding
-      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+        Default rule.
+    - `evenodd`
+      - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to use as the clipping region.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -70,8 +76,8 @@ the clipping region are rendered.
 The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create circular clipping region
 ctx.beginPath();
@@ -79,9 +85,9 @@ ctx.arc(100, 75, 50, 0, Math.PI * 2);
 ctx.clip();
 
 // Draw stuff that gets clipped
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = 'orange';
+ctx.fillStyle = "orange";
 ctx.fillRect(0, 0, 100, 100);
 ```
 
@@ -105,8 +111,8 @@ creates a hole where the clipping rectangles intersect; by default (with the
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create clipping path
 let region = new Path2D();
@@ -115,7 +121,7 @@ region.rect(40, 50, 100, 50);
 ctx.clip(region, "evenodd");
 
 // Draw stuff that gets clipped
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -140,14 +146,14 @@ representing the intersection of the circle and the square.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create two clipping paths
 let circlePath = new Path2D();
-circlePath.arc( 150, 75, 75, 0, 2 * Math.PI );
+circlePath.arc(150, 75, 75, 0, 2 * Math.PI);
 let squarePath = new Path2D();
-squarePath.rect( 85, 10, 130, 130 );
+squarePath.rect(85, 10, 130, 130);
 
 // Set the clip to the circle
 ctx.clip(circlePath);
@@ -155,7 +161,7 @@ ctx.clip(circlePath);
 ctx.clip(squarePath);
 
 // Draw stuff that gets clipped
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 

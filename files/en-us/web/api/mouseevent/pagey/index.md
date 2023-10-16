@@ -1,34 +1,25 @@
 ---
-title: MouseEvent.pageY
+title: "MouseEvent: pageY property"
+short-title: pageY
 slug: Web/API/MouseEvent/pageY
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.pageY
 ---
-{{APIRef("DOM Events")}}
 
-The **`pageY`** read-only property of the
-{{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate in pixels of the
-event relative to the whole document. This property takes into account any vertical
-scrolling of the page.
+{{APIRef("UI Events")}}
 
-## Syntax
+The **`pageY`** read-only property of the {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate in pixels of the event relative to the whole document.
+This property takes into account any vertical scrolling of the page.
 
-```js
-var pos = event.pageY;
-```
+## Value
 
-Originally, this property was defined as a `long` integer. The CSSOM View
-Module redefined it as a `double` float. See the Browser compatibility
-section for details.
+A `double` floating point value.
 
 ## Examples
 
-    var pageY = event.pageY;
+```js
+let pageY = event.pageY;
+```
 
 ## Specifications
 

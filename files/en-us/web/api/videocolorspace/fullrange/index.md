@@ -1,14 +1,11 @@
 ---
-title: VideoColorSpace.fullRange
+title: "VideoColorSpace: fullRange property"
+short-title: fullRange
 slug: Web/API/VideoColorSpace/fullRange
-tags:
-  - API
-  - Property
-  - Reference
-  - fullRange
-  - VideoColorSpace
+page-type: web-api-instance-property
 browser-compat: api.VideoColorSpace.fullRange
 ---
+
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **`fullRange`** read-only property of the {{domxref("VideoColorSpace")}} interface returns `true` if full-range color values are used.
@@ -22,7 +19,7 @@ A {{jsxref("Boolean")}}, `true` if full-range color values are used.
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The value of `fullRange` is printed to the console.
 
 ```js
-let colorSpace = VideoFrame.colorSpace
+let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace.fullRange);
 ```
 
@@ -33,5 +30,3 @@ console.log(colorSpace.fullRange);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -1,14 +1,11 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.From
 ---
-{{HTTPSidebar}}
 
+{{HTTPSidebar}}
 
 The **`From`** request header contains an Internet email
 address for a human user who controls the requesting user agent.
@@ -18,7 +15,6 @@ must be sent, so you can be contacted if problems occur on servers, such as if t
 robot is sending excessive, unwanted, or invalid requests.
 
 > **Warning:** You must not use the `From` header for access control or authentication.
-
 
 <table class="properties">
   <tbody>
@@ -35,18 +31,18 @@ robot is sending excessive, unwanted, or invalid requests.
 
 ## Syntax
 
-```
+```http
 From: <email>
 ```
 
 ## Directives
 
 - \<email>
-  - : A machine-usable email address.
+  - : A machine-usable email address.
 
 ## Examples
 
-```
+```http
 From: webmaster@example.org
 ```
 

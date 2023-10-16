@@ -1,17 +1,18 @@
 ---
 title: system-property
 slug: Web/XPath/Functions/system-property
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `system-property` function returns an object representing the given system-property.
 
 ### Syntax
 
-    system-property(name)
+```plain
+system-property(name)
+```
 
 ### Arguments
 
@@ -26,11 +27,11 @@ An object representing the given system-property.
 
 - xsl:version, a number giving the version of XSLT implemented by the processor; for XSLT processors implementing the version of XSLT specified by this document, this is the number 1.0
 - xsl:vendor, a string identifying the vendor of the XSLT processor
-- xsl:vendor-url, a string containing a URL identifying the vendor of the XSLT processor; typically this is the host page (home page) of the vendor's Web site.
+- xsl:vendor-url, a string containing a URL identifying the vendor of the XSLT processor; typically this is the host page (home page) of the vendor's website.
 
 ### Defined
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-system-property)
+[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-system-property)
 
 ### Gecko support
 

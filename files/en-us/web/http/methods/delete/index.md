@@ -1,12 +1,10 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - Reference
-  - Request method
+page-type: http-method
 browser-compat: http.methods.DELETE
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `DELETE` request method** deletes the specified
@@ -45,7 +43,7 @@ resource.
 
 ## Syntax
 
-```
+```http
 DELETE /file.html HTTP/1.1
 ```
 
@@ -53,7 +51,7 @@ DELETE /file.html HTTP/1.1
 
 ### Request
 
-```
+```http
 DELETE /file.html HTTP/1.1
 Host: example.com
 ```
@@ -70,7 +68,7 @@ status codes possible:
 - A {{HTTPStatus("200")}} (`OK`) status code if the action has been enacted
   and the response message includes a representation describing the status.
 
-```
+```http
 HTTP/1.1 200 OK
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 
@@ -79,7 +77,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
     <h1>File deleted.</h1>
   </body>
 </html>
-````
+```
 
 ## Specifications
 

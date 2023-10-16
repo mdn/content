@@ -1,16 +1,14 @@
 ---
-title: 'CSP: prefetch-src'
+title: "CSP: prefetch-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-tags:
-  - CSP
-  - Content Security Policy
-  - Directive
-  - HTTP
-  - Reference
-  - prefetch-src
-browser-compat: http.headers.csp.Content-Security-Policy.prefetch-src
+page-type: http-csp-directive
+status:
+  - deprecated
+  - non-standard
+browser-compat: http.headers.Content-Security-Policy.prefetch-src
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`prefetch-src`** directive specifies valid resources that may
@@ -40,14 +38,16 @@ be prefetched or prerendered.
 
 One or more sources can be allowed for the `prefetch-src` policy:
 
-```
+```http
 Content-Security-Policy: prefetch-src <source>;
 Content-Security-Policy: prefetch-src <source> <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Example
 
@@ -55,7 +55,7 @@ Content-Security-Policy: prefetch-src <source> <source>;
 
 Given a page with the following Content Security Policy:
 
-```
+```http
 Content-Security-Policy: prefetch-src https://example.com/
 ```
 
@@ -63,8 +63,8 @@ Fetches for the following code will return network errors, as the URLs provided 
 match `prefetch-src`'s source list:
 
 ```html
-    <link rel="prefetch" src="https://example.org/"></link>
-    <link rel="prerender" src="https://example.org/"></link>
+<link rel="prefetch" href="https://example.org/" />
+<link rel="prerender" href="https://example.org/" />
 ```
 
 ## Specifications

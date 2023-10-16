@@ -1,21 +1,23 @@
 ---
-title: BackgroundFetchRegistration.match()
+title: "BackgroundFetchRegistration: match() method"
+short-title: match()
 slug: Web/API/BackgroundFetchRegistration/match
-tags:
-  - API
-  - Method
-  - Reference
-  - match
-  - BackgroundFetchRegistration
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
 ## Syntax
 
-    let record = BackgroundFetchRegistration.match(request, options);
+```js-nolint
+match(request)
+match(request, options)
+```
 
 ### Parameters
 
@@ -53,17 +55,17 @@ the request or {{jsxref("undefined")}} if no match is found.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : A {{domxref("DOMException")}} indicating that you called `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if you call `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`.
 
 ## Examples
 
-In this example we look for a record with the url "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
+In this example we look for a record with the URL "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

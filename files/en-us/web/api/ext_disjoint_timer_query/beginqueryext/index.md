@@ -1,14 +1,11 @@
 ---
-title: EXT_disjoint_timer_query.beginQueryEXT()
+title: "EXT_disjoint_timer_query: beginQueryEXT() method"
+short-title: beginQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/beginQueryEXT
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.beginQueryEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.beginQueryEXT()`** method of
@@ -16,13 +13,13 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) starts a timer query.
 
 ## Syntax
 
-```js
-void ext.beginQueryEXT(target, query);
+```js-nolint
+beginQueryEXT(target, query)
 ```
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIME_ELAPSED_EXT`.
 - `query`
@@ -30,16 +27,16 @@ void ext.beginQueryEXT(target, query);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_disjoint_timer_query');
-var query = ext.createQueryEXT();
+const ext = gl.getExtension("EXT_disjoint_timer_query");
+const query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 
-// ...
+// …
 ```
 
 ## Specifications

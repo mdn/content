@@ -1,36 +1,33 @@
 ---
-title: Basic Shapes
-slug: Web/CSS/CSS_Shapes/Basic_Shapes
-tags:
-  - CSS
-  - CSS Shapes
-  - Guide
-  - Reference
+title: Basic shapes
+slug: Web/CSS/CSS_shapes/Basic_shapes
+page-type: guide
 ---
+
 {{CSSRef}}
 
-CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I’ll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
+CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I'll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
 
-Before looking at the shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
+Before looking at shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
 
 - The `<basic-shape>` type
 - The reference box
 
 ## The \<basic-shape> type
 
-The `<basic-shape>` type is used as the value for all of our Basic Shapes. This type uses Functional Notation: the type of shape is followed by brackets, inside of which are additional values used to describe the shape.
+The `<basic-shape>` type is used as the value for all of our basic shapes. This type uses Functional Notation: the type of shape is followed by parenthese, inside of which are additional values used to describe the shape.
 
 The arguments which are accepted vary depending on the shape that you are creating. We will cover these in the examples below.
 
 ## The reference box
 
-Understanding the reference box used by CSS Shapes is important when using Basic Shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values), which directly uses the reference box to create the shape.
+Understanding the reference box used by CSS Shapes is important when using basic shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values), which directly uses the reference box to create the shape.
 
-The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a Basic Shape the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
+The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a basic shape, the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
 
-![](shapes-reference-box.png)
+![An imaged clipped into a circle floated left, with a paragraph of text. The left edge of the text is circular abutting the clipped shape on the outside of the margin with the margin following the shape clipping.](shapes-reference-box.png)
 
-You can add the various Box Values after your Basic Shape definition. Therefore the default behavior is as if you have defined.
+You can add the various box values after your basic shape definition. Therefore the default behavior is as if you have defined.
 
 ```css
 .shape {
@@ -48,7 +45,7 @@ You can therefore change this in order that your shape uses the different parts 
 
 What is worth noting is that the `margin-box` will clip the shape, therefore shapes created in reference to other shapes which extend past the margin box will have the shape clipped to the margin box. We will see this in the following examples of basic shapes.
 
-For an excellent description of references boxes as they apply to CSS Shapes see [Understanding Reference Boxes for CSS Shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
+For an excellent description of references boxes as they apply to CSS Shapes, see [Understanding Reference Boxes for CSS Shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
 
 ## inset()
 
@@ -90,7 +87,7 @@ The keyword **`closest-side`** uses the length from the center of the shape to t
 
 The keyword **`farthest-side`** uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.
 
-The second argument is a `position`. If omitted this will be set to `center`. However you can use any valid position here to indicate the position of the centre of the circle.
+The second argument is a `position`. If omitted this will be set to `center`. However you can use any valid position here to indicate the position of the center of the circle.
 
 Our circle therefore accepts one radius value, which may be a length, a percentage or the closest-side or farthest side keyword then optionally the keyword **at** followed by a position value.
 
@@ -106,7 +103,7 @@ As an additional example, if you use the keywords `top left` for position, you c
 
 ### The shape will be clipped by the margin box
 
-When describing Reference Boxes I explained that the margin-box will clip the shape. You can see this by moving the centre of our circle towards the content by setting the position to 60%. The centre of the circle is now nearer the content and the circle extends past the margin-box. This means that the extension becomes clipped and squared off.
+When describing Reference Boxes I explained that the margin-box will clip the shape. You can see this by moving the center of our circle towards the content by setting the position to 60%. The center of the circle is now nearer the content and the circle extends past the margin-box. This means that the extension becomes clipped and squared off.
 
 ```css
 img {
@@ -121,7 +118,7 @@ img {
 
 An ellipse is essentially a squashed circle and so `ellipse()` acts in a very similar way to `circle()` except that we have to specify two radii x and y in that order.
 
-These may then be followed by position values as with `circle()` to move the centre of the ellipse around. In the example below we have an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the centre of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.
+These may then be followed by position values as with `circle()` to move the center of the ellipse around. In the example below we have an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the center of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse.html", '100%', 800)}}
 
@@ -141,4 +138,4 @@ You may well find the Firefox Shape Inspector very useful here to create your po
 
 ![The polygon basic shape, highlighted with the Shapes Inspector.](shapes-polygon.png)
 
-Another useful resource is [Clippy](http://bennettfeely.com/clippy/) - a tool for creating shapes for `clip-path`, as the values for Basic Shapes are the same as those used for `clip-path`.
+Another useful resource is [Clippy](https://bennettfeely.com/clippy/) - a tool for creating shapes for `clip-path`, as the values for Basic Shapes are the same as those used for `clip-path`.

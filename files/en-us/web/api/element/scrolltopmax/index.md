@@ -1,27 +1,22 @@
 ---
-title: Element.scrollTopMax
+title: "Element: scrollTopMax property"
+short-title: scrollTopMax
 slug: Web/API/Element/scrollTopMax
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Element.scrollTopMax
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollTopMax`** read-only property returns a
-{{jsxref("Number")}} representing the maximum top scroll offset possible for the
+number representing the maximum top scroll offset possible for the
 element.
 
-## Syntax
+## Value
 
-```js
-var pxl = elt.scrollTopMax;
-```
+A number.
 
 ## Specifications
 

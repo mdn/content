@@ -1,26 +1,19 @@
 ---
 title: Intl.NumberFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
+
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatToParts()`** method
-allows locale-aware formatting of strings produced by `NumberFormat`
-formatters.
+The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances allows locale-aware formatting of strings produced by this `Intl.NumberFormat` object.
+
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts()
 formatToParts(number)
 ```
@@ -46,38 +39,46 @@ looks like this:
 [
   { type: "integer", value: "3" },
   { type: "group", value: "." },
-  { type: "integer", value: "500" }
-]
+  { type: "integer", value: "500" },
+];
 ```
 
 Possible types are the following:
 
-- currency
-  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
-    depending on how `currencyDisplay` is specified.
-- decimal
+- `compact`
+  - : The exponent in `"long"` or `"short"` form, depending on how `compactDisplay` (which defaults to `short`) is specified when `notation` is set to `compact`.
+- `currency`
+  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro", depending on how `currencyDisplay` is specified.
+- `decimal`
   - : The decimal separator string (".").
-- fraction
+- `exponentInteger`
+  - : The exponent integer value, when `notation` is set to `scientific` or `engineering`.
+- `exponentMinusSign`
+  - : The exponent minus sign string ("-").
+- `exponentSeparator`
+  - : The exponent separator, when `notation` is set to `scientific` or `engineering`.
+- `fraction`
   - : The fraction number.
-- group
+- `group`
   - : The group separator string (",").
-- infinity
+- `infinity`
   - : The {{jsxref("Infinity")}} string ("∞").
-- integer
+- `integer`
   - : The integer number.
-- literal
+- `literal`
   - : Any literal strings or whitespace in the formatted number.
-- minusSign
+- `minusSign`
   - : The minus sign string ("-").
-- nan
+- `nan`
   - : The {{jsxref("NaN")}} string ("NaN").
-- plusSign
+- `plusSign`
   - : The plus sign string ("+").
-- percentSign
+- `percentSign`
   - : The percent sign string ("%").
-- unit
-  - : The unit string, such as the "l" or "litres", depending on how
-    `unitDisplay` is specified.
+- `unit`
+  - : The unit string, such as the "l" or "litres", depending on how `unitDisplay` is specified.
+- `unknown`
+  - : The string for `unknown` type results.
 
 ## Examples
 
@@ -87,11 +88,11 @@ Possible types are the following:
 directly:
 
 ```js
-var number = 3500;
+const number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+const formatter = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
 formatter.format(number);
@@ -108,30 +109,34 @@ formatter.formatToParts(number);
 
 // return value:
 [
-  { type: "integer",  value: "3"   },
-  { type: "group",    value: "."   },
-  { type: "integer",  value: "500" },
-  { type: "decimal",  value: ","   },
-  { type: "fraction", value: "00"  },
-  { type: "literal",  value: " "   },
-  { type: "currency", value: "€"   }
-]
+  { type: "integer", value: "3" },
+  { type: "group", value: "." },
+  { type: "integer", value: "500" },
+  { type: "decimal", value: "," },
+  { type: "fraction", value: "00" },
+  { type: "literal", value: " " },
+  { type: "currency", value: "€" },
+];
 ```
 
 Now the information is available separately and it can be formatted and concatenated
 again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
-[arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch
-statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template
-literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
+[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
-  switch (type) {
-    case 'currency': return `<strong>${value}</strong>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+const numberString = formatter
+  .formatToParts(number)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "currency":
+        return `<strong>${value}</strong>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 ```
 
 This will make the currency bold, when using the `formatToParts()` method.
@@ -152,6 +157,5 @@ console.log(numberString);
 ## See also
 
 - {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
-- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

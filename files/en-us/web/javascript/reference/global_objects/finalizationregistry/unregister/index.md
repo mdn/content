@@ -1,39 +1,38 @@
 ---
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
+
 {{JSRef}}
 
-The `unregister` unregisters a target object from a
-{{jsxref("FinalizationRegistry")}} instance.
+The **`unregister()`** method of {{jsxref("FinalizationRegistry")}} instances unregisters a target value from this `FinalizationRegistry`.
 
 ## Syntax
 
-```js
-unregister(unregisterToken);
+```js-nolint
+unregister(unregisterToken)
 ```
 
 ### Parameters
 
 - `unregisterToken`
-  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register",
-        "register")}} method when registering the target object.
+  - : The token used with the {{jsxref("FinalizationRegistry/register", "register()")}} method when registering the target value. Multiple cells registered with the same `unregisterToken` will be unregistered together.
 
 ### Return value
 
-`undefined`.
+A boolean value that is `true` if at least one cell was unregistered and `false` if no cell was unregistered.
 
-## Notes
+### Exceptions
 
-When a target object has been reclaimed, it is no longer registered in the registry.
-There is no need to all `unregister` in your cleanup callback. Only call
+- {{jsxref("TypeError")}}
+  - : Thrown if `unregisterToken` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+
+## Description
+
+When a target value has been reclaimed, it is no longer registered in the registry.
+There is no need to call `unregister` in your cleanup callback. Only call
 `unregister` if you haven't received a cleanup callback and no longer need
 to receive one.
 
@@ -46,32 +45,33 @@ token, then later unregistering it via `unregister`:
 
 ```js
 class Thingy {
-    #cleanup = label => {
-    //         ^^^^^−−−−− held value
-        console.error(
-            `The \`release\` method was never called for the object with the label "${label}"`
-        );
-    };
-    #registry = new FinalizationRegistry(this.#cleanup);
+  static #cleanup = (label) => {
+    //               ^^^^^−−−−− held value
+    console.error(
+      `The "release" method was never called for the object with the label "${label}"`,
+    );
+  };
+  #registry = new FinalizationRegistry(Thingy.#cleanup);
 
-    /**
-     * Constructs a `Thingy` instance. Be sure to call `release` when you're done with it.
-     *
-     * @param   label       A label for the `Thingy`.
-     */
-    constructor(label) {
-        //                            vvvvv−−−−− held value
-        this.#registry.register(this, label, this);
-        //          target −−−−−^^^^         ^^^^−−−−− unregister token
-    }
+  /**
+   * Constructs a `Thingy` instance.
+   * Be sure to call `release` when you're done with it.
+   *
+   * @param label A label for the `Thingy`.
+   */
+  constructor(label) {
+    //                            vvvvv−−−−− held value
+    this.#registry.register(this, label, this);
+    //          target −−−−−^^^^         ^^^^−−−−− unregister token
+  }
 
-    /**
-     * Releases resources held by this `Thingy` instance.
-     */
-    release() {
-        this.#registry.unregister(this);
-        //                        ^^^^−−−−− unregister token
-    }
+  /**
+   * Releases resources held by this `Thingy` instance.
+   */
+  release() {
+    this.#registry.unregister(this);
+    //                        ^^^^−−−−− unregister token
+  }
 }
 ```
 
@@ -79,37 +79,40 @@ This example shows registering a target object using a different object as its
 unregister token:
 
 ```js
- {
-    //         ^^^^−−−−− held value
-        console.error(
-            `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
-        );
-    };
-    #registry = new FinalizationRegistry(this.#cleanup);
+class Thingy {
+  static #cleanup = (file) => {
+    //               ^^^^−−−−− held value
+    console.error(
+      `The "release" method was never called for the "Thingy" for the file "${file.name}"`,
+    );
+  };
+  #registry = new FinalizationRegistry(Thingy.#cleanup);
+  #file;
 
-    /**
-     * Constructs a `Thingy` instance for the given file. Be sure to call `release` when you're done with it.
-     *
-     * @param   filename    The name of the file.
-     */
-    constructor(filename) {
-        this.#file = File.open(filename);
-        //                            vvvvv−−−−− held value
-        this.#registry.register(this, label, this.#file);
-        //          target −−−−−^^^^         ^^^^^^^^^^−−−−− unregister token
-    }
+  /**
+   * Constructs a `Thingy` instance for the given file.
+   * Be sure to call `release` when you're done with it.
+   *
+   * @param filename The name of the file.
+   */
+  constructor(filename) {
+    this.#file = File.open(filename);
+    //                            vvvvv−−−−− held value
+    this.#registry.register(this, label, this.#file);
+    //          target −−−−−^^^^         ^^^^^^^^^^−−−−− unregister token
+  }
 
-    /**
-     * Releases resources held by this `Thingy` instance.
-     */
-    release() {
-        if (this.#file) {
-            this.#registry.unregister(this.#file);
-            //                        ^^^^^^^^^^−−−−− unregister token
-            File.close(this.#file);
-            this.#file = null;
-        }
+  /**
+   * Releases resources held by this `Thingy` instance.
+   */
+  release() {
+    if (this.#file) {
+      this.#registry.unregister(this.#file);
+      //                        ^^^^^^^^^^−−−−− unregister token
+      File.close(this.#file);
+      this.#file = null;
     }
+  }
 }
 ```
 

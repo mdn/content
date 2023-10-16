@@ -1,26 +1,22 @@
 ---
-title: Screen.availLeft
+title: "Screen: availLeft property"
+short-title: availLeft
 slug: Web/API/Screen/availLeft
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Screen.availLeft
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-Returns the first available pixel available from the left side of the screen.
+Returns the first available pixel from the left side of the screen.
 
-## Syntax
+## Value
 
-```js
-let availLeft = window.screen.availLeft;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 let setX = window.screen.width - window.screen.availLeft;
@@ -33,7 +29,7 @@ window.moveTo(setX, setY);
 In most cases, this property returns 0.
 
 If you work with two screens this property, evaluated on the right screen, returns the
-width of the left one in pixels (thereby indicating the X coordinate of the left edge of
+width of the left one in pixels (thereby indicating the X coordinate of the left edge of
 the screen on the right).
 
 On Windows, this property depends on which screen is set as your primary, returning the

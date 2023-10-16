@@ -1,12 +1,10 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-tags:
-  - HTTP
-  - Reference
-  - Status code
-  - Success response
+page-type: http-status-code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`202 Accepted`**
@@ -21,15 +19,13 @@ for cases where another process or server handles the request, or for batch proc
 
 ## Status
 
-```
+```http
 202 Accepted
 ```
 
 ## Specifications
 
-| Specification                                            | Title                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "202 Accepted" , "6.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

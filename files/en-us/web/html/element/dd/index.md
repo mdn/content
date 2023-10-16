@@ -1,31 +1,34 @@
 ---
-title: '<dd>: The Description Details element'
+title: "<dd>: The Description Details element"
 slug: Web/HTML/Element/dd
-tags:
-  - Definition
-  - Description Details
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-  - dd
-  - details
+page-type: html-element
 browser-compat: html.elements.dd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, definition, or value for the preceding term ({{HTMLElement("dt")}}) in a description list ({{HTMLElement("dl")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
 
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `nowrap` {{Non-standard_inline}} {{Deprecated_Inline}}
+  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+
+## Examples
+
+For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -34,7 +37,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -51,17 +54,20 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        A {{HTMLElement("dl")}} or (in {{Glossary("WHATWG")}} HTML,
-        {{Glossary("W3C")}} HTML 5.2 and later) a
+        A {{HTMLElement("dl")}} or a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used after a
-        {{HTMLElement("dt")}} or another {{HTMLElement("dl")}}
+        {{HTMLElement("dt")}} or another {{HTMLElement("dd")}}
         element.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+        </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
@@ -73,17 +79,6 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
-  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
-
-## Examples
-
-For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
 
 ## Specifications
 

@@ -1,16 +1,11 @@
 ---
-title: Document.getElementsByClassName()
+title: "Document: getElementsByClassName() method"
+short-title: getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Gecko
-  - HTML5
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 The **`getElementsByClassName`** method of
@@ -30,44 +25,45 @@ descendants of the specified root element with the given class name(s).
 
 ## Syntax
 
-```js
-var elements = document.getElementsByClassName(names); // or:
-var elements = rootElement.getElementsByClassName(names);
+```js-nolint
+getElementsByClassName(names)
 ```
 
-- _elements_ is a live {{domxref("HTMLCollection")}} of found elements.
-- _names_ is a string representing the class name(s) to match; multiple class
-  names are separated by whitespace
-- {{domxref("Element.getElementsByClassName", "getElementsByClassName")}} can be
-  called on any element, not only on the {{domxref("document")}}. The element on which
-  it is called will be used as the root of the search.
+### Parameters
+
+- `names`
+  - : A string representing the class name(s) to match; multiple class names are separated by whitespace.
+
+### Return value
+
+A live {{domxref("HTMLCollection")}} of found elements.
 
 ## Examples
 
 Get all elements that have a class of 'test':
 
 ```js
-document.getElementsByClassName('test')
+document.getElementsByClassName("test");
 ```
 
 Get all elements that have both the 'red' and 'test' classes:
 
 ```js
-document.getElementsByClassName('red test')
+document.getElementsByClassName("red test");
 ```
 
 Get all elements that have a class of 'test', inside of an element that has the ID of
 'main':
 
 ```js
-document.getElementById('main').getElementsByClassName('test')
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 Get the first element with a class of 'test', or `undefined` if there is no
 matching element:
 
 ```js
-document.getElementsByClassName('test')[0]
+document.getElementsByClassName("test")[0];
 ```
 
 We can also use methods of Array.prototype on any {{domxref("HTMLCollection")}} by
@@ -75,10 +71,11 @@ passing the `HTMLCollection` as the method's _this_ value. Here
 we'll find all div elements that have a class of 'test':
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-  return testElement.nodeName === 'DIV';
-});
+const testElements = document.getElementsByClassName("test");
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === "DIV",
+);
 ```
 
 ### Get the first element whose class is 'test'
@@ -86,25 +83,25 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 This is the most commonly used method of operation.
 
 ```html
-<html>
-<body>
+<html lang="en">
+  <body>
     <div id="parent-id">
-        <p>hello world 1</p>
-        <p class="test">hello world 2</p>
-        <p>hello world 3</p>
-        <p>hello world 4</p>
+      <p>hello world 1</p>
+      <p class="test">hello world 2</p>
+      <p>hello world 3</p>
+      <p>hello world 4</p>
     </div>
 
     <script>
-        var parentDOM = document.getElementById("parent-id");
+      const parentDOM = document.getElementById("parent-id");
 
-        var test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
-        console.log(test); //HTMLCollection[1]
+      const test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
+      console.log(test); // HTMLCollection[1]
 
-        var testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
-        console.log(testTarget); //<p class="test">hello world 2</p>
+      const testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
+      console.log(testTarget); // <p class="test">hello world 2</p>
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -128,17 +125,17 @@ elements with ALL of the classNames specified are selected.
 
 ```js
 // getElementsByClassName only selects elements that have both given classes
-var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
-var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceByClass[i].textContent;
+const allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
+let result = "document.getElementsByClassName('orange juice')";
+for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
+  result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
 }
 
 // querySelector only selects full complete matches
-var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
+const allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+for (let i = 0; i < allOrangeJuiceQuery.length; i++) {
+  result += `\n  ${allOrangeJuiceQuery[i].textContent}`;
 }
 
 document.getElementById("resultArea").value = result;

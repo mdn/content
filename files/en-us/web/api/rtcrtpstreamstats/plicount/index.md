@@ -1,26 +1,11 @@
 ---
-title: RTCRtpStreamStats.pliCount
+title: "RTCRtpStreamStats: pliCount property"
+short-title: pliCount
 slug: Web/API/RTCRtpStreamStats/pliCount
-tags:
-  - API
-  - Data Loss
-  - Media
-  - PLI
-  - Packet Loss
-  - Packet Loss Indication
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - pliCount
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.pliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`pliCount`** property of the
@@ -31,13 +16,7 @@ packet to the sender.
 A PLI packet indicates that some amount of encoded video
 data has been lost for one or more frames.
 
-## Syntax
-
-```js
-var pliCount = RTCRtpStreamStats.pliCount;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of times a PLI packet was sent by the stream's
 receiver to the sender.
@@ -66,6 +45,6 @@ the bit rate of the stream.
 
 ## See also
 
-- {{RFC(4585, "6.3.1")}}: Definition of "PLI messages" in the document _Extended
+- {{RFC(4585, "", "6.3.1")}}: Definition of "PLI messages" in the document _Extended
   RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback
   (RTP/AVPF)_.

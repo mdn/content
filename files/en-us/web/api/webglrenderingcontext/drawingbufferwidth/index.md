@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.drawingBufferWidth
+title: "WebGLRenderingContext: drawingBufferWidth property"
+short-title: drawingBufferWidth
 slug: Web/API/WebGLRenderingContext/drawingBufferWidth
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.drawingBufferWidth
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLRenderingContext.drawingBufferWidth`**
@@ -18,11 +14,9 @@ property represents the actual width of the current drawing buffer. It should ma
 this context, but might differ if the implementation is not able to provide the
 requested width.
 
-## Syntax
+## Value
 
-```js
-gl.drawingBufferWidth;
-```
+A number.
 
 ## Examples
 
@@ -35,8 +29,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the width of the drawing buffer with the following lines:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 gl.drawingBufferWidth; // 300
 ```
 

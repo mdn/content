@@ -1,28 +1,9 @@
 ---
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
-tags:
-  - API
-  - AR
-  - Animation
-  - Drawing
-  - Frames
-  - Games
-  - Guide
-  - Intermediate
-  - Reality
-  - Scene
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - display
-  - rendering
-  - requestAnimationFrame
+page-type: guide
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Once your WebXR environment has been set up and an {{domxref("XRSession")}} created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the {{domxref("XRSession")}} to obtain an {{domxref("XRFrame")}} object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.
@@ -43,15 +24,16 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerStartPosition, viewerStartOrientation));
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation),
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
 }
 ```
 
-After getting a reference space for the immersive world, this creates an offset reference space representing the position and orientation of the viewer by creating an {{domxref("XRRigidTransform")}} representing that position and orientation, then calling the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
+After getting a reference space for the immersive world, this creates an offset reference space representing the position and orientation of the viewer by creating an {{domxref("XRRigidTransform")}} representing that position and orientation, then calling the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
 
-Then the first animation frame is scheduled by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, providing a callback function, `myDrawFrame()`, whose job is to render the frame.
+Then the first animation frame is scheduled by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, providing a callback function, `myDrawFrame()`, whose job is to render the frame.
 
 Note that this code doesn't have a loop! Instead, the frame rendering code—in this case, a function named `myDrawFrame()`—is responsible for scheduling time to draw another frame by once again calling `requestAnimationFrame()`.
 
@@ -76,7 +58,7 @@ But not all displays run at 60 Hz; nowadays, higher performance displays are beg
 
 ### Time available to render each frame
 
-This makes using the most of the time available between frames critical. If the user's device is using a 60 Hz display, your callback will be called up to 60 times per second, and your goal is to do what you can to ensure that it doesn't get called less often than that. You achieve this by doing as much as is practicable off the main thread and by keeping your frame rendering callback as efficient as possible. The division of time into 60 Hz blocks with each block being used at least in part to render the scene is shown in the diagram below.
+This makes using the most of the time available between frames critical. If the user's device is using a 60 Hz display, your callback will be called up to 60 times per second, and your goal is to do what you can to ensure that it doesn't get called less often than that. You achieve this by doing as much as is practicable off the main thread and by keeping your frame rendering callback as efficient as possible. The division of time into 60 Hz blocks with each block being used at least in part to render the scene is shown in the diagram below.
 
 ![Renderer execution time per frame period](frames-and-refresh-rate.svg)
 
@@ -98,7 +80,7 @@ Clearly, you have very little time to render your scene each frame. Not only tha
 
 Not only that, but if your rendering crosses the vertical refresh boundary, you can wind up with a **tearing** effect. Tearing occurs when the display hardware starts the next refresh cycle while the previous frame is still being drawn to the screen. As a result, you wind up with the visual effect of the top part of the screen showing the new frame, while the bottom part of the frame shows some combination of the previous frame and possibly even the frame before that one.
 
-Your mission, then, is to keep your code tight and lightweight enough that you don't overrrun the time available to you or otherwise cause dropped frames or excessively abuse the main thread.
+Your mission, then, is to keep your code tight and lightweight enough that you don't overrun the time available to you or otherwise cause dropped frames or excessively abuse the main thread.
 
 For these reasons, unless your renderer is fairly small and lightweight, with little to do, you should consider offloading everything you can to a worker so you can be computing the next frame while the browser handles other things. By having your computations and data ready before the frame is actually called for, you can make your site or app render much more efficiently, improving main thread performance and generally making the user experience better.
 
@@ -110,13 +92,13 @@ Your frame rendering callback function receives as input two parameters: the tim
 
 ### The optics of 3D
 
-We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of  how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.
+We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our [depth perception](https://en.wikipedia.org/wiki/Depth_perception).
 
 To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better we are able to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.
 
-The typical human's {{interwiki("wikipedia", "pupillary distance")}}—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at `[0.0, 2.0, 0.0]` (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, `[-0.032, 2.0, 0.0]` (32mm to the left of center) and then render it again at `[0.032, 2.0, 0.0]` (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.
+The typical human's [pupillary distance](https://en.wikipedia.org/wiki/Pupillary_distance)—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at `[0.0, 2.0, 0.0]` (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, `[-0.032, 2.0, 0.0]` (32mm to the left of center) and then render it again at `[0.032, 2.0, 0.0]` (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.
 
-That distance (or whatever pupillary distance the XR system is configured to use) is enough to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to percieve three dimensions despite our retinas only being 2D surfaces.
+That distance (or whatever pupillary distance the XR system is configured to use) is enough to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to perceive three dimensions despite our retinas only being 2D surfaces.
 
 This is illustrated in the diagram below, in which we see how each eye perceives a die located directly in front of the viewer. While this diagram exaggerates the effect in some respects for illustrative purposes, the concept is the same. Each eye sees an area whose boundaries make up an arc in front of the eye. Because each eye is offset to one side or the other of the head's centerline, and each eye sees about the same field of view, the result is that each eye sees a slightly different part of the world in front of it, and from a slightly different angle.
 
@@ -124,17 +106,17 @@ This is illustrated in the diagram below, in which we see how each eye perceives
 
 The left eye sees the die from a little bit to the left of center, and the right eye sees it from a bit to the right of center. As a result, the left eye sees just a little bit more of the left side of the object and a little bit less of the right, and vice versa. These two images are focused onto the retinas and the resulting signal transmitted over the optic nerves to the brain's visual cortex, located at the back of the occipital lobe.
 
-Tha brain takes those signals from the left and right eyes and constructs a single, unified, 3D image of the world in the viewer's brain, and that image is what is seen. And because of those differences between what is seen by the left eye versus the right eye, the brain is able to infer a great deal of information about how deep the object is, its size, and more. By combining that inferred depth information with other cues such as perspective, shadows, memories of what these relationships mean, and so forth, we can figure out a great deal about the world around us.
+The brain takes those signals from the left and right eyes and constructs a single, unified, 3D image of the world in the viewer's brain, and that image is what is seen. And because of those differences between what is seen by the left eye versus the right eye, the brain is able to infer a great deal of information about how deep the object is, its size, and more. By combining that inferred depth information with other cues such as perspective, shadows, memories of what these relationships mean, and so forth, we can figure out a great deal about the world around us.
 
 ### Frames, poses, views, and framebuffers
 
 Once you have an `XRFrame` representing the state of the scene at a moment in time, you need to determine the positions of objects within the scene relative to the viewer so that you can render them. The viewer's position and orientation relative to a reference space is represented by an {{domxref("XRViewerPose")}} obtained by calling the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}.
 
-The `XRFrame` doesn't directly keep track of the positions or orientations of the objects in your world. Instead, it offers a way to convert positions and orientations into the scene's coordinate system, and it collects the viwer's position and orientation data from the XR hardware, converts it into the reference space you've configured, and delivers it to your frame rendering code with a timestamp. You use that timestamp and your own data to determine how to render the scene.
+The `XRFrame` doesn't directly keep track of the positions or orientations of the objects in your world. Instead, it offers a way to convert positions and orientations into the scene's coordinate system, and it collects the viewer's position and orientation data from the XR hardware, converts it into the reference space you've configured, and delivers it to your frame rendering code with a timestamp. You use that timestamp and your own data to determine how to render the scene.
 
 After rendering the scene twice—once into the left half of the framebuffer and once into the right half of the framebuffer—the framebuffer is sent to the XR hardware, which displays each half of the framebuffer to the corresponding eye. This is often (but not always) done by drawing the image to a single screen and using lenses to transfer the correct half of that image to each eye.
 
-You can learn more about how 3D is represented by WebXR in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Cameras", "Representing 3D with WebXR")}}.
+You can learn more about how 3D is represented by WebXR in [Representing 3D with WebXR](/en-US/docs/Web/API/WebXR_Device_API/Cameras#representing_3d_with_webxr).
 
 ## Drawing the scene
 
@@ -146,7 +128,7 @@ Ideally, you want this code to be fast enough that it can maintain a 60 FPS fram
 
 In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:
 
-```js
+```plain
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -172,7 +154,7 @@ Let's take a look at some real code that follows this basic pattern. Since in th
 let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
-  let session = frame.session;
+  const session = frame.session;
   let viewerPose;
 
   // Schedule the next frame to be painted when the time comes.
@@ -185,7 +167,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
   viewerPose = frame.getViewerPose(viewerRefSpace);
   if (viewerPose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     // Start by erasing the color and depth framebuffers.
@@ -204,8 +186,8 @@ function myDrawFrame(currentFrameTime, frame) {
     // Now call the scene rendering code once for each of
     // the session's views.
 
-    for (let view of viewerPose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of viewerPose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       myDrawSceneIntoView(view, deltaTime);
     }
@@ -223,7 +205,7 @@ The next step is to erase the framebuffer. While you can in theory skip this ste
 
 Since WebXR uses a single framebuffer for every view, with viewports upon the view being used to separate each eye's viewpoint within the framebuffer, we only need to clear a single framebuffer rather than cleaning it for each eye (or other viewpoints, if any) individually.
 
-Next, the time elapsed since the previous frame was rendered is calculated by subtracting from the current time as specified by the `currentFrameTime` parameter the saved time at which the last frame was rendered, `lastFrameTime`. The result is a {{domxref("DOMHighResTimeStamp")}} value indicating the number of milliseconds that have elapsed since the last frame was rendered. We can use this value while drawing the scene to ensure we move everything the appopriate distance given the true elapsed time, rather than assuming that the callback will be fired at a consistent frame rate. This elapsed time is saved in the variable `deltaTime`, and the value of `lastFrameTime` is replaced with this frame's time, ready to compute the differential for the next frame.
+Next, the time elapsed since the previous frame was rendered is calculated by subtracting from the current time as specified by the `currentFrameTime` parameter the saved time at which the last frame was rendered, `lastFrameTime`. The result is a {{domxref("DOMHighResTimeStamp")}} value indicating the number of milliseconds that have elapsed since the last frame was rendered. We can use this value while drawing the scene to ensure we move everything the appropriate distance given the true elapsed time, rather than assuming that the callback will be fired at a consistent frame rate. This elapsed time is saved in the variable `deltaTime`, and the value of `lastFrameTime` is replaced with this frame's time, ready to compute the differential for the next frame.
 
 It's now time to actually render the scene for each eye. We iterate over the views within the viewer poses's {{domxref("XRViewerPose.views", "views")}} array. For each of these {{domxref("XRView")}} objects representing an eye's perspective on the scene, we need to begin by limiting drawing to the area of the framebuffer which represents the current eye's visible image.
 
@@ -243,7 +225,7 @@ An advantage of WebXR's approach of using a single WebGL framebuffer to contain 
 
 The resulting pseudocode looks like this:
 
-```js
+```plain
 for each object in the scene
   bindProgram()
   bindUniforms()
@@ -292,12 +274,12 @@ For that reason, you need to use the timestamp provided to ensure your animation
 let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
-  /* ... schedule next frame, prepare the buffer, etc ... */
+  // schedule next frame, prepare the buffer, etc.
 
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;
 
-  for (let view of pose.views) {
+  for (const view of pose.views) {
     /* render each view */
   }
 }
@@ -308,9 +290,12 @@ This maintains a global (or an object property) called `lastFrameTime` which con
 With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:
 
 ```js
-const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+const xDeltaRotation =
+  xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const yDeltaRotation =
+  yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const zDeltaRotation =
+  zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 ```
 
 This computes the amount by which the object has rotated around each of the three axes since the last time the frame was drawn. Without this, the shape would rotate by the given amount every frame, regardless of the elapsed time. This could cause substantial stutter in many cases.
@@ -323,7 +308,7 @@ const yDistanceMoved = ySpeedPerSecond * deltaTime;
 const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 ```
 
-`xSpeedPerSecond`, `ySpeedPerSecond`, and `zSpeedPerSecond` each contian that axis's component of the object's velocity. In other words, `[xDistanceMoved, yDistanceMoved, zDistanceMoved]` is a vector representing the velocity of the object.
+`xSpeedPerSecond`, `ySpeedPerSecond`, and `zSpeedPerSecond` each contain that axis's component of the object's velocity. In other words, `[xDistanceMoved, yDistanceMoved, zDistanceMoved]` is a vector representing the velocity of the object.
 
 ## Additional tasks related to animating the scene
 
@@ -331,7 +316,7 @@ There are, of course, other things that probably need to happen each pass throug
 
 ### Handling user control inputs
 
-There are three methods by which users might provide input while using a WebXR application. First, WebXR supports directly handling inputs from the controllers which are integrated with the XR hardware itself. These input sources may include devices such as hand controllers, optical tracking systems, acclerometers and magnetometers, and other devices of that nature.
+There are three methods by which users might provide input while using a WebXR application. First, WebXR supports directly handling inputs from the controllers which are integrated with the XR hardware itself. These input sources may include devices such as hand controllers, optical tracking systems, accelerometers and magnetometers, and other devices of that nature.
 
 The second type of input is a gamepad that's connected through the XR system. This uses interfaces inherited from the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) but you interact with them through WebXR.
 
@@ -353,7 +338,7 @@ For example, a virtual reality or augmented reality game might have enemy non-pl
 
 In addition, there may be objects and structures in motion. In a sports game, there may be a ball arcing through the air, its movement needing to be simulated. In racing games there may be cars or other vehicles, with moving parts to animate including the wheels. If there's water in the scene, it needs ripples or waves to look realistic. Parts of structures may be moving, such as doors, walls and floors (for some types of games), and so forth.
 
-Another common source of motion is the player themself. After interpreting inputs from the controls (both XR-affliated and otherwise), you need to apply those changes to the scene in order to simulate the user's movement. See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for details and a thorough example of how this works.
+Another common source of motion is the player themselves. After interpreting inputs from the controls (both XR-affiliated and otherwise), you need to apply those changes to the scene in order to simulate the user's movement. See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for details and a thorough example of how this works.
 
 ## Next steps
 

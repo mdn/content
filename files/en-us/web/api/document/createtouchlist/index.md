@@ -1,41 +1,40 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() method"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Method
-  - Mobile
-  - createTouchList
-  - touch
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.createTouchList
 ---
-{{APIRef("DOM")}}{{Deprecated_Header}}
+
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef("TouchList")}} object.
 
 ## Syntax
 
-```js
-var list = document.createTouchList([touch1 [, touch2 [, ...]]]);
+```js-nolint
+createTouchList(touch1)
+createTouchList(touch1, touch2)
+createTouchList(touch1, touch2, /* …, */ touchN)
 ```
 
 ### Parameters
 
-- `touches`
+- `touch1`, …, `touchN`
   - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
     accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
-    {{DOMxRef("Touch")}} objects.
+    {{DOMxRef("Touch")}} objects.
 
 ### Return value
 
 - `list`
-  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
+  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
     specified by the `touches` parameter.
 
-## Example
+## Examples
 
 This example illustrates using the {{DOMxRef("Document.createTouchList()")}} method to
 create {{DOMxRef("TouchList")}} objects.
@@ -45,20 +44,20 @@ In following code snippet, some {{DOMxRef("Touch")}} objects are created for the
 {{DOMxRef("TouchList")}} objects.
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
 // Create some touch points
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 // Create an empty TouchList objects
-var list0 = document.createTouchList();
+const list0 = document.createTouchList();
 
 // Create a TouchList with only one Touch object
-var list1 = document.createTouchList(touch1);
+const list1 = document.createTouchList(touch1);
 
 // Create a list with two Touch objects
-var list2 = document.createTouchList(touch1, touch2);
+const list2 = document.createTouchList(touch1, touch2);
 ```
 
 ## Specifications

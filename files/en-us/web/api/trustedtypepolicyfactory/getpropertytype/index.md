@@ -1,34 +1,34 @@
 ---
-title: TrustedTypePolicyFactory.getPropertyType()
+title: "TrustedTypePolicyFactory: getPropertyType() method"
+short-title: getPropertyType()
 slug: Web/API/TrustedTypePolicyFactory/getPropertyType
-tags:
-  - API
-  - Method
-  - Reference
-  - getPropertyType
-  - TrustedTypePolicyFactory
+page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element's property.
 
 ## Syntax
 
-    var null = TrustedTypePolicyFactory.getPropertyType(tagName,property[, elementNS]);
+```js-nolint
+getPropertyType(tagName, property)
+getPropertyType(tagName, property, elementNS)
+```
 
 ### Parameters
 
 - `tagName`
-  - : A {{domxref("DOMString","string")}} containing the name of an HTML tag.
+  - : A string containing the name of an HTML tag.
 - `property`
-  - : A {{domxref("DOMString","string")}} containing a property, for example `"innerHTML"`.
-- `elementNs`{{optional_inline}}
-  - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.
+  - : A string containing a property, for example `"innerHTML"`.
+- `elementNS` {{optional_inline}}
+  - : A string containing a namespace, if empty defaults to the HTML namespace.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} with one of:
+A string with one of:
 
 - `"TrustedHTML"`
 - `"TrustedScript"`
@@ -41,7 +41,7 @@ Or, null.
 In this example, passing the {{htmlelement("div")}} element and `innerHTML` property to `getPropertyType` returns "TrustedHTML".
 
 ```js
-console.log(trustedTypes.getPropertyType('div', 'innerHTML')); // "TrustedHTML"
+console.log(trustedTypes.getPropertyType("div", "innerHTML")); // "TrustedHTML"
 ```
 
 ## Specifications

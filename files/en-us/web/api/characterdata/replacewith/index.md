@@ -1,30 +1,35 @@
 ---
-title: CharacterData.replaceWith()
+title: "CharacterData: replaceWith() method"
+short-title: replaceWith()
 slug: Web/API/CharacterData/replaceWith
-tags:
-  - API
-  - DOM
-  - Method
-  - CharacterData
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CharacterData.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
-The **`CharacterData.replaceWith()`** method replaces characters
-in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+The **`replaceWith()`** method of the {{domxref("CharacterData")}} interface
+replaces this node in the children list of its parent
+with a set of {{domxref("Node")}} objects or string.
+
+Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as argument to the {{domxref("Text/Text", "Text()")}} constructor.
 
 ## Syntax
 
-```js
-replaceWith(...nodes)
+```js-nolint
+replaceWith(nodes)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.
+- `nodes` {{optional_inline}}
+  - : A comma-separated list of {{domxref("Node")}} objects or strings that will replace the current node.
+
+> **Note:** If there no argument is passed, this method acts just remove the node from the DOM tree.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -33,20 +38,19 @@ replaceWith(...nodes)
 
 ## Examples
 
-### Using `replaceWith()`
-
 ```html
 <p id="myText">Some text</p>
 ```
 
 ```js
-let text = document.getElementById('myText').firstChild;
-text.replaceWith("Other text");
+let text = document.getElementById("myText").firstChild;
+let em = document.createElement("em");
+em.textContent = "Italic text";
+
+text.replaceWith(em); // Replace `Some text` by `Italic text`
 ```
 
-```html
-<p id="myText">Other text</p>
-```
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

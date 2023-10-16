@@ -1,28 +1,21 @@
 ---
-title: HTMLAreaElement.pathname
+title: "HTMLAreaElement: pathname property"
+short-title: pathname
 slug: Web/API/HTMLAreaElement/pathname
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.pathname`** property is a
-{{domxref("USVString")}} containing an initial `'/'` followed by the path of
-the URL not including the query string or fragment (or the empty string if there is no
+string containing an initial `'/'` followed by the path of
+the URL not including the query string or fragment (or the empty string if there is no
 path).
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.pathname;
-// Setter
-area.pathname = string;
-```
+A string.
 
 ## Examples
 

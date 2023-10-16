@@ -1,13 +1,11 @@
 ---
-title: WEBGL_draw_buffers
+title: WEBGL_draw_buffers extension
+short-title: WEBGL_draw_buffers
 slug: Web/API/WEBGL_draw_buffers
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension
 browser-compat: api.WEBGL_draw_buffers
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_draw_buffers`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables a fragment shader to write to several textures, which is useful for [deferred shading](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/), for example.
@@ -29,7 +27,7 @@ This extension exposes new constants, which can be used in the {{domxref("WebGLR
 - `ext.MAX_DRAW_BUFFERS_WEBGL`
   - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of draw buffers.
 
-## Methods
+## Instance methods
 
 This extension exposes one new method.
 
@@ -41,18 +39,42 @@ This extension exposes one new method.
 Enabling the extension:
 
 ```js
-var ext = gl.getExtension('WEBGL_draw_buffers');
+const ext = gl.getExtension("WEBGL_draw_buffers");
 ```
 
 Binding multiple textures (to a `tx[]` array) to different framebuffer color attachments:
 
 ```js
-var fb = gl.createFramebuffer();
+const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT0_WEBGL, gl.TEXTURE_2D, tx[0], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT1_WEBGL, gl.TEXTURE_2D, tx[1], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT2_WEBGL, gl.TEXTURE_2D, tx[2], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT3_WEBGL, gl.TEXTURE_2D, tx[3], 0);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT0_WEBGL,
+  gl.TEXTURE_2D,
+  tx[0],
+  0,
+);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT1_WEBGL,
+  gl.TEXTURE_2D,
+  tx[1],
+  0,
+);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT2_WEBGL,
+  gl.TEXTURE_2D,
+  tx[2],
+  0,
+);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT3_WEBGL,
+  gl.TEXTURE_2D,
+  tx[3],
+  0,
+);
 ```
 
 Mapping the color attachments to draw buffer slots that the fragment shader will write to using `gl_FragData`:
@@ -62,7 +84,7 @@ ext.drawBuffersWEBGL([
   ext.COLOR_ATTACHMENT0_WEBGL, // gl_FragData[0]
   ext.COLOR_ATTACHMENT1_WEBGL, // gl_FragData[1]
   ext.COLOR_ATTACHMENT2_WEBGL, // gl_FragData[2]
-  ext.COLOR_ATTACHMENT3_WEBGL  // gl_FragData[3]
+  ext.COLOR_ATTACHMENT3_WEBGL, // gl_FragData[3]
 ]);
 ```
 
@@ -70,16 +92,16 @@ Shader code that writes to multiple textures:
 
 ```html
 <script type="x-shader/x-fragment">
-#extension GL_EXT_draw_buffers : require
+  #extension GL_EXT_draw_buffers : require
 
-precision highp float;
+  precision highp float;
 
-void main(void) {
-  gl_FragData[0] = vec4(0.25);
-  gl_FragData[1] = vec4(0.5);
-  gl_FragData[2] = vec4(0.75);
-  gl_FragData[3] = vec4(1.0);
-}
+  void main(void) {
+    gl_FragData[0] = vec4(0.25);
+    gl_FragData[1] = vec4(0.5);
+    gl_FragData[2] = vec4(0.75);
+    gl_FragData[3] = vec4(1.0);
+  }
 </script>
 ```
 

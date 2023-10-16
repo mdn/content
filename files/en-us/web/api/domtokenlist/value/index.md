@@ -1,30 +1,21 @@
 ---
-title: DOMTokenList.value
+title: "DOMTokenList: value property"
+short-title: value
 slug: Web/API/DOMTokenList/value
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Property
-  - Reference
-  - value
+page-type: web-api-instance-property
 browser-compat: api.DOMTokenList.value
 ---
+
 {{APIRef("DOM")}}
 
-The **`value`** property of the {{domxref("DOMTokenList")}}
-interface is a stringifier that returns the value of the list as a
-{{domxref("DOMString")}}, or clears and sets the list to the given value.
+The **`value`** property of the {{domxref("DOMTokenList")}}
+interface is a {{Glossary("stringifier")}} that returns the value of the list serialized as a
+string, or clears and sets the list to the given value.
 
-## Syntax
+## Value
 
-```js
-tokenList.value;
-```
-
-### Value
-
-A {{domxref("DOMString")}}
+A string representing the serialized content of the list.
+Each item is separated by a space.
 
 ## Examples
 
@@ -42,8 +33,8 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
+const span = document.querySelector("span");
+const classes = span.classList;
 span.textContent = classes.value;
 ```
 

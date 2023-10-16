@@ -1,14 +1,12 @@
 ---
 title: Navigation and resource timings
 slug: Web/Performance/Navigation_and_resource_timings
-tags:
-  - Navigation Timing
-  - Resource Timing
-  - Timings
-  - Web Performance
-  - performance APIs
+page-type: guide
 ---
-**Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
+**Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
 
 The general performance timings below have been deprecated in favor of the Performance Entry API, which provides for marking and measuring times along the navigation and resource loading process. While deprecated, they are supported in all browsers.
 
@@ -16,16 +14,16 @@ The general performance timings below have been deprecated in favor of the Perfo
 
 The [performanceTiming API](/en-US/docs/Web/API/PerformanceTiming), a JavaScript API for measuring the loading performance of the requested page, is deprecated but supported in all browsers. It has been replaced with the [performanceNavigationTiming](/en-US/docs/Web/API/PerformanceNavigationTiming) API.
 
-The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from [`navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart), [`unloadEventStart`](/en-US/docs/Web/API/PerformanceTiming/unloadEventStart), [`unloadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd), [`redirectStart`](/en-US/docs/Web/API/PerformanceTiming/redirectStart), [`redirectEnd`](/en-US/docs/Web/API/PerformanceTiming/redirectEnd), [`fetchStart`](/en-US/docs/Web/API/PerformanceTiming/fetchStart), [`domainLookupStart`](/en-US/docs/Web/API/PerformanceTiming/domainLookupStart), [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd), [`connectStart`](/en-US/docs/Web/API/PerformanceTiming/connectStart) , [`connectEnd`](/en-US/docs/Web/API/PerformanceTiming/connectEnd), [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart), [`requestStart`](/en-US/docs/Web/API/PerformanceTiming/requestStart), [`responseStart`](/en-US/docs/Web/API/PerformanceTiming/responseStart), [`responseEnd`](/en-US/docs/Web/API/PerformanceTiming/responseEnd), [`domLoading`](/en-US/docs/Web/API/PerformanceTiming/domLoading), [`domInteractive`](/en-US/docs/Web/API/PerformanceTiming/domInteractive), [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart), [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd), [`domComplete`](/en-US/docs/Web/API/PerformanceTiming/domComplete), [`loadEventStart`](/en-US/docs/Web/API/PerformanceTiming/loadEventStart), and [`loadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/loadEventEnd).
+The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from [`navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart), [`unloadEventStart`](/en-US/docs/Web/API/PerformanceTiming/unloadEventStart), [`unloadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd), [`redirectStart`](/en-US/docs/Web/API/PerformanceTiming/redirectStart), [`redirectEnd`](/en-US/docs/Web/API/PerformanceTiming/redirectEnd), [`fetchStart`](/en-US/docs/Web/API/PerformanceTiming/fetchStart), [`domainLookupStart`](/en-US/docs/Web/API/PerformanceTiming/domainLookupStart), [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd), [`connectStart`](/en-US/docs/Web/API/PerformanceTiming/connectStart), [`connectEnd`](/en-US/docs/Web/API/PerformanceTiming/connectEnd), [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart), [`requestStart`](/en-US/docs/Web/API/PerformanceTiming/requestStart), [`responseStart`](/en-US/docs/Web/API/PerformanceTiming/responseStart), [`responseEnd`](/en-US/docs/Web/API/PerformanceTiming/responseEnd), [`domLoading`](/en-US/docs/Web/API/PerformanceTiming/domLoading), [`domInteractive`](/en-US/docs/Web/API/PerformanceTiming/domInteractive), [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart), [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd), [`domComplete`](/en-US/docs/Web/API/PerformanceTiming/domComplete), [`loadEventStart`](/en-US/docs/Web/API/PerformanceTiming/loadEventStart), and [`loadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/loadEventEnd).
 
 ![Navigation Timing event metrics](screen_shot_2019-05-03_at_1.06.27_pm.png)
 
-With the metrics above, and a little bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
+With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/Time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
 
-To help measure the time it takes to complete all the steps, the Performance Timing API  provides read only measurements of navigation timings. To view and capture our app's timing we enter:
+To help measure the time it takes to complete all the steps, the Performance Timing API provides read only measurements of navigation timings. To view and capture our app's timing we enter:
 
 ```js
-let time = window.performance.timing
+let time = window.performance.timing;
 ```
 
 We can then use the results to measure how well our app is performing.
@@ -232,7 +230,7 @@ The order is:
       <td>
         Right before the parser sent the
         <code
-          ><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event"
+          ><a href="/en-US/docs/Web/API/Document/DOMContentLoaded_event"
             >DOMContentLoaded</a
           ></code
         >
@@ -298,18 +296,17 @@ The order is:
 We can use these values to measure specific timings of interest:
 
 ```js
-let
-    dns  = time.domainLookupEnd - time.domainLookupStart,
-    tcp  = time.connectEnd - time.connectStart,
-    ssl != time.secureConnectionStart,
+const dns = time.domainLookupEnd - time.domainLookupStart;
+const tcp = time.connectEnd - time.connectStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ### Time to first byte
 
-[Time to First Byte](/en-US/docs/Glossary/time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
+[Time to First Byte](/en-US/docs/Glossary/Time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
 
 ```js
-let ttfb = time.responseStart - time.navigationStart;
+const ttfb = time.responseStart - time.navigationStart;
 ```
 
 ### Page load time
@@ -325,7 +322,7 @@ let pageloadtime = time.loadEventStart - time.navigationStart;
 The DNS lookup time is the time between [`domainLookupStart`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart) and [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd). These are both available in both the `performanceTiming` and `performanceNavigationTiming` APIs.
 
 ```js
-let dns  = time.domainLookupEnd - time.domainLookupStart;
+const dns = time.domainLookupEnd - time.domainLookupStart;
 ```
 
 ### TCP
@@ -333,15 +330,15 @@ let dns  = time.domainLookupEnd - time.domainLookupStart;
 The time it takes for the [TCP](/en-US/docs/Glossary/TCP) handshake is the time between the connection start and connection end:
 
 ```js
-tcp  = time.connectEnd - time.connectStart;
+const tcp = time.connectEnd - time.connectStart;
 ```
 
-### SSL negotiation
+### TLS negotiation
 
-[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [https](/en-US/docs/Glossary/https) in not used, or a time stamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
+[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [HTTPS](/en-US/docs/Glossary/HTTPS) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
 
 ```js
-ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ## Performance Entry API
@@ -349,15 +346,15 @@ ssl = time.requestStart - time.secureConnectionStart;
 The general performance timings above are deprecated but fully supported. We now have the {{domxref('PerformanceEntry', 'Performance Entry API')}}, which provides for marking and measuring times along the navigation and resource loading process. You can also create marks:
 
 ```js
-performance.getEntriesByType('navigation').forEach((navigation) => {
+performance.getEntriesByType("navigation").forEach((navigation) => {
   console.dir(navigation);
 });
 
-performance.getEntriesByType('resource').forEach((resource) => {
+performance.getEntriesByType("resource").forEach((resource) => {
   console.dir(resource);
 });
 
-performance.getEntriesByType('mark').forEach((mark) => {
+performance.getEntriesByType("mark").forEach((mark) => {
   console.dir(mark);
 });
 
@@ -365,11 +362,11 @@ performance.getEntriesByType("measure").forEach((measure) => {
   console.dir(measure);
 });
 
-performance.getEntriesByType('paint').forEach((paint) => {
+performance.getEntriesByType("paint").forEach((paint) => {
   console.dir(paint);
 });
 
-performance.getEntriesByType('frame').forEach((frame) => {
+performance.getEntriesByType("frame").forEach((frame) => {
   console.dir(frame);
 });
 ```
@@ -378,20 +375,20 @@ In supporting browsers, you can use `performance.getEntriesByType('paint')` to q
 
 ## Navigation Timing
 
-When a user requests a web site or application,[ to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
+When a user requests a website or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and TLS negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
 
 ```js
-let navigationTimings = performance.getEntriesByType('navigation');
+const navigationTimings = performance.getEntriesByType("navigation");
 ```
 
-The `performance.getEntriesByType('navigation')`a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
+The `performance.getEntriesByType('navigation')` a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
 
 ![The results of when performance.getEntriesByType('navigation'); is entered into the console for this document](perfgentrybytypenavigation.png)
 
 A lot can be garnered from these timing. In the above image, we see via the _name_ property that the file being timed is this document For the rest of this explanation, we use the following variable:
 
 ```js
-let timing = performance.getEntriesByType('navigation')[0];
+const timing = performance.getEntriesByType("navigation")[0];
 ```
 
 ### Protocol
@@ -399,7 +396,7 @@ let timing = performance.getEntriesByType('navigation')[0];
 We can check the protocol used by querying:
 
 ```js
-let protocol = timing.nextHopProtocol
+const protocol = timing.nextHopProtocol;
 ```
 
 It returns the network protocol used to fetch the resource: in this case `h2` for `http/2`.
@@ -409,13 +406,13 @@ It returns the network protocol used to fetch the resource: in this case `h2` fo
 To get the compression savings percentage, we divide the transferSize by the decodedBodySize, and subtract that from 100%. We see a savings of over 74%.
 
 ```js
-let compressionSavings = 1 - (timing.transferSize / timing.decodedBodySize)
+const compressionSavings = 1 - timing.transferSize / timing.decodedBodySize;
 ```
 
 We could have used
 
 ```js
-let compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize)
+const compressionSavings = 1 - timing.encodedBodySize / timing.decodedBodySize;
 ```
 
 but using `transferSize` includes the overhead bytes.
@@ -435,15 +432,15 @@ The API doesn't provide every measurement you may desire. For example, how long 
 To measure the response time, subtract the request start time from the response start time. The request start is the moment immediately before the user agent starts requesting the resource from the server, or from relevant application caches or from local resources. The response start is the time immediately after the user agent's HTTP parser receives the first byte of the response from relevant application caches, or from local resources or from the server, which happens after the request is received and processed.
 
 ```js
-request = timing.responseStart - timing.requestStart
+const request = timing.responseStart - timing.requestStart;
 ```
 
 ### Load event duration
 
-By subtracting the time stamp from immediately before the load event of the current document is fired from the time when the load event of the current document is completed, you can measure the duration of the load event.
+By subtracting the timestamp from immediately before the load event of the current document is fired from the time when the load event of the current document is completed, you can measure the duration of the load event.
 
 ```js
-load = timing.loadEventEnd - timing.loadEventStart
+const load = timing.loadEventEnd - timing.loadEventStart;
 ```
 
 ### DOMContentLoaded event
@@ -451,7 +448,8 @@ load = timing.loadEventEnd - timing.loadEventStart
 The DOMContentLoaded event duration is measured by subtracting the time value immediately before the user agent fires the DOMContentLoaded event from the time value immediately after the event completes. Keeping this at 50ms or faster helps ensure a responsive user interface.
 
 ```js
-DOMContentLoaded = timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart
+const DOMContentLoaded =
+  timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart;
 ```
 
 ### Duration

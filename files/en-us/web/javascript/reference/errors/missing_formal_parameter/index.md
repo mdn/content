@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: missing formal parameter'
+title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing formal parameter" occurs when your function
@@ -14,8 +11,10 @@ declaration is missing valid parameters.
 
 ## Message
 
-```js
+```plain
 SyntaxError: missing formal parameter (Firefox)
+SyntaxError: Unexpected number '3'. Expected a parameter pattern or a ')' in parameter list. (Safari)
+SyntaxError: Unexpected string literal "x". Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
 
 ## Error type
@@ -43,20 +42,20 @@ identifier is part of the code.
 Function parameters must be identifiers when setting up a function. All these function
 declarations fail, as they are providing values for their parameters:
 
-```js example-bad
+```js-nolint example-bad
 function square(3) {
   return number * number;
-};
+}
 // SyntaxError: missing formal parameter
 
 function greet("Howdy") {
   return greeting;
-};
+}
 // SyntaxError: missing formal parameter
 
 function log({ obj: "value"}) {
   console.log(arg)
-};
+}
 // SyntaxError: missing formal parameter
 ```
 
@@ -65,15 +64,15 @@ You will need to use identifiers in function declarations:
 ```js example-good
 function square(number) {
   return number * number;
-};
+}
 
 function greet(greeting) {
   return greeting;
-};
+}
 
 function log(arg) {
-  console.log(arg)
-};
+  console.log(arg);
+}
 ```
 
 You can then call these functions with the arguments you like:
@@ -83,14 +82,9 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({obj: "value"}); // Object { obj: "value" }
+log({ obj: "value" }); // { obj: "value" }
 ```
 
 ## See also
 
-- Other errors regarding formal parameters:
-
-  - [SyntaxError:
-    Malformed formal parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
-  - [SyntaxError:
-    redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+- [SyntaxError: redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

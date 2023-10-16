@@ -1,41 +1,30 @@
 ---
-title: SpeechSynthesisEvent.elapsedTime
+title: "SpeechSynthesisEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/SpeechSynthesisEvent/elapsedTime
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - elapsedTime
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.elapsedTime
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`elapsedTime`** read-only property of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns the elapsed time in seconds
-after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the
-event was triggered at.
+{{APIRef("Web Speech API")}}
 
-## Syntax
+The **`elapsedTime`** read-only property of the {{domxref("SpeechSynthesisEvent")}} returns the elapsed time in seconds, after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken, at which the [event](/en-US/docs/Web/API/SpeechSynthesisUtterance#events) was triggered.
 
-```js
-event.elapsedTime;
-```
+## Value
 
-### Value
+A float containing the elapsed time, in seconds.
 
-A float.
+> **Note:** Early versions of the specification required the elapsed time in milliseconds.
+> Check the [compatibility table](#browser_compatibility) below for your browser.
 
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-}
+utterThis.onboundary = (event) => {
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+  );
+};
 ```
 
 ## Specifications

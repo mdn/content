@@ -1,28 +1,20 @@
 ---
 title: MediaKeySystemAccess
 slug: Web/API/MediaKeySystemAccess
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeySystemAccess
-  - NeedsExample
-  - Reference
-  - Video
+page-type: web-api-interface
 browser-compat: api.MediaKeySystemAccess
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-The **`MediaKeySystemAccess`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} method.
+{{APIRef("EncryptedMediaExtensions")}}
 
-## Properties
+The **`MediaKeySystemAccess`** interface of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} method.
 
-- {{domxref("MediaKeySystemAccess.keySystem")}} {{readonlyinline}}
-  - : Returns a {{domxref('DOMString')}} identifying the key system being used.
+## Instance properties
 
-## Methods
+- {{domxref("MediaKeySystemAccess.keySystem")}} {{ReadOnlyInline}}
+  - : Returns a string identifying the key system being used.
+
+## Instance methods
 
 - {{domxref("MediaKeySystemAccess.createMediaKeys()")}}
   - : Returns a {{jsxref('Promise')}} that resolves to a new {{domxref("MediaKeys")}} object.

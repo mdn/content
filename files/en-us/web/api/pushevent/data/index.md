@@ -1,59 +1,46 @@
 ---
-title: PushEvent.data
+title: "PushEvent: data property"
+short-title: data
 slug: Web/API/PushEvent/data
-tags:
-  - API
-  - Experimental
-  - Property
-  - Push
-  - PushEvent
-  - Reference
-  - data
+page-type: web-api-instance-property
 browser-compat: api.PushEvent.data
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-The `data` read-only property of the **`PushEvent`** interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
+{{APIRef("Push API")}}
 
-## Syntax
+The `data` read-only property of the **`PushEvent`** interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
-```js
-var myPushData = PushEvent.data;
-```
+## Value
 
-### Value
+A {{domxref("PushMessageData")}} object or `null` if no `data` member is passed when the event instance initialized.
 
-A {{domxref("PushMessageData")}} object.
-
-**Examples**
+## Examples
 
 The following example takes data from a PushEvent and displays it on all of the service workers' clients.
 
 ```js
-self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.Notification.permission === 'granted')) {
-    return;
-  }
+self.addEventListener("push", (event) => {
+  if (!(self.Notification && self.Notification.permission === "granted")) {
+    return;
+  }
 
-  var data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
-  var title = data.title || "Something Has Happened";
-  var message = data.message || "Here's something you might want to check out.";
-  var icon = "images/new-notification.png";
+  const data = event.data?.json() ?? {};
+  const title = data.title || "Something Has Happened";
+  const message =
+    data.message || "Here's something you might want to check out.";
+  const icon = "images/new-notification.png";
 
-  var notification = new Notification(title, {
-    body: message,
-    tag: 'simple-push-demo-notification',
-    icon: icon
-  });
+  const notification = new Notification(title, {
+    body: message,
+    tag: "simple-push-demo-notification",
+    icon,
+  });
 
-  notification.addEventListener('click', function() {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
-  });
+  notification.addEventListener("click", () => {
+    clients.openWindow(
+      "https://example.blog.com/2015/03/04/something-new.html",
+    );
+  });
 });
 ```
 

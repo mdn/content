@@ -1,27 +1,27 @@
 ---
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.animate.repeatCount
 ---
+
 {{SVGRef}}
 
-The **`repeatCount`** attribute indicates the number of times an animation will take place.
+The **`repeatCount`** attribute indicates the number of times an animation will take place.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -29,12 +29,22 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="5"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="1s"
+      repeatCount="5" />
   </rect>
   <rect x="120" y="0" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="1s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -60,38 +70,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than `0`.
-*   `indefinite`
-    *   : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
+- `<number>`
+  - : This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than `0`.
+- `indefinite`
+  - : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#RepeatCountAttribute", "repeatCount")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#RepeatCountAttribute", "repeatCount")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

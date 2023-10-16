@@ -1,23 +1,20 @@
 ---
-title: XRTransientInputHitTestSource.cancel()
+title: "XRTransientInputHitTestSource: cancel() method"
+short-title: cancel()
 slug: Web/API/XRTransientInputHitTestSource/cancel
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestSource.cancel
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`cancel()`** method of the {{domxref("XRTransientInputHitTestSource")}} interface unsubscribes a transient input hit test.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 
@@ -27,13 +24,13 @@ None.
 
 ### Return value
 
-Returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ### Unsubscribe from hit test
 
-The `cancel()` method unsubscribes from a transient input hit test source. Since the {{domxref("XRTransientInputHitTestSource")}} object will no longer be usable, you can clean up and set it to {{jsxref("null")}}.
+The `cancel()` method unsubscribes from a transient input hit test source. Since the {{domxref("XRTransientInputHitTestSource")}} object will no longer be usable, you can clean up and set it to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 transientHitTestSource.cancel();

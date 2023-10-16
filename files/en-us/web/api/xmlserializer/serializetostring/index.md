@@ -1,21 +1,11 @@
 ---
-title: XMLSerializer.serializeToString()
+title: "XMLSerializer: serializeToString() method"
+short-title: serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - DOM to HTML
-  - DOM to XML
-  - Parsing
-  - Reference
-  - Serialize
-  - Serializing DOM
-  - XML
-  - XMLSerializer
-  - serializeToString
+page-type: web-api-instance-method
 browser-compat: api.XMLSerializer.serializeToString
 ---
+
 {{APIRef("DOM Parsing")}}
 
 The {{domxref("XMLSerializer")}} method
@@ -24,8 +14,8 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
 ## Syntax
 
-```js
-xmlString = anXMLSerializer.serializeToString(rootNode);
+```js-nolint
+serializeToString(rootNode)
 ```
 
 ### Parameters
@@ -36,18 +26,18 @@ xmlString = anXMLSerializer.serializeToString(rootNode);
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the XML representation of the specified DOM tree.
+A string containing the XML representation of the specified DOM tree.
 
 ### Exceptions
 
-- `TypeError`
-  - : The specified `rootNode` is not a compatible node type. The root node
+- {{jsxref("TypeError")}}
+  - : Thrown if the specified `rootNode` is not a compatible node type. The root node
     must be either {{domxref("Node")}} or {{domxref("Attr")}}.
-- `InvalidStateError`
-  - : The tree could not be successfully serialized, probably due to issues with the
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the tree could not be successfully serialized, probably due to issues with the
     content's compatibility with XML serialization.
-- `SyntaxError`
-  - : A serialization of HTML was requested but could not succeed due to the content not
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if a serialization of HTML was requested but could not succeed due to the content not
     being well-formed.
 
 ## Usage notes
@@ -70,7 +60,7 @@ The following types are also permitted as descendants of the root node, in addit
 - {{domxref("ProcessingInstruction")}}
 - {{domxref("Attr")}}
 
-If any other type is encountered, a `TypeError` exception is thrown.
+If any other type is encountered, a {{jsxref("TypeError")}} exception is thrown.
 
 ### Notes on the resulting XML
 
@@ -97,8 +87,7 @@ There are some things worth noting about the XML output by
 
 ## See also
 
-- [Parsing and serializing
-  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - Serializing to HTML: {{domxref("Element.innerHTML")}} and
   {{domxref("Element.outerHTML")}}
 - Parsing HTML or XML to create a DOM tree: {{domxref("DOMParser")}}

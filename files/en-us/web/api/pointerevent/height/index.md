@@ -1,15 +1,11 @@
 ---
-title: PointerEvent.height
+title: "PointerEvent: height property"
+short-title: height
 slug: Web/API/PointerEvent/height
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.PointerEvent.height
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`height`** read-only property of the
@@ -21,20 +17,13 @@ value.
 If the input hardware cannot report the contact geometry to the browser, the height
 defaults to `1`.
 
-## Syntax
+## Value
 
-```js
-var contactHeight = pointerEvent.height;
-```
+The height of the event's contact area (in CSS pixels).
 
-### Return value
+## Examples
 
-- `contactHeight`
-  - : The height of the event's contact area (in CSS pixels).
-
-## Example
-
-An example of this property is included in the [PointerEvent.width example](/en-US/docs/Web/API/PointerEvent/width#example).
+An example of this property is included in the [PointerEvent.width example](/en-US/docs/Web/API/PointerEvent/width#examples).
 
 ## Specifications
 

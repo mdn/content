@@ -1,16 +1,11 @@
 ---
-title: FileSystemFileEntry.file()
+title: "FileSystemFileEntry: file() method"
+short-title: file()
 slug: Web/API/FileSystemFileEntry/file
-tags:
-  - API
-  - File
-  - File and Directory Entries API
-  - FileSystemFileEntry
-  - Files
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.FileSystemFileEntry.file
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method
@@ -20,8 +15,9 @@ the directory entry.
 
 ## Syntax
 
-```js
-FileSystemFileEntry.file(successCallback[, errorCallback]);
+```js-nolint
+file(successCallback)
+file(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -36,27 +32,27 @@ FileSystemFileEntry.file(successCallback[, errorCallback]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example establishes a method, `readFile()`, reads a text file and calls
-a specified callback function with the received text (in a {{jsxref("String")}} object)
+a specified callback function with the received text (in a string)
 once the read is completed. If an error occurs, a specified (optional) error callback is
 called.
 
 ```js
 function readFile(entry, successCallback, errorCallback) {
-  entry.file(function(file) {
+  entry.file((file) => {
     let reader = new FileReader();
 
-    reader.onload = function() {
+    reader.onload = () => {
       successCallback(reader.result);
     };
 
-    reader.onerror = function() {
+    reader.onerror = () => {
       errorCallback(reader.error);
-    }
+    };
 
     reader.readAsText(file);
   }, errorCallback);
@@ -65,9 +61,9 @@ function readFile(entry, successCallback, errorCallback) {
 
 This function calls `file()`, specifying as its success callback a method
 which proceeds to use a {{domxref("FileReader")}} to read the file as text. The
-FileReader's {{event("load")}} event handler is set up to deliver the loaded string to
+FileReader's {{domxref("FileReader/load_event", "load")}} event handler is set up to deliver the loaded string to
 the `successCallback` specified when the `readFile()` method was
-called; similarly, its {{event("error")}} handler is set up to call the
+called; similarly, its {{domxref("FileReader/error_event", "error")}} handler is set up to call the
 `errorCallback` specified.
 
 ## Specifications
@@ -80,7 +76,5 @@ called; similarly, its {{event("error")}} handler is set up to call the
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

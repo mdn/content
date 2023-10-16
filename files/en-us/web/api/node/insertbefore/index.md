@@ -1,23 +1,20 @@
 ---
-title: Node.insertBefore()
+title: "Node: insertBefore() method"
+short-title: insertBefore()
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Node.insertBefore
 ---
+
 {{APIRef("DOM")}}
 
-The **`Node.insertBefore()`** method
-inserts a node before a _reference node_ as a child of a specified _parent
-node_.
+The **`insertBefore()`** method of the {{domxref("Node")}} interface
+inserts a node before a _reference node_ as a child of a specified _parent node_.
 
-If the given node already exists in the document, `insertBefore()` moves it
-from its current position to the new position. (That is, it will automatically be
-removed from its existing parent before appending it to the specified new parent.)
+If the given node already exists in the document,
+`insertBefore()` moves it from its current position to the new position.
+(That is, it will automatically be removed from its existing parent
+before appending it to the specified new parent.)
 
 This means that a node cannot be in two locations of the document simultaneously.
 
@@ -31,31 +28,30 @@ node.
 
 ## Syntax
 
-```js
-let insertedNode = parentNode.insertBefore(newNode, referenceNode)
+```js-nolint
+insertBefore(newNode, referenceNode)
 ```
 
-- `insertedNode`
-  - : The node being inserted (the same as `newNode`)
-- `parentNode`
-  - : The parent of the newly inserted node.
+### Parameters
+
 - `newNode`
   - : The node to be inserted.
 - `referenceNode`
   - : The node before which `newNode` is inserted. If this is
     `null`, then `newNode` is inserted at the end of
-    `parentNode`'s child nodes.
-
-> **Note:** `referenceNode` is **not**
-> an optional parameter. You must explicitly pass a {{domxref("Node")}} or
-> `null`. Failing to provide it or passing invalid values may [behave](https://code.google.com/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in
-> different browser versions.
+    node's child nodes.
+    > **Note:** `referenceNode` is **not** an optional parameter.
+    > You must explicitly pass a {{domxref("Node")}} or `null`.
+    > Failing to provide it or passing invalid values may [behave](https://crbug.com/419780) [differently](https://bugzil.la/119489) in different browser versions.
 
 ### Return value
 
-Returns the added child (unless `newNode` is a
-{{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}}
-is returned).
+Returns the added child (unless `newNode` is a {{domxref("DocumentFragment")}},
+in which case the empty {{domxref("DocumentFragment")}} is returned).
+
+### Exceptions
+
+Pre-insert validity
 
 ## Example
 
@@ -63,30 +59,30 @@ is returned).
 
 ```html
 <div id="parentElement">
-   <span id="childElement">foo bar</span>
+  <span id="childElement">foo bar</span>
 </div>
 
 <script>
-// Create the new node to insert
-let newNode = document.createElement("span")
+  // Create the new node to insert
+  const newNode = document.createElement("span");
 
-// Get a reference to the parent node
-let parentDiv = document.getElementById("childElement").parentNode
+  // Get a reference to the parent node
+  const parentDiv = document.getElementById("childElement").parentNode;
 
-// Begin test case [ 1 ] : Existing childElement (all works correctly)
-let sp2 = document.getElementById("childElement")
-parentDiv.insertBefore(newNode, sp2)
-// End test case [ 1 ]
+  // Begin test case [ 1 ] : Existing childElement (all works correctly)
+  let sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // End test case [ 1 ]
 
-// Begin test case [ 2 ] : childElement is of Type undefined
-let sp2 = undefined // Non-existent node of id "childElement"
-parentDiv.insertBefore(newNode, sp2) // Implicit dynamic cast to type Node
-// End test case [ 2 ]
+  // Begin test case [ 2 ] : childElement is of Type undefined
+  sp2 = undefined; // Non-existent node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
+  // End test case [ 2 ]
 
-// Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
-let sp2 = "undefined" // Non-existent node of id "childElement"
-parentDiv.insertBefore(newNode, sp2) // Generates "Type Error: Invalid Argument"
-// End test case [ 3 ]
+  // Begin test case [ 3 ] : childElement is of Type "undefined" (string)
+  sp2 = "undefined"; // Non-existent node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
+  // End test case [ 3 ]
 </script>
 ```
 
@@ -98,33 +94,32 @@ parentDiv.insertBefore(newNode, sp2) // Generates "Type Error: Invalid Argument"
 </div>
 
 <script>
-// Create a new, plain <span> element
-let sp1 = document.createElement("span")
+  // Create a new, plain <span> element
+  let sp1 = document.createElement("span");
 
-// Get the reference element
-let sp2 = document.getElementById("childElement")
-// Get the parent element
-let parentDiv = sp2.parentNode
+  // Get the reference element
+  let sp2 = document.getElementById("childElement");
+  // Get the parent element
+  let parentDiv = sp2.parentNode;
 
-// Insert the new element into before sp2
-parentDiv.insertBefore(sp1, sp2)
+  // Insert the new element into before sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-> **Note:** There is no `insertAfter()` method. It can be
-> emulated by combining the `insertBefore` method with
-> {{domxref("Node.nextSibling")}}.
-
-In the previous example, `sp1` could be inserted after `sp2`
-using:
-
-```js
-parentDiv.insertBefore(sp1, sp2.nextSibling)
-```
-
-If `sp2` does not have a next sibling, then it must be the last child —
-`sp2.nextSibling` returns `null`, and `sp1` is inserted
-at the end of the child node list (immediately after `sp2`).
+> **Note:** There is no `insertAfter()` method.
+> It can be emulated by combining the `insertBefore` method
+> with {{domxref("Node.nextSibling")}}.
+>
+> In the previous example, `sp1` could be inserted after `sp2` using:
+>
+> ```js
+> parentDiv.insertBefore(sp1, sp2.nextSibling);
+> ```
+>
+> If `sp2` does not have a next sibling, then it must be the last child —
+> `sp2.nextSibling` returns `null`, and `sp1` is inserted
+> at the end of the child node list (immediately after `sp2`).
 
 ### Example 3
 
@@ -133,15 +128,15 @@ Insert an element before the first child element, using the
 
 ```js
 // Get the parent element
-let parentElement = document.getElementById('parentElement')
+let parentElement = document.getElementById("parentElement");
 // Get the parent's first child
-let theFirstChild = parentElement.firstChild
+let theFirstChild = parentElement.firstChild;
 
 // Create a new element
-let newElement = document.createElement("div")
+let newElement = document.createElement("div");
 
 // Insert the new element before the first child
-parentElement.insertBefore(newElement, theFirstChild)
+parentElement.insertBefore(newElement, theFirstChild);
 ```
 
 When the element does not have a first child, then `firstChild` is

@@ -1,40 +1,21 @@
 ---
-title: RTCSctpTransport.state
+title: "RTCSctpTransport: state property"
+short-title: state
 slug: Web/API/RTCSctpTransport/state
-tags:
-  - API
-  - Draft
-  - Experimental
-  - NeedsCompatTable
-  - NeedsExample
-  - Property
-  - RTCSctpTransport
-  - RTCSctpTransportState
-  - Read-only
-  - Reference
-  - WebRTC
-  - state
+page-type: web-api-instance-property
 browser-compat: api.RTCSctpTransport.state
 ---
-{{APIRef("WebRTC")}}{{Draft}}{{SeeCompatTable}}
 
-The **`state`** read-only property of the
-{{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream
-Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport state.
+{{APIRef("WebRTC")}}
 
-## Syntax
+The **`state`** read-only property of the {{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream Control Transmission Protocol ({{Glossary("SCTP")}}) transport state.
 
-```js
-var myState = sctpTransport.state;
-```
+## Value
 
-### Value
-
-A string whose value is taken from the `RTCSctpTransportState` enumerated
-type. Its value is one of the following:
+A string whose value is one of the following:
 
 - `connecting`
-  - : The initial state when the connection is being estabilished.
+  - : The initial state when the connection is being established.
 - `connected`
   - : The connection is open for data transmission.
 - `closed`

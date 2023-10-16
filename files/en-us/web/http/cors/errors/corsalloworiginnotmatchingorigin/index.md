@@ -1,24 +1,14 @@
 ---
-title: 'Reason: CORS header ''Access-Control-Allow-Origin'' does not match ''xyz'''
+title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-tags:
-  - CORS
-  - CORSAllowOriginNotMatchingOrigin
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
+page-type: http-cors-error
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 ```
 
@@ -37,13 +27,15 @@ configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file.
 
-```
+> **Warning:** You must include the HTTPS or HTTP protocol as part of the origin.
+
+```apacheconf
 Header set Access-Control-Allow-Origin 'origin'
 ```
 
 For Nginx, the command to set up this header is:
 
-```
+```nginx
 add_header 'Access-Control-Allow-Origin' 'origin'
 ```
 
@@ -52,5 +44,4 @@ add_header 'Access-Control-Allow-Origin' 'origin'
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [Enable CORS: I want to add CORS
-  support to my server](https://enable-cors.org/server.html)
+- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
