@@ -42,7 +42,7 @@ requestAnimationFrame(callback)
     rendering (based on the number of milliseconds since
     [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
   - The timestamp is a decimal number, in milliseconds, but with a minimal
-    precision of 1 millisend. For `Window` objects (not `Workers`), it is equal to
+    precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to
     {{domxref("document.timeline.currentTime")}}. This timestamp is shared
     between all windows that run on the same agent (that is, all same-origin windows,
     and more importantly same-origin iframes) — which allows synchronizing
