@@ -45,7 +45,7 @@ requestAnimationFrame(callback)
     precision of 1 millisend. For `Window` objects (not `Workers`), it is equal to
     {{domxref("document.timeline.currentTime")}}. This timestamp is shared
     between all windows that run on the same agent (that is, all same-origin windows,
-    and more importantly same-origin iframes) — which allows synchronizing
+    and more importantly same-origin iframes) — which allows synchronizing
     animations across multiple `requestAnimationFrame` callbacks. The timestamp
     value is also similar to calling {{domxref('performance.now()')}} at the start
     of the callback function, but it is never the same value.
