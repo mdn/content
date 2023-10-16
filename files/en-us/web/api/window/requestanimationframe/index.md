@@ -105,26 +105,11 @@ the highest precision available is the duration of a single frame, 16.67ms @60hz
 callback's timestamp argument represents the end of the previous frame, so the soonest
 your newly calculated value(s) will be rendered is the next frame.
 
-This example uses {{domxref("document.timeline.currentTime")}} to set a zero value
-prior to the first call to `requestAnimationFrame`. {{domxref("document.timeline.currentTime")}}
-aligns with the timeStamp argument, so the zero value is equivalent to the
-0th frame's timestamp.
-
-```js
-const zero = document.timeline.currentTime;
-requestAnimationFrame(animate);
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration; // animation-timing-function: linear
-  if (value < 1) {
-    element.style.opacity = value;
-    requestAnimationFrame((t) => animate(t));
-  } else element.style.opacity = 1;
-}
-```
-
 This example waits until the first callback executes to set `zero`. If your animation
-jumps to a new value when it starts, you must structure it this way or like the first
-example on this page.
+jumps to a new value when it starts, you must structure it this way. If you have no need to
+synchronize to anything external, such as audio, then this approach is recommended because
+some browsers have a multi-frame delay between the initial call to `requestAnimationFrame()`
+and the first call to the callback function.
 
 ```js
 let zero;
@@ -135,6 +120,23 @@ function firstFrame(timeStamp) {
 }
 function animate(timeStamp) {
   const value = (timeStamp - zero) / duration;
+  if (value < 1) {
+    element.style.opacity = value;
+    requestAnimationFrame((t) => animate(t));
+  } else element.style.opacity = 1;
+}
+```
+
+This example uses {{domxref("document.timeline.currentTime")}} to set a zero value
+prior to the first call to `requestAnimationFrame`. {{domxref("document.timeline.currentTime")}}
+aligns with the timeStamp argument, so the zero value is equivalent to the
+0th frame's timestamp.
+
+```js
+const zero = document.timeline.currentTime;
+requestAnimationFrame(animate);
+function animate(timeStamp) {
+  const value = (timeStamp - zero) / duration; // animation-timing-function: linear
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));
