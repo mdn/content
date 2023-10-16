@@ -214,6 +214,8 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("flex")}}
   - {{cssxref("flex-flow")}}
   - {{cssxref("font")}}
+  - {{cssxref("font-synthesis")}}
+  - {{cssxref("font-variant")}}
   - {{cssxref("gap")}}
   - {{cssxref("grid")}}
   - {{cssxref("grid-area")}}

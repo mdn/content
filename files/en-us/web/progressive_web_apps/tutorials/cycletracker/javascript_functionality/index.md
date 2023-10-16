@@ -179,7 +179,7 @@ Add the container element to the list of contents at the top of your script.
 const pastPeriodContainer = document.getElementById("past-periods");
 ```
 
-We retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create a header and an unordered list. We loop thru the past periods, adding list items containing formatted from and to dates.
+We retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create a header and an unordered list. We loop through the past periods, adding list items containing formatted from and to dates.
 
 ```js
 function renderPastPeriods() {
