@@ -336,6 +336,7 @@ We included the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute on th
 
 ol {
   list-style: uppercase-roman;
+  padding-left: 5em;
 }
 ```
 
