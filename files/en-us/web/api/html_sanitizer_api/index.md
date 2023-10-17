@@ -9,7 +9,8 @@ browser-compat: api.Sanitizer
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-> **Note:** Since the initial implementation of this API, the specification has changed significantly. As a result, it has been removed from Chrome and other Chromium-based browsers while the specification update stabilizes and a new implementation is worked on.
+> **Note:** This documentation reflects stale browser implementations.
+> The specification has changed significantly since the docs were written, and they will need to be updated once browser implementations catch up. 
 
 {{securecontext_header}}
 
