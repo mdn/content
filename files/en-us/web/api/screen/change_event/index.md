@@ -40,8 +40,8 @@ An event of type `change`, the event object of which is structurally equivalent 
 ## Examples
 
 ```js
-const firstScreen = (await window.getScreenDetails())[0];
-firstScreen.addEventListener("change", async (event) => {
+const firstScreen = (await window.getScreenDetails()).screens[0];
+firstScreen.addEventListener("change", (event) => {
   console.log("The first screen has changed.", event, firstScreen);
 });
 ```

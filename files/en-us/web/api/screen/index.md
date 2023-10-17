@@ -38,6 +38,19 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
+## Non-standard properties
+
+The following properties are standardized as part of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), thus we have chosen to document their standard form, which is available on the {{domxref("ScreenDetailed")}} interface. However, non-standard versions of these properties are available on the `Screen` interface.
+
+- {{domxref("ScreenDetailed.availLeft", "Screen.availLeft")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : A number representing the x-coordinate (left-hand edge) of the available screen area.
+- {{domxref("ScreenDetailed.availTop", "Screen.availTop")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : A number representing the y-coordinate (top edge) of the available screen area.
+- {{domxref("ScreenDetailed.left", "Screen.left")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : A number representing the x-coordinate (left-hand edge) of the total screen area.
+- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : A number representing the y-coordinate (top edge) of the total screen area.
+
 ## Instance methods
 
 _Also inherits methods from its parent {{domxref("EventTarget")}}_.
@@ -54,7 +67,7 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fires when the screen orientation changes.
 
-## Example
+## Examples
 
 ```js
 if (screen.pixelDepth < 8) {

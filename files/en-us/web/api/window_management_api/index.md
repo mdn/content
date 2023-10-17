@@ -25,15 +25,15 @@ const myWindow = window.open(
 
 You can retrieve information about your screen from the {{domxref("Window.screen")}} property, such as how much screen space you have available to place windows in.
 
-However, the above features are limited. `Window.screen` only returns data about the primary screen, and not secondary displays available to a device. To move a window to a secondary display, you could use {{domxref("Window.MoveTo()")}}, but you'd have to guess what coordinates to use based on where it is placed in your setup relative to the primary display.
+However, the above features are limited. `Window.screen` only returns data about the primary screen, and not secondary displays available to a device. To move a window to a secondary display, you could use {{domxref("Window.moveTo()")}}, but you'd have to guess what coordinates to use based on where it is placed in your setup relative to the primary display.
 
 The Window Management API provides more robust, flexible window management. It allows you to query whether your display is extended with multiple screens and return information on each screen separately: windows can then be placed on each screen as desired. It also provides event handlers to allow you to respond to changes in the available screens, new fullscreen functionality to choose which screen to put into fullscreen mode (if any), and permissions functionality to control access to the API.
 
 ### Multi-screen origin
 
-The Window Management API introduces the concept of the **multi-screen origin** — this is the (0,0) coordinate of the host operating system (OS)'s virtual screen arrangement, around which all available screens and windows are positioned. The multi-screen origin is the top-left corner of the OS primary screen (which can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock).
+The Window Management API introduces the concept of the **multi-screen origin** — this is the (0,0) coordinate of the host operating system (OS)'s virtual screen arrangement, around which all available screens and windows are positioned. The multi-screen origin is commonly, but not always, the top-left corner of the OS primary screen (which can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock).
 
-On devices with multiple displays:
+On devices with multiple displays, the following are true on Chrome. Firefox behaves in the same way, but not reliably/consistently, whereas Safari generally uses local values relative to the _current_ screen.
 
 - The values of {{domxref("ScreenDetailed.left")}}, {{domxref("ScreenDetailed.top")}}, {{domxref("ScreenDetailed.availLeft")}}, and {{domxref("ScreenDetailed.availTop")}} for each available screen are reported relative to the multi-screen origin.
 - The values of {{domxref("Window.screenLeft")}}, {{domxref("Window.screenTop")}}, {{domxref("Window.screenX")}}, {{domxref("Window.screenY")}} for each window are reported relative to the multi-screen origin.
@@ -77,7 +77,11 @@ const noOfScreens = screenDetails.screens.length;
 When `getScreenDetails()` is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting {{domxref("ScreenDetails")}} object contains the following properties:
 
 - `screens`
+
   - : An array of {{domxref("ScreenDetailed")}} objects, each one containing detailed information about a separate screen available to the system (see below). This array is also useful for determining the number of available screens, via `screens.length`.
+
+    > **Note:** `screens` only includes "extended" displays, not those that mirror another display.
+
 - `currentScreen`
   - : A single {{domxref("ScreenDetailed")}} object containing detailed information about the screen that the current browser window is displayed in.
 
@@ -105,7 +109,7 @@ function openWindow(left, top, width, height, url) {
   const windowFeatures = `left=${left},top=${top},width=${width},height=${height}`;
   const windowRef = window.open(
     url,
-    Math.random().toString(), // a target is needed for it to open as a separate window rather than a tab
+    "_blank", // needed for it to open in a new window
     windowFeatures,
   );
 
@@ -140,13 +144,11 @@ As shown in an earlier code block, it is a good idea to keep track of the window
 ```js
 function closeAllWindows() {
   // Loop through all window refs and close each one
-  windowRefs.forEach(windowRef => {
+  windowRefs.forEach((windowRef) => {
     windowRef.close();
   });
   windowRefs = [];
 }
-
-// ...
 
 // Check whether one of our popup windows has been closed
 // If so, close them all
@@ -154,28 +156,46 @@ function closeAllWindows() {
 closeMonitor = setInterval(checkWindowClose, 250);
 
 function checkWindowClose() {
-  windowRefs.forEach(windowRef => {
-    if (windowRef.closed) {
-      closeAllWindows();
-      return;
-    }
-  });
+  if (windowRefs.some((windowRef) => windowRef.closed)) {
+    closeAllWindows();
+    clearInterval(closeMonitor);
+  }
+}
 ```
 
 > **Note:** In our experiments, the {{domxref("setInterval()")}} polling method shown above seemed to work best for detecting window closure in the case of multiple windows. Using events such as {{domxref("Window.beforeunload_event", "beforeunload")}}, {{domxref("Window.pagehide_event", "pagehide")}}, or {{domxref("Document.visibilitychange_event", "visibilitychange")}} proved unreliable because, when opening multiple windows at the same time, the rapid shift in focus/visibility seemed to fire the handler function prematurely.
+
+> **Note:** One concern with the above example is that it uses constant values to represent the size of the Chrome window UI portions in the calculations — `WINDOW_CHROME_X` and `WINDOW_CHROME_Y` — to get the window size calculations correct. This might not produce entirely correctly-sized windows on other future implementations of the API, or future versions of Chrome that might have a different-sized UI. There currently isn't an easy way to work around this.
+
+### Simple single-window per display case
+
+If you want to open a single window on each available display that is the full width and height of the display, you could use a pattern like this:
+
+```js
+// Open a window on each screen of the device
+for (const screen of screenDetails.screens) {
+  openWindow(
+    screen.availLeft,
+    screen.availTop,
+    screen.availWidth,
+    screen.availHeight,
+    url,
+  );
+}
+```
 
 ### Window management events
 
 The Window Management API provides some useful events for responding to changes in the available screens:
 
 - The `ScreenDetails` {{domxref("ScreenDetails.screenschange_event", "screenschange")}} event
-  - : Fired when the screens available to the system change in some way.
+  - : Fired when screens are connected to or disconnected from the system.
 - The `ScreenDetails` {{domxref("ScreenDetails.currentscreenchange_event", "currentscreenchange")}} event
-  - : Fired when the current screen changes in some way.
+  - : Fired when the window's current screen changes in some way.
 - The `Screen` {{domxref("Screen.change_event", "change")}} event
   - : Fired on a specific screen when it changes in some way.
 
-So for example, you could use the `screenschange` event to detect when the available screens have changed (perhaps when a screen is plugged in or unplugged), report the change, close all windows, and then reopen them all to suit the new configuration:
+So for example, you could use the `screenschange` event to detect when the available screens have changed (perhaps when a screen is plugged in or unplugged), report the change, close all windows, and update window arrangements to suit the new configuration:
 
 ```js
 screenDetails.addEventListener("screenschange", () => {
@@ -201,9 +221,9 @@ The Window Management API adds a new `screen` option to the {{domxref("Element.r
 
 ```js
 try {
-  const primaryScreen = (await getScreenDetails()).screens.filter(
+  const primaryScreen = (await getScreenDetails()).screens.find(
     (screen) => screen.isPrimary,
-  )[0];
+  );
   await document.body.requestFullscreen({ screen: primaryScreen });
 } catch (err) {
   console.error(err.name, err.message);
@@ -263,6 +283,7 @@ You can find full examples here:
 
 - [Multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api)).
 - [Elmer-inspired trading desk demo](https://window-placement.glitch.me/) (see the [source code](https://glitch.com/edit/#!/window-placement)).
+- [Window management demo](https://michaelwasserman.github.io/window-placement-demo/) (see the [source code](https://github.com/michaelwasserman/window-placement-demo)).
 
 ## Specifications
 

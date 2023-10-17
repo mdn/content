@@ -15,17 +15,30 @@ The **`top`** read-only property of the
 
 This is equal to the true top edge, ignoring any OS UI element drawn at the top of the screen. Windows cannot be placed in those areas; to get the top coordinate of the screen area that windows can be placed in, use {{domxref("ScreenDetailed.availTop")}}.
 
+> **Note:** In Firefox, a non-standard implementation of the `top` property is available on the `Screen` interface, and represents the y-coordinate (top edge) of the _current_ screen's area (i.e. the screen containing the browser window the code is being run in). See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
+
 ## Value
 
 A number.
 
 ## Examples
 
+### Window Management API example
+
 ```js
+// Available in browsers that support the Window Management API
 const screenDetails = await window.getScreenDetails();
 
 // Return the absolute top value of the first screen
 const screen1Top = screenDetails.screens[0].top;
+```
+
+### Non-standard example
+
+```js
+// Available in Firefox
+// Return the absolute top value of the current screen
+const screenTop = window.screen.top;
 ```
 
 ## Specifications

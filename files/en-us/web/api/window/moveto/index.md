@@ -15,8 +15,6 @@ interface moves the current window to the specified coordinates.
 > contrast, {{domxref("window.moveBy()")}} moves the window relative to its current
 > location.
 
-> **Note:** On devices with multiple displays, `moveTo()` positions windows relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin).
-
 ## Syntax
 
 ```js-nolint

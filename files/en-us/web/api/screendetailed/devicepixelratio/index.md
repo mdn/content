@@ -11,7 +11,12 @@ browser-compat: api.ScreenDetailed.devicePixelRatio
 {{APIRef("Window Management API")}}{{SeeCompatTable}}
 
 The **`devicePixelRatio`** read-only property of the
-{{domxref("ScreenDetailed")}} interface is a number representing the screen's device pixel ratio. This is the same as the value returned by {{domxref("Window.devicePixelRatio")}} (although that property always returns the device pixel ratio for the {{domxref("ScreenDetails.currentScreen", "current screen", "", "nocode")}}) — see that page for more information about device pixel ratios in general.
+{{domxref("ScreenDetailed")}} interface is a number representing the screen's device pixel ratio.
+
+This is the same as the value returned by {{domxref("Window.devicePixelRatio")}}, except that `Window.devicePixelRatio`:
+
+- always returns the device pixel ratio for the {{domxref("ScreenDetails.currentScreen", "current screen", "", "nocode")}}.
+- also includes scaling of the window itself, i.e. page zoom (at least on some browser implementations).
 
 ## Value
 

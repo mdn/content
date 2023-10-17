@@ -12,23 +12,7 @@ browser-compat: api.ScreenDetails.screenschange_event
 
 The **`screenschange`** event of the {{domxref("ScreenDetails")}} interface is fired when the screens available to the system change in some way.
 
-Specifically, a _change_ in this context means either:
-
-- A screen ({{domxref("ScreenDetailed")}} object) is added to or removed from the {{domxref("ScreenDetails.screens", "screens")}} array.
-- A screen's _basic observable properties_ change. These are:
-  - {{domxref("Screen.width", "width")}}
-  - {{domxref("Screen.height", "height")}}
-  - {{domxref("Screen.availWidth", "availWidth")}}
-  - {{domxref("Screen.availHeight", "availHeight")}}
-  - {{domxref("Screen.colorDepth", "colorDepth")}}
-  - {{domxref("Screen.orientation", "orientation")}}
-- A screen's _advanced observable properties_ change. These are:
-  - The screen's position ((x,y) coordinates of the top-left corner) inside the OS virtual screen arrangement, relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin)
-  - The screen's available position ((x,y) coordinates of the top-left corner) inside the OS virtual screen arrangement, relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin). This is equal to the screen position, plus the width/height of any OS UI elements drawn on the top-left of the screen — windows cannot be placed in those areas
-  - {{domxref("ScreenDetailed.devicePixelRatio", "devicePixelRatio")}}
-  - {{domxref("ScreenDetailed.label", "label")}}
-  - The screen's designation as primary or secondary (see {{domxref("ScreenDetailed.isPrimary", "isPrimary")}})
-  - The screen's designation as internal or external (see {{domxref("ScreenDetailed.isInternal", "isInternal")}})
+Specifically, a _change_ in this context means a screen ({{domxref("ScreenDetailed")}} object) has been added to or removed from the {{domxref("ScreenDetails.screens", "screens")}} array.
 
 ## Syntax
 
@@ -59,12 +43,8 @@ screenDetails.addEventListener("screenschange", () => {
     );
   }
 
-  // If the windows are open, close them and then open them again
-  // So that they fit with the new screen configuration
-  if (windowRefs.length > 0) {
-    closeAllWindows();
-    openWindows();
-  }
+  // Open, close, or rearrange windows as needed, to fit the new screen configuration
+  updateWindows();
 });
 ```
 

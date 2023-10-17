@@ -20,7 +20,7 @@ The **`ScreenDetailed`** interface of the [Window Management API](/en-US/docs/We
 _Inherits properties from its parent, {{DOMxRef("Screen")}}._
 
 - {{domxref("ScreenDetailed.availLeft", "availLeft")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A number representing the x-coordinate (left hand edge) of the available screen area.
+  - : A number representing the x-coordinate (left-hand edge) of the available screen area.
 - {{domxref("ScreenDetailed.availTop", "availTop")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A number representing the y-coordinate (top edge) of the available screen area.
 - {{domxref("ScreenDetailed.devicePixelRatio", "devicePixelRatio")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{DOMxRef("Screen")}}._
 - {{domxref("ScreenDetailed.label", "label")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string providing a descriptive label for the screen, for example "Built-in Retina Display".
 - {{domxref("ScreenDetailed.left", "left")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A number representing the x-coordinate (left hand edge) of the total screen area.
+  - : A number representing the x-coordinate (left-hand edge) of the total screen area.
 - {{domxref("ScreenDetailed.top", "top")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A number representing the y-coordinate (top edge) of the total screen area.
 
@@ -54,11 +54,11 @@ function openWindow(left, top, width, height, url) {
   const windowFeatures = `left=${left},top=${top},width=${width},height=${height}`;
   const windowRef = window.open(
     url,
-    Math.random().toString(), // a target is needed for it to open as a separate window rather than a tab
+    "_blank", // needed for it to open in a new window
     windowFeatures,
   );
 
-  // Store a reference to the window in the windowRefs array
+  // Store a reference to the window in the windowRefs array for later use
   windowRefs.push(windowRef);
 }
 ```

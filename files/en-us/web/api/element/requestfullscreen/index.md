@@ -165,9 +165,9 @@ If you wanted to make the element fullscreen on the primary OS screen, you could
 
 ```js
 try {
-  const primaryScreen = (await getScreenDetails()).screens.filter(
+  const primaryScreen = (await getScreenDetails()).screens.find(
     (screen) => screen.isPrimary,
-  )[0];
+  );
   await document.body.requestFullscreen({ screen: primaryScreen });
 } catch (err) {
   console.error(err.name, err.message);
