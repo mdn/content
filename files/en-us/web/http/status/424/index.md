@@ -13,6 +13,12 @@ Regular web servers will normally not return this status code. But some other pr
 
 ## Status
 
+```http
+424 Failed Dependency
+```
+
+## Specifications
+
 {{Specifications}}
 
 ## See also

@@ -99,11 +99,11 @@ This page is just like the last one, except we've added two {{htmlelement("butto
 <br />
 
 <button id="upper" type="button">Uppercase span elements</button>
-<button id="reset" type="button">Reset</button>
+<button id="reload" type="button">Reload</button>
 ```
 
 Clicking the "Uppercase span elements" button finds all `<span>` elements in the page and changes their text to uppercase.
-Clicking the "Reset" button just reloads the page, so you can try again.
+Clicking the "Reload" button just reloads the page, so you can try again.
 
 ```js
 const host = document.querySelector("#host");
@@ -120,8 +120,8 @@ upper.addEventListener("click", () => {
   }
 });
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => document.location.reload());
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
 ```
 
 If you click "Uppercase span elements", you'll see that {{domxref("Document.querySelectorAll()")}} doesn't find the elements in our shadow DOM: they are effectively hidden from JavaScript in the page:
@@ -130,7 +130,7 @@ If you click "Uppercase span elements", you'll see that {{domxref("Document.quer
 
 ## Element.shadowRoot and the "mode" option
 
-In the example above, we pass an argument `{ mode: "open" }` to `attachShadow()`. With `mode` set to `"open"`, then JavaScript in the page is able to access the internals of your shadow DOM through the {{domxref("Element.shadowRoot", "shadowRoot")}} property of the shadow host.
+In the example above, we pass an argument `{ mode: "open" }` to `attachShadow()`. With `mode` set to `"open"`, the JavaScript in the page is able to access the internals of your shadow DOM through the {{domxref("Element.shadowRoot", "shadowRoot")}} property of the shadow host.
 
 In this example, as before, the HTML contains the shadow host, a `<span>` element in the main DOM tree, and two buttons:
 
@@ -140,7 +140,7 @@ In this example, as before, the HTML contains the shadow host, a `<span>` elemen
 <br />
 
 <button id="upper" type="button">Uppercase shadow DOM span elements</button>
-<button id="reset" type="button">Reset</button>
+<button id="reload" type="button">Reload</button>
 ```
 
 This time the "Uppercase" button uses `shadowRoot` to find the `<span>` elements in the DOM:
@@ -160,15 +160,15 @@ upper.addEventListener("click", () => {
   }
 });
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => document.location.reload());
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
 ```
 
 This time, the JavaScript running in the page can access the shadow DOM internals:
 
 {{EmbedLiveSample("Element.shadowRoot and the \"mode\" option")}}
 
-So `{mode: "open"}` gives the page a way to break the encapsulation of your shadow DOM. If you don't want to give the page this ability, pass `{mode: "closed"}` instead, and then `shadowRoot` returns `null`.
+The `{mode: "open"}` argument gives the page a way to break the encapsulation of your shadow DOM. If you don't want to give the page this ability, pass `{mode: "closed"}` instead, and then `shadowRoot` returns `null`.
 
 However, you should not consider this a strong security mechanism, because there are ways it can be evaded, for example by browser extensions running in the page. It's more of an indication that the page should not access the internals of your shadow DOM tree.
 
@@ -206,7 +206,22 @@ The page CSS does not affect nodes inside the shadow DOM:
 
 ## Applying styles inside the shadow DOM
 
-To style page elements in the shadow DOM, we can create a {{htmlelement("style")}} element and attach it to the shadow root. Rules defined in here will be scoped to the shadow DOM tree.
+In this section we'll look at two different ways to apply styles inside a shadow DOM tree:
+
+- [_Programmatically_](#constructable_stylesheets), by constructing a {{domxref("CSSStyleSheet")}} object and attaching it to the shadow root.
+- [_Declaratively_](#adding_style_elements_in_template_declarations), by adding a {{htmlelement("style")}} element in a {{htmlelement("template")}} element's declaration.
+
+In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the rest of the page.
+
+### Constructable stylesheets
+
+To style page elements in the shadow DOM with constructable stylesheets, we can:
+
+1. Create an empty {{domxref("CSSStyleSheet")}} object
+2. Set its content using {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}}
+3. Add it to the shadow root by assigning it to {{domxref("ShadowRoot.adoptedStyleSheets")}}
+
+Rules defined in the `CSSStyleSheet` will be scoped to the shadow DOM tree, as well as any other DOM trees to which we have assigned it.
 
 Here, again, is the HTML containing our host and a `<span>`:
 
@@ -215,33 +230,68 @@ Here, again, is the HTML containing our host and a `<span>`:
 <span>I'm not in the shadow DOM</span>
 ```
 
-Again, we will add a page style targeting `<span>` elements:
-
-```css
-span {
-  color: blue;
-  border: 1px solid black;
-}
-```
-
-This time we will create the shadow DOM and add a `<style>` element to it:
+This time we will create the shadow DOM and assign a `CSSStyleSheet` object to it:
 
 ```js
+const sheet = new CSSStyleSheet();
+sheet.replaceSync("span { color: red; border: 2px dotted black;}");
+
 const host = document.querySelector("#host");
 
 const shadow = host.attachShadow({ mode: "open" });
-const style = document.createElement("style");
-style.textContent = `span { color: red; border: 2px dotted black;}`;
-shadow.appendChild(style);
+shadow.adoptedStyleSheets = [sheet];
 
 const span = document.createElement("span");
 span.textContent = "I'm in the shadow DOM";
 shadow.appendChild(span);
 ```
 
-{{EmbedLiveSample("Applying styles inside the shadow DOM")}}
+The styles defined in the shadow DOM tree are not applied in the rest of the page:
 
-So the encapsulation of CSS works both ways: page styles don't affect the shadow DOM tree, and shadow DOM styles don't affect elements outside the shadow DOM.
+{{EmbedLiveSample("Constructable stylesheets")}}
+
+### Adding `<style>` elements in `<template>` declarations
+
+An alternative to constructing `CSSStyleSheet` objects is to include a {{htmlelement("style")}} element inside the {{htmlelement("template")}} element used to define a web component.
+
+In this case the HTML includes the `<template>` declaration
+
+```html
+<template id="my-element">
+  <style>
+    span {
+      color: red;
+      border: 2px dotted black;
+    }
+  </style>
+  <span>I'm in the shadow DOM</span>
+</template>
+
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+```
+
+In the JavaScript, we will create the shadow DOM and add the content of the `<template>` to it:
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const template = document.getElementById("my-element");
+
+shadow.appendChild(template.content);
+```
+
+Again, the styles defined in the `<template>` are applied only within the shadow DOM tree, and not in the rest of the page:
+
+{{EmbedLiveSample("adding_style_elements_in_template_declarations")}}
+
+### Choosing between programmatic and declarative options
+
+Which of these options to use is dependent on your application and personal preference.
+
+Creating a `CSSStyleSheet` and assigning it to the shadow root using `adoptedStyleSheets` allows you to create a single stylesheet and share it among many DOM trees. For example, a component library could create a single stylesheet and then share it among all the custom elements belonging to that library. The browser will parse that stylesheet once. Also, you can make dynamic changes to the stylesheet and have them propagate to all components that use the sheet.
+
+The approach of attaching a `<style>` element is great if you want to be declarative, have few styles, and don't need to share styles across different components.
 
 ## Shadow DOM and custom elements
 
@@ -292,3 +342,15 @@ For more examples, illustrating different aspects of custom element implementati
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+- {{domxref("Element.attachShadow()")}}
+- {{domxref("ShadowRoot.adoptedStyleSheets")}}
+- {{domxref("CSSStyleSheet.replace()")}}
+- {{domxref("CSSStyleSheet.replaceSync()")}}
+- {{HTMLelement("template")}}
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- {{CSSXref(":host")}}
+- {{CSSXref(":host_function", ":host()")}}
+- {{CSSXref(":host-context", ":host-context()")}}
+- {{CSSXref("::slotted", "::slotted()")}}
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- {{CSSXref("::part")}}
