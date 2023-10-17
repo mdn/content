@@ -22,13 +22,13 @@ align-items: stretch;
 
 /* Positional alignment */
 /* align-items does not take left and right values */
-align-items: center; /* Pack items around the center */
-align-items: start; /* Pack items from the start */
-align-items: end; /* Pack items from the end */
-align-items: flex-start; /* Pack flex items from the start */
-align-items: flex-end; /* Pack flex items from the end */
-align-items: self-start; /* Pack flex items from the start */
-align-items: self-end; /* Pack flex items from the end */
+align-items: center;
+align-items: start;
+align-items: end;
+align-items: flex-start;
+align-items: flex-end;
+align-items: self-start;
+align-items: self-end;
 
 /* Baseline alignment */
 align-items: baseline;
