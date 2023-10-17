@@ -58,9 +58,9 @@ align-items: unset;
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `flex-start`
-  - : The cross-start margin edges of the flex items are flushed with the cross-start edge of the line.
+  - : Only used in flex layout. Aligns the flex items to be flush with the edge of the alignment container corresponding to the flex container's main-start or cross-start side, as appropriate.
 - `flex-end`
-  - : The cross-end margin edges of the flex items are flushed with the cross-end edge of the line.
+  - : Only used in flex layout. Aligns the flex items to be flush with the edge of the alignment container corresponding to the flex container's main-end or cross-end side, as appropriate.
 - `center`
   - : The flex items' margin boxes are centered within the line on the cross-axis. If the cross-size of an item is larger than the flex container, it will overflow equally in both directions.
 - `start`
@@ -74,7 +74,7 @@ align-items: unset;
 - `baseline`, `first baseline`, `last baseline`
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 - `stretch`
-  - : Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints.
+  - : If the combined size of the items is less than the size of the alignment container, any auto-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by `max-height`/`max-width` (or equivalent functionality), so that the combined size exactly fills the alignment container.
 - `safe`
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
