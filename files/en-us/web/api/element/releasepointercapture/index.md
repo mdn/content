@@ -34,9 +34,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-| Exception          | Explanation                                          |
-| ------------------ | ---------------------------------------------------- |
-| `InvalidPointerId` | pointerId does not match any of the active pointers. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if `pointerId` does not match any active pointer.
 
 ## Examples
 
