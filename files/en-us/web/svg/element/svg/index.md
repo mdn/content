@@ -42,7 +42,7 @@ svg {
 
 {{EmbedLiveSample('nested_svg-elements', 300, 100)}}
 
-### Using dynamic viewport lengths
+### Using dynamic viewport units
 
 This example the `height` and `width` attributes, on the `svg` element, are set using the dynamic viewport values `vmin`
 
