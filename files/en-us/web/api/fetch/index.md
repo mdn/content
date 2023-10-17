@@ -53,7 +53,7 @@ fetch(resource, options)
 
     - `browsingTopics` {{experimental_inline}}
 
-      - : A boolean that specifies whether observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+      - : A boolean specifying that observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 
     - `cache`
 

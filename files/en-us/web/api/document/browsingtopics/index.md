@@ -33,7 +33,7 @@ A {{jsxref("Promise")}} that fulfills with an array of up to three objects repre
 - `configVersion`
   - : A string identifying the algorithm (other than the model part) used to calculate the topic.
 - `modelVersion`
-  - : A string representing the model used to classify a string into topic IDs.
+  - : A string representing the model used to classify a string (such as a web page's hostname) into topic IDs.
 - `taxonomyVersion`
   - : A string representing the taxonomy version used.
 - `topic`
