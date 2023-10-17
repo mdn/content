@@ -15,8 +15,7 @@ While we think of counters as numbers, they are actually strings with incrementa
 
 ### Properties
 
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
+No properties are defined in this module
 
 ### Functions
 
@@ -57,6 +56,9 @@ While we think of counters as numbers, they are actually strings with incrementa
 
 [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
 
+- {{cssxref("counter-increment")}} property
+- {{cssxref("counter-reset")}} property
+- {{cssxref("counter-set")}} property
 - {{cssxref("list-style-type")}} property
 - {{cssxref("list-style")}} shorthand property
 - {{cssxref("counter", "counter()")}} function
