@@ -34,7 +34,11 @@ In their most basic forms, both `create()` and `get()` receive a very large rand
 
 To illustrate how the credential creation process works, let's describe the typical flow that occurs when a user wants to register a credential to a relying party:
 
-1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)).
+1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [Fetch](/en-US/docs/Web/API/Fetch_API) or [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)).
+
+   > **Note:** The format for sharing information between the relying party server and the web app is up to the application.
+   > A recommended approach is to exchange {{glossary("JSON type representation")}} objects for credentials and credential options.
+   > Convenience methods have been created in `PublicKeyCredential` for converting from the JSON representations to the form required by the authentication APIs: {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "parseCreationOptionsFromJSON()")}}, {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "parseRequestOptionsFromJSON()")}} and {{domxref("PublicKeyCredential.toJSON()")}}.
 
 2. The web app initiates generation of a new credential via the authenticator, on behalf of the relying party, via a {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} call. This call is passed a `publicKey` option specifying device capabilities, e.g., whether the device provides its own user authentication (for example with biometrics).
 
