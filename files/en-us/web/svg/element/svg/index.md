@@ -44,7 +44,7 @@ svg {
 
 ### Using dynamic viewport units
 
-This example the `height` and `width` attributes, on the `svg` element, are set using the dynamic viewport values `vmin`
+In this example, the `height` and `width` attributes on the `svg` element are set using the dynamic viewport value `60vmin`, equivalent to 60% of the viewport's width or height, whichever is smaller. 
 
 ```html hidden
 <div class="resizer">
