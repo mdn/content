@@ -220,15 +220,6 @@ document.body.appendChild(preloadedScript);
 
 This is useful when you want to preload a script, but then defer execution until exactly when you need it.
 
-## Other resource preloading mechanisms
-
-Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
-
-- `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See {{Glossary("prefetch")}} for more details.
-- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users' bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
-- `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
-- There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
-
 ## Specifications
 
 {{Specifications}}
@@ -239,4 +230,5 @@ Other preloading features exist, but none are quite as fit for purpose as `<link
 
 ## See also
 
+- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="preload">` and other similar performance improvement features.
 - [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

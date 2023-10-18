@@ -347,7 +347,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
 
 ## Accessibility concerns
 
-Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
+Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are hearing impaired to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.
 

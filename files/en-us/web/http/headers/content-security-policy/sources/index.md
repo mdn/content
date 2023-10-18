@@ -83,6 +83,8 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     See [script-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) for an example.
 - `'report-sample'`
   - : Requires a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ## Relevant directives
 
