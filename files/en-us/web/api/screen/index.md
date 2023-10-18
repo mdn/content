@@ -40,7 +40,7 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
 ## Non-standard properties
 
-The following properties are standardized as part of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), thus we have chosen to document their standard form, which is available on the {{domxref("ScreenDetailed")}} interface. However, non-standard versions of these properties are available on the `Screen` interface.
+The following properties are specified as part of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), which makes them available on the {{domxref("ScreenDetailed")}} interface; this is where we have chosen to document them. However, non-standard versions of these properties are available on the `Screen` interface in browsers that don't support that API. See this page's [Browser compatibility](#browser_compatibility) table for details of the non-standard support.
 
 - {{domxref("ScreenDetailed.availLeft", "Screen.availLeft")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A number representing the x-coordinate (left-hand edge) of the available screen area.
