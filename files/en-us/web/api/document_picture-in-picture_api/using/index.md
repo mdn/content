@@ -62,7 +62,7 @@ if ("documentPictureInPicture" in window) {
 }
 ```
 
-If it is available, we remove the "Document Picture-in-Picture API not available" message and instead addd a {{htmlelement("button")}} element to open the video player in a Document Picture-in-Picture window.
+If it is available, we remove the "Document Picture-in-Picture API not available" message and instead add a {{htmlelement("button")}} element to open the video player in a Document Picture-in-Picture window.
 
 ## Open a Picture-in-Picture window
 
