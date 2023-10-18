@@ -34,7 +34,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### SVG
 
-- The {{SVGElement("svg")}} element now supports level 3 [length](/en-US/docs/Web/CSS/length) [CSS data types](/en-US/docs/Web/CSS/CSS_Types) for the {{SVGAttr("height")}} and {{SVGAttr("width")}} attributes. This enables the sizing of SVGs based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.). (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
+- The [SVG attributes](/en-US/docs/Web/SVG/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) value now supports [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/en-US/docs/Web/CSS/length) [CSS data types](/en-US/docs/Web/CSS/CSS_Types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.). (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 #### Removals
 
