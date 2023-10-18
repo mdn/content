@@ -69,3 +69,5 @@ You should end up with something like this image.
 ![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
+
+{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

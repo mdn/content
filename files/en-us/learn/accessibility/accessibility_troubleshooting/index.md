@@ -82,3 +82,5 @@ The data table is not currently very accessible — it is hard for screen reader
 ### Other considerations?
 
 Can you list two more ideas for improvements that would make the website more accessible?
+
+{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
