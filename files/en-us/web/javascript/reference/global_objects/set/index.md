@@ -271,11 +271,11 @@ console.log([...mySet]); // Will show you exactly the same Array as myArray
 ```js
 // Use to remove duplicate elements from an array
 
-const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
+const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
 console.log([...new Set(numbers)]);
 
-// [2, 3, 4, 5, 6, 7, 32]
+// [2, 13, 4, 5, 6, 7, 32]
 ```
 
 ### Relation to strings

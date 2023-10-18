@@ -199,7 +199,7 @@ Compare the rendering of the uppercase gamma letters in the following formula:
 
 {{ EmbedLiveSample('Reverting automatic italicization of <mi>', 700, 50) }}
 
-> **Note:** Although you can apply this tranformation, normally you'd just use the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
+> **Note:** Although you can apply this transformation, normally you'd just use the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 
 ## Operator properties of \<mo>
 
