@@ -65,7 +65,7 @@ Note that most of the values included inside the listed sub-members equate to bo
 So for example, "Response" will result in a link being created like so:
 
 ```html
-<li><a href="/en-US/docs/Web/API">Response</a></li>
+<li><a href="/en-US/docs/Web/API/Response">Response</a></li>
 ```
 
 There are a few exceptions.
@@ -91,7 +91,7 @@ These are all technically optional, but it is strongly encouraged that instead o
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
    "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/Element/animationstart_event).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API.
-   Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link.
+   Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link text.
    As an example, the following object:
 
    ```json

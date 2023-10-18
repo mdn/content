@@ -42,7 +42,7 @@ string. `test()` returns a boolean, unlike the
 `-1` if not found).
 
 To get more information (but with slower execution), use the
-{{jsxref("RegExp.prototype.exec()", "exec()")}} method. (This is similar to the
+{{jsxref("RegExp/exec", "exec()")}} method. (This is similar to the
 {{jsxref("String.prototype.match()")}} method.)
 
 As with `exec()` (or in combination with it), `test()` called

@@ -21,7 +21,7 @@ commit()
 
 ## Examples
 
-```javascript
+```js
 const placeholder = document.createElement("canvas");
 const offscreen = placeholder.transferControlToOffscreen();
 const ctx = offscreenCanvas.getContext("2d");

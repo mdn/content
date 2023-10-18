@@ -11,7 +11,7 @@ browser-compat:
 
 The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to gain access to _unpartitioned cookies_ that it would normally only have access to in a first-party context (i.e. when loaded directly in a browser tab).
 
-> **Note:** When we say _unpartitioned cookies_, we are talking about cookies stored in the traditional way they have historically been stored since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned cookies_, where embedded resources under each top-level origin are given a unique cookie storage space (see for example [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)).
+> **Note:** When we say _unpartitioned cookies_, we are talking about cookies stored in the traditional way they have historically been stored since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned cookies_, where embedded resources under each top-level site are given a unique cookie storage space (see for example [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)).
 
 The Storage Access API is relevant to user agents that by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy (for example, to prevent tracking). There are legitimate uses for unpartitioned cookie access by third-party content that we still want to enable, even with these default restrictions in place. Examples include SSO with federated IdPs, or persisting user details such as location data or viewing preferences across different sites.
 
@@ -86,8 +86,6 @@ Although the API surface is the same, websites using the Storage Access API shou
 Design properties unique to Firefox are summarized here:
 
 - If the embedded origin `tracker.example` has already obtained unpartitioned cookie access on the top-level origin `foo.example`, and the user visits a page from `foo.example` embedding a page from `tracker.example` again in less than 30 days, the embedded origin will have unpartitioned cookie access immediately when loading.
-- If an embedded page from `tracker.example` has previously successfully obtained unpartitioned cookie access on top-level origin `foo.example`, all embedded subresources from `tracker.example` on `foo.example` (e.g. scripts, images, stylesheets, etc.) will load with access to their cookies, which means they may send Cookie headers and honor incoming {{httpheader("Set-Cookie")}} headers.
-- In Firefox, when the promise returned from `requestStorageAccess()` is resolved, the embedded page will gain access to its entire first-party storage, not just unpartitioned cookies. This includes access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache), and so on.
 - The storage access grants are phased out after 30 calendar days have passed.
 
 Documentation for Firefox's new storage access policy for blocking tracking cookies includes [a detailed description](/en-US/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants) of the scope of storage access grants.

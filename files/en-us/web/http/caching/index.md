@@ -123,7 +123,7 @@ For the example response, the meaning of `max-age` is the following:
 
 As long as the stored response remains fresh, it will be used to fulfill client requests.
 
-When a response is stored in a shared cache, it is necessary to inform the client of the response's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
+When a response is stored in a shared cache, it is possible to tell the client the age of the response. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
 
 ```http
 HTTP/1.1 200 OK

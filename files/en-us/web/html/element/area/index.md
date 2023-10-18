@@ -43,9 +43,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
-- `hreflang` {{Deprecated_Inline}}
-  - : Indicates the language of the linked resource. Allowed values are defined by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-    Use this attribute only if the [`href`](#href) attribute is present.
 - `ping`
   - : Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background).
     Typically used for tracking.
@@ -85,19 +82,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     Use this attribute only if the [`href`](#href) attribute is present.
 
     > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
-
-### Deprecated attributes
-
-- `name` {{deprecated_inline}}
-  - : Define a names for the clickable area so that it can be scripted by older browsers.
-- `nohref` {{deprecated_inline}}
-
-  - : Indicates that no hyperlink exists for the associated area.
-
-    > **Note:** The `nohref` attribute is not necessary, as omitting the `href` attribute is sufficient.
-
-- `type` {{deprecated_inline}}
-  - : Hint for the type of the referenced resource. Ignored by browsers.
 
 ## Examples
 
@@ -154,7 +138,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <a href="/en-US/docs/Web/HTML/Element/area#href"><code>href</code></a> attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <a href="/en-US/docs/Web/HTML/Element/area#href"><code>href</code></a> attribute is present, otherwise
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

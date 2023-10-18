@@ -426,10 +426,10 @@ This is because of the loop. The line `const fruits = ['apples', 'bananas', 'che
 A `for...of` loop gives you a way to get each item in the array and run some JavaScript on it. The line `for (const fruit of fruits)` says:
 
 1. Get the first item in `fruits`.
-2. Set the `fruit` variable to that item, then run the code between the `{}` brackets.
+2. Set the `fruit` variable to that item, then run the code between the `{}` curly braces.
 3. Get the next item in `fruits`, and repeat 2, until you reach the end of `fruits`.
 
-In this case, the code inside the brackets is writing out `fruit` to the console.
+In this case, the code inside the curly braces is writing out `fruit` to the console.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
@@ -487,7 +487,7 @@ Let's play with some browser objects a bit.
 
    The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
-5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
+5. Now try typing `guesses` into the console and pressing <kbd>Enter</kbd> (or <kbd>Return</kbd>, depending on your keyboard). The console shows you that the variable contains a {{htmlelement("p")}} element.
 6. Now try entering the following line:
 
    ```js
