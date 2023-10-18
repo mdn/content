@@ -9,7 +9,7 @@ browser-compat: api.Window.requestAnimationFrame
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the
-browser that you wish to perform an animation. I requests that the browser call a
+browser that you wish to perform an animation. It requests the browser to call a
 user-supplied callback function prior to the next repaint.
 
 The frequency of calls to the callback function will generally match the display
