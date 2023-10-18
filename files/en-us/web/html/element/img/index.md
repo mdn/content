@@ -14,7 +14,7 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 The above example shows usage of the `<img>` element:
 
 - The `src` attribute is **required**, and contains the path to the image you want to embed.
-- The `alt` attribute holds a textual replacement for the image, which is mandatory in most cases and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
 
 There are many other attributes to achieve various purposes:
 
@@ -57,7 +57,7 @@ If an error occurs while loading or rendering an image, and an `onerror` event h
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `alt`
+- [`alt`](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes)
 
   - : Defines text that can replace the image in the page.
 
