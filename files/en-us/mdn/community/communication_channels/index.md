@@ -10,12 +10,12 @@ There are various communication channels using which community can contact MDN W
 
 ## Chat rooms
 
-Chat rooms are for meeting other folks, asking questions and sharing information.
+Chat rooms are for meeting other people, asking questions and sharing information.
 They are a great place to get to know other community members, share your work, and get help with your contributions.
 
 ### Discord server
 
-The MDN Web Docs community Discord is open to the public.
+The MDN Web Docs community Discord server is open to the public.
 This server is a great place to see what staff and members of the community are doing on a daily basis.
 You can ask questions, seek clarifications, find out how to get involved, and join specific channels based on your areas of interest.
 

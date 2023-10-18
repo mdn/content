@@ -30,7 +30,7 @@ Here's a list of ways you can contribute to MDN Web Docs:
 - [Contributing](/en-US/docs/MDN/Community/Contributing)
 
   - : This section explains how you can start contributing and the type of contributions we accept.
-    This section covers [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started), [Our repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories), [Translated content](/en-US/docs/MDN/Community/Contributing/Translated_content), and [Security vulnerability response steps](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response).
+    It covers [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started), [Our repositories](/en-US/docs/MDN/Community/Contributing/Our_repositories), [Translated content](/en-US/docs/MDN/Community/Contributing/Translated_content), and [Security vulnerability response steps](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response).
 
 - [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette)
 
