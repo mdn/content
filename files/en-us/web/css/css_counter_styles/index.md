@@ -78,4 +78,5 @@ No properties are defined in this module
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
 - [Ready-made counter styles](https://w3c.github.io/predefined-counter-styles/) via W3C
