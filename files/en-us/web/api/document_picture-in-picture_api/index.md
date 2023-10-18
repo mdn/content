@@ -13,7 +13,7 @@ The **Document Picture-in-Picture API** makes it possible to open an always-on-t
 
 ## Concepts and usage
 
-It is often useful to have a separate web app window available in addition to the main window that the app is running in. You might want to browse other windows while keeping certain app content in view, or you might want to give that content its own space while keeping the main app window freed up for displaying other content. You could handle this by just opening a regular new browser window, but this has two major issues:
+It is often helpful to have a different window available to a web app in addition to the main window in which the app is running. You might want to browse other windows while keeping specific app content in view, or you might want to give that content its own space while keeping the main app window freed up to display other content. You could handle this by just opening a regular new browser window, but this has two major issues:
 
 1. You have to handle sharing of state information between the two windows.
 2. The additional app window doesn't always stay on top, and can therefore get hidden by other windows.
