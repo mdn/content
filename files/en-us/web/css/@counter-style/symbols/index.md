@@ -25,7 +25,9 @@ The `symbols` descriptor is specified as one or more `<symbol>`s.
 
 - `<symbol>`
 
-  - : Represents a symbol used within the counter system. Each symbol in the list of symbols is a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}}
+  - : Represents a symbol used within the counter system. Each symbol in the list of symbols is a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}}.
+
+If using an {{glossary("identifier")}} rather than a string for a symbol, be aware that {{glossary("ASCII")}} non-letters like `*`, `"` and `\` are not identifiers and must be quoted as a string or escaped.
 
 ## Description
 
@@ -35,7 +37,7 @@ When the value of the {{cssxref('@counter-style/system', 'system')}} descriptor 
 
 While a space between quoted symbols is not required, it makes the CSS more legible. To use a quote as a symbol, either escape the quote character or enclose the character is using different quotes, such as `"'"`.
 
-If using identifiers rather than strings to define the symbols, be aware of the syntax of identifiers. In particular, ascii non-letters like "\*" are not identifiers, and so must be quoted in a string. Hex escapes, used in several of the counter styles defined in this specification, "eat" the following space (to allow a digit to follow a hex escape without ambiguity), so two spaces must be put after a hex escape to separate it from the following one, or else they'll be considered adjacent, and part of the same identifier. For example, symbols: \660 \661; only defines a single symbol, consisting of the U+0660 and U+0661 characters, rather than the two that were intended; either quote the escapes in strings, like symbols: "\660" "\661", or put two spaces between the escapes.
+If using identifiers rather than strings to define the symbols, be aware of the syntax of identifiers. As noted above, ASCII non-letters like `*` are not identifiers and must either be quoted in a string or escaped. Hex escapes characters are followed by a space. This space may look like the space separating two identifiers, but it is actually there to enable a digit to follow a HEX-escaped character. That means two spaces must be put after a hex escaped identifier to separate it from the following identifier. As your code tools might remove double spaces, it is likely safer to quote identifiers that need to be escaped and use strings instead.
 
 ## Formal definition
 

@@ -61,6 +61,9 @@ ol {
 
 ## See also
 
-- {{cssxref("@counter-style")}}
+- {{cssxref("@counter-style")}} at rule and
+- [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor
+- {{cssxref("list-style-type")}} property
+- {{cssxref("list-style")}} shorthand property
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
-- {{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
