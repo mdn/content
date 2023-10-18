@@ -74,7 +74,7 @@ align-items: unset;
 - `baseline`, `first baseline`, `last baseline`
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 - `stretch`
-  - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the width and height limits.
+  - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
 - `safe`
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
