@@ -93,7 +93,7 @@ The Topics API has no distinct interfaces of its own.
 ## HTTP headers
 
 - {{httpheader("Sec-Browsing-Topics")}}
-  - : Sends observed topics along with a request, to be used by an ad server to choose a personalized ad for the current user.
+  - : Sends observed topics along with a request, which are used by an ad tech platform to choose a personalized ad to display to the current user.
 - {{httpheader("Observe-Browsing-Topics")}}
   - : Used to mark topics sent by {{httpheader("Sec-Browsing-Topics")}} as observed in the response to the request. The browser will then use those topics to calculate topics of interest for a user for future epochs.
 - {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} directive

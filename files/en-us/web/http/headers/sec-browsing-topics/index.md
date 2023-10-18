@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-Browsing-Topics
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Sec-Browsing-Topics`** request header sends observed topics along with a request, to be used by an ad server to choose a personalized ad for the current user.
+The **`Sec-Browsing-Topics`** request header sends observed topics along with a request, which are used by an ad tech platform to choose a personalized ad to display to the current user.
 
 See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 
@@ -29,12 +29,31 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 ## Syntax
 
 ```http
-Sec-Browsing-Topics: [{configVersion: "chrome.1", modelVersion: "1", taxonomyVersion: "1", topic: 43, version: "chrome.1:1:1"}]
+Sec-Browsing-Topics: <array-of-observed-topics>
 ```
 
 ## Directives
 
-A JSON object representing an array of objects containing the observed topics.
+A JSON object representing an array of objects containing the observed topics. Each object contains the following properties:
+
+- `configVersion`
+  - : A string identifying the algorithm (other than the model part) used to calculate the topic.
+- `modelVersion`
+  - : A string representing the model used to classify a string (such as a web page's hostname) into topic IDs.
+- `taxonomyVersion`
+  - : A string representing the taxonomy version used.
+- `topic`
+  - : A number representing the ID of the topic, which can be used by the browser to retrieve the topic from the taxonomy (see an example [taxonomy of interests](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md)).
+- `version`
+  - : The `configVersion`, `modelVersion`, and `taxonomyVersion`, concatenated with colons (`:`) between each.
+
+## Examples
+
+The exact property values may vary by browser implementation. An example header from Chrome might look as follows:
+
+```http
+Sec-Browsing-Topics: [{configVersion: "chrome.1", modelVersion: "1", taxonomyVersion: "1", topic: 43, version: "chrome.1:1:1"}]
+```
 
 ## Specifications
 
