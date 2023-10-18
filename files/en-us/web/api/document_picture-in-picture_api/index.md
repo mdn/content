@@ -18,7 +18,7 @@ It is often useful to have a separate web app window available in addition to th
 1. You have to handle sharing of state information between the two windows.
 2. The additional app window doesn't always stay on top, and can therefore get hidden by other windows.
 
-To solve these problems, web browsers have introduced APIs allowing apps to spawn an always-on-top window that is part of the same session. The first recognized use case was keeping video content playing in a separate window so that the user can continue to consume it while looking at other content. This is handled using the [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), whch is directly used on a {{htmlelement("video")}} element to place it into the separate window.
+To solve these problems, web browsers have introduced APIs allowing apps to spawn an always-on-top window that is part of the same session. The first recognized use case was keeping video content playing in a separate window so that the user can continue to consume it while looking at other content. This is handled using the [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which is directly used on a {{htmlelement("video")}} element to place it into the separate window.
 
 However, this API has been found to be somewhat limiting — you can only put a single `<video>` element into the always-on-top window, with minimal browser-generated controls. To provide more flexibility, the **Document Picture-in-Picture API** has been introduced. This allows _any_ content to be placed in the always-on-top window for a wide range of use cases, including:
 
