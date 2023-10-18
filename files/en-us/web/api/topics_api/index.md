@@ -54,7 +54,7 @@ More importantly, the recorded topics of interest are the only information that 
 
 ## What API features observe and return topics?
 
-The following features all trigger observing topics and returning already observed top topics from the last three epochs to the ad tech platform via the {{httpheader("Sec-Browsing-Topics")}} header. These would typically be used inside an `<iframe>` in which you intend to embed an ad from an ad tech platform.
+The following features all trigger observing topics and returning already observed top topics from the last three epochs to the ad tech platform via the {{httpheader("Sec-Browsing-Topics")}} header.
 
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
@@ -64,7 +64,7 @@ The following features all trigger observing topics and returning already observ
   <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
   ```
 
-You can also call {{domxref("Document.browsingTopics()")}} to return the list of observed topics and then send those to the ad tech platform in a subsequent fetch request. This does not rely on the `Sec-Browsing-Topics` header, and is significantly less performant, so you are advised to use this method only as a last resort if required.
+You can also call {{domxref("Document.browsingTopics()")}} to return the list of observed topics and then send those to the ad tech platform in a subsequent fetch request. This does not rely on the HTTP headers, and is somewhat less performant. `browsingTopics()` would also typically be used inside an `<iframe>` in which you intend to embed an ad from an ad tech platform.
 
 ## What topics are there?
 
