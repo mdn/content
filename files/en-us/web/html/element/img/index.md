@@ -14,7 +14,7 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 The above example shows usage of the `<img>` element:
 
 - The `src` attribute is **required**, and contains the path to the image you want to embed.
-- The `alt` attribute holds a text description of the image, which isn't mandatory but is **incredibly useful** for accessibility — screen readers read this description out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory in most cases and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
 
 There are many other attributes to achieve various purposes:
 
@@ -59,7 +59,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `alt`
 
-  - : Defines an alternative text description of the image.
+  - : Defines text that can replace the image in the page.
 
     > **Note:** Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:
     >
@@ -246,7 +246,7 @@ Depending on its type, an image may have an intrinsic width and height. For some
 The following example embeds an image into the page and includes alternative text for accessibility.
 
 ```html
-<img src="favicon144.png" alt="MDN logo" />
+<img src="favicon144.png" alt="MDN" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -268,7 +268,7 @@ This example builds upon the previous one, showing how to turn the image into a 
 In this example we include a `srcset` attribute with a reference to a high-resolution version of the logo; this will be loaded instead of the `src` image on high-resolution devices. The image referenced in the `src` attribute is counted as a `1x` candidate in {{glossary("User agent", "user agents")}} that support `srcset`.
 
 ```html
-<img src="favicon72.png" alt="MDN logo" srcset="favicon144.png 2x" />
+<img src="favicon72.png" alt="MDN" srcset="favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
@@ -280,7 +280,7 @@ The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that
 ```html
 <img
   src="clock-demo-200px.png"
-  alt="Clock"
+  alt="The time is 12:45."
   srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
   sizes="(max-width: 600px) 200px, 50vw" />
 ```
@@ -297,7 +297,7 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
 
 ### Authoring meaningful alternate descriptions
 
-An `alt` attribute's value should clearly and concisely describe the image's content. It should not describe the presence of the image itself or the file name of the image. If the `alt` attribute is purposefully left off because the image has no textual equivalent, consider alternate methods to present what the image is trying to communicate.
+An `alt` attribute's value should provide a clear and concise text replacement for the image's content. It should not describe the presence of the image itself or the file name of the image. If the `alt` attribute is purposefully left off because the image has no textual equivalent, consider alternate methods to present what the image is trying to communicate.
 
 #### Don't
 
@@ -308,7 +308,7 @@ An `alt` attribute's value should clearly and concisely describe the image's con
 #### Do
 
 ```html example-good
-<img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg" />
+<img alt="A Rockhopper Penguin is standing on a beach." src="penguin.jpg" />
 ```
 
 When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
@@ -324,12 +324,12 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
-<img src="mdn.svg" alt="MDN logo" role="img" />
+<img src="mdn.svg" alt="MDN" role="img" />
 ```
 
 ### The title attribute
 
-The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
+The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
 
 The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
 
