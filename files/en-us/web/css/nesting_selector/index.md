@@ -183,7 +183,7 @@ This example uses nested CSS styling.
 .example {
   font-family: system-ui;
   font-size: 1.2rem;
-  & a {
+  & > a {
     color: tomato;
     &:hover,
     &:focus {
