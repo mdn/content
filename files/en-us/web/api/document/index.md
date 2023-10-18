@@ -81,6 +81,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a boolean that indicates whether the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
@@ -305,6 +307,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
+  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}

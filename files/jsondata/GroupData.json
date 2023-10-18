@@ -1271,6 +1271,17 @@
       "properties": ["Navigator.serviceWorker"],
       "events": []
     },
+    "Speculation Rules API": {
+      "overview": ["Speculation Rules API"],
+      "interfaces": [],
+      "properties": [
+        "Document.prerendering",
+        "PerformanceNavigationTiming.activationStart",
+        "PerformanceResourceTiming.deliveryType"
+      ],
+      "methods": [],
+      "events": ["Document: prerenderingchange"]
+    },
     "Storage": {
       "overview": ["Storage API"],
       "guides": [
