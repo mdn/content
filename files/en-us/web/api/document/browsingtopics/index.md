@@ -10,7 +10,7 @@ browser-compat: api.Document.browsingTopics
 
 {{APIRef("Topics API")}}{{SeeCompatTable}}
 
-The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing observed topics for the current user and site. It also triggers the browser to observe topics for the current user and site.
+The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing observed topics for the current user and site, for the three most recent epochs. It also triggers the browser to observe topics for the current user and site.
 
 ## Syntax
 
