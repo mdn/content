@@ -27,18 +27,18 @@ Once the browser has recorded some topics for a user, an advertising technology 
 
 Observing topics and returning topics are typically done using the same API calls.
 
-For example, an ad tech company might have a page at `ad tech1.example`, which is designed to be embedded via an {{htmlelement("iframe")}} into the sites of publishers that want to show ads. It will request a user's topics and then display an appropriate ad for one of the returned topics.
+For example, an ad tech company might have a page at `ad-tech1.example`, which is designed to be embedded via an {{htmlelement("iframe")}} into the sites of publishers that want to show ads. It will request a user's topics and then display an appropriate ad for one of the returned topics.
 
-Let's say `ad tech1.example` is embedded in the following pages:
+Let's say `ad-tech1.example` is embedded in the following pages:
 
 - `yoga.example`
 - `knitting.example`
 - `diy-clothing.example`
 
-When each page is loaded, `ad tech1.example` could say make a {{domxref("fetch()")}} call with a `browsingTopics: true` option. This will:
+When each page is loaded, `ad-tech1.example` could say make a {{domxref("fetch()")}} call with a `browsingTopics: true` option. This will:
 
-- Trigger the browser to record topics such as "Fitness", "Crafts", and "Fashion & Style" for the current user, for `ad tech1.example`.
-- Return observed topics for the current user, for `ad tech1.example`. Initially, no topics are returned so the ad tech platform may end up just displaying a default non-targeted ad. However, once the end of the first epoch is reached, the browser will start to return topics and `ad tech1.example` can start to show more relevant ads based on the observed topics for the current user.
+- Trigger the browser to record topics such as "Fitness", "Crafts", and "Fashion & Style" for the current user, for `ad-tech1.example`.
+- Return observed topics for the current user, for `ad-tech1.example`. Initially, no topics are returned so the ad tech platform may end up just displaying a default non-targeted ad. However, once the end of the first epoch is reached, the browser will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
 
 It is important to understand that topics are not being collected about all sites the user visits, all of the time, and being shared with all sites that request them — that would be terrible for privacy. ad tech platforms and their associated publishers have to opt-in to using the API, and they can access their own private topic sets for each user, stored by the browser.
 
@@ -55,7 +55,7 @@ The following will all trigger observing topics and return already observed top 
 - In an {{htmlelement("iframe")}} in which you intend to embed a page from an ad server, most likely to display an ad, you can set the `browsingtopics` attribute (or set the equivalent {{domxref("HTMLIFrameElement.browsingTopics")}} property to `true`) at the same time or before setting the `src` attribute to load the source. For example:
 
   ```html
-  <iframe browsingtopics src="ad tech1.example"> ... </iframe>
+  <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
   ```
 
 - You could call {{domxref("Document.browsingTopics()")}}.
