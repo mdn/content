@@ -7,7 +7,9 @@ browser-compat: css.properties.list-style-type.symbols
 
 {{CSSRef}}
 
-The **`symbols()`** CSS function lets you define counter styles inline, directly as the value of a property such as {{cssxref("list-style")}}. Unlike {{cssxref("@counter-style")}}, `symbols()` is _anonymous_ (i.e., it can only be used once). Although less powerful, it is shorter and easier to write than {{cssxref("@counter-style")}}.
+The **`symbols()`** CSS function enables defining counter styles inline, directly as the value of a property such as {{cssxref("list-style")}} providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
+
+Unlike {{cssxref("@counter-style")}}, which defines a re-usable counter style, `symbols()` is _anonymous_ (i.e., it can only be used once). The `symbols()` function supports strings and images as values. The {{cssxref("@counter-style")}}'s [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor also supports identifiers.
 
 ## Syntax
 
@@ -60,4 +62,5 @@ ol {
 ## See also
 
 - {{cssxref("@counter-style")}}
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
 - {{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.
