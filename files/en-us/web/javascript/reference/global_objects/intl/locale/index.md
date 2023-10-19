@@ -72,7 +72,7 @@ These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.
 - {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}
   - : Returns an {{jsxref("Array")}} of the collation types for the `Locale`.
 - {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}
-  - : Returns an {{jsxref("Array")}} of hour cycle identifiers, indicating either the 12-hour format ("h11", "h12") or the 24-hour format ("h23", "h24").
+  - : Returns an {{jsxref("Array")}} of hour cycle identifiers, indicating either the 12-hour clock ("h12"), the Japanese 12-hour clock ("h11"), the 24-hour clock ("h23"), or the unused format "h24".
 - {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}
   - : Returns an {{jsxref("Array")}} of numbering system identifiers available according to the locale's rules.
 - {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}

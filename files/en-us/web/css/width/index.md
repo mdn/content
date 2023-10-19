@@ -45,7 +45,7 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the width as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the width as a percentage of the containing block's width.
+  - : Defines the width as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s width.
 - `auto`
   - : The browser will calculate and select a width for the specified element.
 - `max-content`

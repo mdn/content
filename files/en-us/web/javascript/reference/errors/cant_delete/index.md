@@ -66,6 +66,6 @@ delete Math.PI; // TypeError
 
 ## See also
 
-- [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.freeze()")}}

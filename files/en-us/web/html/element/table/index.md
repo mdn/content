@@ -140,6 +140,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
+> **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the height of the parent container.
+
 ## Examples
 
 ### Simple table

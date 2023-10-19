@@ -26,11 +26,7 @@ isSameEntry(fileSystemHandle)
 
 ### Return value
 
-Returns a {{jsxref('Boolean')}} which is `true` is the entries match.
-
-### Exceptions
-
-No exceptions are thrown.
+A Promise that fulfills with a {{jsxref('Boolean')}}.
 
 ## Examples
 

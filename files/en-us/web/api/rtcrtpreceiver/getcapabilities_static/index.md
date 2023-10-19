@@ -10,7 +10,7 @@ browser-compat: api.RTCRtpReceiver.getCapabilities_static
 
 The _static method_ **`RTCRtpReceiver.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by {{domxref("RTCRtpReceiver")}} objects on the current device.
 
-You can, similarly, obtain the capabilities of {{domxref("RTCRtpSender")}} objects by calling the static function {{domxref("RTCRtpSender.getCapabilities()")}}.
+You can, similarly, obtain the capabilities of {{domxref("RTCRtpSender")}} objects by calling the static function {{domxref("RTCRtpSender.getCapabilities_static", "RTCRtpSender.getCapabilities()")}}.
 
 ## Syntax
 

@@ -19,6 +19,10 @@ The initial value of this property is the same function object as the initial va
 map[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The same return value as {{jsxref("Map.prototype.entries()")}}: a new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the map.

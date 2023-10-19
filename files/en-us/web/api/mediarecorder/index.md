@@ -31,7 +31,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 
 ## Static methods
 
-- {{domxref("MediaRecorder.isTypeSupported()")}}
+- {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}
   - : A static method which returns a `true` or `false` value indicating if the given MIME media type is supported by the current user agent.
 
 ## Instance methods

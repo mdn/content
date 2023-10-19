@@ -44,10 +44,10 @@ A 25% value renders the first image at 25% and the second at 75%. The 75% value 
 The above could also have been written as:
 
 ```css
-cross-fade(url(white.png) 0%,   url(black.png)); /* fully black */
-cross-fade(url(white.png) 25%,  url(black.png)); /* 25% white, 75% black */
-cross-fade(url(white.png),      url(black.png)); /* 50% white, 50% black */
-cross-fade(url(white.png) 75%,  url(black.png)); /* 75% white, 25% black */
+cross-fade(url(white.png) 0%, url(black.png)); /* fully black */
+cross-fade(url(white.png) 25%, url(black.png)); /* 25% white, 75% black */
+cross-fade(url(white.png), url(black.png)); /* 50% white, 50% black */
+cross-fade(url(white.png) 75%, url(black.png)); /* 75% white, 25% black */
 cross-fade(url(white.png) 100%, url(black.png)); /* fully white */
 cross-fade(url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */
 ```

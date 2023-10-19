@@ -76,7 +76,7 @@ For a web app to be installable, it must include a [service worker](/en-US/docs/
 
 ## Installation from an app store
 
-Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple Store.
+Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple App Store.
 
 If your app meets the installability prerequisites, you can package it and distribute it through app stores. The process is specific to each app store:
 
@@ -113,8 +113,9 @@ On desktop:
 
 On mobile:
 
-- Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs on Android.
-- Only Safari is allowed to install PWAs on iOS.
+- On Android, Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs.
+- On iOS 16.3 and earlier, PWAs can only be installed with Safari.
+- On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
 
 ### Triggering the install prompt
 
@@ -126,6 +127,8 @@ This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/
 - listen for the `beforeinstallprompt` event
 - cancel the event's default behavior by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)
 - in the event handler for its own "Install" button, call [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt).
+
+This is not supported on iOS.
 
 ### Customizing the installation prompt
 

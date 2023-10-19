@@ -18,6 +18,10 @@ The **`valueOf()`** method of {{jsxref("Boolean")}} values returns the primitive
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The primitive value of the given {{jsxref("Boolean")}} object.

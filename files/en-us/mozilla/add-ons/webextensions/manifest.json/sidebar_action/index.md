@@ -80,7 +80,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
           </ul>
         <div class="notecard warning">
           <p>
-            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>

@@ -15,6 +15,7 @@ the string arguments to this string and returns a new string.
 ## Syntax
 
 ```js-nolint
+concat()
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, /* …, */ strN)
@@ -22,7 +23,7 @@ concat(str1, str2, /* …, */ strN)
 
 ### Parameters
 
-- `strN`
+- `str1`, …, `strN`
   - : One or more strings to concatenate to `str`.
 
 ### Return value

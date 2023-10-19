@@ -15,6 +15,10 @@ The **`[@@iterator]()`** method of {{jsxref("Iterator")}} instances implements t
 iterator[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the iterator object itself.

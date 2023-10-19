@@ -88,4 +88,4 @@ Infinity % Infinity; // NaN
 - [Decrement (`--`)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
-- [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html)
+- [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html) by Dr. Axel Rauschmayer (2019)

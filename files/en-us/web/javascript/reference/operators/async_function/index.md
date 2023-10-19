@@ -95,5 +95,5 @@ add(10).then((v) => {
 ## See also
 
 - {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("AsyncFunction")}} object
+- {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}

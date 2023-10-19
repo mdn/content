@@ -84,4 +84,4 @@ class DocArchiver {}
 
 ## See also
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

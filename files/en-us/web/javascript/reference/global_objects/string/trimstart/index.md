@@ -19,6 +19,10 @@ trimStart()
 trimLeft()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string representing `str` stripped of whitespace from its beginning (left side). Whitespace is defined as [white space](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) characters plus [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators).

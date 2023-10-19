@@ -85,7 +85,7 @@ Note that:
 - `lower-greek`
   - : Lowercase classical Greek.
 - `lower-alpha`, `lower-latin`
-  - : Lowercase ASCII letters.
+  - : Lowercase {{Glossary("ASCII")}} letters.
 - `upper-alpha`, `upper-latin`
   - : Uppercase ASCII letters.
 - `arabic-indic`, `-moz-arabic-indic`
@@ -170,6 +170,8 @@ Note that:
   - : Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.
 - `disclosure-closed`
   - : Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.
+
+Refer to the [All list style types](#all_list_style_types) example to see the above values in action. Details of all the available counter styles used by various cultures around the world can be found in [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/).
 
 ### Non-standard extensions
 
@@ -706,3 +708,4 @@ container.addEventListener("change", (event) => {
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- [Counter styles converter](https://r12a.github.io/app-counters/)

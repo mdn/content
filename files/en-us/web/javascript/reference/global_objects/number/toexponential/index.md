@@ -52,8 +52,7 @@ point.
 If a number has more digits than requested by the
 `fractionDigits` parameter, the number is rounded to the nearest
 number represented by `fractionDigits` digits. See the discussion
-of rounding in the description of the {{jsxref("Number.prototype.toFixed",
-  "toFixed()")}} method, which also applies to `toExponential()`.
+of rounding in the description of the {{jsxref("Number/toFixed", "toFixed()")}} method, which also applies to `toExponential()`.
 
 ## Examples
 

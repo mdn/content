@@ -1,5 +1,5 @@
 ---
-title: label
+title: Labeled statement
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
 browser-compat: javascript.statements.label
@@ -19,7 +19,7 @@ label:
 ```
 
 - `label`
-  - : Any JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that is not a reserved word.
+  - : Any JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).
 - `statement`
   - : A JavaScript statement. `break` can be used within any labeled statement, and `continue` can be used within labeled looping statements.
 

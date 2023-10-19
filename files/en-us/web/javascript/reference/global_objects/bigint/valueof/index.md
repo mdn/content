@@ -10,13 +10,17 @@ browser-compat: javascript.builtins.BigInt.valueOf
 The **`valueOf()`** method of {{jsxref("BigInt")}} values returns the wrapped primitive value
 of a {{jsxref("BigInt")}} object.
 
-{{EmbedInteractiveExample("pages/js/bigint-valueof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/bigint-valueof.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
-bigIntObj.valueOf()
+valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

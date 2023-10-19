@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("String")}} values returns this string v
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the specified string value.

@@ -20,6 +20,14 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - Inline dimension
   - : The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
+### New properties and values
+
+CSS was initially designed with only physical coordinates in its controls. The module defines new flow–relative equivalents for many [values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [properties](/en-US/docs/Glossary/Property/CSS).
+
+Some physical properties now have logical equivalents. Properties that accept physical values (`top`, `bottom`, `left`, `right`) now also accept flow-relative logical values (`block-start`, `block-end`, `inline-start`, `inline-end`).
+
+The transition to logical axes is ongoing and not fully defined by the module; some properties don't yet have logical equivalents.
+
 ## Reference
 
 ### Properties for sizing
@@ -31,7 +39,27 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("min-block-size")}}
 - {{CSSxRef("min-inline-size")}}
 
-### Properties for margins, borders, and padding
+### Properties for margins
+
+- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("margin-block")}}
+- {{CSSxRef("margin-block-end")}}
+- {{CSSxRef("margin-block-start")}}
+- {{CSSxRef("margin-inline")}}
+- {{CSSxRef("margin-inline-end")}}
+- {{CSSxRef("margin-inline-start")}}
+
+### Properties for paddings
+
+- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("padding-block")}}
+- {{CSSxRef("padding-block-end")}}
+- {{CSSxRef("padding-block-start")}}
+- {{CSSxRef("padding-inline")}}
+- {{CSSxRef("padding-inline-end")}}
+- {{CSSxRef("padding-inline-start")}}
+
+### Properties for borders
 
 - {{CSSxRef("border-block")}}
 - {{CSSxRef("border-block-color")}}
@@ -58,31 +86,19 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("border-inline-start-width")}}
 - {{CSSxRef("border-inline-style")}}
 - {{CSSxRef("border-inline-width")}}
+- {{CSSxRef("border-style")}}
+- {{CSSxRef("border-width")}}
+
+### Properties for border radius
+
+- {{CSSxRef("border-radius")}}
 - {{CSSxRef("border-start-start-radius")}}
 - {{CSSxRef("border-start-end-radius")}}
 - {{CSSxRef("border-end-start-radius")}}
 - {{CSSxRef("border-end-end-radius")}}
-- {{CSSxRef("border-style")}}
-- {{CSSxRef("border-width")}}
-- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("margin-block")}}
-- {{CSSxRef("margin-block-end")}}
-- {{CSSxRef("margin-block-start")}}
-- {{CSSxRef("margin-inline")}}
-- {{CSSxRef("margin-inline-end")}}
-- {{CSSxRef("margin-inline-start")}}
-- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("padding-block")}}
-- {{CSSxRef("padding-block-end")}}
-- {{CSSxRef("padding-block-start")}}
-- {{CSSxRef("padding-inline")}}
-- {{CSSxRef("padding-inline-end")}}
-- {{CSSxRef("padding-inline-start")}}
 
-### Properties for floating and positioning
+### Properties for positioning
 
-- {{CSSxRef("clear")}} (`inline-end` and `inline-start` keywords)
-- {{CSSxRef("float")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("inset")}}
 - {{CSSxRef("inset-block")}}
 - {{CSSxRef("inset-block-end")}}
@@ -96,13 +112,21 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
 
-### Other properties
+### Properties for scrolling
 
-- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-inline")}}
 - {{CSSxRef("overscroll-behavior-block")}}
 - {{CSSxRef("overscroll-behavior-inline")}}
+
+### Properties for floating
+
+- {{CSSxRef("clear")}} (`inline-end` and `inline-start` keywords)
+- {{CSSxRef("float")}} (`inline-end` and `inline-start` keywords)
+
+### Other properties
+
+- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
 - {{CSSxRef("resize")}} (`block` and `inline` keywords)
 - {{CSSxRef("text-align")}} (`end` and `start` keywords)
 
@@ -112,6 +136,31 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - `offset-block-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}})
 - `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
 - `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
+
+### Unsupported properties
+
+The following properties don't have logical equivalents:
+
+- {{CSSxRef("background-position-x")}}
+- {{CSSxRef("background-position-y")}}
+
+### Unsupported values
+
+The following properties accept only physical values:
+
+- {{CSSxRef("text-underline-position")}}
+- {{CSSxRef("box-shadow")}}
+- {{CSSxRef("text-shadow")}}
+- {{CSSxRef("clip-path")}}
+
+- {{CSSxRef("&lt;position&gt;")}}
+  - {{CSSxRef("background-position")}}
+  - {{CSSxRef("object-position")}}
+  - {{CSSxRef("mask-position")}}
+  - {{CSSxRef("offset-position")}}
+  - {{CSSxRef("offset-anchor")}}
+  - {{CSSxRef("transform-origin")}}
+  - {{CSSxRef("perspective-origin")}}
 
 ## Guides
 

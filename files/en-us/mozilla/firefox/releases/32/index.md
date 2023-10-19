@@ -55,7 +55,7 @@ Highlights:
 - The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Webkit bug 967264](https://bugzil.la/967264)).
 - The [MSISDN Verification API](/en-US/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ([Webkit bug 988469](https://bugzil.la/988469)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
-- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape_static")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
+- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape_static", "CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
 - To complete our Hit Regions implementation, `MouseEvent.region` has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
 - The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ([Firefox bug 1004579](https://bugzil.la/1004579)).
 - The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).

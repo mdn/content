@@ -15,6 +15,10 @@ The **`toWellFormed()`** method of {{jsxref("String")}} values returns a string 
 toWellFormed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string that is a copy of this string, with all lone surrogates replaced with the Unicode replacement character U+FFFD. If `str` [is well formed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/isWellFormed), a new string is still returned (essentially a copy of `str`).

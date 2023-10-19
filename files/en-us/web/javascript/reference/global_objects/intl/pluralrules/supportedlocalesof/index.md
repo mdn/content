@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 
 The **`Intl.PluralRules.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in plural rules without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-supportedlocalesof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-supportedlocalesof.html", "shorter")}}
 
 ## Syntax
 

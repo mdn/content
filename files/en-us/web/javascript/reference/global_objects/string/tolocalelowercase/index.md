@@ -36,8 +36,7 @@ locale-specific case mappings.
 The `toLocaleLowerCase()` method returns the value of the string converted
 to lower case according to any locale-specific case mappings.
 `toLocaleLowerCase()` does not affect the value of the string itself. In most
-cases, this will produce the same result as {{jsxref("String.prototype.toLowerCase()",
-  "toLowerCase()")}}, but for some locales, such as Turkish, whose case mappings do not
+cases, this will produce the same result as {{jsxref("String/toLowerCase", "toLowerCase()")}}, but for some locales, such as Turkish, whose case mappings do not
 follow the default case mappings in Unicode, there may be a different result.
 
 ## Examples

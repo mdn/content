@@ -265,7 +265,7 @@ With these classes created we can now lay out different width columns on the gri
 
 Try modifying the classes on your elements or even adding and removing some containers, to see how you can vary the layout. For example, you could make the second row look like this:
 
-```css
+```html
 <div class="row">
   <div class="col span8">13</div>
   <div class="col span4">14</div>

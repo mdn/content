@@ -80,5 +80,5 @@ BigInt.asIntN(64, max + 1n); // -9223372036854775808n
 
 ## See also
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asUintN()")}}
+- {{jsxref("BigInt")}}
+- {{jsxref("BigInt.asUintN()")}}

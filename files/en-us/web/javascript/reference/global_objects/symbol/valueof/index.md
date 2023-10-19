@@ -17,6 +17,10 @@ The **`valueOf()`** method of {{jsxref("Symbol")}} values returns this symbol va
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The primitive value of the specified {{jsxref("Symbol")}} object.

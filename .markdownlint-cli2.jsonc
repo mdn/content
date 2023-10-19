@@ -206,6 +206,12 @@
           "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
           "replace": "](/",
           "searchScope": "text"
+        },
+        {
+          "name": "un-closed-md-link",
+          "message": "Missng closing bracket ')'",
+          "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
+          "searchScope": "text"
         }
       ]
     }

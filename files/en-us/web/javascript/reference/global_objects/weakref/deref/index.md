@@ -15,6 +15,10 @@ The **`deref()`** method of {{jsxref("WeakRef")}} instances returns this `WeakRe
 deref()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The target value of the WeakRef, which is either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). Returns `undefined` if the value has been garbage-collected.

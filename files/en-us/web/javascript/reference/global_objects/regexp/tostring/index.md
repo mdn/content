@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("RegExp")}} instances returns a string r
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the given object.

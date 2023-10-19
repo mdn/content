@@ -1,6 +1,8 @@
 ---
 title: Sec-CH-Prefers-Color-Scheme
 slug: Web/HTTP/Headers/Sec-CH-Prefers-Color-Scheme
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 ---
 

@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.capturing_group
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **capturing group** groups a subpattern, allowing you to apply a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) to the entire group or use [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) within it. It memorizes information about the subpattern match, so that you can refer back to it later with a [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference), or access the information through the [match results](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#return_value).
 
@@ -117,8 +117,8 @@ parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing g
 
 ## See also
 
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
 - [Backreference: `\1`, `\2`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)

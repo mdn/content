@@ -83,7 +83,7 @@ This method may return a promise rejected with a {{domxref("DOMException")}} of 
 - `SecurityError` {{domxref("DOMException")}}
   - : If a lock manager cannot be obtained for the current environment.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : If `names` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
+  - : If `name` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
 - `AbortError` {{domxref("DOMException")}}
   - : If the option `signal` exists and is aborted.
 

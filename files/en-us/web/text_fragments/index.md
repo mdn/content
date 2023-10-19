@@ -118,45 +118,26 @@ For example, in our [scroll-to-text demo](https://mdn.github.io/css-examples/tar
 
 Try following the above link in a supporting browser to see the effect this has.
 
-### Programmatic access to text fragments
+### Feature Detectability
 
-In supporting browsers, information on the text fragments matched in the current document can be found in the {{domxref("FragmentDirective")}} object, which is accessed via the {{domxref("Document.fragmentDirective")}} property.
+The {{domxref("FragmentDirective")}} object, which is accessed via the {{domxref("Document.fragmentDirective")}} property, can be used to test whether or not text fragments are supported in a browser.
 
 Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
 
 ```js
 document.fragmentDirective;
+// returns an empty FragmentDirective object, if supported
+// undefined otherwise
 ```
 
-You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
-```
-
-This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.
+This functionality is mainly intended for feature detection at present. In the future, the `FragmentDirective` object could include additional information.
 
 ## Reference
 
 ### API
 
 - {{domxref("FragmentDirective")}}
-  - : An object representing the text fragments highlighted in the current document.
+  - : An object representing the text fragments. Currently empty and mainly intended for feature detection.
 - {{domxref("Document.fragmentDirective")}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 

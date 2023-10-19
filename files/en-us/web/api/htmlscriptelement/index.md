@@ -56,7 +56,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Static methods
 
-- {{domxref("HTMLScriptElement.supports()")}}
+- {{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}}
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
     This method provides a simple and unified method for script-related feature detection.
 
@@ -124,7 +124,7 @@ affixScriptToHead("myScript2.js", () => {
 
 ### Checking if a script type is supported
 
-{{domxref("HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
+{{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
 
 The example below shows how to check for module support, using the existence of the `noModule` attribute as a fallback.
 

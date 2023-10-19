@@ -12,7 +12,7 @@ This page describes legacy web extension version string formats. See the manifes
 
 A **version string** consists of one or more _version parts_, separated by dots.
 
-Each **version part** is parsed as a sequence of four parts: `<number-a><string-b><number-c><string-d>`. Each of the parts is optional. Numbers are integers base 10 (may be negative), and strings are non-numeric ASCII characters.
+Each **version part** is parsed as a sequence of four parts: `<number-a><string-b><number-c><string-d>`. Each of the parts is optional. Numbers are integers base 10 (may be negative), and strings are non-numeric {{Glossary("ASCII")}} characters.
 
 Here are a few examples of valid version parts:
 

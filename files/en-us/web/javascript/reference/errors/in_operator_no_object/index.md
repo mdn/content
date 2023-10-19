@@ -84,4 +84,4 @@ const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 
 ## See also
 
-- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)

@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get changed files
         env:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Checkout HEAD
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head

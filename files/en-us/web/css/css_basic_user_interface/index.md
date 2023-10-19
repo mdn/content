@@ -49,14 +49,12 @@ To see the code for this basic user interface sample, [view the source on GitHub
 
 ## Guides
 
-- [Using URL values for the `cursor` property](/en-US/docs/Web/CSS/CSS_basic_user_interface
-  Title: CSS basic user interface/Using_URL_values_for_the_cursor_property)
-  - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
 - [Learn forms: advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
   - : Explains how {{CSSxRef("appearance")}} can be used to style form controls.
 
 ## Related concepts
 
+- CSS [`cursor`](/en-US/docs/Web/CSS/cursor) property
 - SVG [`cursor`](/en-US/docs/Web/SVG/Attribute/cursor) attribute
 - CSS {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, and {{CSSxRef(":focus-visible")}} pseudoclasses
 - {{DOMXref("CaretPosition")}} Interface

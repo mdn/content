@@ -12,7 +12,7 @@ If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-findindex.html", "shorter")}}
 
 ## Syntax
 
@@ -113,7 +113,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findLast()")}}

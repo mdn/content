@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("Function")}} instances returns a string
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the source code of the function.

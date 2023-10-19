@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 page-type: guide
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
 
@@ -42,15 +42,15 @@ The following properties are deprecated. This does not affect their use in [repl
 
 - {{jsxref("RegExp/n", "$1–$9")}}
   - : Parenthesized substring matches, if any.
-- {{jsxref("RegExp.input", "input, $_")}}
+- {{jsxref("RegExp/input", "input, $_")}}
   - : The string against which a regular expression is matched.
-- {{jsxref("RegExp.lastMatch", "lastMatch, $&amp;")}}
+- {{jsxref("RegExp/lastMatch", "lastMatch, $&amp;")}}
   - : The last matched substring.
-- {{jsxref("RegExp.lastParen", "lastParen, $+")}}
+- {{jsxref("RegExp/lastParen", "lastParen, $+")}}
   - : The last parenthesized substring match, if any.
-- {{jsxref("RegExp.leftContext", "leftContext, $`")}}
+- {{jsxref("RegExp/leftContext", "leftContext, $`")}}
   - : The substring preceding the most recent match.
-- {{jsxref("RegExp.rightContext", "rightContext, $'")}}
+- {{jsxref("RegExp/rightContext", "rightContext, $'")}}
   - : The substring following the most recent match.
 
 > **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
@@ -63,13 +63,13 @@ The following regex syntaxes are deprecated and only available in [Unicode-unawa
 - [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](#escape_sequences).
 - In [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), character ranges where one boundary is a character class makes the `-` become a literal character.
 - An escape sequence that's not recognized becomes an ["identity escape"](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
-- Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with ASCII letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
+- Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with {{Glossary("ASCII")}} letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
 - The sequence `\k` within a regex that doesn't have any [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) is treated as an identity escape.
 - The syntax characters `]`, `{`, and `}` may appear [literally](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) without escaping if they cannot be interpreted as the end of a character class or quantifier delimiters.
 
 ### Function
 
-- The {{jsxref("Global_Objects/Function/caller", "caller")}} property of functions and the [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property are deprecated and unavailable in strict mode.
+- The {{jsxref("Function/caller", "caller")}} property of functions and the [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property are deprecated and unavailable in strict mode.
 - Instead of accessing `arguments` as a property of a function, you should use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures.
 
 ### Object
@@ -85,13 +85,13 @@ The following regex syntaxes are deprecated and only available in [Unicode-unawa
 
 ### Date
 
-- The {{jsxref("Global_Objects/Date/getYear", "getYear()")}} and {{jsxref("Global_Objects/Date/setYear", "setYear()")}} methods are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} and {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- The `toGMTString()` method is deprecated. Use {{jsxref("Global_Objects/Date/toUTCString", "toUTCString()")}} instead.
+- The {{jsxref("Date/getYear", "getYear()")}} and {{jsxref("Date/setYear", "setYear()")}} methods are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Date/getFullYear", "getFullYear")}} and {{jsxref("Date/setFullYear", "setFullYear")}}.
+- The `toGMTString()` method is deprecated. Use {{jsxref("Date/toUTCString", "toUTCString()")}} instead.
 
 ### Escape sequences
 
 - Octal escape sequences (\ followed by one, two, or three octal digits) are deprecated in string and regular expression literals.
-- The {{jsxref("Global_Objects/escape", "escape")}} and {{jsxref("Global_Objects/unescape", "unescape")}} functions are deprecated. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} to encode and decode escape sequences for special characters.
+- The {{jsxref("escape()")}} and {{jsxref("unescape()")}} functions are deprecated. Use {{jsxref("encodeURI()")}}, {{jsxref("encodeURIComponent()")}}, {{jsxref("decodeURI()")}}, or {{jsxref("decodeURIComponent()")}} to encode and decode escape sequences for special characters.
 
 ### Statements
 

@@ -204,7 +204,7 @@ req.upload.addEventListener("load", transferComplete);
 req.upload.addEventListener("error", transferFailed);
 req.upload.addEventListener("abort", transferCanceled);
 
-oReq.open();
+req.open();
 ```
 
 > **Note:** Progress events are not available for the

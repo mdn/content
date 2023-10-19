@@ -54,7 +54,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("atob", "WorkerGlobalScope.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("btoa", "WorkerGlobalScope.btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a string of binary data.
+  - : Creates a base-64 encoded {{Glossary("ASCII")}} string from a string of binary data.
 - {{domxref("clearInterval", "WorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout", "WorkerGlobalScope.clearTimeout()")}}

@@ -14,7 +14,7 @@ The **`delete()`** method of {{jsxref("Set")}} instances removes a specified val
 ## Syntax
 
 ```js-nolint
-delete(value)
+setInstance.delete(value)
 ```
 
 ### Parameters

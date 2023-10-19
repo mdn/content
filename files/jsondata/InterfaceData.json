@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -378,10 +382,6 @@
     },
     "CloseEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "CloseWatcher": {
-      "inh": "EventTarget",
       "impl": []
     },
     "Comment": {
@@ -762,6 +762,10 @@
     },
     "CSSVariableReferenceValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSViewTransitionRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -2692,6 +2696,14 @@
       "inh": "",
       "impl": []
     },
+    "RestrictionTarget": {
+      "inh": "",
+      "impl": []
+    },
+    "RevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "RTCCertificate": {
       "inh": "",
       "impl": []
@@ -3460,14 +3472,6 @@
       "inh": "AbortSignal",
       "impl": []
     },
-    "TCPServerSocket": {
-      "inh": "",
-      "impl": []
-    },
-    "TCPSocket": {
-      "inh": "",
-      "impl": []
-    },
     "Text": {
       "inh": "CharacterData",
       "impl": []
@@ -3585,10 +3589,6 @@
       "impl": []
     },
     "TrustedTypePolicyFactory": {
-      "inh": "",
-      "impl": []
-    },
-    "UDPSocket": {
       "inh": "",
       "impl": []
     },
@@ -3926,6 +3926,10 @@
     },
     "WebTransportReceiveStream": {
       "inh": "ReadableStream",
+      "impl": []
+    },
+    "WebTransportSendGroup": {
+      "inh": "",
       "impl": []
     },
     "WebTransportSendStream": {

@@ -242,7 +242,7 @@ For animations that can't be handled in JavaScript, for example, animating an HT
 
 ```js
 function loop() {
-  // Clear the camvas before drawing the next frame of the animation
+  // Clear the canvas before drawing the next frame of the animation
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 

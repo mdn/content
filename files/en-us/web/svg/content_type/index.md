@@ -170,7 +170,8 @@ SVG makes use of a number of data types. This article lists these types along wi
     http://example.com/someDrawing.svg#Lamppost
     ```
 
-    _IRIs_ are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    _IRIs_ are used in the {{SVGAttr("href")}} attribute.
+    Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 

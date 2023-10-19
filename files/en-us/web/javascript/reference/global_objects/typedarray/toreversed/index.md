@@ -15,6 +15,10 @@ The **`toReversed()`** method of {{jsxref("TypedArray")}} instances is the [copy
 toReversed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new typed array containing the elements in reversed order.
@@ -45,7 +49,7 @@ console.log(uint8); // Uint8Array [1, 2, 3]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray.prototype.reverse()")}}
 - {{jsxref("TypedArray.prototype.toSorted()")}}
 - {{jsxref("TypedArray.prototype.with()")}}
