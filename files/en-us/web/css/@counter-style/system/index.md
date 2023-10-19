@@ -34,7 +34,7 @@ This may take one of three forms:
 
 - One of the keyword values `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, or `fixed`.
 - The keyword value `fixed` along with an integer.
-- The keyword value `extends` along with `<counter-style>`, which is either a [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) value or a {{cssxref("symbols", "symbols()")}} function.
+- The keyword value `extends` along with a [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) value.
 
 The values include:
 
