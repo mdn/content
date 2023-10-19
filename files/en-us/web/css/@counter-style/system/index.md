@@ -22,7 +22,7 @@ system: symbolic;
 system: additive;
 system: fixed;
 
-/* Combined values */
+/* Other values */
 system: fixed 3;
 system: extends decimal;
 system: extends customCounterName;
@@ -44,7 +44,7 @@ The values include:
 
 - `fixed` or `fixed <integer>`
 
-  - : Defines a finite set of symbols are specified; iterating once through the list of symbols provided in the `symbols` descriptor. Once the system iterated through the symbols specified, the fallback counter style is used. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. The `fixed` value can include an optional {{cssxref("&lt;integer&gt;")}}. If specified, the value indicates which item will get the first symbol in the single iteration of the fixed list of symbols as its marker. By default, if the integer is omitted, the value of the first integer is taken as `1`.
+  - : Defines a finite set of symbols, iterating once through the list of symbols provided in the `symbols` descriptor. Once the specified symbols have been iterated through, the fallback counter style is used. This keyword value is useful in cases where the counter style values are finite. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid. The `fixed` keyword can be followed by an optional {{cssxref("&lt;integer&gt;")}} value. If specified, the `<integer>` value indicates the item in the list that will get the first symbol from the list of symbols. If omitted, the default value of `integer` is `1`, which gives the first item in the list the first symbol.
 
 - `symbolic`
 

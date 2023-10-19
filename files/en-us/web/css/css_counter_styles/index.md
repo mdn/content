@@ -7,9 +7,9 @@ spec-urls: https://drafts.csswg.org/css-counter-styles/
 
 {{CSSRef}}
 
-The **CSS counter styles** module lets you define your own counter styles for use with CSS [list-markers](/en-US/docs/Web/CSS/::marker) and [generated-content](/en-US/docs/Web/CSS/CSS_generated_content) counters.
+The **CSS counter styles** module lets you define your own counter styles to manage the appearance of [markers](/en-US/docs/Web/CSS/::marker) in lists and counters in [generated content](/en-US/docs/Web/CSS/CSS_generated_content).
 
-While we think of counters as numbers, they are actually strings with incrementable components. The counter style module defines the `@counter-style` rule with ten descriports that provide developers the ability to precisely define how counters are converted into strings with a prefix and postfix, along with a negative sign (that can be wrapped if needed). The module enables defining a range, limiting the values a counter style handles, while providing fallback styles for when the counter value is outside that range or otherwise can't render the counter value. The module also enables defining the how the counter is read out loud by speech synthesizers.
+While we think of counters as numbers, they are actually strings with components that can be incremented. The counter styles module defines the `@counter-style` rule with ten descriptors, which enable developers to precisely define how counters are converted into strings. This module enables defining a range to limit the values a counter style can handle, while also providing fallback styles for when the counter value falls outside the defined range or otherwise can't render the counter value. The module also enables defining how the counter is read out loud by speech synthesizers.
 
 ## Reference
 
@@ -25,7 +25,7 @@ No properties are defined in this module
 
 - [`<counter-style>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
 - [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
-- [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values™)
+- [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values)
 - [`<symbols-type>`](/en-US/docs/Web/CSS/symbols#syntax)
 
 ### At-rules and descriptors
@@ -45,7 +45,8 @@ No properties are defined in this module
 
 ### Interfaces and APIs
 
-- {{domxref("CSSCounterStyleRule")}} interface
+- [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
+   - {{domxref("CSSCounterStyleRule")}} interface
 
 ## Guides
 
