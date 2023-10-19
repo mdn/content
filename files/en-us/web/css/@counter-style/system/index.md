@@ -25,7 +25,7 @@ system: fixed;
 /* Other values */
 system: fixed 3;
 system: extends decimal;
-system: extends customCounterName;
+system: extends circled-letters;
 ```
 
 ## Values
