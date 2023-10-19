@@ -42,15 +42,17 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ### Rendering negative counters
 
+This example extends the brower `decimal` list style, the default list-style-type, adding a `-` and parenthesis around the negative counter values
+
 #### HTML
 
 ```html
-<ol class="list" start="-3">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+<ol start="-3">
+  <li>negative three</li>
+  <li>negative two</li>
+  <li>negative one</li>
+  <li>zero</li>
+  <li>one</li>
 </ol>
 ```
 
@@ -58,12 +60,11 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ```css
 @counter-style neg {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  system: extends decimal;
   negative: "(-" ")";
 }
 
-.list {
+ol {
   list-style: neg;
 }
 ```
