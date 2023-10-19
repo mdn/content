@@ -7,7 +7,7 @@ browser-compat: css.at-rules.counter-style.negative
 
 {{CSSRef}}
 
-When defining custom counter styles, the **`negative`** descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
+The **`negative`** descriptor of the {{cssxref("@counter-style")}} at-rule lets you define how negative counter values are represented when defining custom counter styles. The value of the `negative` descriptor defines the symbols to be prepended and appended to the counter representation when the counter's value is negative.
 
 ## Syntax
 
@@ -19,14 +19,16 @@ negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
 
 ### Values
 
+The `negative` descriptor takes as it's value one to two [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values™) values.
+
 - first `<symbol>`
-  - : This symbol will be prepended to the representation when the counter is negative.
+  - : This symbol will be prepended (comes before) to the representation when the counter is negative.
 - second `<symbol>`
-  - : If present, this symbol will be appended to the representation when the counter is negative.
+  - : If present, this symbol will be appended (placed after) to the representation when the counter is negative.
 
 ## Description
 
-If the counter value is negative, the symbol provided as value for the descriptor is prepended to the counter representation; and a second symbol if specified, will be appended to the representation. The negative descriptor has effect only if the `system` value is `symbolic`, `alphabetic`, `numeric`, `additive`, or `extends`, if the extended counter style itself uses a negative sign. If the negative descriptor is specified for other systems that don't support negative counter values, then the descriptor is ignored.
+If the counter value is negative, the symbol provided as value for the descriptor is added before the counter representation; and a second symbol if specified, will be added after the representation. The `negative` descriptor is only relevant for counter styles that have a `system` value of `symbolic`, `alphabetic`, `numeric`, `additive`, when the count is negative, and for `system: extends`, if the extended counter style itself uses a negative sign. If the `negative`` descriptor is specified for other systems, the ones that don't support negative counter values, then this descriptor is ignored.
 
 ## Formal definition
 
