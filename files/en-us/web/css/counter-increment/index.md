@@ -130,9 +130,10 @@ i {
 
 ## See also
 
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("@counter-style")}}
 - The {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
