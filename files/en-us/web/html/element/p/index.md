@@ -55,9 +55,9 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
         {{HTMLElement("section")}}, {{HTMLElement("table")}},
         {{HTMLElement("ul")}} or another {{HTMLElement("p")}}
         element, or if there is no more content in the parent element and the
-        parent element is not an {{HTMLElement("a")}}, {{HTMLElement("audio")}}, 
-        {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}}, 
-        {{HTMLElement("noscript")}} or {{HTMLElement("video")}} element, 
+        parent element is not an {{HTMLElement("a")}}, {{HTMLElement("audio")}},
+        {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}},
+        {{HTMLElement("noscript")}} or {{HTMLElement("video")}} element,
         or an autonomous custom element.
       </td>
     </tr>
