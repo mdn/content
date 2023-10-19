@@ -190,7 +190,7 @@ To begin with, the JavaScript file defines a class called `PopupInfo`, which ext
 
 ```js
 // Create a class for the element
-class PopUpInfo extends HTMLElement {
+class PopupInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -302,7 +302,7 @@ Here's the class definition:
 
 ```js
 // Create a class for the element
-class PopUpInfo extends HTMLElement {
+class PopupInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
