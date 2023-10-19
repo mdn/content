@@ -23,24 +23,20 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with two arguments:
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with two arguments:
 
 - `status`
   - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
 - `details` {{optional_inline}}
 
-  - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a single property:
+  - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a property:
 
     - `version`
       - : `string`. The update's version.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
-Request an update, and log the new version if one is available:
+Request an update and log the new version if one is available:
 
 ```js
 function onRequested(status, details) {
@@ -54,11 +50,15 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
+let requestingCheck = browser.runtime.requestUpdateCheck();
 requestingCheck.then(onRequested, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
