@@ -36,17 +36,17 @@ A string identifying which of the compositing or blending mode operations to use
 - `"destination-atop"`
   - : The existing canvas is only kept where it overlaps the new shape. The new shape is drawn behind the canvas content.
 - `"lighter"`
-  - : Where both shapes overlap the color is determined by adding color values.
+  - : Where both shapes overlap, the color is determined by adding color values.
 - `"copy"`
   - : Only the new shape is shown.
 - `"xor"`
   - : Shapes are made transparent where both overlap and drawn normal everywhere else.
 - `"multiply"`
-  - : The pixels of the top layer are multiplied with the corresponding pixel of the bottom layer. A darker picture is the result.
+  - : The pixels of the top layer are multiplied with the corresponding pixels of the bottom layer. A darker picture is the result.
 - `"screen"`
-  - : The pixels are inverted, multiplied, and inverted again. A lighter picture is the result (opposite of multiply)
+  - : The pixels are inverted, multiplied, and inverted again. A lighter picture is the result (opposite of `multiply`)
 - `"overlay"`
-  - : A combination of multiply and screen. Dark parts on the base layer become darker, and light parts become lighter.
+  - : A combination of `multiply` and `screen`. Dark parts on the base layer become darker, and light parts become lighter.
 - `"darken"`
   - : Retains the darkest pixels of both layers.
 - `"lighten"`
@@ -56,13 +56,13 @@ A string identifying which of the compositing or blending mode operations to use
 - `"color-burn"`
   - : Divides the inverted bottom layer by the top layer, and then inverts the result.
 - `"hard-light"`
-  - : A combination of multiply and screen like overlay, but with top and bottom layer swapped.
+  - : Like `overlay`, a combination of `multiply` and `screen` — but instead with the top layer and bottom layer swapped.
 - `"soft-light"`
-  - : A softer version of hard-light. Pure black or white does not result in pure black or white.
+  - : A softer version of `hard-light`. Pure black or white does not result in pure black or white.
 - `"difference"`
-  - : Subtracts the bottom layer from the top layer or the other way round to always get a positive value.
+  - : Subtracts the bottom layer from the top layer — or the other way round — to always get a positive value.
 - `"exclusion"`
-  - : Like difference, but with lower contrast.
+  - : Like `difference`, but with lower contrast.
 - `"hue"`
   - : Preserves the luma and chroma of the bottom layer, while adopting the hue of the top layer.
 - `"saturation"`
@@ -197,7 +197,7 @@ window.onload = () => {
 };
 ```
 
-And this code, runComposite(), handles the bulk of the work, relying on a number of utility functions to do the hard parts.
+And this code, `runComposite()`, handles the bulk of the work, relying on a number of utility functions to do the hard parts.
 
 ```js
 function createCanvas() {
