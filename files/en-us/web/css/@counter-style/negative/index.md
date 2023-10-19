@@ -42,7 +42,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ### Rendering negative counters
 
-This example extends the brower `decimal` list style, the default list-style-type, adding a `-` and parenthesis around the negative counter values
+This example extends the brower `decimal` list style, the default {{Cssxref("list-style-type")}} or ordered lists, adding a `-` and parenthesis around negative counter values.
 
 #### HTML
 
@@ -85,3 +85,5 @@ ol {
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
