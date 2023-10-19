@@ -34,13 +34,13 @@ This may take one of three forms:
 
 - One of the keyword values `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, or `fixed`.
 - The keyword value `fixed` along with an integer.
-- The keyword value or `extends` along with `<counter-style>`, which is a [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) or {{cssxref("symbols", "symbols()")}}.
+- The keyword value `extends` along with `<counter-style>`, which is either a [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) value or a {{cssxref("symbols", "symbols()")}} function.
 
 The values include:
 
 - `cyclic`
 
-  - : Cycles through the list of symbols provided in [the `symbols` descriptor](/en-US/docs/Web/CSS/@counter-style/symbols). Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the `symbols` descriptor, or the counter style is not valid.
+  - : Cycles through the list of symbols provided in the [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor. Once the end of the list is reached, the cycle will loop back to the beginning and start over. This value is useful both for basic bullet styles with just one symbol and for styles with multiple symbols. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid.
 
 - `fixed` or `fixed <integer>`
 
@@ -48,7 +48,7 @@ The values include:
 
 - `symbolic`
 
-  - : Cycles through the symbols provided in the `symbols` descriptor list of symbols repeatedly, doubling, tripling, etc. the symbols on each successive pass through the list. For example, if there were are two symbols provided for the `symbols` descriptor, "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. This counter system works for positive counter values only.
+  - : Cycles through the symbols provided in the `symbols` descriptor list repeatedly, doubling, tripling, and so on, the symbols on each successive pass through the list. For example, if two symbols "◽" and "◾" are specified in the `symbols` descriptor, on each successive pass, they will become "◽◽" and "◾◾" and "◽◽◽" and "◾◾◾" and so on in subsequent passes. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid. This counter system works for positive counter values only.
 
 - `alphabetic`
 
@@ -70,9 +70,9 @@ The values include:
 
 - `extends`
 
-  - : Allows authors to use extend the algorithm of another browser or author defined counter style by altering its other aspects. Any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.
+  - : Extends the algorithm of another browser- or author-defined counter style by allowing the alteration of some aspects of the extended counter style. Any unspecified descriptors and their values are inherited from the extended counter style specified. If the counter style name specified with `extends` is not yet defined, the `decimal` counter style will be extended by default.
 
-    It must not contain a `symbols` or `additive-symbols` descriptor, or else the counter style rule is invalid. If one or more counter styles definitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.
+    It must not contain a `symbols` or `additive-symbols` descriptor, otherwise the counter style rule will be invalid. If one or more counter styles definitions form a cycle with their `extends` values, the browser will treat all the participating counter styles as extending from the `decimal` style.
 
 > **Note:** The [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor is required when the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`. The [`additive-symbols`](/en-US/docs/Web/CSS/@counter-style/additive-symbols) descriptor is required if the `additive` value is set.
 
@@ -121,7 +121,7 @@ ul {
 
 ### Fixed counter
 
-The `fixed` value iterates through the list of symbols only once, starting the single cycle at the number indicated by the integer:
+The `fixed` value iterates through the list of symbols only once, starting the single cycle at the list item number indicated by the `integer` value:
 
 #### CSS
 
@@ -154,7 +154,7 @@ ul {
 
 ### Symbolic counter
 
-The `symbolic` value loops throught the list defined in the `symbols` descriptor, doubling and tripling the number of symbols for the second and third cycles through the list, respectively:
+The `symbolic` value loops through the list defined in the `symbols` descriptor, doubling and tripling the number of symbols for the second and third cycles through the list, respectively:
 
 #### CSS
 
@@ -224,7 +224,7 @@ ul {
 
 The first symbol provided in the `symbols` descriptor is interpreted as `0` here.
 
-#### CSS<br>
+#### CSS
 
 ```html hidden
 <ul>
@@ -298,7 +298,7 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 
 #### HTML
 
-We included the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute on the {{HTMLElement("ol")}} to demonstrate that counting doesn't need to start with `1` and the [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that counters you define using `@counter-style` behave just like native counters.
+We use the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute on the {{HTMLElement("ol")}} element to demonstrate that counting doesn't need to start at `1`. Additionally, we use the [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that the counters you define using `@counter-style` behave just like native counters.
 
 ```html
 <ol start="48">
@@ -344,9 +344,9 @@ ol {
 
 {{ EmbedLiveSample('Additive_counter', '') }}
 
-### Extends example
+### Extending a counter
 
-This example will use the algorithm, symbols, and other properties of [`lower-alpha`](/en-US/docs/Web/CSS/list-style-type#lower-alpha), one of the several native {{CSSXref("list-style-type")}} counter values, but extends it, removing the period (`'.'`) after the counter representation, and enclosing the characters in parenthesis; like `(a)`, `(b)`, etc.
+This example uses the algorithm, symbols, and other properties of [`lower-alpha`](/en-US/docs/Web/CSS/list-style-type#lower-alpha), one of the several native {{CSSXref("list-style-type")}} counter values, but extends it by removing the period (`'.'`) after the counter representation and enclosing the characters in parentheses, as in  `(a)` and `(b)`.
 
 #### HTML
 

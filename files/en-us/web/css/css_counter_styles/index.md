@@ -2,7 +2,7 @@
 title: CSS counter styles
 slug: Web/CSS/CSS_counter_styles
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-counter-styles-3
+spec-urls: https://drafts.csswg.org/css-counter-styles/
 ---
 
 {{CSSRef}}
@@ -54,7 +54,7 @@ No properties are defined in this module
 
 ## Related concepts
 
-[CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
+[CSS lists](/en-US/docs/Web/CSS/CSS_lists) module:
 
 - {{cssxref("counter-increment")}} property
 - {{cssxref("counter-reset")}} property
@@ -64,7 +64,7 @@ No properties are defined in this module
 - {{cssxref("counter", "counter()")}} function
 - {{cssxref("counters", "counters()")}} function
 
-[CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+[CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module:
 
 - {{cssxref("::after")}} pseudo-element
 - {{cssxref("::before")}} pseudo-element

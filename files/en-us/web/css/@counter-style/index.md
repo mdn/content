@@ -21,11 +21,11 @@ ul {
 }
 ```
 
-While CSS provides many useful pre-defined counter styles, the `@counter-style` at-rule addresses provides an open-ended method of creating counters to meet the needs of worldwide typography by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
+While CSS provides many useful predefined counter styles, the `@counter-style` at-rule offers an open-ended method for creating counters. This at-rule caters to the needs of worldwide typography by allowing authors to define their own counter styles when the predefined styles don't fit their requirements.
 
 ## Syntax
 
-Each `@counter-style` is identified by a `<counter-style-name>` and has a set of [descriptors](#descriptors).
+The `@counter-style` at-rule is identified by a [counter style name](#counter_style_name) and can be further fine-tuned using a list of one or more [descriptors](#descriptors) and their values.
 
 ### Counter style name
 
