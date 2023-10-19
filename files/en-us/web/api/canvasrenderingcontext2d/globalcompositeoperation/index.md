@@ -60,7 +60,7 @@ A string identifying which of the compositing or blending mode operations to use
 - `"soft-light"`
   - : A softer version of `hard-light`. Pure black or white does not result in pure black or white.
 - `"difference"`
-  - : Subtracts the bottom layer from the top layer — or the other way round — to always get a positive value.
+  - : Subtracts the bottom layer from the top layer — or the other way round — to always get a positive value.
 - `"exclusion"`
   - : Like `difference`, but with lower contrast.
 - `"hue"`
