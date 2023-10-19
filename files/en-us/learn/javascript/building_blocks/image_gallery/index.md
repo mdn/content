@@ -31,7 +31,7 @@ Now that we've looked at the fundamental building blocks of JavaScript, we'll te
 
 To get this assessment started, you should go and [grab the ZIP](https://raw.githubusercontent.com/mdn/learning-area/main/javascript/building-blocks/gallery/gallery-start.zip) file for the example, unzip it somewhere on your computer, and do the exercise locally to begin with.
 
-Alternatively, you could use an online editor such as the [MDN Playground](/en-US/play), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 
 > **Note:** If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
 

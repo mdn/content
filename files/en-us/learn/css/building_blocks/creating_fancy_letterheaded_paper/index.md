@@ -35,7 +35,7 @@ To get this assessment started, you should:
 - Make local copies of the [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/style.css) — save them as `index.html` and `style.css` in a new directory.
 - Save local copies of the [top](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [bottom](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) and [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) images in the same directory as your code files.
 
-Alternatively, you could use an online editor such as the [MDN Playground](/en-US/play), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 You could paste the HTML and fill in the CSS into one of these online editors.
 
 > **Note:** If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).

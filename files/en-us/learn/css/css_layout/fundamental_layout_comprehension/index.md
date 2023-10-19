@@ -37,7 +37,7 @@ Save the HTML document and stylesheet into a directory on your computer, and add
 
 This starting point has all of the content of your layout as displayed by the browser in normal flow.
 
-Alternatively, you could use an online editor such as the [MDN Playground](/en-US/play), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 If you use an online editor, you will need to upload the images and replace the values in the `src` attributes to point to the new image locations.
 
 > **Note:** If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).

@@ -31,7 +31,7 @@ In the assessment for this module, we present to you a simple site with a number
 
 To get this assessment started, you should go and grab the [ZIP containing the files that comprise the example](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip). Decompress the contents into a new directory somewhere on your local computer.
 
-Alternatively, you could use an online editor such as the [MDN Playground](/en-US/play), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 
 The finished assessment site should look like so:
 

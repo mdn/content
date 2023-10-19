@@ -8,7 +8,7 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you understand [CSS multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), including the {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} and {{CSSxRef("column-rule")}} properties and values. You will be working through three small tasks that use different elements of the material you have just covered.
 
-> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as the [MDN Playground](/en-US/play), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
 > If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
 

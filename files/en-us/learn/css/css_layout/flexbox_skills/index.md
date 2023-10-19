@@ -8,7 +8,7 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) behave. Below are four common design patterns that you might use flexbox to create. Your task is to build them.
 
-> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as the [MDN Playground](/en-US/play), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
 > If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
