@@ -60,3 +60,4 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages).format(date);
 - {{domxref("navigator.language")}}
 - {{domxref("navigator")}}
 - {{domxref("Window.languagechange_event", "languagechange")}} event
+- {{jsxref("Intl")}}
