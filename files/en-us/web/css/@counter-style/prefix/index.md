@@ -14,7 +14,7 @@ When the counter value is negative, the `prefix` comes before the negative sign 
 ## Syntax
 
 ```css
-/* <symbol> values: string, image, and identifiers */
+/* <symbol> values: string, image, or identifier */
 prefix: "»";
 prefix: "Page ";
 prefix: url(bullet.png);
