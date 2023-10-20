@@ -157,4 +157,5 @@ const formattedCount = new Intl.NumberFormat(navigator.languages).format(count);
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{domxref("navigator.language")}}
+- {{domxref("navigator.languages")}}
 - [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html) by Norbert Lindenberg (2012)
