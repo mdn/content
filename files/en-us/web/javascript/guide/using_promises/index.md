@@ -85,12 +85,12 @@ doSomething()
   .catch(failureCallback);
 ```
 
-**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions, `() => x` is short for `() => { return x; }`). If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
+> **Note:** Always return results, otherwise callbacks won't catch the result of a previous promise. Arrow function expressions can have an [implicit return](en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`. If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
 
 ```js example-bad
 doSomething()
   .then((url) => {
-    // I forgot to return this
+    // Missing `return` keyword in front of fetch(url).
     fetch(url);
   })
   .then((result) => {
@@ -108,7 +108,7 @@ const listOfIngredients = [];
 
 doSomething()
   .then((url) => {
-    // I forgot to return this
+    // Missing `return` keyword in front of fetch(url).
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -117,7 +117,7 @@ doSomething()
   })
   .then(() => {
     console.log(listOfIngredients);
-    // Always [], because the fetch request hasn't completed yet.
+    // listOfIngredients will always be [], because the fetch request hasn't completed yet.
   });
 ```
 
@@ -127,15 +127,17 @@ Therefore, as a rule of thumb, whenever your operation encounters a promise, ret
 const listOfIngredients = [];
 
 doSomething()
-  .then((url) =>
-    fetch(url)
+  .then((url) => {
+    // return keyword now included in front of fetch call.
+    return fetch(url)
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      }),
-  )
+      });
+  })
   .then(() => {
     console.log(listOfIngredients);
+    // listOfIngredients will now contain data from fetch call.
   });
 
 // OR
@@ -221,9 +223,9 @@ doSomething()
 // Forgot to terminate chain with a catch!
 ```
 
-The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run concurrently with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
+The first mistake is improperly chaining things together. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run concurrently with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
 
-The second mistake is to nest unnecessarily. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
+The second mistake is unnecessarily nesting function calls. Nesting also limits the scope of inner error handlers, which, if unintended can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
 
 The third mistake is forgetting to terminate chains with `catch`. Unterminated promise chains lead to uncaught promise rejections in most browsers. See [error handling](#error_handling) below.
 
