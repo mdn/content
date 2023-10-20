@@ -85,7 +85,7 @@ doSomething()
   .catch(failureCallback);
 ```
 
-> **Note:** Always return results, otherwise callbacks won't catch the result of a previous promise. Arrow function expressions can have an [implicit return](en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`. If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
+> **Note:** Always return results, otherwise callbacks won't catch the result of a previous promise. Arrow function expressions can have an [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`. If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
 
 ```js example-bad
 doSomething()
