@@ -39,11 +39,6 @@ counter-increment: revert-layer;
 counter-increment: unset;
 ```
 
-The `counter-increment` property is specified as either one of the following:
-
-- A `<custom-ident>` naming the counter, followed optionally by an `<integer>`. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
-- The keyword value `none`.
-
 ### Values
 
 The `counter-increment` property takes as its value either a list of space-separated counter names specified as `<custom-ident>` with an optional `<integer>` value or the keyword `none`.
@@ -54,6 +49,8 @@ The `counter-increment` property takes as its value either a list of space-separ
   - : Specifies the value to add to the counter. If the integer is preceded by a `-` sign, the value will be subtracted from the counter. Defaults to `1` if no value is specified.
 - `none`
   - : Indicates that no counter must be increased or decreased. This value can also be used to cancel all counters from being increased or decreased in more specific rules. This is the default value of the property.
+
+You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
 
 > **Note:** Using the `none` value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the value as `0` on the relevant counter(s).
 
