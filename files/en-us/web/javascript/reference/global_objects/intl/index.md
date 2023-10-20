@@ -133,9 +133,7 @@ const date = new Date("2012-05-24");
 const formattedDate = new Intl.DateTimeFormat(navigator.language).format(date);
 ```
 
-### Using the browser's list of preferred languages
-
-The {{domxref("navigator.languages")}} property provides a sorted list of the user's preferred languages. This list can be passed directly to the `Intl` constructors to implement preference-based fallback selection of locales. The [locale negotiation](#locale-identification-and-negotiation) process is used to pick the most appropriate locale available:
+Alternatively, the {{domxref("navigator.languages")}} property provides a sorted list of the user's preferred languages. This list can be passed directly to the `Intl` constructors to implement preference-based fallback selection of locales. The [locale negotiation](#locale_identification_and_negotiation) process is used to pick the most appropriate locale available:
 
 ```js
 const count = 26254.39;

@@ -30,7 +30,7 @@ A string.
 
 ## Examples
 
-### Listing the contents of `navigator.language` and `navigator.languages`
+### Listing the contents of navigator.language and navigator.languages
 
 ```js
 navigator.language; //"en-US"
