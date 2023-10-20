@@ -90,8 +90,8 @@ If using identifiers rather than strings to define the symbols, be aware of the 
 
 ## See also
 
-- The `symbols` descriptor is used within the {{cssxref("@counter-style")}} at-rule.
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}} properties
+- {{cssxref("symbols", "symbols()")}} function
 - {{cssxref("url", "url()")}} function
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
