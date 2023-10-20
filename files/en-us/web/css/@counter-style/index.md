@@ -25,12 +25,15 @@ While CSS provides many useful predefined counter styles, the `@counter-style` a
 
 ## Syntax
 
-The `@counter-style` at-rule is identified by a [counter style name](#counter_style_name) and with the style of the named counter fine-tuned using a list of one or more [descriptors](#descriptors) and their values.
+The `@counter-style` at-rule is identified by a [counter style name](#counter_style_name) and with the style of the named counter fine-tuned using `<declaration-list>` consisting of one or more [descriptors](#descriptors) and their values.
 
 ### Counter style name
 
 - `<counter-style-name>`
-  - : Provides a name for your counter style. It is specified as a case-sensitive {{cssxref("custom-ident")}} without quotes. The value should not be equal to `none`. Like all custom identifiers, the value of your counter style can't be a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords). Avoid other enumerated CSS property values, including values of [list](/en-US/docs/Web/CSS/CSS_lists#properties) and [counter style](/en-US/docs/Web/CSS/CSS_counter_styles#properties) properties. Also don't use the {{cssxref("list-style-type")}} property values `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed`, case-insensitive, for your counter style unless you are overriding or extending the list style type.
+
+  - : Provides a name for your counter style. It is specified as a case-sensitive {{cssxref("custom-ident")}} without quotes. The value should not be equal to `none`. Like all custom identifiers, the value of your counter style can't be a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords). Avoid other enumerated CSS property values, including values of [list](/en-US/docs/Web/CSS/CSS_lists#properties) and [counter style](/en-US/docs/Web/CSS/CSS_counter_styles#properties) properties. The name of your counter can't be the case-insensitive {{cssxref("list-style-type")}} property values of `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed`.
+
+    > **Note:** The non-overridable counter-style names `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed` can not be used as a the name of a custom counter, but are valid for other instances where the `<counter-style-name>` data type is expected, such as the counter style name in `system: extend <counter-style-name>`.
 
 ### Descriptors
 
