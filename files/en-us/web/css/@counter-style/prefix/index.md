@@ -7,7 +7,7 @@ browser-compat: css.at-rules.counter-style.prefix
 
 {{CSSRef}}
 
-The {{cssxref('@counter-style')}} rule's **`prefix`** descriptor specifies content that will be added to the beginning of the counter's marker representation. If not specified, the default value is an empty string (`""`).
+The {{cssxref('@counter-style')}} rule's **`prefix`** descriptor specifies content that will be added to the beginning of the counter's marker representation.
 
 When the counter value is negative, the `prefix` comes before the negative sign and any other `<symbol>`s added by the {{cssxref("@counter-style/negative", "negative")}} descriptor.
 
