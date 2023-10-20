@@ -53,7 +53,7 @@ The `counter-increment` property takes as its value either a list of space-separ
 - {{cssxref("&lt;integer&gt;")}}
   - : Specifies the value to add to the counter. If the integer is preceded by a `-` sign, the value will be subtracted from the counter. Defaults to `1` if no value is specified.
 - `none`
-  - : Indicates that no counter must be increased or decreased. This value can also be used to cancel all counters from being increased or decreased in more specific rules. This is the default value of the property. 
+  - : Indicates that no counter must be increased or decreased. This value can also be used to cancel all counters from being increased or decreased in more specific rules. This is the default value of the property.
 
 > **Note:** Using the `none` value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the value as `0` on the relevant counter(s).
 
