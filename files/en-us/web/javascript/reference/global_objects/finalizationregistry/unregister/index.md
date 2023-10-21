@@ -18,7 +18,7 @@ unregister(unregisterToken)
 ### Parameters
 
 - `unregisterToken`
-  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register", "register")}} method when registering the target value. Multiple cells registered with the same `unregisterToken` will be unregistered together.
+  - : The token used with the {{jsxref("FinalizationRegistry/register", "register()")}} method when registering the target value. Multiple cells registered with the same `unregisterToken` will be unregistered together.
 
 ### Return value
 

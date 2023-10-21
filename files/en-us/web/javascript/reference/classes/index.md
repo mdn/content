@@ -47,7 +47,7 @@ Like function expressions, class expressions may be anonymous, or have a name th
 
 ### Class body
 
-The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
+The body of a class is the part that is in curly braces `{}`. This is where you define class members, such as methods or constructor.
 
 The body of a class is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) even without the `"use strict"` directive.
 

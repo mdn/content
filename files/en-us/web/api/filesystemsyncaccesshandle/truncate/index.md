@@ -26,7 +26,7 @@ truncate(newSize)
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to undefined.
+None ({{jsxref('undefined')}}).
 
 ### Exceptions
 

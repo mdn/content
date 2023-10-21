@@ -22,7 +22,7 @@ for complete information about expressions.
 ## Block statement
 
 The most basic statement is a _block statement_, which is used to group
-statements. The block is delimited by a pair of curly brackets:
+statements. The block is delimited by a pair of curly braces:
 
 ```js
 {
@@ -282,7 +282,6 @@ this purpose:
 
 - [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
-  and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
 ### throw statement
 

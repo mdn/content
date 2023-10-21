@@ -2,12 +2,10 @@
 title: Map.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Map.groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 > **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
 
@@ -15,7 +13,7 @@ The **`Map.groupBy()`** static method groups the elements of a given iterable us
 
 The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time. If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
 
-<!-- {{EmbedInteractiveExample("pages/js/map-groupby.html")}} -->
+{{EmbedInteractiveExample("pages/js/map-groupby.html", "shorter")}}
 
 ## Syntax
 
