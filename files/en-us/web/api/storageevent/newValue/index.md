@@ -1,0 +1,27 @@
+---
+title: "StorageEvent: newValue property"
+short-title: newValue
+slug: Web/API/StorageEvent/newValue
+page-type: web-api-instance-property
+browser-compat: api.StorageEvent.newValue
+---
+
+{{APIRef("Web Storage API")}}
+
+The **`newValue`** property of the {{domxref("StorageEvent")}} interface returns the new value of the `key`.
+
+## Value
+
+A string containing the new value of the `key`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
