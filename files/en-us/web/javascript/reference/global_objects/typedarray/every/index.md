@@ -33,7 +33,7 @@ every(callbackFn, thisArg)
 
 ### Return value
 
-`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for a typed array element, in which case `false` is immediately returned.
 
 ## Description
 

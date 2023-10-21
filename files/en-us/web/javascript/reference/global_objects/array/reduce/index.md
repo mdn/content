@@ -36,7 +36,7 @@ reduce(callbackFn, initialValue)
     - `currentValue`
       - : The value of the current element. On the first call, its value is `array[0]` if `initialValue` is specified; otherwise its value is `array[1]`.
     - `currentIndex`
-      - : The index position of `currentValue` in the typed array. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
+      - : The index position of `currentValue` in the array. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
     - `array`
       - : The array `reduce()` was called upon.
 - `initialValue` {{optional_inline}}

@@ -172,11 +172,11 @@ scroll-snap-type: unset;
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
 .x.proximity-scroll-snapping {
   scroll-snap-type: x proximity;
+}
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
 }
 .y.proximity-scroll-snapping {
   scroll-snap-type: y proximity;

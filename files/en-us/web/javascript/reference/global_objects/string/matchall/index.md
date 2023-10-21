@@ -92,7 +92,7 @@ str.matchAll(regexp);
 // TypeError
 ```
 
-`matchAll` internally makes a clone of the `regexp` — so, unlike {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
+`matchAll` internally makes a clone of the `regexp` — so, unlike {{jsxref("RegExp/exec", "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
 
 ```js
 const regexp = /[a-c]/g;
@@ -108,7 +108,7 @@ However, this means that unlike using [`regexp.exec()`](/en-US/docs/Web/JavaScri
 
 Another compelling reason for `matchAll` is the improved access to capture groups.
 
-Capture groups are ignored when using {{jsxref("Global_Objects/String/match", "match()")}} with the global `g` flag:
+Capture groups are ignored when using {{jsxref("String/match", "match()")}} with the global `g` flag:
 
 ```js
 const regexp = /t(e)(st(\d?))/g;

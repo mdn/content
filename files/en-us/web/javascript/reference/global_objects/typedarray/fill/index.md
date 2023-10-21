@@ -30,7 +30,7 @@ fill(value, start, end)
 
 ### Return value
 
-The modified array, filled with `value`.
+The modified typed array, filled with `value`.
 
 ## Description
 

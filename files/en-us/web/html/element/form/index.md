@@ -157,9 +157,7 @@ The following attributes control behavior during form submission.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code> if the form has an
-        <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name">accessible name</a>, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>

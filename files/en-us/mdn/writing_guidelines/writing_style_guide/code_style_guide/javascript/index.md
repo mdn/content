@@ -301,7 +301,7 @@ function doIt() {
   };
   ```
 
-- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
+- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _expression body_) when possible:
 
   ```js example-good
   arr.map((e) => e.id);

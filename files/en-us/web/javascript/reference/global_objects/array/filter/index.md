@@ -33,7 +33,7 @@ filter(callbackFn, thisArg)
 
 ### Return value
 
-A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of the given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. If no elements pass the test, an empty array will be returned.
+A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned.
 
 ## Description
 

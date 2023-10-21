@@ -29,7 +29,7 @@ copyWithin(target, start, end)
 
 ### Return value
 
-The modified array.
+The modified typed array.
 
 ## Description
 

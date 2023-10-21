@@ -69,7 +69,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
   return a + 100;
 });
 
-// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+// 1. Remove the word "function" and place arrow between the argument and opening body brace
 (a) => {
   return a + 100;
 };
@@ -136,13 +136,13 @@ const bob2 = (a) => a + 100;
 
 ### Function body
 
-Arrow functions can have either a _concise body_ or the usual _block body_.
+Arrow functions can have either an _expression body_ or the usual _block body_.
 
-In a concise body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
+In an expression body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
 
 ```js
 const func = (x) => x * x;
-// concise body syntax, implied "return"
+// expression body syntax, implied "return"
 
 const func2 = (x, y) => {
   return x + y;
@@ -150,7 +150,7 @@ const func2 = (x, y) => {
 // with block body, explicit "return" needed
 ```
 
-Returning object literals using the concise body syntax `(params) => { object: literal }` does not work as expected.
+Returning object literals using the expression body syntax `(params) => { object: literal }` does not work as expected.
 
 ```js-nolint example-bad
 const func = () => { foo: 1 };
@@ -163,7 +163,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-This is because JavaScript only sees the arrow function as having a concise body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal.
+This is because JavaScript only sees the arrow function as having an expression body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal.
 
 To fix this, wrap the object literal in parentheses:
 

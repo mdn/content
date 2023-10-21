@@ -33,7 +33,7 @@ some(callbackFn, thisArg)
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for at least one element in the typed array. Otherwise, `false`.
+`false` unless `callbackFn` returns a {{Glossary("truthy")}} value for a typed array element, in which case `true` is immediately returned.
 
 ## Description
 

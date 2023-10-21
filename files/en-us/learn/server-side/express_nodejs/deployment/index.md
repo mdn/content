@@ -74,7 +74,7 @@ Some of the things to consider when choosing a host:
 - Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
 - Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
-- Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
+- Additional benefits. Some providers will offer free domain names and support for TLS certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
