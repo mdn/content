@@ -240,15 +240,15 @@ This example tests for browser compatibility and creates a new barcode detector 
 
 ```js
 // check compatibility
-if (!("BarcodeDetector" in window)) {
-  console.log("Barcode Detector is not supported by this browser.");
-} else {
+if ("BarcodeDetector" in window) {
   console.log("Barcode Detector supported!");
 
   // create new detector
   const barcodeDetector = new BarcodeDetector({
     formats: ["code_39", "codabar", "ean_13"],
   });
+} else {
+  console.log("Barcode Detector is not supported by this browser.");
 }
 ```
 
