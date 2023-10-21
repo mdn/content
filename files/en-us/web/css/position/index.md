@@ -56,7 +56,7 @@ position: unset;
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
 
-    > **Note:** At least one [inset](/en-US/docs/Web/CSS/inset) property on the axis in which the element needs to be kept in view needs to have non `auto` value. Otherwise, if both inset properties are `auto` on an axis then the `sticky` value behaves as `relative` on that axis.
+    > **Note:** At least one [inset](/en-US/docs/Web/CSS/inset) property ({{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}}, etc.) needs to be set to a non-`auto` value for the axis on which the element needs to be made sticky. If both `inset` properties for an axis are set to `auto`, on that axis the `sticky` value will behave as `relative`.
 
 ## Description
 
