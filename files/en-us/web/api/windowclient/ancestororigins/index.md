@@ -14,7 +14,7 @@ The first element in the array is the origin of this window's parent, and the la
 
 ## Value
 
-An array of string.
+An array of strings.
 
 ## Specifications
 
