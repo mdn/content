@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### CSS
 
+- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
+
 #### Removals
 
 ### JavaScript
@@ -31,6 +33,8 @@ This article provides information about the changes in Firefox 119 that affect d
 #### Removals
 
 ### SVG
+
+- The [SVG attributes](/en-US/docs/Web/SVG/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/en-US/docs/Web/CSS/length) [CSS data types](/en-US/docs/Web/CSS/CSS_Types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g. `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 #### Removals
 
@@ -48,6 +52,10 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - The relative priority for send streams can now be specified by including the `sendOrder` property inside an options argument passed to [`WebTransport.createBidirectionalStream()`](/en-US/docs/Web/API/WebTransport/createBidirectionalStream) and [`WebTransport.createUnidirectionalStream()`](/en-US/docs/Web/API/WebTransport/createUnidirectionalStream) ([Firefox bug 1816925](https://bugzil.la/1816925)).
 - The [`getAuthenticatorData()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData), [`getPublicKeyAlgorithm()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKeyAlgorithm), and [`getPublicKey()`](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKey) methods of the [`AuthenticatorAttestationResponse`](/en-US/docs/Web/API/AuthenticatorAttestationResponse) interface are now supported (see [Firefox bug 1816519](https://bugzil.la/1816519) and [Firefox bug 1816520](https://bugzil.la/1816520)).
+- The [Credential Properties Extension (`credProps`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing users to query if credentials are discoverable after creation/registration ([Firefox bug 1844437](https://bugzil.la/1844437)).
+- The [`SubtleCrypto.deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey) method now supports the [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf) algorithm as an option for its [`derivedKeyAlgorithm`](/en-US/docs/Web/API/SubtleCrypto/deriveKey#derivedkeyalgorithm) parameter (see [Firefox bug 1851928](https://bugzil.la/1851928)).
+- The {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "parseCreationOptionsFromJSON()")}}, {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "parseRequestOptionsFromJSON()")}}, and {{domxref("PublicKeyCredential.toJSON", "toJSON()")}} methods of the {{domxref("PublicKeyCredential")}} interface are now supported.
+  These are convenience methods for converting objects used for creating and sharing credentials objects to JSON representations that can be serialized/deserialized and shared with a server (see [Firefox bug 1823782](https://bugzil.la/1823782)).
 
 #### DOM
 

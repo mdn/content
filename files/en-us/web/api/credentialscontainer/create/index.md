@@ -294,6 +294,19 @@ The `publicKey` object can contain the following properties:
     - `name`
       - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"johndoe667"`).
 
+- `hints` {{optional_inline}}
+
+  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
+
+    The values can be any of the following:
+
+    - `"security-key"`
+      - : Authentication requires a separate dedicated physical device to provide the key.
+    - `"client-device"`
+      - : The user authenticates using their own device, such as a phone.
+    - `"hybrid"`
+      - : Authentication relies on a combination of authorization/authentication methods, potentially relying on both user and server-based mechanisms.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}} instance matching the provided parameters. If no credential object can be created, the promise resolves with `null`.
