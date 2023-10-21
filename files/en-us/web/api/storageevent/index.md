@@ -55,3 +55,7 @@ _In addition to the methods listed below, this interface inherits the methods of
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)

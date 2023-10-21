@@ -45,3 +45,7 @@ A new {{domxref("StorageEvent")}} object.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
