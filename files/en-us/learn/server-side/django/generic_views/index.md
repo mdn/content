@@ -308,7 +308,7 @@ The main parts of the syntax you will need to know for declaring the pattern mat
     <tr>
       <td>( )</td>
       <td>
-        Capture the part of the pattern inside the brackets. Any captured values
+        Capture the part of the pattern inside the parentheses. Any captured values
         will be passed to the view as unnamed parameters (if multiple patterns
         are captured, the associated parameters will be supplied in the order
         that the captures were declared).

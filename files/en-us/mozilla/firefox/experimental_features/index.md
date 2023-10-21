@@ -99,46 +99,6 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
-### Reflecting ARIA attributes
-
-[ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is enabled for non-IDREF attributes which allows authors to get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`, (see [Firefox bug 1824980](https://bugzil.la/1824980) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>114</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>accessibility.ARIAReflection.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -526,7 +486,7 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
 ### :has() pseudo-class
 
 The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
-(See [Firefox bug 1771896](https://bugzil.la/1771896) for more details.)
+(See [Firefox bug 1771896](https://bugzil.la/1771896) and [Firefox bug 1853701](https://bugzil.la/1853701) for more details.)
 
 <table>
   <thead>
@@ -539,8 +499,8 @@ The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that cont
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>103</td>
-      <td>No</td>
+      <td>119</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>

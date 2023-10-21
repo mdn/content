@@ -66,7 +66,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("counter-increment")}} property
   - {{cssxref("counter-reset")}} property
 
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 
   - {{cssxref("attr", "attr()")}} function
   - {{cssxref("string")}} data type

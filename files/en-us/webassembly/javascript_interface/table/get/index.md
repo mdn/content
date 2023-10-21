@@ -36,7 +36,7 @@ to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table
 
 ### Using get
 
-The following example (see [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)
+The following example (see [table.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.html)
 on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/table.html) also)
 compiles and instantiates the loaded table.wasm byte code using the
 [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method. It then retrieves the
