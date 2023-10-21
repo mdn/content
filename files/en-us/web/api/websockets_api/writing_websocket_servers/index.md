@@ -83,6 +83,7 @@ Either the client or the server can choose to send a message at any time — tha
 Each data frame (from the client to the server or vice versa) follows this same format:
 
 ```bash
+Frame format:
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-------+-+-------------+-------------------------------+
@@ -103,82 +104,19 @@ Each data frame (from the client to the server or vice versa) follows this same 
      +---------------------------------------------------------------+
 ```
 
-Another view for the frame format of the 8-bits payload length example
+Another view for the frame format (think the payload how a tape of the bits)
 
 ```bash
-Frame format:
-
-byte 1 0 FIN
+Summary:
+- First byte:
+       0 FIN
        1 RSV1
        2 RSV2
        3 RSV3
-       4 -> Next 4 bits is OPCODE(4)
-       5
-       6
-       7
-byte 2 0 MASK
-       1 -> Next 7 bits is Payload length(7)
-       2
-       3
-       4
-       5
-       6
-       7
-// If the payload length is more the 8-bits the next bytes is the payload length
-// Next 2 bytes for 16-bits
-// Next 8 bytes for 64-bits
-byte 3 0 -> Next 4 BYTES is Masking key if MASK set to 1
-       1
-       2
-       3
-       4
-       5
-       6
-       7
-byte 4 0
-       1
-       2
-       3
-       4
-       5
-       6
-       7
-byte 5 0
-       1
-       2
-       3
-       4
-       5
-       6
-       7
-byte 6 0
-       1
-       2
-       3
-       4
-       5
-       6
-       7
-byte 7 0 -> All next bytes are remaining payload data
-       1
-       2
-       3
-       4
-       5
-       6
-       7
-byte 8 0
-       1
-       2
-       3
-       4
-       5
-       6
-       7
-.
-.
-.
-
+       4-7 OPCODE
+- Bytes 2-10: payload length (see [Decoding Payload Length](#decoding_payload_length))
+- If masking is used, next 4 bytes contain masking key (see [Reading and unmasking the data](#reading_and_unmasking_the_data))
+- All subsequent bytes are payload
 ```
 
 The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. _Note: You must mask messages even when using a secure socket._ RSV1-3 can be ignored, they are for extensions.
