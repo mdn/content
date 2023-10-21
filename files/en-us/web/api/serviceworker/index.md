@@ -9,7 +9,7 @@ browser-compat: api.ServiceWorker
 
 The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique `ServiceWorker` object.
 
-A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, {{domxref("ServiceWorkerRegistration.installing")}} property, {{domxref("ServiceWorkerRegistration.waiting")}} property, {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property — this is a service worker that has been activated and is controlling the page (the service worker has been successfully registered, and the controlled page has been reloaded.)
+A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, {{domxref("ServiceWorkerRegistration.installing")}} property, {{domxref("ServiceWorkerRegistration.waiting")}} property, {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property.
 
 The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
