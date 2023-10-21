@@ -69,6 +69,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
+- `blocking` {{Experimental_Inline}}
+
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+    - `render`: The rendering of content on the screen is blocked.
+
 - `crossorigin`
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
 - `defer`
@@ -128,23 +133,22 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
         JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
+    - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
+      - : This value indicates that the body of the element contains an import map.
+        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
     - `module`
       - : This value causes the code to be treated as a JavaScript module.
         The processing of the script contents is deferred.
         The `charset` and `defer` attributes have no effect.
         For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
         Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
-    - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
-      - : This value indicates that the body of the element contains an import map.
-        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
+    - [`speculationrules`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+      - : This value indicates that the body of the element contains speculation rules.
+        Speculation rules take the form of a JSON object that determine what resources should be prefetched or prerendered by the browser. This is part of the [speculation rules API](/en-US/docs/Web/Performance/Speculative_loading#the_speculation_rules_api).
     - **Any other value**
       - : The embedded content is treated as a data block, and won't be processed by the browser.
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
         All of the other attributes will be ignored, including the `src` attribute.
-
-- `blocking` {{Experimental_Inline}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
-    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
