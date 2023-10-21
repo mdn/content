@@ -105,7 +105,7 @@ if (navigator.mediaDevices) {
         const clipLabel = document.createElement("p");
         const audio = document.createElement("audio");
         const deleteButton = document.createElement("button");
-        const mainContainer = document.querySelector('body');
+        const mainContainer = document.querySelector("body");
 
         clipContainer.classList.add("clip");
         audio.setAttribute("controls", "");
