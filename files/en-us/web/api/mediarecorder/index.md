@@ -105,6 +105,7 @@ if (navigator.mediaDevices) {
         const clipLabel = document.createElement("p");
         const audio = document.createElement("audio");
         const deleteButton = document.createElement("button");
+        const mainContainer = document.querySelector('body');
 
         clipContainer.classList.add("clip");
         audio.setAttribute("controls", "");
@@ -114,7 +115,7 @@ if (navigator.mediaDevices) {
         clipContainer.appendChild(audio);
         clipContainer.appendChild(clipLabel);
         clipContainer.appendChild(deleteButton);
-        soundClips.appendChild(clipContainer);
+        mainContainer.appendChild(clipContainer);
 
         audio.controls = true;
         const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
