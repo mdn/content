@@ -468,16 +468,16 @@ Unfortunately, we don't yet have any way for users to borrow books! So before we
 
 First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a User. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
 
-Open **catalog/models.py**, and import the `User` model from `django.contrib.auth.models` (add this just below the previous import line at the top of the file, so `User` is available to subsequent code that makes use of it):
+Open **catalog/models.py**, and import the `settings` from `django.conf` in order to import the custom user model using the AUTH_USER_MODEL setting (add this just below the previous import line at the top of the file, so `User` is available to subsequent code that makes use of it):
 
 ```python
-from django.contrib.auth.models import User
+from django.conf import settings
 ```
 
 Next, add the `borrower` field to the `BookInstance` model:
 
 ```python
-borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
 ```
 
 While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue.
