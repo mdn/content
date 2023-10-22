@@ -7,7 +7,7 @@ browser-compat: api.RadioNodeList
 
 {{APIRef("HTML DOM")}}
 
-The **`RadioNodeList`** interface represents a collection of elements in a {{HTMLElement("form")}} or a {{HTMLElement("fieldset")}} element whose `name` or `id` match a specified value.
+The **`RadioNodeList`** interface represents a collection of elements in a {{HTMLElement("form")}} or a {{HTMLElement("fieldset")}} element, returned by a call to {{domxref("HTMLFormControlsCollection.namedItem()")}}.
 
 {{InheritanceDiagram}}
 
