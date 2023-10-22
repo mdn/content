@@ -503,7 +503,7 @@ bird.sayBye(); // Bye from Ferrari
 
 > **Note:** Classes are always in strict mode. Calling methods with an undefined `this` will throw an error if the method tries to access properties on `this`.
 >
-> ```js
+> ```js example-bad
 > const carSayHi = car.sayHi;
 > carSayHi(); // TypeError because the 'sayHi' method tries to access 'this.name', but 'this' is undefined in strict mode.
 > ```
