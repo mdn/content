@@ -123,9 +123,13 @@ This element extends the built-in {{htmlelement("p")}} element.
 In this minimal example the element doesn't implement any customization, so it will behave just like a normal `<p>` element. However, it does satisfy the requirements of `define()`, so we can define it like this:
 
 ```js
-customElements.define("my-customized-built-in-element", MyCustomizedBuiltInElement, {
-  extends: "p",
-});
+customElements.define(
+  "my-customized-built-in-element",
+  MyCustomizedBuiltInElement,
+  {
+    extends: "p",
+  },
+);
 ```
 
 We could then use it in an HTML page like this:
