@@ -30,6 +30,11 @@ new TextDecoderStream(label, options)
       - : A boolean value indicating if this object must throw a {{jsxref("TypeError")}} when decoding invalid data.
         It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
 
+    - `ignoreBOM`
+      - : A boolean parameter that indicates whether to consider the Byte Order Mark (BOM) when decoding text streams.
+          By default, it's set to `false`, meaning it considers the BOM for encoding. If set to `true`, it ignores the BOM, useful for handling text streams
+          without considering it.      
+
 ### Exceptions
 
 - {{jsxref("RangeError")}}
