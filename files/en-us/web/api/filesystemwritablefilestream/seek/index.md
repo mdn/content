@@ -28,9 +28,9 @@ A {{jsxref('Promise')}} that returns `undefined`.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if {{domxref('PermissionStatus.state')}} is not `granted`.
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 - {{jsxref("TypeError")}}
-  - : Returned if `position` is not a number or not defined.
+  - : Thrown if `position` is not a number or not defined.
 
 ## Examples
 
