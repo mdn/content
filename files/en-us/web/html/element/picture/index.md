@@ -118,6 +118,7 @@ It is composed of a comma-separated list of image descriptors. Each image descri
 - a _pixel density descriptor_, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
 
 Make sure to note that:
+
 - width and pixel density descriptors should not be used together
 - a missing pixel density descriptor implies 1x
 - duplicate descriptor values are not allowed (2x & 2x, 100w & 100w)
