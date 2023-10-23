@@ -45,7 +45,7 @@ No properties are defined in this module
 ### Interfaces and APIs
 
 - [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
- - {{domxref("CSSCounterStyleRule")}} interface
+   - {{domxref("CSSCounterStyleRule")}} interface
 
 ## Guides
 
