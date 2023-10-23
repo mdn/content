@@ -123,7 +123,6 @@ For example, you can float an image left to cause text to wrap round the image. 
 
 Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
 
-
 ### Should you use physical or logical properties?
 
 The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes, then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you also start dealing with layout methods such as flexbox and grid.
