@@ -7,11 +7,12 @@ browser-compat: css.properties.counter-increment
 
 {{CSSRef}}
 
-The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property increases or decreases the value of the named [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified value or increments it by `1` if no value is provided.
+The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property increases or decreases the value of the named [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified value or increases it by `1` if no value is provided.
+
+You can reset the counter's value to any integer value by using the {{cssxref("counter-reset")}} CSS property.
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-You can reset the counter's value to any integer value by using the {{cssxref("counter-reset")}} CSS property.
 
 ## Syntax
 
@@ -41,7 +42,7 @@ counter-increment: unset;
 
 ### Values
 
-The `counter-increment` property takes as its value either a list of space-separated counter names specified as `<custom-ident>` with an optional `<integer>` value or the keyword `none`.
+The `counter-increment` property takes as its value either a list of space-separated counter names specified as `<custom-ident>` with an optional `<integer>` value or the keyword `none`. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
 
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Specifies the name of the counter to increase or decrease.
@@ -50,9 +51,7 @@ The `counter-increment` property takes as its value either a list of space-separ
 - `none`
   - : Indicates that no counter must be increased or decreased. This value can also be used to cancel all counters from being increased or decreased in more specific rules. This is the default value of the property.
 
-You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
-
-> **Note:** Using the `none` value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the value as `0` on the relevant counter(s).
+>> **Note:** Using the `none` value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the `integer` value as `0` on the relevant counter(s).
 
 ## Formal definition
 
@@ -82,7 +81,7 @@ In this example, we display a sequence of numbers counting backward. To do this,
 
 We set the initial value of the counter named `sevens` to `100` by using {{cssxref("counter-reset")}}. Then, for each {{HTMLElement("i")}}, we decrease the counter by `7`.
 
-To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/counter) function."
+To set the first count at `100`, we target the first `<i>` element by using the {{cssxref(":first-of-type")}} pseudo-class and setting `counter-increment: none;`. Additionally, the {{cssxref("content")}} property is used in the {{cssxref("::before")}} pseudo-element to display the value of the counter using the [`counter()`](/en-US/docs/Web/CSS/counter) function.
 
 ```css
 div {
