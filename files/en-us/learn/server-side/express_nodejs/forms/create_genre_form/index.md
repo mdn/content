@@ -129,14 +129,18 @@ asyncHandler(async (req, res, next) => {
 });
 ```
 
-If the genre name data is valid then we check to see if a `Genre` with the same name already exists (as we don't want to create duplicates).
-If it does, we redirect to the existing genre's detail page.
+If the genre name data is valid then we perform a case-insensitive search to see if a `Genre` with the same name already exists (as we don't want to create duplicate or near duplicate records that vary only in letter case, such as: "Fantasy", "fantasy", "FaNtAsY", and so on).
+To ignore letter case and accents when searching we chain the [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) method, specifying the locale of 'en' and strength of 2 (for more information see the MongoDB [Collation](https://www.mongodb.com/docs/manual/reference/collation/) topic).
+
+If a `Genre` with a matching name already exists we redirect to its detail page.
 If not, we save the new `Genre` and redirect to its detail page.
 Note that here we `await` on the result of the database query, following the same pattern as in other route handlers.
 
 ```js
 // Check if Genre with same name already exists.
-const genreExists = await Genre.findOne({ name: req.body.name }).exec();
+const genreExists = await Genre.findOne({ name: req.body.name })
+  .collation({ locale: "en", strength: 2 })
+  .exec();
 if (genreExists) {
   // Genre exists, redirect to its detail page.
   res.redirect(genreExists.url);
@@ -208,7 +212,7 @@ The only error we validate against server-side is that the genre field must not 
 
 > **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >
-> ```
+> ```pug
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
 > ```
 

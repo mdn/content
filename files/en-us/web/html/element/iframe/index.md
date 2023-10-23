@@ -234,4 +234,5 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## See also
 
+- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

@@ -123,9 +123,10 @@ To trigger on multiple signals they must be daisy chained.
 The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
 
 ```js
+let timeoutId;
 try {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 5000);
+  timeoutId = setTimeout(() => controller.abort(), 5000);
   const res = await fetch(url, { signal: controller.signal });
   const body = await res.json();
 } catch (e) {
@@ -153,7 +154,7 @@ The promise is rejected immediately if the signal is already aborted, or if the 
 Otherwise it completes normally and then resolves the promise.
 
 ```js
-function myCoolPromiseAPI(/* … ,*/ { signal }) {
+function myCoolPromiseAPI(/* …, */ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
@@ -182,7 +183,7 @@ const signal = controller.signal;
 
 startSpinner();
 
-myCoolPromiseAPI({ /* … ,*/ signal })
+myCoolPromiseAPI({ /* …, */ signal })
   .then((result) => {})
   .catch((err) => {
     if (err.name === "AbortError") return;

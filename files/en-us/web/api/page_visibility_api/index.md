@@ -94,8 +94,8 @@ This example pauses audio when the user switches to a different tab, and plays w
 const audio = document.querySelector("audio");
 
 // Handle page visibility change:
-// - If the page is hidden, pause the video
-// - If the page is shown, play the video
+// - If the page is hidden, pause the audio
+// - If the page is shown, play the audio
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     audio.pause();

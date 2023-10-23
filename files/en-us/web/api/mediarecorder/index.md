@@ -31,7 +31,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 
 ## Static methods
 
-- {{domxref("MediaRecorder.isTypeSupported()")}}
+- {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}
   - : A static method which returns a `true` or `false` value indicating if the given MIME media type is supported by the current user agent.
 
 ## Instance methods
@@ -64,7 +64,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - [`stop`](/en-US/docs/Web/API/MediaRecorder/stop_event)
   - : Fired when media recording ends, either when the {{domxref("MediaStream")}} ends, or after the {{domxref("MediaRecorder.stop()")}} method is called.
 - [`warning`](/en-US/docs/Web/API/MediaRecorder/warning_event) {{deprecated_inline}}
-  - : Fired when media recording has a non-fatal error, or after the {{domxref("MediaRecorder.onwarning()")}} method is called.
+  - : Fired when media recording has a non-fatal error.
 
 ## Example
 
@@ -79,8 +79,6 @@ if (navigator.mediaDevices) {
     .getUserMedia(constraints)
     .then((stream) => {
       const mediaRecorder = new MediaRecorder(stream);
-
-      visualize(stream);
 
       record.onclick = () => {
         mediaRecorder.start();

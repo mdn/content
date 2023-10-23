@@ -106,7 +106,7 @@
     "no-bare-urls": false,
     // Produces too many false positives
     "no-space-in-emphasis": false,
-    "fenced-code-language": false,
+    "fenced-code-language": true,
     // See https://github.com/mdn/content/pull/20026, as macros currently break this
     "no-empty-links": false,
     "code-block-style": {
@@ -206,10 +206,16 @@
           "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
           "replace": "](/",
           "searchScope": "text"
+        },
+        {
+          "name": "un-closed-md-link",
+          "message": "Missng closing bracket ')'",
+          "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
+          "searchScope": "text"
         }
       ]
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules", ".github", "tests"]
+  "ignores": ["node_modules", ".git", ".github", "tests"]
 }

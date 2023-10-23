@@ -43,7 +43,7 @@ You specify `options_ui` as a path to an HTML file packaged with your extension.
 If you want to **share** data or functions between the JavaScript on your **options page** and your **background script(s)**, you can do so directly by obtaining a reference to the [Window](/en-US/docs/Web/API/Window) of your background scripts by using {{WebExtAPIRef("extension.getBackgroundPage()")}}, or a reference to the {{domxref("Window")}} of any of the pages running within your extension with {{WebExtAPIRef("extension.getViews()")}}. Alternately, you can communicate between the JavaScript for your options page and your background script(s) using {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, or {{WebExtAPIRef("runtime.connect()")}}.
 The latter (or {{WebExtAPIRef("runtime.Port")}} equivalents) can also be used to share options between your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) and your **[content script(s).](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)**
 
-In general, you will want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync()")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local()")}} (if the settings are local to the current machine/profile). If you do so and your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) (or [content script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.
+In general, you will want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local")}} (if the settings are local to the current machine/profile). If you do so and your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) (or [content script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.
 
 ## Syntax
 
@@ -77,7 +77,7 @@ The `options_ui` key is an object with the following contents:
           </ul>
         <div class="notecard warning">
           <p>
-            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>

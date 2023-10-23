@@ -26,13 +26,13 @@ In some cases, however, browsers can decide to further separate the data stored 
 
 Web developers can use the following web technologies to store data in the browser:
 
-| Technology                                                                                                            | Description                                                                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Cookies](/en-US/docs/Web/HTTP/Cookies)                                                                               | An HTTP cookie is a small piece of data that the web server and browser send each other to remember stateful information across page navigation.                                                                                  |
-| [Web Storage](/en-US/docs/Web/API/Web_Storage_API)                                                                    | The Web Storage API provides mechanisms for webpages to store string-only key/value pairs, including [`localStorage`](/en-US/docs/Web/API/Window/localStorage) and [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). |
-| [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)                                                                        | IndexedDB is a Web API for storing large data structures in the browser and indexing them for high-performance searching.                                                                                                         |
-| [Cache API](/en-US/docs/Web/API/Cache)                                                                                | The Cache API provides a persistent storage mechanism for HTTP request and response object pairs that's used to make webpages load faster.                                                                                        |
-| [Origin Private File System Access API (OPFS)](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) | OPFS provides a file system that's private to the origin of the page and can be used to read and write directories and files.                                                                                                     |
+| Technology                                                                                          | Description                                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Cookies](/en-US/docs/Web/HTTP/Cookies)                                                             | An HTTP cookie is a small piece of data that the web server and browser send each other to remember stateful information across page navigation.                                                                                  |
+| [Web Storage](/en-US/docs/Web/API/Web_Storage_API)                                                  | The Web Storage API provides mechanisms for webpages to store string-only key/value pairs, including [`localStorage`](/en-US/docs/Web/API/Window/localStorage) and [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). |
+| [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)                                                      | IndexedDB is a Web API for storing large data structures in the browser and indexing them for high-performance searching.                                                                                                         |
+| [Cache API](/en-US/docs/Web/API/Cache)                                                              | The Cache API provides a persistent storage mechanism for HTTP request and response object pairs that's used to make webpages load faster.                                                                                        |
+| [Origin Private File System (OPFS)](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) | OPFS provides a file system that's private to the origin of the page and can be used to read and write directories and files.                                                                                                     |
 
 Note that, in addition to the above, browsers will store other types of data in the browser for an origin, such as [WebAssembly](/en-US/docs/WebAssembly) code caching.
 
@@ -75,7 +75,7 @@ Once this limit is reached, browsers throw a `QuotaExceededError` exception whic
 
 ### Other web technologies
 
-The data that's stored by using other web technologies, such as IndexedDB, Cache API, or Origin-Private File System Access API, is managed by a storage management system that's specific to each browser.
+The data that's stored by using other web technologies, such as IndexedDB, Cache API, or File System API (which defines the Origin Private File System), is managed by a storage management system that's specific to each browser.
 
 This system regulates all of the data that an origin stores using these APIs.
 
@@ -107,7 +107,13 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 #### Safari
 
-In Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
+Starting with macOS 14 and iOS 17, Safari allots up to around 20% of the total disk space for each origin. If the user has saved it as a web app on the Home Screen or the Dock, this limit is increased to up to 60% of the disk size. For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
+
+For instance, a macOS device with a 1 TiB drive will limit each origin to around 200 GiB. If the user stores a web app on its Dock, that will be alloted a greater limit of around 600 GiB.
+
+Like other browsers, the exact limits enforced by the quota may vary as to avoid fingerprinting. Additionally, Safari also enforces an overall quota that stored data across all origins cannot grow beyond: 80% of disk size for each browser and web app, and 15% of disk size for each non-browser app that displays web content. More info on Safari's storage policies can be found on the [Webkit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
+
+In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 
 ## How to check the available space?
 

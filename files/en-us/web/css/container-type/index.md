@@ -50,7 +50,9 @@ container-type: unset;
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Establishing inline size containment
 
 Given the following HTML example which is a card component with an image, a title, and some text:
 
@@ -83,8 +85,6 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
   }
 }
 ```
-
-For more information on container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_container_queries) page.
 
 ## Specifications
 

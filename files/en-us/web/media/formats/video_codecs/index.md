@@ -1745,7 +1745,7 @@ Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that
         <p>Edge support for VP8 requires the use of <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a>.</p>
         <p>macOS: Safari 14.1 supports VP8 in WebRTC, MSE and video elements. Safari 12.2 only supports VP8 in WebRTC connections.</p>
         <p>iOS: Safari 12.1 and later support VP8 in WebRTC connections only.</p>
-        <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
+        <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.</p>
       </td>
     </tr>
     <tr>
@@ -1910,7 +1910,7 @@ This is especially true if you wish to use an open codec rather than a proprieta
         </table>
         <p>
           Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use
-          {{domxref("MediaSource.isTypeSupported()")}} to check for availability.
+          {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.
         </p>
         <ul>
           <li>Safari 14: (macOS, iOS) supports VP9 in WebM for WebRTC.</li>

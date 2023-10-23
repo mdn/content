@@ -67,7 +67,7 @@ instance ensuring that the user is not served a lower-quality image from the cac
 Request:
 
 ```http
-GET /image.jpg HTTP/1.0
+GET /image.jpg HTTP/1.1
 Host: example.com
 Save-Data: on
 ```
@@ -75,7 +75,7 @@ Save-Data: on
 Response:
 
 ```http
-HTTP/1.0 200 OK
+HTTP/1.1 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -89,14 +89,14 @@ Content-Type: image/jpeg
 Request:
 
 ```http
-GET /image.jpg HTTP/1.0
+GET /image.jpg HTTP/1.1
 Host: example.com
 ```
 
 Response:
 
 ```http
-HTTP/1.0 200 OK
+HTTP/1.1 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000

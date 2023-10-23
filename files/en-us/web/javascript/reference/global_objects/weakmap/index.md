@@ -75,16 +75,16 @@ const o3 = window;
 wm1.set(o1, 37);
 wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
-wm2.set(o3, undefined);
+wm2.set(o2, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!
 
 wm1.get(o2); // "azerty"
-wm2.get(o2); // undefined, because there is no key for o2 on wm2
-wm2.get(o3); // undefined, because that is the set value
+wm2.get(o2); // undefined, because that is the set value
+wm2.get(o3); // undefined, because there is no key for o3 on wm2
 
 wm1.has(o2); // true
-wm2.has(o2); // false
-wm2.has(o3); // true (even if the value itself is 'undefined')
+wm2.has(o2); // true (even if the value itself is 'undefined')
+wm2.has(o3); // false
 
 wm3.set(o1, 37);
 wm3.get(o1); // 37
@@ -269,8 +269,8 @@ This only works if your function's input is an object. Moreover, even if the inp
 ## See also
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
-- [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) in the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
+- [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) by Nick Fitzgerald (2014)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

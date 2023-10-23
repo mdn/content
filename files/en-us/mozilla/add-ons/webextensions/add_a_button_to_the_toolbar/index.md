@@ -175,7 +175,7 @@ In our JavaScript, we listen for clicks on the popup choices. We first check to 
 
 The extension's final structure should look like this:
 
-```
+```plain
 button/
     icons/
         page-16.png

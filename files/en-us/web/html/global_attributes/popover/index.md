@@ -2,12 +2,10 @@
 title: popover
 slug: Web/HTML/Global_attributes/popover
 page-type: html-attribute
-status:
-  - experimental
 browser-compat: html.global_attributes.popover
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}
 
 The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to designate an element as a popover element.
 

@@ -428,8 +428,8 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-color-correction`
 - `-webkit-flow-from`
 - `-webkit-flow-into`
-- `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
-- `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
+- `-webkit-grid-columns` (See [`grid-column`](/en-US/docs/Web/CSS/grid-column))
+- `-webkit-grid-rows` (See [`grid-row`](/en-US/docs/Web/CSS/grid-row))
 - `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})

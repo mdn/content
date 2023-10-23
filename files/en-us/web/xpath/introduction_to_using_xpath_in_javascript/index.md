@@ -318,7 +318,7 @@ const personIterator = xmlDoc.evaluate(
 
 This is an example for illustration only. This function will need to take namespace prefixes from the `xpathExpression` and return the URI that corresponds to that prefix. For example, the expression:
 
-```
+```plain
 '//xhtml:td/mathml:math'
 ```
 

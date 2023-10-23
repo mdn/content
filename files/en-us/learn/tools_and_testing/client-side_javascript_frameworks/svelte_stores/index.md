@@ -7,7 +7,7 @@ page-type: learn-module-chapter
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte: [Stores](https://svelte.dev/tutorial/writable-stores). Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.
+In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte: [Stores](https://learn.svelte.dev/tutorial/writable-stores). Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.
 
 <table>
   <tbody>
@@ -509,7 +509,7 @@ Here we declare `subs`, which is an array of subscribers. In the `subscribe()` m
 
 When we call `set()`, we update the value of the store and call each handler, passing the new value as a parameter.
 
-Usually you don't implement stores from scratch; instead you'd use the writable store to create [custom stores](https://svelte.dev/tutorial/custom-stores) with domain-specific logic. In the following example we create a counter store, which will only allow us to add one to the counter or reset its value:
+Usually you don't implement stores from scratch; instead you'd use the writable store to create [custom stores](https://learn.svelte.dev/tutorial/custom-stores) with domain-specific logic. In the following example we create a counter store, which will only allow us to add one to the counter or reset its value:
 
 ```js
 import { writable } from "svelte/store";
@@ -626,7 +626,7 @@ Svelte stores provide a very simple and lightweight, but extremely powerful, way
 
 ## Bonus track: Transitions
 
-Let's change the subject now and do something fun and different: add an animation to our alerts. Svelte provides a whole module to define [transitions](https://svelte.dev/tutorial/transition) and [animations](https://svelte.dev/tutorial/animate) so we can make our user interfaces more appealing.
+Let's change the subject now and do something fun and different: add an animation to our alerts. Svelte provides a whole module to define [transitions](https://learn.svelte.dev/tutorial/transition) and [animations](https://learn.svelte.dev/tutorial/animate) so we can make our user interfaces more appealing.
 
 A transition is applied with the [transition:fn](https://svelte.dev/docs#transition_fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change. The `svelte/transition` module exports seven functions: `fade`, `blur`, `fly`, `slide`, `scale`, `draw`, and `crossfade`.
 
@@ -660,7 +660,7 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
 
 > **Note:** Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with `npm run build`, our `public/build/bundle.js` file will weight a little less than 22 KB. If we remove the `transitions:fly` directive Svelte is smart enough to realize the fly function is not being used and the `bundle.js` file size will drop down to just 18 KB.
 
-This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples/easing) to explore the various ease functions available.
+This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://learn.svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://learn.svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples/easing) to explore the various ease functions available.
 
 ## The code so far
 

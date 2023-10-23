@@ -10,7 +10,7 @@ The `last` function returns a number equal to the context size from the expressi
 
 ### Syntax
 
-```
+```plain
 last()
 ```
 

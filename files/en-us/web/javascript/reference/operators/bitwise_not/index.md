@@ -23,14 +23,14 @@ The `~` operator is overloaded for two types of operands: number and [BigInt](/e
 
 The operator operates on the operands' bit representations in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). The operator is applied to each bit, and the result is constructed bitwise.
 
-The truth table for the `NOT` operation is:
+The truth table for the NOT operation is:
 
 | x   | NOT x |
 | --- | ----- |
 | 0   | 1     |
 | 1   | 0     |
 
-```
+```plain
  9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)

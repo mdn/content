@@ -56,6 +56,8 @@ In other words, the request for a specific set of hints does not expire until th
 A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
+> **Note:** The client hints set for a particular origin can also be cleared by sending a {{httpheader("Clear-Site-Data", "Clear-Site-Data: \"clientHints\"")}} response header for a URL inside that origin.
+
 ## Low entropy hints
 
 Client hints are broadly divided into high and low entropy hints.

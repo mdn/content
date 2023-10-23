@@ -50,7 +50,7 @@ In this example, we obtain the usage estimates and present the percentage of sto
 ```html
 <label>
   You're currently using about <output id="percent"> </output>% of your
-  available storage.
+  estimated storage quota (<output id="quota"></output>).
 </label>
 ```
 
@@ -62,6 +62,8 @@ navigator.storage.estimate().then((estimate) => {
     (estimate.usage / estimate.quota) *
     100
   ).toFixed(2);
+  document.getElementById("quota").value =
+    (estimate.quota / 1024 / 1024).toFixed(2) + "MB";
 });
 ```
 
@@ -79,7 +81,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ## See also
 
-- Storage API
+- [Storage API](/en-US/docs/Web/API/Storage_API)
 - {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
 - {{domxref("StorageManager")}}
 - {{domxref("navigator.storage")}}

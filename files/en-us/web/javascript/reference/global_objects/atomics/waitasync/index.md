@@ -11,7 +11,7 @@ The **`Atomics.waitAsync()`** static method waits asynchronously on a shared mem
 
 Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on the main thread.
 
-> **Note:** This operation only works with a shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
+> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ Atomics.waitAsync(typedArray, index, value, timeout)
 - `value`
   - : The expected value to test.
 - `timeout` {{optional_inline}}
-  - : Time to wait in milliseconds. {{jsxref("Infinity")}}, if no time is provided.
+  - : Time to wait in milliseconds. {{jsxref("NaN")}} (and values that get converted to `NaN`, such as `undefined`) becomes {{jsxref("Infinity")}}. Negative values become `0`.
 
 ### Return value
 

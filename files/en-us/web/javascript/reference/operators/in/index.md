@@ -1,5 +1,5 @@
 ---
-title: in operator
+title: in
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
 browser-compat: javascript.operators.in
@@ -34,7 +34,7 @@ prop in object
 
 The `in` operator tests if a string or symbol property is present in an object or its prototype chain. If you want to check for only _non-inherited_ properties, use {{jsxref("Object.hasOwn()")}} instead.
 
-A property may be present in an object but have value `undefined`. Therefore, `x in obj` is not the same as `obj.x === undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
+A property may be present in an object but have value `undefined`. Therefore, `x in obj` is not the same as `obj.x !== undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
 
 You can also use the `in` operator to check whether a particular [private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) has been defined in an object. The operator returns `true` if the property is defined, and `false` otherwise. This is known as a _branded check_, because it returns `true` if and only if the object was created with that class constructor, after which you can safely access other private properties as well.
 
@@ -71,7 +71,7 @@ It also generally avoids the need for dealing with error handling just to access
 
 However, the `in` operator still requires the private property to be declared beforehand in the enclosing class — otherwise, it would throw a {{jsxref("SyntaxError")}} ("Private field '#x' must be declared in an enclosing class"), the same one as when you try to access an undeclared private property.
 
-```js example-bad
+```js-nolint example-bad
 class C {
   foo() {
     #x in this;
@@ -131,7 +131,7 @@ delete trees[3];
 3 in trees; // returns false
 ```
 
-If you set a property to {{jsxref("Global_Objects/undefined", "undefined")}} but do not delete it, the `in` operator returns true for that property.
+If you set a property to {{jsxref("undefined")}} but do not delete it, the `in` operator returns true for that property.
 
 ```js
 const mycar = { make: "Honda", model: "Accord", year: 1998 };

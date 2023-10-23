@@ -26,7 +26,7 @@ AggregateError(errors, message, options)
 ### Parameters
 
 - `errors`
-  - : An iterable of errors, may not actually be {{JSxRef("Error")}} instances.
+  - : An iterable of errors, may not actually be {{jsxref("Error")}} instances.
 - `message` {{optional_inline}}
   - : An optional human-readable description of the aggregate error.
 - `options` {{optional_inline}}

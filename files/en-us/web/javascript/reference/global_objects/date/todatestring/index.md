@@ -17,6 +17,10 @@ The **`toDateString()`** method of {{jsxref("Date")}} instances returns a string
 toDateString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the date portion of the given date (see description for the format). Returns `"Invalid Date"` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

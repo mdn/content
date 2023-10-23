@@ -28,7 +28,7 @@ The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image da
 
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
@@ -47,7 +47,7 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
   height="200">
   <defs>
     <filter id="image">
-      <feImage xlink:href="mdn_logo_only_color.png" />
+      <feImage href="mdn_logo_only_color.png" />
     </filter>
   </defs>
 

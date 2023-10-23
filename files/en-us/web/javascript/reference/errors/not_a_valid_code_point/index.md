@@ -12,7 +12,7 @@ used with {{jsxref("String.fromCodePoint()")}}.
 
 ## Message
 
-```
+```plain
 RangeError: Invalid code point -1 (V8-based)
 RangeError: -1 is not a valid code point (Firefox)
 RangeError: Arguments contain a value that is out of range of code points (Safari)

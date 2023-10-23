@@ -82,11 +82,11 @@ _No changes._
   - {{domxref("Location.href")}}
   - {{domxref("MediaList.mediaText")}}
   - {{domxref("URL.href")}}
-  - {{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}
+  - {{domxref("WorkerLocation.href")}}
 
 #### DOM events
 
-- {{domxref("Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1593644](https://bugzil.la/1593644)).
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1593644](https://bugzil.la/1593644)).
 
 #### Media, Web Audio, and WebRTC
 

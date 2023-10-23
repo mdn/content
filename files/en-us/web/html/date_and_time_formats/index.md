@@ -111,7 +111,7 @@ Before looking at the various formats of date and time related strings used by H
 
 ### Character set
 
-Dates and times in HTML are always strings which use the [ASCII](https://en.wikipedia.org/wiki/ASCII) character set.
+Dates and times in HTML are always strings which use the {{Glossary("ASCII")}} character set.
 
 ### Year numbers
 

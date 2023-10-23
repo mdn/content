@@ -6,10 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.getSize
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`getSize()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface returns the size of the file associated with the handle in bytes.
+
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, `getSize()`, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Syntax
 
@@ -23,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to a number representing the number of bytes in the file.
+A number representing the size of the file in bytes.
 
 ### Exceptions
 
@@ -70,8 +72,6 @@ onmessage = async (e) => {
 };
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, `getSize()`, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
-
 ## Specifications
 
 {{Specifications}}
@@ -82,5 +82,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

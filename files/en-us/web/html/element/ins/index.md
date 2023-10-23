@@ -1,5 +1,5 @@
 ---
-title: <ins>
+title: "<ins>: The Inserted Text element"
 slug: Web/HTML/Element/ins
 page-type: html-element
 browser-compat: html.elements.ins
@@ -53,8 +53,9 @@ The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">insertion</a
+          ></code
         >
       </td>
     </tr>

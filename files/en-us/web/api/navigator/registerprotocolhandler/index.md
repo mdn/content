@@ -59,7 +59,7 @@ A **custom scheme** may be registered as long as:
 
 - The custom scheme's name begins with `web+`
 - The custom scheme's name includes at least 1 letter after the `web+` prefix
-- The custom scheme has only lowercase ASCII letters in its name.
+- The custom scheme has only lowercase {{Glossary("ASCII")}} letters in its name.
 
 For example, `web+burger`, as shown in the [Example](#examples) below.
 

@@ -17,7 +17,7 @@ The heading role indicates to assistive technologies that this element should be
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement("Heading_Elements", "h1")}} (thru {{HTMLElement("Heading_Elements", "h6")}}) element instead.
+This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement("Heading_Elements", "h1")}} (through {{HTMLElement("Heading_Elements", "h6")}}) element instead.
 
 ```html
 <h1>This is a main page heading</h1>
@@ -108,7 +108,7 @@ The heading role overrides the native semantic meaning of the element it is bein
 
 ## See also
 
-- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
 
 <section id="Quick_links">
 

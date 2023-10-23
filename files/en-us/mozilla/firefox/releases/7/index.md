@@ -45,7 +45,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 - Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Attribute/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces](</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
 
 ### DOM
 
@@ -53,7 +53,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The {{ domxref("FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the `Content-Disposition` HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.
 - The {{ domxref("element.dir") }} attribute now always returns its result as all lower-case, as required by the HTML specification.
 - The {{ domxref("FileReader") }} `readAsArrayBuffer()` method is now implemented.
-- {{ domxref("document.createEntityReference") }} has been removed. It was never properly implemented and is not implemented in most other browsers.
+- `Document.createEntityReference` has been removed. It was never properly implemented and is not implemented in most other browsers.
 - `document.normalizeDocument` has been removed. Use {{ domxref("Node.normalize") }} instead.
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.

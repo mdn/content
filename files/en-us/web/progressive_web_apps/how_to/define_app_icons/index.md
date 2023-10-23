@@ -121,9 +121,7 @@ Learn more about how to reference the various icon sizes in [Reference your icon
 
 ## Support masking
 
-Depending on the operating system, the device capabilities, or the user theme, a mask may be applied to your icon to match a particular shape or color. Maskable icons are adaptive icons that enable your icon to fill up the entire shape an operating system provides. For example, on Android, app icons can have a circular mask or theme color applied to them, or both. If the icon is adaptive, or maskable, the icon will fill up the circle and can be colored according to the user's theme. Otherwise, the icon will appear within a white or theme-colored circle.
-
-![The Android 13 home screen, showing circular and color themed app icons](./android-13-home-screen.png)
+Depending on the operating system and the device capabilities, a mask may be applied to your icon to match a particular shape. Maskable icons are adaptive icons that can be displayed in a variety of shapes that operating systems provide. For example, on Android, app icons can have a circular mask.
 
 Your PWA app icon should specifically support masking to look well integrated with operating systems that apply masks. Icons that do not support masking may appear cropped or smaller than expected. On Android, non-maskable icons are centered within the circular mask and given a white background, which may not look good with your icon.
 

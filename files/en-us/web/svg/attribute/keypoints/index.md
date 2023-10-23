@@ -47,7 +47,7 @@ svg {
       keyPoints="0;0.5;1"
       keyTimes="0;0.15;1"
       calcMode="linear">
-      <mpath xlink:href="#motionPath" />
+      <mpath href="#motionPath" />
     </animateMotion>
   </circle>
 </svg>

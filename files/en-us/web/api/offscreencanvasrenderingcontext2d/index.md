@@ -84,7 +84,7 @@ The following methods and properties control drawing text. See also the {{domxre
   - : Draws (strokes) a given text at the given (x, y) position.
 - {{domxref("CanvasRenderingContext2D.measureText()")}}
   - : Returns a {{domxref("TextMetrics")}} object.
-- {{domxref("CanvasRenderingContext2D.textRendering")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.textRendering")}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`,
 
 ### Line styles
@@ -118,7 +118,7 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
@@ -128,7 +128,7 @@ The following properties control how text is laid out.
   - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
 - {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
-- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles

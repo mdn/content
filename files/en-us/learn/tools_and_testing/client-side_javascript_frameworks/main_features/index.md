@@ -35,7 +35,7 @@ DSLs can't be read by the browser directly; they must be transformed into JavaSc
 
 ### JSX
 
-[JSX](https://reactjs.org/docs/introducing-jsx.html), which stands for JavaScript and XML, is an extension of JavaScript that brings HTML-like syntax to a JavaScript environment. It was invented by the React team for use in React applications, but can be used to develop other applications — like Vue apps, for instance.
+[JSX](https://react.dev/learn/writing-markup-with-jsx), which stands for JavaScript and XML, is an extension of JavaScript that brings HTML-like syntax to a JavaScript environment. It was invented by the React team for use in React applications, but can be used to develop other applications — like Vue apps, for instance.
 
 The following shows a simple JSX example:
 
@@ -178,7 +178,7 @@ function CounterButton() {
 }
 ```
 
-[`useState()`](https://reactjs.org/docs/hooks-reference.html#usestate) is a **[React hook](https://reactjs.org/docs/hooks-intro.html)** which, given an initial data value, will keep track of that value as it is updated. The code will be initially rendered like so in the browser:
+[`useState()`](https://react.dev/reference/react/useState) is a **[React hook](https://react.dev/reference/react)** which, given an initial data value, will keep track of that value as it is updated. The code will be initially rendered like so in the browser:
 
 ```html
 <button>Clicked 0 times</button>
@@ -253,7 +253,7 @@ The problem of passing data through many layers of components is called prop dri
 
 To circumvent prop drilling, frameworks provide functionality known as dependency injection, which is a way to get certain data directly to the components that need it, without passing it through intervening levels. Each framework implements dependency injection under a different name, and in a different way, but the effect is ultimately the same.
 
-Angular calls this process [dependency injection](https://angular.io/guide/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://reactjs.org/docs/context.html); Ember shares state through [services](https://guides.emberjs.com/release/services/).
+Angular calls this process [dependency injection](https://angular.io/guide/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://react.dev/learn/passing-data-deeply-with-context); Ember shares state through [services](https://guides.emberjs.com/release/services/).
 
 ### Lifecycle
 

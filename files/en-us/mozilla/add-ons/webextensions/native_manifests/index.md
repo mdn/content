@@ -358,15 +358,15 @@ The detailed rules are the same for all the manifest types, except that the penu
 
 For global visibility, create a registry key with the following name:
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
 ```
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
 ```
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
@@ -378,15 +378,15 @@ The key should have a single default value, which is the path to the manifest.
 
 For per-user visibility, create a registry key with the following name:
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
 ```
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
 ```
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
@@ -396,29 +396,29 @@ The key should have a single default value, which is the path to the manifest.
 
 For global visibility, store the manifest in:
 
-```
+```plain
 /Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
 ```
 
-```
+```plain
 /Library/Application Support/Mozilla/ManagedStorage/<name>.json
 ```
 
-```
+```plain
 /Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
 For per-user visibility, store the manifest in:
 
-```
+```plain
 ~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
 ```
 
-```
+```plain
 ~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
 ```
 
-```
+```plain
 ~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
@@ -426,42 +426,42 @@ For per-user visibility, store the manifest in:
 
 For global visibility, store the manifest in either:
 
-```
+```plain
 /usr/lib/mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 /usr/lib/mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 /usr/lib/mozilla/pkcs11-modules/<name>.json
 ```
 
 or:
 
-```
+```plain
 /usr/lib64/mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 /usr/lib64/mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 /usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
 For per-user visibility, store the manifest in:
 
-```
+```plain
 ~/.mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 ~/.mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 ~/.mozilla/pkcs11-modules/<name>.json
 ```

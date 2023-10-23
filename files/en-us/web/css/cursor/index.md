@@ -38,7 +38,7 @@ cursor:
 cursor:
   url(cursor_1.svg) 4 5,
   url(cursor_2.svg),
-  /* … ,*/ url(cursor_n.cur) 5 5,
+  /* …, */ url(cursor_n.cur) 5 5,
   progress;
 
 /* Global values */

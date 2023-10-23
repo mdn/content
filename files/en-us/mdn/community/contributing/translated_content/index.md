@@ -6,13 +6,17 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-Since December 14th 2020, MDN has been running on the new GitHub-based [Yari platform](https://github.com/mdn/yari). This has a lot of advantages for MDN, but we've needed to make radical changes to the way in which we handle localization. This is because we've ended up with a lot of unmaintained and out-of-date content in our non-en-US locales, and we want to manage it better in the future.
+Since December 14th 2020, MDN has been running on the new GitHub-based [Yari platform](https://github.com/mdn/yari). This has a lot of advantages for MDN, but we've needed to make radical changes to the way in which we handle localization. This is because we've ended up with a lot of unmaintained and out-of-date content in our non-English locales, and we want to manage it better in the future.
 
-We have frozen all localized content (meaning that we won't accept any edits to it; it'll be read-only), EXCEPT for the below locales — these locales have dedicated teams taking responsibility for maintaining them.
+We have archived all locales, EXCEPT for the ones listed below, meaning that they are read-only on GitHub and cannot be viewed on MDN. The active locales have dedicated teams taking responsibility for maintaining them.
+
+## How to contribute
+
+If you want to contribute to one of the existing active locales, check out the [mdn/translated-content GitHub repository](https://github.com/mdn/translated-content). This repository contains all of the localized documents for all active locales, as well as issue tracking. We recommend reading the [translation guide](https://github.com/mdn/translated-content/tree/main/docs) first.
+
+If you need help or have any questions, feel free to get in touch with one of the active members or communities listed below, or [contact us](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Active locales
-
-> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us](/en-US/docs/MDN/Community/Communication_channels) if you have any questions.
 
 ### Brazilian Portuguese (pt-BR)
 
@@ -32,7 +36,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Japanese (ja)
 
 - Discussions: [Slack (#translation channel)](https://mozillajp.slack.com/), [GitHub (mozilla-japan)](https://github.com/mozilla-japan/translation), [Google Group (Mozilla.translations.ja)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
-- Current contributors: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
+- Current maintainers: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
 ### Korea (ko)
 

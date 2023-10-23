@@ -1,5 +1,5 @@
 ---
-title: "Referer header: privacy and security concerns"
+title: "Referer header: Privacy and security concerns"
 slug: Web/Security/Referer_header:_privacy_and_security_concerns
 page-type: guide
 ---

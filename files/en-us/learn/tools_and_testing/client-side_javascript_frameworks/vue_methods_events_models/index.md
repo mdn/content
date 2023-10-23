@@ -147,7 +147,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
    - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
    - `.self`: Triggers the handler only if the event was dispatched from this exact element.
-   - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+   - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to {{Glossary("kebab_case", "kebab-case")}} (e.g. `page-down`).
    - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
    - `.once`: Listens for the event until it's been triggered once, and then no more.
    - `.left`: Only triggers the handler via the left mouse button event.
@@ -217,7 +217,7 @@ The first thing we need is a `data` property in our form to track the value of t
 
 4. Now go back to your running app, add some text to the `<input>` field, and click the "Add" button. You should see the value you entered logged to your console, for example:
 
-   ```
+   ```plain
    Label value: My value
    ```
 

@@ -245,7 +245,7 @@ Try this simple example:
    test.style.transform = "rotate(90deg)";
    ```
 
-As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what properties are implemented in that browser.
+As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in {{Glossary("camel_case", "lower camel case")}}, not {{Glossary("kebab_case", "kebab-case")}}), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what properties are implemented in that browser.
 
 If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
 

@@ -138,7 +138,7 @@ defaults.
 When you wish to provide your own certificates for use by an
 {{domxref("RTCPeerConnection")}} instead of having the `RTCPeerConnection`
 generate them automatically, you do so by calling the static
-{{domxref("RTCPeerConnection.generateCertificate()")}} function.
+{{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} function.
 
 The `certificates` property's value cannot be changed once it's first
 specified. If it's included in the configuration passed into a call to a connection's

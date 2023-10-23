@@ -102,7 +102,7 @@ Returns a list of entries from a specific directory. Call this method until an e
 
 #### Syntax
 
-```
+```js-nolint
 readEntries()
 ```
 

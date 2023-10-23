@@ -189,8 +189,6 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
    ```html-nolint
    <form>
-   ...
-   </form>
    ```
 
 4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:

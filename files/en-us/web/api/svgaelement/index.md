@@ -18,7 +18,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.download")}}
   - : See {{domxref("HTMLAnchorElement.download")}}.
 - {{domxref("SVGAElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute.
+  - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute.
 - {{domxref("SVGAElement.hreflang")}}
   - : A string that reflects the `hreflang` attribute, indicating the language of the linked resource.
 - {{domxref("SVGAElement.ping")}}

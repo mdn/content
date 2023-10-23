@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("VideoEncoder.isConfigSupported()")}}
+- {{domxref("VideoEncoder.isConfigSupported_static", "VideoEncoder.isConfigSupported()")}}
   - : Returns a promise indicating whether the provided `VideoEncoderConfig` is supported.
 
 ## Instance methods
