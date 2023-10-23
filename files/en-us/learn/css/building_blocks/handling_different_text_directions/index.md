@@ -123,7 +123,7 @@ For example, you can float an image left to cause text to wrap round the image. 
 
 Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
 
-> **Note:** Currently, only Firefox supports flow relative values for `float`. If you are using **Google Chrome** or **Microsoft Edge**, you may find that the image did not float.
+> **Note:** Currently, only Firefox and Google Chrome supports flow relative values for `float`. If you are using **Microsoft Edge**, you may find that the image did not float.
 
 ### Should you use physical or logical properties?
 
