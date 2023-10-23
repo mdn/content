@@ -36,6 +36,8 @@ A number representing the number of bytes read from the file.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the associated access handle is already closed.
+- {{jsxref("TypeError")}}
+  - : Thrown if the underlying file system does not support reading the file from the specified file offset.
 
 ## Examples
 
