@@ -56,7 +56,7 @@ The values include:
 
 - `symbolic`
 
-  - : Cycles through the symbols provided in the `symbols` descriptor list repeatedly, doubling, tripling, and so on, the symbols on each successive pass through the list. For example, if two symbols "◽" and "◾" are specified in the `symbols` descriptor, on each successive pass, they will become "◽◽" and "◾◾" and "◽◽◽" and "◾◾◾" and so on in subsequent passes. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid. This counter system works for positive counter values only.
+  - : Cycles through the symbols provided in the `symbols` descriptor list repeatedly, doubling, tripling, and so on, the symbols on each successive pass through the list. For example, if two symbols "◽" and "◾" are specified in the `symbols` descriptor, on each successive pass, they will become "◽◽" and "◾◾", then "◽◽◽" and "◾◾◾", and so on in subsequent passes. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid. This counter system works for positive counter values only.
 
 - `additive`
 
