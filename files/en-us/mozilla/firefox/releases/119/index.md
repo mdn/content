@@ -71,9 +71,30 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
+- When performing a `pointerDown` action with the middle or right mouse button pressed, the  `mousedown` event as emitted by the related HTML element had the value of the `buttons` property swapped ([Firefox bug 1850086](https://bugzil.la/1850086)).
+
+- When performing a `scroll` action of input type `wheel` with an origin set to `pointer` an `invalid argument` error was inappropriately raised, whereby as per the current WebDriver specification this combination is currently not supported ([Firefox bug 1850166](https://bugzil.la/1850166)).
+
+
 #### WebDriver BiDi
 
+- Added the [`browsingContext.reload`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-reload) command that allows users to reload the page or a frame that is currently displayed within a given browsing context ([Firefox bug 1830859](https://bugzil.la/1830859)).
+
+- Added the [`browsingContext.userPromptClosed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptClosed) event that is emitted when a user prompt of type `alert`, `confirm`, or `prompt` got closed ([Firefox bug 1824221](https://bugzil.la/1824221)).
+
+- Added the [`browsingContext.navigationStarted`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-navigationStarted) event that is emitted when a new navigation is started by Firefox ([Firefox bug 1756595](https://bugzil.la/1756595)).
+
+- Added the [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) and [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) events that allow users to monitor the lifetime of JavaScript Realms of a given browsing context. Such a Realm is basically an isolated execution environment (`sandbox`) with its own unique global object (window) ([Firefox bug 1788657](https://bugzil.la/1788657), [Firefox bug 1788659](https://bugzil.la/1788659)).
+
+- The `browsingContext.userPromptOpened` event was accidentally sent when a HTTP Authentication dialog was opened ([Firefox bug 1853302](https://bugzil.la/1853302)).
+
+- Unwanted events with the `context` field set to `null` will no longer be emitted. Because the underlying browsing context has been closed such events are no longer valid ([Firefox bug 1847563](https://bugzil.la/1847563)).
+
 #### Marionette
+
+- The list of possible error codes when trying to install a WebExtension by using the `Addon:Install` command has been updated to match the latest error codes of Firefox ([Firefox bug 1852537](https://bugzil.la/1852537)).
 
 ## Changes for add-on developers
 
