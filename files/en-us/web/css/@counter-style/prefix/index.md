@@ -14,7 +14,7 @@ When the counter value is negative, the `prefix` comes before the negative sign 
 ## Syntax
 
 ```css
-/* <symbol> values: string, image, or identifier */
+/* <symbol> value: string, image, or identifier */
 prefix: "»";
 prefix: "Page ";
 prefix: url(bullet.png);
@@ -22,10 +22,10 @@ prefix: url(bullet.png);
 
 ### Values
 
-The **`prefix`** descriptor takes as it's value a single `<symbol>`:
+The **`prefix`** descriptor takes as its value a single `<symbol>`:
 
 - `<symbol>`
-  - : Specifies a `<symbol>`, a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}}, that is prepended to the marker representation.
+  - : Specifies a `<symbol>` — a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}} — that is prepended to the marker representation.
 
 ## Formal definition
 
@@ -83,6 +83,6 @@ In this example, each counter number is prefixed by "Book " (with a space) and f
 
 ## See also
 
-- Other {{cssxref("@counter-style")}} descriptors, including, {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
+- Other {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("symbols", "symbols()")}}: the functional notation for creating anonymous counter styles
