@@ -30,11 +30,13 @@ Coordinates specified using the "offset" model use the top-left corner of the el
 
 For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by the distances specified by {{cssxref("padding-left")}} and {{cssxref("padding-top")}}.
 
-### Client
+### Viewport
 
-The "client" coordinate system uses as its origin the top-left corner of the viewport or browsing context in which the event occurred. This is the entire viewing area in which the document is presented. Scrolling is not a factor.
+The "viewport" (or "client") coordinate system uses as its origin the top-left corner of the viewport or browsing context in which the event occurred. This is the entire viewing area in which the document is presented.
 
-On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the browser window. The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the client coordinates of a given position within the document.
+On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the browser window.
+
+The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the viewport coordinates of a given position within the document.
 
 ### Page
 

@@ -57,3 +57,4 @@ function logKey(e) {
 - {{ domxref("MouseEvent") }}
 - {{ domxref("MouseEvent.screenX","screenX") }}
 - {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

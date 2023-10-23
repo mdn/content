@@ -71,3 +71,4 @@ function checkClickMap(e) {
 - {{ domxref("MouseEvent") }}
 - {{ domxref("MouseEvent.screenY","screenY") }}
 - {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

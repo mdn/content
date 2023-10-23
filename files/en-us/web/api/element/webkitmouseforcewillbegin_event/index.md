@@ -45,9 +45,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [client coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#client).
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [client coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#client).
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
