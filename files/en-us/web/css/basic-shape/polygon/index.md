@@ -108,7 +108,9 @@ Example coordinates:
 | y | 0% | 0% | 100% | 100% | y<sub>n</sub> |
 
 The x and y values represent the coordinates of each point. Multiple points are separated by a comma.
-Here's an example of a clip-path CSS property using the polygon() function:
+Here's an example of a clip-path CSS property using the polygon() function: <br>
+
+clip-path: polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)
 
 ```css
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
