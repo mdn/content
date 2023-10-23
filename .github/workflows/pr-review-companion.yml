@@ -57,7 +57,7 @@ jobs:
       - name: Unzip what was downloaded
         run: 7z x build.zip -obuild -bb1
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: mdn/yari
           path: yari

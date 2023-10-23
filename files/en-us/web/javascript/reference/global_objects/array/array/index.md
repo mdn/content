@@ -34,7 +34,7 @@ Array(arrayLength)
     a single argument is passed to the `Array` constructor and that argument is
     a number (see the `arrayLength` parameter below). Note that this special case only
     applies to JavaScript arrays created with the `Array` constructor, not
-    array literals created with the bracket syntax.
+    array literals created with the square bracket syntax.
 - `arrayLength`
   - : If the only argument passed to the `Array` constructor is an integer
     between 0 and 2<sup>32</sup> - 1 (inclusive), this returns a new JavaScript array with
@@ -105,5 +105,5 @@ console.log(fruits[0]); // "Apple"
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

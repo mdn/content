@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getHours
 
 The **`getHours()`** method of {{jsxref("Date")}} instances returns the hours for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-gethours.html", "shorter")}}
 
 ## Syntax
 

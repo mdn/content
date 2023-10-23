@@ -86,10 +86,13 @@ fetch(resource, options)
 
       - : How to handle a `redirect` response:
 
-        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
-        - `error`: Abort with an error if a redirect occurs.
-        - `manual`: Caller intends to process the response in another context.
-          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
+        - `follow`
+          - : Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
+        - `error`
+          - : Abort with an error if a redirect occurs.
+        - `manual`
+          - : Caller intends to process the response in another context.
+            See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
 
     - `referrer`
       - : A string specifying the referrer of the request. This can be a
@@ -111,9 +114,12 @@ fetch(resource, options)
         fetch request and abort it if desired via an {{domxref("AbortController")}}.
     - `priority`
       - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
-        - `high`: A high priority fetch request relative to other requests of the same type.
-        - `low`: A low priority fetch request relative to other requests of the same type.
-        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
+        - `high`
+          - : A high priority fetch request relative to other requests of the same type.
+        - `low`
+          - : A low priority fetch request relative to other requests of the same type.
+        - `auto`
+          - : Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
 ### Return value
 

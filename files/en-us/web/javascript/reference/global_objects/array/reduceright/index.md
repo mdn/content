@@ -13,7 +13,7 @@ value.
 
 See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html", "shorter")}}
 
 ## Syntax
 
@@ -31,7 +31,7 @@ reduceRight(callbackFn, initialValue)
     - `currentValue`
       - : The value of the current element. On the first call, its value is the last element if `initialValue` is specified; otherwise its value is the second-to-last element.
     - `currentIndex`
-      - : The index position of `currentValue` in the typed array. On the first call, its value is `array.length - 1` if `initialValue` is specified, otherwise `array.length - 2`.
+      - : The index position of `currentValue` in the array. On the first call, its value is `array.length - 1` if `initialValue` is specified, otherwise `array.length - 2`.
     - `array`
       - : The array `reduceRight()` was called upon.
 - `initialValue` {{optional_inline}}
@@ -260,7 +260,7 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}

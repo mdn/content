@@ -43,7 +43,7 @@ See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Referen
 
 ### Return value
 
-A string representing the time portion of the given {{jsxref("Global_Objects/Date", "Date")}} instance according to language-specific conventions.
+A string representing the time portion of the given {{jsxref("Date")}} instance according to language-specific conventions.
 
 In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`, where `options` has been normalized as described above.
 

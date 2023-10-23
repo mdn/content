@@ -33,9 +33,39 @@ Another place you might see physical keywords in use, is when using `text-align:
 
 We call these keywords and properties _physical_ because they relate to the screen you are looking at. Left is always left, no matter what direction your text is running.
 
+### Issues with physical properties
+
 This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left .
 
-![A simple example of text direction.](8_direction_simple_example.png)
+```html hidden
+<p class="left">
+  I have my text set to <code>text-align: left</code> I will always align left
+  even if the direction of the text in this document is rtl.
+</p>
+
+<p>I have no alignment set and use the direction set in the document.</p>
+```
+
+```css hidden
+body {
+  direction: rtl;
+}
+
+p {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  margin: 1em;
+  color: #d9480f;
+}
+
+.left {
+  text-align: left;
+}
+```
+
+{{EmbedLiveSample("","",200)}}
 
 This is a very simple example of the problem with physical values and properties being used in CSS. They prevent the browser being able to do the work to switch writing mode, as they make the assumption that the text is flowing left to right and top to bottom.
 
@@ -53,7 +83,7 @@ Once we begin dealing with logical, rather than physical properties, we stop see
 
 I'm going to introduce another specification here, that I will be using in my examples: the CSS Writing Modes specification. This spec details how we can use these different writing modes in CSS, not just for the support of languages that have a different writing mode to English, but also for creative purposes. I'll be using the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, in order to demonstrate how the logical values work. If you want to dig into writing modes further, however, then I would recommend that you read Jen Simmons excellent article on [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/). This goes into more depth on that specification than we will touch upon here.
 
-### writing-mode
+### `writing-mode`
 
 Writing Modes are more than just left to right and right to left text, and the `writing-mode` property helps us display text running in other directions. The {{cssxref("writing-mode")}} property can have values of:
 
@@ -63,7 +93,7 @@ Writing Modes are more than just left to right and right to left text, and the `
 - `sideways-rl`
 - `sideways-lr`
 
-The value `horizontal-tb` is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see [Jen's article](https://24ways.org/2016/css-writing-modes/). As a simple example, I have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
+The value `horizontal-tb` is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. As a simple example, I have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
 
 ```css hidden
 .wrapper > p {
@@ -88,7 +118,7 @@ The value `horizontal-tb` is the default for text on the web. It is the directio
 </div>
 ```
 
-{{ EmbedLiveSample('writing-mode', '500', '500') }}
+{{ EmbedLiveSample('writing-mode', '500', '420') }}
 
 ## Writing modes in grid layouts
 
@@ -137,7 +167,7 @@ The grid in this example has three columns and two row tracks. This means there 
 </div>
 ```
 
-{{ EmbedLiveSample('Default_writing_mode', '500', '330') }}
+{{ EmbedLiveSample('Default_writing_mode', '500', '230') }}
 
 ### Setting writing mode
 
@@ -184,8 +214,6 @@ If we add `writing-mode: vertical-lr` to the grid container, we can see that the
 ```
 
 {{ EmbedLiveSample('Setting_writing_mode', '500', '330') }}
-
-![An image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
 
 ## Logical values for alignment
 
@@ -249,7 +277,7 @@ In this next example, I am using alignment to align items inside a grid that is 
 </div>
 ```
 
-{{ EmbedLiveSample('Logical_values_for_alignment', '500', '330') }}
+{{ EmbedLiveSample('Logical_values_for_alignment', '500', '280') }}
 
 If you want to see how these work, with a right to left as well as top to bottom writing mode, switch `vertical-lr` to `vertical-rl`, which is a vertical writing mode running from right to left.
 
@@ -316,7 +344,7 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 </div>
 ```
 
-{{ EmbedLiveSample('Line-based_placement_with_left_to_right_text', '500', '330') }}
+{{ EmbedLiveSample('Line-based_placement_with_left_to_right_text', '500', '240') }}
 
 ### Line-based placement with right to left text
 
@@ -370,7 +398,7 @@ If I now add the {{cssxref("direction")}} property with a value of `rtl` to the 
 </div>
 ```
 
-{{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '330') }}
+{{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '240') }}
 
 What this demonstrates, is that if you are switching the direction of your text, either for entire pages or for parts of pages, and are using lines: you may want to name your lines, if you do not want the layout to completely switch direction. For some things, for example, where a grid contains text content, this switching may be exactly what you want. For other usage it may not.
 
@@ -454,7 +482,7 @@ In addition to displaying documents, using the correct writing mode for the lang
 </div>
 ```
 
-{{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '330') }}
+{{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '280') }}
 
 ## Physical values and grid layout
 

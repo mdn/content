@@ -119,7 +119,7 @@ svg:not([height]) {
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/filter_effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}

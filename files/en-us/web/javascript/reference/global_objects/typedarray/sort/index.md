@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.sort
 
 The **`sort()`** method of {{jsxref("TypedArray")}} instances sorts the elements of a typed array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same typed array, now sorted. This method has the same algorithm as {{jsxref("Array.prototype.sort()")}}, except that it sorts the values numerically instead of as strings by default.
 
-{{EmbedInteractiveExample("pages/js/typedarray-sort.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-sort.html", "shorter")}}
 
 ## Syntax
 
@@ -29,11 +29,11 @@ sort(compareFn)
     - `b`
       - : The second element for comparison. Will never be `undefined`.
 
-    If omitted, the array elements are sorted according to numeric value.
+    If omitted, the typed array elements are sorted according to numeric value.
 
 ### Return value
 
-The reference to the original array, now sorted. Note that the array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
+The reference to the original typed array, now sorted. Note that the typed array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
 
 ## Description
 
@@ -72,7 +72,7 @@ numbers.sort((a, b) => a - b); // compare numbers
 ## See also
 
 - [Polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.reverse()")}}
 - {{jsxref("TypedArray.prototype.toSorted()")}}

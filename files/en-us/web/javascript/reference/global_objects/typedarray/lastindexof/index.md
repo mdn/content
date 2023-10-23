@@ -22,12 +22,12 @@ lastIndexOf(searchElement, fromIndex)
 
 - `searchElement`
   - : Element to locate in the typed array.
-- `fromIndex`
+- `fromIndex` {{optional_inline}}
   - : Zero-based index at which to start searching backwards, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
 
 ### Return value
 
-The last index of the element in the array; `-1` if not found.
+The last index of `searchElement` in the typed array; `-1` if not found.
 
 ## Description
 
@@ -58,7 +58,7 @@ uint8.lastIndexOf(2, -1); // 3
 ## See also
 
 - [Polyfill of `TypedArray.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.findLastIndex()")}}

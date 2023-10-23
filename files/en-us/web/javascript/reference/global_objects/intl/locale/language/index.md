@@ -11,7 +11,7 @@ The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances retu
 
 ## Description
 
-Language is one of the core features of a locale. The Unicode specification treats the language identifier of a locale as the language and the region together (to make a distinction between dialects and variations, e.g. British English vs. American English). The `language` property of a {{jsxref("Intl/Locale", "Locale")}} returns strictly the locale's language subtag.
+Language is one of the core features of a locale. The Unicode specification treats the language identifier of a locale as the language and the region together (to make a distinction between dialects and variations, e.g. British English vs. American English). The `language` property of a {{jsxref("Intl.Locale")}} returns strictly the locale's language subtag.
 
 ## Examples
 

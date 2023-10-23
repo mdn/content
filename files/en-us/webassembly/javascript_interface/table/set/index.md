@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 
 ### Using Table.set
 
-The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)
+The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html)
 and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
 creates a new WebAssembly Table instance with an initial size of 2
 references. We then print out the table length and contents of the two indexes
@@ -67,7 +67,7 @@ const importObj = {
 Finally, we load and instantiate a Wasm module (table2.wasm) using the
 [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), log the table length, and invoke the
 two referenced functions that are now stored in the table (the table2.wasm module (see
-[text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
+[text representation](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))
 adds two function references to the table, both of which print out
 a simple value):
 

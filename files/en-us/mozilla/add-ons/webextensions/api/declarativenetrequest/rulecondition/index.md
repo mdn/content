@@ -71,7 +71,7 @@ Domains specified in `initiatorDomains`, `excludedInitiatorDomains`, `requestDom
 - The entries must consist of only _lowercase_ ASCII characters.
 - Use [Punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
 - IPv4 addresses must be represented as 4 numbers separated by a dot.
-- IPv6 addresses should be represented in their canonical form, wrapped in brackets.
+- IPv6 addresses should be represented in their canonical form, wrapped in square brackets.
 
 To programmatically generate the canonical domain for a URL, use the [URL API](/en-US/docs/Web/API/URL) and read its `hostname` property, i.e., `new URL(url).hostname`.
 

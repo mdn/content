@@ -202,8 +202,8 @@ console.log(text.match(nonGreedyRegexp));
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

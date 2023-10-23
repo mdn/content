@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Error.stack
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The non-standard **`stack`** property of an {{jsxref("Error")}} instance offers a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
 

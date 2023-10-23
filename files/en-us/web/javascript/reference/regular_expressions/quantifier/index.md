@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.quantifier
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) a certain number of times. The quantifier is placed after the atom it applies to.
 
@@ -176,7 +176,7 @@ Another paragraph
 
 ## See also
 
-- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
