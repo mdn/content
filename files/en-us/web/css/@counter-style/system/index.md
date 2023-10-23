@@ -376,7 +376,7 @@ ul {
 
 #### Result
 
-{{ EmbedLiveSample('Extends_example') }}
+{{ EmbedLiveSample('Extending_a_counter') }}
 
 ## Specifications
 
