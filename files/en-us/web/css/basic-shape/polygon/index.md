@@ -97,6 +97,25 @@ p {
 
 {{EmbedLiveSample("Setting a polygon for shape-outside", '100%', 400)}}
 
+### Creating different shapes with polygon()
+
+You can create almost any shape with polygon() by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The polygon() function requires at least 3 points to create a triangle, but there's no upper limit.
+
+Example coordinates:
+| axis | point 1 | point 2 | point 3 | point 4 | point n |
+| ---- | ------- | ------- | ------- | ------- | ------------- |
+| x | 0% | 100% | 100% | 0% | x<sub>n</sub> |
+| y | 0% | 0% | 100% | 100% | y<sub>n</sub> |
+
+The x and y values represent the coordinates of each point. Multiple points are separated by a comma.
+Here's an example of a clip-path CSS property using the polygon() function:
+
+```css
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+```
+
+In the above example, a square/rectangle shape is created by specifying the coordinates of its four corners: (0% 0%), (100% 0%), (100% 100%), and (0% 100%).
+
 ## Specifications
 
 {{Specifications}}
