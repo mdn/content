@@ -77,7 +77,6 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - When performing a `scroll` action of input type `wheel` with an origin set to `pointer` an `invalid argument` error was inappropriately raised, whereby as per the current WebDriver specification this combination is currently not supported ([Firefox bug 1850166](https://bugzil.la/1850166)).
 
-
 #### WebDriver BiDi
 
 - Added the [`browsingContext.reload`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-reload) command that allows users to reload the page or a frame that is currently displayed within a given browsing context ([Firefox bug 1830859](https://bugzil.la/1830859)).
