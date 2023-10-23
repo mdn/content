@@ -125,15 +125,27 @@ For information about image formats supported by web browsers and guidance on se
 
 ## Examples
 
-### Video example
+### Video with type attribute example
 
-This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats) for details on what media file formats you can use and how well they're supported by browsers.
+This example demonstrates how to offer a video in WebM format for users whose browsers support WebM format, Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats) for details on what media file formats you can use and how well they're supported by browsers.
 
 ```html
 <video controls>
   <source src="foo.webm" type="video/webm" />
   <source src="foo.ogg" type="video/ogg" />
   <source src="foo.mov" type="video/quicktime" />
+  I'm sorry; your browser doesn't support HTML video.
+</video>
+```
+
+### Video with media attribute example
+
+This example demonstrates how to offer an alternate source file for viewports at or above a certain width. When a user's browsing environment meets the specified `media` condition, the associated `<source>` element is chosen, and the contents of its `src` attribute are requested and rendered. If the `media` condition does not match, the user agent will move on to the next `<source>` in the source order. The second source option in the below code has no `media` condition, so will be selected for all other browsing contexts.
+
+```html
+<video controls>
+  <source src="foo-large.webm" media="(min-width: 800px)" />
+  <source src="foo.webm" />
   I'm sorry; your browser doesn't support HTML video.
 </video>
 ```

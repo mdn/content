@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### CSS
 
+- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
+
 #### Removals
 
 ### JavaScript
@@ -31,6 +33,8 @@ This article provides information about the changes in Firefox 119 that affect d
 #### Removals
 
 ### SVG
+
+- The [SVG attributes](/en-US/docs/Web/SVG/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/en-US/docs/Web/CSS/length) [CSS data types](/en-US/docs/Web/CSS/CSS_Types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g. `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 #### Removals
 
