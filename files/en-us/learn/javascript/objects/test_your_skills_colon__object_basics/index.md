@@ -11,7 +11,7 @@ The aim of this skill test is to assess whether you've understood our [JavaScrip
 > **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
 >
-> If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Object basics 1
 

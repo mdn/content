@@ -11,7 +11,7 @@ The aim of this skill test is to assess whether you've understood our [Making de
 > **Note:** You can try solutions by downloading the code and putting it in an online an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
 >
-> If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Conditionals 1
 
@@ -79,4 +79,3 @@ Try updating the live code below to recreate the finished example:
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals3-download.html) to work in your own editor or in an online editor.
-

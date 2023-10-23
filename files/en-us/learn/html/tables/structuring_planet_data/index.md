@@ -30,7 +30,7 @@ To start the assessment, make local copies of [blank-template.html](https://gith
 
 > **Note:** You can try solutions in your code editor or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
-> If you get stuck, you can reach out to us in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Project brief
 
