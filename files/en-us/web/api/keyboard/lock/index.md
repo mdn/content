@@ -16,6 +16,8 @@ capture of keypresses for any or all of the keys on the physical keyboard. This 
 can only capture keys that are granted access by the underlying operating
 system.
 
+> **Note:** If `lock()` is called multiple times without an intervening call to `unlock()`, then only the keyCodes specified in the last request call will be in effect.
+
 ## Syntax
 
 ```js-nolint
@@ -32,6 +34,15 @@ lock(keyCodes)
 ### Return value
 
 A {{jsxref('Promise')}}.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown on the previous call to `lock()` if the subsequent call to `lock()` is made before the previous one has finished.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if any key in keyCodes is not a valid key code attribute value.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `lock()` is not currently executing in the currently active top-level browsing context.
 
 ## Security
 
