@@ -185,6 +185,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Similar to the [`next`](#next) keyword, relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `prev` values indicates that the current document is a part of a series, and that the link references a previous document in the series is the referenced document.
 
     Note: The synonym `previous` is incorrect and should not be used.
+
 - `privacy-policy`
 
   - : Valid for {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('link')}} elements, the `privacy-policy` value indicates that the referenced document is the Privacy Policy which describes the data collection and usage practices of the current document.
