@@ -32,7 +32,7 @@ property `[key, value]` pairs.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `read` mode.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if current entry is not found.
 

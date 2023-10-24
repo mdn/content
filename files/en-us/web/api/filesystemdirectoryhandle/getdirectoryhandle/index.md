@@ -42,15 +42,14 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHand
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `readwrite` mode if the `create` option is set to `true` or in `read` mode if the `create` option is set to `false`.
 - {{jsxref("TypeError")}}
   - : Thrown if the name specified is not a valid string or contains characters that would
     interfere with the native file system.
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the returned entry is a file and not a directory.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if directory doesn't exist and the `create` option is set to
-    `false`.
+  - : Thrown if directory doesn't exist and the `create` option is set to `false`.
 
 ## Examples
 
