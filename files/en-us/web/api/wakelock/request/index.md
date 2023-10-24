@@ -21,7 +21,7 @@ request(type)
 
 ### Parameters
 
-- `type`
+- `type` {{optional_inline}}
 
   - : Options are as follows:
 
@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
 ### Exceptions
 
-- `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown when wake lock is not available, which can happen because:
 
