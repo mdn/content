@@ -26,8 +26,7 @@ request(type)
   - : A string specifying the screen wake lock type, from among the following enumerated types:
 
     - `screen`
-      - : Prevents devices from
-        dimming or locking the screen.
+      - : Prevents devices from dimming or locking the screen.
 
 If no `type` parameter is explicitly specified, the `request()` method defaults to using the `screen` type.
 
