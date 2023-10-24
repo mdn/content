@@ -24,12 +24,10 @@ _In addition to the properties listed below, this interface inherits the propert
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
   - : Returns a string that represents the key changed.
-    The `key` attribute is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
-    when the change is caused by the storage `clear()` method.
+    The `key` attribute is `null` when the change is caused by the storage `clear()` method.
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
   - : Returns a string with the new value of the `key`.
-    This value is `null`
-    when the change has been invoked by storage `clear()` method,
+    This value is `null` when the change has been invoked by storage `clear()` method,
     or the `key` has been removed from the storage.
 - {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
   - : Returns a string with the original value of the `key`.
@@ -45,8 +43,7 @@ _In addition to the properties listed below, this interface inherits the propert
 _In addition to the methods listed below, this interface inherits the methods of its parent interface, {{domxref("Event")}}._
 
 - {{domxref("StorageEvent.initStorageEvent", "initStorageEvent()")}} {{deprecated_inline}}
-  - : Initializes the event in a manner analogous to the similarly-named {{domxref("Event.initEvent", "initEvent()")}} method in the DOM
-    Events interfaces. Use the constructor instead.
+  - : Initializes the event in a manner analogous to the similarly-named {{domxref("Event.initEvent", "initEvent()")}} method in the DOM Events interfaces. Use the constructor instead.
 
 ## Specifications
 
