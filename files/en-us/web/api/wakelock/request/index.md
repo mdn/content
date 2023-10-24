@@ -23,7 +23,7 @@ request(type)
 
 - `type` {{optional_inline}}
 
-  - : Options are as follows:
+  - : Default to be `'screen'`. Available values are as follows:
 
     - `'screen'`
       - : Requests a screen wake lock. Prevents devices from
