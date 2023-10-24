@@ -75,7 +75,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - When performing a `pointerDown` action with the middle or right mouse button pressed, the `mousedown` event as emitted by the related HTML element had the value of the `buttons` property swapped ([Firefox bug 1850086](https://bugzil.la/1850086)).
 
-- When performing a `scroll` action of input type `wheel` with an origin set to `pointer` an `invalid argument` error was inappropriately raised, whereby as per the current WebDriver specification this combination is currently not supported ([Firefox bug 1850166](https://bugzil.la/1850166)).
+- When performing a `scroll` action of input type `wheel` with an origin set to `pointer` an `invalid argument` error was inappropriately raised, whereas per the current WebDriver specification this combination is not supported ([Firefox bug 1850166](https://bugzil.la/1850166)).
 
 #### WebDriver BiDi
 
