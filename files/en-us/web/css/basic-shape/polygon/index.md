@@ -69,23 +69,30 @@ This would create a rectangle shape the size of its parent content by specifying
 
 ### Create a triangle
 
-In this example, a triangle is formed by defining the coordinates of its three points relative to the dimensions of its parent container (which is 400px by 400px). The coordinates for the triangle's points are as follows: the top-right point is located at (`100% 0%`), the center point is at (`50% 50%`), and the bottom-right point is positioned at (`100% 100%`).
+In this example, a triangle is formed by defining the coordinates of its three points. 
+
+#### HTML
 
 ```html
 <div class="triangle"></div>
 ```
+
+#### CSS
 
 ```css
 .triangle {
   width: 400px;
   height: 400px;
   background-color: yellow;
-
   clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Create a triangle", '100%', 400)}}
+
+The coordinates for the triangle are the top-right corner (`100% 0%`), the center point (`50% 50%`), and the bottom-right corner (`100% 100%`) of the container.
 
 ### Setting a polygon for shape-outside
 
