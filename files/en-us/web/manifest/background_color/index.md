@@ -1,4 +1,4 @@
----
+a§1a---
 title: background_color
 slug: Web/Manifest/background_color
 page-type: web-manifest-member
