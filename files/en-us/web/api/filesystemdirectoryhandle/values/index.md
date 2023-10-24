@@ -25,7 +25,14 @@ None.
 
 ### Return value
 
-A new {{jsxref('Array')}}
+A new {{jsxref('Array')}}.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if current entry is not found.
 
 ## Examples
 

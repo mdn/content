@@ -29,7 +29,7 @@ getFileHandle(name, options)
 
   - : An object with the following properties:
 
-    - `create`
+    - `create` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`. When
         set to `true` if the file is not found, one with the specified name
         will be created and returned.
@@ -44,7 +44,7 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}
   - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
 - {{jsxref("TypeError")}}
   - : Thrown if the name specified is not a valid string or contains characters that would
-    interfere with the native file system
+    interfere with the native file system.
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the named entry is a directory and not a file.
 - `NotFoundError` {{domxref("DOMException")}}

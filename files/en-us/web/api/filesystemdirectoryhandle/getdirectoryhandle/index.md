@@ -30,7 +30,7 @@ getDirectoryHandle(name, options)
   - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:
 
-    - `create`
+    - `create` {{optional_inline}}
       - : A boolean value, which defaults to `false`. When
         set to `true` if the directory is not found, one with the specified
         name will be created and returned.

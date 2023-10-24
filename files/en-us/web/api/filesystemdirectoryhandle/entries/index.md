@@ -29,6 +29,13 @@ None.
 An array of the given `FileSystemDirectoryHandle` object's own enumerable
 property `[key, value]` pairs.
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if current entry is not found.
+
 ## Examples
 
 ```js
