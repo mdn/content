@@ -189,6 +189,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - `privacy-policy`
 
   - : Valid for {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('link')}} elements, the `privacy-policy` value indicates that the referenced document is the Privacy Policy which describes the data collection and usage practices of the current document.
+
 - `search`
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
@@ -208,6 +209,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     Requires the use of the CORS protocol for cross-origin fetching.
 
 - `tag`
+
   - : Valid for the {{htmlelement('a')}}, and {{htmlelement('area')}} elements, it gives a tag (identified by the given address) that applies to the current document. The tag value denotes that the link refers to a document describing a tag applying to the document on which it is located. This link type is not meant for tags within a tag cloud, as those tags apply to a group of pages, whereas the `tag` value of the `rel` attribute is for a single document.
 
 - `terms-of-service`
