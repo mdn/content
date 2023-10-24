@@ -29,6 +29,8 @@ request(type)
       - : Prevents devices from
         dimming or locking the screen.
 
+If no `type` parameter is explicitly specified, the `request()` method defaults to using the `screen` type.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
