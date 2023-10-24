@@ -541,9 +541,9 @@ function notePressed(event) {
     const dataset = event.target.dataset;
 
     if (!dataset["pressed"] && dataset["octave"]) {
-        const octave = Number(dataset["octave"]);
-        oscList[octave][dataset["note"]] = playTone(dataset["frequency"]);
-        dataset["pressed"] = "yes";
+      const octave = Number(dataset["octave"]);
+      oscList[octave][dataset["note"]] = playTone(dataset["frequency"]);
+      dataset["pressed"] = "yes";
     }
   }
 }
