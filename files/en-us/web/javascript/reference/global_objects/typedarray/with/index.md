@@ -59,4 +59,5 @@ console.log(arr); // Uint8Array [1, 2, 3, 4, 5]
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray.prototype.toReversed()")}}
 - {{jsxref("TypedArray.prototype.toSorted()")}}
+- {{jsxref("TypedArray.prototype.at()")}}
 - {{jsxref("Array.prototype.with()")}}

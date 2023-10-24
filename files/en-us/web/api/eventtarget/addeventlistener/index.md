@@ -273,23 +273,22 @@ a reference to the listener around so you can remove it later.
 This is an example with and without `bind()`:
 
 ```js
-const Something = function (element) {
-  // |this| is a newly created object
-  this.name = "Something Good";
-  this.onclick1 = function (event) {
-    console.log(this.name); // undefined, as |this| is the element
-  };
+class Something {
+  name = "Something Good";
+  constructor(element) {
+    // bind causes a fixed `this` context to be assigned to `onclick2`
+    this.onclick2 = this.onclick2.bind(this);
+    element.addEventListener("click", this.onclick1, false);
+    element.addEventListener("click", this.onclick2, false); // Trick
+  }
+  onclick1(event) {
+    console.log(this.name); // undefined, as `this` is the element
+  }
+  onclick2(event) {
+    console.log(this.name); // 'Something Good', as `this` is bound to the Something instance
+  }
+}
 
-  this.onclick2 = function (event) {
-    console.log(this.name); // 'Something Good', as |this| is bound to newly created object
-  };
-
-  // bind causes a fixed `this` context to be assigned to onclick2
-  this.onclick2 = this.onclick2.bind(this);
-
-  element.addEventListener("click", this.onclick1, false);
-  element.addEventListener("click", this.onclick2, false); // Trick
-};
 const s = new Something(document.body);
 ```
 
@@ -297,10 +296,14 @@ Another solution is using a special function called `handleEvent()` to catch
 any events:
 
 ```js
-const Something = function (element) {
-  // |this| is a newly created object
-  this.name = "Something Good";
-  this.handleEvent = function (event) {
+class Something {
+  name = "Something Good";
+  constructor(element) {
+    // Note that the listeners in this case are `this`, not this.handleEvent
+    element.addEventListener("click", this, false);
+    element.addEventListener("dblclick", this, false);
+  }
+  handleEvent(event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch (event.type) {
       case "click":
@@ -310,33 +313,21 @@ const Something = function (element) {
         // some code here…
         break;
     }
-  };
+  }
+}
 
-  // Note that the listeners in this case are |this|, not this.handleEvent
-  element.addEventListener("click", this, false);
-  element.addEventListener("dblclick", this, false);
-
-  // You can properly remove the listeners
-  element.removeEventListener("click", this, false);
-  element.removeEventListener("dblclick", this, false);
-};
 const s = new Something(document.body);
 ```
 
-Another way of handling the reference to _this_ is to pass to the
-`EventListener` a function that calls the method of the object that contains
-the fields that need to be accessed:
+Another way of handling the reference to `this` is to use an arrow function, which doesn't create a separate `this` context.
 
 ```js
 class SomeClass {
-  constructor() {
-    this.name = "Something Good";
-  }
+  name = "Something Good";
 
   register() {
-    const that = this;
     window.addEventListener("keydown", (e) => {
-      that.someMethod(e);
+      this.someMethod(e);
     });
   }
 

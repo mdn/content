@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to a number representing the number of bytes in the file.
+A number representing the size of the file in bytes.
 
 ### Exceptions
 

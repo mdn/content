@@ -113,18 +113,18 @@ The order that fields are declared will affect their default order if a model is
 
 The following common arguments can be used when declaring many/most of the different field types:
 
-- [help_text](https://docs.djangoproject.com/en/4.0/ref/models/fields/#help-text): Provides a text label for HTML forms (e.g. in the admin site), as described above.
-- [verbose_name](https://docs.djangoproject.com/en/4.0/ref/models/fields/#verbose-name): A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.
-- [default](https://docs.djangoproject.com/en/4.0/ref/models/fields/#default): The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.
-- [null](https://docs.djangoproject.com/en/4.0/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
-- [blank](https://docs.djangoproject.com/en/4.0/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True`, because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
-- [choices](https://docs.djangoproject.com/en/4.0/ref/models/fields/#choices): A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.
-- [primary_key](https://docs.djangoproject.com/en/4.0/ref/models/fields/#primary-key):
+- [help_text](https://docs.djangoproject.com/en/4.2/ref/models/fields/#help-text): Provides a text label for HTML forms (e.g. in the admin site), as described above.
+- [verbose_name](https://docs.djangoproject.com/en/4.2/ref/models/fields/#verbose-name): A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.
+- [default](https://docs.djangoproject.com/en/4.2/ref/models/fields/#default): The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.
+- [null](https://docs.djangoproject.com/en/4.2/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
+- [blank](https://docs.djangoproject.com/en/4.2/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True`, because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
+- [choices](https://docs.djangoproject.com/en/4.2/ref/models/fields/#choices): A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.
+- [primary_key](https://docs.djangoproject.com/en/4.2/ref/models/fields/#primary-key):
   If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records).
   If no field is specified as the primary key, Django will automatically add a field for this purpose.
-  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/4.0/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
+  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/4.2/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
 
-  > **Note:** Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#bigautofield).
+  > **Note:** Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#bigautofield).
   > You can see this in the local library **catalog/apps.py** file:
   >
   > ```py
@@ -132,23 +132,23 @@ The following common arguments can be used when declaring many/most of the diffe
   >   default_auto_field = 'django.db.models.BigAutoField'
   > ```
 
-There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-options).
+There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-options).
 
 ##### Common field types
 
 The following list describes some of the more commonly used types of fields.
 
-- [CharField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.CharField) is used to define short-to-mid sized fixed-length strings. You must specify the `max_length` of the data to be stored.
-- [TextField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.TextField) is used for large arbitrary-length strings. You may specify a `max_length` for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).
-- [IntegerField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.IntegerField) is a field for storing integer (whole number) values, and for validating entered values as integers in forms.
-- [DateField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#datefield) and [DateTimeField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#datetimefield) are used for storing/representing dates and date/time information (as Python `datetime.date` and `datetime.datetime` objects, respectively). These fields can additionally declare the (mutually exclusive) parameters `auto_now=True` (to set the field to the current date every time the model is saved), `auto_now_add` (to only set the date when the model is first created), and `default` (to set a default date that can be overridden by the user).
-- [EmailField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#emailfield) is used to store and validate email addresses.
-- [FileField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#filefield) and [ImageField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#imagefield) are used to upload files and images respectively (the `ImageField` adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.
-- [AutoField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#autofield) is a special type of `IntegerField` that automatically increments. A primary key of this type is automatically added to your model if you don't explicitly specify one.
-- [ForeignKey](https://docs.djangoproject.com/en/4.0/ref/models/fields/#foreignkey) is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).
-- [ManyToManyField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#manytomanyfield) is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to `ForeignKeys`, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter `on_delete` to define what happens when the associated record is deleted (e.g. a value of `models.SET_NULL` would set the value to `NULL`).
+- [CharField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#django.db.models.CharField) is used to define short-to-mid sized fixed-length strings. You must specify the `max_length` of the data to be stored.
+- [TextField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#django.db.models.TextField) is used for large arbitrary-length strings. You may specify a `max_length` for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).
+- [IntegerField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#django.db.models.IntegerField) is a field for storing integer (whole number) values, and for validating entered values as integers in forms.
+- [DateField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#datefield) and [DateTimeField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#datetimefield) are used for storing/representing dates and date/time information (as Python `datetime.date` and `datetime.datetime` objects, respectively). These fields can additionally declare the (mutually exclusive) parameters `auto_now=True` (to set the field to the current date every time the model is saved), `auto_now_add` (to only set the date when the model is first created), and `default` (to set a default date that can be overridden by the user).
+- [EmailField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#emailfield) is used to store and validate email addresses.
+- [FileField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#filefield) and [ImageField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#imagefield) are used to upload files and images respectively (the `ImageField` adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.
+- [AutoField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#autofield) is a special type of `IntegerField` that automatically increments. A primary key of this type is automatically added to your model if you don't explicitly specify one.
+- [ForeignKey](https://docs.djangoproject.com/en/4.2/ref/models/fields/#foreignkey) is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).
+- [ManyToManyField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#manytomanyfield) is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to `ForeignKeys`, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter `on_delete` to define what happens when the associated record is deleted (e.g. a value of `models.SET_NULL` would set the value to `NULL`).
 
-There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the [full list here](https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-types).
+There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the [full list here](https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-types).
 
 #### Metadata
 
@@ -179,7 +179,7 @@ Other useful attributes allow you to create and apply new "access permissions" f
 
 Many of the other metadata options control what database must be used for the model and how the data is stored (these are really only useful if you need to map a model to an existing database).
 
-The full list of metadata options are available here: [Model metadata options](https://docs.djangoproject.com/en/4.0/ref/models/options/) (Django docs).
+The full list of metadata options are available here: [Model metadata options](https://docs.djangoproject.com/en/4.2/ref/models/options/) (Django docs).
 
 #### Methods
 
@@ -255,7 +255,7 @@ wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
 ```
 
-The fields to match and the type of match are defined in the filter parameter name, using the format: `field_name__match_type` (note the _double underscore_ between `title` and `contains` above). Above we're filtering `title` with a case-sensitive match. There are many other types of matches you can do: `icontains` (case insensitive), `iexact` (case-insensitive exact match), `exact` (case-sensitive exact match) and `in`, `gt` (greater than), `startswith`, etc. The [full list is here](https://docs.djangoproject.com/en/4.0/ref/models/querysets/#field-lookups).
+The fields to match and the type of match are defined in the filter parameter name, using the format: `field_name__match_type` (note the _double underscore_ between `title` and `contains` above). Above we're filtering `title` with a case-sensitive match. There are many other types of matches you can do: `icontains` (case insensitive), `iexact` (case-insensitive exact match), `exact` (case-sensitive exact match) and `in`, `gt` (greater than), `startswith`, etc. The [full list is here](https://docs.djangoproject.com/en/4.2/ref/models/querysets/#field-lookups).
 
 In some cases, you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a `ForeignKey`). In this case, you can "index" to fields within the related model with additional double underscores.
 So for example to filter for books with a specific genre pattern, you will have to index to the `name` through the `genre` field, as shown below:
@@ -268,7 +268,7 @@ books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 > **Note:** You can use underscores (`__`) to navigate as many levels of relationships (`ForeignKey`/`ManyToManyField`) as you like.
 > For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'.`
 
-There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values, etc. For more information, see [Making queries](https://docs.djangoproject.com/en/4.0/topics/db/queries/) (Django Docs).
+There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values, etc. For more information, see [Making queries](https://docs.djangoproject.com/en/4.2/topics/db/queries/) (Django Docs).
 
 ## Defining the LocalLibrary Models
 
@@ -453,8 +453,8 @@ At this point we'll divert briefly from creating the site, and check out the _Dj
 
 ## See also
 
-- [Writing your first Django app, part 2](https://docs.djangoproject.com/en/4.0/intro/tutorial02/) (Django docs)
-- [Making queries](https://docs.djangoproject.com/en/4.0/topics/db/queries/) (Django Docs)
-- [QuerySet API Reference](https://docs.djangoproject.com/en/4.0/ref/models/querysets/) (Django Docs)
+- [Writing your first Django app, part 2](https://docs.djangoproject.com/en/4.2/intro/tutorial02/) (Django docs)
+- [Making queries](https://docs.djangoproject.com/en/4.2/topics/db/queries/) (Django Docs)
+- [QuerySet API Reference](https://docs.djangoproject.com/en/4.2/ref/models/querysets/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}

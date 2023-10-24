@@ -291,8 +291,8 @@ With all other operators, JavaScript does _not_ convert numeric values to string
 
 In the case that a value representing a number is in memory as a string, there are methods for conversion.
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 

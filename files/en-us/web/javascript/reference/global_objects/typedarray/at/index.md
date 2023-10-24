@@ -84,5 +84,6 @@ console.log(atWay); // 11
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.with()")}}
 - {{jsxref("Array.prototype.at()")}}
 - {{jsxref("String.prototype.at()")}}

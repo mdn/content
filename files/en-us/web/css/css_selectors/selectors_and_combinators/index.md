@@ -68,17 +68,17 @@ The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted 
 
 The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
 
-### General sibling combinator
+### Subsequent-sibling combinator
 
-In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
+In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
 
-### Adjacent sibling combinator
+### Next-sibling combinator
 
-The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`), is similar to the general sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
+The [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), denoted by the plus symbol (`+`), is similar to the subsequent-sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
 ### Column combinator
 
-There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters (`||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
 ### Namespace separator
 

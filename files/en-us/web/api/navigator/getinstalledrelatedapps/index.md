@@ -56,7 +56,6 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
     - `"chrome_web_store"`: A [Google Chrome Web Store](https://chrome.google.com/webstore) app.
     - `"play"`: A [Google Play Store](https://play.google.com/) app.
     - `"chromeos_play"`: A [Chrome OS Play](https://support.google.com/googleplay/answer/7021273) app.
-    - `"itunes"`: An [Apple App Store](https://www.apple.com/app-store/) app.
     - `"webapp"`: A [Progressive Web App](/en-US/docs/Web/Progressive_web_apps).
     - `"windows"`: A [Windows Store](https://www.microsoft.com/store/apps) app.
     - `"f-droid"`: An [F-Droid](https://f-droid.org/) app.
