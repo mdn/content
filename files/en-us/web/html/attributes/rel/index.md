@@ -41,9 +41,11 @@ The following table lists some of the most important existing keywords. Every ke
 | [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). | External Resource       | Not allowed                                      | Not allowed             |
 | [`prerender`](/en-US/docs/Web/HTML/Attributes/rel/prerender)         | Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.                                                                                                                                 | External Resource       | Not allowed                                      | Not allowed             |
 | [`prev`](#prev)                                                      | Indicates that the current document is a part of a series and that the previous document in the series is the referenced document.                                                                                                                                                      | Link                    | Link                                             | Link                    |
+| [`privacy-policy`](#privacy-policy)                                  | Gives a link to a information about the data collection and usage practices that apply to the current document.                                                                                                                                                                          | Link                    | Link                                             | Not allowed             |
 | [`search`](#search)                                                  | Gives a link to a resource that can be used to search through the current document and its related pages.                                                                                                                                                                               | Link                    | Link                                             | Link                    |
 | [`stylesheet`](#stylesheet)                                          | Imports a style sheet.                                                                                                                                                                                                                                                                  | External Resource       | Not allowed                                      | Not allowed             |
 | [`tag`](#tag)                                                        | Gives a tag (identified by the given address) that applies to the current document.                                                                                                                                                                                                     | Not allowed             | Link                                             | Not allowed             |
+| [`terms-of-service`](#terms-of-service)                              | Gives a link to a information about the information about the agreements between a document's provider and users who wish to use the document provided.                                                                                                                                                                 | Link                    | Link            | Not allowed             |
 
 The `rel` attribute is relevant to the {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}} elements, but some values only relevant to a subset of those elements. Like all HTML keyword attribute values, these values are case-insensitive.
 
@@ -183,7 +185,11 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Similar to the [`next`](#next) keyword, relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `prev` values indicates that the current document is a part of a series, and that the link references a previous document in the series is the referenced document.
 
     Note: The synonym `previous` is incorrect and should not be used.
+    
+- `privacy-policy`
 
+  - : Valid for {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('link')}} elements, the `privacy-policy` value indicates that the referenced document is the Privacy Policy which describes the data collection and usage practices of the current document.
+  
 - `search`
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
@@ -204,6 +210,10 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 - `tag`
   - : Valid for the {{htmlelement('a')}}, and {{htmlelement('area')}} elements, it gives a tag (identified by the given address) that applies to the current document. The tag value denotes that the link refers to a document describing a tag applying to the document on which it is located. This link type is not meant for tags within a tag cloud, as those tags apply to a group of pages, whereas the `tag` value of the `rel` attribute is for a single document.
+
+- `terms-of-service`
+
+  - : Valid for {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('link')}} elements, the `terms-of-service` value indicates that the referenced document is the Terms of Service that describes the agreements between the current document's provider and users who wish to use the document provided.
 
 ### Non-standard values
 
