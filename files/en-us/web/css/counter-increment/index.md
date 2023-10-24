@@ -13,7 +13,6 @@ You can reset the counter's value to any integer value by using the {{cssxref("c
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-
 ## Syntax
 
 ```css
