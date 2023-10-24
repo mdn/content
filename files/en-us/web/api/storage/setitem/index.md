@@ -32,8 +32,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-`setItem()` may throw an exception if the storage is full. Developers should make sure to
-**always catch possible exceptions from `setItem()`**.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if the storage run out of disk quota or the user declined to grant you more space.
 
 ## Examples
 
