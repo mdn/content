@@ -119,7 +119,7 @@ BigInt("900719925474099267");
 
 ## See also
 
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.prototype.toFixed()")}}

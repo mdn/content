@@ -113,7 +113,7 @@ Events have three functions:
   - : `boolean`. Whether the request is from a private browsing window.
 - `isProxy`
   - : `boolean`. `true` for `Proxy-Authenticate`, `false` for `WWW-Authenticate`.
-    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/SSL proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
+    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/TLS proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
 - `method`
   - : `string`. Standard HTTP method (For example, `"GET"` or `"POST"`).
 - `parentFrameId`

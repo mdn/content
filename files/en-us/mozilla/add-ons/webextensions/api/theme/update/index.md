@@ -7,7 +7,9 @@ browser-compat: webextensions.api.theme.update
 
 {{AddonSidebar()}}
 
-Updates the browser theme according to the content of given {{WebExtAPIRef("theme.Theme", "Theme")}} object.
+Updates the browser theme according to the content of the {{WebExtAPIRef("theme.Theme", "Theme")}} object.
+
+To use this method, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 ## Syntax
 
@@ -21,13 +23,13 @@ browser.theme.update(
 ### Parameters
 
 - `windowId` {{optional_inline}}
-  - : `integer`. The ID of a window. If this is provided, the theme is applied only to that window. If it is omitted the theme is applied to all windows.
+  - : `integer`. The ID of a window. If this is provided, the theme is applied only to that window. If it is omitted, the theme is applied to all windows.
 - `theme`
   - : `object`. A {{WebExtAPIRef("theme.Theme", "Theme")}} object specifying values for the UI elements you want to modify.
 
 ## Examples
 
-Sets the browser theme to use a sun graphic with complementary background color:
+Sets the browser theme to use a sun graphic with a complementary background color:
 
 ```js
 const suntheme = {
@@ -43,7 +45,7 @@ const suntheme = {
 browser.theme.update(suntheme);
 ```
 
-Set the theme for just the currently focused window:
+Set the theme for the focused window only:
 
 ```js
 const day = {

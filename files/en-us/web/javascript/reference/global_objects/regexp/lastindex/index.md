@@ -19,7 +19,7 @@ A non-negative integer.
 
 ## Description
 
-This property is set only if the regular expression instance used the `g` flag to indicate a global search, or the `y` flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp.prototype.exec()", "exec()")}} is called on a given input:
+This property is set only if the regular expression instance used the `g` flag to indicate a global search, or the `y` flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp/exec", "exec()")}} is called on a given input:
 
 - If `lastIndex` is greater than the length of the input, `exec()` will not find a match, and `lastIndex` will be set to 0.
 - If `lastIndex` is equal to or less than the length of the input, `exec()` will attempt to match the input starting from `lastIndex`.

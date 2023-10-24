@@ -13,19 +13,14 @@ The first article in our practical tutorial series explains what you'll learn, a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
-          >Django Introduction</a
-        >. For the following articles you'll also need to have
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
-          >set up a Django development environment</a
-        >.
+        Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django Introduction</a>.
+        For the following articles you'll also need to have <a href="/en-US/docs/Learn/Server-side/Django/development_environment">set up a Django development environment</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To introduce the example application used in this tutorial, and allow
-        readers to understand what topics will be covered.
+        To introduce the example application used in this tutorial, and allow readers to understand what topics will be covered.
       </td>
     </tr>
   </tbody>

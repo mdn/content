@@ -38,7 +38,7 @@ let a, b, a1, b1, c, d, rest, pop, push;
 [a, b, ...{ pop, push }] = array;
 [a, b, ...[c, d]] = array;
 
-({ a, b } = obj); // brackets are required
+({ a, b } = obj); // parentheses are required
 ({ a: a1, b: b1 } = obj);
 ({ a: a1 = aDefault, b = bDefault } = obj);
 ({ a, b, ...rest } = obj);
@@ -53,7 +53,7 @@ The object and array literal expressions provide an easy way to create _ad hoc_ 
 const x = [1, 2, 3, 4, 5];
 ```
 
-The destructuring assignment uses similar syntax, but on the left-hand side of the assignment to define what values to unpack from the sourced variable.
+The destructuring assignment uses similar syntax but uses it on the left-hand side of the assignment instead. It defines which values to unpack from the sourced variable.
 
 ```js
 const x = [1, 2, 3, 4, 5];

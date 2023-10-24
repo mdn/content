@@ -14,7 +14,7 @@ Default values for these properties tend to vary across browsers.
 ## Properties
 
 - `networkPredictionEnabled`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' …>`), and preemptively opening TCP and SSL connections to servers.
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' …>`), and preemptively opening TCP and TLS connections to servers.
 - `peerConnectionEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) interface is disabled. Note that [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) is _not_ affected by this setting.
 - `webRTCIPHandlingPolicy`

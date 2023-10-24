@@ -336,6 +336,17 @@
         "Window: devicemotion"
       ]
     },
+    "Document Picture-in-Picture API": {
+      "overview": ["Document Picture-in-Picture API"],
+      "guides": ["/docs/Web/API/Document_Picture-in-Picture_API/Using"],
+      "interfaces": [
+        "DocumentPictureInPicture",
+        "DocumentPictureInPictureEvent"
+      ],
+      "methods": [],
+      "properties": ["Window.documentPictureInPicture"],
+      "events": ["DocumentPictureInPicture: enter"]
+    },
     "DOM": {
       "overview": ["Document Object Model"],
       "guides": [
@@ -437,7 +448,7 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential"],
+      "interfaces": ["IdentityCredential", "IdentityProvider"],
       "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
@@ -1259,6 +1270,17 @@
       "methods": [],
       "properties": ["Navigator.serviceWorker"],
       "events": []
+    },
+    "Speculation Rules API": {
+      "overview": ["Speculation Rules API"],
+      "interfaces": [],
+      "properties": [
+        "Document.prerendering",
+        "PerformanceNavigationTiming.activationStart",
+        "PerformanceResourceTiming.deliveryType"
+      ],
+      "methods": [],
+      "events": ["Document: prerenderingchange"]
     },
     "Storage": {
       "overview": ["Storage API"],

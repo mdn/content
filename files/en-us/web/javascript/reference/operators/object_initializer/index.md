@@ -179,7 +179,7 @@ For more information and examples about methods, see [method definitions](/en-US
 
 ### Computed property names
 
-The object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed and used as the property name. This is reminiscent of the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax, which you may have used to read and set properties already.
+The object initializer syntax also supports computed property names. That allows you to put an expression in square brackets `[]`, that will be computed and used as the property name. This is reminiscent of the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax, which you may have used to read and set properties already.
 
 Now you can use a similar syntax in object literals, too:
 

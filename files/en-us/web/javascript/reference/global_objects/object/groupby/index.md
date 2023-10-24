@@ -2,12 +2,10 @@
 title: Object.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Object.groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 > **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.group()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
 

@@ -137,7 +137,7 @@ These APIs are used to manage user identity and security, in order to authentica
 
 ### Telephony
 
-These interfaces and events are related to interactivity with Public-Switched Telephone Networks (PTSNs). They're primarily used to send tone dialing sounds—or packets representing those tones—across the network to the remote peer.
+These interfaces and events are related to interactivity with Public-Switched Telephone Networks (PSTNs). They're primarily used to send tone dialing sounds—or packets representing those tones—across the network to the remote peer.
 
 #### Interfaces
 

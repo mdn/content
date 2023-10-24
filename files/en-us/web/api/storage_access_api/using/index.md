@@ -45,7 +45,7 @@ function doThingsWithCookies() {
 }
 
 async function handleCookieAccess() {
-  if (document.hasStorageAccess) {
+  if (!document.hasStorageAccess) {
     // This browser doesn't support the Storage Access API
     // so let's just hope we have access!
     doThingsWithCookies();

@@ -63,7 +63,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
   - : Overview of available data structures in JavaScript.
 - [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-  - : JavaScript provides three different value comparison operations: strict equality using `===`, loose equality using `==`, and the {{jsxref("Global_Objects/Object/is", "Object.is()")}} method.
+  - : JavaScript provides three different value comparison operations: strict equality using `===`, loose equality using `==`, and the {{jsxref("Object.is()")}} method.
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
   - : How different methods that visit a group of object properties one-by-one handle the enumerability and ownership of properties.
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
