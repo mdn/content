@@ -38,7 +38,7 @@ A {{jsxref('Promise')}}.
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown on the previous call to `lock()` if the subsequent call to `lock()` is made before the previous one has finished.
+  - : Thrown if a new call to `lock()` is made before the current one has finished.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if any key in keyCodes is not a valid key code attribute value.
 - `InvalidStateError` {{domxref("DOMException")}}
