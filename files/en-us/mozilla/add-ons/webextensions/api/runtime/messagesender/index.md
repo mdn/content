@@ -23,8 +23,6 @@ Values of this type are objects. They contain the following properties:
   - : `integer`. The frame that opened the connection. Zero for top-level frames, positive for child frames. This is only set when `tab` is set.
 - `id` {{optional_inline}}
   - : `string`. The ID of the extension that sent the message, if the message was sent by an extension. If the sender has an ID explicitly set using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `id` has this value. Otherwise, it has the ID that was generated for the sender.
-- `nativeApplication` {{optional_inline}}
-  - : `string`. The name of the native application that opened the connection, if any.
 - `origin` {{optional_inline}}
   - : `string`. The origin of the page or frame that opened the connection. It can differ from the `url` property (e.g., about:blank) or be opaque (e.g., sandboxed iframes). This is useful for identifying if the origin can be trusted if it isn't apparent from the URL.
 - `tab` {{optional_inline}}
