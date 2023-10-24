@@ -23,7 +23,7 @@ request(type)
 
 - `type` {{optional_inline}}
 
-  - : A screen wake lock type from among the following enumerated types:
+  - : A string specifying the screen wake lock type, from among the following enumerated types:
 
     - `screen`
       - : Prevents devices from
