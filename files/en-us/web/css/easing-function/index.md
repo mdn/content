@@ -108,7 +108,7 @@ For example, the `linear(0, 0.25, 1)` function defines the linear stops at `0`, 
 
 ![Graphs of "Input progress" to "Output progress", of which "linear(0, 0.25, 1)" shows a broken line connecting the origin, (0.5, 0.25), and (1, 1); and "linear(0, 0.25 75%, 1)" shows a broken line connecting the origin, (0.75, 0.25), and (1, 1).](linear_function.svg)
 
-By default, the stops are equidistant. So if there are 5 stops, they will be at 0%, 25%, 50%, 75%, and 100% of the duration. However, optional `<linear-stop-length>` percentage values provide finer control, defining the start and/or length of each segment, allowing for a more controlled progression of the transition.
+By default, the stops are equidistant. So if there are 5 stops, they will be at 0%, 25%, 50%, 75%, and 100% of the duration. You can use optional `<linear-stop-length>` percentage values to provide finer control, defining the start and/or length of each segment, allowing for a more controlled progression of the transition.
 
 Let's look at an example where the progress of the animation is specified: `linear(0, 0.25 75%, 1)`. In this case, the animation progresses to `75%` of its total change in the first 25% of the duration (that is, to go from the timeline point `0` to `0.25`). The last 25% of the animation's total change is used during the remaining 75% of the duration (that is, to progress from the timeline point `0.25` to `1`). Consider another example of the `linear()` function: `linear(0.5 25% 75%, 1)`. Here, the animation reaches `25%` of its total change at the halfway point (`0.5`), and then instantly jumps to `75%` of its total change. Over the remaining 50% of the duration (`0.5` to `1`), it progresses from `75%` of its total change to 100%.
 
