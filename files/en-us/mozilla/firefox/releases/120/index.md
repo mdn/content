@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 120 that affect d
 
 #### Removals
 
+- The deprecated `-moz-transform` CSS property has been removed. Use the standard `transform` property instead ([Firefox bug 1855763](https://bugzil.la/1855763)).
+
 ### JavaScript
 
 - {{jsxref("Date.parse()")}} now accepts numeric dashed dates which do not meet the formal ISO standard, e.g.
