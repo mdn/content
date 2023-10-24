@@ -60,6 +60,8 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
 #### WebDriver BiDi
 
 #### Marionette
