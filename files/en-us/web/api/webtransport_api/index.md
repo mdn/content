@@ -94,7 +94,7 @@ async function readData() {
 
 ### Reliable transmission via streams
 
-"Reliable" means that transmission and order of data are guaranteed. That provides slower delivery (albeit faster than with WebSockets), and is needed in situations where reliability and ordering are important (like chat applications, for example).
+"Reliable" means that transmission and order of data are guaranteed. That provides slower delivery (albeit faster than with WebSockets), and is needed in situations where reliability and ordering are important (such as chat applications, for example).
 
 ### Unidirectional transmission
 
