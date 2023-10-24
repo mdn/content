@@ -42,7 +42,7 @@ A {{jsxref('Promise')}}.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if any key in keyCodes is not a valid key code attribute value.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if `lock()` is not currently executing in the currently active top-level browsing context.
+  - : Thrown if `lock()` is not called in an active top-level browsing context.
 
 ## Security
 
