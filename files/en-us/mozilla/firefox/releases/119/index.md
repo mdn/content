@@ -6,11 +6,9 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 119 that affect developers. Firefox 119 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [October 24, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 119 that affect developers. Firefox 119 was released on October 24, 2023.
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
@@ -22,31 +20,19 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
 
-#### Removals
-
 ### JavaScript
 
 - The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods for grouping the elements of an iterable are now supported (See [Firefox bug 1792650](https://bugzil.la/1792650) for more details.)
 - The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods respectively can be used to check if a string contains well-formed Unicode text (i.e. contains no [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)) and sanitize an ill-formed string to well-formed Unicode text.
   (See [Firefox bug 1850755](https://bugzil.la/1850755) for more details).
 
-#### Removals
-
 ### SVG
 
 - The [SVG attributes](/en-US/docs/Web/SVG/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/en-US/docs/Web/CSS/length) [CSS data types](/en-US/docs/Web/CSS/CSS_Types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g. `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
-#### Removals
-
 ### HTTP
 
 - The [`credentialless`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#credentialless) directive of the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header is now supported on desktop platforms (and mobile platforms other than Android), allowing `no-cors` requests for resources to be made on cross-origin servers that have not explicitly opted into it, albeit without cookies or other credentials ([Firefox bug 1851467](https://bugzil.la/1851467)).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -60,14 +46,6 @@ This article provides information about the changes in Firefox 119 that affect d
 #### DOM
 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is now supported by default for attributes that do not reference other elements; only non-IDREF attributes are reflected. You can now get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `buttonElement.ariaPressed = "true";` is now supported in addition to `buttonElement.setAttribute("aria-pressed", "true");` ([Firefox bug 1785412](https://bugzil.la/1785412)).
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -94,12 +72,6 @@ This article provides information about the changes in Firefox 119 that affect d
 #### Marionette
 
 - The list of possible error codes when trying to install a WebExtension by using the `Addon:Install` command has been updated to match the latest error codes of Firefox ([Firefox bug 1852537](https://bugzil.la/1852537)).
-
-## Changes for add-on developers
-
-### Removals
-
-### Other
 
 ## Older versions
 
