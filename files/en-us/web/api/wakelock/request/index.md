@@ -25,7 +25,7 @@ request(type)
 
   - : A screen wake lock type from among the following enumerated types:
 
-    - `'screen'`
+    - `screen`
       - : Prevents devices from
         dimming or locking the screen.
 
