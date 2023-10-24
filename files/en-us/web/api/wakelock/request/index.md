@@ -23,10 +23,10 @@ request(type)
 
 - `type` {{optional_inline}}
 
-  - : Default to be `'screen'`. Available values are as follows:
+  - : A screen wake lock type from among the following enumerated types:
 
     - `'screen'`
-      - : Requests a screen wake lock. Prevents devices from
+      - : Prevents devices from
         dimming or locking the screen.
 
 ### Return value
