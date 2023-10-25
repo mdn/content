@@ -44,7 +44,14 @@ This example, run in the context of a service worker, listens for a `pushsubscri
 self.addEventListener(
   "pushsubscriptionchange",
   (event) => {
-    const subscription = swRegistration.pushManager
+    const conv = (val) => btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
+    const getPayload = (subscription) => ({
+      endpoint: subscription.endpoint,
+      p256dh: conv(subscription.getKey('p256dh')),
+      auth: conv(subscription.getKey('auth'))
+    });
+
+    const subscription = self.registration.pushManager
       .subscribe(event.oldSubscription.options)
       .then((subscription) =>
         fetch("register", {
@@ -53,7 +60,8 @@ self.addEventListener(
             "Content-type": "application/json",
           },
           body: JSON.stringify({
-            endpoint: subscription.endpoint,
+            old: getPayload(oldSubscription),
+            new: getPayload(subscription
           }),
         }),
       );
@@ -70,7 +78,7 @@ You can also use the `onpushsubscriptionchange` event handler property to set up
 ```js
 self.onpushsubscriptionchange = (event) => {
   event.waitUntil(
-    swRegistration.pushManager
+    self.registration.pushManager
       .subscribe(event.oldSubscription.options)
       .then((subscription) => {
         /* ... */
