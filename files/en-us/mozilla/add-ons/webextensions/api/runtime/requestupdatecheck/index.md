@@ -23,11 +23,11 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with two arguments:
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an object with the result of the update request.
 
-- `status`
-  - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
-- `details` {{optional_inline}}
+- `result` {{optional_inline}}
+  - `status`
+    - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
 
   - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a property:
 
@@ -39,7 +39,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Request an update and log the new version if one is available:
 
 ```js
-function onRequested(status, details) {
+function onRequested(result) {
   console.log(status);
   if (status === "update_available") {
     console.log(details.version);
