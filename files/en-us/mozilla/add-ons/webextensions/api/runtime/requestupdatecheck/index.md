@@ -42,9 +42,9 @@ Request an update and log the new version if one is available:
 
 ```js
 function onRequested(result) {
-  console.log(status);
-  if (status === "update_available") {
-    console.log(details.version);
+  console.log(result.status);
+  if (result.status === "update_available") {
+    console.log(result.version);
   }
 }
 
