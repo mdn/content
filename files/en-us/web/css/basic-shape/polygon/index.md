@@ -83,7 +83,7 @@ In this example, a triangle is formed by defining the coordinates of its three p
 .triangle {
   width: 400px;
   height: 400px;
-  background-color: yellow;
+  background-color: magenta;
   clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
 }
 ```
