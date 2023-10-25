@@ -17,9 +17,9 @@ The **`Math.hypot()`** static method returns the square root of the sum of squar
 
 ```js-nolint
 Math.hypot()
-Math.hypot(value0)
-Math.hypot(value0, value1)
-Math.hypot(value0, value1, /* …, */ valueN)
+Math.hypot(value1)
+Math.hypot(value1, value2)
+Math.hypot(value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters

@@ -106,11 +106,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Stepped value functions
 
-- {{CSSxRef("round", "round()")}} {{Experimental_Inline}}
+- {{CSSxRef("round", "round()")}}
   - : Calculates a rounded number based on a rounding strategy.
-- {{CSSxRef("mod", "mod()")}} {{Experimental_Inline}}
+- {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
-- {{CSSxRef("rem", "rem()")}} {{Experimental_Inline}}
+- {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
 ### Trigonometric functions
@@ -305,6 +305,8 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 The following functions are used as a value in transition and animation properties.
 
+- {{cssxref("easing-function#linear_easing_function", "linear()")}}
+  - : Easing function that interpolates linearly between its points.
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
 - {{cssxref("easing-function#step_easing_function", "steps()")}}

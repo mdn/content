@@ -30,9 +30,6 @@ add(contentDescription)
     - `title`
       - : A {{jsxref('String')}} title for the item. Used in
         user-visible lists of content.
-    - `title`
-      - : A {{jsxref('String')}} title of the item. Used in
-        user-visible lists of content.
     - `description`
       - : A {{jsxref('String')}} description of the item. Used
         in user-visible lists of content.
@@ -77,7 +74,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
       contain a {{domxref('FetchEvent')}}.
     - The `id`, `title`, `description` or
       `url` are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
-    - The items referenced by `icons` are not of image type.
+    - One of the items in `icons` are not an image type, or fetching one of the items in `icons` failed with a network error.
 
 ## Examples
 

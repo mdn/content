@@ -35,7 +35,7 @@ An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there
 
 ## Examples
 
-In this example, the `<em>` element is used to hilite an implicit or explicit contrast between two ingredient lists:
+In this example, the `<em>` element is used to highlight an implicit or explicit contrast between two ingredient lists:
 
 ```html
 <p>
@@ -91,8 +91,9 @@ In this example, the `<em>` element is used to hilite an implicit or explicit co
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
+          ></code
         >
       </td>
     </tr>

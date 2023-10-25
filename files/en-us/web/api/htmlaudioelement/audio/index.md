@@ -74,8 +74,7 @@ If all references to an audio element created using
 the `Audio()` constructor are deleted, the element itself won't be removed
 from memory by the JavaScript runtime's garbage collection mechanism if playback is
 currently underway. Instead, the audio will keep playing and the object will remain in
-memory until playback ends or is paused (such as by calling
-{{domxref("HTMLMediaElement.pause", "pause()")}}). At that time, the object becomes
+memory until playback ends. At that time, the object becomes
 subject to garbage collection.
 
 ## Specifications

@@ -7,7 +7,7 @@ page-type: javascript-error
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after function body" occurs when there is a syntax
-mistake when creating a function somewhere. Check if any closing curly brackets or
+mistake when creating a function somewhere. Check if any closing curly braces or
 parenthesis are in the correct order.
 
 ## Message
@@ -23,7 +23,7 @@ SyntaxError: missing } after function body (Firefox)
 ## What went wrong?
 
 There is a syntax mistake when creating a function somewhere. Also check if any closing
-curly brackets or parenthesis are in the correct order. Indenting or formatting the code
+curly braces or parenthesis are in the correct order. Indenting or formatting the code
 a bit nicer might also help you to see through the jungle.
 
 ## Examples
@@ -54,7 +54,7 @@ function charge() {
 ```
 
 It can be more obscure when using [IIFEs](/en-US/docs/Glossary/IIFE) or other constructs that use
-a lot of different parenthesis and curly brackets, for example.
+a lot of different parenthesis and curly braces, for example.
 
 ```js-nolint example-bad
 (function () {
@@ -77,4 +77,4 @@ errors.
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

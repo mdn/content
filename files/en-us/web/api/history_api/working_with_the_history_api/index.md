@@ -37,8 +37,12 @@ If the user clicks **Back** once again, the URL will change to `https://mozilla.
 Let's examine each of these three parameters in more detail.
 
 - **state object**
+
   - : The state object is a JavaScript object which is associated with the new history entry created by `pushState()`. Whenever the user navigates to the new state, a `popstate` event is fired, and the `state` property of the event contains a copy of the history entry's state object.
-    The state object can be anything that can be serialized. Because Firefox saves state objects to the user's disk so they can be restored after the user restarts the browser, we impose a size limit of 640k characters on the serialized representation of a state object. If you pass a state object whose serialized representation is larger than this to `pushState()`, the method will throw an exception. If you need more space than this, you're encouraged to use `sessionStorage` and/or `localStorage`.
+    The state object can be anything that can be serialized.
+
+    > **Note:** Some browsers save state objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a state object, and will throw an exception if you pass a state object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
+
 - **title**
   - : [All browsers but Safari currently ignore this parameter](https://github.com/whatwg/html/issues/2174), although they may use it in the future. Passing the empty string here should be safe against future changes to the method. Alternatively, you could pass a short title for the state to which you're moving.
 - **URL**

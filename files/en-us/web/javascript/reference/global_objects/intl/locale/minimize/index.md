@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
+A {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
 the result of the [Remove Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm
 executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 

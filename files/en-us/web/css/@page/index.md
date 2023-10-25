@@ -153,7 +153,7 @@ Where the `<page-body>` includes:
 
 and `<pseudo-selector>` represents these pseudo-classes:
 
-- {{Cssxref(":blank")}}
+- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
@@ -389,7 +389,7 @@ Clicking the print button will launch a print dialog with the html sections spli
 
 Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
-- {{Cssxref(":blank")}}
+- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}

@@ -12,7 +12,7 @@ The **`[@@toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this s
 ## Syntax
 
 ```js-nolint
-symbol[Symbol.toPrimitive](hint)
+symbolValue[Symbol.toPrimitive](hint)
 ```
 
 ### Parameters

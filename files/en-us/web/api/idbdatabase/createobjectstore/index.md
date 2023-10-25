@@ -53,7 +53,7 @@ A new {{domxref("IDBObjectStore")}}.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
+This method may raise a {{domxref("DOMException")}} with a `name` of
 one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}

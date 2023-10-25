@@ -81,7 +81,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ## See also
 
-- Storage API
+- [Storage API](/en-US/docs/Web/API/Storage_API)
 - {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
 - {{domxref("StorageManager")}}
 - {{domxref("navigator.storage")}}

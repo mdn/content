@@ -50,7 +50,7 @@ The `font-variant-caps` property is specified using a single keyword value from 
 - `normal`
   - : Deactivates of the use of alternate glyphs.
 - `small-caps`
-  - : Enables display of small capitals (OpenType feature: `smcp`). Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
+  - : Enables display of small capitals (OpenType feature: `smcp`). Small-caps glyphs typically use the form of uppercase letters but are displayed using the same size as lowercase letters.
 - `all-small-caps`
   - : Enables display of small capitals for both upper and lowercase letters (OpenType features: `c2sc`, `smcp`).
 - `petite-caps`
