@@ -83,13 +83,13 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 ### Transitioning from `X-Forwarded-For` to `Forwarded`
 
 If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced.
-Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
+Note that an IPv6 address is quoted and enclosed in square brackets in `Forwarded` (unlike in the {{HTTPHeader("X-Forwarded-For")}} header).
 
 ```http
 X-Forwarded-For: 192.0.2.172
 Forwarded: for=192.0.2.172
 
-X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
+X-Forwarded-For: 192.0.2.43, 2001:db8:cafe::17
 Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 ```
 
