@@ -53,7 +53,6 @@ Given the above, mapping the coordinates of the container can be visualized as:
 | x | 0% | 100% | 100% | 0% | x<sub>n</sub> |
 | y | 0% | 0% | 100% | 100% | y<sub>n</sub> |
 
-
 Applying those coordinates to the CSS {{cssxref("clip-path")}} property using the `polygon()` function:
 
 ```css
