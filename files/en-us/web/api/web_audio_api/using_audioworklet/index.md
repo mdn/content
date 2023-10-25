@@ -207,7 +207,7 @@ In order to ensure the context is usable, this starts by creating the context if
 You can then create a new audio processor node by doing this:
 
 ```js
-let newProcessorNode = createMyAudioProcessor();
+let newProcessorNode = await createMyAudioProcessor();
 ```
 
 If the returned value, `newProcessorNode`, is non-`null`, we have a valid audio context with its hiss processor node in place and ready to use.
