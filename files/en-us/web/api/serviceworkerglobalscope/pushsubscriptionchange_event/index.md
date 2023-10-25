@@ -44,11 +44,12 @@ This example, run in the context of a service worker, listens for a `pushsubscri
 self.addEventListener(
   "pushsubscriptionchange",
   (event) => {
-    const conv = (val) => btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
+    const conv = (val) =>
+      btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
     const getPayload = (subscription) => ({
       endpoint: subscription.endpoint,
-      publicKey: conv(subscription.getKey('p256dh')),
-      authToken: conv(subscription.getKey('auth'))
+      publicKey: conv(subscription.getKey("p256dh")),
+      authToken: conv(subscription.getKey("auth")),
     });
 
     const subscription = self.registration.pushManager
@@ -61,7 +62,7 @@ self.addEventListener(
           },
           body: JSON.stringify({
             old: getPayload(event.oldSubscription),
-            new: getPayload(subscription)
+            new: getPayload(subscription),
           }),
         }),
       );
