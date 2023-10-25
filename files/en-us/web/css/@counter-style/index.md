@@ -100,20 +100,26 @@ The above counter style rule can be applied to lists like this:
 }
 ```
 
-Which will produce lists like this:
+Which will produce a lists like this:
 
-Ⓐ One
-Ⓑ Two
-Ⓒ Three
-Ⓓ Four
-Ⓔ Five
-…
-Ⓨ Twenty-five
-Ⓩ Twenty-six
-27 Twenty-seven
-28 Twenty-eight
-29 Twenty-nine
-30 Thirty
+```html hidden
+<ol class="items">
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+  <li>four</li>
+  <li>five</li>
+</ol>
+<p>...</p>
+<ol class="items" start="25">
+  <li>twenty-five</li>
+  <li>twenty-six</li>
+  <li>twenty-seven</li>
+  <li>twenty-eight</li>
+</ol>
+```
+
+{{EmbedLiveSample('Specifying symbols with counter-style')}}
 
 See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).
 
