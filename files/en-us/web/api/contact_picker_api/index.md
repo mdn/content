@@ -99,5 +99,5 @@ async function getContacts() {
 
 ## See also
 
-- [A Contact Picker for the Web](https://web.dev/contact-picker/)
+- [A Contact Picker for the Web](https://developer.chrome.com/articles/contact-picker/)
 - [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

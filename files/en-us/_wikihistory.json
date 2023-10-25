@@ -2822,19 +2822,6 @@
       "sandeepmishraxp"
     ]
   },
-  "Glossary/I18N": {
-    "modified": "2019-03-23T23:11:33.019Z",
-    "contributors": [
-      "lpiot",
-      "Andrew_Pfeiffer",
-      "kscarfone",
-      "S4y4Nt4n",
-      "Sukanta.Pal",
-      "Biraj",
-      "Sheppy",
-      "klez"
-    ]
-  },
   "Glossary/IANA": {
     "modified": "2019-03-23T22:57:40.767Z",
     "contributors": ["lpiot", "klez", "Andrew_Pfeiffer"]
@@ -3075,16 +3062,6 @@
       "Andrew_Pfeiffer",
       "kscarfone",
       "gusleindecker"
-    ]
-  },
-  "Glossary/Internationalization_and_localization": {
-    "modified": "2020-03-27T15:13:27.575Z",
-    "contributors": [
-      "RafeyIqbalRahman",
-      "paulderek97",
-      "Iqbalh11",
-      "Charles2020",
-      "estelle"
     ]
   },
   "Glossary/Internet": {
