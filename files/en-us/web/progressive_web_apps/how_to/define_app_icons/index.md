@@ -160,6 +160,6 @@ You can also use tools like [Maskable.app](https://maskable.app/) to preview how
 
 - [`icons` manifest member](/en-US/docs/Web/Manifest/icons)
 - [App design](https://web.dev/learn/pwa/app-design/#the-icon) on web.dev
-- [Adaptive icon support in PWAs with maskable icons](https://web.dev/maskable-icon/) on web.dev
+- [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) on web.dev
 - [Define icons and a theme color](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on microsoft.com
 - [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) on pwabuilder.com
