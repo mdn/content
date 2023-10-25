@@ -60,7 +60,7 @@ self.addEventListener(
             "Content-type": "application/json",
           },
           body: JSON.stringify({
-            old: getPayload(oldSubscription),
+            old: getPayload(event.oldSubscription),
             new: getPayload(subscription
           }),
         }),
