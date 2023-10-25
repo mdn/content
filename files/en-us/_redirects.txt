@@ -7777,6 +7777,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozImageSmoothingEnabled	/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozTextStyle	/en-US/docs/Web/API/CanvasRenderingContext2D/font
 /en-US/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
+/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /en-US/docs/Web/API/CharacterData.previousElementSibling	/en-US/docs/Web/API/CharacterData/previousElementSibling
 /en-US/docs/Web/API/ChildNode.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/Element/remove
@@ -12034,7 +12035,7 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing	/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing
-/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example	/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example	/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
