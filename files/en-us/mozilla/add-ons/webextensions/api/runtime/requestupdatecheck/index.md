@@ -25,16 +25,16 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an object with the result of the update request.
 
-- `result` {{optional_inline}}
+- `result`
 
-  - `status`
+  - : An object with the following properties:
 
-    - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
+    - `status`
 
-  - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a property:
+      - : {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}. The result of the update check.
 
-    - `version`
-      - : `string`. The update's version.
+    - `version` {{optional_inline}}
+      - : `string`. The update's version, if `status` is `update_available`.
 
 ## Examples
 
