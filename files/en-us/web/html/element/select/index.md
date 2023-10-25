@@ -581,7 +581,9 @@ document.forms[0].onsubmit = (e) => {
       <th scope="row">Permitted content</th>
       <td>
         Zero or more {{HTMLElement("option")}} or
-        {{HTMLElement("optgroup")}} elements.
+        {{HTMLElement("optgroup")}} elements, {{HTMLElement("hr")}}, and <a href="https://html.spec.whatwg.org/#script-supporting-elements-2"
+          >script-supporting</a
+        > elements
       </td>
     </tr>
     <tr>
