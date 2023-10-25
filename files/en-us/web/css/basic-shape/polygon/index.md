@@ -53,7 +53,7 @@ The space-separated `x` and `y` values represent the coordinates of each point. 
 
 <code>clip-path: polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
-Here's an example of a clip-path CSS property using the `polygon()` function:
+Applying those coordinates to the CSS {{cssxref("clip-path")}} property using the `polygon()` function:
 
 ```css
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -69,7 +69,7 @@ This would create a rectangle shape the size of its parent content by specifying
 
 ### Create a triangle
 
-In this example, a triangle is formed by defining the coordinates of its three points. 
+In this example, a triangle is formed by defining the coordinates of its three points.
 
 #### HTML
 
