@@ -10,12 +10,12 @@ page-type: glossary-definition
 
 The complementary process of adapting a system for a specific target audience is called {{glossary("Localization")}}.
 
-Among other things, internationalization requires support for:
+Among other things, internationalization covers adapting to differences in:
 
-- different writing systems
-- different units of measure (currency, °C/°F, km/miles, etc.)
-- different time and date formats
-- different keyboard layouts
+- writing systems
+- units of measure (currency, °C/°F, km/miles, etc.)
+- time and date formats
+- keyboard layouts
 
 The work of the [Unicode Consortium](https://home.unicode.org/) is a fundamental part of internationalization. Unicode supports not only variations among the world's writing systems but also cultural variations such as currencies and time/date formats.
 
