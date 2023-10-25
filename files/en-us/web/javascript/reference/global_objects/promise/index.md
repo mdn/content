@@ -63,7 +63,7 @@ myPromise
   .then(handleFulfilledC, handleRejectedC);
 ```
 
-Processing continues to the next link of the chain even when a `.then()` lacks a callback function that returns a Promise object. Therefore, a chain can safely omit every _rejection_ callback function until the final `.catch()`.
+Processing continues to the next link of the chain even when a `.then()` lacks a callback function. Therefore, a chain can safely omit every _rejection_ callback function until the final `.catch()`.
 
 Handling a rejected promise in each `.then()` has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final `.catch()` statement. A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is fulfilled.
 
