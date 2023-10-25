@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.classes.private_class_fields
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
 Class fields are [public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) by default, but **private class members** can be created by using a hash `#` prefix. The privacy encapsulation of these class features is enforced by JavaScript itself.
 
@@ -385,7 +385,7 @@ PrivateConstructor.create(); // PrivateConstructor {}
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Statements/class", "class")}}

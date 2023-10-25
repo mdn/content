@@ -56,7 +56,7 @@ This is equivalent to:
 const x = (y = 5);
 ```
 
-Which means `y` must be a pre-existing variable, and `x` is a newly declared `const` variable. `y` is assigned the value `5`, and `x` is initialized with the value of the `y = 5` expression, which is also `5`. If `y` is not a pre-existing variable, a global variable `y` is implicitly created in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or a {{jsxref("ReferenceError")}} is thrown in strict mode. To declare two variables on the same line, use:
+Which means `y` must be a pre-existing variable, and `x` is a newly declared `const` variable. `y` is assigned the value `5`, and `x` is initialized with the value of the `y = 5` expression, which is also `5`. If `y` is not a pre-existing variable, a global variable `y` is implicitly created in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or a {{jsxref("ReferenceError")}} is thrown in strict mode. To declare two variables within the same declaration, use:
 
 ```js
 const x = 5,

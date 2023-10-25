@@ -33,7 +33,7 @@ Each element with `role="cell"` MUST be nested in a container element with [`rol
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan).
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}}, and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
+> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) element, along with the table row element ({{HTMLElement('tr')}}), and table cell element ({{HTMLElement('td')}}), whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 

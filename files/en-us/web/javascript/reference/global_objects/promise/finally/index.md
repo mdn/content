@@ -16,7 +16,7 @@ This lets you avoid duplicating code in both the promise's {{jsxref("Promise/the
 ## Syntax
 
 ```js-nolint
-promiseObject.finally(onFinally)
+promiseInstance.finally(onFinally)
 ```
 
 ### Parameters

@@ -13,9 +13,7 @@ error that occurred while reading the file.
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard.
+A {{domxref("DOMException")}} containing the relevant error.
 
 ## Specifications
 

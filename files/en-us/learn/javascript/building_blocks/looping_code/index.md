@@ -161,7 +161,7 @@ for (const cat of cats) {
 In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
-2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
+2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
 3. Get the next item, and repeat (2) until you've reached the end of the collection.
 
 ### map() and filter()

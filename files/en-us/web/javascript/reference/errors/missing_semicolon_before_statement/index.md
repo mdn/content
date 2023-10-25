@@ -99,4 +99,4 @@ function print(info) {
 ## See also
 
 - [Automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
-- [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)
+- [Statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)

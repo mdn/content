@@ -61,7 +61,7 @@ In the above example, we're adding an `onClick` attribute to the `<button>` elem
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 
-- The camel-cased nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
+- The {{Glossary("camel_case", "camel-cased")}} nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
 - All browser events follow this format in JSX – `on`, followed by the name of the event.
 
 Let's apply this to our app, starting in the `Form.js` component.

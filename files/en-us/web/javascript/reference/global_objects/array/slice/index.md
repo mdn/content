@@ -125,7 +125,7 @@ console.log(Array.prototype.slice.call(arrayLike, 1, 3));
 
 ### Using slice() to convert array-like objects to arrays
 
-The `slice()` method is often used with {{jsxref("Function.prototype.bind", "bind()")}} and {{jsxref("Function.prototype.call", "call()")}} to create a utility method that converts an array-like object into an array.
+The `slice()` method is often used with {{jsxref("Function/bind", "bind()")}} and {{jsxref("Function/call", "call()")}} to create a utility method that converts an array-like object into an array.
 
 ```js
 // slice() is called with `this` passed as the first argument
@@ -157,7 +157,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}

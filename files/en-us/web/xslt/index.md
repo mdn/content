@@ -17,8 +17,6 @@ XSLT is most often used to convert data between different XML schemas or to conv
   - : Reference.
 - [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT allows a stylesheet author to transform a primary XML document in two significant ways: manipulating and sorting the content, including a wholesale reordering of it if so desired, and transforming the content into a different format.
-- [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
-  - : This document describes the JavaScript interface to the XSLT processing engine in Mozilla 1.2 and up.
 - [Specifying parameters using processing instructions](/en-US/docs/Web/XSLT/PI_Parameters)
   - : Firefox allows stylesheet parameters to be specified when using the `<?xml-stylesheet?>` processing instruction. This is done using the `<?xslt-param?>` PI described in this document.
 - [XSLT Tutorial](https://www.w3schools.com/xml/xsl_intro.asp)

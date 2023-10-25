@@ -95,6 +95,6 @@ While this article does not dive into using these APIs, it is useful to know the
 
 ## Conclusion
 
-This article provided a brief overview of web performance tools that can help you measure performance on a web app or site. Next up, you'll look at perceived performance and some techniques to make unavoidable performance hits appear less severe to the user, or disguise them completely.
+This article provided a brief overview of some of the tools that can help you measure performance on a web app or site. In the next article, we'll see how you can optimize images on your site to improve its performance.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

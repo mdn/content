@@ -15,7 +15,7 @@ key.
 ## Syntax
 
 ```js-nolint
-mapObject.delete(key)
+mapInstance.delete(key)
 ```
 
 ### Parameters

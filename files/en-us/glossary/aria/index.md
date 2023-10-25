@@ -12,4 +12,9 @@ For example, you could add the attribute `role="alert"` to a {{HTMLElement("p")}
 
 ## See also
 
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA states and properties: `aria-*` attributes](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [ARIA guides](/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides)
+- [WAI-ARIA specification](https://w3c.github.io/aria/)
+- [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.2/)

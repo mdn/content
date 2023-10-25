@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.fromCodePoint
 
 The **`String.fromCodePoint()`** static method returns a string created from the specified sequence of code points.
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html", "shorter")}}
 
 ## Syntax
 
@@ -22,7 +22,7 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 
 ### Parameters
 
-- `numN`
+- `num1`, …, `numN`
   - : An integer between `0` and `0x10FFFF` (inclusive) representing a Unicode code point.
 
 ### Return value
