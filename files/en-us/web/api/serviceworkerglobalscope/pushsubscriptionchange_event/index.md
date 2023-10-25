@@ -47,8 +47,8 @@ self.addEventListener(
     const conv = (val) => btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
     const getPayload = (subscription) => ({
       endpoint: subscription.endpoint,
-      p256dh: conv(subscription.getKey('p256dh')),
-      auth: conv(subscription.getKey('auth'))
+      publicKey: conv(subscription.getKey('p256dh')),
+      authToken: conv(subscription.getKey('auth'))
     });
 
     const subscription = self.registration.pushManager
