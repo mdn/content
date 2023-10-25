@@ -61,7 +61,7 @@ self.addEventListener(
           },
           body: JSON.stringify({
             old: getPayload(event.oldSubscription),
-            new: getPayload(subscription
+            new: getPayload(subscription)
           }),
         }),
       );
