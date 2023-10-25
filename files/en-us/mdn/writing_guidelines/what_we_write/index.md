@@ -78,7 +78,7 @@ We consider documenting a new technology if it is:
 We do not document a new technology if:
 
 - It doesn't have a specification or the specification is a rough note that looks liable to change,
-- One or zero browsers have currently implemented it and non-supporting browsers are not showing signs of interest in implementing it. You can gauge this by asking engineers who work on those browsers and by looking at browser bug trackers and mailing lists, et.,
+- One or zero browsers have currently implemented it and non-supporting browsers are not showing signs of interest in implementing it. You can gauge this by asking engineers who work on those browsers and by looking at browser bug trackers and mailing lists, etc.,
 - Isn't a web-exposed technology and/or is completely proprietary, or
 - It's already showing signs of being deprecated or superseded by a similar feature.
 
