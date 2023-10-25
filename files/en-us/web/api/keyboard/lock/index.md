@@ -16,7 +16,7 @@ capture of keypresses for any or all of the keys on the physical keyboard. This 
 can only capture keys that are granted access by the underlying operating
 system.
 
-> **Note:** If `lock()` is called multiple times without an intervening call to `unlock()`, then only the keyCodes specified in the last request call will be in effect.
+If `lock()` is called multiple times without an intervening call to {{domxref("Keyboard.unlock()", "unlock()")}}, then only the key codes specified in the last call will be locked.
 
 ## Syntax
 
