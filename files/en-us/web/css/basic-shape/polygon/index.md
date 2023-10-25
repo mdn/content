@@ -47,7 +47,7 @@ The `polygon()` function takes as it's value a comma separated coordinates, or p
 
 <code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
-Given the above, mapping the coordinates of the container can be visualized as: 
+Given the above, mapping the coordinates of the container can be visualized as:
 | axis | point 1 | point 2 | point 3 | point 4 | point n |
 | ---- | ------- | ------- | ------- | ------- | ------------- |
 | x | 0% | 100% | 100% | 0% | x<sub>n</sub> |
