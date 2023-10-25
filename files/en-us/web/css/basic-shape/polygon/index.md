@@ -41,17 +41,18 @@ Returns a {{cssxref("basic-shape")}} value.
 
 ## Description
 
-You can create almost any shape with the `polygon()` function by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The `polygon()` function requires at least 3 points to create a triangle, but there's no upper limit.
+You can create almost any shape with the `polygon()` function by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The `polygon()` function requires at least 3 points, which creates a triangle, but there's no upper limit.
 
-Example coordinates:
+The `polygon()` function takes as it's value a comma separated coordinates, or points. Each point consists of space-separated `x` and `y` values represent the point's coordinates 
+
+<code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
+
+Given the above, mapping the coordinates of the container can be visualized as: 
 | axis | point 1 | point 2 | point 3 | point 4 | point n |
 | ---- | ------- | ------- | ------- | ------- | ------------- |
 | x | 0% | 100% | 100% | 0% | x<sub>n</sub> |
 | y | 0% | 0% | 100% | 100% | y<sub>n</sub> |
 
-The space-separated `x` and `y` values represent the coordinates of each point. Multiple coordinated point pairs are comma-separated.
-
-<code>clip-path: polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
 Applying those coordinates to the CSS {{cssxref("clip-path")}} property using the `polygon()` function:
 
