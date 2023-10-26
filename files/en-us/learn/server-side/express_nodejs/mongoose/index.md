@@ -473,12 +473,12 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const authorSchema = Schema({
+const authorSchema = new Schema({
   name: String,
   stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
-const storySchema = Schema({
+const storySchema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: "Author" },
   title: String,
 });

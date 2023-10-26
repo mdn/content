@@ -47,4 +47,4 @@ navigator.clearAppBadge();
 
 ## See also
 
-- [Badging for app icons](https://web.dev/badging-api/)
+- [Badging for app icons](https://developer.chrome.com/articles/badging-api/)
