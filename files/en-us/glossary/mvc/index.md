@@ -18,7 +18,7 @@ The three parts of the MVC software-design pattern can be described as follows:
 
 Imagine a simple shopping list app. All we want is a list of the name, quantity and price of each item we need to buy this week. Below we'll describe how we could implement some of this functionality using MVC.
 
-![Diagram to show the different parts of the mvc architecture.](model-view-controller-light-blue.png)
+<img src="model-view-controller-light-blue.png" style="background-color: white" alt="Diagram to show the different parts of the mvc architecture.">
 
 ### The Model
 

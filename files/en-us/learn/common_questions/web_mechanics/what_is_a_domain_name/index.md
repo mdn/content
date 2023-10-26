@@ -46,7 +46,7 @@ To solve all those problems we use human-readable addresses called domain names.
 
 A domain name has a simple structure made of several parts (it might be one part only, two, three…), separated by dots and **read from right to left**:
 
-![Anatomy of the MDN domain name](structure.png)
+<img src="structure.png" style="background-color:white;" alt="Anatomy of the MDN domain name">
 
 Each of those parts provides specific information about the whole domain name.
 
