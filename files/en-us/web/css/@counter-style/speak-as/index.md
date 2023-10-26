@@ -63,7 +63,7 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 
 ### Setting the spoken form for a counter
 
-In this example, the counter system is fixed with unintelligible symbols used for the markers. To experience the result of the `speak-as` descriptor, use assistive technology such as VoiceOver or other screen reader or view the [accessibility panel](https://firefox-source-docs.mozilla.org/devtools-user/index.html#accessibility-inspector) in the developer tools of a browser that supports the `speak-as` counter feature.
+In this example, the counter system is fixed with unintelligible symbols used for the markers. To experience the result of the `speak-as` descriptor, use assistive technology such as VoiceOver or another screen reader or view the [accessibility panel](https://firefox-source-docs.mozilla.org/devtools-user/index.html#accessibility-inspector) in the developer tools of a browser that supports `speak-as`.
 
 #### HTML
 
@@ -106,6 +106,6 @@ In this example, the counter system is fixed with unintelligible symbols used fo
 
 ## See also
 
-- Other {{cssxref("@counter-style")}} descriptors, including, {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
+- Other {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}: the functional notation for creating anonymous counter styles.
