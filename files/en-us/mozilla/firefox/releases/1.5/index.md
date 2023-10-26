@@ -51,7 +51,7 @@ Some of the new features in Firefox 1.5:
 
 #### Networking-related changes
 
-- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requestor as an `nsIChannel`'s notificationCallbacks and giving out an interface for `nsIBadCertListener`.
+- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requester as an `nsIChannel`'s notificationCallbacks and giving out an interface for `nsIBadCertListener`.
 - nsIWebBrowserPersist's listeners can now implement `nsIInterfaceRequestor::GetInterface` and will get an opportunity to provide all interfaces that channels might ask for, including `nsIProgressEventSink` (not too useful, redundant with `nsIWebProgressListener`). Useful interfaces here include `nsIChannelEventSink` and `nsIBadCertListener`.
 - Extensions or other necko consumers, including XMLHttpRequest, can set a Cookie header explicitly, and necko will not replace it. Stored cookies will be merged with the explicitly set header, in a way that the explicit header will override the stored cookies.
 

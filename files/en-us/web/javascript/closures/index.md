@@ -144,7 +144,7 @@ const size14 = makeSizer(14);
 const size16 = makeSizer(16);
 ```
 
-`size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
+`size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons as demonstrated in the following code example.
 
 ```js
 document.getElementById("size-12").onclick = size12;

@@ -104,4 +104,4 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
