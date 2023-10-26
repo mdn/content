@@ -7,22 +7,25 @@ browser-compat: css.at-rules.counter-style.additive-symbols
 
 {{CSSRef}}
 
-The **`additive-symbols`** descriptor of the {{cssxref('@counter-style')}} at-rule is used to specify counter symbols when {{cssxref('@counter-style/system', 'system: additive')}} is set as a `@counter-style` descriptor. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
-
-The `additive-symbols` descriptor defines a comma-separated list of _additive tuples_. Each _additive tuple_ contains a space-separated non-negative integer weight and counter symbol. To be valid, the list must be in descending weight order.
+The **`additive-symbols`** descriptor of the {{cssxref('@counter-style')}} at-rule is used to specify counter symbols when the `@counter-style` {{cssxref('@counter-style/system', 'system')}} descriptor value is set as `additive`. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
 
 ## Syntax
 
 ```css
+/* Single tuple */
 additive-symbols: 3 "*";
+
+/* Comma-separated list of tuples */
 additive-symbols:
   3 "0",
   2 "\2E\20",
   1 url(symbol.png);
-/* binary counter */
+
+/* Binary counter */
 additive-symbols:
   2 "1",
   1 "0";
+
 /* Etruscan counter */
 additive-symbols:
   100 "𐌟",
@@ -32,7 +35,11 @@ additive-symbols:
   1 "𐌠";
 ```
 
-When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, use the {{cssxref('symbols')}} descriptor instead of `additive-symbols`.
+## Description
+
+The `additive-symbols` descriptor defines a comma-separated list of _additive tuples_. Each _additive tuple_ contains a space-separated non-negative integer and counter symbol. To be valid, the list must be in the descending order of integer. The integer and symbol are concatenated together to form the counter symbol.
+
+When the `system` descriptor value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, use the {{cssxref('symbols')}} descriptor instead of `additive-symbols`.
 
 ## Formal definition
 
@@ -101,7 +108,7 @@ ul {
 
 ## See also
 
-- Other {{cssxref("@counter-style")}} descriptors, including, {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- The {{cssxref("symbols", "symbols()")}}, functional notation is used for creating anonymous counter styles.
+- {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- List style properties: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}} function to create anonymous counter styles
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
