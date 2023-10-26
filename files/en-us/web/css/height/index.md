@@ -43,7 +43,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the height as a percentage of the containing block's height.
+  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s height.
 - `auto`
   - : The browser will calculate and select a height for the specified element.
 - `max-content`

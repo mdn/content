@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: javascript.classes
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
 Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
@@ -47,7 +47,7 @@ Like function expressions, class expressions may be anonymous, or have a name th
 
 ### Class body
 
-The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
+The body of a class is the part that is in curly braces `{}`. This is where you define class members, such as methods or constructor.
 
 The body of a class is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) even without the `"use strict"` directive.
 
@@ -283,7 +283,7 @@ For how instances are created, see the {{jsxref("Classes/constructor", "construc
 
 ### Binding this with instance and static methods
 
-When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body is always executed in strict mode.
+When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive isn't present, because code within the `class` body is always executed in strict mode.
 
 ```js
 class Animal {
@@ -336,7 +336,7 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)

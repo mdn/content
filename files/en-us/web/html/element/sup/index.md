@@ -131,8 +131,9 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
+          ></code
         >
       </td>
     </tr>

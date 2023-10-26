@@ -65,7 +65,7 @@ In this example, the `.app-button` element will be hidden by default unless the 
 
 Here is another example showing how to use the {{domxref("window.matchMedia()")}} method to detect if the `standalone` display mode is enabled:
 
-```javascript
+```js
 function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }
@@ -74,5 +74,5 @@ function isStandaloneApp() {
 ## See also
 
 - [Web App Manifests](/en-US/docs/Web/Manifest).
-- [Display modes](https://web.dev/learn/pwa/app-design/#display-modes).
+- [Display modes](https://web.dev/learn/pwa/app-design/#display_modes).
 - Customize your app's title bar on desktop operating systems by using the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).

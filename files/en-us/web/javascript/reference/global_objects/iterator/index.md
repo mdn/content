@@ -118,12 +118,12 @@ const myIterator = Iterator.from({
 
 ## Constructor
 
-- {{jsxref("Iterator/Iterator", "Iterator()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator/Iterator", "Iterator()")}} {{experimental_inline}}
   - : Intended to be [extended](/en-US/docs/Web/JavaScript/Reference/Classes/extends) by other classes that create iterators. Throws an error when constructed by itself.
 
 ## Static methods
 
-- {{jsxref("Iterator.from()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.from()")}} {{experimental_inline}}
   - : Creates a new `Iterator` object from an iterator or iterable object.
 
 ## Instance properties
@@ -140,27 +140,27 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 
 ## Instance methods
 
-- {{jsxref("Iterator.prototype.drop()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.drop()")}} {{experimental_inline}}
   - : Returns a new iterator helper that skips the given number of elements at the start of this iterator.
-- {{jsxref("Iterator.prototype.every()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.every()")}} {{experimental_inline}}
   - : Tests whether all elements produced by the iterator pass the test implemented by the provided function.
-- {{jsxref("Iterator.prototype.filter()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.filter()")}} {{experimental_inline}}
   - : Returns a new iterator helper that yields only those elements of the iterator for which the provided callback function returns `true`.
-- {{jsxref("Iterator.prototype.find()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.find()")}} {{experimental_inline}}
   - : Returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
-- {{jsxref("Iterator.prototype.flatMap()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.flatMap()")}} {{experimental_inline}}
   - : Returns a new iterator helper that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
-- {{jsxref("Iterator.prototype.forEach()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.forEach()")}} {{experimental_inline}}
   - : Executes a provided function once for each element produced by the iterator.
-- {{jsxref("Iterator.prototype.map()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.map()")}} {{experimental_inline}}
   - : Returns a new iterator helper that yields elements of the iterator, each transformed by a mapping function.
-- {{jsxref("Iterator.prototype.reduce()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.reduce()")}} {{experimental_inline}}
   - : Executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
-- {{jsxref("Iterator.prototype.some()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.some()")}} {{experimental_inline}}
   - : Tests whether at least one element in the iterator passes the test implemented by the provided function. It returns a boolean value.
-- {{jsxref("Iterator.prototype.take()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.take()")}} {{experimental_inline}}
   - : Returns a new iterator helper that yields the given number of elements in this iterator and then terminates.
-- {{jsxref("Iterator.prototype.toArray()")}} {{Experimental_Inline}}
+- {{jsxref("Iterator.prototype.toArray()")}} {{experimental_inline}}
   - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
 - [`Iterator.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator)
   - : Returns the iterator object itself. This allows iterator objects to also be iterable.
@@ -190,5 +190,5 @@ for (const value of arrIterator) {
 ## See also
 
 - [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
-- {{JSxRef("Statements/function*", "function*")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("Statements/function*", "function*")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

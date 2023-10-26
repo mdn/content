@@ -96,8 +96,8 @@ function example() {
 
 ## See also
 
-- [if statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) guide

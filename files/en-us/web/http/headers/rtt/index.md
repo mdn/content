@@ -68,7 +68,7 @@ RTT: 125
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)
 - Network client hints
 
   - {{HTTPHeader("Downlink")}}

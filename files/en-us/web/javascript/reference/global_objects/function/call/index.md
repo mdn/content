@@ -125,5 +125,5 @@ slice(arguments);
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Reflect.apply()")}}
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)

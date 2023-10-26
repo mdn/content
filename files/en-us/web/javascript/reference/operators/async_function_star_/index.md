@@ -79,7 +79,7 @@ x(6)
 
 - {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("AsyncGeneratorFunction")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Functions", "Functions", "", 1)}}

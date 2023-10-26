@@ -106,14 +106,14 @@ Events have three functions:
       - : `integer`. The server's port number.
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `frameId`
   - : `integer`. This is `0` if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
 - `incognito`
   - : `boolean`. Whether the request is from a private browsing window.
 - `isProxy`
   - : `boolean`. `true` for `Proxy-Authenticate`, `false` for `WWW-Authenticate`.
-    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/SSL proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
+    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/TLS proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
 - `method`
   - : `string`. Standard HTTP method (For example, `"GET"` or `"POST"`).
 - `parentFrameId`

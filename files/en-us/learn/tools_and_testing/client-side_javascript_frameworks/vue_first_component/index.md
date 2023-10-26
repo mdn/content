@@ -117,7 +117,7 @@ export default {
 
 This is the same way that the `HelloWorld` component was registered by the Vue CLI earlier.
 
-To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is in PascalCase (e.g. `ToDoList`), and the equivalent custom element is in kebab-case (e.g. `<to-do-list>`).
+To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is in PascalCase (e.g. `ToDoList`), and the equivalent custom element is in {{Glossary("kebab_case", "kebab-case")}} (e.g. `<to-do-list>`).
 It's necessary to use this casing style if you're writing Vue templates [in the DOM directly](https://vuejs.org/guide/essentials/component-basics.html#dom-template-parsing-caveats)
 
 1. Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).

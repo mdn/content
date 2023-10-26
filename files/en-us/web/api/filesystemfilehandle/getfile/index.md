@@ -31,7 +31,7 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object.
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
     read mode.
 
@@ -61,4 +61,4 @@ async function getTheFile() {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
