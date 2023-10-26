@@ -12,9 +12,11 @@ The **`negative`** descriptor of the {{cssxref("@counter-style")}} at-rule lets 
 ## Syntax
 
 ```css
-/* <symbol> values */
-negative: "-"; /* Prepends '-' if value is negative */
-negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
+/* One <symbol> value */
+negative: "--"; /* Adds '--' before if counter value is negative */
+
+/* Two <symbol> values */
+negative: "(" ")"; /* Adds '(- before and ')' after if counter value is negative */
 ```
 
 ### Values
@@ -23,11 +25,12 @@ The `negative` descriptor accepts up to two [`<symbol>`](/en-US/docs/Web/CSS/@co
 
 - `<symbol>`
   - : If only one value is specified, it is added before the counter representation when the counter is negative. If two values are specified, the first one is added before and the second one is added after the counter representation when the counter is negative.
-- second `<symbol>`
 
 ## Description
 
-If the counter value is negative, the specified symbol for the `negative` descriptor is added before the counter representation; a second symbol, if specified, is added after the counter representation. The `negative` descriptor is relevant in two cases: if counter styles have the `system` value of `symbolic`, `alphabetic`, `numeric`, and `additive` and the count is negative; and if `system` value is `extends` and the extended counter style itself uses a negative sign. For systems that don't support negative counter values, specifying the `negative` descriptor has no effect and is ignored.
+If the counter value is negative, the specified `<symbol>` for the `negative` descriptor is added before the counter representation, replacing the default `-` for negative values. The second `<symbol>`, if specified, is added after the counter representation.
+
+The `negative` descriptor is relevant in two cases: if counter styles have the `system` value of `symbolic`, `alphabetic`, `numeric`, and `additive` and the count is negative; and if `system` value is `extends` and the extended counter style itself uses a negative sign. For systems that don't support negative counter values, specifying the `negative` descriptor has no effect and is ignored.
 
 ## Formal definition
 
@@ -72,6 +75,8 @@ ol {
 #### Result
 
 {{ EmbedLiveSample('Rendering negative counters') }}
+
+The prefix and suffix listed as the value of the `negative` descriptor are only added to the marker when the counter value is less than zero.
 
 ## Specifications
 
