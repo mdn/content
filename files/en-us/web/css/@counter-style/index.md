@@ -100,7 +100,7 @@ The above counter style rule can be applied to lists like this:
 }
 ```
 
-Which will produce a lists like this:
+The above code produces the following result:
 
 ```html hidden
 <ol class="items">
@@ -119,7 +119,7 @@ Which will produce a lists like this:
 </ol>
 ```
 
-{{EmbedLiveSample('Specifying symbols with counter-style')}}
+{{EmbedLiveSample('Specifying symbols with counter-style', '', '300')}}
 
 See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).
 
