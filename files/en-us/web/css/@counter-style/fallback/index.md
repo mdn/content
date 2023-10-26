@@ -7,7 +7,7 @@ browser-compat: css.at-rules.counter-style.fallback
 
 {{CSSRef}}
 
-The **`fallback`** descriptor can be used to specify a counter style to fall back to if the current counter style cannot create a marker representation for a particular counter value.
+The **`fallback`** descriptor of the {{cssxref("@counter-style")}} at-rule can be used to specify a counter style to fall back to if the counter style being defined cannot create a marker representation for a particular counter value.
 
 ## Syntax
 
@@ -78,5 +78,6 @@ A couple of scenarios where a fallback style will be used are:
 
 ## See also
 
+- Other {{cssxref("@counter-style")}} descriptors, including, {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, and {{cssxref("@counter-style/speak-as", "speak-as")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}: the functional notation creating anonymous counter styles
