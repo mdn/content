@@ -26,7 +26,7 @@ additive-symbols:
   2 "1",
   1 "0";
 
-/* Etruscan counter */
+/* Etruscan (a civilization in ancient Italy) counter  */
 additive-symbols:
   100 "𐌟",
   50 "𐌣",
@@ -34,6 +34,19 @@ additive-symbols:
   5 "𐌡",
   1 "𐌠";
 ```
+
+### Values
+
+The descriptor accepts a comma separated list of _additive tuples_ with each tuple consisting of the following two values separated by a space:
+
+- {{cssxref("integer")}}
+
+  - : A non-negative integer values specifying the integer weight of the associated symbol value of the tuple.
+
+- [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#symbol)
+  - : Specifies the counter symbol to be used for the weight value defined by the associated `<integer>` weight value of the tuple.
+
+> **Note:** The additive tuples must be specified in order of descending weight; otherwise, the descriptor declaration isn't valid and is ignored.
 
 ## Description
 
@@ -54,6 +67,8 @@ When the `system` descriptor value is `cyclic`, `numeric`, `alphabetic`, `symbol
 ### Specifying additive symbols
 
 #### HTML
+
+In this example, {{cssxref("@counter-style/system","system: additive")}} along with the `additive-symbols` descriptor values specify how numbers should be represented as Roman numerals. The value of each {{HTMLElement("li")}} element in the list is converted to a Roman numeral according to the rules defined in {{cssxref("@counter-style")}}.
 
 ```html
 <ul>
@@ -97,6 +112,8 @@ ul {
 #### Result
 
 {{ EmbedLiveSample('Specifying_additive_symbols') }}
+
+For the list item with the value of `109`, the numeral `C` represents `100`, and `IX` represents `9`. This generates `CIX` counter for the list item `109`. The next list item automatically gets a value of `110`. The roman numeral `CX` is derived from `C` for `100` and `X` for `10`.
 
 ## Specifications
 
