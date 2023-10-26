@@ -63,7 +63,9 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 
 ### Setting the spoken form for a counter
 
-In this example, the counter system is fixed with unintelligible symbols used for the markers. To experience the result of the `speak-as` descriptor, use assistive technology such as VoiceOver or another screen reader or view the [accessibility panel](https://firefox-source-docs.mozilla.org/devtools-user/index.html#accessibility-inspector) in the developer tools of a browser that supports `speak-as`.
+In this example, the counter system is fixed with unintelligible symbols used for the visual markers. However, the `speak-as` descriptor is used to set the list item markers as numbers in the accessibility tree. When supported, numbers rather than visual markers will be read out by screen readers.
+
+To experience the result of the `speak-as` descriptor, use assistive technology such as VoiceOver or another screen reader or view the [accessibility panel](https://firefox-source-docs.mozilla.org/devtools-user/index.html#accessibility-inspector) in the developer tools of a browser that supports `speak-as`.
 
 #### HTML
 
