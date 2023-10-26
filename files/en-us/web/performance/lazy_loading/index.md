@@ -98,5 +98,4 @@ When browser compatibility is crucial, there are a few options:
 ## See also
 
 - [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
-- [Optimizing loading and rendering](https://web.dev/explore/fast#optimize-web-fonts)
-- [Lazy loading images and video](https://web.dev/explore/fast#lazy-load-images-and-video)
+- [Use lazy loading to improve loading speed](https://web.dev/articles/lazy-loading)
