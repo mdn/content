@@ -148,6 +148,10 @@ When a control has a `pattern` attribute, the `title` attribute, if used, must d
 
 While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
 
+### Differences to JavaScript regular expression
+* The expression matches against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
+* In a character class, a hyphen `-` must be escaped as `\-`. Example: to match digits 0-9 and hyphen `[0-9-]*` is valid in JavaScript but must be writen as `[0-9\-]*`.
+
 ## Specifications
 
 {{Specifications}}
