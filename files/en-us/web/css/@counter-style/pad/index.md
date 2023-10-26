@@ -13,6 +13,7 @@ The **`pad`** descriptor of the {{cssxref("@counter-style")}} at-rule is used to
 
 ```css
 pad: 3 "0";
+pad: "+" 5;
 ```
 
 ### Values
