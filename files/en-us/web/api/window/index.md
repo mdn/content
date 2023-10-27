@@ -43,6 +43,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
+- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{ReadOnlyInline}}
@@ -171,7 +173,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("Window.clearImmediate()")}}
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Cancels the repeated execution set using `setImmediate()`.
 - {{domxref("clearInterval", "Window.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
@@ -237,7 +239,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setImmediate()")}}
+- {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("setInterval", "Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.

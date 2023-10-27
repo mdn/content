@@ -502,6 +502,11 @@ bird.sayBye(); // Bye from Ferrari
 ```
 
 > **Note:** Classes are always in strict mode. Calling methods with an undefined `this` will throw an error if the method tries to access properties on `this`.
+>
+> ```js example-bad
+> const carSayHi = car.sayHi;
+> carSayHi(); // TypeError because the 'sayHi' method tries to access 'this.name', but 'this' is undefined in strict mode.
+> ```
 
 Note, however, that auto-bound methods suffer from the same problem as [using arrow functions for class properties](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods): each instance of the class will have its own copy of the method, which increases memory usage. Only use it where absolutely necessary. You can also mimic the implementation of [`Intl.NumberFormat.prototype.format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format#using_format_with_map): define the property as a getter that returns a bound function when accessed and saves it, so that the function is only created once and only created when necessary.
 

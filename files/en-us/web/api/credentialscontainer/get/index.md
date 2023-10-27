@@ -44,7 +44,7 @@ get(options)
 
       - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
 
-        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
+        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
 
         - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
 
@@ -236,13 +236,19 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
   - : An array of objects defining a restricted list of the acceptable credentials for retrieval. Each object will contain the following properties:
 
-    - `id`: An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
+    - `id`
 
-    - `transports`: An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"` (see {{domxref("AuthenticatorAttestationResponse.getTransports", "getTransports()")}} for more details).
+      - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
-      > **Note:** This value is mirrored by the return value of the {{domxref("AuthenticatorAttestationResponse.getTransports", "PublicKeyCredential.response.getTransports()")}} method of the {{domxref("PublicKeyCredential")}} object returned by the `create()` call that originally created the credential. At that point, it should be stored by the app for later use.
+    - `transports`
 
-    - `type`: A string defining the type of the public key credential to retrieve. This can currently take a single value, `"public-key"`, but more values may be added in the future. This value is mirrored by the {{domxref("Credential.type", "type")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
+      - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"`.
+
+        > **Note:** This value is mirrored by the return value of the {{domxref("AuthenticatorAttestationResponse.getTransports", "PublicKeyCredential.response.getTransports()")}} method of the {{domxref("PublicKeyCredential")}} object returned by the `create()` call that originally created the credential.
+        > At that point, it should be stored by the app for later use.
+
+    - `type`
+      - : A string defining the type of the public key credential to retrieve. This can currently take a single value, `"public-key"`, but more values may be added in the future. This value is mirrored by the {{domxref("Credential.type", "type")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
     If `allowCredentials` is omitted, it will default to an empty array, meaning that any credential is potentially acceptable for retrieval without the relying party first providing an ID.
 
@@ -250,13 +256,20 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
   - : A string specifying the relying party's preference for how the attestation statement (i.e., provision of verifiable evidence of the authenticity of the authenticator and its data) is conveyed during authentication. The value can be one of the following:
 
-    - `"none"`: Specifies that the relying party is not interested in authenticator attestation. This might be to avoid additional user consent for round trips to the relying party server to relay identifying information, or round trips to an attestation certificate authority (CA), with the aim of making the authentication process smoother. If `"none"` is chosen as the `attestation` value, and the authenticator signals that it uses a CA to generate its attestation statement, the client app will replace it with a "None" attestation statement, indicating that no attestation statement is available.
+    - `"none"`
 
-    - `"direct"`: Specifies that the relying party wants to receive the attestation statement as generated by the authenticator.
+      - : Specifies that the relying party is not interested in authenticator attestation. This might be to avoid additional user consent for round trips to the relying party server to relay identifying information, or round trips to an attestation certificate authority (CA), with the aim of making the authentication process smoother. If `"none"` is chosen as the `attestation` value, and the authenticator signals that it uses a CA to generate its attestation statement, the client app will replace it with a "None" attestation statement, indicating that no attestation statement is available.
 
-    - `"enterprise"`: Specifies that the Relying Party wants to receive an attestation statement that may include uniquely identifying information. This is intended for controlled deployments within an enterprise where the organization wishes to tie registrations to specific authenticators.
+    - `"direct"`
 
-    - `"indirect"`: Specifies that the relying party wants to receive a verifiable attestation statement, but it will allow the client to decide how to receive it. For example, the client could choose to replace the authenticator's assertion statement with one generated by an Anonymization CA to protect user privacy.
+      - : Specifies that the relying party wants to receive the attestation statement as generated by the authenticator.
+
+    - `"enterprise"`
+
+      - : Specifies that the relying party wants to receive an attestation statement that may include uniquely identifying information. This is intended for controlled deployments within an enterprise where the organization wishes to tie registrations to specific authenticators.
+
+    - `"indirect"`
+      - : Specifies that the relying party wants to receive a verifiable attestation statement, but it will allow the client to decide how to receive it. For example, the client could choose to replace the authenticator's assertion statement with one generated by an anonymization CA to protect user privacy.
 
     If `attestation` is omitted, it will default to `"none"`.
 
@@ -295,11 +308,27 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
     The value can be one of the following:
 
-    - `"required"`: The relying party requires user verification, and the operation will fail if it does not occur.
-    - `"preferred"`: The relying party prefers user verification if possible, but the operation will not fail if it does not occur.
-    - `"discouraged"`: The relying party does not want user verification, in the interests of making user interaction as smooth as possible.
+    - `"required"`
+      - : The relying party requires user verification, and the operation will fail if it does not occur.
+    - `"preferred"`
+      - : The relying party prefers user verification if possible, but the operation will not fail if it does not occur.
+    - `"discouraged"`
+      - : The relying party does not want user verification, in the interests of making user interaction as smooth as possible.
 
     If `userVerification` is omitted, it will default to `"preferred"`.
+
+- `hints` {{optional_inline}}
+
+  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
+
+    The values can be any of the following:
+
+    - `"security-key"`
+      - : Authentication requires a separate dedicated physical device to provide the key.
+    - `"client-device"`
+      - : The user authenticates using their own device, such as a phone.
+    - `"hybrid"`
+      - : Authentication relies on a combination of authorization/authentication methods, potentially relying on both user and server-based mechanisms.
 
 ### Return value
 
