@@ -11,13 +11,13 @@ The **`grow()`** prototype method of the [`WebAssembly.Table`](/en-US/docs/WebAs
 ## Syntax
 
 ```js-nolint
-grow(elementIncrease)
-grow(elementIncrease, value)
+grow(delta)
+grow(delta, value)
 ```
 
 ### Parameters
 
-- `elementIncrease`
+- `delta`
   - : The number of elements you want to grow the table by.
 - `value` {{optional_inline}}
   - : The element to fill the newly-allocated space with.
@@ -30,7 +30,7 @@ The previous length of the table.
 
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
-    - If the current size added with `elementIncrease` exceeds the Table instance's maximum size capacity.
+    - If the current size added with `delta` exceeds the Table instance's maximum size capacity.
     - If the client doesn't have enough memory for the allocation.
 - {{jsxref("TypeError")}}
   - : Thrown if `value` is not a value of the element type of the table.
