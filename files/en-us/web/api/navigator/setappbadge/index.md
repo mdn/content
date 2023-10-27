@@ -28,8 +28,6 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : The {{domxref("Navigator")}} does not have a document that this action can be acted on.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the document is not fully active.
 - `SecurityError` {{domxref("DOMException")}}
