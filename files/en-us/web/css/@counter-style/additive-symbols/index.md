@@ -37,7 +37,7 @@ additive-symbols:
 
 ### Values
 
-The descriptor accepts a comma separated list of _additive tuples_ with each tuple consisting of the following two values separated by a space:
+The descriptor accepts a comma-separated list of _additive tuples_ with each tuple consisting of the following two values separated by a space:
 
 - {{cssxref("integer")}}
 
