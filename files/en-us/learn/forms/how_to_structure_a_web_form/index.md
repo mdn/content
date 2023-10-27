@@ -180,9 +180,135 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
 1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) in a new directory on your computer.
 
-2. Apply the CSS to the HTML by adding the following styles inside an HTML {{htmlelement("style")}} element:
+2. Next, create your form by adding a {{htmlelement("form")}} element:
 
-   ```css
+   ```html-nolint
+   <form>
+   ```
+
+3. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
+
+   ```html-nolint
+   <h1>Payment form</h1>
+   <p>
+     Required fields are followed by
+     <strong><span aria-label="required">*</span></strong>.
+   </p>
+   ```
+
+4. Next, we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+
+   ```html
+   <section>
+     <h2>Contact information</h2>
+     <fieldset>
+       <legend>Title</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="A" />
+             Ace
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="K" />
+             King
+           </label>
+         </li>
+         <li>
+           <label for="title_3">
+             <input type="radio" id="title_3" name="title" value="Q" />
+             Queen
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Name: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="text" id="name" name="username" required />
+     </p>
+     <p>
+       <label for="mail">
+         <span>Email: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" required />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Password: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="password" id="pwd" name="password" required />
+     </p>
+   </section>
+   ```
+
+5. The second `<section>` of our form is the payment information.
+   We have three distinct controls along with their labels, each contained inside a `<p>`.
+   The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
+   The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
+   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a _placeholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
+   These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+
+   Enter the following below the previous section:
+
+   ```html
+   <section>
+     <h2>Payment information</h2>
+     <p>
+       <label for="card">
+         <span>Card type:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Card number:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="tel" id="number" name="cardnumber" required />
+     </p>
+     <p>
+       <label for="expiration">
+         <span>Expiration date:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input
+         type="text"
+         id="expiration"
+         required="true"
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+     </p>
+   </section>
+   ```
+
+6. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+
+   ```html
+   <section>
+     <p>
+       <button type="submit">Validate the payment</button>
+     </p>
+   </section>
+   ```
+
+7. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
+
+   ```html
+   </form>
+   ```
+
+   ```css hidden
    h1 {
      margin-top: 0;
    }
@@ -261,135 +387,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    }
    ```
 
-3. Next, create your form by adding a {{htmlelement("form")}} element:
-
-   ```html-nolint
-   <form>
-   ```
-
-4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
-
-   ```html-nolint
-   <h1>Payment form</h1>
-   <p>
-     Required fields are followed by
-     <strong><span aria-label="required">*</span></strong>.
-   </p>
-   ```
-
-5. Next, we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
-
-   ```html
-   <section>
-     <h2>Contact information</h2>
-     <fieldset>
-       <legend>Title</legend>
-       <ul>
-         <li>
-           <label for="title_1">
-             <input type="radio" id="title_1" name="title" value="A" />
-             Ace
-           </label>
-         </li>
-         <li>
-           <label for="title_2">
-             <input type="radio" id="title_2" name="title" value="K" />
-             King
-           </label>
-         </li>
-         <li>
-           <label for="title_3">
-             <input type="radio" id="title_3" name="title" value="Q" />
-             Queen
-           </label>
-         </li>
-       </ul>
-     </fieldset>
-     <p>
-       <label for="name">
-         <span>Name: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="text" id="name" name="username" required />
-     </p>
-     <p>
-       <label for="mail">
-         <span>Email: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="email" id="mail" name="usermail" required />
-     </p>
-     <p>
-       <label for="pwd">
-         <span>Password: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="password" id="pwd" name="password" required />
-     </p>
-   </section>
-   ```
-
-6. The second `<section>` of our form is the payment information.
-   We have three distinct controls along with their labels, each contained inside a `<p>`.
-   The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
-   The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
-   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a _placeholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
-   These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
-
-   Enter the following below the previous section:
-
-   ```html
-   <section>
-     <h2>Payment information</h2>
-     <p>
-       <label for="card">
-         <span>Card type:</span>
-       </label>
-       <select id="card" name="usercard">
-         <option value="visa">Visa</option>
-         <option value="mc">Mastercard</option>
-         <option value="amex">American Express</option>
-       </select>
-     </p>
-     <p>
-       <label for="number">
-         <span>Card number:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="tel" id="number" name="cardnumber" required />
-     </p>
-     <p>
-       <label for="expiration">
-         <span>Expiration date:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input
-         type="text"
-         id="expiration"
-         required="true"
-         placeholder="MM/YY"
-         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
-     </p>
-   </section>
-   ```
-
-7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
-
-   ```html
-   <section>
-     <p>
-       <button type="submit">Validate the payment</button>
-     </p>
-   </section>
-   ```
-
-8. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
-
-   ```html
-   </form>
-   ```
-
-You can see the finished form in action below:
+We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn/Forms/How_to_structure_a_web_form/example) or visit [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
 
 {{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
 
