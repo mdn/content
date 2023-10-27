@@ -12,7 +12,7 @@ The **`key`** property of the {{domxref("StorageEvent")}} interface returns the 
 
 ## Value
 
-A string containing the key that was changed.
+A string containing the `key` that was changed.
 
 ## Specifications
 
