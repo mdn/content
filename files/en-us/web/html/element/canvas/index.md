@@ -105,26 +105,7 @@ It is better to specify your canvas dimensions by setting the `width` and `heigh
 
 ### Maximum canvas size
 
-The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels.
-
-The following is data collected through various tests and other sources (e.g. [Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)):
-
-#### Desktop
-
-| Browser            | Maximum width    | Maximum height   | Maximum area                               |
-| ------------------ | ---------------- | ---------------- | ------------------------------------------ |
-| Chrome (Win, Mac)  | 65,535 pixels    | 65,535 pixels    | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| Firefox (Win, Mac) | 32,767 pixels    | 32,767 pixels    | 536,756,224 pixels (i.e., 23,168 x 23,168) |
-| Safari (Mac)       | 4,194,303 pixels | 8,388,607 pixels | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| Edge (Win)         | 65,535 pixels    | 65,535 pixels    | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-
-#### Mobile
-
-| Browser           | Maximum width    | Maximum height   | Maximum area                               |
-| ----------------- | ---------------- | ---------------- | ------------------------------------------ |
-| Chrome (Android)  | 65,535 pixels    | 65,535 pixels    | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| Firefox (Android) | 32,767 pixels    | 32,767 pixels    | 536,756,224 pixels (i.e., 23,168 x 23,168) |
-| Safari (iOS)      | 4,194,303 pixels | 6,029,311 pixels | 16,777,216 pixels (i.e., 4,096 x 4,096)    |
+The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://github.com/jhildenbiddle/canvas-size#test-results) (2021).
 
 > **Note:** Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
 
