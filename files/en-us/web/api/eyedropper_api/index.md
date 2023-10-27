@@ -7,7 +7,7 @@ status:
 browser-compat: api.EyeDropper
 ---
 
-{{DefaultAPISidebar("EyeDropper API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{DefaultAPISidebar("EyeDropper API")}}{{SeeCompatTable}}
 
 The **EyeDropper API** provides a mechanism for creating an eyedropper tool. Using this tool, users can sample colors from their screens, including outside of the browser window.
 

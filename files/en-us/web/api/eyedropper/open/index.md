@@ -8,7 +8,7 @@ status:
 browser-compat: api.EyeDropper.open
 ---
 
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has selected a color and exited the eyedropper mode.
 
