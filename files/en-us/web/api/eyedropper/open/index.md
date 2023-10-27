@@ -25,7 +25,7 @@ open(options)
 
   - : An options object to pass an {{domxref("AbortSignal")}} signal:
 
-    - `signal`
+    - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}. The eyedropper mode will be aborted when the `AbortSignal`'s {{domxref("AbortController/abort()", "abort()")}} method is called.
 
 ### Return value
