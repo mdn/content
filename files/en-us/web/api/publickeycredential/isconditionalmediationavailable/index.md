@@ -69,7 +69,7 @@ if (
 }
 ```
 
-> **Note:** See [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for more information about using conditional mediation.
+> **Note:** See [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more information about using conditional mediation.
 
 ## Specifications
 
