@@ -28,6 +28,12 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("Navigator")}} does not have a document that this action can be acted on.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not fully active.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 
 ## Examples
 
