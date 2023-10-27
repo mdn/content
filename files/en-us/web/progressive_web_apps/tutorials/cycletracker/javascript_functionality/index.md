@@ -128,7 +128,7 @@ Limitations of `localStorage` include:
 - Can cause poor performance: Getting and setting from and to local storage is done synchronously on the main thread. When the main thread is occupied, apps are not responsive and appear frozen. With the limited nature of this app, this blip of bad user experience is negligible.
 - Only available to the main thread: In addition to the performance issues of occupying the main thread, service workers do not have access to the main thread, meaning the service worker can't directly set or get the local storage data.
 
-#### Retrieve, append, sort, and re-store data
+### Retrieve, append, sort, and re-store data
 
 Because we're using localStorage, which comprises of a single string, we retrieve the JSON string of data from local storage, parse the JSON data (if any), push the new pair of dates to the existing array, sort the dates, parse the JSON object back into a string, and save that string back to `localStorage`.
 
@@ -167,7 +167,7 @@ function getAllStoredPeriods() {
 }
 ```
 
-### Render data to screen
+## Render data to screen
 
 The last step of our application is to render the list of past periods to the screen along with a heading.
 
@@ -222,7 +222,7 @@ function formatDate(dateString) {
 }
 ```
 
-## Render past periods on load
+### Render past periods on load
 
 When the deferred JavaScript runs on page load, we render past periods, if any.
 
