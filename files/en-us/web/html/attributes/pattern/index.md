@@ -32,6 +32,8 @@ When including a `pattern`, provide a description of the pattern in visible text
 If the input's value is not the empty string and the value does not match the entire regular expression, there is a constraint violation reported by the {{domxref('ValidityState')}} object's {{domxref('ValidityState.patternMismatch','patternMismatch')}} property being `true`.
 The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
 
+The pattern's regular expression is compiled with the `v` flag ([`unicodeSets`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) mode), which changes how character classes are interpreted. In addition to `]` and `\`, the following characters must be escaped if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Example: to match digits 0-9 and hyphen `[0-9-]*` is valid when not compiled with the `v` flag, but must be writen as `[0-9\-]*` since the `v` flag is used.
+
 > **Note:** If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
 
 ## Examples
@@ -142,16 +144,11 @@ This renders like so:
 
 {{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
 
-### Accessibility Concerns
+## Accessibility Concerns
 
 When a control has a `pattern` attribute, the `title` attribute, if used, must describe the pattern. Relying on the `title` attribute for the visual display of text content is generally discouraged as many user agents do not expose the attribute in an accessible manner. Some browsers show a tooltip when an element with a title is hovered, but that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the control to match the requirements.
 
 While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
-
-### Differences to JavaScript regular expression
-
-- The expression matches against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
-- In a character class, a hyphen `-` must be escaped as `\-`. Example: to match digits 0-9 and hyphen `[0-9-]*` is valid in JavaScript but must be writen as `[0-9\-]*`.
 
 ## Specifications
 
