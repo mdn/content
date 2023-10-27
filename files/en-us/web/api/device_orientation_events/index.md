@@ -62,4 +62,4 @@ Some typical features for which you might want to use the device orientation eve
 
 ## See also
 
-- [Device Orientation & Motion](https://web.dev/device-orientation/) at web.dev
+- [Device Orientation & Motion](https://web.dev/articles/device-orientation) at web.dev

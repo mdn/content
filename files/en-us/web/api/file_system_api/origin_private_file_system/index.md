@@ -191,4 +191,4 @@ accessHandle.truncate(4);
 
 ## See also
 
-- [The origin private file system](https://web.dev/origin-private-file-system/) on web.dev
+- [The origin private file system](https://web.dev/articles/origin-private-file-system) on web.dev

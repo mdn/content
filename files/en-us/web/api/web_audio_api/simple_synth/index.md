@@ -540,7 +540,7 @@ function notePressed(event) {
   if (event.buttons & 1) {
     const dataset = event.target.dataset;
 
-    if (!dataset["pressed"]) {
+    if (!dataset["pressed"] && dataset["octave"]) {
       const octave = Number(dataset["octave"]);
       oscList[octave][dataset["note"]] = playTone(dataset["frequency"]);
       dataset["pressed"] = "yes";
@@ -563,9 +563,12 @@ function noteReleased(event) {
 
   if (dataset && dataset["pressed"]) {
     const octave = Number(dataset["octave"]);
-    oscList[octave][dataset["note"]].stop();
-    delete oscList[octave][dataset["note"]];
-    delete dataset["pressed"];
+
+    if (oscList[octave] && oscList[octave][dataset["note"]]) {
+      oscList[octave][dataset["note"]].stop();
+      delete oscList[octave][dataset["note"]];
+      delete dataset["pressed"];
+    }
   }
 }
 ```
