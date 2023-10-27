@@ -57,7 +57,7 @@ Tracking data can be used to profile a user and their interests and preferences,
 - **Selling or sharing data**: Some third parties have been known to compile tracking data and then sell it to/share it with others to use for various purposes, like targeted ads. This is obviously highly unethical and may also be illegal, depending on where in the world it happens.
 - **Prejudice via data**: In the worst cases, sharing data could result in the user being unfairly disadvantaged. For example, imagine an insurance company finding out data points about a potential customer that they didn't consent to share, and using them as a justification for increasing insurance premiums.
 
-> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties/#what-can-third-party-resources-do) for a useful related scenario description and additional information.
+> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties#what_can_third-party_resources_do) for a useful related scenario description and additional information.
 
 ### Fingerprinting
 
