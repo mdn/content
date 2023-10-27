@@ -17,6 +17,13 @@ fallback: lower-alpha;
 fallback: custom-gangnam-style;
 ```
 
+## Value
+
+The descriptor takes a single `<counter-style-name>` as its value:
+
+- [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
+  - : Provides the name of the counter style to be used as the fallback, which is either the case-sensitive `<custom-ident>` (without quotes) of a custom CSS counter style or a case-insensitive {{cssxref("list-style-type")}} property value such as `decimal`, `disc`, and so on.
+
 ## Description
 
 If the specified fallback style is also unable to construct a representation, then its fallback style will be used. If a valid fallback style is not specified, it defaults to `decimal`.
