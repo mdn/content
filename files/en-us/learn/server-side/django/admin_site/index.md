@@ -213,9 +213,9 @@ Unfortunately we can't directly specify the `genre` field in `list_display` beca
 Add the following code into your `Book` model (**models.py**). This creates a string from the first three values of the `genre` field (if they exist) and creates a `short_description` that can be used in the admin site for this method.
 
 ```python
-def display_genre(self):
+def display_genre(self, obj):
     """Create a string for the Genre. This is required to display genre in Admin."""
-    return ', '.join(genre.name for genre in self.genre.all()[:3])
+    return ', '.join(genre.name for genre in obj.genre.all()[:3])
 
 display_genre.short_description = 'Genre'
 ```
