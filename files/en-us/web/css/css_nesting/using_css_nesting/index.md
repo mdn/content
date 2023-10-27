@@ -52,7 +52,9 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
+
+> **Note:** This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
 
 #### Without nesting selector
 
@@ -152,7 +154,7 @@ label {
 
 #### Nesting the sibling combinator
 
-In this example, the first paragraph after each `<h2>` is targeted with the [adjacent sibling combinator (`+`)](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) using CSS nesting.
+In this example, the first paragraph after each `<h2>` is targeted with the [next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Next-sibling_combinator) using CSS nesting.
 
 ##### HTML
 
@@ -228,15 +230,15 @@ In this example the `&` nesting selector is used to create compound selectors to
 ```html
 <div class="notices">
   <div class="notice">
-    <h2>Notice</h2>
+    <h2 class="notice-heading">Notice</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice warning">
-    <h2>Warning</h2>
+    <h2 class="warning-heading">Warning</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice success">
-    <h2>Success</h2>
+    <h2 class="success-heading">Success</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
@@ -256,7 +258,7 @@ Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_l
 }
 ```
 
-This CSS uses nesting to create compound selectors. The top-level selector defines the basic styles for an element with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`.
+In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading:before`.
 
 ```css
 .notice {
@@ -267,8 +269,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  h2:before {
-    /* same as `.notice h2:before` */
+  .notice-heading:before {
+    /* equivalent to `.notice .notice-heading:before` */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -276,8 +278,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.warning h2:before` */
+    .warning-heading:before {
+      /* equivalent to `.notice.warning .warning-heading:before` */
       content: "! ";
     }
   }
@@ -286,8 +288,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.success h2:before` */
+    .success-heading:before {
+      /* equivalent to `.notice.success .success-heading:before` */
       content: "✓ ";
     }
   }
@@ -322,7 +324,7 @@ As opposed to:
 .foo {
   /* .foo styles */
   .bar & {
-    /* .bar .for styles */
+    /* .bar .foo styles */
   }
 }
 ```
@@ -374,7 +376,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured .card` */
+      /* equivalent to `.featured .card h2` */
       color: tomato;
     }
   }

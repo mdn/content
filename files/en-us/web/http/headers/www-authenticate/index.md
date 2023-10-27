@@ -82,7 +82,9 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.
+    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning).
+    Some clients show this value to the user to inform them about which particular credentials are required — though most browsers stopped doing so to counter phishing.
+    The only reliably supported character set for this value is `us-ascii`.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.

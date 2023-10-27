@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.literal_character
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **literal character** specifies exactly itself to be matched in the input text.
 

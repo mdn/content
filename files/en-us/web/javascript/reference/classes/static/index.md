@@ -155,7 +155,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Calling static members from a class constructor and other methods
 
-Static members are not directly accessible using the {{JSxRef("Operators/this", "this")}} keyword from
+Static members are not directly accessible using the {{jsxref("Operators/this", "this")}} keyword from
 non-static methods. You need to call them using the class name:
 `CLASSNAME.STATIC_METHOD_NAME()` /
 `CLASSNAME.STATIC_PROPERTY_NAME` or by calling the method as a property of

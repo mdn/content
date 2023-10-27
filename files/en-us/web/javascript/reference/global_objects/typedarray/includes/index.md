@@ -27,7 +27,7 @@ includes(searchElement, fromIndex)
 
 ### Return value
 
-A boolean value which is `true` if the value `searchElement` is found within the array (or the part of the array indicated by the index `fromIndex`, if specified).
+A boolean value which is `true` if the value `searchElement` is found within the typed array (or the part of the typed array indicated by the index `fromIndex`, if specified).
 
 ## Description
 

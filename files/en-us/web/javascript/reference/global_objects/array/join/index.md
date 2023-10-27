@@ -28,8 +28,7 @@ join(separator)
 
 ### Return value
 
-A string with all array elements joined. If `arr.length` is
-`0`, the empty string is returned.
+A string with all array elements joined. If `array.length` is `0`, the empty string is returned.
 
 ## Description
 

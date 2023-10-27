@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.getName
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`getName()`** method of the
 {{domxref("CustomElementRegistry")}} interface returns the name for a

@@ -21,12 +21,11 @@ join(separator)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : A string to separate each pair of adjacent elements of the array. If omitted, the typed array elements are separated with a comma (",").
+  - : A string to separate each pair of adjacent elements of the typed array. If omitted, the typed array elements are separated with a comma (",").
 
 ### Return value
 
-A string with all array elements joined. If `arr.length` is
-`0`, the empty string is returned.
+A string with all typed array elements joined. If `array.length` is `0`, the empty string is returned.
 
 ## Description
 

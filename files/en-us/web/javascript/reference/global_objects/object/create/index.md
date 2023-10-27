@@ -22,7 +22,7 @@ Object.create(proto, propertiesObject)
 
 - `proto`
   - : The object which should be the prototype of the newly-created object.
-- `propertiesObject` {{Optional_inline}}
+- `propertiesObject` {{optional_inline}}
   - : If specified and not {{jsxref("undefined")}}, an object whose [enumerable own properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of {{jsxref("Object.defineProperties()")}}.
 
 ### Return value

@@ -287,6 +287,6 @@ For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/
 
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
 - [`share_target` manifest member](/en-US/docs/Web/Manifest/share_target)
-- [Integrate with the OS sharing UI with the Web Share API](https://web.dev/web-share/) on web.dev
+- [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
 - [Receiving shared data with the Web Share Target API](https://developer.chrome.com/articles/web-share-target/) on chrome.com
 - [Share content with other apps](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com

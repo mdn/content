@@ -14,13 +14,10 @@ The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WebTran
 "Reliable" means that transmission and order of data are guaranteed.
 This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
-<!-- sendOrder is pending https://bugzilla.mozilla.org/show_bug.cgi?id=1816925
-
-The relative order in which queued bytes are emptied from created streams can be specified using the send-order option.
+The relative order in which queued bytes are emptied from created streams can be specified using the `sendOrder` option.
 If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
 If the order number is not set then the order in which bytes are sent is implementation dependent.
 Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
--->
 
 {{AvailableInWorkers}}
 
@@ -28,15 +25,10 @@ Note however that even though bytes from higher send-order streams are sent firs
 
 ```js-nolint
 createBidirectionalStream()
+createBidirectionalStream(options)
 ```
 
-<!-- createBidirectionalStream({sendOrder: "596996858"}) -->
-
 ### Parameters
-
-None
-
-<!-- sendOrder is pending https://bugzilla.mozilla.org/show_bug.cgi?id=1816925
 
 - `options` {{optional_inline}}
 
@@ -46,7 +38,6 @@ None
       - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
         Queued bytes are sent first for streams that have a higher value.
         If not set, the send order depends on the implementation.
--->
 
 ### Return value
 
@@ -63,7 +54,9 @@ An initial function is used to get references to the {{domxref("WebTransportBidi
 
 ```js
 async function setUpBidirectional() {
-  const stream = await transport.createBidirectionalStream();
+  const stream = await transport.createBidirectionalStream({
+    sendOrder: "596996858",
+  });
   // stream is a WebTransportBidirectionalStream
   // stream.readable is a ReadableStream
   const readable = stream.readable;
@@ -112,7 +105,7 @@ async function writeData(writable) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)
