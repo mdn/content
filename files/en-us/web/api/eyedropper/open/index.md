@@ -40,10 +40,15 @@ The promise resolves to an object with the following property:
 ### Exceptions
 
 Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejected.
-The promise is rejected in two cases:
 
-- When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
-- When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if it is not called via a [transient user activation](/en-US/docs/Glossary/Transient_activation).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if another eye dropper has already opened.
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the user abort the selection by pressing the <kbd>Escape</kbd> key or is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the selection fails for other reasons.
 
 ## Specifications
 
