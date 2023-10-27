@@ -21,7 +21,7 @@ negative: "(" ")"; /* Adds '(- before and ')' after if counter value is negative
 
 ### Values
 
-The `negative` descriptor accepts up to two [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values™) values.
+The `negative` descriptor accepts up to two [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values) values.
 
 - `<symbol>`
   - : If only one value is specified, it is added before the counter representation when the counter is negative. If two values are specified, the first one is added before and the second one is added after the counter representation when the counter is negative.
