@@ -162,4 +162,4 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_containment)
 - [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size)
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)

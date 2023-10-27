@@ -170,4 +170,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Read files in JavaScript](https://web.dev/read-files/) (web.dev)
+- [Read files in JavaScript](https://web.dev/articles/read-files) (web.dev)
