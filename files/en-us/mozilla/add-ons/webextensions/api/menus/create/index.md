@@ -17,8 +17,9 @@ For compatibility with other browsers, Firefox makes this method available in th
 >
 > How you create menu items depends on whether your extension is persistent or non-persistent:
 >
-> - in extensions using persistent background pages, menus are not persisted. A persistent background page starts once and doesn't terminate until the browser or extension unloads. So, you use a top-level call to create the menu.
-> - in extensions using non-persistent background pages (an event page), menus persist. You call `menus.create` from within a {{WebExtAPIRef("runtime.onInstalled")}} listener. This avoids repeated attempts to create the menu item when the pages restart, which would occur with a top-level call.
+> - in extensions using non-persistent background pages (an event page), menus persist across browser and extension restarts. You call `menus.create` (with a menu-specific ID) from within a {{WebExtAPIRef("runtime.onInstalled")}} listener. This avoids repeated attempts to create the menu item when the pages restart, which would occur with a top-level call.
+> - In Chrome, menu items from persistent background pages are also persisted.
+> - In Firefox, menu items from persistent background pages are never persisted. Call `menus.create` unconditionally from the top-level to make sure that the menu items are registered.
 >
 > See [Initialize the extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts#initialize_the_extension) on the background scripts page and [Event-driven background scripts](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/#event-driven-background-scripts) on Extension Workshop for more information.
 
