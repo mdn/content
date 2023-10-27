@@ -56,4 +56,5 @@ navigator.setAppBadge(unread);
 
 ## See also
 
+- [Badging API](/en-US/docs/Web/API/Badging_API)
 - [Badging for app icons](https://web.dev/badging-api/)
