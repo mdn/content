@@ -126,5 +126,5 @@ The default allowlist for `screen-wake-lock` is `self`.
 
 ## See also
 
-- [An introductory article on the Screen Wake Lock API](https://web.dev/wake-lock/)
+- [An introductory article on the Screen Wake Lock API](https://developer.chrome.com/articles/wake-lock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
