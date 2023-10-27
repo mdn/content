@@ -53,7 +53,7 @@ None.
   - : Clears the badge on the icon associated with this app.
 - {{domxref("Navigator.setClientBadge()")}}
   - : Sets a badge on the icon associated with the current document.
-- {{domxref("Navigator.clearClearClientBadge()")}}
+- {{domxref("Navigator.clearClientBadge()")}}
   - : Clears the badge on the icon associated with the current document.
 
 ### Extensions to the WorkerNavigator interface
@@ -64,7 +64,7 @@ None.
   - : Clears the badge on the icon associated with this app.
 - {{domxref("WorkerNavigator.setClientBadge()")}}
   - : Sets a badge on the icon associated with the current document.
-- {{domxref("WorkerNavigator.clearClearClientBadge()")}}
+- {{domxref("WorkerNavigator.clearClientBadge()")}}
   - : Clears the badge on the icon associated with the current document.
 
 ## Examples
