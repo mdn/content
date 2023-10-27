@@ -55,9 +55,9 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-> **Note:** `resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If it is not set, the resulting {{jsxref("Promise")}} will resolve to a URN that can only be used in an `<iframe>`.
+`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque URN that can only be used in an `<iframe>`.
 
-The `FencedFrameConfig` has several internal properties. `url` for example contains the target URL of the content to embed, in the same manner as a regular `<iframe>`'s `src` property. However, these internal properties cannot be read by JavaScript running in the embedding context.
+Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
 > **Note:** `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) for more details.
 
@@ -113,6 +113,8 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 ### Extensions to other interfaces
 
+- {{domxref("Navigator.deprecatedReplaceInURN()")}}
+  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property.
 - {{domxref("Window.fence")}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a `<fencedframe>`.
 

@@ -471,7 +471,7 @@
         "/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames"
       ],
       "interfaces": ["Fence", "FencedFrameConfig", "HTMLFencedFrameElement"],
-      "methods": [],
+      "methods": ["Navigator.deprecatedReplaceInURN"],
       "properties": ["Window.fence"],
       "events": []
     },

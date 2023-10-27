@@ -138,6 +138,8 @@ _Doesn't inherit any method._
   - : Returns `true` if a call to `Navigator.share()` would succeed.
 - {{domxref("Navigator.clearAppBadge()")}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
+  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
