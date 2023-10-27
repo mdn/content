@@ -660,7 +660,7 @@ Further reading for you to find out more information if desired.
 
 ### Tutorials and guides
 
-- [Databinding UI Elements with IndexedDB (2012)](https://web.dev/indexeddb-uidatabinding/)
+- [Databinding UI Elements with IndexedDB (2012)](https://web.dev/articles/indexeddb-uidatabinding)
 - [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### Libraries

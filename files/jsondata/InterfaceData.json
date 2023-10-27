@@ -764,6 +764,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSViewTransitionRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CustomElementRegistry": {
       "inh": "",
       "impl": []
@@ -2340,10 +2344,6 @@
       "inh": "",
       "impl": []
     },
-    "PageRevealEvent": {
-      "inh": "Event",
-      "impl": []
-    },
     "PageTransitionEvent": {
       "inh": "Event",
       "impl": []
@@ -2698,6 +2698,10 @@
     },
     "RestrictionTarget": {
       "inh": "",
+      "impl": []
+    },
+    "RevealEvent": {
+      "inh": "Event",
       "impl": []
     },
     "RTCCertificate": {
@@ -3922,6 +3926,10 @@
     },
     "WebTransportReceiveStream": {
       "inh": "ReadableStream",
+      "impl": []
+    },
+    "WebTransportSendGroup": {
+      "inh": "",
       "impl": []
     },
     "WebTransportSendStream": {

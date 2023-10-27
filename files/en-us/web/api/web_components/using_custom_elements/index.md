@@ -54,7 +54,7 @@ Custom element lifecycle callbacks include:
 - `connectedCallback()`: called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
 - `disconnectedCallback()`: called each time the element is removed from the document.
 - `adoptedCallback()`: called each time the element is moved to a new document.
-- `attributeChangedCallback()`: called each time any attributes that are listed in the `observedAttributes` static property are changed, added, removed, or replaced. This callback is passed the name of the attribute, its old value, and its new value.
+- `attributeChangedCallback()`: called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
 
 Here's a minimal custom element that logs these lifecycle events:
 
@@ -131,6 +131,50 @@ To use an autonomous custom element, use the custom name just like a built-in HT
 </popup-info>
 ```
 
+## Responding to attribute changes
+
+Like built-in elements, custom elements can use HTML attributes to configure the element's behavior. To use attributes effectively, an element has to be able to respond to changes in an attribute's value. To do this, a custom element needs to add the following members to the class that implements the custom element:
+
+- A static property named `observedAttributes`. This must be an array containing the names of all attributes for which the element needs change notifications.
+- An implementation of the `attributeChangedCallback()` lifecycle callback.
+
+The `attributeChangedCallback()` callback is then called whenever an attribute whose name is listed in the element's `observedAttributes` property is added, modified, removed, or replaced.
+
+The callback is passed three arguments:
+
+- The name of the attribute which changed.
+- The attribute's old value.
+- The attribute's new value.
+
+For example, this autonomous element will observe a `size` attribute, and log the old and new values when they change:
+
+```js
+// Create a class for the element
+class MyCustomElement extends HTMLElement {
+  static observedAttributes = ["size"];
+
+  constructor() {
+    super();
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(
+      `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+    );
+  }
+}
+
+customElements.define("my-custom-element", MyCustomElement);
+```
+
+Note that if the element's HTML declaration includes an observed attribute, then `attributeChangedCallback()` will be called after the attribute is initialized, when the element's declaration is parsed for the first time. So in the following example, `attributeChangedCallback()` will be called when the DOM is parsed, even if the attribute is never changed again:
+
+```html
+<my-custom-element size="100"></my-custom-element>
+```
+
+For a complete example showing the use of `attributeChangedCallback()`, see [Lifecycle callbacks](#lifecycle_callbacks) in this page.
+
 ## Examples
 
 In the rest of this guide we'll look at a few example custom elements. You can find the source for all these examples, and more, in the [web-components-examples](https://github.com/mdn/web-components-examples) repository, and you can see them all live at <https://mdn.github.io/web-components-examples/>.
@@ -146,7 +190,7 @@ To begin with, the JavaScript file defines a class called `PopupInfo`, which ext
 
 ```js
 // Create a class for the element
-class PopUpInfo extends HTMLElement {
+class PopupInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -258,7 +302,7 @@ Here's the class definition:
 
 ```js
 // Create a class for the element
-class PopUpInfo extends HTMLElement {
+class PopupInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();

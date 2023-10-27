@@ -3593,11 +3593,12 @@
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
+/en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
 /en-US/docs/Glossary/Index	/en-US/docs/Glossary
 /en-US/docs/Glossary/Instance_method	/en-US/docs/Glossary/Method
 /en-US/docs/Glossary/Instance_property	/en-US/docs/Glossary/property/JavaScript
-/en-US/docs/Glossary/Internationalization	/en-US/docs/Glossary/I18N
+/en-US/docs/Glossary/Internationalization_and_localization	/en-US/docs/Glossary/Internationalization
 /en-US/docs/Glossary/Modern_web_apps	/en-US/docs/Glossary/Progressive_web_apps
 /en-US/docs/Glossary/NodeJs	/en-US/docs/Glossary/Node.js
 /en-US/docs/Glossary/Node_(networking)	/en-US/docs/Glossary/Node/networking
@@ -7777,6 +7778,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozImageSmoothingEnabled	/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozTextStyle	/en-US/docs/Web/API/CanvasRenderingContext2D/font
 /en-US/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
+/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /en-US/docs/Web/API/CharacterData.previousElementSibling	/en-US/docs/Web/API/CharacterData/previousElementSibling
 /en-US/docs/Web/API/ChildNode.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/Element/remove
@@ -12034,7 +12036,7 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing	/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing
-/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example	/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example	/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
