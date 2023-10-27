@@ -61,7 +61,8 @@ Consider an example where we want to style an element, providing styles to be ap
   }
 }
 
-/* the browser parses this as */
+/* the browser parses above nested rules as */
+
 .parent-rule {
   /* parent rule properties */
 }
@@ -81,7 +82,8 @@ With the **`&` nesting selector** added with no whitespace, the elements matched
   }
 }
 
-/* the browser parses this as */
+/* the browser parses above nested rules as */
+
 .parent-rule {
   /* parent rule properties */
 }
@@ -103,7 +105,8 @@ The `&` nesting selector can also be appended to reverse the context of the rule
   }
 }
 
-/* the browser parses this as */
+/* the browser parses above nested rules as */
+
 .card {
   /* .card styles */
 }
@@ -123,7 +126,8 @@ The `&` nesting selector can be placed multiple times:
   }
 }
 
-/* the browser parses this as */
+/* the browser parses above nested rules as */
+
 .card {
   /* .card styles */
 }
