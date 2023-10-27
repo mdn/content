@@ -23,7 +23,7 @@ The `:fullscreen` pseudo-class lets you configure your stylesheets to automatica
 
 ## Examples
 
-In this example, the color of a button is changed depending on whether or not the document is in fullscreen mode. This is done without needing to specifically apply style changes using JavaScript.
+In this example, the color of a button is changed depending on whether or not the document is in fullscreen mode. You will need JavaScript to [request fullscreen mode](/en-US/docs/Web/API/Fullscreen_API/Guide). Once in that mode, no JavaScript is needed to style.
 
 ### HTML
 
