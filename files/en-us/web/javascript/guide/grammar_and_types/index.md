@@ -28,7 +28,7 @@ A semicolon is not necessary after a statement if it is written on its own line.
 
 It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.
 
-The source text of JavaScript script gets scanned from left to right, and is converted into a sequence of input elements which are _tokens_, _control characters_, _line terminators_, _comments_, or {{glossary("whitespace")}}. (Spaces, tabs, and newline characters are considered whitespace.)
+The source text of JavaScript script gets scanned from left to right, and is converted into a sequence of input elements which are _tokens_, _control characters_, _line terminators_, _comments_, or {{Glossary("whitespace")}}. (Spaces, tabs, and newline characters are considered whitespace.)
 
 ## Comments
 
@@ -115,7 +115,7 @@ A variable may belong to one of the following [scopes](/en-US/docs/Glossary/Scop
 
 - Global scope: The default scope for all code running in script mode.
 - Module scope: The scope for code running in module mode.
-- Function scope: The scope created with a {{glossary("function")}}.
+- Function scope: The scope created with a {{Glossary("function")}}.
 
 In addition, variables declared with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) can belong to an additional scope:
 
@@ -291,8 +291,8 @@ With all other operators, JavaScript does _not_ convert numeric values to string
 
 In the case that a value representing a number is in memory as a string, there are methods for conversion.
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
@@ -482,7 +482,7 @@ console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
 ```
 
-Object property names can be any string, including the empty string. If the property name would not be a valid JavaScript {{Glossary("Identifier","identifier")}} or number, it must be enclosed in quotes.
+Object property names can be any string, including the empty string. If the property name would not be a valid JavaScript {{Glossary("Identifier", "identifier")}} or number, it must be enclosed in quotes.
 
 Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 

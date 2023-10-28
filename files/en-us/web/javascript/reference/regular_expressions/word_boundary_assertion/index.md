@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.word_boundary_assertion
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **word boundary assertion** checks if the current position in the string is a word boundary. A word boundary is where the next character is a word character and the previous character is not a word character, or vice versa.
 

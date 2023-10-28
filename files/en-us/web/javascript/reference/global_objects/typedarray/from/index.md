@@ -12,7 +12,7 @@ The **`TypedArray.from()`** static method creates a new
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
 
 ## Syntax
 

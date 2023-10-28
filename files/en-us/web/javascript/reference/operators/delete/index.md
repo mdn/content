@@ -65,7 +65,7 @@ It is important to consider the following scenarios:
 - Non-configurable properties cannot be removed. This includes properties of built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}} and properties that are created as non-configurable with methods like {{jsxref("Object.defineProperty()")}}.
 - Deleting variables, including function parameters, never works. `delete variable` will throw a {{jsxref("SyntaxError")}} in strict mode, and will have no effect in non-strict mode.
   - Any variable declared with {{jsxref("Statements/var", "var")}} cannot be deleted from the global scope or from a function's scope, because while they may be attached to the [global object](/en-US/docs/Glossary/Global_object), they are not configurable.
-  - Any variable declared with {{jsxref("Statements/let","let")}} or {{jsxref("Statements/const","const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
+  - Any variable declared with {{jsxref("Statements/let", "let")}} or {{jsxref("Statements/const", "const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
 
 ## Examples
 
@@ -184,7 +184,7 @@ Object.defineProperty(Employee, "name", { configurable: false });
 console.log(delete Employee.name); // returns false
 ```
 
-{{jsxref("Statements/var","var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
+{{jsxref("Statements/var", "var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
 
 ```js
 // Since "nameOther" is added using with the

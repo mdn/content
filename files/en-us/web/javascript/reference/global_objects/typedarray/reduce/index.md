@@ -37,7 +37,7 @@ reduce(callbackFn, initialValue)
 
 ### Return value
 
-The value that results from running the "reducer" callback function to completion over the entire array.
+The value that results from running the "reducer" callback function to completion over the entire typed array.
 
 ### Exceptions
 
@@ -73,3 +73,5 @@ const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
 - {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

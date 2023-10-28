@@ -76,7 +76,7 @@ Some of the things to consider when choosing a host:
 - Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
 - Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
-- Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
+- Additional benefits. Some providers will offer free domain names and support for TLS certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
@@ -119,9 +119,9 @@ During development no environment variable will be specified for the key, so the
 
 ```python
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag"
+# SECRET_KEY = 'django-insecure-&psk#na5l=p3q8_a+-$4w1f^lt3lx1c@d*p4x$ymm_rn7pwb87'
 import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8_a+-$4w1f^lt3lx1c@d*p4x$ymm_rn7pwb87')
 ```
 
 Then comment out the existing `DEBUG` setting and add the new line shown below.
@@ -140,7 +140,7 @@ You can set the environment variable to "False" on Linux by issuing the followin
 export DJANGO_DEBUG=False
 ```
 
-A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
+A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
 ```python
 python3 manage.py check --deploy
@@ -367,16 +367,25 @@ pip3 install dj-database-url
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
 ```python
-# Update database configuration from $DATABASE_URL.
+# Update database configuration from $DATABASE_URL environment variable (if defined)
 import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES['default'] = dj_database_url.config(
+        conn_max_age=500,
+        conn_health_checks=True,
+    )
 ```
 
 Django will now use the database configuration in `DATABASE_URL` if the environment variable is set; otherwise it uses the default SQLite database.
 The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle (this is optional and can be removed if needed).
 
 ##### psycopg2
+
+<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/4.2/releases/4.2/#psycopg-3-support
+  But didn't work on Railway!
+  Try again to update in next release.
+-->
 
 Django needs _psycopg2_ to work with Postgres databases.
 Install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server:
@@ -424,7 +433,7 @@ While it will cause no harm, you might as well delete the duplicate previous ref
 
 ```python
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -474,9 +483,14 @@ Optionally, you can reduce the size of the static files when they are served (th
 Just add the following to the bottom of **/locallibrary/settings.py**:
 
 ```python
-# Simplified static file serving.
-# https://pypi.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Static file serving.
+# https://whitenoise.readthedocs.io/en/stable/django.html#add-compression-and-caching-support
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 ```
 
 You don't need to do anything else to configure _WhiteNoise_ because it uses your project settings for `STATIC_ROOT` and `STATIC_URL` by default.
@@ -493,12 +507,12 @@ After installing all the different dependencies above, your **requirements.txt**
 Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
 ```plain
-dj-database-url==0.5.0
-Django==4.0.2
-gunicorn==20.1.0
-psycopg2-binary==2.9.3
-wheel==0.37.1
-whitenoise==6.0.0
+Django==4.2.3
+dj-database-url==2.0.0
+gunicorn==21.2.3
+psycopg2-binary==2.9.6
+wheel==0.38.1
+whitenoise==6.5.0
 ```
 
 #### Runtime
@@ -579,7 +593,7 @@ This is a Django security error that is raised because our source code is not ru
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
 
-Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
+Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.2/ref/settings/#allowed-hosts) setting to include your Railway site URL:
 
 ```python
 ## For example, for a site URL at 'web-production-3640.up.railway.app'
@@ -591,7 +605,7 @@ ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
 # ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
 ```
 
-Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.0/ref/settings/#csrf-trusted-origins) key.
+Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.2/ref/settings/#csrf-trusted-origins) key.
 Open **/locallibrary/settings.py** and add a line like the one below:
 
 ```python
@@ -738,7 +752,7 @@ The Railway client provides the logs command to show the tail of logs (a more fu
 railway logs
 ```
 
-If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.0/topics/logging/).
+If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.2/topics/logging/).
 
 ## Summary
 
@@ -748,13 +762,13 @@ The next step is to read our last few articles, and then complete the assessment
 
 ## See also
 
-- [Deploying Django](https://docs.djangoproject.com/en/4.0/howto/deployment/) (Django docs)
+- [Deploying Django](https://docs.djangoproject.com/en/4.2/howto/deployment/) (Django docs)
 
-  - [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs)
-  - [Deploying static files](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/) (Django docs)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/) (Django docs)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/modwsgi/) (Django docs)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/gunicorn/) (Django docs)
+  - [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/) (Django docs)
+  - [Deploying static files](https://docs.djangoproject.com/en/4.2/howto/static-files/deployment/) (Django docs)
+  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/) (Django docs)
+  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/modwsgi/) (Django docs)
+  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Railway Docs
 

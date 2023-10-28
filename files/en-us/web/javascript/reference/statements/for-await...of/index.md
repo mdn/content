@@ -245,5 +245,5 @@ To make `finally` blocks of a sync generator always called, use the appropriate 
 
 ## See also
 
-- {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
+- {{jsxref("Symbol.asyncIterator")}}
 - {{jsxref("Statements/for...of", "for...of")}}

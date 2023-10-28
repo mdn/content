@@ -7,7 +7,7 @@ browser-compat: javascript.statements.generator_function
 
 {{jsSidebar("Statements")}}
 
-The **`function*`** declaration creates a {{glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{glossary("binding", "bindings")}}) saved across re-entrances.
+The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 

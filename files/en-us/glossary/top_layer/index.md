@@ -6,7 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The **top layer** is a specific layer in the [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), which spans the entire width and height of the viewport and sits on top of all other layers displayed in a web document. It is created by the browser to contain elements that should appear on top of all other content on the page.
+The **top layer** is a specific layer that spans the entire width and height of the viewport and sits on top of all other layers displayed in a web document. It is created by the browser to contain elements that should appear on top of all other content on the page.
+
+Elements placed in the top layer generate a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), as do their corresponding {{cssxref("::backdrop")}} pseudo-elements.
 
 Elements that will appear in the top layer include:
 
@@ -14,12 +16,16 @@ Elements that will appear in the top layer include:
 - {{htmlelement("dialog")}} elements displayed as a modal via a successful {{domxref("HTMLDialogElement.showModal()")}} call.
 - Popover elements shown via a successful {{domxref("HTMLElement.showPopover()")}} call.
 
-The following screenshot demonstrates how a shown popover element is placed in the top layer in Chrome:
+Some browsers, such as Chrome, show elements placed in the top layer inside a special DOM tree entry. For example:
 
 ![An element in the top layer, as shown in the chrome devtools](top_layer_devtools.png)
+
+Note that the top layer is an internal browser concept and cannot be directly manipulated from code. You can target elements placed in the top layer using CSS and JavaScript, but you cannot target the top layer itself.
 
 ## See also
 
 - [The stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
-- [The Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
-- [The Popover API](/en-US/docs/Web/API/Popover_API)
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- {{htmlelement("dialog")}} element, {{domxref("HTMLDialogElement")}} interface
+- [Popover API](/en-US/docs/Web/API/Popover_API)
+- {{CSSXref(":fullscreen")}} pseudo-class

@@ -43,7 +43,7 @@ There are five different types of operations that return `NaN`:
 
 ### Testing against NaN
 
-To tell if a value is `NaN`, use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is `NaN` — or, since `NaN` is the only value that compares unequal to itself, you can perform a self-comparison like `x !== x`.
+To tell if a value is `NaN`, use {{jsxref("Number.isNaN()")}} or {{jsxref("isNaN()")}} to most clearly determine whether a value is `NaN` — or, since `NaN` is the only value that compares unequal to itself, you can perform a self-comparison like `x !== x`.
 
 ```js
 NaN === NaN; // false
@@ -125,4 +125,4 @@ NaN ** 0 === 1; // true
 
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

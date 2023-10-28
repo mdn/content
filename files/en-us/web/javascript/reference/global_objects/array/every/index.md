@@ -11,7 +11,7 @@ The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
-{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-every.html", "shorter")}}
 
 ## Syntax
 
@@ -35,7 +35,7 @@ every(callbackFn, thisArg)
 
 ### Return value
 
-`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for an array element, in which case `false` is immediately returned.
 
 ## Description
 

@@ -5,7 +5,7 @@ page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 > **Note:** Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
 

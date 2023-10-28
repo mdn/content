@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 page-type: javascript-error
 ---
 
-{{JSSidebar("Errors")}}
+{{jsSidebar("Errors")}}
 
 The JavaScript exception "identifier starts immediately after numeric literal" occurs
 when an identifier started with a digit. Identifiers can only start with a letter,

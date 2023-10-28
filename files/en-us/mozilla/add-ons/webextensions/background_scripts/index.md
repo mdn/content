@@ -88,7 +88,9 @@ You cannot specify background scripts and a background page.
 
 ### Initialize the extension
 
-Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization. For extensions with event pages, this is where stateful APIs, such as a context menu created using {{WebExtAPIRef("menus.create")}}, should be used.
+Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization.
+
+For extensions with event pages, this is where stateful APIs, such as a context menu created using {{WebExtAPIRef("menus.create")}}, should be used. This is because stateful APIs don't need to be run each time the event page reloads; they only need to run when the extension is installed.
 
 ```js
 browser.runtime.onInstalled.addListener(() => {

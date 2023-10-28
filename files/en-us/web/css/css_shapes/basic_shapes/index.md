@@ -15,7 +15,7 @@ Before looking at shapes, it is worth understanding two pieces of information th
 
 ## The \<basic-shape> type
 
-The `<basic-shape>` type is used as the value for all of our basic shapes. This type uses Functional Notation: the type of shape is followed by brackets, inside of which are additional values used to describe the shape.
+The `<basic-shape>` type is used as the value for all of our basic shapes. This type uses Functional Notation: the type of shape is followed by parenthese, inside of which are additional values used to describe the shape.
 
 The arguments which are accepted vary depending on the shape that you are creating. We will cover these in the examples below.
 

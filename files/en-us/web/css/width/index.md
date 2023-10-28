@@ -29,6 +29,7 @@ width: 75%;
 /* Keyword values */
 width: max-content;
 width: min-content;
+width: fit-content;
 width: fit-content(20em);
 width: auto;
 
@@ -45,14 +46,16 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the width as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the width as a percentage of the containing block's width.
+  - : Defines the width as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s width.
 - `auto`
   - : The browser will calculate and select a width for the specified element.
 - `max-content`
   - : The intrinsic preferred width.
 - `min-content`
   - : The intrinsic minimum width.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
 ## Accessibility concerns

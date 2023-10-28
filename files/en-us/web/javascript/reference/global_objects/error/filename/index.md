@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Error.fileName
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The **`fileName`** data property of an {{jsxref("Error")}} instance contains the path to the file that raised this error.
 

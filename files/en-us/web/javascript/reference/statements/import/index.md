@@ -7,7 +7,7 @@ browser-compat: javascript.statements.import
 
 {{jsSidebar("Statements")}}
 
-The static **`import`** declaration is used to import read-only live {{glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
+The static **`import`** declaration is used to import read-only live {{Glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
 In order to use the `import` declaration in a source file, the file must be interpreted by the runtime as a [module](/en-US/docs/Web/JavaScript/Guide/Modules). In HTML, this is done by adding `type="module"` to the {{HTMLElement("script")}} tag. Modules are automatically interpreted in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
@@ -234,7 +234,7 @@ setTimeout(() => {
 
 ## See also
 
-- {{JSxRef("Statements/export", "export")}}
+- {{jsxref("Statements/export", "export")}}
 - [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/) on blogs.windows.com (2016)

@@ -181,7 +181,7 @@ You can see how this works by trying it out below. Find some files and directori
 
 ## Specifications
 
-This API has no official W3C or WHATWG specification.
+{{Specifications}}
 
 ## Browser compatibility
 

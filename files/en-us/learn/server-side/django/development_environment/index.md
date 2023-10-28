@@ -60,7 +60,7 @@ In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 #### What version of Python should be used?
 
 You can use any Python version supported by your target Django release.
-For Django 4.0.10 the allowed versions are Python 3.8 to 3.10 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django)).
+For Django 4.2 the allowed versions are Python 3.8 to 3.11 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django)).
 
 The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
 
@@ -76,7 +76,7 @@ This article shows how to install Django from PyPi, in order to get the latest s
 
 #### Which database?
 
-Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/4.0/ref/databases/) that are better to avoid).
+Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/4.2/ref/databases/) that are better to avoid).
 
 For this article (and most of this module) we will be using the _SQLite_ database, which stores its data in a file. SQLite is intended for use as a lightweight database and can't support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.
 
@@ -120,7 +120,7 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
-> **Note:** Python 3.8 is the oldest version [supported by Django 4.0](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django).
+> **Note:** Python 3.8 is the oldest version [supported by Django 4.2](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django).
 > While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
 > If you want to update Python, then there are instructions on the internet.
 
@@ -140,8 +140,8 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/macos/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
-      (at time of writing this is Python 3.10.2).
+   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
+      (at time of writing this is Python 3.11.4).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -160,8 +160,8 @@ Windows doesn't include Python by default, but you can easily install it (along 
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/windows/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
-      (at time of writing this is Python 3.10.2).
+   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
+      (at time of writing this is Python 3.11.4).
 
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
@@ -235,7 +235,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` variables point to the normal installation location for Python3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
+> **Note:** The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` variables point to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
 >
 > You can find the correct locations for your system using the commands `which virtualenvwrapper.sh` and `which python3`.
 
@@ -278,7 +278,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** The `VIRTUALENVWRAPPER_PYTHON` variable points to the normal installation location for Python3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
+> **Note:** The `VIRTUALENVWRAPPER_PYTHON` variable points to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
 >
 > For example, one installation test on macOS ended up with the following lines being necessary in the startup file:
 >
@@ -325,7 +325,7 @@ Now you can create a new virtual environment with the `mkvirtualenv` command
 
 Once you've installed _virtualenvwrapper_ or _virtualenvwrapper-win_ then working with virtual environments is very similar on all platforms.
 
-Now you can create a new virtual environment with the `mkvirtualenv` command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in brackets (below we show this for Ubuntu, but the final line is similar for Windows/macOS).
+Now you can create a new virtual environment with the `mkvirtualenv` command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in parentheses (below we show this for Ubuntu, but the final line is similar for Windows/macOS).
 
 ```bash
 mkvirtualenv my_django_environment
@@ -359,10 +359,10 @@ Once you've created a virtual environment, and called `workon` to enter it, you 
 
 ```bash
 # Linux/macOS
-python3 -m pip install django~=4.0
+python3 -m pip install django~=4.2
 
 # Windows
-py -3 -m pip install django~=4.0
+py -3 -m pip install django~=4.2
 ```
 
 You can test that Django is installed by running the following command (this just tests that Python can find the Django module):
@@ -391,8 +391,7 @@ py -3 -m django --version
 
 Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
 
-Note that you should use a [Django aware linter](https://djangopackages.org/grids/g/linters/) like [pylint-django](https://pypi.org/project/pylint-django/).
-Commonly used Python linters, such as `pylint`, may incorrectly report errors in the standard files generated for Django.
+Note that you should use a Django-aware linter such as [pylint-django](https://pypi.org/project/pylint-django/), because some common Python linters (such as `pylint`) incorrectly report errors in the standard files generated for Django.
 
 ## Testing your installation
 
@@ -420,7 +419,7 @@ python3 manage.py runserver
 py -3 manage.py runserver
 ```
 
-> **Note:** You can ignore the warnings about "18 unapplied migration(s)" at this point!
+> **Note:** You can ignore the warnings about "unapplied migration(s)" at this point!
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 
@@ -434,8 +433,8 @@ In the testing section you also briefly saw how we can create a new Django websi
 
 ## See also
 
-- [Quick Install Guide](https://docs.djangoproject.com/en/4.0/intro/install/) (Django docs)
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.0/topics/install/) (Django docs) — also covers how to remove Django
-- [How to install Django on Windows](https://docs.djangoproject.com/en/4.0/howto/windows/) (Django docs)
+- [Quick Install Guide](https://docs.djangoproject.com/en/4.2/intro/install/) (Django docs)
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.2/topics/install/) (Django docs) — also covers how to remove Django
+- [How to install Django on Windows](https://docs.djangoproject.com/en/4.2/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}

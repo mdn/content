@@ -41,9 +41,9 @@ The zip file contains:
 - CSS to style your markup.
 - Images that are used on the page.
 
-Create the example on your local computer, or alternatively use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+Create the example on your local computer, or alternatively use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 
-> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+> **Note:** If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Project brief
 
@@ -78,17 +78,5 @@ You should also:
 The following screenshot shows an example of what the homepage might look like after being marked up.
 
 ![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
-
-## Assessment or further help
-
-If you would like your work assessed or are stuck and want to ask for help:
-
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for Structuring a page of content".
-   - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

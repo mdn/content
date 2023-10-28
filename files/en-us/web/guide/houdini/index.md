@@ -82,7 +82,7 @@ inheritance behavior, and an initial value.
 
 - [CSS Properties and Values API reference](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Properties and Values API guide](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
-- [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)
+- [Smarter custom properties with Houdini's new API](https://web.dev/articles/css-props-and-vals)
 
 ### CSS Typed OM
 

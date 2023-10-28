@@ -57,7 +57,7 @@ Tracking data can be used to profile a user and their interests and preferences,
 - **Selling or sharing data**: Some third parties have been known to compile tracking data and then sell it to/share it with others to use for various purposes, like targeted ads. This is obviously highly unethical and may also be illegal, depending on where in the world it happens.
 - **Prejudice via data**: In the worst cases, sharing data could result in the user being unfairly disadvantaged. For example, imagine an insurance company finding out data points about a potential customer that they didn't consent to share, and using them as a justification for increasing insurance premiums.
 
-> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties/#what-can-third-party-resources-do) for a useful related scenario description and additional information.
+> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties#what_can_third-party_resources_do) for a useful related scenario description and additional information.
 
 ### Fingerprinting
 
@@ -96,7 +96,7 @@ So-called "powerful" web API features that provide access to potentially sensiti
 
 Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third-party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
 
-For example, one change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value to `Lax` (see [Changes to the default behavior without SameSite](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite)).
+For example, one change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value to `Lax` (see [Changes to the default behavior without SameSite](https://web.dev/articles/samesite-cookies-explained#changes_to_the_default_behavior_without_samesite)).
 
 This attribute controls whether cookies are sent with cross-site requests and can provide some protection against tracking and {{glossary("CSRF")}} attacks. However, the default was `None`, and not many developers adopted it, meaning cross-site cookies were being sent **everywhere**. Changing the default value to `Lax` means that cookies are not sent on cross-site requests, such as on requests to load images or frames, but are sent when a user is navigating to the origin site from an external site, for example, when following a link.
 

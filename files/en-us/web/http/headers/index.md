@@ -234,6 +234,11 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Via")}}
   - : Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.
 
+## Privacy
+
+- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}}{{experimental_inline}}
+  - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+
 ## Redirects
 
 - {{HTTPHeader("Location")}}
@@ -400,6 +405,8 @@ A server might use them to modify its caching behavior, or the information that 
   - : Used to remove the [path restriction](https://w3c.github.io/ServiceWorker/#path-restriction) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
+- [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode)
+  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 - {{HTTPHeader("Upgrade")}}
   - : The relevant RFC document for the [Upgrade header field is RFC 9110, section 7.8](https://httpwg.org/specs/rfc9110.html#field.upgrade). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to [WebSocket](/en-US/docs/Glossary/WebSockets), assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 7.6.1 of the aforementioned RFC](https://httpwg.org/specs/rfc9110.html#field.connection).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}

@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.functions.method_definitions
 ---
 
-{{JsSidebar("Functions")}}
+{{jsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
@@ -82,7 +82,7 @@ const obj = {
   __proto__: {
     prop: "foo",
   },
-  method: function () {
+  notAMethod: function () {
     console.log(super.prop); // SyntaxError: 'super' keyword unexpected here
   },
 };
@@ -110,6 +110,9 @@ You can use the exact same syntax to define public instance methods that are ava
 class ClassWithPublicInstanceMethod {
   publicMethod() {
     return "hello world";
+  }
+  secondPublicMethod() {
+    return "goodbye world";
   }
 }
 

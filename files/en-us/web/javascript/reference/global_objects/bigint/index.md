@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.BigInt
 
 ## Description
 
-A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} function (without the `new` operator) and giving it an integer value or string value.
+A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("BigInt/BigInt", "BigInt()")}} function (without the `new` operator) and giving it an integer value or string value.
 
 ```js
 const previouslyMaxSafeInteger = 9007199254740991n;
@@ -53,50 +53,39 @@ typeof Object(1n) === "object"; // true
 
 ### Operators
 
-The following operators may be used with BigInt values or object-wrapped BigInt values:
+Most operators support BigInts, however most do not permit operands to be of mixed types — both operands must be BigInt or neither:
 
-```plain
-+ * - % **
-```
+- [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators): `+`, `-`, `*`, `/`, `%`, `**`
+- [Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators): `>>`, `<<`, `&`, `|`, `^`, `~`
+- [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Increment/decrement](/en-US/docs/Web/JavaScript/Reference/Operators#increment_and_decrement): `++`, `--`
 
-[Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are supported as well, except `>>>` (zero-fill right shift), as every BigInt value is signed.
+The boolean-returning operators allow mixing numbers and BigInts as operands:
 
-Also unsupported is the unary operator (`+`), [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+- [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) and [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators): `>`, `<`, `>=`, `<=`, `==`, `!=`, `===`, `!==`
+- [Logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators) only rely on the [truthiness](/en-US/docs/Glossary/Truthy) of operands
 
-```js
-const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
-// 9007199254740991n
+A couple of operators do not support BigInt at all:
 
-const maxPlusOne = previousMaxSafe + 1n;
-// 9007199254740992n
+- [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) cannot be supported due to conflicting usage in asm.js, so it has been left out [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+- [Unsigned right shift (`>>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) is the only bitwise operator that's unsupported, as every BigInt value is signed.
 
-const theFuture = previousMaxSafe + 2n;
-// 9007199254740993n, this works now!
+Special cases:
 
-const multi = previousMaxSafe * 2n;
-// 18014398509481982n
-
-const subtr = multi - 10n;
-// 18014398509481972n
-
-const mod = multi % 10n;
-// 2n
-
-const bigN = 2n ** 54n;
-// 18014398509481984n
-
-bigN * -1n;
-// -18014398509481984n
-```
-
-The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won't return any fractional digits.
+- Addition (`+`) involving a string and a BigInt returns a string.
+- Division (`/`) truncates fractional components towards zero, since BigInt is unable to represent fractional quantities.
 
 ```js
-const expected = 4n / 2n;
-// 2n
-
-const truncated = 5n / 2n;
-// 2n, not 2.5n
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER); // 9007199254740991n
+const maxPlusOne = previousMaxSafe + 1n; // 9007199254740992n
+const theFuture = previousMaxSafe + 2n; // 9007199254740993n, this works now!
+const multi = previousMaxSafe * 2n; // 18014398509481982n
+const subtr = multi - 10n; // 18014398509481972n
+const mod = multi % 10n; // 2n
+const bigN = 2n ** 54n; // 18014398509481984n
+bigN * -1n; // -18014398509481984n
+const expected = 4n / 2n; // 2n
+const truncated = 5n / 2n; // 2n, not 2.5n
 ```
 
 ### Comparisons

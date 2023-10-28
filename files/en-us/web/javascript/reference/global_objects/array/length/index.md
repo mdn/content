@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.length
 
 The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
-{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-length.html", "shorter")}}
 
 ## Value
 
