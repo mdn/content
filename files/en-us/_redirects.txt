@@ -8175,6 +8175,7 @@
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
+/en-US/docs/Web/API/File/type	/en-US/docs/Web/API/Blob/type
 /en-US/docs/Web/API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Web/API/FileException	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/FileHandle	/en-US/docs/Web/API/IndexedDB_API
