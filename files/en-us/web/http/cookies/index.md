@@ -98,7 +98,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
 
 #### Domain attribute
 
-The `Domain` attribute specifies which server can receive a cookie. 
+The `Domain` attribute specifies which server can receive a cookie.
 
 If specified, then cookies are available on the server and its subdomains. For example, if you set `Domain=mozilla.org`, cookies are available on mozilla.org and its subdomains like `developer.mozilla.org`.
 
