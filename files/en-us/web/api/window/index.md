@@ -159,8 +159,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : Register an event handler to a specific event type on the window.
 - {{domxref("atob", "Window.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
@@ -185,8 +183,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
-  - : Used to trigger an event.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
 - {{domxref("fetch", "Window.fetch()")}}
@@ -217,8 +213,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
-- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
-  - : Removes an event listener from the window.
 - {{domxref("reportError", "Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
