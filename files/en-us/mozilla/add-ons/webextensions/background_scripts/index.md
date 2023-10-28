@@ -13,9 +13,13 @@ Background scripts or a page are:
 - Persistent – loaded when the extension starts and unloaded when the extension is disabled or uninstalled.
 - Non-persistent (which are also known as event pages) – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing.
 
-> **Note:** In Firefox, if the extension process crashes, persistent background scripts running at the time of the crash are reloaded automatically. Open event pages aren't automatically restored. Event pages issue a warning to inform the user they have crashed and allow the user to close or restore the tab containing the page.
-> ![Browser window displaying the user message indicating that a page has crashed with the options to close or restart the tab](your-tab-crashed-screenshot.png)
-> You can test this condition by opening a new tab and navigating to `about:crashextensions`, which silently triggers a crash of the extension process.
+> **Note:** In Firefox, if the extension process crashes:
+>
+> - persistent background scripts running at the time of the crash are reloaded automatically.
+> - non-persistent background scripts (also known as "Event Pages") running at the time of the crash are not reloaded. However, they are restarted automatically when Firefox calls one of their WebExtensions API events listeners.
+> - extension pages loaded in tabs at the time of the crash are not automatically restored. A warning message in each tab informs the user the page has crashed and enables the user to close or restore the tab.
+>   ![Browser window displaying the user message indicating that a page has crashed with the options to close or restart the tab](your-tab-crashed-screenshot.png)
+>   You can test this condition by opening a new tab and navigating to `about:crashextensions`, which silently triggers a crash of the extension process.
 
 In Manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In Manifest V3, only non-persistent background scripts or a page are supported.
 
