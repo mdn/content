@@ -19,7 +19,7 @@ You access the `VirtualKeyboard` interface by using {{domxref("navigator.virtual
 
 ## Instance properties
 
-_The `VirtualKeyboard` interface doesn't inherit any properties._
+_The `VirtualKeyboard` interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
 - {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMRect")}} that describes the geometry of the virtual keyboard.
@@ -33,7 +33,7 @@ _The `VirtualKeyboard` interface doesn't inherit any properties._
 
 ## Instance methods
 
-_The `VirtualKeyboard` interface doesn't inherit any methods_.
+_The `VirtualKeyboard` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref('VirtualKeyboard.show()')}} {{experimental_inline}}
   - : Show the virtual keyboard.
