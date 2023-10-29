@@ -219,10 +219,10 @@ function changeTabs(e) {
     .removeAttribute("hidden");
 }
 
-if (document.readyState !== 'loading') {
+if (document.readyState !== "loading") {
   init();
 } else {
-  window.addEventListener('DOMContentLoaded', init);
+  window.addEventListener("DOMContentLoaded", init);
 }
 ```
 
