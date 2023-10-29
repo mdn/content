@@ -119,3 +119,6 @@ li::after {
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
 - CSS [`counters()`](/en-US/docs/Web/CSS/counters) function
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
