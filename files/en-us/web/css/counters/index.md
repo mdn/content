@@ -165,3 +165,6 @@ li::before {
 - {{cssxref("@counter-style")}}
 - CSS [`counter()`](/en-US/docs/Web/CSS/counter) function
 - {{cssxref("::marker")}}
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
