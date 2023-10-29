@@ -1,4 +1,4 @@
----
+ ---
 title: Getting started with MDN Web Docs
 slug: MDN/Community/Contributing/Getting_started
 page-type: mdn-community-guide
