@@ -128,5 +128,5 @@ i {
 - Counter at-rule: {{cssxref("@counter-style")}}
 - Counter functions: {{cssxref("counter", "counter()")}}, {{cssxref("counters", "counters()")}}
 - [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
-- [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
