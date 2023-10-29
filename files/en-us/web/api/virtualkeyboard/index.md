@@ -26,11 +26,6 @@ _The `VirtualKeyboard` interface inherits properties from its parent, {{domxref(
 - {{DOMxRef("VirtualKeyboard.overlaysContent")}} {{Experimental_Inline}}
   - : A {{jsxref('Boolean')}} that defines whether the browser should stop handling the on-screen virtual keyboard.
 
-### Events
-
-- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
-  - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
-
 ## Instance methods
 
 _The `VirtualKeyboard` interface inherits methods from its parent, {{domxref("EventTarget")}}._
@@ -39,6 +34,11 @@ _The `VirtualKeyboard` interface inherits methods from its parent, {{domxref("Ev
   - : Show the virtual keyboard.
 - {{domxref('VirtualKeyboard.hide()')}} {{experimental_inline}}
   - : Hide the virtual keyboard.
+
+## Events
+
+- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
+  - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
 
 ## Example
 
