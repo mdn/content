@@ -169,7 +169,7 @@ function clock() {
   ctx.restore();
 
   const sec = now.getSeconds();
-  // For a sweeping second hand, use:
+  // To display a clock with a sweeping second hand, use:
   // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
   const min = now.getMinutes();
   const hr = now.getHours() % 12;
@@ -238,7 +238,8 @@ window.requestAnimationFrame(clock);
 
 ### Result
 
-> **Note:** Though the image appears to change only once every second, it is updated at 60 frames per second or at the display refresh rate of your web browser. For a sweeping second hand, use the alternative version of `const sec`.
+> **Note:** Although the clock updates only once every second, the animated image is updated at 60 frames per second (or at the display refresh rate of your web browser).
+> To display the clock with a sweeping second hand, replace the definition of `const sec` above with the version that has been commented out.
 
 {{EmbedLiveSample("An_animated_clock", "180", "200")}}
 
