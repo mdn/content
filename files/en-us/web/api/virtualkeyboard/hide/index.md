@@ -12,7 +12,7 @@ browser-compat: api.VirtualKeyboard.hide
 
 The **`hide()`** method of the {{domxref("VirtualKeyboard")}} interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}.
 
-This method only works if the currently-focused element is a form control — such as an {{htmlelement("input")}} or {{htmlelement("textarea")}} element — or if the focused element is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable).
+This method only works if the currently-focused element's `virtualKeyboardPolicy` attribute is set to `mannul` and `inputmode` isn't set to `none`.
 
 The `hide()` method always returns `undefined` and triggers a {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} event.
 
