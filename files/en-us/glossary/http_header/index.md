@@ -1,4 +1,4 @@
----
+Damarcus Jones---
 title: HTTP header
 slug: Glossary/HTTP_header
 page-type: glossary-definition
