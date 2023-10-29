@@ -6,13 +6,13 @@ browser-compat: javascript.builtins.WebAssembly.Table.Table
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.Table()`** constructor creates a new
-`Table` object of the given size and element type.
+The **`WebAssembly.Table()`** constructor creates a new `Table` object of the given size and element type, filled with the provided value.
 
 ## Syntax
 
 ```js-nolint
 new WebAssembly.Table(tableDescriptor)
+new WebAssembly.Table(tableDescriptor, value)
 ```
 
 ### Parameters
@@ -28,25 +28,27 @@ new WebAssembly.Table(tableDescriptor)
     - `maximum` {{optional_inline}}
       - : The maximum number of elements the WebAssembly Table is allowed to grow to.
 
+- `value` {{optional_inline}}
+
+  - : The element to fill the newly-allocated space with.
+
 ### Exceptions
 
-- If `tableDescriptor` is not of type object, a {{jsxref("TypeError")}} is
-  thrown.
-- If `maximum` is specified and is smaller than `initial`, a
-  {{jsxref("RangeError")}} is thrown.
-  - If `tableDescriptor.element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
+- If `tableDescriptor` is not an object, a {{jsxref("TypeError")}} is thrown.
+- If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
+- If `element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
+- If `value` is not a value of the type `element`, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
 ### Creating a new WebAssembly Table instance
 
-The following example creates a `WebAssembly.Table` instance with an initial size of 2
-elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible from JavaScript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console log messages from the code snippets below.
+The following example creates a `WebAssembly.Table` instance with an initial size of 2 elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible from JavaScript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console log messages from the code snippets below.
 
 This example uses the following reference files:
 
-1. `table2.html`: An HTML file containing JavaScript that creates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html))
-2. `table2.wasm`: A WebAssembly module imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
+1. `table2.html`: An HTML file containing JavaScript that creates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html))
+2. `table2.wasm`: A WebAssembly module imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))
 
 In `table2.html`, we create a `WebAssembly.Table`:
 
@@ -110,6 +112,25 @@ instantiating.then((obj) => {
 ```
 
 While we are creating and accessing the `WebAssembly.Table` from JavaScript, the same `Table` is also visible and callable inside the WebAssembly instance.
+
+### Creating a new WebAssembly Table instance with a value
+
+The following example creates a new WebAssembly Table instance with 4 elements, full of the same object:
+
+```js
+const myObject = { hello: "world" };
+
+const table = new WebAssembly.Table(
+  {
+    element: "externref",
+    initial: 4,
+    maximum: 4,
+  },
+  myObject,
+);
+
+console.log(myObject === table.get(2)); // true
+```
 
 ## Specifications
 

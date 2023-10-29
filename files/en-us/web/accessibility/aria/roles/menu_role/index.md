@@ -168,7 +168,7 @@ When the menu is open, the button itself generally does not received focus as us
 
 The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` element as a menu.
 
-The showing and hiding of the menu can be done with CSS. For example, in these code examples we can use the attribute and adjacent sibling selectors to toggle the visibility of the menu:
+The showing and hiding of the menu can be done with CSS. For example, in these code examples we can use the attribute and next-sibling selectors to toggle the visibility of the menu:
 
 ```css
 [role="menu"] {

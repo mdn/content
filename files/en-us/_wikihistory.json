@@ -2822,19 +2822,6 @@
       "sandeepmishraxp"
     ]
   },
-  "Glossary/I18N": {
-    "modified": "2019-03-23T23:11:33.019Z",
-    "contributors": [
-      "lpiot",
-      "Andrew_Pfeiffer",
-      "kscarfone",
-      "S4y4Nt4n",
-      "Sukanta.Pal",
-      "Biraj",
-      "Sheppy",
-      "klez"
-    ]
-  },
   "Glossary/IANA": {
     "modified": "2019-03-23T22:57:40.767Z",
     "contributors": ["lpiot", "klez", "Andrew_Pfeiffer"]
@@ -3075,16 +3062,6 @@
       "Andrew_Pfeiffer",
       "kscarfone",
       "gusleindecker"
-    ]
-  },
-  "Glossary/Internationalization_and_localization": {
-    "modified": "2020-03-27T15:13:27.575Z",
-    "contributors": [
-      "RafeyIqbalRahman",
-      "paulderek97",
-      "Iqbalh11",
-      "Charles2020",
-      "estelle"
     ]
   },
   "Glossary/Internet": {
@@ -24687,10 +24664,6 @@
       "trevorh"
     ]
   },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-23T23:28:23.382Z",
-    "contributors": ["brttd", "beaugunderson", "jpmedley", "fscholz", "Sheppy"]
-  },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2020-08-05T11:19:13.950Z",
     "contributors": [
@@ -35292,21 +35265,6 @@
       "ethertank",
       "Sheppy",
       "Crash"
-    ]
-  },
-  "Web/API/File/type": {
-    "modified": "2020-10-15T21:52:05.883Z",
-    "contributors": [
-      "PanayiotisPaschalides",
-      "mfuji09",
-      "sideshowbarker",
-      "EricLaw1979",
-      "adilsoncabral0",
-      "fscholz",
-      "Jedipedia",
-      "stevenwdv",
-      "david_ross",
-      "vinayk7"
     ]
   },
   "Web/API/File/webkitRelativePath": {
@@ -76814,36 +76772,6 @@
       "webinista"
     ]
   },
-  "Web/CSS/Adjacent_sibling_combinator": {
-    "modified": "2020-10-15T21:03:44.777Z",
-    "contributors": [
-      "wbamberg",
-      "cariad",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "KadirTopal",
-      "erikadoyle",
-      "jsx",
-      "Jezer",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "jlanus",
-      "zacharytamas",
-      "motoxer4533",
-      "khs",
-      "FredB",
-      "Sheppy",
-      "dhar",
-      "tregagnon",
-      "tw2113",
-      "BYK",
-      "miken32",
-      "Wjjohnst"
-    ]
-  },
   "Web/CSS/Alternative_style_sheets": {
     "modified": "2020-10-15T21:15:55.661Z",
     "contributors": [
@@ -78955,31 +78883,6 @@
       "Wjjohnst"
     ]
   },
-  "Web/CSS/General_sibling_combinator": {
-    "modified": "2020-10-15T21:04:16.746Z",
-    "contributors": [
-      "nko6",
-      "wbamberg",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "mfluehr",
-      "Sheppy",
-      "erikadoyle",
-      "mikelew42",
-      "cvrebert",
-      "MusikAnimal",
-      "Sebastianz",
-      "DanSorahan",
-      "SphinxKnight",
-      "FredB",
-      "teoli",
-      "ethertank",
-      "tiffon",
-      "dhar",
-      "miken32"
-    ]
-  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-12-14T11:20:33.993Z",
     "contributors": [
@@ -79174,6 +79077,36 @@
       "Phreed",
       "Jchernandez",
       "GT"
+    ]
+  },
+  "Web/CSS/Next-sibling_combinator": {
+    "modified": "2020-10-15T21:03:44.777Z",
+    "contributors": [
+      "wbamberg",
+      "cariad",
+      "mfuji09",
+      "ExE-Boss",
+      "fscholz",
+      "mfluehr",
+      "KadirTopal",
+      "erikadoyle",
+      "jsx",
+      "Jezer",
+      "cvrebert",
+      "Sebastianz",
+      "teoli",
+      "jlanus",
+      "zacharytamas",
+      "motoxer4533",
+      "khs",
+      "FredB",
+      "Sheppy",
+      "dhar",
+      "tregagnon",
+      "tw2113",
+      "BYK",
+      "miken32",
+      "Wjjohnst"
     ]
   },
   "Web/CSS/Privacy_and_the_:visited_selector": {
@@ -79473,6 +79406,31 @@
       "MattBrubeck",
       "fryn",
       "jwalker"
+    ]
+  },
+  "Web/CSS/Subsequent-sibling_combinator": {
+    "modified": "2020-10-15T21:04:16.746Z",
+    "contributors": [
+      "nko6",
+      "wbamberg",
+      "mfuji09",
+      "ExE-Boss",
+      "fscholz",
+      "mfluehr",
+      "Sheppy",
+      "erikadoyle",
+      "mikelew42",
+      "cvrebert",
+      "MusikAnimal",
+      "Sebastianz",
+      "DanSorahan",
+      "SphinxKnight",
+      "FredB",
+      "teoli",
+      "ethertank",
+      "tiffon",
+      "dhar",
+      "miken32"
     ]
   },
   "Web/CSS/Syntax": {

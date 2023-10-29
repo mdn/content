@@ -104,7 +104,7 @@ The width and height that are used when it is size constrained are set at the sa
 
 ## See also
 
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)
 - {{CSSxRef("contain-intrinsic-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
 - {{CSSxRef("contain-intrinsic-block-size")}}

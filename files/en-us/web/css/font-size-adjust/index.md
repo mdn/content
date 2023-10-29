@@ -63,7 +63,7 @@ The `font-size-adjust` property takes as its value the keyword `none`, one (`<nu
     The `<number>` value accepts any number from `0` to infinity. `0` yields text of zero height (that is, the text is hidden). Negative values are invalid.
 
 - `from-font`
-  - : Uses the `<number>` value for the specified `<font-metric>` from the first available font that is able to provide the desired metric. This keyword is helpful in cases when the desired font metric is not registered in a font or the necessary glyphs are missing.
+  - : Uses the `<number>` value for the specified `<font-metric>` from the first available font.
 
 ## Description
 

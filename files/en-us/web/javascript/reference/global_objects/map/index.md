@@ -7,10 +7,8 @@ browser-compat: javascript.builtins.Map
 
 {{JSRef}}
 
-The **`Map`** object holds key-value pairs and remembers the original insertion
-order of the keys. Any value (both objects and
-{{Glossary("Primitive", "primitive values")}}) may be used as
-either a key or a value.
+The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
+Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
@@ -307,7 +305,7 @@ The following are examples of read-only `Map`-like browser objects:
 
 ## Static methods
 
-- {{jsxref("Map.groupBy()")}} {{experimental_inline}}
+- {{jsxref("Map.groupBy()")}}
   - : Groups the elements of a given iterable using the values returned by a provided callback function. The final returned `Map` uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
 ## Instance properties

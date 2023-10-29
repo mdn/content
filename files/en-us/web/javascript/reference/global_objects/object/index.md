@@ -205,7 +205,7 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
   - : Returns an array of all symbol properties found directly upon a given object.
 - {{jsxref("Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
-- {{jsxref("Object.groupBy()")}} {{experimental_inline}}
+- {{jsxref("Object.groupBy()")}}
   - : Groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group, containing arrays with the elements in the group.
 - {{jsxref("Object.hasOwn()")}}
   - : Returns `true` if the specified object has the indicated property as its _own_ property, or `false` if the property is inherited or does not exist.

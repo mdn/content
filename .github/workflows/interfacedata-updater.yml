@@ -19,7 +19,7 @@ jobs:
           ref: main
 
       - name: Setup node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: "mdn-content/.nvmrc"
 

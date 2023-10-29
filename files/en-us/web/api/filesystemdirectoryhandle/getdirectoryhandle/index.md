@@ -43,6 +43,9 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHand
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+- {{jsxref("TypeError")}}
+  - : Thrown if the name specified is not a valid string or contains characters that would
+    interfere with the native file system.
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the returned entry is a file and not a directory.
 - `NotFoundError` {{domxref("DOMException")}}
@@ -72,4 +75,4 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
