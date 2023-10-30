@@ -7,9 +7,9 @@ browser-compat: css.properties.list-style-type.symbols
 
 {{CSSRef}}
 
-The **`symbols()`** CSS function enables defining counter styles inline, directly as the value of a property such as {{cssxref("list-style")}} providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
+The **`symbols()`** CSS function enables defining counter styles inline, directly as a value of properties such as {{cssxref("list-style")}}, providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
 
-Unlike {{cssxref("@counter-style")}}, which defines a re-usable counter style, `symbols()` is _anonymous_ (i.e., it can only be used once). The `symbols()` function supports strings and images as values. The {{cssxref("@counter-style")}}'s [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor also supports identifiers.
+Unlike {{cssxref("@counter-style")}}, which defines a reusable counter style, `symbols()` is _anonymous_ (i.e., it can only be used once). This function accepts strings and images as values. In comparison, the {{cssxref("@counter-style")}}'s [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor also accepts identifiers.
 
 ## Syntax
 
@@ -61,9 +61,7 @@ ol {
 
 ## See also
 
-- {{cssxref("@counter-style")}} at rule and
-- [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor
-- {{cssxref("list-style-type")}} property
-- {{cssxref("list-style")}} shorthand property
+- {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-type")}}
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

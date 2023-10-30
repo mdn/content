@@ -7,7 +7,7 @@ browser-compat: css.at-rules.counter-style.symbols
 
 {{CSSRef}}
 
-The **`symbols`** [CSS](/en-US/docs/Web/CSS) descriptor is used within the {{cssxref("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to specify the symbols that the specified counter system will use to construct counter representations. This discriptor is required when the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`.
+The **`symbols`** [CSS](/en-US/docs/Web/CSS) descriptor of the {{cssxref("@counter-style")}} at-rule is used to specify the symbols for creating counter representations in the specified counter system. Specifying this descriptor is mandatory when the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`.
 
 ## Syntax
 
@@ -21,23 +21,23 @@ symbols: indic-numbers;
 
 ### Values
 
-The `symbols` descriptor is specified as one or more `<symbol>`s.
+The `symbols` descriptor is specified as a list one or more space-separated `<symbol>` values.
 
 - `<symbol>`
 
-  - : Represents a symbol used within the counter system. Each symbol in the list of symbols is a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}}.
+  - : Specifies the symbol to use within the counter system. Each symbol in the list can be either a {{cssxref("&lt;string&gt;")}}, an {{cssxref("&lt;image&gt;")}}, or a {{cssxref("&lt;custom-ident&gt;")}}. The `<image>` value can, in turn, be specified as a {{cssxref("&lt;url&gt;")}} or {{cssxref("&lt;gradient&gt;")}}.
 
-If using an {{glossary("identifier")}} rather than a string for a symbol, be aware that {{glossary("ASCII")}} non-letters like `*`, `"` and `\` are not identifiers and must be quoted as a string or escaped.
+  > **Note:** When using an {{glossary("identifier")}} for a symbol, note that {{glossary("ASCII")}} non-letters such as `*`, `"`, and `\` are not considered identifiers. They must be either quoted as a string or escaped.
 
 ## Description
 
 A symbol can be a string, image, or identifier. It is used within the {{cssxref("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
-When the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must be specified. When the `additive` system is used, use the {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} descriptor instead to specify the symbols.
+When the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must be specified. For the `additive` system, use the {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} descriptor instead to specify the symbols.
 
-While a space between quoted symbols is not required, it makes the CSS more legible. To use a quote as a symbol, either escape the quote character or enclose the character is using different quotes, such as `"'"`.
+While a space between quoted symbols is not required, it makes CSS more readable. To use a quote as a symbol, either escape the quote character or enclose the character within different quotes, such as `"'"`.
 
-If using identifiers rather than strings to define the symbols, be aware of the syntax of identifiers. As noted above, ASCII non-letters like `*` are not identifiers and must either be quoted in a string or escaped. Hex escapes characters are followed by a space. This space may look like the space separating two identifiers, but it is actually there to enable a digit to follow a HEX-escaped character. That means two spaces must be put after a hex escaped identifier to separate it from the following identifier. As your code tools might remove double spaces, it is likely safer to quote identifiers that need to be escaped and use strings instead.
+When defining symbols with identifiers instead of strings, be sure to use identifier syntax rules. For example, as noted above, ASCII non-letters such as `*` are not identifiers and must be either quoted or escaped. Hex escape characters are followed by a space. This space may look like the space separating two identifiers, but it enables digits to follow hex-escaped characters. This means that two spaces must be included after a hex-escaped identifier to separate it from the next identifier. As your code tools might remove double spaces, it is safer to quote identifiers that need to be escaped or use strings.
 
 ## Formal definition
 
@@ -91,7 +91,7 @@ If using identifiers rather than strings to define the symbols, be aware of the 
 ## See also
 
 - {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
-- {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}} properties
+- List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}} function
 - {{cssxref("url", "url()")}} function
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
