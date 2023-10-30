@@ -938,6 +938,49 @@ The CSS {{cssxref("offset-path")}} property now supports using [`url()`](/en-US/
   </tbody>
 </table>
 
+### zoom property
+
+The non-standard CSS {{cssxref("zoom")}} property lets you magnify an element similar to the {{cssxref("transform")}} property, but it affects the layout size of the element.
+See ([Firefox bug 1855763](https://bugzil.la/1855763) and [Firefox bug 390936](https://bugzil.la/390936)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.zoom.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
