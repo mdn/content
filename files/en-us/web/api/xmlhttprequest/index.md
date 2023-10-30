@@ -128,4 +128,4 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 
-- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
+- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/articles/xhr2)
