@@ -39,6 +39,13 @@
       "properties": [],
       "events": []
     },
+    "Badging API": {
+      "overview": ["Badging API"],
+      "interfaces": [],
+      "methods": ["Navigator.clearAppBadge()", "Navigator.setAppBadge()"],
+      "properties": [],
+      "events": []
+    },
     "Battery API": {
       "overview": ["Battery Status API"],
       "guides": [
