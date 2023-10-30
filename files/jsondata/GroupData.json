@@ -1580,7 +1580,7 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.virtualKeyboard"],
       "events": []
     },
     "Visual Viewport": {
