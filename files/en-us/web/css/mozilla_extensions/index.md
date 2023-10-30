@@ -1,5 +1,5 @@
 ---
-title: Mozilla CSS extensions
+title: Mozilla vendor-prefixed CSS extensions
 slug: Web/CSS/Mozilla_Extensions
 page-type: landing-page
 status:
@@ -513,4 +513,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ## See also
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [Vendor Prefix](/en-US/docs/Glossary/Vendor_Prefix) glossary entry
+- [Mozilla vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [WebKit vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
