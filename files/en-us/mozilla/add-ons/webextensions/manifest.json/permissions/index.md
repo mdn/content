@@ -56,9 +56,8 @@ The extra privileges include:
 
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (even for requests made from content scripts)
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
-- the ability to inject scripts and styles programmatically into pages served from those origins
-  - using {{webextAPIref("scripting/executeScript", "scripting.executeScript()")}} and {{webextAPIref("scripting/insertCSS", "scripting.insertCSS()")}} when combined with the `scripting` permission (in Chrome Manifest V3 only)
-  - using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} and {{webextAPIref("tabs/insertCSS", "tabs.insertCss()")}} (Manifest V2 only)
+- the ability to [inject content scripts](
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts) and styles programmatically into pages served from those origins.
 - the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
@@ -148,16 +147,14 @@ This permission is specified as `"activeTab"`. If an extension has the `activeTa
 
 "User interaction" includes:
 
-- the user clicks the extension's item in the add-on toolbar menu or its icon pinned to the toolbar (It is referred to as {{webextAPIref("action")}} in Manifest V3 API and as {{webextAPIref("browserAction", "browser action")}} in Manifest V2 API.)
-- the user clicks the extension's [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) added to the address bar (Manifest V2 only)
+- the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
 - the user selects its context menu item
 - the user activates a keyboard shortcut defined by the extension
 
 The extra privileges are:
 
-- The ability to inject JavaScript or CSS into the tab programmatically
-  - using {{webextAPIref("scripting/executeScript", "scripting.executeScript()")}} and {{webextAPIref("scripting/insertCSS", "scripting.insertCSS()")}} when combined with the `scripting` permission (in Chrome Manifest V3 only)
-  - using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} and {{webextAPIref("tabs/insertCSS", "tabs.insertCss()")}} (Manifest V2 only)
+- The ability to inject JavaScript or CSS into the tab programmatically (see [Loading content scripts](
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts)).
 - Access to the privileged parts of the tabs API for the current tab: `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
 The intention of this permission is to enable extensions to fulfill a common use case, without having to give them very powerful permissions. Many extensions want to "do something to the current page when the user asks".
@@ -166,7 +163,7 @@ For example, consider an extension that wants to run a script in the current pag
 
 > **Note:** You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
 
-The `acitveTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Even a listener of the {{webextAPIref("menus/onClicked", "menus.onClicked")}} event may be unable to inject a content script inside the frame where the [context menu](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items) is opened. The intention is to avoid escalation of privileges by creating a frame with arbitrary web page and running some action in its context. Actual limitations are not uniform across browsers however. For example, Firefox blocks access to frames created by page scripts, but for Manifest V2 add-ons it allows to run context scripts in static cross-origin frames. Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions-restrictions-and-limitations) related to particular sites and URI schemes are applied as well.
+The `activeTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions-restrictions-and-limitations) related to particular sites and URI schemes are applied as well.
 
 Usually the tab that's granted `activeTab` is just the currently active tab, except in one case. The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).
 
