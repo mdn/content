@@ -402,7 +402,7 @@ You can search for records using query methods, specifying the query conditions 
 ```js
 const Athlete = mongoose.model("Athlete", yourSchema);
 
-// find all athletes who play tennis, selecting the 'name' and 'age' fields
+// find all athletes who play tennis, returning the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
   "name age",
