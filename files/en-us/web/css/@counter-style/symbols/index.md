@@ -37,7 +37,7 @@ When the value of the {{cssxref('@counter-style/system', 'system')}} descriptor 
 
 While a space between quoted symbols is not required, it makes CSS more readable. To use a quote as a symbol, either escape the quote character or enclose the character within different quotes, such as `"'"`.
 
-When defining symbols with identifiers instead of strings, be sure to use identifier syntax rules. For example, as noted above, ASCII non-letters such as `*` are not identifiers and must be either quoted or escaped. Hex escape characters are followed by a space. This space may look like the space separating two identifiers, but it enables digits to follow hex-escaped characters. This means that two spaces must be included after a hex-escaped identifier to separate it from the next identifier. As your code tools might remove double spaces, it is safer to quote identifiers that need to be escaped or use strings.
+When defining symbols with identifiers instead of strings, be sure to use identifier syntax rules. For example, as noted above, ASCII non-letters such as `*` are not identifiers and must be either quoted or escaped. Hex escape characters are followed by a space. This space may look like the space separating two identifiers, but it enables digits to follow hex-escaped characters. This means that two spaces must be included after a hex-escaped identifier to separate it from the next identifier. For example, it is better to use the string `"\2A 1"` instead of `\2A  1` with two spaces, as your code tools might remove double spaces. It is generally safer to quote identifiers that need to be escaped or use strings.
 
 ## Formal definition
 
@@ -50,6 +50,8 @@ When defining symbols with identifiers instead of strings, be sure to use identi
 ## Examples
 
 ### Setting counter symbols
+
+In this example, the list of values for the `symbols` descriptor include letters (`A`, `D`, `E`), a number within quotes (`"1"`), and a hex-escape identifier within quotes (`"\24B7"`) for the character `Ⓑ`.
 
 #### HTML
 
