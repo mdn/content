@@ -387,7 +387,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    }
    ```
 
-We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn/Forms/How_to_structure_a_web_form/example) or visit [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
+We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn/Forms/How_to_structure_a_web_form/Example) or visit [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
 
 {{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
 
