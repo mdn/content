@@ -9,7 +9,7 @@ browser-compat: webextensions.api.action
 
 Adds a button to the browser's toolbar.
 
-> **Note:** This API is available in Manifest V3 or higher. It replaces {{WebExtAPIRef("browserAction")}} and {{WebExtAPIRef("pageAction")}} Manifest V2 API.
+> **Note:** This API is available in Manifest V3 or higher. It replaces the Manifest V2 APIs {{WebExtAPIRef("browserAction")}} and, in Chrome and Safari, {{WebExtAPIRef("pageAction")}}.
 
 A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) is a button in the browser's toolbar.
 
