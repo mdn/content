@@ -3593,11 +3593,12 @@
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
+/en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
 /en-US/docs/Glossary/Index	/en-US/docs/Glossary
 /en-US/docs/Glossary/Instance_method	/en-US/docs/Glossary/Method
 /en-US/docs/Glossary/Instance_property	/en-US/docs/Glossary/property/JavaScript
-/en-US/docs/Glossary/Internationalization	/en-US/docs/Glossary/I18N
+/en-US/docs/Glossary/Internationalization_and_localization	/en-US/docs/Glossary/Internationalization
 /en-US/docs/Glossary/Modern_web_apps	/en-US/docs/Glossary/Progressive_web_apps
 /en-US/docs/Glossary/NodeJs	/en-US/docs/Glossary/Node.js
 /en-US/docs/Glossary/Node_(networking)	/en-US/docs/Glossary/Node/networking
@@ -8174,6 +8175,7 @@
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
+/en-US/docs/Web/API/File/type	/en-US/docs/Web/API/Blob/type
 /en-US/docs/Web/API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Web/API/FileException	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/FileHandle	/en-US/docs/Web/API/IndexedDB_API
