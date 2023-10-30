@@ -23,9 +23,11 @@ This process only happens on sites where a Topics API feature is used (see [What
 
 > **Note:** An epoch is a week by default, but it is possible to alter the length of an epoch in various ways such as runtime flags (see the [Examples](#examples) section for more details). Top topics are updated each week so that they are kept current and users don't start to see ads for topics that they are no longer interested in.
 
-Once the browser has observed some topics for a user, the Topics API can retrieve them and send them to an ad tech platform. The platform can then use those topics to personalize the ads they serve to the user. The API helps to preserve privacy by returning _only topics that have been observed by the calling site, for the current user_.
+Once the browser has observed some topics for a user, the Topics API can retrieve them and send them to an ad tech platform. The platform can then use those topics to personalize the ads they serve to the user. The API helps to preserve privacy by _only returning topics to an API caller that have been observed by them_ on pages visited by the current user.
 
-The API returns topics within the most recent three epochs; one for each. The topic selected for each epoch is randomly selected from the user's top five topics for that epoch. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance that the topic for an epoch is randomly selected from all possible topics.
+The API returns topics within the most recent three epochs; one for each. The topic selected for each epoch is randomly selected from the user's top five topics for that epoch.
+
+To further enhance privacy and ensure that all topics may be represented, there is a 5% chance that the topic for an epoch is randomly selected from all possible topics. This only occurs if there is a _real_ observed topic available for that epoch — if not, then a random topic is chosen from the [entire list of available topics](#what_topics_are_there). For example, the caller may not have had a presence on sites visited by the user during that epoch.
 
 ## How does the Topics API work?
 
@@ -33,31 +35,45 @@ Let's say we've got an ad tech platform, `ad-tech1.example`, which is embedding 
 
 - `yoga.example`
 - `knitting.example`
-- `diy-clothing.example`
+- `football.example`
 
 When each page is loaded, the `<iframe>` can:
 
-- Trigger the browser to record page views for the above sites, and infer topics of interest such as "Fitness", "Crafts", and "Fashion & Style" from their URLs. This is done only for the current user, and for `ad-tech1.example`.
+Fitness, Fibre & textile arts and Shopping
+
+- Trigger the browser to record page views for the above sites, and infer topics of interest such as "Fitness", "Fibre & textile arts", and "Soccer" from their URLs.
 - Calculate top topics for that user for future epochs, based on those topics of interest.
 - Return the browser's observed top topics for the current user to the `ad-tech1.example` platform. Initially, no topics are returned so the `<iframe>` may end up just displaying a default non-targeted ad. However, once the end of the first epoch is reached, the API will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
 
 When the `<iframe>` source is requested:
 
-1. A {{httpheader("Sec-Browsing-Topics")}} header is sent along with the request, which contains the top topics for the current user.
+1. A {{httpheader("Sec-Browsing-Topics")}} header is sent along with the request, which lists topics for the current user observed by the caller associated with the domain of the `<iframe>` `src`.
 2. The ad tech server can then use these topics to return a relevant ad to display in the `<iframe>`.
 3. Topics provided in the {{httpheader("Sec-Browsing-Topics")}} header can be marked as observed by setting an {{httpheader("Observe-Browsing-Topics")}} header on the response to the request.
 
-Once this is all done, the browser records a **topics history entry** for each observed topic in a private topics history storage. Each topics history entry includes information about the topic such as the domains where the topic was observed (known as **topics caller domains**), and the last time and date the topic was observed for each one. The topics history entries are then used when calculating top topics for a user for future epochs.
+Once this is all done, the browser records a **topics history entry** for each observed topic in a private topics history storage. Each topics history entry includes the following information:
 
-> **Note:** If a topics history entry already exists, but the topic is observed again (by a different domain, or by the same domain at a different time), the browser will append information to the same entry (for example by updating the last visited date, or adding a new caller domain).
+- A document id (i.e. an identifier for the current page)
+- Topics calculation input data (i.e. the page hostname)
+- The time (since the Unix epoch) until the page was observed
+- The domain(s) where the topic was observed (known as **topics caller domains**)
+
+The topics history entries are used when calculating the top topics for a user for future epochs.
+
+> **Note:** For each topics history entry, a caller domain is added for each caller with a presence on the page.
+
+The topics for a user are calculated at the end of each epoch — by calculating the topic for each history entry (based on the topics calculation input data, i.e. the hostname of the page visit) and then determining the top topics for the entire epoch.
 
 ### Private topic sets
 
-It is important to understand that topics are not being collected about all sites the user visits, all of the time, and being shared with all sites that request them — that would be terrible for privacy. Ad tech platforms and their associated publishers have to opt-in to using the API, and they can access their own private topic sets for each user, stored by the browser.
+A caller can only access topics that they themselves have observed for a user — and not topics observed by other callers. For example:
 
-Extending the example above, another ad tech platform located at `ad-tech2.example` would not have any top topics calculated and returned, unless its page was also embedded on them and using Topics API features to trigger the process of observing topics.
+- If the `ad-tech1.example` platform has a presence on `tennis.example`, they would observe topics like "Sports" and "Tennis" for a user who visits that site.
+- If another ad tech platform, `ad-tech2.example`, has a presence on "gardening.example", they would observe the topic "Gardening".
 
-More importantly, the recorded topics of interest are the only information that can be accessed via this API — unlike with tracking cookies, no other information can be leaked.
+To reiterate, these ad tech platforms will only get topics for a user that they have observed. In this example, `ad-tech1.example` won't get "Gardening" and `ad-tech2.example` won't get "Tennis".
+
+In other words, callers such as ad tech platforms only get topics for pages where they have a presence. More importantly, the recorded topics of interest are the only information that can be accessed via this API — unlike with tracking cookies, no other information can be leaked.
 
 ## What API features observe and return topics?
 
