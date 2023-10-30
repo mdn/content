@@ -70,7 +70,7 @@ Device-Memory: 1
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)
 - [Device Memory API](/en-US/docs/Web/API/Device_Memory_API)
 - {{DOMxRef("Navigator.deviceMemory")}}
 - Device client hints

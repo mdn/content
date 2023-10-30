@@ -155,5 +155,5 @@ These CSS workarounds should only be used when an HTML solution is unavailable, 
 
 - {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, and {{Cssxref("list-style-position")}} properties
 - {{Cssxref("::marker")}} pseudo-element
-- [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
