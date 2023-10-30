@@ -65,7 +65,7 @@ So let's imagine a ball in a garden:
 <div class="garden">
   <div class="ball"></div>
 </div>
-
+Hold the device parallel to the ground. Rotate along its x and y axes to see the ball move up/down and left/right respectively.
 <pre class="output"></pre>
 ```
 
