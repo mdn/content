@@ -48,6 +48,8 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### APIs
 
+- The [Minimum PIN Length Extension (`minPinLength`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing a relying party server to request the authenticator's minimum PIN length during creation/registration ([Firefox bug 1844450](https://bugzil.la/1844450)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
