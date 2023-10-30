@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.beforeinput_event
 
 {{APIRef}}
 
-The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is about to be modified. But in contrast to the `input` event, it does not fire on the {{HTMLSelect("select")}} element. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
+The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is about to be modified. But in contrast to the `input` event, it does not fire on the {{HTMLElement("select")}} element. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
 
 This allows web apps to override text edit behavior before the browser modifies the DOM tree, and provides more control over input events to improve performance.
 
