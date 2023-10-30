@@ -63,8 +63,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
     As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
-- {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{DOMxRef("HTMLElement.style")}}
