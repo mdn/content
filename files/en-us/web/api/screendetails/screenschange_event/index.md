@@ -10,9 +10,7 @@ browser-compat: api.ScreenDetails.screenschange_event
 
 {{APIRef("Window Management API")}}{{SeeCompatTable}}
 
-The **`screenschange`** event of the {{domxref("ScreenDetails")}} interface is fired when the screens available to the system change in some way.
-
-Specifically, a _change_ in this context means a screen ({{domxref("ScreenDetailed")}} object) has been added to or removed from the {{domxref("ScreenDetails.screens", "screens")}} array.
+The **`screenschange`** event of the {{domxref("ScreenDetails")}} interface is fired when the set of screens available to the system has changed: that is, a new screen has become available or an existing screen has become unavailable. This will be reflected in a change in the {{domxref("ScreenDetails.screens", "screens")}} array.
 
 ## Syntax
 
@@ -26,15 +24,18 @@ onscreenschange = (event) => {};
 
 ## Event type
 
-An event of type `screenschange`, the event object of which is structurally equivalent to an {{domxref("Event")}}.
-
-{{InheritanceDiagram("Event")}}
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 You could use the `screenschange` event to detect when the available screens have changed, report the change, close all windows, and then reopen them all to suit the new configuration:
 
 ```js
+const screenDetails = await window.getScreenDetails();
+
+// Return the number of screens
+const noOfScreens = screenDetails.screens.length;
+
 screenDetails.addEventListener("screenschange", () => {
   // If the new number of screens is different to the old number of screens, report the difference
   if (screenDetails.screens.length !== noOfScreens) {

@@ -16,8 +16,6 @@ the top side of the screen.
 > {{domxref("Window.screenY")}} property. `screenTop` was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
-> **Note:** On devices with multiple displays, browsers will report the value of `screenTop` relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin), except for Safari, which returns coordinates relative to the current display.
-
 ## Value
 
 A number equal to the number of CSS pixels from the top edge of the browser viewport to

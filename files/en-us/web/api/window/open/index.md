@@ -10,8 +10,6 @@ browser-compat: api.Window.open
 
 The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Element/iframe)) under a specified name.
 
-> **Note:** On devices with multiple displays, `open()` should position windows relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin). This is true in Chromium-based browsers, while Firefox does it inconsistently, sometimes exhibiting unusual behavior. Safari on the other hand uses local values, always opening it relative to the primary display.
-
 ## Syntax
 
 ```js-nolint

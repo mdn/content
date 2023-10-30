@@ -11,11 +11,11 @@ browser-compat: api.ScreenDetailed.left
 {{APIRef("Window Management API")}}{{seecompattable}}
 
 The **`left`** read-only property of the
-{{domxref("ScreenDetailed")}} interface is a number representing the x-coordinate (left-hand edge) of the total screen area inside the OS virtual screen arrangement, relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin).
+{{domxref("ScreenDetailed")}} interface is a number representing the x-coordinate (left-hand edge) of the total screen area inside the OS virtual screen arrangement, relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin).
 
 This is equal to the true left-hand edge, ignoring any OS UI element drawn at the left of the screen. Windows cannot be placed in those areas; to get the left-hand coordinate of the screen area that windows can be placed in, use {{domxref("ScreenDetailed.availLeft")}}.
 
-> **Note:** In Firefox, a non-standard implementation of the `left` property is available on the `Screen` interface, and represents the x-coordinate (left-hand edge) of the _current_ screen's area (i.e. the screen containing the browser window the code is being run in). See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
+> **Note:** In Firefox, a non-standard implementation of the `left` property is available on the `Screen` interface. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
 
 ## Value
 

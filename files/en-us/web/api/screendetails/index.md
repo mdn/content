@@ -21,21 +21,22 @@ This information is accessed via the {{domxref("Window.getScreenDetails()")}} me
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
+- {{domxref("ScreenDetails.currentScreen", "currentScreen")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+
+  - : A single {{domxref("ScreenDetailed")}} object representing detailed information about the screen that the current browser window is displayed in.
+
 - {{domxref("ScreenDetails.screens", "screens")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
   - : An array of {{domxref("ScreenDetailed")}} objects, each one representing detailed information about one specific screen available to the user's device.
 
     > **Note:** `screens` only includes "extended" displays, not those that mirror another display.
 
-- {{domxref("ScreenDetails.currentScreen", "currentScreen")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A single {{domxref("ScreenDetailed")}} object representing detailed information about the screen that the current browser window is displayed in.
-
 ## Events
 
-- {{domxref("ScreenDetails.screenschange_event", "screenschange")}} {{experimental_inline}}
-  - : Fired when screens are connected to or disconnected from the system.
 - {{domxref("ScreenDetails.currentscreenchange_event", "currentscreenchange")}} {{experimental_inline}}
   - : Fired when the window's current screen changes in some way — for example available width or height, or orientation.
+- {{domxref("ScreenDetails.screenschange_event", "screenschange")}} {{experimental_inline}}
+  - : Fired when screens are connected to or disconnected from the system.
 
 ## Examples
 
@@ -43,7 +44,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ### Basic screen information access
 
-When {{domxref("Window.getScreenDetails()")}} is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting `ScreenDetails` object contains details of all the screens available to the user's system.
+When {{domxref("Window.getScreenDetails()")}} is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). If the user grants permission, a {{domxref("ScreenDetails")}} object is returned. This object contains details of all the screens available to the user's system.
 
 The below example opens a full-size window on each available display.
 
@@ -67,15 +68,22 @@ for (const screen of screenDetails.screens) {
 You could use the `screenschange` event to detect when the available screens have changed (perhaps when a screen is plugged in or unplugged), report the change, and update window arrangements to suit the new configuration:
 
 ```js
+const screenDetails = await window.getScreenDetails();
+
+// Return the number of screens
+const noOfScreens = screenDetails.screens.length;
+
 screenDetails.addEventListener("screenschange", () => {
-  // If the new number of screens is different to the old number of screens, report the difference
+  // If the new number of screens is different to the old number of screens,
+  // report the difference
   if (screenDetails.screens.length !== noOfScreens) {
     console.log(
       `The screen count changed from ${noOfScreens} to ${screenDetails.screens.length}`,
     );
   }
 
-  // Open, close, or rearrange windows as needed, to fit the new screen configuration
+  // Open, close, or rearrange windows as needed,
+  // to fit the new screen configuration
   updateWindows();
 });
 ```

@@ -17,9 +17,11 @@ The **`screens`** read-only property of the
 
 An array of {{domxref("ScreenDetailed")}} objects.
 
+> **Note:** `screens` only includes "extended" displays, not those that mirror another display.
+
 ## Examples
 
-See the main [`ScreenDetails` page](/en-US/docs/Web/API/ScreenDetails#examples) for example usage.
+See the main [`ScreenDetails`](/en-US/docs/Web/API/ScreenDetails#examples) page for example usage.
 
 ## Specifications
 
