@@ -47,8 +47,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
-- {{DOMxRef("HTMLElement.noModule")}}
-  - : A boolean value indicating whether an import script can be executed in user agents that support module scripts.
 - {{DOMxRef("HTMLElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
 - {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
