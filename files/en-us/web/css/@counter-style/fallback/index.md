@@ -24,14 +24,16 @@ The descriptor takes a single `<counter-style-name>` as its value:
 - [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name)
   - : Provides the name of the counter style to be used as the fallback, which is either the case-sensitive `<custom-ident>` of a custom CSS counter style (without quotes) or a case-insensitive {{cssxref("list-style-type")}} property value such as `decimal`, `disc`, and so on.
 
+If omitted, the counter fallback defaults to `decimal`.
+
 ## Description
 
-If the specified fallback style is also unable to construct a representation, then its fallback style will be used. If a valid fallback style is not specified, it defaults to `decimal`.
+If the specified fallback style is also unable to construct a representation, then the `fallback` value of the fallback counter style will be used. If that fallback style's fallback is also unable to construct a representation, then that counter's fallback will be used, and so on. If no fallback `fallback` value is able to construct a representation, if a fallback style doesn't have a `fallback` value set, or if a `fallback` value is not not specified or invalid, the `fallback` defaults to `decimal`.
 
-A couple of scenarios where a fallback style will be used are:
+A couple of scenarios where a `fallback` style will be used are:
 
-- When the {{cssxref('@counter-style/range', 'range')}} descriptor is specified for a counter style, the fallback style will be used to represent values that fall outside the range.
-- When the `fixed` {{cssxref('@counter-style/system', 'system')}} is used and there are not enough symbols to cover all the list items, the fallback style will be used for the rest of the list items.
+- When the {{cssxref('@counter-style/range', 'range')}} descriptor is specified for a counter style, the `fallback` style will be used to represent values that fall outside the range.
+- When the `fixed` {{cssxref('@counter-style/system', 'system')}} is used and there are not enough symbols to cover all the list items, the `fallback` style will be used for the rest of the list items.
 
 ## Formal definition
 
