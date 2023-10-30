@@ -2,9 +2,6 @@
 title: Center an element
 slug: Web/CSS/Layout_cookbook/Center_an_element
 page-type: guide
-browser-compat:
-  - css.properties.align-items
-  - css.properties.justify-content
 ---
 
 {{CSSRef}}
@@ -93,10 +90,6 @@ div {
 {{ EmbedLiveSample('Using_grid', 400, 200) }}
 
 Instead of applying `place-items: center;` on the container, you can achieve the same centering by setting {{cssxref("place-content", "place-content: center;")}} on the container or by applying either {{cssxref("place-self", "place-self: center")}} or {{cssxref("margin", "margin: auto;")}} on the inner item itself.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Resources on MDN
 
