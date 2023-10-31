@@ -49,10 +49,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The height of the frame in CSS pixels. Default is `150`.
 - `loading`
 
-  - : Indicates how the browser should load the iframe:
+  - : Indicates when the browser should load the iframe:
 
-    - `eager`: Load the iframe immediately, regardless if it is outside the visible viewport (this is the default value).
-    - `lazy`: Defer loading of the iframe until it reaches a calculated distance from the viewport, as defined by the browser.
+    - `eager`
+      - : Load the iframe immediately, regardless if it is outside the visible viewport (this is the default value).
+    - `lazy`
+      - : Defer loading of the iframe until it reaches a calculated distance from the viewport, as defined by the browser.
+        The intent is to avoid the network and storage bandwidth needed until its reasonably certain that it will be needed.
+        This improves the performance and cost in most typical use cases.
 
 - `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method.
@@ -60,34 +64,57 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
 
-    - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
-    - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
-    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
-    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
-    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
-    - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+    - `no-referrer`
+      - : The {{HTTPHeader("Referer")}} header will not be sent.
+    - `no-referrer-when-downgrade`
+      - : The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`
+      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin-when-cross-origin`
+      - : The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
+    - `same-origin`
+      - : A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
+    - `strict-origin`
+      - : Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin` (default)
+      - : Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
+    - `unsafe-url`
+      - : The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `sandbox`
 
   - : Controls the restrictions applied to the content embedded in the `<iframe>`. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
 
-    - `allow-downloads`: Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
-    - `allow-downloads-without-user-activation` {{experimental_inline}}: Allows for downloads to occur without a gesture from the user.
-    - `allow-forms`: Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
-    - `allow-modals`: Allows the page to open modal windows by {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} and {{domxref("Window.prompt()")}}, while opening a {{HTMLElement("dialog")}} is allowed regardless of this keyword. It also allows the page to receive {{domxref("BeforeUnloadEvent")}} event.
-    - `allow-orientation-lock`: Lets the resource [lock the screen orientation](/en-US/docs/Web/API/Screen/lockOrientation).
-    - `allow-pointer-lock`: Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
-    - `allow-popups`: Allows popups (like from {{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}}). If this keyword is not used, that functionality will silently fail.
-    - `allow-popups-to-escape-sandbox`: Allows a sandboxed document to open new windows without forcing the sandboxing flags upon them. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to.
-    - `allow-presentation`: Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
-    - `allow-same-origin`: If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
-    - `allow-scripts`: Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
-    - `allow-storage-access-by-user-activation` {{experimental_inline}}: Allows a document loaded in the `<iframe>` to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
-    - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
-    - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
-    - `allow-top-navigation-to-custom-protocols`: Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
+    - `allow-downloads`
+      - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
+    - `allow-downloads-without-user-activation` {{experimental_inline}}
+      - : Allows for downloads to occur without a gesture from the user.
+    - `allow-forms`
+      - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
+    - `allow-modals`
+      - : Allows the page to open modal windows by {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} and {{domxref("Window.prompt()")}}, while opening a {{HTMLElement("dialog")}} is allowed regardless of this keyword. It also allows the page to receive {{domxref("BeforeUnloadEvent")}} event.
+    - `allow-orientation-lock`
+      - : Lets the resource [lock the screen orientation](/en-US/docs/Web/API/Screen/lockOrientation).
+    - `allow-pointer-lock`
+      - : Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
+    - `allow-popups`
+      - : Allows popups (like from {{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}}). If this keyword is not used, that functionality will silently fail.
+    - `allow-popups-to-escape-sandbox`
+      - : Allows a sandboxed document to open new windows without forcing the sandboxing flags upon them. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to.
+    - `allow-presentation`
+      - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
+    - `allow-same-origin`
+      - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+    - `allow-scripts`
+      - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
+    - `allow-storage-access-by-user-activation` {{experimental_inline}}
+      - : Allows a document loaded in the `<iframe>` to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
+    - `allow-top-navigation`
+      - : Lets the resource navigate the top-level browsing context (the one named `_top`).
+    - `allow-top-navigation-by-user-activation`
+      - : Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
+    - `allow-top-navigation-to-custom-protocols`
+      - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
 
     > **Note:**
     >
@@ -119,9 +146,12 @@ These attributes are deprecated and may no longer be supported by all user agent
 
   - : Indicates when the browser should provide a scrollbar for the frame:
 
-    - `auto`: Only when the frame's content is larger than its dimensions.
-    - `yes`: Always show a scrollbar.
-    - `no`: Never show a scrollbar.
+    - `auto`
+      - : Only when the frame's content is larger than its dimensions.
+    - `yes`
+      - : Always show a scrollbar.
+    - `no`
+      - : Never show a scrollbar.
 
 ## Scripting
 

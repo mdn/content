@@ -709,3 +709,5 @@ container.addEventListener("change", (event) => {
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - [Counter styles converter](https://r12a.github.io/app-counters/)
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

@@ -19,7 +19,7 @@ There are two types of custom element:
 
 ## Implementing a custom element
 
-A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of automonous elements) or the interface you want to customize (in the case of customized built-in elements).
+A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements).
 
 Here's the implementation of a minimal custom element that customizes the {{HTMLElement("p")}} element:
 
