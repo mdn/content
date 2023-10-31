@@ -155,5 +155,6 @@ div {
 ## See also
 
 - {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
+- {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors

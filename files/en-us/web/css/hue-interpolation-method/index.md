@@ -248,4 +248,4 @@ p {
 ## See also
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{CSSXref("&lt;hue&gt;")}}
+- {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color
