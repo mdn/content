@@ -8,13 +8,15 @@ status:
 browser-compat: api.Keyboard.lock
 ---
 
-{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
 capture of keypresses for any or all of the keys on the physical keyboard. This method
 can only capture keys that are granted access by the underlying operating
 system.
+
+If `lock()` is called multiple times without an intervening call to {{domxref("Keyboard.unlock()", "unlock()")}}, then only the key codes specified in the last call will be locked.
 
 ## Syntax
 
@@ -32,6 +34,15 @@ lock(keyCodes)
 ### Return value
 
 A {{jsxref('Promise')}}.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if a new call to `lock()` is made before the current one has finished.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if any key in keyCodes is not a valid key code attribute value.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `lock()` is not called in an active top-level browsing context.
 
 ## Security
 

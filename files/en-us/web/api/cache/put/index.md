@@ -76,7 +76,7 @@ like so:
 let response;
 const cachedResponse = caches
   .match(event.request)
-  .catch(() => fetch(event.request))
+  .then((r) => (r !== undefined ? r : fetch(event.request)))
   .then((r) => {
     response = r;
     caches.open("v1").then((cache) => {

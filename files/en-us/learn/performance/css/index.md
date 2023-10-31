@@ -48,6 +48,7 @@ Showing users an unstyled page and then repainting it after the CSS styles have 
 To optimize the CSSOM construction and improve page performance, you can do one or more of the following based on the current state of your CSS:
 
 - **Remove unnecessary styles**: This may sound obvious, but it is surprising how many developers forget to clean up unused CSS rules that were added to their stylesheets during development and ended up not being used. All styles get parsed, whether they are being used during layout and painting or not, so it can speed up page rendering to get rid of unused ones. As [How Do You Remove Unused CSS From a Site?](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) (csstricks.com, 2019) summarizes, this is a difficult problem to solve for a large codebase, and there isn't a magic bullet to reliably find and remove unused CSS. You need to do the hard work of keeping your CSS modular and being careful and deliberate about what is added and removed.
+
 - **Split CSS into separate modules**: Keeping CSS modular means that CSS not required at page load can be loaded later on, reducing initial CSS render-blocking and loading times. The simplest way to do this is by splitting up your CSS into separate files and loading only what is needed:
 
   ```html
@@ -119,7 +120,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
   With `preload`, the browser will fetch the referenced resources as soon as possible and make them available in the browser cache so that they will be ready for use sooner when they are referenced in subsequent code. It is useful to preload high-priority resources that the user will encounter early on in a page so that the experience is as smooth as possible. Note how you can also use `media` attributes to create responsive preloaders.
 
-  See also [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
+  See also [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 ## Handling animations
 
@@ -229,7 +230,7 @@ This is more likely to be beneficial if your `font-family` declaration is hidden
 
 You can also consider:
 
-- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins) for details.
+- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins) for details.
 - Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize the font loading behavior via JavaScript.
 
 ### Loading only the glyphs you need
@@ -288,5 +289,5 @@ article {
 ## See also
 
 - [CSS animation performance](/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance)
-- [Best practices for fonts](https://web.dev/font-best-practices/) on web.dev (2022)
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) on web.dev (2022)
+- [Best practices for fonts](https://web.dev/articles/font-best-practices) on web.dev (2022)
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) on web.dev (2022)
