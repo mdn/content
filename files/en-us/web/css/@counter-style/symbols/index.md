@@ -21,7 +21,7 @@ symbols: indic-numbers;
 
 ### Values
 
-The `symbols` descriptor is specified as a list one or more space-separated `<symbol>` values.
+The `symbols` descriptor is specified as a list of one or more space-separated `<symbol>` values.
 
 - `<symbol>`
 
