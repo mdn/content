@@ -85,7 +85,7 @@ Usable in all roles; except in for elements with the role of [`gridcell`](/en-US
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
-- [Exampl: `aria-current` in a breadcrumb navigation](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [Breadcrumb navigation with `aria-current`](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
 
 <section id="Quick_links">
 
