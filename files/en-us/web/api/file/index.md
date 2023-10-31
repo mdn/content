@@ -24,33 +24,33 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
 
 ## Instance properties
 
-- {{DOMxRef("File.prototype.lastModified")}} {{ReadOnlyInline}}
+- {{DOMxRef("File.lastModified")}} {{ReadOnlyInline}}
   - : Returns the last modified time of the file, in millisecond since the UNIX epoch (January 1st, 1970 at Midnight).
-- {{DOMxRef("File.prototype.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the last modified {{JSxRef("Date")}} of the file referenced by the `File` object.
-- {{DOMxRef("File.prototype.name")}} {{ReadOnlyInline}}
+- {{DOMxRef("File.name")}} {{ReadOnlyInline}}
   - : Returns the name of the file referenced by the `File` object.
-- {{DOMxRef("File.prototype.webkitRelativePath")}} {{ReadOnlyInline}}
+- {{DOMxRef("File.webkitRelativePath")}} {{ReadOnlyInline}}
   - : Returns the path the URL of the {{DOMxRef("File")}} is relative to.
 
 `File` implements {{DOMxRef("Blob")}}, so it also has the following properties available to it:
 
 - {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : Returns the size of the file in bytes.
-- {{DOMxRef("File.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
   - : Returns the [MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) type of the file.
 
 ## Instance methods
 
 _The `File` interface doesn't define any methods, but inherits methods from the {{DOMxRef("Blob")}} interface:_
 
-- {{DOMxRef("Blob.prototype.slice()", "Blob.prototype.slice([start[, end[, contentType]]])")}}
+- {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the source `Blob`.
-- {{DOMxRef("Blob.prototype.stream()")}}
+- {{DOMxRef("Blob.stream()")}}
   - : Transforms the `File` into a {{DOMxRef("ReadableStream")}} that can be used to read the `File` contents.
-- {{DOMxRef("Blob.prototype.text()")}}
+- {{DOMxRef("Blob.text()")}}
   - : Transforms the `File` into a stream and reads it to completion. It returns a promise that resolves with a string (text).
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+- {{DOMxRef("Blob.arrayBuffer()")}}
   - : Transforms the `File` into a stream and reads it to completion. It returns a promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ## Specifications
