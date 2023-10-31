@@ -103,3 +103,4 @@ Link: <https://example.com>; rel=preconnect;
 ## See also
 
 - {{HTTPHeader("Link")}}
+- [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the CloudFlare blog
