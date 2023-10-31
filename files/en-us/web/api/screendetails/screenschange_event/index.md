@@ -34,7 +34,7 @@ You could use the `screenschange` event to detect when the available screens hav
 const screenDetails = await window.getScreenDetails();
 
 // Return the number of screens
-const noOfScreens = screenDetails.screens.length;
+let noOfScreens = screenDetails.screens.length;
 
 screenDetails.addEventListener("screenschange", () => {
   // If the new number of screens is different to the old number of screens, report the difference
@@ -42,6 +42,9 @@ screenDetails.addEventListener("screenschange", () => {
     console.log(
       `The screen count changed from ${noOfScreens} to ${screenDetails.screens.length}`,
     );
+
+    // Update noOfScreens value
+    noOfScreens = screenDetails.screens.length;
   }
 
   // Open, close, or rearrange windows as needed, to fit the new screen configuration
