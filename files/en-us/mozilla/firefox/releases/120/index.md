@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 120 that affect d
 
   These dates will be parsed with behavior typical of other non-ISO dates, such as local time zone and month rollover (April 31 rolls over to May 1 since April 31 doesn't exist).
 
-- The [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object now parses several additional date formats, including formats such as `"Mon DDYYYY"`, `"Mon.DD.YYYY"`, and `"Mon DD YYYY hh:mmXm"` ([Firefox bug 449921](https://bugzil.la/449921)).
+- The [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object now parses several additional date formats, including formats such as `"MonDD YYYY"`, `"Mon.DD.YYYY"`, and `"Mon DD YYYY hh:mmXm"` ([Firefox bug 449921](https://bugzil.la/449921)).
 
 #### Removals
 
