@@ -26,6 +26,8 @@ One of the following:
   - : Medium quality.
 - `"high"`
   - : High quality.
+ 
+The default value is `"low"`.
 
 ## Examples
 
