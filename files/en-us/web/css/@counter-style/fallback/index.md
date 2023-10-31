@@ -28,12 +28,9 @@ If omitted, the counter fallback defaults to `decimal`.
 
 ## Description
 
-If the specified fallback style is also unable to construct a representation, then the `fallback` value of the fallback counter style will be used. If that fallback style's fallback is also unable to construct a representation, then that counter's fallback will be used, and so on. If no fallback `fallback` value is able to construct a representation, if a fallback style doesn't have a `fallback` value set, or if a `fallback` value is not not specified or invalid, the `fallback` defaults to `decimal`.
+The counter style provided as the value of the `fallback` descriptor is used when a {{cssxref('@counter-style/range', 'range')}} descriptor is specified for a counter style; the `fallback` style is used to represent all the values that fall outside the range. The `fallback` style is also used when the `fixed` {{cssxref('@counter-style/system', 'system')}} is used and there are not enough symbols to cover all the list items; the `fallback` style is used to represent all the values beyond the scope of the fixed system. In both these cases, and any other time the defined counter cannot create a specific counter value, the `fallback` style is used.
 
-A couple of scenarios where a `fallback` style will be used are:
-
-- When the {{cssxref('@counter-style/range', 'range')}} descriptor is specified for a counter style, the `fallback` style will be used to represent values that fall outside the range.
-- When the `fixed` {{cssxref('@counter-style/system', 'system')}} is used and there are not enough symbols to cover all the list items, the `fallback` style will be used for the rest of the list items.
+If the specified fallback style is also unable to construct a representation, then the `fallback` value of that fallback counter is used. If that fallback style's fallback is also unable to construct a representation, then that fallback's fallback is used. This falling back continues until a fallback is found that can construct the counter-representation. If no fallback `fallback` value is able to construct a representation―if a fallback style doesn't have a `fallback` value set, or if a `fallback` value is not specified or invalid―the `fallback` defaults to `decimal`.
 
 ## Formal definition
 
