@@ -20,7 +20,15 @@ This article provides information about the changes in Firefox 120 that affect d
 
 #### Removals
 
-- The deprecated `-moz-transform` CSS property has been removed. Use the standard `transform` property instead ([Firefox bug 1855763](https://bugzil.la/1855763)).
+- The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled via the `layout.css.prefixes.transforms` preference being set to `false` by default ([Firefox bug 1855763](https://bugzil.la/1855763)).
+  Specifically, the disabled properties are:
+
+  - `-moz-backface-visibility`
+  - `-moz-perspective`
+  - `-moz-perspective-origin`
+  - `-moz-transform`
+  - `-moz-transform-origin`
+  - `-moz-transform-style`
 
 ### JavaScript
 
