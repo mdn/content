@@ -7,9 +7,128 @@ browser-compat: css.types.color.light-dark
 
 {{CSSRef}}
 
-The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions).
+The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) allows a user to set light and dark colors, without using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) and detects if a user has requested light or dark color theme.
+A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
+
+For this to work the the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes).
+
+```css
+:root {
+  color-scheme: light dark;
+}
+```
+
+To force a section of a page to only use light or dark can be done by setting the `color-scheme` property to `light` or `dark` only.
+
+```css
+.my-dark-section {
+  color-scheme: dark;
+}
+```
+
+## Syntax
 
 ```css
 /* Named color values */
 color: light-dark(white, black);
+
+/* RGB color values */
+color: light-dark(rgb(255 255 255), rgb(0 0 0));
+
+/* Custom properties */
+color: light-dark(var(--light), var(--dark));
 ```
+
+### Values
+
+Functional notation: `light-dark(light-color, dark-color)`
+
+- `light-color`
+
+  - : {{CSSXref("&lt;color&gt;")}} value to be set for light {{CSSXref("color-scheme")}}.
+
+- `dark-color`
+  - : {{CSSXref("&lt;color&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
+
+### Formal syntax
+
+{{csssyntax}}
+
+## Example
+
+### Setting the colors based on system preferences
+
+In a supporting browser, the colors will change based upon the user preference through an operating system setting (e.g. light or dark mode) or a user agent setting. You can also change this setting in the browsers developer tools.
+
+#### HTML
+
+```html
+<h1><code>light-dark()</code> CSS function</h1>
+<section>
+  <h2>Automatic</h2>
+  <p>This section will react to the users system or user agent setting.</p>
+</section>
+<section class="light">
+  <h2>Light</h2>
+  <p>
+    This section will be light due to the <code>color-scheme: light;</code>.
+  </p>
+</section>
+<section class="dark">
+  <h2>Dark</h2>
+  <p>This section will be light due to the <code>color-scheme: dark;</code>.</p>
+</section>
+```
+
+#### CSS
+
+```css
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
+  --light-bg: ghostwhite;
+  --dark-bg: darkslategray;
+  --light-color: darkslategray;
+  --dark-color: ghostwhite;
+  --light-code: tomato;
+  --dark-code: gold;
+}
+* {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+code {
+  color: light-dark(var(--light-code), var(--dark-code));
+}
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
+```
+
+```css hidden
+section {
+  padding: 0.8rem;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("setting_the_colors_based_on_system_preferences", "100%", 500)}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{CSSXref("color-scheme")}}
+- {{CSSXref("&lt;color&gt;")}}
