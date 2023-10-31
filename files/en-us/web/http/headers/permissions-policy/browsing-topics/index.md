@@ -28,7 +28,7 @@ The default allowlist for `browsing-topics` is `*`.
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of an official standard, although it is specified in the [Topics API Unofficial Proposal Draft](https://patcg-individual-drafts.github.io/topics/).
 
 ## Browser compatibility
 
