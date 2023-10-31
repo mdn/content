@@ -9,8 +9,8 @@ browser-compat: http.status.103
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the resources that the server is expecting the final response will link.
-This allows a browser to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
+The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server is expecting the final response will link.
+This allows a browser to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
 
 The early hint response is primarily intended for use with the {{HTTPHeader("Link")}} header, which indicates the resources to be loaded.
 It may also contain a [`Content-Security-Policy`](/en-US/docs/Web/HTTP/CSP) header that is enforced while processing the early hint.
@@ -80,6 +80,16 @@ Content-Type: text/html
 ...
 <link rel="stylesheet" rel="preload" href="style.css" />
 ...
+```
+
+### Early hint to preconnect
+
+The following example shows an early hint response where the server indicates that the client might want to preconnect to a particular origin (`example.com`).
+Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute this is a hint that the page is likely to need resources from the target resource's origin, and that the browser can likely improve the user experience by preemptively initiating a connection to that origin.
+
+```http
+103 Early Hints
+Link: <https://example.com>; rel=preconnect;
 ```
 
 ## Specifications
