@@ -35267,21 +35267,6 @@
       "Crash"
     ]
   },
-  "Web/API/File/type": {
-    "modified": "2020-10-15T21:52:05.883Z",
-    "contributors": [
-      "PanayiotisPaschalides",
-      "mfuji09",
-      "sideshowbarker",
-      "EricLaw1979",
-      "adilsoncabral0",
-      "fscholz",
-      "Jedipedia",
-      "stevenwdv",
-      "david_ross",
-      "vinayk7"
-    ]
-  },
   "Web/API/File/webkitRelativePath": {
     "modified": "2020-11-17T19:00:12.607Z",
     "contributors": [
