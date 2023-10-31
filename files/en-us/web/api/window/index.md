@@ -159,8 +159,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : Register an event handler to a specific event type on the window.
 - {{domxref("atob", "Window.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
@@ -185,8 +183,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
-  - : Used to trigger an event.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
 - {{domxref("fetch", "Window.fetch()")}}
@@ -217,8 +213,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
-- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
-  - : Removes an event listener from the window.
 - {{domxref("reportError", "Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
@@ -277,14 +271,16 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("Window/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-- {{domxref("Window/languagechange_event", "languagechange")}}
-  - : Fired at the global scope object when the user's preferred language changes.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window/error_event", "error")}}
+  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+- {{domxref("Window/languagechange_event", "languagechange")}}
+  - : Fired at the global scope object when the user's preferred language changes.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}

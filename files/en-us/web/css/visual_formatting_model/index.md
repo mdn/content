@@ -108,7 +108,7 @@ In addition, the references for specific values of display explain how these for
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
 ### Independent formatting contexts
 
