@@ -50,6 +50,10 @@ oklab(59% 0.1 0.1 / 0.5)
 /* Oklch (Lightness, Chroma, Hue) */
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
+
+/* light-dark */
+light-dark(white, black)
+light-dark(rgb(255 255 255), rgb(0 0 0))
 ```
 
 A `<color>` value can be specified using one of the methods listed below:
@@ -62,6 +66,7 @@ A `<color>` value can be specified using one of the methods listed below:
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
+- By specifying two colors, the first representing light-mode and second representing dark-mode: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
 ### currentcolor keyword
 
