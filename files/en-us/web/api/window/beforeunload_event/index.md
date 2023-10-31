@@ -18,7 +18,7 @@ The dialog can be triggered in the following ways:
 - Setting the event object's {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} property to a non-empty string value or any other [truthy](/en-US/docs/Glossary/Truthy) value.
 - Returning any truthy value from the event handler function, e.g. `return "string"`. Note that this only works when the function is attached via the `onbeforeunload` property, not the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. This behavior is consistent across modern versions of Firefox, Safari, and Chrome.
 
-The last two machanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object.
+The last two machanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object, while also setting `returnValue` to support legacy cases.
 
 ## Syntax
 
@@ -50,7 +50,7 @@ The `beforeunload` event suffers from some problems:
 
   > **Note:** It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
 
-- In Firefox, `beforeunload` is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
+- In Firefox, `beforeunload` is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
 
 It is therefore recommended that developers listen for `beforeunload` only when users have unsaved changes so that the dialog mentioned above can be used to warn them about impending data loss, and remove the listener again when it is not needed. Listening for `beforeunload` sparingly can minimize the effect on performance.
 
@@ -76,14 +76,15 @@ Our JavaScript attaches an {{domxref("HTMLElement.input_event", "input")}} event
 
 If the value becomes an empty string again (i.e. the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
 
-The `beforeunload` event handler function invokes `preventDefault()` to trigger the warning dialog when the user closes or navigates the tab.
+The `beforeunload` event handler function invokes `event.preventDefault()` to trigger the warning dialog when the user closes or navigates the tab. We have also included `event.returnValue = true` in the handler function so that any browsers that don't support the `event.preventDefault()` mechanism will still run the demo correctly.
 
 ```js
 const beforeUnloadHandler = (event) => {
+  // Recommended
   event.preventDefault();
-  // Equivalent to the following legacy mechanisms
-  //   event.returnValue = "string";
-  //   return "string"; (only works with onbeforeunload)
+
+  // Included for legacy support, e.g. Chrome/Edge < 119
+  event.returnValue = true;
 };
 
 const nameInput = document.querySelector("#name");

@@ -33,7 +33,7 @@ Media, namely images and video, account for over 70% of the bytes downloaded for
   </tbody>
 </table>
 
-> **Note:** This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see <https://images.guide>.
+> **Note:** This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see <https://web.dev/learn/images>.
 
 ## Why optimize your multimedia?
 

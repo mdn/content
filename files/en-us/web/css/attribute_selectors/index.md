@@ -60,7 +60,7 @@ a[class~="logo"] {
 - `[attr operator value i]`
   - : Adding an `i` (or `I`) before the closing bracket causes the value to be compared case-insensitively (for characters within the {{Glossary("ASCII")}} range).
 - `[attr operator value s]` {{Experimental_Inline}}
-  - : Adding an `s` (or `S`) before the closing bracket causes the value to be compared case-sensitively (for characters within the ASCII range).
+  - : Adding an `s` (or `S`) before the closing bracket causes the value to be compared case-sensitively (for characters within the {{Glossary("ASCII")}} range).
 
 ## Examples
 

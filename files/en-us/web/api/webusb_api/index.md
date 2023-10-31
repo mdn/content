@@ -87,4 +87,4 @@ navigator.usb.getDevices().then((devices) => {
 
 ## See also
 
-- [Access USB Devices on the Web](https://web.dev/usb/)
+- [Access USB Devices on the Web](https://developer.chrome.com/articles/usb/)

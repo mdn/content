@@ -199,7 +199,7 @@ Instead of allowing `'unsafe-inline'`, you can use the `'unsafe-hashes'` source 
 Given a HTML page that includes the following inline event handler:
 
 ```html
-<!-- I wan't to use addEventListener, but I can't :( -->
+<!-- I want to use addEventListener, but I can't :( -->
 <button onclick="myScript()">Submit</button>
 ```
 
