@@ -8,7 +8,7 @@ status:
 browser-compat: api.Keyboard.lock
 ---
 
-{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
