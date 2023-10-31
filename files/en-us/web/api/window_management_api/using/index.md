@@ -60,8 +60,15 @@ function openWindow(left, top, width, height, url) {
     windowFeatures,
   );
 
-  // Store a reference to the window in the windowRefs array
-  windowRefs.push(windowRef);
+  if (windowRef === null) {
+    // If the browser is blocking new windows, close any windows that were
+    // able to open and display instructions to help the user fix this problem
+    closeAllWindows();
+    popoverElem.showPopover();
+  } else {
+    // Store a reference to the window in the windowRefs array
+    windowRefs.push(windowRef);
+  }
 }
 ```
 
@@ -118,6 +125,34 @@ function checkWindowClose() {
 > **Note:** In our experiments, the {{domxref("setInterval()")}} polling method shown above seemed to work best for detecting window closure in the case of multiple windows. Using events such as {{domxref("Window.beforeunload_event", "beforeunload")}}, {{domxref("Window.pagehide_event", "pagehide")}}, or {{domxref("Document.visibilitychange_event", "visibilitychange")}} proved unreliable because, when opening multiple windows at the same time, the rapid shift in focus/visibility seemed to fire the handler function prematurely.
 
 > **Note:** One concern with the above example is that it uses constant values to represent the size of the Chrome window UI portions in the calculations — `WINDOW_CHROME_X` and `WINDOW_CHROME_Y` — to get the window size calculations correct. To create precisely-sized windows on other future implementations of the API, you'd need to keep a small library of browser chrome sizes, and employ browser detection to discover which browser is rendering your app and choose the correct size for calculations. Or you can rely on less precise window sizes.
+
+### Handling browser popup blockers
+
+In modern browsers, a separate user gesture event is required for each `Window.open()` call, for security purposes. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to:
+
+- Open no more than one new window at once.
+- Reuse existing windows to display different pages.
+- Advise users on how to update their browser settings to allow multiple windows.
+
+In our demo application, we have gone for the third option. Our `openWindow()` function contains the following section:
+
+```js
+// ...
+
+if (windowRef === null) {
+  // If the browser is blocking new windows, close any windows that were
+  // able to open and display instructions to help the user fix this problem
+  closeAllWindows();
+  popoverElem.showPopover();
+} else {
+  // Store a reference to the window in the windowRefs array
+  windowRefs.push(windowRef);
+}
+
+// ...
+```
+
+If the browser blocks a new window, the resulting `windowRef` will be `null`. In this case we run our `closeAllWindows()` function to close any windows that _did_ manage to open before the blocking started, and show a [popover element](/en-US/docs/Web/API/Popover_API) that explains how to disable the popup blocker.
 
 ## Simple single-window per display case
 
