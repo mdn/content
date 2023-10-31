@@ -20,8 +20,6 @@ For ten years, the MDN community has been documenting the open Web. From fixing 
 
 [Learn more about contributing](/en-US/docs/MDN/Contribute)
 
-{{TenthCampaignQuote}}
-
 ## See also
 
 - [The history of MDN](/en-US/docs/MDN/At_ten/History_of_MDN)
