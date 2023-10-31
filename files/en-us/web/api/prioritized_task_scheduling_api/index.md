@@ -511,4 +511,4 @@ Note that the second string appears in log after about 2 seconds.
 ## See also
 
 - [Building a Faster Web Experience with the postTask Scheduler](https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91) on the Airbnb blog (2021)
-- [Optimizing long tasks](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) on web.dev (2022)
+- [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary) on web.dev (2022)
