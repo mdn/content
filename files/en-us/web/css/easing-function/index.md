@@ -7,7 +7,7 @@ browser-compat: css.types.easing-function
 
 {{CSSRef}}
 
-The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a mathematical function that describes the rate at which a numerical value changes.
+The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a mathematical function that describes the rate at which a value changes.
 
 This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition-timing-function) and [animation](/en-US/docs/Web/CSS/animation-timing-function) properties.
 
@@ -30,6 +30,7 @@ ease-in-out
 /* steps function and keywords */
 /* steps(<number-of-steps>, <direction>) */
 steps(4, end)
+steps(10, jump-both)
 step-start
 step-end
 ```
@@ -54,7 +55,7 @@ step-end
 
 - `<cubic-bezier-easing-function>`
 
-  - : Specifies a `cubic-bezier()` function using two control points, each with two values, which help shape the curve of the animation or transition progress. The control points can be specified using a custom `cubic-bezier()` function, or one of the four predefined keyword values for the `cubic-bezier()` function can be used. The predefined keywords include:
+  - : Specifies a [Bézier curve](/en-US/docs/Glossary/Bezier_curve) to shape the progress of an animation or a transition. In CSS, Bézier curves are defined by four control points that mathematically describe the curve: a starting point, an ending point, and two control points. The cubic Bézier easing function can be defined in one of these two ways: by creating a custom curve with a four-parameter `cubic-bezier()` function call or by using one of the predefined keyword values, which map to the commonly used Bézier curve parameters. The predefined keyword values include:
 
     `ease`: This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1)`. It indicates that the interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. It is similar to the `ease-in-out` keyword, though it accelerates more sharply at the beginning.
 
