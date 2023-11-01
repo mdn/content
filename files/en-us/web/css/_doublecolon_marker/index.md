@@ -68,3 +68,6 @@ ul li::marker {
 ## See also
 
 - HTML elements that have marker boxes by default: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
