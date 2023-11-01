@@ -50,7 +50,9 @@ The {{HTMLElement("button")}} with the ID `"fs-toggle"` will change between ligh
 For this example, we need the button click to toggle parent div to and from fullscreen mode:
 
 ```js
-document.querySelector('#fs-toggle').addEventListener('click', function (event) {
+document
+  .querySelector("#fs-toggle")
+  .addEventListener("click", function (event) {
     if (document.fullscreenElement) {
         // If there is a fullscreen element, exit full screen.
         document.exitFullscreen();
