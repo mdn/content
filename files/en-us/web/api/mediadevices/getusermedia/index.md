@@ -420,6 +420,8 @@ const constraints = {
 };
 ```
 
+> **Note:** In certain cases, it may be necessary to release the current camera facing mode before you can switch to a different one. To ensure the camera switch, it is advisable to free up the media resources by invoking the "stop()" method on the track before requesting a different facing mode.
+
 ## Specifications
 
 {{Specifications}}
