@@ -210,3 +210,4 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 
 - [List of HTTP status codes on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 - [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [Series of posts on HTTP status codes](https://evertpot.com/http/)
