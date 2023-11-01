@@ -31,10 +31,10 @@ This example styles an element in different background color depending on whethe
 <div class="element">
   <h1>MDN :fullscreen pseudo-class demo</h1>
 
-    <p>
-        This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-        change the background color of the <code>.element</code> div.
-    </p>
+  <p>
+    This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+    change the background color of the <code>.element</code> div.
+  </p>
 
     <p>
         Normally, the background is light yellow. In fullscreen mode, the background
