@@ -56,14 +56,14 @@ This example styles an element in different background color depending on whethe
 ```
 
 ```js
-document.querySelector('.toggle').addEventListener('click', function (event) {
-    if (document.fullscreenElement) {
-        // If there is a fullscreen element, exit full screen.
-        document.exitFullscreen();
-        return;
-    }
-    // Make the parent div fullscreen.
-    document.querySelector('.element').requestFullscreen();
+document.querySelector(".toggle").addEventListener("click", function (event) {
+  if (document.fullscreenElement) {
+    // If there is a fullscreen element, exit full screen.
+    document.exitFullscreen();
+    return;
+  }
+  // Make the parent div fullscreen.
+  document.querySelector(".element").requestFullscreen();
 });
 ```
 
