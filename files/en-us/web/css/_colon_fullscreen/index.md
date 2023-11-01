@@ -36,10 +36,10 @@ This example styles an element in different background color depending on whethe
     change the background color of the <code>.element</code> div.
   </p>
 
-    <p>
-        Normally, the background is light yellow. In fullscreen mode, the background
-        is light pink.
-    </p>
+  <p>
+    Normally, the background is light yellow. In fullscreen mode, the background
+    is light pink.
+  </p>
 
     <button class="toggle">Toggle Fullscreen</button>
 </div>
