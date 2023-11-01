@@ -41,7 +41,7 @@ There are several {{glossary("IDE")}} extensions and programming-language specif
 
 You can run a local HTTP server using a [VSCode plugin](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), which enables running a local server on a single or different port. The [Preview on Web Server extension](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) for the [VSCode](https://code.visualstudio.com/download) IDE creates a server at the root of the directory currently opened by the editor, with a default port of `8080`. VS Code extensions are configurable. The `previewServer.port` setting is the port number of the web server. The extensions default setting of `8080` can be edited and changed. By default, entering `localhost:8080` in the browser URL bar will load the page.
 
-> **Note:** that the Preview on Web Server extension uses browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
+> **Note:** that the Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
 
 You can also create a [local server with the IntelliJ IDE](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html), which comes with a [configurable built-in PHP web server](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server).
 
