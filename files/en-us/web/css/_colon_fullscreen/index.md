@@ -51,7 +51,7 @@ This example styles an element in different background color depending on whethe
 }
 
 .element:fullscreen {
-    background-color: lightpink;
+  background-color: lightpink;
 }
 ```
 
