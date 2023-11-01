@@ -45,6 +45,8 @@ This example styles an element in different background color depending on whethe
 </div>
 ```
 
+The `:fullscreen` pseudo-class is used to override the background color of the `<div>` when it is in fullscreen mode.
+
 ```css
 .element {
   background-color: lightyellow;
@@ -54,6 +56,8 @@ This example styles an element in different background color depending on whethe
   background-color: lightpink;
 }
 ```
+
+The following JavaScript provides an event handler function that toggles fullscreen when the button is clicked.
 
 ```js
 document.querySelector(".toggle").addEventListener("click", function (event) {
