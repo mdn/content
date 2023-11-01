@@ -22,17 +22,17 @@ A list of valid keys is found in the [UI Events KeyboardEvent code Values](https
 
 ## Instance methods
 
-- {{domxref('KeyboardLayoutMap.entries()')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('KeyboardLayoutMap.entries()')}} {{experimental_inline}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a `for-in` loop enumerates properties in the prototype chain as well).
-- {{domxref('KeyboardLayoutMap.forEach()')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('KeyboardLayoutMap.forEach()')}} {{experimental_inline}}
   - : Executes a provided function once for each element of `KeyboardLayoutMap`.
 - {{domxref('KeyboardLayoutMap.get()')}} {{experimental_inline}}
   - : Returns the element with the given key from the `KeyboardLayoutMap` object.
 - {{domxref('KeyboardLayoutMap.has()')}} {{experimental_inline}}
   - : Returns a boolean indicating whether the `KeyboardLayoutMap` object has an element with the specified key.
-- {{domxref('KeyboardLayoutMap.keys()')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('KeyboardLayoutMap.keys()')}} {{experimental_inline}}
   - : Returns a new _array iterator_ object that contains the keys for each index in the array.
-- {{domxref('KeyboardLayoutMap.values()')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('KeyboardLayoutMap.values()')}} {{experimental_inline}}
   - : Returns a new _array iterator_ object that contains the values for each index in the `KeyboardLayoutMap` object.
 
 ## Examples
