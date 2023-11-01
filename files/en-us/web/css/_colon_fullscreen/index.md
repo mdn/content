@@ -23,41 +23,59 @@ The `:fullscreen` pseudo-class lets you configure your stylesheets to automatica
 
 ## Examples
 
-In this example, the color of a button is changed depending on whether or not the document is in fullscreen mode. This is done without needing to specifically apply style changes using JavaScript.
+In this example, the color of a button is changed depending on whether or not it's parent div is in fullscreen mode. This is done without needing to specifically apply style changes using JavaScript.
 
 ### HTML
 
 The page's HTML looks like this:
 
 ```html
-<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
+<div style="background-color: lightyellow">
+  <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>
-  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-  change the style of a button used to toggle fullscreen mode on and off,
-  entirely using CSS.
-</p>
+  <p>
+    This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+    change the style of a button used to toggle fullscreen mode on and off,
+    entirely using CSS.
+  </p>
 
-<button id="fs-toggle">Toggle Fullscreen</button>
+  <button id="fs-toggle">Toggle Fullscreen</button>
+</div>
 ```
 
-The {{HTMLElement("button")}} with the ID `"fs-toggle"` will change between pale red and pale green depending on whether or not the document is in fullscreen mode.
+The {{HTMLElement("button")}} with the ID `"fs-toggle"` will change between light pink and light green depending on whether or not the parent div is in fullscreen mode.
+
+### Javascript
+
+For this example, we need the button click to toggle parent div to and from fullscreen mode:
+
+```js
+document.querySelector('#fs-toggle').addEventListener('click', function (event) {
+    if (document.fullscreenElement) {
+        // If there is a fullscreen element, exit full screen.
+        document.exitFullscreen();
+        return;
+    }
+    // Make the parent div fullscreen.
+    event.target.parentElement.requestFullscreen();
+});f
+```
 
 ### CSS
 
 The magic happens in the CSS. There are two rules here. The first establishes the background color of the "Toggle Fullscreen Mode" button when the element is not in a fullscreen state. The key is the use of the `:not(:fullscreen)`, which looks for the element to not have the `:fullscreen` pseudo-class applied to it.
 
 ```css
-#fs-toggle:not(:fullscreen) {
-  background-color: #afa;
+div:not(:fullscreen) #fs-toggle {
+  background-color: lightgreen;
 }
 ```
 
-When the document _is_ in fullscreen mode, the following CSS applies instead, setting the background color to a pale shade of red.
+When the parent div _is_ in fullscreen mode, the following CSS applies instead, setting the background color to light pink.
 
 ```css
-#fs-toggle:fullscreen {
-  background-color: #faa;
+div:fullscreen #fs-toggle {
+  background-color: lightpink;
 }
 ```
 
