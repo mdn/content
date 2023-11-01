@@ -54,9 +54,9 @@ document
   .querySelector("#fs-toggle")
   .addEventListener("click", function (event) {
     if (document.fullscreenElement) {
-        // If there is a fullscreen element, exit full screen.
-        document.exitFullscreen();
-        return;
+      // If there is a fullscreen element, exit full screen.
+      document.exitFullscreen();
+      return;
     }
     // Make the parent div fullscreen.
     event.target.parentElement.requestFullscreen();
