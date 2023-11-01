@@ -7,7 +7,7 @@ browser-compat: css.selectors.fullscreen
 
 {{CSSRef}}
 
-The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element which is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects them all.
+The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element that is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects them all.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ The `:fullscreen` pseudo-class lets you configure your stylesheets to automatica
 
 ### Styling a Fullscreen Element
 
-This example styles an element in different background color depending on whether or not it is in fullscreen state.
+This example applies a different background color to a {{htmlelement("div")}} element, depending on whether or not it is in fullscreen mode. It includes a {{htmlelement("button")}} to toggle fullscreen on and off.
 
 ```html
 <div class="element">
@@ -45,7 +45,7 @@ This example styles an element in different background color depending on whethe
 </div>
 ```
 
-The `:fullscreen` pseudo-class is used to override the background color of the `<div>` when it is in fullscreen mode.
+The `:fullscreen` pseudo-class is used to override the [`background-color`](/en-US/docs/Web/CSS/background-color) of the `<div>` when it is in fullscreen mode.
 
 ```css
 .element {
@@ -57,7 +57,7 @@ The `:fullscreen` pseudo-class is used to override the background color of the `
 }
 ```
 
-The following JavaScript provides an event handler function that toggles fullscreen when the button is clicked.
+The following JavaScript provides an event handler function that toggles fullscreen when the `<button>` is clicked.
 
 ```js
 document.querySelector(".toggle").addEventListener("click", function (event) {
@@ -71,9 +71,9 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 });
 ```
 
-### Demo
+#### Demo
 
-See the demo live on [JSFiddle](https://jsfiddle.net/yookoala/oLc1uws0/).
+[See the example live](https://jsfiddle.net/yookoala/oLc1uws0/).
 
 ## Specifications
 
@@ -87,7 +87,6 @@ See the demo live on [JSFiddle](https://jsfiddle.net/yookoala/oLc1uws0/).
 
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
-- {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute
