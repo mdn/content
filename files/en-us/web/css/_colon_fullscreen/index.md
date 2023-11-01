@@ -71,9 +71,9 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 });
 ```
 
-#### Result
+### Demo
 
-{{EmbedLiveSample("Styling a Fullscreen Element", "100%", 300)}}
+See the demo live on [JSFiddle](https://jsfiddle.net/yookoala/oLc1uws0/).
 
 ## Specifications
 
