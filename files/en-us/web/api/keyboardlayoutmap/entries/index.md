@@ -2,7 +2,7 @@
 title: "KeyboardLayoutMap: entries property"
 short-title: entries
 slug: Web/API/KeyboardLayoutMap/entries
-page-type: web-api-instance-property
+page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.KeyboardLayoutMap.entries

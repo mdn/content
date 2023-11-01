@@ -2,7 +2,7 @@
 title: "KeyboardLayoutMap: keys property"
 short-title: keys
 slug: Web/API/KeyboardLayoutMap/keys
-page-type: web-api-instance-property
+page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.KeyboardLayoutMap.keys

@@ -2,7 +2,7 @@
 title: "KeyboardLayoutMap: values property"
 short-title: values
 slug: Web/API/KeyboardLayoutMap/values
-page-type: web-api-instance-property
+page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.KeyboardLayoutMap.values
