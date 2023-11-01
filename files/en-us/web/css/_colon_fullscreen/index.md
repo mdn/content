@@ -29,7 +29,7 @@ This example styles an element in different background color depending on whethe
 
 ```html
 <div class="element">
-    <h1>MDN :fullscreen pseudo-class demo</h1>
+  <h1>MDN :fullscreen pseudo-class demo</h1>
 
     <p>
         This demo uses the <code>:fullscreen</code> pseudo-class to automatically
