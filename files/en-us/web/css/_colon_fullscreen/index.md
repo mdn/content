@@ -41,7 +41,7 @@ This example styles an element in different background color depending on whethe
     is light pink.
   </p>
 
-    <button class="toggle">Toggle Fullscreen</button>
+  <button class="toggle">Toggle Fullscreen</button>
 </div>
 ```
 
