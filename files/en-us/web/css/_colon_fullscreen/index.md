@@ -80,7 +80,6 @@ div:fullscreen #fs-toggle {
 }
 ```
 
-
 ## Specifications
 
 {{Specifications}}
