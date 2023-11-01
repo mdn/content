@@ -207,9 +207,11 @@ It is important to provide a closing mechanism within every `dialog` element. Th
 - When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
+> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), `transition-behavior: allow-discrete` needs to be set to enabled the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations) the above behavior is available by default; an equivalent step is not required.
+
 #### Transitioning dialog elements
 
-When animating `<dialog>`s with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), the following are required:
+When animating `<dialog>`s with CSS transitions, the following are required:
 
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on the `<dialog>` that you want to transition from when it is shown. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
 - [`display`](/en-US/docs/Web/CSS/display) needs to be added to the transitions list so that the `<dialog>` will remain as `display: block` for the duration of the animation, allowing the other animations to be seen.
@@ -311,16 +313,16 @@ The code renders as follows:
 
 #### dialog keyframe animations
 
-When animating a `<dialog>` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), there are some differences to note from transitions:
+When animating a `<dialog>` with CSS animations, there are some differences to note from transitions:
 
 - You don't provide a starting state inside a `@starting-style` block; instead, you need to provide the starting `display` value in an explicit starting keyframe (for example using `0%` or `from`).
 - You don't need to enable discrete transitions; there is no equivalent to `allow-discrete` inside keyframes.
-- You can't set `overlay` inside keyframes either. The best solution we found at this time to defer removal from the top layer was to use JavaScript — animating the `<dialog>` and then using {{domxref("setTimeout()")}} to defer removal of the `<dialog>` until after the animation is finished.
+- You can't set `overlay` inside keyframes either, but we found we could get the animation example working OK by setting the animations as appropriate on the shown and closed states of the `<dialog>` via CSS.
 
-Let's have a look at an example so you can see what this looks like. First, the HTML contains a `<dialog>` element, plus a button to show the dialog. Additionally, the `<dialog>` element contains another button to close itself. The `<dialog>` has a `class` of `fade-in` set on it, which will trigger the entry animation when the dialog is shown.
+Let's have a look at an example so you can see what this looks like. First, the HTML contains a `<dialog>` element, plus a button to show the dialog. Additionally, the `<dialog>` element contains another button to close itself.
 
 ```html
-<dialog id="dialog" class="fade-in">
+<dialog id="dialog">
   Content here
   <button class="close">close</button>
 </dialog>
@@ -331,14 +333,16 @@ Let's have a look at an example so you can see what this looks like. First, the 
 Now for the CSS:
 
 ```css
-/* Animation classes */
-
-.fade-in {
-  animation: fade-in 0.5s ease-out forwards;
+dialog {
+  animation: fade-out 0.7s ease-out forwards;
 }
 
-.fade-out {
-  animation: fade-out 0.5s ease-out forwards;
+dialog[open] {
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+dialog[open]::backdrop {
+  animation: backdrop-fade-in 0.7s ease-out forwards;
 }
 
 /* Animation keyframes */
@@ -371,15 +375,25 @@ Now for the CSS:
   }
 }
 
+@keyframes backdrop-fade-in {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
 body,
 button {
   font-family: system-ui;
 }
 ```
 
-Note the keyframes defined to animate between the closed and open states, which are then applied to control classes. This includes animating `display` to make sure the actual visible animation effects remain visible for the whole duration. This example doesn't animate the backdrop like the transitions example above does — that wasn't possible to reproduce with a keyframe animation at the time of writing.
+Note the keyframes defined to animate between the closed and shown states of the `<dialog>`, plus the fade-in animation for the `<dialog>`'s backdrop. The `<dialog>` animations include animating `display` to make sure the actual visible animation effects remain visible for the whole duration. Note that it wasn't possible to reproduce a keyframe animation for the backdrop fade out at the time of writing.
 
-Finally, the JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`, while also adding and removing the control classes as required to apply the entry and exit animations. In addition, note how {{domxref("setTimeout()")}} is used to defer closing the `<dialog>` until the exit animation is finished.
+Finally, the JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`.
 
 ```js
 const dialogElem = document.getElementById("dialog");
@@ -387,17 +401,11 @@ const showBtn = document.querySelector(".show");
 const closeBtn = document.querySelector(".close");
 
 showBtn.addEventListener("click", () => {
-  dialogElem.classList.remove("fade-out");
-  dialogElem.classList.add("fade-in");
   dialogElem.showModal();
 });
 
 closeBtn.addEventListener("click", () => {
-  dialogElem.classList.remove("fade-in");
-  dialogElem.classList.add("fade-out");
-  setTimeout(() => {
-    dialogElem.close();
-  }, 500);
+  dialogElem.close();
 });
 ```
 

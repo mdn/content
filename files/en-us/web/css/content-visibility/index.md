@@ -51,10 +51,10 @@ This behavior is useful for creating entry/exit animations where you want to for
 
 When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit starting keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) section below.
 
-When animating `content-visibility` with transitions, two additional features are needed:
+When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`, to avoid unexpected behavior.
-- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility` when it is transitioned. This effectively enables `content-visibility` transitions, enabling it to animate.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, CSS transitions are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`, to avoid unexpected behavior.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility` when it is transitioned. This effectively enables `content-visibility` transitions.
 
 ## Formal definition
 

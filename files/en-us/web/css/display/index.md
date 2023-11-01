@@ -272,10 +272,10 @@ This behavior is useful for creating entry/exit animations where you want to for
 
 When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `display` value in an explicit starting keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
 
-When animating `display` with transitions, two additional features are needed (see the below links for examples):
+When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed (see the below links for examples):
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
-- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `display` when it is transitioned. This effectively enables `display` transitions, enabling it to animate.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, CSS transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `display` when it is transitioned. This effectively enables `display` transitions.
 
 ## Accessibility concerns
 

@@ -20,15 +20,15 @@ This enables the easy creation of entry animations that were previously complex 
 ## Syntax
 
 ```css
-@starting-style {rules}
-@starting-style {declarations}
+@starting-style { rules }
+@starting-style { declarations }
 ```
 
 where:
 
 - _rules_
   - : Is the set of CSS rules providing the starting styles for the transition, when `@starting-style` is used in standalone style.
-- _rules_
+- _declarations_
   - : Is the set of CSS declarations providing the starting styles for the transition, when `@starting-style` is nested inside a particular ruleset.
 
 ## Description
