@@ -140,12 +140,12 @@ _Doesn't inherit any method._
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
+- {{domxref("Navigator.getGamepads()")}}
+  - : returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
 - {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}}
   - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
 - {{domxref("Navigator.registerProtocolHandler()")}}
   - : Allows websites to register themselves as a possible handler for a given protocol.
-- {{domxref("Navigator.unregisterProtocolHandler()")}}
-  - : Unregister a website that is a handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
 - {{domxref("Navigator.requestMIDIAccess()")}}
@@ -158,17 +158,19 @@ _Doesn't inherit any method._
   - : Invokes the native sharing mechanism of the current platform.
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
+- {{domxref("Navigator.unregisterProtocolHandler()")}}
+  - : Unregister a website that is a handler for a given protocol.
 
 ### Deprecated methods
 
-- {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
 - {{domxref("Navigator.getUserMedia()")}} {{Deprecated_Inline}}
   - : After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.
-- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
-  - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
+- {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
 - {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
   - : Always returns false.
+- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
+  - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
 
 ## Specifications
 
