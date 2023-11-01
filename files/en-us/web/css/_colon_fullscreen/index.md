@@ -66,21 +66,19 @@ f;
 
 ### CSS
 
-The magic happens in the CSS. There are two rules here. The first establishes the background color of the "Toggle Fullscreen Mode" button when the element is not in a fullscreen state. The key is the use of the `:not(:fullscreen)`, which looks for the element to not have the `:fullscreen` pseudo-class applied to it.
+The magic happens in the CSS. There are two rules here:
+1. Normally, the background color of the "Toggle Fullscreen Mode" button is light green.
+2. Within a div which _is_ in fullscreen state, background color of the same button is light pink.
 
 ```css
-div:not(:fullscreen) #fs-toggle {
+#fs-toggle {
   background-color: lightgreen;
 }
-```
-
-When the parent div _is_ in fullscreen mode, the following CSS applies instead, setting the background color to light pink.
-
-```css
 div:fullscreen #fs-toggle {
   background-color: lightpink;
 }
 ```
+
 
 ## Specifications
 
