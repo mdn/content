@@ -67,6 +67,7 @@ f;
 ### CSS
 
 The magic happens in the CSS. There are two rules here:
+
 1. Normally, the background color of the "Toggle Fullscreen Mode" button is light green.
 2. Within a div which _is_ in fullscreen state, background color of the same button is light pink.
 
