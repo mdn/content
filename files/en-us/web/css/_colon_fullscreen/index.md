@@ -71,7 +71,7 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 });
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Styling a Fullscreen Element", "100%", 300)}}
 
