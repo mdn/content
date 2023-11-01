@@ -60,7 +60,8 @@ document
     }
     // Make the parent div fullscreen.
     event.target.parentElement.requestFullscreen();
-});f
+  });
+f;
 ```
 
 ### CSS
