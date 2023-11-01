@@ -21,6 +21,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+- {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 - {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
@@ -31,12 +33,10 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
 - {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("GPU")}} object for the current browsing context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
-- {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an {{domxref("HID")}} object providing methods
-    for connecting to HID devices, listing attached HID devices, and event
-    handlers for connected HID devices.
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
+- {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("HID")}} object providing methods for connecting to HID devices, listing attached HID devices, and event handlers for connected HID devices.
 - {{domxref("Navigator.ink")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("Ink")}} object for the current document, providing access to [Ink API](/en-US/docs/Web/API/Ink_API) functionality.
 - {{domxref('Navigator.keyboard')}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -63,12 +63,12 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("Presentation")}} API.
+- {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
@@ -79,6 +79,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 - {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
+- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.
 - {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}}
@@ -90,16 +92,12 @@ _Doesn't inherit any properties._
 
 - {{domxref("Navigator.buildID")}} {{Non-standard_Inline}}
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
-- {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 - {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
   - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
-- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.
 
 ### Deprecated properties
 
