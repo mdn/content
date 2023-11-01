@@ -31,7 +31,7 @@ You can control the gaps between columns with the {{cssxref("column-gap")}} or {
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
 
-In this example, we used the {{cssxref("column-width")}} property to set a minumum width the columns need to be before the browser adds an additional column. The {{cssxref("columns")}} shorthand property can be used to set both the `column-width` and the the {{cssxref("column-count")}} property, which defines the maximum number of columns allowed.
+In this example, we used the {{cssxref("column-width")}} property to set a minimum width that the columns need to be before the browser adds an additional column. The {{cssxref("columns")}} shorthand property can be used to set the `column-width` and {{cssxref("column-count")}} properties, either of which can define the maximum number of columns allowed.
 
 > **Callout:**
 >
@@ -45,7 +45,7 @@ Use multicol when:
 
 ### A single row of items with equal heights — flexbox
 
-Flexbox can be used to break content into columns by setting {{cssxref("display", "display: flex;")}} to make a parent element a flex-container. Just adding this one property turns all the chidren (child elements, pseudo-elements, and text nodes) into flex items along a single line. Setting the same {{cssxref("flex")}} shorthand property with a single numeric distributes all the available space proportionally, generally making all the flex items the same size as long as none have non-wrapping content requires that item be larger.
+Flexbox can be used to break content into columns by setting {{cssxref("display", "display: flex;")}} to make a parent element a flex-container. Just adding this one property turns all the children (child elements, pseudo-elements, and text nodes) into flex items along a single line. Setting the same {{cssxref("flex")}} shorthand property with a single numeric value distributes all the available space equally, generally making all the flex items the same size as long as none have non-wrapping content forcing the item to be larger.
 
 Margins or the `gap` property can be used to create gaps between items, but there is currently no CSS property that adds rules between flex items.
 
@@ -71,7 +71,7 @@ Use flexbox:
 
 ### Lining items up in rows and columns — grid layout
 
-If what you want a two-dimensional grid, a layout where items line up in rows and columns, then you should choose CSS Grid Layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} set on the container. Properties set on the grid container, like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} define how the items are distribute both rows and columns.
+If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS Grid Layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
