@@ -62,7 +62,7 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
     document.exitFullscreen();
     return;
   }
-  // Make the parent div fullscreen.
+  // Make the .element div fullscreen.
   document.querySelector(".element").requestFullscreen();
 });
 ```
