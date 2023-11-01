@@ -20,7 +20,7 @@ The multi-screen origin is relevant to the following APIs:
 - The values of {{domxref("Window.screenLeft")}}, {{domxref("Window.screenTop")}}, {{domxref("Window.screenX")}}, {{domxref("Window.screenY")}} for each window are reported relative to the multi-screen origin.
 - When using {{domxref("Window.moveTo()")}} and {{domxref("Window.open()")}}, windows are positioned relative to the multi-screen origin.
 
-> **Note**: Not all browsers officially support multi-screen origin, but some have their own non-standard implementations. You are advised to check the browser compatibility information of the above features for the behavior in each browser.
+> **Note:** Not all browsers officially support multi-screen origin, but some have their own non-standard implementations. You are advised to check the browser compatibility information of the above features for the behavior in each browser.
 
 ## Visual examples
 
