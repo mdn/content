@@ -7,9 +7,11 @@ browser-compat: css.properties.container-type
 
 {{CSSRef}}
 
-An element can be established as a query container for [container size queries](/en-US/docs/Web/CSS/CSS_container_queries) using `container-type` property. The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the [type of size containment](/en-US/docs/Web/CSS/CSS_container_queries#naming_containment_contexts) used in a container query.
+An element can be established as a query container for [container size queries](/en-US/docs/Web/CSS/CSS_container_queries) using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of size containment used in a container query.
 
-Size containments turn off the ability for an element to get size information from its contents. This is important for container queries to avoid infinite loop where a CSS rule inside container query changes the content size, which in turn makes the query false and changes the parent element's size. So the container size has to be explicit or set by context, e.g. block elements and elements in grid and flex stretch to full width. If explicit size is not available then elements with size containment will collapse.
+Size containment turns off the ability of an element to get size information from its contents, which is important for container queries to avoid infinite loops. If this were not the case, a CSS rule inside a container query could change the content size, which in turn could make the query evaluate to false and change the parent element's size, which in turn could change the content size and flip the query back to true, and so on.
+
+The container size has to be set explicitly or by context, for example, block elements, flex containers, and grid containers stretching to the full width of their parent. If an explicit or contextual size is not available, elements with size containment will collapse.
 
 ## Syntax
 
