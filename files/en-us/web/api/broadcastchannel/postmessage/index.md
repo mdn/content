@@ -35,7 +35,7 @@ None.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Throw if the {{domxref("BroadcastChannel")}} has already closed.
+  - : Thrown if the {{domxref("BroadcastChannel")}} has already been closed.
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if any part of the input data is not serializable.
 
