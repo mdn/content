@@ -88,9 +88,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - `languagechange`
   - : Fires at the global/worker scope object when the user's preferred languages change.
 - `rejectionhandled` {{non-standard_inline}}
-  - : Fires on handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
+  - : Fires on handled {{jsxref("Promise")}} rejection events.
 - `unhandledrejection` {{non-standard_inline}}
-  - : Fires on unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
+  - : Fires on unhandled {{jsxref("Promise")}} rejection events.
 
 ## Example
 
