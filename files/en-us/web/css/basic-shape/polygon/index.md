@@ -43,7 +43,7 @@ Returns a {{cssxref("basic-shape")}} value.
 
 You can create almost any shape with the `polygon()` function by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The `polygon()` function requires at least 3 points, which creates a triangle, but there's no upper limit.
 
-The `polygon()` function accepts comma-separated coordinates or points as its values. Each point is represented by a pair of `x` and `y` values, which indicate the points' coordinates within the polygon.
+The `polygon()` function accepts comma-separated coordinates or points as its values. Each point is represented by a pair of space-separated `x` and `y` values, which indicate the points' coordinates within the polygon.
 
 <code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
