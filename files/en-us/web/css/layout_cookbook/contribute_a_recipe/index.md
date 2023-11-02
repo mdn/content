@@ -18,14 +18,14 @@ A recipe consists of:
 - A downloadable version of that example, also stored in the CSS Examples repo.
 - A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that includes:
 
-  1.  Introduction
-  2.  Requirements
-  3.  The recipe
-  4.  The choices made
-  5.  Any useful fallbacks or alternative methods, when relevant
-  6.  Accessibility concerns
-  7.  Browser compatibility (only if using CSS properties that aren't fully supported)
-  8.  Additional resources
+  1. Introduction
+  2. Requirements
+  3. The recipe
+  4. The choices made
+  5. Any useful fallbacks or alternative methods, when relevant
+  6. Accessibility concerns
+  7. Browser compatibility (only if using CSS properties that aren't fully supported)
+  8. Additional resources
 
 ## Steps to publish a recipe
 
@@ -49,7 +49,7 @@ The live examples that you can see on cookbook pages and elsewhere on MDN allow 
 
 Fork the [CSS Examples repo](https://github.com/mdn/css-examples) and then take a look in the `css-cookbook` folder. There is a [cookbook-template.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html) file. Copy this file and use it as a starting point. Save this in the `css-cookbook` directory with a name that makes sense for your pattern. The template is commented to help you add the various parts to the right place.
 
-The important parts of this are as follows.
+The important parts of this are as follows:
 
 1. There is a stylesheet for the editor panels with some basic body styling and a JavaScript file for the editor functionality. Leave these files as they are.
 
