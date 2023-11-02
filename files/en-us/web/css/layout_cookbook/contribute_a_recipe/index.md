@@ -55,7 +55,7 @@ The important parts of this are as follows.
 
 2. There are two style blocks in the `<head>`. The first style block is for things the reader does not need to change to play with the example. The second style block contains the items readers might want to play with. We typically add all of our CSS from the example into the first block, then choose which sets of rules to move to the second block. The rules in the second block should be those that are fundamental to the pattern, perhaps those where a user could make a change to a CSS value and see the pattern update.
 
-3. You need to add the HTML for your component twice. First inside the section with a class of `preview`, then inside the `<textarea>` with the class `playable-html`.
+3. You need to add the HTML for your component twice. First, inside the section with a class of `preview`, then inside the `<textarea>` with the class `playable-html`.
 
 4. Your editable CSS, from the second block in the head, must also be copied into the `playable-css` section.
 
@@ -77,15 +77,17 @@ It can be handy to include the body CSS rules that are in our included styleshee
 
 ### 4. Make a Pull Request with your example
 
-Make a [PR](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) on the [CSS Examples repo](https://github.com/mdn/css-examples). This way we can help you with any changes to the example that may be needed before you create your page, plus the example will need to be live to be included some it makes sense to create it first. In your PR, include an explanation of the pattern and what you are demonstrating.
+Make a [PR](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) on the [CSS Examples repo](https://github.com/mdn/css-examples). This way, we can help you with any changes to the example that may be needed before you create your page. Plus, the example will need to be live to be included. This is why it makes sense to create the code examples first, before the explanatory guide. In your PR, explain the pattern and what you are demonstrating.
 
 ### 5. Create your page
 
-Once your example is merged you can [open a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) to create a new page for it in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook).
-There is [a template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1) that you should use.
+Once your example is merged, you can [open a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) to create a new page in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook).
+There is [a template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md) that you should use.
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help.
 
-If you need to ask any questions, or want someone to take a look at your page, get in touch with us on any of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+Also, add a link to the new recipe in the top-level [Layout Cookbook page](/en-us/web/css/layout_cookbook/).
+
+If you have any questions or want someone to take a look at your page, get in touch via any [communication channel](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 
