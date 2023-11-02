@@ -85,7 +85,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Fires when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
 - `online`
   - : Fires when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
-- [`languagechange`](/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event)
+- `languagechange`
   - : Fires at the global/worker scope object when the user's preferred languages change.
 - `rejectionhandled` {{non-standard_inline}}
   - : Fires on handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
