@@ -39,16 +39,16 @@ This article provides information about the changes in Firefox 70 that will affe
 
 ### CSS
 
-- Opacity values like for {{cssxref("opacity")}} or {{SVGAttr("stop-opacity")}} can now be percentages ([Webkit bug 1562086](https://bugzil.la/1562086)).
-- {{cssxref("grid-auto-columns")}} and {{cssxref("grid-auto-rows")}} now accept multiple track-size values ([Webkit bug 1339672](https://bugzil.la/1339672)).
+- Opacity values like for {{cssxref("opacity")}} or {{SVGAttr("stop-opacity")}} can now be percentages ([Firefox bug 1562086](https://bugzil.la/1562086)).
+- {{cssxref("grid-auto-columns")}} and {{cssxref("grid-auto-rows")}} now accept multiple track-size values ([Firefox bug 1339672](https://bugzil.la/1339672)).
 - A number of text-related CSS properties have been enabled by default ([Firefox bug 1573631](https://bugzil.la/1573631)):
 
   - {{cssxref("text-decoration-thickness")}}.
   - {{cssxref("text-underline-offset")}}.
   - {{cssxref("text-decoration-skip-ink")}}. The default value is `auto`, which means that by default underlines and overlines are now interrupted where they would otherwise cross over a {{Glossary("glyph")}}.
 
-- The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ([Webkit bug 1038294](https://bugzil.la/1038294), [Webkit bug 1105868](https://bugzil.la/1105868) and [Webkit bug 1557825](https://bugzil.la/1557825)).
-- The {{cssxref("font-size")}} property now accepts the new keyword value `xxx-large`. ([Webkit bug 1553545](https://bugzil.la/1553545)).
+- The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ([Firefox bug 1038294](https://bugzil.la/1038294), [Webkit bug 1105868](https://bugzil.la/1105868) and [Webkit bug 1557825](https://bugzil.la/1557825)).
+- The {{cssxref("font-size")}} property now accepts the new keyword value `xxx-large`. ([Firefox bug 1553545](https://bugzil.la/1553545)).
 - The {{cssxref(":visited")}} pseudo-class no longer matches {{htmlelement("link")}} elements, for logic and performance reasons ([Firefox bug 1572246](https://bugzil.la/1572246); see [Intent to ship: Make \<link> elements always unvisited](https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ) and [\[selectors\] :link and \<link>](https://github.com/w3c/csswg-drafts/issues/3817) for more reasoning as to why).
 - We now support an `auto` value for the {{cssxref("quotes")}} property ([Firefox bug 1421938](https://bugzil.la/1421938)).
 - Stylesheets contained in {{htmlelement("style")}} elements are now cached for reuse, to improve performance ([Firefox bug 1480146](https://bugzil.la/1480146)). Note that this currently doesn't include stylesheets that contain `@import` rules.
@@ -56,8 +56,8 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### Removals
 
-- We have retired support for 3-valued \<position> (excluding background)([Webkit bug 1559276](https://bugzil.la/1559276)).
-- The `none` value is now invalid in {{cssxref("counter", "counter()")}} / {{cssxref("counters", "counters()")}} — a change which makes the Level 3 spec match CSS 2.1 [Webkit bug 1576821](https://bugzil.la/1576821)).
+- We have retired support for 3-valued \<position> (excluding background)([Firefox bug 1559276](https://bugzil.la/1559276)).
+- The `none` value is now invalid in {{cssxref("counter", "counter()")}} / {{cssxref("counters", "counters()")}} — a change which makes the Level 3 spec match CSS 2.1 [Firefox bug 1576821](https://bugzil.la/1576821)).
 
 ### SVG
 
@@ -71,7 +71,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 ### JavaScript
 
-- [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are now supported ([Webkit bug 1435818](https://bugzil.la/1435818)).
+- [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are now supported ([Firefox bug 1435818](https://bugzil.la/1435818)).
 - The {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} method has been implemented ([Firefox bug 1473229](https://bugzil.la/1473229)).
 - The {{jsxref("BigInt.prototype.toLocaleString()")}} method has been updated to work with the `locales` and `options` parameters per the ECMAScript 402 Intl API. Also, {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.format()")}} and {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.formatToParts()")}} now accept {{jsxref("BigInt")}} values ([Firefox bug 1543677](https://bugzil.la/1543677)).
 - Per the latest ECMAScript specification, a leading zero is now never allowed for [BigInt literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#bigint_literal), making `08n` and `09n` invalid similar to the existing error when legacy octal numbers like `07n` are used. Always use a leading zero with the letter "o" (lowercase or uppercase) for octal `BigInt` numbers (i.e. `0o755n` instead of `0755n`). See [Firefox bug 1568619](https://bugzil.la/1568619).
@@ -81,7 +81,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### DOM
 
-- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed [Webkit bug 1563587](https://bugzil.la/1563587).
+- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed [Firefox bug 1563587](https://bugzil.la/1563587).
 - We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
 - A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ([Firefox bug 1558570](https://bugzil.la/1558570), [Firefox bug 1558571](https://bugzil.la/1558571)).
 - [Notification](/en-US/docs/Web/API/Notifications_API) permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ([Firefox bug 1560741](https://bugzil.la/1560741)).
