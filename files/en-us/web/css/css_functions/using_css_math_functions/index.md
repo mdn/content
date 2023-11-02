@@ -28,11 +28,23 @@ In the first two of our three examples above, we want to set the style of an ele
 
 The **`calc()`** function lets you specify CSS property values using **addition, subtraction, multiplication, and division**. It is often used to combine two CSS values that have different units, such as `%` and `px`.
 
+The `calc()` math function takes a mathematical expression as a parameter and returns the result of that expression, e.g.:
+
+```css
+property: calc(expression);
+```
+
 {{EmbedInteractiveExample("pages/css/function-calc.html")}}
 
 ## `min()`: Finding the minimum value in a set
 
 There are cases where we don't want the value of a CSS property to exceed a certain number. Say, for example, we want the width of our content container to be the smaller of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{CSSxRef("min", "min()")}}.
+
+The `min()` math function takes a set of comma-separated values as arguments and returns the smallest of those values, e.g.:
+
+```css
+property: min(<first value>, <second value>, <third value>, ...);
+```
 
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
 
@@ -42,15 +54,25 @@ This function is often used to compare two CSS values that have different units,
 
 Similar to `min()`, sometimes we don't want the value of a CSS property to go below a certain number. For example, we might want the width of our content container to be the _larger_ of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{CSSxRef("max", "max()")}}.
 
+The `max()` math function takes a set of comma-separated values as arguments and returns the largest of those values, e.g.:
+
+```css
+property: max(<first value>, <second value>, <third value>, ...);
+```
+
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
 
 Notice the similarities and differences between the examples for `min()` and `max()`.
 
 {{EmbedInteractiveExample("pages/css/function-max-01.html")}}
 
-## `clamp()`: Keeping a value between two values
+## `clamp()`: Constraining a value between two values
 
-We can combine the functions of `min()` and `max()` by using {{CSSxRef("clamp", "clamp()")}}.
+We can combine the functions of `min()` and `max()` by using {{CSSxRef("clamp", "clamp()")}}. The `clamp()` math function takes a minimum value, the value to be clamped, and the maximum value as arguments, e.g.:
+
+```css
+property: clamp(<minimum value>, <value to be clamped>, <maximum value>);
+```
 
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
 
