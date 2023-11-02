@@ -82,7 +82,7 @@ Make a [PR](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) on the 
 ### 5. Create your page
 
 Once your example is merged, you can [open a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) to create a new page in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook).
-There is [a template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md) that you should use.
+There is [a template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1) that you should use.
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help.
 
 Also, add a link to the new recipe in the top-level [Layout Cookbook page](/en-us/web/css/layout_cookbook/).
