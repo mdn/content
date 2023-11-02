@@ -16,10 +16,7 @@ According to this definition, `support.mozilla.org` and `developer.mozilla.org` 
 
 In some contexts, the scheme is also considered when differentiating sites. This would make `http://vpl.ca` and `https://vpl.ca` different sites. Including the scheme prevents an insecure (HTTP) site from being treated as the same site as a secure (HTTPS) site. A definition that considers the scheme is sometimes called a _schemeful same-site_. This stricter definition is applied in the rules for handling [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookies.
 
-:::note
-For security reasons, browsers sometimes need to distinguish between requests using the port as well as the site (scheme and domain).
-The scheme, domain and port together are referred to as an {{Glossary("Origin")}}.
-:::
+> **Note:** Browsers sometimes make security decisions (for example, deciding which resources a script can access) based on the {{Glossary("Origin")}} of a resource. This is a more restrictive concept than the site, encompassing the scheme, the whole domain, and the port. See also [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).
 
 ## Examples
 
