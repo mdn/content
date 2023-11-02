@@ -65,12 +65,12 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
+- {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
+  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.location")}}
   - : Gets/sets the location, or current URL, of the window object.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Returns the locationbar object.
-- {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
-  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Returns the menubar object.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -237,14 +237,14 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Toggles a user's ability to resize a window.
 - {{domxref("setTimeout", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
-  - : Sizes the window according to its content.
+- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
+  - : Displays a directory picker which allows the user to select a directory.
 - {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
   - : Shows a file picker that allows a user to select a file or multiple files.
 - {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}}
   - : Shows a file picker that allows a user to save a file.
-- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
-  - : Displays a directory picker which allows the user to select a directory.
+- {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
+  - : Sizes the window according to its content.
 - {{domxref("Window.stop()")}}
   - : This method stops window loading.
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
