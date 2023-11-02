@@ -84,7 +84,8 @@ fullscreen mode. It uses your browser's default control, which uses Fullscreen A
 
 ```html
 <video controls loop>
-    <source src="https://yookoala.github.io/fullscreen-video-background-demo/assets/rotating-cube.webm">
+  <source
+    src="https://yookoala.github.io/fullscreen-video-background-demo/assets/rotating-cube.webm" />
 </video>
 ```
 
@@ -96,10 +97,10 @@ demo shows, you can style the background color of the video
  * Demo: CSS background color.
  */
 video {
-    background-color: blue;
+  background-color: blue;
 }
 video:fullscreen {
-    background-color: green;
+  background-color: green;
 }
 ```
 
