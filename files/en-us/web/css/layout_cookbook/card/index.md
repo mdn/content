@@ -2,24 +2,22 @@
 title: Card
 slug: Web/CSS/Layout_cookbook/Card
 page-type: guide
-browser-compat:
-  - css.properties.grid-template-columns
-  - css.properties.grid-template-rows
+browser-compat: css.properties.grid
 ---
 
 {{CSSRef}}
 
-This pattern is a list of "card" components with optional footers.
+This pattern is a list of "card" components with optional footers. A card contains a title, an image, a description or other content, and an attribution or footer, and is generally displayed within a collection of cards.
 
 ![Three card components in a row](cards.png)
 
 ## Requirements
 
-The card component can contain a variety of content, including a heading, image, content and a footer.
+Create a group of cards, with each card component containing a heading, image, content, and, optionally, a footer.
 
-Each card should be the same height, and footers should stick to the bottom of the card.
+Each card in the group of cards should be the same height. The optional card footer should stick to the bottom of the card.
 
-When added to a collection of cards, the cards should line up in two dimensions.
+The cards in the collection of cards should line up in two dimensions; both vertically and horizontally.
 
 ## Recipe
 
@@ -31,7 +29,7 @@ When added to a collection of cards, the cards should line up in two dimensions.
 
 ## Choices made
 
-The card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:
+Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. To set up a single column grid we can use the following:
 
 ```css
 .card {
@@ -40,29 +38,38 @@ The card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout
 }
 ```
 
-The heading track is set to {{cssxref("max-content")}}, which prevents it from stretching. I have decided that I want my image to live within a track that is 200 pixels tall. I then set the next track — which is where the content lives — to `1fr`. This means it will take up any additional space.
+The {{cssxref("display", "display: grid")}} converts the element into a grid container. The three values of the {{cssxref("grid-template-rows")}} property divide the grid into a minimum of three rows, defining the height of the first three children of the card, in order. Each `card` contains a {{HTMLElement("header")}}, {{HTMLElement("image")}}, and {{HTMLElement("div")}}, in that order, with some also containing a {{HTMLElement("footer")}}. The heading row, or track, is set to {{cssxref("max-content")}}, which prevents it from stretching. The image track is set to 200 pixels tall. The third track — which is where the content lives — is set to `1fr`. This means it will take up any additional space.
 
-If the track does have a footer it will be auto-sized, as rows created in the implicit grid are auto-sized by default. Therefore this will fit the content added to it.
+Any children beyond the three with defined sizes create rows in the implicit grid, which fits content added to it. These are auto-sized by default. If a card contains a footer, it is auto-sized. The footer, when present, sticks to the bottom of the grid as the footer is auto-sized to be only the height it needs to be with the content `<div>` growing to take up any additional space.
 
-> **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. The proposed subgrid feature of Grid Level 2 would give a solution to this issue.
+The create the grid of cards we used:
 
-## Useful fallbacks or alternative methods
+```css
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+```
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) could be used to lay out the card, in which case you should make the content area grow, and other items not grow. This would be a reasonable way to lay out the card, although I have a slight preference for being able to control the tracks from the container rather than needing to add rules to the items.
+The {{cssxref("grid-template-columns")}} property defines the widths of a grid's columns. In this case, we all the grid to auto fill, with repeated columns that are minimally `230px` but allowed to grow to fill up The {{cssxref("grid-gap")}} property sets a gap of `20px` between adjacent rows and between adjacent columns. Alternatively, the {{cssxref("gap")}} property could have been used.
 
-For the overall layout you could use flexbox, however this will result in cards stretching over the final flex row where there are fewer than can fit in the rows above. Alternatively you could use [CSS multi-col](/en-US/docs/Web/CSS/CSS_multicol_layout) — this would cause the cards to lay out down the columns, which may or may not be a problem.
+> **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. Lining up the components in each card with the same components in adjacent cards, can be done with [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
 
-See the [columns recipe](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) for demonstrations of each of these layout methods.
+## Alternative methods
+
+[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) can also be used to lay out each individual card. With flexbox, the dimensions of each card's rows are set with the {{cssxref("flex")}} property on each row, rahter than on the card container as we saw with the grid example.
+
+With flexbox, the dimensions of the flex items are defined on the children rather than the parent. Whether you choose to use grid or flexbox depends on your preference; whether you prefer controlling the tracks from the container or prefer adding rules to the items.
+
+We chose grid for the cards as, generally, you want cards to be lined up both vertically and horizontally. Additionally, lining up the components within each card to the components of adjacent cards can be done with subgrid. Flex has no hack-free equivalent to subgrid.
 
 ## Accessibility concerns
 
 Depending on the content of your card there may be things you could, or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
 - [Inclusive Components: Card](https://inclusive-components.design/cards/)
+- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
