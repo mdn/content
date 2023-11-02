@@ -73,7 +73,7 @@ console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 ```
 
-Note that `encodeURI()` by itself _cannot_ form proper HTTP {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} requests, such as for {{domxref("XMLHttpRequest")}}, because `&`, `+`, and `=` are not encoded, which are treated as special characters in `GET` and `POST` requests. `encodeURIComponent()`, however, does encode these characters.
+Note that `&`, `+`, and `=` are characters used to construct the query string of a URL, and therefore they are treated as special characters in {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} HTTP requests. Since `encodeURI()` does not encode those, it _cannot_ form a proper HTTP `GET` or `POST` request just by itself, in the case where those characters would appear in other parts of the URL, such as the URL path, the fragment, or in the value of a query string parameter. However, `encodeURIComponent()` does encode these characters, so in such cases both functions would have to be used.
 
 ### Encoding a lone surrogate throws
 
