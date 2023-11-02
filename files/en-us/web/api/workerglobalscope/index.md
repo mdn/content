@@ -21,6 +21,10 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 - {{domxref("caches", "WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+- {{domxref("crossOriginIsolated", "WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
+  - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
+- {{domxref("crypto", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
 - {{domxref("indexedDB", "WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
@@ -33,7 +37,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("origin", "WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
-- {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
+- {{domxref("performance", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
 - {{domxref("Window.scheduler", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
@@ -64,11 +68,15 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("fetch", "WorkerGlobalScope.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`.
+- {{domxref("queueMicrotask", "WorkerGlobalScope.queueMicrotask()")}}
+  - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("setInterval", "WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout", "WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
+- {{domxref("structuredClone", "WorkerGlobalScope.structuredClone()")}}
+  - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - {{domxref("reportError", "WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
