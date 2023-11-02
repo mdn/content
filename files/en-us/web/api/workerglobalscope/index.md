@@ -95,9 +95,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Fires when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
 - `languagechange`
   - : Fires at the global/worker scope object when the user's preferred languages change.
-- `rejectionhandled` {{non-standard_inline}}
+- `rejectionhandled`
   - : Fires on handled {{jsxref("Promise")}} rejection events.
-- `unhandledrejection` {{non-standard_inline}}
+- `unhandledrejection`
   - : Fires on unhandled {{jsxref("Promise")}} rejection events.
 
 ## Example
