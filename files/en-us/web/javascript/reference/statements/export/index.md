@@ -1,6 +1,8 @@
----
-title: export
-slug: Web/JavaScript/Reference/Statements/export
+// In top-level module
+// We can consume the exports from a single module since parentModule
+// "collected"/"bundled" them in a single source
+import { myFunction, myVariable, MyClass } from "parentModule.js";
+---title: exportslug: Web/JavaScript/Reference/Statements/export
 page-type: javascript-statement
 browser-compat: javascript.statements.export
 ---
