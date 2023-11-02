@@ -276,7 +276,11 @@ When transitioning these properties, two additional features are also needed:
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, CSS transitions are not triggered on elements' first style updates, or when `display`/`content-visibility` changes from `none`/`hidden` to another state, to avoid unexpected behavior.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the transitions. This effectively enables `display`/`content-visibility` transitions, enabling them to animate.
 
-Let's put all of this together into a working example. The HTML contains a simple instruction message plus a {{htmlelement("div")}} that we will transition from `display` `none` to `block`.
+Let's put all of this together into a working example.
+
+### HTML
+
+The HTML contains a simple instruction message plus a {{htmlelement("div")}} that we will transition from `display` `none` to `block`.
 
 ```html
 <p>
@@ -290,6 +294,8 @@ Let's put all of this together into a working example. The HTML contains a simpl
   it transitions to <code>display: block; opacity: 1</code>. Neat, huh?
 </div>
 ```
+
+### CSS
 
 The CSS is as follows:
 
@@ -310,6 +316,8 @@ div {
   transition:
     opacity 1s,
     display 1s allow-discrete;
+  /* Equivalent to
+    all 1s allow-discrete */
 }
 
 .showing {
@@ -325,6 +333,8 @@ div {
 ```
 
 Note the `@starting-style` block used to specify the starting style for the transition, and the inclusion of the `display` property in the trainsitions list, with `allow-discrete` set on it.
+
+### JavaScript
 
 Finally, we include a bit of JavaScript to set up event listeners to trigger the transition (via the `showing` class).
 
@@ -343,6 +353,8 @@ function showHide() {
   }
 }
 ```
+
+### Result
 
 The code renders as follows:
 

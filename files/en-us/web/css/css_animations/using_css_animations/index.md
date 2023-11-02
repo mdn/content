@@ -396,7 +396,11 @@ So for example:
 
 This behavior is useful for creating entry/exit animations where you want to for example remove a container from the UI immediately with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
 
-Let's put all of this together into a working example. The HTML contains a simple instruction message plus a {{htmlelement("div")}} that we will animate from `display` `none` to `block`.
+Let's put all of this together into a working example.
+
+### HTML
+
+The HTML contains a simple instruction message plus a {{htmlelement("div")}} that we will animate from `display` `none` to `block`.
 
 ```html
 <p>
@@ -410,6 +414,8 @@ Let's put all of this together into a working example. The HTML contains a simpl
   <code>display: block; opacity: 1</code>. Neat, huh?
 </div>
 ```
+
+### CSS
 
 The CSS is as follows:
 
@@ -466,6 +472,8 @@ div.fade-out {
 
 Note the inclusion of the `display` property in the keyframe animations. When animating `display` or `content-visibility`, you need to provide the starting value in an explicit starting keyframe (for example using `0%` or `from`).
 
+### JavaScript
+
 Finally, we include a bit of JavaScript to set up event listeners to trigger the animations. Specifically, we add the `fade-in` class to the `<div>` when we want it to appear, and `fade-out` when we want it to disappear.
 
 ```js
@@ -485,6 +493,8 @@ function showHide() {
   }
 }
 ```
+
+### Result
 
 The code renders as follows:
 

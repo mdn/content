@@ -66,12 +66,16 @@ See the next example for shorthand usage.
 
 This example shows how a [popover](/en-US/docs/Web/API/Popover_API) can be animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided.
 
+#### HTML
+
 The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's toggle control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
 <div popover="auto" id="mypopover">I'm a Popover! I should animate.</div>
 ```
+
+#### CSS
 
 The CSS for the example looks like this:
 
@@ -95,6 +99,8 @@ html {
     transform 0.7s,
     overlay 0.7s allow-discrete,
     display 0.7s allow-discrete;
+  /* Equivalent to
+    all 0.7s allow-discrete */
 }
 
 /* Needs to be included after the previous [popover]:popover-open rule
@@ -109,15 +115,17 @@ html {
 /* Transition for the popover's backdrop */
 
 [popover]::backdrop {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(0 0 0 / 0);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
     background-color 0.7s;
+  /* Equivalent to
+    all 0.7s allow-discrete */
 }
 
 [popover]:popover-open::backdrop {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(0 0 0 / 0.25);
 }
 
 /* This starting-style rule cannot be nested inside the above selector
@@ -125,7 +133,7 @@ because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0 0 0 / 0);
   }
 }
 ```
@@ -142,6 +150,8 @@ In the transitions list, `transition-behavior: allow-discrete` is set in the sho
 
 You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the popover when it opens, to provide a nice darkening animation. `[popover]:popover-open::backdrop` is needed to select the backdrop when the popover is open.
 
+#### Result
+
 The code renders as follows:
 
 {{ EmbedLiveSample("Animating a popover", "100%", "200") }}
@@ -156,7 +166,7 @@ The code renders as follows:
 
 ## See also
 
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - [`overlay`](/en-US/docs/Web/CSS/overlay)
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style)
-- [`transition`](/en-US/docs/Web/CSS/transition)
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)

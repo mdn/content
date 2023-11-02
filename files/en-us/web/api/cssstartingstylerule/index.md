@@ -30,4 +30,5 @@ _This interface inherits methods from its parent, {{domxref("CSSGroupingRule")}}
 ## See also
 
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

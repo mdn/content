@@ -49,7 +49,7 @@ In the case of `content-visibility` however, the browser will flip between the t
 
 This behavior is useful for creating entry/exit animations where you want to for example remove some content from the UI immediately with `content-visibility: hidden`, but have it animate (for example fade out) rather than disappearing immediately.
 
-When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit starting keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) section below.
+When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit starting keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) below.
 
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
@@ -169,7 +169,11 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 ### content-visibility animation example
 
-In this example, we have a {{htmlelement("div")}} element, the content of which can be toggled between shown and hidden by clicking or pressing any key. The HTML looks like this:
+In this example, we have a {{htmlelement("div")}} element, the content of which can be toggled between shown and hidden by clicking or pressing any key.
+
+#### HTML
+
+The HTML looks like this:
 
 ```html
 <p>
@@ -184,6 +188,8 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
   to provide a smooth animation effect.
 </div>
 ```
+
+#### CSS
 
 In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframe` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` but also [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
 
@@ -213,27 +219,29 @@ div {
 @keyframes show {
   0% {
     content-visibility: hidden;
-    color: rgba(0, 0, 0, 0);
+    color: rgb(0 0 0 / 0);
   }
 
   100% {
     content-visibility: visible;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(0 0 0 / 1);
   }
 }
 
 @keyframes hide {
   0% {
     content-visibility: visible;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(0 0 0 / 1);
   }
 
   100% {
     content-visibility: hidden;
-    color: rgba(0, 0, 0, 0);
+    color: rgb(0 0 0 / 0);
   }
 }
 ```
+
+#### JavaScript
 
 Finally, we use some JavaScript to apply the `.show` and `.hide` classes to the `<div>` as appropriate to apply the animations as it is toggled between shown and hidden.
 
@@ -254,6 +262,8 @@ function showHide() {
   }
 }
 ```
+
+#### Result
 
 The rendered result looks like this:
 

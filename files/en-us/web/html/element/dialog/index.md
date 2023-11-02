@@ -183,7 +183,7 @@ confirmBtn.addEventListener("click", (event) => {
 });
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
 
@@ -202,23 +202,29 @@ It is important to provide a closing mechanism within every `dialog` element. Th
 
 ### Animating dialogs
 
-`<dialog>`s are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}}. Therefore, for `<dialog>` elements to be animated `display` needs to be animatable. This is now the case; [supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So for example:
+`<dialog>`s are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. This is now the case; [supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So for example:
 
 - When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), `transition-behavior: allow-discrete` needs to be set to enabled the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations) the above behavior is available by default; an equivalent step is not required.
+> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations) the above behavior is available by default; an equivalent step is not required.
 
 #### Transitioning dialog elements
 
-When animating `<dialog>`s with CSS transitions, the following are required:
+When animating `<dialog>`s with CSS transitions, the following features are required:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on the `<dialog>` that you want to transition from when it is shown. This is needed because, by default, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
-- [`display`](/en-US/docs/Web/CSS/display) needs to be added to the transitions list so that the `<dialog>` will remain as `display: block` for the duration of the animation, allowing the other animations to be seen.
-- [`overlay`](/en-US/docs/Web/CSS/overlay) needs to be added to the transitions list so that the removal of the `<dialog>` from the top layer will be deferred until the animation is finished, again allowing the other animations to be seen.
-- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the `display` and `overlay` transitions. This effectively enables discrete transitions.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule
+  - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from when it is first shown. This is needed because, by default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
+- [`display`](/en-US/docs/Web/CSS/display) property
+  - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` for the duration of the transition, ensuring the other transitions are visible.
+- [`overlay`](/en-US/docs/Web/CSS/overlay) property
+  - : Include `overlay` in the transitions list to ensure the removal of the `<dialog>` from the top layer is deferred until the transition completes, again ensuring the transition is visible.
+- {{cssxref("transition-behavior")}} property
+  - : Set `transition-behavior: allow-discrete` on the `display` and `overlay` transitions to enable discrete transitions on these two properties that are not by default animatable.
 
 Here is a quick example to show what this might look like.
+
+##### HTML
 
 The HTML contains a `<dialog>` element, plus a button to show the dialog. Additionally, the `<dialog>` element contains another button to close itself.
 
@@ -231,7 +237,7 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 <button class="show">Show Modal</button>
 ```
 
-The CSS is as follows:
+##### CSS
 
 ```css
 /*   Open state of the dialog */
@@ -242,13 +248,15 @@ dialog[open] {
 
 /*   Closed state of the dialog   */
 dialog {
-  transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out,
-    overlay 0.5s ease-out allow-discrete,
-    display 0.5s ease-out allow-discrete;
   opacity: 0;
   transform: scaleY(0);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    overlay 0.7s ease-out allow-discrete,
+    display 0.7s ease-out allow-discrete;
+  /* Equivalent to
+    all 0.7s allow-discrete */
 }
 
 /*   Before-open state  */
@@ -263,15 +271,17 @@ dialog {
 
 /* Transition the :backdrop when the dialog modal is promoted to the top layer */
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(0 0 0 / 0);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
     background-color 0.7s;
+  /* Equivalent to
+    all 0.7s allow-discrete */
 }
 
 dialog[open]::backdrop {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(0 0 0 / 0.25);
 }
 
 /* This starting-style rule cannot be nested inside the above selector
@@ -279,7 +289,7 @@ because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
   dialog[open]::backdrop {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0 0 0 / 0);
   }
 }
 
@@ -290,6 +300,8 @@ button {
 ```
 
 Note the `@starting-style` block used to define the transition starting styles, and the `display` and `overlay` properties included in the transition list, each with `allow-discrete` set on them. Note that we've also included similar CSS to transition the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. `dialog[open]::backdrop` is required to select the backdrop when the dialog is open.
+
+##### JavaScript
 
 The JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`:
 
@@ -307,6 +319,8 @@ closeBtn.addEventListener("click", () => {
 });
 ```
 
+##### Result
+
 The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning dialog elements", "100%", "200") }}
@@ -315,11 +329,15 @@ The code renders as follows:
 
 When animating a `<dialog>` with CSS animations, there are some differences to note from transitions:
 
-- You don't provide a starting state inside a `@starting-style` block; instead, you need to provide the starting `display` value in an explicit starting keyframe (for example using `0%` or `from`).
-- You don't need to enable discrete transitions; there is no equivalent to `allow-discrete` inside keyframes.
-- You can't set `overlay` inside keyframes either, but we found we could get the animation example working OK by setting the animations as appropriate on the shown and closed states of the `<dialog>` via CSS.
+- You don't provide a `@starting-style`; instead, you provide the starting values (including the initial `display` value) in an explicit starting keyframe (using `0%` or `from`).
+- You don't need to explicitly enable discrete animations; there is no equivalent to `allow-discrete` inside keyframes.
+- You don't need to set `overlay` inside keyframes either; the `display` animation handles the animation of the `<dialog>` from shown to hidden.
 
-Let's have a look at an example so you can see what this looks like. First, the HTML contains a `<dialog>` element, plus a button to show the dialog. Additionally, the `<dialog>` element contains another button to close itself.
+Let's have a look at an example so you can see what this looks like.
+
+##### HTML
+
+First, the HTML contains a `<dialog>` element, plus a button to show the dialog. Additionally, the `<dialog>` element contains another button to close itself.
 
 ```html
 <dialog id="dialog">
@@ -330,7 +348,7 @@ Let's have a look at an example so you can see what this looks like. First, the 
 <button class="show">Show Modal</button>
 ```
 
-Now for the CSS:
+##### CSS
 
 ```css
 dialog {
@@ -377,11 +395,11 @@ dialog[open]::backdrop {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0 0 0 / 0);
   }
 
   100% {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgb(0 0 0 / 0.25);
   }
 }
 
@@ -391,7 +409,9 @@ button {
 }
 ```
 
-Note the keyframes defined to animate between the closed and shown states of the `<dialog>`, plus the fade-in animation for the `<dialog>`'s backdrop. The `<dialog>` animations include animating `display` to make sure the actual visible animation effects remain visible for the whole duration. Note that it wasn't possible to reproduce a keyframe animation for the backdrop fade out at the time of writing.
+Note the keyframes defined to animate between the closed and shown states of the `<dialog>`, plus the fade-in animation for the `<dialog>`'s backdrop. The `<dialog>` animations include animating `display` to make sure the actual visible animation effects remain visible for the whole duration. Note that it wasn't possible to animate the backdrop fade out — the backdrop is immediately removed from the DOM when the `<dialog>` is closed, so there is nothing to animate.
+
+##### JavaScript
 
 Finally, the JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`.
 
@@ -408,6 +428,8 @@ closeBtn.addEventListener("click", () => {
   dialogElem.close();
 });
 ```
+
+##### Result
 
 The code renders as follows:
 

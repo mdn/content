@@ -48,7 +48,7 @@ transition:
   color 1s;
 
 /* Apply to all changed properties */
-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out allow-discrete;
 
 /* Global values */
 transition: inherit;
@@ -133,6 +133,8 @@ Sample CSS:
     transform 0.7s,
     overlay 0.7s allow-discrete,
     display 0.7s allow-discrete;
+  /* Equivalent to
+    all 0.7s allow-discrete */
 }
 ```
 
@@ -148,5 +150,5 @@ See the [`overlay`](/en-US/docs/Web/CSS/overlay) page for a full working example
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - {{ domxref("TransitionEvent") }}
