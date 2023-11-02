@@ -13,7 +13,7 @@ The HTTP {{HTTPHeader("Permissions-Policy")}} header `window-management` directi
 
 Where this policy forbids use of the API:
 
-- {{jsxref("Promise", "Promises")}} returned by the {{domxref("Window.getScreenDetails()")}} method will reject with a `NotAllowedError` exception.
+- The {{jsxref("Promise")}} returned by the {{domxref("Window.getScreenDetails()")}} method will reject with a `NotAllowedError` exception.
 - The {{domxref("Screen.isExtended", "Window.screen.isExtended")}} property will always return `false`.
 
 ## Syntax

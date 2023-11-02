@@ -41,14 +41,15 @@ The below example opens a full-size window on each available display.
 ```js
 const screenDetails = await window.getScreenDetails();
 
-// Open a window on each screen of the device
+// Open a full-size window on each screen available to the device
 for (const screen of screenDetails.screens) {
-  openWindow(
-    screen.availLeft,
-    screen.availTop,
-    screen.availWidth,
-    screen.availHeight,
-    url,
+  window.open(
+    "https://example.com",
+    "_blank",
+    `left=${screen.availLeft},
+    top=${screen.availTop},
+    width=${screen.availWidth},
+    height=${screen.availHeight}`,
   );
 }
 ```

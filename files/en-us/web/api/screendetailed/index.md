@@ -38,50 +38,28 @@ _Inherits properties from its parent, {{DOMxRef("Screen")}}._
 
 ## Examples
 
-When {{domxref("Window.getScreenDetails()")}} is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting {{domxref("ScreenDetails")}} object contains details of all the screens available to the user's system.
+When {{domxref("Window.getScreenDetails()")}} is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting {{domxref("ScreenDetails")}} object contains `ScreenDetailed` objects representing all the screens available to the user's system.
+
+The following example opens a window in the top-left corner of the OS primary screen:
 
 ```js
-const screenDetails = await window.getScreenDetails();
+// Return ScreenDetails
+const allScreens = await window.getScreenDetails();
 
-// Return the number of screens
-const noOfScreens = screenDetails.screens.length;
-```
-
-You'll still need to use {{domxref("Window.open()")}} to open and manage windows, but the above provides you with better information for doing so in a multi-screen environment. For example, a utility function might look like so:
-
-```js
-function openWindow(left, top, width, height, url) {
-  const windowFeatures = `left=${left},top=${top},width=${width},height=${height}`;
-  const windowRef = window.open(
-    url,
-    "_blank", // needed for it to open in a new window
-    windowFeatures,
-  );
-
-  // Store a reference to the window in the windowRefs array for later use
-  windowRefs.push(windowRef);
-}
-```
-
-Each item inside the {{domxref("ScreenDetails.screens")}} array is a `ScreenDetailed` object, which can be used to place a window on a specific screen available to the current device.
-
-```js
-const screen1 = screenDetails.screens[0];
-const screen2 = screenDetails.screens[1];
-// Windows will be a third the width and the full height of the screen
-let windowWidth = Math.floor((screen1.availWidth - 3 * WINDOW_CHROME_X) / 3);
-let windowHeight = Math.floor(screen1.availHeight - WINDOW_CHROME_Y);
-
-// Open the reference windows in thirds across the entire height of the primary screen
-openWindow(
-  screen1.availLeft,
-  screen1.availTop,
-  windowWidth,
-  windowHeight,
-  sites[1].url,
+// Return the primary screen ScreenDetailed object
+const primaryScreenDetailed = allScreens.screens.find(
+  (screenDetailed) => screenDetailed.isPrimary,
 );
 
-// ...
+// Open a window in the top-left corner of the OS primary screen
+window.open(
+  "https://example.com",
+  "_blank",
+  `left=${primaryScreenDetailed.availLeft},
+   top=${primaryScreenDetailed.availTop},
+   width=200,
+   height=200`,
+);
 ```
 
 > **Note:** See [Multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) for a full example (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api) also).

@@ -13,11 +13,13 @@ browser-compat: api.Screen.isExtended
 The **`isExtended`** read-only property of the
 {{domxref("Screen")}} interface returns `true` if the user's device has multiple screens, and `false` if not.
 
-This property is typically accessed via `window.screen.isExtended`, and provides a useful test to see if multiple screens are available before attempting to create a multi-window, multi-screen layout using the [Window Management API](/en-US/docs/Web/API/Window_Management_API).
+This property is typically accessed via `window.screen.isExtended`, and can be used to test whether multiple screens are available before attempting to create a multi-window, multi-screen layout using the [Window Management API](/en-US/docs/Web/API/Window_Management_API).
 
 ## Value
 
 A boolean value — `true` if the device has multiple screens, and `false` if not.
+
+> **Note:** If a {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is set that blocks use the Window Management API, `isExtended` will always return `false`.
 
 ## Examples
 

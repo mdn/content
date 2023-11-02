@@ -10,9 +10,7 @@ browser-compat: api.Screen.change_event
 
 {{APIRef("Window Management API")}}{{SeeCompatTable}}
 
-The **`change`** event of the {{domxref("Screen")}} interface is fired on a specific screen when it changes in some way — for example available width or height, or orientation.
-
-Specifically, _change_ means changes to a `Screen` instance's _basic observable properties_, which are:
+The **`change`** event of the {{domxref("Screen")}} interface is fired on a specific screen when one or more of the following properties change on it:
 
 - {{domxref("Screen.width", "width")}}
 - {{domxref("Screen.height", "height")}}
@@ -33,9 +31,7 @@ onchange = (event) => {};
 
 ## Event type
 
-An event of type `change`, the event object of which is structurally equivalent to an {{domxref("Event")}}.
-
-{{InheritanceDiagram("Event")}}
+A generic {{domxref("Event")}}.
 
 ## Examples
 

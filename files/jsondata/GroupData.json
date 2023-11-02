@@ -2321,11 +2321,7 @@
       "interfaces": ["ScreenDetails", "ScreenDetailed"],
       "methods": ["Element.requestFullscreen()", "Window.getScreenDetails()"],
       "properties": ["Screen.isExtended"],
-      "events": [
-        "Screen: change",
-        "ScreenDetails: currentscreenchange",
-        "ScreenDetails: screenschange"
-      ]
+      "events": ["Screen: change"]
     },
     "XMLHttpRequest": {
       "overview": ["XMLHttpRequest"],
