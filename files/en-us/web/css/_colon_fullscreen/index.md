@@ -75,6 +75,38 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 
 [See the example live](https://jsfiddle.net/yookoala/oLc1uws0/).
 
+### Fullscreen Element without JavaScript
+
+Just to be clear. Although the `:fullscreen` pseudo class works with Fullscreen API, it doesn't mean the use of it requires JavaScript.
+
+This example styles a different background color to the {{htmlelement("video")}} element, depending on depending on whether or not it is in
+fullscreen mode. It uses your browser's default control, which uses Fullscreen API, to toggle the video fullscreen on and off.
+
+```html
+<video controls loop>
+    <source src="https://yookoala.github.io/fullscreen-video-background-demo/assets/rotating-cube.webm">
+</video>
+```
+
+Since the fullscreen video would fill up the whole screen by default, it takes some tricky CSS to show the background color. But as the
+demo shows, you can style the background color of the video
+
+```css
+/**
+ * Demo: CSS background color.
+ */
+video {
+    background-color: blue;
+}
+video:fullscreen {
+    background-color: green;
+}
+```
+
+#### Demo
+
+[See the example live](https://yookoala.github.io/fullscreen-video-background-demo/)
+
 ## Specifications
 
 {{Specifications}}
