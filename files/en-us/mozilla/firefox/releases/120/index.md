@@ -20,7 +20,15 @@ This article provides information about the changes in Firefox 120 that affect d
 
 #### Removals
 
-- The deprecated `-moz-transform` CSS property has been removed. Use the standard `transform` property instead ([Firefox bug 1855763](https://bugzil.la/1855763)).
+- The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled via the `layout.css.prefixes.transforms` preference being set to `false` by default ([Firefox bug 1855763](https://bugzil.la/1855763)).
+  Specifically, the disabled properties are:
+
+  - `-moz-backface-visibility`
+  - `-moz-perspective`
+  - `-moz-perspective-origin`
+  - `-moz-transform`
+  - `-moz-transform-origin`
+  - `-moz-transform-style`
 
 ### JavaScript
 
@@ -52,8 +60,9 @@ This article provides information about the changes in Firefox 120 that affect d
 
 - The {{domxref("PublicKeyCredential.authenticatorAttachment", "authenticatorAttachment")}} property of the {{domxref("PublicKeyCredential")}} interface is now supported.
   This allows web application client and server code to configure itself based on whether the authenticator is part of the device running web authentication, or can roam between devices (see [Firefox bug 1810851](https://bugzil.la/1810851)).
-  
 - The [Minimum PIN Length Extension (`minPinLength`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing a relying party server to request the authenticator's minimum PIN length during creation/registration ([Firefox bug 1844450](https://bugzil.la/1844450)).
+- The {{domxref("Navigator.userActivation")}} property and {{domxref("UserActivation")}} interface are now supported.
+  These can be used to check whether the user is interacting with the page, or has interacted with it since page load (see [Firefox bug 1791079](https://bugzil.la/1791079)).
 
 #### DOM
 
