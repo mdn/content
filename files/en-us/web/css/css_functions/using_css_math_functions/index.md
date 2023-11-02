@@ -18,8 +18,40 @@ However, there are cases where we might feel limited by expressing an element's 
 
 In all of these cases, we need to rely on math to achieve the desired outcomes. One solution could be to rely on mathematical functions defined by JavaScript, and dynamically set element styles based on results calculated by our scripts.
 
-In many instances, including in the examples above, **we can utilize math functions built directly into CSS**. This solution is often simpler to program and faster for the browser to execute than using JavaScript.
+In many instances, including in the examples above, **we can instead utilize math functions built directly into CSS**. This solution is often simpler to implement and faster for the browser to execute than using JavaScript.
 
-## Introducing `calc()`
+In total, developers can use a combination of [nearly two dozen CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) in their stylesheets. In this guide, we'll introduce and exemplify five of the more commonly-used.
 
-In the first two of our three examples above, we want to set the style of an element according to the result of an addition or subtraction operation. This is exactly the use case for {{CSSxRef("calc", "calc()")}}.
+## `calc()`: Basic math operations
+
+In the first two of our three examples above, we want to set the style of an element according to the result of an addition or subtraction operation. This is exactly one of the use cases for {{CSSxRef("calc", "calc()")}}.
+
+The **`calc()`** function lets you specify CSS property values using **addition, subtraction, multiplication, and division**. It is often used to combine two CSS values that have different units, such as `%` and `px`.
+
+{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+
+## `min()`: Finding the minimum value in a set
+
+There are cases where we don't want the value of a CSS property to exceed a certain number. Say, for example, we want the width of our content container to be the smaller of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{CSSxRef("min", "min()")}}.
+
+This function is often used to compare two CSS values that have different units, such as `%` and `px`.
+
+{{EmbedInteractiveExample("pages/css/function-min-01.html")}}
+
+## `max()`: Finding the maximum value in a set
+
+Similar to `min()`, sometimes we don't want the value of a CSS property to go below a certain number. For example, we might want the width of our content container to be the _larger_ of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{CSSxRef("max", "max()")}}.
+
+This function is often used to compare two CSS values that have different units, such as `%` and `px`.
+
+Notice the similarities and differences between the examples for `min()` and `max()`.
+
+{{EmbedInteractiveExample("pages/css/function-max-01.html")}}
+
+## `clamp()`: Keeping a value between two values
+
+We can combine the functions of `min()` and `max()` by using {{CSSxRef("clamp", "clamp()")}}.
+
+This function is often used to compare two CSS values that have different units, such as `%` and `px`.
+
+{{EmbedInteractiveExample("pages/css/function-clamp-01.html")}}
