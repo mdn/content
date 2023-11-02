@@ -79,7 +79,7 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 
 Just to be clear. Although the `:fullscreen` pseudo class works with Fullscreen API, it doesn't mean the use of it requires JavaScript.
 
-This example styles a different background color to the {{htmlelement("video")}} element, depending on depending on whether or not it is in
+This example styles a different background color to the {{htmlelement("video")}} element, depending on whether or not it is in
 fullscreen mode. It uses your browser's default control, which uses Fullscreen API, to toggle the video fullscreen on and off.
 
 ```html
