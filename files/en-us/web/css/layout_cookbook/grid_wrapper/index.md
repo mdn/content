@@ -47,4 +47,4 @@ Although CSS grid enables positioning items anywhere (within reason), ensuring t
 - {{Cssxref("grid-template-columns")}} property
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/) (2018)
-- [Breaking Out with CSS Grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/) (2017)
+- [Breaking out with CSS grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/) (2017)
