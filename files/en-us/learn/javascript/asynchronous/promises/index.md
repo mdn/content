@@ -24,7 +24,7 @@ page-type: learn-module-chapter
   </tbody>
 </table>
 
-In the last article, we talked about the use of callbacks to implement asynchronous functions. With that design, you call the asynchronous function, passing in your callback function. The function returns immediately and calls your callback when the operation is finished.
+In the [previous article](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing), we talked about the use of callbacks to implement asynchronous functions. With that design, you call the asynchronous function, passing in your callback function. The function returns immediately and calls your callback when the operation is finished.
 
 With a promise-based API, the asynchronous function starts the operation and returns a {{jsxref("Promise")}} object. You can then attach handlers to this promise object, and these handlers will be executed when the operation has succeeded or failed.
 
@@ -44,7 +44,7 @@ Copy this into your browser's JavaScript console:
 
 ```js
 const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 
 console.log(fetchPromise);
@@ -83,7 +83,7 @@ Try this:
 
 ```js
 const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 
 fetchPromise.then((response) => {
@@ -104,7 +104,7 @@ It is, of course. But the elegant feature of promises is that _`then()` itself r
 
 ```js
 const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 
 fetchPromise
@@ -120,7 +120,7 @@ Before we move on to the next step, there's one more piece to add. We need to ch
 
 ```js
 const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 
 fetchPromise
@@ -143,13 +143,13 @@ In the last article, we saw that error handling can get very difficult with nest
 
 To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation _succeeds_, the handler passed to `catch()` is called when the asynchronous operation _fails_.
 
-If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fails. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
+If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fail. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
 
 Try this version of our `fetch()` code. We've added an error handler using `catch()`, and also modified the URL so the request will fail.
 
 ```js
 const fetchPromise = fetch(
-  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 
 fetchPromise
@@ -202,13 +202,13 @@ For example:
 
 ```js
 const fetchPromise1 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 const fetchPromise2 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
 );
 const fetchPromise3 = fetch(
-  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
 );
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
@@ -236,13 +236,13 @@ If we try the same code with a badly formed URL, like this:
 
 ```js
 const fetchPromise1 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 const fetchPromise2 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
 );
 const fetchPromise3 = fetch(
-  "bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+  "bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
 );
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
@@ -266,13 +266,13 @@ Sometimes, you might need any one of a set of promises to be fulfilled, and don'
 
 ```js
 const fetchPromise1 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
 );
 const fetchPromise2 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found"
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
 );
 const fetchPromise3 = fetch(
-  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
 );
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
@@ -308,7 +308,7 @@ async function fetchProducts() {
     // after this line, our function will wait for the `fetch()` call to be settled
     // the `fetch()` call will either return a Response or throw an error
     const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
     );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -335,7 +335,7 @@ Note though that async functions always return a promise, so you can't do someth
 async function fetchProducts() {
   try {
     const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
     );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -357,7 +357,7 @@ Instead, you'd need to do something like:
 async function fetchProducts() {
   try {
     const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
     );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -379,7 +379,7 @@ Also, note that you can only use `await` inside an `async` function, unless your
 try {
   // using await outside an async function is only allowed in a module
   const response = await fetch(
-    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
   );
   if (!response.ok) {
     throw new Error(`HTTP error: ${response.status}`);

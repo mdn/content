@@ -1,6 +1,7 @@
 ---
 title: XPath
 slug: Web/XPath
+page-type: landing-page
 ---
 
 {{XsltSidebar}}

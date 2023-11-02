@@ -13,7 +13,7 @@ The **`AbortSignal.timeout()`** static method returns an {{domxref("AbortSignal"
 The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout, or with `AbortError` {{domxref("DOMException")}} due to pressing a browser stop button (or some other inbuilt "stop" operation).
 This allow UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.
 
-The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache ("[bfcache](https://web.dev/bfcache/)").
+The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache ("[bfcache](https://web.dev/articles/bfcache)").
 
 > **Note:** At time of writing there is no way to combine multiple signals.
 > This means that you can't directly abort a download using either a timeout signal or by calling {{domxref("AbortController.abort()")}}.
@@ -52,7 +52,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc."
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");

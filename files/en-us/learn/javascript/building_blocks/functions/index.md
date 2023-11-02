@@ -235,7 +235,7 @@ textBox.addEventListener("keydown", (event) => {
 });
 ```
 
-If the function only takes one parameter, you can omit the brackets around the parameter:
+If the function only takes one parameter, you can omit the parentheses around the parameter:
 
 ```js-nolint
 textBox.addEventListener("keydown", event => {
@@ -255,7 +255,7 @@ console.log(doubled); // [2, 4, 6]
 
 The `map()` method takes each item in the array in turn, passing it into the given function. It then takes the value returned by that function and adds it to a new array.
 
-So in the example above, `(item) => item * 2` is the arrow function equivalent of:
+So in the example above, `item => item * 2` is the arrow function equivalent of:
 
 ```js
 function doubleItem(item) {
@@ -267,7 +267,7 @@ You can use the same concise syntax to rewrite the `addEventListener` example.
 
 ```js
 textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`)
+  console.log(`You pressed "${event.key}".`),
 );
 ```
 

@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.classes.private_class_fields
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
 Class fields are [public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) by default, but **private class members** can be created by using a hash `#` prefix. The privacy encapsulation of these class features is enforced by JavaScript itself.
 
@@ -55,19 +55,18 @@ Private properties are declared with **# names** (pronounced "hash names"), whic
 
 It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private properties that were not declared in the class body, or to attempt to remove declared properties with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
   #privateField;
 
-  constructor() {
-    this.#privateField = 42;
+  constructor() {;
     delete this.#privateField; // Syntax error
-    this.#undeclaredField = 444; // Syntax error
+    this.#undeclaredField = 42; // Syntax error
   }
 }
 
 const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
+instance.#privateField; // Syntax error
 ```
 
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.
@@ -89,11 +88,31 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check for potentially missing private fields (or private methods). This will return `true` if the private field or method exists, and `false` otherwise.
+This example also illustrates that you can access private properties within static functions too, and on externally defined instances of the class.
+
+You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check whether an externally defined object possesses a private property. This will return `true` if the private field or method exists, and `false` otherwise.
+
+```js example-good
+class C {
+  #x;
+  constructor(x) {
+    this.#x = x;
+  }
+  static getX(obj) {
+    if (#x in obj) return obj.#x;
+
+    return "obj must be an instance of C";
+  }
+}
+console.log(C.getX(new C("foo"))); // "foo"
+console.log(C.getX(new C(0.196))); // 0.196
+console.log(C.getX(new C(new Date()))); // the current date and time
+console.log(C.getX({})); // "obj must be an instance of C"
+```
 
 Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private property of the current class (either from a `try...catch` or an `in` check), it must possess all other private properties. An object possessing the private properties of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
 
-Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class.
+Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class. For this reason, {{jsxref("Object.freeze()")}} and {{jsxref("Object.seal()")}} have no effect on private properties.
 
 For more information on how and when private fields are initialized, see [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
@@ -160,6 +179,9 @@ new Stamper(obj);
 console.log(obj); // In some dev tools, it shows {#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
+
+// You cannot stamp private properties twice
+new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
 > **Warning:** This is a potentially very confusing thing to do. You are generally advised to avoid returning anything from the constructor — especially something unrelated to `this`.
@@ -363,10 +385,10 @@ PrivateConstructor.create(); // PrivateConstructor {}
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Statements/class", "class")}}
-- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
+- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) in the TC39 class-fields proposal
 - [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
 - [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)

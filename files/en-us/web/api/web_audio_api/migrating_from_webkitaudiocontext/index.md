@@ -108,7 +108,7 @@ xhr.onload = () => {
     },
     () => {
       alert("Decoding the audio buffer failed");
-    }
+    },
   );
 };
 ```
@@ -304,8 +304,8 @@ Note, the `loopStart` and `loopEnd` attributes are not supported in `webkitAudio
 The `playbackState` attribute of {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}} has been removed. Depending on why you used this attribute, you can use the following techniques to get the same information:
 
 - If you need to compare this attribute to `UNSCHEDULED_STATE`, you can basically remember whether you've called `start()` on the node or not.
-- If you need to compare this attribute to `SCHEDULED_STATE`, you can basically remember whether you've called `start()` on the node or not. You can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to `start()` to know whether playback has started or not.
-- If you need to compare this attribute to `PLAYING_STATE`, you can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to `start()` to know whether playback has started or not.
+- If you need to compare this attribute to `SCHEDULED_STATE`, you can basically remember whether you've called `start()` on the node or not. You can compare the value of {{domxref("BaseAudioContext.currentTime")}} to the first argument passed to `start()` to know whether playback has started or not.
+- If you need to compare this attribute to `PLAYING_STATE`, you can compare the value of {{domxref("BaseAudioContext.currentTime")}} to the first argument passed to `start()` to know whether playback has started or not.
 - If you need to know when playback of the node is finished (which is the most significant use case of `playbackState`), there is a new ended event which you can use to know when playback is finished. Please see this code example:
 
 ```js

@@ -1,6 +1,7 @@
 ---
 title: <xsl:output>
 slug: Web/XSLT/Element/output
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

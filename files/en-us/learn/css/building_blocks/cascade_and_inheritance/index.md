@@ -179,11 +179,11 @@ The amount of specificity a selector has is measured using three different value
 - **Classes**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
 - **Elements**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
 
-> **Note:** The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), [combinators](/en-US/docs/Learn/CSS/Building_blocks//selectors/combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/:where)) along with its parameters, have no effect on specificity.
+> **Note:** The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), [combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/:where)) along with its parameters, have no effect on specificity.
 
-The negation ([`:not()`](/en-US/docs/Web/CSS/:not)), relational selector ([`:has()`](/en-US/docs/Web/CSS/:has)), and the matches-any ([`:is()`](/en-US/docs/Web/CSS/:is)) pseudo-classes themselves don't have effect on specificity, but their parameters do. The specificity that each contributes to the specificity algorithm is the specificity of the selector in the parameter that has the greatest weight.
+The negation ([`:not()`](/en-US/docs/Web/CSS/:not)), relational selector ([`:has()`](/en-US/docs/Web/CSS/:has)), the matches-any ([`:is()`](/en-US/docs/Web/CSS/:is)) pseudo-classes, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) themselves don't add to specificity, but their parameters or nested rules do. The specificity weight that each contributes to the specificity algorithm is the specificity weight of the selector in the parameter or nested rule with the greatest weight.
 
-The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
+The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
 
 | Selector                                  | Identifiers | Classes | Elements | Total specificity |
 | ----------------------------------------- | ----------- | ------- | -------- | ----------------- |

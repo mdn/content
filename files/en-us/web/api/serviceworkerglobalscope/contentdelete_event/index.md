@@ -49,7 +49,7 @@ self.addEventListener("contentdelete", (event) => {
       Promise.all([
         cache.delete(`/icon/${event.id}`),
         cache.delete(`/content/${event.id}`),
-      ])
+      ]),
     );
   event.waitUntil(deletion);
 });
@@ -74,5 +74,5 @@ self.oncontentdelete = (event) => {
 ## See also
 
 - [Content index API](/en-US/docs/Web/API/Content_Index_API)
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

@@ -32,7 +32,7 @@ None.
 
 ## Static methods
 
-- {{domxref('CSSNumericValue.parse')}}
+- {{domxref('CSSNumericValue/parse_static', 'CSSNumericValue.parse')}}
   - : Allows a `CSSNumericValue` to be constructed directly from a string containing CSS.
 
 ## Instance methods

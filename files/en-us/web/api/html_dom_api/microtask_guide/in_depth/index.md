@@ -104,7 +104,7 @@ There are three types of event loop:
 - Worker event loop
   - : A worker event loop is one which drives a worker; this includes all forms of workers, including basic [web workers](/en-US/docs/Web/API/Web_Workers_API), [shared workers](/en-US/docs/Web/API/SharedWorker), and [service workers](/en-US/docs/Web/API/Service_Worker_API). Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.
 - Worklet event loop
-  - : A [worklet](/en-US/docs/Web/API/Worklet) event loop is the event loop used to drive agents which run the code for the worklets for a given agent. This includes worklets of type {{domxref("Worklet")}}, {{domxref("AudioWorklet")}}, and {{domxref("PaintWorklet")}}.
+  - : A [worklet](/en-US/docs/Web/API/Worklet) event loop is the event loop used to drive agents which run the code for the worklets for a given agent. This includes worklets of type {{domxref("Worklet")}} and {{domxref("AudioWorklet")}}.
 
 Several windows loaded from the same {{Glossary("origin")}} may be running on the same event loop, each queueing tasks onto the event loop so that their tasks take turns with the processor, one after another. Keep in mind that in web parlance, the word "window" actually means "browser-level container that web content runs within," including an actual window, a tab, or a frame.
 

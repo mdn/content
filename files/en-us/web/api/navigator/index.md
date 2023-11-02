@@ -17,8 +17,10 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+  - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 - {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
@@ -69,6 +71,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
+- {{domxref("Navigator.usb")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("UserActivation")}} object containing information about the current window's user activation state.
 - {{domxref("Navigator.userAgent")}} {{ReadOnlyInline}}
@@ -90,7 +94,7 @@ _Doesn't inherit any properties._
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
-- {{domxref("Navigator.globalPrivacyControl")}} {{Non-standard_Inline}} {{Experimental_Inline}}
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
   - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".

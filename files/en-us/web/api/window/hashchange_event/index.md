@@ -50,7 +50,7 @@ window.addEventListener(
   () => {
     console.log("The hash has changed!");
   },
-  false
+  false,
 );
 ```
 

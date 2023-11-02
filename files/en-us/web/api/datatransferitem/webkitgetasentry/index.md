@@ -71,13 +71,17 @@ The styles used by the example are shown here.
   vertical-align: middle;
   text-align: center;
   color: black;
-  font: bold 2em "Arial", sans-serif;
+  font:
+    bold 2em "Arial",
+    sans-serif;
   width: 300px;
   height: 100px;
 }
 
 body {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -132,7 +136,7 @@ dropzone.addEventListener(
   (event) => {
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -155,7 +159,7 @@ dropzone.addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 
@@ -177,7 +181,7 @@ You can see how this works by trying it out below. Find some files and directori
 
 ## Specifications
 
-This API has no official W3C or WHATWG specification.
+{{Specifications}}
 
 ## Browser compatibility
 

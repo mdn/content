@@ -24,7 +24,7 @@ To start developing with Three.js, you don't need much. You should:
 Here's the HTML structure we will use:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />

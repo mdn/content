@@ -1,6 +1,7 @@
 ---
 title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

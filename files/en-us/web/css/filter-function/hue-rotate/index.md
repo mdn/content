@@ -90,7 +90,9 @@ p {
   background-color: magenta;
   color: goldenrod;
   border: 1em solid rebeccapurple;
-  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  box-shadow:
+    inset -5px -5px red,
+    5px 5px yellow;
 }
 ```
 
@@ -182,7 +184,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}

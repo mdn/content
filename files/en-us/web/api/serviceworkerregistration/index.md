@@ -75,7 +75,7 @@ if ("serviceWorker" in navigator) {
         const installingWorker = registration.installing;
         console.log(
           "A new service worker is being installed:",
-          installingWorker
+          installingWorker,
         );
 
         // You can listen for changes to the installing service worker's

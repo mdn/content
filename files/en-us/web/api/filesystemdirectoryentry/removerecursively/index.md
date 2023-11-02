@@ -79,7 +79,7 @@ directory.removeRecursively(
   },
   () => {
     /* an error occurred while removing the directory */
-  }
+  },
 );
 ```
 

@@ -15,10 +15,6 @@ We can not only draw new shapes behind existing shapes but we can also use it to
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : This sets the type of compositing operation to apply when drawing new shapes, where type is a string identifying which of the twelve compositing operations to use.
 
-See [compositing examples](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) for the code of the following examples.
-
-{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
-
 ## Clipping paths
 
 A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image below. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
@@ -65,7 +61,7 @@ function draw() {
     ctx.fillStyle = "#fff";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
-      75 - Math.floor(Math.random() * 150)
+      75 - Math.floor(Math.random() * 150),
     );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();

@@ -25,7 +25,10 @@ svg {
 }
 
 text {
-  font: 25px Arial, Helvetica, sans-serif;
+  font:
+    25px Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 

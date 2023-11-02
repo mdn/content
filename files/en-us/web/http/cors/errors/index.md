@@ -21,7 +21,7 @@ To understand the underlying issue with the CORS configuration, you need to find
 
 The text of the error message will be something similar to the following:
 
-```
+```plain
 Cross-Origin Request Blocked: The Same Origin Policy disallows
 reading the remote resource at https://some-url-here. (Reason:
 additional information here).

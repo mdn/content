@@ -184,6 +184,12 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+      </td>
+      <td>Fired when the browser has started to load the resource.</td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.pause_event", 'pause')}}
       </td>
       <td>Playback has been paused.</td>
@@ -335,7 +341,7 @@ If the MIME type for the video is not set correctly on the server, the video may
 
 If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
 
-```
+```plain
 AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
@@ -343,7 +349,7 @@ AddType video/ogg .ogg
 
 If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in `httpd.conf`.
 
-```
+```plain
 AddType video/webm .webm
 ```
 
@@ -428,7 +434,7 @@ If automatic captioning services are used, it is important to review the generat
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone:
 
-```
+```plain
 14
 00:03:14 --> 00:03:18
 [Dramatic rock music]

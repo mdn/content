@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.grammar.template_literals
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 **Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
@@ -187,14 +187,14 @@ console.log(`Hello``World`); // TypeError: "Hello" is not a function
 
 The only exception is optional chaining, which will throw a syntax error.
 
-```js example-bad
+```js-nolint example-bad
 console.log?.`Hello`; // SyntaxError: Invalid tagged template on optional chain
 console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
 Note that these two expressions are still parsable. This means they would not be subject to [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), which will only insert semicolons to fix code that's otherwise unparsable.
 
-```js example-bad
+```js-nolint example-bad
 // Still a syntax error
 const a = console?.log
 `Hello`
@@ -294,7 +294,7 @@ This is useful for many tools which give special treatment to literals tagged by
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 // Some formatters will format this literal's content as HTML
-const doc = html`<!DOCTYPE html>
+const doc = html`<!doctype html>
   <html lang="en-US">
     <head>
       <title>Hello</title>
@@ -340,7 +340,7 @@ latex`\unicode`;
 
 Note that the escape-sequence restriction is only dropped from _tagged_ templates, but not from _untagged_ template literals:
 
-```js example-bad
+```js-nolint example-bad
 const bad = `bad escape sequence: \unicode`;
 ```
 
@@ -354,7 +354,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

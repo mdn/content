@@ -1,6 +1,7 @@
 ---
 title: <xsl:attribute>
 slug: Web/XSLT/Element/attribute
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

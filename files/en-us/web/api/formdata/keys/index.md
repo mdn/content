@@ -41,7 +41,7 @@ for (const key of formData.keys()) {
 
 The result is:
 
-```
+```plain
 key1
 key2
 ```

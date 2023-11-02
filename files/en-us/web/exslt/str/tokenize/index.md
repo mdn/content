@@ -1,6 +1,7 @@
 ---
 title: str:tokenize()
 slug: Web/EXSLT/str/tokenize
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

@@ -1454,6 +1454,11 @@
     "url": "https://www.rfc-editor.org/rfc/rfc7168",
     "status": "RFC"
   },
+  "RFC 7486": {
+    "name": "HTTP Origin-Bound Authentication (HOBA)",
+    "url": "https://www.rfc-editor.org/rfc/rfc7486",
+    "status": "RFC"
+  },
   "RFC 8288": {
     "name": "Web Linking",
     "url": "https://www.rfc-editor.org/rfc/rfc8288",

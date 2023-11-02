@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.BigInt.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
+The **`toLocaleString()`** method of {{jsxref("BigInt")}} values returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
 
 When formatting large numbers of numbers, it is better to create a {{jsxref("Intl.NumberFormat")}} object and use the function provided by its {{jsxref("Intl/NumberFormat/format", "format()")}} method.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.read
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`read()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface reads the content of the file associated with the handle into a specified buffer, optionally at a given offset.
@@ -14,14 +14,14 @@ The **`read()`** method of the
 ## Syntax
 
 ```js-nolint
-read(buffer, FileSystemReadWriteOptions)
+read(buffer, options)
 ```
 
 ### Parameters
 
 - `buffer`
   - : An {{jsxref("ArrayBuffer")}} or `ArrayBufferView` (such as a {{jsxref("DataView")}}) representing the buffer that the file content should be read into. Note that you cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create one of the typed array objects like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
-- `FileSystemReadWriteOptions` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object containing the following properties:
 
@@ -30,7 +30,7 @@ read(buffer, FileSystemReadWriteOptions)
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to a number representing the number of bytes read from the file.
+A number representing the number of bytes read from the file.
 
 ### Exceptions
 
@@ -77,7 +77,7 @@ onmessage = async (e) => {
 };
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Specifications
 
@@ -89,5 +89,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)

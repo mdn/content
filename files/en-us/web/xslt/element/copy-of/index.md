@@ -1,6 +1,7 @@
 ---
 title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

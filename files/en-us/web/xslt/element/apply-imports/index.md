@@ -1,6 +1,7 @@
 ---
 title: <xsl:apply-imports>
 slug: Web/XSLT/Element/apply-imports
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

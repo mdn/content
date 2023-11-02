@@ -95,11 +95,9 @@ Here we call a PHP program file that generates a JSON string, displaying the res
 const doAjax = async () => {
   const response = await fetch("Ajax.php"); // Generate the Response object
   if (response.ok) {
-    const jsonValue = await response.json(); // Get JSON value from the response body
-    return Promise.resolve(jsonValue);
-  } else {
-    return Promise.reject("*** PHP file not found");
+    return response.json(); // Get JSON value from the response body
   }
+  throw new Error("*** PHP file not found");
 };
 
 // Call the function and output value or error message to console

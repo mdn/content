@@ -21,7 +21,7 @@ Before you call the only method in this interface, [`readEntries()`](#readentrie
 
 ### Example
 
-In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/filesystem-sync/), we create Web Workers and pass data from it to the main app.
+In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/articles/filesystem-sync), we create Web Workers and pass data from it to the main app.
 
 ```js
 // Taking care of the browser-specific prefixes.
@@ -102,7 +102,7 @@ Returns a list of entries from a specific directory. Call this method until an e
 
 #### Syntax
 
-```
+```js-nolint
 readEntries()
 ```
 

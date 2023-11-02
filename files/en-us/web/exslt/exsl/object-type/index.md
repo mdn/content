@@ -1,6 +1,7 @@
 ---
 title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

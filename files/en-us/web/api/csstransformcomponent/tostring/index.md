@@ -8,7 +8,7 @@ browser-compat: api.CSSTransformComponent.toString
 
 {{APIRef("CSS Typed OM")}}
 
-The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a {{Glossary("stringifier")}} returning a [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) function.
+The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a {{Glossary("stringifier")}} returning a [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms) function.
 
 ## Syntax
 

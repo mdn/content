@@ -81,6 +81,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a boolean that indicates whether the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
@@ -141,8 +143,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
   - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Gets/sets the height of the current document.
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -159,8 +159,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Returns a list of the style sheet sets available on the document.
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns the width of the current document.
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : Returns the encoding as determined by the XML declaration.
 - {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
@@ -196,8 +194,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Creates a new element with the given tag name.
 - {{DOMxRef("Document.createElementNS()")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{DOMxRef("Document.createEntityReference()")}} {{Deprecated_Inline}}
-  - : Creates a new entity reference object and returns it.
 - {{DOMxRef("Document.createEvent()")}}
   - : Creates an event object.
 - {{DOMxRef("Document.createNodeIterator()")}}
@@ -311,6 +307,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
+  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
@@ -426,13 +424,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

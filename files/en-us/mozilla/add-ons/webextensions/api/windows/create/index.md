@@ -41,7 +41,7 @@ let creating = browser.windows.create(
         - if the URL(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
 
     - `cookieStoreId` {{optional_inline}}
-      - : `integer`. If present, specifies the `CookieStoreId` for all tabs that will be created when the window is opened.
+      - : `integer`. If present, specifies the `CookieStoreId` for all the tabs created when the window is opened. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information on using `cookieStoreId`.
     - `focused` {{optional_inline}}
       - : `boolean`. If `true`, the new window will be focused. If `false`, the new window will be opened in the background and the currently focused window will stay focused. Defaults to `true`.
     - `height` {{optional_inline}}
@@ -84,8 +84,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    url: ["https://developer.mozilla.org",
-          "https://addons.mozilla.org"]
+    url: ["https://developer.mozilla.org", "https://addons.mozilla.org"],
   });
   creating.then(onCreated, onError);
 });
@@ -104,7 +103,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    tabId: tab.id
+    tabId: tab.id,
   });
   creating.then(onCreated, onError);
 });
@@ -122,17 +121,15 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let popupURL = browser.extension.getURL("popup/popup.html");
 
   let creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,
-    width: 200
+    width: 200,
   });
   creating.then(onCreated, onError);
-
 });
 ```
 

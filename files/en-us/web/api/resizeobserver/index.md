@@ -56,16 +56,16 @@ const resizeObserver = new ResizeObserver((entries) => {
       const contentBoxSize = entry.contentBoxSize[0];
       h1Elem.style.fontSize = `${Math.max(
         1.5,
-        contentBoxSize.inlineSize / 200
+        contentBoxSize.inlineSize / 200,
       )}rem`;
       pElem.style.fontSize = `${Math.max(
         1,
-        contentBoxSize.inlineSize / 600
+        contentBoxSize.inlineSize / 600,
       )}rem`;
     } else {
       h1Elem.style.fontSize = `${Math.max(
         1.5,
-        entry.contentRect.width / 200
+        entry.contentRect.width / 200,
       )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
@@ -122,4 +122,4 @@ As long as the error event does not fire indefinitely, resize observer will sett
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
-- Upcoming [container queries](/en-US/docs/Web/CSS/CSS_Container_Queries) may be a viable alternative for implementing responsive design.
+- Upcoming [container queries](/en-US/docs/Web/CSS/CSS_container_queries) may be a viable alternative for implementing responsive design.

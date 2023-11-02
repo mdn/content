@@ -44,7 +44,7 @@ gl.compressedTexImage2D(
   512,
   512,
   0,
-  textureData
+  textureData,
 );
 
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);

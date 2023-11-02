@@ -19,7 +19,7 @@ Behind the scenes, the inputs are processed by the user agent and/or the authent
 
 For example, in a `publicKey` object for a `create()` call, we might want to request the use of two extensions:
 
-1. The `credProps` extension. Relying parties set `credProps` to request that the browser tells the relying party whether the credential is resident/discoverable after registration. This is useful when calling `create()` with `publicKey.authenticatorSelection.residentKey = "preferred"`. To request it, you also need to set `publicKey.extensions.credProps = true` when. The browser makes a credential and, depending on the type of authenticator used, it will be discoverable (for example, the FIDO2 authenticator would typically make it discoverable; FIDO1/U2F security key would be non-discoverable). `credProps` is processed by the user agent only.
+1. The `credProps` extension. Relying parties set `credProps` to request that the browser tells the relying party whether the credential is resident/discoverable after registration. This is useful when calling `create()` with `publicKey.authenticatorSelection.residentKey = "preferred"`. To request it, you also need to set `publicKey.extensions.credProps = true` when the browser makes a credential and, depending on the type of authenticator used, it will be discoverable (for example, the FIDO2 authenticator would typically make it discoverable; FIDO1/U2F security key would be non-discoverable). `credProps` is processed by the user agent only.
 2. The `minPinLength` extension allows relying parties to request the authenticator's minimum PIN length. This requires `extensions.minPinLength` to be set to `true`. `minPinLength` is processed by the authenticator, with the user agent only serving to pass the input data along to it.
 
 ```js
@@ -233,7 +233,7 @@ The available `credentialProtectionPolicy` values are as follows:
 
 If the `create()` call is successful, the authenticator data will contain a representation of the `credProtect` value representing the set policy in the following form:
 
-```
+```js
 { "credProtect": 0x01 }
 ```
 
@@ -336,8 +336,8 @@ extensions: {
 
 If the relying party is authorized to receive the `minPinLength` value (if its `rpId` is present on the authenticator's authorized relying party list), the authenticator data will contain a representation of it in the following form:
 
-```
-"minPinLength": uint
+```js
+{"minPinLength": uint}
 ```
 
 If the relying party is not authorized, the extension is ignored, and no `"minPinLength"` output value is provided.

@@ -20,11 +20,17 @@ format(duration)
 ### Parameters
 
 - `duration`
-  - : The duration object to be formatted. It should include some or all of the following properties: `"months"`, `"weeks"`, `"days"`, `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`.
+  - : The duration object to be formatted. It should include some or all of the following properties: `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`.
+
+### Return value
+
+A string representing the given `duration` formatted according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
 
 ## Examples
 
-### Using format with an object as parameter
+### Using format()
+
+The following example shows how to create a Duration formatter using the English language.
 
 ```js
 const duration = {
@@ -77,29 +83,37 @@ new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 // With style set to "digital" and locale set to "en"
 new Intl.DurationFormat("en", { style: "digital" }).format(duration);
 // "1:46:40"
+
+// With style set to "digital", locale set to "en", and hours set to "long"
+new Intl.DurationFormat("en", { style: "digital", hours: "long" }).format(
+  duration,
+);
+// "1 hour, 46:40"
 ```
 
-### Using format with fractionalDigits option
-
-Use the `format` getter function for formatting using with fractionalDigits options and setting milliseconds display to `narrow`.
+### Using format() with the fractionalDigits option
 
 ```js
 const duration = {
+  hours: 11,
+  minutes: 30,
   seconds: 12,
   milliseconds: 345,
   microseconds: 600,
 };
 
-// Example using fractionalDigits
-new Intl.DurationFormat("en", { fractionalDigits: 2 }).format(duration);
-// => 12 sec, 345 ms, 600 μs
+new Intl.DurationFormat("en", { style: "digital" }).format(duration);
+// "11:30:12.3456"
 
-// Example using fractionalDigits and milliseconds set to `long`
-new Intl.DurationFormat("en", {
-  milliseconds: "long",
-  fractionalDigits: 2,
-}).format(duration);
-// => 12 sec, 345 milliseconds, 600 μs
+new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 5 }).format(
+  duration,
+);
+// "11:30:12.34560"
+
+new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
+  duration,
+);
+// "11:30:12.346"
 ```
 
 ## Specifications

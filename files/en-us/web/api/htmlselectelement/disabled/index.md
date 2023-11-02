@@ -47,7 +47,7 @@ allowDrinksCheckbox.addEventListener(
   (event) => {
     drinkSelect.disabled = !event.target.checked;
   },
-  false
+  false,
 );
 ```
 

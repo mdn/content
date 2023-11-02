@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-mask-attachment
 
 If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -webkit-mask-attachment: scroll;
@@ -28,8 +30,6 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 -webkit-mask-attachment: revert-layer;
 -webkit-mask-attachment: unset;
 ```
-
-## Syntax
 
 ### Values
 

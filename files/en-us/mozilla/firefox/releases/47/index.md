@@ -1,6 +1,7 @@
 ---
 title: Firefox 47 for developers
 slug: Mozilla/Firefox/Releases/47
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -89,7 +90,7 @@ _No change._
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) methods can now use the RSA-PSS cryptographic algorithm ([Firefox bug 1191936](https://bugzil.la/1191936)).
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has had the {{domxref("Permissions.revoke()")}} method added ([Firefox bug 1197461](https://bugzil.la/1197461)).
 - The [Browser API](/en-US/docs/Web/API/Browser_API), which extends the functionality of {{htmlelement("iframe")}}s to allow the creation of frames for displaying web content using HTML — and was previously only available in Firefox OS — is now available to desktop chrome code too ([Firefox bug 1238160](https://bugzil.la/1238160)).
-- The [Notification API](/en-US/docs/Web/API/Notification)'s {{domxref("Notification.requestPermission()","requestPermission()")}} method has been updated from a callback to a promised-based syntax ([Firefox bug 1241278](https://bugzil.la/1241278)).
+- The [Notification API](/en-US/docs/Web/API/Notification)'s {{domxref("Notification/requestPermission_static","requestPermission()")}} method has been updated from a callback to a promised-based syntax ([Firefox bug 1241278](https://bugzil.la/1241278)).
 - The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) has been updated to the latest spec and unprefixed. Some methods have been renamed or have seen their capitalization changed ([Firefox bug 743198](https://bugzil.la/743198)). Note that this is behind the `full-screen-api.unprefix.enabled` preference, defaulting to false ([Firefox bug 1268749](https://bugzil.la/1268749)).
 
 ### Audio/Video

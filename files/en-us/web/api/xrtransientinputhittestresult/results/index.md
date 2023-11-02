@@ -26,7 +26,7 @@ Two arrays are used to access transient input hit test results. First, you get a
 // frame loop
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
-    transientHitTestSource
+    transientHitTestSource,
   );
 
   hitTestResults.forEach((resultsPerInputSource) => {

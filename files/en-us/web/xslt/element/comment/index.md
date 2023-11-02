@@ -1,6 +1,7 @@
 ---
 title: <xsl:comment>
 slug: Web/XSLT/Element/comment
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

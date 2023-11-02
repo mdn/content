@@ -1,6 +1,7 @@
 ---
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -13,7 +14,7 @@ This article provides information about the changes in Firefox 64 that will affe
 
 - The [Accessibility info-bar](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) has been enhanced to include information about the color contrast ratio of text or images on the page ([Firefox bug 1473037](https://bugzil.la/1473037)).
 - [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) device selection is now saved between sessions ([Firefox bug 1248619](https://bugzil.la/1248619)).
-- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ([Firefox bug 1333994](https://bugzil.la/1333994)).
+- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ([Firefox bug 1333994](https://bugzil.la/1333994)).
 - The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) got improvements around entering and evaluating code:
 
   - [Autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) for Console expressions is now case-insensitive ([Firefox bug 672733](https://bugzil.la/672733)).
@@ -34,7 +35,7 @@ _No changes._
 
 ### CSS
 
-- [CSS Scrollbars](/en-US/docs/Web/CSS/CSS_Scrollbars) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
+- [CSS Scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
 - Interaction Media Features implemented, including [`pointer:coarse`](/en-US/docs/Web/CSS/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). For [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) and [`any-hover`](/en-US/docs/Web/CSS/@media/any-hover) implementation, see [Firefox bug 1483111](https://bugzil.la/1483111).
 - The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature is now supported in Firefox for Android ([Firefox bug 1478505](https://bugzil.la/1478505)).
 - CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g. `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
@@ -49,7 +50,7 @@ _No changes._
 
 - The non-standard [`-moz-box` and `-moz-inline-box`](/en-US/docs/Mozilla/Gecko/Chrome/CSS/display-xul) {{CSSxRef("display")}} values have been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
 - The non-standard {{CSSxRef("::-moz-tree")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) have been hidden from web content ([Firefox bug 1496961](https://bugzil.la/1496961)).
-- The `layout.css.filters.enabled` preference has been removed; [CSS filters](/en-US/docs/Web/CSS/Filter_Effects) can no longer be disabled ([Firefox bug 1408841](https://bugzil.la/1408841)).
+- The `layout.css.filters.enabled` preference has been removed; [CSS filters](/en-US/docs/Web/CSS/CSS_filter_effects) can no longer be disabled ([Firefox bug 1408841](https://bugzil.la/1408841)).
 - A previous change — to swap the values of the 2-value {{cssxref("overflow")}} syntax so block is specified first and inline second ([Firefox bug 1481866](https://bugzil.la/1481866)) — has been reverted ([Firefox bug 1492567](https://bugzil.la/1492567)). See [Bug 1481866 comment 14](https://bugzil.la/1481866#c14) for why.
 
 ### SVG
@@ -91,7 +92,7 @@ _No changes._
 
 - The {{domxref("PannerNode.refDistance")}}, {{domxref("PannerNode.maxDistance")}}, {{domxref("PannerNode.rolloffFactor")}}, and {{domxref("PannerNode.coneOuterGain")}} properties now correctly throw exceptions when set to values outside their accepted ranges ([Firefox bug 1487963](https://bugzil.la/1487963)).
 - {{domxref("RTCRtpEncodingParameters")}} settings changed via {{domxref("RTCRtpSender.setParameters()")}} used to not update if the changes were made during a call. They will now update live, without renegotiation ([Firefox bug 1253499](https://bugzil.la/1253499)).
-- {{domxref("RTCIceCandidateStats.relayProtocol")}} has been implemented — this is the standardized version of {{domxref("RTCIceCandidateStats.mozLocalTransport")}}, which has now been deprecated ([Firefox bug 1435789](https://bugzil.la/1435789)).
+- {{domxref("RTCIceCandidateStats.relayProtocol")}} has been implemented — this is the standardized version of `RTCIceCandidateStats.mozLocalTransport`, which has now been deprecated ([Firefox bug 1435789](https://bugzil.la/1435789)).
 - Automatic Gain Control (AGC) is now enabled by default; this can be changed using the preference `media.getusermedia.agc_enabled` ([Firefox bug 1496714](https://bugzil.la/1496714)).
 
 #### Removals

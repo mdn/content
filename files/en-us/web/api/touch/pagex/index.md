@@ -45,7 +45,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
     }
   },
-  false
+  false,
 );
 ```
 

@@ -133,7 +133,7 @@ importScripts(); /* imports nothing */
 importScripts("foo.js"); /* imports just "foo.js" */
 importScripts("foo.js", "bar.js"); /* imports two scripts */
 importScripts(
-  "//example.com/hello.js"
+  "//example.com/hello.js",
 ); /* You can import scripts from other origins */
 ```
 
@@ -348,7 +348,7 @@ Here we let the worker handle two simple operations for illustration: getting th
 this.sendQuery = (queryMethod, ...queryMethodArguments) => {
   if (!queryMethod) {
     throw new TypeError(
-      "QueryableWorker.sendQuery takes at least one argument"
+      "QueryableWorker.sendQuery takes at least one argument",
     );
   }
   worker.postMessage({
@@ -369,7 +369,7 @@ worker.onmessage = (event) => {
   ) {
     listeners[event.data.queryMethodListener].apply(
       instance,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     this.defaultListener.call(instance, event.data);
@@ -418,7 +418,7 @@ onmessage = (event) => {
   ) {
     queryableFunctions[event.data.queryMethod].apply(
       self,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     defaultReply(event.data);
@@ -431,7 +431,7 @@ Here are the full implementation:
 **example.html** (the main page):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -478,7 +478,7 @@ Here are the full implementation:
         this.sendQuery = (queryMethod, ...queryMethodArguments) => {
           if (!queryMethod) {
             throw new TypeError(
-              "QueryableWorker.sendQuery takes at least one argument"
+              "QueryableWorker.sendQuery takes at least one argument",
             );
           }
           worker.postMessage({
@@ -495,7 +495,7 @@ Here are the full implementation:
           ) {
             listeners[event.data.queryMethodListener].apply(
               instance,
-              event.data.queryMethodArguments
+              event.data.queryMethodArguments,
             );
           } else {
             this.defaultListener.call(instance, event.data);
@@ -511,7 +511,7 @@ Here are the full implementation:
         document
           .getElementById("firstLink")
           .parentNode.appendChild(
-            document.createTextNode(`The difference is ${result}!`)
+            document.createTextNode(`The difference is ${result}!`),
           );
       });
 
@@ -584,7 +584,7 @@ onmessage = (event) => {
   ) {
     queryableFunctions[event.data.queryMethod].apply(
       self,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     defaultReply(event.data);
@@ -611,7 +611,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 There is not an "official" way to embed the code of a worker within a web page, like {{HTMLElement("script")}} elements do for normal scripts. But a {{HTMLElement("script")}} element that does not have a `src` attribute and has a `type` attribute that does not identify an executable MIME type can be considered a data block element that JavaScript could use. "Data blocks" is a more general feature of HTML that can carry almost any textual data. So, a worker could be embedded in this way:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -647,8 +647,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
         Array.prototype.map.call(
           document.querySelectorAll("script[type='text\/js-worker']"),
           (script) => script.textContent,
-          { type: "text/javascript" }
-        )
+        ),
+        { type: "text/javascript" },
       );
 
       // Creating a new document.worker property containing all our "text/js-worker" scripts.
@@ -694,29 +694,29 @@ Workers are mainly useful for allowing your code to perform processor-intensive 
 The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.
 
 ```js
-self.onmessage = (e) => {
-  const userNum = Number(e.data);
-  fibonacci(userNum);
+self.onmessage = (event) => {
+  const userNum = Number(event.data);
+  self.postMessage(fibonacci(userNum));
 };
 
 function fibonacci(num) {
   let a = 1;
   let b = 0;
-  while (num >= 0) {
+  while (num > 0) {
     [a, b] = [a + b, a];
     num--;
   }
 
-  self.postMessage(b);
+  return b;
 }
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread.
+The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called. This performs the math and eventually returns the result back to the main thread.
 
 #### The HTML code
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -736,9 +736,10 @@ The worker sets the property `onmessage` to a function which will receive messag
     <form>
       <div>
         <label for="number"
-          >Enter a number that is an index position in the fibonacci sequence to
-          see what number is in that position (e.g. enter 5 and you'll get a
-          result of 8 — fibonacci index position 5 is 8).</label
+          >Enter a number that is a zero-based index position in the fibonacci
+          sequence to see what number is in that position. For example, enter 6
+          and you'll get a result of 8 — the fibonacci number at index position
+          6 is 8.</label
         >
         <input type="number" id="number" />
       </div>
@@ -775,7 +776,7 @@ The worker sets the property `onmessage` to a function which will receive messag
 </html>
 ```
 
-The web page creates a `<div>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
+The web page creates a `<p>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<p>` element, and the `onerror` handler is set to log the error message to the devtools console.
 
 Finally, a message is sent to the worker to start it.
 

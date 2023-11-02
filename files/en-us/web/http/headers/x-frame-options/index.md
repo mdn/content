@@ -30,7 +30,7 @@ The added security is provided only if the user accessing the document is using 
 
 There are two possible directives for `X-Frame-Options`:
 
-```
+```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
@@ -54,13 +54,13 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
 
 To configure Apache to send the `X-Frame-Options` header for all pages, add this to your site's configuration:
 
-```
+```plain
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
 To configure Apache to set the `X-Frame-Options` DENY, add this to your site's configuration:
 
-```
+```plain
 Header set X-Frame-Options "DENY"
 ```
 
@@ -68,7 +68,7 @@ Header set X-Frame-Options "DENY"
 
 To configure Nginx to send the `X-Frame-Options` header, add this either to your http, server or location configuration:
 
-```
+```plain
 add_header X-Frame-Options SAMEORIGIN always;
 ```
 
@@ -96,13 +96,13 @@ Or see this [Microsoft support article on setting this configuration using the I
 
 To configure HAProxy to send the `X-Frame-Options` header, add this to your front-end, listen, or backend configuration:
 
-```
+```plain
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
 Alternatively, in newer versions:
 
-```
+```plain
 http-response set-header X-Frame-Options SAMEORIGIN
 ```
 

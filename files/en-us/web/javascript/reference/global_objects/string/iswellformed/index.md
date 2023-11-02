@@ -15,6 +15,10 @@ The **`isWellFormed()`** method of {{jsxref("String")}} values returns a boolean
 isWellFormed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns `true` if this string does not contain any lone surrogates, `false` otherwise.
@@ -31,10 +35,10 @@ Strings in JavaScript are UTF-16 encoded. UTF-16 encoding has the concept of _su
 
 ```js
 const strings = [
-  // Lone high surrogate
+  // Lone leading surrogate
   "ab\uD800",
   "ab\uD800c",
-  // Lone low surrogate
+  // Lone trailing surrogate
   "\uDFFFab",
   "c\uDFFFab",
   // Well-formed

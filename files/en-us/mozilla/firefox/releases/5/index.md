@@ -1,6 +1,7 @@
 ---
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,7 +36,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### CSS
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Support for CSS animations has been added, using the `-moz-` prefix for now.
 
 ### DOM
@@ -90,7 +91,7 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 
 #### NetUtil.jsm
 
-- The [`asyncFetch()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#asyncFetch()>) method now supports specifying the input source as an `nsIInputStream`.
+- The `asyncFetch()` method now supports specifying the input source as an `nsIInputStream`.
 
 ### Interface changes
 
@@ -124,7 +125,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Build system changes
 
-- You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#choose_an_application) now defaults to "browser". After pulling or downloading the code, you can `configure && make` (or `make -f client.mk`) to build Firefox.
+- You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html#choose_an_application) now defaults to "browser". After pulling or downloading the code, you can `configure && make` (or `make -f client.mk`) to build Firefox.
 
 ## See also
 

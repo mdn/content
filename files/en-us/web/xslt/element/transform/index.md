@@ -1,6 +1,7 @@
 ---
 title: <xsl:transform>
 slug: Web/XSLT/Element/transform
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

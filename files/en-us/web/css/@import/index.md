@@ -29,7 +29,7 @@ where:
 - _url_
   - : Is a {{CSSxRef("&lt;string&gt;")}}, a `<url>`, or a {{CSSxRef("url")}} function representing the location of the resource to import. The URL may be absolute or relative.
 - _list-of-media-queries_
-  - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
+  - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_
   - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
 - _supports-condition_ {{experimental_inline}}
@@ -39,9 +39,31 @@ where:
 
 ## Description
 
-Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/@layer) statements. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/@layer) statements.
 
-So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
+```css example-bad
+* {
+  margin: 0;
+  padding: 0;
+}
+/* more styles */
+@import url("my-imported-styles.css");
+```
+
+As the `@import` at-rule is declared after the styles it is invalid and hence ignored.
+
+```css example-good
+@import url("my-imported-styles.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+/* more styles */
+```
+
+The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+
+So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 
 Similarly, user agents can use the `supports()` function in an `@import` at-rule to only fetch resources if a particular feature set is (or is not) supported.
 This allows authors to take advantage of recently introduced CSS features, while providing graceful fallbacks for older browser versions.
@@ -86,7 +108,7 @@ The `@import` rules in the above examples show media-dependent conditions that w
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
 While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`, as long as you wrap each condition to be tested in parentheses.
 You can also use parentheses to indicate precedence.
-Note that if you just have a single declaration then you don't need to wrap it in additional brackets: this is shown in the first example above.
+Note that if you just have a single declaration then you don't need to wrap it in additional parenthese: this is shown in the first example above.
 
 The examples above show support conditions using simple declaration syntax.
 You can also specify CSS functions in `supports()`, and it will evaluate to `true` if they are supported and can be evaluated on the user-agent.

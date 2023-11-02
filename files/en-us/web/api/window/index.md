@@ -43,6 +43,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
+- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{ReadOnlyInline}}
@@ -96,7 +98,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
 - {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
 - {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
@@ -157,8 +159,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : Register an event handler to a specific event type on the window.
 - {{domxref("atob", "Window.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
@@ -171,7 +171,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("Window.clearImmediate()")}}
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Cancels the repeated execution set using `setImmediate()`.
 - {{domxref("clearInterval", "Window.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
@@ -183,8 +183,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
-  - : Used to trigger an event.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
 - {{domxref("fetch", "Window.fetch()")}}
@@ -215,8 +213,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
-- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
-  - : Removes an event listener from the window.
 - {{domxref("reportError", "Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
@@ -237,7 +233,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setImmediate()")}}
+- {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("setInterval", "Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
@@ -275,14 +271,16 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("Window/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-- {{domxref("Window/languagechange_event", "languagechange")}}
-  - : Fired at the global scope object when the user's preferred language changes.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window/error_event", "error")}}
+  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+- {{domxref("Window/languagechange_event", "languagechange")}}
+  - : Fired at the global scope object when the user's preferred language changes.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
@@ -303,13 +301,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
 - {{domxref("Window/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
 - {{domxref("Window/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Connection events
 
@@ -347,8 +345,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
   - : Fired when the window, the document and its resources are about to be unloaded.
-- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
 - {{domxref("Window/unload_event", "unload")}}
@@ -385,13 +381,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ### Transition events
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ### Deprecated events
 

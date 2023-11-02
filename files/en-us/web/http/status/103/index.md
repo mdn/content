@@ -9,8 +9,8 @@ browser-compat: http.status.103
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the resources that the server is expecting the final response will link.
-This allows a browser to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
+The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server is expecting the final response will link.
+This allows a browser to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
 
 The early hint response is primarily intended for use with the {{HTTPHeader("Link")}} header, which indicates the resources to be loaded.
 It may also contain a [`Content-Security-Policy`](/en-US/docs/Web/HTTP/CSP) header that is enforced while processing the early hint.
@@ -18,6 +18,12 @@ It may also contain a [`Content-Security-Policy`](/en-US/docs/Web/HTTP/CSP) head
 A server might send multiple `103` responses, for example, following a redirect.
 Browsers only process the first early hint response, and this response must be discarded if the request results in a cross-origin redirect.
 Preloaded resources from the early hint are effectively pre-pended to the `Document`'s head element, and then followed by the resources loaded in the final response.
+
+> **Note:** For compatibility reasons [it is recommended](https://www.rfc-editor.org/rfc/rfc8297#section-3) to only send HTTP `103 Early Hints` responses over HTTP/2 or later, unless the client is known to handle informational responses correctly.
+>
+> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser-compatibility) below.
+>
+> Despite this, the examples below use HTTP/1.1-style notation as per usual convention.
 
 ## Syntax
 
@@ -76,6 +82,16 @@ Content-Type: text/html
 ...
 ```
 
+### Early hint to preconnect
+
+The following example shows an early hint response where the server indicates that the client might want to preconnect to a particular origin (`example.com`).
+Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute this is a hint that the page is likely to need resources from the target resource's origin, and that the browser can likely improve the user experience by preemptively initiating a connection to that origin.
+
+```http
+103 Early Hints
+Link: <https://example.com>; rel=preconnect;
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -87,3 +103,4 @@ Content-Type: text/html
 ## See also
 
 - {{HTTPHeader("Link")}}
+- [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the CloudFlare blog

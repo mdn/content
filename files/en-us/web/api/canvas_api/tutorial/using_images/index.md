@@ -74,7 +74,7 @@ img.addEventListener(
   () => {
     // execute drawImage statements here
   },
-  false
+  false,
 );
 img.src = "myImage.png"; // Set source path
 ```
@@ -248,7 +248,7 @@ function draw() {
     21,
     20,
     87,
-    104
+    104,
   );
 
   // Draw frame

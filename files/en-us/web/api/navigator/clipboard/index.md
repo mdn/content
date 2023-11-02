@@ -34,7 +34,7 @@ in order to read the contents of the clipboard.
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".cliptext").innerText = clipText)
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
   );
 ```
 

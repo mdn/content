@@ -29,17 +29,17 @@ A **`WebAssembly.Module`** object contains stateless WebAssembly code that has a
 
 The following example compiles the loaded `simple.wasm` byte code using the [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method and sends the resulting `Module` instance to a [worker](/en-US/docs/Web/API/Web_Workers_API) using {{domxref("Worker/postMessage", "postMessage()")}}.
 
-See the `index-compile.html` [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) or [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html).
+See the `index-compile.html` [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) or [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html).
 
 ```js
 const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod)
+  worker.postMessage(mod),
 );
 ```
 
-The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) defines an import object for the module to use. The function then sets up an event handler to receive the module from the main thread. When the module is received, we create an instance from it using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method and invoke an exported function from inside it.
+The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js) defines an import object for the module to use. The function then sets up an event handler to receive the module from the main thread. When the module is received, we create an instance from it using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method and invoke an exported function from inside it.
 
 ```js
 const importObject = {

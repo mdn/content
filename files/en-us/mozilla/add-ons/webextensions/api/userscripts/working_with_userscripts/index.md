@@ -57,7 +57,7 @@ async function registerScript() {
     runAt: runAtInput.value,
     matchAboutBlank: stringToBool(matchAboutBlankInput.value),
     allFrames: stringToBool(allFramesInput.value),
-    scriptMetadata: {name: scriptNameInput.value || null},
+    scriptMetadata: { name: scriptNameInput.value || null },
   };
 
   // Store the last submitted values to the extension storage
@@ -88,7 +88,7 @@ async function registerScript() {
     lastErrorEl.textContent = lastError;
 
     // Store the last error.
-    await browser.storage.local.set({lastError});
+    await browser.storage.local.set({ lastError });
   }
 }
 ```

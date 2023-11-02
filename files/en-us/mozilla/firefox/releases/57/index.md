@@ -1,6 +1,7 @@
 ---
 title: Firefox 57 (Quantum) for developers
 slug: Mozilla/Firefox/Releases/57
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -45,7 +46,7 @@ Following bugs have been fixed in Quantum:
 - Gecko reuses the same mechanism used when parsing a url-token when parsing the `domain()` or `url-prefix()` URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ([Firefox bug 1362333](https://bugzil.la/1362333)).
 - In Gecko, when you set a system font as the value of a canvas 2D context's {{DOMxRef("CanvasRenderingContext2D.font", "font")}} (e.g. `menu`), getting the font value fails to return the expected font (it returns nothing). This has been fixed in Quantum. ([Firefox bug 1374885](https://bugzil.la/1374885)).
 - In Gecko, when you create a detached subtree (e.g. a {{htmlelement("div")}} created using {{DOMxRef("Document.createElement","createElement()")}} that is not yet inserted into the DOM), the subtree's root element is set as a block-level element. In Quantum CSS this is set as inline, as per spec ([Firefox bug 1374994](https://bugzil.la/1374994)).
-- In Gecko, {{CSSxRef("calc", "calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient", "radial-gradient()")}} function ([Firefox bug 1376019](https://bugzil.la/1376019)).
+- In Gecko, {{CSSxRef("calc", "calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("gradient/radial-gradient")}} function ([Firefox bug 1376019](https://bugzil.la/1376019)).
 - In Gecko, `calc(1*2*3)` is not parsed successfully; Quantum CSS fixes this ([Firefox bug 1379467](https://bugzil.la/1379467)).
 - In Quantum CSS, [`calc()` is supported everywhere that the spec explains it should be](https://drafts.csswg.org/css-values-3/#calc-notation) ([Firefox bug 1350857](https://bugzil.la/1350857)). In Gecko it is not.
 - Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the {{CSSxRef("content")}} property value is set to `normal` or `none`. As per spec, they shouldn't be ([Firefox bug 1387931](https://bugzil.la/1387931)).

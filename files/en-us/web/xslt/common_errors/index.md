@@ -1,6 +1,7 @@
 ---
 title: Common XSLT Errors
 slug: Web/XSLT/Common_errors
+page-type: guide
 ---
 
 {{XsltSidebar}}

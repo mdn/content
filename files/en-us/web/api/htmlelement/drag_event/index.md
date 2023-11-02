@@ -107,7 +107,7 @@ target.addEventListener(
     // prevent default to allow drop
     event.preventDefault();
   },
-  false
+  false,
 );
 
 target.addEventListener("dragenter", (event) => {

@@ -1,6 +1,7 @@
 ---
 title: "Recommended Web Performance Timings: How long is too long?"
 slug: Web/Performance/How_long_is_too_long
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

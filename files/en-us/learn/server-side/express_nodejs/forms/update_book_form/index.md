@@ -129,9 +129,9 @@ exports.book_update_post = [
       return;
     } else {
       // Data from form is valid. Update the record.
-      const thebook = await Book.findByIdAndUpdate(req.params.id, book, {});
+      const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
       // Redirect to book detail page.
-      res.redirect(thebook.url);
+      res.redirect(updatedBook.url);
     }
   }),
 ];

@@ -1,6 +1,7 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `substring-after` function returns a string that is the rest of a given stri
 
 ### Syntax
 
-```
+```plain
 substring-after( haystack, needle )
 ```
 

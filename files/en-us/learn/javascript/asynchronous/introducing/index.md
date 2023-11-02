@@ -243,7 +243,7 @@ document.querySelector("#xhr").addEventListener("click", () => {
 
   xhr.open(
     "GET",
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
   );
   xhr.send();
   log.textContent = `${log.textContent}Started XHR request\n`;

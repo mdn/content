@@ -50,17 +50,17 @@ rotate3d(x, y, z, a)
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^2</th>
+      <th scope="col"><a href="/en-US/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
       <td rowspan="2">
         This transformation applies to the 3D space and can't be represented on
         the plane.
       </td>
     </tr>
     <tr>
-      <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
     </tr>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^3</th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
       <td>
         <a
           href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_cart.png"
@@ -244,7 +244,7 @@ rotate3d(x, y, z, a)
       </td>
     </tr>
     <tr>
-      <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
       <td>
         <a
           href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"

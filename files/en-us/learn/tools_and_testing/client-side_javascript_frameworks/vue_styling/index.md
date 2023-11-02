@@ -120,7 +120,11 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:
+    1.6rem/1.25 "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
@@ -250,7 +254,9 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     padding: 1rem;
     padding-top: 0;
     position: relative;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
   }
   @media screen and (min-width: 550px) {
     #app {

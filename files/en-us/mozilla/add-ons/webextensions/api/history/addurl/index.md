@@ -61,7 +61,7 @@ browser.history
       text: "https://example.org/",
       startTime: 0,
       maxResults: 1,
-    })
+    }),
   )
   .then(onGot);
 ```
@@ -91,7 +91,7 @@ browser.history
   .then(() =>
     browser.history.getVisits({
       url: "https://example.org/",
-    })
+    }),
   )
   .then(onGot);
 ```

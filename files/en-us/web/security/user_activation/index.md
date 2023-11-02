@@ -1,6 +1,7 @@
 ---
 title: Features gated by user activation
 slug: Web/Security/User_activation
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -38,7 +39,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
-- {{domxref("IdleDetector.requestPermission()")}}
+- {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - `MediaStreamTrack.sendCaptureAction()`
 - `MediaDevices.getViewportMedia()`

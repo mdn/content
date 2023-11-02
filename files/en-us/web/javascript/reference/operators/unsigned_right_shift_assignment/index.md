@@ -19,7 +19,7 @@ x >>>= y
 
 ## Description
 
-`x >>>= y` is equivalent to `x = x >>> y`.
+`x >>>= y` is equivalent to `x = x >>> y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -47,4 +47,4 @@ c >>>= 2n; // 1n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [Unsigned right shift (`>>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

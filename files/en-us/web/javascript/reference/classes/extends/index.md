@@ -222,10 +222,13 @@ d.speak(); // Mitzie makes a noise.
 
 This example extends the built-in {{jsxref("Date")}} object. This example is extracted from this [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-```js
+```js-nolint
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    ];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
@@ -374,7 +377,7 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Statements/class", "class")}}

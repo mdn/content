@@ -30,17 +30,19 @@ You can find specific information about possible media file types and the codecs
 
 ## Handle HTTP 1.1 byte range requests correctly
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
+In order to support seeking and playing back regions of the media that aren't yet downloaded, Firefox uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position.
+In addition, it uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
 Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
-
 Your server must also return `206: Partial Content` for the request `Range: bytes=0-` as well.
+
+For more information, see [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests).
 
 ## Include regular key frames
 
 When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
 
-By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
 > **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
@@ -82,7 +84,7 @@ Another problem with allowing HTTP compression for media streaming: Apache serve
 
 You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](https://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-```
+```plain
 $ oggz-info /g/media/bruce_vs_ironman.ogv
 Content-Duration: 00:01:00.046
 

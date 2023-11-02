@@ -96,7 +96,7 @@ orderButton.addEventListener(
 
     outputBox.innerHTML = output;
   },
-  false
+  false,
 );
 ```
 

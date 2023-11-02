@@ -127,7 +127,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       // constraints - only audio needed for this app
       {
         audio: true,
-      }
+      },
     )
 
     // Success callback

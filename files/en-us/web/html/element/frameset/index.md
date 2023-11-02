@@ -29,7 +29,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 A frameset document has a `<frameset>` element instead of a {{HTMLElement("body")}} element. The {{HTMLElement("frame")}} elements are placed within the `<frameset>`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <!-- Document metadata goes here -->

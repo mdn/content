@@ -14,7 +14,7 @@ Methods called on object instances are called _instance methods_.
 
 ## Examples
 
-In the [Notifications API](/en-US/docs/Web/API/Notifications_API), the {{domxref("Notification.requestPermission()")}} method is called on the actual {{domxref("Notification")}} constructor itself — it is a static method:
+In the [Notifications API](/en-US/docs/Web/API/Notifications_API), the {{domxref("Notification/requestPermission_static", "Notification.requestPermission()")}} method is called on the actual {{domxref("Notification")}} constructor itself — it is a static method:
 
 ```js
 let promise = Notification.requestPermission();

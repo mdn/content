@@ -311,3 +311,4 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 - [Custom property syntax](/en-US/docs/Web/CSS/--*)
 - [`var()`](/en-US/docs/Web/CSS/var)
+- {{cssxref("@property")}} at-rule

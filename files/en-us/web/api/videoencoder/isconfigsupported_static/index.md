@@ -65,7 +65,7 @@ for (const config of configs) {
   console.log(
     `VideoEncoder's config ${JSON.stringify(support.config)} support: ${
       support.supported
-    }`
+    }`,
   );
 }
 ```

@@ -65,11 +65,11 @@ Later on, once the `stagingBuffer` contains the results of the GPU computation, 
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // Offset
-  BUFFER_SIZE // Length
+  BUFFER_SIZE, // Length
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
-const data = copyArrayBuffer.slice();
+const data = copyArrayBuffer.slice(0);
 stagingBuffer.unmap();
 console.log(new Float32Array(data));
 ```

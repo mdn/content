@@ -29,7 +29,7 @@ Instead of creating a `Clipboard` object through instantiation, you access the s
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".editor").innerText += clipText)
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
   );
 ```
 
@@ -55,4 +55,4 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 ## See also
 
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

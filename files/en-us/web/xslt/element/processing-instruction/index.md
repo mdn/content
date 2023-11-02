@@ -1,6 +1,7 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

@@ -144,7 +144,7 @@ navigator.xr
   .catch((error) => {
     // "immersive-vr" sessions are not supported
     console.error(
-      "'immersive-vr' isn't supported, or an error occurred activating VR!"
+      "'immersive-vr' isn't supported, or an error occurred activating VR!",
     );
   });
 ```

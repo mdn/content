@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.isPrototypeOf
 
 {{JSRef}}
 
-The **`isPrototypeOf()`** method checks if an object exists in another object's prototype chain.
+The **`isPrototypeOf()`** method of {{jsxref("Object")}} instances checks if this object exists in another object's prototype chain.
 
 > **Note:** `isPrototypeOf()` differs from the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator. In the expression `object instanceof AFunction`, `object`'s prototype chain is checked against `AFunction.prototype`, not against `AFunction` itself.
 
@@ -28,7 +28,7 @@ isPrototypeOf(object)
 
 A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e. a primitive).
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if `this` is `null` or `undefined` (because it can't be [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)).

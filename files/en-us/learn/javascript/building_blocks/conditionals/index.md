@@ -276,20 +276,21 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 In such a case, [`switch` statements](/en-US/docs/Web/JavaScript/Reference/Statements/switch) are your friend — they take a single expression/value as an input, and then look through several choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
-```
+```js
 switch (expression) {
   case choice1:
-    run this code
+    // run this code
     break;
 
   case choice2:
-    run this code instead
+    // run this code instead
     break;
 
   // include as many cases as you like
 
   default:
-    actually, just run this code
+    // actually, just run this code
+    break;
 }
 ```
 
@@ -362,7 +363,7 @@ function setWeather() {
 
 There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
-```
+```js-nolint
 condition ? run this code : run this code instead
 ```
 
@@ -401,7 +402,9 @@ function update(bgColor, textColor) {
 }
 
 select.addEventListener("change", () =>
-  select.value === "black" ? update("black", "white") : update("white", "black")
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
 );
 ```
 
@@ -619,7 +622,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -652,7 +655,7 @@ textarea.onkeyup = function () {
 In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the `// ADD SWITCH STATEMENT` comment:
 
 - It should accept the `choice` variable as its input expression.
-- For each case, the choice should equal one of the possible `<option> value`s that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
+- For each case, the choice should equal one of the possible `<option>` values that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
 - For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
 
 If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
@@ -806,7 +809,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;

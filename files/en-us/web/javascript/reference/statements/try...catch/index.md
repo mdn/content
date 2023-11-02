@@ -28,7 +28,7 @@ try {
 - `catchStatements`
   - : Statement that is executed if an exception is thrown in the `try` block.
 - `exceptionVar` {{optional_inline}}
-  - : An optional [identifier or pattern](#the_exception_variable) to hold the caught exception for the associated `catch` block. If the `catch` block does not use the exception's value, you can omit the `exceptionVar` and its surrounding parentheses.
+  - : An optional [identifier or pattern](#catch_binding) to hold the caught exception for the associated `catch` block. If the `catch` block does not use the exception's value, you can omit the `exceptionVar` and its surrounding parentheses.
 - `finallyStatements`
   - : Statements that are executed before control flow exits the `try...catch...finally` construct. These statements execute regardless of whether an exception was thrown or caught.
 
@@ -42,7 +42,7 @@ The `try` statement always starts with a `try` block. Then, a `catch` block or a
 
 Unlike other constructs such as [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), the `try`, `catch`, and `finally` blocks must be _blocks_, instead of single statements.
 
-```js example-bad
+```js-nolint example-bad
 try doSomething(); // SyntaxError
 catch (e) console.log(e);
 ```
@@ -55,11 +55,11 @@ You can nest one or more `try` statements. If an inner `try` statement does not 
 
 You can also use the `try` statement to handle JavaScript exceptions. See the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements) for more information on JavaScript exceptions.
 
-### The exception variable
+### Catch binding
 
-When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this variable to get information about the exception that was thrown. This variable is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
+When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this {{Glossary("binding")}} to get information about the exception that was thrown. This {{Glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
 
-It need not be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple identifiers at once.
+It needs not be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple identifiers at once.
 
 ```js
 try {
@@ -70,18 +70,18 @@ try {
 }
 ```
 
-The variables bound by the `catch` clause live in the same scope as the `catch` block, so any variables declared in the `catch` block cannot have the same name as the variables bound by the `catch` clause. (There's [one exception to this rule](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements), but it's a deprecated syntax.)
+The bindings created by the `catch` clause live in the same scope as the `catch` block, so any variables declared in the `catch` block cannot have the same name as the bindings created by the `catch` clause. (There's [one exception to this rule](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements), but it's a deprecated syntax.)
 
-```js example-bad
+```js-nolint example-bad
 try {
   throw new TypeError("oops");
 } catch ({ name, message }) {
   var name; // SyntaxError: Identifier 'name' has already been declared
-  let message; // SyntaxError: Identifier 'name' has already been declared
+  let message; // SyntaxError: Identifier 'message' has already been declared
 }
 ```
 
-The exception variable is writable. For example, you may want to normalize the exception value to make sure it's an {{jsxref("Error")}} object.
+The exception binding is writable. For example, you may want to normalize the exception value to make sure it's an {{jsxref("Error")}} object.
 
 ```js
 try {
@@ -111,8 +111,8 @@ function isValidJSON(text) {
 
 The `finally` block contains statements to execute after the `try` block and `catch` block(s) execute, but before the statements following the `try...catch...finally` block. Control flow will always enter the `finally` block, which can proceed in one of the following ways:
 
-- Immediately before the `try` block finishes execution normally (and no exceptions were thrown);
-- Immediately before the `catch` block finishes execution normally;
+- Immediately after the `try` block finishes execution normally (and no exceptions were thrown);
+- Immediately after the `catch` block finishes execution normally;
 - Immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try` block or `catch` block.
 
 If an exception is thrown from the `try` block, even when there's no `catch` block to handle the exception, the `finally` block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.
@@ -195,6 +195,17 @@ try {
     throw e; // re-throw the error unchanged
   }
 }
+```
+
+This may mimic the syntax from other languages, like Java:
+
+```java
+try {
+  myRoutine();
+} catch (RangeError e) {
+  // statements to handle this very common expected error
+}
+// Other errors are implicitly re-thrown
 ```
 
 ### Nested try blocks

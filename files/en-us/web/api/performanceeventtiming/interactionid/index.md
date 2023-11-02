@@ -35,7 +35,7 @@ The following example collects event duration for all events corresponding to an
 
 ```js
 // The key is the interaction ID.
-let = eventLatencies = {};
+let eventLatencies = {};
 
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
@@ -44,15 +44,16 @@ const observer = new PerformanceObserver((list) => {
       if (!eventLatencies.has(interactionId)) {
         eventLatencies[interactionId] = [];
       }
-       eventLatencies[interactionId].push(entry.duration);
+      eventLatencies[interactionId].push(entry.duration);
+    }
   });
 });
 
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 
 // Log events with maximum event duration for a user interaction
 Object.entries(eventLatencies).forEach(([k, v]) => {
-    console.log(Math.max(...v));
+  console.log(Math.max(...v));
 });
 ```
 

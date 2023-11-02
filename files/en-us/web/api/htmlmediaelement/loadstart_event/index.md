@@ -102,7 +102,7 @@ loadVideo.addEventListener("click", () => {
     source = document.createElement("source");
     source.setAttribute(
       "src",
-      "https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
+      "https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm",
     );
     source.setAttribute("type", "video/webm");
 

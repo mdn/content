@@ -44,7 +44,7 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedVideoChunk(init);
+chunk = new EncodedVideoChunk(init);
 ```
 
 ## Specifications

@@ -46,7 +46,6 @@ Log the old value and its new value of
 changes in the local storage.
 */
 function logStorageChange(changes) {
-
   const changedItems = Object.keys(changes);
 
   for (const item of changedItems) {

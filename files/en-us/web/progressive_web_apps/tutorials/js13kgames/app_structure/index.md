@@ -1,6 +1,7 @@
 ---
 title: Progressive web app structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+page-type: guide
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -18,7 +19,7 @@ The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure i
 From the HTML point of view, the app shell is everything outside the content section:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -199,7 +200,7 @@ self.addEventListener("install", (e) => {
       const cache = await caches.open(cacheName);
       console.log("[Service Worker] Caching all: app shell and content");
       await cache.addAll(contentToCache);
-    })()
+    })(),
   );
 });
 ```
@@ -220,7 +221,7 @@ self.addEventListener("fetch", (e) => {
       console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
       cache.put(e.request, response.clone());
       return response;
-    })()
+    })(),
   );
 });
 ```

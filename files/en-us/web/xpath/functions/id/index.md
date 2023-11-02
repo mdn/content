@@ -1,6 +1,7 @@
 ---
 title: id
 slug: Web/XPath/Functions/id
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `id` function finds nodes matching the given ids and returns a node-set cont
 
 ### Syntax
 
-```
+```plain
 id( expression )
 ```
 

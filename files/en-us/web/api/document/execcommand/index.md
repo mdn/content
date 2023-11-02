@@ -50,7 +50,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point.
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
@@ -193,7 +193,7 @@ for (const buttonContainer of buttonContainers) {
   for (const button of buttons) {
     const elementName = button.getAttribute("data-el");
     button.addEventListener("click", () =>
-      insertText(`<${elementName}></${elementName}>`, pasteTarget)
+      insertText(`<${elementName}></${elementName}>`, pasteTarget),
     );
   }
 }

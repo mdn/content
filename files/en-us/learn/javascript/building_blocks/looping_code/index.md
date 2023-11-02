@@ -88,7 +88,7 @@ function draw() {
       random(canvas.height),
       random(50),
       0,
-      2 * Math.PI
+      2 * Math.PI,
     );
     ctx.fill();
   }
@@ -110,7 +110,7 @@ for (let i = 0; i < 100; i++) {
     random(canvas.height),
     random(50),
     0,
-    2 * Math.PI
+    2 * Math.PI,
   );
   ctx.fill();
 }
@@ -132,7 +132,7 @@ ctx.arc(
   random(canvas.height),
   random(50),
   0,
-  2 * Math.PI
+  2 * Math.PI,
 );
 ctx.fill();
 ```
@@ -161,7 +161,7 @@ for (const cat of cats) {
 In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
-2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
+2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
 3. Get the next item, and repeat (2) until you've reached the end of the collection.
 
 ### map() and filter()
@@ -185,7 +185,7 @@ console.log(upperCats);
 
 Here we pass a function into {{jsxref("Array.prototype.map()","cats.map()")}}, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array. In this case the function we provide converts the item to uppercase, so the resulting array contains all our cats in uppercase:
 
-```
+```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
@@ -207,7 +207,7 @@ console.log(filtered);
 This looks a lot like `map()`, except the function we pass in returns a [boolean](/en-US/docs/Learn/JavaScript/First_steps/Variables#booleans): if it returns `true`, then the item is included in the new array.
 Our function tests that the item starts with the letter "L", so the result is an array containing only cats whose names start with "L":
 
-```
+```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
@@ -347,13 +347,13 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 
 The final output sentence isn't very well-formed:
 
-```
+```plain
 My cats are called Pete, Biggles, Jasmine,
 ```
 
 We'd prefer it to handle the last cat differently, like this:
 
-```
+```plain
 My cats are called Pete, Biggles, and Jasmine.
 ```
 
@@ -496,7 +496,7 @@ Here's the output:
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -538,7 +538,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-```
+```js-nolint
 initializer
 do {
   // code to run
@@ -726,7 +726,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -907,7 +907,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -947,7 +947,7 @@ Let's have a look at them all again.
 
 First `for...of`:
 
-```
+```js-nolint
 for (const item of array) {
   // code to run
 }
@@ -955,7 +955,7 @@ for (const item of array) {
 
 `for`:
 
-```
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -963,7 +963,7 @@ for (initializer; condition; final-expression) {
 
 `while`:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -974,7 +974,7 @@ while (condition) {
 
 and finally `do...while`:
 
-```
+```js-nolint
 initializer
 do {
   // code to run

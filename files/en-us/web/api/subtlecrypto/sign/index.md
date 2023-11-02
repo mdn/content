@@ -138,7 +138,7 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   "RSASSA-PKCS1-v1_5",
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -167,7 +167,7 @@ let signature = await window.crypto.subtle.sign(
     saltLength: 32,
   },
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -196,7 +196,7 @@ let signature = await window.crypto.subtle.sign(
     hash: { name: "SHA-384" },
   },
   privateKey,
-  encoded
+  encoded,
 );
 ```
 

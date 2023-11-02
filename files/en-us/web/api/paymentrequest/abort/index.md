@@ -34,20 +34,23 @@ been abandoned or neglected.
 ```js
 const request = new PaymentRequest(supportedInstruments, details, options);
 
-const paymentTimeout = setTimeout(() => {
-  clearTimeout(paymentTimeout);
-  request
-    .abort()
-    .then(() => {
-      print("Payment timed out after 20 minutes.");
-    })
-    .catch(() => {
-      print(
-        "Unable to abort, because the user is currently in the process " +
-          "of paying."
-      );
-    });
-}, 20 * 60 * 1000); /* 20 minutes */
+const paymentTimeout = setTimeout(
+  () => {
+    clearTimeout(paymentTimeout);
+    request
+      .abort()
+      .then(() => {
+        print("Payment timed out after 20 minutes.");
+      })
+      .catch(() => {
+        print(
+          "Unable to abort, because the user is currently in the process " +
+            "of paying.",
+        );
+      });
+  },
+  20 * 60 * 1000,
+); /* 20 minutes */
 ```
 
 ## Specifications

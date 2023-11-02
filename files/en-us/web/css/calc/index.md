@@ -137,7 +137,7 @@ Here, the form itself is established to use 1/6 of the available window width. T
 
 ### Nested `calc()` with CSS Variables
 
-You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_Variables). Consider the following code:
+You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables). Consider the following code:
 
 ```css
 .foo {

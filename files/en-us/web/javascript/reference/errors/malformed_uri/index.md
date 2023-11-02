@@ -11,7 +11,7 @@ wasn't successful.
 
 ## Message
 
-```
+```plain
 URIError: URI malformed (V8-based)
 URIError: malformed URI sequence (Firefox)
 URIError: String contained an illegal UTF-16 sequence. (Safari)

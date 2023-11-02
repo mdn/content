@@ -101,7 +101,7 @@ playButton.addEventListener(
       // …
     }
   },
-  false
+  false,
 );
 ```
 
@@ -129,7 +129,7 @@ filterButton.addEventListener(
       // …
     }
   },
-  false
+  false,
 );
 ```
 
@@ -163,7 +163,7 @@ Now let's get our response data:
 iirFilter.getFrequencyResponse(
   myFrequencyArray,
   magResponseOutput,
-  phaseResponseOutput
+  phaseResponseOutput,
 );
 ```
 
@@ -218,7 +218,7 @@ magResponseOutput.forEach((magResponseData, i) => {
   } else {
     canvasCtx.lineTo(
       (width / totalArrayItems) * i,
-      height - magResponseData * 100 - spacing
+      height - magResponseData * 100 - spacing,
     );
   }
 });

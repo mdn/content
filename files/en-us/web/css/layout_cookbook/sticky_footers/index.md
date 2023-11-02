@@ -52,4 +52,4 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Resources on MDN
 
-- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

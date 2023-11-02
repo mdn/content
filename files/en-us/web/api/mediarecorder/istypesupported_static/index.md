@@ -49,7 +49,7 @@ for (const type of types) {
   console.log(
     `Is ${type} supported? ${
       MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("
-    }`
+    }`,
   );
 }
 ```

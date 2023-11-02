@@ -74,7 +74,7 @@ Some of the things to consider when choosing a host:
 - Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
 - Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
-- Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
+- Additional benefits. Some providers will offer free domain names and support for TLS certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
@@ -119,9 +119,17 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 
 ```js
 // Set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+
 const dev_db_url =
   "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 ```
 
 > **Note:** Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
@@ -236,7 +244,7 @@ app.use(
     directives: {
       "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
     },
-  })
+  }),
 );
 
 // …
@@ -402,7 +410,10 @@ The final step is to copy your application source files into the repo folder, an
    It should look a bit like the listing below.
 
    ```bash
-   > git status
+   git status
+   ```
+
+   ```plain
    On branch main
    Your branch is up-to-date with 'origin/main'.
    Changes to be committed:
@@ -538,7 +549,7 @@ This will publish the site and put the domain in place of the button, as shown b
 Select the domain URL to open your library application.
 Note that because we haven't specified a production database, the local library will open using your development data.
 
-### Provision and connect a MongoDb database
+### Provision and connect a MongoDB database
 
 Instead of using our development data, next let's create a production MongoDB database to use instead.
 We will create the database as part of the Railway application project, although there is nothing to stop you creating in its own separate project, or indeed to use a _MongoDB Atlas_ database for production data, just as you have for the development database.
@@ -555,7 +566,7 @@ Select **Database** when prompted about the type of service to add:
 
 Then select **Add MongoDB** to start adding the database
 
-![Railway popup showing different databases that can be selected: postgres, mysql, mongodb and so on](railway_database_select_type.png)
+![Railway popup showing different databases that can be selected: Postgres, MySQL, MongoDB and so on](railway_database_select_type.png)
 
 Railway will then provision a service containing an empty database in the same project.
 On completion you will now see both the application and database services in the project view.

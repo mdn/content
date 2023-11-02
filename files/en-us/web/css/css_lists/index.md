@@ -1,5 +1,5 @@
 ---
-title: CSS lists
+title: CSS lists and counters
 slug: Web/CSS/CSS_lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-lists/
 
 {{CSSRef}}
 
-The **CSS lists** module defines how lists can be laid out and styled.
+The **CSS lists and counters** module enables styling list counters, including styling, positioning, and manipulating their values.
 
 ## Reference
 

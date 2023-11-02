@@ -82,7 +82,7 @@ event.initKeyEvent(
   false, // shiftKeyArg,
   false, // metaKeyArg,
   9, // keyCodeArg,
-  0
+  0,
 ); // charCodeArg);
 
 document.getElementById("blah").dispatchEvent(event);

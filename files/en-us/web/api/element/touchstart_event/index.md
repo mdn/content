@@ -64,4 +64,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 ## See also
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
-- This event on {{domxref("Document")}} targets: {{domxref("Document/touchstart_event", "touchstart")}}

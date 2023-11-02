@@ -17,6 +17,10 @@ The **`getUTCDate()`** method of {{jsxref("Date")}} instances returns the day of
 getUTCDate()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 1 and 31, representing day of month for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

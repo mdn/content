@@ -33,7 +33,7 @@ function read() {
         ctlr.abort();
         resolve(event);
       },
-      { once: true }
+      { once: true },
     );
     ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
   });

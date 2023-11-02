@@ -1,6 +1,7 @@
 ---
 title: Updating add-ons for Firefox 6
 slug: Mozilla/Firefox/Releases/6/Updating_add-ons
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

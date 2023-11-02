@@ -58,7 +58,7 @@ self.addEventListener("notificationclick", (event) => {
           if (client.url === "/" && "focus" in client) return client.focus();
         }
         if (clients.openWindow) return clients.openWindow("/");
-      })
+      }),
   );
 });
 ```
@@ -82,7 +82,7 @@ self.onnotificationclick = (event) => {
           if (client.url === "/" && "focus" in client) return client.focus();
         }
         if (clients.openWindow) return clients.openWindow("/");
-      })
+      }),
   );
 };
 ```
@@ -91,7 +91,7 @@ You can handle event actions using `event.action` within a {{domxref("ServiceWor
 
 ```js
 navigator.serviceWorker.register("sw.js");
-Notification.requestPermission((result) => {
+Notification.requestPermission().then((result) => {
   if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       // Show a notification that includes an action titled Archive.
@@ -119,7 +119,7 @@ self.addEventListener(
       clients.openWindow("/inbox");
     }
   },
-  false
+  false,
 );
 ```
 

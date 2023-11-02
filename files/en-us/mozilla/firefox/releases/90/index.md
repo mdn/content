@@ -1,6 +1,7 @@
 ---
 title: Firefox 90 for developers
 slug: Mozilla/Firefox/Releases/90
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

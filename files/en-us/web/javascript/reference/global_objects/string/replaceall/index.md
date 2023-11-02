@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.replaceAll
 
 {{JSRef}}
 
-The **`replaceAll()`** method returns a new string with all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function to be called for each match. The original string is left unchanged.
+The **`replaceAll()`** method of {{jsxref("String")}} values returns a new string with all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function to be called for each match. The original string is left unchanged.
 
 {{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
 
@@ -104,7 +104,7 @@ This will work:
 ## See also
 
 - [Polyfill of `String.prototype.replaceAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

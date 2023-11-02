@@ -1,6 +1,7 @@
 ---
 title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -44,7 +45,7 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and {{domxref("Window.languagechange_event", "languagechange")}} event have been implemented ([Webkit bug 889335](https://bugzil.la/889335)).
+- The {{domxref("Navigator.languages")}} property and {{domxref("Window.languagechange_event", "languagechange")}} event have been implemented ([Webkit bug 889335](https://bugzil.la/889335)).
 - The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ([Firefox bug 1014581](https://bugzil.la/1014581)).
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ([Webkit bug 1009388](https://bugzil.la/1009388)).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ([Webkit bug 865649](https://bugzil.la/865649)).
@@ -54,8 +55,8 @@ Highlights:
 - The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Webkit bug 967264](https://bugzil.la/967264)).
 - The [MSISDN Verification API](/en-US/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ([Webkit bug 988469](https://bugzil.la/988469)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
-- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
-- To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
+- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape_static", "CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
+- To complete our Hit Regions implementation, `MouseEvent.region` has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
 - The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ([Firefox bug 1004579](https://bugzil.la/1004579)).
 - The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).
 - [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ([Firefox bug 998076](https://bugzil.la/998076))..

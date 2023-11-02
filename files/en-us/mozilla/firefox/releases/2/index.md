@@ -1,6 +1,7 @@
 ---
 title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

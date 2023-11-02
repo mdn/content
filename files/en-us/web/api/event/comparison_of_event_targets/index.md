@@ -140,7 +140,7 @@ There are five targets to consider:
 ### Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
