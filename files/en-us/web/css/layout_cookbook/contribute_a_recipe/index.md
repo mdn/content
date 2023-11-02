@@ -14,18 +14,18 @@ If you would like to contribute an example for the Layout Cookbook, then this pa
 
 A recipe consists of:
 
-* A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
-* A downloadable version of that example, also stored in the CSS Examples repo.
-* A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that includes:
+- A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
+- A downloadable version of that example, also stored in the CSS Examples repo.
+- A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that includes:
 
-   1. Introduction
-   2. Requirements
-   3. The recipe
-   4. The choices made
-   5. Any useful fallbacks or alternative methods, when relevant
-   6. Accessibility concerns
-   7. Browser compatibility (only if using CSS properties that aren't fully supported)
-   8. Additional resources
+  1.  Introduction
+  2.  Requirements
+  3.  The recipe
+  4.  The choices made
+  5.  Any useful fallbacks or alternative methods, when relevant
+  6.  Accessibility concerns
+  7.  Browser compatibility (only if using CSS properties that aren't fully supported)
+  8.  Additional resources
 
 ## Steps to publish a recipe
 
