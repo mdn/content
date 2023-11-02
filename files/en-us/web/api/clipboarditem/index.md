@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ClipboardItem
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{DefaultAPISidebar("Clipboard API")}}{{SecureContext_Header}}
 
 The **`ClipboardItem`** interface of the {{domxref('Clipboard API')}} represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
 
