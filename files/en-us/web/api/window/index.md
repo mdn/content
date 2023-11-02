@@ -268,10 +268,16 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "history.forward()")}}.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
+- {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
+- {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.
+- {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Transforms a {{domxref("WebKitPoint")}} from the page's coordinate system to the node's coordinate system.
 
 ## Events
 
