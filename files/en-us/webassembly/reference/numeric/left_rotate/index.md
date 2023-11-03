@@ -1,6 +1,7 @@
 ---
 title: Left rotate
 slug: WebAssembly/Reference/Numeric/Left_rotate
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

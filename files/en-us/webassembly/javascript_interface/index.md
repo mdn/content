@@ -1,6 +1,7 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
+page-type: webassembly-interface
 browser-compat: javascript.builtins.WebAssembly
 ---
 
