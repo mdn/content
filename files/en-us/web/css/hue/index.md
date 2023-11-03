@@ -4,7 +4,6 @@ slug: Web/CSS/hue
 page-type: css-type
 browser-compat:
   - css.types.color.hsl
-  - css.types.color.hsla
   - css.types.color.hwb
   - css.types.color.lch
   - css.types.color.oklch
