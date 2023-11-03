@@ -35,6 +35,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the console object which provides access to the browser's debugging console.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
+- {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
+  - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
   - : Returns the browser crypto object.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
@@ -65,12 +67,12 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
+- {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
+  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.location")}}
   - : Gets/sets the location, or current URL, of the window object.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Returns the locationbar object.
-- {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
-  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Returns the menubar object.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -171,8 +173,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Cancels the repeated execution set using `setImmediate()`.
 - {{domxref("clearInterval", "Window.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
@@ -215,6 +215,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
+- {{domxref("queueMicrotask", "Window.queueMicrotask()")}}
+  - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("reportError", "Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
@@ -235,24 +237,24 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("setInterval", "Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : Toggles a user's ability to resize a window.
 - {{domxref("setTimeout", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
-  - : Sizes the window according to its content.
+- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
+  - : Displays a directory picker which allows the user to select a directory.
 - {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
   - : Shows a file picker that allows a user to select a file or multiple files.
 - {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}}
   - : Shows a file picker that allows a user to save a file.
-- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
-  - : Displays a directory picker which allows the user to select a directory.
+- {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
+  - : Sizes the window according to its content.
 - {{domxref("Window.stop()")}}
   - : This method stops window loading.
+- {{domxref("structuredClone", "Window.structuredClone()")}}
+  - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : Updates the state of commands of the current chrome window (UI).
 
@@ -262,12 +264,22 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "history.back()")}}.
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
   - : Registers the window to capture all events of the specified type.
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Cancels the repeated execution set using `setImmediate()`.
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "history.forward()")}}.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
+- {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Lets a website or app gain access to a sandboxed file system for its own use.
+- {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
+- {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.
+- {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Transforms a {{domxref("WebKitPoint")}} from the page's coordinate system to the node's coordinate system.
 
 ## Events
 
