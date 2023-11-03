@@ -40,7 +40,8 @@ The top-left corner of the window is always (0, 0), regardless of the content of
 
 ### Page
 
-The "page" coordinate system gives the position of a pixel relative to the top-left corner of the entire {{domxref("Document")}} in which the pixel is located. That means that a given point in an element within the document will keep the same coordinates in the page model unless the element moves (either directly by changing its position or indirectly by adding or resizing other content).
+The "page" coordinate system gives the position of a pixel relative to the top-left corner of the entire rendered {{domxref("Document")}}.
+That means that a point in an element within the document will have the same coordinates after the user scrolls horizontally or vertically in the document unless the element moves via layout changes.
 
 Mouse events' {{domxref("MouseEvent.pageX", "pageX")}} and {{domxref("MouseEvent.pageY", "pageY")}} properties provide the position of the mouse at the time the event was generated, given relative to the top-left corner of the document.
 
