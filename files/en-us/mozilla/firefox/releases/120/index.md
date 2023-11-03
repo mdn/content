@@ -50,6 +50,9 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### HTTP
 
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code is enabled for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to a particular origin (that the page is likely to need resources from).
+  For more details see [Firefox bug 1858712](https://bugzil.la/1858712).
+
 #### Removals
 
 ### Security

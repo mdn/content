@@ -2428,7 +2428,8 @@ For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 ### HTTP Status 103
 
-The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start preloading resources while the server is still preparing the full response.
+The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server is still preparing the full response.
+Note that using the header to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites is already supported.
 For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 
 <table>
@@ -2462,7 +2463,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>network.early-hints.enabled</code> and <code>network.early-hints.preconnect.enabled</code></td>
+      <td colspan="2"><code>network.early-hints.enabled</code></td>
     </tr>
   </tbody>
 </table>
