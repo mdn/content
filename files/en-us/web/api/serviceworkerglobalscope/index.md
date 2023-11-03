@@ -34,6 +34,10 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("console", "ServiceWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
+- {{domxref("crossOriginIsolated", "ServiceWorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
+  - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
+- {{domxref("crypto_property", "ServiceWorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts", "ServiceWorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
 - {{domxref("indexedDB", "ServiceWorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
@@ -70,14 +74,24 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Cancels the repeated execution set using {{domxref("setInterval")}}.
 - {{domxref("clearTimeout", "ServiceWorkerGlobalScope.clearTimeout()")}}
   - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+- {{domxref("createImageBitmap", "ServiceWorkerGlobalScope.createImageBitmap()")}}
+  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("WorkerGlobalScope.dump", "ServiceWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Writes a message to the console.
+- {{domxref("fetch", "ServiceWorkerGlobalScope.fetch()")}}
+  - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts", "ServiceWorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
+- {{domxref("queueMicrotask", "ServiceWorkerGlobalScope.queueMicrotask()")}}
+  - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("setInterval", "ServiceWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
 - {{domxref("setTimeout", "ServiceWorkerGlobalScope.setTimeout()")}}
   - : Sets a delay for executing a function.
+- {{domxref("structuredClone", "ServiceWorkerGlobalScope.structuredClone()")}}
+  - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+- {{domxref("reportError", "ServiceWorkerGlobalScope.reportError()")}}
+  - : Reports an error in a script, emulating an unhandled exception.
 
 ## Events
 
