@@ -32,7 +32,7 @@ This example demonstrates the use of `<address>` to demarcate the contact inform
 ```html
 <address>
   You can contact author at
-  <a href="http://www.exmple.com/contact">www.example.com</a>.<br>
+  <a href="http://www.example.com/contact">www.example.com</a>.<br>
   If you see any bugs, please
   <a href="mailto:webmaster@example.com">contact webmaster</a>.<br />
   You may also want to visit us:<br>
