@@ -39,3 +39,7 @@ A {{jsxref('Boolean')}} indicating whether the specified key was found.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Map.prototype.has()")}}

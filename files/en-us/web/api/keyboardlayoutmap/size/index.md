@@ -25,3 +25,7 @@ A number.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Map.prototype.size")}}

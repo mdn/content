@@ -49,3 +49,7 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Map.prototype.forEach()")}}

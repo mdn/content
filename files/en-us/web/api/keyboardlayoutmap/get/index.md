@@ -51,3 +51,7 @@ keyboard.getLayoutMap().then((keyboardLayoutMap) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Map.prototype.get()")}}

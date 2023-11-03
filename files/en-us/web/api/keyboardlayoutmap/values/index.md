@@ -23,3 +23,7 @@ A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) o
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Map.prototype.values()")}}
