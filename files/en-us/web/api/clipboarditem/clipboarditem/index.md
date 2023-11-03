@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ClipboardItem.ClipboardItem
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}}
 
 The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.
 
