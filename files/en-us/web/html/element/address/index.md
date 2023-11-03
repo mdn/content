@@ -35,10 +35,10 @@ This example demonstrates the use of `<address>` to demarcate the contact inform
   <a href="http://www.example.com/contact">www.example.com</a>.<br>
   If you see any bugs, please
   <a href="mailto:webmaster@example.com">contact webmaster</a>.<br />
-  You may also want to visit us:<br>
-  Mozilla Foundation<br>
-  331 E Evelyn Ave<br>
-  Mountain View, CA 94041<br>
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
   USA
 </address>
 ```
