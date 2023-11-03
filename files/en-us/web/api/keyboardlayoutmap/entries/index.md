@@ -14,8 +14,7 @@ The **`entries()`** method of the {{domxref("KeyboardLayoutMap")}} interface ret
 
 ## Value
 
-An array of the given `KeyboardLayoutMap` object's own enumerable property
-`[key, value]` pairs.
+A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 
 ## Specifications
 

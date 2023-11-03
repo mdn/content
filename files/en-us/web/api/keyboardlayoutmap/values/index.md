@@ -14,7 +14,7 @@ The **`values()`** method of the {{domxref("KeyboardLayoutMap")}} interface retu
 
 ## Value
 
-An iterator.
+A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 
 ## Specifications
 

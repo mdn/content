@@ -14,7 +14,7 @@ The **`keys()`** method of the {{domxref("KeyboardLayoutMap")}} interface return
 
 ## Value
 
-An iterator.
+A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 
 ## Specifications
 
