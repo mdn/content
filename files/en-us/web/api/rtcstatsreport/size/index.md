@@ -12,7 +12,7 @@ The **`size`** read-only property of the {{domxref("RTCStatsReport")}} interface
 
 Note that each item consists of a key-value pair, where the keys are unique `id` values for monitored statistics objects from which the statistics are derived, and the associated values are [statistics dictionary objects](/en-US/docs/Web/API/RTCStatsReport#the_statistic_types).
 
-The method is otherwise the same as {{jsxref("Map.prototype.size")}}.
+This property is otherwise the same as {{jsxref("Map.prototype.size")}}.
 
 ## Value
 

@@ -1,6 +1,7 @@
 ---
 title: WebAssembly Concepts
 slug: WebAssembly/Concepts
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
