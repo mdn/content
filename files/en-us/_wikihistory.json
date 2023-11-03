@@ -2822,19 +2822,6 @@
       "sandeepmishraxp"
     ]
   },
-  "Glossary/I18N": {
-    "modified": "2019-03-23T23:11:33.019Z",
-    "contributors": [
-      "lpiot",
-      "Andrew_Pfeiffer",
-      "kscarfone",
-      "S4y4Nt4n",
-      "Sukanta.Pal",
-      "Biraj",
-      "Sheppy",
-      "klez"
-    ]
-  },
   "Glossary/IANA": {
     "modified": "2019-03-23T22:57:40.767Z",
     "contributors": ["lpiot", "klez", "Andrew_Pfeiffer"]
@@ -3075,16 +3062,6 @@
       "Andrew_Pfeiffer",
       "kscarfone",
       "gusleindecker"
-    ]
-  },
-  "Glossary/Internationalization_and_localization": {
-    "modified": "2020-03-27T15:13:27.575Z",
-    "contributors": [
-      "RafeyIqbalRahman",
-      "paulderek97",
-      "Iqbalh11",
-      "Charles2020",
-      "estelle"
     ]
   },
   "Glossary/Internet": {
@@ -35290,21 +35267,6 @@
       "Crash"
     ]
   },
-  "Web/API/File/type": {
-    "modified": "2020-10-15T21:52:05.883Z",
-    "contributors": [
-      "PanayiotisPaschalides",
-      "mfuji09",
-      "sideshowbarker",
-      "EricLaw1979",
-      "adilsoncabral0",
-      "fscholz",
-      "Jedipedia",
-      "stevenwdv",
-      "david_ross",
-      "vinayk7"
-    ]
-  },
   "Web/API/File/webkitRelativePath": {
     "modified": "2020-11-17T19:00:12.607Z",
     "contributors": [
@@ -57778,41 +57740,6 @@
       "Gor1"
     ]
   },
-  "Web/API/Screen/availLeft": {
-    "modified": "2020-10-15T21:13:04.118Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Navin_Jadhav",
-      "Sheppy",
-      "jzaruba",
-      "Mgjbot",
-      "Yaroukh",
-      "Gor1"
-    ]
-  },
-  "Web/API/Screen/availTop": {
-    "modified": "2020-10-15T21:16:26.852Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "kosvrouvas",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Mgjbot",
-      "Gor1"
-    ]
-  },
   "Web/API/Screen/availWidth": {
     "modified": "2020-10-15T21:16:26.709Z",
     "contributors": [
@@ -57860,23 +57787,6 @@
       "Sheppy",
       "Gieron",
       "Mgjbot",
-      "Gor1"
-    ]
-  },
-  "Web/API/Screen/left": {
-    "modified": "2020-10-15T21:16:24.841Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "MHasan",
-      "namolmes",
-      "Sheppy",
-      "Mgjbot",
-      "Nickolay",
-      "Jabez",
       "Gor1"
     ]
   },
@@ -57991,25 +57901,6 @@
       "Gor1"
     ]
   },
-  "Web/API/Screen/top": {
-    "modified": "2020-10-15T21:16:23.568Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "cvrebert",
-      "teoli",
-      "jswisher",
-      "Anonymous",
-      "MHasan",
-      "chitra_lakhotia",
-      "Sheppy",
-      "ethertank",
-      "jryans",
-      "Mgjbot",
-      "Mw22",
-      "Gor1"
-    ]
-  },
   "Web/API/Screen/unlockOrientation": {
     "modified": "2020-10-15T21:23:44.621Z",
     "contributors": [
@@ -58045,6 +57936,77 @@
       "Sheppy",
       "Gieron",
       "Mgjbot",
+      "Gor1"
+    ]
+  },
+  "Web/API/ScreenDetailed/availLeft": {
+    "modified": "2020-10-15T21:13:04.118Z",
+    "contributors": [
+      "mfuji09",
+      "ExE-Boss",
+      "fscholz",
+      "cvrebert",
+      "Sebastianz",
+      "teoli",
+      "MHasan",
+      "kscarfone",
+      "Navin_Jadhav",
+      "Sheppy",
+      "jzaruba",
+      "Mgjbot",
+      "Yaroukh",
+      "Gor1"
+    ]
+  },
+  "Web/API/ScreenDetailed/availTop": {
+    "modified": "2020-10-15T21:16:26.852Z",
+    "contributors": [
+      "mfuji09",
+      "ExE-Boss",
+      "fscholz",
+      "cvrebert",
+      "Sebastianz",
+      "teoli",
+      "kosvrouvas",
+      "Navin_Jadhav",
+      "Sheppy",
+      "Mgjbot",
+      "Gor1"
+    ]
+  },
+  "Web/API/ScreenDetailed/left": {
+    "modified": "2020-10-15T21:16:24.841Z",
+    "contributors": [
+      "ExE-Boss",
+      "fscholz",
+      "cvrebert",
+      "Sebastianz",
+      "teoli",
+      "MHasan",
+      "namolmes",
+      "Sheppy",
+      "Mgjbot",
+      "Nickolay",
+      "Jabez",
+      "Gor1"
+    ]
+  },
+  "Web/API/ScreenDetailed/top": {
+    "modified": "2020-10-15T21:16:23.568Z",
+    "contributors": [
+      "ExE-Boss",
+      "fscholz",
+      "cvrebert",
+      "teoli",
+      "jswisher",
+      "Anonymous",
+      "MHasan",
+      "chitra_lakhotia",
+      "Sheppy",
+      "ethertank",
+      "jryans",
+      "Mgjbot",
+      "Mw22",
       "Gor1"
     ]
   },

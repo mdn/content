@@ -26,6 +26,7 @@ max-height: 75%;
 max-height: none;
 max-height: max-content;
 max-height: min-content;
+max-height: fit-content;
 max-height: fit-content(20em);
 
 /* Global values */
@@ -48,7 +49,9 @@ max-height: unset;
   - : The intrinsic preferred `max-height`.
 - `min-content`
   - : The intrinsic minimum `max-height`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ## Accessibility concerns

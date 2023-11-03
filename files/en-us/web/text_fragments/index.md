@@ -156,4 +156,4 @@ This functionality is mainly intended for feature detection at present. In the f
 
 ## See also
 
-- [Boldly link where no one has linked before: Text Fragments](https://web.dev/text-fragments/)
+- [Boldly link where no one has linked before: Text Fragments](https://web.dev/articles/text-fragments)

@@ -10,15 +10,27 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
+### Developer tools
 
 ### HTML
+
+- Support for the `media` attribute in the [`<source>`](/en-US/docs/Web/HTML/Element/source) element has been reintroduced and expanded to include `<audio>` and `<video>` elements. This attribute was first added in Firefox 15 but was removed in Firefox 53 when its use was limited to `<source>` element within `<picture>`. With this release, the `media` attribute will be available in `<source>` elements within `<audio>`, `<video>`, and `<picture>` ([Firefox bug 1836128](https://bugzil.la/1836128)).
 
 #### Removals
 
 ### CSS
 
 #### Removals
+
+- The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled via the `layout.css.prefixes.transforms` preference being set to `false` by default ([Firefox bug 1855763](https://bugzil.la/1855763)).
+  Specifically, the disabled properties are:
+
+  - `-moz-backface-visibility`
+  - `-moz-perspective`
+  - `-moz-perspective-origin`
+  - `-moz-transform`
+  - `-moz-transform-origin`
+  - `-moz-transform-style`
 
 ### JavaScript
 
@@ -40,6 +52,9 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### HTTP
 
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code is enabled for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to a particular origin (that the page is likely to need resources from).
+  For more details see [Firefox bug 1858712](https://bugzil.la/1858712).
+
 #### Removals
 
 ### Security
@@ -47,6 +62,12 @@ This article provides information about the changes in Firefox 120 that affect d
 #### Removals
 
 ### APIs
+
+- The {{domxref("PublicKeyCredential.authenticatorAttachment", "authenticatorAttachment")}} property of the {{domxref("PublicKeyCredential")}} interface is now supported.
+  This allows web application client and server code to configure itself based on whether the authenticator is part of the device running web authentication, or can roam between devices (see [Firefox bug 1810851](https://bugzil.la/1810851)).
+- The [Minimum PIN Length Extension (`minPinLength`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing a relying party server to request the authenticator's minimum PIN length during creation/registration ([Firefox bug 1844450](https://bugzil.la/1844450)).
+- The {{domxref("Navigator.userActivation")}} property and {{domxref("UserActivation")}} interface are now supported.
+  These can be used to check whether the user is interacting with the page, or has interacted with it since page load (see [Firefox bug 1791079](https://bugzil.la/1791079)).
 
 #### DOM
 
