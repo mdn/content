@@ -27,6 +27,11 @@ The possible values are:
 
 > **Note:** In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
 
+### JavaScript must be enabled
+
+Loading is only deferred when JavaScript is enabled.
+This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+
 ### Timing of the load event
 
 The {{domxref("Window.load_event", "load")}} event is fired when the document has been fully processed.
