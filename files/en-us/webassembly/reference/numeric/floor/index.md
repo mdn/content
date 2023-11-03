@@ -1,6 +1,7 @@
 ---
 title: Floor
 slug: WebAssembly/Reference/Numeric/Floor
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

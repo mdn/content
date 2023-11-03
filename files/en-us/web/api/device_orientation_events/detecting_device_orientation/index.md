@@ -65,7 +65,8 @@ So let's imagine a ball in a garden:
 <div class="garden">
   <div class="ball"></div>
 </div>
-
+Hold the device parallel to the ground. Rotate along its x and y axes to see the
+ball move up/down and left/right respectively.
 <pre class="output"></pre>
 ```
 
@@ -124,8 +125,8 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-  ball.style.top = `${(maxY * y) / 180 - 10}px`;
-  ball.style.left = `${(maxX * x) / 180 - 10}px`;
+  ball.style.left = `${(maxY * y) / 180 - 10}px`; // rotating device about Y axis moves the ball along X
+  ball.style.top = `${(maxX * x) / 180 - 10}px`; // rotating device about X axis moves the ball along Y
 }
 
 window.addEventListener("deviceorientation", handleOrientation);

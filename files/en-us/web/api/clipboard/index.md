@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Clipboard
 ---
 
-{{APIRef("Clipboard API")}} {{SecureContext_Header}}
+{{APIRef("Clipboard API")}}{{SecureContext_Header}}
 
 The **`Clipboard`** interface implements the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), providing—if the user grants permission—both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
 

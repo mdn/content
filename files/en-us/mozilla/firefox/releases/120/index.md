@@ -10,9 +10,11 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
+### Developer tools
 
 ### HTML
+
+- Support for the `media` attribute in the [`<source>`](/en-US/docs/Web/HTML/Element/source) element has been reintroduced and expanded to include `<audio>` and `<video>` elements. This attribute was first added in Firefox 15 but was removed in Firefox 53 when its use was limited to `<source>` element within `<picture>`. With this release, the `media` attribute will be available in `<source>` elements within `<audio>`, `<video>`, and `<picture>` ([Firefox bug 1836128](https://bugzil.la/1836128)).
 
 #### Removals
 
@@ -49,6 +51,9 @@ This article provides information about the changes in Firefox 120 that affect d
 #### Removals
 
 ### HTTP
+
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code is enabled for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to a particular origin (that the page is likely to need resources from).
+  For more details see [Firefox bug 1858712](https://bugzil.la/1858712).
 
 #### Removals
 
