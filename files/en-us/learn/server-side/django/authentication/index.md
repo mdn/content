@@ -86,10 +86,10 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > ```python
 > # Get current user model from settings
 > from django.contrib.auth import get_user_model
-> UserModel = get_user_model()
+> User = get_user_model()
 >
 > # Create user from model and save to the database
-> user = UserModel.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+> user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
 >
 > # Update fields and then save again
 > user.first_name = 'Tyrone'
