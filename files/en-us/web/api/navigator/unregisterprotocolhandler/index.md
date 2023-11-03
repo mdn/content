@@ -64,6 +64,7 @@ Otherwise, the scheme must be one of the following:
 - `im`
 - `irc`
 - `ircs`
+- `lbry`
 - `magnet`
 - `mailto`
 - `matrix`
