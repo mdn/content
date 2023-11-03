@@ -176,7 +176,7 @@ Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/J
 
 ```js
 BigInt.prototype.toJSON = function () {
-  return this.toString();
+  return { $bigint: this.toString() };
 };
 ```
 
@@ -184,14 +184,14 @@ Instead of throwing, `JSON.stringify()` now produces a string like this:
 
 ```js
 console.log(JSON.stringify({ a: 1n }));
-// {"a":"1"}
+// {"a":{"$bigint":"1"}}
 ```
 
 If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
 
 ```js
 const replacer = (key, value) =>
-  typeof value === "bigint" ? value.toString() : value;
+  typeof value === "bigint" ? { $bigint: value.toString() } : value;
 
 const data = {
   number: 1,
@@ -200,22 +200,25 @@ const data = {
 const stringified = JSON.stringify(data, replacer);
 
 console.log(stringified);
-// {"number":1,"big":"18014398509481982"}
+// {"number":1,"big":{"$bigint":"18014398509481982"}}
 ```
 
 If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
 
 ```js
-const reviver = (key, value) => (key === "big" ? BigInt(value) : value);
+const reviver = (key, value) =>
+  value !== null && typeof value === "object" && "$bigint" in value && typeof value.$bigint === "string" ? BigInt(value.$bigint) : value;
 
-const payload = '{"number":1,"big":"18014398509481982"}';
+const payload = '{"number":1,"big":{"$bigint":"18014398509481982"}}';
 const parsed = JSON.parse(payload, reviver);
 
 console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
 
-> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects as shown above, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+>
+> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you are only dealing with a few specific keys containing bigints, it may be better not to wrap the value and simply revive those specific keys.
 
 ### BigInt coercion
 
