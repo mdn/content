@@ -17,6 +17,8 @@ object has an element with the specified key.
 A list of valid keys is found in
 the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
+The method is otherwise the same as {{jsxref("Map.prototype.keys()")}}.
+
 ## Syntax
 
 ```js-nolint

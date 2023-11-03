@@ -14,6 +14,8 @@ The **`forEach()`** method of the
 {{domxref('KeyboardLayoutMap')}} interface executes a provided function once for
 each element of the map.
 
+The method is otherwise the same as {{jsxref("Map.prototype.forEach()")}}.
+
 ## Syntax
 
 ```js-nolint

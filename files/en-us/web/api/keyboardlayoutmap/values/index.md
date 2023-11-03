@@ -12,6 +12,8 @@ browser-compat: api.KeyboardLayoutMap.values
 
 The **`values()`** method of the {{domxref("KeyboardLayoutMap")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the values for each index in the `KeyboardLayoutMap` object.
 
+The method is otherwise the same as {{jsxref("Map.prototype.values()")}}.
+
 ## Value
 
 A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
