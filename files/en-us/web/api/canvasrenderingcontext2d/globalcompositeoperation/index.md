@@ -426,20 +426,6 @@ const op_8x8 = createInterlace(8, "#FFF", "#eee");
 
 {{Compat}}
 
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-  `ctx.setCompositeOperation()` is implemented besides this property.
-- Support for `"plus-darker"` and `"darker"` were removed in
-  Chrome 48. Developers looking for a replacement should use `"darken"`.
-
-### Gecko-specific notes
-
-- An early Canvas specification draft specified the value `"darker"`.
-  However, Firefox removed support for `"darker"` in version 4
-  ([Firefox bug 571532](https://bugzil.la/571532)). See also [this blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
-  similar affect to `"darker"`.
-
 ## See also
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
