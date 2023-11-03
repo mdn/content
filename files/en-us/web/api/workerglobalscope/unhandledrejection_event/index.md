@@ -8,7 +8,7 @@ browser-compat: api.WorkerGlobalScope.unhandledrejection_event
 
 {{APIRef}}
 
-The **`unhandledrejection`** event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected.
+The **`unhandledrejection`** event is sent to the global scope (typically {{domxref("WorkerGlobalScope")}}) of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected.
 
 This is useful for debugging and for providing fallback error handling for unexpected situations.
 
