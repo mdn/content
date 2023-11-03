@@ -10,10 +10,7 @@ browser-compat: api.KeyboardLayoutMap.keys
 
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-The **`keys`** read-only property of
-the {{domxref("KeyboardLayoutMap")}} interface returns a new Array
-Iterator object that contains the keys for each index in the
-array.
+The **`keys()`** method of the {{domxref("KeyboardLayoutMap")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the keys for each index in the array.
 
 ## Value
 
