@@ -7,7 +7,7 @@ browser-compat: html.elements.source
 
 {{HTMLSidebar}}
 
-The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
+The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
@@ -83,8 +83,8 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     The list consists of strings separated by commas, indicating a set of possible images for the browser to use. Each string is composed of:
 
-    - A URL for an image.
-    - An optional width descriptor—a positive integer directly followed by `"w"`, such as `300w`. If not specified, the value used by default is infinity.
+    - A URL specifying an image location.
+    - An optional width descriptor—a positive integer directly followed by `"w"`, such as `300w`. If not specified, the value used by default is `infinity`.
     - An optional pixel density descriptor—a positive floating number directly followed by `"x"`, such as `2x`. If not specified, the value used by default is `1x`.
 
     Each string in the list must have either a width descriptor or a pixel density descriptor to be valid. These two descriptors should not be used together; only one should be used consistently throughout the list. The value of each descriptor in the list must be unique. The browser chooses the most adequate image to display at a given point of time based on these descriptors. If the `sizes` attribute is also present, then each string must include a width descriptor. If the browser does not support `srcset`, then `src` will be used for the default image source.
@@ -115,15 +115,21 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
 
-If the `type` attribute isn't specified, the browser retrieves the media's type from the server and determine if it can be displayed. If the media can't be rendered, the browser checks the next `<source>` in the list. If the `type` attribute is specified, the browser immediately compares it with the media types it can display. If the type is not supported, the browser skips querying the server and directly checks the next `<source>` element.
+The browser goes through a list of `<source>` elements to find a format it supports. It uses the first one it can display. For each `<source>` element:
 
-When the `<source>` elements are used within a `<picture>` element, the browser will fall back to using the image specified in the `<picture>` element's {{HTMLElement("img")}} child. This happens if none of the `<source>` elements provide a suitable image.
+- If the `type` attribute isn't specified, the browser retrieves the media's type from the server and determines if it can be displayed. If the media can't be rendered, the browser checks the next `<source>` in the list.
+- If the `type` attribute is specified, the browser immediately compares it with the media types it can display. If the type is not supported, the browser skips querying the server and directly checks the next `<source>` element.
+
+If none of the `<source>` elements provide a usable source:
+
+- In the case of a `<picture>` element, the browser will fall back to using the image specified in the `<picture>` element's {{HTMLElement("img")}} child.
+- In the case of an `<audio>` or `<video>` element, the browser will fall back to displaying the content included between the element's opening and closing tags.
 
 For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types). For details on the video and audio media types you can use, see the [Media type and format guide](/en-US/docs/Web/Media/Formats).
 
 ## Examples
 
-### Using type attribute with video
+### Using the `type` attribute with `<video>`
 
 This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Formats).
 
@@ -136,9 +142,9 @@ This example demonstrates how to offer a video in different formats: WebM for br
 </video>
 ```
 
-### Using media attribute with video
+### Using the `media` attribute with `<video>`
 
-This example demonstrates how to offer an alternate source file for viewports that are at or above a certain width. When a user's browsing environment meets the specified `media` condition, the associated `<source>` element is chosen. The contents of its `src` attribute are then requested and rendered. If the `media` condition does not match, the browser will move on to the next `<source>` in the list. The second `<source>` option in the code below has no `media` condition, so it will be selected for all other browsing contexts.
+This example demonstrates how to offer an alternate source file for viewports above a certain width. When a user's browsing environment meets the specified `media` condition, the associated `<source>` element is chosen. The contents of its `src` attribute are then requested and rendered. If the `media` condition does not match, the browser will move on to the next `<source>` in the list. The second `<source>` option in the code below has no `media` condition, so it will be selected for all other browsing contexts.
 
 ```html
 <video controls>
@@ -150,7 +156,7 @@ This example demonstrates how to offer an alternate source file for viewports th
 
 For more examples, the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) article in the Learn area is a great resource.
 
-### Using media attribute with picture
+### Using the `media` attribute with `<picture>`
 
 In this example, two `<source>` elements are included within {{HTMLElement("picture")}}, providing versions of an image to use when the available space exceeds certain widths. If the available width is less than the smallest of these widths, the browser will fall back to the image specified in the {{HTMLElement("img")}} element.
 
@@ -164,7 +170,7 @@ In this example, two `<source>` elements are included within {{HTMLElement("pict
 
 With the `<picture>` element, you must always include an `<img>` with a fallback image. Also, make sure to add an `alt` attribute for accessibility, unless the image is purely decorative and irrelevant to the content.
 
-### Setting height and width attributes in picture
+### Using `height` and `width` attributes with `<picture>`
 
 In this example, three `<source>` elements with `height` and `width` attributes are included in a {{HTMLElement("picture")}} element.
 A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
