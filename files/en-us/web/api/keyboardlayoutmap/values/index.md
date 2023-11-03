@@ -1,5 +1,5 @@
 ---
-title: "KeyboardLayoutMap: values property"
+title: "KeyboardLayoutMap: values() method"
 short-title: values
 slug: Web/API/KeyboardLayoutMap/values
 page-type: web-api-instance-method
