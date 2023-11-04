@@ -38,6 +38,8 @@ There are some additional syntax restrictions:
 
 ## Description
 
+### Private properties
+
 Most class features have their private counterparts:
 
 - Private fields
