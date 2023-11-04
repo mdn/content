@@ -31,7 +31,7 @@ None ({{jsxref('undefined')}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the associated access handle is already closed, or if the modification of the file's binary data completely fails.
+  - : Thrown if the associated access handle is already closed, or if the modification of the file's binary data otherwise fails.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the `newSize` is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - {{jsxref("TypeError")}}
