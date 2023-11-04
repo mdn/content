@@ -23,20 +23,20 @@ when a storage area the window has access to is changed within the context of an
 _In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
-  - : Returns a string that represents the key changed.
+  - : Returns a string with the key for the storage item that was changed.
     The `key` attribute is `null` when the change is caused by the storage `clear()` method.
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
-  - : Returns a string with the new value of the `key`.
+  - : Returns a string with the new value of the storage item.
     This value is `null` when the change has been invoked by storage `clear()` method,
     or the `key` has been removed from the storage.
 - {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
-  - : Returns a string with the original value of the `key`.
+  - : Returns a string with the original value of the storage item.
     This value is `null` when the `key` has been newly added
     and therefore doesn't have any previous value.
 - {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Storage")}} object that represents the storage that was affected.
+  - : Returns a {{DOMxRef("Storage")}} object that represents the storage object that was affected.
 - {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
-  - : Returns string with the URL of the document whose `key` changed.
+  - : Returns string with the URL of the document whose storage changed.
 
 ## Instance methods
 
