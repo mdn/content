@@ -30,7 +30,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-### <dialog> element
+### \<dialog> element
 
 #### HTML
 
@@ -82,7 +82,7 @@ closeButton.addEventListener("click", () => {
 
 {{ EmbedLiveSample('dialog_cancel', '100%', '100px') }}
 
-### <input> element
+### \<input> element
 
 #### HTML
 

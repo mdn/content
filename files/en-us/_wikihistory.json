@@ -37825,8 +37825,8 @@
       "dhodder"
     ]
   },
-  "Web/API/HTMLDialogElement/cancel_event": {
-    "modified": "2020-10-15T21:43:04.572Z",
+  "Web/API/HTMLElement/cancel_event": {
+    "modified": "2023-11-04T04:52:37.782Z",
     "contributors": [
       "mfuji09",
       "fscholz",
@@ -37834,7 +37834,8 @@
       "sideshowbarker",
       "fgwang",
       "rolfedh",
-      "cvrebert"
+      "cvrebert",
+      "FurryR"
     ]
   },
   "Web/API/HTMLDialogElement/close": {
