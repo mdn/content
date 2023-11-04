@@ -28,7 +28,7 @@ new StorageEvent(type, options)
     - `oldValue` {{optional_inline}}
       - : A string containing the original value of the storage item. Defaults to `null`.
     - `newValue` {{optional_inline}}
-      - : A string with the new value of the `key`. It defaults to `null`.
+      - : A string with the new value of the `key`. Defaults to `null`.
     - `url`
       - : A string with the URL of the document whose storage changed.
     - `storageArea` {{optional_inline}}
