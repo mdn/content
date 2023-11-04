@@ -49,7 +49,7 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHand
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the returned entry is a file and not a directory.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if directory doesn't exist and the `create` option is set to
+  - : Thrown if current entry is not found or if the target directory doesn't exist and the `create` option is set to
     `false`.
 
 ## Examples
