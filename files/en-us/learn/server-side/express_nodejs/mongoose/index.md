@@ -313,12 +313,12 @@ Mongoose provides built-in and custom validators, and synchronous and asynchrono
 The built-in validators include:
 
 - All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
-- [Numbers](https://mongoosejs.com/docs/api.html#schema-number-js) have [min](https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) and [max](https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max) validators.
-- [Strings](https://mongoosejs.com/docs/api.html#schema-string-js) have:
+- [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
+- [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
 
-  - [enum](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): specifies the set of allowed values for the field.
-  - [match](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): specifies a regular expression that the string must match.
-  - [maxLength](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) and [minLength](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) for the string.
+  - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): specifies the set of allowed values for the field.
+  - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): specifies a regular expression that the string must match.
+  - [maxLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()>) and [minLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()>) for the string.
 
 The example below (slightly modified from the Mongoose documents) shows how you can specify some of the validator types and error messages:
 
@@ -402,7 +402,7 @@ You can search for records using query methods, specifying the query conditions 
 ```js
 const Athlete = mongoose.model("Athlete", yourSchema);
 
-// find all athletes who play tennis, selecting the 'name' and 'age' fields
+// find all athletes who play tennis, returning the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
   "name age",
@@ -473,12 +473,12 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const authorSchema = Schema({
+const authorSchema = new Schema({
   name: String,
   stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
-const storySchema = Schema({
+const storySchema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: "Author" },
   title: String,
 });
