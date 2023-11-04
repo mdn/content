@@ -13,8 +13,7 @@ browser-compat: api.DataTransferItem.getAsFileSystemHandle
 The **`getAsFileSystemHandle()`** method of the
 {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
 if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the
-dragged item is a directory, or fulfilled with `null` if the dragged item does not in
-`readwrite` or `read` mode or if its `kind` is not `file`.
+dragged item is a directory.
 
 ## Syntax
 
