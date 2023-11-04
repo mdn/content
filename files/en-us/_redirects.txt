@@ -8411,8 +8411,8 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
-/en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/cancel	/en-US/docs/Web/API/HTMLElement/cancel_event
+/en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
 /en-US/docs/Web/API/HTMLDialogElement/showModal()	/en-US/docs/Web/API/HTMLDialogElement/showModal
