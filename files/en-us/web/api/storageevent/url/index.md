@@ -8,11 +8,11 @@ browser-compat: api.StorageEvent.url
 
 {{APIRef("Web Storage API")}}
 
-The **`url`** property of the {{domxref("StorageEvent")}} interface returns the URL of the document whose `key` changed.
+The **`url`** property of the {{domxref("StorageEvent")}} interface returns the URL of the document whose storage changed.
 
 ## Value
 
-A string containing the URL of the document whose `key` changed.
+A string containing the URL of the document whose storage changed.
 
 ## Specifications
 

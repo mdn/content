@@ -24,15 +24,15 @@ new StorageEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `key` {{optional_inline}}
-      - : A string that represents the key changed. It defaults to `null`.
+      - : A string that represents the key for the storage item that changed. Defaults to `null`.
     - `oldValue` {{optional_inline}}
-      - : A string with the original value of the `key`. It defaults to `null`.
+      - : A string containing the original value of the storage item. Defaults to `null`.
     - `newValue` {{optional_inline}}
       - : A string with the new value of the `key`. It defaults to `null`.
     - `url`
-      - : A string with the URL of the document whose `key` changed.
+      - : A string with the URL of the document whose storage changed.
     - `storageArea` {{optional_inline}}
-      - : A {{DOMxRef("Storage")}} object that represents the storage that was affected. It defaults to `null`.
+      - : A {{DOMxRef("Storage")}} object that represents the storage that was affected. Defaults to `null`.
 
 ### Return value
 

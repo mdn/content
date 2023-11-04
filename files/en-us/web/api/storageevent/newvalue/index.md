@@ -8,11 +8,11 @@ browser-compat: api.StorageEvent.newValue
 
 {{APIRef("Web Storage API")}}
 
-The **`newValue`** property of the {{domxref("StorageEvent")}} interface returns the new value of the `key`.
+The **`newValue`** property of the {{domxref("StorageEvent")}} interface returns the new value of the storage item whose value was changed.
 
 ## Value
 
-A string containing the new value of the `key`.
+A string containing the new value of the storage item.
 
 ## Specifications
 

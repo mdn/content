@@ -8,11 +8,11 @@ browser-compat: api.StorageEvent.oldValue
 
 {{APIRef("Web Storage API")}}
 
-The **`oldValue`** property of the {{domxref("StorageEvent")}} interface returns the original value of the `key`.
+The **`oldValue`** property of the {{domxref("StorageEvent")}} interface returns the original value of the storage item whose value changed.
 
 ## Value
 
-A string containing the original value of the `key`.
+A string containing the original value of the storage item.
 
 ## Specifications
 

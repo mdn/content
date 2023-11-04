@@ -8,11 +8,11 @@ browser-compat: api.StorageEvent.storageArea
 
 {{APIRef("Web Storage API")}}
 
-The **`storageArea`** property of the {{domxref("StorageEvent")}} interface returns the storage that was affected.
+The **`storageArea`** property of the {{domxref("StorageEvent")}} interface returns the storage object that was affected.
 
 ## Value
 
-A {{DOMxRef("Storage")}} object that represents the storage that was affected.
+A {{DOMxRef("Storage")}} object that represents the storage object that was affected.
 
 ## Specifications
 

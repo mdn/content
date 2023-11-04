@@ -8,11 +8,11 @@ browser-compat: api.StorageEvent.key
 
 {{APIRef("Web Storage API")}}
 
-The **`key`** property of the {{domxref("StorageEvent")}} interface returns the key that was changed.
+The **`key`** property of the {{domxref("StorageEvent")}} interface returns the key for the storage item that was changed.
 
 ## Value
 
-A string containing the `key` that was changed.
+A string containing the key for the storage item that was changed.
 
 ## Specifications
 
