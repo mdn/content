@@ -109,7 +109,7 @@ document.body.addEventListener("click", (event) => {
 
 ## Instance properties
 
-- {{domxref("Location.ancestorOrigins")}}
+- {{domxref("Location.ancestorOrigins")}} {{ReadOnlyInline}}
   - : A static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
 - {{domxref("Location.href")}}
   - : A {{Glossary("stringifier")}} that returns a string containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
