@@ -22,21 +22,31 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 ```css
 /* A repeating gradient tilted 45 degrees,
    starting blue and finishing red, repeating 3 times */
-repeating-linear-gradient(45deg, blue, red 33.3%);
+repeating-linear-gradient(45deg, blue, red 33.3%)
 
 /* A repeating gradient going from the bottom right to the top left,
    starting blue and finishing red, repeating every 20px */
-repeating-linear-gradient(to left top, blue, red 20px);
+repeating-linear-gradient(to left top, blue, red 20px)
 
 /* A gradient going from the bottom to top,
    starting blue, turning green after 40%,
    and finishing red. This gradient doesn't repeat because
    the last color stop defaults to 100% */
-repeating-linear-gradient(0deg, blue, green 40%, red);
+repeating-linear-gradient(0deg, blue, green 40%, red)
 
 /* A gradient repeating five times, going from the left to right,
    starting red, turning green, and back to red */
-repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
+repeating-linear-gradient(to right, red 0%, green 10%, red 20%)
+
+/* Interpolation in rectangular color space */
+repeating-linear-gradient(in oklab, blue, red 50px)
+
+/* Interpolation in polar color space */
+repeating-linear-gradient(in hsl, blue, red 50px)
+
+/* Interpolation in polar color space
+  with longer hue interpolation method */
+repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 ```
 
 ### Values
@@ -115,6 +125,59 @@ body {
 
 Because the last color stop is 10% and the gradient is vertical, each gradient in the repeated gradient is 10% of the height, fitting 10 horizontal bars.
 
+### Interpolation in rectangular color space
+
+```css hidden
+body {
+  width: 100vw;
+  height: 100vh;
+}
+```
+
+```css
+body {
+  background: repeating-linear-gradient(90deg in oklab, blue, red 100px);
+}
+```
+
+{{EmbedLiveSample("Interpolation in rectangular color space", 120, 120)}}
+
+### Interpolation in polor color space with hue interpolation methods
+
+```html
+<div class="shorter">shorter hue</div>
+<div class="longer">longer hue</div>
+```
+
+```css hidden
+div {
+  height: 50vh;
+  color: #330;
+  font-weight: bolder;
+  padding-left: 1.5rem;
+}
+```
+
+```css
+.shorter {
+  background: repeating-linear-gradient(
+    90deg in hsl shorter hue,
+    blue,
+    red 100px
+  );
+}
+
+.longer {
+  background: repeating-linear-gradient(
+    90deg in hsl longer hue,
+    blue,
+    red 100px
+  );
+}
+```
+
+{{EmbedLiveSample("Interpolation in polor color space with hue interpolation methods", 120, 120)}}
+
 > **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
@@ -129,6 +192,8 @@ Because the last color stop is 10% and the gradient is vertical, each gradient i
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

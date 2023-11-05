@@ -18,11 +18,15 @@ The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-U
    is a starburst of lighter and darker blue,
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
-background: repeating-conic-gradient(
+repeating-conic-gradient(
   from 3deg at 25% 25%,
   hsl(200, 100%, 50%) 0deg 15deg,
   hsl(200, 100%, 60%) 10deg 30deg
-);
+)
+
+/* Interpolation in polar color space
+  with longer hue interpolation method */
+repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 
 ### Values
@@ -157,6 +161,56 @@ div {
 
 {{EmbedLiveSample("Off-centered_gradient", 220, 220)}}
 
+### Interpolation in polor color space with hue interpolation methods
+
+```html
+<div class="shorter"></div>
+<div class="longer"></div>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 45vw;
+  height: 80vh;
+}
+
+.shorter::before {
+  content: "shorter hue";
+  display: block;
+  margin-top: -1rem;
+}
+
+.longer::before {
+  content: "longer hue";
+  display: block;
+  margin-top: -1rem;
+}
+```
+
+```css
+.shorter {
+  background-image: repeating-conic-gradient(
+    in hsl shorter hue,
+    red,
+    blue 90deg,
+    green 180deg
+  );
+}
+
+.longer {
+  background-image: repeating-conic-gradient(
+    in hsl longer hue,
+    red,
+    blue 90deg,
+    green 180deg
+  );
+}
+```
+
+{{EmbedLiveSample('Interpolation in polor color space with hue interpolation methods', 240, 200)}}
+
 ### More repeating-conic-gradient examples
 
 Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
@@ -173,6 +227,8 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}
