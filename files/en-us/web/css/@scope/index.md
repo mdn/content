@@ -29,7 +29,7 @@ The `@scope` at-rule consists of a block of statements with a _rule list_.
 
 Match links only inside a `.light-scheme` class:
 
-```
+```css
 @scope (.light-scheme) {
   a {
     color: darkmagenta;
@@ -39,7 +39,7 @@ Match links only inside a `.light-scheme` class:
 
 Match links only inside a `.dark-scheme` class:
 
-```
+```css
 @scope (.dark-scheme) {
   a {
     color: plum;
@@ -49,7 +49,7 @@ Match links only inside a `.dark-scheme` class:
 
 Match `.author-images` only inside a `.media-object` class.
 
-```
+```css
 @scope (.media-object) {
   .author-image {
     border-radius: 50%;
@@ -59,7 +59,7 @@ Match `.author-images` only inside a `.media-object` class.
 
 Match nested descendants with scoping limits. The `img` selector will only match image tags that are in a DOM fragment starting with any `.media-object`, and including all descendants up to any intervening children of the `.content` class.
 
-```
+```css
 @scope (.media-object) to (.content > *) {
   img {
     border-radius: 50%;
