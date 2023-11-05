@@ -18,8 +18,7 @@ pictureInPictureWindow.width
 
 ### Value
 
-An integer value indicating the width of the floating video window in pixels. This
-property is read-only, and has no default value.
+An integer value indicating the width of the floating video window in pixels if the Picture-in-Picture window is open. Otherwise, it returns `0`.
 
 ## Specifications
 
