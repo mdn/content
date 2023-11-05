@@ -195,7 +195,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_Inline}}
   - : Gets default computed style for the specified element, ignoring author stylesheets.
-- {{domxref("Window.getScreenDetails()")}} {{experimental_inline}}
+- {{domxref("Window.getScreenDetails()")}} {{experimental_inline}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance representing the details of all the screens available to the user's device.
 - {{domxref("Window.getSelection()")}}
   - : Returns the selection object representing the selected item(s).
