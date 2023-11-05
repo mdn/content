@@ -8,9 +8,7 @@ browser-compat: api.PictureInPictureWindow.width
 
 {{APIRef("Picture-in-Picture API")}}
 
-The read-only {{domxref("PictureInPictureWindow")}} property
-**`width`** returns the width of the floating video window in
-pixels.
+The read-only **`width`** property of the {{domxref("PictureInPictureWindow")}} inbterface returns the width of the floating video window in pixels.
 
 ## Syntax
 
