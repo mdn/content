@@ -1,15 +1,15 @@
 ---
-title: Private class features
-slug: Web/JavaScript/Reference/Classes/Private_class_fields
+title: Private properties
+slug: Web/JavaScript/Reference/Classes/Private_properties
 page-type: javascript-language-feature
-browser-compat: javascript.classes.private_class_fields
+browser-compat: javascript.classes.private_properties
 ---
 
 {{jsSidebar("Classes")}}
 
-Class fields are [public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) by default, but **private class members** can be created by using a hash `#` prefix. The privacy encapsulation of these class features is enforced by JavaScript itself.
+Private properties are counterparts of the regular class properties that are [public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) by default. Private properties cannot be accessed from outside of the class. They get created by using a hash `#` prefix. The privacy encapsulation of these class features is enforced by JavaScript itself.
 
-Private members are not native to the language before this syntax existed. In prototypical inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
+Private properties, or **private class fields**, are not native to the language before this syntax existed. In prototypical inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
 
 ## Syntax
 
@@ -37,8 +37,6 @@ There are some additional syntax restrictions:
 - The private identifier cannot be `#constructor`.
 
 ## Description
-
-### Private properties
 
 Most class features have their private counterparts:
 
