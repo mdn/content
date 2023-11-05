@@ -18,7 +18,7 @@ pictureInPictureWindow.height
 
 ### Value
 
-An integer value indicating the height of the floating video window in pixels if the floating video window is open. Otherwise, it returns `0`.
+An integer value indicating the height of the floating video window in pixels if the Picture-in-Picture window is open. Otherwise, it returns `0`.
 
 ## Specifications
 
