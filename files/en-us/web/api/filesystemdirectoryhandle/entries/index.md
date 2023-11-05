@@ -11,7 +11,7 @@ browser-compat: api.FileSystemDirectoryHandle.entries
 The **`entries()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
 for the iteration of the key-value pairs of the entries within the `FileSystemDirectoryHandle`
-on which this method is called. The order of iteration is vague. The key-value pairs are
+on which this method is called. The key-value pairs are
 in the form of an array like `[key, value]`.
 
 ## Syntax

@@ -11,7 +11,7 @@ browser-compat: api.FileSystemDirectoryHandle.values
 The **`values()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
 for the iteration of the value of the entries within the `FileSystemDirectoryHandle`
-on which this method is called. The order of iteration is vague.
+on which this method is called.
 
 ## Syntax
 
