@@ -39,25 +39,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>
-        Retrieving the <code>PermissionDescriptor</code> information failed in
-        some way, or the permission doesn't exist or is currently unsupported
-        (e.g. <code>midi</code>, or <code>push</code> with
-        <code>userVisibleOnly</code>).
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
+- {{jsxref("TypeError")}}
+  - : Thrown if retrieving the `PermissionDescriptor` information failed in some way, or the permission doesn't exist or is currently unsupported (e.g. `midi`, or `push` with `userVisibleOnly`).
 
 ## Examples
 
