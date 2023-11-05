@@ -1,6 +1,6 @@
 ---
 title: Private properties
-slug: Web/JavaScript/Reference/Classes/Private_properties
+slug: Web/JavaScript/Reference/Classes/private_class_fields
 page-type: javascript-language-feature
 browser-compat: javascript.classes.private_properties
 ---
