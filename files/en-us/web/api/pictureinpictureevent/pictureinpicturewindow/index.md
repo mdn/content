@@ -10,7 +10,7 @@ browser-compat: api.PictureInPictureEvent.pictureInPictureWindow
 
 The read-only **`pictureInPictureWindow`** property of the {{domxref("PictureInPictureEvent")}} interface returns the {{domxref("PictureInPictureWindow")}} the event relates to.
 
-### Value
+## Value
 
 A {{domxref("PictureInPictureWindow")}}.
 
