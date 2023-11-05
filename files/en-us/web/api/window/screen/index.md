@@ -20,7 +20,7 @@ A {{DOMxRef("Screen")}} object.
 ## Examples
 
 ```js
-if (screen.pixelDepth < 8) {
+if (screen.pixelColor < 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page
