@@ -582,7 +582,10 @@ Add the following test code to **/catalog/tests/test_views.py**. Here we first u
 import datetime
 
 from django.utils import timezone
-from django.contrib.auth.models import User # Required to assign User as a borrower
+
+# Get user model from settings
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 from catalog.models import BookInstance, Book, Genre, Language
 
