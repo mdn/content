@@ -134,4 +134,4 @@ Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTP
 - [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)
 - [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)

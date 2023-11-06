@@ -82,4 +82,4 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 - [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [Template, slot, and shadow](https://web.dev/learn/html/template/) on web.dev (2023)
-- [Custom element best practices](https://web.dev/custom-elements-best-practices/) on web.dev (2019)
+- [Custom element best practices](https://web.dev/articles/custom-elements-best-practices) on web.dev (2019)

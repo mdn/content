@@ -1,6 +1,7 @@
 ---
 title: Equal
 slug: WebAssembly/Reference/Numeric/Equal
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

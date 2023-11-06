@@ -97,5 +97,5 @@ while (port.readable) {
 
 ## See also
 
-- [Read from and write to a serial port](https://web.dev/serial/)
+- [Read from and write to a serial port](https://developer.chrome.com/articles/serial/)
 - [Getting started with the Web Serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

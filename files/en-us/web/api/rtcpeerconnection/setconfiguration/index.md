@@ -44,7 +44,7 @@ setConfiguration(configuration)
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if one or more of the URLs specified in `configuration.iceServers` is a {{Glossary("TURN")}} server, but complete login information is not provided (that is,
-    either the {{domxref("RTCIceServer.username")}} or {{domxref("RTCIceServer.credential")}} is missing, or if {{domxref("RTCIceServer.credentialType")}} is "password" and {{domxref("RTCIceServer.credential")}} is not a string).
+    either the `username` or `credential` is missing, or if `credentialType` is `"password"` and `credential` is not a string).
     This prevents successful login to the server.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if the `configuration` includes changed identity information, but the connection already has identity information specified.

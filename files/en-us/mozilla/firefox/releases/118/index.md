@@ -49,7 +49,6 @@ No notable changes.
 - The {{domxref("RTCRtpTransceiver.currentDirection")}} and {{domxref("RTCRtpTransceiver.direction")}} properties now support the `"stopped"` value for indicating whether a transceiver has stopped. This value should now be used instead of the deprecated {{domxref("RTCRtpTransceiver.stopped")}} property ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The array returned by {{domxref("RTCPeerConnection.getTransceivers()")}} now omits stopped transceivers. Similarly, {{domxref("RTCPeerConnection.getReceivers()")}} and {{domxref("RTCPeerConnection.getSenders()")}} omit the receivers and senders associated with a stopped transceiver ([Firefox bug 1568296](https://bugzil.la/1568296)).
 - The [`TextMetrics.emHeightDescent`](/en-US/docs/Web/API/TextMetrics/emHeightDescent) and [`TextMetrics.emHeightAscent`](/en-US/docs/Web/API/TextMetrics/emHeightAscent) properties are now supported (Firefox bug [1841692](https://bugzil.la/1841692)).
-- [`CSSStyleRule`](/en-US/docs/Web/API/CSSStyleRule) now inherits from [`CSSGroupingRule`](/en-US/docs/Web/API/CSSGroupingRule) instead of directly from [`CSSRule`](/en-US/docs/Web/API/CSSRule). As a result, it additionally implements the property [`cssRules`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and the methods [`deleteRule()`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and [`insertRule()`](/en-US/docs/Web/API/CSSGroupingRule/insertRule) (Firefox bug [1846251](https://bugzil.la/1846251)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

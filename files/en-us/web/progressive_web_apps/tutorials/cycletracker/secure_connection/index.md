@@ -13,7 +13,7 @@ Service workers, and therefore PWAs, are [restricted to secure contexts](/en-US/
 
 In the previous section, we used HTML and CSS to create the shell of our period tracking application. In this section, we'll open the CycleTracker static content in a browser, view the content from a locally started development environment, and view the content on a remote, secure server.
 
-## Viewing with the files:// protocol
+## Viewing with the `file://` protocol
 
 Any browser will render your HTML. To view the HTML file with the CSS applied you created in the previous section, open the `index.html` file by navigating to it via your computer's file structure or from your browser using the "Open File" menu option.
 
@@ -21,7 +21,7 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
-We are viewing our page using the `file://` protocol. This works for the current state of our codebase, and will continue to suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality). However, manifest files and service workers, both PWA requirements, require a secure connection, as do several other APIs. PWAs need to be served from a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. If we view our finished app using the `files://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) we add will fail.
+We are viewing our page using the `file://` protocol. This works for the current state of our codebase, and will continue to suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality). However, manifest files and service workers, both PWA requirements, require a secure connection, as do several other APIs. PWAs need to be served from a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. If we view our finished app using the `file://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) we add will fail.
 
 > **Note:** Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
 
@@ -31,7 +31,7 @@ We need a local development environment to work through the tutorial. Part of [m
 
 The default method for setting up a local development environment varies by operating system. While the default location for the index and configuration files on your operating system may differ, most desktop operating systems enable a server configuration accessible to you, the developer.
 
-For example, on MacOS, at least on Sierra and Monterey, entering `sudo apachectl start` enables an apache server. Once the server is started, entering `http://localhost` in the browser displays an basic web page that reads "It works!". By default, the HTML file displayed is `Library/WebServer/Documents/index.html.en`. To enable file extensions other than `.html.en` or to change the root directory away from `Library/WebServer/Documents/`, you have to edit the apache http configuration file, located at `/etc/apache2/httpd.conf`. The serve can be stopped with `sudo apachectl stop`.
+For example, on macOS, at least on Sierra and Monterey, entering `sudo apachectl start` enables an Apache HTTP server. Once the server is started, entering `http://localhost` in the browser displays an basic web page that reads "It works!". By default, the HTML file displayed is `Library/WebServer/Documents/index.html.en`. To enable file extensions other than `.html.en` or to change the root directory away from `Library/WebServer/Documents/`, you have to edit the apache http configuration file, located at `/etc/apache2/httpd.conf`. The server can be stopped with `sudo apachectl stop`.
 
 The OS's default `localhost` has an easy-to-remember URL, but a difficult to remember server root location and configuration process. It also only allows for one local server in one location at a time. Fortunately, there are more intuitive server set up method options to create one or more local development environments on multiple ports.
 
@@ -41,7 +41,7 @@ There are several {{glossary("IDE")}} extensions and programming-language specif
 
 You can run a local HTTP server using a [VSCode plugin](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), which enables running a local server on a single or different port. The [Preview on Web Server extension](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) for the [VSCode](https://code.visualstudio.com/download) IDE creates a server at the root of the directory currently opened by the editor, with a default port of `8080`. VS Code extensions are configurable. The `previewServer.port` setting is the port number of the web server. The extensions default setting of `8080` can be edited and changed. By default, entering `localhost:8080` in the browser URL bar will load the page.
 
-Note that the Preview on Web Server extension uses browserSync. When your development environment is started by this extension, `localhost:3001` provides an overview of the current server environment.
+> **Note:** that the Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
 
 You can also create a [local server with the IntelliJ IDE](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html), which comes with a [configurable built-in PHP web server](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server).
 
@@ -75,11 +75,11 @@ To get the added features of PWAs, including single click installation, a standa
 
 When officially publishing a PWA, you will likely want to invest in a [domain name and web hosting](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting). For open source projects, where developers can learn from the codebase and even contribute back to the project, you can host your progress on [GitHub Pages](https://pages.github.com/).
 
-## GitHub pages
+## GitHub Pages
 
 The current state of the CycleTracker application is viewable on GitHub, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css](https://mdn.github.io/pwa-examples/cycletracker/html_and_css). We've posted the files to the MDN GitHub account. Similarly, if you have a [GitHub](https://github.com) account, you can post it to yours. Just note that while securely served over TLS, actions on GitHub are not necessarily private, and all GitHub pages are public. If you live in an area with a repressive government that tracks menstrual cycles, consider copying and pasting the code rather than forking it.
 
-To create a publicly available secure site, create a [GitHub pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). Create a repository named `<username>.github.io`, where `<username>` is your GitHub username. Create a `gh-pages` branch. This branch of your application will be available at `https://<username>.github.io`.
+To create a publicly available secure site, create a [GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). Create a repository named `<username>.github.io`, where `<username>` is your GitHub username. Create a `gh-pages` branch. This branch of your application will be available at `https://<username>.github.io`.
 
 As noted, all GitHub Pages are publicly available on the internet, even if you set the repository to private. As the period data is saved using localStorage, the application will be available via the GitHub URL, but the user's data is only available in the one browser on the one device where the data was entered. Deleting the localStorage directly, which is done in the browser, will delete all the stored data.
 
@@ -87,7 +87,7 @@ If you don't want your PWA to be top level, you can make your app appear as if i
 
 In the case of the CycleTracker demo app in the various stages of development, the `<username>` is `mdn` and the repository is `pwa-examples`. Because this repository has multiple example PWAs, each with progress at several steps in the development process, the files, and therefore the PWA, are nested a few levels deep.
 
-Note that you can [configure a custom domain for a GitHub pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+Note that you can [configure a custom domain for a GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 ## Up next
 

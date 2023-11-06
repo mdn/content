@@ -1,6 +1,7 @@
 ---
 title: end
 slug: WebAssembly/Reference/Control_flow/end
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
