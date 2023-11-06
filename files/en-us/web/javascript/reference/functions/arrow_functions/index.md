@@ -69,7 +69,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
   return a + 100;
 });
 
-// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+// 1. Remove the word "function" and place arrow between the argument and opening body brace
 (a) => {
   return a + 100;
 };

@@ -65,8 +65,6 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 
 #### Dictionaries
 
-- {{DOMxRef("RTCIceServer")}}
-  - : Defines how to connect to a single {{Glossary("ICE")}} server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
 - {{DOMxRef("RTCRtpContributingSource")}}
   - : Contains information about a given contributing source (CSRC) including the most recent time a packet that the source contributed was played out.
 

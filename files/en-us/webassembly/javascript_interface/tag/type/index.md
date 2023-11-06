@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Tag.prototype.type()
 slug: WebAssembly/JavaScript_interface/Tag/type
+page-type: webassembly-instance-method
 browser-compat: javascript.builtins.WebAssembly.Tag.type
 ---
 

@@ -32,9 +32,9 @@ This example demonstrates the use of `<address>` to demarcate the contact inform
 ```html
 <address>
   You can contact author at
-  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
+  <a href="http://www.example.com/contact">www.example.com</a>.<br />
   If you see any bugs, please
-  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
+  <a href="mailto:webmaster@example.com">contact webmaster</a>.<br />
   You may also want to visit us:<br />
   Mozilla Foundation<br />
   331 E Evelyn Ave<br />
@@ -102,8 +102,10 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
+          ></code
         >
       </td>
     </tr>

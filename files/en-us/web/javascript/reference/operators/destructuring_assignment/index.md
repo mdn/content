@@ -38,7 +38,7 @@ let a, b, a1, b1, c, d, rest, pop, push;
 [a, b, ...{ pop, push }] = array;
 [a, b, ...[c, d]] = array;
 
-({ a, b } = obj); // brackets are required
+({ a, b } = obj); // parentheses are required
 ({ a: a1, b: b1 } = obj);
 ({ a: a1 = aDefault, b = bDefault } = obj);
 ({ a, b, ...rest } = obj);

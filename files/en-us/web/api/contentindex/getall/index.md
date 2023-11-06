@@ -36,9 +36,6 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
     - `id`
       - : A unique {{jsxref('String')}} identifier.
     - `title`
-      - : A {{jsxref('String')}} title for the item.
-        Used in user-visible lists of content.
-    - `title`
       - : A {{jsxref('String')}} title of the item.
         Used in user-visible lists of content.
     - `description`
@@ -128,6 +125,6 @@ async function createReadingList() {
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
