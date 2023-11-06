@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Document.requestStorageAccess
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Storage Access API")}}
 
 The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies.
 
