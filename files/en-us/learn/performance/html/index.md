@@ -140,7 +140,7 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 <img src="800w.jpg" alt="Family portrait" loading="lazy" />
 ```
 
-See [Browser-level image lazy loading for the web](https://web.dev/browser-level-image-lazy-loading/) on web.dev for detailed information.
+See [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading) on web.dev for detailed information.
 
 You can also lazy load video content by using the `preload` attribute. For example:
 
@@ -153,7 +153,7 @@ You can also lazy load video content by using the `preload` attribute. For examp
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
 
-See [Lazy loading video](https://web.dev/lazy-loading-video/) on web.dev for detailed information.
+See [Lazy loading video](https://web.dev/articles/lazy-loading-video) on web.dev for detailed information.
 
 ## Handling embedded content
 
@@ -185,7 +185,7 @@ In the same way as `<img>` elements, you can also use the `loading` attribute to
 </iframe>
 ```
 
-See [It's time to lazy-load offscreen iframes!](https://web.dev/iframe-lazy-loading/) for more information.
+See [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) for more information.
 
 ## Handling resource loading order
 
@@ -258,7 +258,7 @@ Upon coming across a `rel="preload"` link, the browser will fetch the referenced
 See the following articles for detailed information on using `rel="preload"`:
 
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
-- [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
+- [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 > **Note:** You can use `rel="preload"` to preload CSS and JavaScript files as well.
 

@@ -290,7 +290,7 @@ const normalArray = [...typedArray];
 ## See also
 
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/) on hacks.mozilla.org (2011)
-- [Typed arrays - Binary data in the browser](https://web.dev/webgl-typed-arrays/) on web.dev (2012)
+- [Typed arrays - Binary data in the browser](https://web.dev/articles/webgl-typed-arrays) on web.dev (2012)
 - [Endianness](/en-US/docs/Glossary/Endianness)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

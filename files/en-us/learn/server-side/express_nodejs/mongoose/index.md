@@ -402,7 +402,7 @@ You can search for records using query methods, specifying the query conditions 
 ```js
 const Athlete = mongoose.model("Athlete", yourSchema);
 
-// find all athletes who play tennis, selecting the 'name' and 'age' fields
+// find all athletes who play tennis, returning the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
   "name age",
@@ -473,12 +473,12 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const authorSchema = Schema({
+const authorSchema = new Schema({
   name: String,
   stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
-const storySchema = Schema({
+const storySchema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: "Author" },
   title: String,
 });

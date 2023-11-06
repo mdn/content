@@ -1,6 +1,7 @@
 ---
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
