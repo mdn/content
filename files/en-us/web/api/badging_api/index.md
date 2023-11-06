@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: api.Navigator.setAppBadge
 ---
 
-{{DefaultAPISidebar("Badging API")}}
+{{DefaultAPISidebar("Badging API")}}{{securecontext_header}}{{AvailableInWorkers}}
 
 The **Badging API** gives web developers a method of setting a badge on a document or application, to act as a notification that state has changed without displaying a more distracting notification. A common use case for this would be an application with a messaging feature displaying a badge on the app icon to show that new messages have arrived.
 
@@ -51,10 +51,6 @@ None.
   - : Sets a badge on the icon associated with this app.
 - {{domxref("Navigator.clearAppBadge()")}}
   - : Clears the badge on the icon associated with this app.
-- {{domxref("Navigator.setClientBadge()")}}
-  - : Sets a badge on the icon associated with the current document.
-- {{domxref("Navigator.clearClearClientBadge()")}}
-  - : Clears the badge on the icon associated with the current document.
 
 ### Extensions to the WorkerNavigator interface
 
@@ -62,10 +58,6 @@ None.
   - : Sets a badge on the icon associated with this app.
 - {{domxref("WorkerNavigator.clearAppBadge()")}}
   - : Clears the badge on the icon associated with this app.
-- {{domxref("WorkerNavigator.setClientBadge()")}}
-  - : Sets a badge on the icon associated with the current document.
-- {{domxref("WorkerNavigator.clearClearClientBadge()")}}
-  - : Clears the badge on the icon associated with the current document.
 
 ## Examples
 

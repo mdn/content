@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
+page-type: webassembly-instance-method
 browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 

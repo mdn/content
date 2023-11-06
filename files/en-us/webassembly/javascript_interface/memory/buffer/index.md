@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
+page-type: webassembly-instance-property
 browser-compat: javascript.builtins.WebAssembly.Memory.buffer
 ---
 
