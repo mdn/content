@@ -274,7 +274,7 @@ When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_animation
 
 When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed (see the below links for examples):
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, CSS transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `display` when it is transitioned. This effectively enables `display` transitions.
 
 ## Accessibility concerns

@@ -385,16 +385,16 @@ And here's the live output.
 
 ## Animating display and content-visibility
 
-Historically, the [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) properties were not animatable. The specs changed however, and supporting browsers (see the reference links for details) now animate them with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values `50%` through animating between the two.
+Supporting browsers animate [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values `50%` through animating between the two.
 
 There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden`. In this case, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration.
 
 So for example:
 
-- When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
-- When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+- When animating between `display` `none` and `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating between `display` `block` (or another visible `display` value) and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-This behavior is useful for creating entry/exit animations where you want to for example remove a container from the UI immediately with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
+This behavior is useful for creating entry/exit animations where you want to for example remove a container from the UI with `display: none`, but have it fade out smoothly with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
 
 Let's put all of this together into a working example.
 
@@ -416,8 +416,6 @@ The HTML contains a simple instruction message plus a {{htmlelement("div")}} tha
 ```
 
 ### CSS
-
-The CSS is as follows:
 
 ```css
 html {

@@ -273,7 +273,7 @@ This behavior is useful for creating entry/exit animations where you want to for
 
 When transitioning these properties, two additional features are also needed:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, CSS transitions are not triggered on elements' first style updates, or when `display`/`content-visibility` changes from `none`/`hidden` to another state, to avoid unexpected behavior.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when `display`/`content-visibility` changes from `none`/`hidden` to another state.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the transitions. This effectively enables `display`/`content-visibility` transitions, enabling them to animate.
 
 Let's put all of this together into a working example.
@@ -297,8 +297,6 @@ The HTML contains a simple instruction message plus a {{htmlelement("div")}} tha
 
 ### CSS
 
-The CSS is as follows:
-
 ```css
 html {
   height: 100vh;
@@ -317,7 +315,7 @@ div {
     opacity 1s,
     display 1s allow-discrete;
   /* Equivalent to
-    all 1s allow-discrete */
+  transition: all 1s allow-discrete; */
 }
 
 .showing {
@@ -346,11 +344,7 @@ htmlElem.addEventListener("click", showHide);
 document.addEventListener("keydown", showHide);
 
 function showHide() {
-  if (divElem.classList[0] === "showing") {
-    divElem.classList.remove("showing");
-  } else {
-    divElem.classList.add("showing");
-  }
+  divElem.classList.toggle("showing");
 }
 ```
 

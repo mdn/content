@@ -77,8 +77,6 @@ The HTML contains a {{htmlelement("div")}} element declared as a popover using t
 
 #### CSS
 
-The CSS for the example looks like this:
-
 ```css
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -92,15 +90,18 @@ html {
 [popover] {
   font-size: 1.2rem;
   padding: 10px;
+
+  /* Final state of the exit animation */
   opacity: 0;
   transform: scaleX(0);
+
   transition:
     opacity 0.7s,
     transform 0.7s,
     overlay 0.7s allow-discrete,
     display 0.7s allow-discrete;
   /* Equivalent to
-    all 0.7s allow-discrete */
+  transition: all 0.7s allow-discrete; */
 }
 
 /* Needs to be included after the previous [popover]:popover-open rule
@@ -121,7 +122,7 @@ html {
     overlay 0.7s allow-discrete,
     background-color 0.7s;
   /* Equivalent to
-    all 0.7s allow-discrete */
+  transition: all 0.7s allow-discrete; */
 }
 
 [popover]:popover-open::backdrop {
@@ -142,7 +143,7 @@ The two properties we want to animate are [`opacity`](/en-US/docs/Web/CSS/opacit
 
 However, because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden — which also means that its hidden state has [`display: none`](/en-US/docs/Web/CSS/display) set on it — some extra steps are required to get the animation working in both directions:
 
-- A starting state for the animation is set inside the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule. This is needed because by default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type, to avoid unexpected behavior. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
+- A starting state for the animation is set inside the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule. This is needed to avoid unexpected behavior. By default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
 - `display` is added to the list of transitioned elements so that the animated element is visible (set to `display: block`) throughout both the entry and exit animation. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
 - [`overlay`](/en-US/docs/Web/CSS/overlay) is added to the list of transitioned elements to make sure that the removal of the element from the top layer is deferred until the animation has been completed. This doesn't make a huge difference for simple animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective.
 

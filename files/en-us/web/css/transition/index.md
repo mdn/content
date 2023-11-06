@@ -134,7 +134,7 @@ Sample CSS:
     overlay 0.7s allow-discrete,
     display 0.7s allow-discrete;
   /* Equivalent to
-    all 0.7s allow-discrete */
+  transition: all 0.7s allow-discrete; */
 }
 ```
 

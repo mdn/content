@@ -38,22 +38,22 @@ content-visibility: unset;
 - `auto`
   - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
 
-## Animating content-visibility
+## Animating and transitioning content-visibility
 
-Historically, the `content-visibility` property was not animatable/transitionable. The spec changed however, and [supporting browsers](#browser_compatibility) now animate `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Discrete animation generally means that the property will flip between two values `50%` through animating between the two.
+[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Discrete animation generally means that the property will flip between two values `50%` through animating between the two.
 
 In the case of `content-visibility` however, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration. So for example:
 
 - When animating between `content-visibility` `hidden` and `visible`, the value will flip to `visible` at `0%` of the animation duration so it is visible throughout.
 - When animating between `content-visibility` `visible` and `hidden`, the value will flip to `hidden` at `100%` of the animation duration so it is visible throughout.
 
-This behavior is useful for creating entry/exit animations where you want to for example remove some content from the UI immediately with `content-visibility: hidden`, but have it animate (for example fade out) rather than disappearing immediately.
+This behavior is useful for creating entry/exit animations where you want to, for example, remove some content from the UI with `content-visibility: hidden`, but you want a smooth transition (such as a fade-out) rather than it disappearing immediately.
 
 When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit starting keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) below.
 
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed because, by default, CSS transitions are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`, to avoid unexpected behavior.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility` when it is transitioned. This effectively enables `content-visibility` transitions.
 
 ## Formal definition
@@ -173,8 +173,6 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
 
 #### HTML
 
-The HTML looks like this:
-
 ```html
 <p>
   Click anywhere on the screen or press any key to toggle the
@@ -267,7 +265,7 @@ function showHide() {
 
 The rendered result looks like this:
 
-{{ EmbedLiveSample("content-visibility animation example", "100%", "250") }}
+{{ EmbedLiveSample("content-visibility animation example", "100%", "300") }}
 
 ## Specifications
 
