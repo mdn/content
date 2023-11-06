@@ -65,4 +65,4 @@ scroll-padding-block: unset;
 ## See also
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

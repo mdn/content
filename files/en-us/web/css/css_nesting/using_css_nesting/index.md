@@ -230,15 +230,15 @@ In this example the `&` nesting selector is used to create compound selectors to
 ```html
 <div class="notices">
   <div class="notice">
-    <h2>Notice</h2>
+    <h2 class="notice-heading">Notice</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice warning">
-    <h2>Warning</h2>
+    <h2 class="warning-heading">Warning</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice success">
-    <h2>Success</h2>
+    <h2 class="success-heading">Success</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
@@ -258,7 +258,7 @@ Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_l
 }
 ```
 
-This CSS uses nesting to create compound selectors. The top-level selector defines the basic styles for an element with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`.
+In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading:before`.
 
 ```css
 .notice {
@@ -269,8 +269,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  h2:before {
-    /* same as `.notice h2:before` */
+  .notice-heading:before {
+    /* equivalent to `.notice .notice-heading:before` */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -278,8 +278,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.warning h2:before` */
+    .warning-heading:before {
+      /* equivalent to `.notice.warning .warning-heading:before` */
       content: "! ";
     }
   }
@@ -288,8 +288,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.success h2:before` */
+    .success-heading:before {
+      /* equivalent to `.notice.success .success-heading:before` */
       content: "✓ ";
     }
   }

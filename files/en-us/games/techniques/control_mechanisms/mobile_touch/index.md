@@ -8,7 +8,7 @@ page-type: guide
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Web/Apps/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
+The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Glossary/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
 
 > **Note:** The game [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.
 

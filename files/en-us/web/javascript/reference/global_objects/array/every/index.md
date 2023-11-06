@@ -59,7 +59,7 @@ The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ### Testing size of all array elements
 
-The following example tests whether all elements in the array are bigger than 9.
+The following example tests whether all elements in the array are 10 or bigger.
 
 ```js
 function isBigEnough(element, index, array) {

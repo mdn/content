@@ -208,10 +208,10 @@ The page CSS does not affect nodes inside the shadow DOM:
 
 In this section we'll look at two different ways to apply styles inside a shadow DOM tree:
 
-- [_Programmatically_](#constructable_stylesheets), by constructing a {{domxref("CSSStyleSheet")}} object and attaching to to the shadow root.
+- [_Programmatically_](#constructable_stylesheets), by constructing a {{domxref("CSSStyleSheet")}} object and attaching it to the shadow root.
 - [_Declaratively_](#adding_style_elements_in_template_declarations), by adding a {{htmlelement("style")}} element in a {{htmlelement("template")}} element's declaration.
 
-In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the page.
+In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the rest of the page.
 
 ### Constructable stylesheets
 
@@ -346,15 +346,6 @@ For more examples, illustrating different aspects of custom element implementati
 - {{domxref("ShadowRoot.adoptedStyleSheets")}}
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
-- {{HTMLelement("template")}}
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
-- {{CSSXref(":host")}}
-- {{CSSXref(":host_function", ":host()")}}
-- {{CSSXref(":host-context", ":host-context()")}}
-- {{CSSXref("::slotted", "::slotted()")}}
-- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
-- {{CSSXref("::part")}}
-
 - {{HTMLelement("template")}}
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - {{CSSXref(":host")}}

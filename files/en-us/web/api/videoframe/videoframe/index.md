@@ -114,7 +114,7 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
 
 ## Examples
 
-The following examples are from the article [Video processing with WebCodecs](https://web.dev/webcodecs/). In this first example, a `VideoFrame` is created from a canvas.
+The following examples are from the article [Video processing with WebCodecs](https://developer.chrome.com/articles/webcodecs/). In this first example, a `VideoFrame` is created from a canvas.
 
 ```js
 const cnv = document.createElement("canvas");
