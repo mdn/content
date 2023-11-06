@@ -47,6 +47,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
+- {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
 - {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}

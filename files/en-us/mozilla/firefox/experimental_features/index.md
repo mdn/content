@@ -99,6 +99,48 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
+### Lazy loading of iframes
+
+This feature allows web pages and JavaScript to provide a hint to the browser as to whether iframes should be loaded immediately on page load, or only when they are needed (just before they will appear in the window's {{Glossary("visual viewport")}}).
+The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
+See [Firefox bug 1622090](https://bugzil.la/1622090) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.iframe_lazy_loading.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -2295,51 +2337,6 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
-### Global Privacy Control
-
-[Global Privacy Control](https://globalprivacycontrol.org/) is a mechanism that allows a user to indicate that they do not consent to a website or service selling or sharing their personal information with third parties.
-Firefox implements the {{HTTPHeader("Sec-GPC")}} header to indicate that consent is not granted, and the {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}} properties that allow JavaScript to check the user consent preference.
-
-Note that the `about:config` preference `privacy.globalprivacycontrol.enabled` must be set `true` to indicate the user preference to not grant consent ([Firefox bug 1830623](https://bugzil.la/1830623)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>118</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>privacy.globalprivacycontrol.functionality.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## HTTP
 
 ### SameSite=Lax by default
@@ -2386,7 +2383,8 @@ For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 ### HTTP Status 103
 
-The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start preloading resources while the server is still preparing the full response.
+The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server is still preparing the full response.
+Note that using the header to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites is already supported.
 For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 
 <table>
@@ -2420,7 +2418,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>network.early-hints.enabled</code> and <code>network.early-hints.preconnect.enabled</code></td>
+      <td colspan="2"><code>network.early-hints.enabled</code></td>
     </tr>
   </tbody>
 </table>

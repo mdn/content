@@ -58,9 +58,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `eager`
       - : Load the iframe immediately, regardless if it is outside the visible viewport (this is the default value).
     - `lazy`
+
       - : Defer loading of the iframe until it reaches a calculated distance from the viewport, as defined by the browser.
         The intent is to avoid the network and storage bandwidth needed until its reasonably certain that it will be needed.
         This improves the performance and cost in most typical use cases.
+
+        > **Note:** Loading is only deferred when JavaScript is enabled.
+        > This is an anti-tracking measure.
 
 - `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method.
