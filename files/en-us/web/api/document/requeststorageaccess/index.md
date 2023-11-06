@@ -43,6 +43,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to unpartit
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - The document or the top-level document has a `null` origin.
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+    - Usage is denied by the user agent's permission request to use the API.
 
 ## Examples
 
