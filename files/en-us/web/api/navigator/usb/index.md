@@ -10,7 +10,7 @@ browser-compat: api.Navigator.usb
 
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-The **`usb`** read-only property of the {{domxref("Navigator")}} interface returns an {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
+The **`usb`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 
 ## Value
 
