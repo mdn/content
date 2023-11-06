@@ -2337,51 +2337,6 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
-### Global Privacy Control
-
-[Global Privacy Control](https://globalprivacycontrol.org/) is a mechanism that allows a user to indicate that they do not consent to a website or service selling or sharing their personal information with third parties.
-Firefox implements the {{HTTPHeader("Sec-GPC")}} header to indicate that consent is not granted, and the {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}} properties that allow JavaScript to check the user consent preference.
-
-Note that the `about:config` preference `privacy.globalprivacycontrol.enabled` must be set `true` to indicate the user preference to not grant consent ([Firefox bug 1830623](https://bugzil.la/1830623)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>118</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>privacy.globalprivacycontrol.functionality.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## HTTP
 
 ### SameSite=Lax by default
