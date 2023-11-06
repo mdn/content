@@ -163,7 +163,7 @@ for (const value of myIterable) {
 
 ### Syntaxes expecting iterables
 
-Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of", "for...of")}} loops, {{jsxref("Operators/yield*", "yield*")}}.
+Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of", "for...of")}} loops, {{jsxref("Operators/Spread_syntax", "spread syntax", "", 1)}}, {{jsxref("Operators/yield*", "yield*")}} and {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}}.
 
 ```js
 for (const value of ["a", "b", "c"]) {
