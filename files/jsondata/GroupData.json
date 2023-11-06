@@ -2214,7 +2214,7 @@
         "USBOutTransferResult"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.usb", "WorkerNavigator.usb"],
       "events": []
     },
     "WebVR API": {
