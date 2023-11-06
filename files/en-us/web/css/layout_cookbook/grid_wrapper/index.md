@@ -23,13 +23,13 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 
 ## Choices made
 
-This recipe uses the CSS grid {{cssxref("minmax", "minmax()")}} function to define the grid track sizes in the {{cssxref("grid-template-columns")}} property. For the central columns with a maximum width, we can set a minimum value of `0` or greater and a maximum value that specifies the maximum size the column tracks will grow to. Using a [relative](/en-US/docs/Web/CSS/length#relative_length_units_based_on_font) or [absolute](/en-US/docs/Web/CSS/length#absolute_length_units) {{cssxref("length")}} units (pixels, ems, rems) will create a fixed maximum size for the central wrapper, whereas using {{cssxref("percentage")}} values or [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) will mean this wrapper grows or shrinks in response to its context.
+This recipe uses the CSS grid {{cssxref("minmax", "minmax()")}} function to define the grid track sizes in the {{cssxref("grid-template-columns")}} property. For the central columns with a maximum width, we can set a minimum value of `0` or greater and a maximum value that specifies the maximum size the column tracks will grow to. Using [relative](/en-US/docs/Web/CSS/length#relative_length_units_based_on_font) or [absolute](/en-US/docs/Web/CSS/length#absolute_length_units) {{cssxref("length")}} units (pixels, ems, rems) will create a fixed maximum size for the central wrapper, whereas using {{cssxref("percentage")}} values or [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) will cause the wrapper to grow or shrink in response to its context.
 
 The outer two columns have a maximum size of `1fr`, meaning that they will each expand to fill the remaining available space in the grid container.
 
 ## Useful fallbacks or alternative methods
 
-When using this recipe at page level, to center the grid itself on the page you can set a `max-width` along with left and right `auto` {{cssxref("margin")}}s to center the content horizontally:
+To center the grid horizontally on the page you can set a `max-width` along with left and right `auto` {{cssxref("margin")}}s:
 
 ```css
 .grid {
@@ -40,7 +40,7 @@ When using this recipe at page level, to center the grid itself on the page you 
 
 ## Accessibility concerns
 
-Although CSS grid enables positioning items anywhere (within reason), ensuring that your underlying markup follows a logical order is important(see [CSS Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) for more details).
+Although CSS grid enables positioning items anywhere (within reason), ensuring that your underlying markup follows a logical order is important (see [CSS Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) for more details).
 
 ## See also
 
