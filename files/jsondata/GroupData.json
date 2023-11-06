@@ -2020,7 +2020,6 @@
       ],
       "dictionaries": [
         "RTCOAuthCredential",
-        "RTCIceServer",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",

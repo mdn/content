@@ -54398,30 +54398,6 @@
     "modified": "2020-10-15T22:06:44.472Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceServer": {
-    "modified": "2020-10-15T21:45:30.558Z",
-    "contributors": ["Sheppy", "fscholz", "zarvox"]
-  },
-  "Web/API/RTCIceServer/credential": {
-    "modified": "2020-10-15T21:45:38.733Z",
-    "contributors": ["sideshowbarker", "fscholz", "david_ross", "Sheppy"]
-  },
-  "Web/API/RTCIceServer/credentialType": {
-    "modified": "2020-10-15T21:45:39.250Z",
-    "contributors": ["sideshowbarker", "Sheppy", "fscholz"]
-  },
-  "Web/API/RTCIceServer/url": {
-    "modified": "2020-10-15T21:45:39.819Z",
-    "contributors": ["sideshowbarker", "fscholz", "Sheppy"]
-  },
-  "Web/API/RTCIceServer/urls": {
-    "modified": "2020-10-15T21:45:39.117Z",
-    "contributors": ["sideshowbarker", "betimer", "fscholz", "Sheppy"]
-  },
-  "Web/API/RTCIceServer/username": {
-    "modified": "2020-10-15T21:45:40.622Z",
-    "contributors": ["sideshowbarker", "fscholz", "Sheppy"]
-  },
   "Web/API/RTCIceTransport": {
     "modified": "2020-10-15T22:06:43.484Z",
     "contributors": ["Sheppy"]
