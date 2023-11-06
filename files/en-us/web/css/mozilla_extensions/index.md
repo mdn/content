@@ -509,7 +509,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ## Other
 
-- {{CSSxRef("-moz-alt-content")}} (see [Webkit bug 11011](https://bugzil.la/11011))
+- {{CSSxRef("-moz-alt-content")}} (see [Firefox bug 11011](https://bugzil.la/11011))
 
 ## See also
 
