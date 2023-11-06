@@ -13,7 +13,7 @@ The **`Map.groupBy()`** static method groups the elements of a given iterable us
 
 The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time. If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "shorter")}}
+{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
 
 ## Syntax
 
