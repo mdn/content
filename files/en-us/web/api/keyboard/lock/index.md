@@ -16,7 +16,8 @@ capture of keypresses for any or all of the keys on the physical keyboard. This 
 can only capture keys that are granted access by the underlying operating
 system.
 
-If `lock()` is called multiple times, previously locked keys will be unlocked and only the key codes specified in the most recent call will be locked.
+If `lock()` is called multiple times then only the key codes specified in the most recent call will be locked.
+Any keys locked by a previous call to `lock()` are unlocked.
 
 ## Syntax
 
