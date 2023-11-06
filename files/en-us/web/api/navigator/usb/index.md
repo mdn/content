@@ -14,7 +14,7 @@ The **`usb`** read-only property of the {{domxref("Navigator")}} interface retur
 
 ## Value
 
-An {{domxref('USB')}} object.
+A {{domxref('USB')}} object.
 
 ## Specifications
 
