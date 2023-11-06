@@ -45,7 +45,7 @@ This article introduces tools you can use to access web performance metrics, whi
 There are several different tools available to help you measure and improve performance. These can generally be classified into two categories:
 
 - Tools that indicate or measure performance, such as [PageSpeed Insights](https://pagespeed.web.dev/) or the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) and [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html). These tools show you how fast or slow your website is loading. They also indicate areas that can be improved to optimize your web app.
-- [Performance APIs](/en-US/docs/Web/API/Performance_API/) that you can use to build custom performance tools.
+- [Performance APIs](/en-US/docs/Web/API/Performance_API) that you can use to build custom performance tools.
 
 ## General performance reporting tools
 
@@ -81,11 +81,11 @@ See also [Chrome's Performance tool documentation](https://developer.chrome.com/
 
 When writing code for the Web, there are a large number of [Web APIs](/en-US/docs/Web/API) available that allow you to create your own performance-measuring tools.
 
-You can use the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API) to measure client-side web performance; including the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's load handler, and more. You can use the API for metrics related to all the navigation events displayed in the diagram below.
+You can use the [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing) to measure client-side web performance; including the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's load handler, and more. You can use the API for metrics related to all the navigation events displayed in the diagram below.
 
 ![The various handlers that the navigation timing API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-The [Performance API](/en-US/docs/Web/API/Performance_API/), which provides access to performance-related information for the current page, includes the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API). These interfaces allow the accurate measurement of the time it takes for JavaScript tasks to complete.
+The [Performance API](/en-US/docs/Web/API/Performance_API), which provides access to performance-related information for the current page, includes the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing), the [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing), and the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing). These interfaces allow the accurate measurement of the time it takes for JavaScript tasks to complete.
 
 The [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) object is part of the _performance timeline_. A _performance entry_ can be directly created by making a performance _{{domxref("PerformanceMark","mark")}}_ or _{{domxref("PerformanceMeasure","measure")}}_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at an explicit point in an application. Performance entries are also created in indirect ways, such as loading a resource like an image.
 
@@ -95,6 +95,6 @@ While this article does not dive into using these APIs, it is useful to know the
 
 ## Conclusion
 
-This article provided a brief overview of web performance tools that can help you measure performance on a web app or site. Next up, you'll look at perceived performance and some techniques to make unavoidable performance hits appear less severe to the user, or disguise them completely.
+This article provided a brief overview of some of the tools that can help you measure performance on a web app or site. In the next article, we'll see how you can optimize images on your site to improve its performance.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

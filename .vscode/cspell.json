@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en-US",
+  "languageId": "*",
+  "dictionaries": [
+    "bash",
+    "css",
+    "cpp",
+    "django",
+    "filetypes",
+    "fonts",
+    "fullstack",
+    "html",
+    "latex",
+    "lorem-ipsum",
+    "markdown",
+    "node",
+    "npm",
+    "project-words",
+    "python",
+    "softwareTerms",
+    "svelte",
+    "typescript"
+  ],
+  "ignorePaths": [
+    ".vscode/cspell.json",
+    ".vscode/extensions.json",
+    ".markdownlint-cli2.jsonc"
+  ],
+  "ignoreRegExpList": [
+    // macros
+    "{{\\s?\\w*\\(",
+    "{{EmbedInteractiveExample\\(.*\\)}}",
+    "{{EmbedLiveSample\\(.*\\)}}",
+    "{{EmbedYouTube\\(\"[\\w-]*\"\\)}}",
+    // TODO - add some details what these match
+    "\\(#\\w*\\)",
+    "\\]\\(\\S*\\)",
+    "\\]\\(\\S*\\)",
+    "\\*\\*\\w\\*\\*\\w*",
+    "\\*\\w\\*\\w*",
+    "#[\\w-]*",
+    "aria-activedescendant=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-controls=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-describedby=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-details=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-errormessage=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-flowto=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-labelledby=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-owns=\"(?:[^\\\"]+|\\.)*\"",
+    "Base64",
+    "class=\"(?:[^\\\"]+|\\.)*\"",
+    "data-test-id=\"(?:[^\\\"]+|\\.)*\"",
+    "EscapeCharacters",
+    "for=\"(?:[^\\\"]+|\\.)*\"",
+    "HexValues",
+    "href=\"(?:[^\\\"]+|\\.)*\"",
+    "id=\"(?:[^\\\"]+|\\.)*\"",
+    "lang=\".*\">.*</",
+    "src=\"(?:[^\\\"]+|\\.)*\"",
+    "url\\(\"data\\:image/svg\\+xml.*\"\\)[,;]",
+    "Urls"
+  ],
+  "allowCompoundWords": true,
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./project-words.txt",
+      "addWords": true
+    }
+  ]
+}

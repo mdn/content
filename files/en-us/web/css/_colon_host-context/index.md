@@ -15,6 +15,8 @@ One typical use of this is with a descendant selector expression — for example
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host, only if it is
    a descendant of the selector argument given */
@@ -87,5 +89,8 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 ## See also
 
 - [Web components](/en-US/docs/Web/API/Web_components)
-- {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
+- CSS {{cssxref(":host")}} pseudo-class
+- CSS {{cssxref(":host_function", ":host()")}} pseudo-class
+- CSS {{CSSXref("::slotted")}} pseudo-element
+- HTML {{HTMLElement("template")}} element
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

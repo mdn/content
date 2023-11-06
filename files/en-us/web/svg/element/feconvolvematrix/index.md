@@ -101,7 +101,7 @@ This element implements the {{domxref("SVGFEConvolveMatrixElement")}} interface.
   </defs>
 
   <image
-    xlink:href="mdn.svg"
+    href="mdn.svg"
     x="0"
     y="0"
     height="200"

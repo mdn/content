@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/JavaScript_interface/Exception/stack
+page-type: webassembly-instance-property
 status:
   - non-standard
 browser-compat: javascript.builtins.WebAssembly.Exception.stack
@@ -26,7 +27,7 @@ The stack trace string lists the locations of each operation on the stack in Web
 This is a human-readable string indicating the URL, name of the function type called, the function index, and its offset in the module binary.
 It has approximately this format (see [stack trace conventions](https://webassembly.github.io/spec/web-api/index.html#conventions) in the specification for more information):
 
-```
+```plain
 ${url}:wasm-function[${funcIndex}]:${pcOffset}
 ```
 

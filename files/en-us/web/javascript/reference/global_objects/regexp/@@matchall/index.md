@@ -65,7 +65,7 @@ console.log(Array.from("😄".matchAll(/(?:)/gu)));
 // [ [ "" ], [ "" ] ]
 ```
 
-This method exists for customizing the behavior of `matchAll()` in {{jsxref('RegExp')}} subclasses.
+This method exists for customizing the behavior of `matchAll()` in {{jsxref("RegExp")}} subclasses.
 
 ## Examples
 

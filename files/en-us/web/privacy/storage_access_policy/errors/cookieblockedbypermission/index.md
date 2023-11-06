@@ -10,7 +10,7 @@ page-type: guide
 
 Firefox:
 
-```
+```plain
 CookieBlockedByPermission=Request to access cookies or storage on "X" was blocked because of custom cookie permission.
 ```
 

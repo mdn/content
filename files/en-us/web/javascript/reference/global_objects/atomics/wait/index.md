@@ -31,7 +31,7 @@ Atomics.wait(typedArray, index, value, timeout)
 - `value`
   - : The expected value to test.
 - `timeout` {{optional_inline}}
-  - : Time to wait in milliseconds. {{jsxref("Infinity")}}, if no time is provided.
+  - : Time to wait in milliseconds. {{jsxref("NaN")}} (and values that get converted to `NaN`, such as `undefined`) becomes {{jsxref("Infinity")}}. Negative values become `0`.
 
 ### Return value
 

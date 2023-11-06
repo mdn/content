@@ -1,6 +1,7 @@
 ---
 title: Truncate (float to int)
 slug: WebAssembly/Reference/Numeric/Truncate_float_to_int
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

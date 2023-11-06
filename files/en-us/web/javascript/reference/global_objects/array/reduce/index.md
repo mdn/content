@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.reduce
 
 {{JSRef}}
 
-The **`reduce()`** method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
+The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
 The final result of running the reducer across all elements of the array is a single value.
 
 The first time that the callback is run there is no "return value of the previous calculation".
@@ -32,11 +32,11 @@ reduce(callbackFn, initialValue)
 - `callbackFn`
   - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
+      - : The value resulting from the previous call to `callbackFn`. On the first call, its value is `initialValue` if the latter is specified; otherwise its value is `array[0]`.
     - `currentValue`
-      - : The value of the current element. On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`.
+      - : The value of the current element. On the first call, its value is `array[0]` if `initialValue` is specified; otherwise its value is `array[1]`.
     - `currentIndex`
-      - : The index position of `currentValue` in the array. On first call, `0` if `initialValue` was specified, otherwise `1`.
+      - : The index position of `currentValue` in the array. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
     - `array`
       - : The array `reduce()` was called upon.
 - `initialValue` {{optional_inline}}
@@ -318,7 +318,7 @@ Some of the acceptable use cases of `reduce()` are given above (most notably, su
   const flattened = array.flat();
   ```
 
-- Grouping objects by a property. Use {{jsxref("Array/group", "group()")}} instead.
+- Grouping objects by a property. Use {{jsxref("Object.groupBy()")}} instead.
 
   ```js example-bad
   const groups = array.reduce((acc, obj) => {
@@ -329,7 +329,7 @@ Some of the acceptable use cases of `reduce()` are given above (most notably, su
   ```
 
   ```js example-good
-  const groups = array.group((obj) => obj.name);
+  const groups = Object.groupBy(array, (obj) => obj.name);
   ```
 
 - Concatenating arrays contained in an array of objects. Use {{jsxref("Array/flatMap", "flatMap()")}} instead.
@@ -406,12 +406,12 @@ In cases where `reduce()` is the best choice, documentation and semantic variabl
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
-- {{jsxref("Array.prototype.group()")}}
-- {{jsxref("Array.prototype.groupToMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
 - {{jsxref("TypedArray.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

@@ -19,6 +19,10 @@ The **`Math.random()`** static method returns a floating-point, pseudo-random nu
 Math.random()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).

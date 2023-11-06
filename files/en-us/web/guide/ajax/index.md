@@ -56,7 +56,7 @@ httpRequest.send();
 
 The parameter to the `send()` method can be any data you want to send to the server if `POST`-ing the request. Form data should be sent in a format that the server can parse, like a query string:
 
-```
+```plain
 "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
 ```
 
@@ -288,7 +288,7 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/en-
 
 Another simple example follows — here we are loading a text file via XHR, the structure of which is assumed to be like this:
 
-```
+```plain
 TIME: 312.05
 TIME: 312.07
 TIME: 312.10

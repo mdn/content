@@ -84,12 +84,18 @@ new RTCPeerConnection(configuration)
         > **Note:** Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.
 
     - `iceServers` {{optional_inline}}
-      - : An array of {{domxref("RTCIceServer")}} objects,
-        each describing one server which may be used by the ICE agent;
-        these are typically STUN and/or TURN servers.
-        If this isn't specified,
-        the connection attempt will be made with no STUN or TURN server available,
-        which limits the connection to local peers.
+
+      - : An array of objects, each describing one server which may be used by the ICE agent; these are typically STUN and/or TURN servers. If this isn't specified, the connection attempt will be made with no STUN or TURN server available, which limits the connection to local peers. Possible values are:
+
+        - `credential` {{optional_inline}}
+          - : The credential to use when logging into the server. This is only used if the `RTCIceServer` represents a TURN server.
+        - `credentialType` {{optional_inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+          - : If the `RTCIceServer` represents a TURN server, this attribute specifies what kind of `credential` is to be used when connecting. The default is `password`.
+        - `urls` {{optional_inline}}
+          - : This **required** property is either a single string or an array of strings, each specifying a URL which can be used to connect to the server.
+        - `username` {{optional_inline}}
+          - : If the `RTCIceServer` is a TURN server, then this is the username to use during the authentication process.
+
     - `iceTransportPolicy` {{optional_inline}}
 
       - : The current ICE transport policy;
@@ -138,7 +144,7 @@ defaults.
 When you wish to provide your own certificates for use by an
 {{domxref("RTCPeerConnection")}} instead of having the `RTCPeerConnection`
 generate them automatically, you do so by calling the static
-{{domxref("RTCPeerConnection.generateCertificate()")}} function.
+{{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} function.
 
 The `certificates` property's value cannot be changed once it's first
 specified. If it's included in the configuration passed into a call to a connection's

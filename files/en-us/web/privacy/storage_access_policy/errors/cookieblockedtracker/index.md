@@ -10,7 +10,7 @@ page-type: guide
 
 Firefox:
 
-```
+```plain
 CookieBlockedTracker=Request to access cookies or storage on "X" was blocked because it came from a tracker and content blocking is enabled.
 ```
 

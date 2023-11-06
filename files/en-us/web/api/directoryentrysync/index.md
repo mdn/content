@@ -76,7 +76,7 @@ Depending on how you've set the `options` parameter, the method either creates a
 
 #### Syntax
 
-```
+```js-nolint
 getFile(path)
 getFile(path, options)
 ```
@@ -156,7 +156,7 @@ Creates or looks up a directory. The method is similar to `getFile()` with Direc
 
 #### Syntax
 
-```
+```js-nolint
 getDirectory(path)
 getDirectory(path, options)
 ```
@@ -240,7 +240,7 @@ If you delete a directory that contains a file that cannot be removed or if an e
 
 #### Syntax
 
-```
+```js-nolint
 removeRecursively()
 ```
 

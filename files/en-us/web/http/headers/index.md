@@ -80,8 +80,6 @@ The different categories of client hints are listed below.
 
 The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent, the platform/architecture it is running on, and user preferences set on the user agent or platform:
 
-- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
-  - : User agent's reduced motion preference setting.
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : User agent's branding and version.
 - {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
@@ -100,18 +98,22 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying operation system/platform.
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : User agent's underlying operation system version.
+- {{HTTPHeader("Sec-CH-UA-Prefers-Color-Scheme")}} {{experimental_inline}}
+  - : User's preference of dark or light color scheme.
+- {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
+  - : User's preference to see fewer animations and content layout shifts.
 
 ### Device client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}}
   - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}}
   - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
@@ -125,7 +127,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("RTT")}}
   - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
-  - : A boolean that indicates the user agent's preference for reduced data usage.
+  - : A string `on` that indicates the user agent's preference for reduced data usage.
 
 ## Conditionals
 
@@ -231,6 +233,11 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
   - : Identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
 - {{HTTPHeader("Via")}}
   - : Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.
+
+## Privacy
+
+- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}}{{experimental_inline}}
+  - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 
 ## Redirects
 
@@ -398,6 +405,8 @@ A server might use them to modify its caching behavior, or the information that 
   - : Used to remove the [path restriction](https://w3c.github.io/ServiceWorker/#path-restriction) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
+- [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode)
+  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 - {{HTTPHeader("Upgrade")}}
   - : The relevant RFC document for the [Upgrade header field is RFC 9110, section 7.8](https://httpwg.org/specs/rfc9110.html#field.upgrade). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to [WebSocket](/en-US/docs/Glossary/WebSockets), assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 7.6.1 of the aforementioned RFC](https://httpwg.org/specs/rfc9110.html#field.connection).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}

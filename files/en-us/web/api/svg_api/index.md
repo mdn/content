@@ -127,7 +127,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGAnimatedLengthList")}}
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
-- {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
 - {{DOMxRef("SVGAnimatedString")}}

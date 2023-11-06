@@ -38,7 +38,7 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 cursor to iterate through all the records in the object store. Within each iteration we
 log the direction of the cursor, something like this:
 
-```
+```plain
 prev
 ```
 

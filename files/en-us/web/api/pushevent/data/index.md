@@ -12,7 +12,7 @@ The `data` read-only property of the **`PushEvent`** interface returns a referen
 
 ## Value
 
-A {{domxref("PushMessageData")}} object.
+A {{domxref("PushMessageData")}} object or `null` if no `data` member is passed when the event instance initialized.
 
 ## Examples
 

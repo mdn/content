@@ -277,8 +277,6 @@ The `no-store` request directive allows a client to request that caches refrain 
 Cache-Control: no-store
 ```
 
-Note that the major browsers do not support requests with `no-store`.
-
 #### `max-age`
 
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).

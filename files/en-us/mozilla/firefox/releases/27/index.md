@@ -17,8 +17,8 @@ Firefox 27 was released on February 4, 2014. This article lists key changes that
 - The inspector now has an "edit-element-html" feature, without needing an add-on.
 - Background-URLs and colors have preview in inspector. Even hovering over canvas elements will give a pop-up with an image preview.
 - Reflow logging has been added.
-- Styles of SVG elements are now inspectable ([Webkit bug 921191](https://bugzil.la/921191)).
-- Failure to find the image when clicking URL link in CSS inspector has been fixed ([Webkit bug 921686](https://bugzil.la/921686)).
+- Styles of SVG elements are now inspectable ([Firefox bug 921191](https://bugzil.la/921191)).
+- Failure to find the image when clicking URL link in CSS inspector has been fixed ([Firefox bug 921686](https://bugzil.la/921686)).
 - The {{HTTPHeader("SourceMap", "X-SourceMap")}} header is now supported ([Firefox bug 765993](https://bugzil.la/765993)).
 
 More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-tools-episode-27-edit-as-html-codemirror-more/).
@@ -31,7 +31,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - Experimental support of `position:sticky` is now active by default on non-release builds ([Firefox bug 902992](https://bugzil.la/902992)). For releases builds, the `layout.css.sticky.enabled` preference still needs to be set to `true`.
 - The {{cssxref("all")}} shorthand property has been added ([Firefox bug 842329](https://bugzil.la/842329)).
 - The {{cssxref("unset")}} global value has been added; it allows to reset any CSS property ([Firefox bug 921731](https://bugzil.la/921731)).
-- Curly brackets are no longer allowed in HTML `style` attributes: doing `<div style="{ display: none }">` was working in quirks mode, but won't anymore [Firefox bug 915053](https://bugzil.la/915053).
+- Curly braces are no longer allowed in HTML `style` attributes: doing `<div style="{ display: none }">` was working in quirks mode, but won't anymore [Firefox bug 915053](https://bugzil.la/915053).
 - The {{cssxref("overflow")}} property now works on {{HTMLElement("fieldset")}} ([Firefox bug 261037](https://bugzil.la/261037)).
 
 ### HTML
@@ -64,7 +64,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - `Event.isTrusted()` is now unforgeable ([Firefox bug 637248](https://bugzil.la/637248)).
 - The WebRTC API's {{domxref("RTCIceCandidate")}} object now includes a {{domxref("RTCIceCandidate.toJSON", "toJSON()")}} method to help with signaling and debugging ([Firefox bug 928304](https://bugzil.la/928304)).
 - The {{domxref("Navigator.vibrate()")}} method has been adapted to match the final specification: It now returns `false` when the list is too long or has too large entries, instead of throwing ([Firefox bug 884935](https://bugzil.la/884935)).
-- As part of the ongoing effort to standardize global objects, the non-standard stylesheet change event interfaces, including `StyleRuleChangeEvent`, `StyleSheetApplicableStateChangeEvent` and `StyleSheetChangeEvent`, are no longer available from Web content. The `CSSGroupRuleRuleList` interface, the implementation detail of {{domxref("CSSRuleList")}}, has also been removed ([Webkit bug 872934](https://bugzil.la/872934) and [Firefox bug 916871](https://bugzil.la/916871)).
+- As part of the ongoing effort to standardize global objects, the non-standard stylesheet change event interfaces, including `StyleRuleChangeEvent`, `StyleSheetApplicableStateChangeEvent` and `StyleSheetChangeEvent`, are no longer available from Web content. The `CSSGroupRuleRuleList` interface, the implementation detail of {{domxref("CSSRuleList")}}, has also been removed ([Firefox bug 872934](https://bugzil.la/872934) and [Firefox bug 916871](https://bugzil.la/916871)).
 - `atob` now ignores whitespaces ([Firefox bug 711180](https://bugzil.la/711180)).
 - [WebGL](/en-US/docs/Web/API/WebGL_API): `MOZ_` prefixed extension strings are deprecated. Support for them will be removed in the future. Use unprefixed extension string only. To get draft extensions, set the `webgl.enable-draft-extensions` preferences ([Firefox bug 924176](https://bugzil.la/924176)).
 
@@ -83,7 +83,7 @@ _No change._
 
 ## Security
 
-- TLS 1.2 has been implemented for improved security ([Webkit bug 861266](https://bugzil.la/861266)).
+- TLS 1.2 has been implemented for improved security ([Firefox bug 861266](https://bugzil.la/861266)).
 
 ## See also
 

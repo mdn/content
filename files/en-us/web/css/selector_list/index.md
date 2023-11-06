@@ -66,7 +66,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving-selector-list).
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving_selector_list).
 
 ### Invalid selector list
 
@@ -147,4 +147,4 @@ In the above example, the italic style will be applied to any `h2` heading that 
 - The [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-classes accept forgiving selector lists.
 - The [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-class accepts a regular selector list
 - The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class accepts a relative selector list.
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)

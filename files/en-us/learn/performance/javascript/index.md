@@ -37,7 +37,7 @@ It is very important to consider how you are using JavaScript on your websites a
 
 The first question you should answer before starting to optimize your code is "what do I need to optimize?". Some of the tips and techniques discussed below are good practices that will benefit just about any web project, whereas some are only needed in certain situations. Trying to apply all these techniques everywhere is probably unnecessary, and may be a waste of your time. You should figure out what performance optimizations are actually needed in each project.
 
-To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API/). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
+To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
 
 ## Optimizing JavaScript downloads
 
@@ -101,7 +101,7 @@ This works OK, but is render-blocking. A better strategy is to use [`rel="preloa
 The preload {{htmlelement("link")}} fetches the JavaScript as soon as possible, without blocking rendering. You can then use it wherever you want in your page:
 
 ```html
-<!-- Include this whever makes sense -->
+<!-- Include this wherever makes sense -->
 <script src="important-js.js"></script>
 ```
 
@@ -129,7 +129,7 @@ First of all, you can add the `async` attribute to your `<script>` elements:
 
 This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time and won't block rendering.
 
-> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event. This has a similar effect to `async`.
+> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event. This has a similar effect to `async`.
 
 You could also just not load the JavaScript at all until an event occurs when it is needed. This could be done via DOM scripting, for example:
 
@@ -242,7 +242,7 @@ For animations that can't be handled in JavaScript, for example, animating an HT
 
 ```js
 function loop() {
-  // Clear the camvas before drawing the next frame of the animation
+  // Clear the canvas before drawing the next frame of the animation
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
@@ -294,10 +294,10 @@ There are several general best practices that will make your code run more effic
 
 - **Reduce DOM manipulation**: Accessing and updating the DOM is computationally expensive, so you should minimize the amount that your JavaScript does, especially when performing constant DOM animation (see [Handling JavaScript animations](#handling_javascript_animations) above).
 - **Batch DOM changes**: For essential DOM changes, you should batch them into groups that get done together, rather than just firing off each individual change as it occurs. This can reduce the amount of work the browser is doing in real terms, but also improve perceived performance. It can make the UI look smoother to get several updates out of the way in one go, rather than constantly making small updates. A useful tip here is — when you have a large chunk of HTML to add to the page, build the entire fragment first (typically inside a {{domxref("DocumentFragment")}}) and then append it all to the DOM in one go, rather than appending each item separately.
-- **Simplify your HTML**: The simpler your DOM tree is, the faster it can be accessed and manipulated with JavaScript. Think carefully about what your UI needs, and remove unneccessary cruft.
+- **Simplify your HTML**: The simpler your DOM tree is, the faster it can be accessed and manipulated with JavaScript. Think carefully about what your UI needs, and remove unnecessary cruft.
 - **Reduce the amount of looped code**: Loops are expensive, so reduce the amount of loop usage in your code wherever possible. In cases where loops are unavoidable:
 
-  - Avoid running the full loop when it is unneccessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
+  - Avoid running the full loop when it is unnecessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
 
     ```js
     function processGroup(array) {
@@ -331,7 +331,7 @@ There are several general best practices that will make your code run more effic
 
 ## See also
 
-- [Optimize long tasks](https://web.dev/optimize-long-tasks/) on web.dev (2022)
+- [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2022)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}

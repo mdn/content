@@ -10,7 +10,7 @@ The `unparsed-entity-url()` function returns the URI of the unparsed entity with
 
 ### Syntax
 
-```
+```plain
 string unparsed-entity-url(string)
 ```
 

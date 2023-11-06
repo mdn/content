@@ -58,7 +58,7 @@ The Barcode Detection API supports the following barcode formats:
       <td>
         A linear (one-dimensional), bidirectionally-decodable, self-checking
         barcode following iso15417 and able to encode all 128 characters of
-        ASCII (hence the naming).
+        {{Glossary("ASCII")}} (hence the naming).
       </td>
       <td>
         <img
@@ -289,4 +289,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://web.dev/shape-detection/#barcodedetector)
+- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/articles/shape-detection/#barcodedetector)

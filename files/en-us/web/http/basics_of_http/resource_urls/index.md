@@ -15,20 +15,20 @@ information is available to sites the browser connects to as well.
 Resource URLs are composed of two parts: a prefix (`resource:`), and a URL
 pointing to the resource you want to load:
 
-```
+```url
 resource://<url>
 ```
 
 An example:
 
-```
+```url
 resource://gre/res/svg.css
 ```
 
 When arrows are found in the resource URL's ('->'), it means that the first file
 loaded the next one:
 
-```
+```url
 resource://<File-loader> -> <File-loaded>
 ```
 
@@ -50,7 +50,7 @@ running on the site (you can find the code in <https://browserleaks.com/firefox#
 The file firefox.js passes preference names and values to the pref() function. For
 example:
 
-```
+```url
 http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
 ```
 

@@ -44,7 +44,7 @@ You can see a live version of the site at [near-misses.netlify.com](https://near
 
 In this article we're going to use the following tools and features:
 
-- [JSX](https://reactjs.org/docs/introducing-jsx.html), a [React](https://reactjs.org)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
+- [JSX](https://react.dev/learn/writing-markup-with-jsx), a [React](https://react.dev)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
 - The latest built-in JavaScript features (at the time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
 - [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.

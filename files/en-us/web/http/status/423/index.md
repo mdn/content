@@ -13,13 +13,13 @@ The HTTP **`423 Locked`** error response code indicates that either the resource
 
 ## Status
 
-```
+```http
 423 Locked
 ```
 
 ### Example
 
-```
+```http
 HTTP/1.1 423 Locked
 Content-Type: application/xml; charset="utf-8"
 Content-Length: xxxx

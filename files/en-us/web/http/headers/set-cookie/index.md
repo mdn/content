@@ -58,7 +58,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Defines the cookie name and its value.
     A cookie definition begins with a name-value pair.
 
-    A `<cookie-name>` can contain any US-ASCII characters except for: control characters (ASCII characters 0 up to 31 and ASCII character 127) or separator characters (space, tab and the characters: `( ) < > @ , ; : \ " / [ ] ? = { }`)
+    A `<cookie-name>` can contain any US-ASCII characters except for: control characters ({{Glossary("ASCII")}} characters 0 up to 31 and ASCII character 127) or separator characters (space, tab and the characters: `( ) < > @ , ; : \ " / [ ] ? = { }`)
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), {{glossary("Whitespace")}}, double quotes, commas, semicolons, and backslashes.
 
@@ -143,7 +143,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
       - : means that the browser sends the cookie with both cross-site and same-site requests.
         The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`. If `Secure` is missing an error will be logged:
 
-        ```
+        ```plain
         Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
 
         This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
@@ -247,4 +247,4 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 - [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [Samesite cookies explained](https://web.dev/samesite-cookies-explained/) (web.dev blog)
+- [Samesite cookies explained](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

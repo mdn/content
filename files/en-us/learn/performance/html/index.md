@@ -132,7 +132,7 @@ There are, however, some key differences between providing sources for images an
 
 ### Lazy loading images
 
-A very useful technique for improving performance is **lazy loading**. This refers to the practice of not loading all images immediately when the HTML is rendered, but instead only loading them when they are actually visible to the user in the viewport (or imminently visible). This means that the immediately visible/usable content is ready to use more quickly, whereas subsequent content only has its images rendered when scrolled to, and the browser won't waste bandwith loading images that the user will never see.
+A very useful technique for improving performance is **lazy loading**. This refers to the practice of not loading all images immediately when the HTML is rendered, but instead only loading them when they are actually visible to the user in the viewport (or imminently visible). This means that the immediately visible/usable content is ready to use more quickly, whereas subsequent content only has its images rendered when scrolled to, and the browser won't waste bandwidth loading images that the user will never see.
 
 Lazy loading has historically been handled using JavaScript, but browsers now have a `loading` attribute available that can instruct the browser to lazy load images automatically:
 
@@ -140,7 +140,7 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 <img src="800w.jpg" alt="Family portrait" loading="lazy" />
 ```
 
-See [Browser-level image lazy loading for the web](https://web.dev/browser-level-image-lazy-loading/) on web.dev for detailed information.
+See [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading) on web.dev for detailed information.
 
 You can also lazy load video content by using the `preload` attribute. For example:
 
@@ -151,9 +151,9 @@ You can also lazy load video content by using the `preload` attribute. For examp
 </video>
 ```
 
-Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for preformance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
+Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
 
-See [Lazy loading video](https://web.dev/lazy-loading-video/) on web.dev for detailed information.
+See [Lazy loading video](https://web.dev/articles/lazy-loading-video) on web.dev for detailed information.
 
 ## Handling embedded content
 
@@ -185,7 +185,7 @@ In the same way as `<img>` elements, you can also use the `loading` attribute to
 </iframe>
 ```
 
-See [It's time to lazy-load offscreen iframes!](https://web.dev/iframe-lazy-loading/) for more information.
+See [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) for more information.
 
 ## Handling resource loading order
 
@@ -193,7 +193,7 @@ Ordering of resource loading is important for maximizing perceived and actual pe
 
 1. The HTML is generally parsed first, in the order in which it appears on the page.
 2. Any found CSS is parsed to understand the styles that need to be applied to the page. During this time, linked assets such as images and web fonts start to be fetched.
-3. Any found JavaScript is parsed, evaluated, and run against the page. By default, this blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements where the JavaScript is encoountered.
+3. Any found JavaScript is parsed, evaluated, and run against the page. By default, this blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements where the JavaScript is encountered.
 4. Slightly later on, the browser works out how each HTML element should be styled, given the CSS applied to it.
 5. The styled result is then painted to the screen.
 
@@ -223,7 +223,7 @@ pElem.addEventListener("click", () => {
 });
 ```
 
-We can apply this script to the page by refering to it in a `<script>` element like this:
+We can apply this script to the page by referring to it in a `<script>` element like this:
 
 ```html
 <script src="index.js"></script>
@@ -231,7 +231,7 @@ We can apply this script to the page by refering to it in a `<script>` element l
 
 If we put this `<script>` element before the `<p>` element in the source order (for example, in the {{htmlelement("head")}} element), the page will throw an error (Chrome for example reports "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')" to the console). This occurs because the script relies on the `<p>` element to work, but at the point the script is parsed, the `<p>` element does not exist on the page. It has not yet been rendered.
 
-You can fix the above issue by putting the `<script>` element after the `<p>` element (for example at the end of the document body), or by running the code inside a suitable event handler (for example run it on the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event), which fires when the DOM has been completely parsed).
+You can fix the above issue by putting the `<script>` element after the `<p>` element (for example at the end of the document body), or by running the code inside a suitable event handler (for example run it on the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event), which fires when the DOM has been completely parsed).
 
 However, this doesn't solve the problem of waiting for the script to load. Better performance can be achieved by adding the `async` attribute to the `<script>` element:
 
@@ -258,7 +258,7 @@ Upon coming across a `rel="preload"` link, the browser will fetch the referenced
 See the following articles for detailed information on using `rel="preload"`:
 
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
-- [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
+- [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 > **Note:** You can use `rel="preload"` to preload CSS and JavaScript files as well.
 

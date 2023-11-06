@@ -123,15 +123,19 @@ It is an error to assign values to unmodifiable properties or to properties of a
 For more complex assignments, the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
 object literals.
 
+Without destructuring, it takes multiple statements to extract values from arrays and objects:
+
 ```js
 const foo = ["one", "two", "three"];
 
-// without destructuring
 const one = foo[0];
 const two = foo[1];
 const three = foo[2];
+```
 
-// with destructuring
+With destructuring, you can extract multiple values into distinct variables using a single statement:
+
+```js
 const [one, two, three] = foo;
 ```
 
@@ -899,7 +903,7 @@ delete myObj.h; // returns true (can delete user-defined properties)
 #### Deleting array elements
 
 Since arrays are just objects, it's technically possible to `delete` elements from them.
-This is however regarded as a bad practice, try to avoid it.
+This is, however, regarded as a bad practice — try to avoid it.
 When you delete an array property, the array length is not affected and other elements are not re-indexed.
 To achieve that behavior, it is much better to just overwrite the element with the value `undefined`.
 To actually manipulate the array, use the various array methods such as [`splice`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
@@ -1101,7 +1105,7 @@ a * c + b * c // 9
 You can use the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the built-in object types. Use `new` as follows:
 
 ```js
-const objectName = new objectType(param1, param2, /* …, */ paramN);
+const objectName = new ObjectType(param1, param2, /* …, */ paramN);
 ```
 
 ### super
@@ -1109,7 +1113,7 @@ const objectName = new objectType(param1, param2, /* …, */ paramN);
 The [`super` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/super) is used to call functions on an object's parent.
 It is useful with [classes](/en-US/docs/Web/JavaScript/Reference/Classes) to call the parent constructor, for example.
 
-```js
+```js-nolint
 super(args); // calls the parent constructor.
 super.functionOnParent(args);
 ```

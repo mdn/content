@@ -25,8 +25,8 @@
     "Background Sync": {
       "overview": ["Background Synchronization API"],
       "interfaces": ["SyncManager", "SyncEvent"],
-      "methods": ["ServiceWorkerRegistration.sync()"],
-      "properties": [],
+      "methods": [],
+      "properties": ["ServiceWorkerRegistration.sync"],
       "events": ["ServiceWorkerGlobalScope: sync"]
     },
     "Background Tasks": {
@@ -204,6 +204,7 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
+        "OTPCredential",
         "PasswordCredential",
         "PublicKeyCredential"
       ],
@@ -335,6 +336,17 @@
         "Window: devicemotion"
       ]
     },
+    "Document Picture-in-Picture API": {
+      "overview": ["Document Picture-in-Picture API"],
+      "guides": ["/docs/Web/API/Document_Picture-in-Picture_API/Using"],
+      "interfaces": [
+        "DocumentPictureInPicture",
+        "DocumentPictureInPictureEvent"
+      ],
+      "methods": [],
+      "properties": ["Window.documentPictureInPicture"],
+      "events": ["DocumentPictureInPicture: enter"]
+    },
     "DOM": {
       "overview": ["Document Object Model"],
       "guides": [
@@ -436,7 +448,7 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential"],
+      "interfaces": ["IdentityCredential", "IdentityProvider"],
       "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
@@ -484,9 +496,9 @@
       "properties": [],
       "events": []
     },
-    "File System Access API": {
-      "overview": ["File System Access API"],
-      "guides": [],
+    "File System API": {
+      "overview": ["File System API"],
+      "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
         "FileSystemHandle",
         "FileSystemFileHandle",
@@ -1259,6 +1271,17 @@
       "properties": ["Navigator.serviceWorker"],
       "events": []
     },
+    "Speculation Rules API": {
+      "overview": ["Speculation Rules API"],
+      "interfaces": [],
+      "properties": [
+        "Document.prerendering",
+        "PerformanceNavigationTiming.activationStart",
+        "PerformanceResourceTiming.deliveryType"
+      ],
+      "methods": [],
+      "events": ["Document: prerenderingchange"]
+    },
     "Storage": {
       "overview": ["Storage API"],
       "guides": [
@@ -1964,6 +1987,7 @@
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
+        "/docs/Web/API/WebRTC_API/Using_Encoded_Transforms",
         "/docs/Web/API/WebRTC_API/adapter.js",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
         "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
@@ -1987,11 +2011,15 @@
         "RTCDTMFSender",
         "RTCDTMFToneChangeEvent",
         "RTCStatsReport",
-        "RTCErrorEvent"
+        "RTCErrorEvent",
+        "RTCRtpScriptTransform",
+        "RTCRtpScriptTransformer",
+        "RTCEncodedVideoFrame",
+        "RTCEncodedAudioFrame",
+        "RTCTransformEvent"
       ],
       "dictionaries": [
         "RTCOAuthCredential",
-        "RTCIceServer",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",
@@ -2036,7 +2064,11 @@
         "RTCTransportStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
-      "properties": ["Navigator.mediaDevices"],
+      "properties": [
+        "Navigator.mediaDevices",
+        "RTCRtpReceiver.transform",
+        "RTCRtpSender.transform"
+      ],
       "events": [
         "RTCDataChannel: bufferedamountlow",
         "RTCDataChannel: close",
@@ -2060,7 +2092,8 @@
         "RTCIceTransport: statechange",
         "RTCDtlsTransport: statechange",
         "RTCDTMFSender: tonechange",
-        "RTCPeerConnection: track"
+        "RTCPeerConnection: track",
+        "DedicatedWorkerGlobalScope: rtctransform"
       ],
       "callbacks": [
         "RTCPeerConnectionErrorCallback",
@@ -2081,7 +2114,8 @@
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_server",
-        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java"
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java",
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno"
       ],
       "interfaces": ["WebSocket", "CloseEvent", "MessageEvent"],
       "methods": [],
@@ -2157,7 +2191,7 @@
     "WebOTP API": {
       "overview": ["WebOTP API"],
       "interfaces": ["OTPCredential"],
-      "methods": [],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },
@@ -2179,7 +2213,7 @@
         "USBOutTransferResult"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.usb", "WorkerNavigator.usb"],
       "events": []
     },
     "WebVR API": {
@@ -2276,6 +2310,17 @@
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
+    },
+    "Window Management API": {
+      "overview": ["Window Management API"],
+      "guides": [
+        "/docs/Web/API/Window_Management_API/Using",
+        "/docs/Web/API/Window_Management_API/Multi-screen_origin"
+      ],
+      "interfaces": ["ScreenDetails", "ScreenDetailed"],
+      "methods": ["Element.requestFullscreen()", "Window.getScreenDetails()"],
+      "properties": ["Screen.isExtended"],
+      "events": ["Screen: change"]
     },
     "XMLHttpRequest": {
       "overview": ["XMLHttpRequest"],

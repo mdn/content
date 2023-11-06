@@ -22,7 +22,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `voffset`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the vertical location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
 - `width`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the `<mpadded>` element.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired horizontal length of the `<mpadded>` element.
 
 ### Legacy syntax
 

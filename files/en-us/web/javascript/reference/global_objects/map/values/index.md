@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in the `Map` object in insertion order.
+The **`values()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this map in insertion order.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 
@@ -16,6 +16,10 @@ The **`values()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScri
 ```js-nolint
 values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

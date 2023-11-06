@@ -1,5 +1,5 @@
 ---
-title: Guidelines for styling CSS code examples
+title: Guidelines for writing CSS code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 page-type: mdn-writing-guide
 ---
@@ -9,6 +9,14 @@ page-type: mdn-writing-guide
 The following guidelines cover how to write CSS example code for MDN Web Docs.
 
 ## General guidelines for CSS code examples
+
+### Choosing a format
+
+Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
+
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+
+Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
 ### Plan your CSS
 
@@ -26,7 +34,7 @@ Don't use preprocessor syntax, such as [Sass](https://sass-lang.com/), [Less](ht
 
 In the same spirit as the previous guideline, don't write example codes on MDN Web Docs using a specific CSS methodology such as [BEM](http://getbem.com/naming/) or [SMACSS](http://smacss.com/). Even though they are valid CSS syntax, the naming conventions can be confusing to people not familiar with those methodologies.
 
-### Don't use resets <!--is this valid in current times-->
+### Don't use resets
 
 For maximum control over CSS across platforms, a lot of people used to use CSS resets to remove every style, before then building things back up themselves. This certainly has its merits, but especially in the modern world, CSS resets can be an overkill, resulting in a lot of extra time spent reimplementing things that weren't completely broken in the first place, like default margins, list styles, etc.
 
@@ -153,61 +161,6 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_querie
     /* ... */
   }
   ```
-
-- When a rule has multiple selectors, put each selector on a new line. This makes the selector list easier to read and can help to make code lines shorter.
-
-  Do this:
-
-  ```css example-good
-  h1,
-  h2,
-  h3 {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  ```
-
-  Not this: <!--I thought this is the preferred style-->
-
-  ```css-nolint example-bad
-  h1, h2, h3 {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  ```
-
-## Space after function parameters
-
-Function parameters should have spaces after their separating commas, but not before:
-
-```css example-good
-color: rgb(255, 0, 0);
-background-image: linear-gradient(to bottom, red, black);
-```
-
-## Syntax style
-
-There are a variety of CSS writing styles you can use, but we prefer the expanded style, with the selector/opening brace, close brace, and each declaration on a separate line. This maximizes readability, and again, promotes consistency on MDN Web Docs.
-
-In addition, keep these specifics in mind:
-
-- Include a space between the selector(s) and the opening curly brace.
-- Always include a semicolon at the end of the last declaration, even though it isn't strictly necessary.
-- Put the closing curly brace on a new line.
-- In each declaration, put a space after the separating colon, but not before.
-- Use two spaces for code indentation.
-
-```css example-good
-p {
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
-```
-
-```css-nolint example-bad
-p { color: white; background-color: black; padding: 1rem; }
-```
 
 ## Value to turn off properties
 

@@ -102,7 +102,7 @@ This is the second example that explain [how to build custom form widgets](/en-U
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;

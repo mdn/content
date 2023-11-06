@@ -104,13 +104,13 @@ const p = new Proxy(obj, {
 });
 Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
 
-const obj = Object.preventExtensions({});
-const p = new Proxy(obj, {
+const obj2 = Object.preventExtensions({});
+const p2 = new Proxy(obj2, {
   getPrototypeOf(target) {
     return {};
   },
 });
-Object.getPrototypeOf(p); // TypeError: expected same prototype value
+Object.getPrototypeOf(p2); // TypeError: expected same prototype value
 ```
 
 ## Specifications

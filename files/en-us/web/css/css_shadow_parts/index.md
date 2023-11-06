@@ -44,7 +44,7 @@ By default, elements in a shadow tree can be styled only within their respective
 - {{domxref("Element.shadowRoot")}} property
 - {{domxref("Element.attachShadow()")}} method
 - {{domxref("ShadowRoot")}} interface
-- CSS scoping module
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
@@ -56,7 +56,7 @@ By default, elements in a shadow tree can be styled only within their respective
 
 ## See also
 
-- [CSS pseudo elements](/en-US/docs/Web/CSS/CSS_pseudo) module
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors) module
+- [CSS pseudo elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
-- [Templates: Styling outside of the current scope](https://web.dev/learn/html/template/#styling-outside-of-the-current-scope) on web.dev (2023)
+- [Templates: Styling outside of the current scope](https://web.dev/learn/html/template/#styling_outside_of_the_current_scope) on web.dev (2023)

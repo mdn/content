@@ -18,7 +18,7 @@ We create an HTML file, with meta data in the head and a static web page contain
 
 To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web), an introduction to web development series.
 
-In the next sections, we'll set up a [local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) and take a look at our progress before adding [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert the static content created in this section into a functional web application. Once we have a functioning app will we have something that we can progressively enhance into a PWA that is installable and works offline.
+In the next sections, we'll set up a [local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) and take a look at our progress before adding [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert the static content created in this section into a functional web application. Once we have a functioning app we will have something that we can progressively enhance into a PWA that is installable and works offline.
 
 ## Static web content
 
@@ -34,6 +34,7 @@ Our static site HTML, with placeholder {{HTMLElement("link")}} and {{HTMLElement
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Period tracker</h1>
     <form>
       <fieldset>
         <legend>Enter your period start and end date</legend>
@@ -60,7 +61,7 @@ Copy this HTML and save it in a file called `index.html`.
 
 ## HTML content
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading thru this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`styles.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading through this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`styles.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
@@ -79,7 +80,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 ### Document head
 
-The {{HTMLelement("head")}} contains machine-readable information about the web application that, with the exception of the `<title>`, which may be displayed as the heading of the browser tab, is not visible to the user.
+The {{HTMLelement("head")}} contains machine-readable information about the web application that's not visible to readers except for the `<title>`, which is displayed as the heading of the browser tab.
 
 The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
@@ -106,7 +107,7 @@ For right now, the last component we include in the `<head>` is a {{HTMLelement(
 <link rel="stylesheet" href="style.css" />
 ```
 
-The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute – and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
+The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute—and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
 
 We will revisit the `<link>` element and its `rel` attribute in a future section when we include the [link to the manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) file.
 
@@ -114,7 +115,7 @@ We will revisit the `<link>` element and its `rel` attribute in a future section
 
 The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the app as a level-1 heading using [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
 
 ```html
 <body>
@@ -135,7 +136,7 @@ Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLeleme
 </form>
 ```
 
-The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidetally submitting an incomplete form.
+The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidentally submitting an incomplete form.
 
 To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
 
@@ -144,7 +145,7 @@ To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-U
 <input type="date" id="start-date" required />
 ```
 
-Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}}) elements, each with a date picker for the start and end dates of the menstrual cycle currently being entered, along with the date pickers' associated {{HTMLelement("label")}}s. We also include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
+Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}} elements), each with a date picker for the start and end dates of the menstrual cycle currently being entered, along with the date pickers' associated {{HTMLelement("label")}}s. We also include a {{HTMLelement("button")}} element which submits the form; we label it "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
 
 ```html
 <form>
@@ -189,7 +190,7 @@ For the time being, we temporarily hardcode some content within this `<section>`
 </section>
 ```
 
-This content, other than the container `<section id="past-periods"></section>`, is temporary. We will remove or comment-out this temporary data once we [complete the CSS](#css-content) and are satisfied with the app's appearance.
+This content, other than the container `<section id="past-periods"></section>`, is temporary. We will remove or comment-out this temporary data once we [complete the CSS](#css_content) and are satisfied with the app's appearance.
 
 ### JavaScript link
 
@@ -199,9 +200,9 @@ Before closing the `</body>`, we include a link to the yet-to-be-written `app.js
 <script src="app.js" defer></script>
 ```
 
-The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycled within the content of the body.
+The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycles within the content of the body.
 
-The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete!
+The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete! You can open the file in your browser at this point, but you'll notice that it's quite plain. We'll fix that in the next section.
 
 ## CSS content
 
@@ -239,9 +240,9 @@ If every line is familiar to you, you can copy the above CSS, or write your own 
 
 ### CSS explained
 
-We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color, along with a thin solid border added with the {{CSSXref("border")}} property on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white (`#fff`) background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
 
-We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_Selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
+We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
 
 ```css
 body {
@@ -273,7 +274,7 @@ li {
 }
 ```
 
-We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
+We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
 
 ```css
 body {
@@ -316,7 +317,7 @@ li:nth-of-type(even) {
 }
 ```
 
-If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_Selectors), or work through the [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
+If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_selectors), or work through the [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
 
 Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
@@ -338,7 +339,7 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 ## Up next
 
-Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert this static content into web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) to view our progress.
+Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert this static content into a web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) to view our progress.
 
 Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) from GitHub.
 

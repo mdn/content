@@ -9,7 +9,7 @@ browser-compat: javascript.classes.extends
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class) to create a class that is a child of another class.
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html")}}
+{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
 
 ## Syntax
 
@@ -377,7 +377,7 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Statements/class", "class")}}

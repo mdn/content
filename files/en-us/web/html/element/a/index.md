@@ -47,6 +47,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
+    - SMS text messages with `sms:` URLs
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
 - `hreflang`
@@ -113,7 +114,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### Result
@@ -145,7 +146,7 @@ a {
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down"> Jump to the heading below </a></p>
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -328,7 +329,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
+<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
 ```
 
 If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
@@ -364,8 +365,8 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 
   <header>…</header>
 
-  <main id="content"></main>
   <!-- The skip link jumps to here -->
+  <main id="content"></main>
 </body>
 ```
 
@@ -477,9 +478,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <code>href</code> attribute is
         present, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
