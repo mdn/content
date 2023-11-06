@@ -25,9 +25,9 @@ This process only happens on sites where a Topics API feature is used (see [What
 
 Once the browser has observed some topics for a user, the Topics API can retrieve them and send them to an ad tech platform. The platform can then use those topics to personalize the ads they serve to the user. The API helps to preserve privacy by _only returning topics to an API caller that have been observed by them_ on pages visited by the current user.
 
-The API returns topics within the most recent three epochs; one for each. The topic selected for each epoch is randomly selected from the user's top five topics for that epoch.
+The API returns topics within the most recent three epochs; one for each. The topic selected for each epoch is randomly selected from the user's top five topics for that epoch. Note that the top topic for each epoch is _always_ chosen from a list of five. If there aren't five observed ("real") topics for an epoch, the list length is made up to five by adding random topics from the [entire list of available topics](#what_topics_are_there).
 
-To further enhance privacy and ensure that all topics may be represented, there is a 5% chance that the topic for an epoch is randomly selected from all possible topics. This only occurs if there is a _real_ observed topic available for that epoch — if not, then a random topic is chosen from the [entire list of available topics](#what_topics_are_there). For example, the caller may not have had a presence on sites visited by the user during that epoch.
+Note also that, in the case of "real" observed topics, there is a 5% chance that the topic will be replaced by a random topic selected from the list of all possible topics.
 
 ## How does the Topics API work?
 
@@ -55,12 +55,12 @@ Once this is all done, the browser records a **topics history entry** for each o
 
 - A document id (i.e. an identifier for the current page)
 - Topics calculation input data (i.e. the page hostname)
-- The time (since the Unix epoch) until the page was observed
+- The time (since the Unix epoch) when the page was first observed
 - The domain(s) where the topic was observed (known as **topics caller domains**)
 
 The topics history entries are used when calculating the top topics for a user for future epochs.
 
-> **Note:** For each topics history entry, a caller domain is added for each caller with a presence on the page.
+> **Note:** For each topics history entry, a new caller domain is appended to the list of caller domains associated with the entry each time a new caller observes the topic.
 
 The topics for a user are calculated at the end of each epoch — by calculating the topic for each history entry (based on the topics calculation input data, i.e. the hostname of the page visit) and then determining the top topics for the entire epoch.
 
