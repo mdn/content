@@ -41,6 +41,11 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
 
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtain a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
+
 ## Examples
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
