@@ -56,11 +56,11 @@ Once this is all done, the browser records a **topics history entry** for each o
 - A document id (i.e. an identifier for the current page)
 - Topics calculation input data (i.e. the page hostname)
 - The time (since the Unix epoch) when the page was first observed
-- The domain(s) where the topic was observed (known as **topics caller domains**)
+- The domain(s) where the topic was observed (known as **topic caller domains**)
 
 The topics history entries are used when calculating the top topics for a user for future epochs.
 
-> **Note:** For each topics history entry, a new caller domain is appended to the list of caller domains associated with the entry each time a new caller observes the topic.
+> **Note:** When a new caller is made available on a page (i.e. embedded in an `<iframe>`), its domain is appended to the list of caller domains contained within the topics history entry associated with that page.
 
 The topics for a user are calculated at the end of each epoch — by calculating the topic for each history entry (based on the topics calculation input data, i.e. the hostname of the page visit) and then determining the top topics for the entire epoch.
 
