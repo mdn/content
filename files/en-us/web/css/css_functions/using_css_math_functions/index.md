@@ -14,7 +14,7 @@ However, there are cases where we might feel limited by expressing an element's 
 
 1. We want to set the height of a content area to be "the height of the viewport minus the height of a navbar."
 2. We want to add the width of two elements together to define the width of a third element.
-3. We want to prevent a variable font-size of some text from growing beyond a certain size.
+3. We want to prevent a variable `font-size` of some text from growing beyond a certain size.
 
 In all of these cases, we need to rely on math to achieve the desired outcomes. One solution could be to rely on mathematical functions defined by JavaScript, and dynamically set element styles based on results calculated by our scripts.
 
@@ -34,7 +34,58 @@ The `calc()` math function takes a mathematical expression as a parameter and re
 property: calc(expression);
 ```
 
-{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+### `calc()` Example
+
+You can play with the example below to try out `calc()` for yourself:
+
+```html hidden
+<div class="calc1">
+  <code>width: calc(10px + 100px);</code>
+</div>
+<div class="calc2">
+  <code>width: calc(2em * 5);</code>
+</div>
+<div class="calc3">
+  <code>width: calc(100% - 32px);</code>
+</div>
+<div class="calc4">
+  <code>width: calc(var(--predefined-width) - calc(16px * 2));</code>
+</div>
+```
+
+```css
+div {
+  background-color: black;
+  margin: 4px 0;
+  width: 100%;
+}
+
+div > code {
+  display: block;
+  background-color: red;
+  color: white;
+  height: 48px;
+}
+
+.calc1 > code {
+  width: calc(10px + 100px);
+}
+
+.calc2 > code {
+  width: calc(2em * 5);
+}
+
+.calc3 > code {
+  width: calc(100% - 32px);
+}
+
+.calc4 > code {
+  --predefined-width: 100%;
+  width: calc(var(--predefined-width) - calc(16px * 2));
+}
+```
+
+{{EmbedLiveSample('calc_Example', '100%', 212) }}
 
 ## `min()`: Finding the minimum value in a set
 
@@ -48,7 +99,57 @@ property: min(<first value>, <second value>, <third value>, ...);
 
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
 
-{{EmbedInteractiveExample("pages/css/function-min-01.html")}}
+### `min()` Example
+
+You can play with the example below to try out `min()` for yourself:
+
+```html hidden
+<div class="min1">
+  <code>width: min(99999999px, 50%);</code>
+</div>
+<div class="min2">
+  <code>width: min(99999999px, 100%);</code>
+</div>
+<div class="min3">
+  <code>width: min(120px, 150px, 90%);</code>
+</div>
+<div class="min4">
+  <code>width: min(80px, 90%);</code>
+</div>
+```
+
+```css
+div {
+  background-color: black;
+  margin: 4px 0;
+  width: 100%;
+}
+
+div > code {
+  display: block;
+  background-color: darkblue;
+  color: white;
+  height: 48px;
+}
+
+.min1 > code {
+  width: min(99999999px, 50%);
+}
+
+.min2 > code {
+  width: min(99999999px, 100%);
+}
+
+.min3 > code {
+  width: min(120px, 150px, 90%);
+}
+
+.min4 > code {
+  width: min(80px, 90%);
+}
+```
+
+{{EmbedLiveSample('min_Example', '100%', 212) }}
 
 ## `max()`: Finding the maximum value in a set
 
@@ -64,7 +165,58 @@ This function is often used to compare two CSS values that have different units,
 
 Notice the similarities and differences between the examples for `min()` and `max()`.
 
-{{EmbedInteractiveExample("pages/css/function-max-01.html")}}
+### `max()` Example
+
+You can play with the example below to try out `max()` for yourself:
+
+```html hidden
+<div class="max1">
+  <code>width: max(50px, 50%);</code>
+</div>
+<div class="max2">
+  <code>width: max(50px, 100%);</code>
+</div>
+<div class="max3">
+  <code>width: max(20px, 50px, 90%);</code>
+</div>
+<div class="max4">
+  <code>width: max(80px, 80%);</code>
+</div>
+```
+
+```css
+div {
+  background-color: black;
+  margin: 4px 0;
+  width: 100%;
+  height: 48px;
+}
+
+div > code {
+  display: block;
+  background-color: darkmagenta;
+  color: white;
+  height: 48px;
+}
+
+.max1 > code {
+  width: max(50px, 50%);
+}
+
+.max2 > code {
+  width: max(50px, 100%);
+}
+
+.max3 > code {
+  width: max(20px, 50px, 90%);
+}
+
+.max4 > code {
+  width: max(80px, 80%);
+}
+```
+
+{{EmbedLiveSample('max_Example', '100%', 212) }}
 
 ## `clamp()`: Constraining a value between two values
 
@@ -76,7 +228,58 @@ property: clamp(<minimum value>, <value to be clamped>, <maximum value>);
 
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
 
-{{EmbedInteractiveExample("pages/css/function-clamp-01.html")}}
+### `clamp()` Example
+
+You can play with the example below to try out `clamp()` for yourself:
+
+```html hidden
+<div class="clamp1">
+  <code>width: clamp(10%, 1px, 90%);</code>
+</div>
+<div class="clamp2">
+  <code>width: clamp(10%, 9999999px, 90%);</code>
+</div>
+<div class="clamp3">
+  <code>width: clamp(25px, 1px, 150px);</code>
+</div>
+<div class="clamp4">
+  <code>width: clamp(25px, 999999px, 150px);</code>
+</div>
+```
+
+```css
+div {
+  background-color: black;
+  margin: 4px 0;
+  width: 100%;
+  height: 48px;
+}
+
+div > code {
+  display: block;
+  background-color: darkgreen;
+  color: white;
+  height: 48px;
+}
+
+.clamp1 > code {
+  width: clamp(20%, 1px, 80%);
+}
+
+.clamp2 > code {
+  width: clamp(10%, 9999999px, 90%);
+}
+
+.clamp3 > code {
+  width: clamp(125px, 1px, 250px);
+}
+
+.clamp4 > code {
+  width: clamp(25px, 999999px, 150px);
+}
+```
+
+{{EmbedLiveSample('clamp_Example', '100%', 212) }}
 
 ## Advanced CSS Math Functions
 
