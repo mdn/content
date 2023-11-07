@@ -62,9 +62,9 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### Other
 
-- Fixed a bug that caused background pages to fail to start when a manifest.json `background` key contained `service_worker` and `scripts` declarations ([Firefox bug 1860304](https://bugzil.la/1860304)).
+- Fixed a bug that resulted in background pages not starting when a manifest.json `background` key contains `service_worker` and `scripts` declarations ([Firefox bug 1860304](https://bugzil.la/1860304)).
 
-  > NOTE: Incidentally, Chrome 121 ignores the `scripts` key when specified with the `service_worker` key, instead of refusing to load the extension ([Chromium bug 1418934](https://crbug.com/1418934)).
+  > **Note:** Incidentally, a change in Chrome 121 sees the `scripts` property ignored when specified with the `service_worker` property. Previously, Chrome refused to load extensions containing both properties ([Chromium bug 1418934](https://crbug.com/1418934)).
 
 ## Older versions
 

@@ -34,7 +34,7 @@ browser-compat: webextensions.manifest.background
   </tbody>
 </table>
 
-Use the `background` key to include one or more background scripts or a background page in your extension.
+Use the `background` key to include one or more background scripts, a background page, or a Service worker in your extension.
 
 Background scripts are the place to put code that needs to maintain a long-term state, or perform long-term operations, independently of the lifetime of any particular web pages or browser windows.
 
@@ -46,6 +46,22 @@ The `background` key is an object that must have one of these properties:
 
 <table class="standard-table">
   <tbody>
+    <tr>
+      <td><code>page</code></td>
+      <td>
+        <p>
+          If you need specific content in the background page, you can define a
+          page using the <code>page</code> property. This is a
+          <code>String</code> representing a path, relative to the manifest.json
+          file, to an HTML document included in your extension bundle.
+        </p>
+        <p>
+          If you use this property, you can not specify background scripts using
+          <code>scripts</code>, but you can include scripts from the
+          page, just like a normal web page.
+        </p>
+      </td>
+    </tr>
     <tr>
       <td><code>scripts</code></td>
       <td>
@@ -78,26 +94,36 @@ The `background` key is an object that must have one of these properties:
             key in the manifest.json file of your extension.
           </p>
         </div>
+        <p>
+          See the note following the table regarding browser support.
+        </p>
       </td>
     </tr>
     <tr>
-      <td><code>page</code></td>
+      <td><code>service_worker</code></td>
       <td>
         <p>
-          If you need specific content in the background page, you can define a
-          page using the <code>page</code> property. This is a
-          <code>String</code> representing a path, relative to the manifest.json
-          file, to an HTML document included in your extension bundle.
+          Specify a JavaScript file as the extension service worker. A service worker is a background script that acts as the extension's main event handler.
         </p>
         <p>
-          If you use this property, you can not specify background scripts using
-          <code>scripts</code>, but you can include scripts from the
-          page, just like a normal web page.
+          See the note following the table regarding browser support.
         </p>
       </td>
     </tr>
   </tbody>
 </table>
+
+> **Note:** Support for the `scripts` and `service_workers` properties varies between browsers like this.
+>
+> - Chrome:
+>   - supports `background.service_worker`.
+>   - before Chrome 121, Chrome refuses to load an extension that has `background.scripts` present. From Chrome 121, Chrome loads these extensions and ignores `background.scripts`.
+> - Safari:
+>   - supports `background.service_worker`.
+>   - supports `background.scripts`, if `service_worker` is not specified.
+> - Firefox:
+>   - supports `background.service_worker` if the service worker feature is enabled. However, this feature is affected by [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1775618#c1).
+>   - supports `background.scripts`, if `service_worker` is not specified or the service worker feature is disabled.
 
 The `background` key can also contain this optional property:
 
