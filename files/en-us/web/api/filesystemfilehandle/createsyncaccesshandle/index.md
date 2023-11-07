@@ -32,7 +32,7 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemSyncAccessHandl
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `readwrite` mode.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `granted` in `readwrite` mode.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref('FileSystemSyncAccessHandle')}} object does not represent a file in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system).
 - `NotFoundError` {{domxref("DOMException")}}

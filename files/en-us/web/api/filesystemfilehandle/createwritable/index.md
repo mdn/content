@@ -45,7 +45,7 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemWritableFileStr
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the browser is not able to acquire a lock on the file associated with the file handle.
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if implementation-defined malware scans and safe browsing checks fails.
+  - : Thrown if implementation-defined malware scans and safe-browsing checks fails.
 
 ## Examples
 
