@@ -1,8 +1,10 @@
 ---
 title: Synchronous and asynchronous requests
-slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 page-type: guide
 ---
+
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 {{domxref('XMLHttpRequest')}} supports both synchronous and asynchronous communications. In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
 

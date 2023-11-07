@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.send
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`send()`** sends the request to the server.

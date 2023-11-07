@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`set()`** method of the {{domxref("FormData")}} interface sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 

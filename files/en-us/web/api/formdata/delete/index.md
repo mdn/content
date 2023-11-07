@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.delete
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key and its value(s) from a `FormData` object.
 

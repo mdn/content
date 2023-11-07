@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.abort
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`XMLHttpRequest.abort()`** method aborts the request if
 it has already been sent. When a request is aborted, its

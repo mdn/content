@@ -1,11 +1,11 @@
 ---
-title: XMLHttpRequest
-slug: Web/API/XMLHttpRequest
-page-type: web-api-interface
+title: XMLHttpRequest API
+slug: Web/API/XMLHttpRequest_API
+page-type: web-api-overview
 browser-compat: api.XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 `XMLHttpRequest` (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
 

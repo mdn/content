@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`getAllResponseHeaders()`** returns all the response

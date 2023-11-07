@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.FormData.FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
 

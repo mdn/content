@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.getAll
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`getAll()`** method of the {{domxref("FormData")}} interface returns all the values associated with a given key from within a `FormData` object.
 

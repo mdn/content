@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
 **`getResponseHeader()`** returns the string containing the

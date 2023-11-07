@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`XMLHttpRequest()`** constructor
 creates a new {{domxref("XMLHttpRequest")}}.

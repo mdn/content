@@ -1,8 +1,10 @@
 ---
 title: Sending and Receiving Binary Data
-slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
+slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 page-type: guide
 ---
+
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
@@ -103,6 +105,4 @@ This is building a 512-byte array of 8-bit integers and sending it; you can use 
 
 ## Submitting forms and uploading files
 
-Please, read [FormData](/en-US/docs/Web/API/FormData).
-
-{{APIRef("XMLHttpRequest")}}
+See [FormData](/en-US/docs/Web/API/FormData).
