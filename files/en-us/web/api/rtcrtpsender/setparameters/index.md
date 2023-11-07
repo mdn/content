@@ -60,7 +60,9 @@ setParameters(parameters)
           - : A string indicating the priority of the {{domxref("RTCRtpSender")}}, which may determine how the user agent allocates bandwidth between senders.
             Allowed values are `very-low`, `low` (default), `medium`, `high`.
         - `rid`
-          - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension. This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}. Its value can only be set when the transceiver is first created.
+          - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension.
+            This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}.
+            Its value can only be set when the transceiver is first created.
         - `rtx` {{Non-standard_Inline}}
           - : TBD
         - `scaleResolutionDownBy`
