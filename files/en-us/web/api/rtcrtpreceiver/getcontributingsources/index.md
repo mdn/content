@@ -23,8 +23,7 @@ None.
 ### Return value
 
 An array of objects, each describing one of the contributing sources that provided data to the incoming stream in the past ten seconds.
-
-Each array objects may have the following properties:
+These objects contain the following properties:
 
 - `audioLevel` {{optional_inline}}
 
@@ -34,7 +33,7 @@ Each array objects may have the following properties:
     This is the amplitude relative to the point at which clipping of the audio begins to occur.
     A value of 1.0 represents 0 dBov (maximum volume), a value of 0.0 represents silence, and a value of 0.5 represents approximately 6 dB SPL (decibels of sound pressure level) change in the sound pressure level from 0 dBov.
 
-    If this property is not present then no volume level was provided by the source
+    If this property is not present then no volume level was provided by the source.
 
 - `rtpTimestamp` {{optional_inline}}
 
