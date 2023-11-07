@@ -54,7 +54,12 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 
 ## Instance methods
 
-_The `WorkerNavigator` interface neither inherits nor implements any method._
+_The `WorkerNavigator` interface doesn't inherit any method._
+
+- {{domxref("Navigator.clearAppBadge()")}}
+  - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.setAppBadge()")}}
+  - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Specifications
 
