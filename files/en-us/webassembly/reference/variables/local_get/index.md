@@ -1,6 +1,7 @@
 ---
 title: Local get
 slug: WebAssembly/Reference/Variables/Local_get
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

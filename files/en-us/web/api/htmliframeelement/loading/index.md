@@ -25,6 +25,12 @@ The possible values are:
 
 ## Usage notes
 
+### JavaScript must be enabled
+
+Loading is only deferred when JavaScript is enabled, irrespective of the value of this property.
+
+This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing iframes in a page's markup such that a server can track how many are requested and when.
+
 ### Timing of the load event
 
 The {{domxref("Window.load_event", "load")}} event is fired when the document has been fully processed.
