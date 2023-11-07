@@ -19,7 +19,7 @@ new PictureInPictureEvent(type, options)
 ### Parameters
 
 - `type`
-  - : A string representing the name of the event. It is case-sensitive and browsers set it to `enterpictureinpicture`, `leavepictureinpicture` or `resize`.
+  - : A string representing the name of the event. It is case-sensitive and browsers set it to `enterpictureinpicture`, `leavepictureinpicture`, or `resize`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `pictureInPictureWindow`
