@@ -20,7 +20,7 @@ The central interface in the XMLHttpRequest API is {{domxref("XMLHttpRequest")}}
 
 1. Create a new `XMLHttpRequest` instance by calling its {{domxref("XMLHttpRequest.XMLHttpRequest", "constructor", "", "nocode")}}.
 2. Initialize it by calling {{domxref("XMLHttpRequest.open()")}}. At this point you provide the URL for the request, the [HTTP method](/en-US/docs/Web/HTTP/Methods) to use, and optionally, a username and password.
-3. Attach event handlers to get the result of the request. For example, the {{domxref("XMLHttpRequest.load_event", "load")}} event fires when the request has successfully completed, and the {{domxref("XMLHttpRequest.error_event", "error")}} event fires in various error conditions.
+3. Attach event handlers to get the result of the request. For example, the {{domxref("XMLHttpRequest.load_event", "load")}} event is fired when the request has successfully completed, and the {{domxref("XMLHttpRequest.error_event", "error")}} event is fired in various error conditions.
 4. Send the request by calling {{domxref("XMLHttpRequest.send()")}}.
 
 For an in-depth guide to XMLHttpRequest, see [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
