@@ -3,112 +3,106 @@ title: XMLHttpRequest API
 slug: Web/API/XMLHttpRequest_API
 page-type: web-api-overview
 browser-compat: api.XMLHttpRequest
+spec-urls: https://xhr.spec.whatwg.org/
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
 
-`XMLHttpRequest` (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
-
-`XMLHttpRequest` is used heavily in [AJAX](/en-US/docs/Web/Guide/AJAX) programming.
-
-{{InheritanceDiagram}}
-
-Despite its name, `XMLHttpRequest` can be used to retrieve any type of data, not just XML.
-
-If your communication needs to involve receiving event data or message data from a server, consider using [server-sent events](/en-US/docs/Web/API/Server-sent_events) through the {{domxref("EventSource")}} interface. For full-duplex communication, [WebSockets](/en-US/docs/Web/API/WebSockets_API) may be a better choice.
-
 {{AvailableInWorkers("notservice")}}
 
-## Constructor
+The XMLHttpRequest API enables web apps to make HTTP requests to web servers and receive the responses programmatically using JavaScript. This in turn enables a website to update just part of a page with data from the server, rather than having to navigate to a whole new page. This practice is also sometimes known as {{glossary("Ajax")}}.
 
-- {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
-  - : The constructor initializes an `XMLHttpRequest`. It must be called before any other method calls.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) is the more flexible and powerful replacement for XMLHttpRequest. The Fetch API uses {{jsxref("Promise", "promises", "", "nocode")}} instead of events to handle asynchronous responses, integrates well with [service workers](/en-US/docs/Web/API/Service_Worker_API), and supports advanced aspects of HTTP such as [CORS](/en-US/docs/Web/HTTP/CORS). For these reasons and more, the Fetch API is usually used in modern web apps instead of XMLHttpRequest.
 
-## Instance properties
+## Concepts and usage
 
-_This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget")}} and of {{domxref("EventTarget")}}._
+The central interface in the XMLHttpRequest API is {{domxref("XMLHttpRequest")}}. To make an HTTP request:
 
-- {{domxref("XMLHttpRequest.readyState")}} {{ReadOnlyInline}}
-  - : Returns a number representing the state of the request.
-- {{domxref("XMLHttpRequest.response")}} {{ReadOnlyInline}}
-  - : Returns an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}}, a JavaScript object, or a string, depending on the value of {{domxref("XMLHttpRequest.responseType")}}, that contains the response entity body.
-- {{domxref("XMLHttpRequest.responseText")}} {{ReadOnlyInline}}
-  - : Returns a string that contains the response to the request as text, or `null` if the request was unsuccessful or has not yet been sent.
-- {{domxref("XMLHttpRequest.responseType")}}
-  - : Specifies the type of the response.
-- {{domxref("XMLHttpRequest.responseURL")}} {{ReadOnlyInline}}
-  - : Returns the serialized URL of the response or the empty string if the URL is null.
-- {{domxref("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Document")}} containing the response to the request, or `null` if the request was unsuccessful, has not yet been sent, or cannot be parsed as XML or HTML. Not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-- {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
-  - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Status) of the request.
-- {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
+1. Create a new `XMLHttpRequest` instance by calling its {{domxref("XMLHttpRequest.XMLHttpRequest", "constructor", "", "nocode")}}.
+2. Initialize it by calling {{domxref("XMLHttpRequest.open()")}}. At this point you provide the URL for the request, the [HTTP method](/en-US/docs/Web/HTTP/Methods) to use, and optionally, a username and password.
+3. Attach event handlers to get the result of the request. For example, the {{domxref("XMLHttpRequest.load_event", "load")}} event fires when the request has successfully completed, and the {{domxref("XMLHttpRequest.error_event", "error")}} event fires in various error conditions.
+4. Send the request by calling {{domxref("XMLHttpRequest.send()")}}.
 
-  - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
+For an in-depth guide to XMLHttpRequest, see [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
-    > **Note:** According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
+## Interfaces
 
-- {{domxref("XMLHttpRequest.timeout")}}
-  - : The time in milliseconds a request can take before automatically being terminated.
-- {{domxref("XMLHttpRequest.upload")}} {{ReadOnlyInline}}
-  - : A {{domxref("XMLHttpRequestUpload")}} representing the upload process.
-- {{domxref("XMLHttpRequest.withCredentials")}}
-  - : Returns `true` if cross-site `Access-Control` requests should be made using credentials such as cookies or authorization headers; otherwise `false`.
+- {{domxref("FormData")}}
+  - : An object representing {{htmlelement("form")}} fields and their values, which can be sent to a server using {{domxref("XMLHttpRequest")}} or {{domxref("fetch()")}}.
+- {{domxref("ProgressEvent")}}
+  - : A subclass of {{domxref("Event")}} which is passed into the {{domxref("XMLHttpRequest.progress_event", "progress")}}, and which contains information about how much of the request has been completed.
+- {{domxref("XMLHttpRequest")}}
+  - : Represents a single HTTP request.
+- {{domxref("XMLHttpRequestEventTarget")}}
+  - : A superclass of both {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}, defining the events that are available in both of those interfaces.
+- {{domxref("XMLHttpRequestUpload")}}
+  - : Represents the upload process for an HTTP upload. Provides events enabling code to track the progress of an upload.
 
-### Non-standard properties
+## Examples
 
-- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
-  - : The channel used by the object when performing the request.
-- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
-  - : A boolean. If true, the request will be sent without cookie and authentication headers.
-- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
-  - : A boolean. If true, the same origin policy will not be enforced on the request.
-- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : A boolean. It indicates whether or not the object represents a background service request.
+### Fetching JSON data from the server
 
-## Instance methods
+In this example we fetch a JSON file from https://raw.githubusercontent.com/, adding event listeners to show the progress of the event.
 
-- {{domxref("XMLHttpRequest.abort()")}}
-  - : Aborts the request if it has already been sent.
-- {{domxref("XMLHttpRequest.getAllResponseHeaders()")}}
-  - : Returns all the response headers, separated by {{Glossary("CRLF")}}, as a string, or `null` if no response has been received.
-- {{domxref("XMLHttpRequest.getResponseHeader()")}}
-  - : Returns the string containing the text of the specified header, or `null` if either the response has not yet been received or the header doesn't exist in the response.
-- {{domxref("XMLHttpRequest.open()")}}
-  - : Initializes a request.
-- {{domxref("XMLHttpRequest.overrideMimeType()")}}
-  - : Overrides the MIME type returned by the server.
-- {{domxref("XMLHttpRequest.send()")}}
-  - : Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
-- {{domxref("XMLHttpRequest.setRequestHeader()")}}
-  - : Sets the value of an HTTP request header. You must call `setRequestHeader()` after {{domxref("XMLHttpRequest.open", "open()")}}, but before {{domxref("XMLHttpRequest.send", "send()")}}.
+#### HTML
 
-## Events
+```html
+<div class="controls">
+  <button class="xhr" type="button">Click to start XHR</button>
+</div>
 
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-  - : Fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
-    Also available via the `onabort` event handler property.
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-  - : Fired when the request encountered an error.
-    Also available via the `onerror` event handler property.
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-  - : Fired when an `XMLHttpRequest` transaction completes successfully.
-    Also available via the `onload` event handler property.
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-  - : Fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
-    Also available via the `onloadend` event handler property.
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-  - : Fired when a request has started to load data.
-    Also available via the `onloadstart` event handler property.
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-  - : Fired periodically when a request receives more data.
-    Also available via the `onprogress` event handler property.
-- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
-  - : Fired whenever the {{domxref("XMLHttpRequest.readyState", "readyState")}} property changes.
-    Also available via the `onreadystatechange` event handler property.
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
-  - : Fired when progress is terminated due to preset time expiring.
-    Also available via the `ontimeout` event handler property.
+<textarea readonly class="event-log"></textarea>
+```
+
+```css hidden
+.event-log {
+  width: 25rem;
+  height: 5rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+button {
+  width: 12rem;
+  margin: 0.5rem;
+}
+```
+
+#### JavaScript
+
+```js
+const xhrButton = document.querySelector(".xhr");
+const log = document.querySelector(".event-log");
+const url =
+  "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json";
+
+function handleEvent(e) {
+  log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+}
+
+function addListeners(xhr) {
+  xhr.addEventListener("loadstart", handleEvent);
+  xhr.addEventListener("load", handleEvent);
+  xhr.addEventListener("loadend", handleEvent);
+  xhr.addEventListener("progress", handleEvent);
+  xhr.addEventListener("error", handleEvent);
+  xhr.addEventListener("abort", handleEvent);
+}
+
+xhrButton.addEventListener("click", () => {
+  log.textContent = "";
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+  addListeners(xhr);
+  xhr.send();
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Fetching JSON data from the server")}}
 
 ## Specifications
 
@@ -120,12 +114,4 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
 ## See also
 
-- {{domxref("XMLSerializer")}}: Serializing a DOM tree into XML
-- MDN tutorials covering `XMLHttpRequest`:
-
-  - [Ajax](/en-US/docs/Web/Guide/AJAX)
-  - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-
-- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/articles/xhr2)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
