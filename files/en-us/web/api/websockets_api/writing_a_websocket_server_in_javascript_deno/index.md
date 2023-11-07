@@ -1,6 +1,7 @@
 ---
 title: Writing a WebSocket server in JavaScript (Deno)
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Websockets API")}}

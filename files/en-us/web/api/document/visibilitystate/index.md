@@ -9,12 +9,15 @@ browser-compat: api.Document.visibilityState
 {{ApiRef("DOM")}}
 
 The **`Document.visibilityState`**
-read-only property returns the visibility of the {{domxref('document')}}, that is in
-which context this element is now visible. It is useful to know if the document is in
-the background or an invisible tab, or only loaded for pre-rendering.
+read-only property returns the visibility of the document. It can be used to check whether the document is in the background or in a minimized window, or is otherwise not visible to the user.
 
-Possible
-values are:
+When the value of this property changes, the {{domxref("Document/visibilitychange_event", "visibilitychange")}} event is sent to the {{domxref("Document")}}.
+
+The {{domxref("Document.hidden")}} property provides an alternative way to determine whether the page is hidden.
+
+## Value
+
+A string with one of the following values:
 
 - `visible`
   - : The page content may be at least partially visible. In practice this means that the
@@ -23,20 +26,6 @@ values are:
   - : The page content is not visible to the user. In practice this means that the
     document is either a background tab or part of a minimized window, or the OS screen
     lock is active.
-
-When the value of this property changes, the
-{{domxref("Document/visibilitychange_event", "visibilitychange")}} event is sent to the
-{{domxref("Document")}}.
-
-Typical use of this can be to prevent the download of some assets when the document is
-solely prerendered, or stop some activities when the document is in the background or
-minimized.
-
-## Syntax
-
-```js-nolint
-document.visibilityState
-```
 
 ## Examples
 
@@ -54,3 +43,7 @@ document.addEventListener("visibilitychange", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.hidden")}}

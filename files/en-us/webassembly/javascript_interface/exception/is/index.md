@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Exception.prototype.is()
 slug: WebAssembly/JavaScript_interface/Exception/is
+page-type: webassembly-instance-method
 browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
 

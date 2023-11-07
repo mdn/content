@@ -165,5 +165,5 @@ Related articles on MDN:
 
 External resources:
 
-- [Simple intersection tests for games](https://www.gamasutra.com/view/feature/3383/simple_intersection_tests_for_games.php) on Gamasutra
+- [Simple intersection tests for games](https://www.gamedeveloper.com/disciplines/simple-intersection-tests-for-games) on Game Developer
 - [Bounding volume](https://en.wikipedia.org/wiki/Bounding_volume) on Wikipedia

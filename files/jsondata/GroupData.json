@@ -2027,7 +2027,6 @@
       ],
       "dictionaries": [
         "RTCOAuthCredential",
-        "RTCIceServer",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",
@@ -2221,7 +2220,7 @@
         "USBOutTransferResult"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.usb", "WorkerNavigator.usb"],
       "events": []
     },
     "WebVR API": {
@@ -2318,6 +2317,17 @@
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
+    },
+    "Window Management API": {
+      "overview": ["Window Management API"],
+      "guides": [
+        "/docs/Web/API/Window_Management_API/Using",
+        "/docs/Web/API/Window_Management_API/Multi-screen_origin"
+      ],
+      "interfaces": ["ScreenDetails", "ScreenDetailed"],
+      "methods": ["Element.requestFullscreen()", "Window.getScreenDetails()"],
+      "properties": ["Screen.isExtended"],
+      "events": ["Screen: change"]
     },
     "XMLHttpRequest": {
       "overview": ["XMLHttpRequest"],
