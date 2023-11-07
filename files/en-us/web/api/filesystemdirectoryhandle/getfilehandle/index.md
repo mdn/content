@@ -48,7 +48,7 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the named entry is a directory and not a file.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if current entry is not found or if the file doesn't exist and the `create` option is set to
+  - : Thrown if the current entry is not found or if the file doesn't exist and the `create` option is set to
     `false`.
 
 ## Examples
