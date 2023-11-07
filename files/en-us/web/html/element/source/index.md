@@ -84,10 +84,10 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The list consists of strings separated by commas, indicating a set of possible images for the browser to use. Each string is composed of:
 
     - A URL specifying an image location.
-    - An optional width descriptor—a positive integer directly followed by `"w"`, such as `300w`. If not specified, the value used by default is `infinity`.
-    - An optional pixel density descriptor—a positive floating number directly followed by `"x"`, such as `2x`. If not specified, the value used by default is `1x`.
+    - An optional width descriptor—a positive integer directly followed by `"w"`, such as `300w`.
+    - An optional pixel density descriptor—a positive floating number directly followed by `"x"`, such as `2x`.
 
-    Each string in the list must have either a width descriptor or a pixel density descriptor to be valid. These two descriptors should not be used together; only one should be used consistently throughout the list. The value of each descriptor in the list must be unique. The browser chooses the most adequate image to display at a given point of time based on these descriptors. If the `sizes` attribute is also present, then each string must include a width descriptor. If the browser does not support `srcset`, then `src` will be used for the default image source.
+    Each string in the list must have either a width descriptor or a pixel density descriptor to be valid. These two descriptors should not be used together; only one should be used consistently throughout the list. The value of each descriptor in the list must be unique. The browser chooses the most adequate image to display at a given point of time based on these descriptors. If the descriptors are not specified, the default value used is `1x`. If the `sizes` attribute is also present, then each string must include a width descriptor. If the browser does not support `srcset`, then `src` will be used for the default image source.
 
 - `sizes`
 
