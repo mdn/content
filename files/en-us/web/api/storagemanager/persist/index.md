@@ -27,7 +27,7 @@ A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
 ### Exceptions
 
 - `TypeError`
-  - : Thrown if obtain a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Example
 
