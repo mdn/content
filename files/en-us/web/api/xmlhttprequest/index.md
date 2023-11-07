@@ -125,7 +125,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
   - [Ajax](/en-US/docs/Web/Guide/AJAX)
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest):
 
   - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/en-US/docs/Web/API/Fetch_API)
