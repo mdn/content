@@ -105,4 +105,4 @@ This is building a 512-byte array of 8-bit integers and sending it; you can use 
 
 ## Submitting forms and uploading files
 
-See [FormData](/en-US/docs/Web/API/FormData).
+See [`FormData`](/en-US/docs/Web/API/FormData).
