@@ -31,8 +31,8 @@ addTransceiver(trackOrKind, init)
     - `direction` {{optional_inline}}
       - : The new transceiver's preferred directionality. This value is used to initialize the new {{domxref("RTCRtpTransceiver")}} object's {{domxref("RTCRtpTransceiver.direction")}} property.
     - `sendEncodings` {{optional_inline}}
-      - : A list of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}.
-        Each entry is of type {{domxref("RTCRtpEncodingParameters")}}.
+      - : An array of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}.
+        This is the same as the [`parameter.encodings`](/en-US/docs/Web/API/RTCRtpSender/setParameters#encodings) array passed to {{domxref("RTCRtpSender.setParameters()")}}.
     - `streams` {{optional_inline}}
       - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.track_event", "track")}} event occurs, these are the streams that will be specified by that event.
 
