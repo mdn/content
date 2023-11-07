@@ -87,6 +87,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the window that opened this current window.
 - {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}}
+  - : Returns true if this window belongs to an agent cluster which is origin-keyed.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
 - {{domxref("Window.outerWidth")}} {{ReadOnlyInline}}
