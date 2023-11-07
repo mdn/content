@@ -30,6 +30,11 @@ A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} h
 finished exiting picture-in-picture mode. If an error occurs while attempting to exit
 fullscreen mode, the `catch()` handler for the promise is called.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `document.pictureInPictureElement` is `null`.
+
 ## Examples
 
 This example causes the current document to exit picture-in-picture mode whenever the
