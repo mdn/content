@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.getScreenDetails
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getScreenDetails()`** method of the
 {{domxref("Window")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance representing the details of all the screens available to the user's device.

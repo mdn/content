@@ -27,6 +27,13 @@ None.
 
 A new asynchronous iterator containing the handles of each entry within the `FileSystemDirectoryHandle`.
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the current entry is not found.
+
 ## Examples
 
 Use the `for await...of` loop can simplify the iteration process.
