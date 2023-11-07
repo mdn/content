@@ -9524,6 +9524,11 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpCodecCapability	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpContributingSource	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/source	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/timestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
 /en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
 /en-US/docs/Web/API/RTCRtpReceiver/getCapabilities	/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities_static
