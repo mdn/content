@@ -31,7 +31,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 ## Instance methods
 
 - {{domxref("RTCRtpReceiver.getContributingSources()")}}
-  - : Returns an array of {{domxref("RTCRtpContributingSource")}} instances for each unique CSRC (contributing source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
+  - : Returns an array that contains an object for each unique CSRC (contributing source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
 - {{domxref("RTCRtpReceiver.getParameters()")}}
   - : Returns an object that contains information about how the RTC data is to be decoded.
 - {{domxref("RTCRtpReceiver.getStats()")}}
