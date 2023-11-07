@@ -37,7 +37,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 - {{domxref("RTCRtpReceiver.getStats()")}}
   - : Returns a {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("RTCStatsReport")}} which contains statistics about the incoming streams and their dependencies.
 - {{domxref("RTCRtpReceiver.getSynchronizationSources()")}}
-  - : Returns an array including one `RTCRtpSynchronizationSource` instance for each unique SSRC (synchronization source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
+  - : Returns an array that contains an object for each unique SSRC (synchronization source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
 
 ## Specifications
 
