@@ -42,7 +42,12 @@
     "Badging API": {
       "overview": ["Badging API"],
       "interfaces": [],
-      "methods": ["Navigator.clearAppBadge()", "Navigator.setAppBadge()"],
+      "methods": [
+        "Navigator.clearAppBadge()",
+        "Navigator.setAppBadge()",
+        "WorkerNavigator.clearAppBadge()",
+        "WorkerNavigator.setAppBadge()"
+      ],
       "properties": [],
       "events": []
     },
