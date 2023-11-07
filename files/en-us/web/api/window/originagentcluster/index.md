@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Window.originAgentCluster
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
-The {{domxref("Window")}} interface's **`originAgentCluster`** property returns `true` if this Window belongs to an agent cluster which is origin-keyed, in the manner described in this section.
+The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an agent cluster which is origin-keyed, in the manner described in this section.
 
 ## Specifications
 
