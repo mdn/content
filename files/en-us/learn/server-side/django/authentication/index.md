@@ -136,9 +136,11 @@ Django provides almost everything you need to create authentication pages to han
 
 In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
 
-> **Note:** You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier. You'll almost certainly need to change the form handling code if you change your user model (an advanced topic!) but even so, you would still be able to use the stock view functions.
+> **Note:** You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.
+> You'll almost certainly need to change the form handling code if you change your user model, but even so, you would still be able to use the stock view functions.
 
-> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
+> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application.
+> However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
 
 ### Project URLs
 
