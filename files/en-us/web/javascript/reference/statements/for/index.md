@@ -181,7 +181,7 @@ for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
 The `i` variable inside the `initialization` is distinct from the `i` variable inside every iteration, including the first. So, in this example, `getI` returns 0, even though the value of `i` inside the iteration is incremented beforehand:
 
 ```js
-for (let i = 0, getI = () => i; i < 3;) {
+for (let i = 0, getI = () => i; i < 3; ) {
   i++;
   console.log(getI());
 }
