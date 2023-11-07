@@ -23,7 +23,7 @@ The `@starting-style` at rule can be used in two ways:
    }
    ```
 
-2. Nested within an existing ruleset, in which case it contains one or more declarations defining starting styles for the elements already selected by that ruleset:
+2. Nested within an existing ruleset, in which case it contains one or more declarations defining starting property values for the elements already selected by that ruleset:
 
    ```css
    selector { /* existing ruleset */
@@ -37,7 +37,7 @@ The `@starting-style` at rule can be used in two ways:
 
 ## Description
 
-To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are by default not triggered on an element's initial style update, or when its [`display`](/en-US/docs/Web/CSS/display) type changes from `none` to another type. To enable first-style transitions, `@starting-style` rules are needed. They provide starting styles for elements that do not have a previous state, defining the styles to transition from.
+To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are by default not triggered on an element's initial style update, or when its [`display`](/en-US/docs/Web/CSS/display) type changes from `none` to another value. To enable first-style transitions, `@starting-style` rules are needed. They provide starting styles for elements that do not have a previous state, defining the property values to transition from.
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the [top layer](/en-US/docs/Glossary/Top_layer) (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
@@ -54,7 +54,7 @@ Let's consider a scenario where we want to animate a [popover](/en-US/docs/Web/A
 }
 ```
 
-To specify the starting style for the popover using the first method, you include a standalone `@starting-style` block in your CSS, as shown below:
+To specify the starting values of the popover's properties that will be animated using the first method, you include a standalone `@starting-style` block in your CSS, as shown below:
 
 ```css
 @starting-style {
@@ -165,10 +165,10 @@ In this example, we want to animate two properties, [`opacity`](/en-US/docs/Web/
 
 We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two states. A starting state for the animation is included inside a `@starting-style` at-rule to enable the entry animation.
 
-However, because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden — which also means that its hidden state has [`display: none`](/en-US/docs/Web/CSS/display) set on it — some extra steps are required to ensure the animation works in both directions:
+However, because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden (with [`display: none`](/en-US/docs/Web/CSS/display)), some extra steps are required to ensure the animation works in both directions:
 
 - `display` is added to the list of transitioned elements to ensure the animated element is visible (set to `display: block` or another visible `display` value) throughout both the entry and exit animations. Without this, the exit animation would not be visible; in effect, the popover would just disappear. Note that the [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) value is also set in the shorthand to activate the animation.
-- [`overlay`](/en-US/docs/Web/CSS/overlay) is added to the list of transitioned elements to ensure that the removal of the element from the top layer is deferred until the animation has been completed. This doesn't make a huge difference for simple animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Again, `transition-behavior: allow-discrete` is required in this case for the animation to occur.
+- [`overlay`](/en-US/docs/Web/CSS/overlay) is added to the list of transitioned elements to ensure that the removal of the element from the top layer is deferred until the animation ends. This doesn't make a huge difference for simple animations such as this one, but in more complex cases, not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Again, `transition-behavior: allow-discrete` is required in this case for the animation to occur.
 
 > **Note:** We've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the popover when it opens, to provide a nice darkening animation. `[popover]:popover-open::backdrop` is used to select the backdrop when the popover is open.
 
@@ -182,7 +182,7 @@ The code renders as follows:
 
 ### Transitioning elements on DOM addition and removal
 
-This example contains a button, which when pressed, appends new elements to a {{htmlelement("section")}} container. Each element, in turn, contains a nested button, which when pressed, removes the element. This example demonstrates how to use transitions to animate elements when they are added to or removed from the DOM.
+This example contains a button which, when pressed, appends new elements to a {{htmlelement("section")}} container. Each element, in turn, contains a nested button, which when pressed, removes the element. This example demonstrates how to use transitions to animate elements when they are added to or removed from the DOM.
 
 #### HTML
 
@@ -234,7 +234,7 @@ When the "Create new column" button is clicked, the `createColumn()` function is
 We then add an event listener to the close button via {{domxref("EventTarget.addEventListener", "addEventListener")}}. Clicking the close button does two things:
 
 - Adds the `fade-out` class to the `<div>`. Adding the class triggers the exit animation set on that class.
-- Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout")}} delays the removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation has finished.
+- Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
 
 #### CSS
 

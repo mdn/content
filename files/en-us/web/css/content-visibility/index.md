@@ -40,9 +40,9 @@ content-visibility: unset;
 
 ## Animating and transitioning content-visibility
 
-[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Discrete animation generally means that the property will flip between two values `50%` through animating between the two.
+[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
-In the case of `content-visibility` however, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration. So for example:
+Discrete animation generally means that the property will flip between two values `50%` through the animation. In the case of `content-visibility`, however, the browser will flip between the two values to show the animated content for `100%` of the animation duration. So, for example:
 
 - When animating between `content-visibility` `hidden` and `visible`, the value will flip to `visible` at `0%` of the animation duration so it is visible throughout.
 - When animating between `content-visibility` `visible` and `hidden`, the value will flip to `hidden` at `100%` of the animation duration so it is visible throughout.
@@ -53,7 +53,7 @@ When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CS
 
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`.
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) provides a set of starting values for properties that you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`.
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility` when it is transitioned. This effectively enables `content-visibility` transitions.
 
 ## Formal definition
@@ -183,7 +183,7 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
   This is a <code>&lt;div&gt;</code> element that animates between
   <code>content-visibility: hidden;</code>and
   <code>content-visibility: visible;</code>. We've also animated the text color
-  to provide a smooth animation effect.
+  to create a smooth animation effect.
 </div>
 ```
 
@@ -241,7 +241,7 @@ div {
 
 #### JavaScript
 
-Finally, we use some JavaScript to apply the `.show` and `.hide` classes to the `<div>` as appropriate to apply the animations as it is toggled between shown and hidden.
+Finally, we use JavaScript to apply the `.show` and `.hide` classes to the `<div>` as appropriate to apply the animations as it is toggled between shown and hidden states.
 
 ```js
 const divElem = document.querySelector("div");

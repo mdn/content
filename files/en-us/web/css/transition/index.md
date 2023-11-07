@@ -49,6 +49,7 @@ transition:
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out allow-discrete;
+transition: 200ms linear 50ms;
 
 /* Global values */
 transition: inherit;
@@ -58,16 +59,16 @@ transition: revert-layer;
 transition: unset;
 ```
 
-The `transition` property is specified as one or more single-property transitions, separated by commas.
+The `transition` property value is specified as one of the following:
 
-Each single-property transition describes the transition that should be applied to a single property (or the special values `all` and `none`). It includes:
+- The special value `none`, which specifies that no transitions will occur on this element. This is the default value.
+- One or more single-property transitions, separated by commas.
+- One single-property transition, which is structured as described below, except that the special value `all` is used in place of a property value. This specifies that the transition will be applied to all properties that change as the element changes state.
+  > **Note:** If you exclude the property value in the single-property transition, then a value of `all` will be inferred and the specified transition will still apply to all changing properties.
 
-- zero or one value representing the property to which the transition should apply. This may be any one of:
+Each single-property transition describes the transition that should be applied to a single property. It includes:
 
-  - the keyword `none`
-  - the keyword `all`
-  - a {{cssxref("&lt;custom-ident&gt;")}} naming a CSS property.
-
+- zero or one {{cssxref("&lt;custom-ident&gt;")}} value representing the property to which the transition should apply.
 - zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use
 - zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.
 - zero or one value declaring whether to start transitions for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete):
@@ -87,7 +88,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_trans
 
 ## Examples
 
-> **Note:** See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) guide for more `transition` examples.
+> **Note:** See [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) for more `transition` examples.
 
 ### Basic example
 
@@ -150,5 +151,5 @@ See the [`overlay`](/en-US/docs/Web/CSS/overlay) page for a full working example
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
 - {{ domxref("TransitionEvent") }}

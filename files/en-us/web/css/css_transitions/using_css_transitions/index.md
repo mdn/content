@@ -280,7 +280,7 @@ Let's put all of this together into a working example.
 
 ### HTML
 
-The HTML contains a simple instruction message plus a {{htmlelement("div")}} that we will transition from `display` `none` to `block`.
+The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}} in between that we will animate from `display` `none` to `block`.
 
 ```html
 <p>
@@ -289,10 +289,17 @@ The HTML contains a simple instruction message plus a {{htmlelement("div")}} tha
 </p>
 
 <div>
-  This is a <code>&lt;div&gt;</code> element with
-  <code>display: none; opacity: 0</code> set on it initially. When it appears,
-  it transitions to <code>display: block; opacity: 1</code>. Neat, huh?
+  This is a <code>&lt;div&gt;</code> element that transitions between
+  <code>display: none; opacity: 0</code> and
+  <code>display: block; opacity: 1</code>. Neat, huh?
 </div>
+
+<p>
+  This is another paragraph to show that <code>display: none; </code> is being
+  applied and removed on the above <code>&lt;div&gt; </code>. If only its
+  <code>opacity</code> was being changed, it would always take up the space in
+  the DOM.
+</p>
 ```
 
 ### CSS
@@ -352,7 +359,7 @@ function showHide() {
 
 The code renders as follows:
 
-{{ EmbedLiveSample("Transitioning display and content-visibility", "100%", "250") }}
+{{ EmbedLiveSample("Transitioning display and content-visibility", "100%", "350") }}
 
 ## Specifications
 

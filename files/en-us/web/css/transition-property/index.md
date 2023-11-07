@@ -76,7 +76,7 @@ The CSS is as follows:
 
 ```css
 .target {
-  font-size: 20px;
+  font-size: 1.4rem;
   transition-property: opacity;
   transition-duration: 1s;
 }

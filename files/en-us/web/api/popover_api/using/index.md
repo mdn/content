@@ -303,7 +303,7 @@ See our [Popover blur background example](https://mdn.github.io/dom-examples/pop
 
 ## Animating popovers
 
-Popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree). Therefore, for popovers to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So for example:
+Popovers are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree). Therefore, for popovers to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for `100%` of the animation duration. So, for example:
 
 - When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
@@ -317,7 +317,7 @@ When animating popovers with CSS transitions, the following features are require
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule
   - : Provides a set of starting values for properties set on the popover that you want to transition from when it is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
 - [`display`](/en-US/docs/Web/CSS/display) property
-  - : Add `display` to the transitions list so that the popover will remain as `display: block` for the duration of the transition, ensuring the other transitions are visible.
+  - : Add `display` to the transitions list so that the popover will remain as `display: block` (or another visible `display` value) for the duration of the transition, ensuring the other transitions are visible.
 - [`overlay`](/en-US/docs/Web/CSS/overlay) property
   - : Include `overlay` in the transitions list to ensure the removal of the popover from the top layer is deferred until the transition completes, again ensuring the transition is visible.
 - {{cssxref("transition-behavior")}} property
@@ -404,10 +404,10 @@ The two popover properties we want to transition are [`opacity`](/en-US/docs/Web
 
 And as discussed earlier, we have:
 
-- Set a starting state for the transition inside the `@starting-style` block.
-- Added `display` to the list of transitioned elements so that the animated element is visible (set to `display: block`) throughout both the entry and exit animation. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
-- Added `overlay` to the list of transitioned elements to make sure that the removal of the element from the top layer is deferred until the animation has been completed. The effect of this may not be noticeable for basic animations such as this one, but in more complex cases, omitting this property can result in the element being removed from the overlay before the transition completes.
-- Set `allow-discrete` on both the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
+- Set a starting state for the `transition` inside the `@starting-style` block.
+- Added `display` to the list of transitioned properties so that the animated element is visible (set to `display: block`) throughout the popover's entry and exit animations. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
+- Added `overlay` to the list of transitioned properties to make sure that the removal of the element from the top layer is deferred until the animation has been completed. The effect of this may not be noticeable for basic animations such as this one, but in more complex cases, omitting this property can result in the element being removed from the overlay before the transition completes.
+- Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
 You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
 
@@ -421,7 +421,7 @@ The code renders as follows:
 
 When animating a popover with CSS keyframe animations, there are some differences to note:
 
-- You don't provide a `@starting-style`; instead, you provide the starting values (including the initial `display` value) in an explicit starting keyframe (using `0%` or `from`).
+- You don't provide a `@starting-style`; instead, you provide the starting values in an explicit starting keyframe (using `0%` or `from`). Also, include a visible `display` value.
 - You don't explicitly enable discrete animations; there is no equivalent to `allow-discrete` inside keyframes.
 - You don't need to set `overlay` inside keyframes either; the `display` animation handles the animation of the popover from shown to hidden.
 
@@ -463,13 +463,11 @@ html {
   0% {
     opacity: 0;
     transform: scaleX(0);
-    display: none;
   }
 
   100% {
     opacity: 1;
     transform: scaleX(1);
-    display: block;
   }
 }
 
@@ -477,6 +475,8 @@ html {
   0% {
     opacity: 1;
     transform: scaleX(1);
+    /* display needed on the closing animation to keep the popover visible
+       until the animation ends */
     display: block;
   }
 

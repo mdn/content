@@ -385,9 +385,9 @@ And here's the live output.
 
 ## Animating display and content-visibility
 
-Supporting browsers animate [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values `50%` through animating between the two.
+Supporting browsers animate [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values `50%` of the way through animating between the two.
 
-There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden`. In this case, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration.
+There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden` to a visible value. In this case, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration.
 
 So for example:
 
@@ -400,7 +400,7 @@ Let's put all of this together into a working example.
 
 ### HTML
 
-The HTML contains a simple instruction message plus a {{htmlelement("div")}} that we will animate from `display` `none` to `block`.
+The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}} in between that we will animate from `display` `none` to `block`.
 
 ```html
 <p>
@@ -413,6 +413,13 @@ The HTML contains a simple instruction message plus a {{htmlelement("div")}} tha
   <code>display: none; opacity: 0</code> and
   <code>display: block; opacity: 1</code>. Neat, huh?
 </div>
+
+<p>
+  This is another paragraph to show that <code>display: none; </code> is being
+  applied and removed on the above <code>&lt;div&gt; </code>. If only its
+  <code>opacity</code> was being changed, it would always take up the space in
+  the DOM.
+</p>
 ```
 
 ### CSS
@@ -429,11 +436,13 @@ div {
   border-radius: 20px;
   width: 480px;
   opacity: 0;
+  display: none;
 }
 
 /* Animation classes */
 
 div.fade-in {
+  display: block;
   animation: fade-in 0.7s ease-in forwards;
 }
 
@@ -496,7 +505,7 @@ function showHide() {
 
 The code renders as follows:
 
-{{ EmbedLiveSample("Animating display and content-visibility", "100%", "250") }}
+{{ EmbedLiveSample("Animating display and content-visibility", "100%", "350") }}
 
 ## See also
 
