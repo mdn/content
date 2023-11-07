@@ -79,5 +79,5 @@ The following events can be triggered on an upload object and used to monitor th
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequestUpload")}}

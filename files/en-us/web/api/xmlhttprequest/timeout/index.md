@@ -12,7 +12,7 @@ The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the
 
 > **Note:** You may not use a timeout for synchronous requests with an owning window.
 
-[Using a timeout with an asynchronous request](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
+[Using a timeout with an asynchronous request](/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout).
 
 ## Example
 

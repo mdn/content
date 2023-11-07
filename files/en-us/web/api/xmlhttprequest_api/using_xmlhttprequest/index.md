@@ -36,7 +36,7 @@ asynchronously or synchronously. The type of request is dictated by the optional
 {{domxref("XMLHttpRequest.open()")}} method. If this argument is `true` or
 not specified, the `XMLHttpRequest` is processed asynchronously, otherwise
 the process is handled synchronously. A detailed discussion and demonstrations of these
-two types of requests can be found on the [synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) page. You can't use synchronous requests outside web
+two types of requests can be found on the [synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) page. You can't use synchronous requests outside web
 workers as it freezes the main interface.
 
 > **Note:** The constructor `XMLHttpRequest` isn't limited to only XML documents.
@@ -70,7 +70,7 @@ There are four primary ways of analyzing this XML document:
 
 > **Note:** `XMLHttpRequest` can now interpret HTML for you
 > using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
-> article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
+> article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) to learn how to do this.
 
 ### Processing a responseText property containing an HTML document
 
@@ -80,7 +80,7 @@ containing the raw HTML. This could prove difficult to manipulate and analyze. T
 three primary ways to analyze and parse this raw HTML string:
 
 1. Use the `XMLHttpRequest.responseXML` property as covered in the article
-   [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+   [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 2. Inject the content into the body of a [document fragment](/en-US/docs/Web/API/DocumentFragment) via
    `fragment.body.innerHTML` and traverse the DOM of the fragment.
 3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
@@ -126,7 +126,7 @@ req.responseType = "arraybuffer";
 req.send();
 ```
 
-For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data) page.
+For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data) page.
 
 ## Monitoring progress
 
@@ -357,7 +357,7 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 
 ## See also
 
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - [HTTP access control](/en-US/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)

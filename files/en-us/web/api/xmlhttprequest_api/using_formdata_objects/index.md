@@ -201,7 +201,7 @@ The `FormData` object doesn't include data from the fields that are disabled or 
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

@@ -275,7 +275,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
 - {{HTMLElement("script")}} elements created using {{domxref("document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
 - DOM {{domxref("file")}} objects now offer a `url` property.
-- [FormData](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
+- [FormData](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
 - The {{domxref("element.isContentEditable")}} property has been implemented.
 - The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
 - Added the `mozSourceNode` property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
