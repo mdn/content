@@ -7,7 +7,7 @@ browser-compat: css.properties.grid
 
 {{CSSRef}}
 
-This pattern is a list of "card" components with optional footers. A card contains a title, an image, a description or other content, and an attribution or footer, and is generally displayed within a collection of cards.
+This pattern is a list of "card" components with optional footers. A card contains a title, an image, a description or other content, and an attribution or footer. Cards are generally displayed within a group or collection.
 
 ![Three card components in a row](cards.png)
 
@@ -17,7 +17,7 @@ Create a group of cards, with each card component containing a heading, image, c
 
 Each card in the group of cards should be the same height. The optional card footer should stick to the bottom of the card.
 
-The cards in the collection of cards should line up in two dimensions; both vertically and horizontally.
+The cards in the group should line up in two dimensions — both vertically and horizontally.
 
 ## Recipe
 
@@ -29,7 +29,7 @@ The cards in the collection of cards should line up in two dimensions; both vert
 
 ## Choices made
 
-Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. To set up a single column grid we can use the following:
+Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite the layout being one-dimensional. This enables the use of content sizing for the grid tracks. To set up a single-column grid we can use the following:
 
 ```css
 .card {
@@ -38,11 +38,15 @@ Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layou
 }
 ```
 
-The {{cssxref("display", "display: grid")}} converts the element into a grid container. The three values of the {{cssxref("grid-template-rows")}} property divide the grid into a minimum of three rows, defining the height of the first three children of the card, in order. Each `card` contains a {{HTMLElement("header")}}, {{HTMLElement("image")}}, and {{HTMLElement("div")}}, in that order, with some also containing a {{HTMLElement("footer")}}. The heading row, or track, is set to {{cssxref("max-content")}}, which prevents it from stretching. The image track is set to 200 pixels tall. The third track — which is where the content lives — is set to `1fr`. This means it will take up any additional space.
+{{cssxref("display", "display: grid")}} converts the element into a grid container. The three values of the {{cssxref("grid-template-rows")}} property divide the grid into a minimum of three rows, defining the height of the first three children of the card, in order.
 
-Any children beyond the three with defined sizes create rows in the implicit grid, which fits content added to it. These are auto-sized by default. If a card contains a footer, it is auto-sized. The footer, when present, sticks to the bottom of the grid as the footer is auto-sized to be only the height it needs to be with the content `<div>` growing to take up any additional space.
+Each `card` contains a {{HTMLElement("header")}}, {{HTMLElement("image")}}, and {{HTMLElement("div")}}, in that order, with some also containing a {{HTMLElement("footer")}}.
 
-The create the grid of cards we used:
+The heading row, or track, is set to {{cssxref("max-content")}}, which prevents it from stretching. The image track is set to 200 pixels tall. The third track — which is where the content lives — is set to `1fr`. This means it will fill any additional space.
+
+Any children beyond the three with explicitly defined sizes create rows in the implicit grid, which fits the content added to it. These are auto-sized by default. If a card contains a footer, it is auto-sized. The footer, when present, sticks to the bottom of the grid. This is because the footer is auto-sized to fit its content; the content `<div>` then stretches take up any additional space.
+
+The following ruleset creates the grid of cards:
 
 ```css
 .cards {
@@ -52,13 +56,13 @@ The create the grid of cards we used:
 }
 ```
 
-The {{cssxref("grid-template-columns")}} property defines the widths of a grid's columns. In this case, we all the grid to auto fill, with repeated columns that are minimally `230px` but allowed to grow to fill up The {{cssxref("grid-gap")}} property sets a gap of `20px` between adjacent rows and between adjacent columns. Alternatively, the {{cssxref("gap")}} property could have been used.
+The {{cssxref("grid-template-columns")}} property defines the widths of the grid columns. In this case, we set the grid to auto-fill, with repeated columns that are minimally `230px` but allowed to grow to fill the available space. The {{cssxref("grid-gap")}} property sets a gap of `20px` between adjacent rows and adjacent columns. Alternatively, the {{cssxref("gap")}} property could have been used.
 
 > **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. Lining up the components in each card with the same components in adjacent cards, can be done with [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
 
 ## Alternative methods
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) can also be used to lay out each individual card. With flexbox, the dimensions of each card's rows are set with the {{cssxref("flex")}} property on each row, rahter than on the card container as we saw with the grid example.
+[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) can also be used to lay out each card. With flexbox, the dimensions of each card's rows are set with the {{cssxref("flex")}} property on each row, rather than on the card container.
 
 With flexbox, the dimensions of the flex items are defined on the children rather than the parent. Whether you choose to use grid or flexbox depends on your preference; whether you prefer controlling the tracks from the container or prefer adding rules to the items.
 
@@ -66,7 +70,7 @@ We chose grid for the cards as, generally, you want cards to be lined up both ve
 
 ## Accessibility concerns
 
-Depending on the content of your card there may be things you could, or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
+Depending on the content of your card, there may be things you could or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
 
 ## See also
 
