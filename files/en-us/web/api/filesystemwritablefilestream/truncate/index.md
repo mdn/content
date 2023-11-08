@@ -10,7 +10,7 @@ browser-compat: api.FileSystemWritableFileStream.truncate
 
 The **`truncate()`** method of the {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with the stream to the specified size in bytes.
 
-If the size specified is larger than the current file size the file is padded with `null` bytes.
+If the size specified is larger than the current file size the file is padded with null bytes.
 
 The file cursor is also updated when `truncate()` is called.
 If the offset is smaller than the size, it remains unchanged.
@@ -28,7 +28,7 @@ truncate(size)
 
 ### Parameters
 
-- size
+- `size`
   - : A number specifying the number of bytes to resize the stream to.
 
 ### Return value
