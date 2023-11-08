@@ -20,19 +20,19 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 - {{DOMxRef("ScreenOrientation.angle")}} {{ReadOnlyInline}}
   - : Returns the document's current orientation angle.
 
-## Events
-
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
-
-- {{DOMxRef("ScreenOrientation.change_event", "change")}}
-  - : Fired whenever the screen changes orientation.
-
 ## Instance methods
 
 - {{DOMxRef("ScreenOrientation.lock()")}}
   - : Locks the orientation of the containing document to its default orientation and returns a {{JSxRef("Promise")}}.
 - {{DOMxRef("ScreenOrientation.unlock()")}}
   - : Unlocks the orientation of the containing document from its default orientation.
+
+## Events
+
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{DOMxRef("ScreenOrientation.change_event", "change")}}
+  - : Fired whenever the screen changes orientation.
 
 ## Example
 
