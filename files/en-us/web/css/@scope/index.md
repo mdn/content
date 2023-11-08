@@ -39,10 +39,25 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
 
 A complex web document tends to include several distinct components — from headers, footers, and new articles, to maps, media players, and ads. As complexity increases, it becomes more important to manage the styling for these components effectively, and effective scoping of styles is a key consideration. Let's consider the following DOM tree:
 
-```html no-lint
-body ├─ article.feature ├─ section.article-hero │ ├─ h2 │ ├─ img │ ├─
-section.article-body │ ├─ h3 │ ├─ p │ ├─ img │ ├─ p │ ├─ figure │ ├─ img │ ├─
-figcaption │ ├─ footer ├─ p ├─ img
+```plain-nolint
+body
+├─ article.feature
+   ├─ section.article-hero
+   │  ├─ h2
+   │  ├─ img
+   │
+   ├─ section.article-body
+   │  ├─ h3
+   │  ├─ p
+   │  ├─ img
+   │  ├─ p
+   │  ├─ figure
+   │     ├─ img
+   │     ├─ figcaption
+   │
+   ├─ footer
+      ├─ p
+      ├─ img
 ```
 
 If we wanted to select just the {{htmlelement("img")}} element inside the {{htmlelement("section")}} with a class of `article-body`, we could:
