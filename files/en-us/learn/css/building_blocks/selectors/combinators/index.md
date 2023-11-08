@@ -108,7 +108,7 @@ p ~ img {
 }
 ```
 
-The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be use to create complex selectors.
+The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors.
 
 ```css
 p {
