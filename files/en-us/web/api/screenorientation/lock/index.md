@@ -70,7 +70,7 @@ The promise may be rejected with the following exceptions:
 
 - `NotSupportedError` {{domxref("DOMException")}}
 
-  - : Thrown if the user agent does not support locking the screen orientation.
+  - : Thrown if the user agent does not support locking the screen orientation of the specific orientation.
 
 - `AbortError` {{domxref("DOMException")}}
 
