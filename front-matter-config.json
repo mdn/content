@@ -4,7 +4,7 @@
     "title": "Front matter schema",
     "type": "object",
     "additionalProperties": false,
-    "required": ["title", "slug"],
+    "required": ["title", "slug", "page-type"],
     "properties": {
       "title": {
         "title": "Title",

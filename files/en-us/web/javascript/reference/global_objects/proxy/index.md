@@ -194,7 +194,7 @@ Note that while this "no-op" works for plain JavaScript objects, it does not wor
 
 ### No private property forwarding
 
-A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 ```js
 class Secret {

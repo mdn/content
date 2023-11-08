@@ -1,15 +1,15 @@
 ---
 title: HTML in XMLHttpRequest
-slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 page-type: guide
 browser-compat: api.XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 The W3C {{domxref("XMLHttpRequest")}} specification adds [HTML](/en-US/docs/Web/HTML) parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using `XMLHttpRequest`.
 
-To get an overview of how to use `XMLHttpRequest` in general, see [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+To get an overview of how to use `XMLHttpRequest` in general, see [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Limitations
 
@@ -130,4 +130,4 @@ If the character encoding is declared in the HTTP {{HTTPHeader("Content-Type")}}
 ## See also
 
 - {{domxref("XMLHttpRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

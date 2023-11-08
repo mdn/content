@@ -31,7 +31,8 @@ None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
-None.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the associated access handle is already closed.
 
 ## Examples
 
