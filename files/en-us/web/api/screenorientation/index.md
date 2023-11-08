@@ -16,7 +16,7 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 ## Instance properties
 
 - {{DOMxRef("ScreenOrientation.type")}} {{ReadOnlyInline}}
-  - : Returns the document's current orientation type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or "landscape-secondary".
+  - : Returns the document's current orientation type, one of `portrait-primary`, `portrait-secondary`, `landscape-primary`, or `landscape-secondary`.
 - {{DOMxRef("ScreenOrientation.angle")}} {{ReadOnlyInline}}
   - : Returns the document's current orientation angle.
 
