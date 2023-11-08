@@ -40,7 +40,7 @@ If you need help or have any questions, feel free to get in touch with one of th
 
 ### Korea (ko)
 
-- Discussions: [Discord (#korean channel)](https://discord.gg/hkGN8VKvvD), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- Discussions: [Discord (#korean channel)](https://discord.gg/Gt4Qf6q67h), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
 - Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42)
 
 ### Russian (ru)
