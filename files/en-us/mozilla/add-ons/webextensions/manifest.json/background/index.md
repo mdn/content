@@ -103,7 +103,7 @@ The `background` key is an object that must have one of these properties:
       <td><code>service_worker</code></td>
       <td>
         <p>
-          Specify a JavaScript file as the extension service worker. A service worker is a background script that acts as the extension's main event handler.
+          Specify a JavaScript file as the extension [service worker](/en-US/docs/Web/API/Service_Worker_API). A service worker is a background script that acts as the extension's main event handler.
         </p>
         <p>
           See the note following the table regarding browser support.
@@ -113,17 +113,18 @@ The `background` key is an object that must have one of these properties:
   </tbody>
 </table>
 
-> **Note:** Support for the `scripts` and `service_workers` properties varies between browsers like this.
+> **Note:** Support for the `scripts`, `page` and `service_worker` properties varies between browsers like this.
 >
 > - Chrome:
 >   - supports `background.service_worker`.
->   - before Chrome 121, Chrome refuses to load an extension that has `background.scripts` present. From Chrome 121, Chrome loads these extensions and ignores `background.scripts`.
+>   - supports `background.scripts` (and `background.page`) in Manifest V2 extensions only.
+>   - before Chrome 121, Chrome refuses to load a Manifest V3 extension that has `background.scripts` or `background.page` present. From Chrome 121, their presence in a Manifest V3 extension is ignored.
 > - Safari:
 >   - supports `background.service_worker`.
 >   - supports `background.scripts`, if `service_worker` is not specified.
 > - Firefox:
->   - supports `background.service_worker` if the service worker feature is enabled. However, this feature is affected by [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1775618#c1).
->   - supports `background.scripts`, if `service_worker` is not specified or the service worker feature is disabled.
+>   - `background.service_worker` is not supported ([bug 1573659](https://bugzilla.mozilla.org/show_bug.cgi?id=1573659).
+>   - supports `background.scripts`, if `service_worker` is not specified or the service worker feature is disabled. Before Firefox 120, Firefox did not start the background page if `service_worker` was present ([Firefox bug 1860304](https://bugzil.la/1860304)). From Firefox 121, the background page starts as expected regardless of the presence of `service_worker`.
 
 The `background` key can also contain this optional property:
 
