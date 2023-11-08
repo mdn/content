@@ -13,6 +13,8 @@ The **`text-decoration-skip`** [CSS](/en-US/docs/Web/CSS) property sets what par
 
 > **Note:** Most other browsers are converging on supporting the simpler {{cssxref("text-decoration-skip-ink")}} property.
 
+## Syntax
+
 ```css
 /* Keyword values */
 text-decoration-skip: none;
@@ -33,8 +35,6 @@ text-decoration-skip: revert;
 text-decoration-skip: revert-layer;
 text-decoration-skip: unset;
 ```
-
-## Syntax
 
 ### Values
 

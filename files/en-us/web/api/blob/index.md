@@ -24,20 +24,20 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 ## Instance properties
 
-- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : The size, in bytes, of the data contained in the `Blob` object.
-- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
   - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
 
 ## Instance methods
 
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+- {{DOMxRef("Blob.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
-- {{DOMxRef("Blob.prototype.slice()")}}
+- {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
-- {{DOMxRef("Blob.prototype.stream()")}}
+- {{DOMxRef("Blob.stream()")}}
   - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob`.
-- {{DOMxRef("Blob.prototype.text()")}}
+- {{DOMxRef("Blob.text()")}}
   - : Returns a promise that resolves with a string containing the entire contents of the `Blob` interpreted as UTF-8 text.
 
 ## Examples
@@ -55,7 +55,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### Creating a URL representing the contents of a typed array
 
-The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
+The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
 
 #### HTML
 
@@ -152,5 +152,5 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("URL.createObjectURL")}}
+- {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -12,11 +12,11 @@ It modifies the coordinate space of the CSS [visual formatting model](/en-US/doc
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-If the property has a value different than `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) will be created.
+If the property has a value different than `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) will be created.
 In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 > **Warning:** Only transformable elements can be `transform`ed.
-> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
+> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Glossary/Inline-level_content), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## Syntax
 
@@ -67,7 +67,7 @@ If {{cssxref("transform-function/perspective", "perspective()")}} is one of mult
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform-order).
+    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
 - `none`
   - : Specifies that no transform should be applied.
 
@@ -182,7 +182,7 @@ When an element is rotated before being translated, the translate direction is o
 
 ### More examples
 
-Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 
@@ -194,7 +194,7 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_t
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

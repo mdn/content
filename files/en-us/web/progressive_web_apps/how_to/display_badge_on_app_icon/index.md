@@ -147,6 +147,6 @@ self.addEventListener("push", (event) => {
 
 ## See also
 
-- [How to create an app badge](https://web.dev/patterns/advanced-apps/badges/)
+- [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
 - [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
-- [Codelab: Build a push notification server](https://web.dev/push-notifications-server-codelab/)
+- [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)

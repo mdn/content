@@ -306,7 +306,7 @@ You can see here that the multiply mix blend has blended together not only the t
 
 ## CSS shapes
 
-While it is true that everything in CSS is a rectangular box, and images are a physical rectangular box, we can make it look as if our content flows around non-rectangular things by using [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes).
+While it is true that everything in CSS is a rectangular box, and images are a physical rectangular box, we can make it look as if our content flows around non-rectangular things by using [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes).
 
 The CSS Shapes specification enables the wrapping of text around a non-rectangular shape. It's especially useful when working with an image which has some white-space you might want to float text around.
 
@@ -318,7 +318,7 @@ The shape in this example is not reacting to the content of the image file. Inst
 
 > **Note:** In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 
-The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) on MDN.
+The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes) on MDN.
 
 ## -webkit-background-clip: text
 

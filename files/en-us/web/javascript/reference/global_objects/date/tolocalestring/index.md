@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string with a language-sensitive representation of this date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of this date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
@@ -158,7 +158,7 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 
 ## See also
 
-- {{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
+page-type: webassembly-instance-method
 browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 
@@ -11,12 +12,12 @@ The **`grow()`** prototype method of the [`WebAssembly.Memory`](/en-US/docs/WebA
 ## Syntax
 
 ```js-nolint
-grow(pageIncrease)
+grow(delta)
 ```
 
 ### Parameters
 
-- `pageIncrease`
+- `delta`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in size).
 
 ### Return value
@@ -25,7 +26,7 @@ The previous size of the memory, in units of WebAssembly pages.
 
 ### Exceptions
 
-- {{jsxref("RangeError")}}: If the current size added with `pageIncrease` exceeds the Memory instance's maximum size capacity.
+- {{jsxref("RangeError")}}: If the current size added with `delta` exceeds the Memory instance's maximum size capacity.
 
 ## Examples
 
@@ -77,6 +78,8 @@ const currentMemoryView = new Uint8Array(memory.buffer);
 console.log(currentMemoryView); // Uint8Array(131072) [ 0, 0, 0, ... ]
 // 131072 = 64KiB * 2
 ```
+
+For a shared `Memory` instance, the initial `buffer` (which would be a [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) in such case) will not become detached, but rather its length will not be updated. Accesses to the `buffer` property after growing will yield a larger `SharedArrayBuffer` which may access a larger span of memory than the buffer from before growing the `Memory`. Every `SharedArrayBuffer` from the `buffer` property will all refer to the start of the same memory address range, and thus manipulate the same data.
 
 ## Specifications
 

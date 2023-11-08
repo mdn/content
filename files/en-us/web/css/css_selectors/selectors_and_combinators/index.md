@@ -19,7 +19,7 @@ There are over 80 selectors and combinators. CSS selectors can be grouped into t
 
 The [type selector](/en-US/docs/Web/CSS/Type_selectors) selects all elements that have the given node name. For example, `div` will select all {{HTMLElement("div")}} elements and `input` will match any {{HTMLElement("input")}} element. The [universal selector](/en-US/docs/Web/CSS/Universal_selectors), denoted with an asterisk (`*`), is a special type selector that selects all elements.
 
-The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with an octothorp (`#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
+The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with a "number sign" (U+0023, `#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
 
 When combining a type or universal selector with a class or id selector to create a [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type or universal selector must precede the class or id.
 
@@ -68,17 +68,17 @@ The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted 
 
 The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
 
-### General sibling combinator
+### Subsequent-sibling combinator
 
-In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
+In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
 
-### Adjacent sibling combinator
+### Next-sibling combinator
 
-The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`), is similar to the general sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
+The [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), denoted by the plus symbol (`+`), is similar to the subsequent-sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
 ### Column combinator
 
-There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters (`||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
 ### Namespace separator
 
@@ -128,6 +128,62 @@ h2 + p + p {
 
 {{EmbedLiveSample("Combinators", "100%", 300)}}
 
+### Creating complex selectors with CSS nesting
+
+The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
+
+#### CSS
+
+In this example, we replicate the same five relative selectors using simple selectors combined with combinators, but this time with CSS nesting.
+
+```css
+h2 {
+  & + p {
+    & ~ p {
+      font-style: italic;
+    }
+    & + p {
+      color: red;
+    }
+  }
+}
+.myClass {
+  & + p {
+    text-decoration: underline;
+  }
+}
+#myId {
+  & > .myClass {
+    outline: 3px dashed red;
+  }
+}
+> p {
+  font-size: 1.1rem;
+}
+```
+
+#### HTML
+
+```html
+<h2 class="myClass" id="myId">
+  No selectors match. <span class="myClass">This span has an outline</span> as
+  it is both myClass and a child of #myId.
+</h2>
+<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+<p>
+  The second paragraph is red. This and the following paragraphs are italic.
+</p>
+<p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
+<p class="myClass">
+  Does not have an outline; this is a sibling of H2, not a child. It is italic
+  and 1.1rem.
+</p>
+```
+
+#### Result
+
+{{EmbedLiveSample("creating_complex_selectors_with_css_nesting", "100%", 300)}}
+
 ## Attribute selectors
 
 [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) select all elements that, depending on how the selector is written, either have the given attribute or have the given attribute with a substring value match.
@@ -146,7 +202,7 @@ Multiple pseudo-classes can be combined to create [compound selectors](#compound
 
 ## Pseudo-element selectors
 
-Not all CSS selectors are defined in the [CSS selectors module](/en-US/docs/Web/CSS/). CSS pseudo-element selectors are defined in the [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo) module.
+Not all CSS selectors are defined in the [CSS selectors module](/en-US/docs/Web/CSS). CSS pseudo-element selectors are defined in the [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module.
 
 CSS [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), prefixed with two colons (`::`), represent entities that are not included in HTML. For example, the simple {{cssxref("::marker")}} selector selects list item bullets, and the compound selector [`p::first-line`](/en-US/docs/Web/CSS/::first-line) matches the first line of all {{HTMLElement("p")}} elements.
 
@@ -161,3 +217,4 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

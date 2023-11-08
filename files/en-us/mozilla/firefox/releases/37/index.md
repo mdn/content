@@ -23,7 +23,7 @@ Highlights:
 ### CSS
 
 - `display: contents` is now activated by default ([Firefox bug 1102374](https://bugzil.la/1102374) and [Firefox bug 1105369](https://bugzil.la/1105369)).
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts) is now working on element with `display: table-caption` ([Firefox bug 1109571](https://bugzil.la/1109571)).
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts) is now working on element with `display: table-caption` ([Firefox bug 1109571](https://bugzil.la/1109571)).
 - Relative positioning (`position: relative`) of table cells has been implemented ([Firefox bug 35168](https://bugzil.la/35168)).
 - The quirks mode behavior of {{cssxref("empty-cells")}} has been removed: it now defaults to `show` like in standard mode ([Firefox bug 1020400](https://bugzil.la/1020400)).
 
@@ -38,7 +38,7 @@ Highlights:
 - The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now supports monkey-patched `prototype.set` or `prototype.add` ([Firefox bug 804279](https://bugzil.la/804279)).
 - The Non-standard {{jsxref("String.quote","String.prototype.quote()")}} method has been removed ([Firefox bug 1103181](https://bugzil.la/1103181)).
 - The {{jsxref("RegExp.prototype.flags")}} property has been implemented ([Firefox bug 1108467](https://bugzil.la/1108467)).
-- Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) as well:
+- Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) as well:
 
   - The {{jsxref("TypedArray.every", "every()")}} and {{jsxref("TypedArray.some", "some()")}} methods ([Firefox bug 1116390](https://bugzil.la/1116390)).
   - The {{jsxref("TypedArray.find", "find()")}} and {{jsxref("TypedArray.findIndex", "findIndex()")}} methods ([Firefox bug 1078975](https://bugzil.la/1078975)).
@@ -63,7 +63,7 @@ Highlights:
 
   - The {{domxref("WebGL2RenderingContext.getBufferSubData()")}} method has been implemented to provide access to Buffer Objects ([Firefox bug 1048731](https://bugzil.la/1048731)).
 
-- In keeping with the evolving WebRTC specification, we have deprecated {{domxref("RTCIceServer.url")}} in favor of {{domxref("RTCIceServer.urls")}}, which lets you specify more than one URL for a given ICE server.
+- In keeping with the evolving WebRTC specification, we have deprecated `RTCIceServer.url` in favor of `RTCIceServer.urls`, which lets you specify more than one URL for a given ICE server.
 - Some key names of `KeyboardEvent.key` are changed for conforming [the latest DOM Level 3 Events spec](https://w3c.github.io/DOM-Level-3-Events-key/). See [the tables of `KeyboardEvent.key` values in MDN](/en-US/docs/Web/API/KeyboardEvent/key#key_values). The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is [Firefox bug 900372](https://bugzil.la/900372)).
 - The {{domxref("console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ([Firefox bug 1058644](https://bugzil.la/1058644)).
 - The value of {{domxref("KeyboardEvent.key")}} was incorrectly being reported as `"RomanCharacters"` when the `英数` (`Eisu`) key was pressed. Now it correctly returns `"Eisu"`.

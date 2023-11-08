@@ -66,7 +66,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving-selector-list).
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving_selector_list).
 
 ### Invalid selector list
 
@@ -124,7 +124,7 @@ The difference between the two is that the specificity of `:is()` is its most sp
 
 ### Relative selector list
 
-A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#relative_selector), which begin with an explicit or implied combinator.
+A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector), which begin with an explicit or implied combinator.
 
 ```css
 h2:has(+ p, + ul.red) {

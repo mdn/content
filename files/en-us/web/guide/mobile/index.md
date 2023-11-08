@@ -45,7 +45,7 @@ You can use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/
 
 To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen [height](/en-US/docs/Web/CSS/@media/height), [width](/en-US/docs/Web/CSS/@media/width), and [pixel ratio](/en-US/docs/Web/CSS/@media/resolution).
 
-You can also make use of CSS properties to implement visual effects like [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/box-shadow) without images.
+You can also make use of CSS properties to implement visual effects like [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/box-shadow) without images.
 
 ### Mobile APIs
 

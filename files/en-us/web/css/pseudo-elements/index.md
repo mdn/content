@@ -94,7 +94,7 @@ T
 
 ## See also
 
-- [CSS pseudo-element](/en-US/docs/Web/CSS/CSS_pseudo) module
+- [CSS pseudo-element](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)

@@ -10,7 +10,7 @@ The `not` function evaluates a boolean expression and returns the opposite value
 
 ### Syntax
 
-```
+```plain
 not( expression )
 ```
 

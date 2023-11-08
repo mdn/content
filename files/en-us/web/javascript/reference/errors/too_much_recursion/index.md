@@ -11,7 +11,7 @@ occurs when there are too many function calls, or a function is missing a base c
 
 ## Message
 
-```
+```plain
 RangeError: Maximum call stack size exceeded (Chrome)
 InternalError: too much recursion (Firefox)
 RangeError: Maximum call stack size exceeded. (Safari)

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseXML
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`XMLHttpRequest.responseXML`** read-only property returns
 a {{domxref("Document")}} containing the HTML or XML retrieved by the request; or

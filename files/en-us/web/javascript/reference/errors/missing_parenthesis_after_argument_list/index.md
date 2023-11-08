@@ -12,7 +12,7 @@ string.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing ) after argument list (V8-based & Firefox)
 SyntaxError: Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```
@@ -32,7 +32,7 @@ Because there is no "+" operator to concatenate the string, JavaScript expects t
 argument for the `log` function to be just `"PI: "`. In that case,
 it should be terminated by a closing parenthesis.
 
-```js example-bad
+```js-nolint example-bad
 console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
@@ -53,7 +53,7 @@ console.log("PI:", Math.PI);
 
 ### Unterminated strings
 
-```js example-bad
+```js-nolint example-bad
 console.log('"Java" + "Script" = \"' + "Java" + 'Script\");
 // SyntaxError: missing ) after argument list
 ```
@@ -70,4 +70,4 @@ console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

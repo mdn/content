@@ -181,9 +181,14 @@ One typographic convention in mathematics is to use italic letters for variables
 </math>
 ```
 
+{{ EmbedLiveSample('Automatic italicization of <mi>', 700, 50) }}
+
 > **Note:** [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
 
-It is sometimes needed to revert this default italic transformation. For that purpose, just attach a `mathvariant="normal"` attribute on the `<mi>` element. Compare the rendering of the uppercase gamma letters in the following formula:
+## Reverting automatic italicization of \<mi>
+
+In order to revert this default italic transformation you can attach a `mathvariant="normal"` attribute on the `<mi>` element.
+Compare the rendering of the uppercase gamma letters in the following formula:
 
 ```html
 <math>
@@ -192,7 +197,9 @@ It is sometimes needed to revert this default italic transformation. For that pu
 </math>
 ```
 
-> **Note:** Although the [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant) provides other values to perform such transformations, it is recommended to just pick the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols) when possible.
+{{ EmbedLiveSample('Reverting automatic italicization of <mi>', 700, 50) }}
+
+> **Note:** Although you can apply this transformation, normally you'd just use the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 
 ## Operator properties of \<mo>
 

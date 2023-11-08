@@ -10,7 +10,7 @@ CSS boxes are the building blocks of any web page styled with CSS. Making them n
 
 Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
 
-On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics it's also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
+On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the techniques it's also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
 
 We are about to see many examples, but we will always work on the most simple piece of HTML possible, a simple element:
 
@@ -72,11 +72,11 @@ Yes, we get a circle:
 
 ## Backgrounds
 
-When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
 - Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
 ```html hidden
@@ -118,7 +118,7 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients).
 
 ## Pseudo-elements
 

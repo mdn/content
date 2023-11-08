@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
+page-type: webassembly-function
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
 
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.WebAssembly.instantiate
 The **`WebAssembly.instantiate()`** function allows you to
 compile and instantiate WebAssembly code. This function has two overloads:
 
-- The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+- The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
   {{jsxref("ArrayBuffer")}}, and performs both compilation and instantiation in one
   step. The returned `Promise` resolves to both a compiled
   [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) and its first [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance).
@@ -35,7 +36,7 @@ WebAssembly.instantiate(bufferSource, importObject);
 #### Parameters
 
 - `bufferSource`
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
     compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module).
 - `importObject` {{optional_inline}}
@@ -114,12 +115,12 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports.exported_func());
 ```
 
-> **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)
+> **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index.html)
 > on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)).
 
 ### Second overload example
 
-The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html)
+The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html)
 demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
 compiles the loaded simple.wasm byte code using the
 [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
@@ -134,7 +135,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
 ```
 
 In the worker (see
-[`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
+[`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
 instance from it using the `WebAssembly.instantiate()` method and invoke an

@@ -84,7 +84,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -220,7 +220,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -356,7 +356,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;

@@ -16,7 +16,7 @@ The **`platform`** property read-only property of the {{domxref("Navigator")}} i
 
 ## Value
 
-A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux x86_64"`.
+A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux armv81"`.
 
 ## Examples
 

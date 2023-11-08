@@ -112,7 +112,7 @@ Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpR
 
 The {{domxref("FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent.
 
-Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects), but here are two examples:
+Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects), but here are two examples:
 
 #### Using a standalone FormData object
 
@@ -217,7 +217,7 @@ Here's the live result:
 
 {{EmbedLiveSample("Using_FormData_bound_to_a_form_element", "100%", 50)}}
 
-You can even get more involved with the process by using the form's {{domxref("HTMLFormElement.elements", "elements")}} property to get a list of all of the data elements in the form and manually manage them one at a time. To learn more about that, see the [Accessing form controls](/en-US/docs/Web/API/HTMLFormElement.elements#accessing_form_controls) example.
+You can even get more involved with the process by using the form's {{domxref("HTMLFormElement.elements", "elements")}} property to get a list of all of the data elements in the form and manually manage them one at a time. To learn more about that, see the [Accessing form controls](/en-US/docs/Web/API/HTMLFormElement/elements#accessing_form_controls) example.
 
 ## Dealing with binary data
 

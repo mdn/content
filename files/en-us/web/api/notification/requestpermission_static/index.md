@@ -31,7 +31,6 @@ A {{jsxref("Promise")}} that resolves to a string with the permission picked by 
 
 - `granted`
 - `denied`
-- `default`
 
 ## Examples
 

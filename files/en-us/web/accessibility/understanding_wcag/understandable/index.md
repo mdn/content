@@ -212,7 +212,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("HTMLElement.oninput")}} is useful here.
+        The {{domxref("HTMLElement/input_event", "input")}} event is useful here.
       </td>
     </tr>
     <tr>

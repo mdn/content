@@ -349,7 +349,7 @@ When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLEle
 
 A time range is specified using the syntax:
 
-```
+```plain
 #t=[starttime][,endtime]
 ```
 
@@ -410,7 +410,7 @@ If these work but the files you are supplying don't, there are two possible issu
 
 Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
 
-```
+```plain
 # AddType TYPE/SUBTYPE EXTENSION
 
 AddType audio/mpeg mp3

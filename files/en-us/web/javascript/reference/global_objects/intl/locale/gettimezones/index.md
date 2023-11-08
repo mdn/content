@@ -17,6 +17,10 @@ The **`getTimeZones()`** method of {{jsxref("Intl.Locale")}} instances returns a
 getTimeZones()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of strings representing supported time zones for the associated `Locale`, where each value is an [IANA time zone canonical name](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database), sorted in alphabetical order. If the locale identifier does not contain a region subtag, the returned value is `undefined`.
@@ -53,4 +57,4 @@ console.log(ar.getTimeZones()); // undefined
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database)
+- [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) on Wikipedia

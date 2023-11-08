@@ -38,7 +38,7 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
-  - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
+  - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`. See the {{domxref("OffscreenCanvas.transferToImageBitmap()", "API description")}} for important notes on managing this {{domxref("ImageBitmap")}}.
 
 ## Examples
 

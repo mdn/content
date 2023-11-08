@@ -95,7 +95,7 @@ exports.book_create_post = [
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genre._id) > -1) {
+        if (book.genre.includes(genre._id)) {
           genre.checked = "true";
         }
       }
@@ -146,13 +146,12 @@ We then use a wildcard (`*`) in the sanitizer to individually validate each of t
 ```
 
 The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form.
-In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked='true'` parameter to those that were in our post data (as reproduced in the code fragment below).
+In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked="true"` parameter to those that were in our post data (as reproduced in the code fragment below).
 
 ```js
 // Mark our selected genres as checked.
-for (const genre of results.genres) {
+for (const genre of allGenres) {
   if (book.genre.includes(genre._id)) {
-    // Current genre is selected. Set "checked" flag.
     genre.checked = "true";
   }
 }

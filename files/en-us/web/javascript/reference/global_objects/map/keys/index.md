@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.keys
 
 {{JSRef}}
 
-The **`keys()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each element in the `Map` object in insertion order.
+The **`keys()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each element in this map in insertion order.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
@@ -16,6 +16,10 @@ The **`keys()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScript
 ```js-nolint
 keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -46,6 +46,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.
 - `cols`
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
+- `dirname`
+
+  - : This attribute is used to indicate the text directionality of the element contents similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element.
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
+
 - `disabled`
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
 - `form`

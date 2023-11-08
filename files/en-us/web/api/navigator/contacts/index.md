@@ -15,7 +15,7 @@ The **`contacts`** read-only property of the
 which allows users to select entries from their contact list and share limited details
 of the selected entries with a website or application.
 
-### Value
+## Value
 
 A {{domxref('ContactsManager')}} object. Two successive calls return the same object.
 
@@ -37,5 +37,5 @@ const supported = "contacts" in navigator && "ContactsManager" in window;
 
 ## See also
 
-- [A Contact Picker for the Web](https://web.dev/contact-picker/)
+- [A Contact Picker for the Web](https://developer.chrome.com/articles/contact-picker/)
 - [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

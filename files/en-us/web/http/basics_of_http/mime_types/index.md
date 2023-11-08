@@ -19,7 +19,7 @@ The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is respo
 
 A MIME type most commonly consists of just two parts: a _type_ and a _subtype_, separated by a slash (`/`) — with no whitespace between:
 
-```
+```plain
 type/subtype
 ```
 
@@ -32,7 +32,7 @@ Each type has its own set of possible subtypes. A MIME type always has both a ty
 
 An optional **parameter** can be added to provide additional details:
 
-```
+```plain
 type/subtype;parameter=value
 ```
 
@@ -260,7 +260,7 @@ The following `<form>`:
 
 will send this message:
 
-```
+```http
 POST / HTTP/1.1
 Host: localhost:8000
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0

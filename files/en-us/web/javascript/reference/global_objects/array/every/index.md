@@ -7,11 +7,11 @@ browser-compat: javascript.builtins.Array.every
 
 {{JSRef}}
 
-The **`every()`** method tests whether
+The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
-{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-every.html", "shorter")}}
 
 ## Syntax
 
@@ -35,7 +35,7 @@ every(callbackFn, thisArg)
 
 ### Return value
 
-`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for an array element, in which case `false` is immediately returned.
 
 ## Description
 
@@ -59,7 +59,7 @@ The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ### Testing size of all array elements
 
-The following example tests whether all elements in the array are bigger than 10.
+The following example tests whether all elements in the array are 10 or bigger.
 
 ```js
 function isBigEnough(element, index, array) {
@@ -174,7 +174,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}

@@ -18,11 +18,11 @@ the console if the assertion is false. If the assertion is true, nothing happens
 ```js-nolint
 assert(assertion, obj1)
 assert(assertion, obj1, obj2)
-assert(assertion, obj1, obj2, /* … ,*/ objN)
+assert(assertion, obj1, obj2, /* …, */ objN)
 
 assert(assertion, msg)
 assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* … ,*/ substN)
+assert(assertion, msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters

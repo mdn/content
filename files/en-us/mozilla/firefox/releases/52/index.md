@@ -39,7 +39,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented Flexbox layout for {{cssxref("align-self")}}|{{cssxref("justify-self")}}: \[ first | last ]? baseline ([Firefox bug 1221524](https://bugzil.la/1221524)).
 - The {{cssxref("touch-action")}} property is now enabled by default on all platforms. (For the full story, see [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) and [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M).)
 - Flexbox {{cssxref("align-content")}} handling & single-line-sizing should depend on {{cssxref("flex-wrap")}}, not number of lines ([Firefox bug 1090031](https://bugzil.la/1090031)).
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
 - Changed `baseline|last-baseline` to `[ first | last ]? baseline` ([Firefox bug 1313254](https://bugzil.la/1313254)).
 - The used value for `left`/`right` is `start` for the block-axis ([Firefox bug 1221565](https://bugzil.la/1221565)).
 - Stretching flexible tracks with an indefinite containing block length now respects the min/max size([Firefox bug 1309407](https://bugzil.la/1309407)).
@@ -56,7 +56,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### CSS Grids
 
-- [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout) are implemented.
+- [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) are implemented.
 
 #### Changes and removals
 
@@ -96,7 +96,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### DOM
 
-- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Document/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events ([Firefox bug 1309612](https://bugzil.la/1309612)).
+- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Node/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events ([Firefox bug 1309612](https://bugzil.la/1309612)).
 - The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ([Firefox bug 1292063](https://bugzil.la/1292063)).
 - Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ([Firefox bug 1305928](https://bugzil.la/1305928)).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been re-enabled on Windows desktop platforms — see [Firefox bug 1244402](https://bugzil.la/1244402). (They were disabled in Firefox 24 because they broke a number of major sites; see [Firefox bug 888304](https://bugzil.la/888304).)

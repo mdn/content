@@ -47,7 +47,7 @@ page-type: firefox-release-notes
 - The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is now supported. An incomplete implementation was previously available behind a preference ([Firefox bug 779297](https://bugzil.la/779297)).
 - Some IME related keys on Windows are supported by `KeyboardEvent.key` ([Firefox bug 865565](https://bugzil.la/865565)), see [the key name table](/en-US/docs/Web/API/KeyboardEvent#keyname_table_win) for the detail.
 - Firefox for Metro now dispatches key events in the same way as the desktop version ([Firefox bug 843236](https://bugzil.la/843236)).
-- `keypress` event is no longer dispatched if `preventDefault()` of preceding `keydown` event is called ([Firefox bug 501496](https://bugzil.la/501496)), see [the document of `keydown` event](</en-US/docs/Web/API/Document/keydown_event#preventdefault()_of_keydown_event>) for the detail.
+- `keypress` event is no longer dispatched if `preventDefault()` of preceding `keydown` event is called ([Firefox bug 501496](https://bugzil.la/501496)), see [the document of `keydown` event](</en-US/docs/Web/API/Element/keydown_event#preventdefault()_of_keydown_event>) for the detail.
 - Renamed the `Future` interface to `Promise` ([Firefox bug 884279](https://bugzil.la/884279)).
 - The `srcDoc` property on the {{domxref("HTMLIFrameElement")}} interface, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ([Firefox bug 802895](https://bugzil.la/802895)).
 - The `createTBody()` method on the {{domxref("HTMLTableElement")}} interface, allowing to get its {{HTMLElement("tbody")}}, is now supported ([Firefox bug 813034](https://bugzil.la/813034)).

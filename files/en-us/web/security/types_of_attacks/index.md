@@ -51,7 +51,9 @@ Now, if you are logged into your bank account and your cookies are still valid (
   <input type="hidden" name="for" value="mallory" />
 </form>
 <script>
-  window.addEventListener('DOMContentLoaded', () => { document.querySelector('form').submit(); }
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("form").submit();
+  });
 </script>
 ```
 

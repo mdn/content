@@ -23,7 +23,7 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 ### Events
 
 - {{domxref("PermissionStatus.change_event", "change")}}
-  - : An event called whenever `PermissionStatus.status` changes.
+  - : Invoked upon changes to `PermissionStatus.state`, or the deprecated `PermissionStatus.status` in the case of older browsers.
 
 ## Example
 

@@ -61,6 +61,10 @@ Conditional group rules are:
 
 Since each conditional group may also contain nested statements, there may be an unspecified amount of nesting.
 
+## Nesting @layer with CSS nesting
+
+[Cascade layers](/en-US/docs/Web/CSS/@layer) can be nested to [create nested layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.`(dot). This can also be achieved using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules#nesting_cascade_layers_layer).
+
 ## Index
 
 - {{cssxref("@charset")}}
@@ -91,10 +95,10 @@ Since each conditional group may also contain nested statements, there may be an
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
@@ -103,3 +107,4 @@ Since each conditional group may also contain nested statements, there may be an
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

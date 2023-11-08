@@ -122,7 +122,7 @@ page-type: firefox-release-notes
 
 ### Battery API
 
-- The {{domxref("navigator.battery")}} property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ([Firefox bug 12593355](https://bugzil.la/12593355)).
+- The `Navigator.battery` property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ([Firefox bug 12593355](https://bugzil.la/12593355)).
 
 ### Files and directories
 

@@ -15,7 +15,7 @@ This status code is only sent if the server expects the request to take signific
 
 ## Status
 
-```
+```plain
 102 Processing
 ```
 

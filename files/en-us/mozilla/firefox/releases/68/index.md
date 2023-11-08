@@ -59,7 +59,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 ### CSS
 
-- [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_Scroll_Snap) has been updated to the latest version of the specification ([Firefox bug 1312163](https://bugzil.la/1312163)) and ([Firefox bug 1544136](https://bugzil.la/1544136)), this includes:
+- [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) has been updated to the latest version of the specification ([Firefox bug 1312163](https://bugzil.la/1312163)) and ([Firefox bug 1544136](https://bugzil.la/1544136)), this includes:
 
   - The `scroll-padding` properties ([Firefox bug 1373832](https://bugzil.la/1373832))
   - The `scroll-margin` properties ([Firefox bug 1373833](https://bugzil.la/1373833))
@@ -72,8 +72,8 @@ This article provides information about the changes in Firefox 68 that will affe
 - The {{CSSxRef("counter-set")}} property has been implemented. ([Firefox bug 1518201](https://bugzil.la/1518201)).
 - We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ([Firefox bug 288704](https://bugzil.la/288704)).
 - Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ([Firefox bug 1545430](https://bugzil.la/1545430)) and ([Firefox bug 1545425](https://bugzil.la/1545425)).
-- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ([Firefox bug 1323962](https://bugzil.la/1323962)).
-- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, and {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
+- [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ([Firefox bug 1323962](https://bugzil.la/1323962)).
+- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("gradient/linear-gradient")}}, {{cssxref("gradient/radial-gradient")}}, and {{cssxref("gradient/repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
   In particular, the complicated syntax taking both an angle and a position will no longer work, and the `to` keyword in the `<side-or-corner>` parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ([Firefox bug 1547939](https://bugzil.la/1547939)).
 
@@ -127,9 +127,9 @@ _No changes._
 
 #### Removals
 
-- Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ([Firefox bug 332175](https://bugzil.la/332175)).
-- Removed the non-standard {{DOMxRef("XMLDocument.async")}} property ([Firefox bug 1328138](https://bugzil.la/1328138)).
-- The {{domxref("RTCIceServer.credentialType")}} `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
+- Removed the non-standard `XMLDocument.load()` method ([Firefox bug 332175](https://bugzil.la/332175)).
+- Removed the non-standard `XMLDocument.async` property ([Firefox bug 1328138](https://bugzil.la/1328138)).
+- The `RTCIceServer.credentialType` `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
 
 ### HTTP
 
@@ -163,7 +163,7 @@ _No changes._
 
 ### API changes
 
-- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) functions have been deprecated and will be removed from Firefox 71 ([Firefox bug 1545811](https://bugzil.la/1545811)).
+- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) functions have been deprecated and will be removed from Firefox 71 ([Firefox bug 1545811](https://bugzil.la/1545811)).
 - A `boolean` flag, `incognito`, has been added to the [proxy.RequestDetails](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails). object. When `true`, it indicates that this was a private browsing request ([Firefox bug 1545163](https://bugzil.la/1545163)).
 - The [webRequest.RequestFilter](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) parameters can include an incognito parameter. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out ([Firefox bug 1548177](https://bugzil.la/1548177)).
 - A `string` value, `cookieStoreId`, representing the cookie store ID of the current context, has been added to the [proxy.RequestDetails](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails). object ([Firefox bug 1545420](https://bugzil.la/1545420)).

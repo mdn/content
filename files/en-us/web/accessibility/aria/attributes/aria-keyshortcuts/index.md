@@ -64,7 +64,7 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
+In trying to improve the accessibility of your sites and applications, there are some best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
@@ -89,7 +89,7 @@ The `aria-keyshortcuts` attribute is very similar to the [problematic](https://w
 <button accesskey="s">Stress reliever</button>
 ```
 
-In this example, we ensured the presence of the shortcut was known to sited users a well by highlighting the non-modifier character.
+In this example, we ensured the presence of the shortcut was known to sighted users a well by highlighting the non-modifier character.
 
 While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.
 

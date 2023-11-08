@@ -50,4 +50,3 @@ To learn how to use server-sent events, see our article [Using server-sent event
 ### Other resources
 
 - A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)

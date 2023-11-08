@@ -43,7 +43,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
 - The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
-- [Webkit bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
+- [Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
 
@@ -57,8 +57,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 <!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
-- {{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. [Webkit bug 585877](https://bugzil.la/585877)
+- `BlobBuilder` is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
+- The `Document.height` and `Document.width` have been removed. [Firefox bug 585877](https://bugzil.la/585877)
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).
@@ -127,7 +127,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### XPCOMUtils.jsm
 
-- The new [`importRelative()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
+- The new `importRelative()` method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
 ### XPCOM
 

@@ -26,7 +26,7 @@ browser.downloads.download({ url: "https://example.org/image.png" });
 
 You can let the user download to a location of their choice by specifying the `saveAs` parameter.
 
-> **Note:** Using [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.
+> **Note:** Using [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL_static) you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.
 
 The downloads API also provides features to cancel, pause, resume, erase, and remove downloads; search for downloaded files in the download manager; show downloaded files in the computer's file manager; and open a file in an associated application.
 
@@ -47,7 +47,7 @@ API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | 
 
 ## Open files in an extension using drag and drop
 
-The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a 'drop zone' that fits with your UI, then add listeners for the [`dragenter`](/en-US/docs/Web/API/Document/dragenter_event), [`dragover`](/en-US/docs/Web/API/Document/dragover_event), and [`drop`](/en-US/docs/Web/API/Document/drop_event) events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the `dataTransfer` property using [`DataTransfer.files`](/en-US/docs/Web/API/DataTransfer/files). Your code can then access and manipulate the files using the [DOM File API](/en-US/docs/Web/API/File).
+The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a 'drop zone' that fits with your UI, then add listeners for the [`dragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/en-US/docs/Web/API/HTMLElement/dragover_event), and [`drop`](/en-US/docs/Web/API/HTMLElement/drop_event) events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the `dataTransfer` property using [`DataTransfer.files`](/en-US/docs/Web/API/DataTransfer/files). Your code can then access and manipulate the files using the [DOM File API](/en-US/docs/Web/API/File).
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/main/imagify)
 Guides: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) | [File drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
@@ -112,7 +112,7 @@ export async function loadStoredImages(filter) {
 
 `loadStoredImages()` is called when the user clicks view or reload in the navigate collection page. `getFileStorage()` opens the `"stored-images"` database, then `imagesStore.list()` gets a filtered list of the stored images. This list is then used to retrieve images with `imagesStore.get()` and build a list to return to the UI.
 
-Note the use of [`URL.createObjectURL(blob)`](/en-US/docs/Web/API/URL/createObjectURL) to create a URL that references the image blob. This URL is then used in the UI ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/main/store-collected-images/webextension-plain/navigate-collection.js)) to display the image.
+Note the use of [`URL.createObjectURL(blob)`](/en-US/docs/Web/API/URL/createObjectURL_static) to create a URL that references the image blob. This URL is then used in the UI ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/main/store-collected-images/webextension-plain/navigate-collection.js)) to display the image.
 
 ### Delete collected images
 
@@ -128,7 +128,7 @@ async function removeStoredImages(storedImages) {
 
 `removeStoredImages()` is called when the user clicks delete in the navigate collection page. Again, `getFileStorage()` opens the `"stored-images"` database then `imagesStore.remove()` removes each image from the filtered list of images.
 
-Note the use of [`URL.revokeObjectURL()`](/en-US/docs/Web/API/URL/revokeObjectURL) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension's background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension's page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
+Note the use of [`URL.revokeObjectURL()`](/en-US/docs/Web/API/URL/revokeObjectURL_static) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension's background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension's page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
 
 Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob URL was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
 

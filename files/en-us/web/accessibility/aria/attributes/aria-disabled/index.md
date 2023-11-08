@@ -127,7 +127,7 @@ Inherits into roles:
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)

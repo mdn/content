@@ -17,7 +17,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### DOM
 
 - The {{domxref("element.outerHTML")}} property is now supported on HTML elements.
-- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 - Removed support for using the {{domxref("XMLHttpRequest")}} `responseType` and `withCredentials` attributes when performing synchronous requests. Attempting to do so throws an `NS_ERROR_DOM_INVALID_ACCESS_ERR` exception. This change has been proposed to the W3C for standardization.
 - The new {{domxref("window.navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as `mozVibrate()` on Gecko.
 - {{domxref("window.navigator.mozApps")}} returns an [`Apps`](/en-US/docs/DOM/Apps) object you can use to install and manage [open web applications](/en-US/docs/Web/Progressive_web_apps).
@@ -71,7 +71,7 @@ _No change._
 - Previous to Firefox 11, object store {{domxref("IDBObjectStore.autoIncrement","autoIncrement")}} counters were shared across all object stores for a given database, whereas per spec each object store should have a separate counter. This is now fixed.
 - It is now possible to {{domxref("IDBObjectStore.createIndex","create an index")}} with an empty `keyPath`.
 - It is now possible to create a multi-entry index (see [`IDBObjectStore.createIndex` parameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} handler has been added.
+- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an `onabort` handler has been added.
 - IndexedDB can now be used to store files/blobs.
 - IndexedDB now supports complex key paths, e.g. `foo.bar` to access property `bar` of property `foo`.
 - IndexedDB can now accept an array as a `keyPath` when creating an {{domxref("IDBDatabase.createObjectStore()","object store")}} or an {{domxref("IDBObjectStore.createIndex()","index")}} ([Firefox bug 694138](https://bugzil.la/694138).)
@@ -93,7 +93,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- `readInputStreamToString()` has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 

@@ -14,7 +14,7 @@ Just like the scripts loaded by normal web pages, content scripts can read and m
 
 Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
-> **Note:** Content scripts are only executed if the extension is granted [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
+> **Note:** Content scripts are only executed if the extension is granted [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
 >
 > However, [restricted domains](#restricted_domains) can never be accessed, regardless of the granted permissions.
 >
@@ -31,7 +31,7 @@ You can load a content script into a web page in one of three ways:
 2. - At runtime, into pages that match URL patterns.
    - : Using {{WebExtAPIRef("scripting.registerContentScripts()")}} or (only in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}}, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
 3. - At runtime, into specific tabs.
-   - : Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).)
+   - : Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).)
 
 <!-- markdownlint-enable MD005 -->
 
@@ -46,7 +46,7 @@ Using method (3), you can also load scripts into pages packaged with your extens
 
 ## Restricted domains
 
-Even with the right [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), extensions cannot access some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
+Even with the right [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), extensions cannot access some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
 
 In Firefox, this includes the following domains:
 
@@ -532,7 +532,7 @@ window.addEventListener("message", (event) => {
 
 In Chrome, this produces output like this:
 
-```
+```plain
 In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
@@ -541,7 +541,7 @@ In page script, window.y: undefined
 
 In Firefox, this produces output like this:
 
-```
+```plain
 In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1

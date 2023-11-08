@@ -65,7 +65,7 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
   </tbody>
 </table>
 
-> **Note:** Paint worklets, defined by the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API), don't subclass {{domxref("Worklet")}}. They are accessed through a regular `Worklet` object obtained using {{DOMxRef("CSS.paintWorklet")}}.
+> **Note:** Paint worklets, defined by the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API), don't subclass {{domxref("Worklet")}}. They are accessed through a regular `Worklet` object obtained using {{DOMxref("CSS.paintWorklet_static", "CSS.paintWorklet")}}.
 
 For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use worklets. Instead, you write vertex shaders and fragment shaders using GLSL code, and those shaders will then run on the graphics card.
 

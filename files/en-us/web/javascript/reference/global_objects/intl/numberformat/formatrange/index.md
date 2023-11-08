@@ -18,11 +18,13 @@ formatRange(startRange, endRange)
 ### Parameters
 
 - `startRange`
-
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
-
 - `endRange`
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+
+### Return value
+
+A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
 ### Exceptions
 
@@ -76,5 +78,5 @@ console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

@@ -106,8 +106,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   margin: 30px;
   padding: 10px;
 
-  border-image: url("border.png") /* source */ 27 / /* slice */ 36px 28px 18px
-    8px / /* width */ 18px 14px 9px 4px /* outset */ round; /* repeat */
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 

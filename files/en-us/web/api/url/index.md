@@ -51,10 +51,10 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 
 - [`canParse()`](/en-US/docs/Web/API/URL/canParse_static)
   - : Returns a boolean indicating whether or not a URL defined from a URL string and optional base URL string is parsable and valid.
-- {{domxref("URL.createObjectURL", "createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
-- {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
-  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
+- {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Instance methods
 

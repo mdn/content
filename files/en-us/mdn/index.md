@@ -1,6 +1,7 @@
 ---
 title: The MDN Web Docs project
 slug: MDN
+page-type: landing-page
 ---
 
 {{MDNSidebar}}

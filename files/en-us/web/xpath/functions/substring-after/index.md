@@ -10,7 +10,7 @@ The `substring-after` function returns a string that is the rest of a given stri
 
 ### Syntax
 
-```
+```plain
 substring-after( haystack, needle )
 ```
 

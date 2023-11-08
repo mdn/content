@@ -55,7 +55,7 @@ The `<end-value-list>` is a semicolon-separated list of values. Each value can b
     - {{domxref("Element/blur_event", "blur")}}
     - {{domxref("Element/focusin_event", "focusin")}}
     - {{domxref("Element/focusout_event", "focusout")}}
-    - {{domxref("Element/activate_event", "activate")}}
+    - {{domxref("Element/DOMActivate_event", "activate")}}
     - {{domxref("Element/auxclick_event", "auxclick")}}
     - {{domxref("Element/click_event", "click")}}
     - {{domxref("Element/dblclick_event", "dblclick")}}
@@ -77,8 +77,8 @@ The `<end-value-list>` is a semicolon-separated list of values. Each value can b
     - {{domxref("SVGElement/load_event", "load")}}
     - {{domxref("SVGElement/unload_event", "unload")}}
     - {{domxref("SVGElement/abort_event", "abort")}}
-    - {{domxref("Element/error_event", "error")}}
-    - {{domxref("Element/select_event", "select")}}
+    - {{domxref("HTMLElement/error_event", "error")}}
+    - {{domxref("HTMLInputElement/select_event", "select")}}
     - {{domxref("Window/resize_event", "resize")}}
     - {{domxref("Element/scroll_event", "scroll")}}
     - {{domxref("SVGAnimationElement/beginEvent_event", "beginEvent")}}

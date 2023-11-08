@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Array.flatMap
 
 {{JSRef}}
 
-The **`flatMap()`** method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
+The **`flatMap()`** method of {{jsxref("Array")}} instances returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array/map", "map()")}} followed by a {{jsxref("Array/flat", "flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-flatmap.html", "shorter")}}
 
 ## Syntax
 
@@ -172,7 +172,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flat()")}}
