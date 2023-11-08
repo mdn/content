@@ -185,6 +185,107 @@ This CSS establishes the look of the menu, with the background and text colors b
 
 {{EmbedLiveSample("Using transitions when highlighting menus")}}
 
+### Transitioning display and content-visibility
+
+This example demonstrates how [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) can be transitioned. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
+
+Supporting browsers transition `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values 50% through animating between the two.
+
+There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden`. In this case, the browser will flip between the two values so that the transitioned content is shown for the entire animation duration.
+
+So for example:
+
+- When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+
+When transitioning these properties, two additional features are also needed:
+
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when `display`/`content-visibility` changes from `none`/`hidden` to another state.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the transitions. This effectively enables `display`/`content-visibility` transitions.
+
+#### HTML
+
+The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}} in between that we will animate from `display` `none` to `block`.
+
+```html
+<p>
+  Click anywhere on the screen or press any key to toggle the
+  <code>&lt;div&gt;</code> between hidden and showing.
+</p>
+
+<div>
+  This is a <code>&lt;div&gt;</code> element that transitions between
+  <code>display: none; opacity: 0</code> and
+  <code>display: block; opacity: 1</code>. Neat, huh?
+</div>
+
+<p>
+  This is another paragraph to show that <code>display: none; </code> is being
+  applied and removed on the above <code>&lt;div&gt; </code>. If only its
+  <code>opacity</code> was being changed, it would always take up the space in
+  the DOM.
+</p>
+```
+
+#### CSS
+
+```css
+html {
+  height: 100vh;
+}
+
+div {
+  font-size: 1.6rem;
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 20px;
+  width: 480px;
+
+  display: none;
+  opacity: 0;
+  transition:
+    opacity 1s,
+    display 1s allow-discrete;
+  /* Equivalent to
+  transition: all 1s allow-discrete; */
+}
+
+.showing {
+  opacity: 1;
+  display: block;
+}
+
+@starting-style {
+  .showing {
+    opacity: 0;
+  }
+}
+```
+
+Note the `@starting-style` block used to specify the starting style for the transition, and the inclusion of the `display` property in the trainsitions list, with `allow-discrete` set on it.
+
+#### JavaScript
+
+Finally, we include a bit of JavaScript to set up event listeners to trigger the transition (via the `showing` class).
+
+```js
+const divElem = document.querySelector("div");
+const htmlElem = document.querySelector(":root");
+
+htmlElem.addEventListener("click", showHide);
+document.addEventListener("keydown", showHide);
+
+function showHide() {
+  divElem.classList.toggle("showing");
+}
+```
+
+#### Result
+
+The code renders as follows:
+
+{{ EmbedLiveSample("Transitioning display and content-visibility", "100%", "350") }}
+
 ## JavaScript examples
 
 > **Note:** Care should be taken when using a transition immediately after:
@@ -257,109 +358,6 @@ el.addEventListener("transitionstart", signalStart, true);
 ```
 
 > **Note:** The `transitionend` event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}`: none` or the animating property's value is changed.
-
-## Transitioning display and content-visibility
-
-Historically, the [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) properties were not transitionable. The specs changed however, and supporting browsers (see the reference links for details) now animate them with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values `50%` through animating between the two.
-
-There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden`. In this case, the browser will flip between the two values so that the transitioned content is shown for `100%` of the animation duration.
-
-So for example:
-
-- When animating between `display` `none` and `block`, the value will flip to `block` at `0%` of the transition duration so it is visible throughout.
-- When animating between `display` `block` and `none`, the value will flip to `none` at `100%` of the transition duration so it is visible throughout.
-
-This behavior is useful for creating entry/exit animations where you want to for example remove a container from the UI immediately with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
-
-When transitioning these properties, two additional features are also needed:
-
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) is used to provide a set of starting values for properties set on an element that you want to transition from when the element receives its first style update. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when `display`/`content-visibility` changes from `none`/`hidden` to another state.
-- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the transitions. This effectively enables `display`/`content-visibility` transitions, enabling them to animate.
-
-Let's put all of this together into a working example.
-
-### HTML
-
-The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}} in between that we will animate from `display` `none` to `block`.
-
-```html
-<p>
-  Click anywhere on the screen or press any key to toggle the
-  <code>&lt;div&gt;</code> between hidden and showing.
-</p>
-
-<div>
-  This is a <code>&lt;div&gt;</code> element that transitions between
-  <code>display: none; opacity: 0</code> and
-  <code>display: block; opacity: 1</code>. Neat, huh?
-</div>
-
-<p>
-  This is another paragraph to show that <code>display: none; </code> is being
-  applied and removed on the above <code>&lt;div&gt; </code>. If only its
-  <code>opacity</code> was being changed, it would always take up the space in
-  the DOM.
-</p>
-```
-
-### CSS
-
-```css
-html {
-  height: 100vh;
-}
-
-div {
-  font-size: 1.6rem;
-  padding: 20px;
-  border: 3px solid red;
-  border-radius: 20px;
-  width: 480px;
-
-  display: none;
-  opacity: 0;
-  transition:
-    opacity 1s,
-    display 1s allow-discrete;
-  /* Equivalent to
-  transition: all 1s allow-discrete; */
-}
-
-.showing {
-  opacity: 1;
-  display: block;
-}
-
-@starting-style {
-  .showing {
-    opacity: 0;
-  }
-}
-```
-
-Note the `@starting-style` block used to specify the starting style for the transition, and the inclusion of the `display` property in the trainsitions list, with `allow-discrete` set on it.
-
-### JavaScript
-
-Finally, we include a bit of JavaScript to set up event listeners to trigger the transition (via the `showing` class).
-
-```js
-const divElem = document.querySelector("div");
-const htmlElem = document.querySelector(":root");
-
-htmlElem.addEventListener("click", showHide);
-document.addEventListener("keydown", showHide);
-
-function showHide() {
-  divElem.classList.toggle("showing");
-}
-```
-
-### Result
-
-The code renders as follows:
-
-{{ EmbedLiveSample("Transitioning display and content-visibility", "100%", "350") }}
 
 ## Specifications
 

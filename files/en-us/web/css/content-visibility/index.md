@@ -38,18 +38,20 @@ content-visibility: unset;
 - `auto`
   - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
 
-## Animating and transitioning content-visibility
+## Description
+
+### Animating and transitioning content-visibility
 
 [Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
-Discrete animation generally means that the property will flip between two values `50%` through the animation. In the case of `content-visibility`, however, the browser will flip between the two values to show the animated content for `100%` of the animation duration. So, for example:
+Discrete animation generally means that the property will flip between two values 50% of the way through the animation. In the case of `content-visibility`, however, the browser will flip between the two values to show the animated content for the entire animation duration. So, for example:
 
-- When animating between `content-visibility` `hidden` and `visible`, the value will flip to `visible` at `0%` of the animation duration so it is visible throughout.
-- When animating between `content-visibility` `visible` and `hidden`, the value will flip to `hidden` at `100%` of the animation duration so it is visible throughout.
+- When animating `content-visibility` from `hidden` to `visible`, the value will flip to `visible` at `0%` of the animation duration so it is visible throughout.
+- When animating `content-visibility` from `visible` to `hidden`, the value will flip to `hidden` at `100%` of the animation duration so it is visible throughout.
 
-This behavior is useful for creating entry/exit animations where you want to, for example, remove some content from the UI with `content-visibility: hidden`, but you want a smooth transition (such as a fade-out) rather than it disappearing immediately.
+This behavior is useful for creating entry/exit animations where you want to, for example, remove some content from the DOM with `content-visibility: hidden`, but you want a smooth transition (such as a fade-out) rather than it disappearing immediately.
 
-When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit starting keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) below.
+When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) below.
 
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
@@ -189,7 +191,7 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
 
 #### CSS
 
-In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframe` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` but also [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
+In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframe` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
 
 ```css
 div {

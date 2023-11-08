@@ -383,22 +383,20 @@ And here's the live output.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 
-## Animating display and content-visibility
+### Animating display and content-visibility
 
-Supporting browsers animate [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values `50%` of the way through animating between the two.
+This example demonstrates how [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) can be animated. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out smoothly with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
 
-There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden` to a visible value. In this case, the browser will flip between the two values so that the animated content is shown for `100%` of the animation duration.
+Supporting browsers animate `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values 50% of the way through animating between the two.
+
+There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden` to a visible value. In this case, the browser will flip between the two values so that the animated content is shown for the entire animation duration.
 
 So for example:
 
-- When animating between `display` `none` and `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
-- When animating between `display` `block` (or another visible `display` value) and `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+- When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-This behavior is useful for creating entry/exit animations where you want to for example remove a container from the UI with `display: none`, but have it fade out smoothly with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
-
-Let's put all of this together into a working example.
-
-### HTML
+#### HTML
 
 The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}} in between that we will animate from `display` `none` to `block`.
 
@@ -422,7 +420,7 @@ The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 html {
@@ -477,9 +475,9 @@ div.fade-out {
 }
 ```
 
-Note the inclusion of the `display` property in the keyframe animations. When animating `display` or `content-visibility`, you need to provide the starting value in an explicit starting keyframe (for example using `0%` or `from`).
+Note the inclusion of the `display` property in the keyframe animations. When animating `display` or `content-visibility`, you need to provide the starting value in an explicit keyframe (for example using `0%` or `from`).
 
-### JavaScript
+#### JavaScript
 
 Finally, we include a bit of JavaScript to set up event listeners to trigger the animations. Specifically, we add the `fade-in` class to the `<div>` when we want it to appear, and `fade-out` when we want it to disappear.
 
@@ -501,7 +499,7 @@ function showHide() {
 }
 ```
 
-### Result
+#### Result
 
 The code renders as follows:
 

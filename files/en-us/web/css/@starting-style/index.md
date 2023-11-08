@@ -41,11 +41,11 @@ To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the [top layer](/en-US/docs/Glossary/Top_layer) (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
-> **Note:** `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to animate such elements, `@starting-style` is not needed; instead, provide the starting style as an explicit starting keyframe (using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#animating_display_and_content-visibility) for an example.
+> **Note:** `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to animate such elements, `@starting-style` is not needed; instead, provide the starting style in an explicit keyframe (using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#animating_display_and_content-visibility) for an example.
 
 There are two ways to use `@starting-style`: as a standalone rule or nested within a ruleset.
 
-Let's consider a scenario where we want to animate a [popover](/en-US/docs/Web/API/Popover_API) when shown (that is, when added to the top layer). The "original rule" specifying the styles for the open popover looks like this (see the [full example in action](#animating_a_popover) in the "Examples" section below):
+Let's consider a scenario where we want to animate a [popover](/en-US/docs/Web/API/Popover_API) when shown (that is, when added to the top layer). The "original rule" specifying the styles for the open popover could look something like this (see the [popover example](#animating_a_popover) below):
 
 ```css
 [popover]:popover-open {
@@ -54,7 +54,7 @@ Let's consider a scenario where we want to animate a [popover](/en-US/docs/Web/A
 }
 ```
 
-To specify the starting values of the popover's properties that will be animated using the first method, you include a standalone `@starting-style` block in your CSS, as shown below:
+To specify the starting values of the popover's properties that will be animated using the first method, you include a standalone `@starting-style` block in your CSS:
 
 ```css
 @starting-style {
@@ -67,7 +67,7 @@ To specify the starting values of the popover's properties that will be animated
 
 > **Note:** The `@starting-style` at-rule and the "original rule" have the same {{cssxref("specificity")}}. To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
 
-To specify the starting style for the popover using the nested method, you can nest the `@starting-style` block inside the "original rule", as shown below:
+To specify the starting style for the popover using the nested method, you can nest the `@starting-style` block inside the "original rule":
 
 ```css
 [popover]:popover-open {
@@ -89,7 +89,7 @@ To specify the starting style for the popover using the nested method, you can n
 
 ### Animating a popover
 
-This example shows how a [popover](/en-US/docs/Web/API/Popover_API) can be animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the [`transition`](/en-US/docs/Web/CSS/transition) property.
+In this example, the [popover](/en-US/docs/Web/API/Popover_API) can be animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the [`transition`](/en-US/docs/Web/CSS/transition) property.
 
 #### HTML
 
@@ -101,6 +101,8 @@ The HTML contains a {{htmlelement("div")}} element declared as a popover using t
 ```
 
 #### CSS
+
+In this example, we want to animate two properties, [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform) (specifically, a horizontally scaling transform), to make the popover fade in and out as well as grow and shrink horizontally.
 
 ```css
 html {
@@ -161,7 +163,7 @@ so specify a standalone starting-style block. */
 }
 ```
 
-In this example, we want to animate two properties, [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform) (specifically, a horizontally scaling transform), to make the popover fade in and out as well as grow and shrink horizontally. To achieve this, we have set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an ending state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class).
+To achieve this, we have set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an ending state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class).
 
 We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two states. A starting state for the animation is included inside a `@starting-style` at-rule to enable the entry animation.
 
@@ -237,6 +239,8 @@ We then add an event listener to the close button via {{domxref("EventTarget.add
 - Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
 
 #### CSS
+
+We include a {{cssxref("transition")}} that animates the {{cssxref("opacity")}} and {{cssxref("scale")}} of each column as they are added and removed:
 
 ```css hidden
 html * {

@@ -60,34 +60,48 @@ transition-property: unset;
 
 ## Examples
 
-> **Note:** See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) guide for more `transition-property` examples.
-
 ### Basic example
 
-When the button is hovered or focused, it undergoes a one-second opacity transition; the `transition-property` is [`opacity`](/en-US/docs/Web/CSS/opacity).
+When the button is hovered or focused, it undergoes a one-second opacity transition; the `transition-property` is [`background-color`](/en-US/docs/Web/CSS/background-color).
 
-The HTML looks like this:
+#### HTML
 
 ```html
 <button class="target">Focus me!</button>
 ```
 
-The CSS is as follows:
+#### CSS
+
+```css hidden
+html {
+  height: 100vh;
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+```
 
 ```css
 .target {
-  font-size: 1.4rem;
-  transition-property: opacity;
-  transition-duration: 1s;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+  background-color: #ccc;
 }
 
 .target:hover,
 .target:focus {
-  opacity: 0;
+  background-color: #eee;
 }
 ```
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
+
+See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) guide for more `transition-property` examples.
 
 ## Specifications
 
