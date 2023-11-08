@@ -7,7 +7,7 @@ browser-compat: javascript.classes.private_class_fields
 
 {{jsSidebar("Classes")}}
 
-**Private properties** are counterparts of the regular class properties that are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. They get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class features is enforced by JavaScript itself.
+**Private properties** are counterparts of the regular class properties which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private properties get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class features is enforced by JavaScript itself.
 
 Private properties were not native to the language before this syntax existed. In prototypical inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
 
