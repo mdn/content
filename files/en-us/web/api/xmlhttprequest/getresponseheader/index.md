@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
 **`getResponseHeader()`** returns the string containing the
@@ -75,7 +75,7 @@ client.onreadystatechange = () => {
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
