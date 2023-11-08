@@ -1,5 +1,5 @@
 ---
-title: WebKit CSS extensions
+title: WebKit vendor-prefixed CSS extensions
 slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:
@@ -520,5 +520,6 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 
 ## See also
 
+- [Vendor Prefix](/en-US/docs/Glossary/Vendor_Prefix) glossary entry
+- [Mozilla vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
 - [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)

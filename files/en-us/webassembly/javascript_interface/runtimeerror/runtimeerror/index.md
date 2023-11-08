@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.RuntimeError() constructor
 slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
+page-type: webassembly-constructor
 browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
 

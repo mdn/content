@@ -129,7 +129,7 @@ _No changes._
 
 - Removed the non-standard `XMLDocument.load()` method ([Firefox bug 332175](https://bugzil.la/332175)).
 - Removed the non-standard `XMLDocument.async` property ([Firefox bug 1328138](https://bugzil.la/1328138)).
-- The {{domxref("RTCIceServer.credentialType")}} `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
+- The `RTCIceServer.credentialType` `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
 
 ### HTTP
 

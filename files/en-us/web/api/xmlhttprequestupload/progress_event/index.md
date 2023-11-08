@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.progress_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`progress`** event is fired periodically when a request receives more data.
 
@@ -65,5 +65,5 @@ xhr.upload.addEventListener("progress", (event) => {
 ## See also
 
 - Related events: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
-- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
 - {{domxref("XMLHttpRequestUpload")}}

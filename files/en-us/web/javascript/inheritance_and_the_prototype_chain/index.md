@@ -641,7 +641,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
       <th scope="row">Pro(s)</th>
       <td>
         Supported in all modern engines. Very high readability and maintainability.
-        <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private properties</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties">Private properties</a>
         are a feature with no trivial replacement in prototypical inheritance.
       </td>
     </tr>
