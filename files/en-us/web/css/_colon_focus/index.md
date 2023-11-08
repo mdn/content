@@ -54,7 +54,7 @@ Make sure the visual focus indicator can be seen by people with low vision. This
 
 - Accessible Visual Focus Indicators: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
-### `:focus { outline: none; }`
+### `:focus { outline-color: transparent; }`
 
 Never just remove the focus outline (visible focus indicator) without replacing it with a focus outline that will pass [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
 
