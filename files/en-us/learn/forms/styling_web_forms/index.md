@@ -357,7 +357,7 @@ button:after {
 
 button:hover,
 button:focus {
-  outline: none;
+  outline-color: transparent;
   background: #000;
   color: #fff;
 }
