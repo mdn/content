@@ -64,8 +64,8 @@ For the JavaScript, the code sets up the event handlers on the inner box by call
 For each of the events, we're calling the `setCoords()` function which sets the inner text of the `<p>` element with the coordinates for each system.
 
 ```js
-let log = document.querySelector(".log");
-let inner = document.querySelector(".inner");
+const log = document.querySelector(".log");
+const inner = document.querySelector(".inner");
 
 function setCoords(e) {
   log.innerText = `
