@@ -113,9 +113,6 @@ The `"inner"` paragraph is where mouse events are tracked and logged.
   color: white;
   cursor: crosshair;
   user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
 }
 
 .log {
