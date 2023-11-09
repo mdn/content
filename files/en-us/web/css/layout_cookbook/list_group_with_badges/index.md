@@ -13,7 +13,7 @@ In this recipe we will create a list group pattern with badges that indicate a c
 
 ## Requirements
 
-The list items should be displayed with the badges. The badge should be aligned right and vertically centered. The badge should must be centered vertically whether there is a single line of content or multiple lines of text.
+The list items should be displayed with the badges. The badge should be aligned right and vertically centered. The badge must be centered vertically whether there is a single line of content or multiple lines of text.
 
 ## Recipe
 
@@ -25,7 +25,7 @@ The list items should be displayed with the badges. The badge should be aligned 
 
 ## Choices made
 
-Flexbox makes this particular pattern straightforward and also enables making changes to the layout.
+Flexbox makes this particular pattern straightforward and also facilitates making changes to the layout.
 
 To ensure the text and badge line up correctly, I use the {{cssxref("justify-content")}} property with a value of `space-between`. This places any extra space between the items. In the live example, if you remove this property, you will see the badge move to the end of the text on items with text shorter than the one line.
 
