@@ -10185,6 +10185,7 @@
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/File_and_Directory_Entries_API#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
+/en-US/docs/Web/API/Window/scheduler	/en-US/docs/Web/API/scheduler_property
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
