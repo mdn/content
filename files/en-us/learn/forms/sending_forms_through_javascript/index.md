@@ -112,7 +112,7 @@ Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpR
 
 The {{domxref("FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent.
 
-Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects), but here are two examples:
+Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects), but here are two examples:
 
 #### Using a standalone FormData object
 
