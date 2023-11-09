@@ -139,7 +139,7 @@ We'll be using Prettier, which we first met in Chapter 2, to tidy our code in th
 You can check whether you've already got it installed globally using the following command:
 
 ```bash
-prettier -v
+npx prettier -v
 ```
 
 If installed, you'll get a version number returned like 2.0.2; if not, it'll return something along the lines of "command not found". If this is the case, install it using the following command:
