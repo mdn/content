@@ -154,6 +154,6 @@ div {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
-- {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
