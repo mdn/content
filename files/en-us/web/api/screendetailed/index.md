@@ -41,7 +41,7 @@ _Inherits properties from its parent, {{DOMxRef("Screen")}}._
 _Inherits events from its parent, {{DOMxRef("Screen")}}._
 
 - `change` {{experimental_inline}}
-  - : Fired on a specific screen when any property of the screen changes — for example, except for including width or height, available width or available height, color depth, or orientation, also including screen position and available screen position, device pixel ratio, label or screen's designation. The event is inherited from {{DOMxRef("Screen")}}.
+  - : Fired on a specific screen when any property of the screen changes — for example, except for width or height, available width or available height, color depth, or orientation, also screen position and available screen position, device pixel ratio, label or screen's designation. The event is inherited from {{DOMxRef("Screen")}}.
 
 ## Examples
 
