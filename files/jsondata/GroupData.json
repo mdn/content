@@ -78,14 +78,17 @@
     "Bluetooth API": {
       "overview": ["Web Bluetooth API"],
       "interfaces": [
+        "Bluetooth",
+        "BluetoothCharacteristicProperties",
         "BluetoothDevice",
         "BluetoothRemoteGATTCharacteristic",
+        "BluetoothRemoteGATTDescriptor",
         "BluetoothRemoteGATTServer",
         "BluetoothRemoteGATTService",
         "BluetoothUUID"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.bluetooth"],
       "events": []
     },
     "Canvas API": {
@@ -1133,7 +1136,7 @@
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "Window.scheduler"],
+      "properties": ["Navigator.scheduling", "scheduler_property"],
       "events": []
     },
     "Push API": {

@@ -9525,6 +9525,11 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpCodecCapability	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpContributingSource	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/source	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/timestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
 /en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
 /en-US/docs/Web/API/RTCRtpReceiver/getCapabilities	/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities_static
@@ -10185,6 +10190,7 @@
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/File_and_Directory_Entries_API#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
+/en-US/docs/Web/API/Window/scheduler	/en-US/docs/Web/API/scheduler_property
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch

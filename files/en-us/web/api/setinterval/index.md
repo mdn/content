@@ -8,7 +8,7 @@ browser-compat: api.setInterval
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-The **`setInterval()`** method, offered on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+The **`setInterval()`** method, offered on the {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}} interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
 This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("clearInterval", "clearInterval()")}}.
 
