@@ -44,6 +44,5 @@ When we nest one media object inside another we need to place it into the second
 ## See also
 
 - {{cssxref("fit-content")}} property
-- [Grid-template-areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [Using grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
