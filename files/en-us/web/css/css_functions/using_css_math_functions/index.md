@@ -68,19 +68,23 @@ div > code {
 }
 
 .calc1 > code {
+  /* Output width: `110px` */
   width: calc(10px + 100px);
 }
 
 .calc2 > code {
+  /* Output width: `10em` */
   width: calc(2em * 5);
 }
 
 .calc3 > code {
+  /* Output width: Depends on the container's width */
   width: calc(100% - 32px);
 }
 
 .calc4 > code {
   --predefined-width: 100%;
+  /* Output width: Depends on the container's width */
   width: calc(var(--predefined-width) - calc(16px * 2));
 }
 ```
@@ -105,10 +109,10 @@ You can play with the example below to try out `min()` for yourself:
 
 ```html hidden
 <div class="min1">
-  <code>width: min(99999999px, 50%);</code>
+  <code>width: min(9999px, 50%);</code>
 </div>
 <div class="min2">
-  <code>width: min(99999999px, 100%);</code>
+  <code>width: min(9999px, 100%);</code>
 </div>
 <div class="min3">
   <code>width: min(120px, 150px, 90%);</code>
@@ -133,18 +137,26 @@ div > code {
 }
 
 .min1 > code {
-  width: min(99999999px, 50%);
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `50%` of the container's width */
+  width: min(9999px, 50%);
 }
 
 .min2 > code {
-  width: min(99999999px, 100%);
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `100%` of the container's width */
+  width: min(9999px, 100%);
 }
 
 .min3 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `120px` of the container's width */
   width: min(120px, 150px, 90%);
 }
 
 .min4 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `80px` of the container's width */
   width: min(80px, 90%);
 }
 ```
@@ -200,18 +212,26 @@ div > code {
 }
 
 .max1 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `50%` of the container's width */
   width: max(50px, 50%);
 }
 
 .max2 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `100%` of the container's width */
   width: max(50px, 100%);
 }
 
 .max3 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `90%` of the container's width */
   width: max(20px, 50px, 90%);
 }
 
 .max4 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `80%` of the container's width */
   width: max(80px, 80%);
 }
 ```
@@ -226,6 +246,10 @@ We can combine the functions of `min()` and `max()` by using {{CSSxRef("clamp", 
 property: clamp(<minimum value>, <value to be clamped>, <maximum value>);
 ```
 
+- If the value to be clamped is less than the passed minimum value, the function will return the minimum value.
+- If the value to be clamped is greater than the passed maximum value, the function will return the maximum value.
+- If the value to be clamped is between the passed minimum and maximum values, the function will return the original value to be clamped.
+
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
 
 ### `clamp()` Example
@@ -237,13 +261,13 @@ You can play with the example below to try out `clamp()` for yourself:
   <code>width: clamp(10%, 1px, 90%);</code>
 </div>
 <div class="clamp2">
-  <code>width: clamp(10%, 9999999px, 90%);</code>
+  <code>width: clamp(10%, 9999px, 90%);</code>
 </div>
 <div class="clamp3">
   <code>width: clamp(25px, 1px, 150px);</code>
 </div>
 <div class="clamp4">
-  <code>width: clamp(25px, 999999px, 150px);</code>
+  <code>width: clamp(25px, 9999px, 150px);</code>
 </div>
 ```
 
@@ -263,19 +287,25 @@ div > code {
 }
 
 .clamp1 > code {
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `20%` of the container's width */
   width: clamp(20%, 1px, 80%);
 }
 
 .clamp2 > code {
-  width: clamp(10%, 9999999px, 90%);
+  /* Output width: Depends on the container's width; */
+  /* on this page, likely to be `90%` of the container's width */
+  width: clamp(10%, 9999px, 90%);
 }
 
 .clamp3 > code {
+  /* Output width: `125px` */
   width: clamp(125px, 1px, 250px);
 }
 
 .clamp4 > code {
-  width: clamp(25px, 999999px, 150px);
+  /* Output width: `150px` */
+  width: clamp(25px, 9999px, 150px);
 }
 ```
 
@@ -283,7 +313,7 @@ div > code {
 
 ## Advanced CSS Math Functions
 
-When laying out and styling DOM elements, the four basic math functions {{CSSxRef("calc", "calc()")}}, {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} are often sufficient. However, for advanced uses like 3D visualizations, you may consider using:
+When laying out and styling DOM elements, the four basic math functions {{CSSxRef("calc", "calc()")}}, {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} are often sufficient. However, for advanced uses like mathematics learning materials, 3D visualizations, or CSS animations, you may consider using:
 
 - [Stepped value functions](/en-US/docs/Web/CSS/CSS_Functions#stepped_value_functions)
   - {{CSSxRef("round", "round()")}}: calculates a **value given a rounding strategy**
