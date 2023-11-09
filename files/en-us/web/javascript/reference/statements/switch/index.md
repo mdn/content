@@ -15,12 +15,12 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 
 ```js-nolint
 switch (expression) {
-  case value1:
+  case caseExpression1:
     statements
-  case value2:
+  case caseExpression2:
     statements
   // …
-  case valueN:
+  case caseExpressionN:
     statements
   default:
     statements
@@ -29,8 +29,8 @@ switch (expression) {
 
 - `expression`
   - : An expression whose result is matched against each `case` clause.
-- `case valueN` {{optional_inline}}
-  - : A `case` clause used to match against `expression`. If the `expression` matches the specified `valueN` (which can be any expression), execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
+- `case expressionN` {{optional_inline}}
+  - : A `case` clause used to match against `expression`. If the `expression` matches the specified `expressionN`, execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
 - `default` {{optional_inline}}
   - : A `default` clause; if provided, this clause is executed if the value of `expression` doesn't match any of the `case` clauses. A `switch` statement can only have one `default` clause.
 
