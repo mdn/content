@@ -313,7 +313,7 @@ p {
 </p>
 
 <p style="line-height: 4em">
-  At the beach, I spent my days swimming, sunbathing, and building sandcastles.
+  At the beach, I spent my days swimming, collecting shells, and building sandcastles.
   I also went on a boat ride and saw dolphins swimming alongside us.
 </p>
 ```
