@@ -307,15 +307,15 @@ p {
 
 ```html
 <p style="line-height: 2em">
-  Summer is a time for adventure, and this year was no exception. I had many
-  exciting experiences, but two of my favorites were my trip to the beach and my
-  week at summer camp.
+  Summer is a time for adventure, and this year was no exception.
+  I had many exciting experiences, but two of my favorites were my 
+  trip to the beach and my week at summer camp.
 </p>
 
 <p style="line-height: 4em">
-  At the beach, I spent my days swimming, collecting shells, and building
-  sandcastles. I also went on a boat ride and saw dolphins swimming alongside
-  us.
+  At the beach, I spent my days swimming, collecting shells, 
+  and building sandcastles. I also went on a boat ride and saw 
+  dolphins swimming alongside us.
 </p>
 ```
 
