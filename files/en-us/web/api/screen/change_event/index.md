@@ -8,7 +8,7 @@ status:
 browser-compat: api.Screen.change_event
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`change`** event of the {{domxref("Screen")}} interface is fired on a specific screen when one or more of the following properties change on it:
 

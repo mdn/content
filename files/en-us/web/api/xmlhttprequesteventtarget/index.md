@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XMLHttpRequestEventTarget
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequestEventTarget` is the interface that describes the event handlers shared on {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}.
 
