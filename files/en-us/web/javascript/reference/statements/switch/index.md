@@ -54,7 +54,7 @@ If no matching `case` clause is found, the program looks for the optional `defau
 
 You can use the [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement within a `switch` statement's body to break out early, often when all statements between two `case` clauses have been executed. Execution will continue at the first statement following `switch`.
 
-If `break` is omitted, execution will proceed to the next `case` clause, even to the `default` clause, regardless of whether the expression of that clause matches. This behavior is called "fall-through".
+If `break` is omitted, execution will proceed to the next `case` clause, even to the `default` clause, regardless of whether the value of that clause's expression matches. This behavior is called "fall-through".
 
 ```js
 const foo = 0;
@@ -179,7 +179,7 @@ It also works when you put `default` before all other `case` clauses.
 
 This method takes advantage of the fact that if there is no `break` below a `case` clause, execution will continue to the next `case` clause regardless if that `case` meets the criteria.
 
-The following is an example of a single operation sequential `case` statement, where four different s perform exactly the same.
+The following is an example of a single operation sequential `case` statement, where four different values perform exactly the same.
 
 ```js
 const Animal = "Giraffe";
