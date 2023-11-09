@@ -1,8 +1,8 @@
 ---
-title: scheduler global property
+title: "Window: scheduler property"
 short-title: scheduler
-slug: Web/API/scheduler_property
-page-type: web-api-global-property
+slug: Web/API/Window/scheduler
+page-type: web-api-instance-property
 browser-compat: api.scheduler
 ---
 
