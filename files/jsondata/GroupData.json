@@ -1133,7 +1133,7 @@
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "Scheduler_property"],
+      "properties": ["Navigator.scheduling", "scheduler_property"],
       "events": []
     },
     "Push API": {
