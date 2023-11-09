@@ -17,6 +17,8 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/docs/Web/API/Web_Bluetooth_API) functionality.
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
