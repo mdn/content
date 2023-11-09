@@ -17,6 +17,8 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -72,7 +74,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
 - {{domxref("Navigator.usb")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
+  - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("UserActivation")}} object containing information about the current window's user activation state.
 - {{domxref("Navigator.userAgent")}} {{ReadOnlyInline}}

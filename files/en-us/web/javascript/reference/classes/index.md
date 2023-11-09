@@ -69,7 +69,7 @@ Together, they add up to 16 possible combinations. To divide the reference more 
   - : Public instance field
 - [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
   - : Public static method, getter, setter, and field
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
   - : Everything that's private
 
 > **Note:** Private features have the restriction that all property names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
@@ -185,7 +185,7 @@ As seen above, the fields can be declared with or without a default value. Field
 
 See [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
 
-#### Private class features
+#### Private properties
 
 Using private fields, the definition can be refined as below.
 
@@ -205,7 +205,7 @@ By defining things that are not visible outside of the class, you ensure that yo
 
 Private fields can only be declared up-front in a field declaration. They cannot be created later through assigning to them, the way that normal properties can.
 
-For more information, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+For more information, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 ### Inheritance
 

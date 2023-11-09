@@ -32,8 +32,9 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
-    read mode.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if current entry is not found.
 
 ## Examples
 

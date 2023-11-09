@@ -25,7 +25,7 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
   - : Returns the color depth of the screen.
 - {{DOMxRef("Screen.height")}}
   - : Returns the height of the screen in pixels.
-- {{domxref("Screen.isExtended")}} {{experimental_inline}}
+- {{domxref("Screen.isExtended")}} {{experimental_inline}} {{securecontext_inline}}
   - : Returns `true` if the user's device has multiple screens, and `false` if not.
 - {{DOMxRef("Screen.orientation")}}
   - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
@@ -62,7 +62,7 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 
 ## Events
 
-- {{domxref("Screen.change_event", "change")}} {{experimental_inline}}
+- {{domxref("Screen.change_event", "change")}} {{experimental_inline}} {{securecontext_inline}}
   - : Fired on a specific screen when it changes in some way — for example available width or height, or orientation.
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fires when the screen orientation changes.
