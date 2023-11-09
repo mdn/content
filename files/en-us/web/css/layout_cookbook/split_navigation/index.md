@@ -7,7 +7,7 @@ browser-compat: css.properties.flex
 
 {{CSSRef}}
 
-The \*_split navigation_ is a navigation pattern where one or more elements are separated from the rest of the navigation items.
+The **split navigation** is a navigation pattern where one or more elements are separated from the rest of the navigation items.
 
 ![Items separated into two groups.](split-navigation.png)
 
