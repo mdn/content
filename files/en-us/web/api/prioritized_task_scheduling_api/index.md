@@ -233,7 +233,7 @@ function mylog(text) {
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/Window/scheduler) property in the global "`this`" exposed to the current scope.
+Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/scheduler_property) property in the global "`this`" exposed to the current scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 
