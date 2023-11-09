@@ -6,7 +6,7 @@ page-type: web-api-global-property
 browser-compat: api.crossOriginIsolated
 ---
 
-{{APIRef()}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The global **`crossOriginIsolated`** read-only property returns a boolean value that
 indicates whether the website is in a cross-origin isolation state. That state mitigates the risk of side-channel attacks and unlocks a few capabilities:

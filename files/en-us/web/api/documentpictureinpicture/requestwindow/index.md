@@ -39,11 +39,13 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} object instan
 
 ### Exceptions
 
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the API has been explicitly disabled (for example via browser settings).
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - `requestWindow()` is invoked without [transient activation](/en-US/docs/Glossary/Transient_activation).
-    - The API has been explicitly disabled (for example via browser settings).
-    - `requestWindow()` is called from the `window` object of the Picture-in-Picture window (i.e. {{domxref("DocumentPictureInPicture.window")}})
+    - `requestWindow()` is not called from a top-level `window` object.
+    - `requestWindow()` is called from the `window` object of the Picture-in-Picture window (i.e. {{domxref("DocumentPictureInPicture.window")}}).
+    - `requestWindow()` is called without {{Glossary("Transient_activation", "transient activation")}}.
 - `RangeError` {{domxref("DOMException")}}
   - : Thrown if only one of `height` and `width` are set, or if `height` and `width` are set with negative values.
 

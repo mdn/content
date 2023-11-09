@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StorageManager.estimate
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}}{{AvailableInWorkers}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
 
@@ -40,6 +40,11 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 - How often the user visits
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
+
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Examples
 

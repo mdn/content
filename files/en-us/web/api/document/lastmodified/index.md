@@ -9,7 +9,7 @@ browser-compat: api.Document.lastModified
 {{APIRef("DOM")}}
 
 The **`lastModified`** property of the {{domxref("Document")}}
-interface returns a string containing the date and time on which the current document
+interface returns a string containing the date and local time on which the current document
 was last modified.
 
 ## Value
@@ -85,10 +85,7 @@ if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
 }
 ```
 
-> **Note:** WebKit returns the time string in UTC; Gecko returns a time in the local timezone. (See: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://webkit.org/b/4363))
-
-If you want to know **whether _an external page_ has changed**,
-please read [this paragraph about the `XMLHttpRequest()` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date).
+If you want to know whether an _external_ page has changed, you can make a {{HTTPMethod("HEAD")}} request using the {{domxref("fetch()")}} API, and examine the {{HTTPHeader("Last-Modified")}} response header.
 
 ## Specifications
 
