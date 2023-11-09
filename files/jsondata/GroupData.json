@@ -1558,8 +1558,11 @@
     "User-Agent Client Hints API": {
       "overview": ["User-Agent Client Hints API"],
       "interfaces": ["NavigatorUAData"],
-      "methods": ["Navigator.userAgentData"],
-      "properties": [],
+      "methods": [],
+      "properties": [
+        "Navigator.userAgentData",
+        "WorkerNavigator.userAgentData"
+      ],
       "events": []
     },
     "Vibration API": {
