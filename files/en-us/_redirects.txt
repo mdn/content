@@ -9530,6 +9530,10 @@
 /en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
 /en-US/docs/Web/API/RTCRtpContributingSource/source	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
 /en-US/docs/Web/API/RTCRtpContributingSource/timestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpEncodingParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
 /en-US/docs/Web/API/RTCRtpReceiver/getCapabilities	/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities_static
