@@ -10,7 +10,7 @@ browser-compat:
   - api.FileSystemSyncAccessHandle
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
 The File System API — with extensions provided via the [File System Access API](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
 
