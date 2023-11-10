@@ -65703,19 +65703,6 @@
     "modified": "2020-12-12T16:10:34.316Z",
     "contributors": ["bershanskiy", "Sheppy"]
   },
-  "Web/API/Web_Audio_API/Migrating_from_webkitAudioContext": {
-    "modified": "2020-04-28T12:54:23.540Z",
-    "contributors": [
-      "Sheppy",
-      "stephaniehobson",
-      "Cwiiis",
-      "chrisdavidmills",
-      "teoli",
-      "Ehsan",
-      "padenot",
-      "cwilso"
-    ]
-  },
   "Web/API/Web_Audio_API/Simple_synth": {
     "modified": "2020-06-16T14:49:12.422Z",
     "contributors": ["jmcantrell", "DianeLooney", "Sheppy"]
@@ -92247,10 +92234,6 @@
       "stevebanikrocana",
       "teoli"
     ]
-  },
-  "Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser": {
-    "modified": "2019-03-18T20:51:50.321Z",
-    "contributors": ["chrisdavidmills", "Syedfaisal"]
   },
   "Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges": {
     "modified": "2019-04-12T10:12:05.792Z",
