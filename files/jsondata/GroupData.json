@@ -507,9 +507,9 @@
         "FileSystemWritableFileStream"
       ],
       "methods": [
-        "window.showOpenFilePicker()",
-        "window.showSaveFilePicker()",
-        "window.showDirectoryPicker()",
+        "Window.showOpenFilePicker()",
+        "Window.showSaveFilePicker()",
+        "Window.showDirectoryPicker()",
         "DataTransferItem.getAsFileSystemHandle()",
         "StorageManager.getDirectory()"
       ],
