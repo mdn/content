@@ -158,4 +158,5 @@ div.hsla {
 
 - [List of all color notations](/en-US/docs/Web/CSS/color)
 - {{CSSXref("&lt;hue&gt;")}} data type
-- [HSL Color Picker](https://hslpicker.com/)
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
+- [Color picker](https://colorjs.io/apps/picker/) by Lea Verou
