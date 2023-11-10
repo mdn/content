@@ -92,7 +92,7 @@ In this example, we use `getAll()` with no parameters. This returns all of the c
 
 ```js
 let cookies = await cookieStore.getAll();
-if (cookies) {
+if (cookies.length > 0) {
   console.log(cookies);
 } else {
   console.log("Cookie not found");
