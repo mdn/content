@@ -9525,6 +9525,15 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpCodecCapability	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpContributingSource	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/source	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpContributingSource/timestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
+/en-US/docs/Web/API/RTCRtpEncodingParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
 /en-US/docs/Web/API/RTCRtpReceiver/getCapabilities	/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities_static
@@ -10083,7 +10092,8 @@
 /en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties/fill	/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect
 /en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties/iterationStart	/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect
 /en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties/iterations	/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect
-/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext	/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext
+/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext	/en-US/docs/Web/API/Web_Audio_API
+/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web/API/Web_Audio_API/Targeting	/en-US/docs/Web/API/WebXR_Device_API/Targeting
 /en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics	/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics
 /en-US/docs/Web/API/Web_Audio_API/ended_event	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
@@ -10185,6 +10195,7 @@
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/File_and_Directory_Entries_API#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
+/en-US/docs/Web/API/Window/scheduler	/en-US/docs/Web/API/scheduler_property
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
@@ -10970,7 +10981,7 @@
 /en-US/docs/Web/Apps/Build/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /en-US/docs/Web/Apps/Build/Audio_and_video_delivery/Video_player_styling_basics	/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics
 /en-US/docs/Web/Apps/Build/Audio_and_video_delivery/WebAudio_playbackRate_explained	/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-/en-US/docs/Web/Apps/Build/Audio_and_video_delivery/Web_Audio_API_cross_browser	/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser
+/en-US/docs/Web/Apps/Build/Audio_and_video_delivery/Web_Audio_API_cross_browser	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web/Apps/Build/Audio_and_video_delivery/buffering_seeking_time_ranges	/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 /en-US/docs/Web/Apps/Build/Audio_and_video_delivery/cross_browser_video_player	/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Apps/Build/Audio_and_video_manipulation	/en-US/docs/Web/Guide/Audio_and_video_manipulation
@@ -10985,7 +10996,7 @@
 /en-US/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video	/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /en-US/docs/Web/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources	/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /en-US/docs/Web/Apps/Build/Manipulating_media/Video_player_styling_basics	/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics
-/en-US/docs/Web/Apps/Build/Manipulating_media/Web_Audio_API_cross_browser	/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser
+/en-US/docs/Web/Apps/Build/Manipulating_media/Web_Audio_API_cross_browser	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web/Apps/Build/Manipulating_media/buffering_seeking_time_ranges	/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 /en-US/docs/Web/Apps/Build/Manipulating_media/cross_browser_video_player	/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Apps/Build/Performance/CSS_JavaScript_animation_performance	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
@@ -11007,7 +11018,7 @@
 /en-US/docs/Web/Apps/Developing/JavaScript_API/navigator.mozApps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/Apps/Developing/Manipulating_media	/en-US/docs/Web/Guide/Audio_and_video_delivery
 /en-US/docs/Web/Apps/Developing/Manipulating_media/H.264_support_in_Firefox	/en-US/docs/Web/Guide/Audio_and_video_delivery
-/en-US/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser	/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser
+/en-US/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web/Apps/Developing/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Developing/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Developing/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
@@ -11019,7 +11030,7 @@
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics	/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Web_Audio_API_cross_browser	/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser
+/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Web_Audio_API_cross_browser	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player	/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation	/en-US/docs/Web/Guide/Audio_and_video_manipulation
@@ -11975,6 +11986,7 @@
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_architecture	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
 /en-US/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/en-US/docs/Web/Guide/Audio_and_video_delivery
+/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web/Guide/CSS	/en-US/docs/Learn/CSS
 /en-US/docs/Web/Guide/CSS/CSS_Image_Sprites	/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /en-US/docs/Web/Guide/CSS/Consistent_list_indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
@@ -13108,7 +13120,7 @@
 /en-US/docs/WebSockets/Writing_WebSocket_server	/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /en-US/docs/WebSockets/Writing_WebSocket_servers	/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /en-US/docs/Web_Audio_API	/en-US/docs/Web/API/Web_Audio_API
-/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext	/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext
+/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web_Audio_API/Using_Web_Audio_API	/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
 /en-US/docs/Web_Development	/en-US/docs/Web/Guide
 /en-US/docs/Web_Development/HTTP_cookies	/en-US/docs/Web/HTTP/Cookies

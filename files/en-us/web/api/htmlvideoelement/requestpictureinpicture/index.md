@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Picture-in-Picture API")}}
 
 The **{{domxref("HTMLVideoElement")}}** method
 **`requestPictureInPicture()`** issues an asynchronous request
