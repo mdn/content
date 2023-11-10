@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-lists/
 
 {{CSSRef}}
 
-The **CSS lists and counters** module enables styling the bullets of list items and their counters, including styling, positioning, and manipulating their values.
+The **CSS lists and counters** module enables styling the bullets of list items and their counters, including styling, positioning, and manipulating their values, including incrementing counters by values other than `1`.
 
 A list item's marker, whether a bullet symbol or ordinal counter, is its defining feature. List items are not limited to {{HTMLElement("li")}} elements nested within an {{HTMLElement("ol")}} or {{HTMLElement("ul")}}. Rather, lists items are element with `display: list-item` set.
 
