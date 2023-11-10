@@ -191,7 +191,7 @@ The `package.json` file contains information about our project that Node.js/npm 
 
 In React, a **component** is a reusable module that renders a part of our app. These parts can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.
 
-Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
+Let's open `src/App.jsx`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
 ```jsx
 import logo from "./logo.svg";
@@ -219,11 +219,11 @@ function App() {
 export default App;
 ```
 
-The `App.js` file consists of three main parts: some [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top, the `App` component in the middle, and an [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement at the bottom. Most React components follow this pattern.
+The `App.jsx` file consists of three main parts: some [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top, the `App` component in the middle, and an [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement at the bottom. Most React components follow this pattern.
 
 ### Import statements
 
-The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
+The `import` statements at the top of the file allow `App.jsx` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```jsx
 import logo from "./logo.svg";
@@ -287,11 +287,11 @@ function App() {
 
 ### Export statements
 
-At the very bottom of the `App.js` file, the statement `export default App` makes our `App` component available to other modules.
+At the very bottom of the `App.jsx` file, the statement `export default App` makes our `App` component available to other modules.
 
 ## Interrogating the index
 
-Let's open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
+Let's open `src/index.jsx`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```jsx
 import React from "react";
@@ -313,11 +313,11 @@ root.render(
 reportWebVitals();
 ```
 
-As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run.
+As with `App.jsx`, the file starts by importing all the JS modules and other assets it needs to run.
 
 The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
-`index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
+`index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.jsx`.
 
 Line 7 calls the `ReactDOM.createRoot()` function with the DOM element inside which we want the React element to be rendered, in this case the DOM element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root`.
 
@@ -327,7 +327,7 @@ All of this tells React that we want to render our React application with `<App 
 
 > **Note:** In JSX, React elements and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
-Your final `index.js` file should look like this:
+Your final `index.jsx` file should look like this:
 
 ```jsx
 import React from "react";
@@ -349,7 +349,7 @@ Next, we'll use a few of our JavaScript skills to get a bit more comfortable edi
 
 ### Variables in JSX
 
-Back in `App.js`, let's focus on line 8:
+Back in `App.jsx`, let's focus on line 8:
 
 ```jsx
 <img src={logo} className="App-logo" alt="logo" />
@@ -397,7 +397,7 @@ Variables are convenient, but the one we've just set doesn't make great use of R
 
 A **prop** is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only.
 
-Let's open `index.js` and give our `<App/>` call its first prop.
+Let's open `index.jsx` and give our `<App/>` call its first prop.
 
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
@@ -405,7 +405,7 @@ Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice
 root.render(<App subject="Clarice" />);
 ```
 
-Back in `App.js`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
+Back in `App.jsx`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
 
 ```jsx
 function App() {
@@ -437,7 +437,7 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. Now, you can also uncomment the line `Hello, {subject}!` and, if you wish, delete your `console.log()`.
+Now that `subject` is one of our props, let's utilize it in `App.jsx`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. Now, you can also uncomment the line `Hello, {subject}!` and, if you wish, delete your `console.log()`.
 
 ```jsx
 function App(props) {
@@ -448,7 +448,7 @@ function App(props) {
 }
 ```
 
-When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.js`, edit the value of `subject`, and save, your text will change.
+When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.jsx`, edit the value of `subject`, and save, your text will change.
 Note that if you wanted to leave in the `Hello` line throughout this change, you could also have updated the JSX variable to `{props.subject}`.
 
 ## Summary
