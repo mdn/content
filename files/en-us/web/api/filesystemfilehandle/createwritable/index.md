@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`createWritable()`** method of the {{domxref("FileSystemFileHandle")}} interface creates a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
 The method returns a {{jsxref('Promise')}} which resolves to this created stream.
