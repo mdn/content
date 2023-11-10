@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemHandle.remove
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`remove()`** method of the {{domxref("FileSystemHandle")}} interface requests removal of the entry represented by the handle from the underlying file system.
 

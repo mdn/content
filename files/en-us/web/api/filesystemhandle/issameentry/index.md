@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`isSameEntry()`** method of the
 {{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
