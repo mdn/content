@@ -55,3 +55,4 @@ Functional notation: `hwb(H W B[ / A])`
 ## See also
 
 - {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
+- {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color
