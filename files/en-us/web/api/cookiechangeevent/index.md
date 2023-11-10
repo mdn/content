@@ -9,12 +9,12 @@ browser-compat: api.CookieChangeEvent
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`CookieChangeEvent`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) is the event type of the {{domxref("CookieStore.change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
+The **`CookieChangeEvent`** interface of the [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is the event type of the {{domxref("CookieStore.change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
 
 Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 - A cookie is newly created and not immediately removed. In this case `type` is "changed".
-- A cookie is newly created and immediately removed. In this case `type` is "deleted"
+- A cookie is newly created and immediately removed. In this case `type` is "deleted".
 - A cookie is removed. In this case `type` is "deleted".
 
 > **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
@@ -45,6 +45,7 @@ cookieStore.addEventListener("change", (event) => {
 });
 
 const one_day = 24 * 60 * 60 * 1000;
+
 cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",

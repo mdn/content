@@ -41,7 +41,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
 
 ## Examples
 
-In this example when the cookie is set, the event listener logs the `changed` property to the console. The first item in that array contains an object representing the cookie that has just been set.
+In this example, when the cookie is set, the event listener logs the `changed` property to the console. The first item in that array contains an object representing the cookie that has just been set.
 
 ```js
 cookieStore.addEventListener("change", (event) => {
