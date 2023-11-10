@@ -126,6 +126,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `unlimitedStorage`
 - `webNavigation`
 - `webRequest`
+- `webRequestAuthProvider` (Manifest V3 and above)
 - `webRequestBlocking`
 - `webRequestFilterResponse`
 - `webRequestFilterResponse.serviceWorkerScript`
