@@ -718,9 +718,9 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 class MyView(PermissionRequiredMixin, View):
     permission_required = 'catalog.can_mark_returned'
     # Or multiple permissions
-    permission_required = ('catalog.can_mark_returned', 'catalog.can_edit')
-    # Note that 'catalog.can_edit' is just an example
-    # the catalog application doesn't have such permission!
+    permission_required = ('catalog.can_mark_returned', 'catalog.change_book')
+    # Note that 'catalog.change_book' is permission
+    # Is created automatically for the book model, along with add_book, and delete_book
 ```
 
 > **Note:** There is a small default difference in the behavior above. By **default** for a logged-in user with a permission violation:
