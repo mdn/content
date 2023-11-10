@@ -88,7 +88,7 @@ Each object contains the following properties:
 
 ## Examples
 
-In this example we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
+In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
 
 ```js
 let cookies = await cookieStore.getAll();
