@@ -1,6 +1,7 @@
 ---
 title: nop
 slug: WebAssembly/Reference/Control_flow/nop
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

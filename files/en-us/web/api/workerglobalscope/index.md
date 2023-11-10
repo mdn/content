@@ -122,5 +122,5 @@ console.log(navigator);
 ## See also
 
 - Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}}
-- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}} and {{domxref("WorkerNavigator")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

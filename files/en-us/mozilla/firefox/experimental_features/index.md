@@ -982,7 +982,7 @@ The CSS {{cssxref("offset-path")}} property now supports using [`url()`](/en-US/
 
 ### zoom property
 
-The non-standard CSS {{cssxref("zoom")}} property lets you magnify an element similar to the {{cssxref("transform")}} property, but it affects the layout size of the element.
+The non-standard CSS {{cssxref("zoom")}} property is enabled in the Nightly release and lets you magnify an element similar to the {{cssxref("transform")}} property, but it affects the layout size of the element.
 See ([Firefox bug 1855763](https://bugzil.la/1855763) and [Firefox bug 390936](https://bugzil.la/390936)) for more details.
 
 <table>
@@ -1018,6 +1018,108 @@ See ([Firefox bug 1855763](https://bugzil.la/1855763) and [Firefox bug 390936](h
       <th>Preference name</th>
       <td colspan="2">
       <code>layout.css.zoom.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+To ensure compatibility with these changes, the [Vendor-prefixed transform properties](#vendor-prefixed-transform-properties) and the [Vendor-prefixed transition properties](#vendor-prefixed-transition-properties) are disabled in the Nightly release.
+These changes are described in the following sections.
+
+#### Vendor-prefixed transform properties
+
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+Specifically, the disabled properties are:
+
+- `-moz-backface-visibility`
+- `-moz-perspective`
+- `-moz-perspective-origin`
+- `-moz-transform`
+- `-moz-transform-origin`
+- `-moz-transform-style`
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.prefixes.transforms</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+#### Vendor-prefixed transition properties
+
+The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+Specifically, the disabled properties are:
+
+- `-moz-transition`
+- `-moz-transition-delay`
+- `-moz-transition-duration`
+- `-moz-transition-property`
+- `-moz-transition-timing-function`
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.prefixes.transitions</code>
     </td>
     </tr>
   </tbody>
@@ -2337,51 +2439,6 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
-### Global Privacy Control
-
-[Global Privacy Control](https://globalprivacycontrol.org/) is a mechanism that allows a user to indicate that they do not consent to a website or service selling or sharing their personal information with third parties.
-Firefox implements the {{HTTPHeader("Sec-GPC")}} header to indicate that consent is not granted, and the {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}} properties that allow JavaScript to check the user consent preference.
-
-Note that the `about:config` preference `privacy.globalprivacycontrol.enabled` must be set `true` to indicate the user preference to not grant consent ([Firefox bug 1830623](https://bugzil.la/1830623)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>118</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>privacy.globalprivacycontrol.functionality.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## HTTP
 
 ### SameSite=Lax by default
@@ -2428,7 +2485,8 @@ For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 ### HTTP Status 103
 
-The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start preloading resources while the server is still preparing the full response.
+The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server is still preparing the full response.
+Note that using the header to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites is already supported.
 For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 
 <table>
@@ -2462,7 +2520,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>network.early-hints.enabled</code> and <code>network.early-hints.preconnect.enabled</code></td>
+      <td colspan="2"><code>network.early-hints.enabled</code></td>
     </tr>
   </tbody>
 </table>
