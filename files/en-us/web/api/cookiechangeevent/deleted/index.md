@@ -39,6 +39,9 @@ An array of objects containing the deleted cookie(s). Each object contains the f
     - `"none"`
       - : Cookies will be sent in all contexts.
 
+- `partitioned`
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+
 ## Examples
 
 In this example, when the cookie is deleted the event listener logs the first item in the `CookieChangeEvent.deleted` property to the console. It contains an object representing the cookie that has just been deleted.
