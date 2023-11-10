@@ -5,6 +5,9 @@ page-type: web-api-overview
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemWritableFileStream
+  - api.FileSystemSyncAccessHandle
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}
