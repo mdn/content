@@ -63,7 +63,7 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 ## Events
 
 - {{domxref("Screen.change_event", "change")}} {{experimental_inline}} {{securecontext_inline}}
-  - : Fired on a specific screen when it changes in some way — for example, width or height, available width or available height, color depth, or orientation.
+  - : Fired on a specific screen when it changes in some way — width or height, available width or available height, color depth, or orientation.
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fires when the screen orientation changes.
 
