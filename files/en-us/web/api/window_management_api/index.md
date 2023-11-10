@@ -57,20 +57,20 @@ Developers can explicitly grant permission for an {{htmlelement("iframe")}} to u
 
 ## Interfaces
 
-- {{domxref("ScreenDetails")}}
+- {{domxref("ScreenDetails")}} {{securecontext_inline}}
   - : Represents the details of all the screens available to the user's device.
-- {{domxref("ScreenDetailed")}}
+- {{domxref("ScreenDetailed")}} {{securecontext_inline}}
   - : Represents detailed information about one specific screen available to the user's device.
 
 ### Extensions to other interfaces
 
-- The `Screen` {{domxref("Screen.change_event", "change")}} event
+- The `Screen` {{domxref("Screen.change_event", "change")}} event {{securecontext_inline}}
   - : Fired on a specific screen when it changes in some way — for example available width or height, or orientation.
-- {{domxref("Screen.isExtended")}}
+- {{domxref("Screen.isExtended")}} {{securecontext_inline}}
   - : A boolean property that returns `true` if the user's device has multiple screens, and `false` if not.
 - {{domxref("Element.requestFullscreen()")}}, the `screen` option
   - : Specifies on which screen you want to put the element in fullscreen mode.
-- {{domxref("Window.getScreenDetails()")}}
+- {{domxref("Window.getScreenDetails()")}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance.
 
 ## Examples

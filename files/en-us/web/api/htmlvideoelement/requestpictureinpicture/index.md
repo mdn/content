@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Picture-in-Picture API")}}
 
 The **{{domxref("HTMLVideoElement")}}** method
 **`requestPictureInPicture()`** issues an asynchronous request
@@ -34,8 +34,14 @@ object that can be used to listen when a user will resize that floating window.
 
 ### Exceptions
 
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the feature is not supported (for example, disabled by a user preference or by a platform limitation).
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Thrown if the feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the video element's `readState` is `HAVE_NOTHING`, or if the video element has no video track, or if the video element's `disablePictureInPicture` attribute is `true`.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if `document.pictureInPictureElement` is `null` and the document does not have {{Glossary("transient activation")}}.
 
 ## Security
 
