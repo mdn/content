@@ -59,7 +59,7 @@ While React _can_ be used for [small pieces of an interface](https://react.dev/l
 
 In addition, many of the developer-experience benefits of a React app, such as writing interfaces with JSX, require a compilation process. Adding a compiler like Babel to a website makes the code on it run slowly, so developers often set up such tooling with a build step. React arguably has a heavy tooling requirement, but it can be learned.
 
-This article is going to focus on the use case of using React to render the entire user interface of an application, using tooling provided by Facebook's own [create-react-app](https://create-react-app.dev/) tool.
+This article is going to focus on the use case of using React to render the entire user interface of an application with the support of [Vite](https://vitejs.dev/), a modern front-end build tool.
 
 ## How does React use JavaScript?
 
@@ -109,13 +109,13 @@ To read more about JSX, check out the React team's [Writing Markup with JSX](htt
 
 ## Setting up your first React app
 
-There are many ways to use React, but we're going to use the command-line interface (CLI) tool create-react-app, as mentioned earlier, which expedites the process of developing a React application by installing some packages and creating some files for you, handling the tooling described above.
+There are many ways to create a new React application, but we're going to use Vite, as mentioned earlier, to create a new application in our command line.
 
-It's possible to [add React to a website without create-react-app](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Element/script) elements into an HTML file, but the create-react-app CLI is a common starting point for React applications. Using it will allow you to spend more time building your app, and less time fussing with setup.
+It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Element/script) elements into an HTML file, but using vite will allow tiy to spend more time building your app and less time fussing with setup.
 
 ### Requirements
 
-In order to use create-react-app, you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner).
+In order to use Vite, you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner).
 
 You may also use the Yarn package manager as an alternative, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
@@ -127,71 +127,65 @@ Also, see the following for more information:
 
 - ["About npm" on the npm blog](https://docs.npmjs.com/about-npm/)
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
-- [The create-react-app documentation](https://create-react-app.dev/)
+- [Vite's documentation](https://vitejs.dev/guide/)
 
 ### Initializing your app
 
-create-react-app takes one argument: the name you'd like to give your app. create-react-app uses this name to make a new directory, then creates the necessary files inside it. Make sure you `cd` to the place you'd like your app to live on your hard drive, then run the following in your terminal:
+The NPM package manager comes with a `create` command that allows you to create new projects from templates. We cam use it to create a new app from Vite's standard React template. Make sure you `cd` to the place you'd like your app to live on your hard drive, then run the following in your terminal:
 
 ```bash
-npx create-react-app moz-todo-react
+npm create vite@latest moz-todo-react -- --template react
 ```
 
-This creates a `moz-todo-react` directory, and does several things inside it:
+This creates a `moz-todo-react` directory using Vite's `react` template. The `--` is necessary to pass arguments to the `create` command, and the `--template react` argument tells Vite to use its React template.
 
-- Installs some npm packages essential to the functionality of the app.
-- Writes scripts for starting and serving the application.
-- Creates a structure of files and directories that define the basic app architecture.
-- Initializes the directory as a git repository, if you have git installed on your computer.
+Your terminal will have printed some messages if this command was successful. You should see text prompting you to `cd` to your new directory, install the app's dependencies, and run the app locally. Let's start with two of those commands. Run the following in your terminal:
 
-> **Note:** if you have the Yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use npm, you can add the flag `--use-npm` when you run create-react-app:
->
-> ```bash
-> npx create-react-app moz-todo-react --use-npm
-> ```
+```bash
+cd moz-todo-react && npm install
+```
 
-create-react-app will display a number of messages in your terminal while it works; this is normal! This might take a few minutes, so now might be a good time to go make a cup of tea.
+Once the process is complete, we need to start a local development server to run our app. Here, we're going to deviate from Vite's suggestion to simply run `npm run dev`. We want to open our app in our browser as soon as the server starts, and we want to use port 3000 to view our app. Run the following in your terminal:
 
-When the process is complete, `cd` into the `moz-todo-react` directory and run the command `npm start`. The scripts installed by create-react-app will start being served at a local server at localhost:3000, and open the app in a new browser tab. Your browser will display something like this:
+```bash
+npm run dev -- --open --port 3000
+```
+
+Once the server starts, you should see a new browser tab with your React app!
+
+<!-- TODO: Take new screenshot -->
 
 ![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](default-create-react-app.png)
 
 ### Application structure
 
-create-react-app gives us everything we need to develop a React application. Its initial file structure looks like this:
+Vite gives us everything we need to develop a React application. Its initial file structure looks like this:
 
 ```plain
 moz-todo-react
 ├── README.md
+├── index.html
 ├── node_modules
-├── package.json
 ├── package-lock.json
-├── .gitignore
+├── package.json
 ├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    ├── reportWebVitals.js
-    └── setupTests.js
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   ├── index.css
+│   └── main.jsx
+└── vite.config.js
 ```
 
-The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives.
+**`index.html`** is the most important top-level file. Vite injects your code into this file so that your browser can run it. You won't need to edit this file during our tutorial, but you should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
-The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
+The **`public`** directory contains static files that will be served directly to your browser without being processed by Vite's build tooling. Right now, it only contains a Vite logo.
 
-The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
+The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives. You'll notice that JavaScript files in this directort end in the extension `.jsx`. This extension is necessary for any file that contains JSX – it tells Vite to turn the JSX syntax into JavaScript that your browser can understand.
 
-The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [package.json on the npm blog](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; Vite merely populated it for us. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [package.json on the npm blog](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
 ## Exploring our first React component — \<App/>
 
@@ -332,8 +326,6 @@ Line 8 calls the `root.render()` method with the React element we want to render
 All of this tells React that we want to render our React application with `<App />` as the root, or first element.
 
 > **Note:** In JSX, React elements and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
-
-[`reportWebVitals`](https://create-react-app.dev/docs/measuring-performance/) are a set of useful metrics that aim to capture the user experience of a web page, but they're not in scope for this article. You can delete its import line, as well as the `reportWebVitals();` line.
 
 Your final `index.js` file should look like this:
 
