@@ -83,8 +83,14 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The passing `options` is an empty object.
+    - The `url` in `options` is present and is not equal with the creation URL if in Window context.
+    - The `url` in `options` is present and its origin is same as the origin of the creation URL.
+    - Getting the cookie or cookies represented by the given `name` or `options` fails.
 
 ## Examples
 
