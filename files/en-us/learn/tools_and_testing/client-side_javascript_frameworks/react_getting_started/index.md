@@ -322,7 +322,7 @@ The `<img>` tag has an attribute you may not have seen before: `className`: This
 
 ### Changing some content
 
-hange the [`<h1>`](/en-US/docs/Web/HTML/Element/h1) element so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the two `<a>` at the top of the component and save. The logos will be gone.
+hange the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the two `<a>` at the top of the component and save. The logos will be gone.
 
 We won't be using most of the boilerplate code Vite provided for us, so let's delete it. Replace the contents of `App.jsx` with the following:
 
