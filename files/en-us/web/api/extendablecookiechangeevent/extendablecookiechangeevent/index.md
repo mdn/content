@@ -9,7 +9,7 @@ browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object
-which is the event type passed to {{domxref("ServiceWorkerRegistration/cookiechange_event", "ServiceWorkerRegistration.oncookiechange()")}}.
+which is the event type passed to {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "ServiceWorkerGlobalScope.cookiechange")}}.
 This constructor is called by the browser when a change event occurs.
 
 > **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
