@@ -22,6 +22,12 @@ cookieStore.addEventListener("change", (event) => { })
 cookieStore.onchange = (event) => { }
 ```
 
+## Event type
+
+A {{domxref("CookieChangeEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("CookieChangeEvent")}}
+
 ## Examples
 
 To be informed when a cookie has changed, you can add a handler to the `cookieStore` instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
