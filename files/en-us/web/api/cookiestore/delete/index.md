@@ -23,12 +23,12 @@ delete(options)
 
 This method requires one of the following:
 
-- `name`
+- `name` {{optional_inline}}
   - : A string with the name of a cookie.
 
 Or
 
-- `options`
+- `options` {{optional_inline}}
 
   - : An object containing:
 
