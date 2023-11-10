@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`getDirectoryHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a
