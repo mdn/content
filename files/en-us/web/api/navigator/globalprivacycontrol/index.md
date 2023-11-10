@@ -5,10 +5,11 @@ slug: Web/API/Navigator/globalPrivacyControl
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.Navigator.globalPrivacyControl
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`Navigator.globalPrivacyControl`** read-only property returns the user's [Global Privacy Control](globalprivacycontrol.org) setting for the current website.
 This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
