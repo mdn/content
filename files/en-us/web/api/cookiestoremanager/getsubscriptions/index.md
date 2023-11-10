@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a list of objects, each containing:
+A {{jsxref("Promise")}} that resolves with a list of objects, each containing:
 
 - `name`
   - : A string with the name of a cookie.
@@ -33,7 +33,7 @@ A {{jsxref("promise")}} that resolves with a list of objects, each containing:
 
 ## Examples
 
-If the {{domxref("ServiceWorkerRegistration")}} represented by `registration` has subscribed to any cookie change events `subscriptions` will resolve to a list of objects containing the name and URL of those cookies.
+If the {{domxref("ServiceWorkerRegistration")}} represented by `registration` has subscribed to any cookie change events, `subscriptions` will resolve to a list of objects containing the name and URL of those cookies.
 
 ```js
 const subscriptions = await registration.cookies.getSubscriptions();
