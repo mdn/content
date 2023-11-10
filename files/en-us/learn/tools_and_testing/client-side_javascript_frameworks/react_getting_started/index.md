@@ -187,6 +187,17 @@ The **`src`** directory is where we'll spend most of our time, as it's where the
 
 The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; Vite merely populated it for us. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [package.json on the npm blog](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
+### Customizing our dev script
+
+Before we move on, you might want to change your `package.json` file a little bit so that you don't have to pass the `--open` and `--port` flags every time you run `npm run dev`. Open `package.json` in your text editor and find the `scripts` object. Change the `"dev"` key so that it looks like this:
+
+```diff
+- "dev": "vite",
++ "dev": "vite -- --open --port 3000",
+```
+
+With this in place, your app will open in your browser at `http://localhost:3000` every time you run `npm run dev`.
+
 ## Exploring our first React component — \<App/>
 
 In React, a **component** is a reusable module that renders a part of our app. These parts can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.
