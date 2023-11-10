@@ -200,33 +200,45 @@ With this in place, your app will open in your browser at `http://localhost:3000
 
 ## Exploring our first React component — \<App/>
 
-In React, a **component** is a reusable module that renders a part of our app. These parts can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.
+In React, a **component** is a reusable module that renders a part of our overall application. Components can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.
 
-Let's open `src/App.jsx`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
+Let's open `src/App.jsx`, since our browser is prompting us to edit it. This file contains our first component, `<App />`:
 
 ```jsx
-import logo from "./logo.svg";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://react.dev"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-      </header>
-    </div>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   );
 }
+
 export default App;
 ```
 
@@ -237,15 +249,19 @@ The `App.jsx` file consists of three main parts: some [`import`](/en-US/docs/Web
 The `import` statements at the top of the file allow `App.jsx` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```jsx
-import logo from "./logo.svg";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
 ```
 
-The first statement imports a logo from `'./logo.svg'`. Note the use of `./` at the beginning of the path and the `.svg` extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the `logo.svg` file lives in our source directory.
+The first statement imports the `useState` hook from the `react` library. Hooks are a way of using React's features inside a component. We'll talk more about hooks later in this tutorial.
 
-The second statement imports the CSS related to our App component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Webpack, the bundler, to add the referenced CSS file to the final CSS bundle.
+After that, we import `reactLogo` and `viteLogo` Note that their import paths start with `./` and `/` respectively, and that they end with the `.svg` extension at the end – this tells us that these imports are _local_, referencing our own files rather than NPM packages.
 
-Releases of React prior to the React 17 release in 2020 also required an import of the React library itself, as in - `import React from 'react'`. Skipping this step would result in an error: React turned the JSX we write into `React.createElement()`, so all React components needed to import the `React` module. React 17 introduced a new, rewritten version of the JSX transform that makes this statement unnecessary, with backported support to React 16.14.0, React 15.7.0, and React 0.14.10 (read more on the [official React doc](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)).
+The final statement imports the CSS related to our App component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Rollup, the bundler, to add the referenced CSS file to the final CSS bundle.
+
+Prior to the release of React 17 in 2020, components were also required to import of the React library itself, as in - `import React from 'react'`. Skipping this step would result in an error: React turned the JSX we write into `React.createElement()`, so all React components needed to import the `React` module. React 17 introduced a new, rewritten version of the JSX transform that makes this statement unnecessary, with backported support to React 16.14.0, React 15.7.0, and React 0.14.10 (read more on the [official React doc](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)).
 
 ### The App component
 
@@ -255,46 +271,80 @@ Let's look at `App` more closely.
 
 ```jsx
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://react.dev"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-      </header>
-    </div>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   );
 }
 ```
 
 The `App` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
-Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
+Just under the `return` keyword is a special bit of syntax: `<>`. This is a [fragment](https://react.dev/docs/fragments). React components have to return a single JSX element, and fragments allow us to do that without rendering arbitrary `<div>`s in the browser. You'll see fragments in many React applications.
 
-Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) element on lines 6–8 so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) element and save; the "Learn React" link will be gone.
+### A brief JSX refresher
 
-Your `App` component should now look like this:
+Let's focus on the first child of the [`<div>`](/en-US/docs/Web/HTML/Element/div) tag just inside the fragment:
 
 ```jsx
+<a href="https://vitejs.dev" target="_blank">
+  <img src={viteLogo} className="logo" alt="Vite logo" />
+</a>
+```
+
+This [`<a>`](/en-US/docs/Web/HTML/Element/a) tag should look familiar! It has an `href` attribute, just like you'd see in HTML.
+
+Inside, the [`<img>`](/en-US/docs/Web/HTML/Element/img) tag has a `src` attribute whose value is a JavaScript expression in curly braces. This value is the `viteLogo` we imported earlier. If this syntax is unfamiliar to you, don't worry too much about it. The main thing to note is that referencing the image this way provides a reliable way for our application to find and serve the file.
+
+The `<img>` tag has an attribute you may not have seen before: `className`: This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. There are a few other differences between JSX and HTML, and we'll cover them as they come up.
+
+### Changing some content
+
+hange the [`<h1>`](/en-US/docs/Web/HTML/Element/h1) element so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the two `<a>` at the top of the component and save. The logos will be gone.
+
+We won't be using most of the boilerplate code Vite provided for us, so let's delete it. Replace the contents of `App.jsx` with the following:
+
+```jsx
+import viteLogo from "/vite.svg";
+import "./App.css";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello, World!</p>
+    <>
+      <header>
+        <img src={viteLogo} className="logo" alt="Vite logo" />
+        <h1>Hello, World!</h1>
       </header>
-    </div>
+    </>
   );
 }
+
+export default App;
 ```
+
+<!-- TODO -->
 
 ### Export statements
 
