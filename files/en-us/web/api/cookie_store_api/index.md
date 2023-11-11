@@ -9,7 +9,7 @@ browser-compat: api.CookieStore
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{SeeCompatTable}}
 
-The _**Cookie Store API**_ provides an asynchronous API for managing cookies, while also exposing cookies to [Service Worker API](/en-US/docs/Web/API/Service_Worker_API),
+The _**Cookie Store API**_ provides an asynchronous API for managing cookies, while also exposing cookies to [Service Worker API](/en-US/docs/Web/API/Service_Worker_API).
 
 ## Concepts and Usage
 
