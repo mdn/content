@@ -10,7 +10,7 @@ browser-compat: api.ServiceWorkerGlobalScope.cookiechange_event
 
 {{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`cookiechange`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list added via {{domxref("CookieStoreManager.subscribe()")}}.
+The **`cookiechange`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list added via {{domxref("CookieStoreManager.subscribe()")}}. This is part of the {{domxref("Cookie Store API")}}.
 
 This event is not cancelable and does not bubble.
 

@@ -10,7 +10,7 @@ browser-compat: api.ServiceWorkerGlobalScope.cookieStore
 
 {{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`cookieStore`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("CookieStore")}} object for the current document context, which is part of the {{domxref("Cookie Store API")}}.
+The **`cookieStore`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface associated with the service worker. This is part of the {{domxref("Cookie Store API")}}.
 
 ## Value
 
