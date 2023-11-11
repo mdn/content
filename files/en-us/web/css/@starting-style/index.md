@@ -33,15 +33,15 @@ The `@starting-style` at-rule consists of a _rule list_.
 
 ### Changing starting colors
 
-The `background-color` of an `h1` element can be transitioned from transparent to green when it is initially rendered:
+The `background-color` of an element can be transitioned from transparent to green when it is initially rendered:
 
 ```css
-h1 {
+div {
   transition: background-color 1.5s;
   background-color: green;
 }
 @starting-style {
-  h1 {
+  div {
     background-color: transparent;
   }
 }
@@ -50,7 +50,7 @@ h1 {
 Conditional rules can be used with [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting):
 
 ```css
-h1 {
+div {
   transition: background-color 1.5s;
   background-color: green;
   @starting-style {
