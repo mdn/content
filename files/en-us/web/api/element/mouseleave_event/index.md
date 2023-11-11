@@ -12,6 +12,8 @@ The **`mouseleave`** event is fired at an {{domxref("Element")}} when the cursor
 
 `mouseleave` and {{domxref("Element/mouseout_event", "mouseout")}} are similar but differ in that `mouseleave` does not bubble and `mouseout` does. This means that `mouseleave` is fired when the pointer has exited the element _and_ all of its descendants, whereas `mouseout` is fired when the pointer leaves the element _or_ leaves one of the element's descendants (even if the pointer is still within the element).
 
+The `mouseleave` and `mouseout` events will not be triggered when the element is replaced or removed from the DOM.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
