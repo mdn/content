@@ -89,3 +89,4 @@ The `opacity` of an element can be transitioned when the element changes to or f
 
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [TransitionEvent](/en-US/docs/Web/API/TransitionEvent)
