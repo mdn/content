@@ -3,10 +3,12 @@ title: "ServiceWorkerGlobalScope: cookiechange event"
 short-title: cookiechange
 slug: Web/API/ServiceWorkerGlobalScope/cookiechange_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.cookiechange_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`cookiechange`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list added via {{domxref("CookieStoreManager.subscribe()")}}.
 
