@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.cancel_event
 
 {{APIRef}}
 
-The **`cancel`** event is fired at {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements when the user instructs the browser that they wish to dismiss the current open dialog, or at input elements in the File state when the user does not change their selection. For {{HTMLElement("dialog")}} elements, The browser fires this event when the user presses the <kbd>Esc</kbd> key.
+The **`cancel`** event is fired by {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements. The event is fired when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key. It is also fired by the [file input](/en-US/docs/Web/HTML/Element/input/file) when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected.
 
 This event does not bubble.
 
