@@ -8,7 +8,7 @@ status:
 browser-compat: api.CookieStoreManager.subscribe
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 

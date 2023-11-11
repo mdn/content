@@ -7,7 +7,7 @@ status:
 browser-compat: api.CookieStoreManager
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`CookieStoreManager`** interface of the [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) allows service workers to subscribe to cookie change events. Call {{domxref("CookieStoreManager.subscribe()","subscribe()")}} on a particular service worker registration to receive change events.
 
