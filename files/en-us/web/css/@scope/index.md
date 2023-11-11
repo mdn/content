@@ -2,10 +2,12 @@
 title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
+status:
+  - experimental
 browser-compat: css.at-rules.scope
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify CSS rules and assign values to a limited subtree of the DOM without adding extra specificity to selectors. This makes it easier to override the CSS.
 
