@@ -87,6 +87,7 @@ closeButton.addEventListener("click", () => {
 #### HTML
 
 ```html
+<label for="file">Select or file. Or don't.</label>
 <input type="file" id="file" name="file" />
 
 <div id="result"></div>
