@@ -50,9 +50,11 @@ h1 {
 Conditional rules can be used with [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting):
 
 ```css
-@starting-style (.dark-scheme) {
-  a {
-    color: plum;
+h1 {
+  transition: background-color 1.5s;
+  background-color: green;
+  @starting-style {
+    background-color: transparent;
   }
 }
 ```
