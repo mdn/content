@@ -12,7 +12,7 @@ The **`originAgentCluster`** read-only property of the {{domxref("Window")}} int
 
 A Document delivered over a {{Glossary("secure context")}} environment can request that it be placed in an origin-keyed agent cluster, by using the `Origin-Agent-Cluster` HTTP response header. This will result Document's [agent cluster key](https://html.spec.whatwg.org/multipage/webappapis.html#agent-cluster-key) to be its origin, instead of the corresponding site. So attempting to relax the {{Glossary("same-origin policy")}} restriction editing `document.domain` property will take no effect.
 
-Note that within a browsing context group, same-origin Document objects can never end up in different agent clusters. This means that the `originAgentCluster` of Document is usually decided by whether the previously-loaded same-origin page has set `Origin-Agent-Cluster` HTTP response header or not.
+Note that within a [browsing context group](https://html.spec.whatwg.org/multipage/document-sequences.html#browsing-context-group), same-origin Document objects can never end up in different agent clusters. This means that the `originAgentCluster` of current Document is usually decided by whether the previously-loaded same-origin page has set `Origin-Agent-Cluster` HTTP response header or not.
 
 Documents with an [opaque origin](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque) or the[cross-origin isolation mode](https://html.spec.whatwg.org/multipage/webappapis.html#agent-cluster-cross-origin-isolation) of Documents' agent cluster is not `none` are considered as origin-keyed and the `originAgentCluster` property will always return `true`, no matter whether the `Origin-Agent-Cluster` HTTP response header is set or not.
 
