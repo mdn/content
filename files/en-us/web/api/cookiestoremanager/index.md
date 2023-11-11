@@ -13,7 +13,7 @@ The **`CookieStoreManager`** interface of the [Cookie Store API](/en-US/docs/Web
 
 A `CookieStoreManager` has an associated {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and URL. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.
 
-To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies")}}.
+To get a `CookieStoreManager`, use {{domxref("ServiceWorkerRegistration.cookies")}}.
 
 ## Instance methods
 
