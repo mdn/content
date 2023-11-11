@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.cookieStore
 ---
 
-{{APIRef}}{{seecompattable}}
+{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`cookieStore`** read-only property of the {{domxref("Window")}} interface returns a reference to the {{domxref("CookieStore")}} object for the current document context, which is part of the {{domxref("Cookie Store API")}}.
 
