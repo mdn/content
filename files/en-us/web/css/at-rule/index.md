@@ -58,6 +58,7 @@ Conditional group rules are:
 
 - {{cssxref("@media")}},
 - {{cssxref("@scope")}},
+- {{cssxref("@starting-style")}},
 - {{cssxref("@supports")}},
 - {{cssxref("@document")}}. _(deferred to Level 4 of CSS Spec)_
 
@@ -84,7 +85,8 @@ Since each conditional group may also contain nested statements, there may be an
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
 - {{cssxref("@property")}}
-- {{cssxref("@scope")}},
+- {{cssxref("@scope")}}
+- {{cssxref("@starting-style")}}
 - {{cssxref("@supports")}}
 
 ## Specifications
