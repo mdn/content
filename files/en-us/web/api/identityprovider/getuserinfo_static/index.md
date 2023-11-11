@@ -3,7 +3,7 @@ title: "IdentityProvider: getUserInfo() static method"
 short-title: getUserInfo()
 slug: Web/API/IdentityProvider/getUserInfo_static
 page-type: web-api-static-method
-browser-compat: api.IdentityProvider.getUserInfo
+browser-compat: api.IdentityProvider.getUserInfo_static
 ---
 
 {{APIRef("FedCM API")}}{{SeeCompatTable}}
