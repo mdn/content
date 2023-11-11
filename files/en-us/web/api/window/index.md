@@ -103,7 +103,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
-- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("scheduler_property", "Window.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
