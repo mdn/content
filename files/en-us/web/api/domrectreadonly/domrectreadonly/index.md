@@ -26,9 +26,9 @@ new DOMRectReadOnly(x, y, width, height)
   - : The `y` coordinate of the `DOMRectReadOnly`'s
     origin.
 - `width`
-  - : The `width` of the `DOMRectReadOnly`.
+  - : The width of the `DOMRectReadOnly`.
 - `height`
-  - : The `height` of the `DOMRectReadOnly`.
+  - : The height of the `DOMRectReadOnly`.
 
 ## Examples
 

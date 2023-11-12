@@ -17,13 +17,13 @@ The **`DOMRectReadOnly`** interface specifies the standard properties (also used
 ## Instance properties
 
 - {{domxref("DOMRectReadOnly.x")}} {{ReadOnlyInline}}
-  - : The x coordinate of the `DOMRectReadOnly`'s origin.
+  - : Returns the x coordinate of the `DOMRectReadOnly`'s origin.
 - {{domxref("DOMRectReadOnly.y")}} {{ReadOnlyInline}}
-  - : The y coordinate of the `DOMRectReadOnly`'s origin.
+  - : Returns the y coordinate of the `DOMRectReadOnly`'s origin.
 - {{domxref("DOMRectReadOnly.width")}} {{ReadOnlyInline}}
-  - : The width of the `DOMRectReadOnly`.
+  - : Returns the width of the `DOMRectReadOnly`.
 - {{domxref("DOMRectReadOnly.height")}} {{ReadOnlyInline}}
-  - : The height of the `DOMRectReadOnly`.
+  - : Returns the height of the `DOMRectReadOnly`.
 - {{domxref("DOMRectReadOnly.top")}} {{ReadOnlyInline}}
   - : Returns the top coordinate value of the `DOMRectReadOnly` (usually the same as `y`).
 - {{domxref("DOMRectReadOnly.right")}} {{ReadOnlyInline}}
