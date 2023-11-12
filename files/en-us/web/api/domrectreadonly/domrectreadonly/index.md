@@ -26,18 +26,18 @@ new DOMRectReadOnly(x, y, width, height)
   - : The `y` coordinate of the `DOMRectReadOnly`'s
     origin.
 - `width`
-  - : The width of the `DOMRectReadOnly`.
+  - : The `width` of the `DOMRectReadOnly`.
 - `height`
-  - : The height of the `DOMRectReadOnly`.
+  - : The `height` of the `DOMRectReadOnly`.
 
 ## Examples
 
-To create a new `DOMPoint`, you could run a line of code like so:
+To create a new `DOMRectReadOnly`, you could run a line of code like so:
 
 ```js
 const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100);
 // running 'myDOMRect' in the console would then return
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
+// DOMRectReadOnly { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```
 
 ## Specifications
