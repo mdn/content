@@ -101522,20 +101522,6 @@
       "Psz"
     ]
   },
-  "Web/HTTP/Headers/X-XSS-Protection": {
-    "modified": "2020-10-15T21:50:40.404Z",
-    "contributors": [
-      "hostmaster",
-      "Malvoz",
-      "mfuji09",
-      "acdha",
-      "valdeirpsr",
-      "ccsplit",
-      "Slaweally",
-      "arthurwhite",
-      "fscholz"
-    ]
-  },
   "Web/HTTP/Messages": {
     "modified": "2020-12-03T23:53:07.614Z",
     "contributors": [

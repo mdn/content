@@ -49,7 +49,6 @@ connection: keep-alive\r\n
 strict-transport-security: max-age=63072000\r\n
 vary: Cookie, Accept-Encoding\r\n
 content-length: 6502\r\n
-x-xss-protection: 1; mode=block\r\n
 ```
 
 Each line is terminated by both carriage return and line feed characters
