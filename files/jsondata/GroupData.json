@@ -62,9 +62,9 @@
     },
     "Beacon": {
       "overview": ["Beacon API"],
-      "guides": ["/docs/Web/API/Beacon_API/Using_the_Beacon_API"],
-      "interfaces": ["Navigator", "WorkerNavigator"],
-      "methods": [],
+      "guides": [],
+      "interfaces": [],
+      "methods": ["Navigator.sendBeacon()"],
       "properties": [],
       "events": []
     },
@@ -78,14 +78,17 @@
     "Bluetooth API": {
       "overview": ["Web Bluetooth API"],
       "interfaces": [
+        "Bluetooth",
+        "BluetoothCharacteristicProperties",
         "BluetoothDevice",
         "BluetoothRemoteGATTCharacteristic",
+        "BluetoothRemoteGATTDescriptor",
         "BluetoothRemoteGATTServer",
         "BluetoothRemoteGATTService",
         "BluetoothUUID"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.bluetooth"],
       "events": []
     },
     "Canvas API": {
@@ -1129,11 +1132,10 @@
         "Scheduling",
         "TaskController",
         "TaskSignal",
-        "AbortSignal",
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "Window.scheduler"],
+      "properties": ["Navigator.scheduling", "scheduler_property"],
       "events": []
     },
     "Push API": {
@@ -1558,8 +1560,11 @@
     "User-Agent Client Hints API": {
       "overview": ["User-Agent Client Hints API"],
       "interfaces": ["NavigatorUAData"],
-      "methods": ["Navigator.userAgentData"],
-      "properties": [],
+      "methods": [],
+      "properties": [
+        "Navigator.userAgentData",
+        "WorkerNavigator.userAgentData"
+      ],
       "events": []
     },
     "Vibration API": {
@@ -1625,7 +1630,6 @@
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
-        "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
         "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
@@ -2176,7 +2180,6 @@
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",
-        "ServiceWorker",
         "SharedWorker",
         "SharedWorkerGlobalScope",
         "Worker",
