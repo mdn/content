@@ -11,6 +11,10 @@ The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an
 
 {{EmbedInteractiveExample("pages/css/order.html")}}
 
+In above demo select options on the left side to change order of the first purple box. Other blue boxes have been given predefined orders.
+
+Notice when the order is set to `2` the purple box is placed before other two blue boxes with order `2`. This is because in source code the purple box comes before the two blue boxes.
+
 ## Syntax
 
 ```css
