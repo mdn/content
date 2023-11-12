@@ -18,7 +18,7 @@ representation of the PaymentAddress object's properties.
 ## Syntax
 
 ```js
-toJSON()
+toJSON();
 ```
 
 ### Return value
