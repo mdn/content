@@ -2180,7 +2180,6 @@
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",
-        "ServiceWorker",
         "SharedWorker",
         "SharedWorkerGlobalScope",
         "Worker",
