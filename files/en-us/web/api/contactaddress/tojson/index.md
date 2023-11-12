@@ -12,7 +12,13 @@ browser-compat: api.ContactAddress.toJSON
 
 The **`toJSON()`** method of the {{domxref("ContactAddress")}} interface is a standard serializer that returns a JSON representation of the PaymentAddress object's properties.
 
-## Value
+## Syntax
+
+```js-nolint
+toJSON()
+```
+
+### Return value
 
 A JSON object.
 
