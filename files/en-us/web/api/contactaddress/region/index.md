@@ -5,7 +5,7 @@ slug: Web/API/ContactAddress/region
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.PaymentAContactAddressddress.region
+browser-compat: api.ContactAddress.region
 ---
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
