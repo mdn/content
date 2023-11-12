@@ -8,8 +8,7 @@ browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 
 {{APIRef("Geometry Interfaces")}}
 
-The **`DOMRectReadOnly()`** constructor creates a new
-{{domxref("DOMRectReadOnly")}} object.
+The **`DOMRectReadOnly()`** constructor creates a new {{domxref("DOMRectReadOnly")}} object.
 
 ## Syntax
 
