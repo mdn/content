@@ -10,13 +10,11 @@ browser-compat: api.ContactAddress.addressLine
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-The **`addressLine`** read-only property of the {{domxref("ContactAddress")}} interface is an array of strings, each specifying a line of the address that is not covered by one of the other properties of `ContactAddress`.
-
-These lines may include the street name, house number, apartment number, rural delivery route, descriptive instructions, or post office box.
+The **`addressLine`** read-only property of the {{domxref("ContactAddress")}} interface is an array of strings, each specifying a line of the address that is not covered by one of the other properties of `ContactAddress`. The array may include the street name, the house number, apartment number, the rural delivery route, descriptive instructions, or the post office box.
 
 ## Value
 
-An array of strings, each containing one line of the address. For example, the `addressLine` array for the Mozilla Space in London would have the following entries:
+An array of strings, each containing one line of the address. For example, the `addressLine` property for the Mozilla Space in London would have the following entries:
 
 | Index | addressLine[] value       |
 | ----- | ------------------------- |

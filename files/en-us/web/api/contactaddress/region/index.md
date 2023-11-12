@@ -10,7 +10,7 @@ browser-compat: api.PaymentAContactAddressddress.region
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-The read-only **`region`** property of the {{domxref("ContactAddress")}} interface returns a string containing the top-level administrative subdivision of the country in which the address is located. For example, this may be a state, province, oblast, or prefecture.
+The read-only **`region`** property of the {{domxref("ContactAddress")}} interface returns a string containing the top-level administrative subdivision of the country in which the address is located. This may be a state, province, oblast, or prefecture.
 
 ## Value
 

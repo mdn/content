@@ -16,7 +16,7 @@ The **`postalCode`** read-only property of the {{domxref("ContactAddress")}} int
 
 A string which contains the postal code portion of the address. A postal code is a string (either numeric or alphanumeric) which is used by a postal service to optimize mail routing and delivery.
 
-Various countries use different terms for this. In most of the world, it's known as the "post code" or "postal code." In the United States, the ZIP code is used. India uses PIN codes.
+Various countries use different terms for this. In most of the world, it's known as the "post code" or "postal code". In the United States, the ZIP code is used. India uses PIN codes.
 
 ## Specifications
 

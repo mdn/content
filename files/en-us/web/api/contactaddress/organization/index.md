@@ -14,7 +14,7 @@ The **`organization`** read-only property of the {{domxref("ContactAddress")}} i
 
 ## Value
 
-A string whose value is the name of the organization or company located at the address described by the `PaymentAddress` object. This should be the name of the organization that is to receive the shipment for shipping addresses, or which is responsible for payment addresses.
+A string whose value is the name of the organization or company located at the address described by the `ContactAddress` object.
 
 ## Specifications
 
