@@ -453,7 +453,7 @@ The [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) method
 
 - [`findById()`](<https://mongoosejs.com/docs/api/model.html#Model.findById()>): Finds the document with the specified `id` (every document has a unique `id`).
 - [`findOne()`](<https://mongoosejs.com/docs/api/model.html#Model.findOne()>): Finds a single document that matches the specified criteria.
-- [`findByIdAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndRemove()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
+- [`findByIdAndDelete()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndDelete()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
 
 > **Note:** There is also a [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
