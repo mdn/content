@@ -229,7 +229,7 @@ If the functionality only occurs under normal circumstances when JavaScript runs
 
 It is also potentially risky to prefetch a document whose server-rendered contents will change due to actions the user can take on the current page. This could include, for example, flash sale pages or movie theater seat maps. Test such cases carefully, and mitigate such issues by updating content once the page is loaded. See [Server-rendered varying state](#server-rendered_varying_state) for more details about these cases.
 
-> **Note:** Browsers will cache prefetched pages for a short time (Chrome for example caches them for for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
+> **Note:** Browsers will cache prefetched pages for a short time (Chrome for example caches them for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
 
 One final tip is to audit the URLs listed as disallowed in your [`Robots.txt`](/en-US/docs/Glossary/Robots.txt) file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e. they exhibit the conditions described above).
 

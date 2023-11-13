@@ -6,10 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.Document.exitPictureInPicture
 ---
 
-{{ApiRef("Picture-in-Picture API")}}
+{{APIRef("Picture-in-Picture API")}}
 
-The {{domxref("Document")}} method
-**`exitPictureInPicture()`** requests that a video contained
+The **`exitPictureInPicture()`** method of the {{domxref("Document")}} interface
+requests that a video contained
 in this document, which is currently floating, be taken out of picture-in-picture
 mode, restoring the previous state of the screen. This usually reverses the
 effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPicture()")}}.
