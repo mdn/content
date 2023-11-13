@@ -6,19 +6,21 @@ page-type: guide
 
 {{AddonSidebar()}}
 
-> **Note:** This article discusses building cross-browser extensions for manifest v2. At the time of writing (December 2021), manifest v3 is being introduced by the major browser vendors. Manifest v3 is likely to change the way cross-browser extension development is undertaken. However, work on Manifest v3 is not complete. The major browser vendors are collaborating (with community members) to ease the development of a cross-browser extension in the [W3C WebExtensions Community Group](https://github.com/w3c/webextensions).
-
 The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, there are differences in the API implementations and the scope of coverage among the browsers that use the extensions API (the major ones being Chrome, Edge, Firefox, Opera, and Safari).
 
-Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at six of the main challenges faced when creating a cross-browser extension and suggests how to address these challenges.
+Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at the main challenges faced when creating a cross-browser extension and suggests how to address these challenges.
+
+> **Note:** The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/migrating/).
 
 ## Cross-platform extension coding hurdles
 
-There are six areas you need to address when tackling a cross-platform extension:
+There are eight areas you need to address when tackling a cross-platform extension:
 
 - API namespace
 - API asynchronous event handling
 - API function coverage
+- Content script execution contexts
+- Background scripts, page, and service worker
 - Manifest keys
 - Extension packaging
 - Extension publishing
@@ -32,18 +34,17 @@ There are two API namespaces in use among the main browsers:
 
 Firefox also supports the `chrome.*` namespace for APIs that are compatible with Chrome, primarily to assist with [porting](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). However, using the `browser.*` namespace is preferred. In addition to being the proposed standard, `browser.*` uses promises—a modern and convenient mechanism for handling asynchronous events.
 
-Only in the most trivial extensions is namespace likely to be the only cross-platform issue that has to be addressed. Therefore, it's rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
+Only in the most trivial extensions is namespace likely to be the only cross-platform issue to be addressed. Therefore, it's rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
 
 ### API asynchronous event handling
 
-There are two approaches to handling asynchronous events in use among the main browsers:
+With the introduction of Manifest V3 (Chrome 88), all the main browsers support _Promises_ as their approach to handling asynchronous events. Before that Firefox and Safari used _Promises_, while _Callbacks_ were used by Chrome, Edge, and Opera.
 
-- _Promises_, the proposed standard for the extensions API used by Firefox and Safari.
-- _Callbacks_, used by Chrome, Edge, and Opera.
+> **Note:** As of November 2023, the Chrome documentation notes that "support has been added to most methods, though callbacks are still supported as an alternative. (We will eventually support promises on all appropriate methods.)"
 
-Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises have been adopted as part of the proposed standard. It greatly simplifies asynchronous event handling, particularly where you need to chain events together.
+Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together.
 
-> **Note:** If you're unfamiliar with the differences between these two methods, take a look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
+> **Note:** If you're unfamiliar with the differences between these two methods, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 
 #### The WebExtension browser API Polyfill
 
@@ -55,7 +56,7 @@ To use the polyfill, install it into your development environment using npm or d
 
 Then, reference `browser-polyfill.js` in:
 
-- `manifest.json`, to make it available to background and content scripts.
+- `manifest.json` to make it available to background and content scripts.
 - HTML documents, such as `browserAction` popups or tab pages.
 - The `executeScript` call in dynamically-injected content scripts loaded by `tabs.executeScript`, where it hasn't been loaded using a `content_scripts` declaration in `manifest.json`.
 
@@ -95,7 +96,7 @@ A simple approach to addressing API differences is to limit the functions used i
 
 Instead, where there are differences among the APIs, you should either offer alternative implementations or fallback functionality. (Remember: you may also need to do this to allow for differences in API support between versions of the _same_ browser.)
 
-The use of runtime checks on the availability of a function's features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that you don't need to update and redistribute the extension to take advantage of a function when it becomes available.
+Using runtime checks on the availability of a function's features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that you don't need to update and redistribute the extension to take advantage of a function when it becomes available.
 
 The following code enables you to perform a runtime check:
 
@@ -104,6 +105,20 @@ if (typeof fn === "function") {
   // safe to use the function
 }
 ```
+
+### Content script execution contexts
+
+Content scripts can access and modify the page's DOM, just as page scripts can. They can also see any changes made to the DOM by page scripts. However, content scripts get a "clean" view of the DOM.
+
+Firefox and Chrome use fundamentally different approaches to handle this behavior: Firefox it's called Xray vision, while Chrome uses an isolated world approach. For more details, see [Content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) section of the Content scripts concept article.
+
+However, Firefox provides some APIs that enable content scripts to access JavaScript objects created by page scripts and to expose their JavaScript objects to page scripts. See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more details.
+
+### Background scripts, page, and service worker
+
+As part of its implementation of Manifest V3, Chrome replaced background pages with service workers. Firefox retains the use of background pages and scripts, while Safari supports background pages and scripts and service workers.
+
+For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"`` manifest key page. This includes a simple example of how to implement a cross-browser script.
 
 ### Manifest keys
 
@@ -205,8 +220,8 @@ The Firefox, Chrome, and Edge stores require that each uploaded version has a di
 
 ## Conclusion
 
-When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/). Following this approach, you benefit from using API features that are closely aligned with the proposed extensions API standard and gain the simplicity of promises for asynchronous event handling.
+When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).
 
-The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each extension store.
+The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. You may also need to account for differences between the content and background script implementations. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You then need to account for the variations in the processes for submitting to each extension store.
 
 Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.
