@@ -265,6 +265,62 @@ However, if you change the `<html>` element's `font-size` in the CSS you will se
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 
+#### Line height units
+
+`lh` and `rlh` are relative lengths units similar to `em` and `rem`. The difference between `lh` and `rlh` is that the first one is relative to the line height of the element itself, while the second one is relative to the line height of the root element, usually `<html>`.
+
+Using these units, we can precisely align box decoration to the text. In this example, we use `lh` unit to create notepad-like lines using [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient). It doesn't matter what's the line height of the text, the lines will always start in the right place.
+
+```css hidden
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px;
+  gap: 24px;
+  background-color: floralwhite;
+  font-family: sans-serif;
+}
+
+@supports not (height: 1lh) {
+  body::before {
+    grid-column: 1 / -1;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: tomato;
+    color: white;
+    content: "You browser doesn’t support lh unit just yet";
+  }
+}
+```
+
+```css
+p {
+  margin: 0;
+  background-image: repeating-linear-gradient(
+    to top,
+    lightskyblue 0 2px,
+    transparent 2px 1lh
+  );
+}
+```
+
+```html
+<p style="line-height: 2em">
+  Summer is a time for adventure, and this year was no exception. I had many
+  exciting experiences, but two of my favorites were my trip to the beach and my
+  week at summer camp.
+</p>
+
+<p style="line-height: 4em">
+  At the beach, I spent my days swimming, collecting shells, and building
+  sandcastles. I also went on a boat ride and saw dolphins swimming alongside
+  us.
+</p>
+```
+
+{{EmbedLiveSample("line_height_units", "100%", "370")}}
+
 ### Percentages
 
 In a lot of cases, a percentage is treated in the same way as a length. The thing with percentages is that they are always set relative to some other value. For example, if you set an element's `font-size` as a percentage, it will be a percentage of the `font-size` of the element's parent. If you use a percentage for a `width` value, it will be a percentage of the `width` of the parent.
