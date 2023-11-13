@@ -14,7 +14,7 @@ Maximizing the reach of your browser extension means developing it for at least 
 
 ## Cross-platform extension coding hurdles
 
-There are eight areas you need to address when tackling a cross-platform extension:
+You need to address the following areas when tackling a cross-platform extension:
 
 - API namespace
 - API asynchronous event handling
@@ -110,13 +110,13 @@ if (typeof fn === "function") {
 
 Content scripts can access and modify the page's DOM, just as page scripts can. They can also see any changes made to the DOM by page scripts. However, content scripts get a "clean" view of the DOM.
 
-Firefox and Chrome use fundamentally different approaches to handle this behavior: Firefox it's called Xray vision, while Chrome uses an isolated world approach. For more details, see [Content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) section of the Content scripts concept article.
+Firefox and Chrome use fundamentally different approaches to handle this behavior: in Firefox it's called Xray vision, while Chrome uses isolated worlds. For more details, see [Content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) section of the Content scripts concept article.
 
-However, Firefox provides some APIs that enable content scripts to access JavaScript objects created by page scripts and to expose their JavaScript objects to page scripts. See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more details.
+However, Firefox provides some APIs that enable content scripts to access JavaScript objects created by page scripts and to expose their JavaScript objects to page scripts. See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for details.
 
 ### Background scripts, page, and service worker
 
-As part of its implementation of Manifest V3, Chrome replaced background pages with service workers. Firefox retains the use of background pages and scripts, while Safari supports background pages and scripts and service workers.
+As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages and scripts, while Safari supports background pages and scripts and service workers.
 
 For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"`` manifest key page. This includes a simple example of how to implement a cross-browser script.
 
