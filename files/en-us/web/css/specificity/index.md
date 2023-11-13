@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 
 **Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
 
-> **Note:** Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. Order of appearance becomes relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
+> **Note:** Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
 
 ## How is specificity calculated?
 
@@ -237,6 +237,33 @@ footer a {
 }
 ```
 
+### How @scope blocks affect specificity
+
+Including a ruleset inside a [`@scope`](/en-US/docs/Web/CSS/@scope) block does not directly affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+
+However, bear in mind that the `:scope` pseudo-class — like all other pseudo-classes — has a specificity of 0-1-0. You'll need to add this on to the value of all contained selectors when calculating their specificity because `:scope` is implicitly prepended to all selectors inside `@scope` blocks. For example:
+
+```css
+@scope (.article-body) {
+  /* here, img has a specificity of 0-1-0 + 0-0-1 = 0-1-1,
+     as it has :scope implicitly prepended to it
+     In other words, this img is equivalent to :scope img */
+  img { ... }
+}
+```
+
+When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} selector. So for example, in:
+
+```css
+@scope (figure, #primary) {
+  & img { ... }
+}
+```
+
+`& img` is equivalent to `:is(figure, #primary) img`.
+
+Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
+
 ## Tips for handling specificity headaches
 
 Instead of using `!important`, consider using cascade layers and using low weight specificity throughout your CSS so that styles are easily overridden with slightly more specific rules. Using semantic HTML helps provide anchors from which to apply styling.
@@ -444,11 +471,13 @@ A few things to remember about specificity:
 
 1. Specificity only applies when the same element is targeted by multiple declarations in the same cascade layer or origin. Specificity only matters for declarations of the same importance and same origin and [cascade layer](/en-US/docs/Web/CSS/@layer). If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.
 
-2. When two selectors in the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
+2. When two selectors in the same cascade layer and origin have the same specificity, scoping proximity is then calculated; the ruleset with the lowest scoping proximity wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 
-3. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+3. If scope proximity is also the same for both selectors, source order then comes into play. When all else is equal, the last selector wins.
 
-4. [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
+4. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+
+5. [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
 
 ## Specifications
 

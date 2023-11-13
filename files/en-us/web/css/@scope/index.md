@@ -167,7 +167,7 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
   }
   ```
 
-### Specificity in scope
+### Specificity in @scope
 
 Including a ruleset inside a `@scope` block does not directly affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
 
@@ -211,7 +211,7 @@ Because of this, it is possible to chain `&` multiple times, whereas you can onl
 
 ### How @scope conflicts are resolved
 
-`@scope` adds a new criterion to the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade): **scoping proximity**. This states that when two scopes have conflicting styles, the style that has the least number of hops up the DOM tree hierarchy to the scope root wins. Let's look at an example to see what this means.
+`@scope` adds a new criterion to the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade): **scoping proximity**. This states that when two scopes have conflicting styles, the style that has the smallest number of hops up the DOM tree hierarchy to the scope root wins. Let's look at an example to see what this means.
 
 Take the following HTML snippet, where we are nesting different-themed cards inside one another:
 
