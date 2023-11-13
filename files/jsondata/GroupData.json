@@ -562,6 +562,7 @@
         "DOMMatrix",
         "DOMMatrixReadOnly",
         "DOMPoint",
+        "DOMPointReadOnly",
         "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
@@ -1132,7 +1133,6 @@
         "Scheduling",
         "TaskController",
         "TaskSignal",
-        "AbortSignal",
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
@@ -1586,7 +1586,7 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.virtualKeyboard"],
       "events": []
     },
     "Visual Viewport": {
@@ -1631,7 +1631,6 @@
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
-        "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
         "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
@@ -2182,7 +2181,6 @@
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",
-        "ServiceWorker",
         "SharedWorker",
         "SharedWorkerGlobalScope",
         "Worker",
