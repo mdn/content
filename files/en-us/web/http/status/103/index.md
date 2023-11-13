@@ -33,7 +33,8 @@ Preloaded resources from the early hint are effectively pre-pended to the `Docum
 
 ### Preconnect example
 
-The following `103` early hint response indicates origins to preconnect to so they are available to be used to load the site resources with minimal delay:
+The following `103` early hint response shows an early hint response where the server indicates that the client might want to preconnect to a particular origin (`https://cdn.example.com`).
+Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute this is a hint that the page is likely to need resources from the target resource's origin, and that the browser can likely improve the user experience by preemptively initiating a connection to that origin.
 
 ```http
 103 Early Hint
