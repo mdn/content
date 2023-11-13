@@ -108,7 +108,7 @@ Or you could include your `@scope` block inline inside a `<style>` element, whic
 </section>
 ```
 
-> **Note** It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. The most noticeable effect of this is inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
+> **Note:** It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
 
 ### The `:scope` pseudo-class
 
@@ -138,7 +138,7 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 
 ### Notes on scoped selector usage
 
-- A scoping limit can use `:scope` to specify a specific relationship requirement between the scope limit and root. For example:
+- A scope limit can use `:scope` to specify a specific relationship requirement between the scope limit and root. For example:
 
   ```css
   /* figure is only a limit when it is a direct child of the :scope */
@@ -167,40 +167,35 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 
 ### Specificity in scope
 
-Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+Including a ruleset inside a `@scope` block does not directly affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
 
-The `:scope` pseudo-class has a specificity of 0-1-0; you'll need to factor this in when calculating the specificity of selectors inside `@scope` blocks. For example:
+However, bear in mind that the `:scope` pseudo-class has a specificity of 0-1-0. Since this is implicitly prepended to selectors inside `@scope` blocks, you'll need to factor this in when calculating their specificity. For example:
 
 ```css
 @scope (.article-body) {
-  /* here, img has a specificity of 0-1-1, as it has :scope implicitly prepended to it */
+  /* here, img has a specificity of 0-1-0 + 0-0-1 = 0-1-1,
+     as it has :scope implicitly prepended to it */
   img { ... }
 }
 ```
 
-When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is()")}} selector. So for example:
+When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} selector. So for example, in:
 
 ```css
-@scope (figure, .article-hero) {
+@scope (figure, #primary) {
   & img { ... }
 }
 ```
 
-Is equivalent to
+`& img` is equivalent to `:is(figure, #primary) img`.
 
-```css
-@scope (figure, .article-hero) {
-  :is(figure, .article-hero) img { ... }
-}
-```
-
-Since `:is()` takes the specificity of its most specific argument (`.article-hero`, in this case), The specificity of the scoped `& img` selector is therefore 0-0-2.
+Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
 
 ### The difference between `:scope` and `&` inside `@scope`
 
-`:scope` represents the matched scoping root, whereas `&` represents the selector used to match the scoping root.
+`:scope` represents the matched scope root, whereas `&` represents the selector used to match the scope root.
 
-Because of this, it is possible to chain `&` multiple times, whereas you can only use `:scope` once; as you can't match a scoping root inside a scoping root.
+Because of this, it is possible to chain `&` multiple times, whereas you can only use `:scope` once; as you can't match a scope root inside a scope root.
 
 ```css
 @scope (.feature) {
@@ -219,11 +214,11 @@ Because of this, it is possible to chain `&` multiple times, whereas you can onl
 Take the following HTML snippet, where we are nesting different-themed cards inside one another:
 
 ```html
-<div class="light">
+<div class="light-theme">
   <p>Light theme text</p>
-  <div class="dark">
+  <div class="dark-theme">
     <p>Dark theme text</p>
-    <div class="light">
+    <div class="light-theme">
       <p>Light theme text</p>
     </div>
   </div>
@@ -233,29 +228,29 @@ Take the following HTML snippet, where we are nesting different-themed cards ins
 If we wrote the theme CSS like so, we'd run into trouble:
 
 ```css
-.light {
+.light-theme {
   background: #ccc;
 }
 
-.dark {
+.dark-theme {
   background: #333;
 }
 
-.light p {
+.light-theme p {
   color: black;
 }
 
-.dark p {
+.dark-theme p {
   color: white;
 }
 ```
 
-The innermost paragraph is supposed to be colored black because it is in a light theme card. However, it is being targetted by both `.light p` and `.dark p` and, since the `.dark p` rule appears later in the source order, it wins and the paragraph ends up being wrongly colored white.
+The innermost paragraph is supposed to be colored black because it is in a light theme card. However, it is being targetted by both `.light-theme p` and `.dark-theme p` and, since the `.dark-theme p` rule appears later in the source order, it wins and the paragraph ends up being wrongly colored white.
 
 To fix this, we can use `@scope` as follows:
 
 ```css
-@scope (.light) {
+@scope (.light-theme) {
   :scope {
     background: #ccc;
   }
@@ -264,7 +259,7 @@ To fix this, we can use `@scope` as follows:
   }
 }
 
-@scope (.dark) {
+@scope (.dark-theme) {
   :scope {
     background: #333;
   }
@@ -274,7 +269,7 @@ To fix this, we can use `@scope` as follows:
 }
 ```
 
-Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light` scope root, but two levels away from the `.dark` scope root. Therefore, the light style wins.
+Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
 > **Note:** Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
 
@@ -284,48 +279,179 @@ Now the innermost paragraph is correctly colored black. This is because it is on
 
 ## Examples
 
-Match links only inside a `.light-scheme` class:
+### Basic style inside scope roots
+
+In this example, we use two separate `@scope` blocks to match links inside elements with a `.light-scheme` and `.dark-scheme` class respectively. Note how `:scope` is used to select and provide styling to the scope roots themselves. In this example, the scope roots are the {{htmlelement("div")}} elements that have the classes applied to them.
+
+#### HTML
+
+```html
+<div class="light-scheme">
+  <p>
+    MDN contains lots of information about
+    <a href="/en-US/docs/Web/HTML">HTML</a>,
+    <a href="/en-US/docs/Web/CSS">CSS</a>, and
+    <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.
+  </p>
+</div>
+
+<div class="dark-scheme">
+  <p>
+    MDN contains lots of information about
+    <a href="/en-US/docs/Web/HTML">HTML</a>,
+    <a href="/en-US/docs/Web/CSS">CSS</a>, and
+    <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.
+  </p>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  padding: 10px;
+}
+```
 
 ```css
 @scope (.light-scheme) {
+  :scope {
+    background-color: plum;
+  }
+
   a {
     color: darkmagenta;
   }
 }
-```
 
-Match links only inside a `.dark-scheme` class:
-
-```css
 @scope (.dark-scheme) {
+  :scope {
+    background-color: darkmagenta;
+    color: antiquewhite;
+  }
+
   a {
     color: plum;
   }
 }
 ```
 
-Match `.author-images` only inside a `.media-object` class.
+#### Result
 
-```css
-@scope (.media-object) {
-  .author-image {
-    border-radius: 50%;
-  }
+The above code renders like this:
+
+{{ EmbedLiveSample("Basic style inside scope roots", "100%", "150") }}
+
+### Scope roots and scope limits
+
+In this example, we have an HTML snippet that matches the DOM structure we talked about earlier in the [Description](#description) section. This structure represents a typical article summary. The key features to note are the {{htmlelement("img")}} elements, which are nested at various levels in the structure.
+
+The aim of this example is to show how to use a scope root and limit to style `<img>` elements starting at the top of the hierarchy, but only down as far as (and not including) the `<img>` inside the {{htmlelement("figure")}} element — in effect creating a donut scope.
+
+#### HTML
+
+```html
+<article class="feature">
+  <section class="article-hero">
+    <h2>Article heading</h2>
+    <img alt="image" />
+  </section>
+
+  <section class="article-body">
+    <h3>Article subheading</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod
+      consectetur leo, nec eleifend quam volutpat vitae. Duis quis felis at
+      augue imperdiet aliquam. Morbi at felis et massa mattis lacinia. Cras
+      pharetra velit nisi, ac efficitur magna luctus nec.
+    </p>
+
+    <img alt="image" />
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <figure>
+      <img alt="image" />
+      <figcaption>My infographic</figcaption>
+    </figure>
+  </section>
+
+  <footer>
+    <p>Written by Chris Mills.</p>
+    <img alt="image" />
+  </footer>
+</article>
+```
+
+#### CSS
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+article {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid gray;
+}
+
+.article-hero,
+.article-body,
+article footer {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid lightgray;
+}
+
+img {
+  height: 100px;
+  width: 100%;
+  display: block;
+  background-color: lightgray;
+  color: black;
+  padding: 10px;
 }
 ```
 
-Match nested descendants with scoping limits. The `img` selector will only match image tags that are in a DOM fragment starting with any `.media-object`, and including all descendants up to any intervening children of the `.content` class.
+In our CSS, we have two `@scope` blocks:
+
+- The first one defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), again demonstrating how `@scope` can be used to theme a specific HTML subset.
+- The second one again defines its scope root as elements with a class of `.feature`, but also defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that ARE NOT nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
 
 ```css
-@scope (.media-object) to (.content > *) {
+/* Scoped CSS */
+
+@scope (.feature) {
+  :scope {
+    background: rebeccapurple;
+    color: antiquewhite;
+    font-family: sans-serif;
+  }
+
+  figure {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+  }
+}
+
+/* Donut scope */
+
+@scope (.feature) to (figure) {
   img {
-    border-radius: 50%;
-  }
-  .content {
-    padding: 1em;
+    border: 5px solid black;
+    background-color: goldenrod;
   }
 }
 ```
+
+#### Result
+
+In the rendered code, note how all of the `<img>` elements are styled with the thick border and golden background, except for the one inside the `<figure>` element (labeled "My infographic").
+
+{{ EmbedLiveSample("Scope roots and scope limits", "100%", "400") }}
 
 ## Specifications
 
@@ -339,4 +465,4 @@ Match nested descendants with scoping limits. The `img` selector will only match
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
-- [Limit the reach of your selectors with the CSS `@scope`` at-rule](https://developer.chrome.com/articles/at-scope/) on developer.chrome.com (2023)
+- [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/articles/at-scope/) on developer.chrome.com (2023)
