@@ -38,7 +38,7 @@ Only in the most trivial extensions is namespace likely to be the only cross-pla
 
 ### API asynchronous event handling
 
-With the introduction of Manifest V3 (Chrome 88), all the main browsers support _Promises_ as their approach to handling asynchronous events. Before that Firefox and Safari used _Promises_, while _Callbacks_ were used by Chrome, Edge, and Opera.
+With the introduction of Manifest V3 (Chrome 88), all the main browsers support _Promises_ as their approach to handling asynchronous events. Before that, Firefox and Safari used _Promises_, while _Callbacks_ were used by Chrome, Edge, and Opera.
 
 > **Note:** As of November 2023, the Chrome documentation notes that "support has been added to most methods, though callbacks are still supported as an alternative. (We will eventually support promises on all appropriate methods.)"
 
