@@ -6,7 +6,7 @@ page-type: web-api-global-property
 browser-compat: api.indexedDB
 ---
 
-{{ APIRef() }}
+{{APIRef("IndexedDB")}}{{AvailableInWorkers}}
 
 The global **`indexedDB`** read-only property provides a mechanism for applications to
 asynchronously access the capabilities of indexed databases.

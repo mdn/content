@@ -63,13 +63,13 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 ### Using Object.entries() on primitives
 
-Non-object arguments are [coerced to objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Only strings may have own enumerable properties, while all other primitives return an empty array.
+Non-object arguments are [coerced to objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) cannot be coerced to objects and throw a {{jsxref("TypeError")}} upfront. Only strings may have own enumerable properties, while all other primitives return an empty array.
 
 ```js
 // Strings have indices as enumerable own properties
 console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
-// Other primitives have no own properties
+// Other primitives except undefined and null have no own properties
 console.log(Object.entries(100)); // []
 ```
 

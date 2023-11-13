@@ -1,6 +1,7 @@
 ---
 title: Greater or equal
 slug: WebAssembly/Reference/Numeric/Greater_or_equal
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

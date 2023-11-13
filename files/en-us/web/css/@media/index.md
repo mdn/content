@@ -176,7 +176,7 @@ To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs
 Both [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) and [`px`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) are valid units, but [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) works better if the user changes the browser text size.
 
 Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
-For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the eqivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
+For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
 
 ## Security
 

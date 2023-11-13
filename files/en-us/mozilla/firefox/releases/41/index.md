@@ -133,7 +133,7 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 
 ## Networking
 
-- The `X-Content-Duration` header is no longer supported ([Webkit bug 1160695](https://bugzil.la/1160695)).
+- The `X-Content-Duration` header is no longer supported ([Firefox bug 1160695](https://bugzil.la/1160695)).
 - Draft versions of the HTTP/2 protocol are no more supported ([Firefox bug 1132357](https://bugzil.la/1132357)).
 
 ## Security

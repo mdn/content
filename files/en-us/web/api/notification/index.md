@@ -57,7 +57,7 @@ These properties are available only on instances of the `Notification` object.
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
-- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 - {{domxref("Notification.silent")}} {{ReadOnlyInline}}
   - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
