@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-GPC
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Sec-GPC`** (**G**lobal **P**rivacy **C**ontrol) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+The **`Sec-GPC`** ([**G**lobal **P**rivacy **C**ontrol](https://globalprivacycontrol.org/)) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 
 The specification does not define how the user can withdraw or grant consent for website.
 Where possible the mechanism will be indicated in the [browser compatibility](#browser_compatibility) section below.

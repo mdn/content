@@ -14,7 +14,7 @@ The key consideration when streaming media to a browser is the fact that rather 
 
 In this case, we are using static media to describe media that is represented by a file, whether it be an mp3 or WebM file. This file sits on a server and can be delivered — like most other files — to the browser. This is often known as a progressive download.
 
-Livestreamed media lacks a finite start and end time as rather as a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
+Livestreamed media lacks a finite start and end time rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
 
 ## Adaptive streaming
 
@@ -90,7 +90,7 @@ DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media 
 
 HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and the latest versions of Android browser / Chrome. HLS is also adaptive.
 
-HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Safari. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
+HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Safari. See this [HTTP Live Streaming JavaScript player](https://github.com/video-dev/hls.js).
 
 At the start of the streaming session, an [extended M3U (m3u8) playlist](https://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
 

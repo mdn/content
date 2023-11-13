@@ -21,7 +21,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 - Support for the `WeakMap.prototype.clear()` method, recently added to the Harmony (ECMAScript 2015) draft proposal has been added ([Firefox bug 814562](https://bugzil.la/814562)).
 - Support for the [`Math.imul()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul) method, a C-style 32-bit multiplication function. Though proposed for Harmony (ECMAScript 2015) it has not yet accepted and still is non-standard ([Firefox bug 808148](https://bugzil.la/808148)).
 - Web apps using draggable text with Kinetic 3.x are working, even when using the Cairo canvas backend ([Firefox bug 835064](https://bugzil.la/835064)).
-- The [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) statement has been deprecated and should not be used. Consider using the new [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement ([Webkit bug 804834](https://bugzil.la/804834)).
+- The [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) statement has been deprecated and should not be used. Consider using the new [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement ([Firefox bug 804834](https://bugzil.la/804834)).
 - Support for the {{jsxref("Map.prototype.keys()")}}, {{jsxref("Map.prototype.values()")}}, and {{jsxref("Map.prototype.entries()")}} has been added ([Firefox bug 817368](https://bugzil.la/817368)).
 
 ### CSS

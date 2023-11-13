@@ -11,7 +11,7 @@ The **`toLocaleDateString()`** method of {{jsxref("Date")}} instances returns a 
 
 When formatting large numbers of dates, it is better to create an {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html", "taller")}}
 
 ## Syntax
 
