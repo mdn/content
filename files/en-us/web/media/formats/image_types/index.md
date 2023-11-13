@@ -373,7 +373,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Royalty free. Licensing information is available at http://aomedia.org/license/ .
+        Royalty free. Licensing information is available at <a href="https://aomedia.org/license/">License Page</a>.
       </td>
     </tr>
   </tbody>
