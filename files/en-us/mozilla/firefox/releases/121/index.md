@@ -22,6 +22,23 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### JavaScript
 
+- {{jsxref("Date.parse()")}} now accepts several additional date formats:
+
+  - Year > 9999 for `YYYY-MMM-DD` format (e.g. `19999-Jan-01`)
+  - `MMM-DD-YYYY` (e.g. `Jan-01-1970`)
+  - Milliseconds for non-ISO date formats (e.g. `Jan 1 1970 10:00:00.050`)
+  - Day of week at the beginning of formats which were being rejected, such as:
+
+    - `Wed, 1970-01-01`
+    - `Wed, 1970-Jan-01`
+
+    The day of week does not need to be correct, or a day of week at all; for example, `foo 1970-01-01` works.
+
+- Other {{jsxref("Date.parse()")}} fixes:
+
+  - `YYYY-M-DD` and `YYYY-MM-D` are no longer assumed GMT as an ISO date `YYYY-MM-DD` would be
+  - Milliseconds for all formats are truncated after 3 digits, rather than being rounded
+
 #### Removals
 
 ### SVG
