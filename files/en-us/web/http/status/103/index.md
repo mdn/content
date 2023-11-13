@@ -62,7 +62,7 @@ Content-Type: text/html
 
 > **Warning:** Some browsers only support `preconnect` over 103 Early Hints. See the implementation notes in the [browser compatibility](#browser-compatibility) section below.
 
-The following `103` early hint response indicates a stylesheet `style.css` might be preloaded by the final response.
+The following `103` early hint response indicates a stylesheet `style.css` might be needed by the final response.
 
 ```http
 103 Early Hint
@@ -70,7 +70,7 @@ Link: </style.css>; rel=preload; as=style
 ```
 
 Subsequently the server sends the final response.
-This includes a link to the stylesheet, which may already have preloaded.
+This includes a link to the stylesheet, which may already have been preloaded from the early hint.
 
 ```http
 200 OK
