@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### CSS
 
+- The {{CSSXref("color_value/light-dark", "light-dark()")}} CSS Color function is now supported. This allows the setting of a colors for both light & dark without the need for `prefers-color-scheme` media feature ([Firefox bug 1856999](https://bugzil.la/1856999)).
+
 #### Removals
 
 ### JavaScript
