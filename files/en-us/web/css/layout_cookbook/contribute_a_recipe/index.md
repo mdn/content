@@ -85,7 +85,7 @@ Once your example is merged, you can [open a pull request](/en-US/docs/MDN/Commu
 There is [a template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1) that you should use.
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help.
 
-Also, add a link to the new recipe in the top-level [Layout Cookbook page](/en-us/web/css/layout_cookbook/).
+Also, add a link to the new recipe in the top-level [Layout Cookbook page](/en-us/web/css/layout_cookbook).
 
 If you have any questions or want someone to take a look at your page, get in touch via any [communication channel](/en-US/docs/MDN/Community/Communication_channels).
 
