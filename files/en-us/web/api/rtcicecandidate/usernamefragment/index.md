@@ -79,7 +79,7 @@ const ssNewCandidate = (signalMsg) => {
     if (parameters.usernameFragment === candidate.usernameFragment) {
       return;
     }
-  };
+  }
 
   pc.addIceCandidate(candidate).catch(reportError);
 };
