@@ -77,7 +77,7 @@ _No change._
 
 #### WebRTC
 
-- Support for the {{domxref("RTCIceServer")}} dictionary has been updated in keeping with revisions to the WebGL 1.0 specification by adding support for the {{domxref("RTCIceServer.credentialType", "credentialType")}} property. This property is a string which specifies whether the credential is a password or a token. Currently, Firefox only supports `"password"`.
+- Support for the `RTCIceServer` dictionary has been updated in keeping with revisions to the WebGL 1.0 specification by adding support for the {{domxref("RTCIceServer.credentialType", "credentialType")}} property. This property is a string which specifies whether the credential is a password or a token. Currently, Firefox only supports `"password"`.
 
 #### New APIs
 

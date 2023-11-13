@@ -240,8 +240,28 @@
       "inh": "",
       "impl": []
     },
+    "BluetoothDataFilter": {
+      "inh": "",
+      "impl": []
+    },
     "BluetoothDevice": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "BluetoothLEScan": {
+      "inh": "",
+      "impl": []
+    },
+    "BluetoothLEScanFilter": {
+      "inh": "",
+      "impl": []
+    },
+    "BluetoothLEScanPermissionResult": {
+      "inh": "PermissionStatus",
+      "impl": []
+    },
+    "BluetoothManufacturerDataFilter": {
+      "inh": "",
       "impl": []
     },
     "BluetoothManufacturerDataMap": {
@@ -266,6 +286,10 @@
     },
     "BluetoothRemoteGATTService": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "BluetoothServiceDataFilter": {
+      "inh": "",
       "impl": []
     },
     "BluetoothServiceDataMap": {
@@ -382,6 +406,10 @@
     },
     "CloseEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "CloseWatcher": {
+      "inh": "EventTarget",
       "impl": []
     },
     "Comment": {
@@ -2228,6 +2256,14 @@
       "inh": "",
       "impl": []
     },
+    "NavigatorLogin": {
+      "inh": "",
+      "impl": []
+    },
+    "NavigatorManagedData": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "NavigatorUAData": {
       "inh": "",
       "impl": []
@@ -2342,6 +2378,10 @@
     },
     "OVR_multiview2": {
       "inh": "",
+      "impl": []
+    },
+    "PageRevealEvent": {
+      "inh": "Event",
       "impl": []
     },
     "PageTransitionEvent": {
@@ -2698,10 +2738,6 @@
     },
     "RestrictionTarget": {
       "inh": "",
-      "impl": []
-    },
-    "RevealEvent": {
-      "inh": "Event",
       "impl": []
     },
     "RTCCertificate": {
@@ -4158,6 +4194,14 @@
     },
     "XRPermissionStatus": {
       "inh": "PermissionStatus",
+      "impl": []
+    },
+    "XRPlane": {
+      "inh": "",
+      "impl": []
+    },
+    "XRPlaneSet": {
+      "inh": "",
       "impl": []
     },
     "XRPose": {

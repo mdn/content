@@ -257,6 +257,10 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines an ellipse shape.
 - {{CSSxRef("basic-shape/inset","inset()")}}
   - : Defines an inset rectangle shape.
+- {{CSSxRef("basic-shape/rect","rect()")}} {{Experimental_Inline}}
+  - : Defines a rectangle shape using the distances from the top and left edges of the reference box.
+- {{CSSxRef("basic-shape/xywh","xywh()")}} {{Experimental_Inline}}
+  - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
 - {{CSSxRef("path", "path()")}}
