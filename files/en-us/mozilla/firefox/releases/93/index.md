@@ -1,6 +1,7 @@
 ---
 title: Firefox 93 for developers
 slug: Mozilla/Firefox/Releases/93
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -22,7 +23,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 ### JavaScript
 
-- [Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) are now supported, allowing more flexible initialization of {{jsxref("Classes/static", "static")}} properties ([Firefox bug 1725689](https://bugzil.la/1725689)).
+- [Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are now supported, allowing more flexible initialization of {{jsxref("Classes/static", "static")}} properties ([Firefox bug 1725689](https://bugzil.la/1725689)).
 - The properties `imageOrientation` and `premultiplyAlpha` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ([Firefox bug 1367251](https://bugzil.la/1367251)).
 - {{jsxref("Intl.supportedValuesOf()")}} is now supported, allowing code to enumerate values supported by an implementation, This might be used, for example, to download a polyfill for just the missing category of values ([Firefox bug 1670033](https://bugzil.la/1670033)).
 
@@ -41,7 +42,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 - The {{domxref("Element.securitypolicyviolation_event","onsecuritypolicyviolation")}} global event handler property is now supported.
   This can be used to assign a handler for processing [`securitypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event) events fired when there is a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation ([Firefox bug 1727302](https://bugzil.la/1727302)).
-- The `onslotchange` event handler property is now supported on {{domxref("HTMLSlotElement.onslotchange","HTMLSlotElement")}} and {{domxref("ShadowRoot.onslotchange","ShadowRoot")}}.
+- The `onslotchange` event handler property is now supported on {{domxref("HTMLSlotElement.onslotchange","HTMLSlotElement")}} and {{domxref("ShadowRoot")}}.
   This can be used to assign a handler for processing [`slotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event) events, which are fired on {{HTMLElement("slot")}} elements when the node(s) contained in the slot change ([Firefox bug 1501983](https://bugzil.la/1501983)).
 
 #### Removals

@@ -1,6 +1,7 @@
 ---
 title: Handling common JavaScript problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -71,17 +72,7 @@ The [JSHint homepage](https://jshint.com/) provides an online linter, which allo
 
 #### Code editor plugins
 
-It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins, for example GitHub's [Atom](https://atom.io/) code editor has a JSHint plugin available.
-
-To install it:
-
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
-5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
-
-![Screenshot of the JS Hint app. The narrow left panel is a file explorer or tree. The right panel has two sections. The top has a tab open to a color-coded and line-numbered JavaScript file. The very bottom has errors and warnings. Errors are red, and warnings are orange. If there is an error or warning on a line, there is a red or orange dot, respectively, next to the line number.](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
+It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
 
 #### Other uses
 
@@ -147,7 +138,7 @@ Try inserting the following line just below line 31 (bolded above):
 console.log("Response value: ", superHeroes);
 ```
 
-Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
+Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before.
 
 The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
 
@@ -211,7 +202,7 @@ As your apps get more complex and you start to use more JavaScript, you may star
 - To avoid loading more JavaScript than you need, bundle your scripts into a single file using a solution like [Browserify](https://browserify.org/). In general, reducing the number of HTTP requests is very good for performance.
 - Make your files even smaller by minifying them before you load them onto your production server. Minifying squashes all the code together onto a huge single line, making it take up far less file size. It is ugly, but you don't need to read it when it is finished! This is best done using a minification tool like [Uglify](https://github.com/mishoo/UglifyJS) (there's also an online version — see [JSCompress.com](https://jscompress.com/))
 - When using APIs, make sure you turn off the API features when they are not being used; some API calls can be really expensive on processing power. For example, when showing a video stream, make sure it is turned off when you can't see it. When tracking a device's location using repeated Geolocation calls, make sure you turn it off when the user stops using it.
-- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) (or the nascent [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
+- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) (or the nascent [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
 
 > **Note:** Addy Osmani's [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) contains a lot of detail and some excellent tips for boosting JavaScript performance.
 
@@ -246,11 +237,17 @@ if ("geolocation" in navigator) {
 }
 ```
 
-You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.
+You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`).
+If you're looking to apply styles if a CSS feature is supported, you can directly use the [@supports](/en-US/docs/Web/CSS/@supports) at-rule (known as a feature query).
+For example, to check whether the browser supports CSS container queries, you could do something like this:
+
+```css
+@supports (container-type: inline-size) {
+  /* Use container queries if supported */
+}
+```
 
 As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
-
-> **Note:** Some features are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
 
 > **Note:** Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.
 
@@ -376,7 +373,7 @@ Use [feature detection](#feature_detection) (and CSS @supports for CSS feature d
 
 ### Handling JavaScript prefixes
 
-In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes as well, with JavaScript using camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
+In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes as well, with JavaScript using {{Glossary("camel_case", "camel case")}} rather than {{Glossary("kebab_case", "hyphenation")}} like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
 
 - Mozilla would use `mozObject`
 - Chrome/Opera/Safari would use `webkitObject`

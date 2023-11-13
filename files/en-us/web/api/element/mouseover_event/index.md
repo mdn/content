@@ -110,7 +110,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 500);
   },
-  false
+  false,
 );
 
 // This handler will be executed every time the cursor
@@ -126,7 +126,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 500);
   },
-  false
+  false,
 );
 ```
 

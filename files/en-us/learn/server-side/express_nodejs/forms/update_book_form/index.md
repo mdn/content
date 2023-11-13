@@ -1,6 +1,7 @@
 ---
 title: Update Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
+page-type: learn-module-chapter
 ---
 
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
@@ -128,9 +129,9 @@ exports.book_update_post = [
       return;
     } else {
       // Data from form is valid. Update the record.
-      const thebook = await Book.findByIdAndUpdate(req.params.id, book, {});
+      const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
       // Redirect to book detail page.
-      res.redirect(thebook.url);
+      res.redirect(updatedBook.url);
     }
   }),
 ];

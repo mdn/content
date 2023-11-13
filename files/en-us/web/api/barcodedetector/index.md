@@ -18,7 +18,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
 
 ## Static methods
 
-- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}} {{Experimental_Inline}}
+- {{domxref('BarcodeDetector/getSupportedFormats_static', 'getSupportedFormats()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ## Instance methods
@@ -89,4 +89,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [Accelerated Shape Detection in Images](https://web.dev/shape-detection/#barcodedetector)
+- [Accelerated Shape Detection in Images](https://developer.chrome.com/articles/shape-detection/#barcodedetector)

@@ -1,6 +1,7 @@
 ---
 title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -56,12 +57,12 @@ _No changes._
 - The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ([Firefox bug 1435813](https://bugzil.la/1435813)).
 - The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ([Firefox bug 1427610](https://bugzil.la/1427610)).
 - JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see [Firefox bug 1435828](https://bugzil.la/1435828) and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).
-- For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ([Firefox bug 1308735](https://bugzil.la/1308735)).
+- For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ([Firefox bug 1308735](https://bugzil.la/1308735)).
 
 #### Removals
 
 - The `DOMPoint` and `DOMPointReadOnly` constructors no longer support an input parameter of type `DOMPointInit`; the values of the properties must be specified using the `x`, `y`, `z`, and `w` parameters ([Firefox bug 1186265](https://bugzil.la/1186265)).
-- The {{domxref("URL.createObjectURL()")}} method no longer supports creating object URLs to represent a {{domxref("MediaStream")}}. This capability has been obsolete for some time, since you can now set {{domxref("HTMLMediaElement.srcObject")}} to the `MediaStream` directly ([Firefox bug 1454889](https://bugzil.la/1454889)).
+- The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} method no longer supports creating object URLs to represent a {{domxref("MediaStream")}}. This capability has been obsolete for some time, since you can now set {{domxref("HTMLMediaElement.srcObject")}} to the `MediaStream` directly ([Firefox bug 1454889](https://bugzil.la/1454889)).
 
 ### APIs
 
@@ -71,7 +72,7 @@ _No changes._
 
 #### DOM
 
-- The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPointInit")}}, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ([Firefox bug 1186265](https://bugzil.la/1186265)).
+- The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint_static", "DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with `DOMPointInit`, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ([Firefox bug 1186265](https://bugzil.la/1186265)).
 - For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ([Firefox bug 453968](https://bugzil.la/453968)).
 - {{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ([Firefox bug 1460506](https://bugzil.la/1460506)).
 - The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ([Firefox bug 1460481](https://bugzil.la/1460481)).

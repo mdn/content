@@ -22,7 +22,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("caches", "SharedWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("WorkerGlobalScope.console", "SharedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+- {{domxref("console", "SharedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.fonts", "SharedWorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
@@ -38,7 +38,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("performance_property", "SharedWorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
-- {{domxref("Window.scheduler", "SharedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("scheduler_property", "SharedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("WorkerGlobalScope.self", "SharedWorkerGlobalScope.self")}}
   - : Returns an object reference to the `SharedWorkerGlobalScope` object itself.

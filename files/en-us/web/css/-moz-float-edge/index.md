@@ -12,6 +12,8 @@ browser-compat: css.properties.-moz-float-edge
 
 The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property specifies whether the height and width properties of the element include the margin, border, or padding thickness.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -moz-float-edge: border-box;
@@ -24,8 +26,6 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 -moz-float-edge: initial;
 -moz-float-edge: unset;
 ```
-
-## Syntax
 
 ### Values
 

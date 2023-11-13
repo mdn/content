@@ -49,4 +49,8 @@ The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not exp
 
 ## See also
 
+- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): to adjust page styles based on user's contrast preference
+- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [`inverted-colors`](/en-US/docs/Web/CSS/@media/inverted-colors)
 - [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

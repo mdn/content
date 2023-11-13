@@ -75,7 +75,9 @@ The `background-origin` property is specified as one of the keyword values liste
 ```css
 div {
   background-image: url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
-  background-position: top right, 0px 0px;
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```

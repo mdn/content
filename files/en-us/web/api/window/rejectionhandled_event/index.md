@@ -52,7 +52,7 @@ window.addEventListener(
   (event) => {
     console.log(`Promise rejected; reason: ${event.reason}`);
   },
-  false
+  false,
 );
 ```
 

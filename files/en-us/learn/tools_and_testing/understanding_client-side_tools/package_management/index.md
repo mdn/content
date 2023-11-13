@@ -1,6 +1,7 @@
 ---
 title: Package management basics
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -188,7 +189,7 @@ Parcel expects an `index.html` and an `index.js` file to work with, but otherwis
 So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -207,7 +208,7 @@ Next, we need to add an `index.js` file in the same directory as `index.html`. F
 Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
 
 ```bash
- parcel index.html
+ npx parcel index.html
 ```
 
 You should see something like this printed in your terminal:
@@ -261,7 +262,7 @@ We can now prepare our bare bones example site for an imaginary deployment. Parc
 Run the following command:
 
 ```bash
-parcel build index.html
+npx parcel build index.html
 ```
 
 You should see an output like so:
@@ -297,7 +298,7 @@ Although the list grows by the month, there are three main offerings for tools t
 Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
 
 ```bash
-parcel build index.html --experimental-scope-hoisting
+npx parcel build index.html --experimental-scope-hoisting
 ```
 
 You'll see that this makes a huge difference:

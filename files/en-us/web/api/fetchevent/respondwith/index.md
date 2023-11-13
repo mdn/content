@@ -106,7 +106,7 @@ addEventListener("fetch", (event) => {
       if (cachedResponse) return cachedResponse;
       // If we didn't find a match in the cache, use the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```

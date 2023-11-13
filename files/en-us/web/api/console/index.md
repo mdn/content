@@ -141,7 +141,7 @@ for (let i = 0; i < 5; i++) {
 
 The output looks like this:
 
-```
+```plain
 Hello, Bob. You've called me 1 times.
 Hello, Bob. You've called me 2 times.
 Hello, Bob. You've called me 3 times.
@@ -156,7 +156,7 @@ You can use the `%c` directive to apply a CSS style to console output:
 ```js
 console.log(
   "This is %cMy stylish message",
-  "color: yellow; font-style: italic; background-color: blue;padding: 2px"
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
 );
 ```
 
@@ -171,7 +171,7 @@ console.log(
   "Multiple styles: %cred %corange",
   "color: red",
   "color: orange",
-  "Additional unformatted message"
+  "Additional unformatted message",
 );
 ```
 

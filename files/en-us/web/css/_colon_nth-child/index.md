@@ -7,7 +7,7 @@ browser-compat: css.selectors.nth-child
 
 {{CSSRef}}
 
-The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings.
+The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
@@ -422,5 +422,8 @@ In the second table the _of syntax_ is used to target only the `tr`s that are **
 
 ## See also
 
-- {{ Cssxref(":nth-of-type") }}
-- {{ Cssxref(":nth-last-child") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":has", ":has()") }}: pseudo-class for selecting parent element
+- [Tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

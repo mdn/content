@@ -1,6 +1,7 @@
 ---
 title: Genre detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
+page-type: learn-module-chapter
 ---
 
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier.
@@ -95,7 +96,6 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 > ```
 >
 > The most likely cause is that the ID being passed into the mongoose methods is not actually an ID.
-> This could happen, for example, if your intended route had an ID, but another route without an ID was matched first.
 > [`Mongoose.prototype.isValidObjectId()`](<https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.isValidObjectId()>) can be used to check whether a particular ID is valid.
 
 ## Next steps

@@ -37,7 +37,7 @@ When the button is clicked, the oscillator starts, and the `MediaRecorder` is st
 From here, you can play and save the opus file.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

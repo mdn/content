@@ -50,7 +50,7 @@ function logShown(itemId) {
   console.log(`shown: ${itemId}`);
   browser.notifications.getAll().then((all) => {
     console.log(all[itemId]);
-  })
+  });
 }
 
 browser.notifications.onShown.addListener(logShown);

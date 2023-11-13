@@ -1,6 +1,7 @@
 ---
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -27,7 +28,7 @@ The quickest, most efficient way to fetch a Wasm module is using the newer [`Web
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
   (results) => {
     // Do something with the results!
-  }
+  },
 );
 ```
 
@@ -46,10 +47,10 @@ fetch("module.wasm")
 
 The [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:
 
-```
+```js-nolint
 {
-  module : Module // The newly compiled WebAssembly.Module object,
-  instance : Instance // A new WebAssembly.Instance of the module object
+  module: Module, // The newly compiled WebAssembly.Module object,
+  instance: Instance, // A new WebAssembly.Instance of the module object
 }
 ```
 
@@ -73,7 +74,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
     // or access the elements of an exported table:
     const table = obj.instance.exports.table;
     console.log(table.get(0)());
-  }
+  },
 );
 ```
 

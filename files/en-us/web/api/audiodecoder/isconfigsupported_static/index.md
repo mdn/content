@@ -57,7 +57,7 @@ for (const config of configs) {
   console.log(
     `AudioDecoder's config ${JSON.stringify(support.config)} support: ${
       support.supported
-    }`
+    }`,
   );
 }
 ```

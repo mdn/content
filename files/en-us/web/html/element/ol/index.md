@@ -223,6 +223,6 @@ To determine which list to use, try changing the order of the list items; if the
 - CSS properties that may be specially useful to style the `<ol>` element:
 
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute
   - the {{CSSxRef("margin")}} property, to control the list indentation

@@ -1,6 +1,7 @@
 ---
 title: Client-side form validation
 slug: Learn/Forms/Form_validation
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -702,7 +703,7 @@ p * {
   display: block;
 }
 
-input.mail {
+input#mail {
   appearance: none;
   width: 100%;
   border: 1px solid #333;
@@ -720,7 +721,7 @@ input.invalid {
   background-color: #fdd;
 }
 
-input:focus.invalid {
+input:focus:invalid {
   outline: none;
 }
 

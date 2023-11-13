@@ -1,6 +1,7 @@
 ---
 title: Basic math in JavaScript — numbers and operators
 slug: Learn/JavaScript/First_steps/Math
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

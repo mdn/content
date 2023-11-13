@@ -106,11 +106,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Stepped value functions
 
-- {{CSSxRef("round", "round()")}} {{Experimental_Inline}}
+- {{CSSxRef("round", "round()")}}
   - : Calculates a rounded number based on a rounding strategy.
-- {{CSSxRef("mod", "mod()")}} {{Experimental_Inline}}
+- {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
-- {{CSSxRef("rem", "rem()")}} {{Experimental_Inline}}
+- {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
 ### Trigonometric functions
@@ -145,9 +145,9 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Sign-related functions
 
-- {{CSSxRef("abs", "abs()")}} {{Experimental_Inline}}
+- {{CSSxRef("abs", "abs()")}}
   - : Calculates the absolute value of a number.
-- {{CSSxRef("sign", "sign()")}} {{Experimental_Inline}}
+- {{CSSxRef("sign", "sign()")}}
   - : Calculates the sign (positive or negative) of the number.
 
 ## Filter functions
@@ -185,17 +185,17 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
 - {{CSSxRef("color_value/hwb", "hwb()")}}
   - : Defines a given color according to its hue, whiteness and blackness components.
-- {{CSSxRef("color_value/lch", "lch()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/lch", "lch()")}}
   - : Defines a given color according to its lightness, chroma and hue components.
-- {{CSSxRef("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
-- {{CSSxRef("color_value/lab", "lab()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/lab", "lab()")}}
   - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
-- {{CSSxRef("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/oklab", "oklab()")}}
   - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
-- {{CSSxRef("color_value/color", "color()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
-- {{CSSxRef("color_value/color-mix", "color-mix()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
 - {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
@@ -255,6 +255,10 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines an ellipse shape.
 - {{CSSxRef("basic-shape/inset","inset()")}}
   - : Defines an inset rectangle shape.
+- {{CSSxRef("basic-shape/rect","rect()")}} {{Experimental_Inline}}
+  - : Defines a rectangle shape using the distances from the top and left edges of the reference box.
+- {{CSSxRef("basic-shape/xywh","xywh()")}} {{Experimental_Inline}}
+  - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
 - {{CSSxRef("path", "path()")}}
@@ -305,6 +309,8 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 The following functions are used as a value in transition and animation properties.
 
+- {{cssxref("easing-function#linear_easing_function", "linear()")}}
+  - : Easing function that interpolates linearly between its points.
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
 - {{cssxref("easing-function#step_easing_function", "steps()")}}

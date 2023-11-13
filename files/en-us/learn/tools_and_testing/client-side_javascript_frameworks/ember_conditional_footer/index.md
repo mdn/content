@@ -1,6 +1,7 @@
 ---
 title: "Ember Interactivity: Footer functionality, conditional rendering"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -212,8 +213,8 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
    And replace it with this — you'll notice that here we're using some more conditional content to add the class value if appropriate:
 
-   ```hbs
-   <li class="\{{ if @todo.isCompleted 'completed' }}">
+   ```hbs-nolint
+   <li class=\{{ if @todo.isCompleted 'completed' }}>
    ```
 
 2. Next, find the following line:

@@ -40,7 +40,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 // Invalidates the iterator state
 document.querySelector("div").remove();

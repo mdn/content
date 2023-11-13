@@ -36,7 +36,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].screenY = ${e.touches[i].screenY}`);
     }
   },
-  false
+  false,
 );
 ```
 

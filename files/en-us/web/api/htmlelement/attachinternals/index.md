@@ -64,5 +64,5 @@ console.log(element.internals_.form);
 
 ## See also
 
-- [More capable form controls](https://web.dev/more-capable-form-controls/)
+- [More capable form controls](https://web.dev/articles/more-capable-form-controls)
 - [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)

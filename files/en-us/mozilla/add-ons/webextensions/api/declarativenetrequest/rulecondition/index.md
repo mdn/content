@@ -24,12 +24,12 @@ Values of this type are objects. They contain these properties:
 - `excludedInitiatorDomains` {{optional_inline}}
   - : An array of `string`. The rule does not match network requests originating from this list of domains. If the list is empty or omitted, no domains are excluded. This takes precedence over `initiatorDomains`. A [canonical domain](#whocanonical_domain) should be used. This matches against the request initiator and not the request URL.
 - `isUrlFilterCaseSensitive` {{optional_inline}}
-  - : A `boolean`. Whether the [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) (whichever is specified) is case sensitive. Default is true in (older) versions of Chrome and Safari, and false in Firefox. There is consensus on defaulting to `true` across browsers in [WECG issue 269](https://github.com/w3c/webextensions/issues/269).
+  - : A `boolean`. Whether the [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) (whichever is specified) is case sensitive. While there is consensus on defaulting to `false` across browsers in [WECG issue 269](https://github.com/w3c/webextensions/issues/269), the value used to be `true` in (older) versions of Chrome and Safari. See [Browser compatibility](#browser_compatibility) for details.
 - `regexFilter` {{optional_inline}}
   - : A `string`. Regular expression to match against the network request URL. Note that:
     - The supported format is not stable and varies across browsers, see ["Regular expressions in DNR API (regexFilter)" in WECG issue 344](https://github.com/w3c/webextensions/issues/344) for details.
     - Only one of [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) can be specified.
-    - The [`regexFilter`](#regexfilter) must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ascii characters are URL encoded in utf-8.
+    - The [`regexFilter`](#regexfilter) must be composed of only {{Glossary("ASCII")}} characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ascii characters are URL encoded in utf-8.
 - `requestDomains` {{optional_inline}}
   - : An array of `string`. The rule only matches network requests when the domain matches one from this list. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. A [canonical domain](#canonical_domain) should be used.
 - `excludedRequestDomains` {{optional_inline}}
@@ -47,7 +47,9 @@ Values of this type are objects. They contain these properties:
 - `excludedTabIds` {{optional_inline}}
   - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should not match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} excludes requests that do not originate from a tab. Only supported for session-scoped rules.
 - `urlFilter` {{optional_inline}}
+
   - : A `string`. The pattern that is matched against the network request URL. Supported constructs:
+
     - `*` : Wildcard: Matches any number of characters.
     - `|` : Left or right anchor: If used at either end of the pattern, specifies the beginning or end of the URL respectively.
     - `||` : Domain name anchor: If used at the beginning of the pattern, specifies the start of a (sub-)domain of the URL.
@@ -57,6 +59,7 @@ Values of this type are objects. They contain these properties:
     If omitted, all URLs are matched. An empty string is not allowed.
     A pattern beginning with `||*` is not allowed. Use `*` instead.
     Note that:
+
     - Only one of `urlFilter` or [`regexFilter`](#regexfilter) can be specified.
     - The `urlFilter` must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ASCII characters are URL encoded in utf-8. For example, when the request URL is `http://abc.рф?q=ф`, the `urlFilter` is matched against the URL `http://abc.xn--p1ai/?q=%D1%84`.
 
@@ -68,7 +71,7 @@ Domains specified in `initiatorDomains`, `excludedInitiatorDomains`, `requestDom
 - The entries must consist of only _lowercase_ ASCII characters.
 - Use [Punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
 - IPv4 addresses must be represented as 4 numbers separated by a dot.
-- IPv6 addresses should be represented in their canonical form, wrapped in brackets.
+- IPv6 addresses should be represented in their canonical form, wrapped in square brackets.
 
 To programmatically generate the canonical domain for a URL, use the [URL API](/en-US/docs/Web/API/URL) and read its `hostname` property, i.e., `new URL(url).hostname`.
 

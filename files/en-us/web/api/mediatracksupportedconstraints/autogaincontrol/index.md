@@ -30,7 +30,9 @@ This example displays whether or not your browser supports the `autoGainControl`
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

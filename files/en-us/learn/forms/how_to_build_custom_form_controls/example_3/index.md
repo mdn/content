@@ -1,6 +1,7 @@
 ---
 title: Example 3
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
+page-type: learn-module-chapter
 ---
 
 This is the third example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
@@ -101,7 +102,7 @@ This is the third example that explain [how to build custom form widgets](/en-US
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -222,7 +223,7 @@ window.addEventListener("load", () => {
       (event) => {
         toggleOptList(select);
       },
-      false
+      false,
     );
 
     select.addEventListener("focus", (event) => {
@@ -234,7 +235,7 @@ window.addEventListener("load", () => {
     });
 
     select.addEventListener("keyup", (event) => {
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });

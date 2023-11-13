@@ -146,5 +146,5 @@ Browsers do not provide any special information on background images to assistiv
 ## See also
 
 - {{cssxref("box-decoration-break")}}
-- [Using gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

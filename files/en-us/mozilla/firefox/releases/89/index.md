@@ -1,6 +1,7 @@
 ---
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -23,7 +24,7 @@ _No changes._
 
 - The {{cssxref("@media/forced-colors","forced-colors")}} media feature has been implemented ([Firefox bug 1659511](https://bugzil.la/1659511)).
 - The {{cssxref("@font-face/ascent-override", "ascent-override")}}, {{cssxref("@font-face/descent-override", "descent-override")}}, and {{cssxref("@font-face/line-gap-override", "line-gap-override")}} `@font-face` descriptors have been implemented ([Firefox bug 1681691](https://bugzil.la/1681691) and [Firefox bug 1704494](https://bugzil.la/1704494)).
-- The `type()` function for {{cssxref("image-set","image-set()")}} has been implemented ([Firefox bug 1695404](https://bugzil.la/1695404)).
+- The `type()` function for {{cssxref("image/image-set")}} has been implemented ([Firefox bug 1695404](https://bugzil.la/1695404)).
 - The {{cssxref("aspect-ratio")}} CSS property is now supported ([Firefox bug 1672073](https://bugzil.la/1672073)).
 
 ### JavaScript

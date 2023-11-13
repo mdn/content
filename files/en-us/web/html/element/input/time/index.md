@@ -93,7 +93,7 @@ startTime.addEventListener(
   () => {
     valueSpan.innerText = startTime.value;
   },
-  false
+  false,
 );
 ```
 

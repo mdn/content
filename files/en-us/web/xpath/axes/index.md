@@ -1,6 +1,7 @@
 ---
 title: Axes
 slug: Web/XPath/Axes
+page-type: landing-page
 ---
 
 {{XsltSidebar}}

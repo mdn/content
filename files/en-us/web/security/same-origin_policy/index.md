@@ -1,6 +1,7 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -142,6 +143,6 @@ Access to data stored in the browser such as [Web Storage](/en-US/docs/Web/API/W
 ## See also
 
 - [Same Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [Same-origin policy at web.dev](https://web.dev/same-origin-policy/)
+- [Same-origin policy at web.dev](https://web.dev/articles/same-origin-policy)
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - {{httpheader("Cross-Origin-Embedder-Policy")}}

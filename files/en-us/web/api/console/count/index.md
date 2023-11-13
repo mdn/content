@@ -53,7 +53,7 @@ console.count();
 
 Console output will look something like this:
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -83,7 +83,7 @@ console.count("alice");
 
 We will see output like this:
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"

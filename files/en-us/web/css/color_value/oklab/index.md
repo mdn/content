@@ -30,20 +30,15 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 Functional notation: `oklab(L a b[ / A])`
 
 - `L`
-
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
-
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
 - `a`
-
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `a` axis in the Oklab colorspace, that is, how green or red the color is.
-
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`. It specifies the distance along the `a` axis in the Oklab colorspace, that is, how green or red the color is.
 - `b`
-
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `b` axis in the Oklab colorspace, that is, how blue or yellow the color is.
-
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`. It specifies the distance along the `b` axis in the Oklab colorspace, that is, how blue or yellow the color is.
 - `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 
@@ -143,10 +138,10 @@ div {
 
 ```css
 [data-color="red"] {
-  background-color: oklab(50% 130 20);
+  background-color: oklab(0.628 0.225 0.126);
 }
 [data-color="red-alpha"] {
-  background-color: oklab(50% 130 20 / 0.4);
+  background-color: oklab(0.628 0.225 0.126 / 0.4);
 }
 ```
 
@@ -166,4 +161,5 @@ div {
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - {{cssxref("color_value/oklch",'oklch()')}}: Another functional notation using the same color space as `oklab()` but in a polar coordinate system
-- [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
+- [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) on bottosson.github.io (2023)
+- [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) on observablehq.com

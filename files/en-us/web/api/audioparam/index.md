@@ -19,7 +19,7 @@ There are two `AudioParam` kinds: _a-rate_ and _k-rate_ parameters. Each {{domxr
 
 ### a-rate
 
-An _a-rate_ `AudioParam` takes the current audio parameter value for each [sample frame](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) of the audio signal.
+An _a-rate_ `AudioParam` takes the current audio parameter value for each [sample frame](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) of the audio signal.
 
 ### k-rate
 

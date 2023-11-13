@@ -1,6 +1,7 @@
 ---
 title: Front-end web developer
 slug: Learn/Front-end_web_developer
+page-type: learn-topic
 ---
 
 {{learnsidebar}}

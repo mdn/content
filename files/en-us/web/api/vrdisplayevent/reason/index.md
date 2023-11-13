@@ -29,7 +29,7 @@ A string representing the reason why the event was fired. The available reasons 
 ```js
 window.addEventListener("vrdisplaypresentchange", (e) => {
   console.log(
-    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
   );
 });
 ```

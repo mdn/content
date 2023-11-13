@@ -1,6 +1,7 @@
 ---
 title: "HTML: A good basis for accessibility"
 slug: Learn/Accessibility/HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

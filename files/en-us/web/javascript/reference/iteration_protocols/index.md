@@ -127,9 +127,9 @@ The language specifies APIs that either produce or consume iterables and iterato
 
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
 
-The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}} (currently unexposed), which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. In the future, these built-in iterators may have additional [helper methods](https://github.com/tc39/proposal-iterator-helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
+The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}}, which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. The `Iterator` class also provides additional [helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
 
-```
+```plain
 console.log([][Symbol.iterator]());
 
 Array Iterator {}
@@ -154,6 +154,8 @@ There are many APIs that accept iterables. Some examples include:
 - {{jsxref("Promise.race()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}
 
 ```js
 const myObj = {};
@@ -212,11 +214,11 @@ const obj = {
   },
 };
 
-const [b] = obj;
+const [a] = obj;
 // Returning 1
 // Closing
 
-const [a, b, c] = obj;
+const [b, c, d] = obj;
 // Returning 1
 // Returning 2
 // Returning 3
@@ -346,7 +348,7 @@ console.log(it.next().value); // 2
 
 ### Defining an iterable with a class
 
-State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) as well.
+State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) as well.
 
 ```js
 class SimpleClass {
@@ -435,7 +437,7 @@ console.log(`${someString}`); // "hi"
 
 ## See also
 
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Symbol.iterator")}}
 - {{jsxref("Iterator")}}

@@ -1,6 +1,7 @@
 ---
 title: <xsl:preserve-space>
 slug: Web/XSLT/Element/preserve-space
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

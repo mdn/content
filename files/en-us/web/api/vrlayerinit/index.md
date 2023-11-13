@@ -55,10 +55,10 @@ if (navigator.getVRDisplays) {
 
 {{domxref("VRLayerInit")}} objects look something like this:
 
-```
+```js
 {
-  leftBounds : [ /* … */ ],
-  rightBounds: [ /* … */ ],
+  leftBounds : [/* … */],
+  rightBounds: [/* … */],
   source: canvasReference
 }
 ```

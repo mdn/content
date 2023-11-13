@@ -1,6 +1,7 @@
 ---
 title: Starting our Svelte to-do list app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -297,11 +298,11 @@ Further down, you can find the following `<ul>` element:
 ```svelte
 <ul
   role="list"
-  className="todo-list stack-large"
+  class="todo-list stack-large"
   aria-labelledby="list-heading">
 ```
 
-The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article "Fixing Lists".
+The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article ["Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) (2019).
 
 The `aria-labelledby` attribute tells assistive technologies that we're treating our `<h2>` with an `id` of `list-heading` as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.
 
@@ -445,7 +446,9 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -544,7 +547,9 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

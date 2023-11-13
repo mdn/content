@@ -1,6 +1,7 @@
 ---
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -31,7 +32,7 @@ Let's start with the simplest, shortest possible Wasm module.
 
 This module is totally empty, but is still a valid module.
 
-If we convert our module to binary now (see [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Text_format_to_Wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/index.html#high-level-structure):
+If we convert our module to binary now (see [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Text_format_to_Wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/modules.html#binary-module):
 
 ```wasm
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -178,7 +179,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) for more details about the instantiate function.
+> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) for more details about the instantiate function.
 
 ## Exploring fundamentals
 
@@ -250,17 +251,17 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
   (obj) => {
     obj.instance.exports.logIt();
-  }
+  },
 );
 ```
 
-> **Note:** You can find this example on GitHub as [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
+> **Note:** You can find this example on GitHub as [logger.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
 
 ### Declaring globals in WebAssembly
 
 WebAssembly has the ability to create global variable instances, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This is very useful, as it allows dynamic linking of multiple modules.
 
-In WebAssembly text format, it looks something like this (see [global.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat) in our GitHub repo; also see [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) for a live JavaScript example):
+In WebAssembly text format, it looks something like this (see [global.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.wat) in our GitHub repo; also see [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) for a live JavaScript example):
 
 ```wasm
 (module
@@ -349,11 +350,11 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
   (obj) => {
     obj.instance.exports.writeHi();
-  }
+  },
 );
 ```
 
-> **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+> **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
 
 ### WebAssembly tables
 
@@ -443,7 +444,7 @@ So what links the `call_indirect` to the table we are calling? The answer is tha
 call_indirect $my_spicy_table (type $i32_to_void)
 ```
 
-The full module all together looks like this, and can be found in our [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat) example file:
+The full module all together looks like this, and can be found in our [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/wasm-table.wat) example file:
 
 ```wasm
 (module
@@ -470,7 +471,7 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
+> **Note:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
 > **Note:** Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table)) as well as imported to/from another Wasm module.
 
@@ -548,7 +549,7 @@ Promise.all([
 
 Each of the modules that is being compiled can import the same memory and table objects and thus share the same linear memory and table "address space".
 
-> **Note:** You can find this example on GitHub as [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
+> **Note:** You can find this example on GitHub as [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/shared-address-space.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
 
 ## Bulk memory operations
 

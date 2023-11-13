@@ -1,6 +1,7 @@
 ---
 title: Graphics on the Web
 slug: Web/Guide/Graphics
+page-type: landing-page
 ---
 
 <section id="Quick_links">

@@ -22,13 +22,15 @@ oklch(59.69% 0.156 49.77 / .5)
 Functional notation: `oklch(L C H[ / A])`
 
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
 - `C`
-  - : A {{CSSXref("&lt;number&gt;")}} or a {{CSSXref("&lt;percentage&gt;")}}, where `0%` is `0` and `100%` is the number `0.4`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while the maximum is theoretically unbounded (but in practice does not exceed `0.5`).
+  - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none`, where `0%` is `0` and `100%` is the number `0.4`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while the maximum is theoretically unbounded (but in practice does not exceed `0.5`).
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 
@@ -128,10 +130,10 @@ div {
 
 ```css
 [data-color="red"] {
-  background-color: oklch(50% 130 20);
+  background-color: oklch(50% 0.5 20);
 }
 [data-color="red-alpha"] {
-  background-color: oklch(50% 130 20 / 0.4);
+  background-color: oklch(50% 0.5 20 / 0.4);
 }
 ```
 
@@ -149,7 +151,7 @@ div {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
-- [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklch()` and {{cssxref("color_value/oklab",'oklab()')}} colors

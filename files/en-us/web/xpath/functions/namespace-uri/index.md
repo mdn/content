@@ -1,6 +1,7 @@
 ---
 title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `namespace-uri` function returns a string representing the namespace URI of 
 
 ### Syntax
 
-```
+```plain
 namespace-uri( [node-set] )
 ```
 

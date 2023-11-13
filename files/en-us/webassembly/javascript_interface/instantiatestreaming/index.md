@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
+page-type: webassembly-function
 browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
 ---
 
@@ -56,7 +57,7 @@ fields:
 
 ### Instantiating streaming
 
-The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)
+The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html)
 demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also)
 directly streams a Wasm module from an underlying source then
 compiles and instantiates it, the promise fulfilling with a `ResultObject`.
@@ -68,7 +69,7 @@ call, and it will pass the response into the function when it fulfills.
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 

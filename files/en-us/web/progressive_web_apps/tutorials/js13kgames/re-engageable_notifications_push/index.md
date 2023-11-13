@@ -1,6 +1,7 @@
 ---
 title: How to make PWAs re-engageable using Notifications and Push
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
+page-type: guide
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -205,7 +206,7 @@ const webPush = require("web-push");
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   console.log(
     "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
-      "environment variables. You can use the following ones:"
+      "environment variables. You can use the following ones:",
   );
   console.log(webPush.generateVAPIDKeys());
   return;
@@ -214,7 +215,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 webPush.setVapidDetails(
   "https://example.com",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
@@ -263,7 +264,7 @@ self.addEventListener("push", (event) => {
   event.waitUntil(
     self.registration.showNotification("ServiceWorker Cookbook", {
       body: payload,
-    })
+    }),
   );
 });
 ```

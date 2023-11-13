@@ -1,6 +1,7 @@
 ---
 title: Drawing graphics
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -675,7 +676,7 @@ function draw() {
       sizePicker.value,
       degToRad(0),
       degToRad(360),
-      false
+      false,
     );
     ctx.fill();
   }
@@ -722,7 +723,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
      75,
      window.innerWidth / window.innerHeight,
      0.1,
-     1000
+     1000,
    );
    camera.position.z = 5;
    ```

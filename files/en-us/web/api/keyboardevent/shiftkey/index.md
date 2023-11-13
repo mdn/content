@@ -39,7 +39,7 @@ A boolean value.
             "\n" +
             "ALT key pressed: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

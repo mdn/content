@@ -70,7 +70,7 @@ Note that browsers typically implement _hidden until found_ using {{cssxref("con
 - the element will participate in page layout
 - margin, borders, padding, and background for the element will be rendered.
 
-Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_Containment) in order to be revealed. This means that if the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by find in page or fragment navigation.
+Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed. This means that if the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by find in page or fragment navigation.
 
 ## Examples
 
@@ -130,7 +130,7 @@ div#until-found-box {
 const untilFound = document.querySelector("#until-found-box");
 untilFound.addEventListener(
   "beforematch",
-  () => (untilFound.textContent = "I've been revealed!")
+  () => (untilFound.textContent = "I've been revealed!"),
 );
 ```
 

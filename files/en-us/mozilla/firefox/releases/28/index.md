@@ -1,6 +1,7 @@
 ---
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -26,7 +27,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### CSS
 
-- Support for multi-line [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
+- Support for multi-line [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
 - Longhand East Asian [counter styles](/en-US/docs/Web/CSS/list-style-type) have been implemented ([Firefox bug 934072](https://bugzil.la/934072)).
 - Experimental support for the {{cssxref("background-blend-mode")}} property has been added, but is disabled by default ([Firefox bug 841601](https://bugzil.la/841601)).
 - The `none` value has been added to {{cssxref("font-variant-ligatures")}} ([Firefox bug 913264](https://bugzil.la/913264)).
@@ -50,11 +51,11 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 - The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()` ([Firefox bug 933193](https://bugzil.la/933193)).
 - The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ([Firefox bug 600117](https://bugzil.la/600117)).
 - The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ([Firefox bug 819900](https://bugzil.la/819900)).
-- The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ([Firefox bug 757726](https://bugzil.la/757726)).
+- The {{domxref("Navigator.plugins")}} is no more enumerable, for privacy reasons ([Firefox bug 757726](https://bugzil.la/757726)).
 - The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ([Firefox bug 943668](https://bugzil.la/943668)).
 - The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ([Firefox bug 540456](https://bugzil.la/540456)).
 - The `willReadFrequently` context attribute for "`2d`" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ([Firefox bug 884226](https://bugzil.la/884226)).
-- The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ([Firefox bug 925847](https://bugzil.la/925847)).
+- The following attributes and methods of `NavigatorID` have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("Navigator.appCodeName")}}, {{domxref("Navigator.product")}}, and {{domxref("Navigator.taintEnabled")}} ([Firefox bug 925847](https://bugzil.la/925847)).
 - The {{domxref("Element/previousElementSibling", "previousElementSibling")}} and {{domxref("Element/nextElementSibling", "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ([Firefox bug 932501](https://bugzil.la/932501)).
 
 ### MathML

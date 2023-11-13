@@ -69,7 +69,7 @@ inputForm.onsubmit = (event) => {
   utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
     console.log(
-      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
+      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
     );
   };
 

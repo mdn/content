@@ -78,7 +78,7 @@ commandEncoder.resolveQuerySet(
   0, // First query to write
   16, // Number of queries to count
   queryBuffer,
-  0 // Buffer offset
+  0, // Buffer offset
 );
 
 // ...

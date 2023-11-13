@@ -48,12 +48,16 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 
 @font-palette-values --blue {
   font-family: "Noto Color Emoji";
-  override-colors: 3 rgb(1, 28, 193), 4 rgb(60, 124, 230);
+  override-colors:
+    3 rgb(1, 28, 193),
+    4 rgb(60, 124, 230);
 }
 
 @font-palette-values --green {
   font-family: "Noto Color Emoji";
-  override-colors: 3 rgb(28, 193, 1), 4 rgb(34, 230, 1);
+  override-colors:
+    3 rgb(28, 193, 1),
+    4 rgb(34, 230, 1);
 }
 
 .colored-hat {

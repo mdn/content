@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.forEach
 
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
+The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
 
 {{EmbedInteractiveExample("pages/js/array-foreach.html")}}
@@ -34,11 +34,11 @@ forEach(callbackFn, thisArg)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
-The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order. Unlike {{jsxref("Array.prototype.map()", "map()")}}, `forEach()` always returns {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.
+The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order. Unlike {{jsxref("Array/map", "map()")}}, `forEach()` always returns {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
@@ -79,7 +79,7 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 
 ### Using forEach() on sparse arrays
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
@@ -274,7 +274,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## See also
 
 - [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.map()")}}

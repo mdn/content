@@ -1,6 +1,7 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -55,7 +56,7 @@ Example
 Output
 
 ```plain
-The quick red fox.
+The quick red fdx.
 ```
 
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.

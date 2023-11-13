@@ -114,5 +114,4 @@ Reflect.set(duck, "eyes", "black");
 
 ## See also
 
-- The {{jsxref("Proxy")}} global object
-- The [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
+- {{jsxref("Proxy")}}

@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.operators.import_meta.resolve
 ---
 
-{{JSSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 **`import.meta.resolve()`** is a built-in function defined on the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object of a JavaScript module that resolves a module specifier to a URL using the current module's URL as base.
 
@@ -127,6 +127,6 @@ This is also useful to calculate paths for other workers, such as [service worke
 
 ## See also
 
-- [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [Dynamic `import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)

@@ -9,7 +9,7 @@ browser-compat: webextensions.api.browserAction.setBadgeText
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
-Tabs without an specific badge text will inherit the global badge text, which is `""` by default.
+Tabs without a specific badge text will inherit the global badge text, which is `""` by default.
 
 ## Syntax
 

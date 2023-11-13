@@ -6,32 +6,21 @@ page-type: web-api-global-function
 browser-compat: api.fetch
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The global **`fetch()`** method starts the process of fetching a
-resource from the network, returning a promise which is fulfilled once the response is
-available.
+The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
 
-The promise resolves to the {{domxref("Response")}} object
-representing the response to your request.
+The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
-A {{domxref("fetch()")}} promise only rejects when a
-network error is encountered (which is usually when there's a permissions issue or
-similar). A {{domxref("fetch()")}} promise _does
-not_ reject on HTTP errors (`404`, etc.). Instead, a
-`then()` handler must check the {{domxref("Response.ok")}} and/or
-{{domxref("Response.status")}} properties.
+A {{domxref("fetch()")}} promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar).
+A {{domxref("fetch()")}} promise _does not_ reject on HTTP errors (`404`, etc.).
+Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.
 
-`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
-{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
-available in pretty much any context in which you might want to fetch resources.
+`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is available in pretty much any context in which you might want to fetch resources.
 
-The `fetch()` method is controlled by the `connect-src` directive
-of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
-rather than the directive of the resources it's retrieving.
+The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
-> **Note:** The `fetch()` method's parameters are identical to
-> those of the {{domxref("Request.Request","Request()")}} constructor.
+> **Note:** The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
 
 ## Syntax
 
@@ -51,15 +40,16 @@ fetch(resource, options)
 
 - `options` {{optional_inline}}
 
-  - : An object containing any custom settings that you want to apply to the request. The
-    possible options are:
+  - : An object containing any custom settings that you want to apply to the request.
+    The possible options are:
 
     - `method`
-      - : The request method, e.g., `GET`, `POST`. Note that the
-        {{httpheader("Origin")}} header is not set on Fetch requests with a method of
-        {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
+      - : The request method, e.g., `"GET"`, `"POST"`.
+        The default is `"GET"`.
+        Note that the {{httpheader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
         (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
-        Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically. If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
+        Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
+        If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
     - `headers`
 
       - : Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{jsxref("String")}} values.
@@ -74,7 +64,7 @@ fetch(resource, options)
         or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
         Note that a request using the `GET` or `HEAD` method cannot have a body.
     - `mode`
-      - : The mode you want to use for the request, e.g., `cors`,
+      - : The [mode](/en-US/docs/Web/API/Request/mode) you want to use for the request, e.g., `cors`,
         `no-cors`, or `same-origin`.
     - `credentials`
 
@@ -96,10 +86,13 @@ fetch(resource, options)
 
       - : How to handle a `redirect` response:
 
-        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
-        - `error`: Abort with an error if a redirect occurs.
-        - `manual`: Caller intends to process the response in another context.
-          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
+        - `follow`
+          - : Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
+        - `error`
+          - : Abort with an error if a redirect occurs.
+        - `manual`
+          - : Caller intends to process the response in another context.
+            See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
 
     - `referrer`
       - : A string specifying the referrer of the request. This can be a
@@ -112,20 +105,21 @@ fetch(resource, options)
         `strict-origin-when-cross-origin`, or `unsafe-url`.
     - `integrity`
       - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
-        value of the request (e.g.,
-        `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+        value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
     - `keepalive`
-      - : The `keepalive` option can be used to allow the request to outlive
-        the page. Fetch with the `keepalive` flag is a replacement for the
-        {{domxref("Navigator.sendBeacon()")}} API.
+      - : The `keepalive` option can be used to allow the request to outlive the page.
+        Fetch with the `keepalive` flag is a replacement for the {{domxref("Navigator.sendBeacon()")}} API.
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
         fetch request and abort it if desired via an {{domxref("AbortController")}}.
     - `priority`
       - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
-        - `high`: A high priority fetch request relative to other requests of the same type.
-        - `low`: A low priority fetch request relative to other requests of the same type.
-        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
+        - `high`
+          - : A high priority fetch request relative to other requests of the same type.
+        - `low`
+          - : A low priority fetch request relative to other requests of the same type.
+        - `auto`
+          - : Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
 ### Return value
 
@@ -153,7 +147,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
         <pre>
 // space in "C ontent-Type"
 const headers = {
-  'C ontent-Type': 'text/xml',
+  'Content-Type': 'text/xml',
   'Breaking-Bad': '<3',
 };
 fetch('https://example.com/', { headers });

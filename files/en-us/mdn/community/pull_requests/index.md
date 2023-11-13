@@ -52,7 +52,7 @@ When looking to contribute to the MDN project, you will find yourself in one of 
 
 - **If you want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
 
-If you're not sure where to start, reach out to us on [the Discord server](/en-US/docs/MDN/Community/Communication_channels#discord_server) and ask for feedback.
+If you're not sure where to start, reach out to us on [the Discord server](/discord) and ask for feedback.
 
 ### Open a pull request
 
@@ -131,6 +131,11 @@ When you are reviewing a pull request, you should:
 - **Request load balancing** if your plate is full and you don't have bandwidth for the review.
   Tag the `@core-yari-content` team and ask if someone else can step in.
 - **Don't merge unless 'depends on'** pull requests are merged first.
+- **Don't merge pull requests that have failing tests.**
+  It is good [open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette) to keep the `main` branch stable to avoid disruption for contributors, maintainers, and for automated processes.
+  An unstable `main` branch blocks all other pull requests and makes it difficult for others to review and merge contributions.
+  In addition, contributors who watch repositories receive high volumes of notifications and unnecessary noise caused by failing tests can be frustrating.
+  If you are not sure how to fix the failing tests, [ask for help](/en-US/docs/MDN/Community/Communication_channels) or assign the pull request to someone else.
 
 If a pull request looks good apart from small typos or other minor issues, you may want to fix the problem directly.
 You can do this provided the pull request [has been set up to allow changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).

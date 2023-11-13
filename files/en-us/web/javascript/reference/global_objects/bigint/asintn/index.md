@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.BigInt.asIntN
 
 The **`BigInt.asIntN()`** static method truncates a `BigInt` value to the given number of least significant bits and returns that value as a signed integer.
 
-{{EmbedInteractiveExample("pages/js/bigint-asintn.html", "taller")}}
+{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}
 
 ## Syntax
 
@@ -80,5 +80,5 @@ BigInt.asIntN(64, max + 1n); // -9223372036854775808n
 
 ## See also
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asUintN()")}}
+- {{jsxref("BigInt")}}
+- {{jsxref("BigInt.asUintN()")}}

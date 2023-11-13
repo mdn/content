@@ -1,6 +1,7 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -55,7 +56,7 @@ httpRequest.send();
 
 The parameter to the `send()` method can be any data you want to send to the server if `POST`-ing the request. Form data should be sent in a format that the server can parse, like a query string:
 
-```
+```plain
 "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
 ```
 
@@ -66,7 +67,7 @@ Note that if you want to `POST` data, you may have to set the MIME type of the r
 ```js
 httpRequest.setRequestHeader(
   "Content-Type",
-  "application/x-www-form-urlencoded"
+  "application/x-www-form-urlencoded",
 );
 ```
 
@@ -161,7 +162,7 @@ In this example:
 - The request is made and then (`onreadystatechange`) the execution is passed to `alertContents()`;
 - `alertContents()` checks if the response was received and OK, then `alert()`s the contents of the `test.html` file.
 
-> **Note:** If you do not set header `Cache-Control: no-cache` the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see [bypassing the cache](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache))
+> **Note:** If you do not set header `Cache-Control: no-cache` the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see [bypassing the cache](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#bypassing_the_cache))
 
 > **Note:** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/en-US/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
 
@@ -245,7 +246,7 @@ function makeRequest(url, userName) {
   httpRequest.open("POST", url);
   httpRequest.setRequestHeader(
     "Content-Type",
-    "application/x-www-form-urlencoded"
+    "application/x-www-form-urlencoded",
   );
   httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
@@ -287,7 +288,7 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/en-
 
 Another simple example follows — here we are loading a text file via XHR, the structure of which is assumed to be like this:
 
-```
+```plain
 TIME: 312.05
 TIME: 312.07
 TIME: 312.10
@@ -301,7 +302,7 @@ Once the text file is loaded, we `split()` the items into an array at each newli
 This is repeated every 5 seconds, using a `setInterval()` call. The idea would be that a server-side script of some kind would continually update the text file with new timestamps, and our XHR code would be used to report the latest timestamp on the client-side.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -356,15 +357,15 @@ While Ajax is still useful, other APIs have been developed since 2005 that enabl
 
 ## See also
 
-- [Using the `XMLHttpRequest` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the `XMLHttpRequest` API](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - : The {{domxref("XMLHttpRequest")}} API is the core of Ajax. This article will explain how to use some Ajax techniques, like:
-    - [Analyzing and manipulating the response of the server](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#handling_responses)
-    - [Monitoring the progress of a request](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
-    - [Submitting forms and upload binary files](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files) – in _pure_ Ajax, or using {{domxref("FormData")}} objects
+    - [Analyzing and manipulating the response of the server](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#handling_responses)
+    - [Monitoring the progress of a request](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
+    - [Submitting forms and upload binary files](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) – in _pure_ Ajax, or using {{domxref("FormData")}} objects
     - Using Ajax within [Web workers](/en-US/docs/Web/API/Worker)
 - [_Pure-Ajax_ navigation example](/en-US/docs/Web/API/History_API/Example)
   - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.
-- [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+- [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
   - : The `responseType` property of the `XMLHttpRequest` object can be set to change the expected response type from the server. Possible values are the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This article will show some Ajax I/O techniques.
 - [XML](/en-US/docs/Web/XML)
   - : The **Extensible Markup Language (XML)** is a W3C-recommended general-purpose markup language for creating special-purpose markup languages. It is a simplified subset of SGML, capable of describing many kinds of data. Its primary purpose is to facilitate the sharing of data across different systems, particularly systems connected via the Internet.
@@ -374,7 +375,7 @@ While Ajax is still useful, other APIs have been developed since 2005 that enabl
   - : XPath stands for **X**ML **Path** Language, it uses a non-XML syntax that provides a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML) document. As well as this, it can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 - {{domxref("FileReader")}} API
   - : The `FileReader` API lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using {{domxref("File")}} or {{domxref("Blob")}} objects to specify the file or data to read. File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, or from a drag and drop operation's {{domxref("DataTransfer")}} object.
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - : The [XMLHttpRequest](https://xhr.spec.whatwg.org/) specification adds HTML parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only XML parsing. This feature allows Web apps to obtain an HTML resource as a parsed DOM using `XMLHttpRequest`.
 - [XMLHttpRequest Specification](https://xhr.spec.whatwg.org/)
   - : WHATWG Living Standard

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.keys
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all keys contained in the {{domxref("FormData")}}. The keys are strings.
 
@@ -41,7 +41,7 @@ for (const key of formData.keys()) {
 
 The result is:
 
-```
+```plain
 key1
 key2
 ```
@@ -56,5 +56,5 @@ key2
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -55,7 +55,7 @@ searchParams.forEach((value, key) => {
 
 The result is:
 
-```
+```plain
 value1 key1
 value2 key2
 ```

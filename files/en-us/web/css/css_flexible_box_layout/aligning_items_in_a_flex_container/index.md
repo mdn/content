@@ -179,7 +179,7 @@ In this live example, I have flex items arranged into a row with the basic flex 
 
 ## Creating gaps between items
 
-To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items on the main axis. The {{cssxref("row-gap")}} property creates gaps between flex lines, when you have {{cssxref("flex-wrap")}} set to `wrap`. The {{cssxref("gap")}} property is a shorthand that sets both together.
+To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items in a row. The {{cssxref("row-gap")}} property creates gaps between flex lines, when you have {{cssxref("flex-wrap")}} set to `wrap`. The {{cssxref("gap")}} property is a shorthand that sets both together.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 

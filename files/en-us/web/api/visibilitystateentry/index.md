@@ -28,13 +28,13 @@ The performance timeline will always have a "`visibility-state`" entry with a `s
 
 This interface has no properties but it extends the properties of {{domxref("PerformanceEntry")}} by qualifying and constraining them as follows:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{experimental_inline}}
   - : Returns "`visibility-state`".
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{experimental_inline}}
   - : Returns either `"visible"` or `"hidden"`.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{experimental_inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the visibility state change occurred.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{experimental_inline}}
   - : Returns 0.
 
 ## Instance methods
@@ -57,7 +57,7 @@ function getVisibilityStateEntries() {
 
 ### Correlating visibility state changes with paint timing
 
-The below function gets a reference to all "`visibility-state`" entries and the "`first-contentful-paint`" entry, then uses {{jsxref("Array.some()")}} to test whether any of the "`hidden`" visibility entries ocurred before the first contentful paint:
+The below function gets a reference to all "`visibility-state`" entries and the "`first-contentful-paint`" entry, then uses {{jsxref("Array.some()")}} to test whether any of the "`hidden`" visibility entries occurred before the first contentful paint:
 
 ```js
 function wasHiddenBeforeFirstContentfulPaint() {
@@ -65,7 +65,7 @@ function wasHiddenBeforeFirstContentfulPaint() {
   const visibilityStateEntries =
     performance.getEntriesByType("visibility-state");
   return visibilityStateEntries.some(
-    (e) => e.startTime < fcpEntry.startTime && e.name === "hidden"
+    (e) => e.startTime < fcpEntry.startTime && e.name === "hidden",
   );
 }
 ```

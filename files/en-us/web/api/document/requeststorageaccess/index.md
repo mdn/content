@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Document.requestStorageAccess
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Storage Access API")}}
 
 The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies.
 
 This is relevant to user agents that by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
 > **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
-
-> **Note:** The [browser compatibility section](#browser_compatibility) provides an overview about the support status of the Storage Access API.
 
 ## Syntax
 
@@ -45,6 +43,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to unpartit
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - The document or the top-level document has a `null` origin.
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+    - Usage is denied by the user agent's permission request to use the API.
 
 ## Examples
 
@@ -55,7 +54,7 @@ document.requestStorageAccess().then(
   },
   () => {
     console.log("access denied");
-  }
+  },
 );
 ```
 

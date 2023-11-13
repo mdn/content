@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Error.columnNumber
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The **`columnNumber`** data property of an {{jsxref("Error")}} instance contains the column number in the line of the file that raised this error.
 

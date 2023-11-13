@@ -26,4 +26,4 @@ Try changing the opacity and alpha channel values in the below examples to see m
 
 ## See also
 
-- [Applying color to HTML elements using CSS.](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS.](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

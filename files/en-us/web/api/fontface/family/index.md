@@ -24,7 +24,7 @@ A string.
 ```js
 let fontFace = new FontFace(
   "Roboto",
-  "url(https://fonts.example.com/roboto.woff2)"
+  "url(https://fonts.example.com/roboto.woff2)",
 );
 console.log(fontFace.family); // 'Roboto'
 

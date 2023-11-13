@@ -64,7 +64,7 @@ if (navigator.mediaDevices.getUserMedia) {
       {
         audio: true,
         video: false,
-      }
+      },
     )
     .then((stream) => {
       const options = {

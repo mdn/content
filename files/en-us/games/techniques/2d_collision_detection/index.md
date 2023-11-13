@@ -100,7 +100,7 @@ Crafty.c("Circle", {
       this.y + this.radius,
       this.radius,
       0,
-      Math.PI * 2
+      Math.PI * 2,
     );
     ctx.closePath();
     ctx.fill();

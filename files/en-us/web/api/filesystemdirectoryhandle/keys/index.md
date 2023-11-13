@@ -6,11 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`keys()`** method of the
-{{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
-containing the keys for each item in `FileSystemDirectoryHandle`.
+{{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
+for the iteration of the key of the entries within the `FileSystemDirectoryHandle`
+on which this method is called.
 
 ## Syntax
 
@@ -24,11 +25,26 @@ None.
 
 ### Return value
 
-A new {{jsxref('Array')}}
+A new asynchronous iterator containing the keys of each entry within the `FileSystemDirectoryHandle`.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the current entry is not found.
 
 ## Examples
 
-Todo
+Use the `for await...of` loop can simplify the iteration process.
+
+```js
+const dirHandle = await window.showDirectoryPicker();
+
+for await (const key of dirHandle.keys()) {
+  console.log(key);
+}
+```
 
 ## Specifications
 
@@ -40,5 +56,5 @@ Todo
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)

@@ -62,7 +62,7 @@ In an HTML document the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

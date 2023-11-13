@@ -1,6 +1,7 @@
 ---
 title: <xsl:otherwise>
 slug: Web/XSLT/Element/otherwise
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

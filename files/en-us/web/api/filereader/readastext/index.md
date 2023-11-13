@@ -57,7 +57,7 @@ function previewFile() {
       // this will then display a text file
       content.innerText = reader.result;
     },
-    false
+    false,
   );
 
   if (file) {

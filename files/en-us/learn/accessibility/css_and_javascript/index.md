@@ -1,6 +1,7 @@
 ---
 title: CSS and JavaScript accessibility best practices
 slug: Learn/Accessibility/CSS_and_JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}

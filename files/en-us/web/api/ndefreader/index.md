@@ -66,7 +66,7 @@ function write(data) {
           .then(resolve, reject)
           .finally(() => (ignoreRead = false));
       },
-      { once: true }
+      { once: true },
     );
   });
 }

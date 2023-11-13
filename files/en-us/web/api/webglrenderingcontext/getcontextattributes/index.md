@@ -46,7 +46,7 @@ gl.getContextAttributes();
 the `getContextAttributes` method returns an object that describes the
 attributes set on this context, for example:
 
-```
+```js
 {
   alpha: true,
   antialias: true,

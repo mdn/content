@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Instance() constructor
 slug: WebAssembly/JavaScript_interface/Instance/Instance
+page-type: webassembly-constructor
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
 
@@ -79,7 +80,7 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -89,7 +90,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
 } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
   // Mute audio on video
   video.muted = true;
-} else (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
+} else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
   // Set a default placeholder image.
   video.poster = "http://example.com/poster_image_url";
 }
@@ -104,7 +105,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 } else if (navigator.getAutoplayPolicy(video) === "allowed-muted") {
   // Mute audio on video
   video.muted = true;
-} else (navigator.getAutoplayPolicy(video) === "disallowed") {
+} else if (navigator.getAutoplayPolicy(video) === "disallowed") {
   // Set a default placeholder image.
   video.poster = "http://example.com/poster_image_url";
 }

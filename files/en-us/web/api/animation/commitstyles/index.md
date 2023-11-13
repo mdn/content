@@ -63,7 +63,7 @@ commitStyles.addEventListener("click", async (event) => {
   offset1 = 100 - offset1;
   const animation = commitStyles.animate(
     { transform: `translate(${offset1}px)` },
-    { duration: 500, fill: "forwards" }
+    { duration: 500, fill: "forwards" },
   );
 
   // Wait for the animation to finish
@@ -82,7 +82,7 @@ fillForwards.addEventListener("click", async (event) => {
   offset2 = 100 - offset2;
   const animation = fillForwards.animate(
     { transform: `translate(${offset2}px)` },
-    { duration: 500, fill: "forwards" }
+    { duration: 500, fill: "forwards" },
   );
 });
 ```

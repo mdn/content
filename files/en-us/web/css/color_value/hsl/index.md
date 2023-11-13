@@ -29,13 +29,17 @@ The function also accepts a legacy syntax in which all values are separated with
 Functional notation: `hsl(H S L[ / A])`
 
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `S`
-  - : A {{CSSXref("&lt;percentage&gt;")}} representing saturation, where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
+  - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represents saturation. Here `100%` is completely saturated, while `0%` is completely unsaturated (gray).
 - `L`
-  - : A {{CSSXref("&lt;percentage&gt;")}} representing lightness, where `100%` is white, `0%` is black, and `50%` is "normal".
+  - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represents lightness. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+
+> **Note:** This functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 
@@ -152,5 +156,7 @@ div.hsla {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: the data type that represents any color
-- [HSL Color Picker](https://hslpicker.com/)
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
+- [Color picker](https://colorjs.io/apps/picker/) by Lea Verou

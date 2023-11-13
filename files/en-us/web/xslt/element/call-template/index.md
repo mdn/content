@@ -1,6 +1,7 @@
 ---
 title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

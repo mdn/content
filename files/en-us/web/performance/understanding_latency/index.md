@@ -1,6 +1,7 @@
 ---
 title: Understanding latency
 slug: Web/Performance/Understanding_latency
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

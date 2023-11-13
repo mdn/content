@@ -1,6 +1,7 @@
 ---
 title: Componentizing our Svelte app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -446,7 +447,7 @@ The `<input>`'s `value` property will be bound to the `name` variable, and the b
 
 We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
 
-```
+```plain
 on:keydown={(e) => e.key === 'Escape' && onCancel()}
 ```
 

@@ -55,7 +55,7 @@ if (navigator.getVRDisplays) {
               Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(
               leftEye.renderHeight,
-              rightEye.renderHeight
+              rightEye.renderHeight,
             );
 
             // stop the normal presentation, and start the vr presentation

@@ -27,7 +27,7 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```
+```css-nolint
 ::highlight(custom-highlight-name)
 ```
 

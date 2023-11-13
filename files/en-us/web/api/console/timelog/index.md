@@ -61,7 +61,7 @@ console.timeLog();
 
 If there is no corresponding timer, `timeLog()` logs a warning like:
 
-```
+```plain
 Timer "timer name" doesn't exist.
 ```
 
@@ -89,7 +89,7 @@ console.timeEnd("answer time");
 The output from the example above shows the time taken by the user to dismiss the first
 alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
-```
+```plain
 answer time: 2542ms debugger eval code:3:9
 answer time: 4161ms - timer ended
 ```

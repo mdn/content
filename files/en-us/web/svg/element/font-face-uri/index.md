@@ -24,7 +24,7 @@ The **`<font-face-uri>`** [SVG](/en-US/docs/Web/SVG) element points to a remote 
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

@@ -9,7 +9,7 @@ browser-compat: api.HIDConnectionEvent
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-The **`HIDConnectionEvent`** interface of the {{domxref('WebHID API')}} represents HID connection events, and is the event type passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when an input report is received.
+The **`HIDConnectionEvent`** interface of the {{domxref('WebHID API')}} represents HID connection events, and is the event type passed to {{domxref("HID/connect_event", "connect")}} and {{domxref("HID/disconnect_event", "disconnect")}} event handlers when an input report is received.
 
 {{InheritanceDiagram}}
 

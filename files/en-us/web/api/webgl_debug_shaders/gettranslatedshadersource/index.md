@@ -41,7 +41,7 @@ const gl = canvas.getContext("webgl");
 const shader = gl.createShader(gl.FRAGMENT_SHADER);
 gl.shaderSource(
   shader,
-  "void main() { gl_FragColor = vec4(gl_FragCoord.x, 0.0, 0.0, 1.0); }"
+  "void main() { gl_FragColor = vec4(gl_FragCoord.x, 0.0, 0.0, 1.0); }",
 );
 gl.compileShader(shader);
 

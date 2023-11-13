@@ -1,6 +1,7 @@
 ---
 title: regexp:replace()
 slug: Web/EXSLT/regexp/replace
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

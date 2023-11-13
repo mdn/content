@@ -73,7 +73,7 @@ function deleteResult() {
         const request = cursor.delete();
         request.onsuccess = () => {
           console.log(
-            "Deleted that mediocre album from 1984. Even Power windows is better."
+            "Deleted that mediocre album from 1984. Even Power windows is better.",
           );
         };
       } else {

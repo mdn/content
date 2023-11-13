@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequest.load_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The `load` event is fired when an {{domxref("XMLHttpRequest")}} transaction completes successfully.
 
@@ -139,4 +139,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## See also
 
 - Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

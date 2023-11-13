@@ -22,16 +22,18 @@ lch(52.2345% 72.2 56.2 / .5);
 Functional notation: `lch(L C H[ / A])`
 
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which specifies the CIE Lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
 - `C`
-  - : A {{CSSXref("&lt;number&gt;")}} or a {{CSSXref("&lt;percentage&gt;")}} where `0%` is `0` and `100%` is the number `150`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`).
+  - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none`, where `0%` is `0` and `100%` is the number `150`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`).
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
 > This case is notable where `100%` is equal to the number `100` for the `L` value and `150` for the `C` value.
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 
@@ -152,6 +154,6 @@ div {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
-- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors

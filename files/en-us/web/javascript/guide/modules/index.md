@@ -7,7 +7,7 @@ browser-compat:
   - javascript.statements.export
 ---
 
-{{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
 
@@ -19,7 +19,7 @@ It has therefore made sense in recent years to start thinking about providing me
 
 The good news is that modern browsers have started to support module functionality natively, and this is what this article is all about. This can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips.
 
-Use of native JavaScript modules is dependent on the {{JSxRef("Statements/import", "import")}} and {{JSxRef("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
+Use of native JavaScript modules is dependent on the {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
 
 ## Browser compatibility
 
@@ -83,7 +83,7 @@ It is also worth noting that:
 
 ## Exporting module features
 
-The first thing you do to get access to module features is export them. This is done using the {{JSxRef("Statements/export", "export")}} statement.
+The first thing you do to get access to module features is export them. This is done using the {{jsxref("Statements/export", "export")}} statement.
 
 The easiest way to use it is to place it in front of any items you want exported out of the module, for example:
 
@@ -114,7 +114,7 @@ Once you've exported some features out of your module, you need to import them i
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
+You use the {{jsxref("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
 
 The _module specifier_ provides a string that the JavaScript environment can resolve to a path to the module file.
 In a browser, this could be a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
@@ -171,8 +171,8 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
     "imports": {
       "shapes": "./shapes/square.js",
       "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
       "https://example.com/shapes/square.js": "./shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
       "../shapes/square": "./shapes/square.js"
     }
   }
@@ -181,6 +181,7 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
 
 The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Element/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap).
 There can only be one import map in the document, and because it is used to resolve which modules are loaded in both static and dynamic imports, it must be declared before any `<script>` elements that import modules.
+Note that the import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 With this map you can now use the property names above as module specifiers.
 If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.
@@ -192,7 +193,7 @@ import { name as squareNameOne } from "shapes";
 import { name as squareNameTwo } from "shapes/square";
 
 // Remap a URL to another URL
-import { name as squareNameThree } from "https://example.com/shapes/moduleshapes/square.js";
+import { name as squareNameThree } from "https://example.com/shapes/square.js";
 ```
 
 If the module specifier has a trailing forward slash then the value must have one as well, and the key is matched as a "path prefix".
@@ -200,7 +201,7 @@ This allows remapping of whole classes of URLs.
 
 ```js
 // Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/square.js";
+import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
 ```
 
 It is possible for multiple keys in an import map to be valid matches for a module specifier.
@@ -379,10 +380,13 @@ The script into which you import the module features basically acts as the top-l
 
 You can only use `import` and `export` statements inside modules, not regular scripts.
 
+> **Note:** Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> This can significantly reduce load time when the modules are used.
+
 ## Other differences between modules and standard scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
-- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.
+- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
 - There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Element/script#attributes)) when loading a module script; modules are deferred automatically.
 - Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
 - Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.
@@ -390,7 +394,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 Module-defined variables are scoped to the module unless explicitly attached to the global object. On the other hand, globally-defined variables are available within the module. For example, given the following code:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -688,7 +692,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 A recent addition to JavaScript modules functionality is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.
 
-This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
+This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{jsxref("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -820,6 +824,23 @@ const triangle1 = new Module.Triangle(
 ```
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
+
+## Import declarations are hoisted
+
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+
+So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
+
+```js
+// …
+const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from "./modules/canvas.js";
+myCanvas.createReportList();
+// …
+```
+
+Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
 
 ## Cyclic imports
 
@@ -959,9 +980,9 @@ Here are a few tips that may help you if you are having trouble getting your mod
 
 ## See also
 
-- [Using JavaScript modules on the web](https://v8.dev/features/modules#mjs), by Addy Osmani and Mathias Bynens
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html), Book by Axel Rauschmayer
+- [JavaScript modules](https://v8.dev/features/modules) on v8.dev (2018)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

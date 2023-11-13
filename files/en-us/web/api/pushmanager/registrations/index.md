@@ -50,7 +50,7 @@ req.onsuccess = (e) => {
   if (req.result.length > 0) {
     req.result.forEach((result) => {
       console.log(
-        `Existing registration ${result.pushEndpoint} ${result.version}`
+        `Existing registration ${result.pushEndpoint} ${result.version}`,
       );
     });
     // Reuse existing endpoints.

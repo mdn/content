@@ -1,6 +1,7 @@
 ---
 title: call
 slug: WebAssembly/Reference/Control_flow/call
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

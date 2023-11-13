@@ -135,7 +135,7 @@ document.body.appendChild(a);
 We declare a namespace with {{cssxref("@namespace")}}. By omitting the name for the namespace, the `@namespace` declaration creates a default namespace.
 
 ```css
-/* By ommitting a name, this sets SVG as the default namespace */
+/* By omitting a name, this sets SVG as the default namespace */
 @namespace url("http://www.w3.org/2000/svg");
 
 /* `<a>` in the default (set to SVG) namespace */

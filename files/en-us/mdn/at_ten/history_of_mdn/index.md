@@ -1,6 +1,7 @@
 ---
 title: The history of MDN
 slug: MDN/At_ten/History_of_MDN
+page-type: guide
 ---
 
 {{MDNSidebar}}

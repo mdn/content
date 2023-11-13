@@ -1,6 +1,7 @@
 ---
 title: parent
 slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/parent
+page-type: xslt-axis
 ---
 
 {{XsltSidebar}}

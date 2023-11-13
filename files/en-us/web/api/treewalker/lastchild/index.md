@@ -36,7 +36,7 @@ const treeWalker = document.createTreeWalker(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 const node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```

@@ -36,7 +36,7 @@ In Firefox, DOM objects in content scripts get an extra property `wrappedJSObjec
 Let's take a simple example. Suppose a web page loads a script:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -101,7 +101,7 @@ Execute content script in the active tab.
 */
 function loadContentScript() {
   browser.tabs.executeScript({
-    file: "/content_scripts/export.js"
+    file: "/content_scripts/export.js",
   });
 }
 
@@ -119,7 +119,7 @@ browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
-    message: message.content
+    message: message.content,
   });
 });
 ```
@@ -168,15 +168,14 @@ the `cloneFunctions` option.
 let messenger = {
   notify(message) {
     browser.runtime.sendMessage({
-      content: `Object method call: ${message}`
+      content: `Object method call: ${message}`,
     });
-  }
+  },
 };
 
-window.wrappedJSObject.messenger = cloneInto(
-  messenger,
-  window,
-  {cloneFunctions: true});
+window.wrappedJSObject.messenger = cloneInto(messenger, window, {
+  cloneFunctions: true,
+});
 ```
 
 Now page scripts see a new property on the window, `messenger`, which has a function `notify()`:
@@ -198,19 +197,19 @@ const objA = new Object();
 const objB = new window.Object();
 
 console.log(
-  objA instanceof Object,                        // true
-  objB instanceof Object,                        // false
-  objA instanceof window.Object,                 // false
-  objB instanceof window.Object,                 // true
-  'wrappedJSObject' in objB                      // true; xrayed
+  objA instanceof Object, // true
+  objB instanceof Object, // false
+  objA instanceof window.Object, // false
+  objB instanceof window.Object, // true
+  "wrappedJSObject" in objB, // true; xrayed
 );
 
 objA.foo = "foo";
-objB.foo = "foo";                                // xray wrappers for plain JavaScript objects pass through property assignments
-objB.wrappedJSObject.bar = "bar";                // unwrapping before assignment does not rely on this special behavior
+objB.foo = "foo"; // xray wrappers for plain JavaScript objects pass through property assignments
+objB.wrappedJSObject.bar = "bar"; // unwrapping before assignment does not rely on this special behavior
 
 window.wrappedJSObject.objA = objA;
-window.wrappedJSObject.objB = objB;              // automatically unwraps when passed to page context
+window.wrappedJSObject.objB = objB; // automatically unwraps when passed to page context
 
 window.eval(`
   console.log(objA instanceof Object);           // false
@@ -237,20 +236,24 @@ window.eval(`
 const ev = new Event("click");
 
 console.log(
-  ev instanceof Event,                           // true
-  ev instanceof window.Event,                    // true; Event constructor is actually inherited from the xrayed window
-  'wrappedJSObject' in ev                        // true; is an xrayed object
+  ev instanceof Event, // true
+  ev instanceof window.Event, // true; Event constructor is actually inherited from the xrayed window
+  "wrappedJSObject" in ev, // true; is an xrayed object
 );
 
-ev.propA = "propA"                                // xray wrappers for native objects do not pass through assignments
-ev.propB = "wrapper";                             // define property on xray wrapper
-ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
-Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
-  'propC', {
-    get: exportFunction(() => {                  // getters must be exported like regular functions
-      return 'propC';
-    }, window)
-  }
+ev.propA = "propA"; // xray wrappers for native objects do not pass through assignments
+ev.propB = "wrapper"; // define property on xray wrapper
+ev.wrappedJSObject.propB = "unwrapped"; // define same property on page object
+Reflect.defineProperty(
+  // privileged reflection can operate on less privileged objects
+  ev.wrappedJSObject,
+  "propC",
+  {
+    get: exportFunction(() => {
+      // getters must be exported like regular functions
+      return "propC";
+    }, window),
+  },
 );
 
 window.eval(`

@@ -109,7 +109,7 @@ You can see a comparison between physical and logical properties below.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1300)}}
 
-There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
+There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ### Logical values
 
@@ -122,8 +122,6 @@ For example, you can float an image left to cause text to wrap round the image. 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1000)}}
 
 Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
-
-> **Note:** Currently, only Firefox supports flow relative values for `float`. If you are using **Google Chrome** or **Microsoft Edge**, you may find that the image did not float.
 
 ### Should you use physical or logical properties?
 

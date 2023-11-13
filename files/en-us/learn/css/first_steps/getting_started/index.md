@@ -42,7 +42,7 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
 Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as `index.html` in a folder on your machine.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -200,7 +200,7 @@ li em {
 
 This selector will select any `<em>` element that is inside (a descendant of) an `<li>`. So in your example document, you should find that the `<em>` in the third list item is now purple, but the one inside the paragraph is unchanged.
 
-Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (an **adjacent sibling combinator**) between the selectors.
+Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (an **next-sibling combinator**) between the selectors.
 
 Try adding this rule to your stylesheet as well:
 

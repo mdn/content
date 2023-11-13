@@ -1,6 +1,7 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -98,9 +99,11 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
-### Reflecting ARIA attributes
+### Lazy loading of iframes
 
-[ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is enabled for non-IDREF attributes which allows authors to get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`, (see [Firefox bug 1824980](https://bugzil.la/1824980) for more details.)
+This feature allows web pages and JavaScript to provide a hint to the browser as to whether iframes should be loaded immediately on page load, or only when they are needed (just before they will appear in the window's {{Glossary("visual viewport")}}).
+The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
+See [Firefox bug 1622090](https://bugzil.la/1622090) for more details.
 
 <table>
   <thead>
@@ -113,27 +116,27 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>114</td>
+      <td>120</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>114</td>
+      <td>120</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>114</td>
+      <td>120</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>114</td>
+      <td>120</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>accessibility.ARIAReflection.enabled</code></td>
+      <td colspan="2"><code>dom.iframe_lazy_loading.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -348,6 +351,50 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
+### ray() CSS function
+
+The CSS {{cssxref("ray")}} function is a way to define an {{cssxref("offset-path")}}. The function defines the path as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle ([Firefox bug 1582554](https://bugzil.la/1582554)).
+
+In version 112, the `<ray_size>` optional parameter was added to the function. If no `<ray_size>` parameter is provided, it assumes the default value of `closest-side` ([Firefox bug 1820071](https://bugzil.la/1820071)).
+
+In version 116, the `at <position>` optional parameter was added to the function. If omitted, the `offset-position` value of the element is used. If both `at <position>` and `offset-position` values are absent, `offset-position: auto` is used as ray's starting position, which places the element at the `top left` corner of the element's box. ([Firefox bug 1820070](https://bugzil.la/1820070)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>72</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.motion-path-ray.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Masonry grid layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See [Firefox bug 1607954](https://bugzil.la/1607954) for more details.
@@ -386,46 +433,6 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Ma
       <td colspan="2">
         <code>layout.css.grid-template-masonry-value.enabled</code>
       </td>
-    </tr>
-  </tbody>
-</table>
-
-### math-style property
-
-The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See [Firefox bug 1665975](https://bugzil.la/1665975) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.math-style.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -476,46 +483,11 @@ Earlier called "scroll-linked animations", a scroll-driven animation depends on 
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
 The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
+When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are both available behind the preference.
+
 You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
-For more information, see [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are now available behind the preference `layout.css.scroll-driven-animations.enabled`. For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), and [Firefox bug 1809005](https://bugzil.la/1809005).
+For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
 <table>
   <thead>
@@ -556,7 +528,7 @@ When using the {{cssxref('scroll-timeline')}} shorthand property, the order of t
 ### :has() pseudo-class
 
 The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
-(See [Firefox bug 1771896](https://bugzil.la/1771896) for more details.)
+(See [Firefox bug 1771896](https://bugzil.la/1771896) and [Firefox bug 1853701](https://bugzil.la/1853701) for more details.)
 
 <table>
   <thead>
@@ -569,8 +541,8 @@ The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that cont
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>103</td>
-      <td>No</td>
+      <td>119</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -631,47 +603,6 @@ See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.font-tech.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### round() math function
-
-The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
-See [Firefox bug 1764850](https://bugzil.la/1764850) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>108</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.round.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -840,6 +771,360 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
   </tbody>
 </table>
 
+### Named view progress timelines property
+
+The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
+The name can then be assigned to the `animation-timeline`, which then animates the associated element as it moves through the visible area of its ancestor scroller.
+See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Anonymous view progress timelines function
+
+The CSS [`view()`](/en-US/docs/Web/CSS/animation-timeline/view) function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
+The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
+See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### offset-position property
+
+The CSS {{cssxref("offset-position")}} property defines the initial position of an element on a path. A new keyword called `normal` has been added to the syntax of the property. When using this keyword, the initial starting position of an element on an {{cssxref("offset-path")}} depends on the CSS function used – {{cssxref("path")}} or {{cssxref("ray")}} – to specify the value of the `offset-path` property. For more information, see {{cssxref("offset-position")}}. See ([Firefox bug 1559232](https://bugzil.la/1559232)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>116</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.motion-path-offset-position.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### rect() and xywh() basic shape functions
+
+The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions enable you to define a rectangle using the [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block as well as the width and height of the rectangle. In both the functions, you can optionally round off the corners.
+For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference names</th>
+      <td colspan="2">
+      <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+### url() function in offset-path property
+
+The CSS {{cssxref("offset-path")}} property now supports using [`url()`](/en-US/docs/Web/CSS/offset-path#url) to specify the ID of an SVG shape element. The referenced shape defines the shape of the path that an element will follow ([Firefox bug 1598158](https://bugzil.la/1598158)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>118</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>118</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.motion-path-url.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+### zoom property
+
+The non-standard CSS {{cssxref("zoom")}} property is enabled in the Nightly release and lets you magnify an element similar to the {{cssxref("transform")}} property, but it affects the layout size of the element.
+See ([Firefox bug 1855763](https://bugzil.la/1855763) and [Firefox bug 390936](https://bugzil.la/390936)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.zoom.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+To ensure compatibility with these changes, the [Vendor-prefixed transform properties](#vendor-prefixed-transform-properties) and the [Vendor-prefixed transition properties](#vendor-prefixed-transition-properties) are disabled in the Nightly release.
+These changes are described in the following sections.
+
+#### Vendor-prefixed transform properties
+
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+Specifically, the disabled properties are:
+
+- `-moz-backface-visibility`
+- `-moz-perspective`
+- `-moz-perspective-origin`
+- `-moz-transform`
+- `-moz-transform-origin`
+- `-moz-transform-style`
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.prefixes.transforms</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+#### Vendor-prefixed transition properties
+
+The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+Specifically, the disabled properties are:
+
+- `-moz-transition`
+- `-moz-transition-delay`
+- `-moz-transition-duration`
+- `-moz-transition-property`
+- `-moz-transition-timing-function`
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.prefixes.transitions</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -886,53 +1171,12 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array grouping methods
+### Array transfer
 
-The {{jsxref("Array.prototype.group()")}} and {{jsxref("Array.prototype.groupToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
-The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
-(See [Firefox bug 1739648](https://bugzil.la/1739648) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>98</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">None</td>
-    </tr>
-  </tbody>
-</table>
-
-### String isWellFormed() and toWellFormed() methods
-
-Strings in JavaScript are represented by sequences of unsigned 16-bit integers, and it's possible to have valid string values that are not well-formed Unicode text.
-The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods are used to check if a string is well-formed Unicode text and to convert a string to well-formed Unicode text, respectively.
-See [tc39/proposal-is-usv-string](https://github.com/tc39/proposal-is-usv-string) and [Firefox bug 1825005](https://bugzil.la/1825005) for more details.
+The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
+The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
+After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
+(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
 
 <table>
   <thead>
@@ -945,27 +1189,29 @@ See [tc39/proposal-is-usv-string](https://github.com/tc39/proposal-is-usv-string
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>115</td>
+      <td>117</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>-</td>
-      <td>-</td>
+      <td>NA</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>-</td>
-      <td>-</td>
+      <td>NA</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>-</td>
-      <td>-</td>
+      <td>NA</td>
+      <td>No</td>
     </tr>
     <tr>
+    <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.well_formed_unicode_strings</code></td>
+      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
+    </tr>
     </tr>
   </tbody>
 </table>
@@ -976,7 +1222,7 @@ See [tc39/proposal-is-usv-string](https://github.com/tc39/proposal-is-usv-string
 
 #### Hit regions
 
-Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
+Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you to define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
 
 <table>
   <thead>
@@ -1054,48 +1300,6 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webgpu.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Audio Output API
-
-#### MediaDevices.selectAudioOutput()
-
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See [Firefox bug 1699026](https://bugzil.la/1699026).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.setsinkid.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1276,6 +1480,91 @@ See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
   </tbody>
 </table>
 
+#### CSS Properties and Values API
+
+The [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) allows developers to register custom CSS properties through JavaScript via [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) or in CSS using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule.
+Registering properties using these two methods allows for type checking, default values, and properties that do or do not inherit values from their parent elements.
+See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>116</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.property-and-value-api.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### CSS Custom Highlight API
+
+The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
+The ranges are defined in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then registered with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
+The CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element is used to apply styles to a registered highlight.
+See [Firefox bug 1703961](https://bugzil.la/1703961) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.customHighlightAPI.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Service Workers
 
 #### Preloading of service worker resources on navigation
@@ -1385,7 +1674,7 @@ The following HTML global attributes are supported:
 - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
 
-See [Firefox bug 934425](https://bugzil.la/934425) for more details.
+See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
 
 <table>
   <thead>
@@ -1872,7 +2161,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
     <tr>
       <th>Release</th>
       <td>97</td>
-      <td>No.</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
@@ -1887,6 +2176,46 @@ The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Sched
 
 This is enabled on Firefox Nightly (only) from Firefox 101.
 No preference is provided to allow it to be enabled in other releases.
+
+### Notifications API
+
+Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>Windows only</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webnotifications.requireinteraction.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Security and privacy
 
@@ -2024,7 +2353,9 @@ This also changes the console warning; if the upgrade succeeds, the message indi
 ### Permissions Policy / Feature policy
 
 [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
+This is implemented in Firefox as **Feature Policy**, the name used in an earlier version of the specification.
+
+Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute on `<iframe>` elements even if the user preference is not set.
 
 <table>
   <thead>
@@ -2154,7 +2485,8 @@ For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 ### HTTP Status 103
 
-The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start preloading resources while the server is still preparing the full response.
+The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server is still preparing the full response.
+Note that using the header to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites is already supported.
 For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 
 <table>
@@ -2188,7 +2520,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>network.early-hints.enabled</code> and <code>network.early-hints.preconnect.enabled</code></td>
+      <td colspan="2"><code>network.early-hints.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2198,7 +2530,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 The [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is a response header to a [CORS preflight request](/en-US/docs/Glossary/Preflight_request), that indicates which request headers may be included in the final request.
 The response directive can contain a wildcard (`*`), which indicates that the final request may include all headers except the `Authorization` header.
 
-By default, Firefox includes the `Authorization` header in the final request after recieving a response with `Access-Control-Allow-Headers: *`.
+By default, Firefox includes the `Authorization` header in the final request after receiving a response with `Access-Control-Allow-Headers: *`.
 Set the preference to `false` to ensure Firefox does not include the `Authorization` header.
 For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
 

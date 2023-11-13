@@ -1,6 +1,7 @@
 ---
 title: Perceived performance
 slug: Learn/Performance/Perceived_performance
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
