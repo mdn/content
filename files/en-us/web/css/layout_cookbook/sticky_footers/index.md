@@ -46,6 +46,6 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 - CSS properties: {{cssxref("display")}}, {{cssxref("min-height")}}, {{cssxref("grid-template-rows")}}, {{cssxref("flex-direction")}}, {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
