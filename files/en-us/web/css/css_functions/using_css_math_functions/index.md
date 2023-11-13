@@ -36,7 +36,7 @@ property: calc(expression);
 
 ### `calc()` Example
 
-You can play with the example below to try out `calc()` for yourself:
+Click on the play icon below to see the `calc()` example in the code playground and try it for yourself.
 
 ```html hidden
 <div class="calc1">
@@ -105,7 +105,7 @@ This function is often used to compare two CSS values that have different units,
 
 ### `min()` Example
 
-You can play with the example below to try out `min()` for yourself:
+Click on the play icon below to see the `min()` example in the code playground and try it for yourself.
 
 ```html hidden
 <div class="min1">
@@ -179,7 +179,7 @@ Notice the similarities and differences between the examples for `min()` and `ma
 
 ### `max()` Example
 
-You can play with the example below to try out `max()` for yourself:
+Click on the play icon below to see the `max()` example in the code playground and try it for yourself.
 
 ```html hidden
 <div class="max1">
@@ -254,7 +254,7 @@ This function is often used to compare two CSS values that have different units,
 
 ### `clamp()` Example
 
-You can play with the example below to try out `clamp()` for yourself:
+Click on the play icon below to see the `clamp()` example in the code playground and try it for yourself.
 
 ```html hidden
 <div class="clamp1">
