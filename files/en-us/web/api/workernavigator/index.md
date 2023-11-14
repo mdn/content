@@ -21,7 +21,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
-- {{domxref("WorkerNavigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WorkerNavigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("GPU")}} object for the current worker context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
@@ -47,7 +47,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
-- {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
