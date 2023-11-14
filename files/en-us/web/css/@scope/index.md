@@ -126,7 +126,9 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 }
 ```
 
-`:scope` is implicitly prepended to all scoped style rules. If you wish to, you can write it explicitly, or you could prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect. As such, the three lines in the following block are all equivalent:
+`:scope` is implicitly prepended to all scoped style rules. If you wish to, you can write it explicitly, or you could prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect. (You might find these styles easier to understand.)
+
+As such, the three lines in the following block are all equivalent:
 
 ```css
 @scope (.feature) {
@@ -167,17 +169,16 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
   }
   ```
 
-### Specificity in @scope
+### Specificity in `@scope`
 
-Including a ruleset inside a `@scope` block does not directly affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
 
-However, bear in mind that the `:scope` pseudo-class has a specificity of 0-1-0. Since this is implicitly prepended to selectors inside `@scope` blocks, you'll need to factor this in when calculating their specificity. For example:
+However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
 ```css
 @scope (.article-body) {
-  /* here, img has a specificity of 0-1-0 + 0-0-1 = 0-1-1,
-     as it has :scope implicitly prepended to it */
-  img { ... }
+  /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
+  :scope img { ... }
 }
 ```
 
@@ -209,7 +210,7 @@ Because of this, it is possible to chain `&` multiple times, whereas you can onl
 }
 ```
 
-### How @scope conflicts are resolved
+### How `@scope` conflicts are resolved
 
 `@scope` adds a new criterion to the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade): **scoping proximity**. This states that when two scopes have conflicting styles, the style that has the smallest number of hops up the DOM tree hierarchy to the scope root wins. Let's look at an example to see what this means.
 

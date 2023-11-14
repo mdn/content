@@ -32,7 +32,7 @@ Which element(s) `:scope` matches depends on the context in which it is used:
 
 ## Examples
 
-### Using :scope as an alternative to :root
+### Using `:scope` as an alternative to `:root`
 
 This example shows that `:scope` is equivalent to `:root` when used at the root level of a stylesheet. In this case, the provided CSS colors the background of the `<html>` element orange.
 
@@ -54,7 +54,7 @@ This example shows that `:scope` is equivalent to `:root` when used at the root 
 
 {{ EmbedLiveSample("Using :scope as an alternative to :root", "100%", 50) }}
 
-### Using :scope to style the scope root in a @scope block
+### Using `:scope` to style the scope root in a `@scope` block
 
 In this example, we use two separate `@scope` blocks to match links inside elements with a `.light-scheme` and `.dark-scheme` class respectively. Note how `:scope` is used to select and provide styling to the scope roots themselves. In this example, the scope roots are the {{htmlelement("div")}} elements that have the classes applied to them.
 
@@ -115,7 +115,7 @@ div {
 
 {{ EmbedLiveSample("Using :scope to style the scope root in a @scope block", "100%", 150) }}
 
-### Using :scope in JavaScript
+### Using `:scope` in JavaScript
 
 This example demonstrates using the `:scope` pseudo-class in JavaScript. A situation where it can be useful is when you need to get a direct descendant of an already retrieved {{domxref("Element")}}.
 
@@ -152,7 +152,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
 
-{{ EmbedLiveSample('Direct_children') }}
+{{ EmbedLiveSample('Using :scope in JavaScript') }}
 
 ## Specifications
 
