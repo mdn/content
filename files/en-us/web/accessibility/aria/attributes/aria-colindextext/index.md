@@ -71,7 +71,9 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ## ARIAMixin API
 
 - {{domxref("Element.ariaColIndexText")}}
-  - : The [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
+  - : The [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindextext` attribute.
+- {{domxref("ElementInternals.ariaColIndexText")}}
+  - : The [`ariaColIndexText`](/en-US/docs/Web/API/ElementInternals/ariaColIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-colindextext` attribute.
 
 ## Associated roles
 
