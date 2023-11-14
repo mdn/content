@@ -445,8 +445,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-         ? todos.filter((t) => t.completed)
-         : todos;
+       ? todos.filter((t) => t.completed)
+       : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -519,8 +519,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-         ? todos.filter((t) => t.completed)
-         : todos;
+       ? todos.filter((t) => t.completed)
+       : todos;
 
    $: {
      if (filter === Filter.ALL) {

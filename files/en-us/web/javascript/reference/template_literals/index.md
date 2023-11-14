@@ -112,8 +112,8 @@ let classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-    ? " icon-expander"
-    : " icon-collapser";
+  ? " icon-expander"
+  : " icon-collapser";
 ```
 
 With a template literal but without nesting, you could do this:

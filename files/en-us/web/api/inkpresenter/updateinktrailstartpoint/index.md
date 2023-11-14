@@ -97,8 +97,9 @@ canvas.addEventListener("pointermove", async (evt) => {
 
     style = { color: `rgba(${r}, ${g}, ${b}, 1)`, diameter: 10 };
     move_cnt = 0;
-    document.getElementById("div").style.backgroundColor =
-      `rgba(${r}, ${g}, ${b}, 0.6)`;
+    document.getElementById(
+      "div",
+    ).style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.6)`;
   }
   move_cnt += 1;
   await presenter.updateInkTrailStartPoint(evt, style);
