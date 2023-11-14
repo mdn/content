@@ -172,7 +172,7 @@ You can combine the values in various ways:
 - `all`
   - : `copy`, `move`, or `link`
 - `uninitialized`
-  - : the default value when the effect has not been set, equivalent to `all`.
+  - : the default value when the effect has not been set, equivalent to `all`
 
 Note that these values must be used exactly as listed above. For example, setting the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `copyMove` allows a copy or move operation but prevents the user from performing a link operation. If you don't change the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property, then any operation is allowed, just like with the '`all`' value. So you don't need to adjust this property unless you want to exclude specific types.
 
