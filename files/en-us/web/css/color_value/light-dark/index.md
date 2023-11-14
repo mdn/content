@@ -86,11 +86,13 @@ In a supporting browser, the colors will change based upon the user preference t
 :root {
   /* this has to be set to switch between light or dark */
   color-scheme: light dark;
+  
   --light-bg: ghostwhite;
-  --dark-bg: darkslategray;
   --light-color: darkslategray;
-  --dark-color: ghostwhite;
   --light-code: tomato;
+  
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
   --dark-code: gold;
 }
 * {
