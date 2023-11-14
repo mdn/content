@@ -31,16 +31,13 @@ new DragEvent(type, dragEventInit)
 
   - : A string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 
-- `dragEventInit` {{optional_inline}}
+- `eventInitDict` {{optional_inline}}
 
-  - : A `DragEventInit` dictionary, having the following fields:
+  - : An object containing the following properties:
 
-    - `dataTransfer {{optional_inline}}
+    - `dataTransfer` {{optional_inline}}
 
       - : A {{domxref("DataTransfer")}}. Defaults to `null`.
-
-The `DragEventInit` dictionary inherits from the
-{{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
 
 ## Specifications
 
