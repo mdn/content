@@ -2,7 +2,7 @@
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
 page-type: webassembly-function
-browser-compat: javascript.builtins.WebAssembly.compile
+browser-compat: webassembly.api.compile
 ---
 
 {{WebAssemblySidebar}}
