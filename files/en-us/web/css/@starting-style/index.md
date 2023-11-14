@@ -37,7 +37,7 @@ The `@starting-style` at rule can be used in two ways:
 
 ## Description
 
-To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are by default not triggered on an element's initial style update, or when its [`display`](/en-US/docs/Web/CSS/display) type changes from `none` to another value. To enable first-style transitions, `@starting-style` rules are needed. They provide starting styles for elements that do not have a previous state, defining the property values to transition from.
+To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) are by default not triggered on an element's initial style update, or when its {{CSSxRef("display")}} type changes from `none` to another value. To enable first-style transitions, `@starting-style` rules are needed. They provide starting styles for elements that do not have a previous state, defining the property values to transition from.
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the [top layer](/en-US/docs/Glossary/Top_layer) (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
