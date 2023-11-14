@@ -35,8 +35,9 @@ new DragEvent(type, dragEventInit)
 
   - : A `DragEventInit` dictionary, having the following fields:
 
-    - `"dataTransfer"`, optional and defaults to `"null"`. The
-      type is {{domxref("DataTransfer")}}.
+    - `dataTransfer {{optional_inline}}
+
+      - : A {{domxref("DataTransfer")}}. Defaults to `null`.
 
 The `DragEventInit` dictionary inherits from the
 {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
