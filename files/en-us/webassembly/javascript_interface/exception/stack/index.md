@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Exception/stack
 page-type: webassembly-instance-property
 status:
   - non-standard
-browser-compat: javascript.builtins.WebAssembly.Exception.stack
+browser-compat: webassembly.apiwebassembly.api.Exception.stack
 ---
 
 {{WebAssemblySidebar}} {{non-standard_header}}
