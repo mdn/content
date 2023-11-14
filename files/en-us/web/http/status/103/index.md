@@ -41,7 +41,11 @@ Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/precon
 Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=preconnect; crossorigin
 ```
 
-This example includes an additional origin used to load resources and also a [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) connection to that same origin for loading fonts or other [CORS](/en-US/docs/Web/HTTP/CORS)-protected resources.
+This example preconnects to `https://cdn.example.com` twice:
+- The first connection would be used for loading resources that can be fetched without CORS, such as images.
+- The second connection includes the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute and would be used for loading [CORS](/en-US/docs/Web/HTTP/CORS)-protected resources, such as fonts.
+
+CORS-protected resources must be fetched over a completely separate connection. If you only need one type of resource from an origin then you only need to preconnect once.
 
 Subsequently the server sends the final response.
 This includes a crossorigin font preload and an `<img>` loaded from the additional origin.
