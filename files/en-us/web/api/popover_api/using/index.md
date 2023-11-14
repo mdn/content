@@ -314,7 +314,7 @@ Popovers are set to `display: none;` when hidden and `display: block;` when show
 
 When animating popovers with CSS transitions, the following features are required:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule
+- {{CSSxRef("@starting-style")}} at-rule
   - : Provides a set of starting values for properties set on the popover that you want to transition from when it is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on an element's first style update, or when the `display` type changes from `none` to another type.
 - [`display`](/en-US/docs/Web/CSS/display) property
   - : Add `display` to the transitions list so that the popover will remain as `display: block` (or another visible `display` value) for the duration of the transition, ensuring the other transitions are visible.
