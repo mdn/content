@@ -20,7 +20,7 @@ You need to address the following areas when tackling a cross-platform extension
 - API asynchronous event handling
 - API function coverage
 - Content script execution contexts
-- Background scripts, page, and service worker
+- Background page versus extension service worker (in Manifest V3)
 - Manifest keys
 - Extension packaging
 - Extension publishing
@@ -114,9 +114,10 @@ Firefox and Chrome use fundamentally different approaches to handle this behavio
 
 However, Firefox provides some APIs that enable content scripts to access JavaScript objects created by page scripts and to expose their JavaScript objects to page scripts. See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for details.
 
-### Background scripts, page, and service worker
+There are also differences between the [Content Security Policy (CSP) for content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#csp_for_content_scripts).
+### Background page and extension service worker
 
-As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages and scripts, while Safari supports background pages and scripts and service workers.
+As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages, while Safari supports background pages and service workers.
 
 For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"`` manifest key page. This includes a simple example of how to implement a cross-browser script.
 
@@ -222,6 +223,6 @@ The Firefox, Chrome, and Edge stores require that each uploaded version has a di
 
 When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).
 
-The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. You may also need to account for differences between the content and background script implementations. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You then need to account for the variations in the processes for submitting to each extension store.
+The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. You may also need to account for differences between the content script and background script implementations. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You then need to account for the variations in the processes for submitting to each extension store.
 
 Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.
