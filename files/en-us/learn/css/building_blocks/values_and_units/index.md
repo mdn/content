@@ -373,7 +373,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 > **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
 There are other color functions available such as `hwb()` and `lch()` which also use `<hue>` component, and even functions such as `lab()` which let you work with colors based on what humans can see.
-If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide and the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS.
+If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ## Images
 
