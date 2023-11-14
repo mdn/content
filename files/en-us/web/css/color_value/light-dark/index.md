@@ -83,6 +83,7 @@ We include three sections to enable targeting light colors, dark colors, and the
 ```
 
 #### CSS
+
 We include colors for both light and dark themes. We also define `color-scheme` for the document on the `:root` to enable the `light-dark()` color function for the entire document.
 
 ```css-nolint
