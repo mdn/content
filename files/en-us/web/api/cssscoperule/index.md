@@ -9,7 +9,7 @@ browser-compat: api.CSSScopeRule
 
 {{ APIRef("CSSOM") }}
 
-The **`CSSScopeRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS [`@scope`](/en-US/docs/Web/CSS/@scope) at-rule.
+The **`CSSScopeRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSxRef("@scope")}} at-rule.
 
 {{InheritanceDiagram}}
 
