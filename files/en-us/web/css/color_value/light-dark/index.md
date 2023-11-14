@@ -136,3 +136,4 @@ section {
 
 - {{CSSXref("color-scheme")}}
 - {{CSSXref("&lt;color&gt;")}}
+- [CSS color](/en-US/docs/Web/CSS/CSS_colors) module
