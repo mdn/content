@@ -2,7 +2,7 @@
 title: WebAssembly.Module
 slug: WebAssembly/JavaScript_interface/Module
 page-type: webassembly-interface
-browser-compat: javascript.builtins.WebAssembly.Module
+browser-compat: webassembly.api.Module
 ---
 
 {{WebAssemblySidebar}}
