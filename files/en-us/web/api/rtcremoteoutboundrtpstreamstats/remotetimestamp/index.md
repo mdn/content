@@ -3,7 +3,7 @@ title: "RTCRemoteOutboundRtpStreamStats: remoteTimestamp property"
 short-title: remoteTimestamp
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp
 page-type: web-api-instance-property
-browser-compat: api.RTCRemoteOutboundRtpStreamStats.remoteTimestamp
+browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.remoteTimestamp
 ---
 
 {{APIRef("WebRTC")}}

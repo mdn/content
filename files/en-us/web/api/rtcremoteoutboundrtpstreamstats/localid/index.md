@@ -3,7 +3,7 @@ title: "RTCRemoteOutboundRtpStreamStats: localId property"
 short-title: localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
 page-type: web-api-instance-property
-browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
+browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.localId
 ---
 
 {{APIRef("WebRTC")}}
