@@ -122,7 +122,7 @@ For example, an event handler callback that can be used to handle both
 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} might look like this:
 
 ```js
-function eventHandler(event) {
+function handleEvent(event) {
   if (event.type === "fullscreenchange") {
     /* handle a full screen toggle */
   } else {

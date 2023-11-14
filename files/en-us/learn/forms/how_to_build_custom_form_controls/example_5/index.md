@@ -56,7 +56,7 @@ This is the last example that explain [how to build custom form widgets](/en-US/
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {

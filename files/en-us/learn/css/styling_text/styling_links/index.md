@@ -151,7 +151,7 @@ p {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
 }
 
 a:link {
@@ -301,7 +301,7 @@ solution.addEventListener("click", () => {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
   text-decoration: none;
   padding: 2px 1px 0;
 }
@@ -368,7 +368,7 @@ p {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
   text-decoration: none;
   padding: 2px 1px 0;
 }
@@ -448,7 +448,7 @@ html {
 a {
   flex: 1;
   text-decoration: none;
-  outline: none;
+  outline-color: transparent;
   text-align: center;
   line-height: 3;
   color: black;
