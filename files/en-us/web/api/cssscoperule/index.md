@@ -59,5 +59,5 @@ console.log(scopeBlock.end); // Returns ".inner"
 
 ## See also
 
-- [`@scope`](/en-US/docs/Web/CSS/@scope)
+- {{CSSxRef("@scope")}}
 - {{CSSxRef(":scope")}}
