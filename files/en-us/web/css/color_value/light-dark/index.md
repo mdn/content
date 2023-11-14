@@ -7,7 +7,7 @@ browser-compat: css.types.color.light-dark
 
 {{CSSRef}}
 
-The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) allows a user to set light and dark colors, without using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) and detects if a user has requested light or dark color theme.
+The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables setting two colors for a property - selecting one of the two options by detecting if a user has requested light or dark color theme - without needing to encase the theme colors withing a [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) query.
 A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
 For this to work the the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes).
