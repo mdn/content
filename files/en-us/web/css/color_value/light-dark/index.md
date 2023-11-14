@@ -18,7 +18,7 @@ To enable support for the `light-dark()` color function, the {{CSSXref("color-sc
 }
 ```
 
-To force a section of a page to only use light or dark can be done by setting the `color-scheme` property to `light` or `dark` only.
+The `color-scheme` property enables overriding a user's color scheme for document sections. Forcing a page section to only use a light or dark color scheme can be done by setting the `color-scheme` property to `light` or `dark`.
 
 ```css
 .my-dark-section {
