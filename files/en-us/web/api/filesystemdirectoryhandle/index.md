@@ -90,16 +90,21 @@ async function returnPathDirectories(directoryHandle) {
 The following example scans recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
 
 ```js
-async function* getFilesRecursively(entry) {
+async function* getFilesRecursively(entry, path = []) {
   if (entry.kind === "file") {
     const file = await entry.getFile();
     if (file !== null) {
-      file.relativePath = getRelativePath(entry);
+      path.push(entry.name);
+      file.relativePath = path.join("/");
+      path.length = 0;
+
       yield file;
     }
   } else if (entry.kind === "directory") {
     for await (const handle of entry.values()) {
-      yield* getFilesRecursively(handle);
+      if(handle.kind === "directory") path.push(handle.name);
+
+      yield* getFilesRecursively(handle, path);
     }
   }
 }
