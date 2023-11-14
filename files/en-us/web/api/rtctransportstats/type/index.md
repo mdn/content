@@ -3,7 +3,7 @@ title: "RTCTransportStats: type property"
 short-title: type
 slug: Web/API/RTCTransportStats/type
 page-type: web-api-instance-property
-browser-compat: api.RTCTransportStats.type_transport.type
+browser-compat: api.RTCStatsReport.type_transport.type
 ---
 
 {{APIRef("WebRTC")}}

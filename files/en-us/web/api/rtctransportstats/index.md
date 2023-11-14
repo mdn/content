@@ -26,36 +26,61 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 - `bytesReceived` {{optional_inline}}
   - : The total number of payload bytes received on this transport (bytes received, not including headers, padding or ICE connectivity checks).
 - `iceRole` {{optional_inline}}
-  - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}.
+  - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}: `controlling` or `controlled`.
 - `iceLocalUsernameFragment` {{optional_inline}}
-  - : A string indicating the local username fragment used in message validation procedures for this transport, as sent in the `ice-ufrag` attribute of the {{glossary("SDP")}} offer when negotiating the ICE connection.
-    The value will change if the connection is renegotiated: on ICE restart or following {{domxref("RTCPeerConnection.setLocalDescription()")}}.
+  - : A string indicating the local username fragment used in message validation procedures for this transport.
+    This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
 - `dtlsState`
-  - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}: `new`, `connecting`, `connected`, `closed`, and `failed`.
+  - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}: `new`, `connecting`, `connected`, `closed`, or `failed`.
 - `iceState` {{optional_inline}}
-  - : {{domxref("RTCIceTransportState")}}
-    Xxx Set to the current value of the state attribute of the underlying RTCIceTransport.
+  - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}: `new`, `checking`, `connected`, `completed`, `disconnected`, `failed`, or `closed`.
 - `selectedCandidatePairId` {{optional_inline}}
   - : A string containing the unique identifier for the object that was inspected to produce the {{domxref("RTCIceCandidatePairStats")}} associated with this transport.
 - `localCertificateId` {{optional_inline}}
-  - : A string containing the local certification <!-- For components where DTLS is negotiated -->
+  - : A string containing the id of the local certificate used by this transport.
+    Only present for DTLS transports, and after DTLS has been negotiated.
 - `remoteCertificateId` {{optional_inline}}
-  - : A string containing the remote certification. <!-- For components where DTLS is negotiated -->
+  - : A string containing the id or the remote certificate used by this transport.
+    Only present for DTLS transports, and after DTLS has been negotiated.
 - `tlsVersion` {{optional_inline}}
-  - : A string containing the negotiated TLS versions.
-    Only exists after DTLS negotiation is complete.
-    <!-- For components where DTLS is negotiated, the TLS version agreed -->
+
+  - : A string containing the negotiated TLS version.
+    This is present for DTLS transports, and only exists after DTLS has been negotiated.
+
+    The value comes from the DTLS handshake `ServerHello.version`, and is represented as four upper case hexadecimal digits, where the digits represent the two bytes of the version.
+    Note however that the bytes might not map directly to version numbers.
+    For example, DTLS represents version 1.2 as `'FEFD'` which numerically is `{254, 253}`.
+
 - `dtlsCipher` {{optional_inline}}
-  - : A string Xxxx
-    Xxx The value comes from ServerHello.supported_versions if present, otherwise from ServerHello.version. It is represented as four upper case hexadecimal digits, representing the two bytes of the version.
+
+  - : A string indicating the name of the cipher suite used for the DTLS transport, as defined in the "Description" column of the [TLS Cipher Suites](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4) section in the _IANA cipher suite registry_.
+    For example `"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"`.
+
 - `dtlsRole` {{optional_inline}}
-  - : {{domxref("RTCDtlsRole")}}
-    "client" or "server" depending on the DTLS role. "unknown" before the DTLS negotiation starts.
+
+  - : The DTLS role of the associated {{domxref("RTCPeerConnection")}}.
+    This is one of `"client"`, `"server"`, or `"unknown"` (before the DTLS negotiation starts).
+
 - `srtpCipher` {{optional_inline}}
-  - : Xxxx A string indicating the descriptive name of the protection profile used for the SRTP transport, as defined in the "Profile" column of the IANA DTLS-SRTP protection profile registry [IANA-DTLS-SRTP] and described further in [RFC5764].
+
+  - : A string indicating the descriptive name of the protection profile used for the [Secure Real-time Transport Protocol (SRTP)](/en-US/docs/Glossary/RTP) transport, as defined in the "Profile" column of the [IANA DTLS-SRTP protection profile registry](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml#srtp-protection-1) and [RFC5764](https://www.rfc-editor.org/rfc/rfc5764.html#section-4.1.2).
+
+    For example `"AES_CM_128_HMAC_SHA1_80"` specifies the following profile, where `maximum_lifetime` is the maximum number of packets that can be protected by a single set of keys.
+
+    ```plain
+    SRTP_AES128_CM_HMAC_SHA1_80
+     cipher: AES_128_CM
+     cipher_key_length: 128
+     cipher_salt_length: 112
+     maximum_lifetime: 2^31
+     auth_function: HMAC-SHA1
+     auth_key_length: 160
+     auth_tag_length: 80
+    ```
+
 - `selectedCandidatePairChanges` {{optional_inline}}
-  - : Xxxx The number of times that the selected candidate pair of this transport has changed.
-    Going from not having a selected candidate pair to having a selected candidate pair, or the other way around, also increases this counter. It is initially zero and becomes one when an initial candidate pair is selected.
+  - : The number of times that the selected candidate pair of this transport has changed.
+    The value is initially zero and increases whenever a candidate pair selected or lost.
 
 ### Common instance properties
 
