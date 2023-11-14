@@ -327,14 +327,16 @@ Let's have a look at an example so you can see what this looks like:
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared to be a popover via the global [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML attribute, and a {{htmlelement("button")}} element designated as the popover's toggle control:
+The HTML contains a {{htmlelement("div")}} element declared to be a popover via the global [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML attribute, and a {{htmlelement("button")}} element designated as the popover's display control:
 
 ```html
-<button popovertarget="mypopover">Toggle the popover</button>
+<button popovertarget="mypopover">Show the popover</button>
 <div popover="auto" id="mypopover">I'm a Popover! I should animate.</div>
 ```
 
 #### CSS
+
+The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
 
 ```css
 html {
@@ -400,9 +402,7 @@ so this starting-style rule cannot be nested */
 }
 ```
 
-The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
-
-And as discussed earlier, we have:
+As discussed earlier, we have also:
 
 - Set a starting state for the `transition` inside the `@starting-style` block.
 - Added `display` to the list of transitioned properties so that the animated element is visible (set to `display: block`) throughout the popover's entry and exit animations. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
@@ -417,6 +417,10 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
+> **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
+>
+> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
+
 ### A popover keyframe animation
 
 When animating a popover with CSS keyframe animations, there are some differences to note:
@@ -429,14 +433,16 @@ Let's look at an example.
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared as a popover, and a {{htmlelement("button")}} element designated as the popover's toggle control:
+The HTML contains a {{htmlelement("div")}} element declared as a popover, and a {{htmlelement("button")}} element designated as the popover's display control:
 
 ```html
-<button id="toggle-button" popovertarget="mypopover">Toggle the popover</button>
-<div popover="manual" id="mypopover">I'm a Popover! I should animate.</div>
+<button popovertarget="mypopover">Show the popover</button>
+<div popover="auto" id="mypopover">I'm a Popover! I should animate.</div>
 ```
 
 #### CSS
+
+We have defined keyframes that specify the desired entry and exit animations, and an entry animation for the backdrop only. Note that it wasn't possible to animate the backdrop fade out — the backdrop is immediately removed from the DOM when the popover is closed, so there is nothing to animate.
 
 ```css
 html {
@@ -497,8 +503,6 @@ html {
   }
 }
 ```
-
-We have defined keyframes that specify the desired entry and exit animations, and an entry animation for the backdrop only. Note that it wasn't possible to animate the backdrop fade out — the backdrop is immediately removed from the DOM when the popover is closed, so there is nothing to animate.
 
 #### Result
 

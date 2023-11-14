@@ -81,22 +81,143 @@ To specify the starting style for the popover using the nested method, you can n
 }
 ```
 
+### When exactly are starting styles used?
+
+It is important to understand that an element will transition from its `@starting-style` styles when it is first rendered in the DOM, or when it transitions from {{cssxref("display", "display: none")}} (or {{cssxref("content-visibility", "content-visibility: hidden")}}) to a visible value. When it transitions back from its initial visible state, it will no longer use the `@starting-style` styles as it is now visible in the DOM. Instead, it will transition back to whatever styles exist for that element's default state.
+
+In effect, there are three style states to manage in these situations — starting-style state, transitioned state, and default state. It is possible for the "to" and "from" transitions to be different in such cases. You can see a proof of this in our [Demonstration of when starting styles are used](#demonstration_of_when_starting_styles_are_used) example, below.
+
 ## Formal syntax
 
 {{csssyntax}}
 
 ## Examples
 
-### Animating a popover
+### Basic @starting-style usage
 
-In this example, the [popover](/en-US/docs/Web/API/Popover_API) can be animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the {{CSSxRef("transition")}} property.
+Transition an element's {{cssxref("background-color")}} from transparent to green when it is initially rendered:
+
+```css
+#target {
+  transition: background-color 1.5s;
+  background-color: green;
+}
+
+@starting-style {
+  #target {
+    background-color: transparent;
+  }
+}
+```
+
+Transition the {{cssxref("opacity")}} of an element when it changes its {{cssxref("display")}} value to or from `none`:
+
+```css
+#target {
+  transition-property: opacity, display;
+  transition-duration: 0.5s;
+  display: block;
+  opacity: 1;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+#target.hidden {
+  display: none;
+  opacity: 0;
+}
+```
+
+### Demonstration of when starting styles are used
+
+In this example, a button is pressed to create a {{htmlelement("div")}} element, give it a `class` of `showing`, and add it to the DOM.
+
+`showing` is given a `@starting-style` of `background-color: red` and a style of `background-color: blue` to transition to. The default `div` ruleset contains `background-color: yellow`, and is also where the `transition` is set.
+
+When the `<div>` is first added to the DOM, you'll see the background transition from red to blue. After a timeout, we remove the `showing` class from the `<div>` via JavaScript. At that point it transitions from blue back to yellow, not red. This proves that the starting styles are only used when the element is first rendered in the DOM. Once it has appeared, the element transitions back to the default style set on it.
+
+After another timeout, we then remove the `<div>` from the DOM altogether, resetting the initial state of the example so it can be run again.
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute and a {{htmlelement("button")}} element designated as the popover's toggle control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
+```html
+<button>Display <code>&lt;div&gt;</code></button>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+div::after {
+  content: "class: " attr(class);
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+```
+
+```css
+div {
+  background-color: yellow;
+  transition: background-color 3s;
+}
+
+div.showing {
+  background-color: skyblue;
+}
+
+@starting-style {
+  div.showing {
+    background-color: red;
+  }
+}
+```
+
+#### JavaScript
+
+```js
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  btn.disabled = true;
+  const divElem = document.createElement("div");
+  divElem.classList.add("showing");
+  document.body.append(divElem);
+
+  setTimeout(() => {
+    divElem.classList.remove("showing");
+
+    setTimeout(() => {
+      divElem.remove();
+      btn.disabled = false;
+    }, 3000);
+  }, 3000);
+});
+```
+
+#### Result
+
+The code renders as follows:
+
+{{ EmbedLiveSample("Demonstration of when starting styles are used", "100%", "150") }}
+
+### Animating a popover
+
+In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the {{CSSxRef("transition")}} property.
+
+#### HTML
+
+The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
 
 ```html
-<button popovertarget="mypopover">Toggle the popover</button>
+<button popovertarget="mypopover">Show the popover</button>
 <div popover="auto" id="mypopover">I'm a Popover! I should animate.</div>
 ```
 
@@ -167,7 +288,7 @@ To achieve this, we have set a starting state for these properties on the defaul
 
 We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two states. A starting state for the animation is included inside a `@starting-style` at-rule to enable the entry animation.
 
-However, because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden (with [`display: none`](/en-US/docs/Web/CSS/display)), some extra steps are required to ensure the animation works in both directions:
+Because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden (with [`display: none`](/en-US/docs/Web/CSS/display)), some extra steps are required to ensure the animation works in both directions:
 
 - `display` is added to the list of transitioned elements to ensure the animated element is visible (set to `display: block` or another visible `display` value) throughout both the entry and exit animations. Without this, the exit animation would not be visible; in effect, the popover would just disappear. Note that the [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) value is also set in the shorthand to activate the animation.
 - [`overlay`](/en-US/docs/Web/CSS/overlay) is added to the list of transitioned elements to ensure that the removal of the element from the top layer is deferred until the animation ends. This doesn't make a huge difference for simple animations such as this one, but in more complex cases, not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Again, `transition-behavior: allow-discrete` is required in this case for the animation to occur.
@@ -179,6 +300,8 @@ However, because the animated element is being promoted to the [top layer](/en-U
 The code renders as follows:
 
 {{ EmbedLiveSample("Animating a popover", "100%", "200") }}
+
+> **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 
 > **Note:** You can find an example that demonstrates transitioning a {{htmlelement("dialog")}} element and its backdrop as it is shown and hidden on the `<dialog>` reference page — see [Transitioning dialog elements](/en-US/docs/Web/HTML/Element/dialog#transitioning_dialog_elements).
 
@@ -231,7 +354,7 @@ function createColumn() {
 }
 ```
 
-When the "Create new column" button is clicked, the `createColumn()` function is called. This creates a {{htmlelement("div")}} element with a randomly generated background color and a {{htmlelement("button")}} element to close the `<div>` when pressed. It then appends the `<button>` to the `<div>` and the `<div>` to the `<section>` container.
+When the "Create new column" button is clicked, the `createColumn()` function is called. This creates a {{htmlelement("div")}} element with a randomly generated background color and a {{htmlelement("button")}} element to close the `<div>`. It then appends the `<button>` to the `<div>` and the `<div>` to the `<section>` container.
 
 We then add an event listener to the close button via {{domxref("EventTarget.addEventListener", "addEventListener")}}. Clicking the close button does two things:
 

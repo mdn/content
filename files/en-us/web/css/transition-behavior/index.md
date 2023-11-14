@@ -66,10 +66,10 @@ In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it 
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's toggle control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
+The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
 
 ```html
-<button popovertarget="mypopover">Toggle the popover</button>
+<button popovertarget="mypopover">Show the popover</button>
 <div popover="auto" id="mypopover">I'm a Popover! I should animate.</div>
 ```
 
@@ -153,6 +153,10 @@ You'll note that we've also included a transition on the [`::backdrop`](/en-US/d
 The code renders as follows:
 
 {{ EmbedLiveSample("Animating a popover", "100%", "200") }}
+
+> **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
+>
+> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 
 ## Specifications
 

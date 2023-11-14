@@ -209,7 +209,7 @@ So for example:
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations) the above behavior is available by default; an equivalent step is not required.
+> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
 
 #### Transitioning dialog elements
 
@@ -240,6 +240,10 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 ```
 
 ##### CSS
+
+In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog[open]` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
+
+We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog[open]::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
 /*   Open state of the dialog */
@@ -301,11 +305,9 @@ button {
 }
 ```
 
-Note the `@starting-style` block used to define the transition starting styles, and the `display` and `overlay` properties included in the transition list, each with `allow-discrete` set on them. Note that we've also included similar CSS to transition the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. `dialog[open]::backdrop` is required to select the backdrop when the dialog is open.
-
 ##### JavaScript
 
-The JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`:
+The JavaScript adds event handlers to the show and close buttons causing them to show and close the `<dialog>` when they are clicked:
 
 ```js
 const dialogElem = document.getElementById("dialog");
@@ -327,11 +329,16 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning dialog elements", "100%", "200") }}
 
+> **Note:** Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog[open]` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog[open]` state to the default `dialog` state.
+>
+> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
+
 #### dialog keyframe animations
 
-When animating a `<dialog>` with CSS animations, there are some differences to note from transitions:
+When animating a `<dialog>` with CSS keyframe animations, there are some differences to note from transitions:
 
-- You don't provide a `@starting-style`; instead, you provide the starting values (including the initial `display` value) in an explicit keyframe (using `0%` or `from`).
+- You don't provide a `@starting-style`; instead, you provide the starting value in an explicit keyframe (using `0%` or `from`).
+- You include the `display` value in a keyframe; this will be the `display` value for the entirety of the animation, or until another non-`none` display value is encountered.
 - You don't need to explicitly enable discrete animations; there is no equivalent to `allow-discrete` inside keyframes.
 - You don't need to set `overlay` inside keyframes either; the `display` animation handles the animation of the `<dialog>` from shown to hidden.
 
@@ -351,6 +358,8 @@ First, the HTML contains a `<dialog>` element, plus a button to show the dialog.
 ```
 
 ##### CSS
+
+The CSS defines keyframes to animate between the closed and shown states of the `<dialog>`, plus the fade-in animation for the `<dialog>`'s backdrop. The `<dialog>` animations include animating `display` to make sure the actual visible animation effects remain visible for the whole duration. Note that it wasn't possible to animate the backdrop fade out — the backdrop is immediately removed from the DOM when the `<dialog>` is closed, so there is nothing to animate.
 
 ```css
 dialog {
@@ -411,11 +420,9 @@ button {
 }
 ```
 
-Note the keyframes defined to animate between the closed and shown states of the `<dialog>`, plus the fade-in animation for the `<dialog>`'s backdrop. The `<dialog>` animations include animating `display` to make sure the actual visible animation effects remain visible for the whole duration. Note that it wasn't possible to animate the backdrop fade out — the backdrop is immediately removed from the DOM when the `<dialog>` is closed, so there is nothing to animate.
-
 ##### JavaScript
 
-Finally, the JavaScript serves to wire up the buttons to event handlers that show and close the `<dialog>`.
+Finally, the JavaScript adds event handlers to the buttons to enable showing and closing the `<dialog>`:
 
 ```js
 const dialogElem = document.getElementById("dialog");
