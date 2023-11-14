@@ -89,7 +89,7 @@ To specify the starting style for the popover using the nested method, you can n
 
 ### Animating a popover
 
-In this example, the [popover](/en-US/docs/Web/API/Popover_API) can be animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the [`transition`](/en-US/docs/Web/CSS/transition) property.
+In this example, the [popover](/en-US/docs/Web/API/Popover_API) can be animated using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions). Basic entry and exit animations are provided using the {{CSSxRef("transition")}} property.
 
 #### HTML
 
