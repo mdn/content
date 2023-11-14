@@ -102,7 +102,7 @@ async function* getFilesRecursively(entry, path = []) {
     }
   } else if (entry.kind === "directory") {
     for await (const handle of entry.values()) {
-      if(handle.kind === "directory") path.push(handle.name);
+      if (handle.kind === "directory") path.push(handle.name);
 
       yield* getFilesRecursively(handle, path);
     }
