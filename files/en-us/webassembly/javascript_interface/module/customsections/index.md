@@ -2,7 +2,7 @@
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
 page-type: webassembly-static-method
-browser-compat: javascript.builtins.WebAssembly.Module.customSections
+browser-compat: webassembly.api.Module.customSections
 ---
 
 {{WebAssemblySidebar}}
