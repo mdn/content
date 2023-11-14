@@ -6,6 +6,7 @@ status:
   - experimental
   - non-standard
 browser-compat: http.headers.Sec-GPC
+spec-urls: https://privacycg.github.io/gpc-spec/
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
