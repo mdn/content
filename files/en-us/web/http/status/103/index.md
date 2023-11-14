@@ -42,6 +42,7 @@ Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=
 ```
 
 This example preconnects to `https://cdn.example.com` twice:
+
 - The first connection would be used for loading resources that can be fetched without CORS, such as images.
 - The second connection includes the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute and would be used for loading [CORS](/en-US/docs/Web/HTTP/CORS)-protected resources, such as fonts.
 
