@@ -30,4 +30,4 @@ See the main {{domxref("CSSScopeRule")}} page for an example.
 
 ## See also
 
-- [`@scope`](/en-US/docs/Web/CSS/@scope)
+- {{CSSxRef("@scope")}}
