@@ -202,7 +202,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
   - : Defines CMYK colors in a device-independent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
-  - : Defines the colors to be used for light and dark color-schemes.
+  - : Returns one of two provided colors based on the current color scheme.
 
 ## Image functions
 
