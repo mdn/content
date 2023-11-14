@@ -18,14 +18,6 @@ To enable support for the `light-dark()` color function, the {{CSSXref("color-sc
 }
 ```
 
-The `color-scheme` property enables overriding a user's color scheme for document sections. Forcing a page section to only use a light or dark color scheme can be done by setting the `color-scheme` property to `light` or `dark`.
-
-```css
-.my-dark-section {
-  color-scheme: dark;
-}
-```
-
 ## Syntax
 
 ```css
@@ -106,6 +98,13 @@ We include colors for both light and dark themes. We also define `color-scheme` 
 code {
   color: light-dark(var(--light-code), var(--dark-code));
 }
+```
+
+The `color-scheme` property enables overriding a user's color scheme for document sections. Forcing a page section to only use a light or dark color scheme can be done by setting the `color-scheme` property to `light` or `dark`.
+
+> **Note:** Generally this should not be done, we are using it here for demonstation purposes. If the user has made a preference, you generally should not override their preferences.
+
+```css
 .light {
   /* forces light color-scheme */
   color-scheme: light;
