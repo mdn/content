@@ -61,6 +61,7 @@ Functional notation: `light-dark(light-color, dark-color)`
 In a supporting browser, the colors will change based on the user preference through an operating system setting (e.g., light or dark mode) or a user agent setting. You can also change this setting in the browsers {{glossary("developer tools")}}.
 
 #### HTML
+
 We include three sections to enable targeting light colors, dark colors, and the user's preferred colors.
 
 ```html
@@ -82,6 +83,7 @@ We include three sections to enable targeting light colors, dark colors, and the
 ```
 
 #### CSS
+
 We include colors for both light and dark themes. We also define `color-scheme` for the document on the `:root` to enable the `light-dark()` color function for the entire document.
 
 ```css-nolint
@@ -122,7 +124,8 @@ section {
 
 #### Result
 
-{{EmbedLiveSample("setting_the_colors_based_on_system_preferences", "100%", 500)}}
+Setting colors based on color scheme
+{{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
 
 ## Specifications
 
