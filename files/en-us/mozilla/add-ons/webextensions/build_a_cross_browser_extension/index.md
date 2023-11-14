@@ -16,14 +16,14 @@ Maximizing the reach of your browser extension means developing it for at least 
 
 You need to address the following areas when tackling a cross-platform extension:
 
-- API namespace
-- API asynchronous event handling
-- API function coverage
-- Content script execution contexts
-- Background page versus extension service worker (in Manifest V3)
-- Manifest keys
-- Extension packaging
-- Extension publishing
+- [API namespace](#api_namespace)
+- [API asynchronous event handling](#api_asynchronous_event_handling)
+- [API function coverage](#api_function_coverage)
+- [Content script execution contexts](#content_script_execution_contexts)
+- [Background page versus extension service worker (in Manifest V3)](#background_page_and_extension_service_worker)
+- [Manifest keys](#manifest_keys)
+- [Extension packaging](#extension_packaging)
+- [Extension publishing](#extension_publishing)
 
 ### API namespace
 
@@ -115,6 +115,7 @@ Firefox and Chrome use fundamentally different approaches to handle this behavio
 However, Firefox provides some APIs that enable content scripts to access JavaScript objects created by page scripts and to expose their JavaScript objects to page scripts. See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for details.
 
 There are also differences between the [Content Security Policy (CSP) for content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#csp_for_content_scripts).
+
 ### Background page and extension service worker
 
 As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages, while Safari supports background pages and service workers.
