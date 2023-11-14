@@ -40,8 +40,6 @@ Only in the most trivial extensions is namespace likely to be the only cross-pla
 
 With the introduction of Manifest V3 (Chrome 88), all the main browsers support _Promises_ as their approach to handling asynchronous events. Before that, Firefox and Safari used _Promises_, while _Callbacks_ were used by Chrome, Edge, and Opera.
 
-> **Note:** As of November 2023, the Chrome documentation notes that "support has been added to most methods, though callbacks are still supported as an alternative. (We will eventually support promises on all appropriate methods.)"
-
 Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together.
 
 > **Note:** If you're unfamiliar with the differences between these two methods, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
