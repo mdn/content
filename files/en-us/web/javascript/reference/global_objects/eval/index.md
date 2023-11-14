@@ -62,7 +62,7 @@ eval(String(expression)); // returns 4
 
 ### Direct and indirect eval
 
-There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval, as the name implies, refers to _directly_ calling the global `eval` function. Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
+There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval, as the name implies, refers to _directly_ calling the global `eval` function with `eval(...)`. Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
 
 ```js
 // Direct call
