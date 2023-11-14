@@ -124,7 +124,6 @@ section {
 
 #### Result
 
-Setting colors based on color scheme
 {{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
 
 ## Specifications
