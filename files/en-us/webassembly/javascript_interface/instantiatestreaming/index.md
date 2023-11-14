@@ -2,7 +2,7 @@
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
 page-type: webassembly-function
-browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
+browser-compat: webassembly.api.instantiateStreaming
 ---
 
 {{WebAssemblySidebar}}
