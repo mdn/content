@@ -2,14 +2,6 @@
 title: ElementInternals.ariaColIndexText
 slug: Web/API/ElementInternals/ariaColIndexText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColIndexText
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaColIndexText
 ---
 

@@ -147,10 +147,10 @@ class CustomCheckbox extends HTMLElement {
   // …
 }
 
-window.customElements.define('custom-checkbox', CustomCheckbox);
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
-let element = document.createElement('custom-checkbox');
-let form = document.createElement('form');
+let element = document.createElement("custom-checkbox");
+let form = document.createElement("form");
 
 // Append element to form to associate it
 form.appendChild(element);

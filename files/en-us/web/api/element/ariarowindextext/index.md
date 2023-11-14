@@ -2,14 +2,6 @@
 title: Element.ariaRowIndexText
 slug: Web/API/Element/ariaRowIndexText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndexText
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowIndexText
 ---
 
@@ -76,9 +68,9 @@ In this example the `aria-rowindextext` attribute on the element with an ID of `
 ```
 
 ```js
-let el = document.getElementById('role-heading');
+let el = document.getElementById("role-heading");
 console.log(el.ariaRowIndexText); // "Heading row"
-el.ariaRowIndexText = "Updated heading row"
+el.ariaRowIndexText = "Updated heading row";
 console.log(el.ariaRowIndexText); // "Updated heading row"
 ```
 

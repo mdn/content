@@ -2,14 +2,6 @@
 title: ElementInternals.ariaRowIndexText
 slug: Web/API/ElementInternals/ariaRowIndexText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndexText
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaRowIndexText
 ---
 

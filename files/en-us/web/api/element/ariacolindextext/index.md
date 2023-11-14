@@ -2,14 +2,6 @@
 title: Element.ariaColIndexText
 slug: Web/API/Element/ariaColIndexText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColIndexText
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaColIndexText
 ---
 
@@ -77,9 +69,9 @@ In this example the `aria-colindex` attribute on the element with an ID of `role
 ```
 
 ```js
-let el = document.getElementById('role-heading');
+let el = document.getElementById("role-heading");
 console.log(el.ariaColIndexText); // "Aria Role"
-el.ariaColIndexText = "New column name"
+el.ariaColIndexText = "New column name";
 console.log(el.ariaColIndexText); // "New column name"
 ```
 
