@@ -2,7 +2,7 @@
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
 page-type: webassembly-instance-method
-browser-compat: javascript.builtins.WebAssembly.Exception.getArg
+browser-compat: webassembly.api.Exception.getArg
 ---
 
 {{WebAssemblySidebar}}
