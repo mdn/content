@@ -210,7 +210,7 @@ This allows you to avoid blocking the main thread when the user is actively inte
 
 - [`Navigator.scheduling`](/en-US/docs/Web/API/Navigator/scheduling)
   - : This property is the entry point for using the `Scheduling.isInputPending()` method.
-- [`Window.scheduler`](/en-US/docs/Web/API/Window/scheduler)
+- [`scheduler`](/en-US/docs/Web/API/scheduler_property)
   - : This property is the entry point for using the `Scheduler.postTask()` method.
     It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available through `this` in most scopes.
 
@@ -233,7 +233,7 @@ function mylog(text) {
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/Window/scheduler) property in the global "`this`" exposed to the current scope.
+Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/scheduler_property) property in the global "`this`" exposed to the current scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 

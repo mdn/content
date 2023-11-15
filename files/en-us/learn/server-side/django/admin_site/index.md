@@ -21,8 +21,7 @@ Now that we've created models for the [LocalLibrary](/en-US/docs/Learn/Server-si
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand the benefits and limitations of the Django admin site, and
-        use it to create some records for our models.
+        To understand the benefits and limitations of the Django admin site, and use it to create some records for our models.
       </td>
     </tr>
   </tbody>
@@ -49,15 +48,16 @@ from django.contrib import admin
 Register the models by copying the following text into the bottom of the file. This code imports the models and then calls `admin.site.register` to register each of them.
 
 ```python
-from .models import Author, Genre, Book, BookInstance
+from .models import Author, Genre, Book, BookInstance, Language
 
 admin.site.register(Book)
 admin.site.register(Author)
 admin.site.register(Genre)
 admin.site.register(BookInstance)
+admin.site.register(Language)
 ```
 
-> **Note:** If you accepted the challenge to create a model to represent the natural language of a book ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models)), import and register it too!
+> **Note:** The lines above assume that you accepted the challenge to create a model to represent the natural language of a book ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models))!
 
 This is the simplest way of registering a model, or models, with the site. The admin site is highly customizable, and we'll talk more about the other ways of registering your models further down.
 
@@ -91,7 +91,7 @@ Enter values for the fields. You can create new authors or genres by pressing th
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **Note:** At this point we'd like you to spend some time adding a few books, authors, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).
+> **Note:** At this point we'd like you to spend some time adding a few books, authors, languages, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).
 
 When you've finished adding books, click on the **Home** link in the top bookmark to be taken back to the main admin page. Then click on the **Books** link to display the current list of books (or on one of the other links to see other model lists). Now that you've added a few books, the list might look similar to the screenshot below. The title of each book is displayed; this is the value returned in the Book model's `__str__()` method that we specified in the last article.
 
@@ -114,7 +114,7 @@ What you won't have is any _Book Instances_, because these are not created from 
 
 Create a number of these records for each of your books. Set the status as _Available_ for at least some records and _On loan_ for others. If the status is **not** _Available_, then also set a future _Due back_ date.
 
-That's it! You've now learned how to set up and use the administration site. You've also created records for `Book`, `BookInstance`, `Genre`, and `Author` that we'll be able to use once we create our own views and templates.
+That's it! You've now learned how to set up and use the administration site. You've also created records for `Book`, `BookInstance`, `Genre`, `Language` and `Author` that we'll be able to use once we create our own views and templates.
 
 ## Advanced configuration
 

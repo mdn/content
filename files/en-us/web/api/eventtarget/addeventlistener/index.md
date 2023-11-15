@@ -12,7 +12,7 @@ The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
 sets up a function that will be called whenever the specified event is delivered to the target.
 
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
-but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
+but the target may be any object that supports events (such as {{domxref("IDBRequest")}}).
 
 > **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
 >
@@ -122,7 +122,7 @@ For example, an event handler callback that can be used to handle both
 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} might look like this:
 
 ```js
-function eventHandler(event) {
+function handleEvent(event) {
   if (event.type === "fullscreenchange") {
     /* handle a full screen toggle */
   } else {

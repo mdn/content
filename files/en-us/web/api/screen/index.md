@@ -48,7 +48,7 @@ The following properties are specified as part of the [Window Management API](/e
   - : A number representing the y-coordinate (top edge) of the available screen area.
 - {{domxref("ScreenDetailed.left", "Screen.left")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A number representing the x-coordinate (left-hand edge) of the total screen area.
-- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : A number representing the y-coordinate (top edge) of the total screen area.
 
 ## Instance methods
