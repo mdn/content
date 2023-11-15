@@ -366,7 +366,6 @@ You can mix and match color models, but it's usually best if your entire project
 
 You will see the color keywords (or 'named colors') used in many MDN code examples. As the [`<named-color>`s](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, these are not commonly used on production websites. As the keyword represents the color as a human-readable text value, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
 
-
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 800)}}
@@ -375,7 +374,7 @@ You will see the color keywords (or 'named colors') used in many MDN code exampl
 
 The next type of color value you are likely to encounter is hexadecimal codes.
 Hexadecimal uses 16 characters from `0-9` and `a-f`, so the entire range is `0123456789abcdef`.
-Each [`<hex-color>`](/en-US/docs/Web/CSS/hex-color) value consists of a hash/pound symbol (`#`) followed by six hexadecimal characters (`#ffc0cb`, for example).
+Each hex color value consists of a hash/pound symbol (`#`) followed by three or six hexadecimal characters (`#fcc` or `#ffc0cb`, for example), with an optional one or two hexadecimal characters representing the alpha-transparency of the previous three or six character color values.
 
 When using hexadecimal to describe RGB values, each **pair** of hexadecimal characters is a decimal number representing one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256).
 These values are less intuitive than keywords for defining colors, but they are a lot more versatile because you can represent any RGB color with them.
