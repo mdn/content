@@ -8,13 +8,7 @@
       border-radius: 50%;
       height: 100%;
       width: 100%;
-      background: conic-gradient(red, #ff0, #0f0, #0ff, #00f, #f0f, red);
-    }
-
-    @supports (background: conic-gradient(in hsl longer hue, red, red)) {
-      div {
-        background: conic-gradient(in hsl longer hue, red, red);
-      }
+      background: conic-gradient(red, #ff0, green, #0ff, blue, #f0f, red);
     }
   </style>
   <path fill="#fff" d="M0 0h400v400H0z" />
