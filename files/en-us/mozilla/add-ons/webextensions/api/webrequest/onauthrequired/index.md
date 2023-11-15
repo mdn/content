@@ -36,11 +36,15 @@ The listener can respond in one of four ways:
 
 See [Examples](#examples).
 
-If you use `"blocking"` you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your `manifest.json`.
-
-> **Note:** In Chrome, as of Manifest V3, the "webRequestBlocking" permission is no longer available for most extensions (the exception being policy-installed extensions). However, as of Chrome 108, using the "webRequest" and "webRequestAuthProvider" permissions enables you to supply credentials asynchronously.
-
 If your extension provides bad credentials, then the listener is called again. For this reason, take care to avoid entering an infinite loop by repeatedly providing bad credentials.
+
+## Permissions
+
+In Firefox and Chrome Manifest V2 extensions, you must have the ["webRequest" and "webRequestBlocking" API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your `manifest.json`.
+
+For Chrome Manifest V3 extensions, the "webRequestBlocking" permission is no longer available (except for policy-installed extensions). Instead, the "webRequest" and "webRequestAuthProvider" permissions enable you to supply credentials asynchronously.
+
+> **Note:** Firefox does not support "webRequestAuthProvider", but support is planned. See [bug 1820569](https://bugzilla.mozilla.org/show_bug.cgi?id=1820569).
 
 ## Proxy authorization
 
@@ -83,7 +87,10 @@ Events have three functions:
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}}.
 
     - To handle the request synchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
-    - To handle the request asynchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `Promise` that is resolved with a `BlockingResponse` object, with its `cancel` or its `authCredentials` properties set.
+      This behavior is the same for Firefox and Chrome. However, synchronous handling is only appropriate for the simplest of extensions.
+    - To handle the request asynchronously:
+      - in Firefox, the `extraInfoSpec` array must include `"blocking"`, and the event handler function can return a Promise that resolves to a `BlockingResponse` object, with its `cancel` or `authCredentials` properties set. This is basically the same as handling the event synchronously.
+      - in Chrome, the `extraInfoSpec` array must include `"asyncBlocking"` (without `"blocking"`). The event handler function is passed a second parameter (called `asyncCallback`) that is invoked with the `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that are sent to this listener.
