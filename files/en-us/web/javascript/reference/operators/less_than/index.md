@@ -56,7 +56,7 @@ x >= y === y <= x;
 "a" < "a"; // false
 "a" < "3"; // false
 
-"\uD855\uDE51" < "\uFF3A" // true
+"\uD855\uDE51" < "\uFF3A"; // true
 ```
 
 ### String to number comparison
