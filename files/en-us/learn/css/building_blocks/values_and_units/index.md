@@ -296,21 +296,20 @@ Some value types accept numbers, without any unit added to them. An example of a
 ## Color
 
 Color values can be used in many places in CSS, whether you are specifying the color of text, backgrounds, borders, and lots more.
-There are many ways to set color in CSS, some methods are newer than others and allow you to control plenty of exciting properties.
+There are many ways to set color in CSS, allowing you to control plenty of exciting properties.
 
 The standard color system available in modern computers supports 24-bit colors, which allows displaying about 16.7 million distinct colors via a combination of different red, green, and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216).
 
-In this section, we'll first look at the most common ways of specifying colors, which are using keywords, hexadecimal, and `rgb()` values.
-We'll also take a quick look at newer functions to recognize them when you see them or experiment with different ways of applying color.
+In this section, we'll first look at the most commonly seen ways of specifying colors: using keywords, hexadecimal, and `rgb()` values.
+We'll also take a quick look at additional color functions, enabling you to recognize them when you see them or experiment with different ways of applying color.
 
 You will likely decide on a color palette and then use those colors — and your favorite way of specifying color — throughout your project.
-You can mix and match color models, but it's usually best if your entire project uses the same one for consistency!
+You can mix and match color models, but it's usually best if your entire project uses the same method of declaring colors for consistency!
 
 ### Color keywords
 
-Often, in the examples in the learn section or elsewhere on MDN, you will see the color keywords (or 'named colors') used, as they are an intuitive way of specifying color.
-There are a number of these keywords, some of which have fairly entertaining names!
-You can see a full list on the page for the [`<named-color>`](/en-US/docs/Web/CSS/named-color) value type.
+You will see the color keywords (or 'named colors') used in many MDN code examples. As the [`<named-color>`s](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, these are not commonly used on production websites. As the keyword represents the color as a human-readable text value, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
+
 
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
@@ -320,7 +319,7 @@ You can see a full list on the page for the [`<named-color>`](/en-US/docs/Web/CS
 
 The next type of color value you are likely to encounter is hexadecimal codes.
 Hexadecimal uses 16 characters from `0-9` and `a-f`, so the entire range is `0123456789abcdef`.
-Each hex color value consists of a hash/pound symbol (`#`) followed by six hexadecimal characters (`#ffc0cb`, for example).
+Each [`<hex-color>`](/en-US/docs/Web/CSS/hex-color) value consists of a hash/pound symbol (`#`) followed by six hexadecimal characters (`#ffc0cb`, for example).
 
 When using hexadecimal to describe RGB values, each **pair** of hexadecimal characters is a decimal number representing one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256).
 These values are less intuitive than keywords for defining colors, but they are a lot more versatile because you can represent any RGB color with them.
@@ -331,7 +330,7 @@ These values are less intuitive than keywords for defining colors, but they are 
 
 ### RGB and RGBA values
 
-To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 — somewhat easier to understand.
+To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two) — somewhat easier to understand.
 
 Let's rewrite our last example to use RGB colors:
 
@@ -362,6 +361,8 @@ Let's take a quick look at the parts you can specify:
 - **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation.
 - **Lightness**: How light or bright is the color? This takes a value from 0–100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white).
 
+Similar to `rgb()`, the `hsl()` color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
+
 Let's update the RGB example to use HSL colors instead:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 800)}}
@@ -373,7 +374,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 > **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
 There are other color functions available such as `hwb()` and `lch()` which also use `<hue>` component, and even functions such as `lab()` which let you work with colors based on what humans can see.
-If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
+If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ## Images
 
