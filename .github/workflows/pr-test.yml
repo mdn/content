@@ -17,7 +17,6 @@ on:
 
 jobs:
   tests:
-    if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
     # Set the permissions to `read-all`, preventing the workflow from
     # any accidental write access to the repository.
