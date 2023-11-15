@@ -130,7 +130,7 @@ But this fails.
 
 #### The Console API
 
-You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log), which prints a custom message to the console.
+You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log_static), which prints a custom message to the console.
 
 Try inserting the following line just below line 31 (bolded above):
 
