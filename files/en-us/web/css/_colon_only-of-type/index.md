@@ -11,8 +11,6 @@ The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) r
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
 
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
-
 ## Syntax
 
 ```css
