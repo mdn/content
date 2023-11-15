@@ -11,8 +11,6 @@ browser-compat: css.properties.transition-behavior
 
 The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
-This is most significant in the cases of [`display`](/en-US/docs/Web/CSS/display), [`content-visibility`](/en-US/docs/Web/CSS/display), and [`overlay`](/en-US/docs/Web/CSS/overlay), the first two of which historically were not animatable. The ability of these elements to be transitioned means that it is fairly easy to create entry and exit animations, where an element is transitioned to and from a hidden state (which includes elements appearing in the [top layer](/en-US/docs/Glossary/Top_layer) such as [popovers](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} elements), or transitioned as soon as it is added to the DOM.
-
 ## Syntax
 
 ```css
@@ -34,6 +32,23 @@ transition-behavior: unset;
   - : Transitions will be started on the element for discrete animated properties.
 - `normal`
   - : Transitions will _not_ be started on the element for discrete animated properties.
+
+## Description
+
+When attempting to transition properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete), `transition-behavior` must be set to `allow-discrete` to enable those transitions to occur.
+
+This is most significant in the cases of [`display`](/en-US/docs/Web/CSS/display), [`content-visibility`](/en-US/docs/Web/CSS/display), and [`overlay`](/en-US/docs/Web/CSS/overlay), which historically were not animatable. The ability of these elements to be transitioned means that it is fairly easy to create entry and exit transitions, where an element is transitioned to and from a hidden state (which includes elements appearing in the [top layer](/en-US/docs/Glossary/Top_layer) such as [popovers](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} elements), or transitioned as soon as it is added to the DOM.
+
+### Discrete animation behavior
+
+Discrete-animated properties generally flip between two values 50% through animating between the two.
+
+There is an exception, however, which is when animating to or from `display: none` or `content-visibility: hidden`. In this case, the browser will flip between the two values so that the transitioned content is shown for the entire animation duration.
+
+So for example:
+
+- When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 ## Formal definition
 
@@ -75,20 +90,24 @@ The HTML contains a {{htmlelement("div")}} element declared as a popover using t
 
 #### CSS
 
-```css
+```css hidden
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+```
+
+```css
 [popover]:popover-open {
   opacity: 1;
   transform: scaleX(1);
 }
 
 [popover] {
-  font-size: 1.2rem;
-  padding: 10px;
-
   /* Final state of the exit animation */
   opacity: 0;
   transform: scaleX(0);
@@ -110,31 +129,6 @@ html {
     transform: scaleX(0);
   }
 }
-
-/* Transition for the popover's backdrop */
-
-[popover]::backdrop {
-  background-color: rgb(0 0 0 / 0);
-  transition:
-    display 0.7s allow-discrete,
-    overlay 0.7s allow-discrete,
-    background-color 0.7s;
-  /* Equivalent to
-  transition: all 0.7s allow-discrete; */
-}
-
-[popover]:popover-open::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
-}
-
-/* The nesting selector (&) cannot represent pseudo-elements
-so this starting-style rule cannot be nested */
-
-@starting-style {
-  [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0);
-  }
-}
 ```
 
 The two properties we want to animate are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform)): we want the popover to fade in and out while growing and shrinking in the horizontal direction. We set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two.
@@ -145,8 +139,6 @@ Because the animated element is being promoted to the [top layer](/en-US/docs/Gl
 - [`overlay`](/en-US/docs/Web/CSS/overlay): Required to make sure that the removal of the element from the top layer is deferred until the animation has been completed. This doesn't make a huge difference for simple animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective.
 
 In addition, a starting state for the animation is set inside the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule. This is needed to avoid unexpected behavior. By default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
-
-You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the popover when it opens, to provide a nice darkening animation. `[popover]:popover-open::backdrop` is needed to select the backdrop when the popover is open.
 
 #### Result
 
