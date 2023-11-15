@@ -128,7 +128,7 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 
 `:scope` is implicitly prepended to all scoped style rules. If you wish to, you can write it explicitly, or you could prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect. (You might find these styles easier to understand.)
 
-As such, the three lines in the following block are all equivalent:
+As such, the three lines in the following block are all equivalent in what they select:
 
 ```css
 @scope (.feature) {
