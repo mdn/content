@@ -7,7 +7,7 @@ browser-compat: api.SVGTextContentElement
 
 {{APIRef("SVG")}}
 
-The **`SVGTextContentElement`** interface is implemented by elements that support rendering child text content. It is inherited by various text-related interfaces, such as {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} and {{domxref("SVGTextPathElement")}}.
+The **`SVGTextContentElement`** interface is implemented by elements that support rendering child text content. It is inherited by various text-related interfaces, such as {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, and {{domxref("SVGTextPathElement")}}.
 
 {{InheritanceDiagram}}
 

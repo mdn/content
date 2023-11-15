@@ -49,3 +49,8 @@ const reader = stream.getReader({ mode: "byob" });
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamBYOBReader")}}
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

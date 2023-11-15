@@ -1,6 +1,7 @@
 ---
 title: Date formatting using luxon
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+page-type: learn-module-chapter
 ---
 
 The default rendering of dates from our models is very ugly: _Mon Apr 10 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: Apr 10th, 2023.

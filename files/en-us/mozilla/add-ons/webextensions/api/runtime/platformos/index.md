@@ -15,6 +15,8 @@ Values of this type are strings. Possible values are:
 
 - `"mac"`
   - : The underlying operating system is macOS.
+- `"ios"`
+  - : The underlying operating system is iOS/iPadOS.
 - `"win"`
   - : The underlying operating system is Windows.
 - `"android"`

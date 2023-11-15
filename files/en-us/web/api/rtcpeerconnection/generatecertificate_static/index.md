@@ -3,7 +3,7 @@ title: "RTCPeerConnection: generateCertificate() static method"
 short-title: generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate_static
 page-type: web-api-static-method
-browser-compat: api.RTCPeerConnection.generateCertificate
+browser-compat: api.RTCPeerConnection.generateCertificate_static
 ---
 
 {{APIRef("WebRTC")}}
@@ -122,7 +122,7 @@ RTCPeerConnection.generateCertificate("ECDSA");
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [Web site security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
 - [Web security](/en-US/docs/Web/Security)
 - {{Glossary("Symmetric-key cryptography")}}
 - [`crypto`](/en-US/docs/Web/API/Crypto)

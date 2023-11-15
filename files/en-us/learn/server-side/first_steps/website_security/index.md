@@ -1,6 +1,7 @@
 ---
 title: Website security
 slug: Learn/Server-side/First_steps/Website_security
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

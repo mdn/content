@@ -97,7 +97,10 @@ Now let's apply some CSS to customize the appearance of the disclosure box.
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 
@@ -154,7 +157,10 @@ The {{HTMLElement("summary")}} element supports the {{cssxref("list-style")}} sh
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 

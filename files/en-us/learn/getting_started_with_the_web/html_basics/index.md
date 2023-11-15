@@ -1,6 +1,7 @@
 ---
 title: HTML basics
 slug: Learn/Getting_started_with_the_web/HTML_basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -11,7 +12,7 @@ HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to str
 
 HTML is a _markup language_ that defines the structure of your content. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing {{Glossary("tag", "tags")}} can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, take the following line of content:
 
-```
+```plain
 My cat is very grumpy
 ```
 
@@ -47,7 +48,7 @@ Attributes that set a value always have:
 2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
 
-> **Note:** Simple attribute values that don't contain ASCII whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
+> **Note:** Simple attribute values that don't contain {{Glossary("ASCII")}} whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
 
 ### Nesting elements
 
@@ -80,7 +81,7 @@ This contains two attributes, but there is no closing `</img>` tag and no inner 
 That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our `index.html` example (which we first met in the [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) article):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -212,7 +213,9 @@ Links are very important — they are what makes the web a web! To add a link, w
 4. Fill in the value of this attribute with the web address that you want the link to:
 
    ```html
-   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+     Mozilla Manifesto
+   </a>
    ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.

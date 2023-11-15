@@ -5,7 +5,7 @@ slug: Web/API/BarcodeDetector/getSupportedFormats_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.BarcodeDetector.getSupportedFormats
+browser-compat: api.BarcodeDetector.getSupportedFormats_static
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}

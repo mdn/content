@@ -155,6 +155,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+      </td>
+      <td>Fired when the browser has started to load the resource.</td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.pause_event", 'pause')}}
       </td>
       <td>Playback has been paused.</td>
@@ -341,7 +347,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
 
 ## Accessibility concerns
 
-Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
+Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are hearing impaired to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.
 
@@ -349,7 +355,7 @@ The `<audio>` element doesn't directly support WebVTT. You will have to find a l
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
 
-```
+```plain
 1
 00:00:00 --> 00:00:45
 [Energetic techno music]

@@ -19,7 +19,7 @@ A JavaScript date is fundamentally specified as the time in milliseconds that ha
 
 > **Note:** While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
-The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
+The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This is the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
 
 ```js
 console.log(new Date(8.64e15).toString()); // "Sat Sep 13 275760 00:00:00 GMT+0000 (Coordinated Universal Time)"
@@ -132,7 +132,7 @@ When a segment overflows or underflows its expected range, it usually "carries o
 
 There are many ways to format a date as a string. The JavaScript specification only specifies one format to be universally supported: the [_date time string format_](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format), a simplification of the ISO 8601 calendar date extended format. The format is as follows:
 
-```
+```plain
 YYYY-MM-DDTHH:mm:ss.sssZ
 ```
 
@@ -157,9 +157,11 @@ When the time zone offset is absent, **date-only forms are interpreted as a UTC 
 
 {{jsxref("Date.parse()")}} and the {{jsxref("Date/Date", "Date()")}} constructor both accept strings in the date time string format as input. Furthermore, implementations are allowed to support other date formats when the input fails to match this format.
 
+The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
+
 > **Note:** You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
 
-The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
+Non-standard strings can be parsed in any way as desired by the implementation, including the time zone — most implementations use the local time zone by default. Implementations are not required to return invalid date for out-of-bounds date components, although they usually do. A string may have in-bounds date components (with the bounds defined above), but does not represent a date in reality (for example, "February 30"). Implementations behave inconsistently in this case. The [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#examples) page offers more examples about these non-standard cases.
 
 ### Other ways to format a date
 
@@ -229,8 +231,8 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Returns the month (`0` – `11`) in the specified date according to universal time.
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
   - : Returns the seconds (`0` – `59`) in the specified date according to universal time.
-- {{jsxref("Date.prototype.getYear()")}} {{Deprecated_Inline}}
-  - : Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} instead.
+- {{jsxref("Date.prototype.getYear()")}} {{deprecated_inline}}
+  - : Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date/getFullYear", "getFullYear()")}} instead.
 - {{jsxref("Date.prototype.setDate()")}}
   - : Sets the day of the month for a specified date according to local time.
 - {{jsxref("Date.prototype.setFullYear()")}}
@@ -261,14 +263,14 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Sets the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCSeconds()")}}
   - : Sets the seconds for a specified date according to universal time.
-- {{jsxref("Date.prototype.setYear()")}} {{Deprecated_Inline}}
-  - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} instead.
+- {{jsxref("Date.prototype.setYear()")}} {{deprecated_inline}}
+  - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date/setFullYear", "setFullYear()")}} instead.
 - {{jsxref("Date.prototype.toDateString()")}}
   - : Returns the "date" portion of the {{jsxref("Date")}} as a human-readable string like `'Thu Apr 12 2018'`.
 - {{jsxref("Date.prototype.toISOString()")}}
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
-  - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
+  - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date/toISOString", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -292,12 +294,12 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
+> **Note:** Creating a date from a string has a lot of behavior inconsistencies. See [date time string format](#date_time_string_format) for caveats on using different formats.
 
 ```js
 const today = new Date();
 const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
-const birthday2 = new Date("1995-12-17T03:24:00"); // This is ISO8601-compliant and will work reliably
+const birthday2 = new Date("1995-12-17T03:24:00"); // This is standardized and will work reliably
 const birthday3 = new Date(1995, 11, 17); // the month is 0-indexed
 const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
 const birthday5 = new Date(628021800000); // passing epoch timestamp
@@ -325,17 +327,19 @@ date.toLocaleTimeString(); // 6:50:21 PM
 ### To get Date, Month and Year or Time
 
 ```js
-const date = new Date();
+const date = new Date("2000-01-17T16:45:30");
 const [month, day, year] = [
   date.getMonth(),
   date.getDate(),
   date.getFullYear(),
 ];
+// [0, 17, 2000] as month are 0-indexed
 const [hour, minutes, seconds] = [
   date.getHours(),
   date.getMinutes(),
   date.getSeconds(),
 ];
+// [16, 45, 30]
 ```
 
 ### Interpretation of two-digit years
@@ -354,7 +358,7 @@ date.setYear(22);
 date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```
 
-So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} methods:.
+So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} and {{jsxref("Date/getFullYear", "getFullYear()")}} methods:.
 
 ```js
 // Preferred method; never interprets any value as being a relative offset,
@@ -425,4 +429,4 @@ In this case, it's important to return only an integer—so a simple division wo
 
 ## See also
 
-- {{jsxref("Date/Date", "Date()")}} constructor
+- {{jsxref("Date/Date", "Date()")}}

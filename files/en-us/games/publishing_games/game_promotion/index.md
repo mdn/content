@@ -1,6 +1,7 @@
 ---
 title: Game promotion
 slug: Games/Publishing_games/Game_promotion
+page-type: guide
 ---
 
 {{GamesSidebar}}

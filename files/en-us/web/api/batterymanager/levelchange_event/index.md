@@ -45,9 +45,8 @@ navigator.getBattery().then((battery) => {
         battery.chargingTime / 60
       }`;
     } else {
-      document.querySelector(
-        "#stateBattery"
-      ).textContent = `Discharging time: ${battery.dischargingTime / 60}`;
+      document.querySelector("#stateBattery").textContent =
+        `Discharging time: ${battery.dischargingTime / 60}`;
     }
   };
 });

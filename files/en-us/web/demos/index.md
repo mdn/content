@@ -1,6 +1,7 @@
 ---
 title: Demos of open web technologies
 slug: Web/Demos
+page-type: landing-page
 ---
 
 Mozilla supports a wide variety of exciting open web technologies, and we encourage their use. This page offers links to interesting demonstrations of these technologies.

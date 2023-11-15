@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.WeakMap.set
 
 {{JSRef}}
 
-The **`set()`** method adds a new element with a specified key
-and value to a `WeakMap` object.
+The **`set()`** method of {{jsxref("WeakMap")}} instances adds a new element with a specified key
+and value to this `WeakMap`.
 
 {{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
 

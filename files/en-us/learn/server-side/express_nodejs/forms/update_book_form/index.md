@@ -1,6 +1,7 @@
 ---
 title: Update Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
+page-type: learn-module-chapter
 ---
 
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
@@ -49,7 +50,7 @@ It `awaits` on the promise returned by `Promise.all()` to get the specified `Boo
 
 When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
-> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()) to the query.
+> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
@@ -114,7 +115,7 @@ exports.book_update_post = [
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genres._id) > -1) {
+        if (book.genre.indexOf(genre._id) > -1) {
           genre.checked = "true";
         }
       }
@@ -128,9 +129,9 @@ exports.book_update_post = [
       return;
     } else {
       // Data from form is valid. Update the record.
-      const thebook = await Book.findByIdAndUpdate(req.params.id, book, {});
+      const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
       // Redirect to book detail page.
-      res.redirect(thebook.url);
+      res.redirect(updatedBook.url);
     }
   }),
 ];

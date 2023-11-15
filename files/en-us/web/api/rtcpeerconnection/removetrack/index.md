@@ -62,7 +62,7 @@ document.getElementById("closeButton").addEventListener(
     pc.removeTrack(sender);
     pc.close();
   },
-  false
+  false,
 );
 ```
 

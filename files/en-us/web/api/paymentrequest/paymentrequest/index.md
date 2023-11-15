@@ -23,7 +23,7 @@ new PaymentRequest(methodData, details, options)
 
 - `methodData`
 
-  - : Contains an array of identifiers for the payment methods the merchant web site
+  - : Contains an array of identifiers for the payment methods the merchant website
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
 

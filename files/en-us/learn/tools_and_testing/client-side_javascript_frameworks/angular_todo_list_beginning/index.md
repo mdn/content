@@ -1,6 +1,7 @@
 ---
 title: Beginning our Angular todo list app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -90,33 +91,33 @@ Now that you know what an `item` is, you can give your application some items by
 In `app.component.ts`, replace the contents with the following:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-  title = 'todo';
+  title = "todo";
 
-  filter: 'all' | 'active' | 'done' = 'all';
+  filter: "all" | "active" | "done" = "all";
 
   allItems = [
-    { description: 'eat', done: true },
-    { description: 'sleep', done: false },
-    { description: 'play', done: false },
-    { description: 'laugh', done: false },
+    { description: "eat", done: true },
+    { description: "sleep", done: false },
+    { description: "play", done: false },
+    { description: "laugh", done: false },
   ];
 
   get items() {
-    if (this.filter === 'all') {
+    if (this.filter === "all") {
       return this.allItems;
     }
-    return this.allItems.filter((item) => this.filter === 'done' ? item.done : !item.done);
+    return this.allItems.filter((item) =>
+      this.filter === "done" ? item.done : !item.done
+    );
   }
-
 }
 ```
 
@@ -163,7 +164,7 @@ The double curly braces that contain `item.description` instructs Angular to pop
 
 In the browser, you should see the list of items as follows:
 
-```
+```plain
 My To Do List
 What would you like to do today?
 

@@ -4,6 +4,8 @@ slug: Glossary/Cipher_suite
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A cipher suite is a combination of a key exchange algorithm, authentication method, bulk encryption {{Glossary("cipher")}}, and message authentication code.
 
 In a {{Glossary("cryptosystem")}} like {{Glossary("TLS")}}, the client and server must agree on a cipher suite before they can begin communicating securely. A typical cipher suite looks like ECDHE_RSA_WITH_AES_128_GCM_SHA256 or ECDHE-RSA-AES128-GCM-SHA256, indicating:

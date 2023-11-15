@@ -46,18 +46,11 @@ div {
 
 ```js
 const audio = document.querySelector("audio");
-
-const rate = document.querySelector("#rate");
-rate.addEventListener("input", () => (audio.playbackRate = rate.value));
-
-const pitch = document.querySelector("#pitch");
-pitch.addEventListener("change", () => {
-  if ("preservesPitch" in audio) {
-    audio.preservesPitch = pitch.checked;
-  } else if ("mozPreservesPitch" in audio) {
-    // deprecated
-    audio.mozPreservesPitch = pitch.checked;
-  }
+document.getElementById("rate").addEventListener("change", (e) => {
+  audio.playbackRate = e.target.value;
+});
+document.getElementById("pitch").addEventListener("change", (e) => {
+  audio.preservesPitch = e.target.checked;
 });
 ```
 

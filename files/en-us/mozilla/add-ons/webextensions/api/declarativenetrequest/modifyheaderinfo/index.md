@@ -60,6 +60,8 @@ In Chrome, `"append"` is supported for the following request headers:
 
 In Firefox, the extension needs host permissions for the new value of the `Host` header.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}

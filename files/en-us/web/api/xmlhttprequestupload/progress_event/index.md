@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.progress_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`progress`** event is fired periodically when a request receives more data.
 
@@ -15,9 +15,9 @@ The **`progress`** event is fired periodically when a request receives more data
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('progress', (event) => { })
+addEventListener("progress", (event) => {});
 
-onprogress = (event) => { }
+onprogress = (event) => {};
 ```
 
 ## Event type
@@ -48,10 +48,9 @@ You can use the `progress` event to get info about the progress of a lengthy upl
 // and the progress message
 xhr.upload.addEventListener("progress", (event) => {
   progressBar.value = event.loaded; // Update the progress bar
-  log.textContent = `Uploading (${(
-    (event.loaded / event.total) *
-    100
-  ).toFixed(2)}%)…`;
+  log.textContent = `Uploading (${((event.loaded / event.total) * 100).toFixed(
+    2,
+  )}%)…`;
 });
 ```
 
@@ -66,5 +65,5 @@ xhr.upload.addEventListener("progress", (event) => {
 ## See also
 
 - Related events: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
-- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
 - {{domxref("XMLHttpRequestUpload")}}

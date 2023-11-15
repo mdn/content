@@ -19,7 +19,7 @@ An event handler for drag and drop events sent to the window.
 
 The event handler function to be registered.
 
-The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in Firefox ([Webkit bug 112288](https://bugzil.la/112288)), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
+The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in Firefox ([Firefox bug 112288](https://bugzil.la/112288)), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
 
 ## Examples
 
@@ -28,7 +28,7 @@ The `window.ondragdrop` property and the `ondragdrop` attribute are not implemen
 In this example, an event listener is added to the window (the event target). If, from an external source, a tab, a link, marked text or a file is dragged and dropped onto this window, the alert is fired. Note how `event.stopPropagation();` prevents the browser from loading the dropped tab, link or file.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

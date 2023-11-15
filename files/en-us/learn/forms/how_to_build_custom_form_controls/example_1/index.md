@@ -1,6 +1,7 @@
 ---
 title: Example 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
+page-type: learn-module-chapter
 ---
 
 This is the first example of code that explains [how to build a custom form widget](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
@@ -37,7 +38,7 @@ This is the first example of code that explains [how to build a custom form widg
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -83,7 +84,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -173,7 +174,7 @@ This is the first example of code that explains [how to build a custom form widg
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -219,7 +220,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -309,7 +310,7 @@ This is the first example of code that explains [how to build a custom form widg
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -355,7 +356,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;

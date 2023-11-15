@@ -9,7 +9,7 @@ browser-compat: api.Document.caretPositionFromPoint
 {{APIRef("CSSOM View")}}
 
 The **`caretPositionFromPoint()`**
-property of the {{domxref("Document")}} interface returns a
+method of the {{domxref("Document")}} interface returns a
 {{domxref('CaretPosition')}} object, containing the DOM node, along with the caret and
 caret's character offset within that node.
 

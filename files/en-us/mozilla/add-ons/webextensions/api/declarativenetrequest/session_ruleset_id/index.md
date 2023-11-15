@@ -11,7 +11,7 @@ The ruleset ID for the session-scoped rules added by the extension.
 
 Its value is `"_session"`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

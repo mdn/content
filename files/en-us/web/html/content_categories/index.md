@@ -52,6 +52,7 @@ The flow elements are:
 - {{HTMLElement("del")}}
 - {{HTMLElement("details")}}
 - {{HTMLElement("dfn")}}
+- {{HTMLElement("dialog")}}
 - {{HTMLElement("div")}}
 - {{HTMLElement("dl")}}
 - {{HTMLElement("em")}}
@@ -75,7 +76,6 @@ The flow elements are:
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}}
 - {{HTMLElement("kbd")}}
-- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("main")}}
 - {{HTMLElement("map")}}
@@ -96,9 +96,11 @@ The flow elements are:
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("s")}}
 - {{HTMLElement("samp")}}
+- {{HTMLElement("search")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("section")}}
 - {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
@@ -114,6 +116,7 @@ The flow elements are:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
+- Plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -147,6 +150,7 @@ Elements belonging to this category are:
 - {{HTMLElement("abbr")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
 - {{HTMLElement("bdo")}}
 - {{HTMLElement("br")}}
 - {{HTMLElement("button")}}
@@ -163,7 +167,6 @@ Elements belonging to this category are:
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("kbd")}}
-- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("mark")}}
 - {{MathMLElement("math")}}
@@ -179,12 +182,14 @@ Elements belonging to this category are:
 - {{HTMLElement("samp")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
 - {{HTMLElement("sub")}}
 - {{HTMLElement("sup")}}
 - {{SVGElement("svg")}}
+- {{HTMLElement("template")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("time")}}
 - {{HTMLElement("u")}}
@@ -221,17 +226,16 @@ Embedded content is a subset of flow content that imports another resource or in
 
 Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include:
 
-- {{HTMLElement("a")}}
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("iframe")}}
-- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 
 Some elements belong to this category only under specific conditions:
 
+- {{HTMLElement("a")}}, if the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute is present
 - {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
 - {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
 - {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
@@ -249,7 +253,6 @@ Form-associated content is a subset of flow content comprising elements that hav
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("meter")}}
 - {{HTMLElement("object")}}
@@ -261,13 +264,13 @@ Form-associated content is a subset of flow content comprising elements that hav
 This category contains several sub-categories:
 
 - listed
-  - : Elements that are listed in the {{domxref("HTMLFormElement.elements", "form.elements")}} and `fieldset.elements` collections. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that are listed in the {{domxref("HTMLFormElement.elements", "form.elements")}} and `fieldset.elements` collections. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - labelable
-  - : Elements that can be associated with {{HTMLElement("label")}} elements. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be associated with {{HTMLElement("label")}} elements. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - submittable
-  - : Elements that can be used for constructing the form data set when the form is submitted. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be used for constructing the form data set when the form is submitted. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - resettable
-  - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 
 ## Secondary categories
 

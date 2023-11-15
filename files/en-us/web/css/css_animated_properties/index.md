@@ -6,7 +6,7 @@ page-type: landing-page
 
 {{CSSRef}}
 
-[CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [Transitions](/en-US/docs/Web/CSS/CSS_Transitions) rely on the concept of **animatable** properties, and all CSS properties are animatable unless otherwise specified. Each property's _animation type_ determines how values [combine](https://w3c.github.io/csswg-drafts/css-values/#combining-values) - interpolate, add, or accumulate - for this property. Transitions only involve interpolation, whereas animations may use all three combination methods.
+[CSS Animations](/en-US/docs/Web/CSS/CSS_animations) and [Transitions](/en-US/docs/Web/CSS/CSS_transitions) rely on the concept of **animatable** properties, and all CSS properties are animatable unless otherwise specified. Each property's _animation type_ determines how values [combine](https://drafts.csswg.org/css-values/#combining-values) - interpolate, add, or accumulate - for this property. Transitions only involve interpolation, whereas animations may use all three combination methods.
 
 > **Note:** The animation type for each CSS property is listed in its "Formal definition" table (E.g., {{CSSXref("color", "", "#formal_definition")}}).
 
@@ -14,7 +14,7 @@ page-type: landing-page
 
 ## Animation types
 
-There are mainly four animation types as defined in the [Web Animations](https://w3c.github.io/csswg-drafts/web-animations-1/#animating-properties) specification:
+There are mainly four animation types as defined in the [Web Animations](https://drafts.csswg.org/web-animations-1/#animating-properties) specification:
 
 - Not animatable
 
@@ -41,11 +41,11 @@ Some properties have specific interpolation behavior not covered by these four t
 
 ## Animating custom properties
 
-For custom properties registered using the {{DOMXref("CSS/registerProperty", "registerProperty()")}} method, the animation type is by computed value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
+For custom properties registered using the {{DOMXref("CSS/registerProperty_static", "registerProperty()")}} method, the animation type is by computed value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
 
 For unregistered custom properties, the animation type is discrete.
 
 ## See also
 
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- [Using CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

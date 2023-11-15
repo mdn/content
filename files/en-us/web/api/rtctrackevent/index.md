@@ -11,14 +11,14 @@ The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** r
 
 The target is the `RTCPeerConnection` object to which the track is being added.
 
-This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
+This event is sent by the WebRTC layer to the website or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("RTCTrackEvent.RTCTrackEvent", "RTCTrackEvent()")}}
-  - : Creates and returns a new `RTCTrackEvent` object, initialized with properties taken from the specified {{domxref("RTCTrackEventInit")}} dictionary. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
+  - : Creates and returns a new `RTCTrackEvent` object. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
 ## Instance properties
 
@@ -58,7 +58,7 @@ peerConnection.addEventListener(
     let videoElement = document.getElementById("videobox");
     videoElement.srcObject = e.streams[0];
   },
-  false
+  false,
 );
 ```
 

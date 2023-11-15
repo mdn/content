@@ -7,12 +7,12 @@ browser-compat: javascript.builtins.Array.findLastIndex
 
 {{JSRef}}
 
-The **`findLastIndex()`** method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
+The **`findLastIndex()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-findlastindex.html", "shorter")}}
 
 ## Syntax
 
@@ -37,7 +37,7 @@ findLastIndex(callbackFn, thisArg)
 ### Return value
 
 The index of the last (highest-index) element in the array that passes the test.
-Otherwise -1 if no matching element is found.
+Otherwise `-1` if no matching element is found.
 
 ## Description
 
@@ -88,7 +88,7 @@ console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 
 ### Calling findLastIndex() on non-array objects
 
-The `findLastIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLastIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -96,6 +96,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLastIndex() since length is 3
 };
 console.log(
   Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
@@ -112,7 +113,8 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}

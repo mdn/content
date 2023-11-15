@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 4: Routes and controllers"
 slug: Learn/Server-side/Express_Nodejs/routes
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
@@ -160,7 +161,7 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 
 The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
 
-> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
+> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (because `:bookId` is a placeholder for _any_ string, therefore `create` matches). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs specifically, their route handler must be defined before your `/book/:bookId` route.
 
 That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
@@ -176,12 +177,12 @@ On success the desired data is returned and then used in the response.
 ```js
 router.get("/about", (req, res, next) => {
   About.find({}).exec((err, queryResults) => {
-      if (err) {
-        return next(err);
-      }
-      //Successful, so render
-      res.render("about_view", { title: "About", list: queryResults });
-    });
+    if (err) {
+      return next(err);
+    }
+    //Successful, so render
+    res.render("about_view", { title: "About", list: queryResults });
+  });
 });
 ```
 
@@ -191,22 +192,21 @@ The previous section shows how Express expects route functions to return errors.
 The framework is designed for use with asynchronous functions that take a callback function (with an error and result argument), which is called when the operation completes.
 That's a problem because later on we will be making Mongoose database queries that use [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based APIs, and which may throw exceptions in our route functions (rather than returning errors in a callback).
 
-In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors as shown in the previous section..
+In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors as shown in the previous section.
 
 > **Note:** Express 5, which is currently in beta, is expected to handle JavaScript exceptions natively.
 
 Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
 
 ```js
-exports.get("/about", function (req, res, next) {
+exports.get("/about", async function (req, res, next) {
   try {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
-  }
-  catch (error) {
+  } catch (error) {
     return next(error);
   }
-};
+});
 ```
 
 That's quite a lot of boilerplate code to add to every function.
@@ -216,12 +216,15 @@ The same example is now very simple, because we only need to write code for the 
 
 ```js
 // Import the module
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
-exports.get("/about", asyncHandler(async (req, res, next) => {
-  const successfulResult = await About.find({}).exec();
-  res.render("about_view", { title: "About", list: successfulResult });
-}));
+exports.get(
+  "/about",
+  asyncHandler(async (req, res, next) => {
+    const successfulResult = await About.find({}).exec();
+    res.render("about_view", { title: "About", list: successfulResult });
+  }),
+);
 ```
 
 ## Routes needed for the LocalLibrary
@@ -261,7 +264,7 @@ Start by creating a folder for our controllers in the project root (**/controlle
 The controllers will use the `express-async-handler` module, so before we proceed, install it into the library using `npm`:
 
 ```bash
-npm install --save express-async-handler
+npm install express-async-handler
 ```
 
 ### Author controller
@@ -270,7 +273,7 @@ Open the **/controllers/authorController.js** file and type in the following cod
 
 ```js
 const Author = require("../models/author");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 // Display list of all Authors.
 exports.author_list = asyncHandler(async (req, res, next) => {
@@ -330,7 +333,7 @@ Open the **/controllers/bookinstanceController.js** file and copy in the followi
 
 ```js
 const BookInstance = require("../models/bookinstance");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 // Display list of all BookInstances.
 exports.bookinstance_list = asyncHandler(async (req, res, next) => {
@@ -379,7 +382,7 @@ Open the **/controllers/genreController.js** file and copy in the following text
 
 ```js
 const Genre = require("../models/genre");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 // Display list of all Genre.
 exports.genre_list = asyncHandler(async (req, res, next) => {
@@ -429,7 +432,7 @@ This follows the same pattern as the other controller modules, but additionally 
 
 ```js
 const Book = require("../models/book");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
@@ -589,37 +592,37 @@ router.get("/genres", genre_controller.genre_list);
 // GET request for creating a BookInstance. NOTE This must come before route that displays BookInstance (uses id).
 router.get(
   "/bookinstance/create",
-  book_instance_controller.bookinstance_create_get
+  book_instance_controller.bookinstance_create_get,
 );
 
 // POST request for creating BookInstance.
 router.post(
   "/bookinstance/create",
-  book_instance_controller.bookinstance_create_post
+  book_instance_controller.bookinstance_create_post,
 );
 
 // GET request to delete BookInstance.
 router.get(
   "/bookinstance/:id/delete",
-  book_instance_controller.bookinstance_delete_get
+  book_instance_controller.bookinstance_delete_get,
 );
 
 // POST request to delete BookInstance.
 router.post(
   "/bookinstance/:id/delete",
-  book_instance_controller.bookinstance_delete_post
+  book_instance_controller.bookinstance_delete_post,
 );
 
 // GET request to update BookInstance.
 router.get(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_get
+  book_instance_controller.bookinstance_update_get,
 );
 
 // POST request to update BookInstance.
 router.post(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_post
+  book_instance_controller.bookinstance_update_post,
 );
 
 // GET request for one BookInstance.
@@ -658,7 +661,7 @@ router.get("/", function (req, res) {
 The last step is to add the routes to the middleware chain.
 We do this in `app.js`.
 
-Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two):
+Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
 
 ```js
 var indexRouter = require("./routes/index");
@@ -666,7 +669,7 @@ var usersRouter = require("./routes/users");
 const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
 ```
 
-Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two):
+Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
 
 ```js
 app.use("/", indexRouter);
@@ -692,14 +695,10 @@ To test the routes, first start the website using your usual approach
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- If you previously set up [nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website), you can instead use:
+- If you previously set up [nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#enable_server_restart_on_file_changes), you can instead use:
 
   ```bash
-  // Windows
-  SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
-
-  // macOS or Linux
-  DEBUG=express-locallibrary-tutorial:* npm run devstart
+  npm run serverstart
   ```
 
 Then navigate to a number of LocalLibrary URLs, and verify that you don't get an error page (HTTP 404). A small set of URLs are listed below for your convenience:

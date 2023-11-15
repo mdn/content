@@ -26,14 +26,14 @@ _A generic {{domxref("Event")}}._
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <div id="level">(battery level unknown)</div>
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {

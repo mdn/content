@@ -34,7 +34,7 @@ if (navigator.getUserMedia) {
 
       const myStream = mediaRecorder.stream;
       console.log(myStream);
-    }
+    },
   );
 }
 ```

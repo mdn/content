@@ -23,7 +23,7 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 - {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
 - {{domxref("PaymentRequestEvent.methodData","methodData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an array of {{domxref("PaymentMethodData")}} objects containing payment method identifiers for the payment methods that the web site accepts and any associated payment method specific data.
+  - : Returns an array of {{domxref("PaymentMethodData")}} objects containing payment method identifiers for the payment methods that the website accepts and any associated payment method specific data.
 - {{domxref("PaymentRequestEvent.modifiers","modifiers")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of objects containing changes to payment details.
 - {{domxref("PaymentRequestEvent.paymentRequestId","paymentRequestId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -68,7 +68,7 @@ When a `paymentrequest` event is received, the payment app can open a payment ha
 
 When the payment has been handled, {{domxref("PaymentRequestEvent.respondWith()")}} is used to pass the payment result back to the merchant website.
 
-See [Receive a payment request event from the merchant](https://web.dev/orchestrating-payment-transactions/#receive-payment-request-event) for more details of this stage.
+See [Receive a payment request event from the merchant](https://web.dev/articles/orchestrating-payment-transactions#receive-payment-request-event) for more details of this stage.
 
 ## Specifications
 
@@ -80,8 +80,8 @@ See [Receive a payment request event from the merchant](https://web.dev/orchestr
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

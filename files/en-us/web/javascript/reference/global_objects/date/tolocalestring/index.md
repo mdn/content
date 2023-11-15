@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string with a language-sensitive representation of this date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of this date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
@@ -65,7 +65,7 @@ console.log(date.toLocaleString());
 
 ### Checking for support for locales and options parameters
 
-The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internationalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
 
 ```js
 function toLocaleStringSupportsLocales() {
@@ -158,7 +158,7 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 
 ## See also
 
-- {{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

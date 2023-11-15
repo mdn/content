@@ -9,6 +9,8 @@ browser-compat: css.properties.hanging-punctuation
 
 The **`hanging-punctuation`** [CSS](/en-US/docs/Web/CSS) property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.
 
+## Syntax
+
 ```css
 /* Keyword values */
 hanging-punctuation: none;
@@ -35,8 +37,6 @@ hanging-punctuation: revert;
 hanging-punctuation: revert-layer;
 hanging-punctuation: unset;
 ```
-
-## Syntax
 
 The `hanging-punctuation` property may be specified with one, two, or three space-separated values.
 

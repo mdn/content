@@ -1,13 +1,14 @@
 ---
 title: Text fragments
 slug: Web/Text_fragments
+page-type: guide
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective
   - css.selectors.target-text
 ---
 
-**Text fragments** allow you linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
 ## Concepts and usage
 
@@ -34,7 +35,7 @@ If the ID is changed or removed, the document fragment is ignored, and the link 
 
 In a similar manner to document fragments, text fragments are appended onto a URL after a hash symbol (`#`). The syntax however is a bit different:
 
-```
+```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ```
 
@@ -59,7 +60,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 - Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
 - Matches are case-insensitive.
-- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Web/HTML/Block-level_elements#elements), but complete matches can span across multiple element boundaries.
+- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Glossary/Block-level_content), but complete matches can span across multiple element boundaries.
 - For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
 - Text fragments are invoked only on full (non-same-page), user-initiated navigations.
 - Text fragments are only applied to the main frame; text will not be searched inside {{htmlelement("iframe")}}s, and `iframe` navigation will not invoke a text fragment.
@@ -81,7 +82,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 ### textStart and textEnd
 
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human,URL](/en-US/docs/Web/HTML/Element/a#:~:text=human,URL) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human,URL](/en-US/docs/Web/HTML/Element/a#:~:text=human,url) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,defining%20a%20value](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,defining%20a%20value) scrolls to and highlights the first instance of a text string starting with `linked URL` and ending with `defining a value`. Note how the highlighted text spans across multiple block-level elements.
 
 ### Examples with prefix- and/or -suffix
@@ -95,7 +96,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 You can specify multiple text fragments to highlight in the same URL by separating them with ampersand (`&`) characters. Let's look at a couple of examples:
 
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked) scrolls to and highlights the first instances of the text strings `Causes` and `linked`.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Element/a#:~:text=causes&text=linked) scrolls to and highlights the first instances of the text strings `Causes` and `linked`.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute) scrolls to and highlights two text instances:
   - The first instance of the text `linked URL` that has the text `'s format` directly following it.
   - The first instance of a text string starting with `attributes` and ending with `attribute`, which is prefixed by `Deprecated`.
@@ -104,7 +105,7 @@ If you don't see one or more of your text fragments highlighted and you are sure
 
 ### Styling matched text fragments
 
-Browsers are free to style the highlighted text in whatever default way they choose. The [CSS Pseudo-Elements Module Level 4](https://w3c.github.io/csswg-drafts/css-pseudo/#selectordef-target-text) defines a pseudo-element, {{cssxref("::target-text")}}, which allows you to specifying custom styling.
+Browsers are free to style the highlighted text in whatever default way they choose. The [CSS Pseudo-Elements Module Level 4](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) defines a pseudo-element, {{cssxref("::target-text")}}, which allows you to specifying custom styling.
 
 For example, in our [scroll-to-text demo](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance) we have the following CSS:
 
@@ -117,45 +118,26 @@ For example, in our [scroll-to-text demo](https://mdn.github.io/css-examples/tar
 
 Try following the above link in a supporting browser to see the effect this has.
 
-### Programmatic access to text fragments
+### Feature Detectability
 
-In supporting browsers, information on the text fragments matched in the current document can be found in the {{domxref("FragmentDirective")}} object, which is accessed via the {{domxref("Document.fragmentDirective")}} property.
+The {{domxref("FragmentDirective")}} object, which is accessed via the {{domxref("Document.fragmentDirective")}} property, can be used to test whether or not text fragments are supported in a browser.
 
 Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
 
 ```js
 document.fragmentDirective;
+// returns an empty FragmentDirective object, if supported
+// undefined otherwise
 ```
 
-You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
-```
-
-This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.
+This functionality is mainly intended for feature detection at present. In the future, the `FragmentDirective` object could include additional information.
 
 ## Reference
 
 ### API
 
 - {{domxref("FragmentDirective")}}
-  - : An object representing the text fragments highlighted in the current document.
+  - : An object representing the text fragments. Currently empty and mainly intended for feature detection.
 - {{domxref("Document.fragmentDirective")}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 
@@ -174,4 +156,4 @@ This functionality is mainly intended for feature detection at present, but in f
 
 ## See also
 
-- [Boldly link where no one has linked before: Text Fragments](https://web.dev/text-fragments/)
+- [Boldly link where no one has linked before: Text Fragments](https://web.dev/articles/text-fragments)

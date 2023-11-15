@@ -35,7 +35,9 @@ let quadLayer = xrGLBinding.createQuadLayer({
   width: 1.0,
   height: 1.0,
   mipLevels: 5,
-  transform : new XRRigidTransform({ /* … */}),
+  transform: new XRRigidTransform({
+    /* … */
+  }),
 });
 
 quadLayer.mipLevels; // 5

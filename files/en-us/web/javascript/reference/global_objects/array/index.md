@@ -24,8 +24,8 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
 
-```js example-bad
-console.log(arr.0); // a syntax error
+```js-nolint example-bad
+arr.0; // a syntax error
 ```
 
 JavaScript syntax requires properties beginning with a digit to be accessed using [bracket notation](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties) instead of [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). It's also possible to quote the array indices (e.g., `years['2']` instead of `years[2]`), although usually not necessary.
@@ -61,7 +61,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
-Increasing the {{jsxref("Array/length", "length")}}.
+Increasing the {{jsxref("Array/length", "length")}} extends the array by adding empty slots without creating any new elements — not even `undefined`.
 
 ```js
 fruits.length = 10;
@@ -79,7 +79,7 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-This is explained further on the {{jsxref("Array/length")}} page.
+This is explained further on the {{jsxref("Array/length", "length")}} page.
 
 ### Array methods and empty slots
 
@@ -115,8 +115,6 @@ These methods treat empty slots as if they are `undefined`:
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}} {{Experimental_Inline}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}} {{Experimental_Inline}}
 - {{jsxref("Array/includes", "includes()")}}
 - {{jsxref("Array/join", "join()")}}
 - {{jsxref("Array/keys", "keys()")}}
@@ -128,7 +126,7 @@ These methods treat empty slots as if they are `undefined`:
 Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first constructing a new array and then populating it with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
 
 - Objects: the object reference is copied into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.
-- Primitive types such as strings, numbers and booleans (not {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, and {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): their values are copied into the new array.
+- Primitive types such as strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}}, and {{jsxref("Boolean")}} objects): their values are copied into the new array.
 
 Other methods mutate the array that the method was called on, in which case their return value differs depending on the method: sometimes a reference to the same array, sometimes the length of the new array.
 
@@ -148,8 +146,6 @@ The following methods always create new arrays with the `Array` base constructor
 - {{jsxref("Array/toSorted", "toSorted()")}}
 - {{jsxref("Array/toSpliced", "toSpliced()")}}
 - {{jsxref("Array/with", "with()")}}
-
-{{jsxref("Array/group", "group()")}} and {{jsxref("Array/groupToMap", "groupToMap()")}} do not use `@@species` to create new arrays for each group entry, but always use the plain `Array` constructor. Conceptually, they are not copying methods either.
 
 The following table lists the methods that mutate the original array, and the corresponding non-mutating alternative:
 
@@ -192,7 +188,7 @@ Where `callbackFn` takes three arguments:
 
 What `callbackFn` is expected to return depends on the array method that was called.
 
-The `thisArg` argument (defaults to `undefined`) will be used as the `this` value when calling `callbackFn`. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules](/en-US/docs/Web/JavaScript/Reference/Operators/this): if `callbackFn` is [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution), primitive `this` values are wrapped into objects, and `undefined`/`null` is substituted with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis). The `thisArg` argument is irrelevant for any `callbackFn` defined with an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as arrow functions don't have their own `this` binding.
+The `thisArg` argument (defaults to `undefined`) will be used as the `this` value when calling `callbackFn`. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules](/en-US/docs/Web/JavaScript/Reference/Operators/this): if `callbackFn` is [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution), primitive `this` values are wrapped into objects, and `undefined`/`null` is substituted with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis). The `thisArg` argument is irrelevant for any `callbackFn` defined with an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as arrow functions don't have their own `this` {{Glossary("binding")}}.
 
 All iterative methods are [copying](#copying_methods_and_mutating_methods) and [generic](#generic_array_methods), although they behave differently with [empty slots](#array_methods_and_empty_slots).
 
@@ -206,8 +202,6 @@ The following methods are iterative:
 - {{jsxref("Array/findLastIndex", "findLastIndex()")}}
 - {{jsxref("Array/flatMap", "flatMap()")}}
 - {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
 - {{jsxref("Array/map", "map()")}}
 - {{jsxref("Array/some", "some()")}}
 
@@ -237,7 +231,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 The `length` property is [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
 
-The language avoids setting `length` to an [unsafe integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). All built-in methods will throw a {{jsxref("TypeError")}} if `length` will be set to a number greater than 2<sup>53</sup> - 1. However, because the {{jsxref("Array/length", "length")}} property of arrays throws an error if it's set to greater than 2<sup>32</sup>, the safe integer threshold is usually not reached unless the method is called on a non-array object.
+The language avoids setting `length` to an [unsafe integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). All built-in methods will throw a {{jsxref("TypeError")}} if `length` will be set to a number greater than 2<sup>53</sup> - 1. However, because the {{jsxref("Array/length", "length")}} property of arrays throws an error if it's set to greater than 2<sup>32</sup> - 1, the safe integer threshold is usually not reached unless the method is called on a non-array object.
 
 ```js
 Array.prototype.flat.call({}); // []
@@ -253,7 +247,7 @@ console.log(a.length); // 0
 
 #### Array-like objects
 
-The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).)
+The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).) Any integer index less than zero or greater than `length - 1` is ignored when an array method operates on an array-like object.
 
 Many DOM objects are array-like — for example, [`NodeList`](/en-US/docs/Web/API/NodeList) and [`HTMLCollection`](/en-US/docs/Web/API/HTMLCollection). The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is also array-like. You can call array methods on them even if they don't have these methods themselves.
 
@@ -279,7 +273,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Array.from()")}}
   - : Creates a new `Array` instance from an iterable or array-like object.
-- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
+- {{jsxref("Array.fromAsync()")}}
   - : Creates a new `Array` instance from an async iterable, iterable, or array-like object.
 - {{jsxref("Array.isArray()")}}
   - : Returns `true` if the argument is an array, or `false` otherwise.
@@ -330,10 +324,6 @@ These properties are own properties of each `Array` instance.
   - : Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the calling array.
-- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
-  - : Groups the elements of an array into an object according to the strings returned by a test function.
-- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
-  - : Groups the elements of an array into a {{jsxref("Map")}} according to values returned by a test function.
 - {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
 - {{jsxref("Array.prototype.indexOf()")}}
@@ -707,40 +697,6 @@ console.log(fruitsAlias);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 ```
 
-### Grouping the elements of an array
-
-The {{jsxref("Array.prototype.group()")}} methods can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
-
-Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
-
-```js
-const inventory = [
-  { name: "asparagus", type: "vegetables" },
-  { name: "bananas", type: "fruit" },
-  { name: "goat", type: "meat" },
-  { name: "cherries", type: "fruit" },
-  { name: "fish", type: "meat" },
-];
-```
-
-To use `group()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
-
-The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
-The result is an object that has properties named after the unique strings returned by the callback.
-Each property is assigned an array containing the elements in the group.
-
-```js
-const result = inventory.group(({ type }) => type);
-console.log(result.vegetables);
-// [{ name: "asparagus", type: "vegetables" }]
-```
-
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of these elements will be reflected in both the original array and the returned object.
-
-If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Array.prototype.groupToMap()")}}.
-This is very similar to `group` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
-
 ### Creating a two-dimensional array
 
 The following creates a chessboard as a two-dimensional array of strings. The first move is made by copying the `'p'` in `board[6][4]` to `board[4][4]`. The old position at `[6][4]` is made blank.
@@ -844,6 +800,6 @@ For more information about the result of a match, see the {{jsxref("RegExp.proto
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

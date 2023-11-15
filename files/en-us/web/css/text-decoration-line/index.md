@@ -79,7 +79,7 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 }
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

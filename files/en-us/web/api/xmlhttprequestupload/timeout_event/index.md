@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.timeout_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`timeout`** event is fired when progression is terminated due to preset time expiring.
 
@@ -15,9 +15,9 @@ The **`timeout`** event is fired when progression is terminated due to preset ti
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('timeout', (event) => { })
+addEventListener("timeout", (event) => {});
 
-ontimeout = (event) => { }
+ontimeout = (event) => {};
 ```
 
 ## Event type

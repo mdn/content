@@ -5,7 +5,7 @@ slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
+browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor_static
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
@@ -103,11 +103,11 @@ function requestNativeScaleWebGLLayer(gl, xrSession) {
   return gl.makeXRCompatible().then(() => {
     let scaleFactor = XRWebGLLayer.getNativeFramebufferScaleFactor(xrSession);
     let glLayer = new XRWebGLLayer(xrSession, gl, {
-                    framebufferScaleFactor: scaleFactor
+      framebufferScaleFactor: scaleFactor,
     });
     xrSession.updateRenderState({ baseLayer: glLayer });
   });
-};
+}
 ```
 
 This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",

@@ -19,11 +19,11 @@ x << y
 
 ## Description
 
-The `<<` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt left shift if both operands becomes BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number left shift. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+The `<<` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt left shift if both operands become BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number left shift. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 The operator operates on the left operand's bit representation in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). For example, `9 << 2` yields 36:
 
-```
+```plain
      9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
@@ -67,4 +67,4 @@ Left shifting any number `x` by `0` returns `x` converted to a 32-bit integer. D
 ## See also
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Left shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [Left shift assignment (`<<=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

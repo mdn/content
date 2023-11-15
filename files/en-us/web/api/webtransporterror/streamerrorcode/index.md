@@ -3,12 +3,10 @@ title: "WebTransportError: streamErrorCode property"
 short-title: streamErrorCode
 slug: Web/API/WebTransportError/streamErrorCode
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportError.streamErrorCode
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`streamErrorCode`** read-only property of the {{domxref("WebTransportError")}} interface returns a number in the range 0-255 indicating the application protocol error code for this error, or `null` if one is not available.
 
@@ -52,7 +50,7 @@ async function initTransport(url) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

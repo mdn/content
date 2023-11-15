@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.send
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`send()`** sends the request to the server.
@@ -63,7 +63,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = () => {
   // Request finished. Do processing here.
@@ -80,16 +80,17 @@ xhr.send(null);
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
 // Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = () => { // Call a function when the state changes.
+xhr.onreadystatechange = () => {
+  // Call a function when the state changes.
   if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
     // Request finished. Do processing here.
   }
-}
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);
@@ -105,5 +106,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

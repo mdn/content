@@ -107,3 +107,8 @@ function fetchStream(stream, list) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Teeing a stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#teeing_a_stream)

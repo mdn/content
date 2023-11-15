@@ -8,7 +8,7 @@ browser-compat:
   - api.Highlight
   - api.HighlightRegistry
   - css.selectors.highlight
-spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
+spec-urls: https://drafts.csswg.org/css-highlight-api-1/
 ---
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}{{SeeCompatTable}}
@@ -67,7 +67,7 @@ Each highlight can be styled differently.
 
 ### Register highlights
 
-Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS.highlights")}}.
+Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS/highlights_static", "CSS.highlights")}}.
 
 The registry is a {{jsxref("Map")}}-like object used to register highlights by names, as seen below:
 
@@ -104,7 +104,7 @@ The final step is to style the registered highlights. This is done by using the 
 - {{domxref("Highlight")}} {{Experimental_Inline}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
 - {{domxref("HighlightRegistry")}}
-  - : Accessible via {{domxref("CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
+  - : Accessible via {{domxref("CSS/highlights_static", "CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
 
 ## Examples
 

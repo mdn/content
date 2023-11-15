@@ -21,8 +21,10 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 ```css
 @counter-style range-multi-example {
   system: cyclic;
-  symbols: "\25A0""\25A1";
-  range: 2 4, 7 9;
+  symbols: "\25A0" "\25A1";
+  range:
+    2 4,
+    7 9;
 }
 ```
 

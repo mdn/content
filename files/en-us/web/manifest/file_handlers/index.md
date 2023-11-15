@@ -1,6 +1,7 @@
 ---
 title: file_handlers
 slug: Web/Manifest/file_handlers
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.file_handlers

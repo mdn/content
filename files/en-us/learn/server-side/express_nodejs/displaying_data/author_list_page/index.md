@@ -1,6 +1,7 @@
 ---
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
+page-type: learn-module-chapter
 ---
 
 The author list page needs to display a list of all authors in the database, with each author name linked to its associated author detail page. The date of birth and date of death should be listed after the name on the same line.
@@ -12,7 +13,6 @@ The author list controller function needs to get a list of all `Author` instance
 Open **/controllers/authorController.js**. Find the exported `author_list()` controller method near the top of the file and replace it with the following code.
 
 ```js
-
 // Display list of all Authors.
 exports.author_list = asyncHandler(async (req, res, next) => {
   const allAuthors = await Author.find().sort({ family_name: 1 }).exec();

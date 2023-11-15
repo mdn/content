@@ -7,7 +7,7 @@ browser-compat: html.elements.h1
 
 {{HTMLSidebar}}
 
-The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest. By default, all heading elements create a [block-level](/en-US/docs/Glossary/Block-level_content) box in the layout, starting on a new line and taking up the full width available in their containing block.
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
 
@@ -101,9 +101,7 @@ The following code shows all the heading levels, in use.
 <h6>Heading level 6</h6>
 ```
 
-#### Result
-
-{{ EmbedLiveSample('All_headings', '280', '300', '') }}
+{{EmbedLiveSample('All_headings', '280', '300')}}
 
 ### Example page
 
@@ -125,17 +123,15 @@ The following code shows a few headings with some content under them.
 <p>Some text here…</p>
 ```
 
-#### Result
-
-{{ EmbedLiveSample('Example_page', '280', '480', '') }}
+{{EmbedLiveSample('Example_page', '280', '480')}}
 
 ## Accessibility concerns
 
 ### Navigation
 
-A common navigation technique for users of screen reading software is jumping from heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
+A common navigation technique for users of screen reading software is to quickly jump from heading to heading in order to determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
 
-#### Don't
+**Don't do this:**
 
 ```html example-bad
 <h1>Heading level 1</h1>
@@ -143,7 +139,7 @@ A common navigation technique for users of screen reading software is jumping fr
 <h4>Heading level 4</h4>
 ```
 
-#### Do
+**Prefer this:**
 
 ```html example-good
 <h1>Heading level 1</h1>
@@ -197,7 +193,7 @@ Another common navigation technique for users of screen reading software is to g
 
 Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
-#### Examples
+#### Sectioning content examples
 
 ```html
 <header>
@@ -217,9 +213,7 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 </footer>
 ```
 
-##### Result
-
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Sectioning_content_examples')}}
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 

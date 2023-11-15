@@ -7,15 +7,13 @@ browser-compat: css.properties.display
 
 {{CSSRef}}
 
-The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline element](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
-Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
+Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_flow_layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
 
 {{EmbedInteractiveExample("pages/css/display.html")}}
 
 ## Syntax
-
-The CSS `display` property is specified using keyword values.
 
 ```css
 /* precomposed values */
@@ -55,6 +53,8 @@ display: revert-layer;
 display: unset;
 ```
 
+The CSS `display` property is specified using keyword values.
+
 ## Grouped values
 
 The keyword values can be grouped into six value categories.
@@ -66,9 +66,9 @@ The keyword values can be grouped into six value categories.
   - : These keywords specify the element's outer display type, which is essentially its role in flow layout:
 
     - `block`
-      - : The element generates a block element box, generating line breaks both before and after the element when in the normal flow.
+      - : The element generates a block box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
-      - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
+      - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > **Note:** Browsers that support the multi-keyword syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
 > This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
@@ -88,15 +88,15 @@ The keyword values can be grouped into six value categories.
         Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
     - `flow-root`
-      - : The element generates a block element box that establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), defining where the formatting root lies.
+      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), defining where the formatting root lies.
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
-      - : The element behaves like a block element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+      - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
     - `grid`
-      - : The element behaves like a block element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+      - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
     - `ruby` {{Experimental_Inline}}
-      - : The element behaves like an inline element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
+      - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > **Note:** Browsers that support the multi-keyword syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
 > This will result in expected behavior; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
@@ -154,7 +154,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `contents`
 
-      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://w3c.github.io/csswg-drafts/css-display/#unbox) for more details.
+      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
     - `none`
       - : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the element did not exist). All descendant elements also have their display turned off.
@@ -168,7 +168,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `inline-block`
 
-      - : The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
+      - : The element generates a block box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
 
         It is equivalent to `inline flow-root`.
 
@@ -180,13 +180,13 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `inline-flex`
 
-      - : The element behaves like an inline element and lays out its content according to the flexbox model.
+      - : The element behaves like an inline-level element and lays out its content according to the flexbox model.
 
         It is equivalent to `inline flex`.
 
     - `inline-grid`
 
-      - : The element behaves like an inline element and lays out its content according to the grid model.
+      - : The element behaves like an inline-level element and lays out its content according to the grid model.
 
         It is equivalent to `inline grid`.
 
@@ -229,35 +229,35 @@ The individual pages for the different types of value that `display` can have se
 
 ### CSS Flow Layout (display: block, display: inline)
 
-- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
-- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
-- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
 
 ### display: flex
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
-- [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
-- [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
-- [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-- [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
 ### display: grid
 
-- [Basic Concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Relationship to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [Line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- [CSS Grid Layout and Accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+- [Basic Concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Relationship to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [CSS Grid Layout and Accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Accessibility concerns
 
@@ -397,7 +397,7 @@ updateDisplay();
 
 ## See also
 
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}

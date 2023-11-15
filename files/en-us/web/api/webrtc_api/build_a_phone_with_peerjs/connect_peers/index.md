@@ -22,7 +22,7 @@ In the last article we set up our server, but it doesn't do anything yet because
        host: location.hostname,
        debug: 1,
        path: "/myapp",
-     }
+     },
    );
    ```
 

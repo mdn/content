@@ -1,6 +1,7 @@
 ---
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
@@ -87,7 +88,7 @@ Developers typically write their code using **web frameworks**. Web frameworks a
 
 Again, while both client and server-side code use frameworks, the domains are very different, and hence so are the frameworks. Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of "common" web server functionality that you might otherwise have to implement yourself (e.g. support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
 
-> **Note:** Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.
+> **Note:** Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple website UI.
 >
 > In contrast, you would almost never consider writing the server-side component of a web app without a framework — implementing a vital feature like an HTTP server is really hard to do from scratch in say Python, but Python web frameworks like Django provide one out of the box, along with other very useful tools.
 
@@ -145,7 +146,7 @@ Real-world examples include social-networking sites which allow users to determi
 
 ### Store session/state information
 
-Server-side programming allows developers to make use of **sessions** — basically, a mechanism that allows a server to store information on the current user of a site and send different responses based on that information.
+Server-side programming allows developers to make use of **sessions** — basically, a mechanism that allows a server to store information associated with the current user of a site and send different responses based on that information.
 
 This allows, for example, a site to know that a user has previously logged in and display links to their emails or order history, or perhaps save the state of a simple game so that the user can go to a site again and carry on where they left it.
 

@@ -14,7 +14,7 @@ It provides a mapping between the text used as the module specifier in an [`impo
 The JSON object must conform to the [Import map JSON representation format](#import_map_json_representation).
 
 An import map is used to resolve module specifiers in static and dynamic imports, and therefore must be declared and processed before any `<script>` elements that import modules using specifiers declared in the map.
-Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import); it does not apply to the path specified in the `src` attribute of a `<script>` element.
+Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import) for modules loaded into documents; it does not apply to the path specified in the `src` attribute of a `<script>` element or to modules loaded into workers or worklets.
 
 For more information, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
 
@@ -37,7 +37,7 @@ Only the first import map in the document with an inline definition is processed
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
 
-An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed.
+An [`error` event](/en-US/docs/Web/API/HTMLElement/error_event) is fired at script elements with `type="importmap"` that are not processed.
 This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description
@@ -95,7 +95,7 @@ Note that in this case the property and mapped path must both have a trailing fo
 We could then import a circle module as shown.
 
 ```js
-import { name as squareName, draw } from "shapes/circle.js";
+import { name as circleName } from "shapes/circle.js";
 ```
 
 ### Paths in the module specifier map key

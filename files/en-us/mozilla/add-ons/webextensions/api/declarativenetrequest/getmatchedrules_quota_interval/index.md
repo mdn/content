@@ -11,7 +11,7 @@ The time interval within which {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATC
 
 Its value is `10`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

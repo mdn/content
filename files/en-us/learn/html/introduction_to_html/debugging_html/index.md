@@ -1,6 +1,7 @@
 ---
 title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
@@ -101,7 +102,8 @@ It's time to study the permissive nature of HTML code.
    - The incorrect nesting has been fixed by the browser as shown here:
 
      ```html
-     <strong>strong
+     <strong>
+       strong
        <em>strong emphasized?</em>
      </strong>
      <em> what is this?</em>
@@ -112,8 +114,8 @@ It's time to study the permissive nature of HTML code.
      ```html
      <li>
        <strong>
-         Unclosed attributes: Another common source of HTML problems. Let's
-         look at an example:
+         Unclosed attributes: Another common source of HTML problems. Let's look
+         at an example:
        </strong>
      </li>
      ```
@@ -151,7 +153,7 @@ The error messages are usually helpful, but sometimes they are not so helpful; w
 - "End of file reached when inside an attribute value. Ignoring tag": This one is rather cryptic; it refers to the fact that there is an attribute value not properly formed somewhere, possibly near the end of the file because the end of the file appears inside the attribute value. The fact that the browser doesn't render the link should give us a good clue as to what element is at fault.
 - "End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The line numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
 
-  ```
+  ```plain
   example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
   ```
 

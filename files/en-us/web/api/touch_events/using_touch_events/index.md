@@ -93,7 +93,7 @@ someElement.addEventListener(
       process_target(ev.targetTouches[i].target);
     }
   },
-  false
+  false,
 );
 ```
 
@@ -135,7 +135,7 @@ The implementation status of pointer events in browsers is [relatively high](htt
 The following documents describe how to use touch events and include example code:
 
 - {{domxref("Touch_events","Touch Events Overview")}}
-- [Implement Custom Gestures](https://web.dev/add-touch-to-your-site/)
+- [Implement Custom Gestures](https://web.dev/articles/add-touch-to-your-site)
 - [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 
 Touch event demonstrations:

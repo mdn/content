@@ -1,11 +1,12 @@
 ---
 title: Features gated by user activation
 slug: Web/Security/User_activation
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-To ensure applications are unable to abuse APIs that can create bad user experience when the behavior is not desired, some APIs can only be used when the user is in an "active interaction" state, meaning the user is currently interacting with the web page, or has interacted with the page at least once. Browsers limit access to sensitive APIs like popups, fullscreen, or vibration APIs to active user interactions to prevent malicious scripts from abusing these features. This page lists web platform features available only after user activation.
+To ensure applications are unable to abuse APIs that can create a bad user experience when the behavior is not desired, some APIs can only be used when the user is in an "active interaction" state, meaning the user is currently interacting with the web page, or has interacted with the page at least once. Browsers limit access to sensitive APIs like popups, fullscreen, or vibration APIs to active user interactions to prevent malicious scripts from abusing these features. This page lists web platform features available only after user activation.
 
 A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load. Typically, this is a click on a button or some other user interaction with the UI.
 
@@ -34,11 +35,11 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("Document.requestStorageAccess()")}}
 - {{domxref("Element.requestFullScreen()")}}
 - {{domxref("Element.requestPointerLock()")}}
-- `GPUAdapter.requestAdapterInfo()`
+- {{domxref("GPUAdapter.requestAdapterInfo()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
-- {{domxref("IdleDetector.requestPermission()")}}
+- {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - `MediaStreamTrack.sendCaptureAction()`
 - `MediaDevices.getViewportMedia()`
@@ -54,7 +55,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("Window.showSaveFilePicker()")}}
 - {{domxref("Window.showDirectoryPicker()")}}
 - `Window.getScreenDetails()`
-- `Window.queryLocalFonts()`
+- {{domxref("Window.queryLocalFonts()")}}
 - {{domxref("XRSystem.requestSession()")}}
 
 ## Sticky activation
@@ -64,7 +65,7 @@ APIs that require transient activation (list is not exhaustive):
 APIs that require sticky activation (not exhaustive):
 
 - {{domxref("Navigator.vibrate()")}}
-- `navigator.virtualKeyboard.show()`
+- {{domxref("VirtualKeyboard.show()")}}
 - Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
 
 ## UserActivation API

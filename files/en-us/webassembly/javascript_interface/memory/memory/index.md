@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Memory() constructor
 slug: WebAssembly/JavaScript_interface/Memory/Memory
-browser-compat: javascript.builtins.WebAssembly.Memory.Memory
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Memory.Memory
 ---
 
 {{WebAssemblySidebar}}
@@ -40,10 +41,16 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Exceptions
 
-- If `memoryDescriptor` is not an object, a {{jsxref("TypeError")}} is thrown.
-- If `initial` is not specified, a {{jsxref("TypeError")}} is thrown.
-- If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
-- If `shared` is present and `true`, yet `maximum` is not specified, a {{jsxref("TypeError")}} is thrown.
+- {{jsxref("TypeError")}}
+  - : Thrown if at least one of these conditions is met:
+    - `memoryDescriptor` is not an object.
+    - `initial` is not specified.
+    - `shared` is present and `true`, yet `maximum` is not specified.
+- {{jsxref("RangeError")}}
+  - : Thrown if at least one of these conditions is met:
+    - `maximum` is specified and is smaller than `initial`.
+    - `initial` exceeds 65,536 (2^16). 2^16 pages is 2^16 \* 64KiB = 4GiB bytes, which is the maximum range that a Wasm module can address, as Wasm currently only allows 32-bit addressing.
+    - Allocation fails. This may occur due to attempting to allocate too much at once, or if the User Agent is otherwise out of memory.
 
 ## Examples
 
@@ -51,7 +58,7 @@ new WebAssembly.Memory(memoryDescriptor)
 
 There are two ways to get a `WebAssembly.Memory` object: construct it from JavaScript, or have it exported by a WebAssembly module.
 
-The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). The example fetches and instantiates the loaded memory.wasm bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values. The `Memory` object's [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) property will return an {{jsxref("ArrayBuffer")}}.
+The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). The example fetches and instantiates the loaded memory.wasm bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values. The `Memory` object's [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) property will return an {{jsxref("ArrayBuffer")}}.
 
 ```js
 const memory = new WebAssembly.Memory({

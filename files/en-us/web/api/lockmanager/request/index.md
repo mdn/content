@@ -9,7 +9,7 @@ browser-compat: api.LockManager.request
 {{APIRef("Web Locks")}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
-The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}}.
+The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 The `mode` property of the `options` parameter may be either `"exclusive"` or `"shared"`.
 
@@ -72,7 +72,7 @@ request(name, options, callback)
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves with `undefined` when the request is granted.
+A {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 ### Exceptions
 
@@ -83,7 +83,7 @@ This method may return a promise rejected with a {{domxref("DOMException")}} of 
 - `SecurityError` {{domxref("DOMException")}}
   - : If a lock manager cannot be obtained for the current environment.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : If `names` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
+  - : If `name` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
 - `AbortError` {{domxref("DOMException")}}
   - : If the option `signal` exists and is aborted.
 
@@ -114,7 +114,7 @@ async function do_read() {
     { mode: "shared" },
     async (lock) => {
       // Read code here.
-    }
+    },
   );
 }
 ```
@@ -129,7 +129,7 @@ async function do_write() {
     { mode: "exclusive" },
     async (lock) => {
       // Write code here.
-    }
+    },
   );
 }
 ```
@@ -152,7 +152,7 @@ await navigator.locks.request(
 
     // The lock was granted, and no other running code in this origin is holding
     // the 'my_res_lock' lock until this returns.
-  }
+  },
 );
 ```
 
@@ -171,7 +171,7 @@ try {
     { signal: controller.signal },
     async (lock) => {
       // The lock was acquired!
-    }
+    },
   );
 } catch (ex) {
   if (ex.name === "AbortError") {

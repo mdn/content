@@ -1,6 +1,7 @@
 ---
 title: Organizing your CSS
 slug: Learn/CSS/Building_blocks/Organizing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
@@ -58,7 +59,7 @@ Having a set of rules you always follow reduces the amount of mental overhead ne
 
 There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
 
-```css
+```css-nolint
 .box {background-color: #567895; }
 h2 {background-color: black; color: white; }
 ```
@@ -399,6 +400,6 @@ This is the final part of our building blocks module, and as you can see there a
 
 To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
-You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

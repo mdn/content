@@ -3,12 +3,10 @@ title: "WebTransportError: source property"
 short-title: source
 slug: Web/API/WebTransportError/source
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportError.source
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`source`** read-only property of the {{domxref("WebTransportError")}} interface returns an enumerated value indicating the source of the error.
 
@@ -52,7 +50,7 @@ async function initTransport(url) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

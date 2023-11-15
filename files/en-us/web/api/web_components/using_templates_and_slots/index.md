@@ -50,7 +50,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 ```
 
@@ -218,12 +218,12 @@ customElements.define(
     constructor() {
       super();
       const template = document.getElementById(
-        "element-details-template"
+        "element-details-template",
       ).content;
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.cloneNode(true));
     }
-  }
+  },
 );
 ```
 
@@ -289,7 +289,7 @@ body {
 
 Finally let's put all the snippets together and see what the rendered result looks like.
 
-{{ EmbedLiveSample('A_more_involved_example', '300','400','element-details.png','') }}
+{{EmbedLiveSample('A_more_involved_example', '300','400')}}
 
 Notice the following points about this rendered result:
 

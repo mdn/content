@@ -4,6 +4,8 @@ slug: Glossary/Submit_button
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **submit button** is an {{Glossary("element")}} in HTML that can be used to submit a {{HTMLElement("form")}}. The native submit button elements are:
 
 - {{HtmlElement("button")}} (its default `type` is `"submit"`)
@@ -16,11 +18,11 @@ In addition to submitting a form, a submit button can affect the form's behavior
 
 Submit buttons can override the form's submission behavior through various attributes:
 
-- `{{HtmlElement("button#attr-formaction", "formaction")}}`: Override the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the form.
-- `{{HtmlElement("button#attr-formenctype", "formenctype")}}`: Override the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the form.
-- `{{HtmlElement("button#attr-formmethod", "formmethod")}}`: Override the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the form.
-- `{{HtmlElement("button#attr-formnovalidate", "formnovalidate")}}`: Override the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the form.
-- `{{HtmlElement("button#attr-formtarget", "formtarget")}}`: Override the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the form.
+- `{{HtmlElement("button#formaction", "formaction")}}`: Override the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the form.
+- `{{HtmlElement("button#formenctype", "formenctype")}}`: Override the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the form.
+- `{{HtmlElement("button#formmethod", "formmethod")}}`: Override the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the form.
+- `{{HtmlElement("button#formnovalidate", "formnovalidate")}}`: Override the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the form.
+- `{{HtmlElement("button#formtarget", "formtarget")}}`: Override the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the form.
 
 ## Form data entries
 

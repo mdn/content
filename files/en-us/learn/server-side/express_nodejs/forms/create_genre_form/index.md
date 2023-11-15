@@ -1,6 +1,7 @@
 ---
 title: Create genre form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
+page-type: learn-module-chapter
 ---
 
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
@@ -128,14 +129,18 @@ asyncHandler(async (req, res, next) => {
 });
 ```
 
-If the genre name data is valid then we check to see if a `Genre` with the same name already exists (as we don't want to create duplicates).
-If it does, we redirect to the existing genre's detail page.
+If the genre name data is valid then we perform a case-insensitive search to see if a `Genre` with the same name already exists (as we don't want to create duplicate or near duplicate records that vary only in letter case, such as: "Fantasy", "fantasy", "FaNtAsY", and so on).
+To ignore letter case and accents when searching we chain the [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) method, specifying the locale of 'en' and strength of 2 (for more information see the MongoDB [Collation](https://www.mongodb.com/docs/manual/reference/collation/) topic).
+
+If a `Genre` with a matching name already exists we redirect to its detail page.
 If not, we save the new `Genre` and redirect to its detail page.
 Note that here we `await` on the result of the database query, following the same pattern as in other route handlers.
 
 ```js
 // Check if Genre with same name already exists.
-const genreExists = await Genre.findOne({ name: req.body.name }).exec();
+const genreExists = await Genre.findOne({ name: req.body.name })
+  .collation({ locale: "en", strength: 2 })
+  .exec();
 if (genreExists) {
   // Genre exists, redirect to its detail page.
   res.redirect(genreExists.url);
@@ -157,7 +162,7 @@ The code below shows the controller code for rendering the template in both case
 // Render the GET route
 res.render("genre_form", { title: "Create Genre" });
 
-// Render the POST route 
+// Render the POST route
 res.render("genre_form", {
   title: "Create Genre",
   genre,
@@ -171,18 +176,19 @@ Create **/views/genre_form.pug** and copy in the text below.
 extends layout
 
 block content
+
   h1 #{title}
 
   form(method='POST' action='')
     div.form-group
       label(for='name') Genre:
-      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name))
+      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required='true' value=(undefined===genre ? '' : genre.name) )
     button.btn.btn-primary(type='submit') Submit
 
   if errors
-   ul
-    for error in errors
-     li!= error.msg
+    ul
+      for error in errors
+        li!= error.msg
 ```
 
 Much of this template will be familiar from our previous tutorials. First, we extend the **layout.pug** base template and override the `block` named '**content**'. We then have a heading with the `title` we passed in from the controller (via the `render()` method).
@@ -201,14 +207,14 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 
 ![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
 
-The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
+The only error we validate against server-side is that the genre field must have at least three characters. The screenshot below shows what the error list would look like if you supply a genre with only one or two characters (highlighted in yellow).
 
 ![The Create Genre section of the Local library application. The left column has a vertical navigation bar. The right section is the create a new Genre from with a heading that reads 'Create Genre'. There is one input field labeled 'Genre'. There is a submit button at the bottom. There is an error message that reads 'Genre name required' directly below the Submit button. The error message was highlighted by the author of this article. There is no visual indication in the form that the genre is required nor that the error message only appears on error.](locallibary_express_genre_create_error.png)
 
-> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
+> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >
-> ```
-> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
+> ```pug
+> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required='true' value=(undefined===genre ? '' : genre.name) )
 > ```
 
 ## Next steps

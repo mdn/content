@@ -3,15 +3,12 @@ title: "WebTransportError: WebTransportError() constructor"
 short-title: WebTransportError()
 slug: Web/API/WebTransportError/WebTransportError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
-The **`WebTransportError()`** constructor creates a new
-{{domxref("WebTransportError")}} object instance.
+The **`WebTransportError()`** constructor creates a new {{domxref("WebTransportError")}} object instance.
 
 {{AvailableInWorkers}}
 
@@ -66,7 +63,7 @@ async function initTransport(url) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

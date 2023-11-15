@@ -65,9 +65,7 @@ There are no special styling considerations for `<label>` elements — structura
 <label>Click me <input type="text" /></label>
 ```
 
-#### Result
-
-{{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
+{{EmbedLiveSample('Simple_label_example', '200', '50')}}
 
 ### Defining an explicit label with the "for" attribute
 
@@ -76,9 +74,7 @@ There are no special styling considerations for `<label>` elements — structura
 <input type="text" id="username" />
 ```
 
-#### Result
-
-{{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
+{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
 
 ## Accessibility concerns
 
@@ -86,7 +82,7 @@ There are no special styling considerations for `<label>` elements — structura
 
 Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `label`. Doing so makes it difficult for people to activate the form input associated with the `label`.
 
-#### Don't
+**Don't do this:**
 
 ```html example-bad
 <label for="tac">
@@ -95,7 +91,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 </label>
 ```
 
-#### Do
+**Prefer this:**
 
 ```html example-good
 <label for="tac">
@@ -113,7 +109,7 @@ Placing [heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) within
 
 If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a title, use the {{HTMLElement("legend")}} element placed within a {{HTMLElement("fieldset")}}.
 
-#### Don't
+**Don't do this:**
 
 ```html example-bad
 <label for="your-name">
@@ -122,7 +118,7 @@ If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a t
 </label>
 ```
 
-#### Do
+**Prefer this:**
 
 ```html example-good
 <label class="large-label" for="your-name">

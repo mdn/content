@@ -51,7 +51,7 @@ const writableStream = new WritableStream(
       console.log("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 const size = queuingStrategy.size();
@@ -64,3 +64,7 @@ const size = queuingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CountQueuingStrategy")}}

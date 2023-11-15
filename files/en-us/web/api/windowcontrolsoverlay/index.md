@@ -42,7 +42,7 @@ if ("windowControlsOverlay" in navigator) {
         const rect = event.titlebarAreaRect;
         // Do something with the coordinates of the title bar area.
       }
-    }
+    },
   );
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: Other form controls
 slug: Learn/Forms/Other_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
@@ -50,7 +51,7 @@ Visually, the text entered wraps and the form control is by default resizable. M
 
 The following screenshots show default, focused, and disabled `<textarea>` elements in Firefox 71 and Safari 13 on macOS and in Edge 18, Yandex 14, Firefox 71, and Chrome 79 on Windows 10.
 
-![The default, focused, and disabled \<textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
+![The default, focused, and disabled 'textarea' element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
 > **Note:** You can find a slightly more interesting example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of the series ([see the source code also](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
 
@@ -245,21 +246,7 @@ There are a few other form features that are not as obvious as the ones we have 
 
 ### Meters and progress bars
 
-Meters and progress bars are visual representations of numeric values.
-
-#### Progress
-
-A progress bar represents a value that changes over time up to a maximum value specified by the [`max`](/en-US/docs/Web/HTML/Element/progress#max) attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.
-
-```html
-<progress max="100" value="75">75/100</progress>
-```
-
-{{EmbedLiveSample("Progress", 120, 120)}}
-
-This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
-
-The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
+Meters and progress bars are visual representations of numeric values. Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
 
 #### Meter
 
@@ -286,14 +273,26 @@ All browsers that implement the {{HTMLElement("meter")}} element use those value
 Such a bar is created by using the {{HTMLElement("meter")}} element. This is for implementing any kind of meter; for example, a bar showing the total space used on a disk, which turns red when it starts to get full.
 
 ```html
-<meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+<meter min="0" max="100" value="75" low="33" high="66" optimum="0">75</meter>
 ```
 
 {{EmbedLiveSample("Meter", 120, 120)}}
 
 The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
 
-Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
+#### Progress
+
+A progress bar represents a value that changes over time up to a maximum value specified by the [`max`](/en-US/docs/Web/HTML/Element/progress#max) attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.
+
+```html
+<progress max="100" value="75">75/100</progress>
+```
+
+{{EmbedLiveSample("Progress", 120, 120)}}
+
+This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
+
+The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
 
 ## Test your skills!
 

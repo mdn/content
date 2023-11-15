@@ -57,7 +57,7 @@ code below:
 
 ```js
 const glLayerOptions = {
-  ignoreDepthValues: true
+  ignoreDepthValues: true,
 };
 
 let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);

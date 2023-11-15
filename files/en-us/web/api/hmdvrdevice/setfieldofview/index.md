@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The {{domxref("VRFieldOfView.VRFieldOfView","VRFieldOfView()")}} constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the `setFieldOfView()` method (the default `zNear` and `zFar` values are always used, in this case.)
+The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The `VRFieldOfView()` constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the `setFieldOfView()` method (the default `zNear` and `zFar` values are always used, in this case.)
 
 ```js
 function setCustomFOV(up, right, down, left) {

@@ -33,7 +33,7 @@ createBindGroupLayout(descriptor)
 An entry object includes the following properties:
 
 - `binding`
-  - : A number representing a unique identifier for this particular entry, which matches the `binding` value of a corresponding {{domxref("GPUBindGroup")}} entry. In addition, it corresponds to a [`@binding`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
+  - : A number representing a unique identifier for this particular entry, which matches the `binding` value of a corresponding {{domxref("GPUBindGroup")}} entry. In addition, it matches the `n` index value of the corresponding [`@binding(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `visibility`
 
   - : One or more {{glossary("Bitwise_flags", "bitwise flags")}} defining the shader stages that a {{domxref("GPUBindGroup")}} entry corresponding to this entry will be visible to. Possible values are:

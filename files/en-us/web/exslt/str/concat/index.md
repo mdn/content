@@ -1,6 +1,7 @@
 ---
 title: str:concat()
 slug: Web/EXSLT/str/concat
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -24,4 +25,4 @@ A string whose value is all the string values of the nodes in `nodeSet` concaten
 
 ## Specifications
 
-[EXSLT - STR:CONCAT](http://exslt.org/str/functions/concat/index.html)
+[EXSLT - STR:CONCAT](https://exslt.github.io/str/functions/concat/index.html)

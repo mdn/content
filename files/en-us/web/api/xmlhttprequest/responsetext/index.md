@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseText
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The read-only {{domxref("XMLHttpRequest")}} property
 **`responseText`** returns the text received from a server
@@ -39,10 +39,10 @@ You know the entire content has been received when the value of
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // If specified, responseType must be empty string or "text"
-xhr.responseType = 'text';
+xhr.responseType = "text";
 
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE) {

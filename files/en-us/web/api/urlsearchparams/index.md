@@ -35,7 +35,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.append()")}}
   - : Appends a specified key/value pair as a new search parameter.
 - {{domxref("URLSearchParams.delete()")}}
-  - : Deletes the given search parameter, and its associated value, from the list of all search parameters.
+  - : Deletes search parameters that match a name, and optional value, from the list of all search parameters.
 - {{domxref("URLSearchParams.entries()")}}
   - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object in the same order as they appear in the query string.
 - {{domxref("URLSearchParams.forEach()")}}
@@ -45,7 +45,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.getAll()")}}
   - : Returns all the values associated with a given search parameter.
 - {{domxref("URLSearchParams.has()")}}
-  - : Returns a boolean value indicating if such a given parameter exists.
+  - : Returns a boolean value indicating if a given parameter, or parameter and value pair, exists.
 - {{domxref("URLSearchParams.keys()")}}
   - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing iteration through all keys of the key/value pairs contained in this object.
 - {{domxref("URLSearchParams.set()")}}
@@ -69,6 +69,7 @@ for (const p of searchParams) {
 }
 
 console.log(searchParams.has("topic")); // true
+console.log(searchParams.has("topic", "fish")); // false
 console.log(searchParams.get("topic") === "api"); // true
 console.log(searchParams.getAll("topic")); // ["api"]
 console.log(searchParams.get("foo") === null); // true
@@ -127,7 +128,7 @@ console.log(searchParams3.has("query")); // true
 
 ### Preserving plus signs
 
-The `URLSearchParams` constructor interprets plus signs (`+`) as spaces, which might cause problems.
+The `URLSearchParams` constructor interprets plus signs (`+`) as spaces, which might cause problems. In the example below, we use [hexadecimal escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hexadecimal_escape_sequences) to mimic a string containing binary data (where every byte carries information) that needs to be stored in the URL search params. Note how the encoded string produced by `btoa()` contains `+` and isn't preserved by `URLSearchParams`.
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";

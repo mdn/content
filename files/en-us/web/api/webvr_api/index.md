@@ -106,10 +106,6 @@ The WebVR API extends the following APIs, adding the listed features.
   - : Fired when a display is able to be presented to.
 - {{DOMxRef("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
   - : Fired when a display can no longer be presented to.
-- {{DOMxRef("Window.vrdisplayblur_event", "vrdisplayblur")}}
-  - : Fired when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
-- {{DOMxRef("Window.vrdisplayfocus_event", "vrdisplayfocus")}}
-  - : Fired when presentation to a display has resumed after being blurred.
 
 ## Examples
 

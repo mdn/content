@@ -81,6 +81,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a boolean that indicates whether the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
@@ -132,7 +134,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a list of all of the anchors in the document.
 - {{DOMxRef("Document.applets")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns an ordered list of the applets within a document.
+  - : Returns an empty {{domxref("HTMLCollection")}}. Legacy property that used to return the list of applets within a document.
 - {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the background color of the current document.
 - {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -141,8 +143,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
   - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Gets/sets the height of the current document.
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -159,8 +159,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Returns a list of the style sheet sets available on the document.
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns the width of the current document.
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : Returns the encoding as determined by the XML declaration.
 - {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
@@ -196,8 +194,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Creates a new element with the given tag name.
 - {{DOMxRef("Document.createElementNS()")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{DOMxRef("Document.createEntityReference()")}} {{Deprecated_Inline}}
-  - : Creates a new entity reference object and returns it.
 - {{DOMxRef("Document.createEvent()")}}
   - : Creates an event object.
 - {{DOMxRef("Document.createNodeIterator()")}}
@@ -241,7 +237,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.getSelection()")}}
   - : Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
 - {{DOMxRef("Document.hasStorageAccess()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.
+  - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
 - {{DOMxRef("Document.prepend()")}}
@@ -257,7 +253,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.replaceChildren()")}}
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
+  - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
 - {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
   - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
@@ -311,6 +307,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
+  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
@@ -426,13 +424,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

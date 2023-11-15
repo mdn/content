@@ -8,14 +8,14 @@ page-type: javascript-error
 
 The JavaScript exception "Unexpected '#' used outside of class body" occurs when a hash
 ("#") is encountered in an unexpected context, most notably
-[outside of a class declaration](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+[outside of a class declaration](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 Hashes are valid at the beginning of a file as a [hashbang comment](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar),
 or inside of a class as part of a private field. You may encounter this error if you forget
 the quotation marks when trying to access a DOM identifier as well.
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected '#' used outside of class body.
 ```
 
@@ -35,7 +35,7 @@ line of a file, or accidentally forgetting the quotation marks around a DOM iden
 
 For each case, there might be something slightly wrong. For example
 
-```js example-bad
+```js-nolint example-bad
 document.querySelector(#some-element)
 ```
 
@@ -47,7 +47,7 @@ document.querySelector("#some-element");
 
 ### Outside of a class
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
   #privateField;
 

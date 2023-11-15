@@ -48,7 +48,7 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 </math>
 ```
 
-{{ EmbedLiveSample('mrow_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

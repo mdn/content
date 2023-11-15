@@ -57,4 +57,5 @@ Note that this code can be seen running in the [Using readable byte streams](/en
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

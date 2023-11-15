@@ -46,17 +46,25 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Embed a YouTube Video
+### Embed a video
+
+#### HTML
 
 ```html
 <object
   type="video/mp4"
-  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
-  width="1280"
-  height="720"></object>
+  data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+  width="600"
+  height="140">
+  <img src="path/image.jpg" alt="useful image description" />
+</object>
 ```
 
-Note that a `type` field is normally specified, but is not needed for YouTube videos.
+#### Result
+
+{{EmbedLiveSample}}
+
+If the video in the example fails to load, the user will be provided with an image as fallback content. The {{HTMLElement("img")}} tag is used to display an image. We include the `src` attribute set to the path to the image we want to embed. We also include the `alt` attribute, which provides the image with an accessible name. If the image also fails to load, the content of the `alt` attribute will be displayed.
 
 ## Technical summary
 
@@ -122,6 +130,5 @@ Note that a `type` field is normally specified, but is not needed for YouTube vi
 
 ## See also
 
-- {{HTMLElement("applet")}} {{deprecated_inline}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("param")}}

@@ -1,6 +1,6 @@
 ---
 title: Box-shadow generator
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 page-type: guide
 ---
 
@@ -32,7 +32,7 @@ The box at the bottom-right contains the CSS for the element and any `before::` 
 
 ## See also
 
-- [Border-image generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator)
+- [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
   - : This interactive tool lets you visually create border images (the {{cssxref("border-image")}} property).
-- [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
+- [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
   - : This interactive tool lets you visually create rounded corners (the {{cssxref("border-radius")}} property).

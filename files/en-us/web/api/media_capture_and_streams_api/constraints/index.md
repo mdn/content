@@ -230,7 +230,10 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -436,7 +439,7 @@ document.getElementById("startButton").addEventListener(
   () => {
     startVideo();
   },
-  false
+  false,
 );
 ```
 
@@ -479,7 +482,7 @@ document.getElementById("applyButton").addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 
@@ -557,7 +560,7 @@ function log(msg) {
 
 function handleError(reason) {
   log(
-    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`
+    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`,
   );
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: "Multimedia: video"
 slug: Learn/Performance/video
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}

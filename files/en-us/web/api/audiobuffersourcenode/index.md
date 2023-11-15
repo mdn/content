@@ -15,7 +15,7 @@ This interface is especially useful for playing back audio which has particularl
 
 An `AudioBufferSourceNode` has no inputs and exactly one output, which has the same number of channels as the `AudioBuffer` indicated by its {{domxref("AudioBufferSourceNode.buffer", "buffer")}} property. If there's no buffer set—that is, if `buffer` is `null`—the output contains a single channel of silence (every sample is 0).
 
-An `AudioBufferSourceNode` can only be played once; after each call to {{domxref("AudioScheduledSourceNode.start", "start()")}}, you have to create a new node if you want to play the same sound again. Fortunately, these nodes are very inexpensive to create, and the actual `AudioBuffer`s can be reused for multiple plays of the sound. Indeed, you can use these nodes in a "fire and forget" manner: create the node, call `start()` to begin playing the sound, and don't even bother to hold a reference to it. It will automatically be garbage-collected at an appropriate time, which won't be until sometime after the sound has finished playing.
+An `AudioBufferSourceNode` can only be played once; after each call to {{domxref("AudioBufferSourceNode.start", "start()")}}, you have to create a new node if you want to play the same sound again. Fortunately, these nodes are very inexpensive to create, and the actual `AudioBuffer`s can be reused for multiple plays of the sound. Indeed, you can use these nodes in a "fire and forget" manner: create the node, call `start()` to begin playing the sound, and don't even bother to hold a reference to it. It will automatically be garbage-collected at an appropriate time, which won't be until sometime after the sound has finished playing.
 
 Multiple calls to {{domxref("AudioScheduledSourceNode/stop", "stop()")}} are allowed. The most recent call replaces the previous one, if the `AudioBufferSourceNode` has not already reached the end of the buffer.
 
@@ -84,7 +84,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const myArrayBuffer = audioCtx.createBuffer(
   2,
   audioCtx.sampleRate * 3,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 // Fill the buffer with white noise;

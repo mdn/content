@@ -20,13 +20,13 @@ Your reuse of the content here is published under the same license as the origin
 
 > [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/Community/Roles_teams#contributor) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
 
-In the above example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/wiki/Marking/Users) for further explanation.
+In the above example, "Mozilla Contributors" links to the history of the cited page. See [Recommended practices for attribution](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) for further explanation.
 
 ### Code samples
 
 Code samples added on or after August 20, 2010 are in the [public domain CC0](https://creativecommons.org/publicdomain/zero/1.0/). No licensing notice is necessary but if you need one, you can use: `Any copyright is dedicated to the Public Domain: https://creativecommons.org/publicdomain/zero/1.0/`
 
-Code samples added before August 20, 2010 are available under the [MIT license](https://opensource.org/licenses/mit-license.php); you should insert the following attribution information into the MIT template: "© \<date of last wiki page revision> \<name of person who put it in the wiki>".
+Code samples added before August 20, 2010 are available under the [MIT license](https://opensource.org/license/mit/); you should insert the following attribution information into the MIT template: "© \<date of last wiki page revision> \<name of person who put it in the wiki>".
 
 Since the launch of the new Yari MDN platform on December 14 2020, there is currently no way to determine which one you need. We are working on this and will update this content soon. <!--do we still need this here?-->
 

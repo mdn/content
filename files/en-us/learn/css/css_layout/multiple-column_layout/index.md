@@ -1,6 +1,7 @@
 ---
 title: Multiple-column layout
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
@@ -52,7 +53,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -104,7 +108,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -165,7 +172,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -213,7 +223,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 .container {
   column-count: 3;
@@ -262,7 +275,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -364,7 +380,7 @@ body {
 
 ### Setting break-inside
 
-To control this behavior, we can use properties from the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of `avoid` to the rules for `.card`. This is the container of the heading and text, so we don't want it fragmented.
+To control this behavior, we can use properties from the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of `avoid` to the rules for `.card`. This is the container of the heading and text, so we don't want it fragmented.
 
 ```css
 .card {
@@ -383,7 +399,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -486,7 +505,7 @@ You now know how to use the basic features of multiple-column layout, another to
 
 ## See also
 
-- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation)
-- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation)
+- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

@@ -4,14 +4,14 @@ slug: Web/Accessibility/ARIA/Roles/combobox_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#combobox,
-  - https://w3c.github.io/aria-practices/#combobox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/
 ---
 
 The `combobox` role identifies an element as an `input` that controls another element, such as a `listbox` or `grid`, that can dynamically pop up to help the user set the value of that `input`.
 
 ## Description
 
-A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of a this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values.
+A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values.
 
 The `combobox` role is set on input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input.
 
@@ -108,8 +108,8 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [ARIA Best Practices – Combobox](https://www.w3.org/TR/wai-aria-practices/#Combobox)
-- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.1/#combobox)
+- [ARIA Best Practices – Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.2/#combobox)
 - [Accessible combobox module](https://dequelabs.github.io/combobo/demo/) examples by Deque
 
 <section id="Quick_links">

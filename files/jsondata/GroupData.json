@@ -25,8 +25,8 @@
     "Background Sync": {
       "overview": ["Background Synchronization API"],
       "interfaces": ["SyncManager", "SyncEvent"],
-      "methods": ["ServiceWorkerRegistration.sync()"],
-      "properties": [],
+      "methods": [],
+      "properties": ["ServiceWorkerRegistration.sync"],
       "events": ["ServiceWorkerGlobalScope: sync"]
     },
     "Background Tasks": {
@@ -62,9 +62,9 @@
     },
     "Beacon": {
       "overview": ["Beacon API"],
-      "guides": ["/docs/Web/API/Beacon_API/Using_the_Beacon_API"],
-      "interfaces": ["Navigator", "WorkerNavigator"],
-      "methods": [],
+      "guides": [],
+      "interfaces": [],
+      "methods": ["Navigator.sendBeacon()"],
       "properties": [],
       "events": []
     },
@@ -78,14 +78,17 @@
     "Bluetooth API": {
       "overview": ["Web Bluetooth API"],
       "interfaces": [
+        "Bluetooth",
+        "BluetoothCharacteristicProperties",
         "BluetoothDevice",
         "BluetoothRemoteGATTCharacteristic",
+        "BluetoothRemoteGATTDescriptor",
         "BluetoothRemoteGATTServer",
         "BluetoothRemoteGATTService",
         "BluetoothUUID"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.bluetooth"],
       "events": []
     },
     "Canvas API": {
@@ -204,6 +207,7 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
+        "OTPCredential",
         "PasswordCredential",
         "PublicKeyCredential"
       ],
@@ -335,6 +339,17 @@
         "Window: devicemotion"
       ]
     },
+    "Document Picture-in-Picture API": {
+      "overview": ["Document Picture-in-Picture API"],
+      "guides": ["/docs/Web/API/Document_Picture-in-Picture_API/Using"],
+      "interfaces": [
+        "DocumentPictureInPicture",
+        "DocumentPictureInPictureEvent"
+      ],
+      "methods": [],
+      "properties": ["Window.documentPictureInPicture"],
+      "events": ["DocumentPictureInPicture: enter"]
+    },
     "DOM": {
       "overview": ["Document Object Model"],
       "guides": [
@@ -436,7 +451,7 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential"],
+      "interfaces": ["IdentityCredential", "IdentityProvider"],
       "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
@@ -484,9 +499,9 @@
       "properties": [],
       "events": []
     },
-    "File System Access API": {
-      "overview": ["File System Access API"],
-      "guides": [],
+    "File System API": {
+      "overview": ["File System API"],
+      "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
         "FileSystemHandle",
         "FileSystemFileHandle",
@@ -547,6 +562,7 @@
         "DOMMatrix",
         "DOMMatrixReadOnly",
         "DOMPoint",
+        "DOMPointReadOnly",
         "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
@@ -977,7 +993,8 @@
         "/docs/Web/API/Performance_API/High_precision_timing",
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
-        "/docs/Web/API/Performance_API/User_timing"
+        "/docs/Web/API/Performance_API/User_timing",
+        "/docs/Web/API/Performance_API/Server_timing"
       ],
       "interfaces": [
         "EventCounts",
@@ -999,7 +1016,8 @@
         "PerformanceResourceTiming",
         "PerformanceServerTiming",
         "PerformanceTiming",
-        "TaskAttributionTiming"
+        "TaskAttributionTiming",
+        "VisibilityStateEntry"
       ],
       "methods": [],
       "properties": ["performance_property"],
@@ -1112,20 +1130,13 @@
       "guides": [],
       "interfaces": [
         "Scheduler",
+        "Scheduling",
         "TaskController",
         "TaskSignal",
-        "AbortSignal",
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Window.scheduler"],
-      "events": []
-    },
-    "Proximity Events": {
-      "overview": ["Proximity Events"],
-      "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
-      "methods": [],
-      "properties": [],
+      "properties": ["Navigator.scheduling", "scheduler_property"],
       "events": []
     },
     "Push API": {
@@ -1263,6 +1274,17 @@
       "properties": ["Navigator.serviceWorker"],
       "events": []
     },
+    "Speculation Rules API": {
+      "overview": ["Speculation Rules API"],
+      "interfaces": [],
+      "properties": [
+        "Document.prerendering",
+        "PerformanceNavigationTiming.activationStart",
+        "PerformanceResourceTiming.deliveryType"
+      ],
+      "methods": [],
+      "events": ["Document: prerenderingchange"]
+    },
     "Storage": {
       "overview": ["Storage API"],
       "guides": [
@@ -1314,7 +1336,6 @@
     "SVG": {
       "interfaces": [
         "SVGAElement",
-        "SVGAltGlyphElement",
         "SVGAngle",
         "SVGAnimateColorElement",
         "SVGAnimatedAngle",
@@ -1540,8 +1561,11 @@
     "User-Agent Client Hints API": {
       "overview": ["User-Agent Client Hints API"],
       "interfaces": ["NavigatorUAData"],
-      "methods": ["Navigator.userAgentData"],
-      "properties": [],
+      "methods": [],
+      "properties": [
+        "Navigator.userAgentData",
+        "WorkerNavigator.userAgentData"
+      ],
       "events": []
     },
     "Vibration API": {
@@ -1562,7 +1586,7 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.virtualKeyboard"],
       "events": []
     },
     "Visual Viewport": {
@@ -1586,7 +1610,9 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "KeyframeEffect"
+        "KeyframeEffect",
+        "ScrollTimeline",
+        "ViewTimeline"
       ],
       "methods": [
         "Document.getAnimations()",
@@ -1605,7 +1631,6 @@
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
-        "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
         "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
@@ -1656,22 +1681,22 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
       "overview": ["Web components"],
@@ -1967,6 +1992,7 @@
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
+        "/docs/Web/API/WebRTC_API/Using_Encoded_Transforms",
         "/docs/Web/API/WebRTC_API/adapter.js",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
         "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
@@ -1990,11 +2016,15 @@
         "RTCDTMFSender",
         "RTCDTMFToneChangeEvent",
         "RTCStatsReport",
-        "RTCErrorEvent"
+        "RTCErrorEvent",
+        "RTCRtpScriptTransform",
+        "RTCRtpScriptTransformer",
+        "RTCEncodedVideoFrame",
+        "RTCEncodedAudioFrame",
+        "RTCTransformEvent"
       ],
       "dictionaries": [
         "RTCOAuthCredential",
-        "RTCIceServer",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",
@@ -2022,38 +2052,28 @@
         "RTCDataChannelInit",
         "RTCDataChannelEventInit",
         "RTCDTMFToneChangeEventInit",
-        "RTCStats",
         "RTCStatsEventInit",
         "RTCErrorEventInit",
-        "RTCRtpStreamStats",
-        "RTCCodecStats",
-        "RTCReceivedRtpStreamStats",
-        "RTCInboundRtpStreamStats",
-        "RTCRemoteInboundRtpStreamStats",
-        "RTCSentRtpStreamStats",
-        "RTCOutboundRtpStreamStats",
-        "RTCRemoteOutboundRtpStreamStats",
-        "RTCRtpContributingSourceStats",
-        "RTCPeerConnectionStats",
-        "RTCMediaStreamStats",
-        "RTCMediaHandlerStats",
-        "RTCVideoHandlerStats",
-        "RTCVideoSenderStats",
-        "RTCSenderVideoTrackAttachmentStats",
-        "RTCVideoReceiverStats",
-        "RTCAudioHandlerStats",
-        "RTCAudioSenderStats",
-        "RTCSenderAudioTrackAttachmentStats",
-        "RTCAudioReceiverStats",
-        "RTCDataChannelStats",
-        "RTCTransportStats",
-        "RTCIceCandidateStats",
         "RTCIceCandidatePairStats",
         "RTCCertificateStats",
-        "RTCRTPStreamStats"
+        "RTCCodecStats",
+        "RTCDataChannelStats",
+        "RTCInboundRtpStreamStats",
+        "RTCIceCandidateStats",
+        "RTCAudioSourceStats",
+        "RTCVideoSourceStats",
+        "RTCOutboundRtpStreamStats",
+        "RTCPeerConnectionStats",
+        "RTCRemoteInboundRtpStreamStats",
+        "RTCRemoteOutboundRtpStreamStats",
+        "RTCTransportStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
-      "properties": ["Navigator.mediaDevices"],
+      "properties": [
+        "Navigator.mediaDevices",
+        "RTCRtpReceiver.transform",
+        "RTCRtpSender.transform"
+      ],
       "events": [
         "RTCDataChannel: bufferedamountlow",
         "RTCDataChannel: close",
@@ -2077,7 +2097,8 @@
         "RTCIceTransport: statechange",
         "RTCDtlsTransport: statechange",
         "RTCDTMFSender: tonechange",
-        "RTCPeerConnection: track"
+        "RTCPeerConnection: track",
+        "DedicatedWorkerGlobalScope: rtctransform"
       ],
       "callbacks": [
         "RTCPeerConnectionErrorCallback",
@@ -2098,7 +2119,8 @@
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_server",
-        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java"
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java",
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno"
       ],
       "interfaces": ["WebSocket", "CloseEvent", "MessageEvent"],
       "methods": [],
@@ -2142,6 +2164,7 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportReceiveStream",
         "WebTransportError"
       ],
       "methods": [],
@@ -2158,7 +2181,6 @@
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",
-        "ServiceWorker",
         "SharedWorker",
         "SharedWorkerGlobalScope",
         "Worker",
@@ -2173,7 +2195,7 @@
     "WebOTP API": {
       "overview": ["WebOTP API"],
       "interfaces": ["OTPCredential"],
-      "methods": [],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },
@@ -2195,7 +2217,7 @@
         "USBOutTransferResult"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.usb", "WorkerNavigator.usb"],
       "events": []
     },
     "WebVR API": {
@@ -2293,11 +2315,25 @@
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
     },
-    "XMLHttpRequest": {
-      "overview": ["XMLHttpRequest"],
+    "Window Management API": {
+      "overview": ["Window Management API"],
       "guides": [
-        "/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest",
-        "/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest"
+        "/docs/Web/API/Window_Management_API/Using",
+        "/docs/Web/API/Window_Management_API/Multi-screen_origin"
+      ],
+      "interfaces": ["ScreenDetails", "ScreenDetailed"],
+      "methods": ["Element.requestFullscreen()", "Window.getScreenDetails()"],
+      "properties": ["Screen.isExtended"],
+      "events": ["Screen: change"]
+    },
+    "XMLHttpRequest API": {
+      "overview": ["XMLHttpRequest API"],
+      "guides": [
+        "/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest",
+        "/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest",
+        "/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests",
+        "/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data",
+        "/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects"
       ],
       "interfaces": [
         "FormData",

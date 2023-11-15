@@ -33,7 +33,7 @@ The endpoints are arranged into groups; an endpoint group can work together to p
 
 > **Note:** There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
-Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a web site and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
+Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
 
 ### Reporting observers
 
@@ -111,7 +111,7 @@ Support is at an early stage right now. Firefox supports the JavaScript API and 
 - JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
 - HTTP header: `dom.reporting.header.enabled`
 
-Chrome is also working on an implementation: [information about Chrome implementation](https://web.dev/reporting-api/).
+Chrome is also working on an implementation: [information about Chrome implementation](https://developer.chrome.com/articles/reporting-api/).
 
 ## See also
 

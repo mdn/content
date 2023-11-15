@@ -38,7 +38,7 @@ document.addEventListener("beforescriptexecute", starting, true);
 document.onbeforescriptexecute = starting;
 ```
 
-[View Live Example](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[View Live Example](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Browser compatibility
 

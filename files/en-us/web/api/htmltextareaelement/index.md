@@ -182,7 +182,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
     <tr>
       <td><code>textLength</code> {{ReadOnlyInline}}</td>
       <td>
-        <code><em>long</em>:</code> Returns the codepoint length of the
+        <code><em>long</em>:</code> Returns the code point length of the
         control's <code>value</code>. Same as reading <code>value.length</code>
       </td>
     </tr>

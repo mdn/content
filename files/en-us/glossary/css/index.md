@@ -4,6 +4,8 @@ slug: Glossary/CSS
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **CSS** (Cascading Style Sheets) is a declarative language that controls how webpages look in the {{glossary("browser")}}.
 
 The browser applies CSS style declarations to selected elements to display them properly. A style declaration contains the properties and their values, which determine how a webpage looks.

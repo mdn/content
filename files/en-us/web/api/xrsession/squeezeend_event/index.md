@@ -19,9 +19,9 @@ Primary squeeze actions include things like users pressing triggers or buttons, 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezeend', (event) => { })
+addEventListener("squeezeend", (event) => {});
 
-onsqueezeend = (event) => { }
+onsqueezeend = (event) => {};
 ```
 
 ## Event type

@@ -11,7 +11,7 @@ The number of times {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} ca
 
 Its value is `20`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.withCredentials
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`XMLHttpRequest.withCredentials`** property is a boolean value that indicates whether or not cross-site `Access-Control` requests should be made using credentials such as cookies, authorization headers or TLS client certificates. Setting `withCredentials` has no effect on same-origin requests.
 
@@ -24,7 +24,7 @@ A boolean.
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```

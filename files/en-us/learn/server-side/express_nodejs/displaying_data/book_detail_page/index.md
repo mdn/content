@@ -1,6 +1,7 @@
 ---
 title: Book detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
+page-type: learn-module-chapter
 ---
 
 The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated copy in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
@@ -37,7 +38,7 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
 The route controller function uses `Promise.all()` to query the specified `Book` and its associated copies (`BookInstance`) in parallel.
-If no matching book is not found an Error object is returned with a "404: Not Found" error.
+If no matching book is found an Error object is returned with a "404: Not Found" error.
 If the book is found, then the retrieved database information is rendered using the "book_detail" template.
 Since the key 'title' is used to give name to the webpage (as defined in the header in 'layout.pug'), this time we are passing `results.book.title` while rendering the webpage.
 

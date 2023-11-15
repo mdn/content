@@ -4,6 +4,8 @@ slug: Glossary/CORS-safelisted_response_header
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A _CORS-safelisted response header_ is an [HTTP header](/en-US/docs/Web/HTTP/Headers) in a [CORS](/en-US/docs/Web/HTTP/CORS) response that it is considered _safe_ to expose to client scripts. Only safelisted response headers are made available to web pages.
 
 By default, the safelist includes the following response headers:

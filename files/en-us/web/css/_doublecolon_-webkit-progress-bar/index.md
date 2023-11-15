@@ -23,7 +23,7 @@ The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 
 ## Examples
 
-### CSS content
+### CSS
 
 ```css
 progress {
@@ -35,7 +35,7 @@ progress {
 }
 ```
 
-### HTML content
+### HTML
 
 ```html
 <progress value="10" max="50"></progress>

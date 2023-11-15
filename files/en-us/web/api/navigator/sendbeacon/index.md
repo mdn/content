@@ -73,7 +73,7 @@ The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request.
 
 ### Sending analytics at the end of a session
 
-Web sites often want to send analytics or diagnostics to the server when the user has finished with the page.
+Websites often want to send analytics or diagnostics to the server when the user has finished with the page.
 The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
 ```js
@@ -95,7 +95,7 @@ However, this is extremely unreliable. In many situations, especially on mobile,
 2. When they are finished, they switch to a different app, instead of closing the tab.
 3. Later, they close the browser app using the phone's app manager.
 
-Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/bfcache/))
+Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/articles/bfcache))
 implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
 thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the `unload` event when the user navigates to another page in the same tab.
 
@@ -136,4 +136,4 @@ document.addEventListener("visibilitychange", function logData() {
 - [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
   page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
-- [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.
+- [Back/forward cache](https://web.dev/articles/bfcache) explains what the back/forward cache is, and its implications for various page lifecycle events.

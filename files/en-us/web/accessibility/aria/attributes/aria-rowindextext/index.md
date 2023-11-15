@@ -13,12 +13,19 @@ When you have a very long table or when you purposefully want to display just a 
 
 The `aria-rowindextext` should only be included **in addition to**, not as a replacement of, the `aria-rowindex`. Some assistive technologies use the numeric row index for the purpose of keeping track of the user's position or providing alternative table navigation. The `aria-rowindextext` is useful if that integer value isn't meaningful or does not reflect the displayed index, such as a game of Chess or Battleship.
 
-The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements with the `row` role. It can also be addition to cells or owned elements of each row.
+The `aria-rowindextext` is added to each {{HTMLElement('tr')}} or to elements with the `row` role. It can also be addition to cells or owned elements of each row.
 
 ## Values
 
 - `<string>`
-  - The human-readable text alternative of the numeric [`aria-spanindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-spanindex)
+  - The human-readable text alternative of the numeric [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+
+## ARIAMixin API
+
+- {{domxref("Element.ariaRowIndexText")}}
+  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
+- {{domxref("ElementInternals.ariaRowIndexText")}}
+  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/ElementInternals/ariaRowIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindextext` attribute.
 
 ## Associated roles
 

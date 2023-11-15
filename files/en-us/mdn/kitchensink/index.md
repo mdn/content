@@ -1,6 +1,7 @@
 ---
 title: The MDN Content Kitchensink
 slug: MDN/Kitchensink
+page-type: guide
 browser-compat: html.elements.video
 ---
 
@@ -33,7 +34,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 ### Plain text
 
-```
+```plain
   ___________________________
 < I'm an expert in my field. >
   ---------------------------
@@ -351,7 +352,6 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
-- [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)

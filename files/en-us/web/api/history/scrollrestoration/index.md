@@ -30,7 +30,7 @@ One of the following:
 const scrollRestoration = history.scrollRestoration;
 if (scrollRestoration === "manual") {
   console.log(
-    "The location on the page is not restored, user will need to scroll manually."
+    "The location on the page is not restored, user will need to scroll manually.",
   );
 }
 ```

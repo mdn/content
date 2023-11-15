@@ -1,6 +1,7 @@
 ---
 title: Image file type and format guide
 slug: Web/Media/Formats/Image_types
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -24,7 +25,7 @@ The image file formats that are most commonly used on the web are listed below.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="#APNG_Animated_Portable_Network_Graphics">APNG</a>
+        <a href="#apng_animated_portable_network_graphics">APNG</a>
       </th>
       <th scope="row">Animated Portable Network Graphics</th>
       <td><code>image/apng</code></td>
@@ -36,7 +37,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#AVIF_image">AVIF</a></th>
+      <th scope="row"><a href="#avif_image">AVIF</a></th>
       <th scope="row">AV1 Image File Format</th>
       <td><code>image/avif</code></td>
       <td><code>.avif</code></td>
@@ -51,7 +52,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#GIF_Graphics_Interchange_Format">GIF</a></th>
+      <th scope="row"><a href="#gif_graphics_interchange_format">GIF</a></th>
       <th scope="row">Graphics Interchange Format</th>
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
@@ -63,7 +64,7 @@ The image file formats that are most commonly used on the web are listed below.
     </tr>
     <tr>
       <th scope="row">
-        <a href="#JPEG_Joint_Photographic_Experts_Group_image">JPEG</a>
+        <a href="#jpeg_joint_photographic_experts_group_image">JPEG</a>
       </th>
       <th scope="row">Joint Photographic Expert Group image</th>
       <td><code>image/jpeg</code></td>
@@ -81,7 +82,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#PNG_Portable_Network_Graphics">PNG</a></th>
+      <th scope="row"><a href="#png_portable_network_graphics">PNG</a></th>
       <th scope="row">Portable Network Graphics</th>
       <td><code>image/png</code></td>
       <td><code>.png</code></td>
@@ -94,7 +95,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#SVG_Scalable_Vector_Graphics">SVG</a></th>
+      <th scope="row"><a href="#svg_scalable_vector_graphics">SVG</a></th>
       <th scope="row">Scalable Vector Graphics</th>
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
@@ -104,7 +105,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#WebP_image">WebP</a></th>
+      <th scope="row"><a href="#webp_image">WebP</a></th>
       <th scope="row">Web Picture format</th>
       <td><code>image/webp</code></td>
       <td><code>.webp</code></td>
@@ -129,26 +130,26 @@ The following list includes image formats that appear on the web, but which shou
       <th scope="row">File format</th>
       <th scope="col">MIME type</th>
       <th scope="col">File extension(s)</th>
-      <th scope="col">Description</th>
+      <th scope="col">Supported browsers</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="#BMP_Bitmap_file">BMP</a></th>
+      <th scope="row"><a href="#bmp_bitmap_file">BMP</a></th>
       <th scope="row">Bitmap file</th>
       <td><code>image/bmp</code></td>
       <td><code>.bmp</code></td>
       <td>Chrome, Edge, Firefox, IE, Opera, Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#ICO_Microsoft_Windows_icon">ICO</a></th>
+      <th scope="row"><a href="#ico_microsoft_windows_icon">ICO</a></th>
       <th scope="row">Microsoft Icon</th>
       <td><code>image/x-icon</code></td>
       <td><code>.ico</code>, <code>.cur</code></td>
       <td>Chrome, Edge, Firefox, IE, Opera, Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#TIFF_Tagged_Image_File_Format">TIFF</a></th>
+      <th scope="row"><a href="#tiff_tagged_image_file_format">TIFF</a></th>
       <th scope="row">Tagged Image File Format</th>
       <td><code>image/tiff</code></td>
       <td><code>.tif</code>, <code>.tiff</code></td>
@@ -372,7 +373,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Royalty free. Licensing information is available at http://aomedia.org/license/ .
+        Royalty free. Licensing information is available at <a href="https://aomedia.org/license/">License Page</a>.
       </td>
     </tr>
   </tbody>
@@ -382,7 +383,7 @@ As support is not yet comprehensive (and has little historical depth) you should
 
 The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
 
-> **Warning:** You should typically avoid using BMP files for web site content.
+> **Warning:** You should typically avoid using BMP files for website content.
 > The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
 > More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
 
@@ -599,7 +600,7 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
 ### ICO (Microsoft Windows icon)
 
 The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
-However, early versions of Internet Explorer introduced the ability for a web site to provide an ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+However, early versions of Internet Explorer introduced the ability for a website to provide an ICO file named `favicon.ico` in a website's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.

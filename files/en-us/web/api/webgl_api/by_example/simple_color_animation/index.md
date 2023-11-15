@@ -94,7 +94,7 @@ window.addEventListener(
           clearInterval(timer);
           alert(
             "Failed to get WebGL context.\n" +
-              "Your browser or device may not support WebGL."
+              "Your browser or device may not support WebGL.",
           );
           return;
         }
@@ -115,7 +115,7 @@ window.addEventListener(
       return [Math.random(), Math.random(), Math.random()];
     }
   },
-  false
+  false,
 );
 ```
 

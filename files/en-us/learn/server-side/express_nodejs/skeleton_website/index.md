@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -37,7 +38,7 @@ The following sections show you how to call the application generator, and provi
 >
 > - The _Express Application Generator_ is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a _minimal_ Express application, see [Hello world example](https://expressjs.com/en/starter/hello-world.html) (Express docs).
 > - The _Express Application Generator_ declares most variables using `var`.
-> We have changed most of these to [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) (and a few to [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)) in the tutorial, because we want to demonstrate modern JavaScript practice.
+>   We have changed most of these to [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) (and a few to [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)) in the tutorial, because we want to demonstrate modern JavaScript practice.
 > - This tutorial uses the version of _Express_ and other dependencies that are defined in the **package.json** created by the _Express Application Generator_.
 >   These are not (necessarily) the latest version, and you may want to update them when deploying a real application to production.
 
@@ -133,7 +134,7 @@ express express-locallibrary-tutorial --view=pug
 
 The generator will create (and list) the project's files.
 
-```bash
+```plain
    create : express-locallibrary-tutorial\
    create : express-locallibrary-tutorial\public\
    create : express-locallibrary-tutorial\public\javascripts\
@@ -188,17 +189,17 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
    - On the Windows CMD prompt, use this command:
 
-     ```bash
+     ```batch
      SET DEBUG=express-locallibrary-tutorial:* & npm start
      ```
 
    - On Windows Powershell, use this command:
 
-     ```bash
-     $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     ```powershell
+     ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
-     > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > **Note:** Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
    - On macOS or Linux, use this command:
 
@@ -217,8 +218,10 @@ Congratulations! You now have a working Express application that can be accessed
 > **Note:** You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
 >
 > ```bash
-> >SET DEBUG=express-locallibrary-tutorial:* & npm start
+> SET DEBUG=express-locallibrary-tutorial:* & npm start
+> ```
 >
+> ```plain
 > > express-locallibrary-tutorial@0.0.0 start D:\github\mdn\test\exprgen\express-locallibrary-tutorial
 > > node ./bin/www
 >
@@ -263,10 +266,10 @@ Because the tool isn't installed globally we can't launch it from the command li
     },
   ```
 
-- On Windows, use this command instead:
+- On Windows, the "serverstart" value would instead look like this (if using the command prompt):
 
   ```bash
-  SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
+  "serverstart": "SET DEBUG=express-locallibrary-tutorial:* & npm run devstart"
   ```
 
 We can now start the server in almost exactly the same way as previously, but using the `devstart` command.

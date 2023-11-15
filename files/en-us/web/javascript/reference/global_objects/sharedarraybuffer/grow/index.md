@@ -22,7 +22,7 @@ grow(newLength)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

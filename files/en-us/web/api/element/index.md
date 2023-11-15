@@ -102,6 +102,8 @@ _The `Element` interface includes the following properties, defined on the `ARIA
   - : A string reflecting the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
 - {{domxref("Element.ariaColIndex")}}
   - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+- {{domxref("Element.ariaColIndexText")}}
+  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
 - {{domxref("Element.ariaColSpan")}}
   - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaCurrent")}}
@@ -150,6 +152,8 @@ _The `Element` interface includes the following properties, defined on the `ARIA
   - : A string reflecting the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 - {{domxref("Element.ariaRowIndex")}}
   - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+- {{domxref("Element.ariaRowIndexText")}}
+  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
 - {{domxref("Element.ariaRowSpan")}}
   - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaSelected")}}
@@ -291,15 +295,11 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
-- {{domxref("Element/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-- {{domxref("Element/select_event", "select")}}
-  - : Fired when some text has been selected.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 
@@ -307,13 +307,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
 - {{domxref("Element/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
 - {{domxref("Element/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
 
 ### Composition events
 

@@ -22,10 +22,10 @@ The CORS mechanism supports secure cross-origin requests and data transfers betw
 This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:
 
 - Invocations of the {{domxref("XMLHttpRequest")}} or [Fetch APIs](/en-US/docs/Web/API/Fetch_API), as discussed above.
-- Web Fonts (for cross-domain font usage in `@font-face` within CSS), [so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by web sites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- Web Fonts (for cross-domain font usage in `@font-face` within CSS), [so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
-- [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 
 This is a general article about Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.
 
@@ -62,8 +62,6 @@ A _simple request_ is one that **meets all the following conditions**:
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
   - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
-
-> **Note:** Firefox has not implemented `Range` as a safelisted request-header yet. See [bug 1733981](https://bugzil.la/1733981).
 
 - The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
 

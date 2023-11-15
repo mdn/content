@@ -89,7 +89,7 @@ outerBlock: {
 
 A `break` statement must be nested within any label it references. The following code also uses `break` statements with labeled blocks, but generates a syntax error because its `break` statement references `block2` but it's not nested within `block2`.
 
-```js example-bad
+```js-nolint example-bad
 block1: {
   console.log("1");
   break block2; // SyntaxError: label not found
@@ -102,7 +102,7 @@ block2: {
 
 Syntax errors are also generated in the following code examples which use `break` statements within functions that are nested within a loop, or labeled block that the `break` statements are intended to break out of.
 
-```js example-bad
+```js-nolint example-bad
 function testBreak(x) {
   let i = 0;
 
@@ -121,7 +121,7 @@ function testBreak(x) {
 testBreak(1); // SyntaxError: Illegal break statement
 ```
 
-```js example-bad
+```js-nolint example-bad
 block1: {
   console.log("1");
   (() => {

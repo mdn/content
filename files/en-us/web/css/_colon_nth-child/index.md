@@ -7,7 +7,7 @@ browser-compat: css.selectors.nth-child
 
 {{CSSRef}}
 
-The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings.
+The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
@@ -47,13 +47,15 @@ The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 By passing a selector argument, we can select the **nth** element that matches that selector. For example, the following selector matches the first three list items which have a `class="important"` set.
 
 ```css
-:nth-child(-n+3 of li.important);
+:nth-child(-n + 3 of li.important) {
+}
 ```
 
 This is different from moving the selector outside of the function, like:
 
 ```css
-li.important: nth-child(-n + 3);
+li.important:nth-child(-n + 3) {
+}
 ```
 
 This selector selects list items if they are among the first three children and match the selector `li.important`.
@@ -406,7 +408,7 @@ td {
 
 In the first table this is just using `:nth-child(even)` the third row has the `hidden` attribute applied to it. So in this instance the 3rd row is not visible and the 2nd & 4th rows are counted as even, which technically they are but visually they are not.
 
-In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not(hidden))`.
+In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not([hidden]))`.
 
 {{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
 
@@ -420,5 +422,8 @@ In the second table the _of syntax_ is used to target only the `tr`s that are **
 
 ## See also
 
-- {{ Cssxref(":nth-of-type") }}
-- {{ Cssxref(":nth-last-child") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":has", ":has()") }}: pseudo-class for selecting parent element
+- [Tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

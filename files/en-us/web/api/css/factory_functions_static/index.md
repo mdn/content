@@ -6,7 +6,6 @@ browser-compat: api.CSS
 ---
 
 {{APIRef("CSSOM")}}
-{{SeeCompatTable}}
 
 The **CSS numeric factory
 functions**, such as `CSS.em()` and

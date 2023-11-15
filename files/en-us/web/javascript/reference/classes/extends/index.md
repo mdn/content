@@ -9,7 +9,7 @@ browser-compat: javascript.classes.extends
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class) to create a class that is a child of another class.
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html")}}
+{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
 
 ## Syntax
 
@@ -116,7 +116,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
+If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) ones) to be defined on unrelated objects.
 
 ### Subclassing built-ins
 
@@ -222,13 +222,47 @@ d.speak(); // Mitzie makes a noise.
 
 This example extends the built-in {{jsxref("Date")}} object. This example is extracted from this [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-```js
+```js-nolint
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    ];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
+```
+
+### Extending `Object`
+
+All JavaScript objects inherit from `Object.prototype` by default, so writing `extends Object` at first glance seems redundant. The only difference from not writing `extends` at all is that the constructor itself inherits static methods from `Object`, such as {{jsxref("Object.keys()")}}. However, because no `Object` static method uses the `this` value, there's still no value in inheriting these static methods.
+
+The {{jsxref("Object/Object", "Object()")}} constructor special-cases the subclassing scenario. If it's implicitly called via [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super), it always initializes a new object with `new.target.prototype` as its prototype. Any value passed to `super()` is ignored.
+
+```js
+class C extends Object {
+  constructor(v) {
+    super(v);
+  }
+}
+
+console.log(new C(1) instanceof Number); // false
+console.log(C.keys({ a: 1, b: 2 })); // [ 'a', 'b' ]
+```
+
+Compare this behavior with a custom wrapper that does not special-case subclassing:
+
+```js
+function MyObject(v) {
+  return new Object(v);
+}
+class D extends MyObject {
+  constructor(v) {
+    super(v);
+  }
+}
+console.log(new D(1) instanceof Number); // true
 ```
 
 ### Species
@@ -343,7 +377,7 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Statements/class", "class")}}

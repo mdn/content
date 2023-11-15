@@ -32,7 +32,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("Node")}} representing the node after the current node in the set represented by this `NodeIterator`, or `null` if the current node is the last node in the set.
 
 ## Examples
 
@@ -44,7 +44,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 ```

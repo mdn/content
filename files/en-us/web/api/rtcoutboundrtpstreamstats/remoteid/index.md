@@ -10,7 +10,7 @@ browser-compat: api.RTCOutboundRtpStreamStats.remoteId
 
 The **`remoteId`** property of the
 {{domxref("RTCOutboundRtpStreamStats")}} dictionary specifies the
-{{domxref("RTCStats.id", "id")}} of the {{domxref("RTCRemoteInboundRtpStreamStats")}}
+{{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCRemoteInboundRtpStreamStats")}}
 object representing the remote peer's {{domxref("RTCRtpReceiver")}} which is sending
 the media to the local peer for this SSRC.
 

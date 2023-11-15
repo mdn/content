@@ -152,7 +152,7 @@ attackControl.addEventListener(
   (ev) => {
     attackTime = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 
 let releaseTime = 0.5;
@@ -162,7 +162,7 @@ releaseControl.addEventListener(
   (ev) => {
     releaseTime = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -271,7 +271,7 @@ hzControl.addEventListener(
   (ev) => {
     pulseHz = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 
 let lfoHz = 30;
@@ -281,7 +281,7 @@ lfoControl.addEventListener(
   (ev) => {
     lfoHz = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -418,7 +418,7 @@ durControl.addEventListener(
   (ev) => {
     noiseDuration = parseFloat(ev.target.value);
   },
-  false
+  false,
 );
 
 let bandHz = 1000;
@@ -428,7 +428,7 @@ bandControl.addEventListener(
   (ev) => {
     bandHz = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -553,7 +553,7 @@ rateControl.addEventListener(
   (ev) => {
     playbackRate = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -581,7 +581,7 @@ A common problem with digital audio applications is getting the sounds to play i
 
 We could schedule our voices to play within a `for` loop; however, the biggest problem with this is updating while it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes will play and push them into a queue. We can start them at a precise time with the `currentTime` property and also consider any changes.
 
-> **Note:** This is a much stripped down version of [Chris Wilson's A Tale Of Two Clocks (2013)](https://web.dev/audio-scheduling/) article, which goes into this method with much more detail. There's no point repeating it all here, but we highly recommend reading this article and using this method. Much of the code here is taken from his [metronome example](https://github.com/cwilso/metronome/blob/master/js/metronome.js), which he references in the article.
+> **Note:** This is a much stripped down version of [Chris Wilson's A Tale Of Two Clocks (2013)](https://web.dev/articles/audio-scheduling) article, which goes into this method with much more detail. There's no point repeating it all here, but we highly recommend reading this article and using this method. Much of the code here is taken from his [metronome example](https://github.com/cwilso/metronome/blob/master/js/metronome.js), which he references in the article.
 
 Let's start by setting up our default BPM (beats per minute), which will also be user-controllable via — you guessed it — another range input.
 
@@ -594,7 +594,7 @@ bpmControl.addEventListener(
   (ev) => {
     tempo = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 

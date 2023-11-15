@@ -17,6 +17,10 @@ The **`getDay()`** method of {{jsxref("Date")}} instances returns the day of the
 getDay()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 0 and 6, representing the day of the week for the given date according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
@@ -50,7 +54,7 @@ console.log(new Intl.DateTimeFormat("de-DE", options).format(valentines));
 The `weekday` variable has value `1`, based on the value of the {{jsxref("Date")}} object `xmas95`, because December 25, 1995 is a Monday.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const weekday = xmas95.getDay();
 
 console.log(weekday); // 1

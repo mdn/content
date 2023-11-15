@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.status
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [status code](/en-US/docs/Web/HTTP/Status) of the `XMLHttpRequest`'s response.
 
@@ -20,17 +20,17 @@ A number.
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('UNSENT: ', xhr.status);
+console.log("UNSENT: ", xhr.status);
 
-xhr.open('GET', '/server');
-console.log('OPENED: ', xhr.status);
+xhr.open("GET", "/server");
+console.log("OPENED: ", xhr.status);
 
 xhr.onprogress = () => {
-  console.log('LOADING: ', xhr.status);
+  console.log("LOADING: ", xhr.status);
 };
 
 xhr.onload = () => {
-  console.log('DONE: ', xhr.status);
+  console.log("DONE: ", xhr.status);
 };
 
 xhr.send();

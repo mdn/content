@@ -1,6 +1,7 @@
 ---
 title: Video and audio content
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

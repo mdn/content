@@ -1,6 +1,7 @@
 ---
 title: Styling our Angular app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -113,7 +114,9 @@ In `app.component.css`, add the following styles:
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 600px) {

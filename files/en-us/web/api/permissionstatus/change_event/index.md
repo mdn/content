@@ -33,7 +33,7 @@ navigator.permissions
     console.log(`geolocation permission state is ${permissionStatus.state}`);
     permissionStatus.onchange = () => {
       console.log(
-        `geolocation permission state has changed to ${permissionStatus.state}`
+        `geolocation permission state has changed to ${permissionStatus.state}`,
       );
     };
   });

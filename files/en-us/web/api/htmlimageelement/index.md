@@ -27,7 +27,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : A string specifying the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for further details. This may be `null` if CORS is not used.
 - {{domxref("HTMLImageElement.currentSrc")}} {{ReadOnlyInline}}
-  - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/Media_Queries) which are in place.
+  - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/CSS_media_queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional string representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
 - {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
@@ -83,7 +83,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Errors
 
-If an error occurs while trying to load or render the image, and an [`onerror`](/en-US/docs/Web/HTML/Global_attributes#onerror) event handler has been configured to handle the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an `onerror` event handler has been configured to handle the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
 
 - The [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute is empty or `null`.
 - The specified `src` URL is the same as the URL of the page the user is currently on.

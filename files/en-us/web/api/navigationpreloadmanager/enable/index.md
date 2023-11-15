@@ -44,7 +44,7 @@ addEventListener("activate", (event) => {
         // Enable navigation preloads!
         await self.registration.navigationPreload.enable();
       }
-    })()
+    })(),
   );
 });
 ```

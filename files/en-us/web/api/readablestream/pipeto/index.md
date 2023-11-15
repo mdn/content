@@ -84,3 +84,8 @@ The same example, but using {{jsxref("Operators/await", "await")}}:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Pipe chains](/en-US/docs/Web/API/Streams_API/Using_readable_streams#pipe_chains)

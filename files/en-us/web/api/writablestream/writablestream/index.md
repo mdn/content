@@ -23,23 +23,18 @@ new WritableStream(underlyingSink, queuingStrategy)
 - `underlyingSink` {{optional_inline}}
 
   - : An object containing methods and properties that define how the constructed stream
-    instance will behave. `underlyingSink` can contain the following:
+    instance will behave. The `controller` parameter passed to this object's methods is a {{domxref("WritableStreamDefaultController")}} that provides abort and error signaling. `underlyingSink` can contain the following:
 
     - `start(controller)` {{optional_inline}}
       - : This is a method, called immediately when the object is constructed. The
         contents of this method are defined by the developer, and should aim to get access
         to the underlying sink. If this process is to be done asynchronously, it can
-        return a promise to signal success or failure. The `controller`
-        parameter passed to this method is a
-        {{domxref("WritableStreamDefaultController")}}. This can be used by the developer
-        to control the stream during set up.
+        return a promise to signal success or failure.
     - `write(chunk, controller)` {{optional_inline}}
       - : This method, also defined by the developer, will be called when a new chunk of
         data (specified in the `chunk` parameter) is ready to be written to the
         underlying sink. It can return a promise to signal success or failure of the write
-        operation. The `controller` parameter passed to this method is a
-        {{domxref("WritableStreamDefaultController")}} that can be used by the developer
-        to control the stream as more chunks are submitted for writing. This method will
+        operation. This method will
         be called only after previous writes have succeeded, and never after the stream is
         closed or aborted (see below).
     - `close(controller)` {{optional_inline}}
@@ -48,9 +43,7 @@ new WritableStream(underlyingSink, queuingStrategy)
         is necessary to finalize writes to the underlying sink, and release access to it.
         If this process is asynchronous, it can return a promise to signal success or
         failure. This method will be called only after all queued-up writes have
-        succeeded. The `controller` parameter passed to this method is a
-        {{domxref("WritableStreamDefaultController")}}, which can be used to control the
-        stream at the end of writing.
+        succeeded.
     - `abort(reason)` {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
         that it wishes to abruptly close the stream and put it in an errored state. It can
@@ -153,7 +146,7 @@ const writableStream = new WritableStream(
       console.log("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 sendMessage("Hello, world.", writableStream);
@@ -173,7 +166,7 @@ less than obvious. To see how backpressure is implemented look for three things.
   `defaultWriter.write()` (line 11).
 - The `defaultWriter.ready` property returns a promise that resolves when
   the sink (the first property of the `WritableStream` constructor) is done
-  writing data. The data source can wither write more data (line 11) or call
+  writing data. The data source can either write more data (line 11) or call
   `close()` (line 24). Calling `close()` too early can prevent
   data from being written. This is why the example calls
   `defaultWriter.ready` twice (lines 9 and 22).

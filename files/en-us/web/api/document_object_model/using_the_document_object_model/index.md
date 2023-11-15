@@ -40,7 +40,7 @@ The Document API, also sometimes called the DOM API, allows you to modify a DOM 
 
 Suppose the author wants to change the header of the above document and write two paragraphs instead of one. The following script would do the job:
 
-### HTML Content
+### HTML
 
 ```html
 <html lang="en">
@@ -55,7 +55,7 @@ Suppose the author wants to change the header of the above document and write tw
 </html>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function change() {

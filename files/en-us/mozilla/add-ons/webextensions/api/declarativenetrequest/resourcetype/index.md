@@ -66,6 +66,8 @@ Values of this type are strings. Possible values are:
 - `other`
   - : Resources that aren't covered by any other available type.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}

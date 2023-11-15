@@ -21,7 +21,10 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols:
+    V 5,
+    IV 4,
+    I 1;
 }
 ```
 

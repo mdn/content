@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-browser-compat: javascript.builtins.WebAssembly.compile
+page-type: webassembly-function
+browser-compat: webassembly.api.compile
 ---
 
 {{WebAssemblySidebar}}
@@ -21,8 +22,8 @@ WebAssembly.compile(bufferSource)
 ### Parameters
 
 - `bufferSource`
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("ArrayBuffer")}}
-    containing the binary code of the .wasm module you want to compile.
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or {{jsxref("ArrayBuffer")}}
+    containing the binary code of the Wasm module you want to compile.
 
 ### Return value
 
@@ -31,7 +32,7 @@ representing the compiled module.
 
 ### Exceptions
 
-- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("ArrayBuffer")}},
+- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or {{jsxref("ArrayBuffer")}},
   the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a
   [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError).

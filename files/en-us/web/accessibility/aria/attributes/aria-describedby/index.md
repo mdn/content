@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-describedby
 page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-describedby
-  - https://w3c.github.io/aria-practices/#describing_with_aria-describedby
+  - https://www.w3.org/TR/wai-aria-1.2/#aria-describedby
 ---
 
 The global `aria-describedby` attribute identifies the element (or elements) that describes the element on which the attribute is set.
@@ -15,7 +15,7 @@ The `aria-describedby` attribute lists the [`id`](/en-US/docs/Web/HTML/Global_at
 
 The `aria-describedby` attribute is not limited to form controls. It can also be used to associate static text with widgets, groups of elements, regions that have a heading, definitions, and more. The `aria-describedby` attribute can be used with semantic HTML elements and with elements that have an ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
-The `aria-describedby` attribute is very similar to [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute. While the `aria-labelledby` lists the `id`s of the labels or elements that describe the essence of an object, the `aria-describedby` lists the `id`s of the descriptions or elements providing more information that the user might need. Both `aria-labelledby` and `aria-describedby` reference other elements to calculate a text alternative, but a label should be concise, while a description is intended to provide more verbose information; a label describes the essence of an object, while a description provides more information that the user might need.
+The `aria-describedby` attribute is very similar to [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute. While `aria-labelledby` lists the `id`s of the labels or elements that describe the essence of an object, `aria-describedby` lists the `id`s of the descriptions or elements providing more information that the user might need. Both `aria-labelledby` and `aria-describedby` reference other elements to calculate a text alternative, but a label should be concise, while a description is intended to provide more verbose information; a label describes the essence of an object, while a description provides more information that the user might need.
 
 The elements linked via `aria-describedby` don't need to be visible. It is possible to reference an element even if that element is hidden. For example, a form control can have a description that is hidden by default that is revealed on request using a disclosure widget like a "more information" icon. The sighted user clicks on the icon; for assistive technology users the description is referenced from that form field directly with `aria-describedby`.
 
@@ -33,16 +33,16 @@ The `aria-describedby` property is appropriate when the associated content conta
 </p>
 ```
 
-> **Note:** The `aria-describedby` attributed is not designed to reference descriptions on an external resource. As its value is one or a space-separated list of more than one `id`, it must reference elements in the same DOM document.
+> **Note:** The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
 
 ## Values
 
 - ID reference list
-  - : The `id` or space-separated list of element IDs that describe the current element.
+  - : The `id` or space-separated list of element `id`s that describe the current element.
 
 ## Associated roles
 
-Used in **ALL** roles. Usable in all HTML elements as well.
+Used in **all** roles. Usable in all HTML elements as well.
 
 ## Specifications
 

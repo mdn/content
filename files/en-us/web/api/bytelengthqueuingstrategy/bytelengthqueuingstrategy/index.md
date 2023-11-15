@@ -55,7 +55,7 @@ const readableStream = new ReadableStream(
       console.log("stream error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 const size = queuingStrategy.size(chunk);
@@ -68,3 +68,7 @@ const size = queuingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy")}} interface

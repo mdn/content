@@ -1,11 +1,10 @@
 ---
 title: XPath snippets
 slug: Web/XPath/Snippets
+page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
-</section>
+{{XsltSidebar}}
 
 This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
@@ -25,7 +24,7 @@ function evaluateXPath(aNode, aExpr) {
   const nsResolver = xpe.createNSResolver(
     aNode.ownerDocument === null
       ? aNode.documentElement
-      : aNode.ownerDocument.documentElement
+      : aNode.ownerDocument.documentElement,
   );
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
@@ -105,7 +104,7 @@ function docEvaluateArray(expr, doc, context, resolver) {
     context,
     resolver,
     XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-    null
+    null,
   );
   for (let i = 0; i < result.snapshotLength; i++) {
     a.push(result.snapshotItem(i));

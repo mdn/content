@@ -26,6 +26,7 @@ getParameter(namespaceURI, localName)
 ### Return value
 
 An object that is the value associated with the parameter. It can be of any type.
+
 > **Note:** Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.
 
 ## Examples

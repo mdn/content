@@ -1,6 +1,7 @@
 ---
 title: 3D games on the Web
 slug: Games/Techniques/3D_on_the_web
+page-type: guide
 ---
 
 {{GamesSidebar}}

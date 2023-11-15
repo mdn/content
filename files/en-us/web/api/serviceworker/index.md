@@ -13,6 +13,9 @@ A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistratio
 
 The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
+Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
+
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -89,7 +92,7 @@ if ("serviceWorker" in navigator) {
 
 ## See also
 
-- [The Offline Cookbook](https://web.dev/offline-cookbook/)(service workers)
+- [The Offline Cookbook](https://web.dev/articles/offline-cookbook)(service workers)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

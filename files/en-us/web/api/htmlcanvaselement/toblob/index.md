@@ -79,7 +79,7 @@ canvas.toBlob(
     /* … */
   },
   "image/jpeg",
-  0.95
+  0.95,
 ); // JPEG at 95% quality
 ```
 
@@ -114,13 +114,13 @@ function blobCallback(iconName) {
 canvas.toBlob(
   blobCallback("passThisString"),
   "image/vnd.microsoft.icon",
-  "-moz-parse-options:format=bmp;bpp=32"
+  "-moz-parse-options:format=bmp;bpp=32",
 );
 ```
 
 ### Save toBlob to disk with OS.File (Chrome/add-on context only)
 
-> **Note:** This technique saves it to the desktop and is only useful in Firefox chrome context or add-on code, as OS APIs are not present on web sites.
+> **Note:** This technique saves it to the desktop and is only useful in Firefox chrome context or add-on code, as OS APIs are not present on websites.
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -142,7 +142,7 @@ function blobCallback(iconName) {
       Cu.import("resource://gre/modules/osfile.jsm");
       const writePath = OS.Path.join(
         OS.Constants.Path.desktopDir,
-        `${iconName}.ico`
+        `${iconName}.ico`,
       );
       const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result), {
         tmpPath: `${writePath}.tmp`,
@@ -153,7 +153,7 @@ function blobCallback(iconName) {
         },
         () => {
           console.log("failure writing file");
-        }
+        },
       );
     };
     r.readAsArrayBuffer(b);
@@ -163,7 +163,7 @@ function blobCallback(iconName) {
 canvas.toBlob(
   blobCallback("passThisString"),
   "image/vnd.microsoft.icon",
-  "-moz-parse-options:format=bmp;bpp=32"
+  "-moz-parse-options:format=bmp;bpp=32",
 );
 ```
 

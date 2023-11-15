@@ -127,7 +127,7 @@ const simulateClick = () => {
     false,
     false,
     0,
-    null
+    null,
   );
   document.body.dispatchEvent(event);
 };

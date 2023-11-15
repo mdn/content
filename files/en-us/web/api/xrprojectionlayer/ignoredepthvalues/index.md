@@ -24,7 +24,7 @@ If the `depthFormat` option is `0` when creating a projection layer, the `ignore
 
 ```js
 let glProjectionLayer = xrGLBinding.createProjectionLayer({
-  depthFormat: 0
+  depthFormat: 0,
 });
 
 glProjectionLayer.ignoreDepthValues; // true

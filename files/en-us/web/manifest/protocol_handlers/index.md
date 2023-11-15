@@ -1,6 +1,7 @@
 ---
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.protocol_handlers

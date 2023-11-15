@@ -10,7 +10,7 @@ browser-compat: api.PerformanceEntry.entryType
 
 The read-only **`entryType`** property returns a string representing the type of performance metric that this entry represents.
 
-All supported `entryTypes` are available using the static property {{domxref("PerformanceObserver.supportedEntryTypes")}}.
+All supported `entryTypes` are available using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
 
 ## Value
 
@@ -88,6 +88,12 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
     The entry instance will be a {{domxref("TaskAttributionTiming")}} object.
 
+- `visibility-state`
+
+  - : Reports the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
+
+    The entry instance will be a {{domxref("VisibilityStateEntry")}} object.
+
 ## Examples
 
 ### Filtering performance entries by type
@@ -99,7 +105,7 @@ const scriptResources = performance
   .getEntries()
   .filter(
     (entry) =>
-      entry.entryType === "resource" && entry.initiatorType === "script"
+      entry.entryType === "resource" && entry.initiatorType === "script",
   );
 console.log(scriptResources);
 ```
@@ -138,6 +144,6 @@ observer.observe({ entryTypes: ["resource", "navigation"] });
 
 ## See also
 
-- {{domxref("PerformanceObserver.supportedEntryTypes")}}
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}
 - {{domxref("Performance.getEntriesByType()")}}
 - {{domxref("PerformanceObserverEntryList.getEntriesByType()")}}

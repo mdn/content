@@ -1,6 +1,7 @@
 ---
 title: Componentizing our React app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -57,14 +58,16 @@ Our new `Todo.js` file is currently empty! Open it up and give it its first line
 import React from "react";
 ```
 
-Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.js` too, as follows. In this code, we define the function and export it on the same line:
+Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.js` too, as follows. In this code, we define the function and export it:
 
 ```jsx
-export default function Todo() {
+function Todo() {
   return (
     // …
   );
 }
+
+export default Todo;
 ```
 
 This is OK so far, but our component has to return something! Go back to `src/App.js`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.js` so that it reads like this:
@@ -106,8 +109,7 @@ With this component imported, you can replace all of the `<li>` elements in `App
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -145,7 +147,7 @@ Once you're confident that your component is getting its `props`, you can replac
 Putting all that together, your `Todo()` function should read like this:
 
 ```jsx
-export default function Todo(props) {
+function Todo(props) {
   return (
     <li className="todo stack-small">
       <div className="c-cb">
@@ -165,6 +167,8 @@ export default function Todo(props) {
     </li>
   );
 }
+
+export default Todo;
 ```
 
 _Now_ your browser should show three unique tasks. Another problem remains though: they're all still checked by default.
@@ -232,7 +236,7 @@ In `src/index.js`, make a new `const` beneath the final import, but above `React
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-2", name: "Repeat", completed: false },
 ];
 ```
 
@@ -243,7 +247,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App tasks={DATA} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -253,9 +257,10 @@ This array is now available to the App component as `props.tasks`. You can `cons
 
 ## Rendering with iteration
 
-To render our array of objects, we have to turn each one into a `<Todo />` component. JavaScript gives us an array method for transforming data into something else: [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+To render our array of objects, we have to turn each object into a `<Todo />` component. JavaScript gives us an array method for transforming items into something else: [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-Above the return statement of `App()`, make a new `const` called `taskList` and use `map()` to transform it. Let's start by turning our `tasks` array into something simple: the `name` of each task:
+Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`.
+The `?.` operator lets us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
 
 ```jsx
 const taskList = props.tasks?.map((task) => task.name);
@@ -267,8 +272,7 @@ Let's try replacing all the children of the `<ul>` with `taskList`:
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -280,7 +284,7 @@ This gets us some of the way towards showing all the components again, but we've
 To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:
 
 ```jsx
-  const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
@@ -301,14 +305,13 @@ Because keys should be unique, we're going to re-use the `id` of each task objec
 
 ```jsx
 const taskList = props.tasks.map((task) => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **You should always pass a unique key to anything you render with iteration.** Nothing obvious will change in your browser, but if you do not use unique keys, React will log warnings to your console and your app may behave strangely!
@@ -331,7 +334,7 @@ touch src/components/Form.js src/components/FilterButton.js
 Open `components/Form.js` and do the following:
 
 - Import `React` at the top of the file, like we did in `Todo.js`.
-- Make yourself a new `Form()` component with the same basic structure as `Todo()`, and export that component.
+- Make yourself a new `Form()` component with the same basic structure as `Todo()`.
 - Copy the `<form>` tags and everything between them from inside `App.js`, and paste them inside `Form()`'s `return` statement.
 - Export `Form` at the end of the file.
 
@@ -406,13 +409,12 @@ import Todo from "./components/Todo";
 function App(props) {
   const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -426,8 +428,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>

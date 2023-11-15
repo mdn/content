@@ -44,7 +44,7 @@ addEventListener("fetch", (event) => {
 
       // Else try the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```

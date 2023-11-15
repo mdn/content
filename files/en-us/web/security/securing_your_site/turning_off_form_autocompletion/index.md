@@ -1,6 +1,7 @@
 ---
 title: How to turn off form autocompletion
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
+page-type: guide
 ---
 
 This article explains how a website can disable autocomplete for form fields.

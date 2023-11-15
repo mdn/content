@@ -43,11 +43,10 @@ createIndex(indexName, keyPath, options)
   - : An object which can include the following
     properties:
     - `unique`
-      - : If true, the index will not allow duplicate values for a single key.
+      - : If `true`, the index will not allow duplicate values for a single key. Defaults to `false`.
     - `multiEntry`
-      - : If `true`, the index will add an entry in the index for each
-        array element when the `keyPath` resolves to an array.
-        If `false`, it will add one single entry containing the array.
+      - : If `true`, the index will add an entry in the index for each array element when the `keyPath` resolves to an array.
+        If `false`, it will add one single entry containing the array. Defaults to `false`.
     - `locale` {{non-standard_inline}}
       - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
@@ -80,7 +79,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     belongs to is not active (e.g. has been deleted or removed.) In Firefox
     previous to version 41, an `InvalidStateError` was raised in
     this case as well, which was misleading; this has now been fixed (see
-    [Webkit bug 1176165](https://bugzil.la/1176165).)
+    [Firefox bug 1176165](https://bugzil.la/1176165).)
 
 ## Examples
 

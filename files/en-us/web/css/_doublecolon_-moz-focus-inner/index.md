@@ -66,7 +66,6 @@ Not part of any standard.
 
 - Related CSS selectors:
 
-  - [`:-moz-focusring`](/en-US/docs/Web/CSS/:-moz-focusring)
   - [`:focus`](/en-US/docs/Web/CSS/:focus)
   - [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible)
   - [`:focus-within`](/en-US/docs/Web/CSS/:focus-within)

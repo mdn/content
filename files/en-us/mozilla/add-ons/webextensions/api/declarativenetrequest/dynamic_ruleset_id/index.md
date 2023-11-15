@@ -11,7 +11,7 @@ Ruleset ID for the dynamic rules added by the extension using {{WebExtAPIRef("de
 
 Its value is `"_dynamic"`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -109,14 +109,14 @@ function onXRSessionStarted(xrSession) {
     space: xrReferenceSpace,
     viewPixelWidth: 1200,
     viewPixelHeight: 600,
-    centralAngle : 60 * Math.PI / 180,
-    aspectRatio : 2,
-    radius : 2,
-    transform : new XRRigidTransform(/* … */),
+    centralAngle: (60 * Math.PI) / 180,
+    aspectRatio: 2,
+    radius: 2,
+    transform: new XRRigidTransform(/* … */),
   });
 
   xrSession.updateRenderState({
-    layers: [cylinderLayer]
+    layers: [cylinderLayer],
   });
 }
 ```

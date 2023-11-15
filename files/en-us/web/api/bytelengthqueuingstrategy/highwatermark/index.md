@@ -35,7 +35,7 @@ const readableStream = new ReadableStream(
       console.log("stream error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 const size = queuingStrategy.size(chunk);
@@ -49,3 +49,7 @@ console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

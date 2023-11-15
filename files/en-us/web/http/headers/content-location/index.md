@@ -126,7 +126,7 @@ When the form is submitted, the site generates a receipt for the transaction. Th
 server could use `Content-Location` to indicate that receipt's URL for future
 access.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Location: /my-receipts/38

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.queryLocalFonts
 ---
 
-{{APIRef("Local Font Access API")}}{{SeeCompatTable()}}
+{{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
 The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 

@@ -95,3 +95,8 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

@@ -94,7 +94,7 @@ const firstChannelByteCount = firstInputFirstChannel.length;
 const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0][0])
 ```
 
-The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is an array of `Float32Array` objects, which contain the samples for that channel.
+The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is a `Float32Array` object, which contains the samples for that channel.
 
 How you use the inputs and how you generate the outputs depends very much on your processor. If your processor is just a generator, it can ignore the inputs and just replace the contents of the outputs with the generated data. Or you can process each input independently, applying an algorithm to the incoming data on each channel of each input and writing the results into the corresponding outputs' channels (keeping in mind that the number of inputs and outputs may differ, and the channel counts on those inputs and outputs may also differ). Or you can take all the inputs and perform mixing or other computations that result in a single output being filled with data (or all the outputs being filled with the same data).
 
@@ -178,7 +178,7 @@ To create an audio node that pumps blocks of audio data through an {{domxref("Au
 
 1. Load and install the audio processor module
 2. Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name
-3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("AudioContext.destination", "destination")}} property.
+3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext/destination", "destination")}} property.
 
 To use an audio worklet processor, you can use code similar to the following:
 
@@ -207,7 +207,7 @@ In order to ensure the context is usable, this starts by creating the context if
 You can then create a new audio processor node by doing this:
 
 ```js
-let newProcessorNode = createMyAudioProcessor();
+let newProcessorNode = await createMyAudioProcessor();
 ```
 
 If the returned value, `newProcessorNode`, is non-`null`, we have a valid audio context with its hiss processor node in place and ready to use.

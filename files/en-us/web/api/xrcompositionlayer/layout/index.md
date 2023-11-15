@@ -42,9 +42,9 @@ To specify a layer's layout, use a layer creation method (like {{domxref("XRWebG
 
 ```js
 const layer = xrGlBinding.createQuadLayer({
-   pixelWidth: 1024,
-   pixelHeight: 768,
-   layout: "stereo"
+  pixelWidth: 1024,
+  pixelHeight: 768,
+  layout: "stereo",
 });
 
 layer.layout; // "stereo"

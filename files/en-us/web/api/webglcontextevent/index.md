@@ -40,7 +40,7 @@ canvas.addEventListener(
   (e) => {
     console.log(e);
   },
-  false
+  false,
 );
 
 gl.getExtension("WEBGL_lose_context").loseContext();

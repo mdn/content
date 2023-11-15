@@ -1,13 +1,14 @@
 ---
 title: Progressive web app structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+page-type: guide
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
 {{PWASidebar}}
 
-Now that we know the theory behind PWAs, let's look at the recommended structure of an actual app. We will start with analyzing the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
+In this article, we will analyze the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
 
 The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure is quite simple: it consists of a single HTML file ([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) with basic CSS styling ([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)), and a few images, scripts, and fonts. The folder structure looks like this:
 
@@ -18,7 +19,7 @@ The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure i
 From the HTML point of view, the app shell is everything outside the content section:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -199,7 +200,7 @@ self.addEventListener("install", (e) => {
       const cache = await caches.open(cacheName);
       console.log("[Service Worker] Caching all: app shell and content");
       await cache.addAll(contentToCache);
-    })()
+    })(),
   );
 });
 ```
@@ -220,7 +221,7 @@ self.addEventListener("fetch", (e) => {
       console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
       cache.put(e.request, response.clone());
       return response;
-    })()
+    })(),
   );
 });
 ```
@@ -265,4 +266,4 @@ Every entry has its own image in the data/img folder. This is our content, loade
 
 In the next article we will look in more detail at how the app shell and the content are cached for offline use with the help from the service worker.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

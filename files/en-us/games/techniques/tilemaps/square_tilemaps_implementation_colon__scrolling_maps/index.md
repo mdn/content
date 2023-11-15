@@ -1,6 +1,7 @@
 ---
 title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -24,8 +25,6 @@ Regardless of the type of camera, we would always need information regarding its
 There are two main differences between rendering scrolling maps vs. static maps:
 
 - **Partial tiles might be shown**. In static maps, usually the rendering starts in the top left corner of a tile situated in the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
-
-TODO: show a diagram here explaining this.
 
 - **Only a section of the map will be rendered**. If the map is bigger than the viewport, we can obviously only display a part of it at a time, whereas non-scrolling maps are usually rendered wholly.
 
@@ -64,7 +63,7 @@ for (let c = startCol; c <= endCol; c++) {
         Math.round(x), // target x
         Math.round(y), // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

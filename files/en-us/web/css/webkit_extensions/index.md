@@ -1,5 +1,5 @@
 ---
-title: WebKit CSS extensions
+title: WebKit vendor-prefixed CSS extensions
 slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:
@@ -65,7 +65,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-dashboard-region", "-webkit-dashboard-region")}}
 - {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
 - {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
-- {{CSSxRef("-webkit-highlight", "-webkit-highlight")}}
 - {{CSSxRef("-webkit-hyphenate-character", "-webkit-hyphenate-character")}}
 - {{CSSxRef("-webkit-hyphenate-limit-after", "-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before", "-webkit-hyphenate-limit-before")}}
@@ -324,7 +323,7 @@ The following properties are supported in at least one browser without a prefix,
 
 The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard](#formerly_proprietary_properties_that_are_now_standard) above.
 
-> **Note:** Due to the legacy code in a multitude of web sites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
+> **Note:** Due to the legacy code in a multitude of websites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
 
 ### A
 
@@ -429,8 +428,9 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-color-correction`
 - `-webkit-flow-from`
 - `-webkit-flow-into`
-- `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
-- `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
+- `-webkit-grid-columns` (See [`grid-column`](/en-US/docs/Web/CSS/grid-column))
+- `-webkit-grid-rows` (See [`grid-row`](/en-US/docs/Web/CSS/grid-row))
+- `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`
@@ -520,5 +520,6 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 
 ## See also
 
+- [Vendor Prefix](/en-US/docs/Glossary/Vendor_Prefix) glossary entry
+- [Mozilla vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
 - [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)

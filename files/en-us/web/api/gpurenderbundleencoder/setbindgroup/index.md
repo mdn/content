@@ -27,7 +27,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 #### Parameters
 
 - `index`
-  - : The index to set the bind group at. This corresponds to the `binding` value of the relevant entry object in the descriptor of the originating {{domxref("GPUDevice.createBindGroup()")}} call that created the `bindGroup`.
+  - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `bindGroup`
   - : The {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands.
 - `dynamicOffsets` {{optional_inline}}

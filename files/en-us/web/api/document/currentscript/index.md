@@ -30,7 +30,7 @@ if (document.currentScript.async) {
 }
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Specifications
 

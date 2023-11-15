@@ -28,7 +28,7 @@ The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it inclu
 - {{domxref("ImageCapture.takePhoto()")}} {{Experimental_Inline}}
   - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
 - {{domxref("ImageCapture.getPhotoCapabilities()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of available configuration options.
+  - : Returns a {{jsxref("Promise")}} that resolves with a `PhotoCapabilities` object containing the ranges of available configuration options.
 - {{domxref("ImageCapture.getPhotoSettings()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.
 - {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}
@@ -96,7 +96,7 @@ function drawCanvas(canvas, img) {
       x,
       y,
       img.width * ratio,
-      img.height * ratio
+      img.height * ratio,
     );
 }
 

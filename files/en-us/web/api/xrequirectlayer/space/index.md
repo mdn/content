@@ -26,7 +26,7 @@ The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equire
 const equirectLayer = xrGlBinding.createEquirectLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 equirectLayer.space = someOtherSpace;

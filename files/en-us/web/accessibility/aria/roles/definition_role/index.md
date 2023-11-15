@@ -11,14 +11,14 @@ The `definition` ARIA role indicates the element is a definition of a term or co
 
 The `definition` ARIA role can be included on an element that is a definition of a term or concept, similar to the native {{HTMLElement('dfn')}} element. To associate the definition with the `term` being defined, and to provide an accessible name, reference the term being defined with `role="term"`, using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
-```html
+```html-nolint
 <p>
   <span role="term">Mansplaining</span>,
-  <span role="definition"
-    >a portmanteau of "man" and "explain", is the patronizing act of explaining
+  <span role="definition">
+    a portmanteau of "man" and "explain", is the patronizing act of explaining
     without being asked to do so, to someone already learned on the topic, often
-    after someone has already explained it</span
-  >.
+    after someone has already explained it
+  </span>.
 </p>
 ```
 

@@ -29,7 +29,7 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-The `overflow-inline` property is specified as a single keyword chosen from the list of values below.
+The `overflow-inline` property is specified as a single {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword value.
 
 ### Values
 
@@ -83,7 +83,8 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
   </li>
 
   <li>
-    <code>overflow-inline: clip</code> (hides the text outside the box beyond the overflow clip edge)
+    <code>overflow-inline: clip</code> (hides the text outside the box beyond
+    the overflow clip edge)
     <code>clip</code>
     <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
@@ -93,11 +94,7 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 #### CSS
 
 ```css
-#div1,
-#div2,
-#div3,
-#div4,
-#div5 {
+div {
   border: 1px solid black;
   width: 250px;
   margin-bottom: 12px;
@@ -136,6 +133,7 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 ## See also
 
 - {{cssxref("clip")}}, {{cssxref("display")}}, {{cssxref("overflow")}}, {{cssxref("overflow-block")}}, {{cssxref("overflow-clip-margin")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
-- [CSS writing modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes)
+- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)

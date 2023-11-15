@@ -4,6 +4,8 @@ slug: Glossary/Class
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In {{glossary("OOP","object-oriented programming")}}, a _class_ defines an {{glossary("object","object's")}} characteristics. Class is a template definition of an object's {{glossary("property","properties")}} and {{glossary("method","methods")}}, the "blueprint" from which other more specific instances of the object are drawn.
 
 ## See also

@@ -1,7 +1,10 @@
 ---
 title: Plugin
 slug: Glossary/Plugin
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A browser plugin is a software component that users can install to handle content that the browser can't support natively. Browser plugins are usually written using the [NPAPI](https://en.wikipedia.org/wiki/NPAPI) (Netscape Plugin Application Programming Interface) architecture.
 

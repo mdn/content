@@ -37,7 +37,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.firstChild(); // returns the first child of the root element, or null if none
 ```

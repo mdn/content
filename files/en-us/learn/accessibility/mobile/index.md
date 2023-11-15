@@ -1,6 +1,7 @@
 ---
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
@@ -216,11 +217,11 @@ We've provided a simple example that shows how to use the mouse and touch events
 
 ## Responsive design
 
-[Responsive design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.
+[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.
 
 In particular, the most common problems that need to be addressed for mobile are:
 
-- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/Media_Queries), [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), and [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
+- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), and [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
 - Conserving image sizes downloaded. In general, small-screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
 

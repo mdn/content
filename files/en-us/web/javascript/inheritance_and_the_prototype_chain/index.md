@@ -20,7 +20,7 @@ Although classes are now widely adopted and have become a new paradigm in JavaSc
 
 JavaScript objects are dynamic "bags" of properties (referred to as **own properties**). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
 
-> **Note:** Following the ECMAScript standard, the notation `someObject.[[Prototype]]` is used to designate the prototype of `someObject`. The `[[Prototype]]` internal slot can be accessed with the {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}} functions. This is equivalent to the JavaScript accessor [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) which is non-standard but de-facto implemented by many JavaScript engines. To prevent confusion while keeping it succinct, in our notation we will avoid using `obj.__proto__` but use `obj.[[Prototype]]` instead. This corresponds to `Object.getPrototypeOf(obj)`.
+> **Note:** Following the ECMAScript standard, the notation `someObject.[[Prototype]]` is used to designate the prototype of `someObject`. The `[[Prototype]]` internal slot can be accessed and modified with the {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}} functions respectively. This is equivalent to the JavaScript accessor [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) which is non-standard but de-facto implemented by many JavaScript engines. To prevent confusion while keeping it succinct, in our notation we will avoid using `obj.__proto__` but use `obj.[[Prototype]]` instead. This corresponds to `Object.getPrototypeOf(obj)`.
 >
 > It should not be confused with the `func.prototype` property of functions, which instead specifies the `[[Prototype]]` to be assigned to all _instances_ of objects created by the given function when used as a constructor. We will discuss the `prototype` property of constructor functions in [a later section](#constructors).
 
@@ -339,7 +339,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 As seen above, `doSomething()` has a default `prototype` property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.
 
-```
+```plain
 {
   constructor: ƒ doSomething(),
   [[Prototype]]: {
@@ -366,7 +366,7 @@ console.log(doSomething.prototype);
 
 This results in:
 
-```
+```plain
 {
   foo: "bar",
   constructor: ƒ doSomething(),
@@ -396,7 +396,7 @@ console.log(doSomeInstancing);
 
 This results in an output similar to the following:
 
-```
+```plain
 {
   prop: "some value",
   [[Prototype]]: {
@@ -612,30 +612,24 @@ console.log(d.hasOwnProperty);
 ### With classes
 
 ```js
-class Polygon {
+class Rectangle {
   constructor(height, width) {
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
 }
 
-class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
-
-  get area() {
-    return this.height * this.width;
-  }
-
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
+class FilledRectangle extends Rectangle {
+  constructor(height, width, color) {
+    super(height, width);
+    this.name = "Filled rectangle";
+    this.color = color;
   }
 }
 
-const square = new Square(2);
-// square ---> Square.prototype ---> Polygon.prototype ---> Object.prototype ---> null
+const filledRectangle = new FilledRectangle(5, 10, "blue");
+// filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
 <table class="standard-table">
@@ -647,7 +641,7 @@ const square = new Square(2);
       <th scope="row">Pro(s)</th>
       <td>
         Supported in all modern engines. Very high readability and maintainability.
-        <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private properties</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties">Private properties</a>
         are a feature with no trivial replacement in prototypical inheritance.
       </td>
     </tr>

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.getFile
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a
@@ -31,9 +31,10 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object.
 
 ### Exceptions
 
-- NotAllowedError
-  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
-    read mode.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if current entry is not found.
 
 ## Examples
 
@@ -60,5 +61,5 @@ async function getTheFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)

@@ -83,3 +83,10 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableStreamDefaultController")}}

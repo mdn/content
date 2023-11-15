@@ -15,7 +15,7 @@ The aim is to allow users to know what's playing and to control it, without need
 
 ## Media Session concepts and usage
 
-The {{domxref("MediaMetadata")}} interface lets a web site provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
+The {{domxref("MediaMetadata")}} interface lets a website provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
 
 The {{domxref("MediaSession")}} interface lets users control playback of media through user-agent defined interface elements. Interaction with these elements triggers action handlers in the web page, playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors, when no page-defined behavior is available.
 

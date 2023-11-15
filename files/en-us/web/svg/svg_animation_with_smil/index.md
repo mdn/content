@@ -99,7 +99,7 @@ In this example, a blue circle bounces between the left and right edges of a bla
 
 {{ EmbedLiveSample('Example_1_Linear_motion', '100%', 120) }}
 
-[View live sample](https://media.prod.mdn.mozit.cloud/samples/svg/svganimdemo1.html)
+[View live sample](https://mdn.dev/archives/media/samples/svg/svganimdemo1.html)
 
 ### Example 2: Curved motion
 

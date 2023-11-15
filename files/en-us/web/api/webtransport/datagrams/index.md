@@ -3,12 +3,10 @@ title: "WebTransport: datagrams property"
 short-title: datagrams
 slug: Web/API/WebTransport/datagrams
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransport.datagrams
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`datagrams`** read-only property of the {{domxref("WebTransport")}} interface returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams — unreliable data transmission.
 
@@ -62,7 +60,7 @@ async function readData() {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

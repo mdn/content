@@ -26,7 +26,7 @@ createBindGroup(descriptor)
     - `entries`
       - : An array of entry objects describing the resources to expose to the shader. There will be one for each corresponding entry described by the {{domxref("GPUBindGroupLayout")}} referenced in `layout`. Each entry object has the following properties:
         - `binding`
-          - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it corresponds to a [`@binding`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
+          - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it matches the `n` index value of the corresponding [`@binding(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader ({{domxref("GPUShaderModule")}}) used in the related pipeline.
         - `resource`
           - : The resource to bind. This can be one of the following:
             - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition)

@@ -45,7 +45,7 @@ someElement.addEventListener(
       console.log(`targetTouches[${i}].force = ${e.targetTouches[i].force}`);
     }
   },
-  false
+  false,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Get Element Attribute
 slug: Web/WebDriver/Commands/GetElementAttribute
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementAttribute
 ---
 

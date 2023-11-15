@@ -3,32 +3,45 @@ title: "WebTransport: createUnidirectionalStream() method"
 short-title: createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
-The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a unidirectional stream; it returns a {{domxref("WritableStream")}} object that can be used to reliably write data to the server.
+The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
+
+The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object, which can be used to reliably write data to the server.
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
+
+The relative order in which queued bytes are emptied from created streams can be specified using the `sendOrder` option.
+If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
+If the order number is not set then the order in which bytes are sent is implementation dependent.
+Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
-```js
-createUnidirectionalStream();
+```js-nolint
+createUnidirectionalStream()
+createUnidirectionalStream(options)
 ```
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+
+  - : An object that may have the following properties:
+
+    - `sendOrder` {{optional_inline}}
+      - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
+        Queued bytes are sent first for streams that have a higher value.
+        If not set, the send order depends on the implementation.
 
 ### Return value
 
-A {{domxref("WritableStream")}} object.
+A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object (this is a {{domxref("WritableStream")}}).
 
 ### Exceptions
 
@@ -43,7 +56,9 @@ Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of th
 
 ```js
 async function writeData() {
-  const stream = await transport.createUnidirectionalStream();
+  const stream = await transport.createUnidirectionalStream({
+    sendOrder: "596996858",
+  });
   const writer = stream.writable.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
@@ -85,7 +100,7 @@ await writer.abort();
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

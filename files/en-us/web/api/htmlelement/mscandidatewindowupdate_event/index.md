@@ -7,9 +7,7 @@ status:
   - non-standard
 ---
 
-{{APIRef("HTML DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 The **`mscandidatewindowupdate`** event is thrown after the Input Method Editor (IME) candidate window has been identified as needing to change size, but before any visual updates have rendered.
 

@@ -1,6 +1,7 @@
 ---
 title: Getting started with Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -174,7 +175,7 @@ The Vue CLI comes with a built-in development server. This allows you to run you
 
 In your terminal, try running `npm run serve` (or `yarn serve` if you prefer yarn). Your terminal should output something like the following:
 
-```
+```plain
 INFO  Starting development server...
 98% after emitting CopyPlugin
 
@@ -218,7 +219,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 

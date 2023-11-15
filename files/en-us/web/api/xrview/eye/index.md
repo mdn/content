@@ -42,7 +42,7 @@ particular eye has been injured during gameplay. When rendering that eye, if the
 ```js
 glLayer = xrSession.renderState.baseLayer;
 gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
-gl.clearColor(0,0, 0, 1.0);
+gl.clearColor(0, 0, 0, 1.0);
 gl.clearDepth(1.0);
 gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 

@@ -1,6 +1,7 @@
 ---
 title: WebVR — Virtual Reality for the Web
 slug: Games/Techniques/3D_on_the_web/WebVR
+page-type: guide
 ---
 
 {{GamesSidebar}}

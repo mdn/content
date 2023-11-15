@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Push API") }}
 
-This article provides a useful summary of best practices to keep in mind when developing web sites and applications that use Push Notifications for user engagement.
+This article provides a useful summary of best practices to keep in mind when developing websites and applications that use Push Notifications for user engagement.
 
 > "If done well, it's nice to have, but if not done well, it's really annoying." — Overheard conversation between two browser developers discussing the ethics of push notifications.
 

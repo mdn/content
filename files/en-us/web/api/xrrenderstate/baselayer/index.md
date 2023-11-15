@@ -44,9 +44,9 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
-};
+}
 ```
 
 Here, the canvas obtained in the first line is the canvas into which WebGL is going to

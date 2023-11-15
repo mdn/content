@@ -1,6 +1,7 @@
 ---
 title: Document and website structure
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -82,7 +83,7 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -211,10 +212,10 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
 ```html
 <p>
   The King walked drunkenly back to his room at 01:00, the beer doing nothing to
-  aid him as he staggered through the door
+  aid him as he staggered through the door.
   <span class="editor-note">
-    [Editor's note: At this point in the play, the lights should be down low]
-  </span>.
+    [Editor's note: At this point in the play, the lights should be down low].
+  </span>
 </p>
 ```
 
@@ -222,14 +223,13 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 
 {{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:
 
-```html
+```html-nolint
 <div class="shopping-cart">
   <h2>Shopping cart</h2>
   <ul>
     <li>
       <p>
-        <a href=""><strong>Silver earrings</strong></a>:
-        $99.95.
+        <a href=""><strong>Silver earrings</strong></a>: $99.95.
       </p>
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>
@@ -305,6 +305,6 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 ## Summary
 
-At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
+At this point, you should have a better idea about how to structure a web page/site. In the next article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

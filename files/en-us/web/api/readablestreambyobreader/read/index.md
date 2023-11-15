@@ -44,7 +44,7 @@ The following are possible:
 
 - If a chunk is available and the stream is still active, the promise fulfills with an object of the form:
 
-  ```
+  ```js
   { value: theChunk, done: false }
   ```
 
@@ -54,13 +54,13 @@ The following are possible:
 
 - If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
 
-  ```
+  ```js
   { value: theChunk, done: true }
   ```
 
 - If the stream is cancelled, the promise fulfills with an object of the form:
 
-  ```
+  ```js
   { value: undefined, done: true }
   ```
 
@@ -137,4 +137,5 @@ When there is no more data in the stream, the `read()` method fulfills with an o
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

@@ -41,14 +41,14 @@ This element implements the {{domxref("SVGFETileElement")}} interface.
   height="200"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Tiling an MDN logo with the Mozilla mascot's head that is on
-      the logo </title>
+  <title>
+    Tiling an MDN logo with the Mozilla mascot's head that is on the logo
+  </title>
   <defs>
     <!-- Define the region of the filter to be the bounding box of the
          MDN logo being filtered. These parameters will create an output
          that covers the same region as the image. -->
     <filter id="tile" x="0" y="0" width="100%" height="100%">
-
       <!-- Create a tile from the central portion of the image from
            (50,50) to (150,150). This area is essentially the Mozilla
            mascot's head. -->
@@ -64,7 +64,7 @@ This element implements the {{domxref("SVGFETileElement")}} interface.
 
   <!-- Use the MDN logo as input to the filter -->
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"

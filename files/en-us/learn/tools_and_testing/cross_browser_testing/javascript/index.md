@@ -1,6 +1,7 @@
 ---
 title: Handling common JavaScript problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -31,7 +32,7 @@ This includes information on using browser dev tools to track down and fix probl
 
 Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavors (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.
 
-Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](https://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/en-US/docs/Web/Guide/AJAX/Getting_Started#step_1_%e2%80%93_how_to_make_an_http_request)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
+Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](https://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/en-US/docs/Web/Guide/AJAX#step_1_%e2%80%93_how_to_make_an_http_request)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
 
 Things have improved significantly since then; modern browsers do a good job of supporting "classic JavaScript features", and the requirement to use such code has diminished as the requirement to support older browsers has lessened (although bear in mind that they have not gone away altogether).
 
@@ -55,7 +56,7 @@ As we said in the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_b
 
   If you want this to work correctly, you can define a function to add the handler separately, calling it on each iteration and passing it the current value of `para` and `i` each time (or something similar). See [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html) also) for a version that works.
 
-- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/en-US/docs/Web/Guide/AJAX/Getting_Started#step_3_%e2%80%93_a_simple_example) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction of [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
+- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/en-US/docs/Web/Guide/AJAX#step_3_%e2%80%93_a_simple_example) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction of [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
 
 > **Note:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 
@@ -71,17 +72,7 @@ The [JSHint homepage](https://jshint.com/) provides an online linter, which allo
 
 #### Code editor plugins
 
-It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins, for example GitHub's [Atom](https://atom.io/) code editor has a JSHint plugin available.
-
-To install it:
-
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
-5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
-
-![Screenshot of the JS Hint app. The narrow left panel is a file explorer or tree. The right panel has two sections. The top has a tab open to a color-coded and line-numbered JavaScript file. The very bottom has errors and warnings. Errors are red, and warnings are orange. If there is an error or warning on a line, there is a red or orange dot, respectively, next to the line number.](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
+It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
 
 #### Other uses
 
@@ -111,22 +102,23 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj['members'];
+  let heroes = jsonObj["members"];
 
   for (const hero of heroes) {
     // …
-   }
+  }
 
-   // …
- }
+  // …
+}
 ```
 
 So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
 
 ```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+let requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 let superHeroes = request.response;
@@ -138,15 +130,15 @@ But this fails.
 
 #### The Console API
 
-You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log), which prints a custom message to the console.
+You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log_static), which prints a custom message to the console.
 
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log('Response value: ', superHeroes);
+console.log("Response value: ", superHeroes);
 ```
 
-Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
+Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before.
 
 The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
 
@@ -159,11 +151,11 @@ showHeroes(superHeroes);
 to the following:
 
 ```js
-request.onload = function() {
+request.onload = function () {
   let superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
@@ -210,7 +202,7 @@ As your apps get more complex and you start to use more JavaScript, you may star
 - To avoid loading more JavaScript than you need, bundle your scripts into a single file using a solution like [Browserify](https://browserify.org/). In general, reducing the number of HTTP requests is very good for performance.
 - Make your files even smaller by minifying them before you load them onto your production server. Minifying squashes all the code together onto a huge single line, making it take up far less file size. It is ugly, but you don't need to read it when it is finished! This is best done using a minification tool like [Uglify](https://github.com/mishoo/UglifyJS) (there's also an online version — see [JSCompress.com](https://jscompress.com/))
 - When using APIs, make sure you turn off the API features when they are not being used; some API calls can be really expensive on processing power. For example, when showing a video stream, make sure it is turned off when you can't see it. When tracking a device's location using repeated Geolocation calls, make sure you turn it off when the user stops using it.
-- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) (or the nascent [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
+- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) (or the nascent [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
 
 > **Note:** Addy Osmani's [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) contains a lot of detail and some excellent tips for boosting JavaScript performance.
 
@@ -245,11 +237,17 @@ if ("geolocation" in navigator) {
 }
 ```
 
-You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.
+You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`).
+If you're looking to apply styles if a CSS feature is supported, you can directly use the [@supports](/en-US/docs/Web/CSS/@supports) at-rule (known as a feature query).
+For example, to check whether the browser supports CSS container queries, you could do something like this:
+
+```css
+@supports (container-type: inline-size) {
+  /* Use container queries if supported */
+}
+```
 
 As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
-
-> **Note:** Some features are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
 
 > **Note:** Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.
 
@@ -291,9 +289,9 @@ Let's work through an exercise — in this example used for demonstration purpos
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
    ```js
-   const myImage = document.querySelector('.my-image');
+   const myImage = document.querySelector(".my-image");
 
-   fetch('flowers.jpg').then((response) => {
+   fetch("flowers.jpg").then((response) => {
      response.blob().then((myBlob) => {
        const objectURL = URL.createObjectURL(myBlob);
        myImage.src = objectURL;
@@ -316,7 +314,7 @@ Doing this requires some extra setup in your JavaScript. You need some kind of a
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -336,7 +334,7 @@ Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference
 
 ```js
 function loadScript(src, done) {
-  const js = document.createElement('script');
+  const js = document.createElement("script");
   js.src = src;
   js.onload = () => {
     done();
@@ -375,7 +373,7 @@ Use [feature detection](#feature_detection) (and CSS @supports for CSS feature d
 
 ### Handling JavaScript prefixes
 
-In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes as well, with JavaScript using camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
+In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes as well, with JavaScript using {{Glossary("camel_case", "camel case")}} rather than {{Glossary("kebab_case", "hyphenation")}} like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
 
 - Mozilla would use `mozObject`
 - Chrome/Opera/Safari would use `webkitObject`
@@ -399,7 +397,7 @@ Again, prefixed features were never supposed to be used in production websites �
 For example, try going into your browser's developer console and start typing
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 If this feature is supported in your browser, it will autocomplete.

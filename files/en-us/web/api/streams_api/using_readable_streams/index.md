@@ -12,11 +12,6 @@ As a JavaScript developer, programmatically reading and manipulating streams of 
 
 > **Note:** If you are looking for information on writable streams try [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams) instead.
 
-## Browser support
-
-You can consume Fetch body objects as streams and create your own custom readable streams most current browsers.
-[Pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) support is still not universal, and it may be worth checking compatibility tables (for example, see {{domxref("ReadableStream.pipeThrough()")}}).
-
 ## Finding some examples
 
 We will look at various examples in this article, taken from our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams) repo. You can find the full source code there, as well as links to the examples.
@@ -69,7 +64,7 @@ fetch("./tortoise.png")
 
 ### Reading the stream
 
-Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
+Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
 
 ```js
 // Fetch the original image
@@ -152,19 +147,17 @@ fetch("http://example.com/somefile.txt")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
-    while (true) {
-      // read() returns a promise that resolves when a value has been received
-      reader.read().then(function pump({ done, value }) {
-        if (done) {
-          // Do something with last chunk of data then exit reader
-          return;
-        }
-        // Otherwise do something here to process current chunk
+    // read() returns a promise that resolves when a value has been received
+    reader.read().then(function pump({ done, value }) {
+      if (done) {
+        // Do something with last chunk of data then exit reader
+        return;
+      }
+      // Otherwise do something here to process current chunk
 
-        // Read some more, and call this function again
-        return reader.read().then(pump);
-      });
-    }
+      // Read some more, and call this function again
+      return reader.read().then(pump);
+    });
   })
   .catch((err) => console.error(err));
 ```
@@ -214,7 +207,7 @@ button.addEventListener("click", () => aborter.abort());
 logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
 
 async function logChunks(url, { signal }) {
-  const response = await fetch(url, signal);
+  const response = await fetch(url, { signal });
   for await (const chunk of response.body) {
     // Do something with the chunk
   }
@@ -246,7 +239,7 @@ async function logChunks(url, { signal }) {
 // A mock push source.
 // Used to simulate some random data arriving
 class MockPushSource {
-  // total amount of data to to stream from the push source
+  // total amount of data to stream from the push source
   static #maxData = 90;
   // total data read so far (capped to maxData)
   #dataRead = 0;
@@ -451,7 +444,7 @@ const stream = new ReadableStream(
   {
     highWaterMark: 3,
     size: () => 1,
-  }
+  },
 );
 ```
 

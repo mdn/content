@@ -81,7 +81,7 @@ document.addEventListener(
   () => {
     outElem.textContent = "";
   },
-  true
+  true,
 );
 
 /* Set event listeners for the buttons */
@@ -106,8 +106,8 @@ document
     elem.addEventListener(
       "click",
       (evt) =>
-        (outElem.textContent += `Click event processed on "${elem.firstChild.data.trim()}"\n`)
-    )
+        (outElem.textContent += `Click event processed on "${elem.firstChild.data.trim()}"\n`),
+    ),
   );
 ```
 

@@ -65,7 +65,7 @@ Number.isSafeInteger(3.0); // true
 ## See also
 
 - [Polyfill of `Number.isSafeInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to.
+- {{jsxref("Number")}}
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.MAX_SAFE_INTEGER")}}
 - {{jsxref("BigInt")}}

@@ -1,6 +1,7 @@
 ---
 title: Images in HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
@@ -8,6 +9,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
 
 <table>
+<caption>Multimedia and Embedding Images</caption>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
@@ -60,23 +62,19 @@ And so on.
 
 > **Note:** Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; `dinosaur.jpg` is better than `img835.png`.
 
-You could embed the image using its absolute URL, for example:
+You could also embed the image using its absolute URL, for example:
 
 ```html
 <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-But this is not recommended. You should host your own images, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
+Linking via absolute URLs is not recommended, however. You should host the images you want to use on your site, which in simple setups means keeping the images for your website on the same server as your HTML. In addition, it is more efficient to use relative URLs than absolute URLs in terms of maintenance (when you move your site to a different domain, you won't need to update all your URLs to include the new domain). In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
 
-> **Warning:** **Never** point your src attribute at an image hosted on someone else's website **without permission**. This is called "hotlinking". It is generally considered unethical, since someone else would be paying the bandwidth costs for delivering the image when someone visits your page. It also leaves you with no control over whether the image is removed or replaced with something embarrassing.
->
-> In general, you should host the images you want to use on your site. Keep in mind that many images you may find on the web are copyrighted. Before you host an image, you should make sure that one of these applies:
->
-> - You own the image.
-> - You have received explicit, written permission from the image owner.
-> - You have ample proof that the image is, in fact, in the public domain.
+If you did not create the images, you should make sure you have the permission to use them under the conditions of the license they are published under (see [Media assets and licensing](#media_assets_and_licensing) below for more information).
 
-Our above code would give us the following result:
+> **Warning:** _Never_ point the `src` attribute at an image hosted on someone else's website _without permission_. This is called "hotlinking". It is considered unethical, since someone else would be paying the bandwidth costs for delivering the image when someone visits your page. It also leaves you with no control over the image being removed or replaced with something embarrassing.
+
+The previous code snippet, either with the absolute or the relative URL, will give us the following result:
 
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
@@ -120,7 +118,9 @@ Essentially, the key is to deliver a usable experience, even when the images can
 
 ### Width and height
 
-You can use the `width` and `height` attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:
+You can use the [`width`](/en-US/docs/Web/HTML/Element/img#width) and [`height`](/en-US/docs/Web/HTML/Element/img#height) attributes to specify the width and height of your image. They are given as integers without a unit, and represent the image's width and height in pixels.
+
+You can find your image's width and height in a number of ways. For example, on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the display information for the image file. Returning to our example, we could do this:
 
 ```html
 <img
@@ -131,15 +131,53 @@ You can use the `width` and `height` attributes to specify the width and height 
   height="341" />
 ```
 
-This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:
+There's a very good reason to do this. The HTML for your page and the image are separate resources, fetched by the browser as separate HTTP(S) requests. As soon as the browser has received the HTML, it will start to display it to the user. If the images haven't yet been received (and this will often be the case, as image file sizes are often much larger than HTML files), then the browser will render only the HTML, and will update the page with the image as soon as it is received.
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
+For example, suppose we have some text after the image:
 
-This is a good thing to do, resulting in the page loading quicker and more smoothly.
+```html
+<h1>Images in HTML</h1>
 
-However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+<img
+  src="dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+  title="A T-Rex on display in the Manchester University Museum" />
+<blockquote>
+  <p>
+    But down there it would be dark now, and not the lovely lighted aquarium she
+    imagined it to be during the daylight hours, eddying with schools of tiny,
+    delicate animals floating and dancing slowly to their own serene currents
+    and creating the look of a living painting. That was wrong, in any case. The
+    ocean was different from an aquarium, which was an artificial environment.
+    The ocean was a world. And a world is not art. Dorothy thought about the
+    living things that moved in that world: large, ruthless and hungry. Like us
+    up here.
+  </p>
+  <footer>- Rachel Ingalls, <cite>Mrs. Caliban</cite></footer>
+</blockquote>
+```
 
-> **Note:** If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
+As soon as the browser downloads the HTML, the browser will start to display the page.
+
+Once the image is loaded, the browser adds the image to the page. Because the image takes up space, the browser has to move the text down the page, to fit the image above it:
+
+![Comparison of page layout while the browser is loading a page and when it has finished, when no size is specified for the image.](no-size.png)
+
+Moving the text like this is extremely distracting to users, especially if they have already started to read it.
+
+If you specify the actual size of the image in your HTML, using the `width` and `height` attributes, then the browser knows, before it has downloaded the image, how much space it has to allow for it.
+
+This means that when the image has been downloaded, the browser doesn't have to move the surrounding content.
+
+![Comparison of page layout while the browser is loading a page and when it has finished, when the image size is specified.](size.png)
+
+For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
+
+> **Note:** Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
+>
+> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+>
+> If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
 
 ### Image titles
 
@@ -167,7 +205,7 @@ It is better to include such supporting information in the main article text, ra
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-```
+```url
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 ```
 
@@ -224,10 +262,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -235,30 +273,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
+const htmlSolution =
+  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -266,7 +305,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -279,7 +318,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -290,10 +332,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -304,6 +346,65 @@ textarea.onkeyup = function(){
 ```
 
 {{ EmbedLiveSample('Active_learning_embedding_an_image', 700, 350) }}
+
+## Media assets and licensing
+
+Images (and other media asset types) you find on the web are released under various license types. Before you use an image on a site you are building, ensure you own it, have permission to use it, or comply with the owner's licensing conditions.
+
+### Understanding license types
+
+Let's look at some common categories of licenses you are likely to find on the web.
+
+#### All rights reserved
+
+Creators of original work such as songs, books, or software often release their work under closed copyright protection. This means that, by default, they (or their publisher) have exclusive rights to use (for example, display or distribute) their work. If you want to use copyrighted images with an _all rights reserved_ license, you need to do one of the following:
+
+- Obtain explicit, written permission from the copyright holder.
+- Pay a license fee to use them. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
+- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://www.bl.uk/business-and-ip-centre/articles/fair-dealing-copyright-explained) in your jurisdiction.
+
+Authors are not required to include a copyright notice or license terms with their work. Copyright exists automatically in an original work of authorship once it is created in a tangible medium. So if you find an image online and there are no copyright notices or license terms, the safest course is to assume it is protected by copyright with all rights reserved.
+
+#### Permissive
+
+If the image is released under a permissive license, such as [MIT](https://mit-license.org/), [BSD](https://opensource.org/license/BSD-3-clause/), or a suitable [Creative Commons (CC) license](https://creativecommons.org/choose/), you do not need to pay a license fee or seek permission to use it. Still, there are various licensing conditions you will have to fulfill, which vary by license.
+
+For example, you might have to:
+
+- Provide a link to the original source of the image and credit its creator.
+- Indicate whether any changes were made to it.
+- Share any derivative works created using the image under the same license as the original.
+- Not share any derivative works at all.
+- Not use the image in any commercial work.
+- Include a copy of the license along with any release that uses the image.
+
+You should consult the applicable license for the specific terms you will need to follow.
+
+> **Note:** You may come across the term "copyleft" in the context of permissive licenses. Copyleft licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) or "Share Alike" Creative Commons licenses) stipulate that derivative works need to be released under the same license as the original.
+
+Copyleft licenses are prominent in the software world. The basic idea is that a new project built with the code of a copyleft-licensed project (this is known as a "fork" of the original software) will also need to be licensed under the same copyleft license. This ensures that the source code of the new project will also be made available for others to study and modify. Note that, in general, licenses that were drafted for software, such as the GPL, are not considered to be good licenses for non-software works as they were not drafted with non-software works in mind.
+
+Explore the links provided earlier in this section to read about the different license types and the kinds of conditions they specify.
+
+#### Public domain/CC0
+
+Work released into the public domain is sometimes referred to as "no rights reserved" — no copyright applies to it, and it can be used without permission and without having to fulfill any licensing conditions. Work can end up in the public domain by various means such as expiration of copyright, or specific waiving of rights.
+
+One of the most effective ways to place work in the public domain is to license it under [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
+
+When using public domain images, obtain proof that the image is in the public domain and keep the proof for your records. For example, take a screenshot of the original source with the licensing status clearly displayed, and consider adding a page to your website with a list of the images acquired along with their license requirements.
+
+### Searching for permissively-licensed images
+
+You can find permissive-licensed images for your projects using an image search engine or directly from image repositories.
+
+Search for images using a description of the image you are seeking along with relevant licensing terms. For example, when searching for "yellow dinosaur" add "public domain images", "public domain image library", "open licensed images", or similar terms to the search query.
+
+Some search engines have tools to help you find images with permissive licenses. For example, when using Google, go to the "Images" tab to search for images, then click "Tools". There is a "Usage Rights" dropdown in the resulting toolbar where you can choose to search specifically for images under creative commons licenses.
+
+Image repository sites, such as [Flickr](https://flickr.com/), [ShutterStock](https://www.shutterstock.com), and [Pixabay](https://pixabay.com/), have search options to allow you to search just for permissively-licensed images. Some sites exclusively distribute permissively-licensed images and icons, such as [Picryl](https://picryl.com) and [The Noun Project](https://thenounproject.com/).
+
+Complying with the license the image has been released under is a matter of finding the license details, reading the license or instruction page provided by the source, and then following those instructions. Reputable image repositories make their license conditions clear and easy to find.
 
 ## Annotating images with figures and figure captions
 
@@ -406,10 +507,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -417,30 +518,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+const htmlSolution =
+  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -448,7 +550,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -461,7 +563,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -475,7 +580,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

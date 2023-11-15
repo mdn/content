@@ -29,7 +29,7 @@ You can request a light probe with {{domxref("XRSession.requestLightProbe()")}} 
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
-  reflectionFormat: xrSession.preferredReflectionFormat
+  reflectionFormat: xrSession.preferredReflectionFormat,
 });
 ```
 
