@@ -23,11 +23,11 @@ When using the third dimension to layer objects from front to back, we use the z
 ## Standard CSSOM coordinate systems
 
 There are four standard coordinate systems used by the CSS object model.
-To help visualize the main systems, the following diagram shows a monitor with a browser window near the bottom that contains content scrolled offscreen.
-Page content that is scrolled offscreen is shown as semi-transparent above the browser window to indicate where the origin for page coordinates would be.
+To help visualize the main systems, the following diagram shows a monitor with a browser window that contains content scrolled outside of the viewport.
+Page content that is scrolled outside of the viewport is shown as semi-transparent above the browser window to indicate where the origin for "page" coordinates would be.
 The origin of the "client", "page", and "viewport" coordinates systems are highlighted.
 
-![Diagram of a computer monitor with a browser window containing offscreen content. Labels show the origin for page, screen, and viewport coordinates.](css-coords.svg)
+![Diagram of a computer monitor with a browser window containing content outside of the viewport. Labels show the origin for page, screen, and viewport coordinates.](css-coords.svg)
 
 ### Offset
 
@@ -40,6 +40,7 @@ For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the 
 The "viewport" (or "client") coordinate system uses as its origin the top-left corner of the viewport or browsing context in which the event occurred. This is the entire viewing area in which the document is presented.
 
 On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the {{domxref("window")}}.
+When using a stylus or a pointer, the {{domxref("Touch.clientX")}} and {{domxref("Touch.clientX")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
 
 The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the viewport coordinates of a given position within the document.
 
@@ -49,6 +50,7 @@ The "page" coordinate system gives the position of a pixel relative to the top-l
 That means that a point in an element within the document will have the same coordinates after the user scrolls horizontally or vertically in the document unless the element moves via layout changes.
 
 Mouse events' {{domxref("MouseEvent.pageX", "pageX")}} and {{domxref("MouseEvent.pageY", "pageY")}} properties provide the position of the mouse at the time the event was generated, given relative to the top-left corner of the document.
+{{domxref("Touch.pageX")}} and {{domxref("Touch.pageX")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
 
 ### Screen
 
@@ -57,6 +59,7 @@ Each point in this coordinate system represents a single logical pixel, and so v
 The position of a given point within a document will change if the containing window is moved, for example, or if the user's screen geometry changes (by changing display resolution or by adding or removing monitors to their system).
 
 The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} properties give the coordinates of a mouse event's position relative to the screen's origin.
+{{domxref("Touch.screenX")}} and {{domxref("Touch.screenX")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
 
 ## Example
 
@@ -136,9 +139,15 @@ Here you can see the results in action. As you mouse in and around the blue box,
 ## See also
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
-- Coordinates of a mouse event:
+- Coordinates of a {{domxref("MouseEvent", "Mouse event")}}:
 
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} and {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}}
+
+- Coordinates of a {{domxref("Touch", "Touch event")}}:
+
+  - {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}}
+  - {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}}
+  - {{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}}
