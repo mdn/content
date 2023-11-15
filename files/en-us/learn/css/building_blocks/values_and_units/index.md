@@ -385,7 +385,7 @@ These values are less intuitive than keywords for defining colors, but they are 
 
 ### RGB and RGBA values
 
-To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two) — somewhat easier to understand.
+To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two).
 
 Let's rewrite our last example to use RGB colors:
 
