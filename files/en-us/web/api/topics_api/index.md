@@ -29,7 +29,7 @@ The API returns topics within the most recent three epochs; one for each. The to
 
 Note also that, in the case of "real" observed topics, there is a 5% chance that the topic will be replaced by a random topic selected from the list of all possible topics.
 
-## How does the Topics API work?
+### How does the Topics API work?
 
 Let's say we've got an ad tech platform, `ad-tech1.example`, which is embedding ads via {{htmlelement("iframe")}}s into the following publisher sites.
 
@@ -75,7 +75,7 @@ To reiterate, these ad tech platforms will only get topics for a user that they 
 
 In other words, callers such as ad tech platforms only get topics for pages where they have a presence. More importantly, the recorded topics of interest are the only information that can be accessed via this API — unlike with tracking cookies, no other information can be leaked.
 
-## What API features observe and return topics?
+### What API features observe and return topics?
 
 The following features all trigger observing topics and returning already observed top topics from the last three epochs to the ad tech platform via the {{httpheader("Sec-Browsing-Topics")}} header.
 
@@ -91,7 +91,7 @@ You can also call {{domxref("Document.browsingTopics()")}} to return the list of
 
 > **Note:** Because the `browsingTopics()` method does not rely on the HTTP headers, the {{httpheader("Observe-Browsing-Topics")}} header is not used for setting the topics as observed and recording/updating topics history entries; the browser does this automatically.
 
-## What topics are there?
+### What topics are there?
 
 The available top topics that the browser could calculate are stored in a publicly available [taxonomy of interests](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md). The initial taxonomy has been proposed by Chrome, with the intention that it becomes a resource maintained by trusted ecosystem contributors. The taxonomy has been human-curated to exclude categories generally considered sensitive, such as ethnicity or sexual orientation.
 
@@ -123,6 +123,19 @@ The Topics API has no distinct interfaces of its own.
   - : Used to mark topics sent by {{httpheader("Sec-Browsing-Topics")}} as observed in the response to the request. The browser will then use those topics to calculate topics of interest for a user for future epochs.
 - {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} directive
   - : Controls access to the Topics API. Where a policy specifically disallows the use of the Topics API, any attempts to call the `Document.browsingTopics()` method or send a request with a `Sec-Browsing-Topics` header will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+
+## Enrollment and local testing
+
+To use the Topics API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the following sub-features won't work:
+
+- The {{domxref("Document.browsingTopics()")}} method
+  - : The promise returned by `browsingTopics()` rejects with a `NotAllowedError` {{domxref("DOMException")}}.
+- The {{httpheader("Sec-Browsing-Topics")}} header
+  - : Creating or modifying the header fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
+
+You can still test your Topics API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
+
+`chrome://flags/#privacy-sandbox-enrollment-overrides`
 
 ## Examples
 

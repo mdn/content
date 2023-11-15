@@ -4,8 +4,6 @@ slug: Web/Privacy/Firefox_tracking_protection
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
-
 ## What is tracking protection?
 
 Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
@@ -100,3 +98,7 @@ Instead, you should account for the case when Google Analytics is missing by che
 More information about this technique is available at [Google Analytics, Privacy, and Event Tracking](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/).
 
 > **Note:** Depending on a third party in this way is not a good practice anyway, because then your site can be broken if the third party is slow or unavailable, or if the tracker has been blocked by an add-on.
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

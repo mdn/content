@@ -12744,6 +12744,7 @@
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
+/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps

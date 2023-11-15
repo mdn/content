@@ -1,13 +1,11 @@
 ---
 title: Cookies Having Independent Partitioned State (CHIPS)
-slug: Web/Privacy/Partitioned_cookies
+slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
 page-type: guide
 status:
   - experimental
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
-
-{{QuicklinksWithSubPages("Web/Privacy")}}{{SeeCompatTable}}
 
 **Cookies Having Independent Partitioned State** (**CHIPS**, also known as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
@@ -68,3 +66,7 @@ Blocking all third-party cookies would currently be problematic, for example in 
 
 - [Cookies Having Independent Partitioned State (CHIPS) on developer.chrome.com](https://developer.chrome.com/docs/privacy-sandbox/chips/)
 - [CHIPS Explainer](https://github.com/privacycg/CHIPS)
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

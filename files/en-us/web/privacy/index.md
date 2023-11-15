@@ -119,16 +119,7 @@ This attribute controls whether cookies are sent with cross-site requests and ca
 
 #### Chrome anti-tracking features
 
-Google's [privacy sandbox project](https://developer.chrome.com/en/docs/privacy-sandbox/) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
-
-Some of the most developed parts of the privacy sandbox project are as follows:
-
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)
-  - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
-- [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)
-  - : A mechanism for a company to declare relationships between different origins. Supporting browsers will then allow limited third-party cookie access across those origins for specific purposes.
-- Third-party cookie default
-  - : Chrome does not yet block third-party cookies by default, but this can be set by users in Chrome settings.
+Google's [privacy sandbox project](/en-US/docs/Web/Privacy/Privacy_sandbox) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
 
 #### Safari anti-tracking features
 
@@ -280,5 +271,5 @@ The below tips offer some guidance on protecting your user's data:
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
 
 <section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "1", "0", "1")}}
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
 </section>
