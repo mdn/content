@@ -61,7 +61,7 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the browsing context is not top-level, or if the contact picker is showing a flag that denotes an already existing contact picker, as only one picker can exist at any time, or if launching a contact picker failed.
+  - : Returned if the browsing context is not top-level, or if the contact picker is showing a flag that denotes an already existing contact picker since only one picker can exist at any time, or if launching a contact picker failed.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the method is not triggered by [user activation](/en-US/docs/Web/Security/User_activation).
 - {{jsxref("TypeError")}}
