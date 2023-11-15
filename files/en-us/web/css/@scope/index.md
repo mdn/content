@@ -43,23 +43,23 @@ A complex web document tends to include several distinct components — from hea
 
 ```plain-nolint
 body
-├─ article.feature
+└─ article.feature
    ├─ section.article-hero
    │  ├─ h2
-   │  ├─ img
+   │  └─ img
    │
    ├─ section.article-body
    │  ├─ h3
    │  ├─ p
    │  ├─ img
    │  ├─ p
-   │  ├─ figure
+   │  └─ figure
    │     ├─ img
-   │     ├─ figcaption
+   │     └─ figcaption
    │
-   ├─ footer
+   └─ footer
       ├─ p
-      ├─ img
+      └─ img
 ```
 
 If we wanted to select just the {{htmlelement("img")}} element inside the {{htmlelement("section")}} with a class of `article-body`, we could:
