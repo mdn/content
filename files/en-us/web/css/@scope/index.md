@@ -171,7 +171,14 @@ As such, the three lines in the following block are all equivalent in what they 
 
 ### Specificity in `@scope`
 
-Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit. For example:
+
+```css
+@scope (.article-body) {
+  /* img has a specificity of 0-0-1, as expected */
+  img { ... }
+}
+```
 
 However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
@@ -182,7 +189,7 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 }
 ```
 
-When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} selector. So for example, in:
+When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} pseudo-class function. So for example, in:
 
 ```css
 @scope (figure, #primary) {

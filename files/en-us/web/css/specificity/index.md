@@ -239,7 +239,14 @@ footer a {
 
 ### How `@scope` blocks affect specificity
 
-Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit.
+Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit. For example:
+
+```css
+@scope (.article-body) {
+  /* img has a specificity of 0-0-1, as expected */
+  img { ... }
+}
+```
 
 However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
