@@ -69,6 +69,10 @@ The following values may be operational on historical browser versions using **`
 - Chrome, Edge and Safari entries below indicate release version support for values used with the `-webkit-appearance` vendor-prefix property.
 - Firefox entries indicate support using `-moz-appearance`.
 - Values with an asterisk (\*) have clear intents for removal.
+- For each cell of browser version and value:
+  - `<={version}`: indicates a value is supported up to and including `{version}`
+  - `<{version}`: support was removed in a release earlier than `{version}`
+  - a blank cell indicates that support was never added
 
 | Value                                  | Safari | Firefox | Chrome   | Edge  |
 | -------------------------------------- | ------ | ------- | -------- | ----- |
