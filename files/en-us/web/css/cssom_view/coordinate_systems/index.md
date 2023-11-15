@@ -22,7 +22,12 @@ When using the third dimension to layer objects from front to back, we use the z
 
 ## Standard CSSOM coordinate systems
 
-There are four standard coordinate systems used by the CSS object model, as described below.
+There are four standard coordinate systems used by the CSS object model.
+To help visualize the main systems, the following diagram shows a monitor with a browser window near the bottom that contains content scrolled offscreen.
+Page content that is scrolled offscreen is shown as semi-transparent above the browser window to indicate where the origin for page coordinates would be.
+The origin of the "client", "page", and "viewport" coordinates systems are highlighted.
+
+![Diagram of a computer monitor with a browser window containing offscreen content. Labels show the origin for page, screen, and viewport coordinates.](css-coords.svg)
 
 ### Offset
 
