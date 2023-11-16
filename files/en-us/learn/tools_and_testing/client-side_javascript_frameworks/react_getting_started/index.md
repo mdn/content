@@ -304,6 +304,46 @@ The `App` function returns a JSX expression. This expression defines what your b
 
 Just under the `return` keyword is a special bit of syntax: `<>`. This is a [fragment](https://react.dev/docs/fragments). React components have to return a single JSX element, and fragments allow us to do that without rendering arbitrary `<div>`s in the browser. You'll see fragments in many React applications.
 
+There's one more line of code after the `App` function:
+
+```jsx
+export default App;
+```
+
+This export statement makes our `App` component available to other modules. We'll talk more about this later.
+
+## Moving on to `main`
+
+Let's open `src/main.jsx`, because that's where the `App` component is being rendered. This file is the entry point for our app, and it initially looks like this:
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
+```
+
+As with `App.jsx`, the file starts by importing all the JS modules and other assets it needs to run.
+
+The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
+
+We then seeour `App` component imported here, folowed by `index.css`, which holds global styles that are applied to our whole app.
+
+Finally, we call the `ReactDOM.createRoot()` function with the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. After `createRoot()`, we call the `render()` method. All of this together tells React that we want to render our application with `<App />` as the root, or first element.
+
+Finally, you'll see that the `<App />` is rendered in a special `<StrictMode>` component. This component helps developers catch potential problems in their code.
+
+You can read up on these React APIs, if you'd like:
+
+- [ReactDOM.createRoot()](https://react.dev/reference/react-dom/client/createRoot)
+- [React.StrictMode](https://react.dev/reference/react/StrictMode)
+
 ### A brief JSX refresher
 
 Let's focus on the first child of the [`<div>`](/en-US/docs/Web/HTML/Element/div) tag just inside the fragment:
@@ -320,11 +360,13 @@ Inside, the [`<img>`](/en-US/docs/Web/HTML/Element/img) tag has a `src` attribut
 
 The `<img>` tag has an attribute you may not have seen before: `className`: This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. There are a few other differences between JSX and HTML, and we'll cover them as they come up.
 
-### Changing some content
+### Starting fresh
 
-hange the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the two `<a>` at the top of the component and save. The logos will be gone.
+Before we start building our app, we're going to delete some of the boilerplate code that Vite provided for us.
 
-We won't be using most of the boilerplate code Vite provided for us, so let's delete it. Replace the contents of `App.jsx` with the following:
+Change the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the two `<a>` at the top of the component and save. The logos will be gone.
+
+We won't be using the rest of the code! Replace the contents of `App.jsx` with the following:
 
 ```jsx
 import viteLogo from "/vite.svg";
@@ -344,141 +386,85 @@ function App() {
 export default App;
 ```
 
-<!-- TODO -->
+## Reactivity with variables and props
 
-### Export statements
-
-At the very bottom of the `App.jsx` file, the statement `export default App` makes our `App` component available to other modules.
-
-## Interrogating the index
-
-Let's open `src/index.jsx`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
-
-```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-```
-
-As with `App.jsx`, the file starts by importing all the JS modules and other assets it needs to run.
-
-The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
-
-`index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.jsx`.
-
-Line 7 calls the `ReactDOM.createRoot()` function with the DOM element inside which we want the React element to be rendered, in this case the DOM element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root`.
-
-Line 8 calls the `root.render()` method with the React element we want to render into the DOM, `<App />` in this case. We use [strict mode](https://react.dev/reference/react/StrictMode) during development to find common bugs in our components.
-
-All of this tells React that we want to render our React application with `<App />` as the root, or first element.
-
-> **Note:** In JSX, React elements and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
-
-Your final `index.jsx` file should look like this:
-
-```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
-```
-
-## Variables and props
-
-Next, we'll use a few of our JavaScript skills to get a bit more comfortable editing components and working with data in React. We'll talk about how variables are used inside JSX, and introduce props, which are a way of passing data into a component (which can then be accessed using variables).
+Next, we'll use our JavaScript skills to get a bit more comfortable editing components and working with data in React. We'll talk about how variables are used inside JSX, and introduce props, which are a way of passing data into a component (which can then be accessed using variables).
 
 ### Variables in JSX
 
-Back in `App.jsx`, let's focus on line 8:
+Let's practice rendering some content from variables in React. As a reminder, our `App` component looks like this:
 
 ```jsx
-<img src={logo} className="App-logo" alt="logo" />
+import viteLogo from "/vite.svg";
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      <header>
+        <img src={viteLogo} className="logo" alt="Vite logo" />
+        <h1>Hello, World!</h1>
+      </header>
+    </>
+  );
+}
+
+export default App;
 ```
 
-Here, the `<img />` tag's `src` attribute value is in curly braces. This is how JSX recognizes variables. React will see `{logo}`, know you are referring to the logo import on the first line of our app, then retrieve the logo file and render it.
-
-Let's try making a variable of our own. Before the return statement of `App`, add `const subject = "React";`. Your `App` component should now look like this:
+Declare a new variable, `subject`, before the return statement and set its value to the string `'React'`. Like this:
 
 ```jsx
+const subject = "React";
 function App() {
-  const subject = "React";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello, World!</p>
+    <>
+      <header>
+        <img src={viteLogo} className="logo" alt="Vite logo" />
+        <h1>Hello, World!</h1>
       </header>
-    </div>
+    </>
   );
 }
 ```
 
-Change the `<p>` element to use our `subject` variable instead of the word "World", like this:
+Then, replace the word "World" in the `<h1>` element with `{subject}`. Like this:
 
 ```jsx
-function App() {
-  const subject = "React";
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello, {subject}!</p>
-      </header>
-    </div>
-  );
-}
+// code omitted for brevity
+<h1>Hello, {subject}!</h1>
 ```
 
-When you save, your browser should display "Hello, React!" instead of "Hello, World!"
-
-Variables are convenient, but the one we've just set doesn't make great use of React's features. That's where props come in.
+Save your file and check your browser. You should see "Hello, React!".
 
 ### Component props
 
-A **prop** is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only.
+A **prop** is any data passed into a React component. React props are comparable to HTML attributes: where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, the flow of data is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only.
 
-Let's open `index.jsx` and give our `<App/>` call its first prop.
+Let's open `index.jsx` and give our `<App />` component its first prop.
 
-Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
+Add a prop of `subject` to the `<App />` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
 ```jsx
-root.render(<App subject="Clarice" />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App subject="Clarice" />
+  </React.StrictMode>,
+);
 ```
 
 Back in `App.jsx`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
 
 ```jsx
 function App() {
-  const subject = "React";
+  const subject = 'React';
   return (
     // return statement
   );
 }
 ```
 
-Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const.
-Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
+Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
 
 ```jsx
 function App(props) {
@@ -489,8 +475,7 @@ function App(props) {
 }
 ```
 
-With this change, `subject` becomes undefined, so comment out the line `Hello, {subject}!` for now.
-Save your file and check your browser's JavaScript console. You should see something like this logged:
+With this change, `subject` becomes undefined, so comment out the line `Hello, {subject}!` for now. Save your file and check your browser's JavaScript console. You should see something like this logged:
 
 ```plain
 Object { subject: "Clarice" }
@@ -498,19 +483,23 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's utilize it in `App.jsx`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. Now, you can also uncomment the line `Hello, {subject}!` and, if you wish, delete your `console.log()`.
+Now that `subject` is one of our props, let's utilize it in `App.jsx`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject` and delete the `console.log()` statement. Your code should look like this:
 
 ```jsx
 function App(props) {
   const subject = props.subject;
   return (
-    // return statement
+    <>
+      <header>
+        <img src={viteLogo} className="logo" alt="Vite logo" />
+        <h1>Hello, {subject}</h1>
+      </header>
+    </>
   );
 }
 ```
 
 When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.jsx`, edit the value of `subject`, and save, your text will change.
-Note that if you wanted to leave in the `Hello` line throughout this change, you could also have updated the JSX variable to `{props.subject}`.
 
 ## Summary
 
