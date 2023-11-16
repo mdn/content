@@ -262,7 +262,7 @@ The primary purpose of these models is that they are uniform so that a given dis
 For the CIELAB color space, you can use the `lab()` and `lch()` functions.
 The `lch()` function uses lightness (L), chroma (C), and hue (H) and the Lab model uses lightness (L), red/green-ness, and yellow/blue-ness along the "a" and "b" axes (rectangular coordinates) in the color space.
 
-The example below shows how the effect of these two functions where each row modifies a single component.
+The example below shows the effect of changing component values in the `lab()` and `lch()` functions where each row modifies a single component.
 The first row shows changes to the `lch()` lightness value, while the second row changes the `lch()` hue component.
 The third row changes the `lab()` "b" axis, so we have a different effect than `lch()` as we're gradually adding more yellow to the color rather than cycling through the entire color wheel:
 
