@@ -448,7 +448,15 @@ Once the answer has been created using {{domxref("RTCPeerConnection.createAnswer
 
 Any errors are caught and passed to `handleGetUserMediaError()`, described in [Handling getUserMedia() errors](#handling_getusermedia_errors).
 
-Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into {{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}.
+Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into 
+{{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}.
+
+```js
+function handleVideoAnswerMsg(msg) {
+  const desc = new RTCSessionDescription(msg.sdp);
+  myPeerConnection.setRemoteDescription(desc).catch(reportError);
+}
+```
 
 > **Note:** As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
 
