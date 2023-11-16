@@ -20,7 +20,7 @@ send.addEventListener("click", async () => {
   formData.append("username", "Groucho");
   formData.append("accountnum", 123456);
 
-  // file <input> element
+  // A file <input> element
   const avatar = document.querySelector("#avatar");
   formData.append("avatar", avatar.files[0]);
 
@@ -37,9 +37,9 @@ send.addEventListener("click", async () => {
 });
 ```
 
-> **Note:** The fields "avatar" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: **if the value is neither a `Blob` nor a `File`, the value is converted to a string**).
+> **Note:** The fields `"avatar"` and `"webmasterfile"? both contain a file. The number assigned to the field `"accountnum"` is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: _if the value is neither a `Blob` nor a `File`, the value is converted to a string_).
 
-This example builds a `FormData` instance containing values for fields named "username", "accountnum", "avatar" and "webmasterfile", then uses {{domxref("fetch()")}} to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke [the `Blob()` constructor](/en-US/docs/Web/API/Blob/Blob).
+This example builds a `FormData` instance containing values for fields named `"username"`, `"accountnum"`, `"avatar"` and `"webmasterfile"`, then uses {{domxref("fetch()")}} to send the form's data. The field `"webmasterfile"` is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke [the `Blob()` constructor](/en-US/docs/Web/API/Blob/Blob).
 
 ## Retrieving a `FormData` object from an HTML form
 
@@ -192,7 +192,7 @@ formElem.addEventListener("formdata", (e) => {
     console.log(value);
   }
 
-  // submit the data via fetch()
+  // Submit the data via fetch()
   fetch("/formHandler", {
     method: "POST",
     body: data,
