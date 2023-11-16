@@ -448,7 +448,7 @@ Once the answer has been created using {{domxref("RTCPeerConnection.createAnswer
 
 Any errors are caught and passed to `handleGetUserMediaError()`, described in [Handling getUserMedia() errors](#handling_getusermedia_errors).
 
-Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into 
+Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into
 {{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}.
 
 ```js
