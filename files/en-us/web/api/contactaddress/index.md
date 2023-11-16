@@ -31,7 +31,7 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
   - : A string specifying a code used by a jurisdiction for mail routing, for example, the ZIP code in the United States or the PIN code in India.
 - {{domxref('ContactAddress.recipient')}} {{ReadOnlyInline}}
   - : A string giving the name of the recipient, purchaser, or contact person at the payment address.
-- {{domxref('ContactAddress.region')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref('ContactAddress.region')}} {{ReadOnlyInline}}
   - : A string containing the top level administrative subdivision of the country, for example a state, province, oblast, or prefecture.
 - {{domxref('ContactAddress.sortingCode')}} {{ReadOnlyInline}}
   - : A string providing a postal sorting code such as is used in France.
