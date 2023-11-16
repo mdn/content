@@ -58,7 +58,7 @@ By default, in supporting browsers, the color returned by the `light-dark()` col
 
 #### HTML
 
-We include three sections to enable targeting light colors, dark colors, and the user's preferred colors.
+We include three sections to enable targeting light colors, dark colors, and the colors selected based on the user's preferred color scheme.
 
 ```html
 <h1><code>light-dark()</code> CSS function</h1>
