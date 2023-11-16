@@ -365,7 +365,8 @@ The third row changes the `lab()` "b" axis, so we have a different effect than `
 
 {{embedlivesample("lch-colors", '100', '150') }}
 
-Oklab is a color space that uses the same model type as CIELAB. Still, it is optimized based on data of visually similar colors, so the values are intended to be more accurate than CIELAB.
+Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered to be more accurate than CIELAB.
+Because of this optimization, hues are more perceptually uniform, making Oklab an excellent choice for gradients.
 If you already understand `lab()` and `lch()`, you can use these functions in a similar way:
 
 ```css
