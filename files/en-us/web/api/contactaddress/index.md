@@ -24,13 +24,13 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 - {{domxref('ContactAddress.dependentLocality')}} {{ReadOnlyInline}}
   - : A string giving the dependent locality or sublocality within a city, for example, a neighborhood, borough, district, or UK dependent locality.
 - {{domxref('ContactAddress.organization')}} {{ReadOnlyInline}}
-  - : A string specifying the name of the organization, firm, company, or institution at the payment address.
+  - : A string specifying the name of the organization, firm, company, or institution at the address.
 - {{domxref('ContactAddress.phone')}} {{ReadOnlyInline}}
   - : A string specifying the telephone number of the recipient or contact person.
 - {{domxref('ContactAddress.postalCode')}} {{ReadOnlyInline}}
   - : A string specifying a code used by a jurisdiction for mail routing, for example, the ZIP code in the United States or the PIN code in India.
 - {{domxref('ContactAddress.recipient')}} {{ReadOnlyInline}}
-  - : A string giving the name of the recipient, purchaser, or contact person at the payment address.
+  - : A string giving the name of the recipient, purchaser, or contact person at the address.
 - {{domxref('ContactAddress.region')}} {{ReadOnlyInline}}
   - : A string containing the top level administrative subdivision of the country, for example a state, province, oblast, or prefecture.
 - {{domxref('ContactAddress.sortingCode')}} {{ReadOnlyInline}}
