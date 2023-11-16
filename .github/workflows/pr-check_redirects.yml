@@ -26,10 +26,10 @@ jobs:
         id: filter
         with:
           filters: |
-            required_files :
+            required_files:
               - ".nvmrc"
               - "files/**"
-              - ".github/workflows/pr-check_redirects_file.yml"
+              - ".github/workflows/pr-check_redirects.yml"
 
       - name: Install all yarn packages
         if: steps.filter.outputs.required_files == 'true'
