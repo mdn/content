@@ -66,8 +66,8 @@ The following values may be operational on historical browser versions using **`
 <details>
 <summary>Non-standard values</summary>
 
-- Chrome, Edge and Safari entries below indicate release version support for values used with the `-webkit-appearance` vendor-prefix property.
 - Firefox entries indicate support using `-moz-appearance`.
+- Chrome, Edge and Safari entries below indicate release version support for values used with the `-webkit-appearance` vendor-prefix property.
 - Values with an asterisk (\*) have clear intents for removal.
 - For each cell of browser version and value:
   - `<={version}`: indicates a value is supported up to and including `{version}`
