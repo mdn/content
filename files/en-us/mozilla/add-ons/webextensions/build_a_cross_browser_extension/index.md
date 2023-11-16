@@ -38,7 +38,11 @@ Only in the most trivial extensions is namespace likely to be the only cross-pla
 
 ### API asynchronous event handling
 
-With the introduction of Manifest V3 (Chrome 88), all the main browsers support _Promises_ as their approach to handling asynchronous events. Before that, Firefox and Safari used _Promises_, while _Callbacks_ were used by Chrome, Edge, and Opera.
+With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. However, at the time of writing, November 2023, Chrome needed to implement Promises on some APIs. The implementation of Promises is expected to be complete by Chrome 121. Consult the Chrome documentation for details of whether the APIs you use have Promise support.
+
+In Manifest V2, Firefox and Safari support Promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See [Callbacks and Promises](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#callbacks_and_promises) for details.
+
+Some handlers of extension API events are expected to respond asynchronously through a `Promise` or callback function. For example, a handler of the `runtime.onMessage` event can [send an asynchronous response using a `Promise`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise) or using [a callback](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse). A `Promise` as the return value from an event handler is supported in Firefox and Safari, but not yet in Chrome.
 
 Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together.
 
