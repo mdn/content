@@ -137,7 +137,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
   - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
-## Obsolete properties
+### Obsolete properties
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
@@ -167,12 +167,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
     > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
-- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
-
-  - : Returns a number representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
-
-    > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
-
 ## Instance methods
 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
@@ -181,7 +175,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
   - : Returns a boolean value indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.
 
-## Obsolete methods
+### Obsolete methods
 
 - {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
   - : Initializes a `KeyboardEvent` object. This was implemented only by Firefox, and is no longer supported even there; instead, you should use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
