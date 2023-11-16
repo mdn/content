@@ -127,9 +127,11 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-There is frequent confusion surrounding the meaning and use of _scope_. Since a
-service worker can't have a scope broader than its own location, only use the
-`scope` option when you need a scope that is narrower than the default.
+There is frequent confusion surrounding the meaning and use of _scope_.
+A service worker can't have a scope broader than its own location,
+unless the server specifies a broader maximum scope in a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed)
+header on the service worker script. Therefore you should use the scope option
+when you need a narrower `scope` than the default.
 
 The following code, if included in `example.com/index.html`, at the root of
 a site, would only apply to resources under `example.com/product`.
@@ -153,6 +155,30 @@ if ("serviceWorker" in navigator) {
 However, servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
 worker script, and then you can specify a max scope for that service worker above the
 service worker's location.
+
+The following code, if included in `example.com/index.html`, would apply to all
+resources under `example.com` if the server set the Service-Worker-Allowed header
+to `/` or `https://example.com/`. If the server doesn't set the header,
+the service worker registration will fail, as the requested `scope` is too broad.
+
+```js
+if ("serviceWorker" in navigator) {
+  // Declaring a broadened scope
+  navigator.serviceWorker.register("/js/sw.js", { scope: "/" }).then(
+    (registration) => {
+      // The registration succeeded because the Service-Worker-Allowed header
+      // had set a broadened maximum scope for the service worker script
+      console.log("Service worker registration succeeded:", registration);
+    },
+    (error) => {
+      // This happens if the Service-Worker-Allowed header doesn't broaden the scope
+      console.error(`Service worker registration failed: ${error}`);
+    },
+  );
+} else {
+  console.error("Service workers are not supported.");
+}
+```
 
 ## Specifications
 
