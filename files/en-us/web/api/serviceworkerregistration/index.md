@@ -17,7 +17,7 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 ## Instance properties
 
-_Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
+_Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
@@ -46,7 +46,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 
 ## Instance methods
 
-_Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
+_Also inherits methods from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
