@@ -48,7 +48,7 @@ For Chrome Manifest V3 extensions, the "webRequestBlocking" permission is no lon
 
 ## Proxy authorization
 
-Firefox does not generally fire `webRequest` events for system requests, such as browser or extension upgrades or search engine queries. To enable proxy authorization to work smoothly for system requests, from version 57, Firefox implements an exception to this.
+Firefox does not generally fire `webRequest` events for system requests, such as browser or extension upgrades or search engine queries. To enable proxy authorization to work smoothly for system requests, from version 57, Firefox supports an exception to this.
 
 If an extension has the `"webRequest"`, `"webRequestBlocking"`, `"proxy"`, and `"<all_urls>"` permissions, then it can use `onAuthRequired` to supply credentials for proxy authorization (but not for normal web authorization). The listener cannot cancel system requests or make any other modifications to any system requests.
 
