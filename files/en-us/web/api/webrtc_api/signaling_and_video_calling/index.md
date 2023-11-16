@@ -612,7 +612,7 @@ Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to 
 
 #### Dealing with state changes
 
-There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
+There are a number of additional events you can set listeners for, which can be used to notify your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
 
 ##### ICE connection state
 
