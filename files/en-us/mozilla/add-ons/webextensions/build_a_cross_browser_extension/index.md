@@ -114,7 +114,6 @@ However, Firefox provides some APIs that enable content scripts to access JavaSc
 
 There are also differences between the [Content Security Policy (CSP) for content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#csp_for_content_scripts).
 
-
 ### Background page and extension service worker
 
 As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages, while Safari supports background pages and service workers.
