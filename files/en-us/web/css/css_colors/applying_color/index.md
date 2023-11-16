@@ -377,7 +377,7 @@ If you already understand `lab()` and `lch()`, you can use these functions in a 
 }
 ```
 
-#### The color function
+#### The `color()` function
 
 If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 This is useful to describe a color for high-definition devices with wider color [gamuts](/en-US/docs/Glossary/Gamut).
