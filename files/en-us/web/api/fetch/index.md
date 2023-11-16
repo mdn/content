@@ -8,7 +8,7 @@ browser-compat: api.fetch
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
+The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
 
 The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
@@ -40,15 +40,14 @@ fetch(resource, options)
 
 - `options` {{optional_inline}}
 
-  - : An object containing any custom settings that you want to apply to the request.
+  - : An object containing any custom settings you want to apply to the request.
     The possible options are:
 
     - `method`
       - : The request method, e.g., `"GET"`, `"POST"`.
         The default is `"GET"`.
         Note that the {{httpheader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
-        Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
+        Any string that is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
         If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
     - `headers`
 
@@ -115,9 +114,9 @@ fetch(resource, options)
     - `priority`
       - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
         - `high`
-          - : A high priority fetch request relative to other requests of the same type.
+          - : A high-priority fetch request relative to other requests of the same type.
         - `low`
-          - : A low priority fetch request relative to other requests of the same type.
+          - : A low-priority fetch request relative to other requests of the same type.
         - `auto`
           - : Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
@@ -215,7 +214,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If the request method is an invalid name token or one of forbidden headers
+        If the request method is an invalid name token or one of the forbidden headers
         (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
       </td>
       <td>
