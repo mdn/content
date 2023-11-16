@@ -84,7 +84,7 @@ For more detailed discussion of each of the color value types, see the reference
 
 ### Keywords
 
-A set of standard color names are defined that let you use keywords instead of numeric representations if you choose this way of describing colors, although there must be a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
+A set of standard color names is defined that lets you use keywords instead of numeric representations if you choose this way of describing colors, although there must be a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
 
 See [Named colors](/en-US/docs/Web/CSS/named-color) for more information on color keywords.
 
@@ -132,11 +132,11 @@ For more information on classifying these functions, see the [Color spaces and c
 #### HSL functional notation
 
 Designers and artists often prefer to work using the [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method.
-The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
+The `hsl()` CSS function is similar to the `rgb()` function in usage otherwise.
 
 The diagram below shows an HSL color cylinder. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/angle) on a circular {{glossary("color wheel")}}.
 Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue.
-As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white).
+As the value of luminance (or lightness) increases, the color transitions from the darkest to the brightest possible (from black to white).
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
 
@@ -251,20 +251,20 @@ You might see "color model" and "color space" used interchangeably, but there is
 - A color space is a system for grouping colors so that describing any given color is consistent.
   If you transform a color between different color spaces, it will look identical.
 
-The `hsl()` and `hwb()` functions we've used above use the sRGB color space and both use **cylindrical** models, and this why a `<hue>` angle let's you control the color's properties like on a [color wheel](/en-US/docs/Glossary/Color_wheel).
+The `hsl()` and `hwb()` functions we've used above use the sRGB color space, and both use _cylindrical_ models; this is why a `<hue>` angle lets you control the color's properties like on a [color wheel](/en-US/docs/Glossary/Color_wheel).
 Let's take a look at other color spaces that are available and why you might use them.
 
 #### CIELAB and Oklab color spaces
 
-The CIELAB and Oklab colors spaces are based on human vision experiments and represent the entire range of color that humans can see.
-The main purpose of these models is that they are uniform in such a way as a given distance between any two points in the color space should appear equally different to a viewer.
+The CIELAB and Oklab color spaces are based on human vision experiments and represent the entire range of colors that humans can see.
+The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer.
 
 For the CIELAB color space, you can use the `lab()` and `lch()` functions.
 The `lch()` function uses lightness (L), chroma (C), and hue (H) and the Lab model uses lightness (L), red/green-ness, and yellow/blue-ness along the "a" and "b" axes (rectangular coordinates) in the color space.
 
 The example below shows how the effect of these two functions where each row modifies a single component.
-The first row shows changes to the `lch()` lightness value, the second row changes the `lch()` hue component.
-The third row changes the `lab()` "b" axis, so we have a different resulting effect than `lch()` as we're actually gradually adding more yellow to the color rather than cycling through the entire color wheel:
+The first row shows changes to the `lch()` lightness value, while the second row changes the `lch()` hue component.
+The third row changes the `lab()` "b" axis, so we have a different effect than `lch()` as we're gradually adding more yellow to the color rather than cycling through the entire color wheel:
 
 ```css hidden live-sample___lch-colors
 /* Varying shades of purple */
@@ -365,7 +365,7 @@ The third row changes the `lab()` "b" axis, so we have a different resulting eff
 
 {{embedlivesample("lch-colors", '100', '150') }}
 
-Oklab is a newer color space that uses the same type of model as CIELAB but it is optimized based on data of visually similar colors, so the values are intended to be more accurate than CIELAB.
+Oklab is a color space that uses the same model type as CIELAB. Still, it is optimized based on data of visually similar colors, so the values are intended to be more accurate than CIELAB.
 If you already understand `lab()` and `lch()`, you can use these functions in a similar way:
 
 ```css
@@ -380,8 +380,8 @@ If you already understand `lab()` and `lch()`, you can use these functions in a 
 #### The color function
 
 If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
-This is useful if you want to describe a color for high-definition devices which have wider color [gamuts](/en-US/docs/Glossary/Gamut).
-For example, if we wanted to show the `display-p3 0 0 1` color which is outside of the sRGB gamut, you can use a [`@media`](/en-US/docs/Web/CSS/@media/color-gamut) at-rule for detecting if the client hardware supports colors in this range:
+This is useful to describe a color for high-definition devices with wider color [gamuts](/en-US/docs/Glossary/Gamut).
+For example, if we wanted to show the `display-p3 0 0 1` color, which is outside of the sRGB gamut, you can use a [`@media`](/en-US/docs/Web/CSS/@media/color-gamut) at-rule for detecting if the client hardware supports colors in this range:
 
 ```css
 .vibrant {
