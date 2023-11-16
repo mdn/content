@@ -56,7 +56,7 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 Link: <https://fonts.googleapis.com/>; rel=preconnect
 ```
 
-or via [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link):
+or via the [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link):
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
 ```
