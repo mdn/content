@@ -273,7 +273,7 @@ The third row changes the `lab()` "b" axis, so we have a different resulting eff
   font-family: sans-serif;
   font-size: 14px;
   color: white;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: 4px;
 }
 
