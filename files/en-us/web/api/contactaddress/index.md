@@ -38,8 +38,8 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 
 ## Instance methods
 
-- {{domxref('PaymentAddress.toJSON()')}}
-  - : A standard serializer that returns a JSON representation of the `PaymentAddress` object's properties.
+- {{domxref('ContactAddress.toJSON()')}}
+  - : A standard serializer that returns a JSON representation of the `ContactAddress` object's properties.
 
 ## Examples
 
