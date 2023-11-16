@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### CSS
 
-- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text.
+- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text ([Firefox bug 1310170](https://bugzil.la/1310170)).
 
 #### Removals
 
