@@ -925,17 +925,39 @@ While there are numerous other test tools that you can use, we'll just highlight
 
 ## Challenge yourself
 
-There are a lot more models and views we can test. As a simple task, try to create a test case for the `AuthorCreate` view.
+There are a lot more models and views we can test. As a challenge, try to create a test case for the `AuthorCreate` view.
 
 ```python
 class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
-    fields = '__all__'
-    initial = {'date_of_death':'12/10/2016'}
-    permission_required = 'catalog.can_mark_returned'
+    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+    initial = {'date_of_death': '11/11/2023'}
+    permission_required = 'catalog.add_author'
 ```
 
-Remember that you need to check anything that you specify or that is part of the design. This will include who has access, the initial date, the template used, and where the view redirects on success.
+Remember that you need to check anything that you specify or that is part of the design.
+This will include who has access, the initial date, the template used, and where the view redirects on success.
+
+You might use the following code to set up your test and assign your user the appropriate permission
+
+```python
+class AuthorCreateViewTest(TestCase):
+    """Test case for the AuthorCreate view (Created as Challenge)."""
+
+    def setUp(self):
+        # Create a user
+        test_user = User.objects.create_user(
+            username='test_user', password='some_password')
+
+        content_typeAuthor = ContentType.objects.get_for_model(Author)
+        permAddAuthor = Permission.objects.get(
+            codename="add_author",
+            content_type=content_typeAuthor,
+        )
+
+        test_user.user_permissions.add(permAddAuthor)
+        test_user.save()
+```
 
 ## Summary
 
