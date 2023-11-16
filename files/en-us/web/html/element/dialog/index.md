@@ -216,9 +216,9 @@ So for example:
 When animating `<dialog>`s with CSS transitions, the following features are required:
 
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule
-  - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from when it is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
+  - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from every time it is opened. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
 - [`display`](/en-US/docs/Web/CSS/display) property
-  - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` for the duration of the transition, ensuring the other transitions are visible.
+  - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` (or another visible `display` value set on the dialog's open state) for the duration of the transition, ensuring the other transitions are visible.
 - [`overlay`](/en-US/docs/Web/CSS/overlay) property
   - : Include `overlay` in the transitions list to ensure the removal of the `<dialog>` from the top layer is deferred until the transition completes, again ensuring the transition is visible.
 - {{cssxref("transition-behavior")}} property
@@ -297,11 +297,6 @@ because the nesting selector cannot represent pseudo-elements. */
   dialog[open]::backdrop {
     background-color: rgb(0 0 0 / 0);
   }
-}
-
-body,
-button {
-  font-family: system-ui;
 }
 ```
 

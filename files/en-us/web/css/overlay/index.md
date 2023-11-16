@@ -21,6 +21,13 @@ It is important to note that `overlay` can _only_ be set by the browser — auth
 /* Keyword values */
 overlay: auto;
 overlay: none;
+
+/* Global values */
+display: inherit;
+display: initial;
+display: revert;
+display: revert-layer;
+display: unset;
 ```
 
 ### Values

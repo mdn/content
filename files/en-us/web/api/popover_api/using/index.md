@@ -489,6 +489,8 @@ html {
   100% {
     opacity: 0;
     transform: scaleX(0);
+    /* display: none not required here because it is the default value
+    for a closed popover, but including it so the behavior is clear */
     display: none;
   }
 }

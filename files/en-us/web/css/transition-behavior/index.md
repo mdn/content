@@ -112,13 +112,19 @@ html {
   opacity: 0;
   transform: scaleX(0);
 
-  transition:
-    opacity 0.7s,
-    transform 0.7s,
-    overlay 0.7s allow-discrete,
-    display 0.7s allow-discrete;
-  /* Equivalent to
-  transition: all 0.7s allow-discrete; */
+  transition-property: opacity, transform, overlay, display;
+  transition-duration: 0.7s;
+  transition-behavior: allow-discrete;
+  /* Using the shorthand transition property, we could write:
+    transition: 
+      opacity 0.7s,
+      transform 0.7s,
+      overlay 0.7s allow-discrete,
+      display 0.7s allow-discrete;
+
+    or even:
+    transition: all 0.7s allow-discrete;
+  */
 }
 
 /* Needs to be included after the previous [popover]:popover-open 
