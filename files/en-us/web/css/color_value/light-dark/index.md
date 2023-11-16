@@ -54,7 +54,7 @@ Functional notation: `light-dark(light-color, dark-color)`
 
 ### Setting colors based on color scheme
 
-In a supporting browser, the colors will change based on the user preference through an operating system setting (e.g., light or dark mode) or a user agent setting. You can also change this setting in the browsers {{glossary("developer tools")}}.
+By default, in supporting browsers, the color returned by the `light-dark()` color function depends on the user preference set through an operating system's settings (e.g., light or dark mode) or from a user agent setting. You can also change this setting in the browser's {{glossary("developer tools")}}.
 
 #### HTML
 
