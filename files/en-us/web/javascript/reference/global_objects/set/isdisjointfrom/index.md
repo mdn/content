@@ -2,10 +2,12 @@
 title: Set.prototype.isDisjointFrom()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Set.isDisjointFrom
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`isDisjointFrom()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if this set has no elements in common with the given set.
 
