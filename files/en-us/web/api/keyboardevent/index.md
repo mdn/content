@@ -161,7 +161,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
+- {{domxref("KeyboardEvent.locale")}} {{Non-standard_inline}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
   - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
