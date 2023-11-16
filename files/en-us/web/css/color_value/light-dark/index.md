@@ -16,6 +16,10 @@ To enable support for the `light-dark()` color function, the {{CSSXref("color-sc
 :root {
   color-scheme: light dark;
 }
+body {
+  color: light-dark(#333b3c, #efefec);
+  background-color: light-dark(#efedea, #223a2c);
+}
 ```
 
 ## Syntax
