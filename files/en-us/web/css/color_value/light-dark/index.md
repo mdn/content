@@ -26,13 +26,13 @@ body {
 
 ```css
 /* Named color values */
-color: light-dark(white, black);
+color: light-dark(black, white);
 
 /* RGB color values */
-color: light-dark(rgb(255 255 255), rgb(0 0 0));
+color: light-dark(rgb(0 0 0), rgb(255 255 255));
 
 /* Custom properties */
-color: light-dark(var(--light), var(--dark));
+color: light-dark(var(--dark), var(--light));
 ```
 
 ### Values
