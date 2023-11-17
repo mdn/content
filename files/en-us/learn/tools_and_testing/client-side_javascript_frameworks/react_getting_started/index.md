@@ -275,8 +275,6 @@ After that, we import `reactLogo` and `viteLogo`. Note that their import paths s
 
 The final statement imports the CSS related to our `App` component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Rollup, the bundler, to add the referenced CSS file to the final CSS bundle.
 
-Prior to the release of React 17 in 2020, components were also required to import of the React library itself, as in - `import React from 'react'`. Skipping this step would result in an error: React turned the JSX we write into `React.createElement()`, so all React components needed to import the `React` module. React 17 introduced a new, rewritten version of the JSX transform that makes this statement unnecessary, with backported support to React 16.14.0, React 15.7.0, and React 0.14.10 (read more on the [official React doc](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)).
-
 ### The App component
 
 After the imports, we have a function named `App`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App` function to `app`, your browser would show you an error.
