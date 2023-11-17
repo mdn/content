@@ -457,7 +457,7 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's utilize it in `App.jsx`. Update your code so that you are reading the `subject` value from `props.subject` rather than the string literal we defined previously. You can also delete the `console.log()` statement. Your code should look like this:
+Now that `subject` is one of our props, let's utilize it in `App.jsx`. Un-comment the `Hello, {subject}!` line and change it to be `Hello, {props.subject}!` instead, then delete the `console.log()` statement. Your code should look like this:
 
 ```jsx
 function App(props) {
@@ -473,6 +473,8 @@ function App(props) {
 ```
 
 When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.jsx`, edit the value of `subject`, and save, your text will change.
+
+For additional practice, you might try adding a `greeting` prop to the `<App />` component and using it alongside the `subject` prop.
 
 ## Summary
 
