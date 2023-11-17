@@ -29,26 +29,40 @@ A new instance of the {{domxref("EventTarget")}} object.
 ## Examples
 
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
+class Counter extends EventTarget {
+  constructor(initialValue = 0) {
     super();
-    this._secret = mySecret;
+    this.value = initialValue;
   }
 
-  get secret() {
-    return this._secret;
+  #emitChangeEvent() {
+    this.dispatchEvent(
+      new CustomEvent("valuechange", { detail: this.value })
+    );
+  }
+
+  increment() {
+    this.value++;
+    this.#emitChangeEvent();
+  }
+
+  decrement() {
+    this.value--;
+    this.#emitChangeEvent();
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // === 5
-myEventTarget.addEventListener("foo", (e) => {
-  myEventTarget._secret = e.detail;
+const counter = new Counter(100);
+
+counter.addEventListener("valuechange", (event) => {
+  console.log("The new value is:", event.detail);
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // === 7
+target.increment()
+// => The new value is: 101
+
+target.decrement()
+// => The new value is: 100
 ```
 
 ## Specifications
