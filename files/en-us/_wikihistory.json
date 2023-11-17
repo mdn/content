@@ -2345,10 +2345,6 @@
     "modified": "2020-03-10T17:57:04.065Z",
     "contributors": ["j9t", "milsyobtaf", "estelle", "cfwilson"]
   },
-  "Glossary/First_interactive": {
-    "modified": "2019-05-14T16:39:39.319Z",
-    "contributors": ["milsyobtaf", "estelle", "jordana"]
-  },
   "Glossary/First_meaningful_paint": {
     "modified": "2019-05-14T16:39:56.381Z",
     "contributors": ["milsyobtaf", "estelle", "ehoops", "cfwilson"]
@@ -65723,19 +65719,6 @@
     "modified": "2020-12-12T16:10:34.316Z",
     "contributors": ["bershanskiy", "Sheppy"]
   },
-  "Web/API/Web_Audio_API/Migrating_from_webkitAudioContext": {
-    "modified": "2020-04-28T12:54:23.540Z",
-    "contributors": [
-      "Sheppy",
-      "stephaniehobson",
-      "Cwiiis",
-      "chrisdavidmills",
-      "teoli",
-      "Ehsan",
-      "padenot",
-      "cwilso"
-    ]
-  },
   "Web/API/Web_Audio_API/Simple_synth": {
     "modified": "2020-06-16T14:49:12.422Z",
     "contributors": ["jmcantrell", "DianeLooney", "Sheppy"]
@@ -71228,7 +71211,7 @@
       "yyss"
     ]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T21:30:40.845Z",
     "contributors": [
       "mfluehr",
@@ -71258,7 +71241,7 @@
       "denschub"
     ]
   },
-  "Web/API/console/clear": {
+  "Web/API/console/clear_static": {
     "modified": "2020-10-15T21:45:27.781Z",
     "contributors": [
       "alattalatta",
@@ -71271,7 +71254,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2020-10-15T21:26:42.386Z",
     "contributors": [
       "alattalatta",
@@ -71296,7 +71279,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/console/countReset": {
+  "Web/API/console/countreset_static": {
     "modified": "2020-10-15T22:07:02.809Z",
     "contributors": [
       "alattalatta",
@@ -71307,11 +71290,11 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/console/debug": {
+  "Web/API/console/debug_static": {
     "modified": "2020-10-15T22:14:46.390Z",
     "contributors": ["alattalatta", "Sheppy"]
   },
-  "Web/API/console/dir": {
+  "Web/API/console/dir_static": {
     "modified": "2020-10-15T21:05:50.008Z",
     "contributors": [
       "mfuji09",
@@ -71341,7 +71324,7 @@
       "alanh"
     ]
   },
-  "Web/API/console/dirxml": {
+  "Web/API/console/dirxml_static": {
     "modified": "2020-10-15T21:37:54.331Z",
     "contributors": [
       "connorshea",
@@ -71355,7 +71338,7 @@
       "Sebastianz"
     ]
   },
-  "Web/API/console/error": {
+  "Web/API/console/error_static": {
     "modified": "2020-10-15T21:05:51.042Z",
     "contributors": [
       "connorshea",
@@ -71379,7 +71362,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/group": {
+  "Web/API/console/group_static": {
     "modified": "2020-10-15T21:02:26.181Z",
     "contributors": [
       "connorshea",
@@ -71402,7 +71385,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/groupCollapsed": {
+  "Web/API/console/groupcollapsed_static": {
     "modified": "2020-10-15T21:02:41.489Z",
     "contributors": [
       "connorshea",
@@ -71421,7 +71404,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/groupEnd": {
+  "Web/API/console/groupend_static": {
     "modified": "2020-10-15T21:05:49.953Z",
     "contributors": [
       "connorshea",
@@ -71440,7 +71423,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2020-10-15T21:05:50.858Z",
     "contributors": [
       "estelle",
@@ -71461,7 +71444,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/log": {
+  "Web/API/console/log_static": {
     "modified": "2020-10-15T21:02:44.299Z",
     "contributors": [
       "mfuji09",
@@ -71499,7 +71482,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/profile": {
+  "Web/API/console/profile_static": {
     "modified": "2020-10-15T21:37:02.369Z",
     "contributors": [
       "fscholz",
@@ -71518,7 +71501,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/console/profileEnd": {
+  "Web/API/console/profileend_static": {
     "modified": "2020-10-15T21:37:04.872Z",
     "contributors": [
       "ExE-Boss",
@@ -71538,7 +71521,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2020-10-15T21:29:54.225Z",
     "contributors": [
       "fscholz",
@@ -71555,7 +71538,7 @@
       "fitzgen"
     ]
   },
-  "Web/API/console/time": {
+  "Web/API/console/time_static": {
     "modified": "2020-10-15T21:05:49.142Z",
     "contributors": [
       "mfuji09",
@@ -71580,7 +71563,7 @@
       "myakura"
     ]
   },
-  "Web/API/console/timeEnd": {
+  "Web/API/console/timeend_static": {
     "modified": "2020-10-15T21:05:49.965Z",
     "contributors": [
       "irenesmith",
@@ -71605,11 +71588,11 @@
       "myakura"
     ]
   },
-  "Web/API/console/timeLog": {
+  "Web/API/console/timelog_static": {
     "modified": "2020-10-15T22:07:02.547Z",
     "contributors": ["plexcom1", "irenesmith", "chrisdavidmills"]
   },
-  "Web/API/console/timeStamp": {
+  "Web/API/console/timestamp_static": {
     "modified": "2020-10-15T21:37:04.975Z",
     "contributors": [
       "vinyldarkscratch",
@@ -71623,7 +71606,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/console/trace": {
+  "Web/API/console/trace_static": {
     "modified": "2020-10-15T21:05:04.282Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -71647,7 +71630,7 @@
       "ziyunfei"
     ]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2020-10-15T21:05:49.876Z",
     "contributors": [
       "SUM1",
@@ -92267,10 +92250,6 @@
       "stevebanikrocana",
       "teoli"
     ]
-  },
-  "Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser": {
-    "modified": "2019-03-18T20:51:50.321Z",
-    "contributors": ["chrisdavidmills", "Syedfaisal"]
   },
   "Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges": {
     "modified": "2019-04-12T10:12:05.792Z",
