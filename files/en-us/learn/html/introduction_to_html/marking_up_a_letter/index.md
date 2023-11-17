@@ -61,7 +61,7 @@ For this project, your task is to mark up a letter that needs to be hosted on a 
 - Use appropriate document structure including doctype, and {{htmlelement("html")}}, {{htmlelement("head")}} and {{htmlelement("body")}} elements.
 - In general, the letter should be marked up as an organization of headings and paragraphs, with the following exception. There is one top level heading (the "Re:" line) and three second level headings.
 - Use an appropriate list type to mark up the semester start dates, study subjects, and exotic dances.
-- Put the two addresses inside {{htmlelement("address")}} elements. Each line of the address should sit on a new line, but not be in a new paragraph.
+- Put the two addresses inside {{htmlelement("address")}} elements. Each line of the address should sit on a new line, but not be in a new paragraph. 
 
 ### Inline semantics
 
