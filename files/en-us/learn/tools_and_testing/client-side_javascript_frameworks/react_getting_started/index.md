@@ -139,7 +139,7 @@ npm create vite@latest moz-todo-react -- --template react
 
 This creates a `moz-todo-react` directory using Vite's `react` template.
 
-> **Note:** The `--` is necessary to pass arguments to the `create` command, and the `--template react` argument tells Vite to use its React template.
+> **Note:** The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
 
 Your terminal will have printed some messages if this command was successful. You should see text prompting you to `cd` to your new directory, install the app's dependencies, and run the app locally. Let's start with two of those commands. Run the following in your terminal:
 
@@ -197,10 +197,12 @@ Before we move on, you might want to change your `package.json` file a little bi
 
 ```diff
 - "dev": "vite",
-+ "dev": "vite -- --open --port 3000",
++ "dev": "vite --open --port 3000",
 ```
 
 With this in place, your app will open in your browser at `http://localhost:3000` every time you run `npm run dev`.
+
+> **Note:** You _don't_ need the extra `--` here because we're calling `vite` directly, rather than using an npm script to call it.
 
 ## Exploring our first React component — \<App/>
 
