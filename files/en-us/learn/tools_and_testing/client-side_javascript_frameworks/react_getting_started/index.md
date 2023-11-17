@@ -454,7 +454,7 @@ Add a prop of `subject` to the `<App />` component call, with a value of `Claric
 <App subject="Clarice" />
 ```
 
-Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `App()` so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console: do that now. The updated lines of your `App()` function should now look like this:"
+Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `App()` so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console: do that now. The updated lines of your `App()` function should now look like this:
 
 ```jsx
 function App(props) {
