@@ -386,13 +386,31 @@ function App() {
 export default App;
 ```
 
-## Reactivity with variables and props
+## Practice with JSX
 
-Next, we'll use our JavaScript skills to get a bit more comfortable editing components and working with data in React. We'll talk about how variables are used inside JSX and introduce props, which are a way of passing data into a component. This data can then be accessed using variables.
+Next, we'll use our JavaScript skills to get a bit more comfortable writing JSX and working with data in React. We'll talk about how to add attributes to JSX elements, how to write comments, how to render content from variables and other expressions, and how to pass data into components with props.
 
-### Variables in JSX
+### Adding attributes to JSX elements
 
-Let's practice rendering some content from variables in React. Declare a new variable called `subject` before the `App()` function definition and set its value to the string `"React"`:
+JSX elements can have attributes, just like HTML elements. For example, you could render a button below your `<h1>` element like this:
+
+```jsx
+<button type="button">Click me!</button>
+```
+
+When you save your file, you'll see a button with the words `Click me!`. The button doesn't do anything yet, but we'll learn about adding interactivity to our app soon.
+
+Some attributes are different than their HTML counterparts. For example, the `class` attribute in HTML translates to `className` in JSX. This is because `class` is a reserved word in JavaScript, and JSX is a JavaScript extension. If you wanted to add a `primary` class to your button, you'd write it like this:
+
+```jsx
+<button type="button" className="primary">
+  Click me!
+</button>
+```
+
+### JavaScript expressions as content
+
+Unlike HTML, JSX allows us to write variables and other JavaScript expressions right alongside our other content. Let's declare a variable called `subject` just above the `App` function:
 
 ```jsx
 const subject = "React";
@@ -409,9 +427,7 @@ Next, replace the word "World" in the `<h1>` element with `{subject}`:
 
 Save your file and check your browser. You should see "Hello, React!" rendered.
 
-You might be wondering why we put curly braces around `subject` here. This is a feature of JSX's syntax. The curly braces tell React that we want to read the value of the `subject` variable, rather than render the literal string `"subject"`. You can put any valid JavaScript expression inside curly braces in JSX, and React will evaluate it and render the _result_ of the expression.
-
-Following is a series of examples, with comments above explaining what each expression will render:
+The curly braces around `subject` are another feature of JSX's syntax. The curly braces tell React that we want to read the value of the `subject` variable, rather than render the literal string `"subject"`. You can put any valid JavaScript expression inside curly braces in JSX; React will evaluate it and render the _result_ of the expression as the final content. Following is a series of examples, with comments above explaining what each expression will render:
 
 ```jsx-nolint
 {/* Hello, React :)! */}
@@ -422,13 +438,15 @@ Following is a series of examples, with comments above explaining what each expr
 <h1>Hello, {2 + 2}!</h1>
 ```
 
-As you can see, even comments in JSX are written inside curly braces. This is because comments, too, are technically expressions in the JavaScript language. The `/* block comment syntax */` is necessary for your program to know where the comment starts and ends.
+Even comments in JSX are written inside curly braces! This is because comments, too, are technically JavaScript expressions. The `/* block comment syntax */` is necessary for your program to know where the comment starts and ends.
 
-Typing manual comments this way is a bit tedious, so we recommend using your text editor's comment shortcut. If your text editor understands how to parse JSX, you can use its built-in commenting shortcut – `Ctrl + /` (on Windows) or `Cmd + /` (on macOS).
+> **Note:** If your text editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut – `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) to create comments more quickly.
 
 ### Component props
 
-A **prop** is any data passed into a React component. React props are comparable to HTML attributes: where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, the flow of data is unidirectional: props can only be passed from Parent components down to Child components. In addition, props are read-only.
+**Props** are a means of passing data into a React component. Their syntax is identical to that of attrributes, in fact: `prop="value"`. The distinction between them is subtle: attributes are passed into plain elements; props are passed into React components.
+
+In React, the flow of data is unidirectional: props can only be passed from Parent components down to Child components.
 
 Let's open `index.jsx` and give our `<App />` component its first prop.
 
@@ -438,7 +456,7 @@ Add a prop of `subject` to the `<App />` component call, with a value of `Claric
 <App subject="Clarice" />
 ```
 
-Back in `App.jsx`, let's revisit the App function itself. Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. That'll look like this"
+Back in `App.jsx`, let's revisit the `App` function itself. Change the signature of `App` so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. That'll look like this"
 
 ```jsx
 function App(props) {
@@ -466,6 +484,9 @@ function App(props) {
     <>
       <header>
         <h1>Hello, {subject}</h1>
+        <button type="button" className="primary">
+          Click me!
+        </button>
       </header>
     </>
   );
