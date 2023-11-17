@@ -23,13 +23,9 @@ pipeThrough(transformStream, options)
 
 - `transformStream`
 
-  - : A {{domxref("TransformStream")}} (or an object with the structure
-    `{writable, readable}`) consisting of a readable stream and a writable
-    stream working together to transform some data from one form to another. Data written
-    to the `writable` stream can be read in some transformed state by the
-    `readable` stream. For example, a {{domxref("TextDecoder")}}, has bytes
-    written to it and strings read from it, while a video decoder has encoded bytes
-    written to it and uncompressed video frames read from it.
+  - : A {{domxref("TransformStream")}} (or an object with the structure `{writable, readable}`) consisting of a readable stream and a writable stream working together to transform some data from one form to another.
+    Data written to the `writable` stream can be read in some transformed state by the `readable` stream.
+    For example, a {{domxref("TextDecoder")}}, has bytes written to it and strings read from it, while a video decoder has encoded bytes written to it and uncompressed video frames read from it.
 
 - `options` {{optional_inline}}
 
@@ -38,20 +34,15 @@ pipeThrough(transformStream, options)
 
     - `preventClose`
 
-      - : If this is set to `true`, the source `ReadableStream` closing will no longer cause the destination `WritableStream` to be closed.
-        The method will return a fulfilled promise once this process completes, unless an error is encountered while closing the destination, in which case it will be rejected with that error.
+      - : If this is set to `true`, closing the source `ReadableStream` will no longer cause the destination `WritableStream` to be closed.
 
     - `preventAbort`
 
       - : If this is set to `true`, errors in the source `ReadableStream` will no longer abort the destination `WritableStream`.
-        The method will return a promise rejected with the source's error, or with any error that occurs during aborting the destination.
 
     - `preventCancel`
 
       - : If this is set to `true`, errors in the destination `WritableStream` will no longer cancel the source `ReadableStream`.
-        In this case the method will return a promise rejected with the source's error, or with any error that occurs during canceling the source.
-        In addition, if the destination writable stream starts out closed or closing, the source readable stream will no longer be canceled.
-        In this case the method will return a promise rejected with an error indicating piping to a closed stream failed, or with any error that occurs during canceling the source.
 
     - `signal`
 
@@ -59,7 +50,20 @@ pipeThrough(transformStream, options)
 
 ### Return value
 
-The `readable` side of the `transformStream`.
+A {{jsxref("Promise")}} that fulfills to the `readable` side of the `transformStream` (a `ReadableStream`), or is rejected with an error.
+
+Notes on errors:
+
+- Closing the source readable stream will cause the destination writable stream to also be closed (unless `preventClose` is truthy).
+  In this case the promise may be rejected with errors resulting from closing the source or destination.
+  If `preventClose` is truthy the destination stream will not close, but the promise may still be rejected due to errors resulting from closing the source.
+- An error in the source readable stream will abort the destination writable stream (unless `preventAbort` is truthy).
+  The promise will be rejected with the source's error, or with any error that occurs during aborting the destination.
+  If `preventAbort` is truthy, the destination stream will not abort, but the promise will still be rejected due to the errors in the source .
+- An error in the destination writable stream will cancel the source readable stream (unless `preventCancel` is truthy).
+  The promise will be rejected with the source's error, or with any error that occurs during canceling the source.
+  If `preventCancel` is truthy, the source readable stream will not canceled, but the promise will still be rejected due to the errors in the destination.
+- If the destination writable stream starts off closed or closing, the promise may be rejected with an error indicating that piping to a closed stream failed.
 
 ### Exceptions
 
