@@ -4,7 +4,6 @@ slug: Web/CSS/-moz-image-rect
 page-type: css-function
 status:
   - deprecated
-  - experimental
   - non-standard
 browser-compat: css.types.-moz-image-rect
 ---
