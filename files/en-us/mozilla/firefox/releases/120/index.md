@@ -25,6 +25,8 @@ This article provides information about the changes in Firefox 120 that affect d
 
 #### Removals
 
+- The non-standard {{cssxref("-moz-image-rect")}} CSS function for clipping images has been removed. First introduced in Firefox 4 this function has never been standardized or implemented in other browsers. ([Firefox bug 1856999](https://bugzil.la/1853867)).
+
 ### JavaScript
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
