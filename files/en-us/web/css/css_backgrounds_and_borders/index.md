@@ -135,9 +135,5 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 
 ## See also
 
-- Interactive tools that let you visually create borders images, rounded corners, and box shadows:
-  - [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - [Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color), including for borders.
 - The [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function that applies a drop shadow effect to the input image. The function is used by the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.

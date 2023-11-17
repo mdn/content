@@ -13,8 +13,6 @@ The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects aro
 
 The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/text-shadow) (the first specified shadow is on top).
 
-[Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
-
 ## Syntax
 
 ```css
