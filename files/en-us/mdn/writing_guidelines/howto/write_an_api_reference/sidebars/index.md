@@ -87,7 +87,7 @@ These are all technically optional, but it is strongly encouraged that instead o
    This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces.
    If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list.
    "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
-5. `"events"` — the value is an array that should contain the _title_ of events that are part of the API bit are defined in interfaces that are _not part of the API (events belonging to interfaces in the API (`interfaces`) are documented by default).
+5. `"events"` — the value is an array that should contain the _title_ of events that are part of the API bit are defined in interfaces that are _not_ part of the API (events belonging to interfaces in the API (`interfaces`) are documented by default).
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
    For example, `"Document: selectionchange"` is part of the [Selection API](/en-US/docs/Web/API/Selection_API) but `Document` is not, so we add the event to the array and it will be linked from the [Selection API](/en-US/docs/Web/API/Selection_API) topic.
 7. `"guides"` — the value is an array of strings, each that addresses a guide topic that explain how to use the API.
