@@ -458,7 +458,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 }
 
 function anim() {
-  requestAnimationFrame(anim);
+  window.requestAnimationFrame(anim);
 
   context.fillStyle = "rgba(0,0,0,0.05)";
   context.fillRect(0, 0, canvas.width, canvas.height);
