@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-browser-compat: javascript.builtins.WebAssembly.instantiate
+page-type: webassembly-function
+browser-compat: webassembly.api.instantiate
 ---
 
 {{WebAssemblySidebar}}

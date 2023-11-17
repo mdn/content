@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`has()`** method of the {{domxref("FormData")}} interface returns whether a `FormData` object contains a certain key.
 
@@ -47,5 +47,5 @@ formData.has("username"); // Returns true
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

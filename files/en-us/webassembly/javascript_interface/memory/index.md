@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Memory
 slug: WebAssembly/JavaScript_interface/Memory
-browser-compat: javascript.builtins.WebAssembly.Memory
+page-type: webassembly-interface
+browser-compat: webassembly.api.Memory
 ---
 
 {{WebAssemblySidebar}}

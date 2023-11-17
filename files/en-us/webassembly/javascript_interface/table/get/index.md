@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
-browser-compat: javascript.builtins.WebAssembly.Table.get
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Table.get
 ---
 
 {{WebAssemblySidebar}}

@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Table/grow
-browser-compat: javascript.builtins.WebAssembly.Table.grow
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Table.grow
 ---
 
 {{WebAssemblySidebar}}

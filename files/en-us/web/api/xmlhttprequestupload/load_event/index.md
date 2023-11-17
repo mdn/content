@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequest.load_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The `load` event is fired when an {{domxref("XMLHttpRequestUpload")}} transaction completes successfully.
 

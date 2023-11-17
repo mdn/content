@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
-browser-compat: javascript.builtins.WebAssembly.Table.set
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Table.set
 ---
 
 {{WebAssemblySidebar}}

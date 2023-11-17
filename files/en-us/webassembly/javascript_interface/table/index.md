@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table
 slug: WebAssembly/JavaScript_interface/Table
-browser-compat: javascript.builtins.WebAssembly.Table
+page-type: webassembly-interface
+browser-compat: webassembly.api.Table
 ---
 
 {{WebAssemblySidebar}}
