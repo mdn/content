@@ -106,8 +106,8 @@ The following values may be operational on historical browser versions using **`
 | `media-toggle-closed-captions-button`  | Y(13.1) |         | Y(73)     |       |
 | `media-slider`                         | Y(13.1) |         | Y(117)    | Y(80)  |
 | `media-sliderthumb`                    | Y(13.1) |         | Y(117)    | Y(80)  |
-| `media-volume-slider-container`        | Y(13.1) |         | Y(73)     |       |
-| `media-volume-slider-mute-button`      | Y(13.1) |         |          |       |
+| `media-volume-slider-container`        | Y(13.1) |         | Y(73)     |        |
+| `media-volume-slider-mute-button`      | Y(13.1) |         |           |        |
 | `media-volume-slider`                  | Y(13.1) |         | Y(117)    | Y(80)  |
 | `media-volume-sliderthumb`             | Y(13.1) |         | Y(117)    | Y(80)  |
 | `media-controls-background`            | Y(13.1) |         | Y(73)     |       |
