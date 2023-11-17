@@ -56,10 +56,10 @@ counter.addEventListener("valuechange", (event) => {
   console.log("The new value is:", event.detail);
 });
 
-target.increment()
+target.increment();
 // => The new value is: 101
 
-target.decrement()
+target.decrement();
 // => The new value is: 100
 ```
 
