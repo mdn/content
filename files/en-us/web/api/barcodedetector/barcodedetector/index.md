@@ -33,6 +33,11 @@ new BarcodeDetector(options)
       - : An {{jsxref('Array')}} of barcode formats as strings.
         To see a full list of supported formats see the [Barcode Detection API](/en-US/docs/Web/API/Barcode_Detection_API).
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `formats` is specified and is empty or contains `unknown`.
+
 ## Examples
 
 This example creates a new barcode detector object, with specified supported formats
