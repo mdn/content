@@ -70,85 +70,85 @@ The following values may be operational on historical browser versions using **`
 - Chrome, Edge and Safari entries below indicate release version support for values used with the `-webkit-appearance` vendor-prefix property.
 - Values with an asterisk (\*) have clear intents for removal.
 - For each cell of browser version and value:
-  - `<={version}`: indicates a value is supported up to and including `{version}`
-  - `<{version}`: support was removed in a release earlier than `{version}`
+  - `Y{version}`: indicates a value is supported up to and including `{version}`
+  - `N{version}`: support was removed in a release earlier than `{version}`
   - a blank cell indicates that support was never added
 
 | Value                                  | Safari | Firefox | Chrome   | Edge  |
 | -------------------------------------- | ------ | ------- | -------- | ----- |
-| `attachment`                           | <=13.1 |         |          |       |
-| `borderless-attachment`                | <=13.1 |         |          |       |
-| `button-bevel`                         | <=13.1 | <75     |          | <80   |
-| `caps-lock-indicator`                  | <=13.1 |         |          | <80   |
-| `caret`                                | <=13.1 | <75     | <=73     | <80   |
-| `checkbox-container`                   |        | <75     |          |       |
-| `checkbox-label`                       |        | <75     |          |       |
-| `checkmenuitem`                        |        | <75     |          |       |
-| `color-well`                           | <=13.1 |         |          |       |
-| `continuous-capacity-level-indicator`  | <=13.1 |         |          |       |
-| `default-button`                       | <=13.1 |         |          | <80   |
-| `discrete-capacity-level-indicator`    | <=13.1 |         |          |       |
-| `inner-spin-button`                    | <=13.1 | <75     | <=118 \* | <=119 |
-| `image-controls-button`                | <=13.1 |         |          |       |
-| `list-button`                          | <=13.1 |         |          |       |
-| `listitem`                             | <=13.1 | <75     | <=73     | <80   |
-| `media-enter-fullscreen-button`        | <=13.1 |         | <=73     |       |
-| `media-exit-fullscreen-button`         | <=13.1 |         | <=73     |       |
-| `media-fullscreen-volume-slider`       | <=13.1 |         |          |       |
-| `media-fullscreen-volume-slider-thumb` | <=13.1 |         |          |       |
-| `media-mute-button`                    | <=13.1 |         |          | <80   |
-| `media-play-button`                    | <=13.1 |         |          | <80   |
-| `media-overlay-play-button`            | <=13.1 |         | <=73     |       |
-| `media-return-to-realtime-button`      | <=13.1 |         |          |       |
-| `media-rewind-button`                  | <=13.1 |         |          |       |
-| `media-seek-back-button`               | <=13.1 |         | <73      |       |
-| `media-seek-forward-button`            | <=13.1 |         | <73      |       |
-| `media-toggle-closed-captions-button`  | <=13.1 |         | <=73     |       |
-| `media-slider`                         | <=13.1 |         | <=117    | <=80  |
-| `media-sliderthumb`                    | <=13.1 |         | <=117    | <=80  |
-| `media-volume-slider-container`        | <=13.1 |         | <=73     |       |
-| `media-volume-slider-mute-button`      | <=13.1 |         |          |       |
-| `media-volume-slider`                  | <=13.1 |         | <=117    | <=80  |
-| `media-volume-sliderthumb`             | <=13.1 |         | <=117    | <=80  |
-| `media-controls-background`            | <=13.1 |         | <=73     |       |
-| `media-controls-dark-bar-background`   | <=13.1 |         |          |       |
-| `media-controls-fullscreen-background` | <=13.1 |         | <=73     |       |
-| `media-controls-light-bar-background`  | <=13.1 |         |          |       |
-| `media-current-time-display`           |        |         | <=73     |       |
-| `media-time-remaining-display`         | <=13.1 |         | <=73     |       |
-| `menulist-text`                        | <=13.1 | <75     | <=73     | <80   |
-| `menulist-textfield`                   | <=13.1 | <75     | <=73     | <80   |
-| `meterbar`                             |        | <=100   |          |       |
-| `number-input`                         |        | <=75    |          |       |
-| `progress-bar-value`                   | <=13.1 |         | <=73     |       |
-| `progressbar`                          |        | <=100   |          |       |
-| `progressbar-vertical`                 |        | <=75    |          |       |
-| `range`                                |        | <=75    |          |       |
-| `range-thumb`                          |        | <=75    |          |       |
-| `rating-level-indicator`               | <=13.1 |         |          |       |
-| `relevancy-level-indicator`            | <=13.1 |         |          |       |
-| `scale-horizontal`                     |        | <=75    |          |       |
-| `scalethumbend`                        |        | <=75    |          |       |
-| `scalethumb-horizontal`                |        | <=75    |          |       |
-| `scalethumbstart`                      |        | <=75    |          |       |
-| `scalethumbtick`                       |        | <=75    |          |       |
-| `scalethumb-vertical`                  |        | <=75    |          |       |
-| `scale-vertical`                       |        | <=75    |          |       |
-| `scrollbarthumb-horizontal`            |        | <=75    |          |       |
-| `scrollbarthumb-vertical`              |        | <=75    |          |       |
-| `scrollbartrack-horizontal`            |        | <=75    |          |       |
-| `scrollbartrack-vertical`              |        | <=75    |          |       |
-| `searchfield-decoration`               | <=13.1 |         |          | <80   |
-| `searchfield-results-decoration`       | <=13.1 | <75     | <73      | <80   |
-| `searchfield-results-button`           | <=13.1 |         |          | <80   |
-| `searchfield-cancel-button`            | <=13.1 | <75     | <=118 \* | <=119 |
-| `snapshotted-plugin-overlay`           | <=13.1 |         |          |       |
+| `attachment`                           | Y(13.1) |         |          |       |
+| `borderless-attachment`                | Y(13.1) |         |          |       |
+| `button-bevel`                         | Y(13.1) | N(75)     |          | N(80)   |
+| `caps-lock-indicator`                  | Y(13.1) |         |          | N(80)   |
+| `caret`                                | Y(13.1) | N(75)     | Y(73)     | N(80)   |
+| `checkbox-container`                   |        | N(75)     |          |       |
+| `checkbox-label`                       |        | N(75)     |          |       |
+| `checkmenuitem`                        |        | N(75)     |          |       |
+| `color-well`                           | Y(13.1) |         |          |       |
+| `continuous-capacity-level-indicator`  | Y(13.1) |         |          |       |
+| `default-button`                       | Y(13.1) |         |          | N(80)   |
+| `discrete-capacity-level-indicator`    | Y(13.1) |         |          |       |
+| `inner-spin-button`                    | Y(13.1) | N(75)     | Y(118) \* | Y(119) |
+| `image-controls-button`                | Y(13.1) |         |          |       |
+| `list-button`                          | Y(13.1) |         |          |       |
+| `listitem`                             | Y(13.1) | N(75)     | Y(73)     | N(80)   |
+| `media-enter-fullscreen-button`        | Y(13.1) |         | Y(73)     |       |
+| `media-exit-fullscreen-button`         | Y(13.1) |         | Y(73)     |       |
+| `media-fullscreen-volume-slider`       | Y(13.1) |         |          |       |
+| `media-fullscreen-volume-slider-thumb` | Y(13.1) |         |          |       |
+| `media-mute-button`                    | Y(13.1) |         |          | N(80)   |
+| `media-play-button`                    | Y(13.1) |         |          | N(80)   |
+| `media-overlay-play-button`            | Y(13.1) |         | Y(73)     |       |
+| `media-return-to-realtime-button`      | Y(13.1) |         |          |       |
+| `media-rewind-button`                  | Y(13.1) |         |          |       |
+| `media-seek-back-button`               | Y(13.1) |         | N(73)      |       |
+| `media-seek-forward-button`            | Y(13.1) |         | N(73)      |       |
+| `media-toggle-closed-captions-button`  | Y(13.1) |         | Y(73)     |       |
+| `media-slider`                         | Y(13.1) |         | Y(117)    | Y(80)  |
+| `media-sliderthumb`                    | Y(13.1) |         | Y(117)    | Y(80)  |
+| `media-volume-slider-container`        | Y(13.1) |         | Y(73)     |       |
+| `media-volume-slider-mute-button`      | Y(13.1) |         |          |       |
+| `media-volume-slider`                  | Y(13.1) |         | Y(117)    | Y(80)  |
+| `media-volume-sliderthumb`             | Y(13.1) |         | Y(117)    | Y(80)  |
+| `media-controls-background`            | Y(13.1) |         | Y(73)     |       |
+| `media-controls-dark-bar-background`   | Y(13.1) |         |          |       |
+| `media-controls-fullscreen-background` | Y(13.1) |         | Y(73)     |       |
+| `media-controls-light-bar-background`  | Y(13.1) |         |          |       |
+| `media-current-time-display`           |        |         | Y(73)     |       |
+| `media-time-remaining-display`         | Y(13.1) |         | Y(73)     |       |
+| `menulist-text`                        | Y(13.1) | N(75)     | Y(73)     | N(80)   |
+| `menulist-textfield`                   | Y(13.1) | N(75)     | Y(73)     | N(80)   |
+| `meterbar`                             |        | Y(100)   |          |       |
+| `number-input`                         |        | Y(75)    |          |       |
+| `progress-bar-value`                   | Y(13.1) |         | Y(73)     |       |
+| `progressbar`                          |        | Y(100)   |          |       |
+| `progressbar-vertical`                 |        | Y(75)    |          |       |
+| `range`                                |        | Y(75)    |          |       |
+| `range-thumb`                          |        | Y(75)    |          |       |
+| `rating-level-indicator`               | Y(13.1) |         |          |       |
+| `relevancy-level-indicator`            | Y(13.1) |         |          |       |
+| `scale-horizontal`                     |        | Y(75)    |          |       |
+| `scalethumbend`                        |        | Y(75)    |          |       |
+| `scalethumb-horizontal`                |        | Y(75)    |          |       |
+| `scalethumbstart`                      |        | Y(75)    |          |       |
+| `scalethumbtick`                       |        | Y(75)    |          |       |
+| `scalethumb-vertical`                  |        | Y(75)    |          |       |
+| `scale-vertical`                       |        | Y(75)    |          |       |
+| `scrollbarthumb-horizontal`            |        | Y(75)    |          |       |
+| `scrollbarthumb-vertical`              |        | Y(75)    |          |       |
+| `scrollbartrack-horizontal`            |        | Y(75)    |          |       |
+| `scrollbartrack-vertical`              |        | Y(75)    |          |       |
+| `searchfield-decoration`               | Y(13.1) |         |          | N(80)   |
+| `searchfield-results-decoration`       | Y(13.1) | N(75)     | N(73)      | N(80)   |
+| `searchfield-results-button`           | Y(13.1) |         |          | N(80)   |
+| `searchfield-cancel-button`            | Y(13.1) | N(75)     | Y(118) \* | Y(119) |
+| `snapshotted-plugin-overlay`           | Y(13.1) |         |          |       |
 | `sheet`                                |        |         |          |       |
-| `slider-vertical`                      |        |         | <=118 \* | <=119 |
-| `sliderthumb-horizontal`               |        |         | <=117    | <=80  |
-| `sliderthumb-vertical`                 |        |         | <=117    | <=80  |
-| `textfield-multiline`                  |        | <=100   |          |       |
-| `-apple-pay-button`                    | <=13.1 |         |          |       |
+| `slider-vertical`                      |        |         | Y(118) \* | Y(119) |
+| `sliderthumb-horizontal`               |        |         | Y(117)    | Y(80)  |
+| `sliderthumb-vertical`                 |        |         | Y(117)    | Y(80)  |
+| `textfield-multiline`                  |        | Y(100)   |          |       |
+| `-apple-pay-button`                    | Y(13.1) |         |          |       |
 
 </details>
 
