@@ -201,7 +201,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 - `'unsafe-inline'`
   - : Allow use of inline resources.
 - `'unsafe-eval'`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setTimeout", "setTimeout")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
 - `'unsafe-allow-redirects'` {{experimental_inline}}
