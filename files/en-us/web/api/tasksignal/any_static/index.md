@@ -34,7 +34,7 @@ A `TaskSignal` instance.
 
 ### Using `TaskSignal.any()`
 
-This example demonstrates combining both a signal from an {{domxref("TaskController")}}, and a timeout signal from {{domxref("AbortSignal.timeout", "TaskSignal.timeout()")}}.
+This example demonstrates combining both a signal from an {{domxref("TaskController")}}, and a timeout signal from {{domxref("AbortSignal.timeout_static", "TaskSignal.timeout()")}}.
 
 ```js
 const button = document.getElementById("cancelDownloadButton");
@@ -61,7 +61,7 @@ try {
     signal: combinedSignal,
   });
   const body = await res.blob();
-  // do something with downloaded content
+  // Do something with downloaded content
 } catch (e) {
   if (e.name === "AbortError") {
     // Cancelled by the user
