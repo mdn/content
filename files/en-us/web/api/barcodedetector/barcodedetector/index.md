@@ -8,7 +8,7 @@ status:
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}{{AvailableInWorkers}}}{{SeeCompatTable}}
 
 The **`BarcodeDetector()`** constructor creates
 a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
