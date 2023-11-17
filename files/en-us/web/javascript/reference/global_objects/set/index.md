@@ -369,25 +369,19 @@ console.log([...mySet]); // Will show you exactly the same Array as myArray
 
 ```js
 // Use to remove duplicate elements from an array
-
 const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
-console.log([...new Set(numbers)]);
-
-// [2, 13, 4, 5, 6, 7, 32]
+console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 ```
 
 ### Relation to strings
 
 ```js
-const text = "India";
+// Case sensitive (set will contain "F" and "f")
+new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
-const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size; // 5
-
-// case sensitive & duplicate omission
-new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
+// Duplicate omission ("f" occurs twice in the string but set will contain only one)
+new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ### Use a set to ensure the uniqueness of a list of values
