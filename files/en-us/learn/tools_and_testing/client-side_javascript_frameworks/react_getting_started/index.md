@@ -409,6 +409,23 @@ Next, replace the word "World" in the `<h1>` element with `{subject}`:
 
 Save your file and check your browser. You should see "Hello, React!" rendered.
 
+You might be wondering why we put curly braces around `subject` here. This is a feature of JSX's syntax. The curly braces tell React that we want to read the value of the `subject` variable, rather than render the literal string `"subject"`. You can put any valid JavaScript expression inside curly braces in JSX, and React will evaluate it and render the _result_ of the expression.
+
+Following is a series of examples, with comments above explaining what each expression will render:
+
+```jsx-nolint
+{/* Hello, React :)! */}
+<h1>Hello, {subject + ' :)'}!</h1>
+{/* Hello, REACT */}
+<h1>Hello, {subject.toUpperCase()}</h1>
+{/* Hello, 4 */}
+<h1>Hello, {2 + 2}!</h1>
+```
+
+As you can see, even comments in JSX are written inside curly braces. This is because comments, too, are technically expressions in the JavaScript language. The `/* block comment syntax */` is necessary for your program to know where the comment starts and ends.
+
+Typing manual comments this way is a bit tedious, so we recommend using your text editor's comment shortcut. If your text editor understands how to parse JSX, you can use its built-in commenting shortcut – `Ctrl + /` (on Windows) or `Cmd + /` (on macOS).
+
 ### Component props
 
 A **prop** is any data passed into a React component. React props are comparable to HTML attributes: where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, the flow of data is unidirectional: props can only be passed from Parent components down to Child components. In addition, props are read-only.
