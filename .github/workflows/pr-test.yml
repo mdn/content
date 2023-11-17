@@ -56,14 +56,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js environment
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note

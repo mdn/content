@@ -2,9 +2,7 @@
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 page-type: guide
-browser-compat:
-  - css.properties.justify-content
-  - css.properties.align-items
+browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}
@@ -15,7 +13,7 @@ In this recipe we will create a list group pattern with badges that indicate a c
 
 ## Requirements
 
-Our list items should be displayed with the badges lined up on the right, no matter how much content the item has. The badge should always be centered vertically whether there is a single line of content, or more than one.
+The list items should be displayed with the badges. The badge should be aligned right and vertically centered. The badge must be centered vertically whether there is a single line of content or multiple lines of text.
 
 ## Recipe
 
@@ -27,17 +25,14 @@ Our list items should be displayed with the badges lined up on the right, no mat
 
 ## Choices made
 
-Flexbox makes this particular pattern straightforward and also makes it easy to make changes to the layout.
+Flexbox makes this particular pattern straightforward and also facilitates making changes to the layout.
 
-To ensure the text and badge line up correctly I use the {{cssxref("justify-content")}} property with a value of `space-between`. This places any extra space between the items. In the live example, if you remove this property and you will see the badge move to the end of the text on items with text shorter than the one line.
+To ensure the text and badge line up correctly, I use the {{cssxref("justify-content")}} property with a value of `space-between`. This places any extra space between the items. In the live example, if you remove this property, you will see the badge move to the end of the text on items with text shorter than the one line.
 
-To align the content horizontally, I use the {{cssxref("align-items")}} property to align the text and badge on the cross axis. If instead, you want the badge to align to the top of the content, change this to `align-items: flex-start`.
-
-## Browser compatibility
-
-{{Compat}}
+To align the content horizontally, I use the {{cssxref("align-items")}} property to align the text and badge on the cross axis. If you want the badge to align to the top of the content instead, change this to `align-items: flex-start`.
 
 ## See also
 
 - [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
