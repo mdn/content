@@ -13,6 +13,8 @@ The **`Attribution-Reporting-Register-Trigger`** header is included as part of a
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
+> **Note:** If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), the `Attribution-Reporting-Register-Trigger` header is ignored and attribution triggers are not registered.
+
 <table class="properties">
   <tbody>
     <tr>
