@@ -37,11 +37,12 @@ A `TaskSignal` instance.
 This example demonstrates combining both a signal from an {{domxref("TaskController")}}, and a timeout signal from {{domxref("AbortSignal.timeout_static", "TaskSignal.timeout()")}}.
 
 ```js
-const button = document.getElementById("cancelDownloadButton");
+const cancelDownloadButton = document.getElementById("cancelDownloadButton");
 
 const userCancelController = new TaskController({
   priority: "user-visible",
 });
+
 cancelDownloadButton.addEventListener("click", () => {
   userCancelController.abort();
 });
