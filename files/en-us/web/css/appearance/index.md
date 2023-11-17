@@ -74,81 +74,81 @@ The following values may be operational on historical browser versions using **`
   - `N{version}`: support was removed in a release earlier than `{version}`
   - a blank cell indicates that support was never added
 
-| Value                                  | Safari | Firefox | Chrome   | Edge  |
-| -------------------------------------- | ------ | ------- | -------- | ----- |
-| `attachment`                           | Y(13.1) |         |          |       |
-| `borderless-attachment`                | Y(13.1) |         |          |       |
-| `button-bevel`                         | Y(13.1) | N(75)     |          | N(80)   |
-| `caps-lock-indicator`                  | Y(13.1) |         |          | N(80)   |
-| `caret`                                | Y(13.1) | N(75)     | Y(73)     | N(80)   |
-| `checkbox-container`                   |        | N(75)     |          |       |
-| `checkbox-label`                       |        | N(75)     |          |       |
-| `checkmenuitem`                        |        | N(75)     |          |       |
-| `color-well`                           | Y(13.1) |         |          |       |
-| `continuous-capacity-level-indicator`  | Y(13.1) |         |          |       |
-| `default-button`                       | Y(13.1) |         |          | N(80)   |
-| `discrete-capacity-level-indicator`    | Y(13.1) |         |          |       |
-| `inner-spin-button`                    | Y(13.1) | N(75)     | Y(118) \* | Y(119) |
-| `image-controls-button`                | Y(13.1) |         |          |       |
-| `list-button`                          | Y(13.1) |         |          |       |
-| `listitem`                             | Y(13.1) | N(75)     | Y(73)     | N(80)   |
-| `media-enter-fullscreen-button`        | Y(13.1) |         | Y(73)     |       |
-| `media-exit-fullscreen-button`         | Y(13.1) |         | Y(73)     |       |
-| `media-fullscreen-volume-slider`       | Y(13.1) |         |          |       |
-| `media-fullscreen-volume-slider-thumb` | Y(13.1) |         |          |       |
-| `media-mute-button`                    | Y(13.1) |         |          | N(80)   |
-| `media-play-button`                    | Y(13.1) |         |          | N(80)   |
-| `media-overlay-play-button`            | Y(13.1) |         | Y(73)     |       |
-| `media-return-to-realtime-button`      | Y(13.1) |         |          |       |
-| `media-rewind-button`                  | Y(13.1) |         |          |       |
-| `media-seek-back-button`               | Y(13.1) |         | N(73)      |       |
-| `media-seek-forward-button`            | Y(13.1) |         | N(73)      |       |
-| `media-toggle-closed-captions-button`  | Y(13.1) |         | Y(73)     |       |
+| Value                                  | Safari  | Firefox | Chrome    | Edge   |
+| -------------------------------------- | ------- | ------- | --------- | ------ |
+| `attachment`                           | Y(13.1) |         |           |        |
+| `borderless-attachment`                | Y(13.1) |         |           |        |
+| `button-bevel`                         | Y(13.1) | N(75)   |           | N(80)  |
+| `caps-lock-indicator`                  | Y(13.1) |         |           | N(80)  |
+| `caret`                                | Y(13.1) | N(75)   | Y(73)     | N(80)  |
+| `checkbox-container`                   |         | N(75)   |           |        |
+| `checkbox-label`                       |         | N(75)   |           |        |
+| `checkmenuitem`                        |         | N(75)   |           |        |
+| `color-well`                           | Y(13.1) |         |           |        |
+| `continuous-capacity-level-indicator`  | Y(13.1) |         |           |        |
+| `default-button`                       | Y(13.1) |         |           | N(80)  |
+| `discrete-capacity-level-indicator`    | Y(13.1) |         |           |        |
+| `inner-spin-button`                    | Y(13.1) | N(75)   | Y(118) \* | Y(119) |
+| `image-controls-button`                | Y(13.1) |         |           |        |
+| `list-button`                          | Y(13.1) |         |           |        |
+| `listitem`                             | Y(13.1) | N(75)   | Y(73)     | N(80)  |
+| `media-enter-fullscreen-button`        | Y(13.1) |         | Y(73)     |        |
+| `media-exit-fullscreen-button`         | Y(13.1) |         | Y(73)     |        |
+| `media-fullscreen-volume-slider`       | Y(13.1) |         |           |        |
+| `media-fullscreen-volume-slider-thumb` | Y(13.1) |         |           |        |
+| `media-mute-button`                    | Y(13.1) |         |           | N(80)  |
+| `media-play-button`                    | Y(13.1) |         |           | N(80)  |
+| `media-overlay-play-button`            | Y(13.1) |         | Y(73)     |        |
+| `media-return-to-realtime-button`      | Y(13.1) |         |           |        |
+| `media-rewind-button`                  | Y(13.1) |         |           |        |
+| `media-seek-back-button`               | Y(13.1) |         | N(73)     |        |
+| `media-seek-forward-button`            | Y(13.1) |         | N(73)     |        |
+| `media-toggle-closed-captions-button`  | Y(13.1) |         | Y(73)     |        |
 | `media-slider`                         | Y(13.1) |         | Y(117)    | Y(80)  |
 | `media-sliderthumb`                    | Y(13.1) |         | Y(117)    | Y(80)  |
 | `media-volume-slider-container`        | Y(13.1) |         | Y(73)     |        |
 | `media-volume-slider-mute-button`      | Y(13.1) |         |           |        |
 | `media-volume-slider`                  | Y(13.1) |         | Y(117)    | Y(80)  |
 | `media-volume-sliderthumb`             | Y(13.1) |         | Y(117)    | Y(80)  |
-| `media-controls-background`            | Y(13.1) |         | Y(73)     |       |
-| `media-controls-dark-bar-background`   | Y(13.1) |         |          |       |
-| `media-controls-fullscreen-background` | Y(13.1) |         | Y(73)     |       |
-| `media-controls-light-bar-background`  | Y(13.1) |         |          |       |
-| `media-current-time-display`           |        |         | Y(73)     |       |
-| `media-time-remaining-display`         | Y(13.1) |         | Y(73)     |       |
-| `menulist-text`                        | Y(13.1) | N(75)     | Y(73)     | N(80)   |
-| `menulist-textfield`                   | Y(13.1) | N(75)     | Y(73)     | N(80)   |
-| `meterbar`                             |        | Y(100)   |          |       |
-| `number-input`                         |        | Y(75)    |          |       |
-| `progress-bar-value`                   | Y(13.1) |         | Y(73)     |       |
-| `progressbar`                          |        | Y(100)   |          |       |
-| `progressbar-vertical`                 |        | Y(75)    |          |       |
-| `range`                                |        | Y(75)    |          |       |
-| `range-thumb`                          |        | Y(75)    |          |       |
-| `rating-level-indicator`               | Y(13.1) |         |          |       |
-| `relevancy-level-indicator`            | Y(13.1) |         |          |       |
-| `scale-horizontal`                     |        | Y(75)    |          |       |
-| `scalethumbend`                        |        | Y(75)    |          |       |
-| `scalethumb-horizontal`                |        | Y(75)    |          |       |
-| `scalethumbstart`                      |        | Y(75)    |          |       |
-| `scalethumbtick`                       |        | Y(75)    |          |       |
-| `scalethumb-vertical`                  |        | Y(75)    |          |       |
-| `scale-vertical`                       |        | Y(75)    |          |       |
-| `scrollbarthumb-horizontal`            |        | Y(75)    |          |       |
-| `scrollbarthumb-vertical`              |        | Y(75)    |          |       |
-| `scrollbartrack-horizontal`            |        | Y(75)    |          |       |
-| `scrollbartrack-vertical`              |        | Y(75)    |          |       |
-| `searchfield-decoration`               | Y(13.1) |         |          | N(80)   |
-| `searchfield-results-decoration`       | Y(13.1) | N(75)     | N(73)      | N(80)   |
-| `searchfield-results-button`           | Y(13.1) |         |          | N(80)   |
-| `searchfield-cancel-button`            | Y(13.1) | N(75)     | Y(118) \* | Y(119) |
-| `snapshotted-plugin-overlay`           | Y(13.1) |         |          |       |
-| `sheet`                                |        |         |          |       |
-| `slider-vertical`                      |        |         | Y(118) \* | Y(119) |
-| `sliderthumb-horizontal`               |        |         | Y(117)    | Y(80)  |
-| `sliderthumb-vertical`                 |        |         | Y(117)    | Y(80)  |
-| `textfield-multiline`                  |        | Y(100)   |          |       |
-| `-apple-pay-button`                    | Y(13.1) |         |          |       |
+| `media-controls-background`            | Y(13.1) |         | Y(73)     |        |
+| `media-controls-dark-bar-background`   | Y(13.1) |         |           |        |
+| `media-controls-fullscreen-background` | Y(13.1) |         | Y(73)     |        |
+| `media-controls-light-bar-background`  | Y(13.1) |         |           |        |
+| `media-current-time-display`           |         |         | Y(73)     |        |
+| `media-time-remaining-display`         | Y(13.1) |         | Y(73)     |        |
+| `menulist-text`                        | Y(13.1) | N(75)   | Y(73)     | N(80)  |
+| `menulist-textfield`                   | Y(13.1) | N(75)   | Y(73)     | N(80)  |
+| `meterbar`                             |         | Y(100)  |           |        |
+| `number-input`                         |         | Y(75)   |           |        |
+| `progress-bar-value`                   | Y(13.1) |         | Y(73)     |        |
+| `progressbar`                          |         | Y(100)  |           |        |
+| `progressbar-vertical`                 |         | Y(75)   |           |        |
+| `range`                                |         | Y(75)   |           |        |
+| `range-thumb`                          |         | Y(75)   |           |        |
+| `rating-level-indicator`               | Y(13.1) |         |           |        |
+| `relevancy-level-indicator`            | Y(13.1) |         |           |        |
+| `scale-horizontal`                     |         | Y(75)   |           |        |
+| `scalethumbend`                        |         | Y(75)   |           |        |
+| `scalethumb-horizontal`                |         | Y(75)   |           |        |
+| `scalethumbstart`                      |         | Y(75)   |           |        |
+| `scalethumbtick`                       |         | Y(75)   |           |        |
+| `scalethumb-vertical`                  |         | Y(75)   |           |        |
+| `scale-vertical`                       |         | Y(75)   |           |        |
+| `scrollbarthumb-horizontal`            |         | Y(75)   |           |        |
+| `scrollbarthumb-vertical`              |         | Y(75)   |           |        |
+| `scrollbartrack-horizontal`            |         | Y(75)   |           |        |
+| `scrollbartrack-vertical`              |         | Y(75)   |           |        |
+| `searchfield-decoration`               | Y(13.1) |         |           | N(80)  |
+| `searchfield-results-decoration`       | Y(13.1) | N(75)   | N(73)     | N(80)  |
+| `searchfield-results-button`           | Y(13.1) |         |           | N(80)  |
+| `searchfield-cancel-button`            | Y(13.1) | N(75)   | Y(118) \* | Y(119) |
+| `snapshotted-plugin-overlay`           | Y(13.1) |         |           |        |
+| `sheet`                                |         |         |           |        |
+| `slider-vertical`                      |         |         | Y(118) \* | Y(119) |
+| `sliderthumb-horizontal`               |         |         | Y(117)    | Y(80)  |
+| `sliderthumb-vertical`                 |         |         | Y(117)    | Y(80)  |
+| `textfield-multiline`                  |         | Y(100)  |           |        |
+| `-apple-pay-button`                    | Y(13.1) |         |           |        |
 
 </details>
 
