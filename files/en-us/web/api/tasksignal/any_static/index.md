@@ -3,6 +3,8 @@ title: "TaskSignal: any() static method"
 short-title: any()
 slug: Web/API/TaskSignal/any_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.TaskSignal.any_static
 ---
 
