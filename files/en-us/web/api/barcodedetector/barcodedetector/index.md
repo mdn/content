@@ -36,7 +36,7 @@ new BarcodeDetector(options)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the `formats` is specified and is empty or contains `unknown`.
+  - : Thrown if the `formats` is specified and the parameter is empty or contains `unknown`.
 
 ## Examples
 
