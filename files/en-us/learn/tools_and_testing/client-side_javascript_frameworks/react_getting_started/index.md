@@ -390,7 +390,7 @@ Next, we'll use our JavaScript skills to get a bit more comfortable writing JSX 
 
 ### Adding attributes to JSX elements
 
-JSX elements can have attributes, just like HTML elements. For example, you could render a button below your `<h1>` element like this:
+JSX elements can have attributes, just like HTML elements. Try adding a `<button>` below the `<h1>` element in your `App.jsx` file, like this:
 
 ```jsx
 <button type="button">Click me!</button>
@@ -442,9 +442,9 @@ Even comments in JSX are written inside curly braces! This is because comments, 
 
 ### Component props
 
-**Props** are a means of passing data into a React component. Their syntax is identical to that of attrributes, in fact: `prop="value"`. The distinction between them is subtle: attributes are passed into plain elements; props are passed into React components.
+**Props** are a means of passing data into a React component. Their syntax is identical to that of attributes, in fact: `prop="value"`. The difference is that whereas attributes are passed into plain elements, props are passed into React components.
 
-In React, the flow of data is unidirectional: props can only be passed from Parent components down to Child components.
+In React, the flow of data is unidirectional: props can only be passed from parent components down to child components.
 
 Let's open `index.jsx` and give our `<App />` component its first prop.
 
@@ -454,7 +454,7 @@ Add a prop of `subject` to the `<App />` component call, with a value of `Claric
 <App subject="Clarice" />
 ```
 
-Back in `App.jsx`, let's revisit the `App` function itself. Change the signature of `App` so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. That'll look like this"
+Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `App()` so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console: do that now. The updated lines of your `App()` function should now look like this:"
 
 ```jsx
 function App(props) {
@@ -465,7 +465,7 @@ function App(props) {
 }
 ```
 
-With this change, `subject` becomes undefined, so comment out the line `Hello, {subject}!` for now. Save your file and check your browser's JavaScript console. You should see something like this logged:
+With this change, `subject` becomes `undefined`, which will cause an error to be thrown. To avoid this, comment out the line `Hello, {subject}!` for now. Save your file and check your browser's JavaScript console. You should see something like this logged:
 
 ```plain
 Object { subject: "Clarice" }
@@ -473,7 +473,7 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's utilize it in `App.jsx`. Un-comment the `Hello, {subject}!` line and change it to be `Hello, {props.subject}!` instead, then delete the `console.log()` statement. Your code should look like this:
+Now that `subject` is one of our props, let's use it in `App.jsx`. Uncomment the `Hello, {subject}!` line and change it to `Hello, {props.subject}!`, then delete the `console.log()` statement. Your code should look like this:
 
 ```jsx
 function App(props) {
@@ -493,7 +493,7 @@ function App(props) {
 
 When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.jsx`, edit the value of `subject`, and save, your text will change.
 
-For additional practice, you might try adding a `greeting` prop to the `<App />` component and using it alongside the `subject` prop.
+For additional practice, you could try adding an additional `greeting` prop to the `<App />` component call inside `main.jsx` and using it alongside the `subject` prop inside `App.jsx`.
 
 ## Summary
 
