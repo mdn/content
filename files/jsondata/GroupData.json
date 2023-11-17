@@ -53,10 +53,7 @@
       "overview": ["Barcode Detection API"],
       "guides": [],
       "interfaces": ["BarcodeDetector"],
-      "methods": [
-        "BarcodeDetector.detect()",
-        "BarcodeDetector.getSupportedFormats()"
-      ],
+      "methods": [],
       "properties": [],
       "events": []
     },
