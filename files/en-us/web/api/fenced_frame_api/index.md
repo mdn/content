@@ -100,7 +100,7 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 ### `beforeunload` and `unload` events
 
-[`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) and [`unload`](/en-US/docs/Web/API/Window/unload_event) event handlers cannot be used inside fenced frames — they are not widely used and can leak information in the form of a page deletion timestamp. It is good to eliminate as many possible leakages as we can.
+[`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) and [`unload`](/en-US/docs/Web/API/Window/unload_event) event handlers cannot be used inside fenced frames — they are not widely used and can leak information in the form of a page deletion timestamp. It is good to eliminate as many potential leakages as possible.
 
 ## Interfaces
 
@@ -117,6 +117,14 @@ Other effects of fenced frames on HTTP headers are as follows:
   - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property.
 - {{domxref("Window.fence")}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a `<fencedframe>`.
+
+## Enrollment and local testing
+
+To use the Fenced Frame API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, data reporting and retrieval events will not occur.
+
+You can still test your fenced Frame API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
+
+`chrome://flags/#privacy-sandbox-enrollment-overrides`
 
 ## Examples
 
