@@ -44,7 +44,7 @@ In Manifest V2, Firefox and Safari support Promises for asynchronous methods. At
 
 Some handlers of extension API events are expected to respond asynchronously through a `Promise` or callback function. For example, a handler of the `runtime.onMessage` event can [send an asynchronous response using a `Promise`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise) or using [a callback](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse). A `Promise` as the return value from an event handler is supported in Firefox and Safari, but not yet in Chrome.
 
-Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together.
+Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together. This means using a polyfill or similar so your extension uses the `browser.*` namespace in Firefox and Safari and `chrome.*` in Chrome, Opera, and Edge.
 
 > **Note:** If you're unfamiliar with the differences between these two methods, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 
