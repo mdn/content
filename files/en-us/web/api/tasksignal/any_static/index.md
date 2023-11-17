@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.TaskSignal.any_static
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}
 
 The **`TaskSignal.any()`** static method takes an iterable of task signals and returns a {{domxref("TaskSignal")}}. The returned abort signal is aborted when any of the task signals is aborted. The {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted. The {{domxref("TaskSignal.priority" "priority")}} property will be determined by the specific `priority` parameter, which can either be a fixed `TaskPriority` or a {{domxref("TaskSignal")}}, in which case the new signal's `priority` will change along with this signal.
 
