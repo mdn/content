@@ -35,7 +35,9 @@ Each [code block](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#examp
 
 \{{EmbedLiveSample("Examples")}}
 ````
+
 The live sample system allows grouping of code blocks in different ways to effectively display the output. The next section describes these methods.
+
 
 ### Grouping code blocks
 
