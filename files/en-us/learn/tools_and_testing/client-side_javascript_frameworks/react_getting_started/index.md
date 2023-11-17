@@ -362,22 +362,6 @@ You can read up on these React APIs, if you'd like:
 - [ReactDOM.createRoot()](https://react.dev/reference/react-dom/client/createRoot)
 - [React.StrictMode](https://react.dev/reference/react/StrictMode)
 
-### A brief JSX refresher
-
-Let's focus on the first child of the [`<div>`](/en-US/docs/Web/HTML/Element/div) tag just inside the fragment:
-
-```jsx
-<a href="https://vitejs.dev" target="_blank">
-  <img src={viteLogo} className="logo" alt="Vite logo" />
-</a>
-```
-
-This [`<a>`](/en-US/docs/Web/HTML/Element/a) tag should look familiar! It has an `href` attribute, just like you'd see in HTML.
-
-Inside, the [`<img>`](/en-US/docs/Web/HTML/Element/img) tag has a `src` attribute whose value is a JavaScript expression in curly braces. This value is the `viteLogo` we imported earlier. If this syntax is unfamiliar to you, don't worry too much about it. The main thing to note is that referencing the image this way provides a reliable way for our application to find and serve the file.
-
-The `<img>` tag has an attribute you may not have seen before: `className`: This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. There are a few other differences between JSX and HTML, and we'll cover them as they come up.
-
 ## Starting fresh
 
 Before we start building our app, we're going to delete some of the boilerplate code that Vite provided for us.
@@ -410,46 +394,18 @@ Next, we'll use our JavaScript skills to get a bit more comfortable editing comp
 
 ### Variables in JSX
 
-Let's practice rendering some content from variables in React. As a reminder, our `App` component looks like this:
-
-```jsx
-import viteLogo from "/vite.svg";
-import "./App.css";
-
-function App() {
-  return (
-    <>
-      <header>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-        <h1>Hello, World!</h1>
-      </header>
-    </>
-  );
-}
-
-export default App;
-```
-
-Declare a new variable called `subject` before the `App()` function definition and set its value to the string `'React'`:
+Let's practice rendering some content from variables in React. Declare a new variable called `subject` before the `App()` function definition and set its value to the string `"React"`:
 
 ```jsx
 const subject = "React";
 function App() {
-  return (
-    <>
-      <header>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-        <h1>Hello, World!</h1>
-      </header>
-    </>
-  );
+  // code omitted for brevity
 }
 ```
 
 Next, replace the word "World" in the `<h1>` element with `{subject}`:
 
 ```jsx
-// code omitted for brevity
 <h1>Hello, {subject}!</h1>
 ```
 
@@ -464,31 +420,16 @@ Let's open `index.jsx` and give our `<App />` component its first prop.
 Add a prop of `subject` to the `<App />` component call, with a value of `Clarice`. When you are done, it should look something like this:
 
 ```jsx
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App subject="Clarice" />
-  </React.StrictMode>,
-);
+<App subject="Clarice" />
 ```
 
-Back in `App.jsx`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
-
-```jsx
-function App() {
-  const subject = 'React';
-  return (
-    // return statement
-  );
-}
-```
-
-Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
+Back in `App.jsx`, let's revisit the App function itself. Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. That'll look like this"
 
 ```jsx
 function App(props) {
   console.log(props);
   return (
-    // return statement
+    // code omitted for brevity
   );
 }
 ```
