@@ -32,7 +32,7 @@ color: light-dark(black, white);
 color: light-dark(rgb(0 0 0), rgb(255 255 255));
 
 /* Custom properties */
-color: light-dark(var(--dark), var(--light));
+color: light-dark(var(--light), var(--dark));
 ```
 
 ### Values
