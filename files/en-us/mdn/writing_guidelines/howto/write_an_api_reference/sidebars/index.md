@@ -87,22 +87,22 @@ These are all technically optional, but it is strongly encouraged that instead o
    This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces.
    If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list.
    "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
-5. `"events"` — the value is an array that should contain the _title_ of events of other interfaces that are part of the API, defined in the API spec, or elsewhere.
+5. `"events"` — the value is an array that should contain the _title_ of events that are part of the API bit are defined in interfaces that are _not part of the API (events belonging to interfaces in the API (`interfaces`) are documented by default).
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "Document: selectionchange" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Document/selectionchange_event](/en-US/docs/Web/API/Document/selectionchange_event).
-6. `"guides"` — the value is an array containing one or more strings that represent links to guides explain how to use the API.
-   "/docs/Web/API/Fetch_API/Using_Fetch" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
-
-7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
+   For example, `"Document: selectionchange"` is part of the [Selection API](/en-US/docs/Web/API/Selection_API) but `Document` is not, so we add the event to the array and it will be linked from the [Selection API](/en-US/docs/Web/API/Selection_API) topic.
+7. `"guides"` — the value is an array of strings, each that addresses a guide topic that explain how to use the API.
+   The strings contain the part of the guide's URL address after the language path: i.e. the `/docs/...` part of the guide URL. 
+   For example, to link to the topic "Using Fetch" at `https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch`, the guide array would contain "/docs/Web/API/Fetch_API/Using_Fetch".
+9. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.
    "CryptoKeyPair" results in a link to [https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair](/en-US/docs/Web/API/CryptoKeyPair).
    > **Note:** MDN is moving away from separately documenting dictionaries.
    > Where possible, these are now described as objects in the places where they are used.
-8. `"types"` — an array of typedefs and enumerated types defined by the API.
+10. `"types"` — an array of typedefs and enumerated types defined by the API.
    You may choose to only list those that are of special importance or are referenced from multiple pages, in order to keep the list short.
    > **Note:** MDN is moving away from separately documenting typedefs.
    > Where possible, these are now described as values in the places where they are used.
-9. `"callbacks"` — the value is an array containing a list of all the defined callback types for the API.
+11. `"callbacks"` — the value is an array containing a list of all the defined callback types for the API.
    You may find it unnecessary to use this group at all, even on APIs that include callback types, as often they are not useful to document separately.
 
 ## Tags used by sidebars
