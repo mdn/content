@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequest.timeout_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`timeout`** event is fired when progression is terminated due to preset time expiring.
 

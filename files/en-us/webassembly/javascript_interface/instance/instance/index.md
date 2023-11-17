@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Instance() constructor
 slug: WebAssembly/JavaScript_interface/Instance/Instance
-browser-compat: javascript.builtins.WebAssembly.Instance.Instance
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Instance.Instance
 ---
 
 {{WebAssemblySidebar}}
