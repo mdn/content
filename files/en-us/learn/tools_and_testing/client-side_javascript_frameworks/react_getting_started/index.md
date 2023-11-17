@@ -371,14 +371,12 @@ First, as an experiment, change the [`<h1>`](/en-US/docs/Web/HTML/Element/Headin
 We won't be using the rest of the code! Replace the contents of `App.jsx` with the following:
 
 ```jsx
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
   return (
     <>
       <header>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
         <h1>Hello, World!</h1>
       </header>
     </>
@@ -450,7 +448,6 @@ function App(props) {
   return (
     <>
       <header>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
         <h1>Hello, {subject}</h1>
       </header>
     </>
