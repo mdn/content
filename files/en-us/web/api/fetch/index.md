@@ -8,15 +8,13 @@ browser-compat: api.fetch
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
+The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
 
 The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
 A {{domxref("fetch()")}} promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar).
 A {{domxref("fetch()")}} promise _does not_ reject on HTTP errors (`404`, etc.).
 Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.
-
-`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is available in pretty much any context in which you might want to fetch resources.
 
 The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
@@ -40,7 +38,7 @@ fetch(resource, options)
 
 - `options` {{optional_inline}}
 
-  - : An object containing any custom settings that you want to apply to the request.
+  - : An object containing any custom settings you want to apply to the request.
     The possible options are:
 
     - `body`
@@ -227,7 +225,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If the request method is an invalid name token or one of forbidden headers
+        If the request method is an invalid name token or one of the forbidden headers
         (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
       </td>
       <td>
