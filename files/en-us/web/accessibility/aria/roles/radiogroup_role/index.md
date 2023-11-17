@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/radiogroup_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#radiogroup
-  - https://w3c.github.io/aria-practices/#radiobutton
+  - https://www.w3.org/WAI/ARIA/apg/patterns/radio/examples/radio/
 ---
 
 The `radiogroup` role is a group of `radio` buttons.

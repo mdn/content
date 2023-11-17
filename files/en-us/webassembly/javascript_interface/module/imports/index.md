@@ -2,7 +2,7 @@
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
 page-type: webassembly-static-method
-browser-compat: javascript.builtins.WebAssembly.Module.imports
+browser-compat: webassembly.api.Module.imports
 ---
 
 {{WebAssemblySidebar}}

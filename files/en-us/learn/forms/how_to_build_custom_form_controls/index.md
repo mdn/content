@@ -135,7 +135,7 @@ We need an extra class `active` to define the look and feel of our control when 
 ```css
 .select.active,
 .select:focus {
-  outline: none;
+  outline-color: transparent;
 
   /* This box-shadow property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
@@ -306,7 +306,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -428,7 +428,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -550,7 +550,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -809,7 +809,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1106,7 +1106,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1427,7 +1427,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1752,7 +1752,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -2036,7 +2036,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
   height: 0;
-  outline: none;
+  outline-color: transparent;
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {

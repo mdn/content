@@ -49,7 +49,7 @@ The following declarations produce the same effect:
 ```css
 filter: blur(1.1px);
 filter: url(#blur11); /* with embedded SVG */
-filter: url(folder/fileName.svg#blurr11); /* external svg filter definition */
+filter: url(folder/fileName.svg#blur11); /* external svg filter definition */
 ```
 
 ## Examples

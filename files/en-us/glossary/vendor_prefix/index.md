@@ -78,6 +78,6 @@ requestAnimationFrame(callback);
 
 ## See also
 
-- [Mozilla vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [WebKit vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [`-moz-` vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [`-webkit-` vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
 - [Browser prefixes](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) on Wikipedia

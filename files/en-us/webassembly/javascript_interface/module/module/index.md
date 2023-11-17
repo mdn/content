@@ -2,7 +2,7 @@
 title: WebAssembly.Module() constructor
 slug: WebAssembly/JavaScript_interface/Module/Module
 page-type: webassembly-constructor
-browser-compat: javascript.builtins.WebAssembly.Module.Module
+browser-compat: webassembly.api.Module.Module
 ---
 
 {{WebAssemblySidebar}}
