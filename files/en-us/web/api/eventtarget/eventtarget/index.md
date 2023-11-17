@@ -36,9 +36,7 @@ class Counter extends EventTarget {
   }
 
   #emitChangeEvent() {
-    this.dispatchEvent(
-      new CustomEvent("valuechange", { detail: this.value })
-    );
+    this.dispatchEvent(new CustomEvent("valuechange", { detail: this.value }));
   }
 
   increment() {
