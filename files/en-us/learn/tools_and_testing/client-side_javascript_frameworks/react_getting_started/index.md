@@ -139,7 +139,7 @@ See the following for more information:
 
 ### Initializing your app
 
-The npm package manager comes with a `create` command that allows you to create new projects from templates. We can use it to create a new app from Vite's standard React template. Make sure you `cd` to the place you'd like your app to live on your hard drive, then run the following in your terminal:
+The npm package manager comes with a `create` command that allows you to create new projects from templates. We can use it to create a new app from Vite's standard React template. Make sure you `cd` to the place you'd like your app to live on your machine, then run the following in your terminal:
 
 ```bash
 npm create vite@latest moz-todo-react -- --template react
