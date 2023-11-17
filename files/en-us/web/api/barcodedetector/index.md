@@ -40,7 +40,7 @@ This example creates a new barcode detector object, with specified supported for
 
 ```js
 // check compatibility
-if (!("BarcodeDetector" in window)) {
+if (!("BarcodeDetector" in globalThis)) {
   console.log("Barcode Detector is not supported by this browser.");
 } else {
   console.log("Barcode Detector supported!");
