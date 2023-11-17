@@ -166,7 +166,7 @@ const initialState = {
 history.replaceState(initialState, "", document.location.href);
 ```
 
-On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has just the same structure as the JSON that we fetch when handling other navgations. We pass this `initialState` into `replaceState()`, which effectively adds the state object to the history entry.
+On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has just the same structure as the JSON that we fetch when handling other navigations. We pass this `initialState` into `replaceState()`, which effectively adds the state object to the history entry.
 
 Now, when the user goes back to our starting point, the `popstate` event will contain this initial state, and we can use our `displayContent()` function to update the page.
 
