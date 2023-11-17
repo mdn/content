@@ -23,9 +23,7 @@ detect(imageBitmapSource)
 ### Parameters
 
 - `imageBitmapSource`
-  - : Receives an `ImageBitmapSource` as a parameter. This can be an
-    {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}} of type image or an
-    {{domxref('ImageData')}} object.
+  - : Receives an image source as a parameter. This can be a {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, a {{domxref("HTMLVideoElement")}}, a {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, an {{domxref("OffscreenCanvas")}}, a {{domxref("VideoFrame")}}, a {{domxref('Blob')}} of type image or an {{domxref('ImageData')}} object.
 
 ### Return value
 
