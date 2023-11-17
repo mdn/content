@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The code below sends a message from a service worker to a client. The client is fetched using the [get() method](/en-US/docs/Web/API/Clients/get) on [clients](/en-US/docs/Web/API/ServiceWorkerGlobalScope/clients) which is a global in  service worker scope.
+The code below sends a message from a service worker to a client. The client is fetched using the [get() method](/en-US/docs/Web/API/Clients/get) on [clients](/en-US/docs/Web/API/ServiceWorkerGlobalScope/clients) which is a global in service worker scope.
 
 ```js
 addEventListener("fetch", (event) => {
