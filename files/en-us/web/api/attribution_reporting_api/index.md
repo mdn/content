@@ -92,6 +92,14 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 - {{httpheader("Permissions-Policy")}} {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} directive
   - : Controls whether the current document is allowed to use attribution reporting.
 
+## Enrollment and local testing
+
+To use the Attribution Reporting API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. the response headers are ignored and sources and triggers are not registered.
+
+You can still test your Attribution Reporting API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
+
+`chrome://flags/#privacy-sandbox-enrollment-overrides`
+
 ## Examples
 
 See [Demo: Attribution Reporting API](https://arapi-home.web.app/) for an example implementation (see the [source code also](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)).
