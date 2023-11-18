@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Blob.size
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The {{domxref("Blob")}} interface's **`size`** property returns
 the size of the {{domxref("Blob")}} or {{domxref("File")}} in bytes.

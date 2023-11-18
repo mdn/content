@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Blob.type
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
 

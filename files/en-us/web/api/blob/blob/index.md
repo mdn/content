@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Blob.Blob
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`Blob()`** constructor returns a
 new {{domxref("Blob")}} object. The content of the blob consists of the concatenation
