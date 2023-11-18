@@ -14,19 +14,19 @@ object instance.
 ## Syntax
 
 ```js-nolint
-new File(bits, name)
-new File(bits, name, options)
+new File(fileBits, fileName)
+new File(fileBits, fileName, options)
 ```
 
 ### Parameters
 
-- `bits`
+- `fileBits`
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("File")}}.
     Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
-- `name`
+- `fileName`
   - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
 
