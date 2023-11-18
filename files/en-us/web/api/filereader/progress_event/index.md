@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FileReader.progress_event
 ---
 
-{{APIRef}}{{AvailableInWorkers}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The `progress` event is fired periodically as the `FileReader` reads data.
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FileReader.error_event
 ---
 
-{{APIRef}}{{AvailableInWorkers}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The `error` event is fired when the read failed due to an error (for example, because the file was not found or not readable).
 
