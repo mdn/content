@@ -203,6 +203,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
   - : Defines CMYK colors in a device-independent way.
+- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
+  - : Returns one of two provided colors based on the current color scheme.
 
 ## Image functions
 
