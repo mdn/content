@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Blob.arrayBuffer
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`arrayBuffer()`** method in the {{domxref("Blob")}}
 interface returns a {{jsxref("Promise")}} that resolves with the contents of the blob as

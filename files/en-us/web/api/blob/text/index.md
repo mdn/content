@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Blob.text
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`text()`** method in the
 {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a
