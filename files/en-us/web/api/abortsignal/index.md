@@ -24,7 +24,7 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 - {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
-- {{domxref("AbortSignal.any()")}}
+- {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}
   - : Returns an **`AbortSignal`** that aborts when any of the given abort signals abort.
 - {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
   - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
@@ -129,7 +129,6 @@ try {
     // This will abort the fetch when either signal is aborted
     signal: AbortSignal.any([controller.signal, timeoutSignal]),
   });
-  const res = await fetch(url, { signal: controller.signal });
   const body = await res.json();
 } catch (e) {
   if (e.name === "AbortError") {

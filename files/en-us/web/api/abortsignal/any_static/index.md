@@ -23,18 +23,22 @@ AbortSignal.any(iterable)
 
 ### Return value
 
-An `AbortSignal` instance with the {{domxref("AbortSignal.aborted")}} property set to `true`, and {{domxref("AbortSignal.reason")}} set to the specified or default reason value.
+A {{domxref("AbortSignal")}} that is:
+
+- **Already aborted**, if any of the abort signals given is already aborted. The returned {{domxref("AbortSignal")}}'s reason will be already set to the {{domxref("AbortSignal.reason", "reason")}} of the first abort signal that was already aborted.
+- **Asynchronously aborted**, when any abort signal in `iterable` aborts. The {{domxref("AbortSignal.reason", "reason")}} will be set to the reason of the first abort signal that is aborted.
 
 ## Examples
 
-### Using AbortSignal.any()
+### Using `AbortSignal.any()`
 
-This example demonstrates combining both a signal from an {{domxref("AbortController")}}, and a timeout signal from {{domxref("AbortSignal.timeout")}}.
+This example demonstrates combining both a signal from an {{domxref("AbortController")}}, and a timeout signal from {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout")}}.
 
 ```js
-const button = document.getElementById("cancelDownloadButton");
+const cancelDownloadButton = document.getElementById("cancelDownloadButton");
 
 const userCancelController = new AbortController();
+
 cancelDownloadButton.addEventListener("click", () => {
   userCancelController.abort();
 });
@@ -55,7 +59,8 @@ try {
     signal: combinedSignal,
   });
   const body = await res.blob();
-  // do something with downloaded content
+  // Do something with downloaded content:
+  // ...
 } catch (e) {
   if (e.name === "AbortError") {
     // Cancelled by the user
