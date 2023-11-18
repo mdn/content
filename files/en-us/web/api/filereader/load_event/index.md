@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FileReader.load_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The `load` event is fired when a file has been read successfully.
 

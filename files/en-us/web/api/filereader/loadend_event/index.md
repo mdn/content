@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FileReader.loadend_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The `loadend` event is fired when a file read has completed, successfully or not.
 

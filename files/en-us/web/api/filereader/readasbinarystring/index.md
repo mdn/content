@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsBinaryString
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The `readAsBinaryString` method is used to start reading the contents of the
 specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is

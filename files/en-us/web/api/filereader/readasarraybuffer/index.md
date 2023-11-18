@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsArrayBuffer
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The {{domxref("FileReader")}} interface's
 **`readAsArrayBuffer()`** method is used to start reading the

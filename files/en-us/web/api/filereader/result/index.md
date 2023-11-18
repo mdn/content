@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FileReader.result
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The {{domxref("FileReader")}} **`result`** property returns the
 file's contents. This property is only valid after the read operation is complete, and

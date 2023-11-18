@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FileReader.loadstart_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The `loadstart` event is fired when a file read operation has begun.
 

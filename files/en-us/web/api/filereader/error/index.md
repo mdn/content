@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FileReader.error
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The {{domxref("FileReader")}} **`error`** property returns the
 error that occurred while reading the file.

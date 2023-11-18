@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FileReader.abort_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The `abort` event is fired when a read has been aborted: for instance because the program called {{domxref("FileReader.abort()")}}.
 

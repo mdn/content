@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsDataURL
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the

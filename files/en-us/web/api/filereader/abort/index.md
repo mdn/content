@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileReader.abort
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`abort`** method aborts the read operation. Upon return,
 the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
