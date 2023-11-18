@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.File.File
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`File()`** constructor creates a new {{domxref("File")}}
 object instance.

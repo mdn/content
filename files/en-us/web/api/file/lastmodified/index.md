@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.File.lastModified
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`File.lastModified`** read-only property provides the
 last modified date of the file as the number of milliseconds since the Unix
