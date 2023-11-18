@@ -36,6 +36,11 @@ new File(fileBits, fileName, options)
     - `type`
       - : A string representing the MIME type of the
         content that will be put into the file. Defaults to a value of `""`.
+    - `endings` {{optional_inline}}
+      - : How to interpret newline characters (`\n`) within the contents, if
+        the data is text. The default value, `transparent`, copies newline
+        characters into the blob without changing them. To convert newlines to the host
+        system's native convention, specify the value `native`.
     - `lastModified`
       - : A number representing the number of milliseconds
         between the Unix time epoch and when the file was last modified. Defaults to a
