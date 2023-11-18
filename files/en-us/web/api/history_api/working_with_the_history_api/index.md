@@ -65,6 +65,19 @@ document.addEventListener("click", async (event) => {
 
 In this click handler, if the link contains a data attribute `"data-creature"`, then we use the value of that attribute to fetch a JSON file containing the new content for the page.
 
+The JSON file might look like this:
+
+```json
+{
+  "description": "Bald eagles are not actually bald.",
+  "image": {
+    "src": "images/eagle.jpg",
+    "alt": "A bald eagle"
+  },
+  "name": "Eagle"
+}
+```
+
 Our `displayContent()` function updates the page with the JSON:
 
 ```js
@@ -85,7 +98,7 @@ The problem with this is that it breaks the expected behavior of the browser's "
 
 From the user's point of view, they clicked a link and the page updated, so it looks like a new page. If they then press the browser's "Back" button, they expect to go to the state before they clicked the link.
 
-But as far as the browser is concerned, the last link didn't load a new page, so "Back" will take the browser to whichever page was loaded before the SPA loaded.
+But as far as the browser is concerned, the last link didn't load a new page, so "Back" will take the browser to whichever page was loaded before the user opened the SPA.
 
 This is essentially the problem that `pushState()`, `replaceState()`, and `popstate` are designed to solve. They enable us to synthesize history entries, and to be notified when the current session history entry changes to one of these entries (for example, because the user pressed the "Back" or "Forward" buttons).
 
@@ -166,7 +179,7 @@ const initialState = {
 history.replaceState(initialState, "", document.location.href);
 ```
 
-On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has just the same structure as the JSON that we fetch when handling other navigations. We pass this `initialState` into `replaceState()`, which effectively adds the state object to the history entry.
+On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has the same structure as the JSON that we fetch when handling other navigations. We pass this `initialState` object into `replaceState()`, which effectively adds the state object to the current history entry.
 
 Now, when the user goes back to our starting point, the `popstate` event will contain this initial state, and we can use our `displayContent()` function to update the page.
 
