@@ -6,41 +6,46 @@ page-type: guide
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
 
-The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest). It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
+The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using the [Fetch](/en-US/docs/Web/API/Fetch_API) or [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API) API. It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
 
 ## Creating a `FormData` object from scratch
 
 You can build a `FormData` object yourself, instantiating it then appending fields to it by calling its {{domxref("FormData.append","append()")}} method, like this:
 
 ```js
-const formData = new FormData();
+const send = document.querySelector("#send");
 
-formData.append("username", "Groucho");
-formData.append("accountnum", 123456); // number 123456 is immediately converted to a string "123456"
+send.addEventListener("click", async () => {
+  const formData = new FormData();
+  formData.append("username", "Groucho");
+  formData.append("accountnum", 123456);
 
-// HTML file input, chosen by user
-formData.append("userfile", fileInputElement.files[0]);
+  // A file <input> element
+  const avatar = document.querySelector("#avatar");
+  formData.append("avatar", avatar.files[0]);
 
-// JavaScript file-like object
-const content = '<q id="a"><span id="b">hey!</span></q>'; // the body of the new file…
-const blob = new Blob([content], { type: "text/xml" });
+  // JavaScript file-like object
+  const content = '<q id="a"><span id="b">hey!</span></q>';
+  const blob = new Blob([content], { type: "text/xml" });
+  formData.append("webmasterfile", blob);
 
-formData.append("webmasterfile", blob);
-
-const request = new XMLHttpRequest();
-request.open("POST", "https://example.com/submitform.php");
-request.send(formData);
+  const response = await fetch("http://example.org/post", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(await response.json());
+});
 ```
 
-> **Note:** The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: **if the value is neither a `Blob` nor a `File`, the value is converted to a string**).
+> **Note:** The fields `"avatar"` and `"webmasterfile"` both contain a file. The number assigned to the field `"accountnum"` is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string. If the value is neither a `Blob` nor a `File`, the value is converted to a string).
 
-This example builds a `FormData` instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the `XMLHttpRequest` method [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke [the `Blob()` constructor](/en-US/docs/Web/API/Blob/Blob).
+This example builds a `FormData` instance containing values for fields named `"username"`, `"accountnum"`, `"avatar"` and `"webmasterfile"`, then uses {{domxref("fetch()")}} to send the form's data. The field `"webmasterfile"` is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke [the `Blob()` constructor](/en-US/docs/Web/API/Blob/Blob).
 
 ## Retrieving a `FormData` object from an HTML form
 
 To construct a `FormData` object that contains the data from an existing {{ HTMLElement("form") }}, specify that form element when creating the `FormData` object:
 
-> **Note:** `FormData` will only use input fields that use the name attribute.
+> **Note:** `FormData` will only use input fields that use the `name` attribute.
 
 ```js
 const formData = new FormData(someFormElement);
@@ -49,21 +54,37 @@ const formData = new FormData(someFormElement);
 For example:
 
 ```js
-const formElement = document.querySelector("form");
-const request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-request.send(new FormData(formElement));
+const send = document.querySelector("#send");
+
+send.addEventListener("click", async () => {
+  // A <form> element
+  const userInfo = document.querySelector("#user-info");
+  const formData = new FormData(userInfo);
+
+  const response = await fetch("http://example.org/post", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(await response.json());
+});
 ```
 
 You can also append additional data to the `FormData` object between retrieving it from a form and sending it, like this:
 
 ```js
-const formElement = document.querySelector("form");
-const formData = new FormData(formElement);
-const request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-formData.append("serialnumber", serialNumber++);
-request.send(formData);
+const send = document.querySelector("#send");
+
+send.addEventListener("click", async () => {
+  const userInfo = document.querySelector("#user-info");
+  const formData = new FormData(userInfo);
+  formData.append("serialnumber", 12345);
+
+  const response = await fetch("http://example.org/post", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(await response.json());
+});
 ```
 
 This lets you augment the form's data before sending it along, to include additional information that's not necessarily user-editable.
@@ -73,7 +94,7 @@ This lets you augment the form's data before sending it along, to include additi
 You can also send files using `FormData`. Include an {{ HTMLElement("input") }} element of type `file` in your {{htmlelement("form")}}:
 
 ```html
-<form enctype="multipart/form-data" method="post" name="fileinfo">
+<form enctype="multipart/form-data" method="post" name="fileinfo" id="fileinfo">
   <p>
     <label
       >Your email address:
@@ -103,35 +124,24 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
     <input type="submit" value="Stash the file!" />
   </p>
 </form>
-<div id="output"></div>
 ```
 
 Then you can send it using code like the following:
 
 ```js
-const form = document.forms.namedItem("fileinfo");
-form.addEventListener(
-  "submit",
-  (event) => {
-    const output = document.querySelector("#output");
-    const formData = new FormData(form);
+const form = document.querySelector("#fileinfo");
 
-    formData.append("CustomField", "This is some extra data");
+form.addEventListener("submit", async (event) => {
+  const formData = new FormData(form);
 
-    const request = new XMLHttpRequest();
-    request.open("POST", "stash.php", true);
-    request.onload = (progress) => {
-      output.innerHTML =
-        request.status === 200
-          ? "Uploaded!"
-          : `Error ${request.status} occurred when trying to upload your file.<br />`;
-    };
+  formData.append("CustomField", "This is some extra data");
 
-    request.send(formData);
-    event.preventDefault();
-  },
-  false,
-);
+  const response = await fetch("stash.php", {
+    method: "POST",
+    body: formData,
+  });
+  event.preventDefault();
+});
 ```
 
 > **Note:** If you pass in a reference to the form, the [request HTTP method](/en-US/docs/Web/HTTP/Methods) specified in the form will be used over the method specified in the `open()` call.
@@ -152,7 +162,7 @@ The [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event), more
 
 This allows a {{domxref("FormData")}} object to be quickly obtained in response to a `formdata` event firing, rather than needing to put it together yourself.
 
-Typically this is used as shown in our [`formdata` event demo](https://long-impatiens.glitch.me/) — in the JavaScript we reference a form:
+For example, in the JavaScript we can reference a form:
 
 ```js
 const formElem = document.querySelector("form");
@@ -182,10 +192,11 @@ formElem.addEventListener("formdata", (e) => {
     console.log(value);
   }
 
-  // submit the data via XHR
-  const request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  // Submit the data via fetch()
+  fetch("/formHandler", {
+    method: "POST",
+    body: data,
+  });
 });
 ```
 
@@ -195,7 +206,7 @@ The `FormData` object doesn't include data from the fields that are disabled or 
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using the Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
