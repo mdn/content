@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.File.webkitRelativePath
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`File.webkitRelativePath`** is a read-only property that
 contains a string which specifies the file's path relative to the
