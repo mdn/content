@@ -47,7 +47,7 @@ addEventListener("fetch", (event) => {
       // Eg, if it's cross-origin.
       if (!event.clientId) return;
 
-      // Get the client
+      // Get the client.
       const client = await self.clients.get(event.clientId);
       // Exit early if we don't get the client.
       // Eg, if it closed.
