@@ -15,13 +15,13 @@ of the values given in the parameter `array`.
 ## Syntax
 
 ```js-nolint
-new Blob(array)
-new Blob(array, options)
+new Blob(blobParts)
+new Blob(blobParts, options)
 ```
 
 ### Parameters
 
-- `array`
+- `blobParts`
 
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
