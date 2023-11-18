@@ -40,22 +40,22 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "2.31.0",
+    "@mdn/yari": "2.35.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
-    "async": "^3.2.4",
+    "async": "^3.2.5",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "fdir": "^6.1.0",
+    "fdir": "^6.1.1",
     "gray-matter": "^4.0.3",
     "husky": "8.0.3",
     "js-yaml": "^4.1.0",
-    "lint-staged": "14.0.1",
+    "lint-staged": "15.1.0",
     "markdownlint-cli2": "0.10.0",
     "markdownlint-rule-search-replace": "1.2.0",
-    "prettier": "3.0.3"
+    "prettier": "3.1.0"
   },
   "devDependencies": {
     "jest": "^29.7.0"

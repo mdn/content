@@ -62,9 +62,9 @@
     },
     "Beacon": {
       "overview": ["Beacon API"],
-      "guides": ["/docs/Web/API/Beacon_API/Using_the_Beacon_API"],
-      "interfaces": ["Navigator", "WorkerNavigator"],
-      "methods": [],
+      "guides": [],
+      "interfaces": [],
+      "methods": ["Navigator.sendBeacon()"],
       "properties": [],
       "events": []
     },
@@ -78,14 +78,17 @@
     "Bluetooth API": {
       "overview": ["Web Bluetooth API"],
       "interfaces": [
+        "Bluetooth",
+        "BluetoothCharacteristicProperties",
         "BluetoothDevice",
         "BluetoothRemoteGATTCharacteristic",
+        "BluetoothRemoteGATTDescriptor",
         "BluetoothRemoteGATTServer",
         "BluetoothRemoteGATTService",
         "BluetoothUUID"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.bluetooth"],
       "events": []
     },
     "Canvas API": {
@@ -336,6 +339,17 @@
         "Window: devicemotion"
       ]
     },
+    "Document Picture-in-Picture API": {
+      "overview": ["Document Picture-in-Picture API"],
+      "guides": ["/docs/Web/API/Document_Picture-in-Picture_API/Using"],
+      "interfaces": [
+        "DocumentPictureInPicture",
+        "DocumentPictureInPictureEvent"
+      ],
+      "methods": [],
+      "properties": ["Window.documentPictureInPicture"],
+      "events": ["DocumentPictureInPicture: enter"]
+    },
     "DOM": {
       "overview": ["Document Object Model"],
       "guides": [
@@ -548,6 +562,7 @@
         "DOMMatrix",
         "DOMMatrixReadOnly",
         "DOMPoint",
+        "DOMPointReadOnly",
         "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
@@ -1118,11 +1133,10 @@
         "Scheduling",
         "TaskController",
         "TaskSignal",
-        "AbortSignal",
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "Window.scheduler"],
+      "properties": ["Navigator.scheduling", "scheduler_property"],
       "events": []
     },
     "Push API": {
@@ -1259,6 +1273,17 @@
       "methods": [],
       "properties": ["Navigator.serviceWorker"],
       "events": []
+    },
+    "Speculation Rules API": {
+      "overview": ["Speculation Rules API"],
+      "interfaces": [],
+      "properties": [
+        "Document.prerendering",
+        "PerformanceNavigationTiming.activationStart",
+        "PerformanceResourceTiming.deliveryType"
+      ],
+      "methods": [],
+      "events": ["Document: prerenderingchange"]
     },
     "Storage": {
       "overview": ["Storage API"],
@@ -1536,8 +1561,11 @@
     "User-Agent Client Hints API": {
       "overview": ["User-Agent Client Hints API"],
       "interfaces": ["NavigatorUAData"],
-      "methods": ["Navigator.userAgentData"],
-      "properties": [],
+      "methods": [],
+      "properties": [
+        "Navigator.userAgentData",
+        "WorkerNavigator.userAgentData"
+      ],
       "events": []
     },
     "Vibration API": {
@@ -1558,7 +1586,7 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.virtualKeyboard"],
       "events": []
     },
     "Visual Viewport": {
@@ -1603,7 +1631,6 @@
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
-        "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
         "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
@@ -1998,7 +2025,6 @@
       ],
       "dictionaries": [
         "RTCOAuthCredential",
-        "RTCIceServer",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",
@@ -2155,7 +2181,6 @@
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",
-        "ServiceWorker",
         "SharedWorker",
         "SharedWorkerGlobalScope",
         "Worker",
@@ -2192,7 +2217,7 @@
         "USBOutTransferResult"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.usb", "WorkerNavigator.usb"],
       "events": []
     },
     "WebVR API": {
@@ -2290,11 +2315,25 @@
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
     },
-    "XMLHttpRequest": {
-      "overview": ["XMLHttpRequest"],
+    "Window Management API": {
+      "overview": ["Window Management API"],
       "guides": [
-        "/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest",
-        "/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest"
+        "/docs/Web/API/Window_Management_API/Using",
+        "/docs/Web/API/Window_Management_API/Multi-screen_origin"
+      ],
+      "interfaces": ["ScreenDetails", "ScreenDetailed"],
+      "methods": ["Element.requestFullscreen()", "Window.getScreenDetails()"],
+      "properties": ["Screen.isExtended"],
+      "events": ["Screen: change"]
+    },
+    "XMLHttpRequest API": {
+      "overview": ["XMLHttpRequest API"],
+      "guides": [
+        "/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest",
+        "/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest",
+        "/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests",
+        "/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data",
+        "/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects"
       ],
       "interfaces": [
         "FormData",

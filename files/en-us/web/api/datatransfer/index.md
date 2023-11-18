@@ -24,7 +24,7 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
   - : Gets the type of drag-and-drop operation currently selected or sets the operation to a new type. The value must be `none`, `copy`, `link` or `move`.
 - {{domxref("DataTransfer.effectAllowed")}}
   - : Provides all of the types of operations that are possible. Must be one of `none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all` or `uninitialized`.
-- {{domxref("DataTransfer.files")}}
+- {{domxref("DataTransfer.files")}} {{ReadOnlyInline}}
   - : Contains a list of all the local files available on the data transfer. If the drag operation doesn't involve dragging files, this property is an empty list.
 - {{domxref("DataTransfer.items")}} {{ReadOnlyInline}}
   - : Gives a {{domxref("DataTransferItemList")}} object which is a list of all of the drag data.

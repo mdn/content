@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-browser-compat: javascript.builtins.WebAssembly.validate
+page-type: webassembly-function
+browser-compat: webassembly.api.validate
 ---
 
 {{WebAssemblySidebar}}
@@ -36,7 +37,7 @@ a {{jsxref("TypeError")}} is thrown.
 
 ### Using validate
 
-The following example (see the validate.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html),
+The following example (see the validate.html [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/validate.html),
 and [see it live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html))
 fetches a Wasm module and converts it into a typed array.
 The `validate()` method is then used to check whether the module is valid.

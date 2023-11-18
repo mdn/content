@@ -91,7 +91,7 @@ _No changes._
 #### Media, Web Audio, and WebRTC
 
 - The {{domxref("PannerNode.refDistance")}}, {{domxref("PannerNode.maxDistance")}}, {{domxref("PannerNode.rolloffFactor")}}, and {{domxref("PannerNode.coneOuterGain")}} properties now correctly throw exceptions when set to values outside their accepted ranges ([Firefox bug 1487963](https://bugzil.la/1487963)).
-- {{domxref("RTCRtpEncodingParameters")}} settings changed via {{domxref("RTCRtpSender.setParameters()")}} used to not update if the changes were made during a call. They will now update live, without renegotiation ([Firefox bug 1253499](https://bugzil.la/1253499)).
+- `RTCRtpEncodingParameters` settings changed via {{domxref("RTCRtpSender.setParameters()")}} used to not update if the changes were made during a call. They will now update live, without renegotiation ([Firefox bug 1253499](https://bugzil.la/1253499)).
 - {{domxref("RTCIceCandidateStats.relayProtocol")}} has been implemented — this is the standardized version of `RTCIceCandidateStats.mozLocalTransport`, which has now been deprecated ([Firefox bug 1435789](https://bugzil.la/1435789)).
 - Automatic Gain Control (AGC) is now enabled by default; this can be changed using the preference `media.getusermedia.agc_enabled` ([Firefox bug 1496714](https://bugzil.la/1496714)).
 

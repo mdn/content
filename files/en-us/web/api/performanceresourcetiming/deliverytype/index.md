@@ -10,18 +10,18 @@ browser-compat: api.PerformanceResourceTiming.deliveryType
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`deliveryType`** read-only property is a string indicating how the resource was delivered — for example, indicating whether the resource was delivered from the cache.
+The **`deliveryType`** read-only property is a string indicating how the resource was delivered — for example from the cache or from a navigational prefetch.
 
 ## Value
 
-The `deliveryType` property can have the following values:.
+A string, which can be one of the following values:
 
-- `cache`
-  - : If the resource was retrieved from the cache
+- `"cache"`
+  - : The resource was retrieved from the cache.
+- `"navigational-prefetch"` {{experimental_inline}}
+  - : The resource was retrieved from a prefetched response stored in an in-memory cache via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - `""` (empty string)
-  - : If none of the other defined delivery types
-
-This set of delivery types is expected to be expanded in the future — for example, to indicate preloaded resources and to indicate prefetched navigation requests.
+  - : Returned if none of the above delivery types apply.
 
 ## Examples
 

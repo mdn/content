@@ -8,9 +8,7 @@ browser-compat: api.PictureInPictureWindow.height
 
 {{APIRef("Picture-in-Picture API")}}
 
-The read-only {{domxref("PictureInPictureWindow")}} property
-**`height`** returns the height of the floating video window
-in pixels.
+The read-only **`height`** property of the {{domxref("PictureInPictureWindow")}} interface returns the height of the floating video window in pixels.
 
 ## Syntax
 
@@ -20,8 +18,7 @@ pictureInPictureWindow.height
 
 ### Value
 
-An integer value indicating the height of the floating video window in pixels. This
-property is read-only, and has no default value.
+An integer value indicating the height of the floating video window in pixels if the Picture-in-Picture window is open. Otherwise, it returns `0`.
 
 ## Specifications
 

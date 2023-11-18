@@ -1,12 +1,13 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
-browser-compat: javascript.builtins.WebAssembly.Module.imports
+page-type: webassembly-static-method
+browser-compat: webassembly.api.Module.imports
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.imports()`** function returns an array
+The **`WebAssembly.Module.imports()`** function returns an array
 containing descriptions of all the declared imports of the given `Module`.
 
 ## Syntax
@@ -35,7 +36,7 @@ If module is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_int
 
 The following example compiles a loaded Wasm module and queries the module's imports.
 
-See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) and
+See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/imports.html) and
 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html).
 
 ```js

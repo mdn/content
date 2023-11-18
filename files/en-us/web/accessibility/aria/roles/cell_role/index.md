@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/cell_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#cell
-  - https://w3c.github.io/aria-practices/#cell
+  - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.

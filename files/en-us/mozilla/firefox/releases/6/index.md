@@ -43,7 +43,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
 - The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
-- [Webkit bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
+- [Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
 
@@ -58,7 +58,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
 - `BlobBuilder` is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The `Document.height` and `Document.width` have been removed. [Webkit bug 585877](https://bugzil.la/585877)
+- The `Document.height` and `Document.width` have been removed. [Firefox bug 585877](https://bugzil.la/585877)
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).

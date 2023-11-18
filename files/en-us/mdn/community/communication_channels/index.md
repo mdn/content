@@ -10,16 +10,16 @@ There are various communication channels using which community can contact MDN W
 
 ## Chat rooms
 
-Chat rooms are for posting queries, seeking clarifications, sharing information, and meeting other folks.
-They are also great place to get to know other community members, share your work, and get help for your contributions.
+Chat rooms are for meeting other people, asking questions and sharing information.
+They are a great place to get to know other community members, share your work, and get help with your contributions.
 
 ### Discord server
 
-MDN Web Docs community Discord server is open to the public. This server is a great place to see what staff and members of the community are doing on a daily basis.
+The MDN Web Docs community Discord server is open to the public.
+This server is a great place to see what staff and members of the community are doing on a daily basis.
+You can ask questions, seek clarifications, find out how to get involved, and join specific channels based on your areas of interest.
 
-You can ask questions, seek clarifications, and find out how you can get involved. You can also join specific channels based on your areas of interest or expertise.
-
-Join the MDN Web Docs community on Discord [here](https://discord.gg/hkGN8VKvvD).
+Join the MDN Web Docs community via our [Discord invite](/discord).
 
 ### Matrix chat rooms
 
@@ -32,17 +32,23 @@ The Matrix chat rooms are an alternative to the Discord server.
 
 ## GitHub Discussions
 
-[GitHub Discussions](https://github.com/orgs/mdn/discussions) on MDN Web Docs is the place to look out for any project-wide [announcements](https://github.com/orgs/mdn/discussions/categories/announcements).
+[GitHub Discussions](https://github.com/orgs/mdn/discussions) on MDN Web Docs is the place to look out for project-wide [announcements](https://github.com/orgs/mdn/discussions/categories/announcements), to share the work you're planning to do if you think you will need a consensus on a good course of action.
+You can also use GitHub Discussions for brainstorming your ideas to define an actionable piece of work, especially when the changes have a wide-ranging impact.
 
-Use GitHub discussions to post your questions and propose your suggestions. Choose the appropriate [discussion category](https://github.com/mdn/mdn-community#github-discussions) when starting a thread. Your answered questions can be really useful for other people looking for similar information in the future.
-
-We strongly recommend you to use GitHub Discussions to share the work you're planning to do and that you think will need a consensus on the course of action. You can also use GitHub Discussions for brainstorming your ideas to define an actionable piece of work, especially when the changes have a wide-ranging impact.
+Use GitHub discussions to post your questions and propose your suggestions.
+Choose the appropriate [discussion category](https://github.com/mdn/mdn-community#github-discussions) when starting a thread.
+Your answered questions can be really useful for other people looking for similar information in the future.
 
 Check out the MDN-specific [discussion guidelines](/en-US/docs/MDN/Community/Discussions) before you create a new submission.
 
+## Social media
+
+You can follow MDN Web Docs on [Mastodon](https://mozilla.social/@mdn) and [Twitter](https://twitter.com/MozDevNet).
+Feel free to tag us in your posts if you want to share something with us or say hello, although we can't guarantee that we can respond to everything.
+
 ## Forums
 
-You can use the forums listed below for discussing code problems. You can also request feedback here on your progress with the assessments in the [MDN learning area](/en-US/docs/Learn).
+You can use the forums listed below for discussing code problems.
 
 - [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236)
 - [MDN Discourse forum learning category](https://discourse.mozilla.org/c/mdn/learn/250)

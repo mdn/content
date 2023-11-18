@@ -1,12 +1,13 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
-browser-compat: javascript.builtins.WebAssembly.Module.customSections
+page-type: webassembly-static-method
+browser-compat: webassembly.api.Module.customSections
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.customSections()`** function returns a copy
+The **`WebAssembly.Module.customSections()`** function returns a copy
 of the contents of all custom sections in the given module with the given string name.
 
 ## Syntax
@@ -65,7 +66,7 @@ The following example uses `WebAssembly.Module.customSections` to check
 if a loaded module instance contains a "name" custom section. A module contains a "name" custom section if `WebAssembly.Module.customSections`
 returns an `ArrayBuffer` with a length greater than 0.
 
-See custom-section.html [source code](https://github.com/mdn/webassembly-examples/blob/master/other-examples/custom-section.html)
+See custom-section.html [source code](https://github.com/mdn/webassembly-examples/blob/main/other-examples/custom-section.html)
 and [live example](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html).
 
 ```js

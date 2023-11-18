@@ -63,5 +63,5 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## See also
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/articles/webcodecs/)
 - [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)
