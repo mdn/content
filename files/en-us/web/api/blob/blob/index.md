@@ -34,7 +34,7 @@ new Blob(blobParts, options)
     - `type` {{optional_inline}}
       - : The {{Glossary("MIME type")}} of the data that will be stored into the blob. The
         default value is the empty string, (`""`).
-    - `endings` {{optional_inline}} {{non-standard_inline}}
+    - `endings` {{optional_inline}}
       - : How to interpret newline characters (`\n`) within the contents, if
         the data is text. The default value, `transparent`, copies newline
         characters into the blob without changing them. To convert newlines to the host
