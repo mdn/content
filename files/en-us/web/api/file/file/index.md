@@ -33,7 +33,7 @@ new File(fileBits, fileName, options)
   - : An options object containing optional attributes for the file. Available options are
     as follows:
 
-    - `type`
+    - `type` {{optional_inline}}
       - : A string representing the MIME type of the
         content that will be put into the file. Defaults to a value of `""`.
     - `endings` {{optional_inline}}
@@ -41,7 +41,7 @@ new File(fileBits, fileName, options)
         the data is text. The default value, `transparent`, copies newline
         characters into the blob without changing them. To convert newlines to the host
         system's native convention, specify the value `native`.
-    - `lastModified`
+    - `lastModified` {{optional_inline}}
       - : A number representing the number of milliseconds
         between the Unix time epoch and when the file was last modified. Defaults to a
         value of {{jsxref("Date.now()")}}.
