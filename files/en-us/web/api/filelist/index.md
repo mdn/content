@@ -30,7 +30,7 @@ const file = document.getElementById("fileItem").files[0];
 
 ## Instance methods
 
-- {{DOMxRef("FileList/item", "item()")}} {{ReadOnlyInline}}
+- {{DOMxRef("FileList/item", "item()")}}
   - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Example
