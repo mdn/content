@@ -70,6 +70,12 @@ JavaScript has three kinds of variable declarations.
   - : Declares a block-scoped, local variable, optionally initializing it to a value.
 - {{jsxref("Statements/const", "const")}}
   - : Declares a block-scoped, read-only named constant.
+ 
+| Keyword | Definition | Scope | Reassignment | Initialization |
+|---|---|---|---|---|
+| `var` | Declares a variable, optionally initializing it to a value. | Global or function scope (function scoped within a function) | Can be reassigned | Optional |
+| `let` | Declares a block-scoped, local variable, optionally initializing it to a value. | Block scope (the block where it is declared) | Can be reassigned | Optional |
+| `const` | Declares a block-scoped, read-only named constant. | Block scope (the block where it is declared) | Cannot be reassigned | Required |
 
 ### Variables
 
