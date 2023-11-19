@@ -10,7 +10,7 @@ browser-compat: api.FileReader.readAsBinaryString
 
 {{APIRef("File API")}}{{Deprecated_Header}}
 
-> **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
+> **Note:** This method is deprecated in favor of {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}.
 
 The `readAsBinaryString` method is used to start reading the contents of the
 specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
