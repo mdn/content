@@ -25,7 +25,7 @@ One example of how `info` might be used is to trigger different single-page navi
 navigation.addEventListener("navigate", (event) => {
   if (isPhotoNavigation(event)) {
     event.intercept({ async handler() {
-      switch (event.info.?via) {
+      switch (event.info?.via) {
         case "go-left": {
           await animateLeft();
           break;
