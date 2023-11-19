@@ -121,6 +121,8 @@ elem.addEventListener("change", () => {
 
 {{ EmbedLiveSample('input_cancel', '100%', '100px') }}
 
+Open the file selector, then close the selection dialog with the escape key or the cancel button. Both of these will cause the cancel event to be fired. Also, try selecting a local file on your machine; then reopen the file selection window and reselect the same file. This too causes the cancel event to be fired.
+
 ## Specifications
 
 {{Specifications}}
