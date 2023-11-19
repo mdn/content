@@ -28,7 +28,7 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they ar
 
 ### Forbidden values
 
-A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit or another hyphen.
+A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit.
 
 To prevent ambiguity, each property that uses `<custom-ident>` forbids the use of specific values:
 
@@ -128,7 +128,6 @@ bili\.bob         A correctly escaped period
 34rem             It must not start with a decimal digit.
 -12rad            It must not start with a dash followed by a decimal digit.
 bili.bob          Only alphanumeric characters, _, and - needn't be escaped.
---toto            It must not start with two dashes. This would be a custom property.
 'bilibob'         This would be a <string>.
 "bilibob"         This would be a <string>.
 ```
