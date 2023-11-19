@@ -172,7 +172,7 @@ Because of this, you should make sure that the `accept` attribute is backed up b
 
 ### Detecting cancellations
 
-The `cancel` event is fired when the user does not change their selection and when the file picker dialog gets closed, or canceled, via the "cancel" button or the <kbd>escape</kbd> key.
+The `cancel` event is fired when the user does not change their selection, reselecting the previously selected files. The  `cancel` event is also fired when the file picker dialog gets closed, or canceled, via the "cancel" button or the <kbd>escape</kbd> key.
 
 For example, the following code will log to the console if the user closes the popup without selecting a file:
 
