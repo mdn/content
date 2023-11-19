@@ -14,9 +14,9 @@ Initially Ajax was implemented using the {{domxref("XMLHttpRequest")}} interface
 
 ## See also
 
+- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- {{DOMxRef("Fetch API")}}
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
 - {{Glossary("SPA", "Single-page application")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- {{DOMxRef("Fetch API")}}
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
