@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
-browser-compat: javascript.builtins.WebAssembly.compileStreaming
+page-type: webassembly-function
+browser-compat: webassembly.api.compileStreaming
 ---
 
 {{WebAssemblySidebar}}

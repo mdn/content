@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception
+page-type: webassembly-interface
+browser-compat: webassembly.api.Exception
 ---
 
 {{WebAssemblySidebar}}

@@ -72,4 +72,4 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 
 - [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
-- [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)
+- [Smarter custom properties with Houdini's new API](https://web.dev/articles/css-props-and-vals)

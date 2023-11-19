@@ -3,7 +3,9 @@ title: "IdentityProvider: getUserInfo() static method"
 short-title: getUserInfo()
 slug: Web/API/IdentityProvider/getUserInfo_static
 page-type: web-api-static-method
-browser-compat: api.IdentityProvider.getUserInfo
+status:
+  - experimental
+browser-compat: api.IdentityProvider.getUserInfo_static
 ---
 
 {{APIRef("FedCM API")}}{{SeeCompatTable}}
@@ -36,7 +38,7 @@ IdentityProvider.getUserInfo(config)
 ### Parameters
 
 - `config`
-  - : A configuation object, which can contain the following properties:
+  - : A configuration object, which can contain the following properties:
     - `configURL`
       - : The URL of the [configuration file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for the identity provider from which you want to get user information.
     - `clientId`

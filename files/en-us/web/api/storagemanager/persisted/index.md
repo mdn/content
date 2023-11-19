@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StorageManager.persisted
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}}{{AvailableInWorkers}}
 
 The **`persisted()`** method of the {{domxref("StorageManager")}} interface returns a {{jsxref('Promise')}} that resolves to `true` if your site's storage bucket is persistent.
 
@@ -23,6 +23,11 @@ None.
 ### Returns
 
 A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
+
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Example
 

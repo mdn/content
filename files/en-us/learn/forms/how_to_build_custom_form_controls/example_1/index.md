@@ -38,7 +38,7 @@ This is the first example of code that explains [how to build a custom form widg
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -174,7 +174,7 @@ This is the first example of code that explains [how to build a custom form widg
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -310,7 +310,7 @@ This is the first example of code that explains [how to build a custom form widg
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {

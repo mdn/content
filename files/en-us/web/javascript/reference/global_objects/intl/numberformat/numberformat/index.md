@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 
 The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat.html", "taller")}}
 
 ## Syntax
 
@@ -181,8 +181,12 @@ The above properties fall into two groups: `minimumIntegerDigits`, `minimumFract
       - : Display grouping separators based on the locale preference, which may also be dependent on the currency.
     - `"min2"`
       - : Display grouping separators when there are at least 2 digits in a group.
+    - `true`
+      - : Same as `"always"`.
+    - `false`
+      - : Display no grouping separators.
 
-    The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise. The boolean values `true` and `false` are accepted, but are always converted to the default value.
+    The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise. The string values `"true"` and `"false"` are accepted, but are always converted to the default value.
 
 - `signDisplay`
   - : When to display the sign for the number. Possible values are:

@@ -312,7 +312,7 @@ For those of you wanting a challenge, consider whether you can optimize some par
 
 - Can [images be compressed](https://github.com/ralscha/parcel-plugin-compress) during the build step?
 - Could React be swapped out for [something smaller](https://preactjs.com/)?
-- Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://web.dev/lighthouse-performance/)?
+- Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://developer.chrome.com/docs/lighthouse/performance/)?
 - Could you set up a notification to let you know when a new deploy succeeded or failed?
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

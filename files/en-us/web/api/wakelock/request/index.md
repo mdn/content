@@ -21,13 +21,14 @@ request(type)
 
 ### Parameters
 
-- `type`
+- `type` {{optional_inline}}
 
-  - : Options are as follows:
+  - : A string specifying the screen wake lock type, from among the following enumerated types:
 
-    - `'screen'`
-      - : Requests a screen wake lock. Prevents devices from
-        dimming or locking the screen.
+    - `screen`
+      - : Prevents the screen from turning off. Only visible documents can acquire the screen wake lock.
+
+If no `type` parameter is explicitly specified, the `request()` method defaults to using the `screen` type.
 
 ### Return value
 
@@ -35,7 +36,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
 ### Exceptions
 
-- `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown when wake lock is not available, which can happen because:
 

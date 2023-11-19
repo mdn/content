@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-browser-compat: javascript.builtins.WebAssembly.Instance.exports
+page-type: webassembly-instance-property
+browser-compat: webassembly.api.Instance.exports
 ---
 
 {{WebAssemblySidebar}}

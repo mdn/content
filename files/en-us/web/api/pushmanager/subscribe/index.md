@@ -70,7 +70,7 @@ navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
       console.log(pushSubscription.endpoint);
       // The push subscription details needed by the application
       // server are now available, and can be sent to it using,
-      // for example, an XMLHttpRequest.
+      // for example, the fetch() API.
     },
     (error) => {
       // During development it often helps to log errors to the
