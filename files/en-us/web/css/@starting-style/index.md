@@ -463,7 +463,7 @@ The final result looks like this:
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
 - [`overlay`](/en-US/docs/Web/CSS/overlay)
 - [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior)
 - {{domxref("CSSStartingStyleRule")}}
