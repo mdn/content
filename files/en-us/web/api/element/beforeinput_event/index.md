@@ -96,4 +96,4 @@ function updateValue(e) {
 
 ## See also
 
-- Related event: [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- Related event: [`input`](/en-US/docs/Web/API/Element/input_event)

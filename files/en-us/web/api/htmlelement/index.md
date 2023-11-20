@@ -123,12 +123,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Input events
 
-- {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : Fired when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified.
-- {{domxref("HTMLElement/input_event", "input")}}
+- {{domxref("Element/input_event", "input")}}
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 - {{domxref("HTMLElement/change_event", "change")}}
-  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
+  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("Element/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 
 ### Pointer events
 

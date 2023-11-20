@@ -121,6 +121,6 @@ input.onkeyup = logKey;
 
 ## See also
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`input`](/en-US/docs/Web/API/Element/input_event)
 - [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
 - [`keypress`](/en-US/docs/Web/API/Element/keypress_event)

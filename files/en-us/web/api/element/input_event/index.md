@@ -87,6 +87,6 @@ function updateValue(e) {
 
 - Related events
 
-  - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
+  - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - {{domxref("HTMLElement/change_event", "change")}}
   - {{domxref("HTMLInputElement/invalid_event", "invalid")}}

@@ -293,7 +293,7 @@ Some properties only apply to input element types that support the corresponding
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`input`](/en-US/docs/Web/API/Element/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements, but we've listed it here because it is most commonly used with form input elements.
 - [`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.

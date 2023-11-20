@@ -61,8 +61,8 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Input events</th>
       <td>
-        {{domxref("HTMLElement/beforeinput_event", "beforeinput")}},
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/beforeinput_event", "beforeinput")}},
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
