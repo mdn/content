@@ -31012,6 +31012,17 @@
       "jpmedley"
     ]
   },
+  "Web/API/Element/beforeinput_event": {
+    "modified": "2020-11-11T09:54:44.715Z",
+    "contributors": [
+      "Rumyra",
+      "chrisdavidmills",
+      "mfuji09",
+      "Sheppy",
+      "Watilin",
+      "mfluehr"
+    ]
+  },
   "Web/API/Element/beforescriptexecute_event": {
     "modified": "2020-10-15T21:19:30.700Z",
     "contributors": [
@@ -32200,6 +32211,46 @@
       "Dria",
       "Callek",
       "JesseW"
+    ]
+  },
+  "Web/API/Element/input_event": {
+    "modified": "2020-10-15T21:19:24.780Z",
+    "contributors": [
+      "mfuji09",
+      "dienluong",
+      "chrisdavidmills",
+      "estelle",
+      "Sheppy",
+      "wbamberg",
+      "mfluehr",
+      "matijs",
+      "JLHwung",
+      "Majr",
+      "fscholz",
+      "thatemil",
+      "roryokane",
+      "lsolova",
+      "jchen",
+      "ibmua",
+      "jkoritzinsky",
+      "erikadoyle",
+      "r-o-b",
+      "cvrebert",
+      "Sebastianz",
+      "chrisAnderson",
+      "teoli",
+      "jonkoops",
+      "claudepache",
+      "mkato",
+      "Masayuki",
+      "bending_the_rules",
+      "codepo8",
+      "jimmont",
+      "joeldart",
+      "Nickolay",
+      "parthiv",
+      "louisremi",
+      "ethertank"
     ]
   },
   "Web/API/Element/insertAdjacentElement": {
@@ -37953,17 +38004,6 @@
       "Krinkle"
     ]
   },
-  "Web/API/HTMLElement/beforeinput_event": {
-    "modified": "2020-11-11T09:54:44.715Z",
-    "contributors": [
-      "Rumyra",
-      "chrisdavidmills",
-      "mfuji09",
-      "Sheppy",
-      "Watilin",
-      "mfluehr"
-    ]
-  },
   "Web/API/HTMLElement/blur": {
     "modified": "2020-10-15T21:06:46.166Z",
     "contributors": [
@@ -38276,46 +38316,6 @@
       "cvrebert",
       "mrenty",
       "evilpie"
-    ]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2020-10-15T21:19:24.780Z",
-    "contributors": [
-      "mfuji09",
-      "dienluong",
-      "chrisdavidmills",
-      "estelle",
-      "Sheppy",
-      "wbamberg",
-      "mfluehr",
-      "matijs",
-      "JLHwung",
-      "Majr",
-      "fscholz",
-      "thatemil",
-      "roryokane",
-      "lsolova",
-      "jchen",
-      "ibmua",
-      "jkoritzinsky",
-      "erikadoyle",
-      "r-o-b",
-      "cvrebert",
-      "Sebastianz",
-      "chrisAnderson",
-      "teoli",
-      "jonkoops",
-      "claudepache",
-      "mkato",
-      "Masayuki",
-      "bending_the_rules",
-      "codepo8",
-      "jimmont",
-      "joeldart",
-      "Nickolay",
-      "parthiv",
-      "louisremi",
-      "ethertank"
     ]
   },
   "Web/API/HTMLElement/isContentEditable": {

@@ -1,9 +1,9 @@
 ---
-title: "HTMLElement: input event"
+title: "Element: input event"
 short-title: input
-slug: Web/API/HTMLElement/input_event
+slug: Web/API/Element/input_event
 page-type: web-api-event
-browser-compat: api.HTMLElement.input_event
+browser-compat: api.Element.input_event
 ---
 
 {{APIRef}}

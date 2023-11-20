@@ -1232,7 +1232,7 @@
 /en-US/docs/DOM/DOM_event_reference/compositionstart	/en-US/docs/Web/API/Element/compositionstart_event
 /en-US/docs/DOM/DOM_event_reference/compositionupdate	/en-US/docs/Web/API/Element/compositionupdate_event
 /en-US/docs/DOM/DOM_event_reference/error	/en-US/docs/Web/API/HTMLElement/error_event
-/en-US/docs/DOM/DOM_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/DOM/DOM_event_reference/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/DOM/DOM_event_reference/mouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/DOM/DOM_event_reference/mouseleave	/en-US/docs/Web/API/Element/mouseleave_event
 /en-US/docs/DOM/DOM_event_reference/mousewheel	/en-US/docs/Web/API/Element/mousewheel_event
@@ -1459,7 +1459,7 @@
 /en-US/docs/DOM/Mozilla_event_reference/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/DOM/Mozilla_event_reference/gamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/DOM/Mozilla_event_reference/hashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/DOM/Mozilla_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/DOM/Mozilla_event_reference/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/DOM/Mozilla_event_reference/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/DOM/Mozilla_event_reference/keydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM/Mozilla_event_reference/keypress	/en-US/docs/Web/API/Element/keypress_event
@@ -2178,7 +2178,7 @@
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/DOM/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/DOM/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -3333,7 +3333,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -6271,7 +6271,7 @@
 /en-US/docs/Mozilla_event_reference/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Mozilla_event_reference/gamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/Mozilla_event_reference/hashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Mozilla_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Mozilla_event_reference/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Mozilla_event_reference/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Mozilla_event_reference/keydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Mozilla_event_reference/keypress	/en-US/docs/Web/API/Element/keypress_event
@@ -7979,7 +7979,7 @@
 /en-US/docs/Web/API/Document/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/Document/onfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/Document/onfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
-/en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/Document/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Document/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8267,7 +8267,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.ondblclick	/en-US/docs/Web/API/Element/dblclick_event
 /en-US/docs/Web/API/GlobalEventHandlers.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/GlobalEventHandlers.onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/GlobalEventHandlers.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/GlobalEventHandlers.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8328,7 +8328,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/GlobalEventHandlers/onformdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
 /en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
-/en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/GlobalEventHandlers/oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
@@ -8442,8 +8442,10 @@
 /en-US/docs/Web/API/HTMLElement/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/HTMLElement/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/HTMLElement/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
+/en-US/docs/Web/API/HTMLElement/beforeinput_event	/en-US/docs/Web/API/Element/beforeinput_event
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/gotpointercapture_event	/en-US/docs/Web/API/Element/gotpointercapture_event
+/en-US/docs/Web/API/HTMLElement/input_event	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLElement/lostpointercapture_event	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
@@ -8455,7 +8457,7 @@
 /en-US/docs/Web/API/HTMLElement/oncut	/en-US/docs/Web/API/HTMLElement/cut_event
 /en-US/docs/Web/API/HTMLElement/ondblclick	/en-US/docs/Web/API/Element/dblclick_event
 /en-US/docs/Web/API/HTMLElement/onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/HTMLElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/HTMLElement/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/HTMLElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/HTMLElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/HTMLElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8794,8 +8796,8 @@
 /en-US/docs/Web/API/InputDeviceCapabilities/fireTouchEvents	/en-US/docs/Web/API/InputDeviceCapabilities/firesTouchEvents
 /en-US/docs/Web/API/InputEvent.InputEvent	/en-US/docs/Web/API/InputEvent/InputEvent
 /en-US/docs/Web/API/InputEvent.isComposing	/en-US/docs/Web/API/InputEvent/isComposing
-/en-US/docs/Web/API/InputEvent/input	/en-US/docs/Web/API/HTMLElement/input_event
-/en-US/docs/Web/API/InputEvent/input_event	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/InputEvent/input	/en-US/docs/Web/API/Element/input_event
+/en-US/docs/Web/API/InputEvent/input_event	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/InstallEvent/activeWorker	/en-US/docs/Web/API/InstallEvent
 /en-US/docs/Web/API/Int16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array
 /en-US/docs/Web/API/Int32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array
@@ -9603,7 +9605,7 @@
 /en-US/docs/Web/API/SVGElement/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/SVGElement/ondblclick	/en-US/docs/Web/API/Element/dblclick_event
 /en-US/docs/Web/API/SVGElement/onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/SVGElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/SVGElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/SVGElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -10845,7 +10847,7 @@
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -11754,7 +11756,7 @@
 /en-US/docs/Web/Events/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
 /en-US/docs/Web/Events/audiostart	/en-US/docs/Web/API/SpeechRecognition/audiostart_event
 /en-US/docs/Web/Events/auxclick	/en-US/docs/Web/API/Element/auxclick_event
-/en-US/docs/Web/Events/beforeinput	/en-US/docs/Web/API/HTMLElement/beforeinput_event
+/en-US/docs/Web/Events/beforeinput	/en-US/docs/Web/API/Element/beforeinput_event
 /en-US/docs/Web/Events/beforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/Events/beforescriptexecute	/en-US/docs/Web/API/Element/beforescriptexecute_event
 /en-US/docs/Web/Events/beforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -11833,7 +11835,7 @@
 /en-US/docs/Web/Events/iceconnectionstatechange	/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event
 /en-US/docs/Web/Events/icegatheringstatechange	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
 /en-US/docs/Web/Events/icegatheringstatechange_event	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
-/en-US/docs/Web/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/Events/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/Events/install	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/Events/keydown	/en-US/docs/Web/API/Element/keydown_event
@@ -12845,7 +12847,7 @@
 /en-US/docs/Web/Reference/Events/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Web/Reference/Events/gamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/Web/Reference/Events/hashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/Reference/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/Reference/Events/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/Reference/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/Reference/Events/keydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/Reference/Events/keypress	/en-US/docs/Web/API/Element/keypress_event

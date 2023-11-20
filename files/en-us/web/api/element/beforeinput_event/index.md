@@ -1,9 +1,9 @@
 ---
-title: "HTMLElement: beforeinput event"
+title: "Element: beforeinput event"
 short-title: beforeinput
-slug: Web/API/HTMLElement/beforeinput_event
+slug: Web/API/Element/beforeinput_event
 page-type: web-api-event
-browser-compat: api.HTMLElement.beforeinput_event
+browser-compat: api.Element.beforeinput_event
 ---
 
 {{APIRef}}
