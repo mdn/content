@@ -41,7 +41,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
   - : Fired when loading a resource has been aborted (for example, because the user canceled it).
 - {{domxref("Element.auxclick_event", "auxclick")}}
   - : Fired when the user clicks the non-primary pointer button.
-- {{domxref("HTMLElement.beforeinput_event", "beforeinput")}}
+- {{domxref("Element.beforeinput_event", "beforeinput")}}
   - : Fired just before the DOM is about to be updated with some user input.
 - {{domxref("Element.blur_event", "blur")}}
   - : Fired when an element has lost focus.
@@ -65,7 +65,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
   - : Fired when an element is just about to receive focus.
 - {{domxref("Element.focusout_event", "focusout")}}
   - : Fired when an element is just about to lose focus.
-- {{domxref("HTMLElement.input_event", "input")}}
+- {{domxref("Element.input_event", "input")}}
   - : Fired just after the DOM has been updated with some user input (for example, some text input).
 - {{domxref("Element.keydown_event", "keydown")}}
   - : Fired when the user has pressed a key.
