@@ -212,7 +212,7 @@ With this in place, your app will open in your browser at `http://localhost:3000
 
 > **Note:** You _don't_ need the extra `--` here because we're calling `vite` directly, rather than using an npm script to call it.
 
-## Exploring our first React component — \<App/>
+## Exploring our first React component — `<App />`
 
 In React, a **component** is a reusable module that renders a part of our overall application. Components can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.
 
