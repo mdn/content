@@ -8,7 +8,7 @@ browser-compat: webassembly.api.compileStreaming_static
 {{WebAssemblySidebar}}
 
 The **`WebAssembly.compileStreaming()`** static method compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source.
-This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function should be used).
+This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function should be used).
 
 > **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
@@ -50,7 +50,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 ```
 
 The resulting module instance is then instantiated using
-[`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate), and the exported function invoked.
+[`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static), and the exported function invoked.
 
 ## Specifications
 
