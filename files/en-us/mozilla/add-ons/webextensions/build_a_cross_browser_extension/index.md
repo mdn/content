@@ -38,7 +38,7 @@ Only in the most trivial extensions is namespace likely to be the only cross-pla
 
 ### API asynchronous event handling
 
-With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. However, at the time of writing, November 2023, Chrome needed to implement Promises on some APIs. The implementation of Promises is expected to be complete by Chrome 121. Consult the Chrome documentation for details of whether the APIs you use have Promise support.
+With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. Firefox and Safari have full support for Promises on all asynchronous APIs. At the time of writing, November 2023, Chrome has nearly complete support for Promises on asynchronous APIs. Consult the Chrome documentation for details of whether the APIs you use have Promise support.
 
 In Manifest V2, Firefox and Safari support Promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See [Callbacks and Promises](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#callbacks_and_promises) for details.
 
@@ -122,7 +122,7 @@ There are also differences between the [Content Security Policy (CSP) for conten
 
 As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages, while Safari supports background pages and service workers.
 
-For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"`` manifest key page. This includes a simple example of how to implement a cross-browser script.
+For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"` manifest key page. This includes a simple example of how to implement a cross-browser script.
 
 ### Manifest keys
 
