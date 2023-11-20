@@ -34,6 +34,7 @@ A {{jsxref("Promise")}} that fulfills with a string equal to the value of the re
   - : Thrown if:
     - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
     - `key` exceeds the browser-defined maximum length.
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
 
 ## Examples
 

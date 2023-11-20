@@ -11,7 +11,12 @@ browser-compat: api.SharedStorageWorklet
 
 The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the current origin's shared storage worklet.
 
-`SharedStorageWorklet` has no properties or methods directly defined on it; it inherits the {{domxref("Worklet.addModule", "addModule()")}} method from the {{domxref("Worklet")}} interface, which is used to add a module to it. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons. Subsequent calls to `addModule()` will reject.
+`SharedStorageWorklet` has no properties or methods directly defined on it; it inherits the {{domxref("Worklet.addModule", "addModule()")}} method from the {{domxref("Worklet")}} interface, which is used to add a module to it. Unlike a regular {{domxref("Worklet")}}.
+
+Note that:
+
+- If the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), calls to `addModule()` will reject.
+- `SharedStorageWorklet` can only have a single module added to it, for privacy reasons. Even with a successful enrollment, repeated calls to `addModule()` on the same shared storage worklet will reject.
 
 `SharedStorageWorklet` is accessed via {{domxref("WindowSharedStorage.worklet")}}.
 

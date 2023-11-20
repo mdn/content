@@ -37,6 +37,7 @@ None (`undefined`).
     - An operation has already been registered with the specified name.
     - The `operationCtor` is not a valid constructor.
     - The class does not contain a valid `run()` method.
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
     - The worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 
 ## Examples

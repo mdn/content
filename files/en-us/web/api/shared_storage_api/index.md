@@ -243,12 +243,7 @@ Last, data in `localStorage` persists until manually cleared (`sessionStorage` i
 
 ## Enrollment and local testing
 
-To use the Shared API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, numerous sub-features will fail to run. Specifically:
-
-- The {{domxref("WorkletSharedStorage.remainingBudget()")}} method
-  - : The promise returned by `remainingBudget()` rejects with a `TypeError` {{domxref("DOMException")}}.
-- The {{domxref("WindowSharedStorage.run()")}} and {{domxref("WindowSharedStorage.selectURL()")}} methods
-  - : Promises returned by run and URL selection operations will reject with a `TypeError` {{domxref("DOMException")}}.
+To use the Shared Storage API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, none of the methods of the Shared Storage API will run successfully.
 
 You can still test your Shared Storage API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 
