@@ -10,7 +10,7 @@ browser-compat: api.TaskSignal
 The **`TaskSignal`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a signal object that allows you to communicate with a prioritized task, and abort it or change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) (if required) via a {{domxref('TaskController')}} object.
 
 An object of this type is created, and associated with, a {{domxref('TaskController')}}.
-The initial priority of the signal may be set by specifying it as an argument to the [`TaskController` constructor](/en-US/docs/Web/API/TaskController/TaskController) (by default it is `"user-visible"`).
+The initial priority of the signal may be set by specifying it as an argument to the {{domxref("TaskController.TaskController", "TaskController()")}} constructor (by default it is `"user-visible"`).
 The priority can be changed by calling {{domxref("TaskController.setPriority()")}} on the controller.
 
 The signal may be passed as the `options.signal` argument in {{domxref("Scheduler.postTask()")}}, after which it's associated controller can be used to abort the task.
@@ -41,9 +41,9 @@ _The `TaskSignal` interface inherits static methods from its parent interface, {
 
 _The `TaskSignal` interface also inherits events and event handlers from its parent interface, {{domxref("AbortSignal")}}._
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using {{domxref("EventTarget.addEventListener()", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event)
+- {{domxref("TaskSignal/prioritychange_event", "prioritychange")}}
   - : Fired when the priority is changed.
     This is triggered by calling {{domxref('TaskController.setPriority()')}} on the associated controller.
 
