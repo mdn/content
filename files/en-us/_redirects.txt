@@ -3589,6 +3589,7 @@
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
+/en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -7375,6 +7376,7 @@
 /en-US/docs/Web-related_technologies	/en-US/docs/Related
 /en-US/docs/Web/API/AbortController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/AbortSignal/abort	/en-US/docs/Web/API/AbortSignal/abort_static
+/en-US/docs/Web/API/AbortSignal/any	/en-US/docs/Web/API/AbortSignal/any_static
 /en-US/docs/Web/API/AbortSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
 /en-US/docs/Web/API/AbortSignal/timeout	/en-US/docs/Web/API/AbortSignal/timeout_static
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
@@ -11334,6 +11336,7 @@
 /en-US/docs/Web/CSS/::-webkit-scrollbar-track-piece	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/:any	/en-US/docs/Web/CSS/:is
+/en-US/docs/Web/CSS/:closed	/en-US/docs/Web/CSS/:popover-open
 /en-US/docs/Web/CSS/:dir()	/en-US/docs/Web/CSS/:dir
 /en-US/docs/Web/CSS/:host()	/en-US/docs/Web/CSS/:host_function
 /en-US/docs/Web/CSS/:lang()	/en-US/docs/Web/CSS/:lang
@@ -11346,6 +11349,7 @@
 /en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
+/en-US/docs/Web/CSS/:open	/en-US/docs/Web/CSS/:popover-open
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@media/update-frequency	/en-US/docs/Web/CSS/@media/update
