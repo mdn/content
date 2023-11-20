@@ -1,13 +1,13 @@
 ---
 title: WebAssembly.compileStreaming()
-slug: WebAssembly/JavaScript_interface/compileStreaming
+slug: WebAssembly/JavaScript_interface/compileStreaming_static
 page-type: webassembly-function
-browser-compat: webassembly.api.compileStreaming
+browser-compat: webassembly.api.compileStreaming_static
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.compileStreaming()`** function compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source.
+The **`WebAssembly.compileStreaming()`** static method compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source.
 This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function should be used).
 
 > **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
