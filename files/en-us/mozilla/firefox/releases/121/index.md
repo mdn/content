@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### HTML
 
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) of `<iframes>` is now supported, allowing developers to indicate that particular iframes should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some frames may not need to be fetched at all).
+- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) of `<iframes>` is now supported, allowing developers to hint that particular `<iframe>`s should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframes>` may not need to be fetched at all).
   The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element, or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
   ([Firefox bug 1622090](https://bugzil.la/1622090)).
 
