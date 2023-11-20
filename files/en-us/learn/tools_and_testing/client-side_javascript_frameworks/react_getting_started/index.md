@@ -167,7 +167,7 @@ Once the server starts, you should see a new browser tab containing your React a
 
 <!-- TODO: Take new screenshot -->
 
-![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](default-create-react-app.png)
+![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](default-vite.png)
 
 ### Application structure
 
