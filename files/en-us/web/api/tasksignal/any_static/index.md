@@ -10,7 +10,7 @@ browser-compat: api.TaskSignal.any_static
 
 {{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}
 
-The **`TaskSignal.any()`** static method takes an iterable of abort signals and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted. The `reason` property will be set to the reason of the first signal that is aborted. The {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter, which can either be a a string which is one of `user-blocking`, `user-visible` and `background` or a `TaskSignal`, in which case the new signal's `priority` will change along with this signal.
+The **`TaskSignal.any()`** static method takes an iterable of abort signals and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted. The {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted. The {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter, which can either be a a string which is one of `user-blocking`, `user-visible` and `background` or a `TaskSignal`, in which case the new signal's `priority` will change along with this signal.
 
 ## Syntax
 
@@ -22,15 +22,15 @@ TaskSignal.any(signals, init)
 ### Parameters
 
 - `signals`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of task signals.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of abort signals.
 - `init` {{optional_inline}}
   - : Contains optional configuration parameters. Currently only one property is defined:
     - `priority` {{optional_inline}}
-      - : A string which is one of `user-blocking`, `user-visible` and `background`, or an {{domxref("AbortSignal")}} (since {{domxref("TaskSignal")}} inherits from {{domxref("AbortSignal")}}, so a {{domxref("TaskSignal")}} is also available).
+      - : A string which is one of `user-blocking`, `user-visible` and `background`, or an {{domxref("AbortSignal")}} (since {{domxref("TaskSignal")}} inherits from {{domxref("AbortSignal")}}, so a {{domxref("TaskSignal")}} can also be accepted).
 
 ### Return value
 
-A `TaskSignal` instance.
+A `TaskSignal` instance, the {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted, the {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter
 
 ## Examples
 
