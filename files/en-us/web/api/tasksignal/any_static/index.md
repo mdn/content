@@ -30,13 +30,13 @@ TaskSignal.any(signals, init)
 
 ### Return value
 
-A `TaskSignal` instance, the {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted, the {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter
+A `TaskSignal` instance, its {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted, and its {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter.
 
 ## Examples
 
 ### Using `TaskSignal.any()`
 
-This example demonstrates combining both a signal from an {{domxref("TaskController")}}, and a timeout signal from {{domxref("AbortSignal/timeout_static", "TaskSignal.timeout()")}}.
+This example demonstrates combining both a signal from a {{domxref("TaskController")}}, and a timeout signal from {{domxref("AbortSignal/timeout_static", "TaskSignal.timeout()")}}.
 
 ```js
 const cancelDownloadButton = document.getElementById("cancelDownloadButton");
@@ -65,6 +65,7 @@ try {
   });
   const body = await res.blob();
   // Do something with downloaded content
+  // ...
 } catch (e) {
   if (e.name === "AbortError") {
     // Cancelled by the user
