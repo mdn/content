@@ -1,14 +1,14 @@
 ---
-title: "HTMLDialogElement: cancel event"
+title: "HTMLElement: cancel event"
 short-title: cancel
-slug: Web/API/HTMLDialogElement/cancel_event
+slug: Web/API/HTMLElement/cancel_event
 page-type: web-api-event
-browser-compat: api.HTMLDialogElement.cancel_event
+browser-compat: api.HTMLElement.cancel_event
 ---
 
 {{APIRef}}
 
-The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
+The **`cancel`** event is fired by {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements. The event is fired when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key. It is also fired by the [file input](/en-US/docs/Web/HTML/Element/input/file) when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected.
 
 This event does not bubble.
 
@@ -30,7 +30,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-### Live example
+### \<dialog> element
 
 #### HTML
 
@@ -80,7 +80,48 @@ closeButton.addEventListener("click", () => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('dialog_cancel', '100%', '100px') }}
+
+### \<input> element
+
+#### HTML
+
+```html
+<label for="file">Select or file. Or don't.</label>
+<input type="file" id="file" name="file" />
+
+<div id="result"></div>
+```
+
+```css hidden
+div {
+  margin-bottom: 10px;
+}
+```
+
+#### JavaScript
+
+```js
+const elem = document.getElementById("file");
+
+const result = document.getElementById("result");
+
+elem.addEventListener("cancel", () => {
+  result.textContent = "Cancelled.";
+});
+
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    result.textContent = "File Selected.";
+  }
+});
+```
+
+#### Result
+
+{{ EmbedLiveSample('input_cancel', '100%', '100px') }}
+
+Open the file selector, then close the selection dialog with the escape key or the cancel button. Both of these will cause the cancel event to be fired. Also, try selecting a local file on your machine; then reopen the file selection window and reselect the same file. This too causes the cancel event to be fired.
 
 ## Specifications
 
@@ -92,5 +133,6 @@ closeButton.addEventListener("click", () => {
 
 ## See also
 
+- HTML {{HTMLElement("input")}} element
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLDialogElement/close_event", "close")}}
