@@ -1,6 +1,6 @@
 ---
 title: WebAssembly.instantiate()
-slug: WebAssembly/JavaScript_interface/instantiate
+slug: WebAssembly/JavaScript_interface/instantiate_static
 page-type: webassembly-function
 browser-compat: webassembly.api.instantiate
 ---

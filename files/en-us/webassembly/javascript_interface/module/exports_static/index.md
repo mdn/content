@@ -1,13 +1,13 @@
 ---
 title: WebAssembly.Module.exports()
-slug: WebAssembly/JavaScript_interface/Module/exports
+slug: WebAssembly/JavaScript_interface/Module/exports_static
 page-type: webassembly-static-method
-browser-compat: webassembly.api.Module.exports
+browser-compat: webassembly.api.Module.exports_static
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.Module.exports()`** function returns an
+The **`WebAssembly.Module.exports()`** static method returns an
 array containing descriptions of all the declared exports of the given
 `Module`.
 

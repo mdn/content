@@ -14,13 +14,13 @@ A **`WebAssembly.Module`** object contains stateless WebAssembly code that has a
 - [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module)
   - : Creates a new `Module` object.
 
-## Static properties
+## Static methods
 
-- [`WebAssembly.Module.customSections()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/customSections)
+- [`WebAssembly.Module.customSections()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/customSections_static)
   - : Given a `Module` and string, returns a copy of the contents of all custom sections in the module with the given string name.
-- [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/exports)
+- [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/exports_static)
   - : Given a `Module`, returns an array containing descriptions of all the declared exports.
-- [`WebAssembly.Module.imports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/imports)
+- [`WebAssembly.Module.imports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/imports_static)
   - : Given a `Module`, returns an array containing descriptions of all the declared imports.
 
 ## Examples
