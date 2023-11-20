@@ -72,7 +72,7 @@ This allows non-critical resources to load only if needed, potentially speeding 
 <iframe src="video-player.html" title="..." loading="lazy"></iframe>
 ```
 
-The `load` event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images or iframes that are within the {{Glossary("visual viewport")}} that haven't yet loaded.
+The `load` event fires when the eagerly-loaded content has all been loaded. At that time, it's entirely possible (or even likely) that there may be lazily-loaded images or iframes within the {{Glossary("visual viewport")}} that haven't yet loaded.
 
 You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.
 
