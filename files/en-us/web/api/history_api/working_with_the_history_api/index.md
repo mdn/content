@@ -128,7 +128,7 @@ document.addEventListener("click", async (event) => {
 Here, we're calling `pushState()` with three arguments:
 
 - `json`: this is the content we just fetched. It will be stored with the history entry, and later included as the {{domxref("PopStateEvent.state", "state")}} property of the argument passed to the `popstate` event handler.
-- `""`: this is needed for backwards compatibility reasons only, and should always be an empty string
+- `""`: this is needed for backward compatibility with legacy sites, and should always be an empty string
 - `creature`: this will be used as the URL for the entry. It will be shown in the browser's URL bar, and will be used as the value of the {{httpheader("Referer")}} header in any HTTP requests that the page makes. Note that this must be {{Glossary("Same-origin policy", "same-origin")}} with the page.
 
 ## Using the `popstate` event
