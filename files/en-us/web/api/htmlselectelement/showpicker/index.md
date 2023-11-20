@@ -3,10 +3,12 @@ title: "HTMLSelectElement: showPicker() method"
 short-title: showPicker()
 slug: Web/API/HTMLSelectElement/showPicker
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.HTMLSelectElement.showPicker
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
 
 The **`HTMLSelectElement.showPicker()`** method displays the browser picker for a `select` element.
 
@@ -37,7 +39,10 @@ None ({{jsxref("undefined")}}).
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+The user has to interact with the page or a UI element in order for this feature to work.
+
+The method is only allowed to be called in same-origin iframes; an exception is thrown if this is called in a cross-origin iframe.
 
 ## Examples
 
