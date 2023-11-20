@@ -61,4 +61,3 @@ img.clip04 {
 ## See also
 
 - Related CSS property: {{ cssxref("clip") }}
-- The [`-moz-image-rect()`](/en-US/docs/Web/CSS/-moz-image-rect) function has similar coordinate values to `rect()`.
