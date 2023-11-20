@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("History API")}}
 
-The History API enables a website to interact with the browser's session history: that is, the list of pages that the user has visited in a given window. As the user visits new pages, for example by clicking links, those new pages are added to the session history. The user can also move back and forward through the history using the browser's "Back" and "Forward" buttons.
+The History API enables a website to interact with the browser's session history: that is, the list of pages that the user has visited in a given window. As the user visits new pages, for example by clicking links, those new pages are added to the session history. The user can also move back and forth through the history using the browser's "Back" and "Forward" buttons.
 
 The main interface defined in the History API is the {{domxref("History")}} interface, and this defines two quite distinct sets of methods:
 
@@ -29,7 +29,7 @@ The main purpose of these APIs is to support websites like {{Glossary("SPA", "Si
 
 ## Single-page applications and session history
 
-Traditionally, websites are implemented as a collection of pages, and when users navigate to different parts of the site by clicking links, the browser loads a whole new page each time.
+Traditionally, websites are implemented as a collection of pages. When users navigate to different parts of the site by clicking links, the browser loads a whole new page each time.
 
 While this is great for many sites, it can have some disadvantages:
 
@@ -94,13 +94,13 @@ function displayContent(content) {
 }
 ```
 
-The problem with this is that it breaks the expected behavior of the browser's "Back" and "Forward" buttons.
+The problem is that it breaks the expected behavior of the browser's "Back" and "Forward" buttons.
 
 From the user's point of view, they clicked a link and the page updated, so it looks like a new page. If they then press the browser's "Back" button, they expect to go to the state before they clicked the link.
 
 But as far as the browser is concerned, the last link didn't load a new page, so "Back" will take the browser to whichever page was loaded before the user opened the SPA.
 
-This is essentially the problem that `pushState()`, `replaceState()`, and `popstate` are designed to solve. They enable us to synthesize history entries, and to be notified when the current session history entry changes to one of these entries (for example, because the user pressed the "Back" or "Forward" buttons).
+This is essentially the problem that `pushState()`, `replaceState()`, and the `popstate` event solve. They enable us to synthesize history entries, and to be notified when the current session history entry changes to one of these entries (for example, because the user pressed the "Back" or "Forward" buttons).
 
 ## Using `pushState()`
 
@@ -131,7 +131,7 @@ Here, we're calling `pushState()` with three arguments:
 - `""`: this is needed for backwards compatibility reasons only, and should always be an empty string
 - `creature`: this will be used as the URL for the entry. It will be shown in the browser's URL bar, and will be used as the value of the {{httpheader("Referer")}} header in any HTTP requests that the page makes. Note that this must be {{Glossary("Same-origin policy", "same-origin")}} with the page.
 
-## Using `popState`
+## Using the `popstate` event
 
 Suppose the user:
 
@@ -155,7 +155,7 @@ window.addEventListener("popstate", (event) => {
 
 ## Using `replaceState()`
 
-There's one more piece we need to add. When the user first loads the SPA, the browser adds a history entry for it. Because this was a real page load, the entry doesn't have any state associated with it. So suppose the user:
+There's one more piece we need to add. When the user loads the SPA, the browser adds a history entry. Because this was an actual page load, the entry has no state associated with it. So suppose the user:
 
 1. Loads the SPA: the browser adds a history entry
 2. Clicks a link inside the SPA: the click handler updates the page and adds a history entry with `pushState()`
@@ -179,9 +179,9 @@ const initialState = {
 history.replaceState(initialState, "", document.location.href);
 ```
 
-On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has the same structure as the JSON that we fetch when handling other navigations. We pass this `initialState` object into `replaceState()`, which effectively adds the state object to the current history entry.
+On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has the same structure as the JSON we fetch when handling other navigations. We pass this `initialState` object into `replaceState()`, which effectively adds the state object to the current history entry.
 
-Now, when the user goes back to our starting point, the `popstate` event will contain this initial state, and we can use our `displayContent()` function to update the page.
+When the user returns to our starting point, the `popstate` event will contain this initial state, and we can use our `displayContent()` function to update the page.
 
 ## A complete example
 
