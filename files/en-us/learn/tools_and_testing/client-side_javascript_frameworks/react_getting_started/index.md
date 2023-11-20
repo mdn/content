@@ -438,8 +438,6 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 
 Even comments in JSX are written inside curly braces! This is because comments, too, are technically JavaScript expressions. The `/* block comment syntax */` is necessary for your program to know where the comment starts and ends.
 
-> **Note:** If your text editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut – `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) to create comments more quickly.
-
 ### Component props
 
 **Props** are a means of passing data into a React component. Their syntax is identical to that of attributes, in fact: `prop="value"`. The difference is that whereas attributes are passed into plain elements, props are passed into React components.
@@ -454,7 +452,7 @@ Add a prop of `subject` to the `<App />` component call, with a value of `Claric
 <App subject="Clarice" />
 ```
 
-Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `App()` so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console: do that now. The updated lines of your `App()` function should now look like this:
+Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `App()` so that it accepts `props` as a parameter and log `props` to the console so you can inspect it. Also delete the `subject` const; we don't need it anymore. Your `App.jsx` file should look like this:
 
 ```jsx
 function App(props) {
@@ -465,7 +463,12 @@ function App(props) {
 }
 ```
 
-With this change, `subject` becomes `undefined`, which will cause an error to be thrown. To avoid this, comment out the line `Hello, {subject}!` for now. Save your file and check your browser's JavaScript console. You should see something like this logged:
+Save your file and check your browser. You'll see a blank background with no content. This is because we're trying to read a `subject` variable that's no longer defined. Fix this by commenting out the `<h1>Hello {subject}!</h1>` line for a moment.
+
+> **Note:** If your text editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut – `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) to create comments more quickly.
+
+Save the file with that line commented out. This time, you should see your
+"Click me!" button rendered by itself. If you open your browser's developer console, you'll see a message that looks like this:
 
 ```plain
 Object { subject: "Clarice" }
@@ -473,11 +476,10 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's use it in `App.jsx`. Uncomment the `Hello, {subject}!` line and change it to `Hello, {props.subject}!`, then delete the `console.log()` statement. Your code should look like this:
+Let's use this `subject` prop to fix the error in our app. Un-coment the `Hello, {subject}!` line and change it to `Hello, {props.subject}!`, then delete the `console.log()` statement. Your code should look like this:
 
 ```jsx
 function App(props) {
-  const subject = props.subject;
   return (
     <>
       <header>
