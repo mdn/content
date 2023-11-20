@@ -87,7 +87,7 @@ Prerendering is restricted to same-origin documents by default. Cross-origin, sa
 
 For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
 
-- `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it.
+- `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it. {{experimental_inline}}
 - It loads subresources loaded via JavaScript, whereas `<link rel="prerender">` doesn't.
 - It doesn't get blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) settings, whereas `<link rel="prerender">` often does.
 - Speculation rules prerender should be treated as a hint and a progressive enhancement. Unlike `<link rel="prerender">`, it is a speculative hint and the browser may choose not to act upon the hint based on user settings, current memory usage, or other heuristics.

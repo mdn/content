@@ -2,7 +2,7 @@
 title: WebAssembly.Memory() constructor
 slug: WebAssembly/JavaScript_interface/Memory/Memory
 page-type: webassembly-constructor
-browser-compat: javascript.builtins.WebAssembly.Memory.Memory
+browser-compat: webassembly.api.Memory.Memory
 ---
 
 {{WebAssemblySidebar}}

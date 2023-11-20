@@ -2,7 +2,7 @@
 title: WebAssembly.Module.exports()
 slug: WebAssembly/JavaScript_interface/Module/exports
 page-type: webassembly-static-method
-browser-compat: javascript.builtins.WebAssembly.Module.exports
+browser-compat: webassembly.api.Module.exports
 ---
 
 {{WebAssemblySidebar}}

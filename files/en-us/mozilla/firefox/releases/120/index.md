@@ -20,7 +20,12 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### CSS
 
+- The {{CSSXref("color_value/light-dark", "light-dark()")}} CSS Color function is now supported. This allows the setting of a colors for both light & dark without the need for `prefers-color-scheme` media feature ([Firefox bug 1856999](https://bugzil.la/1856999)).
+- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text ([Firefox bug 1310170](https://bugzil.la/1310170)).
+
 #### Removals
+
+- The non-standard {{cssxref("-moz-image-rect")}} CSS function for clipping background images has been removed. First introduced in Firefox 4, this function was never standardized or implemented in other browsers ([Firefox bug 1856999](https://bugzil.la/1853867)).
 
 ### JavaScript
 
@@ -37,11 +42,14 @@ This article provides information about the changes in Firefox 120 that affect d
     These dates will be parsed with behavior typical of other non-ISO dates, such as local time zone and month rollover (April 31 rolls over to May 1 since April 31 doesn't exist).
 
   - Requirements for characters directly following numbers have been loosened to accept new formats ([Firefox bug 449921](https://bugzil.la/449921)), including:
+
     - `"DDMonYYYY"`
     - `"Mon.DD.YYYY"`
     - `"DD.Mon.YYYY"`
     - `"YYYY.MM.DD"`
     - `"Mon DD YYYY hh:mmXm"` (`am`/`pm` directly following time)
+
+  - Timezone `'Z'` is now accepted for non-ISO formats (e.g. `Jan 1 1970 10:00Z`) ([Firefox bug 1852422](https://bugzil.la/1852422))
 
 #### Removals
 

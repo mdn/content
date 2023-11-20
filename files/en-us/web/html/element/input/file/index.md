@@ -170,6 +170,26 @@ The `accept` attribute doesn't validate the types of the selected files; it prov
 
 Because of this, you should make sure that the `accept` attribute is backed up by appropriate server-side validation.
 
+### Detecting cancellations
+
+The `cancel` event is fired when the user does not change their selection, reselecting the previously selected files. The `cancel` event is also fired when the file picker dialog gets closed, or canceled, via the "cancel" button or the <kbd>escape</kbd> key.
+
+For example, the following code will log to the console if the user closes the popup without selecting a file:
+
+```js
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    console.log("File selected: ", elem.files[0]);
+  }
+});
+elem.click();
+```
+
 ### Notes
 
 1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
@@ -396,8 +416,9 @@ The example looks like this; have a play:
     <tr>
       <td><strong>Events</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("HTMLElement/input_event", "input")}} and
+        {{domxref("HTMLElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
