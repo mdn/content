@@ -3,7 +3,6 @@ title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
 page-type: css-function
 status:
-  - experimental
   - deprecated
   - non-standard
 browser-compat: css.types.-moz-image-rect
