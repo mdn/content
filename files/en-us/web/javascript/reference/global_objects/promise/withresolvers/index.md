@@ -63,7 +63,8 @@ async function* readableToAsyncIterable(stream) {
 
   while (stream.readable) {
     await promise;
-    for (let chunk = stream.read(); chunk !== null; chunk = stream.read()) {
+    let chunk;
+    while ((chunk = stream.read())) {
       yield chunk;
     }
     ({ promise, resolve, reject } = Promise.withResolvers());
