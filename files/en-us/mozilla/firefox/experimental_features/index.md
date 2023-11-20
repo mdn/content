@@ -99,48 +99,6 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
-### Lazy loading of iframes
-
-This feature allows web pages and JavaScript to provide a hint to the browser as to whether iframes should be loaded immediately on page load, or only when they are needed (just before they will appear in the window's {{Glossary("visual viewport")}}).
-The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
-See [Firefox bug 1622090](https://bugzil.la/1622090) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>120</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>120</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>120</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>120</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.iframe_lazy_loading.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## CSS
 
 ### Hex boxes to display stray control characters
