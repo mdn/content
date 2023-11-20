@@ -475,7 +475,7 @@ div.fade-out {
 }
 ```
 
-Note the inclusion of the `display` property in the keyframe animations. When animating `display` or `content-visibility`, you need to provide the starting value in an explicit keyframe (for example using `0%` or `from`).
+Note the inclusion of the `display` property in the keyframe animations.
 
 #### JavaScript
 

@@ -334,7 +334,7 @@ The code renders as follows:
 
 When animating a `<dialog>` with CSS keyframe animations, there are some differences to note from transitions:
 
-- You don't provide a `@starting-style`; instead, you provide the starting value in an explicit keyframe (using `0%` or `from`).
+- You don't provide a `@starting-style`.
 - You include the `display` value in a keyframe; this will be the `display` value for the entirety of the animation, or until another non-`none` display value is encountered.
 - You don't need to explicitly enable discrete animations; there is no equivalent to `allow-discrete` inside keyframes.
 - You don't need to set `overlay` inside keyframes either; the `display` animation handles the animation of the `<dialog>` from shown to hidden.

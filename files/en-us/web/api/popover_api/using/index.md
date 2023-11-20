@@ -425,7 +425,7 @@ The code renders as follows:
 
 When animating a popover with CSS keyframe animations, there are some differences to note:
 
-- You don't provide a `@starting-style`; instead, you provide the starting values in an explicit keyframe (using `0%` or `from`). Also, include a visible `display` value.
+- You don't provide a `@starting-style`; you include your "to" and "from" `display` values in keyframes.
 - You don't explicitly enable discrete animations; there is no equivalent to `allow-discrete` inside keyframes.
 - You don't need to set `overlay` inside keyframes either; the `display` animation handles the animation of the popover from shown to hidden.
 

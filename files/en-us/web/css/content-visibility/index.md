@@ -51,12 +51,9 @@ Discrete animation generally means that the property will flip between two value
 
 This behavior is useful for creating entry/exit animations where you want to, for example, remove some content from the DOM with `content-visibility: hidden`, but you want a smooth transition (such as a fade-out) rather than it disappearing immediately.
 
-When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit keyframe (for example using `0%` or `from`). For a full example, see the [Animating content-visibility](#animating_content-visibility) example below.
+When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility`. This effectively enables `content-visibility` transitions.
 
-When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
-
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) provides a set of starting values for properties that you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on elements' first style updates, or when the `content-visibility` value changes from `hidden` to `visible`.
-- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility` when it is transitioned. This effectively enables `content-visibility` transitions.
+> **Note:** When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
 ## Formal definition
 

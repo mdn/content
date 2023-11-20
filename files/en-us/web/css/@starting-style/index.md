@@ -41,7 +41,7 @@ To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the [top layer](/en-US/docs/Glossary/Top_layer) (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
-> **Note:** `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to animate such elements, `@starting-style` is not needed; instead, provide the starting style in an explicit keyframe (using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#animating_display_and_content-visibility) for an example.
+> **Note:** `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
 
 There are two ways to use `@starting-style`: as a standalone rule or nested within a ruleset.
 
@@ -83,7 +83,7 @@ To specify the starting style for the popover using the nested method, you can n
 
 ### When exactly are starting styles used?
 
-It is important to understand that an element will transition from its `@starting-style` styles when it is first rendered in the DOM, or when it transitions from {{cssxref("display", "display: none")}} (or {{cssxref("content-visibility", "content-visibility: hidden")}}) to a visible value. When it transitions back from its initial visible state, it will no longer use the `@starting-style` styles as it is now visible in the DOM. Instead, it will transition back to whatever styles exist for that element's default state.
+It is important to understand that an element will transition from its `@starting-style` styles when it is first rendered in the DOM, or when it transitions from {{cssxref("display", "display: none")}} to a visible value. When it transitions back from its initial visible state, it will no longer use the `@starting-style` styles as it is now visible in the DOM. Instead, it will transition back to whatever styles exist for that element's default state.
 
 In effect, there are three style states to manage in these situations — starting-style state, transitioned state, and default state. It is possible for the "to" and "from" transitions to be different in such cases. You can see a proof of this in our [Demonstration of when starting styles are used](#demonstration_of_when_starting_styles_are_used) example, below.
 
