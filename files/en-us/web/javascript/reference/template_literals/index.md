@@ -279,6 +279,38 @@ Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
+Combining a `String.raw` template literal with the
+{{jsxref("RegExp/RegExp", "RegExp()")}} constructor allows you to
+create regular expressions with an alternative delimiter other than a
+forward slash (`/`) without requiring double-escaping (`\\`) of
+regular expression escape sequences. This is especially valuable in
+strings that contain a lot of slashes, such as file paths or URLs.
+
+```js
+// A String.raw template allows a fairly readable regular expression matching a URL:
+const re_raw_template = new RegExp(
+  String.raw`https://developer\.mozilla\.org/en-US/docs/Web/JavaScript/Reference/`,
+);
+
+// The same thing with a regexp literal looks like this, with \/ for
+// each forward slash:
+const re_regexp_literal =
+  /https:\/\/developer\.mozilla\.org\/en-US\/docs\/Web\/JavaScript\/Reference\//;
+
+// And the same thing written with the RegExp constructor and a
+// traditional string literal, with \\. for each period:
+const re_string_literal = new RegExp(
+  "https://developer\\.mozilla\\.org/en-US/docs/Web/JavaScript/Reference/",
+);
+
+console.log(re_raw_template.source == re_regexp_literal.source);
+// true
+console.log(re_raw_template.source == re_string_literal.source);
+// true
+console.log(re_raw_template.source);
+// https:\/\/developer\.mozilla\.org\/en-US\/docs\/Web\/JavaScript\/Reference\/
+```
+
 `String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js
