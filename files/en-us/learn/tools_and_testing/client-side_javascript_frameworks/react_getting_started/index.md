@@ -273,7 +273,7 @@ After that, we import `reactLogo` and `viteLogo`. Note that their import paths s
 
 The final statement imports the CSS related to our `App` component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Rollup, the bundler, to add the referenced CSS file to the final CSS bundle.
 
-### The App component
+### The `App()` function
 
 After the imports, we have a function named `App`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App` function to `app`, your browser would show you an error.
 
@@ -314,7 +314,7 @@ The `App` function returns a JSX expression. This expression defines what your b
 
 Just under the `return` keyword is a special bit of syntax: `<>`. This is a [fragment](https://react.dev/docs/fragments). React components have to return a single JSX element, and fragments allow us to do that without rendering arbitrary `<div>`s in the browser. You'll see fragments in many React applications.
 
-### The export statement
+### The `export` statement
 
 There's one more line of code after the `App` function:
 
@@ -461,9 +461,9 @@ function App(props) {
 }
 ```
 
-Save your file and check your browser. You'll see a blank background with no content. This is because we're trying to read a `subject` variable that's no longer defined. Fix this by commenting out the `<h1>Hello {subject}!</h1>` line for a moment.
+Save your file and check your browser. You'll see a blank background with no content. This is because we're trying to read a `subject` variable that's no longer defined. Fix this by commenting out the `<h1>Hello {subject}!</h1>` line.
 
-> **Note:** If your text editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut – `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) to create comments more quickly.
+> **Note:** If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
 
 Save the file with that line commented out. This time, you should see your
 "Click me!" button rendered by itself. If you open your browser's developer console, you'll see a message that looks like this:
@@ -474,14 +474,14 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Let's use this `subject` prop to fix the error in our app. Un-coment the `Hello, {subject}!` line and change it to `Hello, {props.subject}!`, then delete the `console.log()` statement. Your code should look like this:
+Let's use this `subject` prop to fix the error in our app. Uncomment the `<h1>Hello, {subject}!</h1>` line and change it to `<h1>Hello, {props.subject}!</h1>`, then delete the `console.log()` statement. Your code should look like this:
 
 ```jsx
 function App(props) {
   return (
     <>
       <header>
-        <h1>Hello, {subject}</h1>
+        <h1>Hello, {props.subject}!</h1>
         <button type="button" className="primary">
           Click me!
         </button>
