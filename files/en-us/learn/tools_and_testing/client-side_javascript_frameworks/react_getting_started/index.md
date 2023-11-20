@@ -210,7 +210,7 @@ Before we move on, you might want to change your `package.json` file a little bi
 
 With this in place, your app will open in your browser at `http://localhost:3000` every time you run `npm run dev`.
 
-> **Note:** You _don't_ need the extra `--` here because we're calling `vite` directly, rather than using an npm script to call it.
+> **Note:** You _don't_ need the extra `--` here because we're calling `vite` directly, rather than referencing an npm script.
 
 ## Exploring our first React component — `<App />`
 
