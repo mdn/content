@@ -1470,8 +1470,7 @@
       "overview": ["Touch events"],
       "guides": [
         "/docs/Web/API/Touch_events/Using_Touch_Events",
-        "/docs/Web/API/Touch_events/Multi-touch_interaction",
-        "/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent"
+        "/docs/Web/API/Touch_events/Multi-touch_interaction"
       ],
       "interfaces": ["Touch", "TouchEvent", "TouchList"],
       "methods": [],
