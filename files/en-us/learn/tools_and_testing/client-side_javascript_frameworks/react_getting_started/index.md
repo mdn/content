@@ -446,7 +446,7 @@ Even comments in JSX are written inside curly braces! This is because comments, 
 
 In React, the flow of data is unidirectional: props can only be passed from parent components down to child components.
 
-Let's open `index.jsx` and give our `<App />` component its first prop.
+Let's open `main.jsx` and give our `<App />` component its first prop.
 
 Add a prop of `subject` to the `<App />` component call, with a value of `Clarice`. When you are done, it should look something like this:
 
@@ -491,7 +491,7 @@ function App(props) {
 }
 ```
 
-When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.jsx`, edit the value of `subject`, and save, your text will change.
+When you save, the app should now greet you with "Hello, Clarice!". If you return to `main.jsx`, edit the value of `subject`, and save, your text will change.
 
 For additional practice, you could try adding an additional `greeting` prop to the `<App />` component call inside `main.jsx` and using it alongside the `subject` prop inside `App.jsx`.
 
