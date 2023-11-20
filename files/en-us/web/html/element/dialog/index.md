@@ -51,7 +51,9 @@ This example demonstrates the create a non-modal dialog by using only HTML. Beca
 
 {{EmbedLiveSample("HTML-only_dialog", "100%", 200)}}
 
-This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are non-modal. You may notice that after clicking "OK", the dialog gets dismissed leaving the Result frame empty. When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
+> **Note:** Reload the page to reset the output.
+
+This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are non-modal. After clicking "OK", the dialog gets dismissed, leaving the Result frame empty. When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
 
 ### Creating a modal dialog
 
@@ -187,11 +189,11 @@ confirmBtn.addEventListener("click", (event) => {
 
 {{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
 
-This example demonstrates the following three methods of closing modal dialogs:
+The above examples demonstrate the following three methods of closing modal dialogs:
 
-- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#caveats-of-creating-a-dialog-using-only-html)).
+- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#html-only_dialog)).
 - By pressing the <kbd>Esc</kbd> key.
-- By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog).
+- By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog)).
   In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 
 The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method. When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
@@ -241,12 +243,12 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 
 ##### CSS
 
-In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog[open]` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
+In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog[open]` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
 
 We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog[open]::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
-/*   Open state of the dialog */
+/*   Open state of the dialog  */
 dialog[open] {
   opacity: 1;
   transform: scaleY(1);

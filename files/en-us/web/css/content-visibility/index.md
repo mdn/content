@@ -51,7 +51,7 @@ Discrete animation generally means that the property will flip between two value
 
 This behavior is useful for creating entry/exit animations where you want to, for example, remove some content from the DOM with `content-visibility: hidden`, but you want a smooth transition (such as a fade-out) rather than it disappearing immediately.
 
-When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit keyframe (for example using `0%` or `from`). For a full example, see the [content-visibility animation example](#content-visibility_animation_example) below.
+When animating `content-visibility` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `content-visibility` value in an explicit keyframe (for example using `0%` or `from`). For a full example, see the [Animating content-visibility](#animating_content-visibility) example below.
 
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 
@@ -169,7 +169,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 {{ EmbedLiveSample('Using hidden to manually manage visibility') }}
 
-### content-visibility animation example
+### Animating content-visibility
 
 In this example, we have a {{htmlelement("div")}} element, the content of which can be toggled between shown and hidden by clicking or pressing any key.
 
@@ -267,7 +267,7 @@ function showHide() {
 
 The rendered result looks like this:
 
-{{ EmbedLiveSample("content-visibility animation example", "100%", "300") }}
+{{ EmbedLiveSample("Animating content-visibility", "100%", "300") }}
 
 ## Specifications
 

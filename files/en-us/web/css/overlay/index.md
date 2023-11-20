@@ -9,7 +9,7 @@ browser-compat: css.properties.overlay
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`overlay`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element appearing in the [top layer](/en-US/docs/Glossary/Top_layer) (for example, a shown [popover](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} element) is actually rendered in the top layer.
+The **`overlay`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element appearing in the [top layer](/en-US/docs/Glossary/Top_layer) (for example, a shown [popover](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} element) is actually rendered in the top layer. This property is only relevant within a list of {{cssxref("transition-property")}} values, and only if `allow-discrete` is set as the {{cssxref("transition-behavior")}}.
 
 It is important to note that `overlay` can _only_ be set by the browser — author styles cannot change the `overlay` value of any element. You can, however, add `overlay` to the [list of transition properties](/en-US/docs/Web/CSS/transition-property) set on an element. This causes its removal from the top layer to be deferred so it can be animated instead of disappearing immediately.
 
@@ -61,6 +61,8 @@ The HTML contains a {{htmlelement("div")}} element declared as a popover using t
 ```
 
 #### CSS
+
+The `overlay` property is only present in the list of transitioned properties. As `overlay` is a user-agent controlled property, it is not declared in the pre-transition or post-transition states.
 
 ```css
 html {
@@ -139,7 +141,7 @@ You'll note that we've also included a transition on the [`::backdrop`](/en-US/d
 
 The code renders as follows:
 
-{{ EmbedLiveSample("Animating a popover", "100%", "200") }}
+{{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
 > **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 >
@@ -155,7 +157,7 @@ The code renders as follows:
 
 ## See also
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style)
 - [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior)
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)

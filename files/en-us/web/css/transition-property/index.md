@@ -89,7 +89,7 @@ button {
 ```css
 .target {
   transition-property: background-color;
-  transition-duration: 0.7s;
+  transition-duration: 1s;
   background-color: #ccc;
 }
 

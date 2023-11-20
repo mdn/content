@@ -262,7 +262,7 @@ div {
 }
 ```
 
-Note the `@starting-style` block used to specify the starting style for the transition, and the inclusion of the `display` property in the trainsitions list, with `allow-discrete` set on it.
+Note the `@starting-style` block used to specify the starting style for the transition, and the inclusion of the `display` property in the transitions list, with `allow-discrete` set on it.
 
 #### JavaScript
 

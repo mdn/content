@@ -35,9 +35,36 @@ transition-behavior: unset;
 
 ## Description
 
-When attempting to transition properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete), `transition-behavior` must be set to `allow-discrete` to enable those transitions to occur.
+The `transition-behavior` property is only relevant when used in conjunction with other transition properties, notably {{cssxref("transition-property")}} and {{cssxref("transition-duration")}}, as no transition occurs if no properties are animated over a non-zero duration of time.
 
-This is most significant in the cases of [`display`](/en-US/docs/Web/CSS/display), [`content-visibility`](/en-US/docs/Web/CSS/display), and [`overlay`](/en-US/docs/Web/CSS/overlay), which historically were not animatable. The ability of these elements to be transitioned means that it is fairly easy to create entry and exit transitions, where an element is transitioned to and from a hidden state (which includes elements appearing in the [top layer](/en-US/docs/Glossary/Top_layer) such as [popovers](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} elements), or transitioned as soon as it is added to the DOM.
+```css
+.card {
+  transition-property: opacity, display;
+  transition-duration: 0.25s;
+  transition-behavior: allow-discrete;
+}
+
+.card.fade-out {
+  opacity: 0;
+  display: none;
+}
+```
+
+The `transition-behavior` value can be included as part of a shorthand {{cssxref("transition")}} declaration. When included in the shorthand, when using or defaulting to all properties, the `allow-discrete` value has no impact on regular animatable properties. The following CSS is equivalent to the longhand declarations above:
+
+```css
+.card {
+  transition: all 0.25s;
+  transition: all 0.25s allow-discrete;
+}
+
+.card.fade-out {
+  opacity: 0;
+  display: none;
+}
+```
+
+In the above snippet we include the `transition` property twice. The first instance does not include the `allow-discrete` value — this provides cross-browser support, ensuring the card's other properties still transition in browsers that don't support `transition-behavior.`
 
 ### Discrete animation behavior
 
@@ -59,21 +86,6 @@ So for example:
 {{CSSSyntax}}
 
 ## Examples
-
-### Basic usage
-
-```css
-.card {
-  transition-property: opacity, display;
-  transition-duration: 0.25s;
-  transition-behavior: allow-discrete;
-}
-
-.card.fade-out {
-  opacity: 0;
-  display: none;
-}
-```
 
 ### Transitioning a popover
 
@@ -150,7 +162,7 @@ In addition, a starting state for the animation is set inside the [`@starting-st
 
 The code renders as follows:
 
-{{ EmbedLiveSample("Animating a popover", "100%", "200") }}
+{{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
 > **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 >
