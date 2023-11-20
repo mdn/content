@@ -161,7 +161,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    <form @submit.prevent="onSubmit">…</form>
    ```
 
-If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log) we added inside our `onSubmit()` method.
+If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log_static) we added inside our `onSubmit()` method.
 
 ## Binding data to inputs with v-model
 

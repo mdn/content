@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/toolbar_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#toolbar
-  - https://w3c.github.io/aria-practices/#toolbar
+  - https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/
 ---
 
 The `toolbar` role defines the containing element as a collection of commonly used function buttons or controls represented in a compact visual form.
