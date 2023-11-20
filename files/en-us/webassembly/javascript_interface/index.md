@@ -15,7 +15,7 @@ Unlike most other global objects, `WebAssembly` is not a constructor (it is not 
 
 The primary uses for the `WebAssembly` object are:
 
-- Loading WebAssembly code, using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function.
+- Loading WebAssembly code, using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) function.
 - Creating new memory and table instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) constructors.
 - Providing facilities to handle errors that occur in WebAssembly via the [`WebAssembly.CompileError()`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError) constructors.
 

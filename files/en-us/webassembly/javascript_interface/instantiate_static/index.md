@@ -2,7 +2,7 @@
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate_static
 page-type: webassembly-function
-browser-compat: webassembly.api.instantiate
+browser-compat: webassembly.api.instantiate_static
 ---
 
 {{WebAssemblySidebar}}
@@ -21,7 +21,7 @@ compile and instantiate WebAssembly code. This function has two overloads:
 
 > **Warning:** This method is not the most efficient way of fetching and
 > instantiating Wasm modules. If at all possible, you should use the newer
-> [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method instead, which fetches,
+> [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method instead, which fetches,
 > compiles, and instantiates a module all in one step, directly from the raw bytecode,
 > so doesn't require conversion to an {{jsxref("ArrayBuffer")}}.
 
@@ -91,7 +91,7 @@ A `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly
 
 ## Examples
 
-> **Note:** You'll probably want to use [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) in most cases, as it is more efficient than `instantiate()`.
+> **Note:** You'll probably want to use [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) in most cases, as it is more efficient than `instantiate()`.
 
 ### First overload example
 
@@ -123,7 +123,7 @@ fetch("simple.wasm")
 The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html)
 demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
 compiles the loaded simple.wasm byte code using the
-[`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
+[`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
 {{domxref("Worker.postMessage", "postMessage()")}}.
 
 ```js
