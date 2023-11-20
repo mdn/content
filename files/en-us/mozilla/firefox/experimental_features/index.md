@@ -1992,16 +1992,10 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
   </tbody>
 </table>
 
-#### ElementInternals: Form associated custom element methods and properties
+#### Custom element state pseudo class
 
-New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
-
-- The {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
-- The {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
-- The {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
-- The {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
-
-See these bugs for details: [Firefox bug 1556362](https://bugzil.la/1556362), [Firefox bug 1556373](https://bugzil.la/1556373), [Firefox bug 1556365](https://bugzil.la/1556365), [Firefox bug 1556449](https://bugzil.la/1556449).
+Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property, as a {{domxref("CustomStateSet")}}, and the state can be matched using a CSS custom state pseudo class — such as `:--somestate`.
+(See [Firefox bug 1861466](https://bugzil.la/1861466) for more details.)
 
 <table>
   <thead>
@@ -2014,27 +2008,27 @@ See these bugs for details: [Firefox bug 1556362](https://bugzil.la/1556362), [F
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>95</td>
-      <td>Yes</td>
+      <td>121</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>95</td>
+      <td>121</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>95</td>
+      <td>121</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>95</td>
+      <td>121</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
+      <td colspan="2"><code>dom.element.customstateset.enabled</code></td>
     </tr>
   </tbody>
 </table>
