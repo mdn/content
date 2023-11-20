@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### CSS
 
+- The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles.
+
 #### Removals
 
 ### JavaScript
