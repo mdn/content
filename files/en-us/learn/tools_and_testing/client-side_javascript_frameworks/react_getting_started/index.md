@@ -271,7 +271,7 @@ The first statement imports the `useState` hook from the `react` library. Hooks 
 
 After that, we import `reactLogo` and `viteLogo`. Note that their import paths start with `./` and `/` respectively and that they end with the `.svg` extension at the end. This tells us that these imports are _local_, referencing our own files rather than npm packages.
 
-The final statement imports the CSS related to our `App` component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Rollup, the bundler, to add the referenced CSS file to the final CSS bundle.
+The final statement imports the CSS related to our `App` component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Vite to add the referenced CSS file to the final code output, so that it can be used in the browser.
 
 ### The `App()` function
 
