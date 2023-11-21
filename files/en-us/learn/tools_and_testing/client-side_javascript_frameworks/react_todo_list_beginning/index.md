@@ -230,7 +230,7 @@ The `aria-labelledby` attribute tells assistive technologies that we're treating
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
 ```jsx
-<input id="todo-0" type="checkbox" defaultChecked={true} />
+<input id="todo-0" type="checkbox" defaultChecked />
 <label className="todo-label" htmlFor="todo-0">
   Eat
 </label>
@@ -240,10 +240,13 @@ The `defaultChecked` attribute in the `<input />` tag tells React to check this 
 
 The `htmlFor` attribute corresponds to the `for` attribute used in HTML. We cannot use `for` as an attribute in JSX because `for` is a reserved word, so React uses `htmlFor` instead.
 
-Notes:
+### A note on boolean attributes in JSX
 
-- To use boolean values (`true` and `false`) in JSX attributes, you must enclose them in curly braces. If you write `defaultChecked="true"`, the value of `defaultChecked` will be `"true"` — a string literal. Remember — this is actually JavaScript, not HTML!
-- The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
+The `defaultChecked` attribute in the previous section is a boolean attribute – an attribute whose value is either `true` or `false`. Like in HTML, a boolean attribute is true if it's present and false if it's absent; the assignment on the right-hand side of the expression is optional. You _may_ explicitly set its value if you want to by passing it in curly braces – for example, `defaultChecked={true}` or `defaultChecked={false}`. This is slightly different than in HTML. Writing `defaultChecked="true"` that will set a _string_ value of `"true"`, rather than a _boolean_ value of `true`.
+
+If you'd like, you can practice writing boolean attributes with another attribute you may have seen before: [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden). `hidden` prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens; then try explicitly setting its value to `false`. Don't forget to remove this code when you're done.
+
+> **Note:** The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
 
 ### Implementing our styles
 
