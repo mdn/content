@@ -91,11 +91,10 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
-#### Marionette
+- Added serialization support for `Proxy` and `Generator` objects ([Firefox bug 1841786](https://bugzil.la/1841786)).
+- Added `authChallenges` property (the list of authentication challenges present in the headers), to `responseStarted` and `responseCompleted` network events, which will be useful in order to handle the upcoming `network.authRequired` event ([Firefox bug 1855149](https://bugzil.la/1855149)).
 
 ## Changes for add-on developers
 

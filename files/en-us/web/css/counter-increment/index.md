@@ -7,9 +7,11 @@ browser-compat: css.properties.counter-increment
 
 {{CSSRef}}
 
-The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property increases or decreases the value of the named [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified value or increases it by `1` if no value is provided.
+The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property can be used to increase or decrease the value of the named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified values, or to prevent all counters or an individual counter's value from being changed.
 
-You can reset the counter's value to any integer value by using the {{cssxref("counter-reset")}} CSS property.
+If a named counter in the list of space-separated counters and values doesn't exist, it will be created. If no value is provided for a counter in the list of counters, the counter will be increased by `1`.
+
+The counter's value can be reset to any integer value with the {{cssxref("counter-reset")}} CSS property.
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
@@ -25,8 +27,8 @@ counter-increment: my-counter -1;
 /* Increases "counter1" by 1 and decreases "counter2" by 4 */
 counter-increment: counter1 counter2 -4;
 
-/* Increases "chapter" and "page" by 1 and "section" by 2 */
-counter-increment: chapter section 2 page;
+/* Increases "page" by 1, "section" by 2, while "chapter" doesn't change */
+counter-increment: chapter 0 section 2 page;
 
 /* Do not increment/decrement anything: used to override less specific rules */
 counter-increment: none;
@@ -113,6 +115,8 @@ i {
 #### Result
 
 {{EmbedLiveSample("Decreasing the counter value", 140, 300)}}
+
+Had we not used `counter-reset` (or {{cssxref("counter-set")}}) to create the counter and set the value to `100`, the `sevens` counter would still have been created, but with an initial value `0`.
 
 ## Specifications
 
