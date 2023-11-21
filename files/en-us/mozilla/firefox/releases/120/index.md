@@ -42,11 +42,14 @@ This article provides information about the changes in Firefox 120 that affect d
     These dates will be parsed with behavior typical of other non-ISO dates, such as local time zone and month rollover (April 31 rolls over to May 1 since April 31 doesn't exist).
 
   - Requirements for characters directly following numbers have been loosened to accept new formats ([Firefox bug 449921](https://bugzil.la/449921)), including:
+
     - `"DDMonYYYY"`
     - `"Mon.DD.YYYY"`
     - `"DD.Mon.YYYY"`
     - `"YYYY.MM.DD"`
     - `"Mon DD YYYY hh:mmXm"` (`am`/`pm` directly following time)
+
+  - Timezone `'Z'` is now accepted for non-ISO formats (e.g. `Jan 1 1970 10:00Z`) ([Firefox bug 1852422](https://bugzil.la/1852422))
 
 #### Removals
 
@@ -88,11 +91,10 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
-#### Marionette
+- Added serialization support for `Proxy` and `Generator` objects ([Firefox bug 1841786](https://bugzil.la/1841786)).
+- Added `authChallenges` property (the list of authentication challenges present in the headers), to `responseStarted` and `responseCompleted` network events, which will be useful in order to handle the upcoming `network.authRequired` event ([Firefox bug 1855149](https://bugzil.la/1855149)).
 
 ## Changes for add-on developers
 

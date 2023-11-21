@@ -17,7 +17,7 @@ to be accessed and used by JavaScript.
 ### Using exports
 
 After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
-module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, importing a
+module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.
 
