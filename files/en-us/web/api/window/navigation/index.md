@@ -12,7 +12,7 @@ browser-compat: api.Window.navigation
 
 The `navigation` read-only property of the {{domxref("Window")}} interface returns the current `window`'s associated {{domxref("Navigation")}} object.
 
-The entry point for the {{domxref("Navigation API")}}.
+This is the entry point for the {{domxref("Navigation API")}}.
 
 ## Value
 
