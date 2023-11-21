@@ -276,7 +276,7 @@ The final statement imports the CSS related to our `<App />` component. Note tha
 
 ### The `App()` function
 
-After the imports, we have a function named `App()`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App()` function to `App()`, your browser would show you an error.
+After the imports, we have a function named `App()`, which defines the structure of the `App` component. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component and not a regular HTML tag. If you were to rename the `App()` function to `app()`, your browser would throw an error.
 
 Let's look at `App()` more closely.
 
@@ -327,7 +327,7 @@ This export statement makes our `App()` function available to other modules. We'
 
 ## Moving on to `main`
 
-Let's open `src/main.jsx`, because that's where the `App()` function is being used. This file is the entry point for our app, and it initially looks like this:
+Let's open `src/main.jsx`, because that's where the `<App />` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```jsx
 import React from "react";
@@ -348,14 +348,14 @@ The first two statements import the `React` and `ReactDOM` libraries because the
 
 We then import our `App()` function and `index.css`, which holds global styles that are applied to our whole app.
 
-We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_ and render it as a _component_ inside the root node.
+We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_ which renders the `App` _component_ inside the root node.
 
 > **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
 You can read up on these React APIs, if you'd like:
 
-- [ReactDOM.createRoot()](https://react.dev/reference/react-dom/client/createRoot)
-- [React.StrictMode](https://react.dev/reference/react/StrictMode)
+- [`ReactDOM.createRoot()`](https://react.dev/reference/react-dom/client/createRoot)
+- [`React.StrictMode`](https://react.dev/reference/react/StrictMode)
 
 ## Starting fresh
 
