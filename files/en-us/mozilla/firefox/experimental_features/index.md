@@ -1994,7 +1994,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 #### Custom element state pseudo class
 
-Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property, as a {{domxref("CustomStateSet")}}, and the state can be matched using a CSS custom state pseudo class — such as `:--somestate`.
+Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state.
 (See [Firefox bug 1861466](https://bugzil.la/1861466) for more details.)
 
 <table>
