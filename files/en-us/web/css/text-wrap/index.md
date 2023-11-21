@@ -51,7 +51,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `stable`
   - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, subsequent lines should not be considered when making break decisions, so that when editing text any content before the cursor remains stable.
 
-#### When to use balance, pretty and stable
+## Description
 
 As `balance` is limited to a short number of lines then this should generally be used for headings, captions, and blockquotes.
 
