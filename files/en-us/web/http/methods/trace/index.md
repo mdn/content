@@ -11,7 +11,7 @@ The **HTTP `TRACE` method** performs a message loop-back test along the path to 
 
 The final recipient of the request should reflect the message received, excluding any fields that might include sensitive data, back to the client as the message body of a {{HTTPStatus("200")}} (`OK`) response with a {{HTTPHeader("Content-Type")}} of `message/http`. The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of 0 in the request.
 
-Note that the client must not content in the request, or generate fields that might include sensitive data, such as stored user credentials or cookies.
+Note that the client must not send content in the request, or generate fields that might include sensitive data, such as stored user credentials or cookies.
 
 <table class="properties">
   <tbody>
