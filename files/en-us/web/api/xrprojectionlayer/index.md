@@ -22,7 +22,7 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 ## Instance properties
 
-_Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
+_Inherits properties from its parent, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}._
 
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}
   - : A boolean enabling the layer's texture alpha channel.
