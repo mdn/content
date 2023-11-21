@@ -184,6 +184,7 @@ moz-todo-react
 │   ├── App.css
 │   ├── App.jsx
 │   ├── assets
+│   │   └── react.svg
 │   ├── index.css
 │   └── main.jsx
 └── vite.config.js
@@ -193,7 +194,7 @@ moz-todo-react
 
 The **`public`** directory contains static files that will be served directly to your browser without being processed by Vite's build tooling. Right now, it only contains a Vite logo.
 
-The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives. You'll notice that JavaScript files in this directory end in the extension `.jsx`. This extension is necessary for any file that contains JSX – it tells Vite to turn the JSX syntax into JavaScript that your browser can understand.
+The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives. You'll notice that JavaScript files in this directory end in the extension `.jsx`. This extension is necessary for any file that contains JSX – it tells Vite to turn the JSX syntax into JavaScript that your browser can understand. The `src/assets` directory contains the React logo you saw in the browser.
 
 The `package.json` file is an npm feature that contains metadata about our project. This file is not unique to React applications; Vite merely populated it for us. You don't need to understand this file at all to complete this tutorial. However, if you'd like to learn more about it, you can read [package.json on the npm blog](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
