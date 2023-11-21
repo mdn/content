@@ -354,7 +354,7 @@ Allows a relying party to request the creation of a WebAuthn credential that may
 
 The inputs for the `payment` extension are defined in the [AuthenticationExtensionsPaymentInputs dictionary](https://w3c.github.io/secure-payment-confirmation/#dictdef-authenticationextensionspaymentinputs)
 
--  `isPayment`
+- `isPayment`
   - : A boolean that indicates that the extension is active.
 - `rpID`
   - : The [Relying Party](https://w3c.github.io/webauthn/#relying-party) id of the credential(s) being used. Only used at authentication time; not registration.
