@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### CSS
 
+- The {{CSSXRef("text-wrap")}} property has now been added with support for the values `balance` and `stable`. The `balance` value is used for short blocks of content, such as headings, and will make sure that when spread over multiple lines the content is balanced and easy to read. The `stable` value makes sure that editable content does not reflow will the user is editing ([Firefox bug 1731541](https://bugzil.la/1731541)).
+
 #### Removals
 
 ### JavaScript
