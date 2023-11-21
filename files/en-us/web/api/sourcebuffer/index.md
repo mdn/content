@@ -87,6 +87,7 @@ function loadVideo() {
     console.error("Unsupported MIME type or codec: ", mimeCodec);
   }
 }
+
 async function sourceOpen() {
   console.log(this.readyState); // open
   const mediaSource = this;
