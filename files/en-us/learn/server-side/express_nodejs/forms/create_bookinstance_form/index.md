@@ -115,7 +115,7 @@ block content
       select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
         - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
-          option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
+          option(value=book._id, selected=(selected_book==book._id.toString() ? '' : false) ) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:

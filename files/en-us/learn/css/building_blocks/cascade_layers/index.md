@@ -319,7 +319,7 @@ The order of layers determines their order of precedence. Therefore, the order o
 @import url(C.css);
 ```
 
-The above code creates two named layers and one unnamed layer. Let us assume that the three files (`A.css`, `B.css`, and `C.css`) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).
+The above code creates two named layers (C.css styles get appended to the implicit layer of unlayered styles). Let us assume that the three files (`A.css`, `B.css`, and `C.css`) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).
 
 1. `firstLayer` normal styles (`A.css`)
 2. `secondLayer` normal styles (`B.css`)
