@@ -14,8 +14,6 @@ URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
 to some user action.
 
-This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
-
 ## Syntax
 
 ```js-nolint
