@@ -150,8 +150,8 @@ This example registers a handler for every event type for the given element.
       el.onpointercancel = cancel_handler;
       el.onpointerout = out_handler;
       el.onpointerleave = leave_handler;
-      el.gotpointercapture = gotcapture_handler;
-      el.lostpointercapture = lostcapture_handler;
+      el.ongotpointercapture = gotcapture_handler;
+      el.onlostpointercapture = lostcapture_handler;
     }
   </script>
   <body onload="init();">
