@@ -25,6 +25,8 @@ The **`text-wrap`** CSS property controls how text inside an element is wrapped.
 text-wrap: wrap;
 text-wrap: nowrap;
 text-wrap: balance;
+text-wrap: pretty;
+text-wrap: stable;
 
 /* Global values */
 text-wrap: inherit;
@@ -43,21 +45,15 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `nowrap`
   - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
 - `balance`
-  - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (the Chromium implementation uses six wrapped lines or less), meaning that it is useful for cases such as headings or pull quotes.
+  - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six for Chromium and ten for Firefox).
+- `pretty`
 
-<!--
-`pretty`
+  - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
 
-Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
-
-`stable`
-
-Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc.
-
-For example, imagine a situation where you have a long word broken onto the next line because it doesn't quite fit on the previous line. With the default behavior (i.e. with values like `wrap` or `balance`), if you start deleting the long word so that what is left would then fit on the previous line, the user agent will recalculate the break and all the content will jump onto the same line. With `stable`, recalculation won't happen, and it will remain as two lines.
-
-The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
--->
+- `stable`
+  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc.
+  - : For example, imagine a situation where you have a long word broken onto the next line because it doesn't quite fit on the previous line. With the default behavior (i.e. with values like `wrap` or `balance`), if you start deleting the long word so that what is left would then fit on the previous line, the user agent will recalculate the break and all the content will jump onto the same line. With `stable`, recalculation won't happen, and it will remain as two lines.
+  - : The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
 
 ## Formal definition
 
