@@ -1066,21 +1066,23 @@
       ],
       "interfaces": ["PointerEvent"],
       "methods": [
+        "Element.hasPointerCapture()",
         "Element.setPointerCapture()",
         "Element.releasePointerCapture()"
       ],
       "properties": ["Navigator.maxTouchPoints"],
       "events": [
-        "HTMLElement: pointerover",
-        "HTMLElement: pointerenter",
-        "HTMLElement: pointerdown",
-        "HTMLElement: pointermove",
-        "HTMLElement: pointerup",
-        "HTMLElement: pointercancel",
-        "HTMLElement: pointerout",
-        "HTMLElement: pointerleave",
-        "HTMLElement: gotpointercapture",
-        "HTMLElement: lostpointercapture"
+        "Element: pointerover",
+        "Element: pointerenter",
+        "Element: pointerdown",
+        "Element: pointermove",
+        "Element: pointerup",
+        "Element: pointercancel",
+        "Element: pointerout",
+        "Element: pointerleave",
+        "Element: pointerrawupdate",
+        "Element: gotpointercapture",
+        "Element: lostpointercapture"
       ]
     },
     "Pointer Lock API": {
