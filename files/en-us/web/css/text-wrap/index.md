@@ -47,13 +47,17 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `balance`
   - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six for Chromium and ten for Firefox).
 - `pretty`
-
   - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
-
 - `stable`
-  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc.
-  - : For example, imagine a situation where you have a long word broken onto the next line because it doesn't quite fit on the previous line. With the default behavior (i.e. with values like `wrap` or `balance`), if you start deleting the long word so that what is left would then fit on the previous line, the user agent will recalculate the break and all the content will jump onto the same line. With `stable`, recalculation won't happen, and it will remain as two lines.
-  - : The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
+  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, subsequent lines should not be considered when making break decisions, so that when editing text any content before the cursor remains stable.
+
+#### When to use balance, pretty and stable
+
+As `balance` is limited to a short number of lines then this should generally be used for headings, captions, and blockquotes.
+
+The `pretty` value can have a negative effect on performance and should be used, for body copy (longer blocks of content), when layout is favourable over paint performance.
+
+The `stable` value should be used on content that has a [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute. This ensures that the preceeding lines will remain stable while a user is editing the content.
 
 ## Formal definition
 
@@ -124,3 +128,4 @@ The text in the example is editable. Change the text, adding long words, to view
 - {{CSSxRef("white-space-collapse")}}
 - [CSS text module](/en-US/docs/Web/CSS/CSS_text)
 - [CSS `text-wrap: balance`](https://developer.chrome.com/blog/css-text-wrap-balance/) on developer.chrome.com
+- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com
