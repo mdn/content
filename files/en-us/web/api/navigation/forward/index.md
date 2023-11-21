@@ -23,7 +23,7 @@ forward(options)
 
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
-    - `info`
+    - `info` {{optional_inline}}
       - : Developer-defined information to be passed along to the {{domxref("Navigation/navigate_event", "navigate")}} event, made available in {{domxref("NavigateEvent.info")}}. This can be any data type. You might, for example, wish to display newly-navigated content with a different animation depending on how it was navigated to (swipe left, swipe right, or go home). A string indicating which animation to use could be passed in as `info`.
 
 ### Return value
