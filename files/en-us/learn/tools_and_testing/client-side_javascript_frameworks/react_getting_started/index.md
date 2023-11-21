@@ -255,7 +255,7 @@ function App() {
 export default App;
 ```
 
-The `App.jsx` file consists of three main parts: some [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top, the `App` component in the middle, and an [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement at the bottom. Most React components follow this pattern.
+The `App.jsx` file consists of three main parts: some [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements at the top, the `App()` funtion in the middle, and an [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement at the bottom. Most React components follow this pattern.
 
 ### Import statements
 
@@ -272,13 +272,13 @@ The first statement imports the `useState` hook from the `react` library. Hooks 
 
 After that, we import `reactLogo` and `viteLogo`. Note that their import paths start with `./` and `/` respectively and that they end with the `.svg` extension at the end. This tells us that these imports are _local_, referencing our own files rather than npm packages.
 
-The final statement imports the CSS related to our `App` component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Vite to add the referenced CSS file to the final code output, so that it can be used in the browser.
+The final statement imports the CSS related to our `<App />` component. Note that there is no variable name and no `from` directive. This is called a [_side-effect import_](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) — it doesn't import any value into the JavaScript file, but it tells Vite to add the referenced CSS file to the final code output, so that it can be used in the browser.
 
 ### The `App()` function
 
-After the imports, we have a function named `App`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App` function to `app`, your browser would show you an error.
+After the imports, we have a function named `App()`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App()` function to `App()`, your browser would show you an error.
 
-Let's look at `App` more closely.
+Let's look at `App()` more closely.
 
 ```jsx
 function App() {
@@ -311,23 +311,23 @@ function App() {
 }
 ```
 
-The `App` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
+The `App()` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
 Just under the `return` keyword is a special bit of syntax: `<>`. This is a [fragment](https://react.dev/docs/fragments). React components have to return a single JSX element, and fragments allow us to do that without rendering arbitrary `<div>`s in the browser. You'll see fragments in many React applications.
 
 ### The `export` statement
 
-There's one more line of code after the `App` function:
+There's one more line of code after the `App()` function:
 
 ```jsx
 export default App;
 ```
 
-This export statement makes our `App` component available to other modules. We'll talk more about this later.
+This export statement makes our `App()` function available to other modules. We'll talk more about this later.
 
 ## Moving on to `main`
 
-Let's open `src/main.jsx`, because that's where the `App` component is being rendered. This file is the entry point for our app, and it initially looks like this:
+Let's open `src/main.jsx`, because that's where the `App()` function is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```jsx
 import React from "react";
@@ -346,11 +346,9 @@ As with `App.jsx`, the file starts by importing all the JS modules and other ass
 
 The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
-We then import our `App` component and `index.css`, which holds global styles that are applied to our whole app.
+We then import our `App()` function and `index.css`, which holds global styles that are applied to our whole app.
 
-We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root.
-
-This tells React that we want to render our application with `<App />` as the root, or outer element.
+We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_ and render it as a _component_ inside the root node.
 
 > **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
@@ -407,7 +405,7 @@ Some attributes are different than their HTML counterparts. For example, the `cl
 
 ### JavaScript expressions as content
 
-Unlike HTML, JSX allows us to write variables and other JavaScript expressions right alongside our other content. Let's declare a variable called `subject` just above the `App` function:
+Unlike HTML, JSX allows us to write variables and other JavaScript expressions right alongside our other content. Let's declare a variable called `subject` just above the `App()` function:
 
 ```jsx
 const subject = "React";
