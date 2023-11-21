@@ -27,18 +27,20 @@ new PaymentRequest(methodData, details, options)
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
 
-    - `supportedMethods`
+     - `supportedMethods`
       - : For early implementations of the spec, this was a sequence of identifiers for
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
         string, and the meaning of the `data` parameter
         changes with the `supportedMethods`. For example, the Example Pay payment method
-        is selected by specifying the string `https://example.com/pay` here.
+        is selected by specifying the string `https://example.com/pay` here. See also the use of `secure-payment-confirmation` for [using SPC with Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_with_Secure_Payment_Confirmation)
+
     - `data`
       - : A JSON-serializable object that provides optional information that might be
         needed by the supported payment methods. This has to conform to the type expected
         by the payment handler indicated by `supportedMethods`. Developers need to consult
-        whomever controls the payment methods for the expected shape of the data object.
+        whomever controls the payment methods for the expected shape of the data object. If `supportedMethods` is `secure-payment-confirmation`, then the data needs to confirm to the  [SecurePaymentConfirmationRequest dictionary](/en-US/docs/Web/API/SecurePaymentConfirmationRequest).
+
 
 - `details`
 
