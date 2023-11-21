@@ -1,13 +1,13 @@
 ---
 title: WebAssembly.Module.exports()
-slug: WebAssembly/JavaScript_interface/Module/exports
+slug: WebAssembly/JavaScript_interface/Module/exports_static
 page-type: webassembly-static-method
-browser-compat: webassembly.api.Module.exports
+browser-compat: webassembly.api.Module.exports_static
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.Module.exports()`** function returns an
+The **`WebAssembly.Module.exports()`** static method returns an
 array containing descriptions of all the declared exports of the given
 `Module`.
 
@@ -38,7 +38,7 @@ If module is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_int
 The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html)
 demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
 compiles the loaded simple.wasm byte code using the
-[`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
+[`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
 
 ```js
 const worker = new Worker("wasm_worker.js");
@@ -52,7 +52,7 @@ In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
-instance from it using the [`WebAssembly.Instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method, invoke an
+instance from it using the [`WebAssembly.Instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) method, invoke an
 exported function from inside it, then show how we can return information on the
 available exports on a module using `WebAssembly.Module.exports`.
 
