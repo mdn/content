@@ -349,7 +349,6 @@ If the relying party is not authorized, the extension is ignored, and no `"minPi
 - Specification: [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/)
 
 Allows a relying party to request the creation of a WebAuthn credential that may be used –by both the Relying Party and other parties– with Secure Payment Confirmation; see [Using Payment Request API for Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_with_Secure_Payment_Confirmation).
-[Editor’s Note: We would copy the  complete list and relevant descriptions from section 5 of the SPC specification.]
 
 #### Input
 
@@ -368,7 +367,7 @@ The inputs for the `payment` extension are defined in the [AuthenticationExtensi
 - `total`
   - : The transaction amount that was displayed to the user. Only used at authentication time; not registration. The total is of type [PaymentCurrencyAmount](https://w3c.github.io/payment-request/#dom-paymentcurrencyamount).
 - `instrument`
- - : The instrument details that were displayed to the user. Only used at authentication time; not registration. The instrument is of type [PaymentCredentialInstrument](https://w3c.github.io/secure-payment-confirmation/#dictdef-paymentcredentialinstrument).
+  - : The instrument details that were displayed to the user. Only used at authentication time; not registration. The instrument is of type [PaymentCredentialInstrument](https://w3c.github.io/secure-payment-confirmation/#dictdef-paymentcredentialinstrument).
 
 #### Output
 
