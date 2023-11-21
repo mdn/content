@@ -33,7 +33,7 @@ An object with the following properties:
 - `committed`
   - : A {{jsxref("Promise")}} which will fulfill when the visible URL has changed and a new {{domxref("NavigationHistoryEntry")}} has been created.
 - `finished`
-  - : A {{jsxref("Promise")}} which will fulfill when all promises returned by the `intercept()` handler are fulfilled. This is equivalent to the {{domxref("NavigationTransition.finished")}} promise fulfilling, when the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires.
+  - : A {{jsxref("Promise")}} which will fulfill when all promises returned by the {{domxref("NavigateEvent.intercept()")}} handler are fulfilled. This is equivalent to the {{domxref("NavigationTransition.finished")}} promise fulfilling, when the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires.
 
 Either one of these promises rejects if the navigation has failed for some reason.
 
