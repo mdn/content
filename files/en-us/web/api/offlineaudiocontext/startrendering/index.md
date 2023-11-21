@@ -56,7 +56,7 @@ function getData() {
     .then((response) => response.arrayBuffer())
     .then((downloadedBuffer) => audioCtx.decodeAudioData(downloadedBuffer))
     .then((decodedBuffer) => {
-      console.log("File downloaded.successfully.");
+      console.log("File downloaded successfully.");
       const source = new AudioBufferSourceNode(offlineCtx, {
         buffer: decodedBuffer,
       });
