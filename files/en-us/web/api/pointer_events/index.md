@@ -98,6 +98,7 @@ Below is a short description of each event type.
 | {{domxref('Element/pointercancel_event', 'pointercancel')}}           | A browser fires this event if it concludes the pointer will no longer be able to generate events (for example the related device is deactivated).                                                                                                                                                                                         |
 | {{domxref('Element/pointerout_event', 'pointerout')}}                 | Fired for several reasons including: pointer is moved out of the [hit test](#hit_test) boundaries of an element; firing the pointerup event for a device that does not support hover (see pointerup); after firing the `pointercancel` event (see `pointercancel`); when a pen stylus leaves the hover range detectable by the digitizer. |
 | {{domxref('Element/pointerleave_event', 'pointerleave')}}             | Fired when a pointer is moved out of the [hit test](#hit_test) boundaries of an element. For pen devices, this event is fired when the stylus leaves the hover range detectable by the digitizer.                                                                                                                                         |
+| {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}             | Fired when a pointer changes any properties that don't fire `pointerdown` or `pointerup` events.                                                                                                                                         |
 | {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}   | Fired when an element receives pointer capture.                                                                                                                                                                                                                                                                                           |
 | {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}} | Fired after pointer capture is released for a pointer.                                                                                                                                                                                                                                                                                    |
 
@@ -105,10 +106,12 @@ Below is a short description of each event type.
 
 There are three extensions to the {{domxref("Element")}} interface:
 
+- {{domxref("Element.hasPointerCapture()","hasPointerCapture()")}}
+  - : Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.
+- {{domxref("Element.releasePointerCapture()","releasePointerCapture()")}}
+  - : Releases (stops) _pointer capture_ that was previously set for a specific pointer event.
 - {{domxref("Element.setPointerCapture()","setPointerCapture()")}}
   - : Designates a specific element as the _capture target_ of future pointer events.
-- {{domxref("Element.releasePointerCapture()","releasePointerCapture()")}}
-  - : This method releases (stops) _pointer capture_ that was previously set for a specific pointer event.
 
 ### Navigator extension
 
