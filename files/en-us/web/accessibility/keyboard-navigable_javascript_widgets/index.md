@@ -60,7 +60,7 @@ Authors can also make a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} ke
 
 ### Grouping controls
 
-For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendant choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendant elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
+For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendant choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendant elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/).)
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
 
