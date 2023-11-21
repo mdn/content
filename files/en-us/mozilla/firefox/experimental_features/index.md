@@ -61,7 +61,7 @@ Layout for `input type="search"` has been updated. This causes a search field to
 
 ### showPicker() method for HTML select elements
 
-The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a `select` element, triggered by user interaction.
+The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction.
 (See [Firefox bug 1854112](https://bugzil.la/1854112) for more details.)
 
 <table>
