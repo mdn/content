@@ -27,7 +27,7 @@ new PaymentRequest(methodData, details, options)
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
 
-     - `supportedMethods`
+    - `supportedMethods`
       - : For early implementations of the spec, this was a sequence of identifiers for
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
