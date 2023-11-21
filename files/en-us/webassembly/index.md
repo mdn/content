@@ -1,6 +1,7 @@
 ---
 title: WebAssembly
 slug: WebAssembly
+page-type: landing-page
 browser-compat: javascript.builtins.WebAssembly
 ---
 
@@ -49,15 +50,15 @@ And what's even better is that it is being developed as a web standard via the [
   - : A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.Instance()`](/en-US/docs/WebAssembly/JavaScript_interface/Instance)
   - : A `WebAssembly.Instance` object is a stateful, executable instance of a `Module`. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
-- [`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile)
+- [`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile_static)
   - : The `WebAssembly.compile()` function compiles WebAssembly binary code into a `WebAssembly.Module` object.
-- [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming)
+- [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static)
   - : The `WebAssembly.compileStreaming()` function compiles a `WebAssembly.Module` directly from a streamed underlying source.
-- [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate)
+- [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static)
   - : The `WebAssembly.instantiate()` function allows you to compile and instantiate WebAssembly code.
-- [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming)
+- [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static)
   - : The `WebAssembly.instantiateStreaming()` function is the primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
-- [`WebAssembly.validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate)
+- [`WebAssembly.validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate_static)
   - : The `WebAssembly.validate()` function validates a given typed array of WebAssembly binary code.
 - [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory)
   - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.

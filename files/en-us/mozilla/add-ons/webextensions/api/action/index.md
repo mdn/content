@@ -9,7 +9,7 @@ browser-compat: webextensions.api.action
 
 Adds a button to the browser's toolbar.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> **Note:** This API is available in Manifest V3 or higher. It replaces the Manifest V2 APIs {{WebExtAPIRef("browserAction")}} and, in Chrome and Safari, {{WebExtAPIRef("pageAction")}}.
 
 A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
@@ -19,7 +19,7 @@ If you specify a popup, it is shown — and the content loaded — when the user
 
 The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `action` {{WebExtAPIRef("menus.ContextType")}}.
 
-You can define most of a browser action's properties declaratively using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json.
+You can define most of a browser action's properties declaratively using the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json.
 
 With the `action` API, you can:
 
@@ -79,7 +79,7 @@ With the `action` API, you can:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

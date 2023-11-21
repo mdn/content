@@ -170,6 +170,26 @@ The `accept` attribute doesn't validate the types of the selected files; it prov
 
 Because of this, you should make sure that the `accept` attribute is backed up by appropriate server-side validation.
 
+### Detecting cancellations
+
+The `cancel` event is fired when the user does not change their selection, reselecting the previously selected files. The `cancel` event is also fired when the file picker dialog gets closed, or canceled, via the "cancel" button or the <kbd>escape</kbd> key.
+
+For example, the following code will log to the console if the user closes the popup without selecting a file:
+
+```js
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    console.log("File selected: ", elem.files[0]);
+  }
+});
+elem.click();
+```
+
 ### Notes
 
 1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
@@ -300,7 +320,7 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If it is, we:
 
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
-  - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
+  - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
 
 - If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
 
@@ -396,8 +416,9 @@ The example looks like this; have a play:
     <tr>
       <td><strong>Events</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("HTMLElement/input_event", "input")}} and
+        {{domxref("HTMLElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>

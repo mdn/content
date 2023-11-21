@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
-browser-compat: javascript.builtins.WebAssembly.Table.set
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Table.set
 ---
 
 {{WebAssemblySidebar}}
@@ -51,7 +52,7 @@ const importObj = {
 };
 ```
 
-Finally, we load and instantiate a Wasm module (table2.wasm) using [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), print the table length, and invoke the two referenced functions that are now stored in the table. The `table2.wasm` module adds two function references to the table, both of which print out a simple value (see [text representation](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat):
+Finally, we load and instantiate a Wasm module (table2.wasm) using [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static), print the table length, and invoke the two referenced functions that are now stored in the table. The `table2.wasm` module adds two function references to the table, both of which print out a simple value (see [text representation](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat):
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(

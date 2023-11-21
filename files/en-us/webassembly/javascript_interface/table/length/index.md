@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table.prototype.length
 slug: WebAssembly/JavaScript_interface/Table/length
-browser-compat: javascript.builtins.WebAssembly.Table.length
+page-type: webassembly-instance-property
+browser-compat: webassembly.api.Table.length
 ---
 
 {{WebAssemblySidebar}}
