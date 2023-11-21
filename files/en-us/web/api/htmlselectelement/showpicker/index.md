@@ -34,6 +34,8 @@ None ({{jsxref("undefined")}}).
   - : Thrown if the element is not mutable, meaning that the user cannot modify it and/or that it cannot be automatically prefilled.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if not explicitly triggered by a user action such as a touch gesture or mouse click (the picker requires {{Glossary("Transient activation")}}).
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the element associated with the picker is not being rendered.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe.
 
