@@ -75,7 +75,7 @@ As a starting point for this project, we're going to provide two things: an `App
 
 ### The JSX
 
-Copy the following snippet to your clipboard, then paste it into `App.js` so that it replaces the existing `App()` function:
+Copy the following snippet to your clipboard, then paste it into `App.jsx`:
 
 ```jsx
 function App(props) {
@@ -173,11 +173,13 @@ function App(props) {
     </div>
   );
 }
+
+export default App;
 ```
 
 Now open `public/index.html` and change the [`<title>`](/en-US/docs/Web/HTML/Element/title) element's text to `TodoMatic`. This way, it will match the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) at the top of our app.
 
-```html
+```jsx
 <title>TodoMatic</title>
 ```
 
@@ -196,9 +198,9 @@ The form will allow us to _make_ tasks; the buttons will let us _filter_ them; t
 
 ### Accessibility features
 
-You may notice some unusual attributes here. For example:
+You may notice some unusual markup here. For example:
 
-```html
+```jsx
 <button type="button" className="btn toggle-btn" aria-pressed="true">
   <span className="visually-hidden">Show </span>
   <span>all</span>
