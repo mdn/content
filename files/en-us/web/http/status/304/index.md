@@ -8,7 +8,7 @@ browser-compat: http.status.304
 {{HTTPSidebar}}
 
 The HTTP **`304 Not Modified`** client redirection response code indicates that there is no need to retransmit the requested resources.
-This happens when the request is a conditional {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request with an {{HTTPHeader("If-None-Match")}} or an {{HTTPHeader("If-Modified-Since")}} header and the condition evaluates to false.
+This response code is sent when the request is a conditional {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request with an {{HTTPHeader("If-None-Match")}} or an {{HTTPHeader("If-Modified-Since")}} header and the condition evaluates to false.
 It is an implicit redirection to a cached resource that would have resulted in a {{HTTPStatus("200")}} `OK` response if the condition evaluated to true.
 
 The response must not contain a body and must include the headers that would
