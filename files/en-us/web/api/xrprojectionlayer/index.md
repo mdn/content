@@ -47,14 +47,8 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Registers an event handler of a specific event type on the `EventTarget`.
 - {{domxref("XRCompositionLayer.destroy()")}}
   - : Deletes the underlying layer attachments.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this `EventTarget`.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the `EventTarget`.
 
 ## Specifications
 
