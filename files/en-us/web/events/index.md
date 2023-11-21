@@ -979,7 +979,7 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [webkitmouseforceup event](/en-US/docs/Web/API/Element/webkitmouseforceup_event)
   - [webkitmouseforcewillbegin event](/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event)
   - [wheel event](/en-US/docs/Web/API/Element/wheel_event)
-  - [cancel event](/en-US/docs/Web/API/Element/cancel_event)
+  - [cancel event](/en-US/docs/Web/API/HTMLElement/cancel_event)
 
 - {{DOMxRef("EventSource")}}
 
