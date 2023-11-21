@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 120 that affect developers. Firefox 120 was released on [November 21, 2023](https://whattrainisitnow.com/calendar/).
+This article provides information about the changes in Firefox 120 that affect developers. Firefox 120 was released on [November 21, 2023](https://whattrainisitnow.com/release/?version=120).
 
 ## Changes for web developers
 

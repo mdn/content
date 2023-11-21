@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [January 23, 2024](https://whattrainisitnow.com/calendar/).
+This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
 
 ## Changes for web developers
 
