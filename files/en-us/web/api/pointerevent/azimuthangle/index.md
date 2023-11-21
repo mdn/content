@@ -1,6 +1,6 @@
 ---
-title: "PointerEvent: azimuth angle property"
-short-title: azimuth angle
+title: "PointerEvent: azimuthAngle property"
+short-title: azimuthAngle
 slug: Web/API/PointerEvent/azimuthAngle
 page-type: web-api-instance-property
 status:

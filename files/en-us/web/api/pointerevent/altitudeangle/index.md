@@ -1,6 +1,6 @@
 ---
-title: "PointerEvent: altitude angle property"
-short-title: altitude angle
+title: "PointerEvent: altitudeAngle property"
+short-title: altitudeAngle
 slug: Web/API/PointerEvent/altitudeAngle
 page-type: web-api-instance-property
 status:
