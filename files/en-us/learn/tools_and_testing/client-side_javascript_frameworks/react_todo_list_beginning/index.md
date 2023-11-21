@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
+Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through the basic structure and styling of such an application, ready for individual component definition and interactivity, which we'll add later.
 
 > **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
@@ -54,26 +54,20 @@ We'll tackle these stories one-by-one.
 
 ## Pre-project housekeeping
 
-create-react-app has made a few files we won't be using at all for our project.
-
-- We're not going to write per-component stylesheets, so first delete the `App.css` import from the top of `App.js`.
-- We are also not going to be using the `logo.svg` file, so remove that import too.
-
-Then, copy and paste the following commands into your terminal to delete some unneeded files. Make sure you're starting in the app's root directory!
+Vite has given us some code that we won't be using at all for our project. The following terminal commands will delete it to make way for our new project. Make sure you're starting in the app's root directory!
 
 ```bash
-# Move into the src directory of your project
+# Move into the src directory
 cd src
-# Delete a few files
-rm -- App.test.js App.css logo.svg reportWebVitals.js setupTests.js
+# Delete the App.css file and the React logo provided by Vite
+rm App.css assets/react.svg
+# Empty the contents of App.jsx and index.css
+: >! {App.jsx,index.css}
 # Move back up to the root of the project
 cd ..
 ```
 
-Notes:
-
-- Two of the files we're deleting are for testing the application. We will not cover testing here.
-- If you stopped your server to do the terminal tasks mentioned above, you'll have to start it again using `npm start`.
+> **Note:** If you stopped your server to do the terminal tasks mentioned above, you'll have to start it again using `npm run dev`.
 
 ## Project starter code
 
