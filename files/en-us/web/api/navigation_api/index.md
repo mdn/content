@@ -7,6 +7,7 @@ status:
 browser-compat:
   - api.Navigation
   - api.NavigateEvent
+spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigation-api
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Navigation API")}}
