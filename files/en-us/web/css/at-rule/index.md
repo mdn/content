@@ -40,6 +40,7 @@ A subset of nested statements, which can be used as a statement of a style sheet
 
 - {{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
 - {{cssxref("@scope")}} - A conditional group rule that will apply its content if the device meets the criteria of the given condition.
+- {{cssxref("@starting-style")}} - A conditional group rule that will apply atarting transition if the browser meets the criteria of the given condition.
 - {{cssxref("@supports")}} — A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
 - {{cssxref("@document")}} {{deprecated_inline}} — A conditional group rule that will apply its content if the document in which the style sheet is applied meets the criteria of the given condition.
 - {{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.
@@ -58,6 +59,7 @@ Conditional group rules are:
 
 - {{cssxref("@media")}},
 - {{cssxref("@scope")}},
+- {{cssxref("@starting-style")}},
 - {{cssxref("@supports")}},
 - {{cssxref("@document")}}. _(deferred to Level 4 of CSS Spec)_
 
@@ -84,7 +86,8 @@ Since each conditional group may also contain nested statements, there may be an
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
 - {{cssxref("@property")}}
-- {{cssxref("@scope")}},
+- {{cssxref("@scope")}}
+- {{cssxref("@starting-style")}}
 - {{cssxref("@supports")}}
 
 ## Specifications

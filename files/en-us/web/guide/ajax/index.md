@@ -363,8 +363,6 @@ While Ajax is still useful, other APIs have been developed since 2005 that enabl
     - [Monitoring the progress of a request](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
     - [Submitting forms and upload binary files](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) – in _pure_ Ajax, or using {{domxref("FormData")}} objects
     - Using Ajax within [Web workers](/en-US/docs/Web/API/Worker)
-- [_Pure-Ajax_ navigation example](/en-US/docs/Web/API/History_API/Example)
-  - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.
 - [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
   - : The `responseType` property of the `XMLHttpRequest` object can be set to change the expected response type from the server. Possible values are the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This article will show some Ajax I/O techniques.
 - [XML](/en-US/docs/Web/XML)
