@@ -12,8 +12,7 @@ The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Pa
 ## Instance properties
 
 - `challenge`
-  - : A random [challenge](/en-US/docs/Web/API/CredentialsContainer/create#challenge) that the relying party generates on the server side
-	to prevent replay attacks.
+  - : A random [challenge](/en-US/docs/Web/API/CredentialsContainer/create#challenge) that the relying party generates on the server side	to prevent replay attacks.
 - `rpId`
   - : The [Relying Party Identifier](/en-US/docs/Web/API/CredentialsContainer/get#rpid) of the credentials.
 - `credentialIds`
