@@ -34,11 +34,11 @@ A new instance of the {{domxref("EventTarget")}} object.
 
 ```html
 <button id="dec" aria-label="Decrement">-</button>
-<span id='currentValue'>0</span>
+<span id="currentValue">0</span>
 <button id="inc" aria-label="Increment">+</button>
 
 <h5>History</h5>
-<ul id='history'></ul>
+<ul id="history"></ul>
 ```
 
 #### JavaScript
