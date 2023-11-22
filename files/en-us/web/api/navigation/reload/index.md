@@ -53,7 +53,7 @@ async function handleReload() {
   await navigation.reload({
     info: { animation: "fade-in" },
     state: { infoPaneOpen: true },
-  });
+  }).finished;
 
   // ...
 }
@@ -65,7 +65,7 @@ Reload page and add a new state item:
 async function handleReload() {
   await navigation.reload({
     state: { ...navigation.currentEntry.getState(), newState: 3 },
-  });
+  }).finished;
 
   // ...
 }

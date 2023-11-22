@@ -109,7 +109,7 @@ async function navigateHandler() {
   await navigation.navigate(url, {
     info: { animation: "swipe-right" },
     state: { infoPaneOpen: true },
-  });
+  }).finished;
 }
 ```
 
