@@ -38,7 +38,6 @@ Payment handlers are identified by **payment method identifiers**, which are str
   - : The [standardized payment method identifier](https://www.w3.org/TR/payment-method-id/#registry) for [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation) is "secure-payment-confirmation". The Payment Request data for this payment is defined by the [SecurePaymentConfirmationRequest dictionary](/en-US/docs/Web/API/SecurePaymentConfirmationRequest). For more information see [Using Payment Request API for Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_with_Secure_Payment_Confirmation).
 - `basic-card`
   - : This payment method identifier was intended to facilitate card-based payments on the Web through Payment Request API. **The [Web Payments Working Group](https://www.w3.org/groups/wg/payments) has deprecated this payment method.**
-    
 ### URL-based payment method identifiers
 
 These may vary substantially depending on the specifics of the service, and a given processing service may have multiple URLs used, depending on the version of their API, their communication technology, and so forth.
