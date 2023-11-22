@@ -26,6 +26,7 @@ Thus, SPC builds on Web Authentication to enable sites to perform streamlined st
 
 ## Payment request method
 
+
 Secure Payment Confirmation leverages underlying capabilities of the Payment Request API. The standardized payment method identifier for the Secure Payment Confirmation payment handler is [secure-payment-confirmation](/en-US/docs/Web/API/Payment_Request_API/Concepts#secure-payment-confirmation).
 
 ## Web authentication extension
