@@ -280,7 +280,7 @@ Another advanced topic that you might not use right away but may need to underst
 }
 ```
 
-**Scoping proximity** is the mechanism by which conflicts between scoped elements is resolved. This states that when two scopes have conflicting styles, the style that has the smallest number of hops up the DOM tree hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
+**Scoping proximity** is the mechanism that resolves conflicts between scoped elements. Scoping proximity states that when two scopes have conflicting styles, the style with the smallest number of hops up the DOM tree hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 
 > **Note:** Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
 
