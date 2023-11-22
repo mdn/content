@@ -20,7 +20,7 @@ A live sample consists of two parts:
 - One or more code blocks grouped together
 - A macro call that shows the result of the combined code blocks in an {{HTMLElement("iframe")}}
 
-Each [code block](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) containing code for the output has a language identifier — `html`, `css`, or `js` — that specifies whether it's HTML, CSS, or JavaScript code. The language classes must be on the corresponding blocks of code, and a macro call (`EmbedLiveSample`) must be present in the page to display the output:
+Each [code block](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) containing code for the output has a language identifier — `html`, `css`, or `js` — that specifies whether it's HTML, CSS, or JavaScript code. The language identifiers must be on the corresponding blocks of code, and a macro call (`EmbedLiveSample`) must be present in the page to display the output:
 
 ````md
 ## Examples
@@ -45,7 +45,7 @@ Code blocks can be grouped in two ways:
 1. Using the ID of a heading or a block element that contains the code blocks as the identifier
 2. Specifying a string identifier along with code blocks
 
-Code blocks that do not explicit specify an identifier are, by default, grouped together using the ID of the heading or block element that contains the code blocks. The identifier in this case is the ID of a heading or a block element (such as a {{HTMLElement("div")}}). This is shown in the example below, where `html` and `css` codes within the block "Styling a paragraph" are used to generate the output for the `EmbedLiveSample` macro call.
+Code blocks that do not explicitly specify an identifier are, by default, grouped together using the ID of the heading or block element that contains the code blocks. The identifier in this case is the ID of a heading or a block element (such as a {{HTMLElement("div")}}). This is shown in the example below, where `html` and `css` codes within the block "Styling a paragraph" are used to generate the output for the `EmbedLiveSample` macro call.
 
 ````md
 ## Examples
@@ -80,7 +80,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 - If the ID belongs to a block element, the group includes all the code blocks within the enclosing block element whose ID is used.
 - If the ID belongs to a heading, the group includes all the code blocks that are after that heading and before the next heading of the same heading level. Note that code blocks under subheadings of the specified heading are all used; if this is not the effect you want, use an ID on a block element or use a string identifier instead.
 
-To group code blocks using a string identifier, add a class that begins with `live-sample___` to the code block's language identifier. Add a unique identifier to the class prefix in the format `live-sample___{IDENTIFIER}`. The `live-sample___` prefix along with the identifier helps the live sample system recognize and group code blocks correctly. For example, `live-sample___color-picker` uses `color-picker` as the identifier following the `live-sample___` prefix.
+To group code blocks using an identifier, add a string in the format `live-sample___{IDENTIFIER}` to the code block's info string. The identifier must be unique to the code blocks you want to group. For example, `live-sample___color-picker` uses `color-picker` as the identifier for the live sample system, and all code blocks with `live-sample___color-picker` in their info string are combined in the live sample.
 The following example groups a CSS and a JavaScript code block together using the identifier `color-picker`:
 
 ````md
@@ -177,7 +177,7 @@ If you're not using a particular language type (for example, if you are not usin
 
 Sometimes you just want to display the static code block pertinent to the example rendered within a page. However, you still need the HTML, CSS, and JavaScript code blocks to render such an example.
 
-To achieve this, you can hide any code blocks that are not relevant by using the `hidden` class. If you do this, omit the `### HTML/CSS/JavaScript` headings for the hidden code blocks.
+To achieve this, you can hide any code blocks that are not relevant by adding the `hidden` info string to the language identifier. If you do this, omit the `### HTML/CSS/JavaScript` headings for the hidden code blocks.
 
 Using the example above but hiding the HTML code would look like this:
 
@@ -282,7 +282,7 @@ Here is a link that results from calling these code blocks via `\{{LiveSampleLin
 
 ### Grouping code blocks by identifier
 
-This HTML creates a paragraph and some blocks to help us position and style a message. The `live-sample___hello-world` class has been added to the `html` language identifier for this code block.
+This HTML creates a paragraph and some blocks to help us position and style a message. The `live-sample___hello-world` string has been added to the `html` language identifier for this code block.
 
 ```html live-sample___hello-world
 <p>A simple example of the live sample system in action.</p>
@@ -291,7 +291,7 @@ This HTML creates a paragraph and some blocks to help us position and style a me
 </div>
 ```
 
-The CSS code styles the box as well as the text inside it. The `live-sample___hello-world` class has been added to the `css` language identifier for this code block.
+The CSS code styles the box as well as the text inside it. The `live-sample___hello-world` string has been added to the `css` language identifier for this code block.
 
 ```css live-sample___hello-world
 .box {
@@ -309,7 +309,7 @@ The CSS code styles the box as well as the text inside it. The `live-sample___he
 }
 ```
 
-This JavaScript code attaches an event handler to the "Hello world!" text that makes an alert appear when it is clicked. The `live-sample___hello-world` class has been added to the `js` language identifier for this code block as well.
+This JavaScript code attaches an event handler to the "Hello world!" text that makes an alert appear when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
 
 ```js live-sample___hello-world
 const el = document.getElementById("item");
