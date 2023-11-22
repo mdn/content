@@ -1,5 +1,5 @@
 ---
-title: SecurePaymentConfirmationRequest
+title: "SecurePaymentConfirmationRequest"
 slug: Web/API/SecurePaymentConfirmationRequest
 page-type: web-api-interface
 ---
