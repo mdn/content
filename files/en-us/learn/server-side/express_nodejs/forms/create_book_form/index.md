@@ -35,7 +35,7 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
 });
 ```
 
-This uses `await` on the result of `Promise.all()` to get all `Author` and `Genre` objects in parallel (the same approach used in [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)). The authors are sorted alphabetically by chaining `.sort({ family_name: 1 })` on to the query.
+This uses `await` on the result of `Promise.all()` to get all `Author` and `Genre` objects in parallel (the same approach used in [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)).
 These are then passed to the view **`book_form.pug`** as variables named `authors` and `genres` (along with the page `title`).
 
 ## Controller—post route
