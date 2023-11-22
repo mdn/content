@@ -39,7 +39,7 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
 
 ## Description
 
-A complex web document tends to include several distinct components — from headers, footers, and new articles, to maps, media players, and ads. As complexity increases, it becomes more important to manage the styling for these components effectively, and effective scoping of styles is a key consideration. Let's consider the following DOM tree:
+A complex web document might include components such as headers, footers, news articles, maps, media players, ads, and others. As complexity increases, effectively managing the styling for these components becomes more of a concern, and effective scoping of styles helps us manage this complexity. Let's consider the following DOM tree:
 
 ```plain-nolint
 body
