@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Document.exitPointerLock
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Pointer Lock API")}}
 
 The **`exitPointerLock()`** method asynchronously releases a
 pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.

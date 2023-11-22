@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Document.pointerlockchange_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Lock API")}}
 
 The `pointerlockchange` event is fired when the pointer is locked/unlocked.
 

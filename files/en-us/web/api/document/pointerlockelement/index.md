@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Document.pointerLockElement
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Pointer Lock API")}}
 
 The read-only **`pointerLockElement`** property
 of the {{domxref("Document")}} interface provides the

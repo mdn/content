@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.requestPointerLock
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Pointer Lock API")}}
 
 The **`Element.requestPointerLock()`** method lets you
 asynchronously ask for the pointer to be locked on the given element.
