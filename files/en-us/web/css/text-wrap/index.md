@@ -49,7 +49,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `pretty`
   - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
 - `stable`
-  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, subsequent lines should not be considered when making break decisions, so that when editing text any content before the cursor remains stable.
+  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, subsequent lines should not be considered when making break decisions, so that, when editing text, any content before the cursor remains stable.
 
 ## Description
 
