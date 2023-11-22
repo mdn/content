@@ -1086,9 +1086,18 @@
     "Pointer Lock API": {
       "overview": ["Pointer Lock API"],
       "interfaces": [],
-      "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
-      "properties": ["Document.pointerLockElement"],
-      "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+      "methods": [
+        "Element.requestPointerLock()",
+        "Document.exitPointerLock()"
+      ],
+      "properties": [
+        "Document.pointerLockElement",
+        "ShadowRoot.pointerLockElement"
+      ],
+      "events": [
+        "Document: pointerlockchange",
+        "Document: pointerlockerror"
+      ]
     },
     "Popover API": {
       "overview": ["Popover API"],
