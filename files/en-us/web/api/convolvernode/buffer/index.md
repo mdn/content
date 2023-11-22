@@ -12,7 +12,7 @@ The **`buffer`** property of the {{ domxref("ConvolverNode") }} interface repres
 
 This is normally a simple recording of as-close-to-an-impulse as can be found in the space you want to model. For example, if you want to model the reverb in your bathroom, you might set up a microphone near the door to record the sound of a balloon pop or synthesized impulse from the sink. That audio recording could then be used as the buffer.
 
-This _{{domxref("AudioBuffer")}}_ must have the same sample-rate as the `AudioContext` or an exception will be thrown. At the time when this attribute is set, the buffer and the state of the attribute will be used to configure the `ConvolverNode` with this impulse response having the given normalization. The initial value of this attribute is `null`.
+This audio buffer must have the same sample-rate as the `AudioContext` or an exception will be thrown. At the time when this attribute is set, the buffer and the state of the attribute will be used to configure the `ConvolverNode` with this impulse response having the given normalization. The initial value of this attribute is `null`.
 
 ## Value
 
@@ -20,39 +20,32 @@ An {{domxref("AudioBuffer")}}.
 
 ## Examples
 
+### Assigning an audio buffer
+
+The following example creates a convolver node and assigns it an {{domxref("AudioBuffer")}}.
+
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see [app.js](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js) for the code that is excerpted below).
+
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
+// ...
+
 const convolver = audioCtx.createConvolver();
+// ...
 
-// …
-
-// grab audio track via XHR for convolver node
-
-let soundSource;
-let concertHallBuffer;
-
-ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open("GET", "concert-crowd.ogg", true);
-ajaxRequest.responseType = "arraybuffer";
-
-ajaxRequest.onload = () => {
-  const audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(
-    audioData,
-    (buffer) => {
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      soundSource.buffer = concertHallBuffer;
-    },
-    (e) => console.error(`Error with decoding audio data: ${e.err}`),
+// Grab audio track via fetch() for convolver node
+try {
+  const response = await fetch(
+    "https://mdn.github.io/voice-change-o-matic/audio/concert-crowd.ogg",
   );
-};
-
-ajaxRequest.send();
-
-// …
-
-convolver.buffer = concertHallBuffer;
+  const arrayBuffer = await response.arrayBuffer();
+  const decodedAudio = await audioCtx.decodeAudioData(arrayBuffer);
+  convolver.buffer = decodedAudio;
+} catch (error) {
+  console.error(
+    `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+  );
+}
 ```
 
 ## Specifications

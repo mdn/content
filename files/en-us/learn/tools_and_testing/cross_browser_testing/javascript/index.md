@@ -32,7 +32,19 @@ This includes information on using browser dev tools to track down and fix probl
 
 Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavors (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.
 
-Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](https://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/en-US/docs/Web/Guide/AJAX#step_1_%e2%80%93_how_to_make_an_http_request)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
+Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. For example, code to create {{domxref("XMLHttpRequest")}} objects had to have special handling for Internet Explorer 6:
+
+```js
+if (window.XMLHttpRequest) {
+  // Mozilla, Safari, IE7+ ...
+  httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+  // IE 6 and older
+  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+}
+```
+
+This is one of the main reasons why libraries like [jQuery](https://jquery.com/) came into existence — to abstract away differences in browser implementations, so a developer could just use, for example, [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/), which would then handle the differences in the background.
 
 Things have improved significantly since then; modern browsers do a good job of supporting "classic JavaScript features", and the requirement to use such code has diminished as the requirement to support older browsers has lessened (although bear in mind that they have not gone away altogether).
 
@@ -130,7 +142,7 @@ But this fails.
 
 #### The Console API
 
-You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log), which prints a custom message to the console.
+You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log_static), which prints a custom message to the console.
 
 Try inserting the following line just below line 31 (bolded above):
 

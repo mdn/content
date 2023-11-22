@@ -118,7 +118,7 @@ button {
 }
 ```
 
-In the screenshot below, the left column shows the default rendering of an \<input type="radio">, \<input type="checkbox">, \<input type="range">, \<input type="text">, \<input type="date"> input, {{htmlelement('select')}}, {{htmlelement('textarea')}},\<input type="submit">, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.
+In the screenshot below, the left column shows the default rendering of an `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.
 
 ![box model properties effect most input types.](boxmodel_formcontrols1.png)
 
@@ -357,7 +357,6 @@ button:after {
 
 button:hover,
 button:focus {
-  outline: none;
   background: #000;
   color: #fff;
 }

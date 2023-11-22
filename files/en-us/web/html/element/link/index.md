@@ -242,7 +242,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `rel`
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
-- `sizes` {{Experimental_Inline}}
+- `sizes`
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
