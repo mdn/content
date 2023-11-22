@@ -34,8 +34,7 @@ The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Pa
 - `showOptOut`
   - : Whether the user should be given a chance to opt-out during the [transaction confirmation UX](https://w3c.github.io/secure-payment-confirmation/#sctn-transaction-confirmation-ux). Optional, default false.
 - `showOptOut`
-- : Whether the user should be given a chance to opt-out during the
-  [transaction confirmation UX](https://w3c.github.io/secure-payment-confirmation/#sctn-transaction-confirmation-ux). Optional, default false.
+  - : Whether the user should be given a chance to opt-out during the [transaction confirmation UX](https://w3c.github.io/secure-payment-confirmation/#sctn-transaction-confirmation-ux). Optional, default false.
 
 ## Specifications
 
