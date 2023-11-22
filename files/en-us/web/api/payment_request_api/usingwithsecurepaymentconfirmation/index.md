@@ -25,6 +25,7 @@ Selecting "Verify" initiates a Web Authentication flow. When the user successful
 Thus, SPC builds on Web Authentication to enable sites to perform streamlined strong authentication and provide evidence of user consent. SPC will typically be used as part of the authentication framework of a given payment system. For example, SPC is supported by both EMV® 3-D Secure (version 2.3.1) and EMV® Secure Remote Commerce (version 1.3) but is designed to work with a wide variety of payment types, including "push payments" like direct credit transfers and wallet payments.
 
 ## Payment request method
+
 Secure Payment Confirmation leverages underlying capabilities of the Payment Request API. The standardized payment method identifier for the Secure Payment Confirmation payment handler is [secure-payment-confirmation](/en-US/docs/Web/API/Payment_Request_API/Concepts#secure-payment-confirmation).
 
 ## Web authentication extension
