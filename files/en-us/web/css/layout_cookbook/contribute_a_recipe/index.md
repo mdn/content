@@ -77,7 +77,7 @@ It can be handy to include the body CSS rules from our included stylesheet. Take
 
 ### 4. Open a pull request with your example
 
-Make a [PR](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) on the [CSS Examples repo](https://github.com/mdn/css-examples). This way, we can help you with any changes to the example that may be needed before you create your page. Plus, the example will need to be live to be included. This is why it makes sense to create the code examples first, before the explanatory guide. In your PR, explain the pattern and what you are demonstrating.
+Open a [pull request (PR)](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) on the [CSS Examples repo](https://github.com/mdn/css-examples/pulls). This allows us to help you with any changes to the example that may be needed before you create your page. Plus, the example will need to be live to be included. This is why it makes sense first to create the code examples, and then the explanatory guide. In your PR, explain the pattern and what you are demonstrating.
 
 ### 5. Create your page
 
