@@ -269,7 +269,7 @@ If you change the first line of CSS in this example to read `@layer secondLayer,
 
 ### Scoping proximity
 
-Another advanced topic that you might not use right away but may need to understand in the future is {{CSSxRef("@scope")}}. This is an [at-rule](/en-US/docs/Web/CSS/At-rule) that enables you to create a block of rules that will only apply to a specific subsection of the HTML on your page. For example, to specify some styles that will only apply to {{htmlelement("img")}} elements nested inside elements with a class of `feature`:
+Another advanced topic that you might not use right away but may need to understand in the future is {{CSSxRef("@scope")}}. This is an [at-rule](/en-US/docs/Web/CSS/At-rule) that enables you to create a block of rules that will only apply to a specific subsection of the HTML on your page. For example, you can specify styles that will only apply to {{htmlelement("img")}} elements when they're nested inside elements that have a `feature` class:
 
 ```css
 @scope (.feature) {
