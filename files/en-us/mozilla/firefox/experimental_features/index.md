@@ -986,7 +986,7 @@ These changes are described in the following sections.
 
 ### text-wrap: balance & stable values
 
-The [`text-wrap`](/en-US/docs/Web/CSS/text-wrap) CSS property values `balance` and `stable` allow the layout of content to be wrapped for short content in a balanced manner and for editable content without rewrapping while the user is editing.
+The [`text-wrap`](/en-US/docs/Web/CSS/text-wrap) CSS property values `balance` and `stable` allow the layout of short content to be wrapped in a balanced manner and for editable content to not reflow while the user is editing it, respectively.
 (See [Firefox bug 1731541](https://bugzil.la/1731541) for more details.)
 
 <table>
