@@ -25,11 +25,11 @@ The `calc()` function takes a single expression as its parameter, with the expre
 - `-`
   - : Subtraction.
 - `*`
-  - : Multiplication. At least one of the arguments must be a {{cssxref("&lt;number&gt;")}}.
+  - : Multiplication. At least one of the operands must be a {{cssxref("&lt;number&gt;")}}.
 - `/`
   - : Division. The right-hand side must be a {{cssxref("&lt;number&gt;")}}.
 
-The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
+All operands must be suffixed with an appropriate units string, except those that "must be a {{cssxref("&lt;number&gt;")}}". You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
 
 ### Notes
 
