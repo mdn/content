@@ -62,7 +62,7 @@ body
       └─ img
 ```
 
-If we wanted to select just the {{htmlelement("img")}} element inside the {{htmlelement("section")}} with a class of `article-body`, we could:
+If we wanted to select the {{htmlelement("img")}} element inside the {{htmlelement("section")}} with a class of `article-body`, we could do the following:
 
 - Write a selector like `.feature > .article-body > img`. However, that has high specificity so is hard to override, and is also tighly coupled to the DOM structure. If your markup structure changes in the future, you might need to rewrite your CSS.
 - Write something less specific like `.article-body img`. However, that will select all images inside the `section`.
