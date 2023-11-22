@@ -34,13 +34,13 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
 - {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
-  - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
+  - : Returns a string indicating the service worker's registration scope associated with the current service worker registration.
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
 - {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
-  - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
+  - : Returns a string indicating the update via cache mode associated with the current service worker registration. It can be one of the following: `imports`, `all`, or `none`.
 
 ## Instance methods
 
