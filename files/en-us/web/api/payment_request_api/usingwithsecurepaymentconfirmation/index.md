@@ -26,6 +26,7 @@ Thus, SPC builds on Web Authentication to enable sites to perform streamlined st
 
 ## Payment request method
 
+
 Secure Payment Confirmation leverages underlying capabilities of the Payment Request API. The standardized payment method identifier for the Secure Payment Confirmation payment handler is [secure-payment-confirmation](/en-US/docs/Web/API/Payment_Request_API/Concepts#secure-payment-confirmation).
 
 ## Web authentication extension
@@ -90,15 +91,19 @@ navigator.credentials
 SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `bank.com`). This is intended to support the following flow:
 As part of a transaction, the Relying Party (e.g., a bank) authenticates the account holder through some mechanism other than SPC (e.g., by using a one-time passcode or some other mechanism). The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions. The user registers an SPC credential with the Relying Party.
 In order for these steps to happen in the merchant context (that is, without a redirect), the cross-origin iframe must have the 'payment' permission policy set. For example:
+
 ```html
 <!-- Assume parent origin is merchant.com -->
 <!-- Inside this cross-origin iframe, script would be allowed to create a SPC credential for example.org -->
 <iframe src="https://example.org" allow="payment"></iframe>
 ```
+
 ### Authenticating a payment
+
 An origin may invoke the Payment Request API with the `secure-payment-confirmation` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface with transaction details (e.g., the payment currency and amount and the payee origin).
 
 > **Note:** Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the 'payment' permission policy set.
+
 ```js
 const request = new PaymentRequest(
   [
@@ -147,9 +152,13 @@ try {
   // SPC cannot be used; merchant should fallback to traditional flows
 }
 ```
+
 ## Specifications
+
 {{Specifications}}
+
 ## Browser compatibility
+
 {{Compat}}
 ## See also
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
