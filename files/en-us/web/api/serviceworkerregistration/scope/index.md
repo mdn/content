@@ -12,7 +12,7 @@ The **`scope`** read-only property of the {{domxref("ServiceWorkerRegistration")
 
 ## Value
 
-Returns the service worker's registration scope.
+Returns the service worker's registration scope associated with the current service worker registration.
 
 ## Specifications
 

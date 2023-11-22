@@ -12,7 +12,7 @@ The **`updateViaCache`** read-only property of the {{domxref("ServiceWorkerRegis
 
 ## Value
 
-Returns one of the following values:
+Returns the update via cache mode associated with the current service worker registration, can be one of the following values:
 
 - `imports`, meaning the HTTP cache is not consulted for update of the service worker, but is consulted for `importScripts`.
 - `all`, meaning the HTTP cache is consulted in both cases
