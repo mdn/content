@@ -189,7 +189,7 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 }
 ```
 
-When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} pseudo-class function. So for example, in:
+When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally calculated as that selector wrapped inside an {{cssxref(":is", ":is()")}} pseudo-class function. So for example, in:
 
 ```css
 @scope (figure, #primary) {
