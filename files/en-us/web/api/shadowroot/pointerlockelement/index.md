@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.pointerLockElement
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Pointer Lock API")}}
 
 The read-only **`pointerLockElement`** property
 of the {{domxref("ShadowRoot")}} interface provides the
