@@ -426,7 +426,7 @@ img {
 
 In our CSS, we have two `@scope` blocks:
 
-- The first one defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), again demonstrating how `@scope` can be used to theme a specific HTML subset.
+- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
 - The second one again defines its scope root as elements with a class of `.feature`, but also defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that ARE NOT nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
 
 ```css
