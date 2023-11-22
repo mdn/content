@@ -1,13 +1,13 @@
 ---
 title: WebAssembly.instantiateStreaming()
-slug: WebAssembly/JavaScript_interface/instantiateStreaming
+slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 page-type: webassembly-function
-browser-compat: webassembly.api.instantiateStreaming
+browser-compat: webassembly.api.instantiateStreaming_static
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.instantiateStreaming()`** function compiles
+The **`WebAssembly.instantiateStreaming()`** static method compiles
 and instantiates a WebAssembly module directly from a streamed underlying source. This
 is the most efficient, optimized way to load Wasm code.
 
