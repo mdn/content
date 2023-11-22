@@ -117,7 +117,7 @@ div {
 
 ### Using `:scope` in JavaScript
 
-This example demonstrates using the `:scope` pseudo-class in JavaScript. A situation where it can be useful is when you need to get a direct descendant of an already retrieved {{domxref("Element")}}.
+This example demonstrates using the `:scope` pseudo-class in JavaScript. This can be useful if you need to get a direct descendant of an already retrieved {{domxref("Element")}}.
 
 #### HTML
 
