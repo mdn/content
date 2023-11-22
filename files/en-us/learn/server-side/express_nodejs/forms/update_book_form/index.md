@@ -16,7 +16,7 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
     Book.findById(req.params.id).populate("author").populate("genre").exec(),
-    Author.find().exec(),
+    Author.find().sort({ family_name: 1 }).exec(),
     Genre.find().exec(),
   ]);
 
@@ -109,7 +109,7 @@ exports.book_update_post = [
 
       // Get all authors and genres for form
       const [allAuthors, allGenres] = await Promise.all([
-        Author.find().exec(),
+        Author.find().sort({ family_name: 1 }).exec(),
         Genre.find().exec(),
       ]);
 
