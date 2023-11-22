@@ -39,6 +39,7 @@ Secure Payment Confirmation defines a [Web Authentication extension](/en-US/docs
 
 ## Examples
 ### Creating a credential
+
 Creating a credential in Secure Payment Confirmation is done by the same `navigator.credentials.create` call as with Web Authentication, but with a `payment` extension specified.
 ```js
 const publicKey = {
