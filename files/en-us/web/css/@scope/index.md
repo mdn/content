@@ -62,12 +62,12 @@ body
       └─ img
 ```
 
-If we wanted to select the {{htmlelement("img")}} element inside the {{htmlelement("section")}} with a class of `article-body`, we could do the following:
+If you wanted to select the {{htmlelement("img")}} element inside the {{htmlelement("section")}} with a class of `article-body`, you could do the following:
 
 - Write a selector like `.feature > .article-body > img`. However, that has high specificity so is hard to override, and is also tighly coupled to the DOM structure. If your markup structure changes in the future, you might need to rewrite your CSS.
 - Write something less specific like `.article-body img`. However, that will select all images inside the `section`.
 
-This is where `@scope` is useful. It allows you to define a precise scope inside which your selectors are allowed to target elements. For example, we could solve the above problem using a standalone `@scope` block like the following:
+This is where `@scope` is useful. It allows you to define a precise scope inside which your selectors are allowed to target elements. For example, you could solve the above problem using a standalone `@scope` block like the following:
 
 ```css
 @scope (.article-body) to (figure) {
@@ -126,9 +126,9 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 }
 ```
 
-`:scope` is implicitly prepended to all scoped style rules. If you wish to, you can write it explicitly, or you could prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect. (You might find these styles easier to understand.)
+In fact, `:scope` is implicitly prepended to all scoped style rules. If you want, you can explicitly prepend `:scope` or prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect if you find these representations easier to understand.
 
-As such, the three lines in the following block are all equivalent in what they select:
+The three rules in the following block are all equivalent in what they select:
 
 ```css
 @scope (.feature) {
@@ -197,19 +197,15 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
 }
 ```
 
-`& img` is equivalent to `:is(figure, #primary) img`.
-
-Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
+`& img` is equivalent to `:is(figure, #primary) img`. Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
 
 ### The difference between `:scope` and `&` inside `@scope`
 
-`:scope` represents the matched scope root, whereas `&` represents the selector used to match the scope root.
-
-Because of this, it is possible to chain `&` multiple times, whereas you can only use `:scope` once; as you can't match a scope root inside a scope root.
+`:scope` represents the matched scope root, whereas `&` represents the selector used to match the scope root. Because of this, it is possible to chain `&` multiple times. However, you can only use `:scope` once — you can't match a scope root inside a scope root.
 
 ```css
 @scope (.feature) {
-  /* Selects a `.feature` inside the matched root .feature */
+  /* Selects a .feature inside the matched root .feature */
   & & { ... }
 
   /* Doesn't work */
@@ -221,7 +217,7 @@ Because of this, it is possible to chain `&` multiple times, whereas you can onl
 
 `@scope` adds a new criterion to the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade): **scoping proximity**. This states that when two scopes have conflicting styles, the style that has the smallest number of hops up the DOM tree hierarchy to the scope root is applied. Let's look at an example to see what this means.
 
-Take the following HTML snippet, where we are nesting different-themed cards inside one another:
+Take the following HTML snippet, where different-themed cards are nested inside one another:
 
 ```html
 <div class="light-theme">
@@ -235,7 +231,7 @@ Take the following HTML snippet, where we are nesting different-themed cards ins
 </div>
 ```
 
-If we wrote the theme CSS like so, we'd run into trouble:
+If you wrote the theme CSS like so, you'd run into trouble:
 
 ```css
 .light-theme {
@@ -255,9 +251,9 @@ If we wrote the theme CSS like so, we'd run into trouble:
 }
 ```
 
-The innermost paragraph is supposed to be colored black because it is in a light theme card. However, it is being targetted by both `.light-theme p` and `.dark-theme p` and, since the `.dark-theme p` rule appears later in the source order, it wins and the paragraph ends up being wrongly colored white.
+The innermost paragraph is supposed to be colored black because it is inside a light theme card. However, it's targeted by both `.light-theme p` and `.dark-theme p`. Because the `.dark-theme p` rule appears later in the source order, it is applied, and the paragraph ends up being wrongly colored white.
 
-To fix this, we can use `@scope` as follows:
+To fix this, you can use `@scope` as follows:
 
 ```css
 @scope (.light-theme) {
@@ -427,7 +423,7 @@ img {
 In our CSS, we have two `@scope` blocks:
 
 - The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
-- The second one again defines its scope root as elements with a class of `.feature`, but also defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that ARE NOT nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
+- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but in addition defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
 
 ```css
 /* Scoped CSS */
