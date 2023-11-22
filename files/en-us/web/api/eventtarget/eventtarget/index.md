@@ -71,10 +71,9 @@ document.querySelector("#currentValue").innerText = initialValue;
 
 counter.addEventListener("valuechange", (event) => {
   document.querySelector("#currentValue").innerText = event.detail;
-  document.querySelector('#history').insertAdjacentHTML(
-    'beforeend',
-    `<li>${event.detail}</li>`
-  );
+  document
+    .querySelector("#history")
+    .insertAdjacentHTML("beforeend", `<li>${event.detail}</li>`);
 });
 
 document.querySelector("#inc").addEventListener("click", () => {
@@ -82,7 +81,7 @@ document.querySelector("#inc").addEventListener("click", () => {
 });
 
 document.querySelector("#dec").addEventListener("click", () => {
-  counter.decrement()
+  counter.decrement();
 });
 ```
 
