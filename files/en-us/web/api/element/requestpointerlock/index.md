@@ -35,6 +35,14 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 > **Note:** Some browsers do not yet support the promise version of `requestPointerLock()`, just the older synchronous version.
 
+## Security
+
+{{Glossary("Transient activation")}} is required when calling `requestPointerLock()`. The user has to interact with the page or a UI element in order for this feature to work. Also, the target element's associated document must be in the active state.
+
+If calling `requestPointerLock()` with {{domxref("Element.requestFullscreen()", "requestFullscreen()")}}, the `requestPointerLock()` must be called first, because the {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} will consume the state of {{Glossary("Transient activation", "transient activation")}}.
+
+When calling `requestPointerLock()` in an {{htmlelement("iframe")}} element, the `allow-pointer-lock` flag of `sandbox` property is required to set. Also, it is required that there is no other element in other {{htmlelement("iframe")}} elements is in pointer lock mode.
+
 ## Examples
 
 Pointer lock is often used in online games, when you want your mouse movement to be focused on controlling the game, without the distraction of the mouse pointer moving around, going outside the game area, or reaching the edge of the window.
@@ -64,10 +72,6 @@ For more example code, see:
 - [pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock))
 - {{domxref("Pointer Lock API", "Pointer Lock API", "", "nocode")}}
 - [Disable mouse acceleration to provide a better FPS gaming experience](https://web.dev/articles/disable-mouse-acceleration)
-
-## Security
-
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Specifications
 
