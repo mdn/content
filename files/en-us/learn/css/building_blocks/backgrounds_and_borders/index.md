@@ -35,7 +35,7 @@ In this lesson, we will take a look at some of the creative things you can do wi
   </tbody>
 </table>
 
-## Styling backgrounds in CSS
+## Styling backgrounds
 
 The CSS {{cssxref("background")}} property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once.
 
@@ -74,7 +74,7 @@ This example demonstrates two things about background images. By default, the la
 
 **If you specify a background color in addition to a background image then the image displays on top of the color. Try adding a `background-color` property to the example above to see that in action.**
 
-#### Controlling background-repeat
+#### Controlling tiling of background images
 
 The {{cssxref("background-repeat")}} property is used to control the tiling behavior of images. The available values are:
 
@@ -87,7 +87,7 @@ The {{cssxref("background-repeat")}} property is used to control the tiling beha
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}
 
-#### Sizing the background image
+#### Controlling the size of background images
 
 The _balloons.jpg_ image used in the initial background images example, is a large image that was cropped due to being larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take [length](/en-US/docs/Web/CSS/length) or [percentage](/en-US/docs/Web/CSS/percentage) values, to size the image to fit inside the background.
 
@@ -106,7 +106,7 @@ Try the following.
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
 
-#### Positioning the background image
+#### Controlling the position of background images
 
 The {{cssxref("background-position")}} property allows you to choose the position in which the background image appears on the box it is applied to. This uses a coordinate system in which the top-left-hand corner of the box is `(0,0)`, and the box is positioned along the horizontal (`x`) and vertical (`y`) axes.
 
@@ -160,17 +160,7 @@ Finally, you can also use a 4-value syntax in order to indicate a distance from 
 
 > **Note:** `background-position` is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
 
-### Gradient backgrounds
-
-A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
-
-You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [this one](https://cssgradient.io/). You can create a gradient then copy and paste out the source code that generates it.
-
-Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
-
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
-
-### Multiple background images
+#### Using multiple background images
 
 It is also possible to have multiple background images — you specify multiple `background-image` values in a single property value, separating each one with a comma.
 
@@ -194,6 +184,16 @@ Each value of the different properties will match up to the values in the same p
 **Let's play. In the example below I have included two images. To demonstrate the stacking order, try switching which background image comes first in the list. Or play with the other properties to change the position, size, or repeat values.**
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}
+
+### Background gradients
+
+A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
+
+You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [this one](https://cssgradient.io/). You can create a gradient then copy and paste out the source code that generates it.
+
+Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
+
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
 
 ### Background attachment
 
@@ -226,7 +226,7 @@ When placing text on top of a background image or color, you should take care th
 
 Screen readers cannot parse background images; therefore, they should be purely decoration. Any important content should be part of the HTML page and not contained in a background.
 
-## Borders
+## Styling borders
 
 When learning about the Box Model, we discovered how borders affect the size of our box. In this lesson we will look at how to use borders creatively. Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and style of the border in one line of CSS.
 
