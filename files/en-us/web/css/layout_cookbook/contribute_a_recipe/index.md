@@ -51,13 +51,13 @@ Fork the [CSS Examples repo](https://github.com/mdn/css-examples) and then take 
 
 The important parts of this template are as follows:
 
-1. There is a stylesheet for the editor panels with some basic body styling and a JavaScript file for the editor functionality. Leave these files as they are.
+- There is a stylesheet for the editor panels with some basic body styling and a JavaScript file for the editor functionality. Leave these files as they are.
 
-2. The `<head>` contains two style blocks. The first style block is for elements that readers do not need to change to play with the example. The second style block contains items that readers might want to play with. We typically add all our CSS to the first block, then choose the rules to move to the second block. The rules in the second block should be those that are fundamental to the pattern, perhaps those where a reader can change a CSS value and see the pattern update.
+- The `<head>` contains two style blocks. The first style block is for elements that readers do not need to change to play with the example. The second style block contains items that readers might want to play with. We typically add all our CSS to the first block, then choose the rules to move to the second block. The rules in the second block should be those that are fundamental to the pattern, perhaps those where a reader can change a CSS value and see the pattern update.
 
-3. You need to add the HTML for your component twice: first inside the section with the class `preview`, and then inside the `<textarea>` with the class `playable-html`.
+- You need to add the HTML for your component twice: first inside the section with the class `preview`, and then inside the `<textarea>` with the class `playable-html`.
 
-4. The editable CSS from the second `<head>` block must also be copied into the `playable-css` section.
+- The editable CSS from the second `<head>` block must also be copied into the `playable-css` section.
 
 A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
