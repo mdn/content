@@ -18,7 +18,6 @@ This technique is so common in modern web development that the specific term "Aj
 
 - [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - {{DOMxRef("Fetch API")}}
-- [Ajax](/en-US/docs/Web/Guide/AJAX)
 - {{Glossary("SPA", "Single-page application")}}
 - {{DOMxRef("XMLHttpRequest")}}
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
