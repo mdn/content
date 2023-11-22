@@ -30,9 +30,7 @@ The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Pa
   - : Any [WebAuthn extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) that should be used for the passed credential(s). The caller does not need to specify the [payment extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment); it is added automatically.
 - `locale`
   - : An optional list of well-formed {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} language tags, in descending order of priority, that identify the local preferences of the website, i.e., a language priority list {{RFC(4647, "Matching of Language Tags")}}, which the user agent can use to perform [language negotiation](/en-US/docs/Web/HTTP/Content_negotiation) and locale-affected formatting with the caller.
-
   NOTE: The locale is distinct from language or direction metadata associated with specific input members, in that it represents the caller's requested localized experience rather than assertion about a specific string value. See [SPC internationalization Considerations](https://w3c.github.io/secure-payment-confirmation/#sctn-i18n-considerations) for more discussion.
-
 - `showOptOut`
   - : Whether the user should be given a chance to opt-out during the	[transaction confirmation UX](https://w3c.github.io/secure-payment-confirmation/#sctn-transaction-confirmation-ux). Optional, default false.
 
