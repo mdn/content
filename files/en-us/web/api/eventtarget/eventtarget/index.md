@@ -28,6 +28,21 @@ A new instance of the {{domxref("EventTarget")}} object.
 
 ## Examples
 
+### Counter
+
+#### HTML
+
+```html
+<button id="dec" aria-label="Decrement">-</button>
+<span id='currentValue'>0</span>
+<button id="inc" aria-label="Increment">+</button>
+
+<h5>History</h5>
+<ul id='history'></ul>
+```
+
+#### JavaScript
+
 ```js
 class Counter extends EventTarget {
   constructor(initialValue = 0) {
@@ -50,18 +65,30 @@ class Counter extends EventTarget {
   }
 }
 
-const counter = new Counter(100);
+const initialValue = 0;
+const counter = new Counter(initialValue);
+document.querySelector("#currentValue").innerText = initialValue;
 
 counter.addEventListener("valuechange", (event) => {
-  console.log("The new value is:", event.detail);
+  document.querySelector("#currentValue").innerText = event.detail;
+  document.querySelector('#history').insertAdjacentHTML(
+    'beforeend',
+    `<li>${event.detail}</li>`
+  );
 });
 
-counter.increment();
-// => The new value is: 101
+document.querySelector("#inc").addEventListener("click", () => {
+  counter.increment();
+});
 
-counter.decrement();
-// => The new value is: 100
+document.querySelector("#dec").addEventListener("click", () => {
+  counter.decrement()
+});
 ```
+
+#### Result
+
+{{EmbedLiveSample("Counter")}}
 
 ## Specifications
 
