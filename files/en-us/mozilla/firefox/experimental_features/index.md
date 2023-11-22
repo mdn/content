@@ -59,6 +59,47 @@ Layout for `input type="search"` has been updated. This causes a search field to
   </tbody>
 </table>
 
+### showPicker() method for HTML select elements
+
+The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction.
+(See [Firefox bug 1854112](https://bugzil.la/1854112) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>121</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>121</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>121</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>121</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.select.showPicker.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Toggle password display
 
 HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
@@ -1950,16 +1991,10 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
   </tbody>
 </table>
 
-#### ElementInternals: Form associated custom element methods and properties
+#### Custom element state pseudo-class
 
-New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
-
-- The {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
-- The {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
-- The {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
-- The {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
-
-See these bugs for details: [Firefox bug 1556362](https://bugzil.la/1556362), [Firefox bug 1556373](https://bugzil.la/1556373), [Firefox bug 1556365](https://bugzil.la/1556365), [Firefox bug 1556449](https://bugzil.la/1556449).
+Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state.
+(See [Firefox bug 1861466](https://bugzil.la/1861466) for more details.)
 
 <table>
   <thead>
@@ -1972,27 +2007,27 @@ See these bugs for details: [Firefox bug 1556362](https://bugzil.la/1556362), [F
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>95</td>
-      <td>Yes</td>
+      <td>121</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>95</td>
+      <td>121</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>95</td>
+      <td>121</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>95</td>
+      <td>121</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
+      <td colspan="2"><code>dom.element.customstateset.enabled</code></td>
     </tr>
   </tbody>
 </table>

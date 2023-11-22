@@ -998,10 +998,10 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a>, <a href="https://www.w3.org/copyright/document-license/">document use</a>
         and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.
+        <a href="https://www.w3.org/copyright/software-license/">software licensing</a> rules apply. No known royalty-bearing patents.
       </td>
     </tr>
   </tbody>
@@ -1112,11 +1112,11 @@ It's not generally useful for strictly bitmap or photographic images, although i
         >, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>,
         <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
-        <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a>,
+        <a href="https://www.w3.org/copyright/document-license/">document use</a>
         and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a>
+        <a href="https://www.w3.org/copyright/software-license/">software licensing</a>
         rules apply. No known royalty-bearing patents.
       </td>
     </tr>

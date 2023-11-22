@@ -69,7 +69,7 @@ Any dynamic features that require the page to complete loading before being used
 
 ### Reduce the number of inline scripts
 
-Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use modern [AJAX](/en-US/docs/Web/Guide/AJAX) methods to manipulate page content for modern browsers, rather than the older approaches based on `document.write()`.
+Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use [DOM APIs to manipulate page content](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents), rather than `document.write()`.
 
 ### Use modern CSS and valid markup
 
