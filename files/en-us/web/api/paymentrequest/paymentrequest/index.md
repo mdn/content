@@ -39,8 +39,7 @@ new PaymentRequest(methodData, details, options)
       - : A JSON-serializable object that provides optional information that might be
         needed by the supported payment methods. This has to conform to the type expected
         by the payment handler indicated by `supportedMethods`. Developers need to consult
-        whomever controls the payment methods for the expected shape of the data object. If `supportedMethods` is `secure-payment-confirmation`, then the data needs to confirm to the  [SecurePaymentConfirmationRequest dictionary](/en-US/docs/Web/API/SecurePaymentConfirmationRequest).
-
+        whomever controls the payment methods for the expected shape of the data object. If `supportedMethods` is `secure-payment-confirmation`, then the data needs to confirm to the [SecurePaymentConfirmationRequest dictionary](/en-US/docs/Web/API/SecurePaymentConfirmationRequest).
 
 - `details`
 
