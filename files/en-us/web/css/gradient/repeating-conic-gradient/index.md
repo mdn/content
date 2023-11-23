@@ -161,9 +161,9 @@ div {
 
 {{EmbedLiveSample("Off-centered_gradient", 220, 220)}}
 
-### Interpolation in polor color space with hue interpolation methods
+### Interpolation with hue interpolation methods
 
-```html
+```html hidden
 <div class="shorter"></div>
 <div class="longer"></div>
 ```
@@ -189,13 +189,14 @@ div {
 }
 ```
 
+In this example for interpolation hsl color system is being used and hue is being interpolated.
+
 ```css
 .shorter {
   background-image: repeating-conic-gradient(
     in hsl shorter hue,
     red,
-    blue 90deg,
-    green 180deg
+    blue 180deg
   );
 }
 
@@ -203,11 +204,12 @@ div {
   background-image: repeating-conic-gradient(
     in hsl longer hue,
     red,
-    blue 90deg,
-    green 180deg
+    blue 180deg
   );
 }
 ```
+
+The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter) so color goes straight from red to blue taking short arc on [color wheel](/en-US/docs/Glossary/Color_wheel). And the box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer) so the color goes from red to blue via green taking longer arc.
 
 {{EmbedLiveSample('Interpolation in polor color space with hue interpolation methods', 240, 200)}}
 

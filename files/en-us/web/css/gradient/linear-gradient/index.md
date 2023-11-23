@@ -174,9 +174,9 @@ body {
 
 {{EmbedLiveSample("Interpolation in rectangular color space", 120, 120)}}
 
-### Interpolation in polor color space with hue interpolation methods
+### Interpolation with hue interpolation methods
 
-```html
+```html hidden
 <div class="shorter">shorter hue</div>
 <div class="longer">longer hue</div>
 ```
@@ -189,15 +189,19 @@ div {
 }
 ```
 
+In this example for interpolation hsl color system is being used and hue is being interpolated.
+
 ```css
 .shorter {
-  background: linear-gradient(90deg in hsl shorter hue, blue, red);
+  background: linear-gradient(90deg in hsl shorter hue, red, blue);
 }
 
 .longer {
-  background: linear-gradient(90deg in hsl longer hue, blue, red);
+  background: linear-gradient(90deg in hsl longer hue, red, blue);
 }
 ```
+
+The box on the top uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter) so color goes straight from red to blue taking short arc on [color wheel](/en-US/docs/Glossary/Color_wheel). And the box on the bottom uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer) so the color goes from red to blue via green taking longer arc.
 
 {{EmbedLiveSample("Interpolation in polor color space with hue interpolation methods", 120, 120)}}
 

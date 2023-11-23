@@ -120,9 +120,9 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 
 The elliptical gradient will be centered 20% from the top left, and will repeat 10 times between the center and the farthest corner (the bottom right corner). Browsers supporting multi position color stops will display a red and green striped ellipse. Browsers not supporting the syntax yet will see a gradient that goes from red to black and then from blue to green.
 
-### Interpolation in polor color space with hue interpolation methods
+### Interpolation with hue interpolation methods
 
-```html
+```html hidden
 <div class="shorter"></div>
 <div class="longer"></div>
 ```
@@ -148,13 +148,14 @@ div {
 }
 ```
 
+In this example for interpolation hsl color system is being used and hue is being interpolated.
+
 ```css
 .shorter {
   background-image: repeating-radial-gradient(
     circle at center in hsl shorter hue,
     red 30px,
-    blue 60px,
-    green 90px
+    blue 60px
   );
 }
 
@@ -162,11 +163,12 @@ div {
   background-image: repeating-radial-gradient(
     circle at center in hsl longer hue,
     red 30px,
-    blue 60px,
-    green 90px
+    blue 60px
   );
 }
 ```
+
+The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter) so color goes straight from red to blue taking short arc on [color wheel](/en-US/docs/Glossary/Color_wheel). And the box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer) so the color goes from red to blue via green taking longer arc.
 
 {{EmbedLiveSample('Interpolation in polor color space with hue interpolation methods', 240, 200)}}
 
