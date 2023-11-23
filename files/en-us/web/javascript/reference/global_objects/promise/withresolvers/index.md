@@ -74,7 +74,7 @@ async function* readableToAsyncIterable(stream) {
 
 ### Calling withResolvers() on a non-Promise constructor
 
-`Promise.withResolvers()` is a generic method. It can be called on any constructor that implements the same signature as the `Promise()` constructor. For example, we can call it on a constructor that passes it `console.log` as `reject`:
+`Promise.withResolvers()` is a generic method. It can be called on any constructor that implements the same signature as the `Promise()` constructor. For example, we can call it on a constructor that passes `console.log` as the `resolve` and `reject` functions to `executor`:
 
 ```js
 class NotPromise {
