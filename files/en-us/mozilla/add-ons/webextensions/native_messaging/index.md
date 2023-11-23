@@ -275,8 +275,17 @@ You can quickly get started sending and receiving messages with this NodeJS code
       // Remove the header
       const contentWithoutSize = stringData.slice(4, payloadSize + 4);
 
+      // Record leftover data to add back in Chunks
+      let leftoverData = stringData.slice(payloadSize + 4); // Note: flushChunksQueue() zeroes payloadSize
+
       // Reset the read size and the queued chunks
       flushChunksQueue();
+
+      // Add leftover data back in Buffer and repeat processing
+      if (leftoverData.length) {
+        chunks.push(leftoverData);
+        processData();
+      }
 
       const json = JSON.parse(contentWithoutSize);
       // Do something with the data…
