@@ -124,7 +124,7 @@ function App(props) {
         aria-labelledby="list-heading">
         <li className="todo stack-small">
           <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
+            <input id="todo-0" type="checkbox" defaultChecked />
             <label className="todo-label" htmlFor="todo-0">
               Eat
             </label>
