@@ -11,9 +11,8 @@ browser-compat: api.Location.replace
 The **`replace()`** method of the {{DOMXref("Location")}}
 interface replaces the current resource with the one at the provided URL. The difference
 from the {{domxref("Location.assign","assign()")}} method is that after using
-`replace()` the current page will not be saved in session
-{{domxref("History")}}, meaning the user won't be able to use the _back_ button
-to navigate to it.
+`replace()` the current page will not be saved in session {{domxref("History")}},
+meaning the user won't be able to use the _back_ button to navigate to it.
 
 ## Syntax
 

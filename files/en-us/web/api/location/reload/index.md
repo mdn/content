@@ -8,7 +8,7 @@ browser-compat: api.Location.reload
 
 {{ APIRef("HTML DOM") }}
 
-The **`location.reload()`** method reloads the current URL, like the Refresh button.
+The **`reload()`** method of the {{DOMXref("Location")}} interface reloads the current URL, like the Refresh button.
 
 ## Syntax
 

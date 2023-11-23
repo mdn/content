@@ -8,10 +8,10 @@ browser-compat: api.Location.assign
 
 {{ APIRef("HTML DOM") }}
 
-The **`Location.assign()`** method causes the window to load
+The **`assign()`** method of the {{DOMXref("Location")}}
+interface causes the window to load
 and display the document at the URL specified. After the navigation occurs, the user can
-navigate back to the page that called `Location.assign()` by pressing the
-"back" button.
+navigate back to the page that called `Location.assign()` by pressing the "back" button.
 
 ## Syntax
 
