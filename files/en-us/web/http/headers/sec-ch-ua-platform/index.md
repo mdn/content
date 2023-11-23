@@ -40,7 +40,7 @@ Sec-CH-UA-Platform: <platform>
 ### Directives
 
 - `<platform>`
-  - : One of the following strings: `"Android"`, `"Chrome OS"`, `"Chromium OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
+  - : One of the following strings: `"Android"`, `"ChromeOS"`, `"Chromium OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
 
 ## Examples
 
