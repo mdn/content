@@ -253,7 +253,7 @@ async function readFullAsync(length, buffer = new Uint8Array(65536)) {
   const data = [];
   while (data.length < length) {
     const input = await fs.open("/dev/stdin");
-    let { bytesRead } = await input.read({ buffer });
+    const { bytesRead } = await input.read({ buffer });
     await input.close();
     if (bytesRead === 0) {
       break;
