@@ -405,6 +405,7 @@ body {
   margin-top: 1.2rem;
 }
 /* End global styles */
+/* General app styles */
 .todoapp {
   background: #fff;
   box-shadow:
@@ -462,6 +463,7 @@ body {
     font-size: 2.4rem;
   }
 }
+/* End general app styles */
 /* Todo item styles */
 .todo {
   display: flex;
@@ -480,7 +482,7 @@ body {
 .todo-text:focus-visible {
   box-shadow: inset 0 0 0 2px;
 }
-/* CHECKBOX STYLES */
+/* Checkbox styles */
 .c-cb {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
@@ -548,6 +550,7 @@ body {
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+/* End checkbox styles */
 ```
 
 Save and look back at your browser, and your app should now have reasonable styling.
