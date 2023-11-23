@@ -177,9 +177,9 @@ function App(props) {
 export default App;
 ```
 
-Now open `public/index.html` and change the [`<title>`](/en-US/docs/Web/HTML/Element/title) element's text to `TodoMatic`. This way, it will match the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) at the top of our app.
+Now open `index.html` and change the [`<title>`](/en-US/docs/Web/HTML/Element/title) element's text to `TodoMatic`. This way, it will match the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) at the top of our app.
 
-```jsx
+```html
 <title>TodoMatic</title>
 ```
 
