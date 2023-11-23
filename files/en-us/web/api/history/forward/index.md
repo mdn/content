@@ -28,6 +28,11 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
+
 ## Examples
 
 The following examples create a button that moves forward one step in the session

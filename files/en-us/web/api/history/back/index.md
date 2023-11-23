@@ -32,6 +32,11 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
+
 ## Examples
 
 The following short example causes a button on the page to navigate back one entry in

@@ -35,6 +35,11 @@ go(delta)
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
+
 ## Examples
 
 To move back one page (the equivalent of calling {{domxref("History.back",
