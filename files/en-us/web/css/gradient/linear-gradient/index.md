@@ -203,7 +203,7 @@ In this example for interpolation hsl color system is being used and hue is bein
 
 The box on the top uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter) so color goes straight from red to blue taking short arc on [color wheel](/en-US/docs/Glossary/Color_wheel). And the box on the bottom uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer) so the color goes from red to blue via green taking longer arc.
 
-{{EmbedLiveSample("Interpolation in polor color space with hue interpolation methods", 120, 120)}}
+{{EmbedLiveSample("Interpolation with hue interpolation methods", 120, 120)}}
 
 ### Gradient with multi-position color-stops
 
