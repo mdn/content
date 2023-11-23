@@ -242,9 +242,9 @@ The `htmlFor` attribute corresponds to the `for` attribute used in HTML. We cann
 
 ### A note on boolean attributes in JSX
 
-The `defaultChecked` attribute in the previous section is a boolean attribute – an attribute whose value is either `true` or `false`. Like in HTML, a boolean attribute is true if it's present and false if it's absent; the assignment on the right-hand side of the expression is optional. You _may_ explicitly set its value if you want to by passing it in curly braces – for example, `defaultChecked={true}` or `defaultChecked={false}`. This is slightly different than in HTML. Writing `defaultChecked="true"` that will set a _string_ value of `"true"`, rather than a _boolean_ value of `true`.
+The `defaultChecked` attribute in the previous section is a boolean attribute – an attribute whose value is either `true` or `false`. Like in HTML, a boolean attribute is `true` if it's present and `false` if it's absent; the assignment on the right-hand side of the expression is optional. You _may_ explicitly set its value if you want to by passing it in curly braces – for example, `defaultChecked={true}` or `defaultChecked={false}`. This is slightly different than in HTML. Writing `defaultChecked="true"` will set a _string_ value of `"true"` rather than a _boolean_ value, which might not give you the behavior you want.
 
-If you'd like, you can practice writing boolean attributes with another attribute you may have seen before: [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden). `hidden` prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens; then try explicitly setting its value to `false`. Don't forget to remove this code when you're done.
+If you'd like, you can practice writing boolean attributes with another attribute you may have seen before: [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden). `hidden` prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens, then try explicitly setting its value to `false`. Don't forget to remove this code when you're done.
 
 > **Note:** The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
 
