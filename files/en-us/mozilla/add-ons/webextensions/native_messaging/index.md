@@ -239,9 +239,8 @@ You can quickly get started sending and receiving messages with this NodeJS code
 
 ```js
 #!/usr/bin/env -S /full/path/to/node
-// Node.js Native Messaging host
 
-import { open } from "node:fs/promises";
+import fs from "node:fs/promises";
 
 async function getMessage() {
   const header = new Uint32Array(1);
@@ -253,10 +252,8 @@ async function getMessage() {
 async function readFullAsync(length, buffer = new Uint8Array(65536)) {
   const data = [];
   while (data.length < length) {
-    const input = await open("/dev/stdin");
-    let { bytesRead } = await input.read({
-      buffer,
-    });
+    const input = await fs.open("/dev/stdin");
+    let { bytesRead } = await input.read({ buffer });
     await input.close();
     if (bytesRead === 0) {
       break;
@@ -268,7 +265,7 @@ async function readFullAsync(length, buffer = new Uint8Array(65536)) {
 
 async function sendMessage(message) {
   const header = new Uint32Array([message.length]);
-  const stdout = await open(`/proc/${process.pid}/fd/1`, "w");
+  const stdout = await fs.open(`/proc/${process.pid}/fd/1`, "w");
   await stdout.write(header);
   await stdout.write(message);
   await stdout.close();
@@ -280,7 +277,8 @@ async function main() {
       const message = await getMessage();
       await sendMessage(message);
     } catch (e) {
-      process.exit();
+      console.error(e);
+      process.exit(1);
     }
   }
 }
