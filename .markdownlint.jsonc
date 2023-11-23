@@ -16,7 +16,7 @@
     "spaces_per_tab": 2
   },
   "line-length": false,
-  "no-duplicate-header": {
+  "no-duplicate-heading": {
     "allow_different_nesting": true
   },
   "single-title": {
