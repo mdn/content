@@ -111,8 +111,8 @@ The following table summarizes the `Number` object's properties.
 
 | Method                               | Description                                                                                                                           |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat()")}} function.                 |
-| {{jsxref("Number.parseInt()")}}      | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt()")}} function. |
+| {{jsxref("Number.parseFloat()")}}    | Parses a value and returns a floating point number. Same as the global {{jsxref("parseFloat()")}} function.                           |
+| {{jsxref("Number.parseInt()")}}      | Parses a value and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt()")}} function.           |
 | {{jsxref("Number.isFinite()")}}      | Determines whether the passed value is a finite number.                                                                               |
 | {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                    |
 | {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("NaN")}}. More robust version of the original global {{jsxref("isNaN()")}}.           |
