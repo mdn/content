@@ -45,8 +45,8 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the user dismisses the prompt without making a selection,
-    or if the user agent deems the selected directionary to be too sensitive or dangerous,
-    or if the {{domxref('PermissionStatus.state')}} for the selected directionary is not `'granted'` in the specfied `mode`.
+    or if the user agent deems the selected directory to be too sensitive or dangerous,
+    or if the {{domxref('PermissionStatus.state')}} for the selected directory is not `"granted"` in the specified `mode`.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
 
