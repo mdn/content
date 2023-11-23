@@ -31,11 +31,11 @@ A recipe consists of:
 
 To create a recipe and add it to the CSS Layout Cookbook, follow these steps:
 
-1. [Build a pattern](#1-build-a-pattern)
-2. [Create a live example](#2-create-a-live-example)
-3. [Create a downloadable version](#3-create-a-downloadable-version)
-4. [Open a pull request](#4-open-a-pull-request-with-your-example)
-5. [Add your content to MDN](#5-create-your-page)
+1. [Build a pattern](#1._build_a_pattern)
+2. [Create a live example](#2._create_a_live_example)
+3. [Create a downloadable version](#3._create_a_downloadable_version)
+4. [Open a pull request](#4._open_a_pull_request_with_your_example)
+5. [Add your content to MDN](#5._create_your_page)
 
 ### 1. Build a pattern
 
@@ -76,12 +76,11 @@ As the examples include all of our live example code, we want to provide readers
 It can be handy to include the body CSS rules from our included stylesheet. Take a look at [`cookbook-template--download.html`](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template--download.html) as a guide; these rules are provided as a starting point.
 
 ### 4. Open a pull request with your example
-
-Open a [pull request (PR)](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) on the [CSS Examples repo](https://github.com/mdn/css-examples/pulls). This allows us to help you with any changes to the example that may be needed before you create your page. Plus, the example will need to be live to be included. This is why it makes sense first to create the code examples, and then the explanatory guide. In your PR, explain the pattern and what you are demonstrating.
+Open a pull request (PR) on the [CSS Examples repo](https://github.com/mdn/css-examples/pulls). This allows us to help you with any changes to the example that may be needed before you create your page. Plus, the example will need to be live to be included. This is why it makes sense to first create the code examples and then the explanatory guide. In your PR, explain the pattern and what you are demonstrating. See our [guidelines for opening a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request).
 
 ### 5. Create your page
 
-After your example PR is merged, open a pull request to create a new page in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook). See our [guidelines for opening a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request).
+After your example PR is merged, open a pull request to create a new page in the [Layout Cookbook directory](https://github.com/mdn/content/tree/main/files/en-us/web/css/layout_cookbook).
 Use our [template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1).
 The template explains the requirements of each section, and you can refer to other cookbook examples for more help.
 
