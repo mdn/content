@@ -253,7 +253,7 @@ If you'd like, you can practice writing boolean attributes with another attribut
 Paste the following CSS code into `src/index.css` so that it replaces what's currently there:
 
 ```css
-/* RESETS */
+/* Resets */
 *,
 *::before,
 *::after {
@@ -324,8 +324,8 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
-/* GLOBAL STYLES */
+/* End resets */
+/* Global styles */
 .form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
@@ -401,7 +401,7 @@ body {
 .stack-exception {
   margin-top: 1.2rem;
 }
-/* END GLOBAL STYLES */
+/* End global styles */
 .todoapp {
   background: #fff;
   box-shadow:
