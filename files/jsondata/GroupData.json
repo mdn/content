@@ -576,7 +576,7 @@
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
       "interfaces": ["History", "PopStateEvent"],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.history"],
       "events": ["Window: popstate"]
     },
     "HTML DOM": {
