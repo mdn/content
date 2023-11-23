@@ -7,7 +7,7 @@ status:
 browser-compat: api.ScreenDetailed
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`ScreenDetailed`** interface of the [Window Management API](/en-US/docs/Web/API/Window_Management_API) represents detailed information about one specific screen available to the user's device.
 

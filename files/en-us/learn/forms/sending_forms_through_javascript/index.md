@@ -18,8 +18,6 @@ Standard HTML form submission, as described in the previous article, loads the U
 
 Many modern UIs only use HTML forms to collect input from the user, and not for data submission. When the user tries to send the data, the application takes control and transmits the data asynchronously in the background, updating only the parts of the UI that require changes.
 
-Sending arbitrary data asynchronously is generally called [AJAX](/en-US/docs/Web/Guide/AJAX), which stands for **"Asynchronous JavaScript And XML"**.
-
 ### How is it different?
 
 The {{domxref("XMLHttpRequest")}} (XHR) DOM object can build HTTP requests, send them, and retrieve their results. Historically, {{domxref("XMLHttpRequest")}} was designed to fetch and send [XML](/en-US/docs/Web/XML) as an exchange format, which has since been superseded by [JSON](/en-US/docs/Glossary/JSON). But neither XML nor JSON fits into form data request encoding. Form data (`application/x-www-form-urlencoded`) is made of URL-encoded lists of key/value pairs. For transmitting binary data, the HTTP request is reshaped into `multipart/form-data`.
@@ -112,7 +110,7 @@ Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpR
 
 The {{domxref("FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent.
 
-Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects), but here are two examples:
+Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects), but here are two examples:
 
 #### Using a standalone FormData object
 

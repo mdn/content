@@ -103,7 +103,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
-- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("scheduler_property", "Window.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
@@ -195,7 +195,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_Inline}}
   - : Gets default computed style for the specified element, ignoring author stylesheets.
-- {{domxref("Window.getScreenDetails()")}} {{experimental_inline}}
+- {{domxref("Window.getScreenDetails()")}} {{experimental_inline}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance representing the details of all the screens available to the user's device.
 - {{domxref("Window.getSelection()")}}
   - : Returns the selection object representing the selected item(s).

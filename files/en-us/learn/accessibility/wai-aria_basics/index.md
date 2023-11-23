@@ -451,6 +451,6 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles): Categories of ARIA roles and the roles covered on MDN
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
-- [WAI-ARIA authoring practices](https://w3c.github.io/aria-practices/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
