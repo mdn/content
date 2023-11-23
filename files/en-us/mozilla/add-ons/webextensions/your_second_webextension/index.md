@@ -67,7 +67,8 @@ Now create a new file called "manifest.json", and give it the following contents
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
-    "theme_icons": [{
+    "theme_icons": [
+      {
         "light": "icons/beasts-32-light.png",
         "dark": "icons/beasts-32.png",
         "size": 32
