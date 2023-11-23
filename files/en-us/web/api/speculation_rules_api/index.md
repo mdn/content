@@ -56,7 +56,7 @@ The results are kept in a per-document in-memory cache. Any cached prefetches ar
 
 This means that if you prefetch something the user doesn't navigate to, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow. That said, the upfront cost of a prefetch is much smaller than the upfront cost of a prerender, so you are encouraged to adopt prefetching broadly, for example prefetching all of the significant pages on your site, provided they are safe to prefetch (see [Unsafe speculative loading conditions](#unsafe_speculative_loading_conditions) for more details).
 
-Same-site and cross-site prefetches will work, but cross-site prefetches are limited (see ["same-site" and "cross-site"](https://web.dev/same-site-same-origin/#same-site-cross-site) for an explanation of the difference between the two). For privacy reasons cross-site prefetches will currently only work if the user has no cookies set for the destination site — we don't want sites to be able to track user activity via prefetched pages (which they may never even actually visit) based on previously-set cookies.
+Same-site and cross-site prefetches will work, but cross-site prefetches are limited (see ["same-site" and "cross-site"](https://web.dev/articles/same-site-same-origin#same-site-cross-site) for an explanation of the difference between the two). For privacy reasons cross-site prefetches will currently only work if the user has no cookies set for the destination site — we don't want sites to be able to track user activity via prefetched pages (which they may never even actually visit) based on previously-set cookies.
 
 > **Note:** In the future an opt-in will be provided via the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header, but this was not implemented at the time of writing.
 
@@ -87,7 +87,7 @@ Prerendering is restricted to same-origin documents by default. Cross-origin, sa
 
 For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
 
-- `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it.
+- `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it. {{experimental_inline}}
 - It loads subresources loaded via JavaScript, whereas `<link rel="prerender">` doesn't.
 - It doesn't get blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) settings, whereas `<link rel="prerender">` often does.
 - Speculation rules prerender should be treated as a hint and a progressive enhancement. Unlike `<link rel="prerender">`, it is a speculative hint and the browser may choose not to act upon the hint based on user settings, current memory usage, or other heuristics.
@@ -229,7 +229,7 @@ If the functionality only occurs under normal circumstances when JavaScript runs
 
 It is also potentially risky to prefetch a document whose server-rendered contents will change due to actions the user can take on the current page. This could include, for example, flash sale pages or movie theater seat maps. Test such cases carefully, and mitigate such issues by updating content once the page is loaded. See [Server-rendered varying state](#server-rendered_varying_state) for more details about these cases.
 
-> **Note:** Browsers will cache prefetched pages for a short time (Chrome for example caches them for for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
+> **Note:** Browsers will cache prefetched pages for a short time (Chrome for example caches them for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
 
 One final tip is to audit the URLs listed as disallowed in your [`Robots.txt`](/en-US/docs/Glossary/Robots.txt) file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e. they exhibit the conditions described above).
 

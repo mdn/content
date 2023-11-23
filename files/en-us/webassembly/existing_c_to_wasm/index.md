@@ -1,6 +1,7 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -190,6 +191,6 @@ document.body.appendChild(img);
 
 Behold, the glory of a new WebP image.
 
-[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://web.dev/emscripting-a-c-library/)
+[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://web.dev/articles/emscripting-a-c-library)
 
 ![DevTools network panel and the generated image.](result.jpg)

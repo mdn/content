@@ -27,8 +27,8 @@ The `counter()` function (and {{cssxref("counters", "counters()")}} function) is
 
 ### Values
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : A name identifying the counter, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
+- `<counter-name>`
+  - : A {{cssxref("&lt;custom-ident&gt;")}} identifying the counter, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
 - `<counter-style>`
   - : A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols", "symbols()")}} function, where a counter style name is a `numeric`, `alphabetic`, or `symbolic` simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to `decimal`.
 
@@ -119,3 +119,6 @@ li::after {
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
 - CSS [`counters()`](/en-US/docs/Web/CSS/counters) function
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

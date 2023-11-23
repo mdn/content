@@ -30,8 +30,6 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [JavaScript learning area](/en-US/docs/Learn/JavaScript)
   - : Whether you are a complete beginner, or hoping to refresh your skills, this is the place to start.
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
-  - : AJAX is a term that defines a group of technologies allowing web applications to make quick, incremental updates to the user interface without reloading the entire browser page. This makes the application faster and more responsive to user actions.
 
 ## Media
 
@@ -44,7 +42,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## APIs
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
   - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using `XMLHttpRequest`. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.

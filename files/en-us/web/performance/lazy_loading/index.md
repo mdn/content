@@ -64,21 +64,17 @@ Very often, webpages contain many images that contribute to data-usage and how f
 
 #### Loading attribute
 
-The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on an {{HTMLElement("img")}} element (or the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
+The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on an {{HTMLElement("img")}} element, or the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on an {{HTMLElement("iframe")}}, can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
+This allows non-critical resources to load only if needed, potentially speeding up initial page loads and reducing network usage.
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />
 <iframe src="video-player.html" title="..." loading="lazy"></iframe>
 ```
 
-The `load` event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images that are within the {{Glossary("visual viewport")}} that haven't yet loaded.
+The `load` event fires when the eagerly-loaded content has all been loaded. At that time, it's entirely possible (or even likely) that there may be lazily-loaded images or iframes within the {{Glossary("visual viewport")}} that haven't yet loaded.
 
 You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.
-
-#### Polyfill
-
-Include this polyfill to provide support for older and currently incompatible browsers:
-[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill).
 
 #### Intersection Observer API
 
@@ -97,6 +93,5 @@ When browser compatibility is crucial, there are a few options:
 
 ## See also
 
-- [Render blocking CSS](https://web.dev/critical-rendering-path-render-blocking-css/)
-- [Optimizing loading and rendering](https://web.dev/fast/#optimize-webfonts)
-- [Lazy loading images and video](https://web.dev/fast/#lazy-load-images-and-video)
+- [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
+- [Use lazy loading to improve loading speed](https://web.dev/articles/lazy-loading)

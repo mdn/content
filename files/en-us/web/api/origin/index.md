@@ -6,7 +6,7 @@ page-type: web-api-global-property
 browser-compat: api.origin
 ---
 
-{{APIRef()}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The global **`origin`** read-only property returns the origin of the global
 scope, serialized as a string.

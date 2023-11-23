@@ -13,7 +13,7 @@ value.
 
 See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html", "shorter")}}
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
 
 ## Syntax
 
