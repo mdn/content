@@ -271,19 +271,15 @@ async function sendMessage(message) {
   await stdout.close();
 }
 
-async function main() {
-  while (true) {
-    try {
-      const message = await getMessage();
-      await sendMessage(message);
-    } catch (e) {
-      console.error(e);
-      process.exit(1);
-    }
+while (true) {
+  try {
+    const message = await getMessage();
+    await sendMessage(message);
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
   }
 }
-
-main();
 ```
 
 Here's another example written in Python. It listens for messages from the extension. Note that the file has to be executable on Linux. If the message is `"ping"`, then it responds with a message `"pong"`.
