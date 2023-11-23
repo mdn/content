@@ -76,6 +76,7 @@ As the examples include all of our live example code, we want to provide readers
 It can be handy to include the body CSS rules from our included stylesheet. Take a look at [`cookbook-template--download.html`](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template--download.html) as a guide; these rules are provided as a starting point.
 
 ### 4. Open a pull request with your example
+
 Open a pull request (PR) on the [CSS Examples repo](https://github.com/mdn/css-examples/pulls). This allows us to help you with any changes to the example that may be needed before you create your page. Plus, the example will need to be live to be included. This is why it makes sense to first create the code examples and then the explanatory guide. In your PR, explain the pattern and what you are demonstrating. See our [guidelines for opening a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request).
 
 ### 5. Create your page
