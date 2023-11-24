@@ -96,7 +96,7 @@ The URL will be chosen based on the experiment group stored in shared storage. T
 
 The URL Selection operation is a JavaScript class that must follow the rules below (these rules vary for each output gate, depending on their intended use case):
 
-- The actual functionality must be contained inside an asynchronous `run()` method, which must have an array of objects containing URLs as its first paramater, and a data object as its second parameter (when called, the data argument is optional).
+- The actual functionality must be contained in an asynchronous `run()` method, which takes an array of objects containing URLs as its first parameter and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
 
 > **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
