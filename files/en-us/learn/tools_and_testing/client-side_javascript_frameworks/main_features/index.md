@@ -292,7 +292,6 @@ Here's a quick test for our `CounterButton` written with the help of React Testi
 ```js
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 
 import CounterButton from "./CounterButton";
 
