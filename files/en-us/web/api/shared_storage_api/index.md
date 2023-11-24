@@ -25,7 +25,7 @@ To extract useful results from a shared storage worklet, you need to use an **ou
 
 ### Use cases
 
-The Shared Storage API's currently available output gates are discussed in the sections below. In each section, we list typical use cases for each one, and link to guides that provide more information and code examples.
+The currently available output gates for the Shared Storage API are discussed in the sections below. In each section, we list typical use cases for each gate and provide links to guides with more information and code examples.
 
 > **Note:** More output gates will likely be added in the future, to support additional use cases.
 
