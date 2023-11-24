@@ -8,13 +8,15 @@ browser-compat: api.Window.originAgentCluster
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters) (a maximal set of agents that can communicate by operating on shared memory, every agent belongs to exactly one agent cluster) which is origin-keyed.
+The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an _origin-keyed_ [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters), this means that the operating system has provided dedicated resources (for example an operating system process) to this window's origin that are not shared with windows from other origins. and `false` otherwise.
 
-A Document delivered over a {{Glossary("secure context")}} environment can request that it be placed in an origin-keyed agent cluster, by using the `Origin-Agent-Cluster` HTTP response header. This will result Document's [agent cluster key](https://html.spec.whatwg.org/multipage/webappapis.html#agent-cluster-key) to be its origin, instead of the corresponding site. So attempting to relax the {{Glossary("same-origin policy", "same-origin")}} restriction by editing `document.domain` property will take no effect.
+Windows that are part of an origin-keyed cluster are subjects to some additional restrictions, compared with windows that are not. In particular, they cannot:
 
-Note that within a [browsing context group](https://html.spec.whatwg.org/multipage/document-sequences.html#browsing-context-group), same-origin Document objects can never end up in different agent clusters. This means that the `originAgentCluster` of current Document is usually decided by whether the previously-loaded same-origin page has set `Origin-Agent-Cluster` HTTP response header or not.
+- Set {{domxref("Document.domain")}}, which is a legacy feature that normally allows same-site cross-origin pages to synchronously access each other's DOM.
+- Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
+- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages. Note that this feature is only supported in Chrome and will disable in future versions chrome, see [Intent to Ship: Restriction on SharedArrayBuffers](https://groups.google.com/a/chromium.org/g/blink-dev/c/1NKvbIj3dq4/m/Vgfisu5HAwAJ).
 
-Documents with an [opaque origin](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque) or with the [cross-origin isolation mode](https://html.spec.whatwg.org/multipage/webappapis.html#agent-cluster-cross-origin-isolation) of Documents' agent cluster is not `none` are considered as origin-keyed and the `originAgentCluster` property will always return `true`, no matter whether the `Origin-Agent-Cluster` HTTP response header is set or not.
+Note that this feature is only available in {{glossary("Secure Context")}}.
 
 ## Specifications
 
@@ -26,4 +28,4 @@ Documents with an [opaque origin](https://html.spec.whatwg.org/multipage/browser
 
 ## See also
 
-- [Agent Clusters](https://tc39.es/ecma262/#sec-agent-clusters)
+- [Requesting performance isolation with the Origin-Agent-Cluster header](https://web.dev/articles/origin-agent-cluster)
