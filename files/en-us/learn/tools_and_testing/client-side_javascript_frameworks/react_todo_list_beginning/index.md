@@ -243,7 +243,7 @@ The `htmlFor` attribute corresponds to the `for` attribute used in HTML. We cann
 
 ### A note on boolean attributes in JSX
 
-The `defaultChecked` attribute in the previous section is a boolean attribute – an attribute whose value is either `true` or `false`. Like in HTML, a boolean attribute is `true` if it's present and `false` if it's absent; the assignment on the right-hand side of the expression is optional. You _may_ explicitly set its value if you want to by passing it in curly braces – for example, `defaultChecked={true}` or `defaultChecked={false}`.
+The `defaultChecked` attribute in the previous section is a boolean attribute – an attribute whose value is either `true` or `false`. Like in HTML, a boolean attribute is `true` if it's present and `false` if it's absent; the assignment on the right-hand side of the expression is optional. You can explicitly set its value by passing it in curly braces – for example, `defaultChecked={true}` or `defaultChecked={false}`.
 
 Because JSX is JavaScript, there's a gotcha to be aware of with boolean attributes: writing `defaultChecked="false"` will set a _string_ value of `"false"` rather than a _boolean_ value. Non-empty strings are [truthy](/en-US/docs/Glossary/Truthy), so React will consider `defaultChecked` to be `true` and check the checkbox by default. This is not what we want, so we should avoid it.
 
