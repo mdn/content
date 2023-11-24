@@ -375,8 +375,8 @@ myButton.addEventListener(
 
 //function declaration for event listener
 function passIntoEvtListener(e){
-  console.log('Expected Value:', this); // Expected Value: 'Data'
-  console.log('current target:', e.currentTarget.id); // current target: my-button-id
+  console.log("Expected Value:", this); // Expected Value: 'Data'
+  console.log("current target:", e.currentTarget.id); // current target: my-button-id
   };
 ```
 
