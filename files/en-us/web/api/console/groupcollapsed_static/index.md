@@ -14,8 +14,7 @@ button next to it to expand it, revealing the entries created in the group.
 
 Call {{domxref("console/groupEnd_static", "console.groupEnd()")}} to back out to the parent group.
 
-See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and
-examples.
+See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and examples.
 
 {{AvailableInWorkers}}
 
@@ -28,8 +27,8 @@ groupCollapsed(label)
 
 ### Parameters
 
-- `label`
-  - : Label for the group. Optional.
+- `label` {{Optional_Inline}}
+  - : Label for the group.
 
 ### Return value
 
@@ -42,3 +41,11 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.group()")}}
+- {{domxref("console.groupEnd()")}}
+- [Microsoft Edge's documentation for `console.groupCollapsed()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#groupcollapsed)
+- [Node.JS documentation for `console.groupCollapsed()`](https://nodejs.org/docs/latest/api/console.html#consolegroupcollapsed)
+- [Google Chrome's documentation for `console.groupCollapsed()`](https://developer.chrome.com/docs/devtools/console/api/#groupcollapsed)
