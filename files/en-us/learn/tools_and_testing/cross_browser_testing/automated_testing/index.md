@@ -172,7 +172,7 @@ To use each plugin, you need to first install it via npm, then require any depen
 2. Add the following dependency to `gulpfile.js`:
 
    ```js
-   const htmltidy = require("gulp-htmltidy");
+   import htmltidy from "gulp-htmltidy";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
@@ -216,8 +216,8 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const autoprefixer = require("gulp-autoprefixer");
-   const csslint = require("gulp-csslint");
+   import autoprefixer from "gulp-autoprefixer";
+   import csslint from "gulp-csslint";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
@@ -245,19 +245,13 @@ In the input version of the file, you may have noticed that we put an empty {{ht
    ]
    ```
 
-5. Add this line after the const definitions:
-
-   ```js
-   const { series } = require("gulp");
-   ```
-
-6. Export the css task using:
+5. Export the css task using:
 
    ```js
    exports.css = css;
    ```
 
-7. Change the default task to:
+6. Change the default task to:
 
    ```js
    exports.default = series(html, css);
@@ -278,8 +272,8 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const babel = require("gulp-babel");
-   const jshint = require("gulp-jshint");
+   import babel from "gulp-babel";
+   import jshint from "gulp-jshint"
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
