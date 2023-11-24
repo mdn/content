@@ -76,7 +76,7 @@ We include three sections to enable targeting light colors, dark colors, and the
 </section>
 <section class="dark">
   <h2>Dark</h2>
-  <p>This section will be light due to the <code>color-scheme: dark;</code>.</p>
+  <p>This section will be dark due to the <code>color-scheme: dark;</code>.</p>
 </section>
 ```
 
