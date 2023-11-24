@@ -430,32 +430,95 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
    ```js
-   const SauceLabs = require("saucelabs");
+   const SauceLabs = require("saucelabs").default;
 
-   let myAccount = new SauceLabs({
-     username: "your-sauce-username",
-     password: "your-sauce-api-key",
-   });
-
-   myAccount.getAccountDetails((err, res) => {
-     console.log(res);
-     myAccount.getServiceStatus((err, res) => {
-       // Status of the Sauce Labs services
-       console.log(res);
-       myAccount.getJobs((err, jobs) => {
-         // Get a list of all your jobs
-         for (const job of jobs) {
-           myAccount.showJob(job.id, (err, res) => {
-             let str = `${res.id}: Status: ${res.status}`;
-             if (res.error) {
-               str += `\x1b[31m Error: ${res.error}\x1b[0m`;
-             }
-             console.log(str);
-           });
-         }
-       });
+   (async() => {
+     const myAccount = new SauceLabs({
+       username: "your-sauce-username",
+       password: "your-sauce-api-key",
      });
-   });
+
+     // get full webdriver url from the client depending on region:
+     console.log(myAccount.webdriverEndpoint); // outputs "https://ondemand.us-west-1.saucelabs.com/
+
+     // get job details of last run job
+     const jobs = await myAccount.listJobs("your-sauce-username", {
+       limit: 1,
+       full: true
+     });
+
+     console.log(jobs);
+     /**
+       * outputs:
+       * { jobs:
+         [ { browser_short_version: '72',
+             video_url:
+               'https://assets.saucelabs.com/jobs/dcdc08ca0c7fa14eee909a093d11567328/video.flv',
+               creation_time: 1551711453,
+              'custom-data': null,
+              browser_version: '72.0.3626.81',
+              owner: '<username-redacted>',
+              id: 'dc08ca0c7fa14eee909a093d11567328',
+              record_screenshots: true,
+              record_video: true,
+              build: null,
+              passed: null,
+              public: 'team',
+              end_time: 1551711471,
+              status: 'complete',
+              log_url:
+               'https://assets.saucelabs.com/jobs/dc08ca0c7fa14eee909a093d11567328/selenium-server.log',
+              start_time: 1551711454,
+              proxied: false,
+              modification_time: 1551711471,
+              tags: [],
+              name: null,
+              commands_not_successful: 1,
+              consolidated_status: 'complete',
+              manual: false,
+              assigned_tunnel_id: null,
+              error: null,
+              os: 'Windows 2008',
+              breakpointed: null,
+              browser: 'googlechrome' } ] }
+         */
+      
+       /**
+       * start Sauce Connect Proxy
+       */
+       const sc = await myAccount.startSauceConnect({
+        /**
+         * you can pass in a `logger` method to print Sauce Connect log messages
+         */
+        logger: (stdout) => console.log(stdout),
+        /**
+         * see all available parameters here: https://docs.saucelabs.com/dev/cli/sauce-connect-proxy/
+         * all parameters have to be applied camel cased instead of with hyphens, e.g.
+         * to apply the `--tunnel-name` parameter, set:
+         */
+        tunnelName: "my-tunnel",
+       });
+
+   // run a test
+   // ...
+   
+   // close Sauce Connect
+   await sc.close();
+
+   // upload additional log files and attach it to your Sauce job
+   await myAccount.uploadJobAssets("76e693dbe6ff4910abb0bc3d752a971e", [
+    // either pass in file names
+    "./logs/video.mp4",
+    "./logs/log.json",
+    // or file objects
+    {
+      filename: "myCustomLogFile.json",
+      data: {
+        someLog: "data",
+      },
+    },
+   ]);
+   })();
    ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
