@@ -63,7 +63,7 @@ export default Todo;
 This is OK so far, but our component should return something useful! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
 
 ```jsx
-export default function Todo() {
+function Todo() {
   return (
     <li className="todo stack-small">
       <div className="c-cb">
@@ -83,6 +83,8 @@ export default function Todo() {
     </li>
   );
 }
+
+export default Todo;
 ```
 
 Now we have something we can use. In `App.jsx`, add the following line near the top of the file to import `Todo`:
