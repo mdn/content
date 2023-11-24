@@ -30,8 +30,8 @@ profileEnd(profileName)
 
 ### Parameters
 
-- `profileName`
-  - : The name to give the profile. This parameter is optional.
+- `profileName` {{Optional_Inline}}
+  - : The name to give the profile.
 
 ### Return value
 

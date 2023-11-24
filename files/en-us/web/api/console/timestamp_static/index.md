@@ -24,8 +24,8 @@ timeStamp(label)
 
 ### Parameters
 
-- `label`
-  - : Label for the timestamp. Optional.
+- `label` {{Optional_Inline}}
+  - : Label for the timestamp.
 
 ### Return value
 

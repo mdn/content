@@ -26,8 +26,8 @@ profile(profileName)
 
 ### Parameters
 
-- `profileName`
-  - : The name to give the profile. Optional.
+- `profileName` {{Optional_Inline}}
+  - : The name to give the profile.
 
 ### Return value
 
