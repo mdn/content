@@ -1,5 +1,5 @@
 ---
-title: "window: queryLocalFonts() method"
+title: "Window: queryLocalFonts() method"
 short-title: queryLocalFonts()
 slug: Web/API/Window/queryLocalFonts
 page-type: web-api-instance-method
