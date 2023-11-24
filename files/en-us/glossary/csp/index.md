@@ -1,4 +1,4 @@
----
+ChinoJones:patch-9---
 title: CSP
 slug: Glossary/CSP
 page-type: glossary-definition
