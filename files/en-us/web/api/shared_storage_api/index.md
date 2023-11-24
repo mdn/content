@@ -76,7 +76,7 @@ async function injectContent() {
 }
 ```
 
-> _Note:_ The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
+> **Note:** The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
 
 ### Reading and processing data from shared storage
 
