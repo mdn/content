@@ -482,7 +482,6 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
               breakpointed: null,
               browser: 'googlechrome' } ] }
          */
-      
        /**
         * you can pass in a `logger` method to print Sauce Connect log messages
         */
