@@ -21,7 +21,7 @@ The Shared Storage API provides a flexible solution to fulfill such use cases â€
 
 Like other storage APIs, you can write to shared storage at any time. However, you can only read shared storage data from inside a {{domxref("SharedStorageWorklet", "worklet", "", "nocode")}}. Worklets provide a secure environment inside which you can process shared storage data and return useful results, but you can't directly share the data with the associated browsing context.
 
-To extract useful results from a shared storage worklet, you need to use an **output gate**. Output gates are mechanisms that fulfill a specific type of use case, for example selecting a URL from a provided list to display to the user based on shared storage data. Any results to be displayed to the user will be shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API) where they can't be accessed from the embedding page.
+To extract useful results from a shared storage worklet, you need to use an **output gate**. These gates serve specific purposes such as selecting a URL from a provided list to display to the user based on shared storage data. Results meant for the user are shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API) where they can't be accessed from the embedding page.
 
 ### Use cases
 
