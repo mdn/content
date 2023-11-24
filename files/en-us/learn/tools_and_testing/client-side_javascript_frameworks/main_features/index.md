@@ -289,7 +289,7 @@ Each framework has extensive tools in its ecosystem, with capabilities for unit 
 
 Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
 
-```js
+```jsx
 import { fireEvent, render, screen } from "@testing-library/react";
 
 import CounterButton from "./CounterButton";
