@@ -444,7 +444,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
      // get job details of last run job
      const jobs = await myAccount.listJobs("your-sauce-username", {
        limit: 1,
-       full: true
+       full: true,
      });
 
      console.log(jobs);
