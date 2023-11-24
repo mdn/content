@@ -52,12 +52,6 @@ mkdir src/components
 touch src/components/Todo.jsx
 ```
 
-Our new `Todo.jsx` file is currently empty! Open it up and give it its first line:
-
-```jsx
-import React from "react";
-```
-
 Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.jsx` too, as follows. In this code, we define the function and export it:
 
 ```jsx
