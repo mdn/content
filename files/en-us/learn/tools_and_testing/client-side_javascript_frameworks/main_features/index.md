@@ -224,11 +224,9 @@ import AuthorCredit from "./components/AuthorCredit";
 Once that's done, `AuthorCredit` could be used inside the `Article` component like this:
 
 ```jsx
-// …
-
-<AuthorCredit />
-
-// …
+<Article>
+  <AuthorCredit />
+</Article>
 ```
 
 ### Dependency injection
