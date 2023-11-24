@@ -39,7 +39,7 @@ _Also inherits methods from its parent interface, {{domxref("WritableStream")}}.
 <!-- WebTransportSendStream.sendGroup not implemented in any browser -->
 
 - {{domxref("WebTransportSendStream.sendOrder")}} {{Experimental_Inline}}
-  - : ?.
+  - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 
 ## Examples
 
