@@ -57,8 +57,8 @@ Writing the data is simple — you use methods defined on the {{domxref("SharedS
 
 This functionality is available in two different contexts:
 
-- In the main browsing context that your site or app is running in, on {{domxref("WindowSharedStorage")}}, which is available via `window.sharedStorage`.
-- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}, which is available via `this.sharedStorage`.
+- In the main browsing context, where your site or app runs, on {{domxref("WindowSharedStorage")}}. This is available via `window.sharedStorage`.
+- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is is available via `this.sharedStorage`.
 
 In our A/B testing example, we define a function in our app context that generates a random number — 0 or 1 — to represent an experiment group to assign the current user to, and then run the {{domxref("SharedStorage.set", "window.sharedStorage.set()")}} function to assign the user to a group and save the result in shared storage:
 
