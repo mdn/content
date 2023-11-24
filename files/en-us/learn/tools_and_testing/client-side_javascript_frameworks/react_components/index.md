@@ -60,7 +60,7 @@ function Todo() {}
 export default Todo;
 ```
 
-This is OK so far, but our component has to return something! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
+This is OK so far, but our component should return something useful! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
 
 ```jsx
 export default function Todo() {
@@ -84,8 +84,6 @@ export default function Todo() {
   );
 }
 ```
-
-> **Note:** Components must always return something. If at any point in the future you try to render a component that does not return anything, React will display an error in your browser.
 
 Our `Todo` component is complete, at least for now; now we can use it. In `App.jsx`, add the following line near the top of the file to import `Todo`:
 
