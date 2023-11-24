@@ -45,20 +45,20 @@ That second bullet is especially valuable: making a component out of common UI e
 
 ## Make a `<Todo />`
 
-Before we can make a component, we should create a new file for it. In fact, we should make a directory just for our components. The following commands make a `components` directory and then, within that, a file called `Todo.js`. Make sure you're in the root of your app before you run these!
+Before we can make a component, we should create a new file for it. In fact, we should make a directory just for our components. The following commands make a `components` directory and then, within that, a file called `Todo.jsx`. Make sure you're in the root of your app before you run these!
 
 ```bash
 mkdir src/components
-touch src/components/Todo.js
+touch src/components/Todo.jsx
 ```
 
-Our new `Todo.js` file is currently empty! Open it up and give it its first line:
+Our new `Todo.jsx` file is currently empty! Open it up and give it its first line:
 
 ```jsx
 import React from "react";
 ```
 
-Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.js` too, as follows. In this code, we define the function and export it:
+Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.jsx` too, as follows. In this code, we define the function and export it:
 
 ```jsx
 function Todo() {
@@ -70,7 +70,7 @@ function Todo() {
 export default Todo;
 ```
 
-This is OK so far, but our component has to return something! Go back to `src/App.js`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.js` so that it reads like this:
+This is OK so far, but our component has to return something! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
 
 ```jsx
 export default function Todo() {
@@ -97,13 +97,13 @@ export default function Todo() {
 
 > **Note:** Components must always return something. If at any point in the future you try to render a component that does not return anything, React will display an error in your browser.
 
-Our `Todo` component is complete, at least for now; now we can use it. In `App.js`, add the following line near the top of the file to import `Todo`:
+Our `Todo` component is complete, at least for now; now we can use it. In `App.jsx`, add the following line near the top of the file to import `Todo`:
 
 ```jsx
 import Todo from "./components/Todo";
 ```
 
-With this component imported, you can replace all of the `<li>` elements in `App.js` with `<Todo />` component calls. Your `<ul>` should read like this:
+With this component imported, you can replace all of the `<li>` elements in `App.jsx` with `<Todo />` component calls. Your `<ul>` should read like this:
 
 ```jsx
 <ul
@@ -130,7 +130,7 @@ Components are powerful because they let us re-use pieces of our UI, and refer t
 
 In order to track the names of tasks we want to complete, we should ensure that each `<Todo />` component renders a unique name.
 
-In `App.js`, give each `<Todo />` a name prop. Let's use the names of our tasks that we had before:
+In `App.jsx`, give each `<Todo />` a name prop. Let's use the names of our tasks that we had before:
 
 ```jsx
 <Todo name="Eat" />
@@ -138,7 +138,7 @@ In `App.js`, give each `<Todo />` a name prop. Let's use the names of our tasks 
 <Todo name="Repeat" />
 ```
 
-When your browser refreshes, you will see… the exact same thing as before. We gave our `<Todo />` some props, but we aren't using them yet. Let's go back to `Todo.js` and remedy that.
+When your browser refreshes, you will see… the exact same thing as before. We gave our `<Todo />` some props, but we aren't using them yet. Let's go back to `Todo.jsx` and remedy that.
 
 First modify your `Todo()` function definition so that it takes `props` as a parameter. You can `console.log()` your `props` as we did before, if you'd like to check that they are being received by the component correctly.
 
@@ -177,7 +177,7 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 
 ### Is it `completed`?
 
-In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
+In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give each `<Todo />` call in `App.jsx` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
 
 ```jsx
 <Todo name="Eat" completed={true} />
@@ -185,7 +185,7 @@ In our original static list, only `Eat` was checked. Once again, we want to reus
 <Todo name="Repeat" completed={false} />
 ```
 
-As before, we must go back to `Todo.js` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
+As before, we must go back to `Todo.jsx` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
 
 ```jsx
 <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
@@ -209,7 +209,7 @@ To follow the same pattern we had initially, let's give each instance of the `<T
 <Todo name="Repeat" completed={false} id="todo-2" />
 ```
 
-Now go back to `Todo.js` and make use of the `id` prop. It needs to replace the value of the `id` attribute of the `<input />` element, as well as the value of its label's `htmlFor` attribute:
+Now go back to `Todo.jsx` and make use of the `id` prop. It needs to replace the value of the `id` attribute of the `<input />` element, as well as the value of its label's `htmlFor` attribute:
 
 ```jsx
 <div className="c-cb">
@@ -230,7 +230,7 @@ We can clean up our code with one of JavaScript's core abilities: iteration. To 
 
 Each of our tasks currently contains three pieces of information: its name, whether it has been checked, and its unique ID. This data translates nicely to an object. Since we have more than one task, an array of objects would work well in representing this data.
 
-In `src/index.js`, make a new `const` beneath the final import, but above `ReactDOM.render()`:
+In `src/index.jsx`, make a new `const` beneath the final import, but above `ReactDOM.render()`:
 
 ```jsx
 const DATA = [
@@ -240,7 +240,7 @@ const DATA = [
 ];
 ```
 
-Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line of `src/index.js` should read like this:
+Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line of `src/index.jsx` should read like this:
 
 ```jsx
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -326,19 +326,19 @@ Now that we've got our most important component sorted out, we can turn the rest
 Since we know we need both, we can batch some of the file creation work together with a terminal command. Run this command in your terminal, taking care that you're in the root directory of your app:
 
 ```bash
-touch src/components/Form.js src/components/FilterButton.js
+touch src/components/Form.jsx src/components/FilterButton.jsx
 ```
 
 ### The `<Form />`
 
-Open `components/Form.js` and do the following:
+Open `components/Form.jsx` and do the following:
 
-- Import `React` at the top of the file, like we did in `Todo.js`.
+- Import `React` at the top of the file, like we did in `Todo.jsx`.
 - Make yourself a new `Form()` component with the same basic structure as `Todo()`.
-- Copy the `<form>` tags and everything between them from inside `App.js`, and paste them inside `Form()`'s `return` statement.
+- Copy the `<form>` tags and everything between them from inside `App.jsx`, and paste them inside `Form()`'s `return` statement.
 - Export `Form` at the end of the file.
 
-Your `Form.js` file should read like this:
+Your `Form.jsx` file should read like this:
 
 ```jsx
 import React from "react";
@@ -370,7 +370,7 @@ export default Form;
 
 ### The \<FilterButton />
 
-Do the same things you did to create `Form.js` inside `FilterButton.js`, but call the component `FilterButton()` and copy the HTML for the first button inside the `<div>` element with the `class` of `filters` from `App.js` into the `return` statement.
+Do the same things you did to create `Form.jsx` inside `FilterButton.jsx`, but call the component `FilterButton()` and copy the HTML for the first button inside the `<div>` element with the `class` of `filters` from `App.jsx` into the `return` statement.
 
 The file should read like this:
 
@@ -396,9 +396,9 @@ export default FilterButton;
 
 Let's make use of our new components.
 
-Add some more `import` statements to the top of `App.js`, to import them.
+Add some more `import` statements to the top of `App.jsx`, to import them.
 
-Then, update the `return` statement of `App()` so that it renders our components. When you're done, `App.js` will read like this:
+Then, update the `return` statement of `App()` so that it renders our components. When you're done, `App.jsx` will read like this:
 
 ```jsx
 import React from "react";
