@@ -197,7 +197,7 @@ To use each plugin, you need to first install it via npm, then require any depen
 
    ```js
    const _default = html;
-   export { _default as default};
+   export { _default as default };
    ```
 
 Here we are grabbing our development `index.html` file with `gulp.src()`, which allows us to grab a source file to do something with.
