@@ -79,7 +79,7 @@ The `inherits: false;` property ensures that the custom property does not inheri
 The element with the `.child` class has a style declaration that sets its background to the `--box-color` property value.
 The value `green` set in the parent element is not defined in the scope of the `.child` element, and the initial value of `cornflowerblue` is used:
 
-```css hidden live-sample___at-property-no-inheritance
+```css hidden
 div {
   font-family: sans-serif;
   width: 200px;
@@ -96,7 +96,7 @@ div {
 }
 ```
 
-```css live-sample___at-property-no-inheritance
+```css
 @property --box-color {
   syntax: "<color>";
   inherits: false;
@@ -113,7 +113,7 @@ div {
 }
 ```
 
-```html live-sample___at-property-no-inheritance
+```html
 <div class="parent">
   <div class="child">
     <p>@property at-rule example</p>
@@ -121,7 +121,7 @@ div {
 </div>
 ```
 
-{{EmbedLiveSample("at-property-no-inheritance",600,260)}}
+{{EmbedLiveSample("",600,260)}}
 
 ### Using initial values
 
