@@ -159,9 +159,9 @@ Read more about the JavaScript used in this section:
 - [`document.createDocumentFragment()`](/en-US/docs/Web/API/Document/createDocumentFragment)
 - [`document.createElement()`](/en-US/docs/Web/API/Document/createElement)
 - [`eventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)
-- [`node.appendChild()`](/en-US/docs/Web/API/Node/appendChild)
-- [`node.removeChild()`](/en-US/docs/Web/API/Node/removeChild)
-- [`node.textContent`](/en-US/docs/Web/API/Node/textContent)
+- [`Node.appendChild()`](/en-US/docs/Web/API/Node/appendChild)
+- [`Node.removeChild()`](/en-US/docs/Web/API/Node/removeChild)
+- [`Node.textContent`](/en-US/docs/Web/API/Node/textContent)
 
 ## Another way to build UIs
 
