@@ -9,7 +9,7 @@ browser-compat: api.Sanitizer
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-> **Note:** This documentation reflects stale browser implementations.
+> **Warning:** This documentation reflects stale browser implementations.
 > The specification has changed significantly since the docs were written, and they will need to be updated once browser implementations catch up.
 
 {{securecontext_header}}
