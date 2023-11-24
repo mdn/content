@@ -201,7 +201,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-This allows us to use {{domxref("console.log()")}} and {{domxref("console.error()")}} to log information to the log box in the document.
+This allows us to use {{domxref("console/log()")}} and {{domxref("console.error_static", "console.log()")}} and {{domxref("console.error()")}} to log information to the log box in the document.
 
 ##### Starting display capture
 

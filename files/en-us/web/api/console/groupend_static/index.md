@@ -36,4 +36,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- {{domxref("console.group()")}}
+- {{domxref("console/group_static", "console.group()")}}

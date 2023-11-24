@@ -40,6 +40,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- {{domxref("console.time()")}}
-- {{domxref("console.timeEnd()")}}
+- {{domxref("console/time_static", "console.time()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
 - [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)

@@ -14,9 +14,9 @@ The **`console.profile()`** starts recording a performance profile (for example,
 
 You can optionally supply an argument to name the profile and this then enables you to
 stop only that profile if multiple profiles being recorded. See
-{{domxref("console.profileEnd()")}} to see how this argument is interpreted.
+{{domxref("console/profileEnd_static", "console.profileEnd()")}} to see how this argument is interpreted.
 
-To stop recording call {{domxref("console.profileEnd()")}}.
+To stop recording call {{domxref("console/profileEnd_static", "console.profileEnd()")}}.
 
 {{AvailableInWorkers}}
 
@@ -41,4 +41,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- {{domxref("console.profileEnd()")}}
+- {{domxref("console/profileEnd_static", "console.profileEnd()")}}

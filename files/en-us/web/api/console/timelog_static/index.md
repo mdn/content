@@ -8,7 +8,7 @@ browser-compat: api.console.timeLog_static
 
 {{APIRef("Console API")}}{{AvailableInWorkers}}
 
-The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console.time()")}}.
+The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console/time_static", "console.time()")}}.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ None ({{jsxref("undefined")}}).
 
 The `console.timeLog()` method logs the current value of a timer.
 
-The method can be passed the name of a timer. This will attempt to log the value of a timer created with that name in a previous call to {{domxref("console.time()")}}:
+The method can be passed the name of a timer. This will attempt to log the value of a timer created with that name in a previous call to {{domxref("console/time_static", "console.time()")}}:
 
 ```js
 console.time("reticulating splines");

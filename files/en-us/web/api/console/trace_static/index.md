@@ -30,7 +30,7 @@ trace(object1, /* …, */ objectN)
 - `objects` {{optional_inline}}
   - : Zero or more objects to be output to console along with the trace. These are
     assembled and formatted the same way they would be if passed to the
-    {{domxref("console.log()")}} method.
+    {{domxref("console/log_static", "console.log()")}} method.
 
 ### Return value
 
