@@ -320,7 +320,7 @@ Now that we've got our most important component sorted out, we can turn the rest
 Since we know we need both, we can batch some of the file creation work together with a terminal command. Run this command in your terminal, taking care that you're in the root directory of your app:
 
 ```bash
-touch src/components/Form.jsx src/components/FilterButton.jsx
+touch src/components/{Form,FilterButton}.jsx
 ```
 
 ### The `<Form />`
