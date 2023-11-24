@@ -41,9 +41,7 @@
     },
     "Battery API": {
       "overview": ["Battery Status API"],
-      "guides": [
-        "/Apps/Build/gather_and_modify_data/retrieving_battery_status_information"
-      ],
+      "guides": [],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
       "properties": [],
