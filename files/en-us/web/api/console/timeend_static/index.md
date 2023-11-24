@@ -8,7 +8,7 @@ browser-compat: api.console.timeEnd_static
 
 {{APIRef("Console API")}}
 
-The **`console.timeEnd()`** stops a timer that was previously started by calling {{domxref("console/time_static", "console.time()")}}.
+The **`console.timeEnd()`** static method stops a timer that was previously started by calling {{domxref("console/time_static", "console.time()")}}.
 
 See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for details and examples.
 
