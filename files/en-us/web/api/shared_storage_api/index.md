@@ -39,9 +39,9 @@ The **URL Selection** output gate, accessed via the {{domxref("WindowSharedStora
 
 #### Run
 
-The **Run** output gate (via the {{domxref("WindowSharedStorage.run", "run()")}} method) is intended as a generic way to process some shared storage data.
+The **Run** output gate, accessed via the {{domxref("WindowSharedStorage.run", "run()")}} method, is intended to be used in a generic way to process some shared storage data.
 
-The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) can use the Run output gate to process shared storage data and generate aggregated reports. These can be used for the following use cases:
+The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) can use the Run output gate to process shared storage data and generate aggregated reports. These reports can be used in the following use cases:
 
 - [**Unique reach reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/): Content producers and advertisers often want to know how many unique people saw their content. You can use shared storage to report on the first time a user saw your ad or embedded publication, and prevent duplicative counting of that same user on a different site, giving you an aggregated noisy report of your approximate unique reach.
 - [**User demographic reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/user-demographics/): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites, in embedded contexts.
