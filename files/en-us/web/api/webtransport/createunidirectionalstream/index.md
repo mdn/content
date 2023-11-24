@@ -11,7 +11,7 @@ browser-compat: api.WebTransport.createUnidirectionalStream
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
 
 The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportSendStream")}} object.
-This object inherits from {{domxref("WriteableStream")}}, and can be used to reliably write data to the server, and to query stream statistics and other information.
+This object inherits from {{domxref("WritableStream")}}, and can be used to reliably write data to the server, and to query stream statistics and other information.
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
