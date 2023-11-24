@@ -235,6 +235,8 @@ const DATA = [
 ];
 ```
 
+> **Note:** If your text editor has an [ESLint](https://eslint.org/) plugin, you may see a warning on this `DATA` const. This warning comes from the ESLint configuration supplied by the Vite template we used, and it doesn't apply to this code. You can safely suppress the warning by adding `// eslint-disable-next-line` to the line above the `DATA` const.
+
 Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line of `src/main.jsx` should read like this:
 
 ```jsx
