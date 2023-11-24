@@ -18,7 +18,7 @@ The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 width: calc(100% - 80px);
 ```
 
-The `calc()`` function takes a single expression as its parameter, and the expression's result is used as the value for a CSS property. In this expression, the [operands](https://developer.mozilla.org/en-US/docs/Glossary/Operand) can be combined using the [operators](https://developer.mozilla.org/en-US/docs/Glossary/Operator) listed below. When the expression contains multiple operands,`calc()` uses the standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
+The `calc()` function takes a single expression as its parameter, and the expression's result is used as the value for a CSS property. In this expression, the [operands](/en-US/docs/Glossary/Operand) can be combined using the [operators](/en-US/docs/Glossary/Operator) listed below. When the expression contains multiple operands,`calc()` uses the standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
 
 - `+`
   - : Adds the specified operands.
