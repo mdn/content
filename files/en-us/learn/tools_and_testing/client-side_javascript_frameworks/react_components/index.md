@@ -275,7 +275,7 @@ This gets us some of the way towards showing all the components again, but we've
 
 ![Our todo list app with the todo item labels just shown bunched up on one line](todo-list-unstructured-names.png)
 
-To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:
+To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX is JavaScript, so we can use it alongside any other, more familiar JavaScript syntax. Let's try the following instead of what we have already:
 
 ```jsx
 const taskList = props.tasks?.map((task) => <Todo />);
