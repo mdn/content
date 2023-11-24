@@ -327,7 +327,6 @@ touch src/components/Form.jsx src/components/FilterButton.jsx
 
 Open `components/Form.jsx` and do the following:
 
-- Import `React` at the top of the file, like we did in `Todo.jsx`.
 - Make yourself a new `Form()` component with the same basic structure as `Todo()`.
 - Copy the `<form>` tags and everything between them from inside `App.jsx`, and paste them inside `Form()`'s `return` statement.
 - Export `Form` at the end of the file.
@@ -335,8 +334,6 @@ Open `components/Form.jsx` and do the following:
 Your `Form.jsx` file should read like this:
 
 ```jsx
-import React from "react";
-
 function Form(props) {
   return (
     <form>
@@ -369,8 +366,6 @@ Do the same things you did to create `Form.jsx` inside `FilterButton.jsx`, but c
 The file should read like this:
 
 ```jsx
-import React from "react";
-
 function FilterButton(props) {
   return (
     <button type="button" className="btn toggle-btn" aria-pressed="true">
@@ -395,7 +390,6 @@ Add some more `import` statements to the top of `App.jsx`, to import them.
 Then, update the `return` statement of `App()` so that it renders our components. When you're done, `App.jsx` will read like this:
 
 ```jsx
-import React from "react";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
