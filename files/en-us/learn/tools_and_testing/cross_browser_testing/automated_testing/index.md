@@ -189,13 +189,15 @@ To use each plugin, you need to first install it via npm, then require any depen
 4. Export the html task using:
 
    ```js
-   exports.html = html;
+   const _html = html;
+   export { _html as html };
    ```
 
 5. Change the default export to:
 
    ```js
-   exports.default = html;
+   const _default = html;
+   export { _default as default};
    ```
 
 Here we are grabbing our development `index.html` file with `gulp.src()`, which allows us to grab a source file to do something with.
@@ -248,13 +250,15 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 5. Export the css task using:
 
    ```js
-   exports.css = css;
+   const _css = css;
+   export { _css as css };
    ```
 
 6. Change the default task to:
 
    ```js
-   exports.default = series(html, css);
+   const _default = gulp.series(html, css);
+   export { _default as default };
    ```
 
 Here we grab our `style.css` file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the `build` directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!
@@ -296,13 +300,15 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 4. Export the js task using:
 
    ```js
-   exports.js = js;
+   const _js = js;
+   export { _js as js };
    ```
 
 5. Change the default task to:
 
    ```js
-   exports.default = series(html, css, js);
+   const _default = gulp.series(html, css, js);
+   export { _default as default };
    ```
 
 Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
@@ -326,7 +332,9 @@ function watch() {
   gulp.watch("src/*.js", js);
 }
 
-exports.watch = watch;
+const _watch = watch;
+
+export { _watch as watch };
 ```
 
 Now try entering the `gulp watch` command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.
