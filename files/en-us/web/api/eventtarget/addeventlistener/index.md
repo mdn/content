@@ -370,14 +370,13 @@ const someString = "Data";
 
 myButton.addEventListener(
   "click",
-  passIntoEvtListener.bind(someString),
-);
+  passIntoEvtListener.bind(someString));
 
 //function declaration for event listener
 function passIntoEvtListener(e) {
   console.log("Expected Value:", this); // Expected Value: 'Data'
   console.log("current target:", e.currentTarget.id); // current target: my-button-id
-  }
+}
 ```
 
 This method is suitable when you don't need to know which HTML element the event
