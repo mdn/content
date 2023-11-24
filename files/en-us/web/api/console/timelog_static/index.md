@@ -8,7 +8,7 @@ browser-compat: api.console.timeLog_static
 
 {{APIRef("Console API")}}{{AvailableInWorkers}}
 
-The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console/time_static", "console.time()")}}.
+The **`console.timeLog()`** static method logs the current value of a timer that was previously started by calling {{domxref("console/time_static", "console.time()")}}.
 
 ## Syntax
 
