@@ -39,7 +39,7 @@ DSLs can't be read by the browser directly; they must be transformed into JavaSc
 
 The following shows a simple JSX example:
 
-```js
+```jsx
 const subject = "World";
 const header = (
   <header>
@@ -135,7 +135,7 @@ Properties, or **props**, are external data that a component needs in order to r
 
 A React representation of this `AuthorCredit` component might look something like this:
 
-```js
+```jsx
 function AuthorCredit(props) {
   return (
     <figure>
@@ -148,7 +148,7 @@ function AuthorCredit(props) {
 
 `{props.src}`, `{props.alt}`, and `{props.byline}` represent where our props will be inserted into the component. To render this component, we would write code like this in the place where we want it rendered (which will probably be inside another component):
 
-```js
+```jsx
 <AuthorCredit
   src="./assets/zelda.png"
   alt="Portrait of Zelda Schiff"
@@ -171,7 +171,7 @@ We talked about the concept of **state** in the previous chapter — a robust st
 
 As an example, consider a button that counts how many times it has been clicked. This component should be responsible for tracking its own _count_ state, and could be written like this:
 
-```js
+```jsx
 function CounterButton() {
   const [count] = useState(0);
   return <button>Clicked {count} times</button>;
@@ -192,7 +192,7 @@ In order to be interactive, components need ways to respond to browser events, s
 
 In React, listening for the [`click`](/en-US/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let's update our `CounterButton` code from above to allow it to count clicks:
 
-```js
+```jsx
 function CounterButton() {
   const [count, setCount] = useState(0);
   return (
@@ -223,7 +223,7 @@ import AuthorCredit from "./components/AuthorCredit";
 
 Once that's done, `AuthorCredit` could be used inside the `Article` component like this:
 
-```js
+```jsx
 // …
 
 <AuthorCredit />
@@ -237,7 +237,7 @@ Real-world applications can often involve component structures with multiple lev
 
 Let's say that the magazine site we're building is structured like this:
 
-```js
+```jsx
 <App>
   <Home>
     <Article>
