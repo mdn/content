@@ -334,7 +334,7 @@ Open `components/Form.jsx` and do the following:
 Your `Form.jsx` file should read like this:
 
 ```jsx
-function Form(props) {
+function Form() {
   return (
     <form>
       <h2 className="label-wrapper">
