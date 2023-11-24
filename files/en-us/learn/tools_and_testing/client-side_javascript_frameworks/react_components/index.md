@@ -55,11 +55,7 @@ touch src/components/Todo.jsx
 Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.jsx` too, as follows. In this code, we define the function and export it:
 
 ```jsx
-function Todo() {
-  return (
-    // …
-  );
-}
+function Todo() {}
 
 export default Todo;
 ```
@@ -71,7 +67,7 @@ export default function Todo() {
   return (
     <li className="todo stack-small">
       <div className="c-cb">
-        <input id="todo-0" type="checkbox" defaultChecked={true} />
+        <input id="todo-0" type="checkbox" defaultChecked />
         <label className="todo-label" htmlFor="todo-0">
           Eat
         </label>
