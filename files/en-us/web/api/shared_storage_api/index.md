@@ -118,7 +118,7 @@ class SelectURLOperation {
 register("ab-testing", SelectURLOperation);
 ```
 
-Note how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage you can only read values back out of shared storage inside a worklet.
+Notice how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage, you can read values from shared storage only within a worklet.
 
 > **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
 
