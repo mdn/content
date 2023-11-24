@@ -85,7 +85,7 @@ export default function Todo() {
 }
 ```
 
-Our `Todo` component is complete, at least for now; now we can use it. In `App.jsx`, add the following line near the top of the file to import `Todo`:
+Now we have something we can use. In `App.jsx`, add the following line near the top of the file to import `Todo`:
 
 ```jsx
 import Todo from "./components/Todo";
@@ -128,9 +128,9 @@ In `App.jsx`, give each `<Todo />` a name prop. Let's use the names of our tasks
 
 When your browser refreshes, you will see… the exact same thing as before. We gave our `<Todo />` some props, but we aren't using them yet. Let's go back to `Todo.jsx` and remedy that.
 
-First modify your `Todo()` function definition so that it takes `props` as a parameter. You can `console.log()` your `props` as we did before, if you'd like to check that they are being received by the component correctly.
+First modify your `Todo()` function definition so that it takes `props` as a parameter. You can `console.log()` your props if you'd like to check that they are being received by the component correctly.
 
-Once you're confident that your component is getting its `props`, you can replace every occurrence of `Eat` with your `name` prop. Remember: when you're in the middle of a JSX expression, you use curly braces to inject the value of a variable.
+Once you're confident that your component is getting its props, you can replace every occurrence of `Eat` with your `name` prop by reading `props.name`. Remember: `props.name` is a JSX expression, so you'll need to wrap it in curly braces.
 
 Putting all that together, your `Todo()` function should read like this:
 
