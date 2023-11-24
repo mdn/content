@@ -2,6 +2,11 @@
 title: Using the CSS properties and values API
 slug: Web/API/CSS_Properties_and_Values_API/guide
 page-type: guide
+browser-compat:
+  - css.at-rules.property
+  - css.properties.custom-property.var
+  - api.CSSPropertyRule
+  - api.CSS.registerProperty_static
 ---
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}{{SeeCompatTable}}
@@ -105,3 +110,11 @@ While not functionally accurate, a good way to think about the difference betwee
 There are two gotchas when registering a property. The first is that, once a property is registered, there's no way to update it, and trying to re-register it with [JavaScript](/en-US/docs/Web/JavaScript) will throw an error indicating it's already been defined.
 
 Second, unlike standard properties, registered properties aren't validated when they're parsed. Rather, they're validated when they're computed. That means both that invalid values won't appear as invalid when inspecting the element's properties, and that including an invalid property after a valid one won't fall back to the valid property. An invalid property will, however, fall back to its registered default.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
