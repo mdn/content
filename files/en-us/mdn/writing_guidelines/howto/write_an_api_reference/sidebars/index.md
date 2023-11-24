@@ -69,8 +69,8 @@ So for example, "Response" will result in a link being created like so:
 ```
 
 There are a few exceptions.
-For example the "guides" sub-member contains the addresses that point to associated guides/tutorials.
-In this case the addresses are appended to the end of the MDN docs root — `https://developer.mozilla.org/<language-code>` — allowing an article anywhere on MDN to be included.
+For example the "guides" sub-member contains the URLs that point to associated guides/tutorials.
+In this case the URLs are appended to the end of the MDN docs root — `https://developer.mozilla.org/<language-code>` — allowing an article anywhere on MDN to be included.
 
 Here are the available members.
 These are all technically optional, but it is strongly encouraged that instead of omitting them, you include empty arrays.
