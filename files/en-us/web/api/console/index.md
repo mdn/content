@@ -44,7 +44,7 @@ This page documents the [Methods](#methods) available on the `console` object an
 - {{domxref("console/group_static", "console.group()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
 - {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
-  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `group()` this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call `groupEnd()`.
+  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `group()`, this starts with the inline group collapse, requiring a disclosure button to expand it. Call `console.groupEnd()` to move back out a level.
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
   - : Exits the current inline [group](#using_groups_in_the_console).
 - {{domxref("console/info_static", "console.info()")}}
