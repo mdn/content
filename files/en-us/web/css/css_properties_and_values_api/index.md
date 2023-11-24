@@ -177,7 +177,7 @@ div {
 
 ### Functions
 
-- {{cssxref("var()")}}
+- {{cssxref("var")}}
 
 ### Interfaces
 

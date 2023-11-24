@@ -83,7 +83,7 @@ textarea {
 
 ### Functions
 
-- {{cssxref("var()")}}
+- {{cssxref("var")}}
 
 ## Guides
 
