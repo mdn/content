@@ -1,4 +1,4 @@
----
+ChinoJones:patch-10---
 title: Secure Sockets Layer (SSL)
 slug: Glossary/SSL
 page-type: glossary-definition
