@@ -40,7 +40,7 @@ This page documents the [Methods](#methods) available on the `console` object an
 - {{domxref("console/error_static", "console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
-  - : An alias for `error()`.
+  - : An alias for `console.error()`.
 - {{domxref("console/group_static", "console.group()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
 - {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
