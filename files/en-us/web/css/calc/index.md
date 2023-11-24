@@ -25,7 +25,7 @@ The `calc()` function takes a single expression as its parameter, with the expre
 - `-`
   - : Subtraction.
 - `*`
-  - : Multiplication. At least one of the operands must be a {{cssxref("&lt;number&gt;")}}.
+  - : Multiplies the specified operands. At least one of the operands must be a {{cssxref("&lt;number&gt;")}}.
 - `/`
   - : Division. The right-hand side must be a {{cssxref("&lt;number&gt;")}}.
 
