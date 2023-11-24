@@ -273,7 +273,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 
    ```js
    import babel from "gulp-babel";
-   import jshint from "gulp-jshint"
+   import jshint from "gulp-jshint";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
