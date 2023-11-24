@@ -290,22 +290,21 @@ Each framework has extensive tools in its ecosystem, with capabilities for unit 
 Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
 
 ```js
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import CounterButton from "./CounterButton";
 
 it("Renders a semantic button with an initial state of 0", () => {
-  const { getByRole } = render(<CounterButton />);
-  const btn = getByRole("button");
+  render(<CounterButton />);
+  const btn = screen.getByRole("button");
 
   expect(btn).toBeInTheDocument();
   expect(btn).toHaveTextContent("Clicked 0 times");
 });
 
 it("Increments the count when clicked", () => {
-  const { getByRole } = render(<CounterButton />);
-  const btn = getByRole("button");
+  render(<CounterButton />);
+  const btn = screen.getByRole("button");
 
   fireEvent.click(btn);
   expect(btn).toHaveTextContent("Clicked 1 times");
