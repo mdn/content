@@ -48,3 +48,6 @@ None ({{jsxref("undefined")}}).
 
 - {{domxref("console.timeEnd()")}}
 - {{domxref("console.timeLog()")}}
+- [Microsoft Edge's documentation for `console.time()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#time)
+- [Node.JS documentation for `console.time()`](https://nodejs.org/docs/latest/api/console.html#consoletimelabel)
+- [Google Chrome's documentation for `console.time()`](https://developer.chrome.com/docs/devtools/console/api/#time)

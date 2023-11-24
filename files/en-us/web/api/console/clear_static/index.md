@@ -31,3 +31,9 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Microsoft Edge's documentation for `console.clear()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#clear)
+- [Node.JS documentation for `console.clear()`](https://nodejs.org/docs/latest/api/console.html#consoleclear)
+- [Google Chrome's documentation for `console.clear()`](https://developer.chrome.com/docs/devtools/console/api/#clear)

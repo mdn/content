@@ -42,3 +42,11 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.group()")}}
+- {{domxref("console.groupEnd()")}}
+- [Microsoft Edge's documentation for `console.groupCollapsed()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#groupcollapsed)
+- [Node.JS documentation for `console.groupCollapsed()`](https://nodejs.org/docs/latest/api/console.html#consolegroupcollapsed)
+- [Google Chrome's documentation for `console.groupCollapsed()`](https://developer.chrome.com/docs/devtools/console/api/#groupcollapsed)

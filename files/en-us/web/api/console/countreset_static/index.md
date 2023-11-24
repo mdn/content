@@ -106,3 +106,9 @@ value of "alice" is unchanged.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Microsoft Edge's documentation for `console.countReset()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#countreset)
+- [Node.JS documentation for `console.countReset()`](https://nodejs.org/docs/latest/api/console.html#consolecountresetlabel)
+- [Google Chrome's documentation for `console.countReset()`](https://developer.chrome.com/docs/devtools/console/api/#countreset)

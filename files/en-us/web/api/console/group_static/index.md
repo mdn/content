@@ -69,3 +69,7 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 ## See also
 
 - {{domxref("console.groupEnd()")}}
+- {{domxref("console.groupCollapsed()")}}
+- [Microsoft Edge's documentation for `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
+- [Node.JS documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
+- [Google Chrome's documentation for `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)

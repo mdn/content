@@ -99,3 +99,9 @@ We're now maintaining separate counts based only on the value of `label`.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Microsoft Edge's documentation for `console.count()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#count)
+- [Node.JS documentation for `console.count()`](https://nodejs.org/docs/latest/api/console.html#consolecountlabel)
+- [Google Chrome's documentation for `console.count()`](https://developer.chrome.com/docs/devtools/console/api/#count)

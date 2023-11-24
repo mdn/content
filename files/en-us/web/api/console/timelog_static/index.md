@@ -106,3 +106,9 @@ longer tracking time.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.time()")}}
+- {{domxref("console.timeEnd()")}}
+- [Node.JS documentation for `console.timeLog()`](https://nodejs.org/docs/latest/api/console.html#consoletimeloglabel-data)

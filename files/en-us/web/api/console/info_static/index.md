@@ -50,4 +50,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
+- [Microsoft Edge's documentation for `console.info()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#info)
+- [Node.JS documentation for `console.info()`](https://nodejs.org/docs/latest/api/console.html#consoleinfodata-args)
+- [Google Chrome's documentation for `console.info()`](https://developer.chrome.com/docs/devtools/console/api/#info)

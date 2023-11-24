@@ -60,3 +60,11 @@ longer tracking time.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console.time()")}}
+- {{domxref("console.timeLog()")}}
+- [Microsoft Edge's documentation for `console.timeEnd()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#timeend)
+- [Node.JS documentation for `console.timeEnd()`](https://nodejs.org/docs/latest/api/console.html#consoletimeendlabel)
+- [Google Chrome's documentation for `console.timeEnd()`](https://developer.chrome.com/docs/devtools/console/api/#timeend)

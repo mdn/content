@@ -52,3 +52,9 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Microsoft Edge's documentation for `console.debug()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#debug)
+- [Node.JS documentation for `console.debug()`](https://nodejs.org/docs/latest/api/console.html#consoledebugdata-args)
+- [Google Chrome's documentation for `console.debug()`](https://developer.chrome.com/docs/devtools/console/api/#debug)

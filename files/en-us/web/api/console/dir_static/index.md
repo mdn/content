@@ -45,5 +45,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [Microsoft Edge's documentation for `console.dir()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
+- [Node.JS documentation for `console.dir()`](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
+- [Google Chrome's documentation for `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)
