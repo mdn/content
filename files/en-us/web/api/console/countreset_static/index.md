@@ -10,7 +10,6 @@ browser-compat: api.console.countReset_static
 
 The **`console.countReset()`** method resets counter used with {{domxref("console/count_static", "console.count()")}}.
 
-
 {{AvailableInWorkers}}
 
 ## Syntax
