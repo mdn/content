@@ -271,7 +271,7 @@ Let's try replacing all the children of the `<ul>` with `taskList`:
 </ul>
 ```
 
-This gets us some of the way towards showing all the components again, but we've got more work to do: the browser currently renders each task's name as unstructured text. We're missing our HTML structure — the `<li>` and its checkboxes and buttons!
+This gets us some of the way towards showing all the components again, but we've got more work to do: the browser currently renders each task's name as plain text. We're missing our HTML structure — the `<li>` and its checkboxes and buttons!
 
 ![Our todo list app with the todo item labels just shown bunched up on one line](todo-list-unstructured-names.png)
 
