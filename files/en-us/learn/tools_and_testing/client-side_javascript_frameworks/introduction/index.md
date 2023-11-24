@@ -104,9 +104,8 @@ How do we show one of those tasks to our users? We want to represent each task a
 function buildTodoItemEl(id, name) {
   const item = document.createElement("li");
   const span = document.createElement("span");
-  const textContent = document.createTextNode(name);
 
-  span.appendChild(textContent);
+  span.textContent = name;
 
   item.id = id;
   item.appendChild(span);
@@ -123,10 +122,8 @@ The tenth line of the previous snippet references another build function: `build
 ```js
 function buildDeleteButtonEl(id) {
   const button = document.createElement("button");
-  const textContent = document.createTextNode("Delete");
-
   button.setAttribute("type", "button");
-  button.appendChild(textContent);
+  button.textContent "Delete";
 
   return button;
 }
@@ -159,12 +156,12 @@ If you want to see code samples from this section in action, you can check out a
 
 Read more about the JavaScript used in this section:
 
-- [`document.createElement()`](/en-US/docs/Web/API/Document/createElement)
-- [`document.createTextNode()`](/en-US/docs/Web/API/Document/createTextNode)
 - [`document.createDocumentFragment()`](/en-US/docs/Web/API/Document/createDocumentFragment)
+- [`document.createElement()`](/en-US/docs/Web/API/Document/createElement)
 - [`eventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)
 - [`node.appendChild()`](/en-US/docs/Web/API/Node/appendChild)
 - [`node.removeChild()`](/en-US/docs/Web/API/Node/removeChild)
+- [`node.textContent`](/en-US/docs/Web/API/Node/textContent)
 
 ## Another way to build UIs
 
