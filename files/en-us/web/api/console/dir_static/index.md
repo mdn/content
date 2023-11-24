@@ -8,17 +8,13 @@ browser-compat: api.console.dir_static
 
 {{APIRef("Console API")}}
 
-The method **`console.dir()`** displays an interactive list of the properties of
-the specified JavaScript object. The output is presented as a hierarchical
-listing with disclosure triangles that let you see the contents of child objects.
+The **`console.dir()`** static method displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects.
 
-In other words, `console.dir()` is the way to see all the properties of a
-specified JavaScript object in console by which the developer can easily get the
-properties of the object.
+In other words, `console.dir()` is the way to see all the properties of a specified JavaScript object in console by which the developer can easily get the properties of the object.
 
 {{AvailableInWorkers}}
 
-![console-dir.png](console-dir.png)
+![A screenshot of the Firefox console where console.dir(document.location) is run. We can see the URL of the page, followed by a block of properties. If the property is a fonction or an object, a disclosure triangle is prepended.](console-dir.png)
 
 ## Syntax
 
@@ -45,5 +41,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [Microsoft Edge's documentation for `console.dir()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
+- [Node.JS documentation for `console.dir()`](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
+- [Google Chrome's documentation for `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)
