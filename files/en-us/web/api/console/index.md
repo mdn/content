@@ -7,22 +7,15 @@ browser-compat: api.console
 
 {{APIRef("Console API")}}
 
-The **`console`** object provides access to the browser's
-debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox).
-The specifics of how it works varies from browser to browser, but there is a _de facto_
-set of features that are typically provided.
+The **`console`** object provides access to the debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox). The specifics of how it works varies from browser to browser or server runtimes (Node.js for example), but there is a _de facto_ set of features that are typically provided.
 
-The `console` object can be accessed from any global object. {{domxref("Window")}} on
-browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the
-property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as
-`console`. For example:
+The `console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as `console`. For example:
 
 ```js
 console.log("Failed to open the specified link");
 ```
 
-This page documents the [Methods](#methods) available on the `console` object and
-gives a few [Usage](#usage) examples.
+This page documents the [Methods](#methods) available on the `console` object and gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
@@ -47,11 +40,11 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
-  - : An alias for `error()`.
+  - : An alias for `console.error()`.
 - {{domxref("console.group()")}}
-  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
+  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `console.groupEnd()`.
 - {{domxref("console.groupCollapsed()")}}
-  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `group()` this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call `groupEnd()`.
+  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `console.group()` this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call `console.groupEnd()`.
 - {{domxref("console.groupEnd()")}}
   - : Exits the current inline [group](#using_groups_in_the_console).
 - {{domxref("console.info()")}}
@@ -118,7 +111,7 @@ My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 
 #### Using string substitutions
 
-When passing a string to one of the `console` object's methods that accepts a string (such as `log()`), you may use these substitution strings:
+When passing a string to one of the `console` object's methods that accepts a string (such as `console.log()`), you may use these substitution strings:
 
 - `%o` or `%O`
   - : Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.
@@ -240,9 +233,6 @@ Will log the time needed by the user to dismiss the alert box, log the time to t
 ![Time log in Firefox console](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
-
-> **Note:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header.
-> If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
 ### Stack traces
 
