@@ -484,40 +484,36 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
          */
       
        /**
-       * start Sauce Connect Proxy
-       */
-       const sc = await myAccount.startSauceConnect({
-        /**
-         * you can pass in a `logger` method to print Sauce Connect log messages
-         */
-        logger: (stdout) => console.log(stdout),
-        /**
-         * see all available parameters here: https://docs.saucelabs.com/dev/cli/sauce-connect-proxy/
-         * all parameters have to be applied camel cased instead of with hyphens, e.g.
-         * to apply the `--tunnel-name` parameter, set:
-         */
-        tunnelName: "my-tunnel",
-       });
+        * you can pass in a `logger` method to print Sauce Connect log messages
+        */
+       logger: (stdout) => console.log(stdout),
+       /**
+        * see all available parameters here: https://docs.saucelabs.com/dev/cli/sauce-connect-proxy/
+        * all parameters have to be applied camel cased instead of with hyphens, e.g.
+        * to apply the `--tunnel-name` parameter, set:
+        */
+       tunnelName: "my-tunnel",
+     });
 
-   // run a test
-   // ...
-   
-   // close Sauce Connect
-   await sc.close();
+     // run a test
+     // ...
 
-   // upload additional log files and attach it to your Sauce job
-   await myAccount.uploadJobAssets("76e693dbe6ff4910abb0bc3d752a971e", [
-    // either pass in file names
-    "./logs/video.mp4",
-    "./logs/log.json",
-    // or file objects
-    {
-      filename: "myCustomLogFile.json",
-      data: {
-        someLog: "data",
-      },
-    },
-   ]);
+     // close Sauce Connect
+     await sc.close();
+
+     // upload additional log files and attach it to your Sauce job
+     await myAccount.uploadJobAssets("76e693dbe6ff4910abb0bc3d752a971e", [
+       // either pass in file names
+       "./logs/video.mp4",
+       "./logs/log.json",
+       // or file objects
+       {
+         filename: "myCustomLogFile.json",
+         data: {
+           someLog: "data",
+         },
+       },
+     ]);
    })();
    ```
 
