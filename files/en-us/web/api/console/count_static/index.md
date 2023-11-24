@@ -59,7 +59,7 @@ Console output will look something like this:
 
 The label is displayed as `default` because no explicit label was supplied.
 
-If we pass the `user` variable as the `label` argument to the first invocation of `count()`, and the string "alice" to the second:
+If we pass the `user` variable as the `label` argument to the first invocation of `console.count()`, and the string "alice" to the second:
 
 ```js
 let user = "";

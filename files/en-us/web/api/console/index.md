@@ -40,11 +40,11 @@ This page documents the [Methods](#methods) available on the `console` object an
 - {{domxref("console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
-  - : An alias for `error()`.
+  - : An alias for `console.error()`.
 - {{domxref("console.group()")}}
-  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `groupEnd()`.
+  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `console.groupEnd()`.
 - {{domxref("console.groupCollapsed()")}}
-  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `group()` this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call `groupEnd()`.
+  - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `console.group()` this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call `console.groupEnd()`.
 - {{domxref("console.groupEnd()")}}
   - : Exits the current inline [group](#using_groups_in_the_console).
 - {{domxref("console.info()")}}
@@ -111,7 +111,7 @@ My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 
 #### Using string substitutions
 
-When passing a string to one of the `console` object's methods that accepts a string (such as `log()`), you may use these substitution strings:
+When passing a string to one of the `console` methods that accepts a string (such as `console.log()`), you may use these substitution strings:
 
 - `%o` or `%O`
   - : Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.

@@ -61,7 +61,7 @@ Console output will look something like this:
 
 Note that the call to `console.counterReset()` resets the value of the default counter to zero.
 
-If we pass the `user` variable as the `label` argument with the string "bob" to the first invocation of `count()`, and the string "alice" to the second:
+If we pass the `user` variable as the `label` argument with the string "bob" to the first invocation of `console.count()`, and the string "alice" to the second:
 
 ```js
 let user = "";

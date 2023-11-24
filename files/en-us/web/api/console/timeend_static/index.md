@@ -24,7 +24,7 @@ timeEnd(label)
 ### Parameters
 
 - `label` {{optional_inline}}
-  - : A `string` representing the name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the console along with an indicator that the time has ended. If omitted, the label "default" is used.
+  - : A string representing the name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the console along with an indicator that the time has ended. If omitted, the label "default" is used.
 
 ### Return value
 
@@ -44,7 +44,7 @@ The output from the example above shows the time taken by the user to dismiss th
 
 ![Timer output in Firefox console](timer_output.png)
 
-Notice that the timer's name is displayed when the timer value is logged using `timeLog()` and again when it's stopped. In addition, the call to timeEnd() has the additional information, "timer ended" to make it obvious that the timer is no
+Notice that the timer's name is displayed when the timer value is logged using `console.timeLog()` and again when it's stopped. In addition, the call to `console.timeEnd()` has the additional information, "timer ended" to make it obvious that the timer is no
 longer tracking time.
 
 ## Specifications

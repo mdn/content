@@ -59,7 +59,7 @@ console.timeLog();
 // default: 780ms
 ```
 
-If there is no corresponding timer, `timeLog()` logs a warning like:
+If there is no corresponding timer, `console.timeLog()` logs a warning like:
 
 ```plain
 Timer "timer name" doesn't exist.
@@ -93,7 +93,7 @@ answer time: 2542ms debugger eval code:3:9
 answer time: 4161ms - timer ended
 ```
 
-Notice that the timer's name is displayed when the timer value is logged using `timeLog()` and again when it's stopped. In addition, the call to `timeEnd()` has the additional information, "timer ended" to make it obvious that the timer is no longer tracking time.
+Notice that the timer's name is displayed when the timer value is logged using `console.timeLog()` and again when it's stopped. In addition, the call to `console.timeEnd()` has the additional information, "timer ended" to make it obvious that the timer is no longer tracking time.
 
 ## Specifications
 
