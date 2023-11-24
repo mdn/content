@@ -432,7 +432,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
    ```js
    const SauceLabs = require("saucelabs").default;
 
-   (async() => {
+   (async () => {
      const myAccount = new SauceLabs({
        username: "your-sauce-username",
        password: "your-sauce-api-key",
