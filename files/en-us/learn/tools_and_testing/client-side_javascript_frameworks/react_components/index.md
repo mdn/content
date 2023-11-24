@@ -165,12 +165,12 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 
 ### Is it `completed`?
 
-In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give each `<Todo />` call in `App.jsx` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
+In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give your first `<Todo />` call a boolean prop of `completed`, and leave the other two as they are.
 
 ```jsx
-<Todo name="Eat" completed={true} />
-<Todo name="Sleep" completed={false} />
-<Todo name="Repeat" completed={false} />
+<Todo name="Eat" completed />
+<Todo name="Sleep" />
+<Todo name="Repeat" />
 ```
 
 As before, we must go back to `Todo.jsx` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
@@ -197,10 +197,12 @@ The second problem is affecting our app right now. If you click on the word "Sle
 We had unique id attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time:
 
 ```jsx
-<Todo name="Eat" completed={true} id="todo-0" />
-<Todo name="Sleep" completed={false} id="todo-1" />
-<Todo name="Repeat" completed={false} id="todo-2" />
+<Todo name="Eat" id="todo-0" completed />
+<Todo name="Sleep" id="todo-1" />
+<Todo name="Repeat" id="todo-2" />
 ```
+
+**Note:** The `completed` prop is last here because it is a boolean with no assignment. This is purely a stylistic convention. The order of props does not matter because props are JavaScript objects, and JavaScript objects are unordered.
 
 Now go back to `Todo.jsx` and make use of the `id` prop. It needs to replace the value of the `id` attribute of the `<input />` element, as well as the value of its label's `htmlFor` attribute:
 
