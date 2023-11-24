@@ -1,4 +1,4 @@
----
+files/en-us/glossary/ssl/index.md---
 title: CDN
 slug: Glossary/CDN
 page-type: glossary-definition
