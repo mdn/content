@@ -19,7 +19,9 @@ For example, `--dark-grey-text` and `--dark-footer` are easier to understand tha
 
 ## Example
 
-The following example shows a
+The following example defines a custom property `--main-bg-color` with a value of `cornflowerblue`.
+It is scoped to the `.container` class, so children of the matching element inherit its value.
+The value is referenced using {{cssxref("var")}} as a property value to give a background color to some elements:
 
 ```html
 <div class="container">
@@ -40,17 +42,10 @@ body {
   font-family: sans-serif;
 }
 
-div,
-input,
-textarea {
+div {
   border: 2px black solid;
-  padding: 4px;
-  margin: 4px;
-}
-
-.container {
-  display: grid;
-  gap: 10px;
+  padding: 8px;
+  margin: 8px;
 }
 ```
 
