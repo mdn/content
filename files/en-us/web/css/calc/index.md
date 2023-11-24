@@ -18,18 +18,18 @@ The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 width: calc(100% - 80px);
 ```
 
-The `calc()` function takes a single expression as its parameter, with the expression's result used as the value. The expression can be any simple expression combining the following operators, using standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
+The `calc()`` function takes a single expression as its parameter, and the expression's result is used as the value for a CSS property. In this expression, the [operands](https://developer.mozilla.org/en-US/docs/Glossary/Operand) can be combined using the [operators](https://developer.mozilla.org/en-US/docs/Glossary/Operator) listed below. When the expression contains multiple operands,`calc()` uses the standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
 
 - `+`
-  - : Addition.
+  - : Adds the specified operands.
 - `-`
-  - : Subtraction.
+  - : Subtracts the second operand from the first operand.
 - `*`
   - : Multiplies the specified operands. At least one of the operands must be a {{cssxref("&lt;number&gt;")}}.
 - `/`
   - : Divides the left-side operand (dividend) by the right-side operand (divisor). The right-hand operand, the divisor, must be a {{cssxref("&lt;number&gt;")}}.
 
-All operands, except of the type {{cssxref("&lt;number&gt;")}}, must be suffixed with an appropriate unit string, such as `px`, `em`, or `%`. You can use a different unit with each each operand in your expression. You may also use parentheses to establish computation order when needed.
+All operands, except those of type {{cssxref("&lt;number&gt;")}}, must be suffixed with an appropriate unit string, such as `px`, `em`, or `%`. You can use a different unit with each each operand in your expression. You may also use parentheses to establish computation order when needed.
 
 ### Notes
 
