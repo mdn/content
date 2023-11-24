@@ -1,3 +1,4 @@
+<meta charset="utf-8" />
 ---
 title: Character encoding
 slug: Glossary/Character_encoding
