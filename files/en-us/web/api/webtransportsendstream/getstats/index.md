@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransportSendStream.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getStats()`** method of the {{domxref("WebTransportSendStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
