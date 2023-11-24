@@ -90,7 +90,7 @@ To use the output gate, you need to:
 
 Below we'll look at these steps one by one.
 
-#### Define an operation in a worklet
+#### Define an operation in a worklet module
 
 The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value and choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
 
