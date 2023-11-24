@@ -27,7 +27,7 @@ The `calc()` function takes a single expression as its parameter, with the expre
 - `*`
   - : Multiplies the specified operands. At least one of the operands must be a {{cssxref("&lt;number&gt;")}}.
 - `/`
-  - : Division. The right-hand side must be a {{cssxref("&lt;number&gt;")}}.
+  - : Divides the left-side operand (dividend) by the right-side operand (divisor). The right-hand operand, the divisor, must be a {{cssxref("&lt;number&gt;")}}.
 
 All operands must be suffixed with an appropriate units string, except those that "must be a {{cssxref("&lt;number&gt;")}}". You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
 
