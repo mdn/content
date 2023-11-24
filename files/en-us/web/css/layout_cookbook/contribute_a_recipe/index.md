@@ -85,7 +85,7 @@ After your example PR is merged, open a pull request to create a new page in the
 Use our [template for Cookbook pages](https://github.com/mdn/content/blob/main/files/en-us/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1).
 The template explains the requirements of each section, and you can refer to other cookbook examples for more help.
 
-Remember to add a link to your new recipe on the main [Layout cookbook](/en-us/web/css/layout_cookbook) page.
+Remember to add a link to your new recipe on the main [Layout cookbook](/en-us/docs/web/css/layout_cookbook) page.
 
 If you have any questions or want someone to take a look at your page, get in touch via any of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
