@@ -8,8 +8,7 @@ browser-compat: api.console.trace_static
 
 {{APIRef("Console API")}}
 
-The **`console.trace()`** method outputs a stack trace to the
-[Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+The **`console.trace()`** method outputs a stack trace to the console.
 
 {{AvailableInWorkers}}
 
