@@ -8,8 +8,7 @@ browser-compat: api.console.countReset_static
 
 {{APIRef("Console API")}}
 
-The **`console.countReset()`** method resets counter used with
-{{domxref("console.count()")}}.
+The **`console.countReset()`** method resets counter used with {{domxref("console.count()")}}.
 
 {{AvailableInWorkers}}
 
@@ -23,9 +22,7 @@ countReset(label)
 ### Parameters
 
 - `label` {{optional_inline}}
-  - : A string. If supplied, `countReset()` resets the count for
-    that label to 0. If omitted, `countReset()` resets the default counter to
-    0\.
+  - : A string. If supplied, `countReset()` resets the count for that label to 0. If omitted, `countReset()` resets the default counter to 0.
 
 ### Return value
 
@@ -62,12 +59,9 @@ Console output will look something like this:
 "default: 0"
 ```
 
-Note that the call to `console.counterReset()` resets the value of the
-default counter to zero.
+Note that the call to `console.counterReset()` resets the value of the default counter to zero.
 
-If we pass the `user` variable as the `label` argument with the
-string "bob" to the first invocation of `count()`, and the string "alice" to
-the second:
+If we pass the `user` variable as the `label` argument with the string "bob" to the first invocation of `count()`, and the string "alice" to the second:
 
 ```js
 let user = "";
@@ -96,8 +90,7 @@ We will see output like this:
 "alice: 3"
 ```
 
-Resetting the value of the counter "bob" only changes the value of that counter. The
-value of "alice" is unchanged.
+Resetting the value of the counter "bob" only changes the value of that counter. The value of "alice" is unchanged.
 
 ## Specifications
 

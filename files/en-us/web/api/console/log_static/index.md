@@ -8,9 +8,7 @@ browser-compat: api.console.log_static
 
 {{APIRef("Console API")}}
 
-The **`console.log()`** method outputs a message to the console.
-The message may be a single string (with optional substitution values), or it may be any one
-or more JavaScript objects.
+The **`console.log()`** method outputs a message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
 
 {{AvailableInWorkers}}
 
@@ -26,17 +24,11 @@ log(msg, subst1, /* …, */ substN)
 ### Parameters
 
 - `obj1` … `objN`
-  - : A list of JavaScript objects to output.
-    Objects are output in the order listed. Please be warned that if
-    you log objects in the latest versions of Chrome and Firefox, what you get logged on
-    the console is a _reference to the object_, which is not necessarily the
-    'value' of the object at the moment in time you call `console.log()`, but
-    it is the value of the object at the moment you open the console.
+  - : A list of JavaScript objects to output. Objects are output in the order listed. Please be warned that if you log objects in the latest versions of Chrome and Firefox, what you get logged on the console is a _reference to the object_, which is not necessarily the 'value' of the object at the moment in time you call `console.log()`, but it is the value of the object at the moment you open the console.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings.
 - `subst1` … `substN`
-  - : JavaScript objects with which to replace substitution strings within
-    `msg`. This gives you additional control over the format of the output.
+  - : JavaScript objects with which to replace substitution strings within `msg`. This gives you additional control over the format of the output.
 
 See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 

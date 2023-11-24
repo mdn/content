@@ -8,8 +8,7 @@ browser-compat: api.console.assert_static
 
 {{APIRef("Console API")}}
 
-The **`console.assert()`** method writes an error message to
-the console if the assertion is false. If the assertion is true, nothing happens.
+The **`console.assert()`** method writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
 
 {{AvailableInWorkers}}
 
@@ -28,17 +27,13 @@ assert(assertion, msg, subst1, /* …, */ substN)
 ### Parameters
 
 - `assertion`
-  - : Any boolean expression. If the assertion is false, the message is written to the
-    console.
+  - : Any boolean expression. If the assertion is false, the message is written to the console.
 - `obj1` … `objN`
-  - : A list of JavaScript objects to output. The string representations of each of these
-    objects are appended together in the order listed and output.
+  - : A list of JavaScript objects to output. The string representations of each of these objects are appended together in the order listed and output.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings.
 - `subst1` … `substN`
-  - : JavaScript objects with which to replace substitution strings within
-    `msg`. This parameter gives you additional control over the format of the
-    output.
+  - : JavaScript objects with which to replace substitution strings within `msg`. This parameter gives you additional control over the format of the output.
 
 ### Return value
 
@@ -46,8 +41,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following code example demonstrates the use of a JavaScript object following the
-assertion:
+The following code example demonstrates the use of a JavaScript object following the assertion:
 
 ```js
 const errorMsg = "the # is not even";
@@ -64,8 +58,7 @@ for (let number = 2; number <= 5; number++) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) in the documentation of {{domxref("console")}} for further
-details.
+See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) in the documentation of {{domxref("console")}} for further details.
 
 ## Specifications
 

@@ -14,8 +14,7 @@ The **`console.trace()`** method outputs a stack trace to the console.
 
 > **Note:** In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
 
-See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
-{{domxref("console")}} documentation for details and examples.
+See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the {{domxref("console")}} documentation for details and examples.
 
 ## Syntax
 
@@ -27,9 +26,7 @@ trace(object1, /* …, */ objectN)
 ### Parameters
 
 - `objects` {{optional_inline}}
-  - : Zero or more objects to be output to console along with the trace. These are
-    assembled and formatted the same way they would be if passed to the
-    {{domxref("console.log()")}} method.
+  - : Zero or more objects to be output to console along with the trace. These are assembled and formatted the same way they would be if passed to the {{domxref("console.log()")}} method.
 
 ### Return value
 

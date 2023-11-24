@@ -8,13 +8,11 @@ browser-compat: api.console.warn_static
 
 {{APIRef("Console API")}}
 
-The **`console.warn()`** method outputs a warning message to the Web
-console.
+The **`console.warn()`** method outputs a warning message to the console.
 
 {{AvailableInWorkers}}
 
-> **Note:** In Chrome and Firefox, warnings have a small exclamation point icon next to them in the Web
-> console log.
+> **Note:** In Chrome and Firefox, warnings have a small exclamation point icon next to them in the console log.
 
 ## Syntax
 
@@ -28,13 +26,11 @@ warn(msg, subst1, /* …, */ substN)
 ### Parameters
 
 - `obj1` … `objN`
-  - : A list of JavaScript objects to output. The string representations of each of these
-    objects are appended together in the order listed and output.
+  - : A list of JavaScript objects to output. The string representations of each of these objects are appended together in the order listed and output.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings.
 - `subst1` … `substN`
-  - : JavaScript objects with which to replace substitution strings within
-    `msg`. This gives you additional control over the format of the output.
+  - : JavaScript objects with which to replace substitution strings within `msg`. This gives you additional control over the format of the output.
 
 See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 

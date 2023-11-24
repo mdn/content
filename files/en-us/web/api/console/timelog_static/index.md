@@ -86,18 +86,14 @@ alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 
-The output from the example above shows the time taken by the user to dismiss the first
-alert box, followed by the cumulative time it took for the user to dismiss both alerts:
+The output from the example above shows the time taken by the user to dismiss the first alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
 ```plain
 answer time: 2542ms debugger eval code:3:9
 answer time: 4161ms - timer ended
 ```
 
-Notice that the timer's name is displayed when the timer value is logged using
-`timeLog()` and again when it's stopped. In addition, the call to `timeEnd()`
-has the additional information, "timer ended" to make it obvious that the timer is no
-longer tracking time.
+Notice that the timer's name is displayed when the timer value is logged using `timeLog()` and again when it's stopped. In addition, the call to `timeEnd()` has the additional information, "timer ended" to make it obvious that the timer is no longer tracking time.
 
 ## Specifications
 

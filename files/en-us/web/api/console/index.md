@@ -7,22 +7,15 @@ browser-compat: api.console
 
 {{APIRef("Console API")}}
 
-The **`console`** object provides access to the browser's
-debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox).
-The specifics of how it works varies from browser to browser, but there is a _de facto_
-set of features that are typically provided.
+The **`console`** object provides access to the browser's debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox). The specifics of how it works varies from browser to browser, but there is a _de facto_ set of features that are typically provided.
 
-The `console` object can be accessed from any global object. {{domxref("Window")}} on
-browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the
-property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as
-`console`. For example:
+The `console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as `console`. For example:
 
 ```js
 console.log("Failed to open the specified link");
 ```
 
-This page documents the [Methods](#methods) available on the `console` object and
-gives a few [Usage](#usage) examples.
+This page documents the [Methods](#methods) available on the `console` object and gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
@@ -241,8 +234,7 @@ Will log the time needed by the user to dismiss the alert box, log the time to t
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
-> **Note:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header.
-> If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
+> **Note:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
 ### Stack traces
 
