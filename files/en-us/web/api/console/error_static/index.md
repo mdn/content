@@ -8,7 +8,7 @@ browser-compat: api.console.error_static
 
 {{APIRef("Console API")}}
 
-The **`console.error()`** method outputs an error message to the console.
+The **`console.error()`** static method outputs an error message to the console.
 
 {{AvailableInWorkers}}
 

@@ -10,7 +10,7 @@ browser-compat: api.console.profile_static
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-The **`console.profile()`** starts recording a performance profile (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
+The **`console.profile()`** static method starts recording a performance profile (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
 
 You can optionally supply an argument to name the profile and this then enables you to stop only that profile if multiple profiles being recorded. See {{domxref("console.profileEnd()")}} to see how this argument is interpreted.
 

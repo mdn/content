@@ -8,7 +8,7 @@ browser-compat: api.console.count_static
 
 {{APIRef("Console API")}}
 
-The **`console.count()`** method logs the number of times that this particular call to `count()` has been called.
+The **`console.count()`** static method logs the number of times that this particular call to `count()` has been called.
 
 {{AvailableInWorkers}}
 

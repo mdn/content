@@ -10,7 +10,7 @@ browser-compat: api.console.profileEnd_static
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-The **`console.profileEnd()`** method stops recording a profile previously started with {{DOMxRef("console.profile()")}}.
+The **`console.profileEnd()`** static method stops recording a profile previously started with {{DOMxRef("console.profile()")}}.
 
 You can optionally supply an argument to name the profile. Doing so enables you to stop only that profile if you have multiple profiles being recorded.
 

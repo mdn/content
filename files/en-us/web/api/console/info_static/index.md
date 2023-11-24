@@ -8,7 +8,7 @@ browser-compat: api.console.info_static
 
 {{APIRef("Console API")}}
 
-The **`console.info()`** method outputs an informational message to the console. In Firefox, a small "i" icon is displayed next to these items in the console's log.
+The **`console.info()`** static method outputs an informational message to the console. In Firefox, a small "i" icon is displayed next to these items in the console's log.
 
 {{AvailableInWorkers}}
 

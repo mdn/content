@@ -8,7 +8,7 @@ browser-compat: api.console.assert_static
 
 {{APIRef("Console API")}}
 
-The **`console.assert()`** method writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
+The **`console.assert()`** static method writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
 
 {{AvailableInWorkers}}
 

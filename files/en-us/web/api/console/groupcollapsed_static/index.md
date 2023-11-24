@@ -8,7 +8,7 @@ browser-compat: api.console.groupCollapsed_static
 
 {{APIRef("Console API")}}
 
-The **`console.groupCollapsed()`** method creates a new inline group in the console. Unlike {{domxref("console.group()")}}, however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
+The **`console.groupCollapsed()`** static method creates a new inline group in the console. Unlike {{domxref("console.group()")}}, however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
 
 Call {{domxref("console.groupEnd()")}} to back out to the parent group.
 

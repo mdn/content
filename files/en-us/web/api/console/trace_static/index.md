@@ -8,7 +8,7 @@ browser-compat: api.console.trace_static
 
 {{APIRef("Console API")}}
 
-The **`console.trace()`** method outputs a stack trace to the console.
+The **`console.trace()`** static method outputs a stack trace to the console.
 
 {{AvailableInWorkers}}
 

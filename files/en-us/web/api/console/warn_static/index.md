@@ -8,7 +8,7 @@ browser-compat: api.console.warn_static
 
 {{APIRef("Console API")}}
 
-The **`console.warn()`** method outputs a warning message to the console.
+The **`console.warn()`** static method outputs a warning message to the console.
 
 {{AvailableInWorkers}}
 
