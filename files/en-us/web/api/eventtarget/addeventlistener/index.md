@@ -368,9 +368,7 @@ As mentioned [above](#specifying_this_using_bind), you can use
 const myButton = document.getElementById("my-button-id");
 const someString = "Data";
 
-myButton.addEventListener(
-  "click",
-  passIntoEvtListener.bind(someString));
+myButton.addEventListener("click", passIntoEvtListener.bind(someString));
 
 //function declaration for event listener
 function passIntoEvtListener(e) {
