@@ -42,7 +42,7 @@ createUnidirectionalStream(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object.
+A {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportSendStream")}} object.
 
 Note that this object inherits from {{domxref("WritableStream")}}.
 Implementations based on older versions of the specification may return a `WritableStream` instead.
