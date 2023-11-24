@@ -27,7 +27,7 @@ To extract useful results from a shared storage worklet, you need to use an **ou
 
 The currently available output gates for the Shared Storage API are discussed in the sections below. In each section, we list typical use cases for each gate and provide links to guides with more information and code examples.
 
-> **Note:** More output gates will likely be added in the future, to support additional use cases.
+> **Note:** More output gates will likely be added in the future to support additional use cases.
 
 #### URL Selection
 
