@@ -33,8 +33,8 @@ The currently available output gates for the Shared Storage API are discussed in
 
 The **URL Selection** output gate, accessed via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method, is used to select a URL from a provided list to display to the user, based on shared storage data. This gate be used for the following purposes:
 
-- [**Creative rotation**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/creative-rotation/): Store data such as creative IDs, view counts, and user interaction, to determine which creative users see across different sites. This allows you to balance views and avoid oversaturation of certain content, which can help you avoid a negative user experience.
-- [**A/B testing**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/): Assign a user to an experiment group, then store group details in shared storage to be accessed cross-site.
+- [**Creative rotation**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/creative-rotation/): Use stored data such as creative IDs, view counts, and user interaction to determine which creative content users see across different sites. This approach helps in balancing views and prevents overexposure of certain content, which in turn can help avoid a negative user experience.
+- [**A/B testing**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/): Assign a user to an experiment group, then store group details in shared storage for cross-site access.
 - [**Custom user experiences**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/known-customer/): Share custom content and calls-to-action based on a user's registration status or other user states.
 
 #### Run
