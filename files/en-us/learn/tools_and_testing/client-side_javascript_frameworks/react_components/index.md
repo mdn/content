@@ -387,11 +387,9 @@ export default FilterButton;
 
 ## Importing all our components
 
-Let's make use of our new components.
+Let's make use of our new components. Add some more `import` statements to the top of `App.jsx` and reference the components we've just made. Then, update the `return` statement of `App()` so that it renders our components.
 
-Add some more `import` statements to the top of `App.jsx`, to import them.
-
-Then, update the `return` statement of `App()` so that it renders our components. When you're done, `App.jsx` will read like this:
+When you're done, `App.jsx` will read like this:
 
 ```jsx
 import Form from "./components/Form";
