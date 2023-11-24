@@ -128,4 +128,4 @@ See [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) - the API for the
   media stream objects
 - [Taking webcam photos](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a
-  tutorial on using `getUserMedia() for taking photos rather than video.`
+  tutorial on using `getUserMedia()` for taking photos rather than video.
