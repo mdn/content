@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 121 that affect developers. Firefox 121 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [December 19, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 121 that affect developers. Firefox 121 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [December 19, 2023](https://whattrainisitnow.com/release/?version=121).
 
 ## Changes for web developers
 
@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 121 that affect d
 #### Removals
 
 ### CSS
+
+- The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g. `text-indent: 3em hanging each-line`.
 
 #### Removals
 

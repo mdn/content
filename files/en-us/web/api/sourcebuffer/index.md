@@ -68,7 +68,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 The following example loads a video chunk by chunk as fast as possible, playing it as soon as it can.
 
-It is adapted from the demo at <https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html>.
+You can see the complete code at <https://github.com/mdn/dom-examples/tree/main/sourcebuffer> and try the demo live at <https://mdn.github.io/dom-examples/sourcebuffer/>.
 
 ```js
 const video = document.querySelector("video");
