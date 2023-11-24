@@ -252,8 +252,7 @@ This array is now available to the App component as `props.tasks`. You can `cons
 
 To render our array of objects, we have to turn each object into a `<Todo />` component. JavaScript gives us an array method for transforming items into something else: [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`.
-The `?.` operator lets us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
+Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`. The `?.` operator lets us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
 
 ```jsx
 const taskList = props.tasks?.map((task) => task.name);
@@ -277,13 +276,13 @@ This gets us some of the way towards showing all the components again, but we've
 To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:
 
 ```jsx
-const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks?.map((task) => <Todo />);
 ```
 
 Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
 ```jsx
-const taskList = props.tasks.map((task) => (
+const taskList = props.tasks?.map((task) => (
   <Todo id={task.id} name={task.name} completed={task.completed} />
 ));
 ```
@@ -297,7 +296,7 @@ Now that React is rendering our tasks out of an array, it has to keep track of w
 Because keys should be unique, we're going to re-use the `id` of each task object as its key. Update your `taskList` constant like so:
 
 ```jsx
-const taskList = props.tasks.map((task) => (
+const taskList = props.tasks?.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -400,7 +399,7 @@ import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
-  const taskList = props.tasks.map((task) => (
+  const taskList = props.tasks?.map((task) => (
     <Todo
       id={task.id}
       name={task.name}
