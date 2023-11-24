@@ -253,7 +253,7 @@ If you'd like, you can practice writing boolean attributes with another attribut
 
 ### Implementing our styles
 
-Paste the following CSS code into `src/index.css` so that it replaces what's currently there:
+Paste the following CSS code into `src/index.css`:
 
 ```css
 /* Resets */
