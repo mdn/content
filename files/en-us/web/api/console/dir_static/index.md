@@ -14,7 +14,7 @@ In other words, `console.dir()` is the way to see all the properties of a specif
 
 {{AvailableInWorkers}}
 
-![console-dir.png](console-dir.png)
+![A screenshot of the Firefox console where console.dir(document.location) is run. We can see the URL of the page, followed by a block of properties. If the property is a fonction or an object, a disclosure triangle is prepended.](console-dir.png)
 
 ## Syntax
 
