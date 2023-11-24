@@ -94,7 +94,7 @@ Below we'll look at these steps one by one.
 
 The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value and choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
 
-The URL Selection operation takes the form of a JavaScript class. It can be written in any way you like, as long as it follows certain rules (some of the rules for each output gate differ, depending on what kind of use case they fulfill):
+The URL Selection operation is a JavaScript class that must follow the rules below (these rules vary for each output gate, depending on their intended use case):
 
 - The actual functionality must be contained inside an asynchronous `run()` method, which must have an array of objects containing URLs as its first paramater, and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
