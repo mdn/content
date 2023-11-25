@@ -5,6 +5,7 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.CookieStore
+spec-urls: https://wicg.github.io/cookie-store/
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{SeeCompatTable}}
