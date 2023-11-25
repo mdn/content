@@ -8,7 +8,7 @@ browser-compat: api.Navigator.geolocation
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`Navigator.geolocation`** read-only property returns a
+The **`geolocation`** read-only property of the {{domxref("Navigator")}} interface returns a
 {{domxref("Geolocation")}} object that gives Web content access to the location of the
 device. This allows a website or app to offer customized results based on the user's
 location.
