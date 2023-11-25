@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers}}
 
 The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("ExtendableCookieChangeEvent")}} object
 which is the event type passed to {{domxref("ServiceWorkerGlobalScope.cookiechange_event", "cookiechange")}}.

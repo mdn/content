@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ExtendableCookieChangeEvent.deleted
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers}}
 
 The **`deleted`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been deleted by the given `ExtendableCookieChangeEvent` instance.
 
