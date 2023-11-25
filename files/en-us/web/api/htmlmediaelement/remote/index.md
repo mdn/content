@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.remote
 
 {{APIRef("Remote Playback API")}}
 
-The **`remote`** read-only property of the {{domxref("HTMLMediaElement")}} interface return a {{domxref("RemotePlayback")}} object instance associated with the media element. This is the entry point of the {{domxref("Remote Playback API", "Remote Playback API", "", "nocode")}}.
+The **`remote`** read-only property of the {{domxref("HTMLMediaElement")}} interface return a {{domxref("RemotePlayback")}} object instance associated with the media element. This is the entry point of the {{domxref("Remote Playback API", "", "", "nocode")}}.
 
 ## Value
 
