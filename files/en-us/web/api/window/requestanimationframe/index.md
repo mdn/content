@@ -43,7 +43,7 @@ requestAnimationFrame(callback)
     [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
   - The timestamp is a decimal number, in milliseconds, but with a minimal
     precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to
-    {{domxref("document.timeline.currentTime")}}. This timestamp is shared
+    {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared
     between all windows that run on the same agent (that is, all same-origin windows,
     and more importantly same-origin iframes) — which allows synchronizing
     animations across multiple `requestAnimationFrame` callbacks. The timestamp
@@ -127,7 +127,7 @@ function animate(timeStamp) {
 }
 ```
 
-This example uses {{domxref("document.timeline.currentTime")}} to set a zero value
+This example uses {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} to set a zero value
 prior to the first call to `requestAnimationFrame`. {{domxref("document.timeline.currentTime")}}
 aligns with the timeStamp argument, so the zero value is equivalent to the
 0th frame's timestamp.
