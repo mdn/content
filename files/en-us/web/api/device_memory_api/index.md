@@ -6,6 +6,7 @@ status:
   - experimental
 browser-compat:
   - api.Navigator.deviceMemory
+  - api.WorkerNavigator.deviceMemory
   - http.headers.Device-Memory
 spec-urls: https://www.w3.org/TR/device-memory/
 ---
