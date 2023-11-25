@@ -8,7 +8,9 @@ browser-compat: api.Window.originAgentCluster
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an _origin-keyed_ [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters), this means that the operating system has provided dedicated resources (for example an operating system process) to this window's origin that are not shared with windows from other origins. and `false` otherwise.
+The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_: this means that the operating system has provided dedicated resources (for example an operating system process) to this window's origin that are not shared with windows from other origins.
+
+Otherwise this property returns `false`.
 
 Windows that are part of an origin-keyed cluster are subjects to some additional restrictions, compared with windows that are not. In particular, they cannot:
 
