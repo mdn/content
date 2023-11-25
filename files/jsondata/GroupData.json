@@ -41,9 +41,7 @@
     },
     "Battery API": {
       "overview": ["Battery Status API"],
-      "guides": [
-        "/Apps/Build/gather_and_modify_data/retrieving_battery_status_information"
-      ],
+      "guides": [],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
       "properties": [],
@@ -296,6 +294,7 @@
         "CSSRule",
         "CSSRuleList",
         "CSSStyleDeclaration",
+        "CSSStartingStyleRule",
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
@@ -1469,8 +1468,7 @@
       "overview": ["Touch events"],
       "guides": [
         "/docs/Web/API/Touch_events/Using_Touch_Events",
-        "/docs/Web/API/Touch_events/Multi-touch_interaction",
-        "/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent"
+        "/docs/Web/API/Touch_events/Multi-touch_interaction"
       ],
       "interfaces": ["Touch", "TouchEvent", "TouchList"],
       "methods": [],

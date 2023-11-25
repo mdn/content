@@ -383,7 +383,12 @@ You can include `render` token inside a `blocking` attribute;
 the rendering of the page will be blocked till the resource is fetched. For example:
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+<link
+  blocking="render"
+  rel="preload"
+  href="critical-font.woff2"
+  as="font"
+  crossorigin />
 ```
 
 ## Technical summary

@@ -708,14 +708,14 @@ Create the template file `locallibrary/catalog/templates/catalog/author_confirm_
 
 {% block content %}
 
-<h1>Delete Author: {{ author }}</h1>
+<h1>Delete Author: \{{ author }}</h1>
 
 {% if author.book_set.all %}
 
 <p>You can't delete this author until all their books have been deleted:</p>
 <ul>
   {% for book in author.book_set.all %}
-    <li><a href="{% url 'book-detail' book.pk %}">{{book}}</a> ({{book.bookinstance_set.all.count}})</li>
+    <li><a href="{% url 'book-detail' book.pk %}">\{{book}}</a> (\{{book.bookinstance_set.all.count}})</li>
   {% endfor %}
 </ul>
 
@@ -758,7 +758,7 @@ Open **catalog/templates/catalog/author_detail.html** and append the following c
 
 ```django
 {% block sidebar %}
-  {{ block.super }}
+  \{{ block.super }}
 
   {% if perms.catalog.change_author or perms.catalog.delete_author %}
   <hr>
@@ -775,7 +775,7 @@ Open **catalog/templates/catalog/author_detail.html** and append the following c
 {% endblock %}
 ```
 
-This block overrides the `sidebar` block in the base template and then pulls in the original content using `{{ block.super }}`.
+This block overrides the `sidebar` block in the base template and then pulls in the original content using `\{{ block.super }}`.
 It then appends links to update or delete the author, but when the user has the correct permissions and the author record isn't associated with any books.
 
 The pages are now ready to test!
