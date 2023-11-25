@@ -21,7 +21,7 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 
 ## Interfaces
 
-- {{domxref("CookieStore")}}
+- {{domxref("CookieStore")}} {{Experimental_Inline}}
   - : The `CookieStore` interface enables getting and setting cookies.
 - {{domxref("CookieStoreManager")}} {{Experimental_Inline}}
   - : The `CookieStoreManager` interface provides a service worker registration to enable service workers to subscribe to cookie change events.
