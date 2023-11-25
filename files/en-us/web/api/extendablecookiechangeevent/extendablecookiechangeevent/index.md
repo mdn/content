@@ -28,9 +28,9 @@ new ExtendableCookieChangeEvent(type, options)
     It is case-sensitive and browsers always set it to `cookiechange`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
-    - `changed`
+    - `changed` {{optional_inline}}
       - : An array containing a changed cookie.
-    - `deleted`
+    - `deleted` {{optional_inline}}
       - : An array containing a deleted cookie.
 
 ### Return value
