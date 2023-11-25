@@ -175,8 +175,6 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 
 _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("EventTarget.addEventListener()")}}
-  - : Registers an event handler to a specific event type on the element.
 - {{DOMxRef("Element.after()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.attachShadow()")}}
@@ -191,8 +189,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
 - {{DOMxRef("Element.computedStyleMap()")}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
-- {{DOMxRef("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.
 - {{DOMxRef("Element.getAnimations()")}}
   - : Returns an array of Animation objects currently active on the element.
 - {{DOMxRef("Element.getAttribute()")}}
@@ -249,8 +245,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Removes the node representation of the named attribute from the current node.
 - {{DOMxRef("Element.removeAttributeNS()")}}
   - : Removes the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the element.
 - {{DOMxRef("Element.replaceChildren()")}}
   - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
 - {{DOMxRef("Element.replaceWith()")}}
@@ -292,7 +286,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
-- {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
+- {{domxref("HTMLElement/cancel_event", "cancel")}}
   - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
