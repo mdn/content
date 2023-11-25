@@ -62,11 +62,6 @@ The flow elements are:
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
 - {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}
-- {{HTMLElement("Heading_Elements", "<h2>")}}
-- {{HTMLElement("Heading_Elements", "<h3>")}}
-- {{HTMLElement("Heading_Elements", "<h4>")}}
-- {{HTMLElement("Heading_Elements", "<h5>")}}
-- {{HTMLElement("Heading_Elements", "<h6>")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
 - {{HTMLElement("hr")}}
@@ -135,7 +130,7 @@ Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElemen
 
 Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
-Elements belonging to this category are {{HTMLElement("Heading_Elements", "<h1>")}}, {{HTMLElement("Heading_Elements", "<h2>")}}, {{HTMLElement("Heading_Elements", "<h3>")}}, {{HTMLElement("Heading_Elements", "<h4>")}}, {{HTMLElement("Heading_Elements", "<h5>")}}, {{HTMLElement("Heading_Elements", "<h6>")}} and {{HTMLElement("hgroup")}}.
+Elements belonging to this category are {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}} and {{HTMLElement("hgroup")}}.
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
