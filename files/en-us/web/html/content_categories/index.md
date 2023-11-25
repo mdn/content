@@ -61,7 +61,7 @@ The flow elements are:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
-- {{HTMLElement("Heading_Elements", "<h1>")}}
+- {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}
 - {{HTMLElement("Heading_Elements", "<h2>")}}
 - {{HTMLElement("Heading_Elements", "<h3>")}}
 - {{HTMLElement("Heading_Elements", "<h4>")}}
@@ -127,13 +127,13 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Sectioning content
 
-Sectioning content is a subset of flow content that creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
+Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
 
 Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
 
 ### Heading content
 
-Heading content is a subset of flow content that defines the title of a section, whether marked by an explicit [sectioning content](#sectioning_content) element, or implicitly defined by the heading content itself.
+Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
 Elements belonging to this category are {{HTMLElement("Heading_Elements", "<h1>")}}, {{HTMLElement("Heading_Elements", "<h2>")}}, {{HTMLElement("Heading_Elements", "<h3>")}}, {{HTMLElement("Heading_Elements", "<h4>")}}, {{HTMLElement("Heading_Elements", "<h5>")}}, {{HTMLElement("Heading_Elements", "<h6>")}} and {{HTMLElement("hgroup")}}.
 
@@ -143,7 +143,7 @@ Elements belonging to this category are {{HTMLElement("Heading_Elements", "<h1>"
 
 ### Phrasing content
 
-Phrasing content is a subset of flow content that defines the text and the markup it contains. Runs of phrasing content make up paragraphs.
+Phrasing content, a subset of flow content, refers to the text and the markup within a document. Sequences of phrasing content make up paragraphs.
 
 Elements belonging to this category are:
 
@@ -196,7 +196,7 @@ Elements belonging to this category are:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
-- plain text (not only consisting of white spaces characters)
+- plain text (including more than just whitespace characters)
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -210,7 +210,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Embedded content
 
-Embedded content is a subset of flow content that imports another resource or inserts content from another markup language or namespace into the document. Elements that belong to this category include:
+Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document. Elements that belong to this category include:
 
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
@@ -225,7 +225,7 @@ Embedded content is a subset of flow content that imports another resource or in
 
 ### Interactive content
 
-Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction. Elements that belong to this category include:
+Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction. Elements that belong to this category include:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
