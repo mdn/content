@@ -3,12 +3,10 @@ title: "WorkerNavigator: deviceMemory property"
 short-title: deviceMemory
 slug: Web/API/WorkerNavigator/deviceMemory
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WorkerNavigator.deviceMemory
 ---
 
-{{APIRef("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Device Memory API")}}{{securecontext_header}}
 
 The **`deviceMemory`** read-only
 property of the {{domxref("WorkerNavigator")}} interface returns the approximate amount of
