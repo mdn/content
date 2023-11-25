@@ -30,7 +30,3 @@ obj.disableRemotePlayback = true;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.disableRemotePlayback` property
