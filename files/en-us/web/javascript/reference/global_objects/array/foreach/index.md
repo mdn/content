@@ -118,7 +118,7 @@ items.forEach((item) => {
 ### Printing the contents of an array
 
 > **Note:** In order to display the content of an array in the console,
-> you can use {{domxref("console/table", "console.table()")}}, which prints a formatted
+> you can use {{domxref("console/table_static", "console.table()")}}, which prints a formatted
 > version of the array.
 >
 > The following example illustrates an alternative approach, using

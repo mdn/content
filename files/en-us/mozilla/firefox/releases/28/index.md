@@ -12,8 +12,8 @@ Firefox 28 was released on March 18, 2014. This article lists key changes that a
 
 ### Developer Tools
 
-- The {{domxref("console.exception")}} property has been added ([Firefox bug 922214](https://bugzil.la/922214)).
-- The {{domxref("console.assert")}} property has been added ([Firefox bug 760193](https://bugzil.la/760193)).
+- The `console.exception`` property has been added ([Firefox bug 922214](https://bugzil.la/922214)).
+- The {{domxref("console/assert_static", "console.assert()")}} property has been added ([Firefox bug 760193](https://bugzil.la/760193)).
 - App Manager: a new Manifest Editor was added.
 - App Manager: the toolbox used for debugging apps is now embedded in the app manager UI.
 - Web Console: added a "split console" mode - press Escape to quickly open the console in any other tool.
