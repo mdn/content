@@ -28,8 +28,8 @@ _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits argu
   - : A string indicating the event type. It is case-sensitive and browsers set it to `geometrychange`.
 - `options`
   - : An object with the following properties:
-    - `visible`
-      - : A boolean flag that's true when the `titlebarAreaRect` object's values are not 0.
+    - `visible` {{optional_inline}}
+      - : A boolean flag that's true when the `titlebarAreaRect` object's values are not 0, defaults to `false`.
     - `titlebarAreaRect`
       - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
