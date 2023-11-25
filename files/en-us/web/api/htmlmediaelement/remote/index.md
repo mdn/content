@@ -22,7 +22,7 @@ const remotePlayback = el.remote;
 
 remotePlayback.watchAvailability((availability) => {
   // do something when the availability changes
-})
+});
 ```
 
 ## Specifications
