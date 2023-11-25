@@ -3,6 +3,7 @@ title: Remote Playback API
 slug: Web/API/Remote_Playback_API
 page-type: web-api-overview
 browser-compat: api.RemotePlayback
+spec-urls: https://w3c.github.io/remote-playback/
 ---
 
 {{DefaultAPISidebar("Remote Playback API")}}
