@@ -3,6 +3,7 @@ title: Geolocation API
 slug: Web/API/Geolocation_API
 page-type: web-api-overview
 browser-compat: api.Geolocation
+spec-urls: https://w3c.github.io/geolocation-api/
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
