@@ -7,7 +7,7 @@ browser-compat: http.headers.Device-Memory
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The **`Device-Memory`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the approximate amount of available RAM on the client device. The header is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
+The **`Device-Memory`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the approximate amount of available RAM on the client device. The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
 <table class="properties">
   <tbody>
@@ -69,8 +69,9 @@ Device-Memory: 1
 ## See also
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)
-- [Device Memory API](/en-US/docs/Web/API/Device_Memory_API)
+- {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
+- {{DOMxRef("WorkerNavigator.deviceMemory")}}
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}
