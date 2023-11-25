@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.deviceMemory
 ---
 
-{{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`deviceMemory`** read-only
 property of the {{domxref("Navigator")}} interface returns the approximate amount of
