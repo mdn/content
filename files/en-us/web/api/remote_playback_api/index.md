@@ -24,6 +24,13 @@ The API enables a page, which has an media element such as a video or audio file
 - {{domxref("RemotePlayback")}}
   - : Allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
 
+## Extensions to other interfaces
+
+- {{domxref("HTMLMediaElement.disableRemotePlayback")}}
+  - : A boolean that sets or returns the remote playback state, indicating whether the media element is allowed to have a remote playback UI.
+- {{domxref("HTMLMediaElement.remote")}} {{ReadOnlyInline}}
+  - : Return a {{domxref("RemotePlayback")}} object instance associated with the media element.
+
 ## Examples
 
 The following example demonstrates a player with custom controls that supports remote playback. Initially the button used to select a device is hidden.
