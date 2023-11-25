@@ -45,6 +45,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+- {{domxref("WorkerNavigator.serviceWorker")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
 - {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}}
