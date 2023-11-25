@@ -56,7 +56,7 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 ## Extensions to other interfaces
 
 - {{domxref("Navigator.windowControlsOverlay")}}
-  - : Returns the {{domxref("WindowControlsOverlay")}} interface, which exposes information about the title bar geometry in desktop Progressive Web Apps that use the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).
+  - : Returns the {{domxref("WindowControlsOverlay")}} interface, which exposes information about the title bar geometry in desktop Progressive Web Apps.
 
 ## Specifications
 
