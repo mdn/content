@@ -317,6 +317,14 @@
         "Window: resize"
       ]
     },
+    "Device Memory API": {
+      "overview": ["Device Memory API"],
+      "guides": [],
+      "interfaces": [],
+      "methods": [],
+      "properties": ["Navigator.deviceMemory", "WorkerNavigator.deviceMemory"],
+      "events": []
+    },
     "Device Orientation Events": {
       "overview": ["Device orientation events"],
       "guides": [
