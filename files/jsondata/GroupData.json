@@ -2310,7 +2310,10 @@
     },
     "Window Controls Overlay API": {
       "overview": ["Window Controls Overlay API"],
-      "interfaces": ["WindowControlsOverlay", "WindowControlsOverlayGeometryChangeEvent"],
+      "interfaces": [
+        "WindowControlsOverlay",
+        "WindowControlsOverlayGeometryChangeEvent"
+      ],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
