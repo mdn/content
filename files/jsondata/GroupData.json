@@ -1159,7 +1159,10 @@
       "guides": [],
       "interfaces": ["RemotePlayback"],
       "methods": [],
-      "properties": ["HTMLMediaElement.disableRemotePlayback", "HTMLMediaElement.remote"],
+      "properties": [
+        "HTMLMediaElement.disableRemotePlayback",
+        "HTMLMediaElement.remote"
+      ],
       "events": []
     },
     "Reporting API": {
