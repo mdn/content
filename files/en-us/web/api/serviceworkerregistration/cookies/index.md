@@ -14,7 +14,7 @@ The **`cookies`** read-only property of the {{domxref("ServiceWorkerRegistration
 
 ## Value
 
-A {{domxref('CookieStoreManager')}} object.
+A {{domxref("CookieStoreManager")}} object.
 
 ## Specifications
 

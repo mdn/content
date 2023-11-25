@@ -65,7 +65,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
+  - : Thrown if the origin can not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if setting the cookie with the given `name` and `value` or `options` fails.
 

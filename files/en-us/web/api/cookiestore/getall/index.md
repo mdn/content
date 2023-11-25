@@ -87,8 +87,8 @@ Each object contains the following properties:
   - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
-    - The `url` in `options` is present and is not equal with the creation URL if in Window context.
-    - The `url` in `options` is present and its origin is same as the origin of the creation URL.
+    - The `url` member of `options` parameter is present and is not equal with the creation URL if in Window context.
+    - The `url` member of `options` parameter is present and its origin is same as the origin of the creation URL.
     - Getting the cookie or cookies represented by the given `name` or `options` fails.
 
 ## Examples

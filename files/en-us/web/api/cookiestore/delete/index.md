@@ -50,7 +50,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when deletion
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
+  - : Thrown if the origin can not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if deleting the cookie represented by the given `name` or `options` fails.
 

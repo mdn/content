@@ -200,7 +200,7 @@
         "ServiceWorkerGlobalScope.cookieStore",
         "ServiceWorkerRegistration.cookies"
       ],
-      "events": ["ServiceWorkerGlobalScope: cookiechange"]
+      "events": ["ServiceWorkerGlobalScope: cookiechange event"]
     },
     "Credential Management API": {
       "overview": ["Credential Management API"],
