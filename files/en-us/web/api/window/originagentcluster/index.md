@@ -14,7 +14,7 @@ Windows that are part of an origin-keyed cluster are subjects to some additional
 
 - Set {{domxref("Document.domain")}}, which is a legacy feature that normally allows same-site cross-origin pages to synchronously access each other's DOM.
 - Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
-- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages. Note that this feature is only supported in Chrome and will disable in future versions chrome, see [Intent to Ship: Restriction on SharedArrayBuffers](https://groups.google.com/a/chromium.org/g/blink-dev/c/1NKvbIj3dq4/m/Vgfisu5HAwAJ).
+- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
 Note that this feature is only available in {{glossary("Secure Context")}}.
 
