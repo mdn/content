@@ -7,6 +7,7 @@ status:
 browser-compat:
   - api.Navigator.deviceMemory
   - http.headers.Device-Memory
+spec-urls: https://www.w3.org/TR/device-memory/
 ---
 
 {{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
@@ -29,6 +30,13 @@ const RAM = navigator.deviceMemory;
 
 You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
 
+## Extensions to other interfaces
+
+- {{domxref("Navigator.deviceMemory")}} {{Experimental_Inline}}
+  - : Returns the approximate amount of device memory in gigabytes.
+- {{domxref("WorkerNavigator.deviceMemory")}} {{Experimental_Inline}}
+  - : Returns the approximate amount of device memory in gigabytes.
+
 ## Specifications
 
 {{Specifications}}
@@ -39,5 +47,4 @@ You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Head
 
 ## See also
 
-- {{DOMxRef("Navigator.deviceMemory")}}
 - {{HTTPHeader("Device-Memory")}} header
