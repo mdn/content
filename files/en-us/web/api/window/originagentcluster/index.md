@@ -12,13 +12,13 @@ The **`originAgentCluster`** read-only property of the {{domxref("Window")}} int
 
 Otherwise this property returns `false`.
 
-Windows that are part of an origin-keyed cluster are subjects to some additional restrictions, compared with windows that are not. In particular, they cannot:
+Windows that are part of an origin-keyed agent cluster are subjects to some additional restrictions, compared with windows that are not. In particular, they cannot:
 
 - Set {{domxref("Document.domain")}}, which is a legacy feature that normally allows same-site cross-origin pages to synchronously access each other's DOM.
 - Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
 - Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
-Note that this feature is only available in {{glossary("Secure Context")}}.
+Note that origin-keyed agent cluster feature is only supported in {{glossary("Secure Context")}}. If a site is not a Secure Context, the `window.originAgentCluster` will always return `false`.
 
 ## Specifications
 
