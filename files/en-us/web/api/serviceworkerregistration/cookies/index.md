@@ -10,7 +10,7 @@ browser-compat: api.ServiceWorkerRegistration.cookies
 
 {{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`cookies`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the {{domxref('CookieStoreManager')}} interface, which allows subscribe and unsubscribe to cookie change events. This is part of the {{domxref("Cookie Store API")}}.
+The **`cookies`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the {{domxref('CookieStoreManager')}} interface, which allows subscribe and unsubscribe to cookie change events. This is part of the {{domxref("Cookie Store API", "", "", "nocode")}}.
 
 ## Value
 
@@ -26,4 +26,4 @@ A {{domxref("CookieStoreManager")}} object.
 
 ## See also
 
-- {{domxref("Cookie Store API")}}
+- {{domxref("Cookie Store API", "", "", "nocode")}}

@@ -26,4 +26,4 @@ A {{domxref("CookieStore")}} object instance.
 
 ## See also
 
-- {{domxref("Cookie Store API")}}
+- {{domxref("Cookie Store API", "", "", "nocode")}}
