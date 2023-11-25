@@ -38,5 +38,4 @@ console.log(`This device has at least ${memory}GiB of RAM.`);
 
 ## See also
 
-- {{domxref("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{HTTPHeader("Device-Memory")}} HTTP header
