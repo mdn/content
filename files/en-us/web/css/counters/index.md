@@ -25,8 +25,8 @@ A [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) has no vi
 
 ### Values
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
+- `<counter-name>`
+  - : A {{cssxref("&lt;custom-ident&gt;")}} identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
 - `<counter-style>`
   - : A counter style name or [`symbols()`](/en-US/docs/Web/CSS/symbols) function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to decimal
 - {{cssxref("&lt;string&gt;")}}
