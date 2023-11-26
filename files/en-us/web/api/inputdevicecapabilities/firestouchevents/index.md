@@ -8,7 +8,7 @@ status:
 browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 The **`InputDeviceCapabilities.firesTouchEvents`** read-only
 property returns a boolean value that indicates whether the device dispatches

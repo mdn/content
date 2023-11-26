@@ -8,7 +8,7 @@ status:
 browser-compat: api.UIEvent.sourceCapabilities
 ---
 
-{{APIRef("UI Events")}}{{SeeCompatTable}}
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 The **`UIEvent.sourceCapabilities`** read-only property returns
 an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides
