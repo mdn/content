@@ -53,8 +53,16 @@ The URL passed to the `subscribe()` method, may be narrower than the service wor
 ```js
 self.registration.cookies.subscribe([{ name: "cookie1", url: "/path/one/" }]); // subscription
 
-self.cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/one/" }); // receives a change event
-self.cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/two/" }); // does not receive a change event
+self.cookieStore.set({
+  name: "cookie1",
+  value: "cookie-value",
+  path: "/path/one/",
+}); // receives a change event
+self.cookieStore.set({
+  name: "cookie1",
+  value: "cookie-value",
+  path: "/path/two/",
+}); // does not receive a change event
 ```
 
 ## Specifications
