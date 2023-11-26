@@ -48,4 +48,4 @@ A new {{domxref("StorageEvent")}} object.
 
 ## See also
 
-- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
+- {{domxref("Web Storage API", "", "", true)}}

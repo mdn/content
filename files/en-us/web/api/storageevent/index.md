@@ -55,4 +55,4 @@ _In addition to the methods listed below, this interface inherits the methods of
 
 ## See also
 
-- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
+- {{domxref("Web Storage API", "", "", true)}}

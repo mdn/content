@@ -24,4 +24,4 @@ A string containing the URL of the document whose storage changed.
 
 ## See also
 
-- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
+- {{domxref("Web Storage API", "", "", true)}}
