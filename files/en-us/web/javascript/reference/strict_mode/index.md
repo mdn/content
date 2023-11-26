@@ -49,7 +49,7 @@ function myNotStrictFunction() {
 }
 ```
 
-The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with non-simple parameter list, [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
+The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with non-simple parameters list like [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 example function with default parameters :-
 
