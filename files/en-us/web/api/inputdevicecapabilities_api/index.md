@@ -26,8 +26,13 @@ myButton.addEventListener("mousedown", (e) => {
 
 ## Interfaces
 
-- {{DOMxRef("InputDeviceCapabilities")}} {{Experimental_Inline}}
+- {{domxref("InputDeviceCapabilities")}} {{Experimental_Inline}}
   - : Provides logical information about an input device.
+
+## Extensions to other interfaces
+
+- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
 
 ## Specifications
 
