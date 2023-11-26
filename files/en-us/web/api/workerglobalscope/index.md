@@ -55,29 +55,29 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Standard methods
 
-- {{domxref("atob", "WorkerGlobalScope.atob()")}}
+- {{domxref("atob()", "WorkerGlobalScope.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("btoa", "WorkerGlobalScope.btoa()")}}
+- {{domxref("btoa()", "WorkerGlobalScope.btoa()")}}
   - : Creates a base-64 encoded {{Glossary("ASCII")}} string from a string of binary data.
-- {{domxref("clearInterval", "WorkerGlobalScope.clearInterval()")}}
+- {{domxref("clearInterval()", "WorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout", "WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("clearTimeout()", "WorkerGlobalScope.clearTimeout()")}}
   - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
-- {{domxref("createImageBitmap", "WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("createImageBitmap()", "WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("fetch", "WorkerGlobalScope.fetch()")}}
+- {{domxref("fetch()", "WorkerGlobalScope.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`.
-- {{domxref("queueMicrotask", "WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("queueMicrotask()", "WorkerGlobalScope.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
-- {{domxref("setInterval", "WorkerGlobalScope.setInterval()")}}
+- {{domxref("setInterval()", "WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout", "WorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("structuredClone", "WorkerGlobalScope.structuredClone()")}}
+- {{domxref("structuredClone()", "WorkerGlobalScope.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- {{domxref("reportError", "WorkerGlobalScope.reportError()")}}
+- {{domxref("reportError()", "WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
 ### Non-standard methods
@@ -87,17 +87,17 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ## Events
 
-- {{domxref("WorkerGlobalScope.error_event", "error")}}
+- {{domxref("WorkerGlobalScope/error_event", "error")}}
   - : Fires when an error occurred.
-- {{domxref("WorkerGlobalScope.languagechange_event", "languagechange")}}
+- {{domxref("WorkerGlobalScope/languagechange_event", "languagechange")}}
   - : Fires at the global/worker scope object when the user's preferred languages change.
-- {{domxref("WorkerGlobalScope.offline_event", "offline")}}
+- {{domxref("WorkerGlobalScope/offline_event", "offline")}}
   - : Fires when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
-- {{domxref("WorkerGlobalScope.online_event", "online")}}
+- {{domxref("WorkerGlobalScope/online_event", "online")}}
   - : Fires when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
-- {{domxref("WorkerGlobalScope.rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : Fires on handled {{jsxref("Promise")}} rejection events.
-- {{domxref("WorkerGlobalScope.unhandledrejection_event", "unhandledrejection")}}
+- {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : Fires on unhandled {{jsxref("Promise")}} rejection events.
 
 ## Example

@@ -29,7 +29,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("SharedWorkerGlobalScope.connect_event", "connect")}}
+- {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}}
   - : Fired on shared workers when a new client connects.
 
 ## Specifications

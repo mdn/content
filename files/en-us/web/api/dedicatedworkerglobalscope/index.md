@@ -29,9 +29,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ## Events
 
-- {{domxref("DedicatedWorkerGlobalScope.message_event", "message")}}
+- {{domxref("DedicatedWorkerGlobalScope/message_event", "message")}}
   - : Fired when the worker receives a message from its parent.
-- {{domxref("DedicatedWorkerGlobalScope.messageerror_event", "messageerror")}}
+- {{domxref("DedicatedWorkerGlobalScope/messageerror_event", "messageerror")}}
   - : Fired when a worker receives a message that can't be deserialized.
 
 ## Specifications
