@@ -298,69 +298,73 @@ We have set all four corners in the example below and then changed the values fo
 
 ### Border images
 
-Border images allow you to use images for your element's borders, thereby offering you a unique and creative way to style elements. Each aspect of the border image can be controlled using the specific {{cssxref("border-image")}} CSS property.
+Border images allow you to use images for the border of elements, thereby offering you a way to add a creative touch to style elements and your website. Each aspect of the border image can be controlled using a specific {{cssxref("border-image")}} CSS property. In this part of the lesson, we'll learn how to use and manipulate images for borders.
 
-To explore these properties interactively and check how they interplay with each other, check out our [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator) tool.
+To explore individual `border-image` properties interactively and check how they interplay with each other, check out our [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator) tool.
 
 #### Specifying the border image
 
-The {{cssxref("border-image-source")}} property is used to specify the image to be used as a border. This is the first step in creating a border image.
+As the very first step, let's specify an image to use as a border. This can be any image, like a star or a balloon. We'll use this image throughout this part of the lesson to demonstrate different properties.
 
-Similar to {{cssxref("background-image")}}, this property accepts either a URL to an image file or a gradient and applies it to the border of the box. You can use various image formats like PNG, JPG, or SVG. The specified image will then be processed by other `border-image` property values to render the final border appearance.
+You specify the border image by using the {{cssxref("border-image-source")}} property. Similar to {{cssxref("background-image")}}, this property accepts either a URL to an image file or a gradient and applies it to the border of the box. You can use various image formats like PNG, JPG, or SVG. The specified image will then be processed by other `border-image` property values to render the final border appearance.
 
-If `border-image-source` value is set as `none`, the browser uses the {{cssxref("border-style")}} property to control the appearance of the border.
+If you set the `border-image-source` value to `none`, the browser uses the {{cssxref("border-style")}} property to control the appearance of the border.
 
 ```css
 .box {
-  border-image-source: url("border-image.png");
+  border-image-source: url("star.png");
 }
 ```
 
-#### Slicing a border image
+#### Slicing the border image
 
-The {{cssxref("border-image-slice")}} property specifies the part of the border image that is displayed in an element's border. This property slices a border image using four lines at a given slice distance from their respective sides. These lines determine the size of the regions that will be used for the border. The four slice lines effectively divide the image into nine regions: four corners, four edges, and the middle.
+Now, let's slice the image. Slicing helps us define the parts of our image that will be displayed in the corners and sides of the element's border.
 
-In the example below, the value `30%` means that 30% of the image from each side (top, right, bottom, left) is used for the border.
+You can slice the image by using the {{cssxref("border-image-slice")}} property. This property slices a border image using four imaginary lines that are at the specified slice distance from the respective edges. The four slice lines effectively divide the image into nine regions: four corners, four edges, and the middle. These lines determine the size of the regions in which the border image will be displayed.
+
+In the example below, the value `30%` means that 30% of the image from each side (top, right, bottom, left) is used to display in the border.
 
 ```css
 .box {
-  border-image-source: url("border-image.png");
+  border-image-source: url("star.png");
   border-image-slice: 30%;
 }
 ```
 
-How the border image finally appears is also dependent on other properties such as {{cssxref("border-image-width")}}, {{cssxref("border-image-repeat")}}, and {{cssxref("border-image-outset")}}. These properties specify how the sliced regions are scaled, repeated, and positioned. Furthermore, basic border properties like {{cssxref("border-width")}} and {{cssxref("border-style")}} also influence the display of the border image. The `border-width` property sets the available space for the border image, and the `border-style` property ensures that the border image is displayed correctly. For example, setting a `border-style` such as `solid`or `dotted` ensures that the space for the border image is properly established, allowing the border image to be displayed effectively. Together, these properties contribute to the overall visual effect of the border image on an element.
+How the border image finally appears is also dependent on other properties such as {{cssxref("border-image-width")}}, {{cssxref("border-image-repeat")}}, and {{cssxref("border-image-outset")}}. These properties specify how the sliced regions are scaled, repeated, and positioned. We'll learn about these properties in subsequent sections here.
 
-#### Controlling the width of a border image
+Furthermore, basic border properties like {{cssxref("border-width")}} and {{cssxref("border-style")}} also influence the display of the border image. The `border-width` property sets the available space for the border image, and the `border-style` property ensures that the border image is displayed correctly. For example, setting a `border-style` such as `solid`or `dotted` ensures that the space for the border image is properly established, allowing the border image to be displayed effectively. Together, these properties contribute to the overall visual effect of the border image on an element.
 
-The {{cssxref("border-image-width")}} property specifies the width of the border image.
+#### Adjusting the width of the border image
+
+After slicing, we need to decide the thickness of our border image. This is where we set the width of the border image using the {{cssxref("border-image-width")}} property.
 
 In the example below, the `border-image-width` property determines how the sliced sections of the border image are scaled within the border.
 
 ```css
 .box {
-  border-image-source: url("border-image.png");
+  border-image-source: url("star.png");
   border-image-slice: 30%;
   border-image-width: 10px;
 }
 ```
 
-While this property defines how wide or thick the border image will appear, the {{cssxref("border-width")}} property defines the width of the border around an element. So `border-image-width` determines how the border image is scaled within this allocated border area.
+It's important that we understand the purposes of the `border-image-width` and {{cssxref("border-width")}} properties. While the `border-image-width` property defines how wide or thick the border image will appear, the `border-width` property defines the width of the border around the element. So `border-image-width` determines how the border image is scaled within this allocated border area. Consider these scenarios:
 
-- If `border-image-width` is greater than `border-width`, the border image will extend beyond the border box. The extension beyond the border area can be further controlled by the {{cssxref("border-image-outset")}} value.
+- If `border-image-width` is greater than `border-width`, the border image will extend beyond the border box. The extension of the image beyond the border area can be further controlled by the {{cssxref("border-image-outset")}} value.
 - If `border-image-width` is smaller than `border-width`, the image may not fill the entire border area, potentially revealing the background or the border color.
 
-#### Controlling the extension of a border image
+#### Extending the border image beyond the border
 
-The {{cssxref("border-image-outset")}} property is used to specify how far the border image can extend beyond the border box. If the border image extends outside the element's box, it can cause the border image to overlap or push adjacent elements or content, thereby affecting the layout of neighboring elements.
+Sometimes, you might want your border image to extend beyond the element's border box. This is where the {{cssxref("border-image-outset")}} property comes into play. It's like deciding how much the icing on a cake should overflow. Although the order of specifying properties is not strict, but `border-image-outset` is typically specified after the {{cssxref("border-image-width")}} property.
 
-Although the order of specifying properties is not strict, but `border-image-outset` is typically specified after the {{cssxref("border-image-width")}} property.
+Keep in mind though that when a border image extends outside the element's border box, it can cause the border image to overlap or push adjacent elements or content. This can affect the layout of neighboring elements.
 
-In the example below, the border image will be displayed with a width of `10px`, which is within the border area of the element, defined by `border-width`. The `border-image-outset` values specifies that the border image will extend `5px` outside the border box. This extension is in addition to the width specified by `border-image-width`. This creates a visual effect where the border image is centered within the `15px` border area, with a portion of it extending outward. The total width occupied by the border and its outset will be `20px` (`15px` for the border and an additional `5px` for the outset).
+In the example below, the border image will be displayed with a width of `10px`, which is within the border area of the element, defined by `border-width`. The `border-image-outset` value specifies that the border image will extend `5px` outside the border box. This extension is in addition to the width specified by `border-image-width`. This creates a visual effect where the border image is centered within the `15px` border area, with a portion of it extending outward. The total width occupied by the border and its outset will be `20px` (`15px` for the border and an additional `5px` for the outset).
 
 ```css
 .box {
-  border-image-source: url("border-image.png");
+  border-image-source: url("star.png");
   border-image-slice: 30%;
   border-image-width: 10px; /* Width of the border image */
   border-image-outset: 5px; /* Extension of the border image beyond the border area */
@@ -370,29 +374,32 @@ In the example below, the border image will be displayed with a width of `10px`,
 
 A larger outset value can make the border appear as if it's floating around the element, while a smaller outset keeps the border image more contained.
 
-#### Controlling the layout of border images
+#### Controlling the layout of the border image
 
-The {{cssxref("border-image-repeat")}} property helps you control how the image is repeated around the border. It works with the slices created using the {{cssxref("border-image-slice")}} property. The sliced image sections (edges and corners) are fitted, repeated, or stretched to fill the border area. This property is often specified last as it deals with the final layout of the border image on the element.
+After slicing the image, you can decide how the sliced image should fit around the border - that is, should the sliced image sections repeat, stretch, or adjust to fit the border area. The {{cssxref("border-image-repeat")}} property helps you with this. This property is often specified last among the `border-image` properties because it deals with the final layout of the border image in the element.
+
+The value `round` will make the image repeat around the border in such a way that it fits perfectly without clipping. In contrast, the value `stretch` will stretch the image to fill the border area without repeating, and the value `repeat` will tile the image across the border, potentially clipping it if it doesn't fit perfectly in the border area.
 
 ```css
 .box {
+  border-image-source: url("star.png");
+  border-image-slice: 30%;
+  border-image-width: 10px;
+  border-image-outset: 5px;
+  border-width: 15px;
   border-image-repeat: round;
 }
 ```
 
-The value `round` will make the image repeat around the border in such a way that it fits perfectly without clipping.
-
-In contrast, the value `stretch` will stretch the image to fill the border area without repeating, and the value `repeat` will tile the image across the border, potentially clipping it if it doesn't fit perfectly.
-
 #### Using the `border-image` shorthand property
 
-You can use the shorthand {{cssxref("border-image")}} property to set all the border image properties at once.
+Finally, let's see how we can set all these properties in one go using the shorthand {{cssxref("border-image")}} property.
 
-In the example below, the shorthand `border-image` property is used to set multiple border image properties at the same time, including {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, and {{cssxref("border-image-repeat")}}.
+In the example below, the shorthand `border-image` property is used to set multiple border image properties, including {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, and {{cssxref("border-image-repeat")}}, at the same time.
 
 ```css
 .box {
-  border-image: url("border-image.png") 30% round;
+  border-image: url("star.png") 30% round;
 }
 ```
 
