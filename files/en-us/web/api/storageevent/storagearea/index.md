@@ -24,4 +24,4 @@ A {{DOMxRef("Storage")}} object that represents the storage object that was affe
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}

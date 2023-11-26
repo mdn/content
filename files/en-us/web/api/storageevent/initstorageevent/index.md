@@ -58,6 +58,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}
 - The constructor to use instead of this deprecated method: {{domxref("StorageEvent.StorageEvent",
     "StorageEvent()")}}.

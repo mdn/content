@@ -24,4 +24,4 @@ A string containing the key for the storage item that was changed.
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}

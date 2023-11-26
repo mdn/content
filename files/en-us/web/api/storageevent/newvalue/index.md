@@ -24,4 +24,4 @@ A string containing the new value of the storage item.
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}

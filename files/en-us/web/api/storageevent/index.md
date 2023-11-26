@@ -55,4 +55,4 @@ _In addition to the methods listed below, this interface inherits the methods of
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}

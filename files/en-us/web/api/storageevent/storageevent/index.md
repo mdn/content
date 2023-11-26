@@ -48,4 +48,4 @@ A new {{domxref("StorageEvent")}} object.
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}

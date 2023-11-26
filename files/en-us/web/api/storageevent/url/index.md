@@ -24,4 +24,4 @@ A string containing the URL of the document whose storage changed.
 
 ## See also
 
-- {{domxref("Web Storage API", "", "", true)}}
+- {{domxref("Web Storage API", "", "", "nocode")}}
