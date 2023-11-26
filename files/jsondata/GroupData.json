@@ -523,7 +523,11 @@
       "guides": [],
       "interfaces": [],
       "methods": [],
-      "properties": ["MouseEvent.webkitForce"],
+      "properties": [
+        "MouseEvent.webkitForce",
+        "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
+        "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN"
+      ],
       "events": [
         "Element: webkitmouseforcewillbegin",
         "Element: webkitmouseforcedown",
