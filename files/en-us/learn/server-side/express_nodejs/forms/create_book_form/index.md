@@ -24,7 +24,7 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
   // Get all authors and genres, which we can use for adding to our book.
   const [allAuthors, allGenres] = await Promise.all([
     Author.find().sort({ family_name: 1 }).exec(),
-    Genre.find().exec(),
+    Genre.find().sort({ name: 1 }).exec(),
   ]);
 
   res.render("book_form", {
@@ -90,7 +90,7 @@ exports.book_create_post = [
       // Get all authors and genres for form.
       const [allAuthors, allGenres] = await Promise.all([
         Author.find().sort({ family_name: 1 }).exec(),
-        Genre.find().exec(),
+        Genre.find().sort({ name: 1 }).exec(),
       ]);
 
       // Mark our selected genres as checked.
