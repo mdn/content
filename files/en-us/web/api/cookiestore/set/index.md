@@ -37,7 +37,7 @@ Or
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie. Defaults to `null`.
     - `expires` {{Optional_Inline}}
-      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie. Defaults to `null`.
+      - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie. Defaults to `null`.
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
@@ -75,7 +75,8 @@ The following example sets a cookie by passing an object with `name`, `value`, `
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore.set({
+
+window.cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,

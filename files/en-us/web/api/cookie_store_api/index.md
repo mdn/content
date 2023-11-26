@@ -14,7 +14,7 @@ spec-urls: https://wicg.github.io/cookie-store/
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{SeeCompatTable}}
 
-The _**Cookie Store API**_ provides an asynchronous API for managing cookies, while also exposing cookies to [Service Worker API](/en-US/docs/Web/API/Service_Worker_API).
+The _**Cookie Store API**_ provides an asynchronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "", "", "nocode")}}.
 
 ## Concepts and Usage
 
@@ -26,12 +26,12 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 
 ## Interfaces
 
+- {{domxref("CookieChangeEvent")}} {{Experimental_Inline}}
+  - : A `CookieChangeEvent` named `change` is dispatched against `CookieStore` object in {{domxref("Window")}} context when any script-visible cookies changes occur.
 - {{domxref("CookieStore")}} {{Experimental_Inline}}
   - : The `CookieStore` interface enables getting and setting cookies.
 - {{domxref("CookieStoreManager")}} {{Experimental_Inline}}
   - : The `CookieStoreManager` interface provides a service worker registration to enable service workers to subscribe to cookie change events.
-- {{domxref("CookieChangeEvent")}} {{Experimental_Inline}}
-  - : A `CookieChangeEvent` named `change` is dispatched against `CookieStore` object in {{domxref("Window")}} context when any script-visible cookies changes occur.
 - {{domxref("ExtendableCookieChangeEvent")}} {{Experimental_Inline}}
   - : An `ExtendableCookieChangeEvent` named `cookiechange` is dispatched against {{domxref("ServiceWorkerGlobalScope")}} context when any script-visible cookie changes occur that match the service worker's cookie change subscription list.
 

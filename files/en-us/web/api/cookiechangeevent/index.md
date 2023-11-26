@@ -44,13 +44,13 @@ _This interface also inherits methods from {{domxref("Event")}}._
 In this example when the cookie is set, the event listener logs the event to the console. This is a `CookieChangeEvent` object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.
 
 ```js
-cookieStore.addEventListener("change", (event) => {
+window.cookieStore.addEventListener("change", (event) => {
   console.log(event);
 });
 
 const one_day = 24 * 60 * 60 * 1000;
 
-cookieStore.set({
+window.cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,

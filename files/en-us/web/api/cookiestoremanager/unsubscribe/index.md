@@ -44,7 +44,8 @@ In this example the {{domxref("ServiceWorkerRegistration")}} represented by `reg
 
 ```js
 const subscriptions = [{ name: "cookie1", url: "/path1" }];
-await registration.cookies.unsubscribe(subscriptions);
+
+await self.registration.cookies.unsubscribe(subscriptions);
 ```
 
 ## Specifications

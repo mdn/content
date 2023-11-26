@@ -37,7 +37,8 @@ In this example we set a cookie and write to the console feedback as to whether 
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore
+
+window.cookieStore
   .set({
     name: "cookie1",
     value: "cookie1-value",

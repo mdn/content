@@ -50,7 +50,8 @@ self.addEventListener("cookiechange", (event) => {
 });
 
 const one_day = 24 * 60 * 60 * 1000;
-cookieStore.set({
+
+self.cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,

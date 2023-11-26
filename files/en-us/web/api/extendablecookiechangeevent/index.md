@@ -45,6 +45,7 @@ In the below example, we use {{domxref("CookieStoreManager.getSubscriptions()")}
 self.addEventListener("activate", (event) => {
   event.waitUntil(async () => {
     const subscriptions = await self.registration.cookies.getSubscriptions();
+
     await self.registration.cookies.unsubscribe(subscriptions);
 
     await self.registration.cookies.subscribe([

@@ -49,7 +49,7 @@ Each object contains the following properties:
 
 - `expires`
 
-  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
+  - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 
 - `name`
 
@@ -96,7 +96,8 @@ Each object contains the following properties:
 In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
 
 ```js
-let cookies = await cookieStore.getAll();
+let cookies = await window.cookieStore.getAll();
+
 if (cookies.length > 0) {
   console.log(cookies);
 } else {
