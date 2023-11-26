@@ -28,7 +28,9 @@ polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ```
 
-The parameters to `polygon()` are separated by a comma and optional whitespace. The 1st parameter is an optional [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) value. The 2nd-Nth parameters are points that define the polygon. Each point is a pair of x/y coordinate {{cssxref("length-percentage")}} values separated by a space, e.g. "0px 0px" for the left/top corner. Note that this alternating space/comma format is strict, unlike the SVG [points](/en-US/docs/Web/SVG/Attribute/points) attribute, which is flexible about the use of space/comma separators.
+The parameters to `polygon()` are separated by a comma and optional whitespace. The 1st parameter is an optional [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) value. The 2nd-Nth parameters are points that define the polygon. Each point is a pair of x/y coordinate {{cssxref("length-percentage")}} values separated by a space, e.g. "0px 0px" for the left/top corner.
+
+Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Element/polygon) tag has [`fill-rule`](/en-US/docs/Web/SVG/Attribute/fill-rule) and [`points`](/en-US/docs/Web/SVG/Attribute/points) as separate attributes, and `points` is flexible about the usage of space and comma separators. CSS `polygon()` rules for separators are strictly enforced.
 
 ### Parameters
 
