@@ -37,7 +37,7 @@ Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Element/polygon) element has sep
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
   - : An optional value of `nonzero` (the default when omitted) or `evenodd`, which specifies the filling rule.
 - {{cssxref("length-percentage")}}
-  - : Each vertex of the polygon is represented with a pair of `<length-percentage>` values, which give the x/y coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box).
+  - : Each vertex of the polygon is represented by a pair of `<length-percentage>` values, which give the x/y coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box).
 
 ### Return value
 
