@@ -49,14 +49,43 @@ function myNotStrictFunction() {
 }
 ```
 
-The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
+The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with non-simple parameter list, [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
+
+example function with default parameters :-
 
 ```js-nolint example-bad
 function sum(a = 1, b = 2) {
-  // SyntaxError: "use strict" not allowed in function with default parameter
+  // SyntaxError: "use strict" not allowed in function with default parameters
   "use strict";
   return a + b;
 }
+
+sum();
+```
+
+example function with rest parameters :-
+
+```js-nolint example-bad
+function sum(...numbers) {
+  // SyntaxError: "use strict" not allowed in function with rest parameters
+  "use strict";
+  const arr = numbers;
+  return arr.reduce((acc, val) => (acc += val));
+}
+
+sum(1, 5, 8, 9, 7, 2, 10);
+```
+
+example function with destructured parameters :-
+
+```js-nolint example-bad
+function sum([a, b]) {
+  // SyntaxError: "use strict" not allowed in function with destructured parameters
+  "use strict";
+  return a + b;
+}
+
+sum([2, 10]);
 ```
 
 ### Strict mode for modules
