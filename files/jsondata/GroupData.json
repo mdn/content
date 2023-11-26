@@ -806,6 +806,14 @@
       "properties": ["Navigator.ink"],
       "events": []
     },
+    "Insertable Streams for MediaStreamTrack API": {
+      "overview": ["Insertable Streams for MediaStreamTrack API"],
+      "guides": [],
+      "interfaces": ["MediaStreamTrackGenerator", "MediaStreamTrackProcessor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
       "guides": [
