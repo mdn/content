@@ -1,4 +1,4 @@
----
+--
 title: import.meta.resolve()
 slug: Web/JavaScript/Reference/Operators/import.meta/resolve
 page-type: javascript-language-feature
