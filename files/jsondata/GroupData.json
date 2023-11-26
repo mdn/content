@@ -2103,6 +2103,14 @@
         "RTCSessionDescriptionCallback"
       ]
     },
+    "Web Serial API": {
+      "overview": ["Web Serial API"],
+      "guides": [],
+      "interfaces": ["Serial", "SerialPort"],
+      "methods": [],
+      "properties": ["Navigator.serial", "WorkerNavigator.serial"],
+      "events": []
+    },
     "Web Share API": {
       "overview": ["Web Share API"],
       "guides": [],
