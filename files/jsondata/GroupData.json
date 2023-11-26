@@ -518,6 +518,19 @@
       "properties": [],
       "events": []
     },
+    "Force Touch events": {
+      "overview": ["Force Touch events"],
+      "guides": [],
+      "interfaces": [],
+      "methods": [],
+      "properties": ["MouseEvent.webkitForce"],
+      "events": [
+        "Element: webkitmouseforcewillbegin",
+        "Element: webkitmouseforcedown",
+        "Element: webkitmouseforceup",
+        "Element: webkitmouseforcechanged"
+      ]
+    },
     "Fullscreen API": {
       "overview": ["Fullscreen API"],
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
