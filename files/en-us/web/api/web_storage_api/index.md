@@ -34,7 +34,7 @@ These mechanisms are available via the {{domxref("Window.sessionStorage")}} and 
 
 ## Determining storage access by a third party
 
-Each origin has its own storage (this is the same for web storage and [shared storage](/en-US/docs/Web/API/Shared_Storage_API)), but what about third-party (i.e. embedded) code access to shared storage? The [browsing context](/en-US/docs/Glossary/Browsing_context) of where the third-party code from another origin is executed determines whose storage that third-party code can access.
+Each origin has its own storage — this is true for both web storage and [shared storage](/en-US/docs/Web/API/Shared_Storage_API)). However, access of third-party (i.e., embedded) code to shared storage depends on its [browsing context](/en-US/docs/Glossary/Browsing_context). The context in which a third-party code from another origin runs determines the storage access of the third-party code.
 
 ![A box diagram showing a top-level browsing context called publisher.com, with third-party content embedded in it](embedded-content.png)
 
