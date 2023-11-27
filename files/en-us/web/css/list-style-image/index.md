@@ -109,5 +109,10 @@ ul {
 
 ## See also
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}
+- {{Cssxref("list-style")}} shorthand
+- {{Cssxref("list-style-type")}} property
+- {{Cssxref("list-style-position")}} property
 - {{cssxref("url", "url()")}} function
+- {{cssxref("::marker")}} pseudo-element
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
