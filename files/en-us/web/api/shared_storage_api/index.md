@@ -200,7 +200,7 @@ async function injectContent() {
 injectContent();
 ```
 
-## How does shared storage differ from web storage?
+## Differences between shared storage and web storage
 
 The key difference is that shared storage is intended for use with cross-origin data after storage has been partitioned.
 
