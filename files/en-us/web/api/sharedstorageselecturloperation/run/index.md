@@ -10,8 +10,7 @@ browser-compat: api.SharedStorageSelectURLOperation.run
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`run()`** method of the
-{{domxref("SharedStorageSelectURLOperation")}} interface defines the structure that the `run()` method defined inside a URL Selection output gate operation should conform to.
+The **`run()`** method of the {{domxref("SharedStorageSelectURLOperation")}} interface defines the structure to which the `run()` method defined inside a URL Selection output gate operation should conform.
 
 ## Syntax
 
