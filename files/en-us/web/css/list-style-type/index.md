@@ -700,6 +700,8 @@ container.addEventListener("change", (event) => {
 
 {{EmbedLiveSample("All_list_style_types", "600", "800")}}
 
+We're not limited to the list style types defined on this page or the specification. The {{cssxref("@counter-style")}} at-rule enables creating [counters using any alphabet](https://r12a.github.io/app-counters/).
+
 ## Specifications
 
 {{Specifications}}
@@ -710,7 +712,9 @@ container.addEventListener("change", (event) => {
 
 ## See also
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- [Counter styles converter](https://r12a.github.io/app-counters/)
+- {{Cssxref("list-style")}} shorthand property
+- {{Cssxref("list-style-image")}} property
+- {{Cssxref("list-style-position")}} property
+- {{Cssxref("::marker")}} pseudo-element
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
