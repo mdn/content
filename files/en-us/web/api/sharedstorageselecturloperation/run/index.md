@@ -21,7 +21,7 @@ run(urls, data)
 ### Parameters
 
 - `urls`
-  - : An array of objects representing the URLs to be chosen between by the URL Selection operation. Each object contains two properties:
+  - : An array of objects representing the URLs to be chosen by the URL Selection operation. Each object contains two properties:
     - `url`
       - : A string representing the URL.
     - `reportingMetadata` {{optional_inline}}
