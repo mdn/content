@@ -93,7 +93,7 @@ register("ab-testing", SelectURLOperation);
 register("experiment-group-reporting", ExperimentGroupReportingOperation);
 ```
 
-In the main browsing context, these operations are invoked by {{domxref("WindowSharedStorage.selectURL()", "selectURL()")}} and {{domxref("WindowSharedStorage.run()", "run()")}} respectively. The operations to invoke via these methods are selected using the names they were registered with, and they are also required to conform to the structures defined by the {{domxref("SharedStorageSelectURLOperation")}} and {{domxref("SharedStorageRunOperation")}} classes, and their `run()` methods.
+In the main browsing context, these operations are invoked by {{domxref("WindowSharedStorage.selectURL()", "selectURL()")}} and {{domxref("WindowSharedStorage.run()", "run()")}}, respectively. The operations to invoke via these methods are selected using the names they were registered with, and they are also required to conform to the structures defined by the {{domxref("SharedStorageSelectURLOperation")}} and {{domxref("SharedStorageRunOperation")}} classes and their `run()` methods.
 
 ```js
 // For demo purposes. The hostname is used to determine the usage of
