@@ -43,7 +43,7 @@ The following example uses a `contentdelete` event handler to remove cached cont
 
 ```js
 self.addEventListener("contentdelete", (event) => {
-  const deletion = caches
+  const deletion = self.caches
     .open("cache-name")
     .then((cache) =>
       Promise.all([
@@ -73,6 +73,6 @@ self.oncontentdelete = (event) => {
 
 ## See also
 
-- [Content index API](/en-US/docs/Web/API/Content_Index_API)
+- {{domxref("Content Index API")}}
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
