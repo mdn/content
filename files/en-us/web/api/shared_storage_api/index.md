@@ -223,7 +223,7 @@ Lastly, data in `localStorage` persists until it is manually cleared. `sessionSt
 - {{domxref("WorkletSharedStorage")}}
   - : Represents the shared storage for a particular origin within a worklet context. Among other things, it defines methods to read the shared storage data.
 - {{domxref("SharedStorageWorklet")}}
-  - : Represents the current origin's shared storage worklet. Contains the {{domxref("Worklet.addModule", "addModule()")}} method used to add a module to it. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons.
+  - : Represents the current origin's shared storage worklet. It contains the {{domxref("Worklet.addModule", "addModule()")}} method for adding modules. Unlike a regular {{domxref("Worklet")}}, the `SharedStorageWorklet` can have only a single module added to it, for privacy reasons.
 - {{domxref("SharedStorageWorkletGlobalScope")}}
   - : Represents the global scope of a {{domxref("SharedStorageWorklet")}} module. Contains functionality to {{domxref("SharedStorageWorkletGlobalScope.register", "register", "", "nocode")}} a defined operation, and {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "access the shared storage", "", "nocode")}}.
 
