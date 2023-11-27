@@ -16,7 +16,7 @@ The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage A
 ## Instance methods
 
 - {{domxref("SharedStorageRunOperation.run", "run()")}} {{Experimental_Inline}}
-  - : Defines the structure that the `run()` method defined inside a run output gate operation should conform to.
+  - : Defines the structure to which the `run()` method defined inside a Run output gate operation should conform.
 
 ## Examples
 
