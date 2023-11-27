@@ -74,6 +74,7 @@ CSS.registerProperty({
 
 ### Interfaces and APIs
 
+- {{domxref('CSSPropertyRule')}}
 - {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
 
 ## Guides
