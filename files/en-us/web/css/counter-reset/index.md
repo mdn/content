@@ -27,10 +27,7 @@ counter-reset: reversed(my-counter);
 counter-reset: reversed(my-counter) -1;
 
 /* Create reversed and regular counters at the same time */
-counter-reset: reversed(page-counter) 10 item-counter 1 reversed(
-    section-counter
-  )
-  4;
+counter-reset: reversed(pages) 10 items 1 reversed(sections) 4;
 
 /* Remove all counter-reset declarations in less specific rules */
 counter-reset: none;
@@ -45,7 +42,7 @@ counter-reset: unset;
 
 ### Values
 
-The `counter-reset` property accepts a list of one or more space-separated counter names or the keyword `none`. For counter names, regular counters use the format `<custom-ident>`, and reversed counters use `reversed(<custom-ident>)`. Optionally, each counter name can be followed by an `<integer>` to set its initial value.
+The `counter-reset` property accepts a list of one or more space-separated counter names or the keyword `none`. For counter names, regular counters use the format `<counter-name>`, and reversed counters use `reversed(<counter-name>)`, where `<counter-name>` is a {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} or `list-item` for the built-in {{HTMLElement("ol")}} counter. Optionally, each counter name can be followed by an `<integer>` to set its initial value.
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : Specifies the counter name to create and initialize using the {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} format.
@@ -66,9 +63,9 @@ Regular counters default to `0` if no reset value is provided. By default, regul
 
 ```css
 h1 {
-  counter-reset: chapter section 4 page;
-  /* Sets the chapter and page counters to 0,
+  /* Creates and sets the chapter and page counters to 0,
      and the section counter to 4 */
+  counter-reset: chapter section 4 page;
 }
 ```
 
@@ -76,10 +73,10 @@ When creating reversed counters without a value, the counter will start with the
 
 ```css
 h1 {
-  counter-reset: reversed(chapter) reversed(section) 10 pages;
   /* Create reversed counters chapter and section, setting
      the chapter counter as the number of elements and the section counter as 10.
      Create the pages counter with initial default value. */
+  counter-reset: reversed(chapter) reversed(section) 10 pages;
 }
 ```
 
