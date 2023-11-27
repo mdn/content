@@ -113,7 +113,6 @@ class KFreqMeasurementOperation {
 }
 
 // Register the operation
-
 register("k-freq-measurement", KFreqMeasurementOperation);
 ```
 
