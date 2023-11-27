@@ -21,7 +21,7 @@ append(key, value)
 ### Parameters
 
 - `key`
-  - : A string representing the key of the key/value pair you want to append a string to.
+  - : A string representing the key of the key-value pair to which you want to append a value.
 - `value`
   - : A string that you want to append to the existing value.
 
