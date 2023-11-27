@@ -51,4 +51,4 @@ window.sharedStorage.clear().then(console.log("Shared storage cleared"));
 
 ## See also
 
-- [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API)
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
