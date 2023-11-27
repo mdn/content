@@ -25,7 +25,7 @@ The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", 
 _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref("SharedStorage")}}._
 
 - {{domxref("WorkletSharedStorage.get", "get()")}} {{Experimental_Inline}}
-  - : Retrieves a value from shared storage.
+  - : Retrieves a value from the shared storage.
 - {{domxref("WorkletSharedStorage.length", "length()")}} {{Experimental_Inline}}
   - : Returns the number of entries currently stored in shared storage for the current origin.
 - {{domxref("WorkletSharedStorage.remainingBudget", "remainingBudget()")}} {{Experimental_Inline}}
