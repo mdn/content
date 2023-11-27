@@ -76,7 +76,7 @@ await window.sharedStorage.run("send-report", {
 });
 ```
 
-In the `reporting-worklet.js` worklet, we read the embedding document's event ID from `sharedStorage.context` and the frame's event-level data from the data object, then report them through Private Aggregation:
+In the `reporting-worklet.js` worklet, we read the embedding document's event ID from `sharedStorage.context` and the frame's event-level data from the data object. We then report them through Private Aggregation:
 
 ```js
 class ReportingOperation {
