@@ -219,7 +219,7 @@ Lastly, data in `localStorage` persists until it is manually cleared. `sessionSt
 - {{domxref("SharedStorage")}}
   - : Represents the shared storage for a particular origin. It defines methods to write data to the shared storage.
 - {{domxref("WindowSharedStorage")}}
-  - : Represents the shared storage for a particular origin, as it is exposed to a standard browsing context. Among other things, it defines methods to use the available output gates, which act as proxies for the operations defined in the worklet.
+  - : Represents the shared storage for a particular origin as exposed to a standard browsing context. Among other things, it defines methods to use the available output gates, which act as proxies for the operations defined in the worklet.
 - {{domxref("WorkletSharedStorage")}}
   - : Represents the shared storage for a particular origin, as it is exposed to a worklet context. Among other things, it defines methods to read the shared storage data.
 - {{domxref("SharedStorageWorklet")}}
