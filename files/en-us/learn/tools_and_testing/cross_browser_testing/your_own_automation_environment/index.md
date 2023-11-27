@@ -304,13 +304,17 @@ Try running your test again; the button will be clicked, and the `alert()` popup
 You can interact with the popup too. Add the following to the bottom of the code, and try testing it again:
 
 ```js
-const alert = driver.switchTo().alert();
+(async function example() {
+  await driver.wait(until.alertIsPresent());
 
-alert.getText().then((text) => {
-  console.log(`Alert text is '${text}'`);
-});
+  const alert = driver.switchTo().alert();
 
-alert.accept();
+  alert.getText().then((text) => {
+    console.log(`Alert text is '${text}'`);
+  });
+
+  alert.accept();
+})();
 ```
 
 Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:
