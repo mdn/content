@@ -11,21 +11,6 @@ browser-compat: api.CustomStateSet
 
 The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) stores a list of possible states for a custom element to be in, and allows states to be added and removed from the set.
 
-## Description
-
-An HTML form element, such as a checkbox has different _states_, "checked" and "unchecked". Likewise, developers creating custom elements need to assign possible states to these elements. The `CustomStateList` allows these states to be stored, and accessed from the custom element.
-
-An instance of `CustomStateList` is returned by {{domxref("ElementInternals.states")}}.
-
-A `CustomStateList` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold an ordered set of state values.
-Each value stored in a `CustomStateList` is a `<dashed-ident>`, in the format `--mystate`.
-
-### Interaction with CSS
-
-States are stored as a `<dashed-ident>` as this format can then be accessed from CSS using the _custom state pseudo-class_.
-In the same way that you can use CSS to determine if a checkbox is checked using the {{cssxref(":checked")}} pseudo-class,
-you can use a custom state pseudo-class to select a custom element that is in a certain state.
-
 ## Instance properties
 
 - {{domxref("CustomStateSet.size")}} {{Experimental_Inline}}
@@ -50,7 +35,24 @@ you can use a custom state pseudo-class to select a custom element that is in a 
 - {{domxref("CustomStateSet.values()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that yields the values for each element in the `CustomStateSet` object in insertion order.
 
+## Description
+
+An HTML form element, such as a checkbox has different _states_, "checked" and "unchecked". Likewise, developers creating custom elements need to assign possible states to these elements. The `CustomStateList` allows these states to be stored, and accessed from the custom element.
+
+An instance of `CustomStateList` is returned by {{domxref("ElementInternals.states")}}.
+
+A `CustomStateList` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold an ordered set of state values.
+Each value stored in a `CustomStateList` is a `<dashed-ident>`, in the format `--mystate`.
+
+### Interaction with CSS
+
+States are stored as a `<dashed-ident>` as this format can then be accessed from CSS using the _custom state pseudo-class_.
+In the same way that you can use CSS to determine if a checkbox is checked using the {{cssxref(":checked")}} pseudo-class,
+you can use a custom state pseudo-class to select a custom element that is in a certain state.
+
 ## Examples
+
+### Custom Element with States
 
 The following function adds and removes the state `--checked` to a `CustomStateSet`, then prints to the console `true` or `false` as the custom checkbox is checked or unchecked.
 
@@ -78,6 +80,66 @@ labeled-checkbox:--checked {
   border: solid;
 }
 ```
+
+### Labeled Checkbox
+
+<!--[UNDER CONSTRUCTION]
+This is the example from spec (partial).
+The example above copies from it but isn't complete. Might we worth making it worked example.
+I don't want to direct copy. Would like to do the non-boolean state thingy. But perhaps this is not he
+This is where I want to show the multi state case - not sure what yet.
+-->
+
+```js
+class LabeledCheckbox extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this.addEventListener("click", this._onClick.bind(this));
+
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.innerHTML = `<style>
+       :host::before {
+         content: '[ ]';
+         white-space: pre;
+         font-family: monospace;
+       }
+       :host(:--checked)::before { content: '[x]'; background: grey; }
+       </style>
+       <slot>Label</slot>`;
+  }
+
+  get checked() {
+    return this._internals.states.has("--checked");
+  }
+
+  set checked(flag) {
+    if (flag) this._internals.states.add("--checked");
+    else this._internals.states.delete("--checked");
+  }
+
+  _onClick(event) {
+    this.checked = !this.checked;
+  }
+}
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+```
+
+```css
+labeled-checkbox {
+  border: dashed red;
+}
+labeled-checkbox:--checked {
+  border: solid;
+}
+```
+
+```html
+<labeled-checkbox>You need to check this</labeled-checkbox>
+```
+
+{{EmbedLiveSample("Labeled Checkbox")}}
 
 ## Specifications
 
