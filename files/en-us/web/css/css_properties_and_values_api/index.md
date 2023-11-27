@@ -10,16 +10,16 @@ spec-urls: https://www.w3.org/TR/css-properties-values-api-1/
 The **CSS properties and values API** module is is part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs and allows authors to define custom properties for cascading variables.
 This API expands on [CSS custom properties for cascading variables](Web/CSS/CSS_cascading_variables) which allows authors to define custom properties in CSS using [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*).
 
-The additional functionality provided by the Properties and Values API is the introduction of control over inheritance, the ability to set initial values, and data type constraints.
-Authors can define CSS properties using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule in CSS and the {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} interface in JavaScript.
+Custom properties let you reuse values across a project to simplify complex or repetitive stylesheets.
+The CSS properties and values API adds metadata to custom properties using [`@property`](/en-US/docs/Web/CSS/@property) in CSS and {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in JavaScript.
+Adding metadata to custom properties gives an expected data type that the browser can use depending on the context, an initial value, and let you control inheritance.
+This API is a good match for rules with animations and transitions because the browser can interpolate between custom values of this type, whereas properties that use [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*) behave more like a string substitution.
 
 ## Properties and Values API in action
 
-Registered properties have an associated data type that the browser can use in different contexts, which makes them a great choice for animations and transitions.
-Using custom properties defined in CSS using the [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*) works more like a string substitution, so a CSS [transition](/en-US/docs/Web/CSS/transition) won't work as expected.
-When you hover over the box below, the background color changes over two seconds with proper interpolation between the different colors.
+To see how custom properties and values can be used via API, hover over the box below.
 
-```js
+```js hidden
 CSS.registerProperty({
   name: "--stop-color",
   syntax: "<color>",
@@ -31,15 +31,14 @@ CSS.registerProperty({
 ```css hidden
 .box {
   padding: 1rem;
-  width: 80%;
+  width: 90%;
   height: 4rem;
   font-family: sans-serif;
+  font-size: large;
   color: white;
   border-radius: 0.5rem;
 }
-```
 
-```css
 .box {
   --stop-color: cornflowerblue;
   background: linear-gradient(to right, var(--stop-color), lavenderblush);
@@ -56,6 +55,9 @@ CSS.registerProperty({
 ```
 
 {{EmbedLiveSample("",600,120)}}
+
+The box has a [backround](/en-US/docs/Web/CSS/background) consisting of a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) from `--stop-color` (the custom property) to [`lavenderblush`](/en-US/docs/Web/CSS/named-color).
+The value of `--stop-color` is set to `cornflowerblue` at first, but when you hover over the box, `--stop-color` [transitions](/en-US/docs/Web/CSS/transition) to `aquamarine` over two seconds (`linear-gradient(to right, aquamarine, lavenderblush)`).
 
 ## Reference
 
