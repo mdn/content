@@ -46,7 +46,7 @@ The different output gate types are detailed below:
 
 Many shared storage worklet module scripts only define and register a single operation; you can see examples on the {{domxref("SharedStorageSelectURLOperation")}} and {{domxref("SharedStorageRunOperation")}} pages.
 
-## Defining multiple operations
+### Defining multiple operations
 
 It is however perfectly possible, in more advanced cases, to define and register multiple operations in the same shared storage worklet module script with different names. In the following worklet module script, we define a URL Selection operation called `SelectURLOperation` that selects a URL for A/B testing, and a Run operation called `ExperimentGroupReportingOperation`, which runs a histogram report based on the user's A/B testing group:
 
