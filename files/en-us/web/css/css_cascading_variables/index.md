@@ -122,6 +122,6 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changin
 
 ## See also
 
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS `env()`](Web/CSS/env)
 - [getPropertyValue()](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
