@@ -31,7 +31,7 @@ run(name, options)
     - `data` {{optional_inline}}
       - : An object representing any data required for executing the operation.
     - `keepAlive` {{optional_inline}}
-      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be again. You therefore need to set `keepAlive` to `true` for each operation that is not intended to be the last one. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run; it therefore cannot be run again.
+      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be run again. Therefore, you need to set `keepAlive` to `true` for each operation that is not intended to be the last one. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run and cannot be run again.
 
 ### Return value
 
