@@ -1,12 +1,8 @@
 ---
-title: CSS Properties and Values API
+title: CSS properties and values API
 slug: Web/CSS/CSS_properties_and_values_API
 page-type: css-module
-browser-compat:
-  - css.at-rules.property
-  - css.properties.custom-property.var
-  - api.CSSPropertyRule
-  - api.CSS.registerProperty_static
+spec-urls: https://www.w3.org/TR/css-properties-values-api-1/
 ---
 
 {{CSSRef}}
@@ -17,157 +13,49 @@ This API expands on [CSS custom properties for cascading variables](Web/CSS/CSS_
 The additional functionality provided by the Properties and Values API is the introduction of control over inheritance, the ability to set initial values, and data type constraints.
 Authors can define CSS properties using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule in CSS and the {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} interface in JavaScript.
 
-## Examples
+## Properties and Values API in action
 
-### Registering custom properties in JavaScript
-
-Registering custom properties is done using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}.
-Because inheritance is disabled, the value `cornflowerblue` set in the parent element is not defined in the scope of the `.child` element, and the initial value of `cornflowerblue` is used:
+Registered properties have an associated data type that the browser can use in different contexts, which makes them a great choice for animations and transitions.
+Using custom properties defined in CSS using the [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*) works more like a string substitution, so a CSS [transition](/en-US/docs/Web/CSS/transition) won't work as expected.
+When you hover over the box below, the background color changes over two seconds with proper interpolation between the different colors.
 
 ```js
-window.CSS.registerProperty({
-  name: "--custom-bg-color",
+CSS.registerProperty({
+  name: "--stop-color",
   syntax: "<color>",
   inherits: false,
-  initialValue: "aquamarine",
+  initialValue: "cornflowerblue",
 });
 ```
 
 ```css hidden
-div {
-  font-family: sans-serif;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 2px black solid;
-}
-
-.child {
+.box {
+  padding: 1rem;
   width: 80%;
-  height: 80%;
-}
-```
-
-```css
-.parent {
-  --custom-bg-color: cornflowerblue;
-  background-color: var(--custom-bg-color);
-}
-
-.child {
-  background-color: var(--custom-bg-color);
-}
-```
-
-```html
-<div class="parent">
-  <div class="child">
-    <p>Custom property registered in JavaScript</p>
-  </div>
-</div>
-```
-
-{{EmbedLiveSample("",600,260)}}
-
-### Using the `@property` at-rule in CSS
-
-The following example shows a custom property (`--box-color`) defined using the `@property` at-rule.
-This custom property represents a color data type and has a default value of `cornflowerblue`.
-The `inherits: false;` property ensures that the custom property does not inherit its value from its parent.
-
-The element with the `.child` class has a style declaration that sets its background to the `--box-color` property value.
-The value `green` set in the parent element is not defined in the scope of the `.child` element, and the initial value of `cornflowerblue` is used:
-
-```css hidden
-div {
+  height: 4rem;
   font-family: sans-serif;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 2px black solid;
   color: white;
-}
-
-.child {
-  width: 80%;
-  height: 80%;
+  border-radius: 0.5rem;
 }
 ```
 
 ```css
-@property --box-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: cornflowerblue;
+.box {
+  --stop-color: cornflowerblue;
+  background: linear-gradient(to right, var(--stop-color), lavenderblush);
+  transition: --stop-color 2s;
 }
 
-.parent {
-  --box-color: green;
-  background-color: var(--box-color);
-}
-
-.child {
-  background-color: var(--box-color);
+.box:hover {
+  --stop-color: aquamarine;
 }
 ```
 
-```html
-<div class="parent">
-  <div class="child">
-    <p>@property at-rule example</p>
-  </div>
-</div>
+```html hidden
+<div class="box"><p>Linear gradient with transition</p></div>
 ```
 
-{{EmbedLiveSample("",600,260)}}
-
-### Using initial values
-
-If a custom property is not defined, the initial value can be used as a fallback.
-In the following example, a custom property is defined using the `@property` syntax with `cornflowerblue` as the initial value.
-The `.parent` element uses this color as its background color while the property is not defined outside of the at-rule.
-The initial value is used instead of the background color inherited from its parent:
-
-```css hidden
-div {
-  font-family: sans-serif;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 2px black solid;
-  color: white;
-}
-
-.child {
-  width: 80%;
-  height: 80%;
-}
-```
-
-```css
-@property --box-color {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: cornflowerblue;
-}
-
-.parent {
-  background-color: var(--box-color);
-}
-```
-
-```html
-<div class="parent">
-  <div class="child">
-    <p>Undefined property value for <code>--box-color</code></p>
-  </div>
-</div>
-```
-
-{{EmbedLiveSample("",600,260)}}
+{{EmbedLiveSample("",600,120)}}
 
 ## Reference
 
@@ -186,14 +74,11 @@ div {
 ## Guides
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+  - : Explains how to register custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
