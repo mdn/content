@@ -68020,30 +68020,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/pageXOffset": {
-    "modified": "2020-10-15T21:37:54.373Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "mrenty",
-      "cvrebert",
-      "Sheppy"
-    ]
-  },
-  "Web/API/Window/pageYOffset": {
-    "modified": "2020-10-15T21:37:58.277Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "jamesdhurd",
-      "hannahcancode",
-      "Sheppy",
-      "erikadoyle",
-      "mrenty",
-      "cvrebert"
-    ]
-  },
   "Web/API/Window/pagehide_event": {
     "modified": "2020-10-15T21:19:33.376Z",
     "contributors": [

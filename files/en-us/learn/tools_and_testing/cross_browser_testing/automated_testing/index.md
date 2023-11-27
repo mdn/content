@@ -551,7 +551,7 @@ Let's have a brief look at how we'd access the API using Node.js.
    getPlanDetails();
    ```
 
-3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack automation dashboard](https://www.browserstack.com/automate). Fill these in now.
+3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the Authentication & Security section. Fill these in now.
 4. Make sure everything is saved, and run your file like so:
 
    ```bash
