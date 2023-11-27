@@ -208,7 +208,7 @@ The key difference is that shared storage is intended for use with cross-origin 
 - If you want data to persist only during a browser session, use [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage).
 - If you are operating as a third-party on another site, and you want to record data from that site to access later on another site, use shared storage.
 
-Another important difference between shared storage and web storage is that reading from shared storage is guarded (writing to storage behaves similarly). With `localStorage` and `sessionStorage`, you can read freely. With shared storage, reading can only happen inside a shared storage worklet, and the origin used for reading in the worklet is the same as the browsing context that created it.
+Another important difference between shared storage and web storage is that reading from shared storage is guarded (writing to storage behaves similarly). With `localStorage` and `sessionStorage`, you can read freely. With shared storage, reading can happen only within a shared storage worklet, and the origin used for reading in the worklet is the same as the browsing context that created it.
 
 Also, you cannot extract shared storage data to the outside of a shared storage worklet (for tracking protection). You must use one of the output gates provided if you want to work with your data in shared storage.
 
