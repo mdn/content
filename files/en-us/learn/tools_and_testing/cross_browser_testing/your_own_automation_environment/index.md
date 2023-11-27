@@ -106,7 +106,7 @@ OK, let's try a quick test to make sure everything is working.
    const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
    (async function example() {
-     let driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+     const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
      try {
        await driver.get("https://www.google.com/ncr");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
