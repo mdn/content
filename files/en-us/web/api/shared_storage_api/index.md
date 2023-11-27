@@ -202,7 +202,7 @@ injectContent();
 
 ## How does shared storage differ from web storage?
 
-The key difference is that shared storage is intended for use with cross-origin data once storage has been partitioned.
+The key difference is that shared storage is intended for use with cross-origin data after storage has been partitioned.
 
 - If you are a publisher and you want to store first-party data that is accessible to you only, use the [`localStorage`](/en-US/docs/Web/API/Window/localStorage) version of [web storage](/en-US/docs/Web/API/Web_Storage_API).
 - If you want that data to persist only for that browser session, use [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage).
