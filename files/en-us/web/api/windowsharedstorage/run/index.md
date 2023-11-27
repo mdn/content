@@ -25,7 +25,7 @@ run(name, options)
 ### Parameters
 
 - `name`
-  - : A string representing the name of the operation registered inside the shared storage worklet module that is to be run. This must match the name given to the operation when it is registered with {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
+  - : A string representing the registered operation's name within the shared storage worklet module. It must match the name given to the operation when it is registered with {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 - `options` {{optional_inline}}
   - : An options object, which can contain the following properties:
     - `data` {{optional_inline}}
