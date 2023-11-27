@@ -60,7 +60,7 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-Inside the fenced frame, we add the worklet module with {{domxref("Worklet.addModule","window.sharedStorage.worklet.addModule()")}}, and then send the event-level data into the shared storage worklet module using {{domxref("WindowSharedStorage.run","window.sharedStorage.run()")}} (this is unrelated to the contextual data from the embedding document):
+Within the fenced frame, after adding the worklet module with {{domxref("Worklet.addModule","window.sharedStorage.worklet.addModule()")}}, we send the event-level data into the shared storage worklet module using {{domxref("WindowSharedStorage.run","window.sharedStorage.run()")}} (this is unrelated to the contextual data from the embedding document):
 
 ```js
 const frameData = {
