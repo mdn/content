@@ -33,7 +33,7 @@ svg {
     <marker
       id="arrow"
       viewBox="0 0 10 10"
-      refX="10" 
+      refX="10"
       refY="5"  <!-- refX and refY set to the tip of the arrowhead -->
       markerWidth="6"
       markerHeight="6"
