@@ -4,7 +4,12 @@ slug: Web/API/Content_Index_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.ContentIndex
+browser-compat:
+  - api.ContentIndex
+  - api.ContentIndexEvent
+  - api.ServiceWorkerRegistration.index
+  - api.ServiceWorkerGlobalScope.contentdelete_event
+spec-urls: https://wicg.github.io/content-index/spec/
 ---
 
 {{DefaultAPISidebar("Content Index API")}}{{SeeCompatTable}}
@@ -15,7 +20,7 @@ The **Content Index API** allows developers to register their offline enabled co
 
 As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, whilst giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.
 
-The Content Index API is an extension to [service workers](/en-US/docs/Web/API/Service_Worker_API), which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.
+The Content Index API is an extension to {{domxref("Service Worker API")}}, which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.
 
 Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.
 
@@ -23,23 +28,23 @@ Indexed entries do not automatically expire. It's good practice to present an in
 
 ## Interfaces
 
-- {{domxref("ContentIndex")}}
+- {{domxref("ContentIndex")}} {{Experimental_Inline}}
   - : The **`ContentIndex`** interface provides functionality to register content available offline.
-- {{domxref("ContentIndexEvent")}}
-  - : The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event.
+- {{domxref("ContentIndexEvent")}} {{Experimental_Inline}}
+  - : The **`ContentIndexEvent`** interface defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event.
 
 ## Service worker additions
 
 The following additions to the {{domxref('ServiceWorker')}} have been specified in the Content Index API spec to provide an entry point for using content indexing.
 
-- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.
-- {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} event {{Experimental_Inline}}
   - : An event fired when content is removed by the user agent.
 
 ## Examples
 
-All the following examples assume a service worker has been registered. For more information see the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API).
+All the following examples assume a service worker has been registered. For more information see the {{domxref("Service Worker API")}}.
 
 ### Feature detection and interface access
 
@@ -112,7 +117,7 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!Array.length) {
+  if (!entries.length) {
     // if there are no entries, display a message
     const message = document.createElement("p");
     message.innerText =
@@ -155,7 +160,7 @@ async function unregisterContent(article) {
 }
 ```
 
-All the above methods are available within the scope of the [service worker](/en-US/docs/Web/API/ServiceWorker). They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
+All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
 
 ```js
 // service worker script
@@ -179,7 +184,7 @@ self.addEventListener("contentdelete", (event) => {
 });
 ```
 
-The {{domxref('ServiceWorkerGlobalScope.contentdelete_event', "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
+The {{domxref('ServiceWorkerGlobalScope/contentdelete_event', "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
 
 ## Specifications
 
@@ -193,4 +198,4 @@ The {{domxref('ServiceWorkerGlobalScope.contentdelete_event', "contentdelete")}}
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- {{domxref("Service Worker API")}}
