@@ -204,9 +204,9 @@ injectContent();
 
 The key difference is that shared storage is intended for use with cross-origin data after storage has been partitioned.
 
-- If you are a publisher and you want to store first-party data that is accessible to you only, use the [`localStorage`](/en-US/docs/Web/API/Window/localStorage) version of [web storage](/en-US/docs/Web/API/Web_Storage_API).
-- If you want that data to persist only for that browser session, use [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage).
-- If you are operating as a third-party on another site, and you want to record data from that site for you to access later on another site, use shared storage.
+- If you are a publisher and you want to store first-party data that is accessible to only you, use the [`localStorage`](/en-US/docs/Web/API/Window/localStorage) version of [web storage](/en-US/docs/Web/API/Web_Storage_API).
+- If you want data to persist only during a browser session, use [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage).
+- If you are operating as a third-party on another site, and you want to record data from that site to access later on another site, use shared storage.
 
 Another important difference between shared storage and web storage is that reading from shared storage is guarded (writing to storage behaves similarly). With `localStorage` and `sessionStorage`, you can read freely. With shared storage, reading can only happen inside a shared storage worklet, and the origin used for reading in the worklet is the same as the browsing context that created it.
 
