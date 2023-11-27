@@ -210,9 +210,9 @@ The key difference is that shared storage is intended for use with cross-origin 
 
 Another important difference between shared storage and web storage is that reading from shared storage is guarded (writing to storage behaves similarly). With `localStorage` and `sessionStorage`, you can read freely. With shared storage, reading can happen only within a shared storage worklet, and the origin used for reading in the worklet is the same as the browsing context that created it.
 
-Also, you cannot extract shared storage data to the outside of a shared storage worklet (for tracking protection). You must use one of the output gates provided if you want to work with your data in shared storage.
+Additionally, you cannot extract shared storage data outside of a shared storage worklet, as a tracking protection. You must use one of the output gates to work with your data in shared storage.
 
-Last, data in `localStorage` persists until manually cleared (`sessionStorage` is cleared at the end of a browsing session). Shared storage data is cleared 30 days after the last write call.
+Lastly, data in `localStorage` persists until it is manually cleared. `sessionStorage` clears at the end of a browsing session, whereas shared storage data clears 30 days after the last write call.
 
 ## Interfaces
 
