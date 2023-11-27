@@ -59,7 +59,7 @@ class ReachMeasurementOperation {
 register("reach-measurement", ReachMeasurementOperation);
 ```
 
-> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
+> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names. See {{domxref("SharedStorageOperation")}} for an example.
 
 In the main browsing context, the `reach-measurement` operation is invoked using the {{domxref("WindowSharedStorage.run()")}} method:
 
