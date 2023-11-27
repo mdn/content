@@ -124,7 +124,7 @@ Notice how the value set in our main app context is retrieved using {{domxref("W
 
 #### Add the worklet
 
-To use the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
+To use the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. In our main app context, this is done before we set the experiment group value, so that it is ready to use when needed:
 
 ```js
 async function injectContent() {
