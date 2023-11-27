@@ -100,14 +100,11 @@ When using reliable transmission via streams you can also set the relative prior
 
 ### Unidirectional transmission
 
-To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportSendStream")}}.
-The `sendorder` property in the object passed as an argument is a number that sets the relative priority of this stream compared to other streams using the transport (bytes are sent first on streams with a higher number).
+To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer")}} to allow data to be written to the stream and sent to the server.
 
 ```js
 async function writeData() {
-  const stream = await transport.createUnidirectionalStream({
-    sendOrder: "999995555",
-  });
+  const stream = await transport.createUnidirectionalStream();
   const writer = stream.writable.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
@@ -123,14 +120,9 @@ async function writeData() {
 }
 ```
 
-The returned {{domxref("WebTransportSendStream")}} object inherits from {{domxref("WritableStream")}}, and can be used to {{domxref("WritableStream.getWriter", "get a writer")}} that allows data to be written to the stream and sent to the server.
-It can also be used to get statistics and other information for the stream.
-
 Note also the use of the {{domxref("WritableStreamDefaultWriter.close()")}} method to close the associated HTTP/3 connection once all data has been sent.
 
 If the server opens a unidirectional stream to transmit data to the client, this can be accessed on the client via the {{domxref("WebTransport.incomingUnidirectionalStreams")}} property, which returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. These can be used to read {{jsxref("Uint8Array")}} instances sent by the server.
-
-> **Note:** In earlier versions of the specification `ReadableStream` and `WritableStream` were used as receive and send streams for unidirectional and bidirectional streams intead of `WebTransportReceiveStream` and `WebTransportSendStream`.
 
 In this case, the first thing to do is set up a function to read a `WebTransportReceiveStream`. These objects inherit from the `ReadableStream` class, so can be used in just the same way:
 
