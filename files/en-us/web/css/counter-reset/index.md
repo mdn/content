@@ -69,8 +69,8 @@ Regular counters default to `0` if no reset value is provided. By default, regul
 
 ```css
 h1 {
-  /* Creates and sets the chapter and page counters to 0,
-     and the section counter to 4 */
+  /* Create the counters "chapter" and "page" and set to initial default value.
+     Create the counter "section" and set to "4". */
   counter-reset: chapter section 4 page;
 }
 ```
@@ -81,14 +81,14 @@ When creating reversed counters without a value, the counter will start with the
 
 ```css
 h1 {
-  /* Create reversed counters chapter and section, setting
-     the chapter counter as the number of elements and the section counter as 10.
-     Create the pages counter with initial default value. */
+  /* Create reversed counters "chapter" and "section".
+      Set "chapter" as the number of elements and "section" as "10".
+      Create the counter "pages" with the initial default value. */
   counter-reset: reversed(chapter) reversed(section) 10 pages;
 }
 ```
 
-### Built-in list-item counter
+### Built-in `list-item` counter
 
 Ordered lists ({{HTMLElement("ol")}}) come with built-in `list-item` counters that control their numbering. These counters automatically increase or decrease by one with each list item. The `counter-reset` property can be used to reset the `list-item` counters. Like with other counters, you can override the default increment value for `list-item` counters by using the {{cssxref("counter-increment")}} property.
 
@@ -130,7 +130,7 @@ ol {
 
 #### Result
 
-{{EmbedLiveSample("Overriding implicit list item counters", 140, 300)}}
+{{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
 Using `counter-reset`, we were able to set the implicit `list-item` counter to start counting at `3`, similar to the effect of writing [`<ol start="3">`](/en-US/docs/Web/HTML/Element/ol#start) in HTML.
 
