@@ -283,7 +283,7 @@ The `max-age=N` request directive indicates that the client allows a stored resp
 Cache-Control: max-age=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 7 days ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Many browsers use this directive for **reloading**, as explained below.
 
