@@ -54,6 +54,8 @@ list-style-image: unset;
 
 ### Using a url value
 
+This example has a star as a marker, which we include using the {{cssxref("url()")}} image function.
+
 #### HTML
 
 ```html
@@ -76,6 +78,8 @@ ul {
 {{ EmbedLiveSample('Using_a_url_value') }}
 
 ### Using a gradient
+
+This example has a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("linear-gradient")}} image function.
 
 #### HTML
 
@@ -112,7 +116,6 @@ ul {
 - {{Cssxref("list-style")}} shorthand
 - {{Cssxref("list-style-type")}} property
 - {{Cssxref("list-style-position")}} property
-- {{cssxref("url", "url()")}} function
 - {{cssxref("::marker")}} pseudo-element
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
