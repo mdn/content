@@ -10,8 +10,7 @@ browser-compat: api.SharedStorage.clear
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`clear()`** method of the
-{{domxref("SharedStorage")}} interface clears the current origin's shared storage, removing all data from it.
+The **`clear()`** method of the {{domxref("SharedStorage")}} interface clears the current origin's shared storage, removing all data from it.
 
 ## Syntax
 
