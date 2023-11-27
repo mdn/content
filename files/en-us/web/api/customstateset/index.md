@@ -148,3 +148,7 @@ labeled-checkbox:--checked {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+[Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)

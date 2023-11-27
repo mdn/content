@@ -7,7 +7,7 @@ status:
 browser-compat: api.ElementInternals.ariaColIndexText
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`ariaColIndexText`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
 
