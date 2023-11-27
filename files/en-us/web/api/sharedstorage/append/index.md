@@ -10,8 +10,7 @@ browser-compat: api.SharedStorage.append
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`append()`** method of the
-{{domxref("SharedStorage")}} interface appends a string to the value of an existing key/value pair in the current origin's shared storage.
+The **`append()`** method of the {{domxref("SharedStorage")}} interface appends a string to the value of an existing key-value pair in the current origin's shared storage.
 
 ## Syntax
 
