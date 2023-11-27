@@ -28,7 +28,7 @@ path([<'fill-rule'>,]?<string>)
 ### Parameters
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
-  - : An optional value of `nonzero` (the default when omitted) or `evenodd`, which specifies the filling rule.
+  - : An optional value of [`nonzero`](/en-US/docs/Web/SVG/Attribute/fill-rule#nonzero) (the default when omitted) or [`evenodd`](/en-US/docs/Web/SVG/Attribute/fill-rule#evenodd), which specifies the filling rule.
 - {{cssxref("string")}}
   - : A [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path). The syntax for the contents of this `<string>` is identical to SVG.
 
