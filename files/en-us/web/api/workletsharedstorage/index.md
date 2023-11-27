@@ -9,7 +9,7 @@ browser-compat: api.WorkletSharedStorage
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} Represents the shared storage for a particular origin, as it is exposed to a worklet context.
+The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin within a worklet context.
 
 `WorkletSharedStorage` is accessed via {{domxref("SharedStorageWorkletGlobalScope.sharedStorage")}}.
 
