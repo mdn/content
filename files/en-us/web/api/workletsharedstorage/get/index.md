@@ -116,7 +116,7 @@ class KFreqMeasurementOperation {
 register("k-freq-measurement", KFreqMeasurementOperation);
 ```
 
-See [K+ frequency measurement](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/) for more explanation of this example, and the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing page for links to other examples.
+For more details about this example, see [K+ frequency measurement](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/). See the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page for links to other examples.
 
 ## Specifications
 
