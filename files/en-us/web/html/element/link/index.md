@@ -242,7 +242,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `rel`
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
-- `sizes` {{Experimental_Inline}}
+- `sizes`
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
@@ -383,7 +383,12 @@ You can include `render` token inside a `blocking` attribute;
 the rendering of the page will be blocked till the resource is fetched. For example:
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+<link
+  blocking="render"
+  rel="preload"
+  href="critical-font.woff2"
+  as="font"
+  crossorigin />
 ```
 
 ## Technical summary

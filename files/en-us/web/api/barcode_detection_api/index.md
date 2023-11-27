@@ -240,7 +240,7 @@ This example tests for browser compatibility and creates a new barcode detector 
 
 ```js
 // check compatibility
-if (!("BarcodeDetector" in window)) {
+if (!("BarcodeDetector" in globalThis)) {
   console.log("Barcode Detector is not supported by this browser.");
 } else {
   console.log("Barcode Detector supported!");
@@ -289,4 +289,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://web.dev/shape-detection/#barcodedetector)
+- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/articles/shape-detection/#barcodedetector)

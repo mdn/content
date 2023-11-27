@@ -42,7 +42,7 @@ _The {{DOMxRef("Document")}} interface provides properties that can be used to d
 
 - {{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}
   - : The `fullscreenElement` property tells you the {{DOMxRef("Element")}} that's currently being displayed in fullscreen mode on the DOM (or shadow DOM). If this is `null`, the document (or shadow DOM) is not in fullscreen mode.
-- {{DOMxRef("document.fullscreenEnabled")}}
+- {{DOMxRef("Document.fullscreenEnabled")}}
   - : The `fullscreenEnabled` property tells you whether or not it is possible to engage fullscreen mode. This is `false` if fullscreen mode is not available for any reason (such as the `"fullscreen"` feature not being allowed, or fullscreen mode not being supported).
 
 ### Obsolete properties

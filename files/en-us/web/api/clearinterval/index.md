@@ -6,7 +6,7 @@ page-type: web-api-global-function
 browser-compat: api.clearInterval
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The global **`clearInterval()`** method cancels a timed, repeating action which
 was previously established by a call to {{domxref("setInterval", "setInterval()")}}.

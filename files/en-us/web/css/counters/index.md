@@ -25,8 +25,8 @@ A [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) has no vi
 
 ### Values
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
+- `<counter-name>`
+  - : A {{cssxref("&lt;custom-ident&gt;")}} identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
 - `<counter-style>`
   - : A counter style name or [`symbols()`](/en-US/docs/Web/CSS/symbols) function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to decimal
 - {{cssxref("&lt;string&gt;")}}
@@ -165,3 +165,6 @@ li::before {
 - {{cssxref("@counter-style")}}
 - CSS [`counter()`](/en-US/docs/Web/CSS/counter) function
 - {{cssxref("::marker")}}
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

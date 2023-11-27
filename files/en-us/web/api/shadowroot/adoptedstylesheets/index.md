@@ -22,10 +22,11 @@ Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/W
 
 ## Value
 
-The value is an array of {{domxref("CSSStyleSheet()")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the shadow root's parent {{domxref("Document")}}.
+The value is an array of {{domxref("CSSStyleSheet")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the shadow root's parent {{domxref("Document")}}.
 
-If the array needs to be modified, use in-place mutations like `push()`.
-Note, the {{domxref("CSSStyleSheet()")}} instances themselves can also be modified, and these changes will apply wherever the stylesheet is adopted.
+If the array needs to be modified, use in-place mutations like `push()`. The {{domxref("CSSStyleSheet")}} instances themselves can also be modified, and these changes will apply wherever the stylesheet is adopted.
+
+In an earlier version of the specification, the array was not modifiable, so the only way to add new stylesheets was to assign a new array to `adoptedStyleSheets`.
 
 ## Examples
 
@@ -81,7 +82,7 @@ shadow.adoptedStyleSheets.push(extraSheet);
 
 ## See also
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}

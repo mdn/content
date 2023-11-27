@@ -104,6 +104,6 @@ To learn more, see [When is data evicted?](/en-US/docs/Web/API/Storage_API/Stora
 ## See also
 
 - [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
-- [Storage for the web on web.dev](https://web.dev/storage-for-the-web/)
-- [Persistent storage on web.dev](https://web.dev/persistent-storage/)
+- [Storage for the web on web.dev](https://web.dev/articles/storage-for-the-web)
+- [Persistent storage on web.dev](https://web.dev/articles/persistent-storage)
 - [Chrome Web Storage and Quota Concepts](https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit)

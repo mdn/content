@@ -192,6 +192,8 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
   - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+- {{jsxref("Promise.withResolvers()")}}
+  - : Returns an object containing a new `Promise` object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
 ## Instance properties
 
@@ -452,5 +454,5 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [JavaScript Promises: an introduction](https://web.dev/promises/) on web.dev (2013)
+- [JavaScript Promises: an introduction](https://web.dev/articles/promises) on web.dev (2013)
 - [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) slide show by Domenic Denicola (2011)

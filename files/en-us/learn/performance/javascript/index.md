@@ -331,7 +331,7 @@ There are several general best practices that will make your code run more effic
 
 ## See also
 
-- [Optimize long tasks](https://web.dev/optimize-long-tasks/) on web.dev (2022)
+- [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2022)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
