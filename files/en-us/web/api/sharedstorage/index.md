@@ -21,13 +21,13 @@ The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared
 ## Instance methods
 
 - {{domxref("SharedStorage.append", "append()")}} {{Experimental_Inline}}
-  - : Appends a string to the value of an existing key/value pair in the current origin's shared storage.
+  - : Appends a string to the value of an existing key-value pair in the current origin's shared storage.
 - {{domxref("SharedStorage.clear", "clear()")}} {{Experimental_Inline}}
   - : Clears the current origin's shared storage, removing all data from it.
 - {{domxref("SharedStorage.delete", "delete()")}} {{Experimental_Inline}}
-  - : Deletes an existing key/value pair from the current origin's shared storage.
+  - : Deletes an existing key-value pair from the current origin's shared storage.
 - {{domxref("SharedStorage.set", "set()")}} {{Experimental_Inline}}
-  - : Stores a new key/value pair in the current origin's shared storage or updates an existing one.
+  - : Stores a new key-value pair in the current origin's shared storage or updates an existing one.
 
 ## Examples
 
