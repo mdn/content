@@ -24,7 +24,7 @@ This example listens for the {{domxref('ContentIndexEvent', 'contentdelete')}} e
 and logs the removed content index id.
 
 The {{domxref('ContentIndexEvent')}} is only available to the
-[global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a
+{{domxref("ServiceWorkerGlobalScope", "global scope")}} of a
 {{domxref('ServiceWorker')}}.
 
 ```js
@@ -47,4 +47,4 @@ self.addEventListener("contentdelete", (event) => {
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
