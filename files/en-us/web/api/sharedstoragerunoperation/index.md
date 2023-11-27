@@ -9,7 +9,7 @@ browser-compat: api.SharedStorageRunOperation
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a run output gate operation.
+The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) operation.
 
 {{InheritanceDiagram}}
 
