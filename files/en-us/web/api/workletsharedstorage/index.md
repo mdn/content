@@ -34,12 +34,9 @@ _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref
 `WorkletSharedStorage` also includes the following methods because it has an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator) defined on it:
 
 - {{domxref("WorkletSharedStorage.entries", "entries()")}} {{Experimental_Inline}}
-  - : Returns a new async iterator of a `WorkletSharedStorage` object instance's enumerable property key/value pairs.
+  - : Returns a new async iterator for the key-value pairs of a `WorkletSharedStorage` object instance's enumerable properties.
 - {{domxref("WorkletSharedStorage.keys", "keys()")}} {{Experimental_Inline}}
   - : Returns a new async iterator containing the keys for each item in a `WorkletSharedStorage` object instance.
-    <!-- Currently unimplemented -->
-    <!-- - {{domxref("WorkletSharedStorage.values", "values()")}} {{Experimental_Inline}} -->
-      <!-- - : Returns a new async iterator containing the values for each index in a `WorkletSharedStorage` object instance. -->
 - `WorkletSharedStorage[@@asyncIterator]()` {{Experimental_Inline}}
   - : Returns the {{domxref("WorkletSharedStorage.entries", "entries()")}} function by default.
 
