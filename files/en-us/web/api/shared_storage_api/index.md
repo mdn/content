@@ -140,7 +140,7 @@ async function injectContent() {
 
 #### Choose a URL and load it in a fenced frame
 
-To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}} — this acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate class structure for a URL Selection operation, as discussed above.
+To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}}. This method acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate class structure for a URL Selection operation, as discussed above.
 
 `selectURL()` expects an array of objects containing URLs to choose from, an optional options object, and for the underlying operation to return an integer that it can use to choose a URL.
 
