@@ -31,7 +31,7 @@ _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref
 - {{domxref("WorkletSharedStorage.remainingBudget", "remainingBudget()")}} {{Experimental_Inline}}
   - : Returns the remaining navigation budget for the current origin.
 
-`WorkletSharedStorage` also has the following methods available because it has an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator) defined on it:
+`WorkletSharedStorage` also includes the following methods because it has an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator) defined on it:
 
 - {{domxref("WorkletSharedStorage.entries", "entries()")}} {{Experimental_Inline}}
   - : Returns a new async iterator of a `WorkletSharedStorage` object instance's enumerable property key/value pairs.
