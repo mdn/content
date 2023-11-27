@@ -97,7 +97,7 @@ Although the API surface is the same, websites using the Storage Access API shou
 
 - Cookies must have [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) explicitly set on them, because the default value for Chrome is `SameSite=Lax` (`SameSite=None` is the default in Firefox and Safari).
 - Cookies must have the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute set on them.
-- The storage access grants are phased out after 30 days of browser usage passed without user interaction. Successful use of the Storage Access API extends this limit by another 30 days. This doesn't occur when {{domxref("requestStorageAccessFor()")}} is called because the user is already on the page.
+- The storage access grants are phased out after 30 days of browser usage passed without user interaction. Successful use of the Storage Access API extends this limit by another 30 days. This doesn't occur when {{domxref("Document.requestStorageAccessFor()")}} is called because the user is already on the page.
 
 ### Firefox
 
