@@ -27,7 +27,7 @@ The different output gate types are detailed below:
   <tbody>
     <tr>
       <td>URL Selection</td>
-      <td>Used to select a URL from a provided list to display to the user, based on shared storage data.</td>
+      <td>Used to select a URL to display to the user based on shared storage data.</td>
       <td>{{domxref("SharedStorageSelectURLOperation")}}</td>
       <td>{{domxref("WindowSharedStorage.selectURL()", "selectURL()")}}</td>
     </tr>
