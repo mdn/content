@@ -42,7 +42,7 @@ The different output gate types are detailed below:
 
 ## Examples
 
-## Defining individual operations
+### Defining individual operations
 
 Many shared storage worklet module scripts only define and register a single operation; you can see examples on the {{domxref("SharedStorageSelectURLOperation")}} and {{domxref("SharedStorageRunOperation")}} pages.
 
