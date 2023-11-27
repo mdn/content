@@ -99,11 +99,11 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changin
 
 ### Properties
 
-- {{cssxref("--*")}} syntax for defining custom properties in CSS.
+- {{cssxref("--*")}}
 
 ### Functions
 
-- {{cssxref("var")}} for referencing a custom property's value.
+- {{cssxref("var")}}
 
 ## Guides
 
