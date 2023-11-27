@@ -251,7 +251,7 @@ You can test your Shared Storage API code locally without enrollment. To allow l
 
 ## Examples
 
-For extensive demos, see [Shared Storage API demo site](https://shared-storage-demo.web.app/) (which also includes some Private Aggregation API examples).
+For extensive demos, see the [Shared Storage API demo site](https://shared-storage-demo.web.app/), which also includes some Private Aggregation API examples.
 
 ## Specifications
 
