@@ -38,7 +38,7 @@ A {{jsxref("Promise")}} that fulfills with either a string equal to the value of
 
 ## Examples
 
-### K+ frequency measurement example
+### Measuring K+ frequency
 
 The following example measures the K+ frequency of content views. Sometimes described as "effective frequency", K frequency refers to the minimum number of views before a user will recognize or recall certain content (often used in the context of ad views).
 
