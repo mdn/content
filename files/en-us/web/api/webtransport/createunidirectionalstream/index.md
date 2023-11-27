@@ -10,8 +10,8 @@ browser-compat: api.WebTransport.createUnidirectionalStream
 
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
 
-The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportSendStream")}} object.
-This object inherits from {{domxref("WritableStream")}}, and can be used to reliably write data to the server, and to query stream statistics and other information.
+The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object, which can be used to reliably write data to the server.
+<!-- Note, returns a `WebTransportSendStream` according to spec, but not yet implemented -->
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
@@ -42,10 +42,7 @@ createUnidirectionalStream(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportSendStream")}} object.
-
-Note that this object inherits from {{domxref("WritableStream")}}.
-Implementations based on older versions of the specification may return a `WritableStream` instead.
+A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object (this is a {{domxref("WritableStream")}}).
 
 ### Exceptions
 
@@ -54,8 +51,7 @@ Implementations based on older versions of the specification may return a `Writa
 
 ## Examples
 
-Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WebTransportSendStream")}}.
-From this you can {{domxref("WritableStream.getWriter", "get a writer", "", "nocode")}} to allow data to be written to the stream and sent to the server.
+Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer", "", "nocode")}} to allow data to be written to the stream and sent to the server.
 
 Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of the resulting {{domxref("WritableStreamDefaultWriter")}} to close the associated HTTP/3 connection. The browser tries to send all pending data before actually closing the associated connection.
 
