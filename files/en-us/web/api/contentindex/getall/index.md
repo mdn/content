@@ -10,9 +10,7 @@ browser-compat: api.ContentIndex.getAll
 
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-The **`getAll()`** method of the
-{{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
-an iterable list of content index entries.
+The **`getAll()`** method of the {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with an iterable list of content index entries.
 
 ## Syntax
 
@@ -62,9 +60,11 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
         - `src`
           - : A URL {{jsxref('String')}} of the source image.
         - `sizes` {{Optional_Inline}}
-          - : A {{jsxref('String')}} representation of the image size.
+          - : A {{jsxref('String')}} representing the image size.
         - `type` {{Optional_Inline}}
           - : The {{Glossary("MIME type")}} of the image.
+        - `label` {{Optional_Inline}}
+          - : A string representing the accessible name of the icon.
 
 ### Exceptions
 
@@ -74,7 +74,7 @@ No exceptions are thrown. If there are no items in the Content Index, an empty
 ## Examples
 
 The below example shows an asynchronous function that retrieves items within the
-[content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building
+{{domxref("Content Index API", "content index")}} and iterates over each entry, building
 a list for the interface.
 
 ```js
@@ -89,11 +89,10 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!Array.length) {
+  if (!entries.length) {
     // if there are no entries, display a message
     const message = document.createElement("p");
-    message.innerText =
-      "You currently have no articles saved for offline reading.";
+    message.innerText = "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
   } else {
@@ -127,4 +126,4 @@ async function createReadingList() {
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}

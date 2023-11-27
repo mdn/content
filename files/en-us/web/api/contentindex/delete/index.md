@@ -10,12 +10,9 @@ browser-compat: api.ContentIndex.delete
 
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-The **`delete()`** method of the
-{{domxref("ContentIndex")}} interface unregisters an item from the currently indexed
-content.
+The **`delete()`** method of the {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed content.
 
-> **Note:** Calling `delete()` only affects the index. It does not delete anything
-> from the {{domxref('Cache')}}.
+> **Note:** Calling `delete()` only affects the index. It does not delete anything from the {{domxref('Cache')}}.
 
 ## Syntax
 
@@ -38,7 +35,7 @@ No exceptions are thrown.
 
 ## Examples
 
-Below is an asynchronous function, that removes an item from the [content index](/en-US/docs/Web/API/Content_Index_API). We receive a reference to the current
+Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index")}}. We receive a reference to the current
 {{domxref('ServiceWorkerRegistration')}}, which allows us to access the
 {{domxref('ServiceWorkerRegistration.index','index')}} property and thus access the
 `delete` method.
@@ -57,7 +54,7 @@ async function unregisterContent(article) {
 ```
 
 The `delete` method can also be used within the
-[service worker](/en-US/docs/Web/API/ServiceWorker) scope.
+{{domxref("ServiceWorker", "service worker")}} scope.
 
 ```js
 self.registration.index.delete("my-id");
@@ -75,4 +72,4 @@ self.registration.index.delete("my-id");
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
