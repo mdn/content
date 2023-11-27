@@ -63,7 +63,7 @@ CSS specifications contain information that explains what the browser does when 
 
 ### Falling back from grid to float
 
-In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the `display: grid` and related properties and the floated layout is used.
+In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view; if not it ignores the `display: grid` and related properties and the floated layout is used.
 
 ```css
 * {
@@ -96,14 +96,12 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 
 {{ EmbedLiveSample('Falling_back_from_grid_to_float', '100%', '200') }}
 
-> **Note:** The {{cssxref("clear")}} property also has no effect once the cleared item becomes a grid item, so you could have a layout with a cleared footer, which is then turned into a Grid Layout.
-
 ### Fallback methods
 
 There are a number of layout methods which can be used in a similar way to this float example. You can choose the one that makes the most sense for the layout pattern you need to create.
 
-- Float and clear
-  - : As shown above, the float and clear properties cease to affect the layout if floated or cleared items become flex or grid items.
+- Float (and clear)
+  - : As shown above, the float property ceases to affect the layout if floated items become flex or grid items. The {{cssxref("clear")}} property also has no effect once the cleared item becomes a flex or grid item.
 - display: inline-block
   - : This method can be used to create column layouts, if an item has `display: inline-block` set but then becomes a flex or grid item, the inline-block behavior is ignored.
 - display: table
