@@ -13,13 +13,13 @@ The **`ContentIndexEvent`** interface of the {{domxref("Content Index API")}} de
 
 This event is sent to the {{domxref("ServiceWorkerGlobalScope", "global scope")}} of a {{domxref('ServiceWorker')}}. It contains the id of the indexed content to be removed.
 
-The {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
+The {{domxref("ServiceWorkerGlobalScope/contentdelete_event", 'contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}} {{Experimental_Inline}}
+- {{domxref("ContentIndexEvent.ContentIndexEvent()", "ContentIndexEvent()")}} {{Experimental_Inline}}
   - : Creates and returns a new `ContentIndexEvent` object whose type and other options are configured as specified.
 
 ## Instance properties

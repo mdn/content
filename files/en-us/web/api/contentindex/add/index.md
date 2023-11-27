@@ -118,8 +118,7 @@ async function registerContent(data) {
 }
 ```
 
-The `add` method can also be used within the
-{{domxref("ServiceWorker", "service worker")}} scope.
+The `add` method can also be used within the {{domxref("ServiceWorker", "service worker")}} scope.
 
 ```js
 // our content

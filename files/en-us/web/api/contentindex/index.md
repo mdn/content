@@ -28,7 +28,7 @@ There are no properties of this interface.
 
 ### Feature detection and interface access
 
-Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the `index` property, which gives us access to the content index interface.
+Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the {{domxref("ServiceWorkerRegistration.index", "index")}} property, which gives us access to the content index interface.
 
 ```js
 // reference registration
@@ -97,7 +97,7 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!Array.length) {
+  if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
     message.innerText = "You currently have no articles saved for offline reading.";

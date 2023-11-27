@@ -17,7 +17,7 @@ The **`delete()`** method of the {{domxref("ContentIndex")}} interface unregiste
 ## Syntax
 
 ```js-nolint
-ContentIndex.delete(id).then(/* … */)
+delete(id)
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ ContentIndex.delete(id).then(/* … */)
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
@@ -35,10 +35,7 @@ No exceptions are thrown.
 
 ## Examples
 
-Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index")}}. We receive a reference to the current
-{{domxref('ServiceWorkerRegistration')}}, which allows us to access the
-{{domxref('ServiceWorkerRegistration.index','index')}} property and thus access the
-`delete` method.
+Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index")}}. We receive a reference to the current {{domxref('ServiceWorkerRegistration')}}, which allows us to access the {{domxref('ServiceWorkerRegistration.index','index')}} property and thus access the `delete` method.
 
 ```js
 async function unregisterContent(article) {
@@ -53,8 +50,7 @@ async function unregisterContent(article) {
 }
 ```
 
-The `delete` method can also be used within the
-{{domxref("ServiceWorker", "service worker")}} scope.
+The `delete` method can also be used within the {{domxref("ServiceWorker", "service worker")}} scope.
 
 ```js
 self.registration.index.delete("my-id");

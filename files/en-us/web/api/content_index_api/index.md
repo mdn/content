@@ -33,7 +33,7 @@ Indexed entries do not automatically expire. It's good practice to present an in
 - {{domxref("ContentIndexEvent")}} {{Experimental_Inline}}
   - : The **`ContentIndexEvent`** interface defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event.
 
-## Service worker additions
+## Extensions to other interfaces
 
 The following additions to the {{domxref('ServiceWorker')}} have been specified in the Content Index API spec to provide an entry point for using content indexing.
 
@@ -63,7 +63,7 @@ if ("index" in registration) {
 
 ### Adding to the content index
 
-Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add()', 'add()')}} method to register it with the {{domxref('Content Index API', 'content index')}}.
 
 ```js
 // our content
@@ -71,8 +71,7 @@ const item = {
   id: "post-1",
   url: "/posts/amet.html",
   title: "Amet consectetur adipisicing",
-  description:
-    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  description: "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
   icons: [
     {
       src: "/media/dark.png",
@@ -117,11 +116,10 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!entries.length) {
+  if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
-    message.innerText =
-      "You currently have no articles saved for offline reading.";
+    message.innerText = "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
   } else {
@@ -174,7 +172,7 @@ const contentIndexItems = self.registration.index.getAll();
 
 ### The contentdelete event
 
-When an item is removed from the user agent interface, a `contentdelete` event is received by the service worker.
+When an item is removed from the user agent interface, a {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} event is received by the service worker.
 
 ```js
 self.addEventListener("contentdelete", (event) => {
@@ -184,7 +182,7 @@ self.addEventListener("contentdelete", (event) => {
 });
 ```
 
-The {{domxref('ServiceWorkerGlobalScope/contentdelete_event', "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
+The {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
 
 ## Specifications
 
@@ -198,4 +196,4 @@ The {{domxref('ServiceWorkerGlobalScope/contentdelete_event', "contentdelete")}}
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
