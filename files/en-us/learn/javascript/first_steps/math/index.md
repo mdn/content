@@ -114,7 +114,7 @@ The result is then 77, as initially expected.
 
 ## Arithmetic operators
 
-Arithmetic operators are the fundamental operators used for performing mathematical calculations in JavaScript:
+Arithmetic operators are used for performing mathematical calculations in JavaScript:
 
 <table class="standard-table">
   <thead>
