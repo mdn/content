@@ -16,7 +16,7 @@ The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Sto
 ## Instance methods
 
 - {{domxref("SharedStorageSelectURLOperation.run", "run()")}} {{Experimental_Inline}}
-  - : Defines the structure that the `run()` method defined inside a URL Selection output gate operation should conform to.
+  - : Defines the structure to which that the `run()` method defined inside a URL Selection output gate operation should conform.
 
 ## Examples
 
