@@ -103,7 +103,7 @@ OK, let's try a quick test to make sure everything is working.
 2. Give it the following contents, then save it:
 
    ```js
-   const {Builder, Browser, By, Key, until} = require('selenium-webdriver');
+   const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
    (async function example() {
      let driver = await new Builder().forBrowser(Browser.FIREFOX).build();
