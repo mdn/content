@@ -26,7 +26,7 @@ get(key)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with a string equal to the value of the retrieved key/value pair, or `undefined` if the specified `key` is not found in the shared storage.
+A {{jsxref("Promise")}} that fulfills with either a string equal to the value of the retrieved key-value pair or `undefined` if the specified `key` is not found in the shared storage.
 
 ### Exceptions
 
