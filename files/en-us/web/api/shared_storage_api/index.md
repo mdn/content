@@ -47,7 +47,7 @@ The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/
 - [**User demographic reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/user-demographics/): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites in embedded contexts.
 - [**K+ frequency measurement**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/): Sometimes described as "effective frequency", K+ frequency refers to the minimum number of views needed before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users who have seen a piece of content at least K times.
 
-## How does shared storage work?
+## Understanding how shared storage works
 
 There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. This example assigns a user to an experiment group, stores the group details in shared storage, and then allows other sites to use that data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
 
