@@ -25,7 +25,7 @@ append(key, value)
 - `value`
   - : A string that you want to append to the existing value.
 
-> **Note:** If the specified `key` isn't found in shared storage, the `append()` operation is equivalent to {{domxref("SharedStorage.set", "set()")}}, i.e. a new key/value pair is added to storage with the specified `key`.
+> **Note:** If the specified `key` isn't found in the shared storage, the `append()` operation is equivalent to {{domxref("SharedStorage.set", "set()")}}, that is, a new key-value pair with the specified `key` is added to the shared storage.
 
 ### Return value
 
