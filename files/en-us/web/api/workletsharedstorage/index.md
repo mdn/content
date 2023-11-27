@@ -46,7 +46,7 @@ _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref
 
 You can use the [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/).
 
-In the following example, we store data from both the embedding page and the fenced frame in [shared storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/).
+In this example, we store data from both the embedding page and the fenced frame using [shared storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/).
 
 In the embedding page, we will set a mock event ID as the shared storage context using `setSharedStorageContext()`:
 
