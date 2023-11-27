@@ -70,7 +70,7 @@ document.querySelector("#currentValue").innerText = initialValue;
 
 counter.addEventListener("valuechange", (event) => {
   document.querySelector("#currentValue").innerText = event.detail;
-  console.log(`The new counter is: ${event.detail}`)
+  console.log(`The new counter is: ${event.detail}`);
 });
 
 document.querySelector("#inc").addEventListener("click", () => {
