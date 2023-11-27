@@ -4,6 +4,8 @@ slug: Web/API/SecurePaymentConfirmationRequest
 page-type: web-api-interface
 ---
 
+# SecurePaymentConfirmationRequest
+
 {APIRef("SecurePaymentConfirmationRequest")}}
 
 The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) when used to authenticate a user during an e-commerce transaction [using SPC with Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_with_Secure_Payment_Confirmation).
