@@ -18,7 +18,7 @@ The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "
 ## Instance properties
 
 - {{domxref("WindowSharedStorage.worklet", "worklet")}} {{Experimental_Inline}}
-  - : Contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin. `SharedStorageWorklet` has the {{domxref("Worklet.addModule", "addModule()")}} method available on it, which is used to add a module to the shared storage worklet.
+  - : Contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin. `SharedStorageWorklet` includes the {{domxref("Worklet.addModule", "addModule()")}} method, which is used to add a module to the shared storage worklet.
 
 ## Instance methods
 
