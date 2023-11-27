@@ -48,7 +48,7 @@ You can use the [Private Aggregation API](https://developer.chrome.com/docs/priv
 
 In this example, we store data from both the embedding page and the fenced frame using [shared storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/).
 
-In the embedding page, we will set a mock event ID as the shared storage context using `setSharedStorageContext()`:
+On the embedding page, we set a mock event ID as the shared storage context using `setSharedStorageContext()`:
 
 ```js
 const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
