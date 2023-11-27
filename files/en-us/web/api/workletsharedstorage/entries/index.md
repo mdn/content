@@ -11,7 +11,7 @@ browser-compat: api.WorkletSharedStorage.entries
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`entries()`** method of the
-{{domxref("WorkletSharedStorage")}} interface returns an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator) providing an array of a `WorkletSharedStorage` instance's enumerable property `[key, value]` pairs, in the same order as a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+{{domxref("WorkletSharedStorage")}} interface returns an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator). The iterator provides an array of `[key, value]` pairs corresponding to the enumerable properties of a `WorkletSharedStorage` instance. The order of these pairs is similar to that in a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop, though a `for...in` loop also enumerates properties from the prototype chain.
 
 ## Syntax
 
