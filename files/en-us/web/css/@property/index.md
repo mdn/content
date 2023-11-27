@@ -30,11 +30,16 @@ The `@property` rule represents a custom property registration directly in a sty
 - {{cssxref("@property/initial-value","initial-value")}}
   - : Sets the initial value for the property.
 
-A valid `@property` rule represents a custom property registration, with the property name being the serialization of the in the rule's prelude.
-
-`@property` rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the <a href="https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition">universal syntax definition</a>, otherwise the descriptor is required; if it's missing, the entire rule is invalid and must be ignored.
+`@property` rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the <a href="https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition">universal syntax definition</a> (`*`), otherwise the descriptor is required; if it's missing, the entire rule is invalid and must be ignored.
 
 Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
+
+#### Syntax strings
+
+The `<syntax>` descriptor can be any one of `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, or `<custom-ident>`.
+The `+` (space-separated) and `#` (comma-separated) multipliers indicate that a list of values is expected, for example `<color>#` means a comma-separated list of `<color>` values is the expected syntax.
+
+Vertical lines (`|`) can create "or" conditions for the expected syntax, for example `<length> | auto` accepts a `<length>`, or `auto`, and `<color># | <integer>#` expects a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
 
 ## Formal syntax
 
@@ -126,6 +131,7 @@ For item three, the `--item-size` value gets set to `1000px`. While `1000px` is 
 
 ## See also
 
+- {{cssxref("var")}}
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)

@@ -62,12 +62,17 @@ CSS.registerProperty({
 ### At-rules
 
 - {{cssxref("@property")}}
+  - [syntax](/en-US/docs/Web/CSS/@property#descriptors) descriptor
+  - [inherits](/en-US/docs/Web/CSS/@property#descriptors) descriptor
+  - [initial-value](/en-US/docs/Web/CSS/@property#descriptors) descriptor
+  - [`+` and `#`](/en-US/docs/Web/CSS/@property#syntax_strings) multipliers
+  - [`|`](/en-US/docs/Web/CSS/@property#syntax_strings) combinator
 
 ### Functions
 
 - {{cssxref("var")}}
 
-### Interfaces
+### Interfaces and APIs
 
 - {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
 
@@ -75,6 +80,17 @@ CSS.registerProperty({
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
   - : Explains how to register custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
+
+## Related concepts
+
+- {{cssxref("var")}}
+- [CSSRule](/en-US/docs/Web/API/CSSRule)
+- [CSSStyleValue](/en-US/docs/Web/API/CSSStyleValue)
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping)
+- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [Worklet](/en-US/docs/Web/API/Worklet)
 
 ## Specifications
 

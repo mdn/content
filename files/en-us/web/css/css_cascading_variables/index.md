@@ -112,11 +112,9 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changin
 
 ## Related concepts
 
-- The [CSS Properties and Values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) provides additional interfaces for defining custom properties that allow you to set an initial value fir the property, define data type constraints and provide control over inheritance.
-  This specification provides:
-
-  - [CSS @property](/en-US/docs/Web/CSS/@property) at-rule for defining custom properties in CSS.
-  - [CSS.registerProperty()](/en-US/docs/Web/API/CSS/registerProperty_static) method for defining custom properties in JavaScript.
+- [CSS Properties and Values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
+  - [CSS @property](/en-US/docs/Web/CSS/@property) at-rule
+  - [CSS.registerProperty()](/en-US/docs/Web/API/CSS/registerProperty_static) method
 
 ## Specifications
 
@@ -126,3 +124,4 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changin
 
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
 - [CSS `env()`](Web/CSS/env)
+- [getPropertyValue()](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
