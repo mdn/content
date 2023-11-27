@@ -9,7 +9,7 @@ browser-compat: api.WindowSharedStorage
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin, as it is exposed to a standard browsing context.
+The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin within a standard browsing context.
 
 `WindowSharedStorage` is accessed via {{domxref("Window.sharedStorage")}}.
 
