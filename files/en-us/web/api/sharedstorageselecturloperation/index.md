@@ -20,7 +20,7 @@ The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Sto
 
 ## Examples
 
-In a worklet, a class called `SelectURLOperation` is defined and registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}} with a name of `ab-testing`. `SharedStorageSelectURLOperation` defines the structure this class needs to conform to, which in real terms means the parameters and return value the `run()` method is required to have. Apart from that, the functionality of the class is flexible in terms of how it is defined.
+In this example, a class called `SelectURLOperation` is defined in a worklet and is registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}} with the name `ab-testing`. `SharedStorageSelectURLOperation` defines the structure to which this class needs to conform, essentially defining the parameters required for the `run()` method. Other than this requirement, the functionality of the class can be defined flexibly.
 
 ```js
 // ab-testing-worklet.js
