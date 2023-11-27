@@ -27,7 +27,10 @@ counter-reset: reversed(my-counter);
 counter-reset: reversed(my-counter) -1;
 
 /* Create reversed and regular counters at the same time */
-counter-reset: reversed(page-counter) 10 item-counter 1 reversed(section-counter) 4;
+counter-reset: reversed(page-counter) 10 item-counter 1 reversed(
+    section-counter
+  )
+  4;
 
 /* Remove all counter-reset declarations in less specific rules */
 counter-reset: none;
