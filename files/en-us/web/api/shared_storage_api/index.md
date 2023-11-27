@@ -53,7 +53,7 @@ There are two parts to using the Shared Storage API — writing data to storage 
 
 ### Writing to shared storage
 
-Writing the data is simple — you use methods defined on the {{domxref("SharedStorage")}} interface to {{domxref("SharedStorage.set", "set", "", "nocode")}}, {{domxref("SharedStorage.append", "append", "", "nocode")}}, or {{domxref("SharedStorage.delete", "delete", "", "nocode")}}/{{domxref("SharedStorage.clear", "clear", "", "nocode")}} data.
+Writing data to shared storage is simple — you use methods defined on the {{domxref("SharedStorage")}} interface to {{domxref("SharedStorage.set", "set", "", "nocode")}}, {{domxref("SharedStorage.append", "append", "", "nocode")}}, or {{domxref("SharedStorage.delete", "delete", "", "nocode")}}/{{domxref("SharedStorage.clear", "clear", "", "nocode")}} data.
 
 This functionality is available in two different contexts:
 
