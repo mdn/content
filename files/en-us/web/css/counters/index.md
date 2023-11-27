@@ -82,7 +82,7 @@ This example includes two `counters()` functions; one with `<counter-style>` set
 
 #### CSS
 
-```css
+```css-nolint
 ol {
   counter-reset: listCounter;
 }
@@ -90,14 +90,13 @@ li {
   counter-increment: listCounter;
 }
 li::marker {
-  content: counters(listCounter, ".", upper-roman) ") ";
+  content:
+    counters(listCounter, ".", upper-roman) ") ";
 }
 li::before {
-  content: counters(listCounter, ".") " == " counters(
-      listCounter,
-      ".",
-      lower-roman
-    );
+  content:
+    counters(listCounter, ".") " == "
+    counters(listCounter, ".", lower-roman);
 }
 ```
 
@@ -139,7 +138,7 @@ This example includes three `counters()` functions, each with different `<string
 
 #### CSS
 
-```css
+```css-nolint
 ol {
   counter-reset: count;
 }
@@ -147,14 +146,13 @@ li {
   counter-increment: count;
 }
 li::marker {
-  content: counters(count, "-", decimal-leading-zero) ") ";
+  content:
+    counters(count, "-", decimal-leading-zero) ") ";
 }
 li::before {
-  content: counters(count, "~", upper-alpha) " == " counters(
-      count,
-      "*",
-      lower-alpha
-    );
+  content:
+    counters(count, "~", upper-alpha) " == "
+    counters(count,  "*", lower-alpha);
 }
 ```
 

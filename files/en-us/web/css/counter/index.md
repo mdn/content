@@ -59,7 +59,7 @@ In this example, we display a counter using `lower-roman` and `lower-alpha` list
 
 #### CSS
 
-```css
+```css-nolint
 ol {
   counter-reset: count;
 }
@@ -67,8 +67,9 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, lower-roman) "] == [" counter(count, lower-alpha)
-    "]";
+  content:
+    "[" counter(count, lower-roman) "] == ["
+    counter(count, lower-alpha) "]";
 }
 ```
 
@@ -94,7 +95,7 @@ In this example, we use the `counter()` function three times.
 
 We include the `counter()` function with three different counter styles, including the default decimal value. We added padding to the list, providing space for the long `::marker` string.
 
-```css
+```css-nolint
 ol {
   counter-reset: listCounter;
   padding-left: 5em;
@@ -103,14 +104,13 @@ li {
   counter-increment: listCounter;
 }
 li::marker {
-  content: "Item #" counter(listCounter) " is: ";
+  content:
+    "Item #" counter(listCounter) " is: ";
 }
 li::after {
-  content: "[" counter(listCounter, decimal-leading-zero) "] == [" counter(
-      listCounter,
-      upper-roman
-    )
-    "]";
+  content:
+    "[" counter(listCounter, decimal-leading-zero) "] == ["
+    counter(listCounter, upper-roman) "]";
 }
 ```
 
