@@ -12,7 +12,7 @@ browser-compat: api.Window.queryLocalFonts
 
 The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 
-To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}. In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ queryLocalFonts(options)
 - `options` {{optional_inline}}
   - : Contains optional configuration parameters. Currently only one property is defined:
     - `postscriptNames` {{optional_inline}}
-      - : An array of font PostScript names. If this is specified, only fonts with PostScript names matching those in the array will be included in the results.
+      - : An array of font PostScript names. If this is specified, only fonts with PostScript names matching those in the array will be included in the results. If not, all fonts will be included in the results.
 
 ### Return value
 
