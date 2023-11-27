@@ -17,8 +17,6 @@ For example, `--dark-grey-text` and `--dark-footer` are easier to understand tha
 ## Custom properties in action
 
 To see how custom properties can be used, move the input slider left to right.
-When the value of the slider changes between 0 and 360, this updates the `--hue` property and color of the boxes inside the grid.
-The `--hue` custom property is used in a slightly different way in each box, and changing the value of `--hue` in one place affects multiple different elements where it's referenced.
 
 ```html hidden
 <div class="container">
@@ -64,7 +62,7 @@ input {
 }
 ```
 
-```css
+```css hidden
 :root {
   --hue: 0;
 }
@@ -100,6 +98,8 @@ input {
 ```
 
 {{EmbedLiveSample("",600,160)}}
+
+Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changing the {{cssxref("background-color")}} using the {{cssxref("hsl")}} {{cssxref("&lt;color&gt;")}} function`hsl(var(--hue) 50% 50%);`. When the slider's value changes between 0 and 360, this updates a `--hue` [custom property]((/en-US/docs/Web/CSS/--*) and the color of the boxes inside the grid.
 
 ## Reference
 
