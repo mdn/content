@@ -113,4 +113,4 @@ register('send-report', ReportingOperation);
 
 ## See also
 
-- [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API)
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
