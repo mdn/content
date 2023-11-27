@@ -225,7 +225,7 @@ Lastly, data in `localStorage` persists until it is manually cleared. `sessionSt
 - {{domxref("SharedStorageWorklet")}}
   - : Represents the current origin's shared storage worklet. It contains the {{domxref("Worklet.addModule", "addModule()")}} method for adding modules. Unlike a regular {{domxref("Worklet")}}, the `SharedStorageWorklet` can have only a single module added to it, for privacy reasons.
 - {{domxref("SharedStorageWorkletGlobalScope")}}
-  - : Represents the global scope of a {{domxref("SharedStorageWorklet")}} module. Contains functionality to {{domxref("SharedStorageWorkletGlobalScope.register", "register", "", "nocode")}} a defined operation, and {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "access the shared storage", "", "nocode")}}.
+  - : Represents the global scope of a {{domxref("SharedStorageWorklet")}} module. It contains the functionality to {{domxref("SharedStorageWorkletGlobalScope.register", "register", "", "nocode")}} a defined operation and {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "access the shared storage", "", "nocode")}}.
 
 ### Output gate operation signature definitions
 
