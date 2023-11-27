@@ -9,7 +9,7 @@ browser-compat: api.SharedStorageWorklet
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the current origin's shared storage worklet.
+The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage worklet for the current origin.
 
 `SharedStorageWorklet` has no properties or methods directly defined on it; it inherits the {{domxref("Worklet.addModule", "addModule()")}} method from the {{domxref("Worklet")}} interface, which is used to add a module to it. Unlike a regular {{domxref("Worklet")}}.
 
