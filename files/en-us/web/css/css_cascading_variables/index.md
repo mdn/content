@@ -9,10 +9,10 @@ spec-urls: https://drafts.csswg.org/css-variables/
 
 The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables.
 
-Custom properties are defined using [two dashes (`--`)](/en-US/docs/Web/CSS/--*) and are subject to the [cascade](/en-US/docs/Web/CSS/Cascade), so they inherit their value from their parent.
-The purpose of custom properties is to help manage complex CSS stylesheets by allowing you to define a property's value in one place and reuse that value in multiple declarations across a project.
-A benefit of custom properties is improved readability and semantics.
-For example, `--dark-grey-text` and `--dark-footer` are easier to understand than hexadecimal colors such as `#00ff00`, and the context of their use is much more apparent.
+When working with CSS, you often end up reusing common project-specific values such as widths that work well with your layout, or a set of colors for your color scheme.
+One way of managing repetition in stylesheets is to define a value once and use it many times in other places.
+Custom properties let you reuse values and simplify complex or repetitive rules which is easier to read and maintain.
+For example, `--dark-grey-text` and `--dark-footer` are easier to understand than hexadecimal colors such as `#00ff00`, and the context of how you use them is more obvious, too.
 
 ## Custom properties in action
 
@@ -60,9 +60,7 @@ input {
   width: 100%;
   margin: 0;
 }
-```
 
-```css hidden
 :root {
   --hue: 0;
 }
@@ -79,10 +77,6 @@ input {
 #color-4 {
   background-color: hsl(calc(var(--hue) + 30) 50% 50%);
 }
-/* Continued up to color-8 ... */
-```
-
-```css hidden
 #color-5 {
   background-color: hsl(calc(var(--hue) + 40) 50% 50%);
 }
@@ -99,7 +93,7 @@ input {
 
 {{EmbedLiveSample("",600,160)}}
 
-Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changing the {{cssxref("background-color")}} using the {{cssxref("hsl")}} {{cssxref("&lt;color&gt;")}} function`hsl(var(--hue) 50% 50%);`. When the slider's value changes between 0 and 360, this updates a `--hue` [custom property]((/en-US/docs/Web/CSS/--*) and the color of the boxes inside the grid.
+Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changing the {{cssxref("background-color")}} using the {{cssxref("color_value/hsl", "hsl()")}} {{cssxref("&lt;color&gt;")}} function (`hsl(var(--hue) 50% 50%);`). When the slider's value changes between 0 and 360, this updates a `--hue` [custom property](/en-US/docs/Web/CSS/--*) and the color of the boxes inside the grid.
 
 ## Reference
 
