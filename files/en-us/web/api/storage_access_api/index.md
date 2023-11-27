@@ -5,6 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.Document.hasStorageAccess
   - api.Document.requestStorageAccess
+  - api.Document.requestStorageAccessFor
   - api.Permissions.permission_storage-access
 spec-urls: https://privacycg.github.io/storage-access/
 ---
@@ -96,7 +97,7 @@ Although the API surface is the same, websites using the Storage Access API shou
 
 - Cookies must have [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) explicitly set on them, because the default value for Chrome is `SameSite=Lax` (`SameSite=None` is the default in Firefox and Safari).
 - Cookies must have the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute set on them.
-- The storage access grants are phased out after 30 days of browser usage passed without user interaction. Successful use of the Storage Access API extends this limit by another 30 days.
+- The storage access grants are phased out after 30 days of browser usage passed without user interaction. Successful use of the Storage Access API extends this limit by another 30 days. This doesn't occur when {{domxref("requestStorageAccessFor()")}} is called because the user is already on the page.
 
 ### Firefox
 
@@ -120,8 +121,8 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to third-party cookies.
 - {{domxref("Document.requestStorageAccess()")}}
   - : Requests access to third-party cookies from embedded content; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
-- {{domxref("Document.requestStorageAccessFor()")}} {{non-standard_inline}}
-  - : Allows top-level sites to request third-party cookie access on behalf of embedded origin content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+- {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
+  - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 > **Note:** User interaction propagates to the promise returned by these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.
 

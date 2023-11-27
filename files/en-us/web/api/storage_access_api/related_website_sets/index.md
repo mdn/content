@@ -8,9 +8,9 @@ browser-compat: api.document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
+{{DefaultAPISidebar("Storage Access API")}}
 
-> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](#standards_positions) and [Browser compatibility](#browser_compatibility) for details of opposition and support status.
+> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](#standards_positions) for details of opposition.
 
 Related website sets is a mechanism for defining a set of related sites that share trusted content. As a result, browsers will grant default access for these sites to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) in situations where they have content embedded in other members of the set.
 
@@ -25,7 +25,7 @@ Related website sets can be considered a progressive enhancement mechanism that 
 In addition:
 
 - The Chrome-only {{domxref("Document.requestStorageAccessFor()")}} method — which allows top-level sites to request storage access on behalf of embedded origin content — is only supported on domains within a related website set. See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an example.
-- When Chrome first supported the Storage Access API, it required calling sites to be part of a related website set, however this is no longer the case.
+- When Chrome first supported the standard Storage Access API (i.e. {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}), it required calling sites to be part of a related website set, however this is no longer the case.
 
 ## How does RWS work?
 
@@ -67,11 +67,8 @@ One or more vendors oppose this specification. Known positions are as follows:
 - Mozilla (Firefox): [Negative](https://mozilla.github.io/standards-positions/#first-party-sets)
 - Apple (Safari): [Negative](https://webkit.org/standards-positions/#position-93)
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
 - [Related Website Sets](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets/) on developer.chrome.com (2023)
+- [Related Website Sets: developer guide](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets-integration/) on developer.chrome.com (2023)
