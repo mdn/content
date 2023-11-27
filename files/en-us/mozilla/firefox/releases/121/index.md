@@ -61,6 +61,8 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### APIs
 
+- The {{domxref("WebTransportSendStream.sendOrder", "sendOrder")}} property of the {{domxref("WebTransportSendStream")}} interface is now supported, allowing the relative priority of outgoing [WebTransport API](/en-US/docs/Web/API/WebTransport_API) _bidirectional_ streams to be read and changed after the stream is created. Note that this cannot be used to modify the priority of unidirectional streams, as Firefox implements them as {{domxref("WritableStream")}} instead of {{domxref("WebTransportSendStream")}}. (For more information see [Firefox bug 1853444](https://bugzil.la/1853444).)
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
