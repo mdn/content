@@ -28,7 +28,9 @@ A new instance of the {{domxref("EventTarget")}} object.
 
 ## Examples
 
-### Counter
+### Implementing a counter
+
+This example implements a `Counter` class, with `increment()` and `decrement()` methods. If fires a custom `"valuechange"` event when either of these methods is called.
 
 #### HTML
 
@@ -36,9 +38,6 @@ A new instance of the {{domxref("EventTarget")}} object.
 <button id="dec" aria-label="Decrement">-</button>
 <span id="currentValue">0</span>
 <button id="inc" aria-label="Increment">+</button>
-
-<h5>History</h5>
-<ul id="history"></ul>
 ```
 
 #### JavaScript
@@ -71,9 +70,7 @@ document.querySelector("#currentValue").innerText = initialValue;
 
 counter.addEventListener("valuechange", (event) => {
   document.querySelector("#currentValue").innerText = event.detail;
-  document
-    .querySelector("#history")
-    .insertAdjacentHTML("beforeend", `<li>${event.detail}</li>`);
+  console.log(`The new counter is: ${event.detail}`)
 });
 
 document.querySelector("#inc").addEventListener("click", () => {
@@ -87,7 +84,7 @@ document.querySelector("#dec").addEventListener("click", () => {
 
 #### Result
 
-{{EmbedLiveSample("Counter")}}
+{{EmbedLiveSample("Implementing a counter")}}
 
 ## Specifications
 
