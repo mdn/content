@@ -32,7 +32,7 @@ These mechanisms are available via the {{domxref("Window.sessionStorage")}} and 
 
 > **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).
 
-## Determining storage access by a third-party
+## Determining storage access by a third party
 
 Each origin has its own storage (this is the same for web storage and [shared storage](/en-US/docs/Web/API/Shared_Storage_API)), but what about third-party (i.e. embedded) code access to shared storage? The [browsing context](/en-US/docs/Glossary/Browsing_context) of where the third-party code from another origin is executed determines whose storage that third-party code can access.
 
