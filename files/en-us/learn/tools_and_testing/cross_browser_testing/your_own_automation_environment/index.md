@@ -112,7 +112,7 @@ OK, let's try a quick test to make sure everything is working.
       await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
       await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
      } finally {
-      await driver.quit();
+       await driver.quit();
      }
    })();
    ```
