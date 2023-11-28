@@ -42,7 +42,7 @@ It is important to note that the Storage Access API is only needed to provide ac
 
 Browsers have various mechanisms to partition third party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies).
 
-When we talk about third-party cookies in the content of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
+When we talk about third-party cookies in the context of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
 
 ### How it works
 
