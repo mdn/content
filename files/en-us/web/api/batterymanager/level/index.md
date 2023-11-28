@@ -11,7 +11,7 @@ browser-compat: api.BatteryManager.level
 The **`BatteryManager.level`** property indicates the current battery charge level as a value between `0.0` and `1.0`.
 A value of `0.0` means the battery is empty and the system is about to be suspended.
 A value of `1.0` means the battery is full or the user agent is unable to report the battery status information.
-When its value changes, the [`levelchange`](/en-US/docs/Web/API/BatteryManager/levelchange_event) event is fired.
+When its value changes, the {{domxref("BatteryManager/levelchange_event", "levelchange")}} event is fired.
 
 ## Value
 
@@ -60,4 +60,4 @@ getLevel.addEventListener("click", async () => {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

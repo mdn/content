@@ -2,7 +2,9 @@
 title: Battery Status API
 slug: Web/API/Battery_Status_API
 page-type: web-api-overview
-browser-compat: api.BatteryManager
+browser-compat:
+  - api.BatteryManager
+  - api.Navigator.getBattery
 spec-urls: https://w3c.github.io/battery/
 ---
 

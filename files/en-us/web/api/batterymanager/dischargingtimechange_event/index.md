@@ -8,7 +8,7 @@ browser-compat: api.BatteryManager.dischargingtimechange_event
 
 {{APIRef("Battery API")}}
 
-The **`dischargingtimechange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.dischargingTime","dischargingTime")}} is updated.
+The **`dischargingtimechange`** event of the {{domxref("Battery Status API", "", "", "nocode")}} is fired when the battery {{domxref("BatteryManager.dischargingTime","dischargingTime")}} is updated.
 
 ## Syntax
 
@@ -57,4 +57,4 @@ navigator.getBattery().then((battery) => {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}
