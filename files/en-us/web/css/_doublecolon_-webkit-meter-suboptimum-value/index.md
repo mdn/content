@@ -52,8 +52,8 @@ body {
   -webkit-appearance: none;
 }
 
-meter::-webkit-meter-suboptimum-value {
-  background: linear-gradient(to bottom, #ff7, #dd4 45%, #dd4 55%, #ff7);
+#styled::-webkit-meter-suboptimum-value {
+  background: linear-gradient(to bottom, #ff7, #990 45%, #990 55%, #ff7);
   height: 100%;
   box-sizing: border-box;
 }

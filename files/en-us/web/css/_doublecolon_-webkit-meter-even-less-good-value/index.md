@@ -55,7 +55,7 @@ body {
 }
 
 #styled::-webkit-meter-even-less-good-value {
-  background: linear-gradient(to bottom, #f77, #d44 45%, #d44 55%, #f77);
+  background: linear-gradient(to bottom, #f77, #900 45%, #900 55%, #f77);
   height: 100%;
   box-sizing: border-box;
 }
