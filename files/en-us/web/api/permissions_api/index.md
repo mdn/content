@@ -6,6 +6,7 @@ browser-compat:
   - api.Permissions
   - api.Navigator.permissions
   - api.WorkerNavigator.permissions
+spec-urls: https://w3c.github.io/permissions/
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
