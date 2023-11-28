@@ -38,6 +38,7 @@ Secure Payment Confirmation defines a [Web Authentication extension](/en-US/docs
    Note: This ability is now part of WebAuthn Level 3, where it uses the "publickey-credential-create" permission policy instead. Developers are encouraged to use that where available, instead of relying on SPC's "payment" permission.
 
 ## Examples
+
 ### Creating a credential
 
 Creating a credential in Secure Payment Confirmation is done by the same `navigator.credentials.create` call as with Web Authentication, but with a `payment` extension specified.
@@ -157,6 +158,7 @@ try {
 {{Specifications}}
 
 ## See also
+
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Payment Method Identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers)
 - [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API)
