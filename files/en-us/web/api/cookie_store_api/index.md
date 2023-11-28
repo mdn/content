@@ -35,7 +35,7 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 - {{domxref("ExtendableCookieChangeEvent")}} {{Experimental_Inline}}
   - : An `ExtendableCookieChangeEvent` named `cookiechange` is dispatched against {{domxref("ServiceWorkerGlobalScope")}} context when any script-visible cookie changes occur that match the service worker's cookie change subscription list.
 
-## Extensions to other interfaces
+### Extensions to other interfaces
 
 - {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object associated with the service worker.
