@@ -3,6 +3,7 @@ title: Pointer events
 slug: Web/API/Pointer_events
 page-type: web-api-overview
 browser-compat: api.PointerEvent
+spec-urls: https://w3c.github.io/pointerevents/
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
