@@ -11,7 +11,7 @@ browser-compat: api.SharedStorageWorkletGlobalScope.sharedStorage
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`context`** read-only property of the
-{{domxref("SharedStorageWorkletGlobalScope")}} interface contains a {{domxref("WorkletSharedStorage")}} object instance representing the shared storage for a particular origin, as it is exposed to a worklet context.
+{{domxref("SharedStorageWorkletGlobalScope")}} interface contains a {{domxref("WorkletSharedStorage")}} object instance, which represents the shared storage for a particular origin as exposed to a worklet context.
 
 ## Value
 
