@@ -93,6 +93,9 @@ class LabeledCheckbox extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
+        :host {
+          display: block;
+        }
        :host::before {
          content: '[ ]';
          white-space: pre;
@@ -136,9 +139,7 @@ customElements.define("labeled-checkbox", LabeledCheckbox);
 After registering the custom element we can use use the element in HTML as shown:
 
 ```html
-<p>
-  <labeled-checkbox>You need to check this</labeled-checkbox>
-</p>
+<labeled-checkbox>You need to check this</labeled-checkbox>
 ```
 
 Finally we use the `:--checked` custom state pseudo class to select CSS for when the box is checked.
