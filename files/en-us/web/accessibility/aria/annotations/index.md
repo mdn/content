@@ -26,9 +26,9 @@ page-type: guide
   </ol>
 </section>
 
-WAI-ARIA version 1.3 sees the addition of a set of new features, collectively known as ARIA annotations, which allow the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review).
+WAI-ARIA versions 1.1, 1.2, and 1.3 include roles and properties which support the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review). This set of ARIA features is sometimes referred to as ARIA annotations, which is not to be confused with the W3C [ARIA Annotations draft specification](https://w3c.github.io/annotation-aria/), no longer maintained as of early 2020.
 
-Below we'll introduce the new features associated with ARIA annotations, and have a look at some code examples that show them in action.
+Below we'll introduce the new features associated with the broader concept of ARIA annotations, and have a look at some code examples that show them in action.
 
 > **Note:** You can find all the examples discussed in this article in a demo file at [aria-annotations](https://mdn.github.io/html-examples/aria-annotations/).
 
@@ -36,13 +36,13 @@ Below we'll introduce the new features associated with ARIA annotations, and hav
 
 The ARIA attributes providing these new abilities are as follows:
 
-- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
-- `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements. Note that these aren't part of the new ARIA annotations features, but they are of central relevance.
-- `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element.
-- `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above).
-- `role="comment"` — semantically denotes a comment/reaction to some content on the page, or to a previous comment.
+- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). This property was introduced in ARIA 1.1.
+- `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements. Note that these aren't part of the new ARIA annotations features, but they are of central relevance. These roles were introduced in ARIA 1.2.
+- `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. This role was introduced in the draft ARIA 1.3.
+- `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above). This role was introduced in the draft ARIA 1.3.
+- `role="comment"` — semantically denotes a comment/reaction to some content on the page, or to a previous comment. This role was introduced in the draft ARIA 1.3.
 
-To provide a semantic association between the document content being annotated and the annotation, an `aria-details` attribute can be set on the annotated content that contains the ID of the annotated element. `aria-details` has been updated so that it can support multiple IDs — this makes sense, for example you can easily envisage having multiple comments relating to the same bit of text.
+To provide a semantic association between the document content being annotated and the annotation, an `aria-details` attribute can be set on the annotated content that contains the ID of the annotated element. `aria-details` has been updated in the draft ARIA 1.3 so that it can support multiple IDs — this makes sense, for example you can easily envisage having multiple comments relating to the same bit of text.
 
 ARIA annotation roles and objects are currently exposed in:
 
