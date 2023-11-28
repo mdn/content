@@ -158,7 +158,7 @@ The most common values for the `[Exposed]` are:
 - `ServiceWorker`
   - : The partial interface is available to the {{domxref('ServiceWorkerGlobalScope')}} only.
 
-Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#exposed) and doesn't need to be documented.
+Another value is possible, like `System`, but this has a [special meaning](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html#custom-extended-attributes) and doesn't need to be documented.
 
 Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
