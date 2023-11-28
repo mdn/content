@@ -1,0 +1,5181 @@
+{
+  "payload": {
+    "allShortcutsEnabled": false,
+    "fileTree": {
+      "files/en-us/web/api/spc": {
+        "items": [
+          {
+            "name": "index.md",
+            "path": "files/en-us/web/api/spc/index.md",
+            "contentType": "file"
+          },
+          {
+            "name": "spc-dialog.png",
+            "path": "files/en-us/web/api/spc/spc-dialog.png",
+            "contentType": "file"
+          }
+        ],
+        "totalCount": 2
+      },
+      "files/en-us/web/api": {
+        "items": [
+          {
+            "name": "abortcontroller",
+            "path": "files/en-us/web/api/abortcontroller",
+            "contentType": "directory"
+          },
+          {
+            "name": "abortsignal",
+            "path": "files/en-us/web/api/abortsignal",
+            "contentType": "directory"
+          },
+          {
+            "name": "absoluteorientationsensor",
+            "path": "files/en-us/web/api/absoluteorientationsensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "abstractrange",
+            "path": "files/en-us/web/api/abstractrange",
+            "contentType": "directory"
+          },
+          {
+            "name": "accelerometer",
+            "path": "files/en-us/web/api/accelerometer",
+            "contentType": "directory"
+          },
+          {
+            "name": "aescbcparams",
+            "path": "files/en-us/web/api/aescbcparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "aesctrparams",
+            "path": "files/en-us/web/api/aesctrparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "aesgcmparams",
+            "path": "files/en-us/web/api/aesgcmparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "aeskeygenparams",
+            "path": "files/en-us/web/api/aeskeygenparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "ambientlightsensor",
+            "path": "files/en-us/web/api/ambientlightsensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "analysernode",
+            "path": "files/en-us/web/api/analysernode",
+            "contentType": "directory"
+          },
+          {
+            "name": "angle_instanced_arrays",
+            "path": "files/en-us/web/api/angle_instanced_arrays",
+            "contentType": "directory"
+          },
+          {
+            "name": "animation",
+            "path": "files/en-us/web/api/animation",
+            "contentType": "directory"
+          },
+          {
+            "name": "animationeffect",
+            "path": "files/en-us/web/api/animationeffect",
+            "contentType": "directory"
+          },
+          {
+            "name": "animationevent",
+            "path": "files/en-us/web/api/animationevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "animationplaybackevent",
+            "path": "files/en-us/web/api/animationplaybackevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "animationtimeline",
+            "path": "files/en-us/web/api/animationtimeline",
+            "contentType": "directory"
+          },
+          {
+            "name": "atob",
+            "path": "files/en-us/web/api/atob",
+            "contentType": "directory"
+          },
+          {
+            "name": "attr",
+            "path": "files/en-us/web/api/attr",
+            "contentType": "directory"
+          },
+          {
+            "name": "audio_output_devices_api",
+            "path": "files/en-us/web/api/audio_output_devices_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiobuffer",
+            "path": "files/en-us/web/api/audiobuffer",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiobuffersourcenode",
+            "path": "files/en-us/web/api/audiobuffersourcenode",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiocontext",
+            "path": "files/en-us/web/api/audiocontext",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiodata",
+            "path": "files/en-us/web/api/audiodata",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiodecoder",
+            "path": "files/en-us/web/api/audiodecoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiodestinationnode",
+            "path": "files/en-us/web/api/audiodestinationnode",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioencoder",
+            "path": "files/en-us/web/api/audioencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiolistener",
+            "path": "files/en-us/web/api/audiolistener",
+            "contentType": "directory"
+          },
+          {
+            "name": "audionode",
+            "path": "files/en-us/web/api/audionode",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioparam",
+            "path": "files/en-us/web/api/audioparam",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioparamdescriptor",
+            "path": "files/en-us/web/api/audioparamdescriptor",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioparammap",
+            "path": "files/en-us/web/api/audioparammap",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioprocessingevent",
+            "path": "files/en-us/web/api/audioprocessingevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioscheduledsourcenode",
+            "path": "files/en-us/web/api/audioscheduledsourcenode",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiosinkinfo",
+            "path": "files/en-us/web/api/audiosinkinfo",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiotrack",
+            "path": "files/en-us/web/api/audiotrack",
+            "contentType": "directory"
+          },
+          {
+            "name": "audiotracklist",
+            "path": "files/en-us/web/api/audiotracklist",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioworklet",
+            "path": "files/en-us/web/api/audioworklet",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioworkletglobalscope",
+            "path": "files/en-us/web/api/audioworkletglobalscope",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioworkletnode",
+            "path": "files/en-us/web/api/audioworkletnode",
+            "contentType": "directory"
+          },
+          {
+            "name": "audioworkletprocessor",
+            "path": "files/en-us/web/api/audioworkletprocessor",
+            "contentType": "directory"
+          },
+          {
+            "name": "authenticatorassertionresponse",
+            "path": "files/en-us/web/api/authenticatorassertionresponse",
+            "contentType": "directory"
+          },
+          {
+            "name": "authenticatorattestationresponse",
+            "path": "files/en-us/web/api/authenticatorattestationresponse",
+            "contentType": "directory"
+          },
+          {
+            "name": "authenticatorresponse",
+            "path": "files/en-us/web/api/authenticatorresponse",
+            "contentType": "directory"
+          },
+          {
+            "name": "background_fetch_api",
+            "path": "files/en-us/web/api/background_fetch_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "background_synchronization_api",
+            "path": "files/en-us/web/api/background_synchronization_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "background_tasks_api",
+            "path": "files/en-us/web/api/background_tasks_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "backgroundfetchevent",
+            "path": "files/en-us/web/api/backgroundfetchevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "backgroundfetchmanager",
+            "path": "files/en-us/web/api/backgroundfetchmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "backgroundfetchrecord",
+            "path": "files/en-us/web/api/backgroundfetchrecord",
+            "contentType": "directory"
+          },
+          {
+            "name": "backgroundfetchregistration",
+            "path": "files/en-us/web/api/backgroundfetchregistration",
+            "contentType": "directory"
+          },
+          {
+            "name": "backgroundfetchupdateuievent",
+            "path": "files/en-us/web/api/backgroundfetchupdateuievent",
+            "contentType": "directory"
+          },
+          {
+            "name": "badging_api",
+            "path": "files/en-us/web/api/badging_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "barcode_detection_api",
+            "path": "files/en-us/web/api/barcode_detection_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "barcodedetector",
+            "path": "files/en-us/web/api/barcodedetector",
+            "contentType": "directory"
+          },
+          {
+            "name": "barprop",
+            "path": "files/en-us/web/api/barprop",
+            "contentType": "directory"
+          },
+          {
+            "name": "baseaudiocontext",
+            "path": "files/en-us/web/api/baseaudiocontext",
+            "contentType": "directory"
+          },
+          {
+            "name": "battery_status_api",
+            "path": "files/en-us/web/api/battery_status_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "batterymanager",
+            "path": "files/en-us/web/api/batterymanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "beacon_api",
+            "path": "files/en-us/web/api/beacon_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "beforeinstallpromptevent",
+            "path": "files/en-us/web/api/beforeinstallpromptevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "beforeunloadevent",
+            "path": "files/en-us/web/api/beforeunloadevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "biquadfilternode",
+            "path": "files/en-us/web/api/biquadfilternode",
+            "contentType": "directory"
+          },
+          {
+            "name": "blob",
+            "path": "files/en-us/web/api/blob",
+            "contentType": "directory"
+          },
+          {
+            "name": "blobevent",
+            "path": "files/en-us/web/api/blobevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetooth",
+            "path": "files/en-us/web/api/bluetooth",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothcharacteristicproperties",
+            "path": "files/en-us/web/api/bluetoothcharacteristicproperties",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothdevice",
+            "path": "files/en-us/web/api/bluetoothdevice",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothremotegattcharacteristic",
+            "path": "files/en-us/web/api/bluetoothremotegattcharacteristic",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothremotegattdescriptor",
+            "path": "files/en-us/web/api/bluetoothremotegattdescriptor",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothremotegattserver",
+            "path": "files/en-us/web/api/bluetoothremotegattserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothremotegattservice",
+            "path": "files/en-us/web/api/bluetoothremotegattservice",
+            "contentType": "directory"
+          },
+          {
+            "name": "bluetoothuuid",
+            "path": "files/en-us/web/api/bluetoothuuid",
+            "contentType": "directory"
+          },
+          {
+            "name": "broadcast_channel_api",
+            "path": "files/en-us/web/api/broadcast_channel_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "broadcastchannel",
+            "path": "files/en-us/web/api/broadcastchannel",
+            "contentType": "directory"
+          },
+          {
+            "name": "btoa",
+            "path": "files/en-us/web/api/btoa",
+            "contentType": "directory"
+          },
+          {
+            "name": "bytelengthqueuingstrategy",
+            "path": "files/en-us/web/api/bytelengthqueuingstrategy",
+            "contentType": "directory"
+          },
+          {
+            "name": "cache",
+            "path": "files/en-us/web/api/cache",
+            "contentType": "directory"
+          },
+          {
+            "name": "caches",
+            "path": "files/en-us/web/api/caches",
+            "contentType": "directory"
+          },
+          {
+            "name": "cachestorage",
+            "path": "files/en-us/web/api/cachestorage",
+            "contentType": "directory"
+          },
+          {
+            "name": "canmakepaymentevent",
+            "path": "files/en-us/web/api/canmakepaymentevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "canvas_api",
+            "path": "files/en-us/web/api/canvas_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "canvascapturemediastreamtrack",
+            "path": "files/en-us/web/api/canvascapturemediastreamtrack",
+            "contentType": "directory"
+          },
+          {
+            "name": "canvasgradient",
+            "path": "files/en-us/web/api/canvasgradient",
+            "contentType": "directory"
+          },
+          {
+            "name": "canvaspattern",
+            "path": "files/en-us/web/api/canvaspattern",
+            "contentType": "directory"
+          },
+          {
+            "name": "canvasrenderingcontext2d",
+            "path": "files/en-us/web/api/canvasrenderingcontext2d",
+            "contentType": "directory"
+          },
+          {
+            "name": "capturecontroller",
+            "path": "files/en-us/web/api/capturecontroller",
+            "contentType": "directory"
+          },
+          {
+            "name": "caretposition",
+            "path": "files/en-us/web/api/caretposition",
+            "contentType": "directory"
+          },
+          {
+            "name": "cdatasection",
+            "path": "files/en-us/web/api/cdatasection",
+            "contentType": "directory"
+          },
+          {
+            "name": "channel_messaging_api",
+            "path": "files/en-us/web/api/channel_messaging_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "channelmergernode",
+            "path": "files/en-us/web/api/channelmergernode",
+            "contentType": "directory"
+          },
+          {
+            "name": "channelsplitternode",
+            "path": "files/en-us/web/api/channelsplitternode",
+            "contentType": "directory"
+          },
+          {
+            "name": "characterdata",
+            "path": "files/en-us/web/api/characterdata",
+            "contentType": "directory"
+          },
+          {
+            "name": "clearinterval",
+            "path": "files/en-us/web/api/clearinterval",
+            "contentType": "directory"
+          },
+          {
+            "name": "cleartimeout",
+            "path": "files/en-us/web/api/cleartimeout",
+            "contentType": "directory"
+          },
+          {
+            "name": "client",
+            "path": "files/en-us/web/api/client",
+            "contentType": "directory"
+          },
+          {
+            "name": "clients",
+            "path": "files/en-us/web/api/clients",
+            "contentType": "directory"
+          },
+          {
+            "name": "clipboard",
+            "path": "files/en-us/web/api/clipboard",
+            "contentType": "directory"
+          },
+          {
+            "name": "clipboard_api",
+            "path": "files/en-us/web/api/clipboard_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "clipboardevent",
+            "path": "files/en-us/web/api/clipboardevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "clipboarditem",
+            "path": "files/en-us/web/api/clipboarditem",
+            "contentType": "directory"
+          },
+          {
+            "name": "closeevent",
+            "path": "files/en-us/web/api/closeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "comment",
+            "path": "files/en-us/web/api/comment",
+            "contentType": "directory"
+          },
+          {
+            "name": "compositionevent",
+            "path": "files/en-us/web/api/compositionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "compression_streams_api",
+            "path": "files/en-us/web/api/compression_streams_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "compressionstream",
+            "path": "files/en-us/web/api/compressionstream",
+            "contentType": "directory"
+          },
+          {
+            "name": "console",
+            "path": "files/en-us/web/api/console",
+            "contentType": "directory"
+          },
+          {
+            "name": "console_api",
+            "path": "files/en-us/web/api/console_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "constantsourcenode",
+            "path": "files/en-us/web/api/constantsourcenode",
+            "contentType": "directory"
+          },
+          {
+            "name": "contact_picker_api",
+            "path": "files/en-us/web/api/contact_picker_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "contactaddress",
+            "path": "files/en-us/web/api/contactaddress",
+            "contentType": "directory"
+          },
+          {
+            "name": "contactsmanager",
+            "path": "files/en-us/web/api/contactsmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "content_index_api",
+            "path": "files/en-us/web/api/content_index_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "contentindex",
+            "path": "files/en-us/web/api/contentindex",
+            "contentType": "directory"
+          },
+          {
+            "name": "contentindexevent",
+            "path": "files/en-us/web/api/contentindexevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "contentvisibilityautostatechangeevent",
+            "path": "files/en-us/web/api/contentvisibilityautostatechangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "convolvernode",
+            "path": "files/en-us/web/api/convolvernode",
+            "contentType": "directory"
+          },
+          {
+            "name": "cookie_store_api",
+            "path": "files/en-us/web/api/cookie_store_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "cookiechangeevent",
+            "path": "files/en-us/web/api/cookiechangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "cookiestore",
+            "path": "files/en-us/web/api/cookiestore",
+            "contentType": "directory"
+          },
+          {
+            "name": "cookiestoremanager",
+            "path": "files/en-us/web/api/cookiestoremanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "countqueuingstrategy",
+            "path": "files/en-us/web/api/countqueuingstrategy",
+            "contentType": "directory"
+          },
+          {
+            "name": "createimagebitmap",
+            "path": "files/en-us/web/api/createimagebitmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "credential",
+            "path": "files/en-us/web/api/credential",
+            "contentType": "directory"
+          },
+          {
+            "name": "credential_management_api",
+            "path": "files/en-us/web/api/credential_management_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "credentialscontainer",
+            "path": "files/en-us/web/api/credentialscontainer",
+            "contentType": "directory"
+          },
+          {
+            "name": "crossoriginisolated",
+            "path": "files/en-us/web/api/crossoriginisolated",
+            "contentType": "directory"
+          },
+          {
+            "name": "crypto",
+            "path": "files/en-us/web/api/crypto",
+            "contentType": "directory"
+          },
+          {
+            "name": "crypto_property",
+            "path": "files/en-us/web/api/crypto_property",
+            "contentType": "directory"
+          },
+          {
+            "name": "cryptokey",
+            "path": "files/en-us/web/api/cryptokey",
+            "contentType": "directory"
+          },
+          {
+            "name": "cryptokeypair",
+            "path": "files/en-us/web/api/cryptokeypair",
+            "contentType": "directory"
+          },
+          {
+            "name": "cspviolationreportbody",
+            "path": "files/en-us/web/api/cspviolationreportbody",
+            "contentType": "directory"
+          },
+          {
+            "name": "css",
+            "path": "files/en-us/web/api/css",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_counter_styles",
+            "path": "files/en-us/web/api/css_counter_styles",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_custom_highlight_api",
+            "path": "files/en-us/web/api/css_custom_highlight_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_font_loading_api",
+            "path": "files/en-us/web/api/css_font_loading_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_object_model",
+            "path": "files/en-us/web/api/css_object_model",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_painting_api",
+            "path": "files/en-us/web/api/css_painting_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_properties_and_values_api",
+            "path": "files/en-us/web/api/css_properties_and_values_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "css_typed_om_api",
+            "path": "files/en-us/web/api/css_typed_om_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssanimation",
+            "path": "files/en-us/web/api/cssanimation",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssconditionrule",
+            "path": "files/en-us/web/api/cssconditionrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csscontainerrule",
+            "path": "files/en-us/web/api/csscontainerrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csscounterstylerule",
+            "path": "files/en-us/web/api/csscounterstylerule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssfontfacerule",
+            "path": "files/en-us/web/api/cssfontfacerule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssfontfeaturevaluesrule",
+            "path": "files/en-us/web/api/cssfontfeaturevaluesrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssfontpalettevaluesrule",
+            "path": "files/en-us/web/api/cssfontpalettevaluesrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssgroupingrule",
+            "path": "files/en-us/web/api/cssgroupingrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssimagevalue",
+            "path": "files/en-us/web/api/cssimagevalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssimportrule",
+            "path": "files/en-us/web/api/cssimportrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csskeyframerule",
+            "path": "files/en-us/web/api/csskeyframerule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csskeyframesrule",
+            "path": "files/en-us/web/api/csskeyframesrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csskeywordvalue",
+            "path": "files/en-us/web/api/csskeywordvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "csslayerblockrule",
+            "path": "files/en-us/web/api/csslayerblockrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csslayerstatementrule",
+            "path": "files/en-us/web/api/csslayerstatementrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathinvert",
+            "path": "files/en-us/web/api/cssmathinvert",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathmax",
+            "path": "files/en-us/web/api/cssmathmax",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathmin",
+            "path": "files/en-us/web/api/cssmathmin",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathnegate",
+            "path": "files/en-us/web/api/cssmathnegate",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathproduct",
+            "path": "files/en-us/web/api/cssmathproduct",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathsum",
+            "path": "files/en-us/web/api/cssmathsum",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmathvalue",
+            "path": "files/en-us/web/api/cssmathvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmatrixcomponent",
+            "path": "files/en-us/web/api/cssmatrixcomponent",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssmediarule",
+            "path": "files/en-us/web/api/cssmediarule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssnamespacerule",
+            "path": "files/en-us/web/api/cssnamespacerule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssnumericarray",
+            "path": "files/en-us/web/api/cssnumericarray",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssnumericvalue",
+            "path": "files/en-us/web/api/cssnumericvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "csspagerule",
+            "path": "files/en-us/web/api/csspagerule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssperspective",
+            "path": "files/en-us/web/api/cssperspective",
+            "contentType": "directory"
+          },
+          {
+            "name": "csspositionvalue",
+            "path": "files/en-us/web/api/csspositionvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssprimitivevalue",
+            "path": "files/en-us/web/api/cssprimitivevalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "csspropertyrule",
+            "path": "files/en-us/web/api/csspropertyrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csspseudoelement",
+            "path": "files/en-us/web/api/csspseudoelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssrotate",
+            "path": "files/en-us/web/api/cssrotate",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssrule",
+            "path": "files/en-us/web/api/cssrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssrulelist",
+            "path": "files/en-us/web/api/cssrulelist",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssscale",
+            "path": "files/en-us/web/api/cssscale",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssskew",
+            "path": "files/en-us/web/api/cssskew",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssskewx",
+            "path": "files/en-us/web/api/cssskewx",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssskewy",
+            "path": "files/en-us/web/api/cssskewy",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssstyledeclaration",
+            "path": "files/en-us/web/api/cssstyledeclaration",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssstylerule",
+            "path": "files/en-us/web/api/cssstylerule",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssstylesheet",
+            "path": "files/en-us/web/api/cssstylesheet",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssstylevalue",
+            "path": "files/en-us/web/api/cssstylevalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "csssupportsrule",
+            "path": "files/en-us/web/api/csssupportsrule",
+            "contentType": "directory"
+          },
+          {
+            "name": "csstransformcomponent",
+            "path": "files/en-us/web/api/csstransformcomponent",
+            "contentType": "directory"
+          },
+          {
+            "name": "csstransformvalue",
+            "path": "files/en-us/web/api/csstransformvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "csstransition",
+            "path": "files/en-us/web/api/csstransition",
+            "contentType": "directory"
+          },
+          {
+            "name": "csstranslate",
+            "path": "files/en-us/web/api/csstranslate",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssunitvalue",
+            "path": "files/en-us/web/api/cssunitvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssunparsedvalue",
+            "path": "files/en-us/web/api/cssunparsedvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssvalue",
+            "path": "files/en-us/web/api/cssvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssvaluelist",
+            "path": "files/en-us/web/api/cssvaluelist",
+            "contentType": "directory"
+          },
+          {
+            "name": "cssvariablereferencevalue",
+            "path": "files/en-us/web/api/cssvariablereferencevalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "customelementregistry",
+            "path": "files/en-us/web/api/customelementregistry",
+            "contentType": "directory"
+          },
+          {
+            "name": "customevent",
+            "path": "files/en-us/web/api/customevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "customstateset",
+            "path": "files/en-us/web/api/customstateset",
+            "contentType": "directory"
+          },
+          {
+            "name": "datatransfer",
+            "path": "files/en-us/web/api/datatransfer",
+            "contentType": "directory"
+          },
+          {
+            "name": "datatransferitem",
+            "path": "files/en-us/web/api/datatransferitem",
+            "contentType": "directory"
+          },
+          {
+            "name": "datatransferitemlist",
+            "path": "files/en-us/web/api/datatransferitemlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "decompressionstream",
+            "path": "files/en-us/web/api/decompressionstream",
+            "contentType": "directory"
+          },
+          {
+            "name": "dedicatedworkerglobalscope",
+            "path": "files/en-us/web/api/dedicatedworkerglobalscope",
+            "contentType": "directory"
+          },
+          {
+            "name": "delaynode",
+            "path": "files/en-us/web/api/delaynode",
+            "contentType": "directory"
+          },
+          {
+            "name": "deprecationreportbody",
+            "path": "files/en-us/web/api/deprecationreportbody",
+            "contentType": "directory"
+          },
+          {
+            "name": "device_memory_api",
+            "path": "files/en-us/web/api/device_memory_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "device_orientation_events",
+            "path": "files/en-us/web/api/device_orientation_events",
+            "contentType": "directory"
+          },
+          {
+            "name": "devicemotionevent",
+            "path": "files/en-us/web/api/devicemotionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "devicemotioneventacceleration",
+            "path": "files/en-us/web/api/devicemotioneventacceleration",
+            "contentType": "directory"
+          },
+          {
+            "name": "devicemotioneventrotationrate",
+            "path": "files/en-us/web/api/devicemotioneventrotationrate",
+            "contentType": "directory"
+          },
+          {
+            "name": "deviceorientationevent",
+            "path": "files/en-us/web/api/deviceorientationevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "directoryentrysync",
+            "path": "files/en-us/web/api/directoryentrysync",
+            "contentType": "directory"
+          },
+          {
+            "name": "directoryreadersync",
+            "path": "files/en-us/web/api/directoryreadersync",
+            "contentType": "directory"
+          },
+          {
+            "name": "document",
+            "path": "files/en-us/web/api/document",
+            "contentType": "directory"
+          },
+          {
+            "name": "document_object_model",
+            "path": "files/en-us/web/api/document_object_model",
+            "contentType": "directory"
+          },
+          {
+            "name": "documentfragment",
+            "path": "files/en-us/web/api/documentfragment",
+            "contentType": "directory"
+          },
+          {
+            "name": "documenttimeline",
+            "path": "files/en-us/web/api/documenttimeline",
+            "contentType": "directory"
+          },
+          {
+            "name": "documenttype",
+            "path": "files/en-us/web/api/documenttype",
+            "contentType": "directory"
+          },
+          {
+            "name": "domerror",
+            "path": "files/en-us/web/api/domerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "domexception",
+            "path": "files/en-us/web/api/domexception",
+            "contentType": "directory"
+          },
+          {
+            "name": "domhighrestimestamp",
+            "path": "files/en-us/web/api/domhighrestimestamp",
+            "contentType": "directory"
+          },
+          {
+            "name": "domimplementation",
+            "path": "files/en-us/web/api/domimplementation",
+            "contentType": "directory"
+          },
+          {
+            "name": "dommatrix",
+            "path": "files/en-us/web/api/dommatrix",
+            "contentType": "directory"
+          },
+          {
+            "name": "dommatrixreadonly",
+            "path": "files/en-us/web/api/dommatrixreadonly",
+            "contentType": "directory"
+          },
+          {
+            "name": "domparser",
+            "path": "files/en-us/web/api/domparser",
+            "contentType": "directory"
+          },
+          {
+            "name": "dompoint",
+            "path": "files/en-us/web/api/dompoint",
+            "contentType": "directory"
+          },
+          {
+            "name": "dompointreadonly",
+            "path": "files/en-us/web/api/dompointreadonly",
+            "contentType": "directory"
+          },
+          {
+            "name": "domquad",
+            "path": "files/en-us/web/api/domquad",
+            "contentType": "directory"
+          },
+          {
+            "name": "domrect",
+            "path": "files/en-us/web/api/domrect",
+            "contentType": "directory"
+          },
+          {
+            "name": "domrectreadonly",
+            "path": "files/en-us/web/api/domrectreadonly",
+            "contentType": "directory"
+          },
+          {
+            "name": "domstringlist",
+            "path": "files/en-us/web/api/domstringlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "domstringmap",
+            "path": "files/en-us/web/api/domstringmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "domtokenlist",
+            "path": "files/en-us/web/api/domtokenlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "dragevent",
+            "path": "files/en-us/web/api/dragevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "dynamicscompressornode",
+            "path": "files/en-us/web/api/dynamicscompressornode",
+            "contentType": "directory"
+          },
+          {
+            "name": "ecdhkeyderiveparams",
+            "path": "files/en-us/web/api/ecdhkeyderiveparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "ecdsaparams",
+            "path": "files/en-us/web/api/ecdsaparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "eckeygenparams",
+            "path": "files/en-us/web/api/eckeygenparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "eckeyimportparams",
+            "path": "files/en-us/web/api/eckeyimportparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "element",
+            "path": "files/en-us/web/api/element",
+            "contentType": "directory"
+          },
+          {
+            "name": "elementinternals",
+            "path": "files/en-us/web/api/elementinternals",
+            "contentType": "directory"
+          },
+          {
+            "name": "encodedaudiochunk",
+            "path": "files/en-us/web/api/encodedaudiochunk",
+            "contentType": "directory"
+          },
+          {
+            "name": "encodedvideochunk",
+            "path": "files/en-us/web/api/encodedvideochunk",
+            "contentType": "directory"
+          },
+          {
+            "name": "encoding_api",
+            "path": "files/en-us/web/api/encoding_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "encrypted_media_extensions_api",
+            "path": "files/en-us/web/api/encrypted_media_extensions_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "errorevent",
+            "path": "files/en-us/web/api/errorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "event",
+            "path": "files/en-us/web/api/event",
+            "contentType": "directory"
+          },
+          {
+            "name": "eventcounts",
+            "path": "files/en-us/web/api/eventcounts",
+            "contentType": "directory"
+          },
+          {
+            "name": "eventsource",
+            "path": "files/en-us/web/api/eventsource",
+            "contentType": "directory"
+          },
+          {
+            "name": "eventtarget",
+            "path": "files/en-us/web/api/eventtarget",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_blend_minmax",
+            "path": "files/en-us/web/api/ext_blend_minmax",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_color_buffer_float",
+            "path": "files/en-us/web/api/ext_color_buffer_float",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_color_buffer_half_float",
+            "path": "files/en-us/web/api/ext_color_buffer_half_float",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_disjoint_timer_query",
+            "path": "files/en-us/web/api/ext_disjoint_timer_query",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_float_blend",
+            "path": "files/en-us/web/api/ext_float_blend",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_frag_depth",
+            "path": "files/en-us/web/api/ext_frag_depth",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_shader_texture_lod",
+            "path": "files/en-us/web/api/ext_shader_texture_lod",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_srgb",
+            "path": "files/en-us/web/api/ext_srgb",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_texture_compression_bptc",
+            "path": "files/en-us/web/api/ext_texture_compression_bptc",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_texture_compression_rgtc",
+            "path": "files/en-us/web/api/ext_texture_compression_rgtc",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_texture_filter_anisotropic",
+            "path": "files/en-us/web/api/ext_texture_filter_anisotropic",
+            "contentType": "directory"
+          },
+          {
+            "name": "ext_texture_norm16",
+            "path": "files/en-us/web/api/ext_texture_norm16",
+            "contentType": "directory"
+          },
+          {
+            "name": "extendablecookiechangeevent",
+            "path": "files/en-us/web/api/extendablecookiechangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "extendableevent",
+            "path": "files/en-us/web/api/extendableevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "extendablemessageevent",
+            "path": "files/en-us/web/api/extendablemessageevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "eyedropper",
+            "path": "files/en-us/web/api/eyedropper",
+            "contentType": "directory"
+          },
+          {
+            "name": "eyedropper_api",
+            "path": "files/en-us/web/api/eyedropper_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "featurepolicy",
+            "path": "files/en-us/web/api/featurepolicy",
+            "contentType": "directory"
+          },
+          {
+            "name": "fedcm_api",
+            "path": "files/en-us/web/api/fedcm_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "federatedcredential",
+            "path": "files/en-us/web/api/federatedcredential",
+            "contentType": "directory"
+          },
+          {
+            "name": "fetch",
+            "path": "files/en-us/web/api/fetch",
+            "contentType": "directory"
+          },
+          {
+            "name": "fetch_api",
+            "path": "files/en-us/web/api/fetch_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "fetchevent",
+            "path": "files/en-us/web/api/fetchevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "file",
+            "path": "files/en-us/web/api/file",
+            "contentType": "directory"
+          },
+          {
+            "name": "file_and_directory_entries_api",
+            "path": "files/en-us/web/api/file_and_directory_entries_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "file_api",
+            "path": "files/en-us/web/api/file_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "file_system_api",
+            "path": "files/en-us/web/api/file_system_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "fileentrysync",
+            "path": "files/en-us/web/api/fileentrysync",
+            "contentType": "directory"
+          },
+          {
+            "name": "filelist",
+            "path": "files/en-us/web/api/filelist",
+            "contentType": "directory"
+          },
+          {
+            "name": "filereader",
+            "path": "files/en-us/web/api/filereader",
+            "contentType": "directory"
+          },
+          {
+            "name": "filereadersync",
+            "path": "files/en-us/web/api/filereadersync",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystem",
+            "path": "files/en-us/web/api/filesystem",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemdirectoryentry",
+            "path": "files/en-us/web/api/filesystemdirectoryentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemdirectoryhandle",
+            "path": "files/en-us/web/api/filesystemdirectoryhandle",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemdirectoryreader",
+            "path": "files/en-us/web/api/filesystemdirectoryreader",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystementry",
+            "path": "files/en-us/web/api/filesystementry",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemfileentry",
+            "path": "files/en-us/web/api/filesystemfileentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemfilehandle",
+            "path": "files/en-us/web/api/filesystemfilehandle",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemhandle",
+            "path": "files/en-us/web/api/filesystemhandle",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemsync",
+            "path": "files/en-us/web/api/filesystemsync",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemsyncaccesshandle",
+            "path": "files/en-us/web/api/filesystemsyncaccesshandle",
+            "contentType": "directory"
+          },
+          {
+            "name": "filesystemwritablefilestream",
+            "path": "files/en-us/web/api/filesystemwritablefilestream",
+            "contentType": "directory"
+          },
+          {
+            "name": "focusevent",
+            "path": "files/en-us/web/api/focusevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "fontdata",
+            "path": "files/en-us/web/api/fontdata",
+            "contentType": "directory"
+          },
+          {
+            "name": "fontface",
+            "path": "files/en-us/web/api/fontface",
+            "contentType": "directory"
+          },
+          {
+            "name": "fontfaceset",
+            "path": "files/en-us/web/api/fontfaceset",
+            "contentType": "directory"
+          },
+          {
+            "name": "fontfacesetloadevent",
+            "path": "files/en-us/web/api/fontfacesetloadevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "force_touch_events",
+            "path": "files/en-us/web/api/force_touch_events",
+            "contentType": "directory"
+          },
+          {
+            "name": "formdata",
+            "path": "files/en-us/web/api/formdata",
+            "contentType": "directory"
+          },
+          {
+            "name": "formdataevent",
+            "path": "files/en-us/web/api/formdataevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "fragmentdirective",
+            "path": "files/en-us/web/api/fragmentdirective",
+            "contentType": "directory"
+          },
+          {
+            "name": "fullscreen_api",
+            "path": "files/en-us/web/api/fullscreen_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "gainnode",
+            "path": "files/en-us/web/api/gainnode",
+            "contentType": "directory"
+          },
+          {
+            "name": "gamepad",
+            "path": "files/en-us/web/api/gamepad",
+            "contentType": "directory"
+          },
+          {
+            "name": "gamepad_api",
+            "path": "files/en-us/web/api/gamepad_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "gamepadbutton",
+            "path": "files/en-us/web/api/gamepadbutton",
+            "contentType": "directory"
+          },
+          {
+            "name": "gamepadevent",
+            "path": "files/en-us/web/api/gamepadevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "gamepadhapticactuator",
+            "path": "files/en-us/web/api/gamepadhapticactuator",
+            "contentType": "directory"
+          },
+          {
+            "name": "gamepadpose",
+            "path": "files/en-us/web/api/gamepadpose",
+            "contentType": "directory"
+          },
+          {
+            "name": "geolocation",
+            "path": "files/en-us/web/api/geolocation",
+            "contentType": "directory"
+          },
+          {
+            "name": "geolocation_api",
+            "path": "files/en-us/web/api/geolocation_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "geolocationcoordinates",
+            "path": "files/en-us/web/api/geolocationcoordinates",
+            "contentType": "directory"
+          },
+          {
+            "name": "geolocationposition",
+            "path": "files/en-us/web/api/geolocationposition",
+            "contentType": "directory"
+          },
+          {
+            "name": "geolocationpositionerror",
+            "path": "files/en-us/web/api/geolocationpositionerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "geometry_interfaces",
+            "path": "files/en-us/web/api/geometry_interfaces",
+            "contentType": "directory"
+          },
+          {
+            "name": "gestureevent",
+            "path": "files/en-us/web/api/gestureevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpu",
+            "path": "files/en-us/web/api/gpu",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuadapter",
+            "path": "files/en-us/web/api/gpuadapter",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuadapterinfo",
+            "path": "files/en-us/web/api/gpuadapterinfo",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpubindgroup",
+            "path": "files/en-us/web/api/gpubindgroup",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpubindgrouplayout",
+            "path": "files/en-us/web/api/gpubindgrouplayout",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpubuffer",
+            "path": "files/en-us/web/api/gpubuffer",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucanvascontext",
+            "path": "files/en-us/web/api/gpucanvascontext",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucommandbuffer",
+            "path": "files/en-us/web/api/gpucommandbuffer",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucommandencoder",
+            "path": "files/en-us/web/api/gpucommandencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucompilationinfo",
+            "path": "files/en-us/web/api/gpucompilationinfo",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucompilationmessage",
+            "path": "files/en-us/web/api/gpucompilationmessage",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucomputepassencoder",
+            "path": "files/en-us/web/api/gpucomputepassencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpucomputepipeline",
+            "path": "files/en-us/web/api/gpucomputepipeline",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpudevice",
+            "path": "files/en-us/web/api/gpudevice",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpudevicelostinfo",
+            "path": "files/en-us/web/api/gpudevicelostinfo",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuerror",
+            "path": "files/en-us/web/api/gpuerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuexternaltexture",
+            "path": "files/en-us/web/api/gpuexternaltexture",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuinternalerror",
+            "path": "files/en-us/web/api/gpuinternalerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuoutofmemoryerror",
+            "path": "files/en-us/web/api/gpuoutofmemoryerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpupipelineerror",
+            "path": "files/en-us/web/api/gpupipelineerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpupipelinelayout",
+            "path": "files/en-us/web/api/gpupipelinelayout",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuqueryset",
+            "path": "files/en-us/web/api/gpuqueryset",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuqueue",
+            "path": "files/en-us/web/api/gpuqueue",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpurenderbundle",
+            "path": "files/en-us/web/api/gpurenderbundle",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpurenderbundleencoder",
+            "path": "files/en-us/web/api/gpurenderbundleencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpurenderpassencoder",
+            "path": "files/en-us/web/api/gpurenderpassencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpurenderpipeline",
+            "path": "files/en-us/web/api/gpurenderpipeline",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpusampler",
+            "path": "files/en-us/web/api/gpusampler",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpushadermodule",
+            "path": "files/en-us/web/api/gpushadermodule",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpusupportedfeatures",
+            "path": "files/en-us/web/api/gpusupportedfeatures",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpusupportedlimits",
+            "path": "files/en-us/web/api/gpusupportedlimits",
+            "contentType": "directory"
+          },
+          {
+            "name": "gputexture",
+            "path": "files/en-us/web/api/gputexture",
+            "contentType": "directory"
+          },
+          {
+            "name": "gputextureview",
+            "path": "files/en-us/web/api/gputextureview",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuuncapturederrorevent",
+            "path": "files/en-us/web/api/gpuuncapturederrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "gpuvalidationerror",
+            "path": "files/en-us/web/api/gpuvalidationerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "gravitysensor",
+            "path": "files/en-us/web/api/gravitysensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "gyroscope",
+            "path": "files/en-us/web/api/gyroscope",
+            "contentType": "directory"
+          },
+          {
+            "name": "hashchangeevent",
+            "path": "files/en-us/web/api/hashchangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "headers",
+            "path": "files/en-us/web/api/headers",
+            "contentType": "directory"
+          },
+          {
+            "name": "hid",
+            "path": "files/en-us/web/api/hid",
+            "contentType": "directory"
+          },
+          {
+            "name": "hidconnectionevent",
+            "path": "files/en-us/web/api/hidconnectionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "hiddevice",
+            "path": "files/en-us/web/api/hiddevice",
+            "contentType": "directory"
+          },
+          {
+            "name": "hidinputreportevent",
+            "path": "files/en-us/web/api/hidinputreportevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "highlight",
+            "path": "files/en-us/web/api/highlight",
+            "contentType": "directory"
+          },
+          {
+            "name": "highlightregistry",
+            "path": "files/en-us/web/api/highlightregistry",
+            "contentType": "directory"
+          },
+          {
+            "name": "history",
+            "path": "files/en-us/web/api/history",
+            "contentType": "directory"
+          },
+          {
+            "name": "history_api",
+            "path": "files/en-us/web/api/history_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "hkdfparams",
+            "path": "files/en-us/web/api/hkdfparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "hmacimportparams",
+            "path": "files/en-us/web/api/hmacimportparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "hmackeygenparams",
+            "path": "files/en-us/web/api/hmackeygenparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "hmdvrdevice",
+            "path": "files/en-us/web/api/hmdvrdevice",
+            "contentType": "directory"
+          },
+          {
+            "name": "html_dom_api",
+            "path": "files/en-us/web/api/html_dom_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "html_drag_and_drop_api",
+            "path": "files/en-us/web/api/html_drag_and_drop_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "html_sanitizer_api",
+            "path": "files/en-us/web/api/html_sanitizer_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlallcollection",
+            "path": "files/en-us/web/api/htmlallcollection",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlanchorelement",
+            "path": "files/en-us/web/api/htmlanchorelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlareaelement",
+            "path": "files/en-us/web/api/htmlareaelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlaudioelement",
+            "path": "files/en-us/web/api/htmlaudioelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlbaseelement",
+            "path": "files/en-us/web/api/htmlbaseelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlbodyelement",
+            "path": "files/en-us/web/api/htmlbodyelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlbrelement",
+            "path": "files/en-us/web/api/htmlbrelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlbuttonelement",
+            "path": "files/en-us/web/api/htmlbuttonelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlcanvaselement",
+            "path": "files/en-us/web/api/htmlcanvaselement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlcollection",
+            "path": "files/en-us/web/api/htmlcollection",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldataelement",
+            "path": "files/en-us/web/api/htmldataelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldatalistelement",
+            "path": "files/en-us/web/api/htmldatalistelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldetailselement",
+            "path": "files/en-us/web/api/htmldetailselement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldialogelement",
+            "path": "files/en-us/web/api/htmldialogelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldivelement",
+            "path": "files/en-us/web/api/htmldivelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldlistelement",
+            "path": "files/en-us/web/api/htmldlistelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmldocument",
+            "path": "files/en-us/web/api/htmldocument",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlelement",
+            "path": "files/en-us/web/api/htmlelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlembedelement",
+            "path": "files/en-us/web/api/htmlembedelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlfieldsetelement",
+            "path": "files/en-us/web/api/htmlfieldsetelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlfontelement",
+            "path": "files/en-us/web/api/htmlfontelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlformcontrolscollection",
+            "path": "files/en-us/web/api/htmlformcontrolscollection",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlformelement",
+            "path": "files/en-us/web/api/htmlformelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlframesetelement",
+            "path": "files/en-us/web/api/htmlframesetelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlheadelement",
+            "path": "files/en-us/web/api/htmlheadelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlheadingelement",
+            "path": "files/en-us/web/api/htmlheadingelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlhrelement",
+            "path": "files/en-us/web/api/htmlhrelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlhtmlelement",
+            "path": "files/en-us/web/api/htmlhtmlelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmliframeelement",
+            "path": "files/en-us/web/api/htmliframeelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlimageelement",
+            "path": "files/en-us/web/api/htmlimageelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlinputelement",
+            "path": "files/en-us/web/api/htmlinputelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmllabelelement",
+            "path": "files/en-us/web/api/htmllabelelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmllegendelement",
+            "path": "files/en-us/web/api/htmllegendelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmllielement",
+            "path": "files/en-us/web/api/htmllielement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmllinkelement",
+            "path": "files/en-us/web/api/htmllinkelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmapelement",
+            "path": "files/en-us/web/api/htmlmapelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmarqueeelement",
+            "path": "files/en-us/web/api/htmlmarqueeelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmediaelement",
+            "path": "files/en-us/web/api/htmlmediaelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmenuelement",
+            "path": "files/en-us/web/api/htmlmenuelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmenuitemelement",
+            "path": "files/en-us/web/api/htmlmenuitemelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmetaelement",
+            "path": "files/en-us/web/api/htmlmetaelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmeterelement",
+            "path": "files/en-us/web/api/htmlmeterelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlmodelement",
+            "path": "files/en-us/web/api/htmlmodelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlobjectelement",
+            "path": "files/en-us/web/api/htmlobjectelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlolistelement",
+            "path": "files/en-us/web/api/htmlolistelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmloptgroupelement",
+            "path": "files/en-us/web/api/htmloptgroupelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmloptionelement",
+            "path": "files/en-us/web/api/htmloptionelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmloptionscollection",
+            "path": "files/en-us/web/api/htmloptionscollection",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmloutputelement",
+            "path": "files/en-us/web/api/htmloutputelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlparagraphelement",
+            "path": "files/en-us/web/api/htmlparagraphelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlparamelement",
+            "path": "files/en-us/web/api/htmlparamelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlpictureelement",
+            "path": "files/en-us/web/api/htmlpictureelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlpreelement",
+            "path": "files/en-us/web/api/htmlpreelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlprogresselement",
+            "path": "files/en-us/web/api/htmlprogresselement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlquoteelement",
+            "path": "files/en-us/web/api/htmlquoteelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlscriptelement",
+            "path": "files/en-us/web/api/htmlscriptelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlselectelement",
+            "path": "files/en-us/web/api/htmlselectelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlslotelement",
+            "path": "files/en-us/web/api/htmlslotelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlsourceelement",
+            "path": "files/en-us/web/api/htmlsourceelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlspanelement",
+            "path": "files/en-us/web/api/htmlspanelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlstyleelement",
+            "path": "files/en-us/web/api/htmlstyleelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltablecaptionelement",
+            "path": "files/en-us/web/api/htmltablecaptionelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltablecellelement",
+            "path": "files/en-us/web/api/htmltablecellelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltablecolelement",
+            "path": "files/en-us/web/api/htmltablecolelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltableelement",
+            "path": "files/en-us/web/api/htmltableelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltablerowelement",
+            "path": "files/en-us/web/api/htmltablerowelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltablesectionelement",
+            "path": "files/en-us/web/api/htmltablesectionelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltemplateelement",
+            "path": "files/en-us/web/api/htmltemplateelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltextareaelement",
+            "path": "files/en-us/web/api/htmltextareaelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltimeelement",
+            "path": "files/en-us/web/api/htmltimeelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltitleelement",
+            "path": "files/en-us/web/api/htmltitleelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmltrackelement",
+            "path": "files/en-us/web/api/htmltrackelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlulistelement",
+            "path": "files/en-us/web/api/htmlulistelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlunknownelement",
+            "path": "files/en-us/web/api/htmlunknownelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "htmlvideoelement",
+            "path": "files/en-us/web/api/htmlvideoelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbcursor",
+            "path": "files/en-us/web/api/idbcursor",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbcursorwithvalue",
+            "path": "files/en-us/web/api/idbcursorwithvalue",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbdatabase",
+            "path": "files/en-us/web/api/idbdatabase",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbfactory",
+            "path": "files/en-us/web/api/idbfactory",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbindex",
+            "path": "files/en-us/web/api/idbindex",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbkeyrange",
+            "path": "files/en-us/web/api/idbkeyrange",
+            "contentType": "directory"
+          },
+          {
+            "name": "idblocaleawarekeyrange",
+            "path": "files/en-us/web/api/idblocaleawarekeyrange",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbobjectstore",
+            "path": "files/en-us/web/api/idbobjectstore",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbopendbrequest",
+            "path": "files/en-us/web/api/idbopendbrequest",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbrequest",
+            "path": "files/en-us/web/api/idbrequest",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbtransaction",
+            "path": "files/en-us/web/api/idbtransaction",
+            "contentType": "directory"
+          },
+          {
+            "name": "idbversionchangeevent",
+            "path": "files/en-us/web/api/idbversionchangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "identitycredential",
+            "path": "files/en-us/web/api/identitycredential",
+            "contentType": "directory"
+          },
+          {
+            "name": "identityprovider",
+            "path": "files/en-us/web/api/identityprovider",
+            "contentType": "directory"
+          },
+          {
+            "name": "idle_detection_api",
+            "path": "files/en-us/web/api/idle_detection_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "idledeadline",
+            "path": "files/en-us/web/api/idledeadline",
+            "contentType": "directory"
+          },
+          {
+            "name": "idledetector",
+            "path": "files/en-us/web/api/idledetector",
+            "contentType": "directory"
+          },
+          {
+            "name": "iirfilternode",
+            "path": "files/en-us/web/api/iirfilternode",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagebitmap",
+            "path": "files/en-us/web/api/imagebitmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagebitmaprenderingcontext",
+            "path": "files/en-us/web/api/imagebitmaprenderingcontext",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagecapture",
+            "path": "files/en-us/web/api/imagecapture",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagedata",
+            "path": "files/en-us/web/api/imagedata",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagedecoder",
+            "path": "files/en-us/web/api/imagedecoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagetrack",
+            "path": "files/en-us/web/api/imagetrack",
+            "contentType": "directory"
+          },
+          {
+            "name": "imagetracklist",
+            "path": "files/en-us/web/api/imagetracklist",
+            "contentType": "directory"
+          },
+          {
+            "name": "indexeddb",
+            "path": "files/en-us/web/api/indexeddb",
+            "contentType": "directory"
+          },
+          {
+            "name": "indexeddb_api",
+            "path": "files/en-us/web/api/indexeddb_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "ink",
+            "path": "files/en-us/web/api/ink",
+            "contentType": "directory"
+          },
+          {
+            "name": "ink_api",
+            "path": "files/en-us/web/api/ink_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "inkpresenter",
+            "path": "files/en-us/web/api/inkpresenter",
+            "contentType": "directory"
+          },
+          {
+            "name": "inputdevicecapabilities",
+            "path": "files/en-us/web/api/inputdevicecapabilities",
+            "contentType": "directory"
+          },
+          {
+            "name": "inputdevicecapabilities_api",
+            "path": "files/en-us/web/api/inputdevicecapabilities_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "inputdeviceinfo",
+            "path": "files/en-us/web/api/inputdeviceinfo",
+            "contentType": "directory"
+          },
+          {
+            "name": "inputevent",
+            "path": "files/en-us/web/api/inputevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "insertable_streams_for_mediastreamtrack_api",
+            "path": "files/en-us/web/api/insertable_streams_for_mediastreamtrack_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "installevent",
+            "path": "files/en-us/web/api/installevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "intersection_observer_api",
+            "path": "files/en-us/web/api/intersection_observer_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "intersectionobserver",
+            "path": "files/en-us/web/api/intersectionobserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "intersectionobserverentry",
+            "path": "files/en-us/web/api/intersectionobserverentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "interventionreportbody",
+            "path": "files/en-us/web/api/interventionreportbody",
+            "contentType": "directory"
+          },
+          {
+            "name": "issecurecontext",
+            "path": "files/en-us/web/api/issecurecontext",
+            "contentType": "directory"
+          },
+          {
+            "name": "keyboard",
+            "path": "files/en-us/web/api/keyboard",
+            "contentType": "directory"
+          },
+          {
+            "name": "keyboard_api",
+            "path": "files/en-us/web/api/keyboard_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "keyboardevent",
+            "path": "files/en-us/web/api/keyboardevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "keyboardlayoutmap",
+            "path": "files/en-us/web/api/keyboardlayoutmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "keyframeeffect",
+            "path": "files/en-us/web/api/keyframeeffect",
+            "contentType": "directory"
+          },
+          {
+            "name": "khr_parallel_shader_compile",
+            "path": "files/en-us/web/api/khr_parallel_shader_compile",
+            "contentType": "directory"
+          },
+          {
+            "name": "largestcontentfulpaint",
+            "path": "files/en-us/web/api/largestcontentfulpaint",
+            "contentType": "directory"
+          },
+          {
+            "name": "launch_handler_api",
+            "path": "files/en-us/web/api/launch_handler_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "launchparams",
+            "path": "files/en-us/web/api/launchparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "launchqueue",
+            "path": "files/en-us/web/api/launchqueue",
+            "contentType": "directory"
+          },
+          {
+            "name": "layoutshift",
+            "path": "files/en-us/web/api/layoutshift",
+            "contentType": "directory"
+          },
+          {
+            "name": "layoutshiftattribution",
+            "path": "files/en-us/web/api/layoutshiftattribution",
+            "contentType": "directory"
+          },
+          {
+            "name": "linearaccelerationsensor",
+            "path": "files/en-us/web/api/linearaccelerationsensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "local_font_access_api",
+            "path": "files/en-us/web/api/local_font_access_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "location",
+            "path": "files/en-us/web/api/location",
+            "contentType": "directory"
+          },
+          {
+            "name": "lock",
+            "path": "files/en-us/web/api/lock",
+            "contentType": "directory"
+          },
+          {
+            "name": "lockmanager",
+            "path": "files/en-us/web/api/lockmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "magnetometer",
+            "path": "files/en-us/web/api/magnetometer",
+            "contentType": "directory"
+          },
+          {
+            "name": "mathmlelement",
+            "path": "files/en-us/web/api/mathmlelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "media_capabilities_api",
+            "path": "files/en-us/web/api/media_capabilities_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "media_capture_and_streams_api",
+            "path": "files/en-us/web/api/media_capture_and_streams_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "media_session_api",
+            "path": "files/en-us/web/api/media_session_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "media_source_extensions_api",
+            "path": "files/en-us/web/api/media_source_extensions_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediacapabilities",
+            "path": "files/en-us/web/api/mediacapabilities",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediadeviceinfo",
+            "path": "files/en-us/web/api/mediadeviceinfo",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediadevices",
+            "path": "files/en-us/web/api/mediadevices",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediaelementaudiosourcenode",
+            "path": "files/en-us/web/api/mediaelementaudiosourcenode",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediaencryptedevent",
+            "path": "files/en-us/web/api/mediaencryptedevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediaerror",
+            "path": "files/en-us/web/api/mediaerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediaimage",
+            "path": "files/en-us/web/api/mediaimage",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediakeymessageevent",
+            "path": "files/en-us/web/api/mediakeymessageevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediakeys",
+            "path": "files/en-us/web/api/mediakeys",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediakeysession",
+            "path": "files/en-us/web/api/mediakeysession",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediakeystatusmap",
+            "path": "files/en-us/web/api/mediakeystatusmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediakeysystemaccess",
+            "path": "files/en-us/web/api/mediakeysystemaccess",
+            "contentType": "directory"
+          },
+          {
+            "name": "medialist",
+            "path": "files/en-us/web/api/medialist",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediametadata",
+            "path": "files/en-us/web/api/mediametadata",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediaquerylist",
+            "path": "files/en-us/web/api/mediaquerylist",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediaquerylistevent",
+            "path": "files/en-us/web/api/mediaquerylistevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediarecorder",
+            "path": "files/en-us/web/api/mediarecorder",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediarecordererrorevent",
+            "path": "files/en-us/web/api/mediarecordererrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediasession",
+            "path": "files/en-us/web/api/mediasession",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediasource",
+            "path": "files/en-us/web/api/mediasource",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediasourcehandle",
+            "path": "files/en-us/web/api/mediasourcehandle",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastream",
+            "path": "files/en-us/web/api/mediastream",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastream_image_capture_api",
+            "path": "files/en-us/web/api/mediastream_image_capture_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastream_recording_api",
+            "path": "files/en-us/web/api/mediastream_recording_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamaudiodestinationnode",
+            "path": "files/en-us/web/api/mediastreamaudiodestinationnode",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamaudiosourcenode",
+            "path": "files/en-us/web/api/mediastreamaudiosourcenode",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamevent",
+            "path": "files/en-us/web/api/mediastreamevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamtrack",
+            "path": "files/en-us/web/api/mediastreamtrack",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamtrackaudiosourcenode",
+            "path": "files/en-us/web/api/mediastreamtrackaudiosourcenode",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamtrackevent",
+            "path": "files/en-us/web/api/mediastreamtrackevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamtrackgenerator",
+            "path": "files/en-us/web/api/mediastreamtrackgenerator",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediastreamtrackprocessor",
+            "path": "files/en-us/web/api/mediastreamtrackprocessor",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediatrackconstraints",
+            "path": "files/en-us/web/api/mediatrackconstraints",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediatracksettings",
+            "path": "files/en-us/web/api/mediatracksettings",
+            "contentType": "directory"
+          },
+          {
+            "name": "mediatracksupportedconstraints",
+            "path": "files/en-us/web/api/mediatracksupportedconstraints",
+            "contentType": "directory"
+          },
+          {
+            "name": "merchantvalidationevent",
+            "path": "files/en-us/web/api/merchantvalidationevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "messagechannel",
+            "path": "files/en-us/web/api/messagechannel",
+            "contentType": "directory"
+          },
+          {
+            "name": "messageevent",
+            "path": "files/en-us/web/api/messageevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "messageport",
+            "path": "files/en-us/web/api/messageport",
+            "contentType": "directory"
+          },
+          {
+            "name": "metadata",
+            "path": "files/en-us/web/api/metadata",
+            "contentType": "directory"
+          },
+          {
+            "name": "midiaccess",
+            "path": "files/en-us/web/api/midiaccess",
+            "contentType": "directory"
+          },
+          {
+            "name": "midiconnectionevent",
+            "path": "files/en-us/web/api/midiconnectionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "midiinput",
+            "path": "files/en-us/web/api/midiinput",
+            "contentType": "directory"
+          },
+          {
+            "name": "midiinputmap",
+            "path": "files/en-us/web/api/midiinputmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "midimessageevent",
+            "path": "files/en-us/web/api/midimessageevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "midioutput",
+            "path": "files/en-us/web/api/midioutput",
+            "contentType": "directory"
+          },
+          {
+            "name": "midioutputmap",
+            "path": "files/en-us/web/api/midioutputmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "midiport",
+            "path": "files/en-us/web/api/midiport",
+            "contentType": "directory"
+          },
+          {
+            "name": "mimetype",
+            "path": "files/en-us/web/api/mimetype",
+            "contentType": "directory"
+          },
+          {
+            "name": "mimetypearray",
+            "path": "files/en-us/web/api/mimetypearray",
+            "contentType": "directory"
+          },
+          {
+            "name": "mouseevent",
+            "path": "files/en-us/web/api/mouseevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mousescrollevent",
+            "path": "files/en-us/web/api/mousescrollevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mutationevent",
+            "path": "files/en-us/web/api/mutationevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "mutationobserver",
+            "path": "files/en-us/web/api/mutationobserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "mutationrecord",
+            "path": "files/en-us/web/api/mutationrecord",
+            "contentType": "directory"
+          },
+          {
+            "name": "namednodemap",
+            "path": "files/en-us/web/api/namednodemap",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigateevent",
+            "path": "files/en-us/web/api/navigateevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigation",
+            "path": "files/en-us/web/api/navigation",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigation_api",
+            "path": "files/en-us/web/api/navigation_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigationcurrententrychangeevent",
+            "path": "files/en-us/web/api/navigationcurrententrychangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigationdestination",
+            "path": "files/en-us/web/api/navigationdestination",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigationhistoryentry",
+            "path": "files/en-us/web/api/navigationhistoryentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigationpreloadmanager",
+            "path": "files/en-us/web/api/navigationpreloadmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigationtransition",
+            "path": "files/en-us/web/api/navigationtransition",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigator",
+            "path": "files/en-us/web/api/navigator",
+            "contentType": "directory"
+          },
+          {
+            "name": "navigatoruadata",
+            "path": "files/en-us/web/api/navigatoruadata",
+            "contentType": "directory"
+          },
+          {
+            "name": "ndefmessage",
+            "path": "files/en-us/web/api/ndefmessage",
+            "contentType": "directory"
+          },
+          {
+            "name": "ndefreader",
+            "path": "files/en-us/web/api/ndefreader",
+            "contentType": "directory"
+          },
+          {
+            "name": "ndefreadingevent",
+            "path": "files/en-us/web/api/ndefreadingevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "ndefrecord",
+            "path": "files/en-us/web/api/ndefrecord",
+            "contentType": "directory"
+          },
+          {
+            "name": "network_information_api",
+            "path": "files/en-us/web/api/network_information_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "networkinformation",
+            "path": "files/en-us/web/api/networkinformation",
+            "contentType": "directory"
+          },
+          {
+            "name": "node",
+            "path": "files/en-us/web/api/node",
+            "contentType": "directory"
+          },
+          {
+            "name": "nodeiterator",
+            "path": "files/en-us/web/api/nodeiterator",
+            "contentType": "directory"
+          },
+          {
+            "name": "nodelist",
+            "path": "files/en-us/web/api/nodelist",
+            "contentType": "directory"
+          },
+          {
+            "name": "notification",
+            "path": "files/en-us/web/api/notification",
+            "contentType": "directory"
+          },
+          {
+            "name": "notificationevent",
+            "path": "files/en-us/web/api/notificationevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "notifications_api",
+            "path": "files/en-us/web/api/notifications_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "notifyaudioavailableevent",
+            "path": "files/en-us/web/api/notifyaudioavailableevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_draw_buffers_indexed",
+            "path": "files/en-us/web/api/oes_draw_buffers_indexed",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_element_index_uint",
+            "path": "files/en-us/web/api/oes_element_index_uint",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_fbo_render_mipmap",
+            "path": "files/en-us/web/api/oes_fbo_render_mipmap",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_standard_derivatives",
+            "path": "files/en-us/web/api/oes_standard_derivatives",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_texture_float",
+            "path": "files/en-us/web/api/oes_texture_float",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_texture_float_linear",
+            "path": "files/en-us/web/api/oes_texture_float_linear",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_texture_half_float",
+            "path": "files/en-us/web/api/oes_texture_half_float",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_texture_half_float_linear",
+            "path": "files/en-us/web/api/oes_texture_half_float_linear",
+            "contentType": "directory"
+          },
+          {
+            "name": "oes_vertex_array_object",
+            "path": "files/en-us/web/api/oes_vertex_array_object",
+            "contentType": "directory"
+          },
+          {
+            "name": "offlineaudiocompletionevent",
+            "path": "files/en-us/web/api/offlineaudiocompletionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "offlineaudiocontext",
+            "path": "files/en-us/web/api/offlineaudiocontext",
+            "contentType": "directory"
+          },
+          {
+            "name": "offscreencanvas",
+            "path": "files/en-us/web/api/offscreencanvas",
+            "contentType": "directory"
+          },
+          {
+            "name": "offscreencanvasrenderingcontext2d",
+            "path": "files/en-us/web/api/offscreencanvasrenderingcontext2d",
+            "contentType": "directory"
+          },
+          {
+            "name": "orientationsensor",
+            "path": "files/en-us/web/api/orientationsensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "origin",
+            "path": "files/en-us/web/api/origin",
+            "contentType": "directory"
+          },
+          {
+            "name": "oscillatornode",
+            "path": "files/en-us/web/api/oscillatornode",
+            "contentType": "directory"
+          },
+          {
+            "name": "otpcredential",
+            "path": "files/en-us/web/api/otpcredential",
+            "contentType": "directory"
+          },
+          {
+            "name": "overconstrainederror",
+            "path": "files/en-us/web/api/overconstrainederror",
+            "contentType": "directory"
+          },
+          {
+            "name": "ovr_multiview2",
+            "path": "files/en-us/web/api/ovr_multiview2",
+            "contentType": "directory"
+          },
+          {
+            "name": "page_visibility_api",
+            "path": "files/en-us/web/api/page_visibility_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "pagetransitionevent",
+            "path": "files/en-us/web/api/pagetransitionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "paintworkletglobalscope",
+            "path": "files/en-us/web/api/paintworkletglobalscope",
+            "contentType": "directory"
+          },
+          {
+            "name": "pannernode",
+            "path": "files/en-us/web/api/pannernode",
+            "contentType": "directory"
+          },
+          {
+            "name": "passwordcredential",
+            "path": "files/en-us/web/api/passwordcredential",
+            "contentType": "directory"
+          },
+          {
+            "name": "path2d",
+            "path": "files/en-us/web/api/path2d",
+            "contentType": "directory"
+          },
+          {
+            "name": "payment_handler_api",
+            "path": "files/en-us/web/api/payment_handler_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "payment_request_api",
+            "path": "files/en-us/web/api/payment_request_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentaddress",
+            "path": "files/en-us/web/api/paymentaddress",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentmanager",
+            "path": "files/en-us/web/api/paymentmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentmethodchangeevent",
+            "path": "files/en-us/web/api/paymentmethodchangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentrequest",
+            "path": "files/en-us/web/api/paymentrequest",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentrequestevent",
+            "path": "files/en-us/web/api/paymentrequestevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentrequestupdateevent",
+            "path": "files/en-us/web/api/paymentrequestupdateevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "paymentresponse",
+            "path": "files/en-us/web/api/paymentresponse",
+            "contentType": "directory"
+          },
+          {
+            "name": "pbkdf2params",
+            "path": "files/en-us/web/api/pbkdf2params",
+            "contentType": "directory"
+          },
+          {
+            "name": "performance",
+            "path": "files/en-us/web/api/performance",
+            "contentType": "directory"
+          },
+          {
+            "name": "performance_api",
+            "path": "files/en-us/web/api/performance_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "performance_property",
+            "path": "files/en-us/web/api/performance_property",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceelementtiming",
+            "path": "files/en-us/web/api/performanceelementtiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceentry",
+            "path": "files/en-us/web/api/performanceentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceeventtiming",
+            "path": "files/en-us/web/api/performanceeventtiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancelongtasktiming",
+            "path": "files/en-us/web/api/performancelongtasktiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancemark",
+            "path": "files/en-us/web/api/performancemark",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancemeasure",
+            "path": "files/en-us/web/api/performancemeasure",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancenavigation",
+            "path": "files/en-us/web/api/performancenavigation",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancenavigationtiming",
+            "path": "files/en-us/web/api/performancenavigationtiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceobserver",
+            "path": "files/en-us/web/api/performanceobserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceobserverentrylist",
+            "path": "files/en-us/web/api/performanceobserverentrylist",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancepainttiming",
+            "path": "files/en-us/web/api/performancepainttiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceresourcetiming",
+            "path": "files/en-us/web/api/performanceresourcetiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performanceservertiming",
+            "path": "files/en-us/web/api/performanceservertiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "performancetiming",
+            "path": "files/en-us/web/api/performancetiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "periodicsyncevent",
+            "path": "files/en-us/web/api/periodicsyncevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "periodicsyncmanager",
+            "path": "files/en-us/web/api/periodicsyncmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "periodicwave",
+            "path": "files/en-us/web/api/periodicwave",
+            "contentType": "directory"
+          },
+          {
+            "name": "permissions",
+            "path": "files/en-us/web/api/permissions",
+            "contentType": "directory"
+          },
+          {
+            "name": "permissions_api",
+            "path": "files/en-us/web/api/permissions_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "permissionstatus",
+            "path": "files/en-us/web/api/permissionstatus",
+            "contentType": "directory"
+          },
+          {
+            "name": "picture-in-picture_api",
+            "path": "files/en-us/web/api/picture-in-picture_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "pictureinpictureevent",
+            "path": "files/en-us/web/api/pictureinpictureevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "pictureinpicturewindow",
+            "path": "files/en-us/web/api/pictureinpicturewindow",
+            "contentType": "directory"
+          },
+          {
+            "name": "plugin",
+            "path": "files/en-us/web/api/plugin",
+            "contentType": "directory"
+          },
+          {
+            "name": "pluginarray",
+            "path": "files/en-us/web/api/pluginarray",
+            "contentType": "directory"
+          },
+          {
+            "name": "pointer_events",
+            "path": "files/en-us/web/api/pointer_events",
+            "contentType": "directory"
+          },
+          {
+            "name": "pointer_lock_api",
+            "path": "files/en-us/web/api/pointer_lock_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "pointerevent",
+            "path": "files/en-us/web/api/pointerevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "popover_api",
+            "path": "files/en-us/web/api/popover_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "popstateevent",
+            "path": "files/en-us/web/api/popstateevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "positionsensorvrdevice",
+            "path": "files/en-us/web/api/positionsensorvrdevice",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentation",
+            "path": "files/en-us/web/api/presentation",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentation_api",
+            "path": "files/en-us/web/api/presentation_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationavailability",
+            "path": "files/en-us/web/api/presentationavailability",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationconnection",
+            "path": "files/en-us/web/api/presentationconnection",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationconnectionavailableevent",
+            "path": "files/en-us/web/api/presentationconnectionavailableevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationconnectioncloseevent",
+            "path": "files/en-us/web/api/presentationconnectioncloseevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationconnectionlist",
+            "path": "files/en-us/web/api/presentationconnectionlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationreceiver",
+            "path": "files/en-us/web/api/presentationreceiver",
+            "contentType": "directory"
+          },
+          {
+            "name": "presentationrequest",
+            "path": "files/en-us/web/api/presentationrequest",
+            "contentType": "directory"
+          },
+          {
+            "name": "prioritized_task_scheduling_api",
+            "path": "files/en-us/web/api/prioritized_task_scheduling_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "processinginstruction",
+            "path": "files/en-us/web/api/processinginstruction",
+            "contentType": "directory"
+          },
+          {
+            "name": "progressevent",
+            "path": "files/en-us/web/api/progressevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "promiserejectionevent",
+            "path": "files/en-us/web/api/promiserejectionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "publickeycredential",
+            "path": "files/en-us/web/api/publickeycredential",
+            "contentType": "directory"
+          },
+          {
+            "name": "push_api",
+            "path": "files/en-us/web/api/push_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "pushevent",
+            "path": "files/en-us/web/api/pushevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "pushmanager",
+            "path": "files/en-us/web/api/pushmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "pushmessagedata",
+            "path": "files/en-us/web/api/pushmessagedata",
+            "contentType": "directory"
+          },
+          {
+            "name": "pushsubscription",
+            "path": "files/en-us/web/api/pushsubscription",
+            "contentType": "directory"
+          },
+          {
+            "name": "pushsubscriptionoptions",
+            "path": "files/en-us/web/api/pushsubscriptionoptions",
+            "contentType": "directory"
+          },
+          {
+            "name": "queuemicrotask",
+            "path": "files/en-us/web/api/queuemicrotask",
+            "contentType": "directory"
+          },
+          {
+            "name": "radionodelist",
+            "path": "files/en-us/web/api/radionodelist",
+            "contentType": "directory"
+          },
+          {
+            "name": "range",
+            "path": "files/en-us/web/api/range",
+            "contentType": "directory"
+          },
+          {
+            "name": "readablebytestreamcontroller",
+            "path": "files/en-us/web/api/readablebytestreamcontroller",
+            "contentType": "directory"
+          },
+          {
+            "name": "readablestream",
+            "path": "files/en-us/web/api/readablestream",
+            "contentType": "directory"
+          },
+          {
+            "name": "readablestreambyobreader",
+            "path": "files/en-us/web/api/readablestreambyobreader",
+            "contentType": "directory"
+          },
+          {
+            "name": "readablestreambyobrequest",
+            "path": "files/en-us/web/api/readablestreambyobrequest",
+            "contentType": "directory"
+          },
+          {
+            "name": "readablestreamdefaultcontroller",
+            "path": "files/en-us/web/api/readablestreamdefaultcontroller",
+            "contentType": "directory"
+          },
+          {
+            "name": "readablestreamdefaultreader",
+            "path": "files/en-us/web/api/readablestreamdefaultreader",
+            "contentType": "directory"
+          },
+          {
+            "name": "relativeorientationsensor",
+            "path": "files/en-us/web/api/relativeorientationsensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "remote_playback_api",
+            "path": "files/en-us/web/api/remote_playback_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "remoteplayback",
+            "path": "files/en-us/web/api/remoteplayback",
+            "contentType": "directory"
+          },
+          {
+            "name": "report",
+            "path": "files/en-us/web/api/report",
+            "contentType": "directory"
+          },
+          {
+            "name": "reportbody",
+            "path": "files/en-us/web/api/reportbody",
+            "contentType": "directory"
+          },
+          {
+            "name": "reporterror",
+            "path": "files/en-us/web/api/reporterror",
+            "contentType": "directory"
+          },
+          {
+            "name": "reporting_api",
+            "path": "files/en-us/web/api/reporting_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "reportingobserver",
+            "path": "files/en-us/web/api/reportingobserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "request",
+            "path": "files/en-us/web/api/request",
+            "contentType": "directory"
+          },
+          {
+            "name": "resize_observer_api",
+            "path": "files/en-us/web/api/resize_observer_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "resizeobserver",
+            "path": "files/en-us/web/api/resizeobserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "resizeobserverentry",
+            "path": "files/en-us/web/api/resizeobserverentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "resizeobserversize",
+            "path": "files/en-us/web/api/resizeobserversize",
+            "contentType": "directory"
+          },
+          {
+            "name": "response",
+            "path": "files/en-us/web/api/response",
+            "contentType": "directory"
+          },
+          {
+            "name": "rsahashedimportparams",
+            "path": "files/en-us/web/api/rsahashedimportparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "rsahashedkeygenparams",
+            "path": "files/en-us/web/api/rsahashedkeygenparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "rsaoaepparams",
+            "path": "files/en-us/web/api/rsaoaepparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "rsapssparams",
+            "path": "files/en-us/web/api/rsapssparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcaudiosourcestats",
+            "path": "files/en-us/web/api/rtcaudiosourcestats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtccertificate",
+            "path": "files/en-us/web/api/rtccertificate",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcdatachannel",
+            "path": "files/en-us/web/api/rtcdatachannel",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcdatachannelevent",
+            "path": "files/en-us/web/api/rtcdatachannelevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcdtlstransport",
+            "path": "files/en-us/web/api/rtcdtlstransport",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcdtmfsender",
+            "path": "files/en-us/web/api/rtcdtmfsender",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcdtmftonechangeevent",
+            "path": "files/en-us/web/api/rtcdtmftonechangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcencodedaudioframe",
+            "path": "files/en-us/web/api/rtcencodedaudioframe",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcencodedvideoframe",
+            "path": "files/en-us/web/api/rtcencodedvideoframe",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcerror",
+            "path": "files/en-us/web/api/rtcerror",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcerrorevent",
+            "path": "files/en-us/web/api/rtcerrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcicecandidate",
+            "path": "files/en-us/web/api/rtcicecandidate",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcicecandidatepair",
+            "path": "files/en-us/web/api/rtcicecandidatepair",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcicecandidatepairstats",
+            "path": "files/en-us/web/api/rtcicecandidatepairstats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcicecandidatestats",
+            "path": "files/en-us/web/api/rtcicecandidatestats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtciceparameters",
+            "path": "files/en-us/web/api/rtciceparameters",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtciceserver",
+            "path": "files/en-us/web/api/rtciceserver",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcicetransport",
+            "path": "files/en-us/web/api/rtcicetransport",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcidentityassertion",
+            "path": "files/en-us/web/api/rtcidentityassertion",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcinboundrtpstreamstats",
+            "path": "files/en-us/web/api/rtcinboundrtpstreamstats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcoutboundrtpstreamstats",
+            "path": "files/en-us/web/api/rtcoutboundrtpstreamstats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcpeerconnection",
+            "path": "files/en-us/web/api/rtcpeerconnection",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcpeerconnectioniceerrorevent",
+            "path": "files/en-us/web/api/rtcpeerconnectioniceerrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcpeerconnectioniceevent",
+            "path": "files/en-us/web/api/rtcpeerconnectioniceevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcpeerconnectionstats",
+            "path": "files/en-us/web/api/rtcpeerconnectionstats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcremoteoutboundrtpstreamstats",
+            "path": "files/en-us/web/api/rtcremoteoutboundrtpstreamstats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpcodecparameters",
+            "path": "files/en-us/web/api/rtcrtpcodecparameters",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpcontributingsource",
+            "path": "files/en-us/web/api/rtcrtpcontributingsource",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpencodingparameters",
+            "path": "files/en-us/web/api/rtcrtpencodingparameters",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpreceiver",
+            "path": "files/en-us/web/api/rtcrtpreceiver",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpscripttransform",
+            "path": "files/en-us/web/api/rtcrtpscripttransform",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpscripttransformer",
+            "path": "files/en-us/web/api/rtcrtpscripttransformer",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpsender",
+            "path": "files/en-us/web/api/rtcrtpsender",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtpstreamstats",
+            "path": "files/en-us/web/api/rtcrtpstreamstats",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcrtptransceiver",
+            "path": "files/en-us/web/api/rtcrtptransceiver",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcsctptransport",
+            "path": "files/en-us/web/api/rtcsctptransport",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcsessiondescription",
+            "path": "files/en-us/web/api/rtcsessiondescription",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtcstatsreport",
+            "path": "files/en-us/web/api/rtcstatsreport",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtctrackevent",
+            "path": "files/en-us/web/api/rtctrackevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "rtctransformevent",
+            "path": "files/en-us/web/api/rtctransformevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "sanitizer",
+            "path": "files/en-us/web/api/sanitizer",
+            "contentType": "directory"
+          },
+          {
+            "name": "scheduler",
+            "path": "files/en-us/web/api/scheduler",
+            "contentType": "directory"
+          },
+          {
+            "name": "scheduling",
+            "path": "files/en-us/web/api/scheduling",
+            "contentType": "directory"
+          },
+          {
+            "name": "screen",
+            "path": "files/en-us/web/api/screen",
+            "contentType": "directory"
+          },
+          {
+            "name": "screen_capture_api",
+            "path": "files/en-us/web/api/screen_capture_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "screen_orientation_api",
+            "path": "files/en-us/web/api/screen_orientation_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "screen_wake_lock_api",
+            "path": "files/en-us/web/api/screen_wake_lock_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "screenorientation",
+            "path": "files/en-us/web/api/screenorientation",
+            "contentType": "directory"
+          },
+          {
+            "name": "scriptprocessornode",
+            "path": "files/en-us/web/api/scriptprocessornode",
+            "contentType": "directory"
+          },
+          {
+            "name": "scrolltimeline",
+            "path": "files/en-us/web/api/scrolltimeline",
+            "contentType": "directory"
+          },
+          {
+            "name": "securitypolicyviolationevent",
+            "path": "files/en-us/web/api/securitypolicyviolationevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "selection",
+            "path": "files/en-us/web/api/selection",
+            "contentType": "directory"
+          },
+          {
+            "name": "selection_api",
+            "path": "files/en-us/web/api/selection_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "sensor",
+            "path": "files/en-us/web/api/sensor",
+            "contentType": "directory"
+          },
+          {
+            "name": "sensor_apis",
+            "path": "files/en-us/web/api/sensor_apis",
+            "contentType": "directory"
+          },
+          {
+            "name": "sensorerrorevent",
+            "path": "files/en-us/web/api/sensorerrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "serial",
+            "path": "files/en-us/web/api/serial",
+            "contentType": "directory"
+          },
+          {
+            "name": "serialport",
+            "path": "files/en-us/web/api/serialport",
+            "contentType": "directory"
+          },
+          {
+            "name": "server-sent_events",
+            "path": "files/en-us/web/api/server-sent_events",
+            "contentType": "directory"
+          },
+          {
+            "name": "service_worker_api",
+            "path": "files/en-us/web/api/service_worker_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "serviceworker",
+            "path": "files/en-us/web/api/serviceworker",
+            "contentType": "directory"
+          },
+          {
+            "name": "serviceworkercontainer",
+            "path": "files/en-us/web/api/serviceworkercontainer",
+            "contentType": "directory"
+          },
+          {
+            "name": "serviceworkerglobalscope",
+            "path": "files/en-us/web/api/serviceworkerglobalscope",
+            "contentType": "directory"
+          },
+          {
+            "name": "serviceworkerregistration",
+            "path": "files/en-us/web/api/serviceworkerregistration",
+            "contentType": "directory"
+          },
+          {
+            "name": "setinterval",
+            "path": "files/en-us/web/api/setinterval",
+            "contentType": "directory"
+          },
+          {
+            "name": "settimeout",
+            "path": "files/en-us/web/api/settimeout",
+            "contentType": "directory"
+          },
+          {
+            "name": "shadowroot",
+            "path": "files/en-us/web/api/shadowroot",
+            "contentType": "directory"
+          },
+          {
+            "name": "sharedworker",
+            "path": "files/en-us/web/api/sharedworker",
+            "contentType": "directory"
+          },
+          {
+            "name": "sharedworkerglobalscope",
+            "path": "files/en-us/web/api/sharedworkerglobalscope",
+            "contentType": "directory"
+          },
+          {
+            "name": "sourcebuffer",
+            "path": "files/en-us/web/api/sourcebuffer",
+            "contentType": "directory"
+          },
+          {
+            "name": "sourcebufferlist",
+            "path": "files/en-us/web/api/sourcebufferlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "spc",
+            "path": "files/en-us/web/api/spc",
+            "contentType": "directory"
+          },
+          {
+            "name": "speculation_rules_api",
+            "path": "files/en-us/web/api/speculation_rules_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechgrammar",
+            "path": "files/en-us/web/api/speechgrammar",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechgrammarlist",
+            "path": "files/en-us/web/api/speechgrammarlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechrecognition",
+            "path": "files/en-us/web/api/speechrecognition",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechrecognitionalternative",
+            "path": "files/en-us/web/api/speechrecognitionalternative",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechrecognitionerrorevent",
+            "path": "files/en-us/web/api/speechrecognitionerrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechrecognitionevent",
+            "path": "files/en-us/web/api/speechrecognitionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechrecognitionresult",
+            "path": "files/en-us/web/api/speechrecognitionresult",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechrecognitionresultlist",
+            "path": "files/en-us/web/api/speechrecognitionresultlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechsynthesis",
+            "path": "files/en-us/web/api/speechsynthesis",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechsynthesiserrorevent",
+            "path": "files/en-us/web/api/speechsynthesiserrorevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechsynthesisevent",
+            "path": "files/en-us/web/api/speechsynthesisevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechsynthesisutterance",
+            "path": "files/en-us/web/api/speechsynthesisutterance",
+            "contentType": "directory"
+          },
+          {
+            "name": "speechsynthesisvoice",
+            "path": "files/en-us/web/api/speechsynthesisvoice",
+            "contentType": "directory"
+          },
+          {
+            "name": "staticrange",
+            "path": "files/en-us/web/api/staticrange",
+            "contentType": "directory"
+          },
+          {
+            "name": "stereopannernode",
+            "path": "files/en-us/web/api/stereopannernode",
+            "contentType": "directory"
+          },
+          {
+            "name": "storage",
+            "path": "files/en-us/web/api/storage",
+            "contentType": "directory"
+          },
+          {
+            "name": "storage_access_api",
+            "path": "files/en-us/web/api/storage_access_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "storage_api",
+            "path": "files/en-us/web/api/storage_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "storageevent",
+            "path": "files/en-us/web/api/storageevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "storagemanager",
+            "path": "files/en-us/web/api/storagemanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "streams_api",
+            "path": "files/en-us/web/api/streams_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "structuredclone",
+            "path": "files/en-us/web/api/structuredclone",
+            "contentType": "directory"
+          },
+          {
+            "name": "stylepropertymap",
+            "path": "files/en-us/web/api/stylepropertymap",
+            "contentType": "directory"
+          },
+          {
+            "name": "stylepropertymapreadonly",
+            "path": "files/en-us/web/api/stylepropertymapreadonly",
+            "contentType": "directory"
+          },
+          {
+            "name": "stylesheet",
+            "path": "files/en-us/web/api/stylesheet",
+            "contentType": "directory"
+          },
+          {
+            "name": "stylesheetlist",
+            "path": "files/en-us/web/api/stylesheetlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "submitevent",
+            "path": "files/en-us/web/api/submitevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "subtlecrypto",
+            "path": "files/en-us/web/api/subtlecrypto",
+            "contentType": "directory"
+          },
+          {
+            "name": "svg_api",
+            "path": "files/en-us/web/api/svg_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgaelement",
+            "path": "files/en-us/web/api/svgaelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgangle",
+            "path": "files/en-us/web/api/svgangle",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatecolorelement",
+            "path": "files/en-us/web/api/svganimatecolorelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedangle",
+            "path": "files/en-us/web/api/svganimatedangle",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedboolean",
+            "path": "files/en-us/web/api/svganimatedboolean",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedenumeration",
+            "path": "files/en-us/web/api/svganimatedenumeration",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedinteger",
+            "path": "files/en-us/web/api/svganimatedinteger",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedlength",
+            "path": "files/en-us/web/api/svganimatedlength",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedlengthlist",
+            "path": "files/en-us/web/api/svganimatedlengthlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatednumber",
+            "path": "files/en-us/web/api/svganimatednumber",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatednumberlist",
+            "path": "files/en-us/web/api/svganimatednumberlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedpreserveaspectratio",
+            "path": "files/en-us/web/api/svganimatedpreserveaspectratio",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedrect",
+            "path": "files/en-us/web/api/svganimatedrect",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedstring",
+            "path": "files/en-us/web/api/svganimatedstring",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatedtransformlist",
+            "path": "files/en-us/web/api/svganimatedtransformlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimateelement",
+            "path": "files/en-us/web/api/svganimateelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatemotionelement",
+            "path": "files/en-us/web/api/svganimatemotionelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimatetransformelement",
+            "path": "files/en-us/web/api/svganimatetransformelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svganimationelement",
+            "path": "files/en-us/web/api/svganimationelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgcircleelement",
+            "path": "files/en-us/web/api/svgcircleelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgclippathelement",
+            "path": "files/en-us/web/api/svgclippathelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgcomponenttransferfunctionelement",
+            "path": "files/en-us/web/api/svgcomponenttransferfunctionelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgcursorelement",
+            "path": "files/en-us/web/api/svgcursorelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgdefselement",
+            "path": "files/en-us/web/api/svgdefselement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgdescelement",
+            "path": "files/en-us/web/api/svgdescelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgelement",
+            "path": "files/en-us/web/api/svgelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgellipseelement",
+            "path": "files/en-us/web/api/svgellipseelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgevent",
+            "path": "files/en-us/web/api/svgevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfeblendelement",
+            "path": "files/en-us/web/api/svgfeblendelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfecolormatrixelement",
+            "path": "files/en-us/web/api/svgfecolormatrixelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfecomponenttransferelement",
+            "path": "files/en-us/web/api/svgfecomponenttransferelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfecompositeelement",
+            "path": "files/en-us/web/api/svgfecompositeelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfeconvolvematrixelement",
+            "path": "files/en-us/web/api/svgfeconvolvematrixelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfediffuselightingelement",
+            "path": "files/en-us/web/api/svgfediffuselightingelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfedisplacementmapelement",
+            "path": "files/en-us/web/api/svgfedisplacementmapelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfedistantlightelement",
+            "path": "files/en-us/web/api/svgfedistantlightelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfedropshadowelement",
+            "path": "files/en-us/web/api/svgfedropshadowelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfefloodelement",
+            "path": "files/en-us/web/api/svgfefloodelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfefuncaelement",
+            "path": "files/en-us/web/api/svgfefuncaelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfefuncbelement",
+            "path": "files/en-us/web/api/svgfefuncbelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfefuncgelement",
+            "path": "files/en-us/web/api/svgfefuncgelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfefuncrelement",
+            "path": "files/en-us/web/api/svgfefuncrelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfegaussianblurelement",
+            "path": "files/en-us/web/api/svgfegaussianblurelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfeimageelement",
+            "path": "files/en-us/web/api/svgfeimageelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfemergeelement",
+            "path": "files/en-us/web/api/svgfemergeelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfemergenodeelement",
+            "path": "files/en-us/web/api/svgfemergenodeelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfemorphologyelement",
+            "path": "files/en-us/web/api/svgfemorphologyelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfeoffsetelement",
+            "path": "files/en-us/web/api/svgfeoffsetelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfepointlightelement",
+            "path": "files/en-us/web/api/svgfepointlightelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfespecularlightingelement",
+            "path": "files/en-us/web/api/svgfespecularlightingelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfespotlightelement",
+            "path": "files/en-us/web/api/svgfespotlightelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfetileelement",
+            "path": "files/en-us/web/api/svgfetileelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfeturbulenceelement",
+            "path": "files/en-us/web/api/svgfeturbulenceelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfilterelement",
+            "path": "files/en-us/web/api/svgfilterelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfontelement",
+            "path": "files/en-us/web/api/svgfontelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfontfaceelement",
+            "path": "files/en-us/web/api/svgfontfaceelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfontfaceformatelement",
+            "path": "files/en-us/web/api/svgfontfaceformatelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfontfacenameelement",
+            "path": "files/en-us/web/api/svgfontfacenameelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfontfacesrcelement",
+            "path": "files/en-us/web/api/svgfontfacesrcelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgfontfaceurielement",
+            "path": "files/en-us/web/api/svgfontfaceurielement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgforeignobjectelement",
+            "path": "files/en-us/web/api/svgforeignobjectelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svggelement",
+            "path": "files/en-us/web/api/svggelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svggeometryelement",
+            "path": "files/en-us/web/api/svggeometryelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgglyphelement",
+            "path": "files/en-us/web/api/svgglyphelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgglyphrefelement",
+            "path": "files/en-us/web/api/svgglyphrefelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svggradientelement",
+            "path": "files/en-us/web/api/svggradientelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svggraphicselement",
+            "path": "files/en-us/web/api/svggraphicselement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svghkernelement",
+            "path": "files/en-us/web/api/svghkernelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgimageelement",
+            "path": "files/en-us/web/api/svgimageelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svglength",
+            "path": "files/en-us/web/api/svglength",
+            "contentType": "directory"
+          },
+          {
+            "name": "svglengthlist",
+            "path": "files/en-us/web/api/svglengthlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svglineargradientelement",
+            "path": "files/en-us/web/api/svglineargradientelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svglineelement",
+            "path": "files/en-us/web/api/svglineelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgmarkerelement",
+            "path": "files/en-us/web/api/svgmarkerelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgmaskelement",
+            "path": "files/en-us/web/api/svgmaskelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgmetadataelement",
+            "path": "files/en-us/web/api/svgmetadataelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgmissingglyphelement",
+            "path": "files/en-us/web/api/svgmissingglyphelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgmpathelement",
+            "path": "files/en-us/web/api/svgmpathelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgnumber",
+            "path": "files/en-us/web/api/svgnumber",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgnumberlist",
+            "path": "files/en-us/web/api/svgnumberlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpathelement",
+            "path": "files/en-us/web/api/svgpathelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpatternelement",
+            "path": "files/en-us/web/api/svgpatternelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpoint",
+            "path": "files/en-us/web/api/svgpoint",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpointlist",
+            "path": "files/en-us/web/api/svgpointlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpolygonelement",
+            "path": "files/en-us/web/api/svgpolygonelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpolylineelement",
+            "path": "files/en-us/web/api/svgpolylineelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgpreserveaspectratio",
+            "path": "files/en-us/web/api/svgpreserveaspectratio",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgradialgradientelement",
+            "path": "files/en-us/web/api/svgradialgradientelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgrect",
+            "path": "files/en-us/web/api/svgrect",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgrectelement",
+            "path": "files/en-us/web/api/svgrectelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgrenderingintent",
+            "path": "files/en-us/web/api/svgrenderingintent",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgscriptelement",
+            "path": "files/en-us/web/api/svgscriptelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgsetelement",
+            "path": "files/en-us/web/api/svgsetelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgstopelement",
+            "path": "files/en-us/web/api/svgstopelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgstringlist",
+            "path": "files/en-us/web/api/svgstringlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgstyleelement",
+            "path": "files/en-us/web/api/svgstyleelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgsvgelement",
+            "path": "files/en-us/web/api/svgsvgelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgswitchelement",
+            "path": "files/en-us/web/api/svgswitchelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgsymbolelement",
+            "path": "files/en-us/web/api/svgsymbolelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtextcontentelement",
+            "path": "files/en-us/web/api/svgtextcontentelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtextelement",
+            "path": "files/en-us/web/api/svgtextelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtextpathelement",
+            "path": "files/en-us/web/api/svgtextpathelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtextpositioningelement",
+            "path": "files/en-us/web/api/svgtextpositioningelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtitleelement",
+            "path": "files/en-us/web/api/svgtitleelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtransform",
+            "path": "files/en-us/web/api/svgtransform",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtransformlist",
+            "path": "files/en-us/web/api/svgtransformlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtrefelement",
+            "path": "files/en-us/web/api/svgtrefelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgtspanelement",
+            "path": "files/en-us/web/api/svgtspanelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgunittypes",
+            "path": "files/en-us/web/api/svgunittypes",
+            "contentType": "directory"
+          },
+          {
+            "name": "svguseelement",
+            "path": "files/en-us/web/api/svguseelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgviewelement",
+            "path": "files/en-us/web/api/svgviewelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "svgvkernelement",
+            "path": "files/en-us/web/api/svgvkernelement",
+            "contentType": "directory"
+          },
+          {
+            "name": "syncevent",
+            "path": "files/en-us/web/api/syncevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "syncmanager",
+            "path": "files/en-us/web/api/syncmanager",
+            "contentType": "directory"
+          },
+          {
+            "name": "taskattributiontiming",
+            "path": "files/en-us/web/api/taskattributiontiming",
+            "contentType": "directory"
+          },
+          {
+            "name": "taskcontroller",
+            "path": "files/en-us/web/api/taskcontroller",
+            "contentType": "directory"
+          },
+          {
+            "name": "taskprioritychangeevent",
+            "path": "files/en-us/web/api/taskprioritychangeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "tasksignal",
+            "path": "files/en-us/web/api/tasksignal",
+            "contentType": "directory"
+          },
+          {
+            "name": "text",
+            "path": "files/en-us/web/api/text",
+            "contentType": "directory"
+          },
+          {
+            "name": "textdecoder",
+            "path": "files/en-us/web/api/textdecoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "textdecoderstream",
+            "path": "files/en-us/web/api/textdecoderstream",
+            "contentType": "directory"
+          },
+          {
+            "name": "textencoder",
+            "path": "files/en-us/web/api/textencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "textencoderstream",
+            "path": "files/en-us/web/api/textencoderstream",
+            "contentType": "directory"
+          },
+          {
+            "name": "textmetrics",
+            "path": "files/en-us/web/api/textmetrics",
+            "contentType": "directory"
+          },
+          {
+            "name": "texttrack",
+            "path": "files/en-us/web/api/texttrack",
+            "contentType": "directory"
+          },
+          {
+            "name": "texttrackcue",
+            "path": "files/en-us/web/api/texttrackcue",
+            "contentType": "directory"
+          },
+          {
+            "name": "texttrackcuelist",
+            "path": "files/en-us/web/api/texttrackcuelist",
+            "contentType": "directory"
+          },
+          {
+            "name": "texttracklist",
+            "path": "files/en-us/web/api/texttracklist",
+            "contentType": "directory"
+          },
+          {
+            "name": "timeevent",
+            "path": "files/en-us/web/api/timeevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "timeranges",
+            "path": "files/en-us/web/api/timeranges",
+            "contentType": "directory"
+          },
+          {
+            "name": "toggleevent",
+            "path": "files/en-us/web/api/toggleevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "touch",
+            "path": "files/en-us/web/api/touch",
+            "contentType": "directory"
+          },
+          {
+            "name": "touch_events",
+            "path": "files/en-us/web/api/touch_events",
+            "contentType": "directory"
+          },
+          {
+            "name": "touchevent",
+            "path": "files/en-us/web/api/touchevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "touchlist",
+            "path": "files/en-us/web/api/touchlist",
+            "contentType": "directory"
+          },
+          {
+            "name": "trackevent",
+            "path": "files/en-us/web/api/trackevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "transformstream",
+            "path": "files/en-us/web/api/transformstream",
+            "contentType": "directory"
+          },
+          {
+            "name": "transformstreamdefaultcontroller",
+            "path": "files/en-us/web/api/transformstreamdefaultcontroller",
+            "contentType": "directory"
+          },
+          {
+            "name": "transitionevent",
+            "path": "files/en-us/web/api/transitionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "treewalker",
+            "path": "files/en-us/web/api/treewalker",
+            "contentType": "directory"
+          },
+          {
+            "name": "trusted_types_api",
+            "path": "files/en-us/web/api/trusted_types_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "trustedhtml",
+            "path": "files/en-us/web/api/trustedhtml",
+            "contentType": "directory"
+          },
+          {
+            "name": "trustedscript",
+            "path": "files/en-us/web/api/trustedscript",
+            "contentType": "directory"
+          },
+          {
+            "name": "trustedscripturl",
+            "path": "files/en-us/web/api/trustedscripturl",
+            "contentType": "directory"
+          },
+          {
+            "name": "trustedtypepolicy",
+            "path": "files/en-us/web/api/trustedtypepolicy",
+            "contentType": "directory"
+          },
+          {
+            "name": "trustedtypepolicyfactory",
+            "path": "files/en-us/web/api/trustedtypepolicyfactory",
+            "contentType": "directory"
+          },
+          {
+            "name": "ui_events",
+            "path": "files/en-us/web/api/ui_events",
+            "contentType": "directory"
+          },
+          {
+            "name": "uievent",
+            "path": "files/en-us/web/api/uievent",
+            "contentType": "directory"
+          },
+          {
+            "name": "url",
+            "path": "files/en-us/web/api/url",
+            "contentType": "directory"
+          },
+          {
+            "name": "url_api",
+            "path": "files/en-us/web/api/url_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "url_pattern_api",
+            "path": "files/en-us/web/api/url_pattern_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "urlpattern",
+            "path": "files/en-us/web/api/urlpattern",
+            "contentType": "directory"
+          },
+          {
+            "name": "urlsearchparams",
+            "path": "files/en-us/web/api/urlsearchparams",
+            "contentType": "directory"
+          },
+          {
+            "name": "usb",
+            "path": "files/en-us/web/api/usb",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbalternateinterface",
+            "path": "files/en-us/web/api/usbalternateinterface",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbconfiguration",
+            "path": "files/en-us/web/api/usbconfiguration",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbconnectionevent",
+            "path": "files/en-us/web/api/usbconnectionevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbdevice",
+            "path": "files/en-us/web/api/usbdevice",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbendpoint",
+            "path": "files/en-us/web/api/usbendpoint",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbinterface",
+            "path": "files/en-us/web/api/usbinterface",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbintransferresult",
+            "path": "files/en-us/web/api/usbintransferresult",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbisochronousintransferpacket",
+            "path": "files/en-us/web/api/usbisochronousintransferpacket",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbisochronousintransferresult",
+            "path": "files/en-us/web/api/usbisochronousintransferresult",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbisochronousouttransferpacket",
+            "path": "files/en-us/web/api/usbisochronousouttransferpacket",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbisochronousouttransferresult",
+            "path": "files/en-us/web/api/usbisochronousouttransferresult",
+            "contentType": "directory"
+          },
+          {
+            "name": "usbouttransferresult",
+            "path": "files/en-us/web/api/usbouttransferresult",
+            "contentType": "directory"
+          },
+          {
+            "name": "user-agent_client_hints_api",
+            "path": "files/en-us/web/api/user-agent_client_hints_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "useractivation",
+            "path": "files/en-us/web/api/useractivation",
+            "contentType": "directory"
+          },
+          {
+            "name": "validitystate",
+            "path": "files/en-us/web/api/validitystate",
+            "contentType": "directory"
+          },
+          {
+            "name": "vibration_api",
+            "path": "files/en-us/web/api/vibration_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "videocolorspace",
+            "path": "files/en-us/web/api/videocolorspace",
+            "contentType": "directory"
+          },
+          {
+            "name": "videodecoder",
+            "path": "files/en-us/web/api/videodecoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "videoencoder",
+            "path": "files/en-us/web/api/videoencoder",
+            "contentType": "directory"
+          },
+          {
+            "name": "videoframe",
+            "path": "files/en-us/web/api/videoframe",
+            "contentType": "directory"
+          },
+          {
+            "name": "videoplaybackquality",
+            "path": "files/en-us/web/api/videoplaybackquality",
+            "contentType": "directory"
+          },
+          {
+            "name": "videotrack",
+            "path": "files/en-us/web/api/videotrack",
+            "contentType": "directory"
+          },
+          {
+            "name": "videotracklist",
+            "path": "files/en-us/web/api/videotracklist",
+            "contentType": "directory"
+          },
+          {
+            "name": "view_transitions_api",
+            "path": "files/en-us/web/api/view_transitions_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "viewtimeline",
+            "path": "files/en-us/web/api/viewtimeline",
+            "contentType": "directory"
+          },
+          {
+            "name": "viewtransition",
+            "path": "files/en-us/web/api/viewtransition",
+            "contentType": "directory"
+          },
+          {
+            "name": "virtualkeyboard",
+            "path": "files/en-us/web/api/virtualkeyboard",
+            "contentType": "directory"
+          },
+          {
+            "name": "virtualkeyboard_api",
+            "path": "files/en-us/web/api/virtualkeyboard_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "visibilitystateentry",
+            "path": "files/en-us/web/api/visibilitystateentry",
+            "contentType": "directory"
+          },
+          {
+            "name": "visual_viewport_api",
+            "path": "files/en-us/web/api/visual_viewport_api",
+            "contentType": "directory"
+          },
+          {
+            "name": "visualviewport",
+            "path": "files/en-us/web/api/visualviewport",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrdisplay",
+            "path": "files/en-us/web/api/vrdisplay",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrdisplaycapabilities",
+            "path": "files/en-us/web/api/vrdisplaycapabilities",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrdisplayevent",
+            "path": "files/en-us/web/api/vrdisplayevent",
+            "contentType": "directory"
+          },
+          {
+            "name": "vreyeparameters",
+            "path": "files/en-us/web/api/vreyeparameters",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrfieldofview",
+            "path": "files/en-us/web/api/vrfieldofview",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrframedata",
+            "path": "files/en-us/web/api/vrframedata",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrlayerinit",
+            "path": "files/en-us/web/api/vrlayerinit",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrpose",
+            "path": "files/en-us/web/api/vrpose",
+            "contentType": "directory"
+          },
+          {
+            "name": "vrstageparameters",
+            "path": "files/en-us/web/api/vrstageparameters",
+            "contentType": "directory"
+          },
+          {
+            "name": "index.md",
+            "path": "files/en-us/web/api/index.md",
+            "contentType": "file"
+          }
+        ],
+        "totalCount": 1143
+      },
+      "files/en-us/web": {
+        "items": [
+          {
+            "name": "api",
+            "path": "files/en-us/web/api",
+            "contentType": "directory"
+          }
+        ]
+      },
+      "files/en-us": {
+        "items": [
+          {
+            "name": "web",
+            "path": "files/en-us/web",
+            "contentType": "directory"
+          }
+        ]
+      },
+      "files": {
+        "items": [
+          { "name": "en-us", "path": "files/en-us", "contentType": "directory" }
+        ]
+      },
+      "": {
+        "items": [
+          { "name": "files", "path": "files", "contentType": "directory" }
+        ]
+      }
+    },
+    "fileTreeProcessingTime": 230.92485200000002,
+    "foldersToFetch": ["files/en-us/web", "files/en-us", "files", ""],
+    "reducedMotionEnabled": null,
+    "repo": {
+      "id": 681751910,
+      "defaultBranch": "main",
+      "name": "content",
+      "ownerLogin": "ianbjacobs",
+      "currentUserCanPush": false,
+      "isFork": true,
+      "isEmpty": false,
+      "createdAt": "2023-08-22T17:22:09.000Z",
+      "ownerAvatar": "https://avatars.githubusercontent.com/u/2948484?v=4",
+      "public": true,
+      "private": false,
+      "isOrgOwned": false
+    },
+    "symbolsExpanded": false,
+    "treeExpanded": true,
+    "refInfo": {
+      "name": "070769cbb139190942680b313119d49c99baf444",
+      "listCacheKey": "v0:1700602952.0",
+      "canEdit": false,
+      "refType": "tree",
+      "currentOid": "070769cbb139190942680b313119d49c99baf444"
+    },
+    "path": "files/en-us/web/api/spc/spc-dialog.png",
+    "currentUser": null,
+    "blob": {
+      "rawLines": null,
+      "stylingDirectives": null,
+      "csv": null,
+      "csvError": null,
+      "dependabotInfo": {
+        "showConfigurationBanner": false,
+        "configFilePath": null,
+        "networkDependabotPath": "/ianbjacobs/content/network/updates",
+        "dismissConfigurationNoticePath": "/settings/dismiss-notice/dependabot_configuration_notice",
+        "configurationNoticeDismissed": null,
+        "repoAlertsPath": "/ianbjacobs/content/security/dependabot",
+        "repoSecurityAndAnalysisPath": "/ianbjacobs/content/settings/security_analysis",
+        "repoOwnerIsOrg": false,
+        "currentUserCanAdminRepo": false
+      },
+      "displayName": "spc-dialog.png",
+      "displayUrl": "https://github.com/ianbjacobs/content/blob/070769cbb139190942680b313119d49c99baf444/files/en-us/web/api/spc/spc-dialog.png?raw=true",
+      "headerInfo": {
+        "blobSize": "48.3 KB",
+        "deleteInfo": {
+          "deleteTooltip": "You must be signed in to make or propose changes"
+        },
+        "editInfo": {
+          "editTooltip": "You must be signed in to make or propose changes"
+        },
+        "ghDesktopPath": null,
+        "gitLfsPath": null,
+        "onBranch": false,
+        "shortPath": "58ebb60",
+        "siteNavLoginPath": "/login?return_to=https%3A%2F%2Fgithub.com%2Fianbjacobs%2Fcontent%2Fblob%2F070769cbb139190942680b313119d49c99baf444%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fspc%2Fspc-dialog.png",
+        "isCSV": false,
+        "isRichtext": false,
+        "toc": null,
+        "lineInfo": { "truncatedLoc": null, "truncatedSloc": null },
+        "mode": "file"
+      },
+      "image": true,
+      "isCodeownersFile": null,
+      "isPlain": false,
+      "isValidLegacyIssueTemplate": false,
+      "issueTemplateHelpUrl": "https://docs.github.com/articles/about-issue-and-pull-request-templates",
+      "issueTemplate": null,
+      "discussionTemplate": null,
+      "language": null,
+      "languageID": null,
+      "large": false,
+      "loggedIn": false,
+      "newDiscussionPath": "/ianbjacobs/content/discussions/new",
+      "newIssuePath": "/ianbjacobs/content/issues/new",
+      "planSupportInfo": {
+        "repoIsFork": null,
+        "repoOwnedByCurrentUser": null,
+        "requestFullPath": "/ianbjacobs/content/blob/070769cbb139190942680b313119d49c99baf444/files/en-us/web/api/spc/spc-dialog.png",
+        "showFreeOrgGatedFeatureMessage": null,
+        "showPlanSupportBanner": null,
+        "upgradeDataAttributes": null,
+        "upgradePath": null
+      },
+      "publishBannersInfo": {
+        "dismissActionNoticePath": "/settings/dismiss-notice/publish_action_from_dockerfile",
+        "dismissStackNoticePath": "/settings/dismiss-notice/publish_stack_from_file",
+        "releasePath": "/ianbjacobs/content/releases/new?marketplace=true",
+        "showPublishActionBanner": false,
+        "showPublishStackBanner": false
+      },
+      "rawBlobUrl": "https://github.com/ianbjacobs/content/raw/070769cbb139190942680b313119d49c99baf444/files/en-us/web/api/spc/spc-dialog.png",
+      "renderImageOrRaw": true,
+      "richText": null,
+      "renderedFileInfo": null,
+      "shortPath": null,
+      "tabSize": 2,
+      "topBannersInfo": {
+        "overridingGlobalFundingFile": false,
+        "globalPreferredFundingPath": null,
+        "repoOwner": "ianbjacobs",
+        "repoName": "content",
+        "showInvalidCitationWarning": false,
+        "citationHelpUrl": "https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files",
+        "showDependabotConfigurationBanner": false,
+        "actionsOnboardingTip": null
+      },
+      "truncated": false,
+      "viewable": false,
+      "workflowRedirectUrl": null,
+      "symbols": null
+    },
+    "copilotInfo": null,
+    "copilotAccessAllowed": false,
+    "csrf_tokens": {
+      "/ianbjacobs/content/branches": {
+        "post": "5a6fsd0iGHnO4q8Dv-XkOPD2TooWLKrPgjXY66vOOLZ0h_ZEu2Mb1kNVhrfVI7v9O4kt-QisR3jCvEXz9JwjrQ"
+      },
+      "/repos/preferences": {
+        "post": "v5DIE7xY5B_iBvBD_7RGc75ULgR0mpJt82qlI-WXmXbgz0h4_fcaWZAKGt2zlN2l2CZWWrx8n0oQgNeN0jNkOQ"
+      }
+    }
+  },
+  "title": "content/files/en-us/web/api/spc/spc-dialog.png at 070769cbb139190942680b313119d49c99baf444 · ianbjacobs/content"
+}
