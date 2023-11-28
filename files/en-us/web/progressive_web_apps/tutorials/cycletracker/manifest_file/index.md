@@ -215,13 +215,13 @@ The `<link>` element is most commonly used to link to stylesheets and, with PWAs
 
 When using the `.webmanifest` extension, set `type="application/manifest+json"` if your server doesn't support that MIME type.
 
-#### Task
+### Task
 
 Save the manifest file that you have created in the steps above, then link to it from the `index.html` file.
 
 Optionally, link to a shortcut icon from your HTML as well.
 
-#### Example solution
+### Example solution
 
 The {{HTMLelement("head")}} of `index.html` may now look similar to:
 
