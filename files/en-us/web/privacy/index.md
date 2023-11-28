@@ -203,7 +203,7 @@ Earlier on we discussed tracking, and some of the unethical purposes they are us
 Also recall from earlier that browsers are implementing a number of technologies to limit the usage of tracking cookies, especially cross-site cookies, with the eventual aim of removing them altogether. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. For example:
 
 - Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data. This does have the downside that the data is stored per-origin, so it can't be shared.
-- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) or the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt in to using cross-site cookies in a safe, controlled way, or block them altogether.
+- Use a technology such as the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way.
 - Use a server-side solution for data persistence.
 
 > **Note:** To reiterate what we said earlier, make sure you clearly communicate to your users what you are doing via your privacy policy, allow them to opt-in, and easily delete their data if they change their mind at a later date.

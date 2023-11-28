@@ -200,9 +200,11 @@ If the cookie domain and scheme match the current page, the cookie is considered
 If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
 While the server hosting a web page sets first-party cookies, the page may contain components stored on servers in other domains, such as images or other documents embedded in {{htmlelement("iframe")}}s. These components may set third-party cookies.
 
+> **Note:** Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ implies ownership by a third-party company or organization. However, the behavior and potential issues are the same whether you own all the involved sites or not.
+
 Typical use cases for third-party cookies include sharing user profile information or collecting analytics across different related domains. They are also often used for advertising and tracking users across the web.
 
-> **Note:** See the [types of cookies used by Google](https://policies.google.com/technologies/types).
+> **Note:** Companies should disclose the types of cookies they use on their sites for transparency purposes, and in some cases to comply with [regulations](#cookie-related_regulations). For example, see [Google's notice on the types of cookie it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
 
 A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites.
 Firefox, by default, blocks third-party cookies that are known to contain trackers.

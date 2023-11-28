@@ -16,35 +16,63 @@ Related website sets is a mechanism for defining a set of related sites that sha
 
 ## Concepts and usage
 
-Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies when loaded in a third-party context inside other related sites (i.e. embedded in an {{htmlelement("iframe")}}). A typical use case is federated sign-in. A separate site handling Single-Sign-On (SSO) will be embedded in multiple sites that require sign-in functionality. The SSO site will typically require access to third-party authentication cookies, and will require the user to sign in on each site separately (or completely break) if those cookies are not available.
+Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies when loaded in a third-party context inside other related sites (i.e. embedded in an {{htmlelement("iframe")}}). Typical use cases are:
+
+- App domains: A single application may be deployed over multiple domains, and the aim is to allow users to seamlessly navigate between them in a single session.
+- Brand domains: A set of brand assets may be contained in a single domain, but then deployed over multiple domains, including session data relating to user preferences, customization, etc.
 
 Third-party cookie access is increasingly commonly blocked by browser cookie blocking policies, but you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
 
-Related website sets can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant **default** third-party cookie access between websites in the same set. This means **without** having to go through the usual user permission prompt workflow, meaning a more user-friendly experience for users of sites in the set.
+Related website sets can be considered a progressive enhancement mechanism that works alongside the Storage Access API. Supporting browsers grant third-party cookie access between websites in the same set **without** having to go through the usual user permission prompt workflow, once {{domxref("Document.requestStorageAccess()")}} (or {{domxref("Document.requestStorageAccessFor()")}}) is called. This results in a more user-friendly experience for users of sites in the set.
 
-In addition:
+You should bear in mind that:
 
 - The Chrome-only {{domxref("Document.requestStorageAccessFor()")}} method — which allows top-level sites to request storage access on behalf of embedded origin content — is only supported on domains within a related website set. See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an example.
 - When Chrome first supported the standard Storage Access API (i.e. {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}), it required calling sites to be part of a related website set, however this is no longer the case.
 
 ## How does RWS work?
 
-A related website set consists of one primary domain and up to five associated domains, which are represented in a JSON structure like the following:
+A related website set consists of one primary domain and up to five associated domains, which are represented in a JSON structure. A hypothetical example is as follows:
 
 ```json
 {
-  "primary": "https://primary.com",
-  "associatedSites": [
-    "https://associate1.com",
-    "https://associate2.com",
-    "https://associate3.com"
+  "sets": [
+    {
+      "contact": "email address or group alias if available",
+      "primary": "https://primary1.com",
+      "associatedSites": [
+        "https://associateA.com",
+        "https://associateB.com",
+        "https://associateC.com"
+      ],
+      "serviceSites": ["https://servicesiteA.com"],
+      "rationaleBySite": {
+        "https://associateA.com": "Explanation of affiliation with primary site",
+        "https://associateB.com": "Explanation of affiliation with primary site",
+        "https://associateC.com": "Explanation of affiliation with primary site",
+        "https://serviceSiteA.com": "Explanation of service functionality support."
+      },
+      "ccTLDs": {
+        "https://associateA.com": [
+          "https://associateA.ca",
+          "https://associateA.co.uk"
+        ],
+        "https://associateB.com": [
+          "https://associateB.ru",
+          "https://associateB.co.kr"
+        ],
+        "https://primary1.com": ["https://primary1.co.uk"]
+      }
+    }
   ]
 }
 ```
 
+> **Note:** The affiliation explanations must include a clear description of how the affiliation to the primary site is presented to users of those sites.
+
 To use a set, it must be added to the `related_website_sets.JSON` file available on the [Related Website Sets GitHub repository](https://github.com/GoogleChrome/related-website-sets/blob/main/related_website_sets.JSON), which Chrome then consumes to get the list of sets to apply RWS behavior to.
 
-To find out about the process and requirements for submitting sets, see the [submission guidelines](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md). Only domain administrators can create a set containing that domain.
+For full details of the process, JSON syntax, and other requirements for submitting sets, see the [submission guidelines](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md). Only domain administrators can create a set containing that domain.
 
 Once a set is active:
 

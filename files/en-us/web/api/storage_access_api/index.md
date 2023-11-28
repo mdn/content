@@ -128,8 +128,10 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 
 ### Additions to other APIs
 
-- {{domxref("Permissions.query()")}}
-  - : You can call `Permissions.query()` with a value of `"storage-access"` to query whether third-party cookie access has been granted in general, i.e. to another same-site embed. If so, you can call `requestStorageAccess()` without user interaction, and the promise will resolve automatically.
+- {{domxref("Permissions.query()")}}, the `"storage-access"` feature name
+  - : In supporting browsers, this can be used to query whether third-party cookie access has been granted in general, i.e. to another same-site embed. If so, you can call `requestStorageAccess()` without user interaction, and the promise will resolve automatically.
+- `Permissions.query()`, the `"top-level-storage-access"` feature name {{experimental_inline}}
+  - : A separate feature name used to query whether permission to access third-party cookies has already been granted via `requestStorageAccessFor()`. If so, you don't need to call `requestStorageAccessFor()` again.
 
 ## Specifications
 

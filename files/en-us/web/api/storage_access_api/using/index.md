@@ -36,7 +36,7 @@ Now on to the code executed inside the embedded document. In this code:
 1. We first use feature detection (`if (document.hasStorageAccess) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
 2. If the API is supported, we call `document.hasStorageAccess()`.
 3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
-4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies has already been granted (i.e. to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because some browsers don't support the `"storage-access"` permission, which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
+4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies has already been granted (i.e. to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because Safari doesn't support the `"storage-access"` permission, which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
 5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
 6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
 7. If the permission state is `"denied"`, the user has denied our requests to access third-party cookies, and our code cannot make use of them.
@@ -114,9 +114,9 @@ navigator.permissions
   })
   .then((permission) => {
     if (permission.state === "granted") {
-      // Permission has already been granted, promise with resolve automatically
-      // You can request storage access without any user gesture
-      rSAFor();
+      // Permission has already been granted, promise will resolve automatically
+      // No need to call requestStorageAccessFor() again, just start sending cookies
+      doThingsWithCookies();
     } else if (permission.state === "prompt") {
       // Need to call requestStorageAccessFor() after a user interaction
       btn.addEventListener("click", () => {
@@ -133,7 +133,6 @@ function rSAFor() {
   if ("requestStorageAccessFor" in document) {
     document.requestStorageAccessFor("https://example.com").then(
       (res) => {
-        // Use storage access
         doThingsWithCookies();
       },
       (err) => {

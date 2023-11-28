@@ -12,12 +12,6 @@ browser-compat: api.Document.requestStorageAccessFor
 
 The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
-This is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or {{htmlelement("script")}} elements requiring cookies.
-
-`requestStorageAccessFor()` is relevant to user agents that by default block access to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
-
-> **Note:** To check whether permission to access third-party cookies has already been granted via `requestStorageAccessFor()`, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"top-level-storage-access"`. Note that this is different to the feature name used for the regular {{domxref("Document.requestStorageAccess()")}} method, which is `"storage-access"`.
-
 ## Syntax
 
 ```js-nolint
@@ -36,7 +30,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 `requestStorageAccessFor()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they need to be run inside a user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
 - If the promise resolves (i.e. if permission was granted), then the user gesture has not been consumed, so the script can subsequently call APIs that require a user gesture.
-- If the promise rejects (i.e. permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This is intentional protection against abuse — it prevents scripts from calling `requestStorageAccessFor()` in a loop until the user accepts the prompt.
+- If the promise rejects (i.e. permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This prevents scripts from calling `requestStorageAccessFor()` again if permission is denied.
 
 ### Exceptions
 
@@ -50,9 +44,29 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The supplied `requestedOrigin` is [opaque](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).
     - The top-level site and embedded site are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - Usage is denied by the user agent's permission request to use the API.
 - `TypeError`
   - : Thrown if `requestedOrigin` is not a valid URL.
+
+## Description
+
+`requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or {{htmlelement("script")}} elements requiring cookies.
+
+This method is relevant to user agents that by default block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+To check whether permission to access third-party cookies has already been granted via `requestStorageAccessFor()`, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"top-level-storage-access"`. This is different to the feature name used for the regular {{domxref("Document.requestStorageAccess()")}} method, which is `"storage-access"`.
+
+The `Permissions.query()` call must specify the embedded origin, for example:
+
+```js
+navigator.permissions.query({
+  name: "top-level-storage-access",
+  requestedOrigin: "https://www.example.com",
+});
+```
+
+> **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server (the same one that controls the rest of the Storage Access API). In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, or anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics.
 
 ## Examples
 
