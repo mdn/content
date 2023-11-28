@@ -40,7 +40,7 @@ For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the 
 The "viewport" (or "client") coordinate system uses as its origin the top-left corner of the viewport or browsing context in which the event occurred. This is the entire viewing area in which the document is presented.
 
 On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the {{domxref("window")}}.
-When using a stylus or a pointer, the {{domxref("Touch.clientX")}} and {{domxref("Touch.clientX")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
+When using a stylus or a pointer, the {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
 
 The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the viewport coordinates of a given position within the document.
 
@@ -50,7 +50,7 @@ The "page" coordinate system gives the position of a pixel relative to the top-l
 That means that a point in an element within the document will have the same coordinates after the user scrolls horizontally or vertically in the document unless the element moves via layout changes.
 
 Mouse events' {{domxref("MouseEvent.pageX", "pageX")}} and {{domxref("MouseEvent.pageY", "pageY")}} properties provide the position of the mouse at the time the event was generated, given relative to the top-left corner of the document.
-{{domxref("Touch.pageX")}} and {{domxref("Touch.pageX")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
+{{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
 
 ### Screen
 
@@ -59,7 +59,7 @@ Each point in this coordinate system represents a single logical pixel, and so v
 The position of a given point within a document will change if the containing window is moved, for example, or if the user's screen geometry changes (by changing display resolution or by adding or removing monitors to their system).
 
 The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} properties give the coordinates of a mouse event's position relative to the screen's origin.
-{{domxref("Touch.screenX")}} and {{domxref("Touch.screenX")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
+{{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
 
 ## Example
 
