@@ -2,12 +2,10 @@
 title: text-wrap
 slug: Web/CSS/text-wrap
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.text-wrap
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 The **`text-wrap`** CSS property controls how text inside an element is wrapped. The different values provide:
 
@@ -40,9 +38,9 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ### Values
 
-- `wrap`
+- `wrap` {{experimental_inline}}
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
-- `nowrap`
+- `nowrap` {{experimental_inline}}
   - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
 - `balance`
   - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six for Chromium and ten for Firefox).
