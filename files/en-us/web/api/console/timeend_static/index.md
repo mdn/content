@@ -8,7 +8,7 @@ browser-compat: api.console.timeEnd_static
 
 {{APIRef("Console API")}}
 
-The **`console.timeEnd()`** static method stops a timer that was previously started by calling {{domxref("console.time()")}}.
+The **`console.timeEnd()`** static method stops a timer that was previously started by calling {{domxref("console.time_static")}}.
 
 See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for details and examples.
 
@@ -57,8 +57,8 @@ longer tracking time.
 
 ## See also
 
-- {{domxref("console.time()")}}
-- {{domxref("console.timeLog()")}}
+- {{domxref("console.time_static")}}
+- {{domxref("console.timelog_static")}}
 - [Microsoft Edge's documentation for `console.timeEnd()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#timeend)
 - [Node.JS documentation for `console.timeEnd()`](https://nodejs.org/docs/latest/api/console.html#consoletimeendlabel)
 - [Google Chrome's documentation for `console.timeEnd()`](https://developer.chrome.com/docs/devtools/console/api/#timeend)

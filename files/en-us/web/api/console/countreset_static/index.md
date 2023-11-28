@@ -8,7 +8,7 @@ browser-compat: api.console.countReset_static
 
 {{APIRef("Console API")}}
 
-The **`console.countReset()`** static method resets counter used with {{domxref("console.count()")}}.
+The **`console.countReset()`** static method resets counter used with {{domxref("console.count_static")}}.
 
 {{AvailableInWorkers}}
 

@@ -8,7 +8,7 @@ browser-compat: api.console.group_static
 
 {{APIRef("Console API")}}
 
-The **`console.group()`** static method creates a new inline group in the console log, causing any subsequent console messages to be indented by an additional level, until {{domxref("console.groupEnd()")}} is called.
+The **`console.group()`** static method creates a new inline group in the console log, causing any subsequent console messages to be indented by an additional level, until {{domxref("console.groupend_static")}} is called.
 
 {{AvailableInWorkers}}
 
@@ -63,8 +63,8 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 
 ## See also
 
-- {{domxref("console.groupEnd()")}}
-- {{domxref("console.groupCollapsed()")}}
+- {{domxref("console.groupend_static")}}
+- {{domxref("console.groupcollapsed_static")}}
 - [Microsoft Edge's documentation for `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
 - [Node.JS documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
 - [Google Chrome's documentation for `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)

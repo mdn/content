@@ -8,9 +8,9 @@ browser-compat: api.console.groupCollapsed_static
 
 {{APIRef("Console API")}}
 
-The **`console.groupCollapsed()`** static method creates a new inline group in the console. Unlike {{domxref("console.group()")}}, however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
+The **`console.groupCollapsed()`** static method creates a new inline group in the console. Unlike {{domxref("console.group_static")}}, however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
 
-Call {{domxref("console.groupEnd()")}} to back out to the parent group.
+Call {{domxref("console.groupend_static")}} to back out to the parent group.
 
 See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and examples.
 
@@ -42,8 +42,8 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- {{domxref("console.group()")}}
-- {{domxref("console.groupEnd()")}}
+- {{domxref("console.group_static")}}
+- {{domxref("console.groupend_static")}}
 - [Microsoft Edge's documentation for `console.groupCollapsed()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#groupcollapsed)
 - [Node.JS documentation for `console.groupCollapsed()`](https://nodejs.org/docs/latest/api/console.html#consolegroupcollapsed)
 - [Google Chrome's documentation for `console.groupCollapsed()`](https://developer.chrome.com/docs/devtools/console/api/#groupcollapsed)
