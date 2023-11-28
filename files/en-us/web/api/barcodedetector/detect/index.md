@@ -8,7 +8,7 @@ status:
 browser-compat: api.BarcodeDetector.detect
 ---
 
-{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
 {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
