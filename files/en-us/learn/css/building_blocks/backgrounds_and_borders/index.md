@@ -306,7 +306,7 @@ To explore individual `border-image` properties interactively and check how they
 
 As the very first step, let's specify an image to use as a border. This can be any image, like a star or a balloon. We'll use the following image throughout this part of the lesson to demonstrate different properties.
 
-<img src="stars.png" width="86" height="86"/>
+<img src="stars.png" alt="A square image divided into nine sections, with a star in all four corners and four sides, with a total of 8 stars" width="86" height="86"/>
 
 You specify the border image by using the {{cssxref("border-image-source")}} property. Similar to {{cssxref("background-image")}}, this property accepts either a URL to an image file or a gradient and applies it to the border of the box. You can use various image formats like PNG, JPG, or SVG. The specified image will then be processed by other `border-image` property values to render the final border appearance.
 
