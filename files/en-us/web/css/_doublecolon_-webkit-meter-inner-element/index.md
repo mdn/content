@@ -42,7 +42,7 @@ body {
   font-family: monospace;
 }
 
-#styled.safari {
+.safari meter {
   /* Reset the default appearance for Safari only */
   /* .safari class is added via JavaScript */
   -webkit-appearance: none;
@@ -67,7 +67,7 @@ const is_safari =
   !navigator.userAgent.includes("Chrome/");
 
 if (is_safari) {
-  document.getElementById("styled").classList.add("safari");
+  document.body.classList.add("safari");
 }
 ```
 
