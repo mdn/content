@@ -51,7 +51,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The top-level site and embedded site are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
     - Usage is denied by the user agent's permission request to use the API.
-      `TypeError`
+- `TypeError`
   - : Thrown if `requestedOrigin` is not a valid URL.
 
 ## Examples
