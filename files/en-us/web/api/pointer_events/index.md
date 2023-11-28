@@ -141,6 +141,7 @@ This example registers a handler for every event type for the given element.
     function cancel_handler(event) {}
     function out_handler(event) {}
     function leave_handler(event) {}
+    function rawupdate_handler(event) {}
     function gotcapture_handler(event) {}
     function lostcapture_handler(event) {}
 
@@ -155,8 +156,9 @@ This example registers a handler for every event type for the given element.
       el.onpointercancel = cancel_handler;
       el.onpointerout = out_handler;
       el.onpointerleave = leave_handler;
-      el.gotpointercapture = gotcapture_handler;
-      el.lostpointercapture = lostcapture_handler;
+      el.onpointerrawupdate = rawupdate_handler;
+      el.ongotpointercapture = gotcapture_handler;
+      el.onlostpointercapture = lostcapture_handler;
     }
   </script>
   <body onload="init();">
