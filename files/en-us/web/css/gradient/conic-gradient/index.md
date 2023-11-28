@@ -219,7 +219,7 @@ div {
 
 {{EmbedLiveSample("Checkerboard", 120, 120)}}
 
-### Interpolation with hue interpolation methods
+### Interpolating with hue
 
 ```html hidden
 <div class="shorter"></div>
@@ -247,7 +247,7 @@ div {
 }
 ```
 
-In this example for interpolation hsl color system is being used and hue is being interpolated.
+In this example for interpolation [hsl](/en-US/docs/Web/CSS/color_value/hsl) color system is being used and [hue](/en-US/docs/Web/CSS/hue) is being interpolated.
 
 ```css
 .shorter {
@@ -259,9 +259,9 @@ In this example for interpolation hsl color system is being used and hue is bein
 }
 ```
 
-The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter) so color goes straight from red to blue taking short arc on [color wheel](/en-US/docs/Glossary/Color_wheel). And the box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer) so the color goes from red to blue via green taking longer arc.
+The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter), meaning color goes straight from red to blue using the shorter arc on [color wheel](/en-US/docs/Glossary/Color_wheel). The box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer), meaning the color goes from red to blue using the longer arc, traversing through greens, yellows, and oranges.
 
-{{EmbedLiveSample('Interpolation with hue interpolation methods', 240, 200)}}
+{{EmbedLiveSample("Interpolating with hue", 240, 200)}}
 
 ### More conic-gradient examples
 
