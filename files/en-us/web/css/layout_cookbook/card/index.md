@@ -42,9 +42,9 @@ Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layou
 
 Each `card` contains a {{HTMLElement("header")}}, {{HTMLElement("image")}}, and {{HTMLElement("div")}}, in that order, with some also containing a {{HTMLElement("footer")}}.
 
-The heading row, or track, is set to {{cssxref("max-content")}}, which prevents it from stretching. The image track is set to 200 pixels tall. The third track — which is where the content lives — is set to `1fr`. This means it will fill any additional space.
+The heading row, or track, is set to {{cssxref("max-content")}}, which prevents it from stretching. The image track is set to 200 pixels tall. The third track, where the content lives, is set to `1fr`. This means it will fill any additional space.
 
-Any children beyond the three with explicitly defined sizes create rows in the implicit grid, which fits the content added to it. These are auto-sized by default. If a card contains a footer, it is auto-sized. The footer, when present, sticks to the bottom of the grid. This is because the footer is auto-sized to fit its content; the content `<div>` then stretches take up any additional space.
+Any children beyond the three with explicitly defined sizes create rows in the implicit grid, which fits the content added to it. These are auto-sized by default. If a card contains a footer, it is auto-sized. The footer, when present, sticks to the bottom of the grid. The footer is auto-sized to fit its content; the content `<div>` then stretches take up any additional space.
 
 The following ruleset creates the grid of cards:
 
@@ -52,11 +52,11 @@ The following ruleset creates the grid of cards:
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 20px;
+  gap: 20px;
 }
 ```
 
-The {{cssxref("grid-template-columns")}} property defines the widths of the grid columns. In this case, we set the grid to auto-fill, with repeated columns that are minimally `230px` but allowed to grow to fill the available space. The {{cssxref("grid-gap")}} property sets a gap of `20px` between adjacent rows and adjacent columns. Alternatively, the {{cssxref("gap")}} property could have been used.
+The {{cssxref("grid-template-columns")}} property defines the widths of the grid columns. In this case, we set the grid to auto-fill, with repeated columns that are minimally `230px` but allowed to grow to fill the available space. The {{cssxref("gap")}} property sets a gap of `20px` between adjacent rows and adjacent columns. Alternatively, the {{cssxref("grid-gap")}} property could have been used.
 
 > **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. Lining up the components in each card with the same components in adjacent cards can be done with [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
 
@@ -64,7 +64,7 @@ The {{cssxref("grid-template-columns")}} property defines the widths of the grid
 
 [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) can also be used to lay out each card. With flexbox, the dimensions of each card's rows are set with the {{cssxref("flex")}} property on each row, rather than on the card container.
 
-With flexbox, the dimensions of the flex items are defined on the children rather than the parent. Whether you choose to use grid or flexbox depends on your preference; whether you prefer controlling the tracks from the container or prefer adding rules to the items.
+With flexbox, the dimensions of the flex items are defined on the children rather than the parent. Whether you choose to use grid or flexbox depends on your preference, whether you prefer controlling the tracks from the container or prefer adding rules to the items.
 
 We chose grid for the cards as, generally, you want cards to be lined up both vertically and horizontally. Additionally, lining up the components within each card to the components of adjacent cards can be done with subgrid. Flex has no hack-free equivalent to subgrid.
 

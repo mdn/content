@@ -175,8 +175,6 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 
 _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("EventTarget.addEventListener()")}}
-  - : Registers an event handler to a specific event type on the element.
 - {{DOMxRef("Element.after()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.attachShadow()")}}
@@ -191,8 +189,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
 - {{DOMxRef("Element.computedStyleMap()")}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
-- {{DOMxRef("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.
 - {{DOMxRef("Element.getAnimations()")}}
   - : Returns an array of Animation objects currently active on the element.
 - {{DOMxRef("Element.getAttribute()")}}
@@ -249,8 +245,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Removes the node representation of the named attribute from the current node.
 - {{DOMxRef("Element.removeAttributeNS()")}}
   - : Removes the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the element.
 - {{DOMxRef("Element.replaceChildren()")}}
   - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
 - {{DOMxRef("Element.replaceWith()")}}

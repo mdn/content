@@ -144,7 +144,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
         <pre>
 // space in "C ontent-Type"
 const headers = {
-  'Content-Type': 'text/xml',
+  'C ontent-Type': 'text/xml',
   'Breaking-Bad': '<3',
 };
 fetch('https://example.com/', { headers });
