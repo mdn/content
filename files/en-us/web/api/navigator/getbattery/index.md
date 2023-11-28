@@ -6,13 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.getBattery
 ---
 
-{{ ApiRef("Battery API") }}
+{{ApiRef("Battery API")}}
 
 The **`getBattery()`** method provides information about the system's battery.
 It returns a battery promise, which is resolved in a {{domxref("BatteryManager")}} object providing also some new events you can handle to monitor the battery status.
-This implements the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API); see that documentation for additional details, a guide to using the API, and sample code.
+This implements the {{domxref("Battery Status API", "", "", "nocode")}}; see that documentation for additional details, a guide to using the API, and sample code.
 
-> **Note:** Access to this feature may be controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery","battery")}}.
+> **Note:** Access to this feature may be controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery", "battery")}}.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ navigator.getBattery().then((battery) => {
 });
 ```
 
-For more examples and details, see [Battery Status API](/en-US/docs/Web/API/Battery_Status_API).
+For more examples and details, see {{domxref("Battery Status API", "", "", "nocode")}}.
 
 ## Specifications
 
@@ -65,5 +65,5 @@ For more examples and details, see [Battery Status API](/en-US/docs/Web/API/Batt
 
 ## See also
 
-- [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
-- `Permissions-Policy` {{HTTPHeader("Permissions-Policy/battery", "battery")}} feature
+- {{domxref("Battery Status API", "", "", "nocode")}}
+- {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/battery", "battery")}} directive
