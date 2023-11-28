@@ -24,9 +24,9 @@ A pointer's _hit test_ is the process a browser uses to determine the target ele
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
-- {{ domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}}
+- {{ domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{ domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}}
+- {{ domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
 - {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
