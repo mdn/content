@@ -56,15 +56,10 @@ body {
   -webkit-appearance: none;
 }
 
-#styled::-webkit-meter-bar {
-  /* Required to get rid of the default background property */
-  background: none;
-  background-color: whiteSmoke;
-  box-shadow: 0 5px 5px -5px #333 inset;
-}
-
 #styled::-webkit-meter-optimum-value {
-  box-shadow: 0 5px 5px -5px #999 inset;
+  background: linear-gradient(to bottom, #7f7, #090 45%, #090 55%, #7f7);
+  height: 100%;
+  box-sizing: border-box;
 }
 ```
 
