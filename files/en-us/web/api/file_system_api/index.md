@@ -8,6 +8,7 @@ browser-compat:
   - api.FileSystemDirectoryHandle
   - api.FileSystemWritableFileStream
   - api.FileSystemSyncAccessHandle
+spec-urls: https://fs.spec.whatwg.org/
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
