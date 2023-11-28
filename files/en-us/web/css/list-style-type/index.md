@@ -11,7 +11,7 @@ The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (s
 
 {{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
-The [color](/en-US/docs/Web/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
+The marker will be [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/color_value) of the element it applies to.
 
 Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
 
@@ -175,19 +175,22 @@ Refer to the [All list style types](#all_list_style_types) example to see the ab
 
 ### Non-standard extensions
 
-A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers support which extension.
+A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
 
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `ethiopic-halehame-ti-er`, `-moz-ethiopic-halehame-ti-er`
-- `ethiopic-halehame-ti-et`, `-moz-ethiopic-halehame-ti-et`
-- `hangul`, `-moz-hangul`
-- `hangul-consonant`, `-moz-hangul-consonant`
-- `urdu`, `-moz-urdu`
+- `ethiopic-halehame`: `-moz-ethiopic-halehame`
+- `ethiopic-halehame-am`: `-moz-ethiopic-halehame-am`
+- `ethiopic-halehame-ti-er`: `-moz-ethiopic-halehame-ti-er`
+- `ethiopic-halehame-ti-et`: `-moz-ethiopic-halehame-ti-et`
+- `ethiopic-numeric`: `-moz-ethiopic-numeric`
+- `hangul`: `-moz-hangul`
+- `hangul-consonant`: `-moz-hangul-consonant`
+- `urdu`: `-moz-urdu`
+
+See the [compatibility table](#browser-compatibility) to check which browsers support which extension.
 
 ## Accessibility concerns
 
-Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
 
 ## Formal definition
 
@@ -697,6 +700,8 @@ container.addEventListener("change", (event) => {
 
 {{EmbedLiveSample("All_list_style_types", "600", "800")}}
 
+We're not limited to the list style types defined on this page or the specification. The {{cssxref("@counter-style")}} at-rule enables creating [counters using any alphabet](https://r12a.github.io/app-counters/).
+
 ## Specifications
 
 {{Specifications}}
@@ -707,7 +712,9 @@ container.addEventListener("change", (event) => {
 
 ## See also
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- [Counter styles converter](https://r12a.github.io/app-counters/)
+- {{Cssxref("list-style")}} shorthand property
+- {{Cssxref("list-style-image")}} property
+- {{Cssxref("list-style-position")}} property
+- {{Cssxref("::marker")}} pseudo-element
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

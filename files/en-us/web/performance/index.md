@@ -73,7 +73,6 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('First contentful paint')}}
 - {{glossary('First CPU idle')}}
 - {{glossary('First input delay')}}
-- {{glossary('First interactive')}}
 - {{glossary('First meaningful paint')}}
 - {{glossary('First paint')}}
 - {{glossary('HTTP')}}

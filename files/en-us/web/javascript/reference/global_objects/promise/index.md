@@ -192,6 +192,8 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
   - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+- {{jsxref("Promise.withResolvers()")}}
+  - : Returns an object containing a new `Promise` object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
 ## Instance properties
 
