@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.BatteryManager.chargingchange_event
 ---
 
-{{APIRef("Battery API")}}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
 The **`chargingchange`** event of the {{domxref("Battery Status API", "", "", "nocode")}} is fired when the battery {{domxref("BatteryManager.charging", "charging")}} property is updated.
 

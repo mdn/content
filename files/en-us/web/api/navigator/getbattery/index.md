@@ -11,7 +11,8 @@ browser-compat: api.Navigator.getBattery
 The **`getBattery()`** method provides information about the system's battery.
 It returns a battery promise, which is resolved in a {{domxref("BatteryManager")}} object providing also some new events you can handle to monitor the battery status.
 This implements the {{domxref("Battery Status API", "", "", "nocode")}}; see that documentation for additional details, a guide to using the API, and sample code.
-Since Chrome 103, the `Navigator.getBattery()` method of {{domxref("Battery Status API", "", "", "nocode")}} requires secure context to work, this is an update reflecting the standard change.
+
+Since Chrome 103, the `Navigator.getBattery()` method of {{domxref("Battery Status API", "", "", "nocode")}} only expose to secure context.
 
 > **Note:** Access to this feature may be controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery", "battery")}}.
 

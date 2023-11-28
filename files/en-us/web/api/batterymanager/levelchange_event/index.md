@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.BatteryManager.levelchange_event
 ---
 
-{{APIRef("Battery API")}}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
 The **`levelchange`** event of the {{domxref("Battery Status API", "", "", "nocode")}} is fired when the battery {{domxref("BatteryManager.level", "level")}} property is updated.
 

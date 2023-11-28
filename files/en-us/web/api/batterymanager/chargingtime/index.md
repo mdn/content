@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.BatteryManager.chargingTime
 ---
 
-{{APIRef("Battery API")}}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
 The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged or the user agent is unable to report the battery status information.
 If the battery is currently discharging, its value is {{jsxref("Infinity")}}.
