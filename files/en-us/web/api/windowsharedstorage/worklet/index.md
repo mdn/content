@@ -13,7 +13,7 @@ browser-compat: api.WindowSharedStorage.worklet
 The **`worklet`** read-only property of the
 {{domxref("WindowSharedStorage")}} interface contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin.
 
-`SharedStorageWorklet` has the {{domxref("Worklet.addModule", "addModule()")}} method available on it, which is used to add a module to the shared storage worklet.
+`SharedStorageWorklet` contains the {{domxref("Worklet.addModule", "addModule()")}} method, which is used to add a module to the shared storage worklet.
 
 ## Value
 
