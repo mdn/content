@@ -98,7 +98,7 @@ const b2f = (x) => new Float64Array(x.buffer)[0];
 const n = f2b(NaN);
 const m = f2b(NaN);
 // Change the sign bit, which doesn't matter for NaN
-n[7] += 2**7;
+n[7] += 2 ** 7;
 // n[0] += 2**7; for big endian processors
 const nan2 = b2f(n);
 console.log(nan2); // NaN
