@@ -11,7 +11,7 @@ browser-compat: api.WorkletSharedStorage.keys
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`keys()`** method of the
-{{domxref("WorkletSharedStorage")}} interface returns an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator) containing the keys for each item in a `WorkletSharedStorage` instance.
+{{domxref("WorkletSharedStorage")}} interface returns an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator), which contains the keys for each item in a `WorkletSharedStorage` instance.
 
 ## Syntax
 
