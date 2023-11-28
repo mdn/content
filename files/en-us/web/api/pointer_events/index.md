@@ -10,8 +10,6 @@ spec-urls: https://w3c.github.io/pointerevents/
 
 Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. _[Pointer events](#pointer_event)_ address that need.
 
-> **Note:** Pointer events are _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-
 Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 
 The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
@@ -385,16 +383,18 @@ Here are some _best practices_ to consider when using pointer events:
 
 Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
-## Demos and examples
+## See also
+
+### Demos and examples
 
 - [Touch/pointer tests and demos (by Patrick H. Lauke)](https://patrickhlauke.github.io/touch/)
 
-## Community
+### Community
 
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
 - [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
 
-## Related topics and resources
+### Related topics and resources
 
 - [Touch Events Standard](https://www.w3.org/TR/touch-events/)
