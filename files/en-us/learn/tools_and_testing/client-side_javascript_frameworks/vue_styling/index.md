@@ -255,8 +255,8 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     padding-top: 0;
     position: relative;
     box-shadow:
-      0 2px 4px 0 rgba(0, 0, 0, 0.2),
-      0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+      0 2px 4px 0 rgb(0 0 0 / 20%),
+      0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
   }
   @media screen and (min-width: 550px) {
     #app {
