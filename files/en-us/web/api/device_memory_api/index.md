@@ -29,11 +29,13 @@ const RAM = navigator.deviceMemory;
 
 You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
 
-## Extensions to other interfaces
+## Interfaces
 
-- {{domxref("Navigator.deviceMemory")}}
+### Extensions to other interfaces
+
+- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}}
   - : Returns the approximate amount of device memory in gigabytes.
-- {{domxref("WorkerNavigator.deviceMemory")}}
+- {{domxref("WorkerNavigator.deviceMemory")}} {{ReadOnlyInline}}
   - : Returns the approximate amount of device memory in gigabytes.
 
 ## Specifications
