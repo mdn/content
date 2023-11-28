@@ -26,7 +26,7 @@ The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Fo
 
 ## Instance methods
 
-- {{domxref('FontData.blob()')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('FontData.blob()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Blob")}} containing the raw bytes of the underlying font file.
 
 ## Examples

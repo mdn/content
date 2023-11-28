@@ -1,5 +1,5 @@
 ---
-title: "validityState: tooLong property"
+title: "ValidityState: tooLong property"
 short-title: tooLong
 slug: Web/API/ValidityState/tooLong
 page-type: web-api-instance-property

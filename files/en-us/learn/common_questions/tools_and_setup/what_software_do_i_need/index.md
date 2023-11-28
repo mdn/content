@@ -161,7 +161,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -239,7 +239,7 @@ Uploading files to a web server is a very important step while creating a websit
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a> (All OS)</li>

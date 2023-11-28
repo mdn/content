@@ -41,9 +41,7 @@
     },
     "Battery API": {
       "overview": ["Battery Status API"],
-      "guides": [
-        "/Apps/Build/gather_and_modify_data/retrieving_battery_status_information"
-      ],
+      "guides": [],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
       "properties": [],
@@ -53,10 +51,7 @@
       "overview": ["Barcode Detection API"],
       "guides": [],
       "interfaces": ["BarcodeDetector"],
-      "methods": [
-        "BarcodeDetector.detect()",
-        "BarcodeDetector.getSupportedFormats()"
-      ],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -479,7 +474,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": ["URL.createObjectURL()", "URL.revokeObjectURL()"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -1335,6 +1330,8 @@
       "events": []
     },
     "SVG": {
+      "overview": ["SVG API"],
+      "guides": ["/docs/Web/SVG"],
       "interfaces": [
         "SVGAElement",
         "SVGAngle",
@@ -2104,6 +2101,14 @@
         "RTCPeerConnectionErrorCallback",
         "RTCSessionDescriptionCallback"
       ]
+    },
+    "Web Serial API": {
+      "overview": ["Web Serial API"],
+      "guides": [],
+      "interfaces": ["Serial", "SerialPort"],
+      "methods": [],
+      "properties": ["Navigator.serial", "WorkerNavigator.serial"],
+      "events": []
     },
     "Web Share API": {
       "overview": ["Web Share API"],
