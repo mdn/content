@@ -57,7 +57,7 @@ As `balance` is limited to a short number of lines then this should generally be
 
 The `pretty` value can have a negative effect on performance and should be only used for longer blocks of text when layout is favorable over speed.
 
-The `stable` value should be used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute. This ensures that the previous lines remain stable when users edit the content.
+The `stable` value should be used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This ensures that the previous lines remain stable when users edit the content.
 
 ## Formal definition
 
