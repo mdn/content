@@ -459,6 +459,6 @@ If inserted content is not decorative, check that the information is provided to
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
-- {{cssxref("image/image-set", "image-set()")}} function
-- {{cssxref("url", "url()")}} function
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("url", "url()")}}
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
