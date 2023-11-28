@@ -100,7 +100,7 @@ There are a few perceived limitations with the Navigation API:
 ## Extensions to other interfaces
 
 - {{domxref("Window.navigation")}}
-  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. Entry point for the API.
+  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. This is the entry point for the Navigation API.
 
 ## Examples
 
