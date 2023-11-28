@@ -8,6 +8,7 @@ browser-compat: html.elements.pre
 {{HTMLSidebar}}
 
 The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional, or [monospaced](https://en.wikipedia.org/wiki/Monospaced_font), font. Whitespace inside this element is displayed as written.
+It is a block-level element.
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
