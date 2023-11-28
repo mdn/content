@@ -304,50 +304,120 @@ To explore individual `border-image` properties interactively and check how they
 
 #### Specifying the border image
 
-As the very first step, let's specify an image to use as a border. This can be any image, like a star or a balloon. We'll use this image throughout this part of the lesson to demonstrate different properties.
+As the very first step, let's specify an image to use as a border. This can be any image, like a star or a balloon. We'll use the following image throughout this part of the lesson to demonstrate different properties.
+
+<img src="stars.png" width="86" height="86"/>
 
 You specify the border image by using the {{cssxref("border-image-source")}} property. Similar to {{cssxref("background-image")}}, this property accepts either a URL to an image file or a gradient and applies it to the border of the box. You can use various image formats like PNG, JPG, or SVG. The specified image will then be processed by other `border-image` property values to render the final border appearance.
 
-If you set the `border-image-source` value to `none`, the browser uses the {{cssxref("border-style")}} property to control the appearance of the border.
+In this example, a `border-width` and `border-style` have been defined along with a border image. This is because the `border-image` property will be visible only if the element has a defined border. Without a specified `border-width` and `border-style`, the border image will not display, regardless of the `border-image` properties set.
 
-```css
+```html hidden live-sample___border-image-source
+<div class="box">Your content here</div>
+```
+
+```css hidden live-sample___border-image-source
 .box {
-  border-image-source: url("star.png");
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 15px;
+  font-size: 1.2em;
+  background: lightpink;
 }
 ```
+
+```css live-sample___border-image-source
+.box {
+  border-style: solid;
+  border-width: 15px;
+  border-image-source: url("stars.png");
+}
+```
+
+{{EmbedLiveSample("border-image-source","100%","150")}}
+
+The `border-image-source` property only sets the image to be used, but it's the combination of `border-width`, `border-style`, and other `border-image` properties that will determine how the image is displayed as the border.
 
 #### Slicing the border image
 
 Now, let's slice the image. Slicing helps us define the parts of our image that will be displayed in the corners and sides of the element's border.
 
-You can slice the image by using the {{cssxref("border-image-slice")}} property. This property slices a border image using four imaginary lines that are at the specified slice distance from the respective edges. The four slice lines effectively divide the image into nine regions: four corners, four edges, and the middle. These lines determine the size of the regions in which the border image will be displayed.
+You can slice the image by using the {{cssxref("border-image-slice")}} property. This property slices a border image using four imaginary lines that are at the specified slice distance from the respective edges. The four slice lines effectively divide the image into nine regions: four corners, four edges, and the middle. These lines determine the size of the regions of the image that will be used for the border.
 
 In the example below, the value `30%` means that 30% of the image from each side (top, right, bottom, left) is used to display in the border.
 
-```css
+```html hidden live-sample___border-image-slice
+<div class="box">Your content here</div>
+```
+
+```css hidden live-sample___border-image-slice
 .box {
-  border-image-source: url("star.png");
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 15px;
+  font-size: 1.2em;
+  background: lightpink;
+}
+```
+
+```css live-sample___border-image-slice
+.box {
+  border-style: solid;
+  border-width: 15px;
+  border-image-source: url("stars.png");
   border-image-slice: 30%;
 }
 ```
 
-How the border image finally appears is also dependent on other properties such as {{cssxref("border-image-width")}}, {{cssxref("border-image-repeat")}}, and {{cssxref("border-image-outset")}}. These properties specify how the sliced regions are scaled, repeated, and positioned. We'll learn about these properties in subsequent sections here.
+{{EmbedLiveSample("border-image-slice","100%","150")}}
 
-Furthermore, basic border properties like {{cssxref("border-width")}} and {{cssxref("border-style")}} also influence the display of the border image. The `border-width` property sets the available space for the border image, and the `border-style` property ensures that the border image is displayed correctly. For example, setting a `border-style` such as `solid`or `dotted` ensures that the space for the border image is properly established, allowing the border image to be displayed effectively. Together, these properties contribute to the overall visual effect of the border image on an element.
+How the border image finally appears is also dependent on the other properties, such as {{cssxref("border-image-width")}}, {{cssxref("border-image-repeat")}}, and {{cssxref("border-image-outset")}}. These properties specify how the sliced regions are scaled, repeated, and positioned and how much they extend beyond the border. We'll learn about these properties in subsequent sections here.
+
+Additionally, basic border properties like {{cssxref("border-width")}} and {{cssxref("border-style")}} also influence the display of the border image. The `border-width` property sets the available space for the border image, and the `border-style` property ensures that the border image is displayed correctly. For example, setting a `border-style` such as `solid`or `dotted` ensures that the space for the border image is properly established, allowing the border image to be displayed effectively. Together, these properties contribute to the overall visual effect of the border image on an element.
 
 #### Adjusting the width of the border image
 
-After slicing, we need to decide the thickness of our border image. This is where we set the width of the border image using the {{cssxref("border-image-width")}} property.
+Next, let's decide the thickness of our border image. This is where we set the width of the border image using the {{cssxref("border-image-width")}} property.
 
-In the example below, the `border-image-width` property determines how the sliced sections of the border image are scaled within the border.
+In the example below, the `border-image-width` property determines how the border image is scaled within the border area.
 
-```css
+```html hidden live-sample___border-image-width
+<div class="box">Your content here</div>
+```
+
+```css hidden live-sample___border-image-width
 .box {
-  border-image-source: url("star.png");
-  border-image-slice: 30%;
-  border-image-width: 10px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 15px;
+  font-size: 1.2em;
+  background: lightpink;
 }
 ```
+
+```css live-sample___border-image-width
+.box {
+  border-style: solid;
+  border-width: 15px;
+  border-image-source: url("stars.png");
+  border-image-slice: 30%;
+  border-image-width: 15px;
+}
+```
+
+{{EmbedLiveSample("border-image-width","100%","150")}}
 
 It's important that we understand the purposes of the `border-image-width` and {{cssxref("border-width")}} properties. While the `border-image-width` property defines how wide or thick the border image will appear, the `border-width` property defines the width of the border around the element. So `border-image-width` determines how the border image is scaled within this allocated border area. Consider these scenarios:
 
@@ -360,34 +430,86 @@ Sometimes, you might want your border image to extend beyond the element's borde
 
 Keep in mind though that when a border image extends outside the element's border box, it can cause the border image to overlap or push adjacent elements or content. This can affect the layout of neighboring elements.
 
-In the example below, the border image will be displayed with a width of `10px`, which is within the border area of the element, defined by `border-width`. The `border-image-outset` value specifies that the border image will extend `5px` outside the border box. This extension is in addition to the width specified by `border-image-width`. This creates a visual effect where the border image is centered within the `15px` border area, with a portion of it extending outward. The total width occupied by the border and its outset will be `20px` (`15px` for the border and an additional `5px` for the outset).
+In the example below, the border image will be displayed with a width of `15px`, which is within the border area of the element, defined by `border-width`. The `border-image-outset` value specifies that the border image will extend `15px` outside the border box. This extension is in addition to the width specified by `border-image-width`. The total width occupied by the border and its outset will be `30px` (`15px` for the border and an additional `15px` for the outset).
 
-```css
+```html hidden live-sample___border-image-outset
+<div class="box">Your content here</div>
+```
+
+```css hidden live-sample___border-image-outset
 .box {
-  border-image-source: url("star.png");
-  border-image-slice: 30%;
-  border-image-width: 10px; /* Width of the border image */
-  border-image-outset: 5px; /* Extension of the border image beyond the border area */
-  border-width: 15px; /* Width of the border area */
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 15px;
+  font-size: 1.2em;
+  background: lightpink;
 }
 ```
+
+```css live-sample___border-image-outset
+.box {
+  border-style: solid;
+  border-width: 15px; /* Width of the border area */
+  border-image-source: url("stars.png");
+  border-image-slice: 30%;
+  border-image-width: 15px; /* Width of the border image */
+  border-image-outset: 15px; /* Extension of the border image beyond the border area */
+}
+```
+
+{{EmbedLiveSample("border-image-outset","100%","150")}}
 
 A larger outset value can make the border appear as if it's floating around the element, while a smaller outset keeps the border image more contained.
 
 #### Controlling the layout of the border image
 
-After slicing the image, you can decide how the sliced image should fit around the border - that is, should the sliced image sections repeat, stretch, or adjust to fit the border area. The {{cssxref("border-image-repeat")}} property helps you with this. This property is often specified last among the `border-image` properties because it deals with the final layout of the border image in the element.
+After slicing the image, you can decide how the sliced sections of the image are laid out around the border - that is, should they repeat, stretch, or adjust to fit the border area. The {{cssxref("border-image-repeat")}} property helps you with this. This property is often specified last among the `border-image` properties because it deals with the final layout of the border image in the element.
 
-The value `round` will make the image repeat around the border in such a way that it fits perfectly without clipping. In contrast, the value `stretch` will stretch the image to fill the border area without repeating, and the value `repeat` will tile the image across the border, potentially clipping it if it doesn't fit perfectly in the border area.
+To make the image repeat around the border in such a way that it fits perfectly without clipping, use the value `round`. Image sections might be stretched for a proper fit. To have extra space be added instead of the stretch for a proper fit, use the value `space`.
+
+Explore other values in the playground by clicking "Play". To stretch the image to fill the border area without repeating the image, use the value `stretch`. The value `repeat` will repeat the image across the border, potentially clipping it if it doesn't fit perfectly in the border area.
+
+```html hidden live-sample___border-image-layout
+<div class="box">Your content here</div>
+```
+
+```css hidden live-sample___border-image-layout
+.box {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+  font-size: 1.2em;
+  background: lightpink;
+}
+```
+
+```css live-sample___border-image-layout
+.box {
+  border-style: solid;
+  border-width: 15px;
+  border-image-source: url("stars.png");
+  border-image-slice: 30%;
+  border-image-width: 15px;
+  border-image-outset: 5px;
+  border-image-repeat: space;
+}
+```
+
+{{EmbedLiveSample("border-image-layout","100%","150")}}
+
+You can even define different layout and scaling for horizontal (top and bottom) and vertical (left and right) sides by specifying two values for `border-image-repeat`. Click "Play" above to explore the difference in appearance between using the same value for all sides and different values for horizontal and vertical sides.
 
 ```css
 .box {
-  border-image-source: url("star.png");
-  border-image-slice: 30%;
-  border-image-width: 10px;
-  border-image-outset: 5px;
-  border-width: 15px;
-  border-image-repeat: round;
+  border-image-repeat: space stretch;
 }
 ```
 
@@ -395,13 +517,34 @@ The value `round` will make the image repeat around the border in such a way tha
 
 Finally, let's see how we can set all these properties in one go using the shorthand {{cssxref("border-image")}} property.
 
-In the example below, the shorthand `border-image` property is used to set multiple border image properties, including {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, and {{cssxref("border-image-repeat")}}, at the same time.
+In the example below, the shorthand `border-image` property is used to set multiple border image properties, including {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}}, and {{cssxref("border-image-repeat")}}, at the same time.
 
-```css
+```html hidden live-sample___border-image
+<div class="box">Your content here</div>
+```
+
+```css hidden live-sample___border-image
 .box {
-  border-image: url("star.png") 30% round;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+  font-size: 1.2em;
+  border: 1px solid;
+  background: lightpink;
 }
 ```
+
+```css live-sample___border-image
+.box {
+  border-image: url("stars.png") 30% / 15px / 5px round;
+}
+```
+
+{{EmbedLiveSample("border-image","100%","150")}}
 
 ## Test your skills!
 
