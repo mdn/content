@@ -43,7 +43,14 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not yet active.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if: - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts). - The document or the top-level document has a `null` origin. - The top-level site and embedded site are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set. - Usage is denied by the user agent's permission request to use the API.
+  - : Thrown if:
+    - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+    - The document is not the top-level document.
+    - The document has a `null` origin.
+    - The supplied `requestedOrigin` is [opaque](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).
+    - The top-level site and embedded site are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+    - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+    - Usage is denied by the user agent's permission request to use the API.
     `TypeError`
   - : Thrown if `requestedOrigin` is not a valid URL.
 
