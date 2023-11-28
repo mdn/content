@@ -61,7 +61,7 @@ async function measureUniqueReach() {
 measureUniqueReach();
 ```
 
-See [Unique reach measurement](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/) for a full explanation of this example, and [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) for more examples.
+See [Unique reach measurement](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/) for a full explanation of this example. See [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) for more examples.
 
 ## Specifications
 
