@@ -156,9 +156,6 @@ try {
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
 ## See also
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Payment Method Identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers)
