@@ -438,8 +438,8 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
        password: "your-sauce-api-key",
      });
 
-     // get full webdriver url from the client depending on region:
-     console.log(myAccount.webdriverEndpoint); // outputs "https://ondemand.us-west-1.saucelabs.com/
+     // Get full WebDriver URL from the client depending on region:
+     console.log(myAccount.webdriverEndpoint);
 
      // get job details of last run job
      const jobs = await myAccount.listJobs("your-sauce-username", {
