@@ -441,7 +441,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
      // Get full WebDriver URL from the client depending on region:
      console.log(myAccount.webdriverEndpoint);
 
-     // get job details of last run job
+     // Get job details of last run job
      const jobs = await myAccount.listJobs("your-sauce-username", {
        limit: 1,
        full: true,
