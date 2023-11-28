@@ -126,7 +126,7 @@ Some of the most developed parts of the privacy sandbox project are as follows:
 - [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)
   - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 - [Related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets)
-  - : A mechanism for a company to declare relationships between different origins. Supporting browsers will then allow limited third-party cookie access across those origins for specific purposes, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+  - : A mechanism for a company to declare relationships between different sites. Supporting browsers will then allow limited third-party cookie access across those sites for specific purposes, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 - Third-party cookie default
   - : Chrome does not yet block third-party cookies by default, but this can be set by users in Chrome settings.
 
