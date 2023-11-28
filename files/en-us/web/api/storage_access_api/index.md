@@ -38,7 +38,7 @@ The Storage Access API is intended to solve this problem; embedded cross-site co
 
 ### Unpartitioned versus partitioned cookies
 
-It is important to note that the Storage Access API is only needed to provide access to _unpartitioned_ third-party cookies. This means cookies stored in the traditional way they have historically been stored since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, thereby making tracking users across sites via cookies impossible.
+It is important to note that the Storage Access API is only needed to provide access to _unpartitioned_ third-party cookies. This means cookies stored in the traditional way they have historically been stored since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, thereby making tracking users across sites via these cookies impossible.
 
 Browsers have various mechanisms to partition third party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies).
 
