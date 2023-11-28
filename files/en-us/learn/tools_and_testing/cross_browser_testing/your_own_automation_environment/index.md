@@ -210,11 +210,12 @@ SELENIUM_BROWSER=firefox:46:MAC
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
 
 ```js
-const webdriver = require("selenium-webdriver");
-const By = webdriver.By;
-const until = webdriver.until;
+const { Builder, By, Key, until } = require("selenium-webdriver");
 
-const driver = new webdriver.Builder().forBrowser("firefox").build();
+(async function example() {
+  const driver = await new Builder().forBrowser("firefox").build();
+})();
+
 ```
 
 ### Getting the document you want to test
@@ -243,7 +244,7 @@ driver.get("http://localhost:8888/fake-div-buttons.html");
 
 But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths.
 
-Add this line to the bottom of `quick_test.js` now:
+Add this line to the bottom of `example` function now:
 
 ```js
 driver.get(
@@ -261,7 +262,7 @@ const element = driver.findElement(By.id("myElementId"));
 
 One of the most useful ways to find an element by CSS — the By.css method allows you to select an element using a CSS selector
 
-Enter the following at the bottom of your `quick_test.js` code now:
+Enter the following at the bottom of your `example` function now:
 
 ```js
 const button = driver.findElement(By.css("button:nth-of-type(1)"));
@@ -279,7 +280,7 @@ button.getText().then((text) => {
 });
 ```
 
-Add this to `quick_test.js` now.
+Add this to the bottom of the `example` function now.
 
 Making sure you are inside your project directory, try running the test:
 
@@ -297,9 +298,11 @@ button.click();
 
 Try running your test again; the button will be clicked, and the `alert()` popup should appear. At least we know the button is working!
 
-You can interact with the popup too. Add the following to the bottom of the code, and try testing it again:
+You can interact with the popup too. Add the following to the bottom of the function, and try testing it again:
 
 ```js
+await driver.wait(until.alertIsPresent());
+
 const alert = driver.switchTo().alert();
 
 alert.getText().then((text) => {
