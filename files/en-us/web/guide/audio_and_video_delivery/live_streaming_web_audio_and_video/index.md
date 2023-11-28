@@ -113,12 +113,6 @@ At the start of the streaming session, an [extended M3U (m3u8) playlist](https:/
 
 \[2] Via JavaScript and a CORS Proxy
 
-### Video Fallbacks
-
-Between DASH and HLS we can cover a significant portion of modern browsers but we still need a fallback if we want to support the rest.
-
-One popular approach is to use a Flash fallback that supports RTMP. Of course, we then have the issue that we need to encode in three different formats.
-
 ## Audio Streaming File Formats
 
 There are also some audio formats beginning to see support across browsers.
