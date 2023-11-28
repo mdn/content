@@ -9,7 +9,7 @@ browser-compat: api.BatteryManager
 
 The `BatteryManager` interface of the {{domxref("Battery Status API", "", "", "nocode")}} provides information about the system's battery charge level. The {{domxref("navigator.getBattery()")}} method returns a promise that resolves with a `BatteryManager` interface.
 
-Since Chrome 103, the `Navigator.getBattery()` method of {{domxref("Battery Status API", "", "", "nocode")}} only expose to secure context.
+Since Chrome 103, the `BatteryManager` interface of {{domxref("Battery Status API", "", "", "nocode")}} only expose to secure context.
 
 {{InheritanceDiagram}}
 
