@@ -75,6 +75,8 @@ The custom state pseudo-class matches the custom element only if the state is `t
 This example, which is adapted from the specification, demonstrates a custom checkbox element that has an internal "checked" state.
 This is mapped to the `--checked` custom state, allowing styling to be applied using the `:--checked` custom state pseudo class.
 
+#### JavaScript
+
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
 In the constructor we just call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
 The content of the element is defined using a `<style>` element to be the text `[]` or `[x]` followed by a label.
@@ -136,11 +138,15 @@ We then call the {{domxref("CustomElementRegistry/define", "define()")}} method 
 customElements.define("labeled-checkbox", LabeledCheckbox);
 ```
 
+#### HTML
+
 After registering the custom element we can use use the element in HTML as shown:
 
 ```html
 <labeled-checkbox>You need to check this</labeled-checkbox>
 ```
+
+#### CSS
 
 Finally we use the `:--checked` custom state pseudo class to select CSS for when the box is checked.
 
@@ -153,7 +159,123 @@ labeled-checkbox:--checked {
 }
 ```
 
+#### Result
+
+The result can be tested below.
+Click the element to see a different border being applied as the checkbox `checked` state is toggled.
+
 {{EmbedLiveSample("Labeled Checkbox", "100%", 50)}}
+
+### Non-boolean internal states
+
+This example shows how to handle the case where the custom element has an internal property with multiple possible value.
+
+The custom element in this case has a `state` property with allowed values: "loading", "interactive" and "complete".
+To make this work we map each value to its own custom state and create code to ensure that only the dashed identifier corresponding to the internal state is set.
+You can see this in the implementation of the `set state()` method: we set the internal state, add the dashed identifier for the matching custom state to `CustomStateSet`, and remove the dashed identifiers associated with all the other values.
+
+Most of the rest of the code is very similar to the previous example (we show different text for each state as the user toggles through them).
+
+#### JavaScript
+
+```js
+class ManyStateElement extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
+    this.state = "loading";
+    this.addEventListener("click", this._onClick.bind(this));
+
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.innerHTML = `<style>
+        :host {
+          display: block;
+          font-family: monospace;
+        }
+       :host::before { content: '[ unknown ]'; white-space: pre; }
+       :host(:--loading)::before { content: '[ loading ]' }
+       :host(:--interactive)::before { content: '[ interactive ]' }
+       :host(:--complete)::before { content: '[ complete ]' }
+       </style>
+       <slot>Click me</slot>`;
+  }
+
+  get state() {
+    return this._state;
+  }
+
+  set state(stateName) {
+    // Set internal state to passed value
+    // Add dashed identifier matching state and delete others
+    if (stateName == "loading") {
+      this._state = "loading";
+      this._internals.states.add("--loading");
+      this._internals.states.delete("--interactive");
+      this._internals.states.delete("--complete");
+    } else if (stateName == "interactive") {
+      this._state = "interactive";
+      this._internals.states.delete("--loading");
+      this._internals.states.add("--interactive");
+      this._internals.states.delete("--complete");
+    } else if (stateName == "complete") {
+      this._state = "complete";
+      this._internals.states.delete("--loading");
+      this._internals.states.delete("--interactive");
+      this._internals.states.add("--complete");
+    }
+  }
+
+  _onClick(event) {
+    // Cycle the state when element clicked
+    if (this.state === "loading") {
+      this.state = "interactive";
+    } else if (this.state === "interactive") {
+      this.state = "complete";
+    } else if (this.state === "complete") {
+      this.state = "loading";
+    }
+  }
+}
+
+customElements.define("many-state-element", ManyStateElement);
+```
+
+#### HTML
+
+After registering the new element we add it to the HTML.
+This is similar to the previous example except we don't specify a value and use the default value from the slot (`<slot>Click me</slot>`).
+
+```html
+<many-state-element></many-state-element>
+```
+
+#### CSS
+
+In the CSS we use the three custom state pseudo classes to select CSS for each of the internal state values: `:--loading`, `:--interactive`, `:--complete`.
+Note that the custom element code ensures that only one of these custom states can be defined at a time.
+
+```css
+many-state-element:--loading {
+  border: dotted grey;
+}
+many-state-element:--interactive {
+  border: dashed blue;
+}
+many-state-element:--complete {
+  border: solid green;
+}
+```
+
+#### Results
+
+The result can be tested below.
+Click the element to see a different border being applied as the state changes.
+
+{{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
 
 ## Specifications
 
