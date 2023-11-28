@@ -79,7 +79,7 @@ ul {
 
 ### Using a gradient
 
-This example has a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("image/linear-gradient", "linear-gradient()")}} image function.
+This example has a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
 
 #### HTML
 
