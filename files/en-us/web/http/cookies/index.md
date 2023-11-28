@@ -63,7 +63,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 ### Define the lifetime of a cookie
 
-The lifetime of a cookie can be defined in two ways:
+Cookies can persist for two different periods, depending on the attributes used with the {{HTTPHeader("Set-Cookie")}} header when they were created:
 
 - _Session_ cookies (i.e. cookies without a `Max age` or `Expires` attribute) are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 - _Permanent_ cookies are deleted at a date specified by the `Expires` attribute, or after a period of time specified by the `Max-Age` attribute.
