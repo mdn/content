@@ -57,7 +57,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("FencedFrameConfig")}} ob
 
 ## Examples
 
-### Basic A/B testing example
+### Basic A/B testing
 
 ```js
 // Randomly assigns a user to a group 0 or 1
