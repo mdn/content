@@ -11,7 +11,7 @@ browser-compat: api.CustomStateSet
 
 The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) stores a list of states for an [autonomous custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element), and allows states to be added and removed from the set.
 
-The interface can be used to expose the internal states of a custom element, which cannot be directly set using properties, allowing them to be used in CSS selectors by code that uses the element.
+The interface can be used to expose the internal states of a custom element, allowing them to be used in CSS selectors by code that uses the element.
 
 ## Instance properties
 
@@ -41,10 +41,10 @@ The interface can be used to expose the internal states of a custom element, whi
 
 Built in HTML elements can have different _states_, such as "enabled" and "disabled, "checked" and "unchecked", "initial", "loading" and "ready".
 Some of these states are public and can be set or queried using properties/attributes, while others are effectively internal, and cannot be directly set.
-Whether external or internal, commonly these states can be used as CSS selectors for styling the element.
+Whether external or internal, commonly elements states can be selected and styled using [CSS pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) as selectors.
 
 The `CustomStateSet` allows developers to add and delete states for autonomous custom elements (but not elements derived from built-in elements).
-These states can then be used as as CSS selectors in a similar way to the states of built-in elements.
+These states can then be used as as custom state pseudo-class selectors in a similar way to the pseudo-classes for built-in elements.
 
 ### Setting custom element states
 
@@ -53,7 +53,7 @@ To make the {{domxref("CustomStateSet")}} available, a custom element must first
 Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements. <!-- https://github.com/whatwg/html/issues/5166 -->
 
 The `CustomStateSet` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold an ordered set of state values.
-Each value is a dashed identifier, with the format: `--mystate`.
+Each value is a dashed identifier, with the format: `--mystatename`.
 Identifiers can be added to the set or deleted.
 If an identifier is present in the set the particular state is `true`, while if it is removed the state is `false`.
 
@@ -64,17 +64,16 @@ The states can be used within the custom element but are not directly accessible
 ### Interaction with CSS
 
 Developers can select a custom element with a specific state using its state _custom state pseudo-class_.
-The format of this pseudo-class is `:--mystate`, where `--mystate` is the state as defined in the element.
+The format of this pseudo-class is `:--mystatename`, where `--mystatename` is the state as defined in the element.
 
-The custom state pseudo-class matches the custom element only if the state is `true` (i.e. if `--mystate` is present in the `CustomStateSet`).
+The custom state pseudo-class matches the custom element only if the state is `true` (i.e. if `--mystatename` is present in the `CustomStateSet`).
 
 ## Examples
 
 ### Labeled Checkbox
 
-This example, which is adapted from the specification, demonstrates a custom checkbox element that exposes its "checked" state as the custom state `--checked`, allowing styling to be applied using the `:--checked` custom state pseudo class.
-
-> **Note:** If you wanted to be able to set the checked state of the custom element using an attribute you could instead define a custom property.
+This example, which is adapted from the specification, demonstrates a custom checkbox element that has an internal "checked" state.
+This is mapped to the `--checked` custom state, allowing styling to be applied using the `:--checked` custom state pseudo class.
 
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
 In the constructor we just call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
