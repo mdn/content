@@ -22,7 +22,7 @@ register(name, operationCtor)
 ### Parameters
 
 - `name`
-  - : A string representing the name you want to register the operation with. When the operation is invoked (for example via {{domxref("WindowSharedStorage.run()")}} or {{domxref("WindowSharedStorage.selectURL()")}}), the name is used to identify the operation you want to run.
+  - : A string representing the name with which you want to register the operation. When the operation is invoked (say via {{domxref("WindowSharedStorage.run()")}} or {{domxref("WindowSharedStorage.selectURL()")}}), this name is used to identify the operation you want to run.
 - `operationCtor`
   - : The class name of the operation to be registered. In real terms, this is the class constructor, which is invoked behind the scenes when the operation is run.
 
