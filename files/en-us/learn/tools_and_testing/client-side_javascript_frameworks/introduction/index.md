@@ -113,9 +113,9 @@ function buildTodoItemEl(id, name) {
 }
 ```
 
-Here, we use the [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) method to make our `<li>`, and several more lines of code to create the properties and children it needs.
+Here, we use the [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) method to make our `<li>`, and several more lines of code to create the properties and child elements it needs.
 
-The tenth line of the previous snippet references another build function: `buildDeleteButtonEl()`. It follows a similar pattern to the one we used to build a list item element:
+The previous snippet references another build function: `buildDeleteButtonEl()`. It follows a similar pattern to the one we used to build a list item element:
 
 ```js
 function buildDeleteButtonEl(id) {
