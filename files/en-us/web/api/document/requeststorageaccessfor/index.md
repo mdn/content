@@ -10,7 +10,7 @@ browser-compat: api.Document.requestStorageAccessFor
 
 {{APIRef("Storage Access API")}}{{seecompattable}}
 
-The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 This is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or {{htmlelement("script")}} elements requiring cookies.
 
