@@ -87,12 +87,14 @@ para.onpointerdown = (event) => {
 
 - Related events
 
-  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
+  - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
+  - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
+  - {{domxref('Element/pointerover_event', 'pointerover')}}
+  - {{domxref('Element/pointerenter_event', 'pointerenter')}}
+  - {{domxref('Element/pointerdown_event', 'pointerdown')}}
+  - {{domxref('Element/pointermove_event', 'pointermove')}}
+  - {{domxref('Element/pointerup_event', 'pointerup')}}
+  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
+  - {{domxref('Element/pointerout_event', 'pointerout')}}
+  - {{domxref('Element/pointerleave_event', 'pointerleave')}}
+  - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
