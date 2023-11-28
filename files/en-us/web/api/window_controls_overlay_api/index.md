@@ -53,7 +53,7 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 - {{domxref("WindowControlsOverlayGeometryChangeEvent")}} {{Experimental_Inline}}
   - : Represents events providing information related to the desktop Progress Web App's title var region when its size or visibility changes.
 
-## Extensions to other interfaces
+### Extensions to other interfaces
 
 - {{domxref("Navigator.windowControlsOverlay")}}
   - : Returns the {{domxref("WindowControlsOverlay")}} interface, which exposes information about the title bar geometry in desktop Progressive Web Apps.
