@@ -2,6 +2,7 @@
 title: SecurePaymentConfirmationRequest
 slug: Web/API/SecurePaymentConfirmationRequest
 page-type: web-api-interface
+spec-urls: https://w3c.github.io/secure-payment-confirmation/#sctn-securepaymentconfirmationrequest-dictionary
 ---
 
 {APIRef("SecurePaymentConfirmationRequest")}}
