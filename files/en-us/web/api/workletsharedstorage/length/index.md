@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with a number representing the number of key/value pairs currently in shared storage.
+A {{jsxref("Promise")}} that fulfills with a number, which represents the total count of key-value pairs currently in the shared storage.
 
 ### Exceptions
 
