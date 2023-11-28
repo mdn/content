@@ -18,7 +18,7 @@ A number of mechanisms are used in combination for strong authentication, includ
 
 SPC is designed to enable streamlined strong customer authentication (SCA) in a variety of payment systems, and to provide cryptographic evidence that the user has consented to the terms of a transaction. When the API is called, the browser displays elements of the transaction in a dialog box: the name of the merchant, payment instrument, and amount and currency of payment. For example, here is the Chrome M118 transaction dialog for SPC:
 
-{{EmbedLiveSample("Chrome M118 transaction dialog for SPC", 160, 160, "chrome-tx-dialog.png")}}
+![Chrome M118 transaction dialog for SPC](chrome-tx-dialog.png)
 
 Selecting "Verify" initiates a Web Authentication flow. When the user successfully authenticates (e.g., using biometric authenticators on their phone or laptop), the browser passes the data displayed in the dialog to the authenticator, which signs it and returns it as part of the resulting Web Authentication assertion. The assertion can then be passed to the Relying Party for validation. Because the browser passes the displayed data directly to the authenticator (with no JavaScript code able to alter the data), the Relying Party can have high confidence that the user consented to the displayed transaction data.
 
