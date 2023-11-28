@@ -12,7 +12,7 @@ In this example, we will open an {{domxref("RTCDataChannel")}} connection linkin
 
 ## The HTML
 
-First, let's take a quick look at the [HTML that's needed](https://github.com/mdn/samples-server/blob/main/s/webrtc-simple-datachannel/index.html). There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:
+First, let's take a quick look at the [HTML that's needed](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/index.html). There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:
 
 ```html
 <button id="connectButton" name="connectButton" class="buttonleft">
@@ -59,7 +59,7 @@ Finally, there's the little box into which we'll insert the messages. This {{HTM
 
 ## The JavaScript code
 
-While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/main/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
+While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
 
 ### Starting up
 
@@ -325,7 +325,7 @@ This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarl
 
 ## Next steps
 
-Take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/main/s/webrtc-simple-datachannel) source code, available on GitHub.
+Take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
 
 ## See also
 

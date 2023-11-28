@@ -69,7 +69,7 @@ A new random notification is created every 30 seconds until it becomes too annoy
 Push is more complicated than notifications — we need to subscribe to a server that will then send the data back to the app. The app's Service Worker will receive data from the push server, which can then be shown using the notifications system, or another mechanism if desired.
 
 The technology is still at a very early stage — some working examples use the Google Cloud Messaging platform, but are being rewritten to support [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification), which offers an extra layer of security for your app.
-You can examine the [Service Workers Cookbook examples](https://github.com/mdn/serviceworker-cookbook/tree/main/push-payload), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
+You can examine the [Service Workers Cookbook examples](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
 
 As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers) article. Inside the service worker, a push-service subscription mechanism is created by calling the [`getSubscription()`](/en-US/docs/Web/API/PushManager/getSubscription) method of the [`PushManager`](/en-US/docs/Web/API/PushManager) interface.
 
@@ -95,13 +95,13 @@ The data can be retrieved and then shown as a notification to the user immediate
 
 ### Push example
 
-Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/tree/main/push-payload).
+Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload).
 
 This demo consists of three files:
 
-- [index.js](https://github.com/mdn/serviceworker-cookbook/blob/main/push-payload/index.js), which contains the source code of our app
-- [server.js](https://github.com/mdn/serviceworker-cookbook/blob/main/push-payload/server.js), which contains the server part (written in Node.js)
-- [service-worker.js](https://github.com/mdn/serviceworker-cookbook/blob/main/push-payload/service-worker.js), which contains the Service Worker-specific code.
+- [index.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/index.js), which contains the source code of our app
+- [server.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/server.js), which contains the server part (written in Node.js)
+- [service-worker.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/service-worker.js), which contains the Service Worker-specific code.
 
 Let's explore all of these
 

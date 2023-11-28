@@ -453,7 +453,7 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 
 ## See also
 
-- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/main/s/webrtc-capturestill)
+- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
 - [Using frames from a video](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video) in the Canvas tutorial
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

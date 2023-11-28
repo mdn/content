@@ -11,7 +11,7 @@ WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSoc
 {{AvailableInWorkers}}
 
 > **Note:** The example snippets in this article are taken from our WebSocket chat client/server sample.
-> [See the code](https://github.com/mdn/samples-server/tree/main/s/websocket-chat).
+> [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
 
 ## Creating a WebSocket object
 

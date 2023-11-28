@@ -10,7 +10,7 @@ page-type: guide
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, [as discussed elsewhere](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection), in order for two devices on different networks to locate one another. This process is called **signaling** and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.
 
-In this article, we will further enhance the [WebSocket chat](https://webrtc-from-chat.glitch.me/) first created as part of our WebSocket documentation (this article link is forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can [try out this example on Glitch](https://webrtc-from-chat.glitch.me/), and you can [remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) to experiment with it as well. You can also [look at the full project](https://github.com/mdn/samples-server/tree/main/s/webrtc-from-chat) on GitHub.
+In this article, we will further enhance the [WebSocket chat](https://webrtc-from-chat.glitch.me/) first created as part of our WebSocket documentation (this article link is forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can [try out this example on Glitch](https://webrtc-from-chat.glitch.me/), and you can [remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) to experiment with it as well. You can also [look at the full project](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat) on GitHub.
 
 > **Note:** If you try out the example on Glitch, please note that any changes made to the code will immediately reset any connections. In addition, there is a short timeout period; the Glitch instance is for quick experiments and testing only.
 
@@ -24,11 +24,11 @@ It's important to note that the server doesn't need to understand or interpret t
 
 ### Readying the chat server for signaling
 
-Our [chat server](https://github.com/mdn/samples-server/tree/main/s/websocket-chat) uses the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to send information as {{Glossary("JSON")}} strings between each client and the server. The server supports several message types to handle tasks, such as registering new users, setting usernames, and sending public chat messages.
+Our [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) uses the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to send information as {{Glossary("JSON")}} strings between each client and the server. The server supports several message types to handle tasks, such as registering new users, setting usernames, and sending public chat messages.
 
 To allow the server to support signaling and ICE negotiation, we need to update the code. We'll have to allow directing messages to one specific user instead of broadcasting to all connected users, and ensure unrecognized message types are passed through and delivered, without the server needing to know what they are. This lets us send signaling messages using this same server, instead of needing a separate server.
 
-Let's take a look at changes we need to make to the chat server to support WebRTC signaling. This is in the file [`chatserver.js`](https://github.com/mdn/samples-server/blob/main/s/webrtc-from-chat/chatserver.js).
+Let's take a look at changes we need to make to the chat server to support WebRTC signaling. This is in the file [`chatserver.js`](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chatserver.js).
 
 First up is the addition of the function `sendToOneUser()`. As the name suggests, this sends a stringified JSON message to a particular username.
 
@@ -161,7 +161,7 @@ The HTML for our client needs a location for video to be presented. This require
 </div>
 ```
 
-The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/main/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
+The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
 
 The `<video>` element with the `id` "`received_video`" will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The "`local_video`" `<video>` element presents a preview of the user's camera; specifying the `muted` attribute, as we don't need to hear local audio in this preview panel.
 
@@ -662,7 +662,7 @@ function handleICEGatheringStateChangeEvent(event) {
 
 ## Next steps
 
-You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/main/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
+You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
 
 Another obvious improvement would be to add a "ringing" feature, so that instead of just asking the user for permission to use the camera and microphone, a "User X is calling. Would you like to answer?" prompt appears first.
 
