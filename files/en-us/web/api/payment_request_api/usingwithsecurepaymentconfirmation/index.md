@@ -50,7 +50,8 @@ const publicKey = {
     name: "Fancy Bank",
   },
   user: {
-    id: Uint8Array.from(userId, (c) => c.charCodeAt(0)), // Assuming that userId is ASCII-only
+    // Assuming that userId is ASCII-only
+    id: Uint8Array.from(userId, (c) => c.charCodeAt(0)),
     name: "jane.doe@example.org",
     displayName: "Jane Doe",
   },
