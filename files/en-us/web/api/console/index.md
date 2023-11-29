@@ -23,58 +23,58 @@ This page documents the [Methods](#methods) available on the `console` object an
 
 ## Instance methods
 
-- {{domxref("console.assert_static")}}
+- {{domxref("console/assert_static", "console.assert()")}}
   - : Log a message and stack trace to console if the first argument is `false`.
-- {{domxref("console.clear_static")}}
+- {{domxref("console/clear_static", "console.clear()")}}
   - : Clear the console.
-- {{domxref("console.count_static")}}
+- {{domxref("console/count_static", "console.count()")}}
   - : Log the number of times this line has been called with the given label.
-- {{domxref("console.countreset_static")}}
+- {{domxref("console/countReset_static", "console.countReset()")}}
   - : Resets the value of the counter with the given label.
-- {{domxref("console.debug_static")}}
+- {{domxref("console/debug_static", "console.debug()")}}
   - : Outputs a message to the console with the log level `debug`.
-- {{domxref("console.dir_static")}}
+- {{domxref("console/dir_static", "console.dir()")}}
   - : Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.
-- {{domxref("console.dirxml_static")}}
+- {{domxref("console/dirxml_static", "console.dirxml()")}}
   - : Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.
-- {{domxref("console.error_static")}}
+- {{domxref("console/error_static", "console.error()")}}
   - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : An alias for `console.error()`.
-- {{domxref("console.group_static")}}
+- {{domxref("console/group_static", "console.group()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. To move back out a level, call `console.groupEnd()`.
-- {{domxref("console.groupcollapsed_static")}}
+- {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
   - : Creates a new inline [group](#using_groups_in_the_console), indenting all following output by another level. However, unlike `console.group()` this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call `console.groupEnd()`.
-- {{domxref("console.groupend_static")}}
+- {{domxref("console/groupEnd_static", "console.groupEnd()")}}
   - : Exits the current inline [group](#using_groups_in_the_console).
-- {{domxref("console.info_static")}}
+- {{domxref("console/info_static", "console.info()")}}
   - : Informative logging of information. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
-- {{domxref("console.log_static")}}
+- {{domxref("console/log_static", "console.log()")}}
   - : For general output of logging information. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
-- {{domxref("console.profile_static")}} {{Non-standard_inline}}
+- {{domxref("console/profile_static", "console.profile()")}} {{Non-standard_inline}}
   - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). You can specify an optional name for the profile.
-- {{domxref("console.profileend_static")}} {{Non-standard_inline}}
+- {{domxref("console/profileEnd_static", "console.profileEnd()")}} {{Non-standard_inline}}
   - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
-- {{domxref("console.table_static")}}
+- {{domxref("console/table_static", "console.table()")}}
   - : Displays tabular data as a table.
-- {{domxref("console.time_static")}}
+- {{domxref("console/time_static", "console.time()")}}
   - : Starts a [timer](#timers) with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.
-- {{domxref("console.timeend_static")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
   - : Stops the specified [timer](#timers) and logs the elapsed time in milliseconds since it started.
-- {{domxref("console.timelog_static")}}
+- {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
-- {{domxref("console.timestamp_static")}} {{Non-standard_inline}}
+- {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
   - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
-- {{domxref("console.trace_static")}}
+- {{domxref("console/trace_static", "console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
-- {{domxref("console.warn_static")}}
+- {{domxref("console/warn_static", "console.warn()")}}
   - : Outputs a warning message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
 
 ## Examples
 
 ### Outputting text to the console
 
-The most frequently-used feature of the console is logging of text and other data. There are several categories of output you can generate, using the {{domxref("console.log_static")}}, {{domxref("console.info_static")}}, {{domxref("console.warn_static")}}, {{domxref("console.error_static")}}, or {{domxref("console.debug_static")}} methods. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.
+The console's most frequently used feature is logging text and other data. There are several categories of output you can generate using the {{domxref("console/log_static", "console.log()")}}, {{domxref("console/info_static", "console.info()")}}, {{domxref("console/warn_static", "console.warn()")}}, {{domxref("console/error_static", "console.error()")}}, or {{domxref("console/debug_static", "console.debug()")}} methods. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to view only the kinds of output that interest you.
 
 There are two ways to use each of the output methods; you can pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.
 
@@ -236,7 +236,7 @@ Notice that the timer's name is displayed both when the timer is started and whe
 
 ### Stack traces
 
-The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console.trace_static")}}. Given code like this:
+The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console/trace_static", "console.trace()")}}. Given code like this:
 
 ```js
 function foo() {

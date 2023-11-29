@@ -2,12 +2,10 @@
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Device-Memory
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+{{HTTPSidebar}} {{securecontext_header}}
 
 The **`Device-Memory`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the approximate amount of available RAM on the client device. The header is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 
