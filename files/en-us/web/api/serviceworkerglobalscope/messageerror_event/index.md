@@ -64,7 +64,7 @@ if (navigator.serviceWorker) {
 }
 ```
 
-The service worker can check the message error by listening to the `messageerror` event:
+The service worker can listen for the message deserialization error by listening to the `messageerror` event:
 
 ```js
 // service-worker.js
@@ -76,7 +76,7 @@ self.addEventListener("messageerror", (event) => {
 });
 ```
 
-Alternatively, the script can listen for the message error using `onmessageerror`:
+Alternatively, the script can listen for the message deserialization error using `onmessageerror`:
 
 ```js
 // service-worker.js
