@@ -24,7 +24,7 @@ The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Pa
 - `payeeName` {{optional_inline}}
   - : The display name of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of `payeeOrigin`.
 - `payeeOrigin`
-  - : The origin of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of payeeName.
+  - : The origin of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of `payeeName`.
 - `extensions`
   - : Any [WebAuthn extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) that should be used for the passed credential(s). The caller does not need to specify the [payment extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment); it is added automatically.
 - `locale`
