@@ -1,15 +1,15 @@
 ---
-title: "Navigator: deviceMemory property"
+title: "WorkerNavigator: deviceMemory property"
 short-title: deviceMemory
-slug: Web/API/Navigator/deviceMemory
+slug: Web/API/WorkerNavigator/deviceMemory
 page-type: web-api-instance-property
-browser-compat: api.Navigator.deviceMemory
+browser-compat: api.WorkerNavigator.deviceMemory
 ---
 
 {{APIRef("Device Memory API")}}{{securecontext_header}}
 
 The **`deviceMemory`** read-only
-property of the {{domxref("Navigator")}} interface returns the approximate amount of
+property of the {{domxref("WorkerNavigator")}} interface returns the approximate amount of
 device memory in gigabytes.
 
 The reported value is imprecise to curtail {{glossary("fingerprinting")}}. It's approximated by
@@ -22,6 +22,8 @@ high-memory devices.
 A floating point number; one of `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 
 ## Examples
+
+The following code can be run in a worker:
 
 ```js
 const memory = navigator.deviceMemory;
