@@ -21,7 +21,7 @@ The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Pa
   - : The description of the instrument name and icon to display during registration and to be signed along with the transaction details.
 - `timeout`
   - : The number of milliseconds before the request to sign the transaction details times out. At most 1 hour.
-- `payeeName`
+- `payeeName` {{optional_inline}}
   - : The display name of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of payeeOrigin.
 - `payeeOrigin`
   - : The origin of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of payeeName.
