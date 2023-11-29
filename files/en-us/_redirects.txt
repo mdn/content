@@ -9599,7 +9599,6 @@
 /en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
 /en-US/docs/Web/API/SVGAnimationElement/onend	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
 /en-US/docs/Web/API/SVGAnimationElement/onrepeat	/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event
-/en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/HTMLElement/change_event
