@@ -56,7 +56,7 @@ The following exceptions can be raised by this method:
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- [File API](/en-US/docs/Web/API/File_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
