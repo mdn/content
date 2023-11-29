@@ -104,7 +104,7 @@ The Storage Access API features above allow an embedded document to request its 
 
 > **Note:** `requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources embedded in {{htmlelement("iframe")}}s, and directly embedded e.g. via {{htmlelement("img")}}s or {{htmlelement("script")}} elements.
 
-For this method to work, both the calling top-level page and the embedded document storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 
 Typical usage of `requestStorageAccessFor()` looks like this (this time written in regular promise-style, rather than async/await):
 
