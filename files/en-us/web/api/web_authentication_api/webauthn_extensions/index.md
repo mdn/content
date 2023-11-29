@@ -342,7 +342,7 @@ If the relying party is authorized to receive the `minPinLength` value (if its `
 
 If the relying party is not authorized, the extension is ignored, and no `"minPinLength"` output value is provided.
 
-## `payment`
+### `payment`
 
 - Usable in: Registration ({{domxref("CredentialsContainer.create()","create()")}})
 - Processed by: User agent
