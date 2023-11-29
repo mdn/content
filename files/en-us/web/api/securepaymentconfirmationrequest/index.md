@@ -22,7 +22,7 @@ The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Pa
 - `timeout`
   - : The number of milliseconds before the request to sign the transaction details times out. At most 1 hour.
 - `payeeName` {{optional_inline}}
-  - : The display name of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of payeeOrigin.
+  - : The display name of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of `payeeOrigin`.
 - `payeeOrigin`
   - : The origin of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of payeeName.
 - `extensions`
