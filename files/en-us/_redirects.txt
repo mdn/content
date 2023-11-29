@@ -2241,7 +2241,6 @@
 /en-US/docs/DOM/window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/DOM/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/setInterval
-/en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/DOM/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -2665,7 +2664,6 @@
 /en-US/docs/DOM:window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM:window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/setInterval
-/en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/DOM:window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -3388,7 +3386,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/Document_Object_Model_(DOM)/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/setInterval
-/en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Document_Object_Model_(DOM)/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/Document_Object_Model_(DOM)/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -10916,7 +10913,6 @@
 /en-US/docs/Web/API/window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/Web/API/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/setInterval
-/en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/Web/API/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -13708,7 +13704,6 @@
 /en-US/docs/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/window.setInterval	/en-US/docs/Web/API/setInterval
-/en-US/docs/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/window.status	/en-US/docs/Web/API/Window/status
