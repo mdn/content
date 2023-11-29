@@ -59,14 +59,14 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("clearInterval", "SharedWorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval")}}.
 - {{domxref("clearTimeout", "SharedWorkerGlobalScope.clearTimeout()")}}
-  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+  - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("WorkerGlobalScope.dump", "SharedWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Writes a message to the console.
 - {{domxref("WorkerGlobalScope.importScripts", "SharedWorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 - {{domxref("setInterval", "SharedWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
-- {{domxref("setTimeout", "SharedWorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "SharedWorkerGlobalScope.setTimeout()")}}
   - : Sets a delay for executing a function.
 
 ## Events

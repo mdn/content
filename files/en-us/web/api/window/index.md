@@ -241,7 +241,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : Toggles a user's ability to resize a window.
-- {{domxref("setTimeout", "Window.setTimeout()")}}
+- {{domxref("setTimeout()", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
   - : Displays a directory picker which allows the user to select a directory.
