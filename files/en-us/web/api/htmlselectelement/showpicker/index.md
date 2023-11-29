@@ -58,6 +58,40 @@ if ("showPicker" in HTMLSelectElement.prototype) {
 }
 ```
 
+### Usage
+
+This example shows how this feature can be used.
+
+> **Note:** A live example cannot be shown here because they run in a cross-origin frame, and would cause a [`SecurityError`](#securityerror)
+
+#### HTML
+
+```html
+<p>
+  <select>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+  </select>
+  <button type="button">Show Picker</button>
+</p>
+```
+
+#### JavaScript
+
+The code simply gets the previous element of the selected button and calls showPicker() on it.
+
+```js
+const button = document.querySelector("button");
+button.addEventListener("click", (event) => {
+  const select = event.srcElement.previousElementSibling;
+  try {
+    select.showPicker();
+  } catch (error) {
+    window.alert(error);
+  }
+});
+```
+
 ## Specifications
 
 {{Specifications}}
