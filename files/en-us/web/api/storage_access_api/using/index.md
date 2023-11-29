@@ -102,7 +102,7 @@ async function handleCookieAccess() {
 
 The Storage Access API features above allow an embedded document to request its own third-party cookie access. There is an additional experimental method available, {{domxref("Document.requestStorageAccessFor()")}}, a proposed extension to the Storage Access API that allows top-level sites to request storage access on behalf of specific related origins.
 
-> **Note:** `requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources embedded in {{htmlelement("iframe")}}s, and directly embedded e.g. via {{htmlelement("img")}}s or {{htmlelement("script")}} elements.
+> **Note:** `requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for directly embedded cross-site resources, e.g. via {{htmlelement("img")}}s or {{htmlelement("script")}} elements.
 
 For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 
