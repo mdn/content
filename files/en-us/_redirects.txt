@@ -10195,6 +10195,8 @@
 /en-US/docs/Web/API/Window/onvrdisplaypointerunrestricted	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/onvrdisplaypresentchange	/en-US/docs/Web/API/Window/vrdisplaypresentchange_event
 /en-US/docs/Web/API/Window/openDialog	/en-US/docs/Web/API/Window
+/en-US/docs/Web/API/Window/pageXOffset	/en-US/docs/Web/API/Window/scrollX
+/en-US/docs/Web/API/Window/pageYOffset	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/Web/API/Window/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/File_and_Directory_Entries_API#resolvelocalfilesystemurl()
