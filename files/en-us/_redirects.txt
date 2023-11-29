@@ -11989,6 +11989,7 @@
 /en-US/docs/Web/Guide/AJAX/Getting_Started	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support	/en-US/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
+/en-US/docs/Web/Guide/API	/en-US/docs/Web/API
 /en-US/docs/Web/Guide/API/DOM	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
