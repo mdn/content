@@ -120,7 +120,7 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 - {{domxref("Document.hasStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to third-party cookies.
 - {{domxref("Document.requestStorageAccess()")}}
-  - : Requests access to third-party cookies from embedded content; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+  - : Allows content loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 

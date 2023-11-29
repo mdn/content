@@ -102,7 +102,7 @@ async function handleCookieAccess() {
 
 The Storage Access API features above allow an embedded document to request its own third-party cookie access. There is an additional experimental method available, {{domxref("Document.requestStorageAccessFor()")}}, a proposed extension to the Storage Access API that allows top-level sites to request storage access on behalf of specific related origins.
 
-> **Note:** `requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for directly embedded cross-site resources, e.g. via {{htmlelement("img")}}s or {{htmlelement("script")}} elements.
+`requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources directly embedded into the top-level site that are unable to request their own storage access, for example via {{htmlelement("img")}} or {{htmlelement("script")}} elements.
 
 For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 
@@ -116,7 +116,7 @@ navigator.permissions
   })
   .then((permission) => {
     if (permission.state === "granted") {
-      // Permission has already been granted, promise will resolve automatically
+      // Permission has already been granted
       // No need to call requestStorageAccessFor() again, just start using cookies
       doThingsWithCookies();
     } else if (permission.state === "prompt") {
@@ -145,10 +145,10 @@ function rSAFor() {
 }
 ```
 
-In the above code, we call `navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: 'https://example.com'})` to discover if the user will be prompted or if storage access has already been granted to the specified origin.
+In the above code, we call `navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: 'https://example.com'})` to discover if the origin has previously been granted permission, or if this call needs to be made to grant this access.
 
-- If the permission status is `"granted"` we call `document.requestStorageAccessFor('https://example.com')`, which should succeed without a user gesture.
-- If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor('https://target.site')` call from within a user gesture, such as a button click.
+- If the permission status is `"granted"` we can just start using cookies; there is no need to call `requestStorageAccessFor()` again.
+- If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor('https://example.com')` call from within a user gesture, such as a button click.
 
 > **Note:** The feature name used when querying the permissions status in this case is different to the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`.
 

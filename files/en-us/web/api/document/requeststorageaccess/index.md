@@ -8,7 +8,7 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies.
 
 This is relevant to user agents that by default block access to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
