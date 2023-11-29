@@ -10,6 +10,8 @@ browser-compat: api.Window.storage_event
 
 The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
 
+This event is not cancelable and does not bubble.
+
 > **Note:** This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 
 ## Syntax
