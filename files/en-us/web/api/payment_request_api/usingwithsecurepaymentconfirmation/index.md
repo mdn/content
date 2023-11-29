@@ -30,7 +30,7 @@ Secure Payment Confirmation leverages underlying capabilities of the Payment Req
 
 ## Web authentication extension
 
-Secure Payment Confirmation defines a [Web Authentication extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions), [payment](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment), which adds three payments-specific capabilities on top of traditional Web Authentication:
+Secure Payment Confirmation defines a [Web Authentication extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions), [`payment`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment), which adds three payments-specific capabilities on top of traditional Web Authentication:
 
 1. When the Relying Party opts in, allows entities other than the Relying Party to initiate a payments authentication ceremony with the Relying Party's credentials. SPC decouples the authentication ceremony from validation of the authentication results. This allows merchants (or their payment service providers in a cross-origin iframe) to retain control over the user experience of authentication, without forwarding the user (via a redirect) to another Website or mobile app. If the Relying Party is the bank, for example, this enables a merchant to manage the user experience of authentication, while the bank can still validate the results of the authentication. Communication between parties (of credentials and authentication results) typically happens over payment system-specific rails such as EMV® 3-D Secure.
 2. Enforces that the User Agent appropriately communicates to the user that they are authenticating a transaction and the transaction details. Those details are then included in the assertion signed by the authenticator.
