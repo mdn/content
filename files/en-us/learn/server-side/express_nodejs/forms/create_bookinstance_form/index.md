@@ -28,7 +28,7 @@ Find the exported `bookinstance_create_get()` controller method and replace it w
 ```js
 // Display BookInstance create form on GET.
 exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
-  const allBooks = await Book.find({}, "title").exec();
+  const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
   res.render("bookinstance_form", {
     title: "Create BookInstance",
@@ -37,7 +37,7 @@ exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
 });
 ```
 
-The controller gets a list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
+The controller gets a sorted list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
 Note that no book has been selected when we first display this form, so we don't pass the `selected_book` variable to `render()`.
 Because of this, `selected_book` will have a value of `undefined` in the template.
 
@@ -76,7 +76,7 @@ exports.bookinstance_create_post = [
     if (!errors.isEmpty()) {
       // There are errors.
       // Render form again with sanitized values and error messages.
-      const allBooks = await Book.find({}, "title").exec();
+      const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
       res.render("bookinstance_form", {
         title: "Create BookInstance",
@@ -113,9 +113,8 @@ block content
     div.form-group
       label(for='book') Book:
       select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
-        - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
-          option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
+          option(value=book._id, selected=(selected_book==book._id.toString() ? '' : false) ) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:
