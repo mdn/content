@@ -52,7 +52,7 @@ mkdir src/components
 touch src/components/Todo.jsx
 ```
 
-Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.jsx` too, as follows. In this code, we define the function and export it:
+Let's start adding the code for the `Todo` component to `Todo.jsx`: add the following snippet to it now. In this code, we define the function and export it:
 
 ```jsx
 function Todo() {}
@@ -87,7 +87,7 @@ function Todo() {
 export default Todo;
 ```
 
-Now we have something we can use. In `App.jsx`, add the following line near the top of the file to import `Todo`:
+Now we have something we can use. In `App.jsx`, add the following line at the top of the file to import `Todo`:
 
 ```jsx
 import Todo from "./components/Todo";
@@ -258,7 +258,7 @@ This array is now available to the App component as `props.tasks`. You can `cons
 
 To render our array of objects, we have to turn each object into a `<Todo />` component. JavaScript gives us an array method for transforming items into something else: [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`. The `?.` operator lets us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
+Inside `App.jsx`, create a new `const` above the `App()` function's `return` statement called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`. The `?.` operator lets us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
 
 ```jsx
 const taskList = props.tasks?.map((task) => task.name);
@@ -285,7 +285,7 @@ To fix this, we need to return a `<Todo />` component from our `map()` function 
 const taskList = props.tasks?.map((task) => <Todo />);
 ```
 
-Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
+Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over contains the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
 ```jsx
 const taskList = props.tasks?.map((task) => (
@@ -365,7 +365,7 @@ export default Form;
 
 ### The \<FilterButton />
 
-Do the same things you did to create `Form.jsx` inside `FilterButton.jsx`, but call the component `FilterButton()` and copy the HTML for the first button inside the `<div>` element with the `class` of `filters` from `App.jsx` into the `return` statement.
+Do the same things you did to create `Form.jsx` inside `FilterButton.jsx`, but call the component `FilterButton()` and copy the HTML for the first button inside `<div className="filters btn-group stack-exception">` from `App.jsx` into the `return` statement.
 
 The file should read like this:
 
