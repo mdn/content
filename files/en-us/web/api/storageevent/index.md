@@ -28,10 +28,10 @@ _In addition to the properties listed below, this interface inherits the propert
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
   - : Returns a string with the new value of the storage item that was changed.
     This value is `null` when the change has been invoked by storage `clear()` method,
-    or the `key` has been removed from the storage.
+    or the storage item has been removed from the storage.
 - {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
   - : Returns a string with the original value of the storage item that was changed.
-    This value is `null` when the `key` has been newly added
+    This value is `null` when the storage item has been newly added
     and therefore doesn't have any previous value.
 - {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("Storage")}} object that represents the storage object that was affected.
