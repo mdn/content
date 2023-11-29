@@ -892,7 +892,7 @@
         "SourceBufferList",
         "VideoPlaybackQuality"
       ],
-      "methods": [ "HTMLVideoElement.getVideoPlaybackQuality()" ],
+      "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
       "properties": ["VideoTrack.sourceBuffer", "TextTrack.sourceBuffer"],
       "events": []
     },
