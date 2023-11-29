@@ -8,7 +8,7 @@ page-type: guide
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
 It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.
-A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.
+A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.https://cdn.ampproject.org/v0/amp-auto-ads-0.1.jshttps://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9509903004577343
 
 ![A Web document is the composition of different resources](fetching_a_page.png)
 
