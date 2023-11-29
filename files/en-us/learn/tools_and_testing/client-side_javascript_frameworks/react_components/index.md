@@ -428,10 +428,10 @@ function App(props) {
 export default App;
 ```
 
-With this in place, we're _almost_ ready to tackle some interactivity in our React app!
+With this in place, your React app should render basically the same as it did before, but using your shiny new components.
 
 ## Summary
 
-And that's it for this article — we've gone into some depth on how to break up your app nicely into components, and render them efficiently. Now we'll go on to look at how we handle events in React, and start adding some interactivity.
+And that's it for this article — we've gone into depth on how to break up your app nicely into components and render them efficiently. Next we'll look at handling events in React, and start adding some interactivity.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
