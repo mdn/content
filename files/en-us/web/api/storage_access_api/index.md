@@ -73,7 +73,7 @@ Several different security measures could cause a {{domxref("Document.requestSto
    ```
 
 6. Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
-7. At the time of writing, Chrome only resolves `requestStorageAccess()` calls that come from domains within a [first-party set](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/). This restriction is intended to be relaxed as the implementation is developed further.
+7. At the time of writing, Chrome directly resolves `requestStorageAccess()` calls that come from domains within a [related website set](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets-integration/). This may change in the future
 
 > **Note:** The document may also be required to pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
