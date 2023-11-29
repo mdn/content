@@ -186,7 +186,7 @@ Last but not least, let's look at the CSS for the timer:
 
 .timer div {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 20%);
   left: 0;
   top: 0;
   width: 0;

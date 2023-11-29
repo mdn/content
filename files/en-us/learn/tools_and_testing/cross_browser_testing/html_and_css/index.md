@@ -181,11 +181,11 @@ button:active {
 }
 ```
 
-Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGB](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGB colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGB colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 
-To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
+To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 

@@ -51,10 +51,7 @@
       "overview": ["Barcode Detection API"],
       "guides": [],
       "interfaces": ["BarcodeDetector"],
-      "methods": [
-        "BarcodeDetector.detect()",
-        "BarcodeDetector.getSupportedFormats()"
-      ],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -182,9 +179,9 @@
     },
     "Console API": {
       "overview": ["Console API"],
-      "interfaces": ["Console"],
+      "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "properties": ["Window.console"],
       "events": []
     },
     "Cookie Store API": {
