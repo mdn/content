@@ -101,18 +101,18 @@ Okay, let's have fun with backgrounds:
      As you will notice, color gradients are
      considered to be images and can be
      manipulated as such */
-  background-image: linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
+  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
 }
 ```
 
