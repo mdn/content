@@ -8,7 +8,7 @@ status:
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`BarcodeDetector()`** constructor creates
 a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
@@ -29,9 +29,16 @@ new BarcodeDetector(options)
     in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
     options are:
 
-    - `formats`
+    - `formats` {{optional_inline}}
       - : An {{jsxref('Array')}} of barcode formats as strings.
-        To see a full list of supported formats see the [Barcode Detection API](/en-US/docs/Web/API/Barcode_Detection_API).
+        If not provided, `detect()` calls search for all supported formats.
+        Limiting to specific formats is therefore recommended for performance reasons.
+        To see a full list of supported formats see the {{domxref("Barcode Detection API")}}.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `formats` is specified and the parameter is empty or contains `unknown`.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.paste_event
 ---
 
-{{APIRef}}
+{{APIRef("SVG")}}
 
 The **`paste`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "paste" action through the browser's user interface.
 

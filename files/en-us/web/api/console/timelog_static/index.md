@@ -105,6 +105,6 @@ Notice that the timer's name is displayed when the timer value is logged using `
 
 ## See also
 
-- {{domxref("console.time()")}}
-- {{domxref("console.timeEnd()")}}
+- {{domxref("console/time_static", "console.time()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
 - [Node.JS documentation for `console.timeLog()`](https://nodejs.org/docs/latest/api/console.html#consoletimeloglabel-data)
