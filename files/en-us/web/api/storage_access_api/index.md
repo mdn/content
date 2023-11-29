@@ -122,7 +122,7 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 - {{domxref("Document.requestStorageAccess()")}}
   - : Requests access to third-party cookies from embedded content; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
-  - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+  - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 > **Note:** User interaction propagates to the promise returned by these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.
 

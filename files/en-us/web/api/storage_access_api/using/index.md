@@ -36,7 +36,7 @@ Now on to the code executed inside the embedded document. In this code:
 1. We first use feature detection (`if (document.hasStorageAccess) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
 2. If the API is supported, we call `document.hasStorageAccess()`.
 3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
-4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies has already been granted (i.e. to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because Safari doesn't support the `"storage-access"` permission, which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
+4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies has already been granted (i.e. to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because [some browsers don't support the `"storage-access"` permission](/en-US/docs/Web/API/Storage_Access_API#api.permissions.permission_storage-access), which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
 5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
 6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
 7. If the permission state is `"denied"`, the user has denied our requests to access third-party cookies, and our code cannot make use of them.
@@ -98,9 +98,11 @@ async function handleCookieAccess() {
 
 > **Note:** The Chrome-only [related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
 
-## Requesting storage access on behalf of a related domain
+## Requesting storage access from the top-level site on behalf of embedded resources
 
-The Storage Access API features above allow an embedded document to request its own third-party cookie access. There is an additional experimental method available, {{domxref("Document.requestStorageAccessFor()")}}, which allows top-level sites to request storage access on behalf of specific related origins. This is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or {{htmlelement("script")}} elements requiring cookies.
+The Storage Access API features above allow an embedded document to request its own third-party cookie access. There is an additional experimental method available, {{domxref("Document.requestStorageAccessFor()")}}, a proposed extension to the Storage Access API that allows top-level sites to request storage access on behalf of specific related origins.
+
+> **Note:** `requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources embedded in {{htmlelement("iframe")}}s, and directly embedded e.g. via {{htmlelement("img")}}s or {{htmlelement("script")}} elements.
 
 For this method to work, both the calling top-level page and the embedded document storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 
@@ -115,7 +117,7 @@ navigator.permissions
   .then((permission) => {
     if (permission.state === "granted") {
       // Permission has already been granted, promise will resolve automatically
-      // No need to call requestStorageAccessFor() again, just start sending cookies
+      // No need to call requestStorageAccessFor() again, just start using cookies
       doThingsWithCookies();
     } else if (permission.state === "prompt") {
       // Need to call requestStorageAccessFor() after a user interaction

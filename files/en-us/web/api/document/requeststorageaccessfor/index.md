@@ -10,7 +10,7 @@ browser-compat: api.Document.requestStorageAccessFor
 
 {{APIRef("Storage Access API")}}{{seecompattable}}
 
-The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface is a proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 ## Syntax
 
@@ -51,7 +51,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 
 ## Description
 
-`requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or {{htmlelement("script")}} elements requiring cookies.
+`requestStorageAccessFor()` is intended to address challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources embedded in {{htmlelement("iframe")}}s, and directly embedded e.g. via {{htmlelement("img")}}s or {{htmlelement("script")}} elements.
 
 This method is relevant to user agents that by default block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
