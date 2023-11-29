@@ -36,7 +36,7 @@ Below we'll introduce the new features associated with the broader concept of AR
 
 The ARIA attributes providing these new abilities are as follows:
 
-- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). This property was introduced in ARIA 1.1.
+- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). This property was introduced in ARIA 1.3.
 - `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements. Note that these aren't part of the new ARIA annotations features, but they are of central relevance. These roles were introduced in ARIA 1.2.
 - `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. This role was introduced in the draft ARIA 1.3.
 - `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above). This role was introduced in the draft ARIA 1.3.
