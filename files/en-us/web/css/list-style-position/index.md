@@ -33,7 +33,7 @@ The `list-style-position` property is specified as one of the keyword values lis
 - `inside`
   - : The {{cssxref("::marker")}} is the first element among the list item's contents.
 - `outside`
-  - : The {{cssxref("::marker")}} is outside the principal block box.
+  - : The {{cssxref("::marker")}} is outside the principal block box. This is the default value for {{cssxref("list-style")}}.
 
 ## Description
 
@@ -114,4 +114,9 @@ It is often more convenient to use the shorthand {{cssxref("list-style")}}.
 
 ## See also
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}
+- {{Cssxref("list-style")}} shorthand
+- {{Cssxref("list-style-type")}} property
+- {{Cssxref("list-style-image")}} property
+- {{cssxref("::marker")}} pseudo-element
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
