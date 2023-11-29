@@ -18,7 +18,7 @@ The effect of `top` depends on how the element is positioned (i.e., the value of
 - When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `top` property has _no effect_.
 
-Consider the situation when both `top` and {{cssxref("bottom")}} values are specified. In this case:
+When both `top` and {{cssxref("bottom")}} values are specified, there are three different cases:
 
 - If `position` is set to `absolute` or `fixed` and {{cssxref("height")}} is unspecified (either `auto` or `100%`), both the `top` and `bottom` values are respected.
 - If `position` is set to `relative` or `height` is constrained, the `top` property takes precedence and the `bottom` property is ignored.
