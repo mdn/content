@@ -57,7 +57,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("btoa", "SharedWorkerGlobalScope.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
 - {{domxref("clearInterval", "SharedWorkerGlobalScope.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout", "SharedWorkerGlobalScope.clearTimeout()")}}
   - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("WorkerGlobalScope.dump", "SharedWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}

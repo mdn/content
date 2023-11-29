@@ -234,6 +234,6 @@ interval has completed before recursing.
 
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("setTimeout()")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("clearInterval()")}}
+- {{domxref("window.requestAnimationFrame()")}}

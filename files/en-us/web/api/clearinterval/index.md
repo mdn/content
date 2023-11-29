@@ -51,6 +51,6 @@ See the [`setInterval()` examples](/en-US/docs/Web/API/setInterval#examples).
 ## See also
 
 - {{domxref("setTimeout()")}}
-- {{domxref("setInterval")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("Window.requestAnimationFrame")}}
+- {{domxref("setInterval()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
