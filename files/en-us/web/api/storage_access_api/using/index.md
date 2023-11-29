@@ -145,7 +145,7 @@ function rSAFor() {
 }
 ```
 
-In the above code, we call `navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: 'https://example.com'})` To discover if the user will be prompted or if storage access has already been granted to the specified origin.
+In the above code, we call `navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: 'https://example.com'})` to discover if the user will be prompted or if storage access has already been granted to the specified origin.
 
 - If the permission status is `"granted"` we call `document.requestStorageAccessFor('https://example.com')`, which should succeed without a user gesture.
 - If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor('https://target.site')` call from within a user gesture, such as a button click.
