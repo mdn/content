@@ -1,39 +1,29 @@
 ---
 title: User input and controls
-slug: Web/Guide/User_input_methods
+slug: Learn/Forms/User_input_methods
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
-</section>
-
-Modern web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies. Relevant APIs and events include [touch events](/en-US/docs/Web/API/Touch_events), [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API), [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) and more.
-
-## User input and controls workflow
-
-The following diagram illustrates the typical workflow for implementing user input mechanisms:
-
-![Flowchart of user input and controls workflow. The first step is to decide what input mechanism you're using, and the second step is to implement controls.](user-input-and-controls.png)
-
-First of all, you need to decide which input mechanisms you want to cover in your application out of mouse, keyboard, finger touch and so on. Once you decided the input mechanisms, you can control them using tools offered by the web platform or JavaScript libraries.
+Web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies. Relevant APIs and events include [touch events](/en-US/docs/Web/API/Touch_events), [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API), [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) and more.
 
 ## Recommendations
 
-Available input mechanisms depend on the capabilities of the device running the application:
+To provide good user experience to the greatest number of users, you need to support multiple input methods, including mouse, keyboard, finger touch and so on. Available input mechanisms depend on the capabilities of the device running the application:
 
 - Some devices provide touchscreen displays: the Web Platform offers [touch events](/en-US/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
 - For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) helps you in implementing a first-person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
-- Using features such as [contentEditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors and with [Drag\&Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
-- You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate websites and apps, and locking them out of your functionality is a bad idea.
+- Using features such as [`contentEditable``](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors and with [Drag\&Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app.
+- When screen orientation matters for your application, through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
 
-The following is a set of recommendations and best practices for using such tools in Open Web Apps.
+You should always be mindful of keyboard accessibility — many web users only use keyboard to navigate websites and apps, and locking them out of your functionality is a bad idea.
 
-### Decide what input mechanism you're using
+The following is a set of recommendations and best practices for users can use your websites and applications:
+
+### Supporting common input mechanisms
 
 #### Keyboard
 
-Keyboard input can be controlled by your app. For example if you want to add controls when any key gets pressed, you need to add an event listener on the window object:
+Keyboard input can be controlled by your app. For example, if you want to add controls when any key gets pressed, you need to add an event listener on the window object:
 
 ```js
 window.addEventListener("keydown", handleKeyDown, true);
@@ -52,7 +42,7 @@ When the input device is a mouse, you can also control user input through the Po
 
 #### Finger touch
 
-When developing web applications meant to be installed on touchscreen devices, it's a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/en-US/docs/Web/API/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
+To support web applications on touchscreen devices, it's a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/en-US/docs/Web/API/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
 
 If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:
 
@@ -70,8 +60,6 @@ where `element` is the DOM element you want to register the touch events on.
 #### Pointer Events
 
 When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. [Pointer Events](https://www.w3.org/TR/pointerevents/) help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
-
-> **Note:** Pointer Events are not widely supported yet, but a [pointer.js polyfill](https://github.com/mozilla/pointer.js) is available on Mozilla GitHub.
 
 ### Implement controls
 
@@ -91,24 +79,18 @@ element.requestPointerLock();
 
 When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
+Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or with CSS through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
 
 > **Note:** More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
 #### Fullscreen
 
-You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element. Bear in mind that many browsers still implement this with a vendor prefix, so you will probably need to fork your code something like this:
+You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element:
 
 ```js
 const elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
-} else if (elem.msRequestFullscreen) {
-  elem.msRequestFullscreen();
-} else if (elem.mozRequestFullScreen) {
-  elem.mozRequestFullScreen();
-} else if (elem.webkitRequestFullscreen) {
-  elem.webkitRequestFullscreen();
 }
 ```
 
@@ -153,7 +135,7 @@ div {
 
 {{EmbedLiveSample("contentEditable")}}
 
-> **Note:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+> **Note:** Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 
 ## Examples
 
@@ -179,5 +161,3 @@ div {
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Content Editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
-- [Keyboard events in Firefox OS TV](/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
-- [Implementing TV remote control navigation](/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

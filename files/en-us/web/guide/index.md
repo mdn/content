@@ -68,5 +68,5 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## User interface development
 
-- [User input and controls](/en-US/docs/Web/Guide/User_input_methods)
-  - : Modern web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.
+- [User input and controls](/en-US/docs/Web/Learn/Forms/User_input_methods)
+  - : User input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.
