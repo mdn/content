@@ -1,5 +1,5 @@
 ---
-title: Using Payment Request API for Secure Payment Confirmation
+title: Using Secure Payment Confirmation
 slug: Web/API/Payment_Request_API/UsingWithSecurePaymentConfirmation
 page-type: guide
 spec-urls:
