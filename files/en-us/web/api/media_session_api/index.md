@@ -34,11 +34,6 @@ navigator.mediaSession.playbackState = "playing";
 - {{domxref("MediaSession")}}
   - : Allows a web page to provide custom behaviors for standard media playback interactions.
 
-## Dictionaries
-
-- {{domxref("MediaImage")}}
-  - : A `MediaImage` object contains information describing an image associated with the media. This might be a CD or DVD cover, a movie poster, a poster frame, or the like.
-
 ## Examples
 
 ### Setting up action handlers for a music player

@@ -883,11 +883,7 @@
       "methods": [],
       "properties": ["navigator.mediaSession"],
       "events": [],
-      "dictionaries": [
-        "MediaImage",
-        "MediaMetadataInit",
-        "MediaSessionActionDetails"
-      ],
+      "dictionaries": [],
       "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
       "callbacks": ["MediaSessionActionHandler"]
     },
