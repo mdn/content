@@ -38,7 +38,7 @@ Standardized payment method identifiers are those listed in the [payment method 
 
 - `secure-payment-confirmation`
 
-  - : The payment method identifier for [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation) is "secure-payment-confirmation". The Payment Request data for this payment is defined by the [SecurePaymentConfirmationRequest dictionary](/en-US/docs/Web/API/SecurePaymentConfirmationRequest). For more information see [Using Payment Request API for Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_with_Secure_Payment_Confirmation).
+  - : Identifies the [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation) method. The payment request data for this method is defined by the {{domxref("SecurePaymentConfirmationRequest")}} dictionary. For more information see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
 - `basic-card`
   - : This payment method identifier was intended to facilitate card-based payments on the Web through the Payment Request API. **The [Web Payments Working Group](https://www.w3.org/groups/wg/payments) has deprecated this payment method.**
