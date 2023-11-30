@@ -50,7 +50,7 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Styling animated inputs with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/styling_animated_inputs_with_css_transforms)
+- [Styling animated buttons with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/styling_animated_buttons_with_css_transforms)
   - : Contains several examples of `<input>` elements styled using animated CSS transforms.
 
 ## Related concepts
