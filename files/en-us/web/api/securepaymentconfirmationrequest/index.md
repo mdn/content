@@ -21,12 +21,12 @@ An instance of this dictionary must be passed into the {{domxref("PaymentRequest
   - : Any [WebAuthn extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) that should be used for the passed credential(s). The caller does not need to specify the [`payment` extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment); this is added automatically.
 - `instrument`
   - : The description of the instrument name and icon to display during registration and to be signed along with the transaction details. This is an object with the following properties:
-      - `displayName`
-        - : A string containing the payment instrument's name, which will be displayed to the user.
-      - `icon`
-        - : A string containing the URL of the payment instrument's icon.
-      - `iconMustBeShown` {{optional_inline}}
-        - : A boolean value indicating whether the icon must be successfully fetched and shown for the request to succeed. Defaults to `true`.
+    - `displayName`
+      - : A string containing the payment instrument's name, which will be displayed to the user.
+    - `icon`
+      - : A string containing the URL of the payment instrument's icon.
+    - `iconMustBeShown` {{optional_inline}}
+      - : A boolean value indicating whether the icon must be successfully fetched and shown for the request to succeed. Defaults to `true`.
 - `locale` {{optional_inline}}
   - : An optional list of well-formed {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} language tags, in descending order of priority, that identify the local preferences of the website. That is, this represents a language priority list {{RFC(4647, "Matching of Language Tags")}}, which the user agent can use to perform [language negotiation](/en-US/docs/Web/HTTP/Content_negotiation) and locale-affected formatting with the caller.
     > **Note:** The locale is distinct from language or direction metadata associated with specific input members, in that it represents the caller's requested localized experience rather than assertion about a specific string value. See [SPC internationalization Considerations](https://w3c.github.io/secure-payment-confirmation/#sctn-i18n-considerations) for more discussion.
