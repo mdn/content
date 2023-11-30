@@ -21,17 +21,17 @@ If you need help or have any questions, feel free to get in touch with one of th
 ### Brazilian Portuguese (`pt-BR`)
 
 - Discussions: [Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
-- Current contributors: [Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
+- Current maintainers: [Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
 ### Chinese (`zh-CN`, `zh-TW`)
 
 - Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/), [Telegram (Mozilla China channel)](https://t.me/mozilla_china)
-- Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403)
+- Current maintainers: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403)
 
 ### French (`fr`)
 
 - Discussions: [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Current contributors: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Current maintainers: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (`ja`)
 
@@ -41,12 +41,12 @@ If you need help or have any questions, feel free to get in touch with one of th
 ### Korean (`ko`)
 
 - Discussions: [Discord (#korean channel)](/discord), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42)
+- Current maintainers: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42)
 
 ### Russian (`ru`)
 
 - Discussions: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Current contributors: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
+- Current maintainers: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### Spanish (`es`)
 
