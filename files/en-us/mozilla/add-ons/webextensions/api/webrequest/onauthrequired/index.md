@@ -90,7 +90,7 @@ Events have three functions:
       This behavior is the same for Firefox and Chrome. However, synchronous handling is only appropriate for the simplest of extensions.
     - To handle the request asynchronously:
       - in Firefox, the `extraInfoSpec` array must include `"blocking"`, and the event handler function can return a Promise that resolves to a `BlockingResponse` object, with its `cancel` or `authCredentials` properties set. This is basically the same as handling the event synchronously.
-      - in Chrome, the `extraInfoSpec` array must include `"asyncBlocking"` (without `"blocking"`). The event handler function is passed a second parameter (called `asyncCallback`) that is invoked with the `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
+      - in Chrome, the `extraInfoSpec` array must include `"asyncBlocking"` (without `"blocking"`). The event handler function is passed a function as a second parameter (called `asyncCallback`) that should be invoked with the `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that are sent to this listener.
