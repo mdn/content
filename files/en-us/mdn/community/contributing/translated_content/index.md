@@ -46,7 +46,7 @@ If you need help or have any questions, feel free to get in touch with one of th
 ### Russian (ru)
 
 - Discussions: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Current contributors: [captainspring](https://github.com/captainspring), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Current contributors: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### Spanish (es)
 
