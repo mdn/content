@@ -152,11 +152,12 @@ JavaScript frameworks were created to make this kind of work a lot easier — th
 
 If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/mxmason/pen/XWbPNmw), which also allows users to add and delete new tasks.
 
-Read more about the JavaScript used in this section:
+Read more about the JavaScript features used in this section:
 
-- [`document.createDocumentFragment()`](/en-US/docs/Web/API/Document/createDocumentFragment)
-- [`document.createElement()`](/en-US/docs/Web/API/Document/createElement)
-- [`eventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)
+- [`Array.forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [`Document.createDocumentFragment()`](/en-US/docs/Web/API/Document/createDocumentFragment)
+- [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement)
+- [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)
 - [`Node.appendChild()`](/en-US/docs/Web/API/Node/appendChild)
 - [`Node.removeChild()`](/en-US/docs/Web/API/Node/removeChild)
 - [`Node.textContent`](/en-US/docs/Web/API/Node/textContent)
