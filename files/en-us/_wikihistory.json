@@ -20931,10 +20931,6 @@
     "modified": "2020-10-15T22:21:03.220Z",
     "contributors": ["1valdis"]
   },
-  "Web/API/AudioWorkletProcessor/parameterDescriptors": {
-    "modified": "2020-10-15T22:21:04.116Z",
-    "contributors": ["Sheppy", "chrisdavidmills", "1valdis"]
-  },
   "Web/API/AudioWorkletProcessor/port": {
     "modified": "2020-10-15T22:21:03.014Z",
     "contributors": ["chrisdavidmills", "1valdis"]
@@ -45162,10 +45158,6 @@
     "modified": "2019-03-23T22:00:50.075Z",
     "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
   },
-  "Web/API/MediaImage": {
-    "modified": "2020-10-15T22:30:04.566Z",
-    "contributors": ["lbd1607", "bershanskiy"]
-  },
   "Web/API/MediaKeyMessageEvent": {
     "modified": "2020-10-15T21:33:46.465Z",
     "contributors": [
@@ -68020,30 +68012,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/pageXOffset": {
-    "modified": "2020-10-15T21:37:54.373Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "mrenty",
-      "cvrebert",
-      "Sheppy"
-    ]
-  },
-  "Web/API/Window/pageYOffset": {
-    "modified": "2020-10-15T21:37:58.277Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "jamesdhurd",
-      "hannahcancode",
-      "Sheppy",
-      "erikadoyle",
-      "mrenty",
-      "cvrebert"
-    ]
-  },
   "Web/API/Window/pagehide_event": {
     "modified": "2020-10-15T21:19:33.376Z",
     "contributors": [
@@ -77486,6 +77454,25 @@
       "caraya"
     ]
   },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-21T10:16:09.302Z",
+    "contributors": [
+      "KartikSoneji",
+      "blueblots",
+      "fscholz",
+      "Thomazella",
+      "s-lee",
+      "jwhitlock",
+      "Jeremie",
+      "teoli",
+      "DBaron",
+      "ethertank",
+      "Sheppy",
+      "jswisher",
+      "ziyunfei",
+      "Marsf"
+    ]
+  },
   "Web/CSS/CSS_fragmentation": {
     "modified": "2020-07-07T12:15:32.340Z",
     "contributors": ["wbamberg", "mfluehr"]
@@ -77934,6 +77921,26 @@
       "Sebastianz",
       "teoli",
       "sujeetkalaskar"
+    ]
+  },
+  "Web/CSS/CSS_media_queries/Printing": {
+    "modified": "2019-03-18T20:51:52.142Z",
+    "contributors": [
+      "benrwb",
+      "wbamberg",
+      "oshliaer",
+      "stevemao",
+      "teoli",
+      "olegskl",
+      "GabrielF",
+      "harshadotcom",
+      "Bognar",
+      "kscarfone",
+      "fusionchess",
+      "ethertank",
+      "Sheppy",
+      "tw2113",
+      "dl748"
     ]
   },
   "Web/CSS/CSS_media_queries/Testing_media_queries": {
@@ -92060,10 +92067,6 @@
       "ethertank"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2020-12-14T00:30:29.082Z",
-    "contributors": ["Sheppy", "steffix.h2", "shing0608"]
-  },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
     "contributors": [
@@ -92364,26 +92367,6 @@
     "modified": "2019-03-23T23:30:00.833Z",
     "contributors": ["estelle", "chrisdavidmills", "shahzad11", "Sheppy"]
   },
-  "Web/Guide/Printing": {
-    "modified": "2019-03-18T20:51:52.142Z",
-    "contributors": [
-      "benrwb",
-      "wbamberg",
-      "oshliaer",
-      "stevemao",
-      "teoli",
-      "olegskl",
-      "GabrielF",
-      "harshadotcom",
-      "Bognar",
-      "kscarfone",
-      "fusionchess",
-      "ethertank",
-      "Sheppy",
-      "tw2113",
-      "dl748"
-    ]
-  },
   "Web/Guide/User_input_methods": {
     "modified": "2020-07-22T12:38:46.565Z",
     "contributors": [
@@ -92395,41 +92378,6 @@
       "MashKao",
       "teoli",
       "franciov"
-    ]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-21T10:16:09.302Z",
-    "contributors": [
-      "KartikSoneji",
-      "blueblots",
-      "fscholz",
-      "Thomazella",
-      "s-lee",
-      "jwhitlock",
-      "Jeremie",
-      "teoli",
-      "DBaron",
-      "ethertank",
-      "Sheppy",
-      "jswisher",
-      "ziyunfei",
-      "Marsf"
-    ]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:13:54.637Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "xfq",
-      "kohei.yoshino",
-      "yyss",
-      "pixelastic",
-      "Gerv",
-      "Bzbarsky",
-      "Sheppy",
-      "Hsivonen",
-      "jswisher"
     ]
   },
   "Web/HTML": {

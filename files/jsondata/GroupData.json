@@ -51,10 +51,7 @@
       "overview": ["Barcode Detection API"],
       "guides": [],
       "interfaces": ["BarcodeDetector"],
-      "methods": [
-        "BarcodeDetector.detect()",
-        "BarcodeDetector.getSupportedFormats()"
-      ],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -182,9 +179,9 @@
     },
     "Console API": {
       "overview": ["Console API"],
-      "interfaces": ["Console"],
+      "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "properties": ["Window.console"],
       "events": []
     },
     "Cookie Store API": {
@@ -316,6 +313,14 @@
         "Element: transitionend",
         "Window: resize"
       ]
+    },
+    "Device Memory API": {
+      "overview": ["Device Memory API"],
+      "guides": [],
+      "interfaces": [],
+      "methods": [],
+      "properties": ["Navigator.deviceMemory", "WorkerNavigator.deviceMemory"],
+      "events": []
     },
     "Device Orientation Events": {
       "overview": ["Device orientation events"],
@@ -477,7 +482,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": ["URL.createObjectURL()", "URL.revokeObjectURL()"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -811,7 +816,15 @@
       "guides": [],
       "interfaces": ["InputDeviceCapabilities"],
       "methods": [],
-      "properties": ["UIEvent.sourceCapabilities"],
+      "properties": ["UIEvent.sourceCapabilities"],,
+      "events": []
+    },
+    "Insertable Streams for MediaStreamTrack API": {
+      "overview": ["Insertable Streams for MediaStreamTrack API"],
+      "guides": [],
+      "interfaces": ["MediaStreamTrackGenerator", "MediaStreamTrackProcessor"],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Intersection Observer API": {
@@ -886,11 +899,7 @@
       "methods": [],
       "properties": ["navigator.mediaSession"],
       "events": [],
-      "dictionaries": [
-        "MediaImage",
-        "MediaMetadataInit",
-        "MediaSessionActionDetails"
-      ],
+      "dictionaries": [],
       "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
       "callbacks": ["MediaSessionActionHandler"]
     },
@@ -903,10 +912,7 @@
         "SourceBufferList",
         "VideoPlaybackQuality"
       ],
-      "methods": [
-        "HTMLVideoElement.getVideoPlaybackQuality()",
-        "URL.createObjectURL()"
-      ],
+      "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
       "properties": ["VideoTrack.sourceBuffer", "TextTrack.sourceBuffer"],
       "events": []
     },
@@ -1341,6 +1347,8 @@
       "events": []
     },
     "SVG": {
+      "overview": ["SVG API"],
+      "guides": ["/docs/Web/SVG"],
       "interfaces": [
         "SVGAElement",
         "SVGAngle",
@@ -2110,6 +2118,14 @@
         "RTCPeerConnectionErrorCallback",
         "RTCSessionDescriptionCallback"
       ]
+    },
+    "Web Serial API": {
+      "overview": ["Web Serial API"],
+      "guides": [],
+      "interfaces": ["Serial", "SerialPort"],
+      "methods": [],
+      "properties": ["Navigator.serial", "WorkerNavigator.serial"],
+      "events": []
     },
     "Web Share API": {
       "overview": ["Web Share API"],

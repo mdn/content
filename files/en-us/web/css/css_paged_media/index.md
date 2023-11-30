@@ -35,3 +35,8 @@ The **CSS paged media** module defines the properties that control the presentat
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing) guide
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
