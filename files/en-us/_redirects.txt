@@ -8892,6 +8892,7 @@
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaDevices/ondevicechange	/en-US/docs/Web/API/MediaDevices/devicechange_event
 /en-US/docs/Web/API/MediaEncodingConfiguration	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
+/en-US/docs/Web/API/MediaImage	/en-US/docs/Web/API/MediaMetadata/artwork
 /en-US/docs/Web/API/MediaKeySession/onkeystatuseschange	/en-US/docs/Web/API/MediaKeySession/keystatuseschange_event
 /en-US/docs/Web/API/MediaKeySession/onmessage	/en-US/docs/Web/API/MediaKeySession/message_event
 /en-US/docs/Web/API/MediaKeySystemConfiguration	/en-US/docs/Web/API/MediaKeySystemAccess/getConfiguration
