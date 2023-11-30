@@ -24,7 +24,7 @@ Here however, we will use a `rel` value of `preload`, which turns `<link>` into 
 - The path to the resource in the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute.
 - The type of resource in the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute.
 
-A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
+A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/main/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
 
 ```html
 <head>
@@ -83,7 +83,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 
 `<link>` elements can accept a [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
 
-You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
+You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
 
 ```html
 <head>
@@ -118,7 +118,7 @@ When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
-Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
+Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/main/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
 
 ```html
 <head>
@@ -151,7 +151,7 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), allowing you to do responsive preloading!
 
-Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
+Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 
 ```html
 <head>

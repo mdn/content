@@ -39,7 +39,17 @@ A string which indicates the type of content the request is asking for. This typ
 Possible values are:
 
 - `""`
-  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
+
+  - : The empty string is the default value, and is used for destinations that do not have their own value. This is the value when requests are made using the following APIs (among others):
+    - [`<a ping>`](/en-US/docs/Web/HTML/Element/a#ping)
+    - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
+    - {{domxref("Cache")}}
+    - {{domxref("EventSource")}}
+    - {{domxref("fetch()")}}
+    - {{domxref("navigator.sendBeacon()")}}
+    - {{domxref("WebSocket")}}
+    - {{domxref("XMLHttpRequest")}}
+
 - `"audio"`
   - : The target is audio data.
 - `"audioworklet"`

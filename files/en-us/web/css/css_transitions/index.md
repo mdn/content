@@ -19,6 +19,10 @@ The **CSS transitions** module lets you create gradual transitions between the v
 - {{cssxref("transition-property")}}
 - {{cssxref("transition-timing-function")}}
 
+### At rules
+
+- {{cssxref("@starting-style")}}
+
 ## Guides
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

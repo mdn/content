@@ -451,13 +451,14 @@ If inserted content is not decorative, check that the information is provided to
 
 ## See also
 
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
-- {{cssxref("image/image-set", "image-set()")}} function
-- {{cssxref("url", "url()")}} function
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("url", "url()")}}
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

@@ -353,7 +353,7 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/master/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
+> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
 
 ### JavaScript codecs
 
