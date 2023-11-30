@@ -82,7 +82,9 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Syntax
 
-{{CSSSyntax}}
+`\{CSSSyntax}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Examples
 
@@ -94,7 +96,7 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> **Note:** Sometimes, you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -124,16 +126,20 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Accessibility concerns
 
-Optionally, warn of any potential accessibility concerns that exist with using this selector, and how to work around them.
-Remove this section if there are none to list.
+Optionally, warn of any potential accessibility concerns with using this selector and how to work around them.
+Remove this section if there is no list.
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
