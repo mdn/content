@@ -8,7 +8,7 @@ browser-compat: api.Geolocation.clearWatch
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
-The **`clearWatch()`** method of the {{domxref("Geolocation")}} interface is used to unregister location/error monitoring handlers previously installed using {{domxref("Geolocation.watchPosition()")}}.
+The **`Geolocation.clearWatch()`** method is used to unregister location/error monitoring handlers previously installed using {{domxref("Geolocation.watchPosition()")}}.
 
 ## Syntax
 

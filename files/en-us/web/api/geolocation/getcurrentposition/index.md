@@ -8,7 +8,7 @@ browser-compat: api.Geolocation.getCurrentPosition
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`getCurrentPosition()`** method of the {{domxref("Geolocation")}} interface is used to get the current position of the device.
+The **`Geolocation.getCurrentPosition()`** method is used to get the current position of the device.
 
 ## Syntax
 
