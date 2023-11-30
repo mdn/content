@@ -85,9 +85,9 @@ input:invalid {
 }
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/required) attribute is present, at least one email address is required.
 
-Some browsers support the appearance of the [`list`](/en-US/docs/Web/HTML/Attributes/list) of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when `multiple` is present. Others do not.
+Some browsers support the appearance of the [`list`](/en-US/docs/Web/HTML/Element/input#list) of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when `multiple` is present. Others do not.
 
 {{EmbedLiveSample("email_input", 600, 80) }}
 
