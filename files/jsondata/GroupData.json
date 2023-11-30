@@ -134,7 +134,6 @@
         "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
       ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
-      "dictionaries": ["ClipboardPermissionDescriptor"],
       "methods": [],
       "properties": ["Navigator.clipboard"],
       "events": [
@@ -301,7 +300,6 @@
         "StyleSheet",
         "StyleSheetList"
       ],
-      "dictionaries": ["ScrollToOptions"],
       "methods": [],
       "properties": [],
       "events": [
@@ -876,8 +874,7 @@
         "mediaCapabilities.encodingInfo()"
       ],
       "properties": ["navigator.mediaCapabilities"],
-      "events": [],
-      "dictionaries": []
+      "events": []
     },
     "Media Capture and Streams": {
       "overview": ["Media Capture and Streams API"],
@@ -908,7 +905,6 @@
       "methods": [],
       "properties": ["navigator.mediaSession"],
       "events": [],
-      "dictionaries": [],
       "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
       "callbacks": ["MediaSessionActionHandler"]
     },
@@ -992,17 +988,6 @@
         "PaymentRequest",
         "PaymentRequestUpdateEvent",
         "PaymentResponse"
-      ],
-      "dictionaries": [
-        "AddressErrors",
-        "PaymentMethodData",
-        "PaymentCurrencyAmount",
-        "PaymentDetailsModifier",
-        "PaymentDetailsUpdate",
-        "PaymentItem",
-        "PaymentOptions",
-        "PaymentShippingOption",
-        "PaymentShippingType"
       ],
       "methods": [],
       "properties": ["HTMLIFrameElement.allowPaymentRequest"],
@@ -1204,7 +1189,6 @@
       "overview": ["Screen Capture API"],
       "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
       "interfaces": ["CaptureController"],
-      "dictionaries": [],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
         "MediaTrackConstraints.displaySurface",
@@ -1767,52 +1751,21 @@
       ],
       "methods": [],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "AudioDataInit",
-        "AudioDataCopyToOptions",
-        "AudioDecoderConfig",
-        "AudioDecoderInit",
-        "AudioDecoderSupport",
-        "AudioEncoderConfig",
-        "AudioEncoderInit",
-        "AudioEncoderSupport",
-        "PlaneLayout",
-        "EncodedAudioChunkInit",
-        "EncodedAudioChunkMetadata",
-        "EncodedVideoChunkInit",
-        "EncodedVideoChunkMetadata",
-        "ImageDecodeOptions",
-        "ImageDecodeResult",
-        "ImageDecoderInit",
-        "SvcOutputMetadata",
-        "VideoColorSpaceInit",
-        "VideoDecoderConfig",
-        "VideoDecoderInit",
-        "VideoDecoderSupport",
-        "VideoEncoderConfig",
-        "VideoEncoderInit",
-        "VideoEncoderSupport",
-        "VideoFrameBufferInit",
-        "VideoFrameCopyToOptions",
-        "VideoFrameInit"
-      ]
+      "events": []
     },
     "Web Crypto API": {
       "overview": ["Web Crypto API"],
       "guides": [
         "/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto"
       ],
-      "interfaces": ["Crypto", "CryptoKey", "SubtleCrypto"],
-      "methods": [],
-      "properties": ["crypto_property"],
-      "events": [],
-      "dictionaries": [
+      "interfaces": [
+        "Crypto",
+        "CryptoKey",
+        "SubtleCrypto",
         "AesCbcParams",
         "AesCtrParams",
         "AesGcmParams",
         "AesKeyGenParams",
-        "Algorithm",
         "CryptoKeyPair",
         "EcKeyGenParams",
         "EcKeyImportParams",
@@ -1821,14 +1774,15 @@
         "HkdfParams",
         "HmacImportParams",
         "HmacKeyGenParams",
-        "JsonWebKey",
-        "KeyAlgorithm",
         "Pbkdf2Params",
         "RsaHashedImportParams",
         "RsaHashedKeyGenParams",
         "RsaOaepParams",
         "RsaPssParams"
-      ]
+      ],
+      "methods": [],
+      "properties": ["crypto_property"],
+      "events": []
     },
     "WebGL": {
       "overview": ["WebGL API"],
@@ -2044,52 +1998,17 @@
         "RTCRtpScriptTransformer",
         "RTCEncodedVideoFrame",
         "RTCEncodedAudioFrame",
-        "RTCTransformEvent"
-      ],
-      "dictionaries": [
-        "RTCOAuthCredential",
-        "RTCSessionDescriptionInit",
-        "RTCIceCandidateInit",
-        "RTCPeerConnectionIceEventInit",
-        "RTCPeerConnectionIceErrorEventInit",
-        "RTCCertificateExpiration",
-        "RTCRtpTransceiverInit",
-        "RTCRtpParameters",
-        "RTCRtpSendParameters",
-        "RTCRtpReceiveParameters",
-        "RTCRtpCodingParameters",
-        "RTCRtpDecodingParameters",
-        "RTCRtpEncodingParameters",
-        "RTCRtcpParameters",
-        "RTCRtpHeaderExtensionParameters",
+        "RTCTransformEvent",
         "RTCRtpCodecParameters",
-        "RTCRtpCapabilities",
-        "RTCRtpCodecCapability",
-        "RTCRtpHeaderExtensionCapability",
-        "RTCRtpContributingSource",
-        "RTCRtpSynchronizationSource",
-        "RTCDtlsFingerprint",
         "RTCIceParameters",
         "RTCIceCandidatePair",
-        "RTCTrackEventInit",
-        "RTCDataChannelInit",
-        "RTCDataChannelEventInit",
-        "RTCDTMFToneChangeEventInit",
-        "RTCStatsEventInit",
-        "RTCErrorEventInit",
         "RTCIceCandidatePairStats",
-        "RTCCertificateStats",
-        "RTCCodecStats",
-        "RTCDataChannelStats",
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
-        "RTCVideoSourceStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
-        "RTCRemoteInboundRtpStreamStats",
-        "RTCRemoteOutboundRtpStreamStats",
-        "RTCTransportStats"
+        "RTCRemoteOutboundRtpStreamStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": [
