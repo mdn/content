@@ -816,7 +816,7 @@
       "guides": [],
       "interfaces": ["InputDeviceCapabilities"],
       "methods": [],
-      "properties": ["UIEvent.sourceCapabilities"],,
+      "properties": ["UIEvent.sourceCapabilities"],
       "events": []
     },
     "Insertable Streams for MediaStreamTrack API": {
