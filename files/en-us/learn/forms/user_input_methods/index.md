@@ -153,11 +153,11 @@ div {
 
 ## Reference
 
-- {{domxref("MouseEvent")}}
-- {{domxref("KeyboardEvent")}}
-- [Touch events](/en-US/docs/Web/API/Touch_events)
-- [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
-- [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
-- [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Content Editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
+- {{domxref("MouseEvent")}} interface
+- {{domxref("KeyboardEvent")}} interface
+- [Touch events](/en-US/docs/Web/API/Touch_events) API
+- [Pointer Lock](/en-US/docs/Web/API/Pointer_Lock_API) API
+- [Screen Orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) API
+- [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) API
+- [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) API
+- HTML [`contenteditable]`(/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
