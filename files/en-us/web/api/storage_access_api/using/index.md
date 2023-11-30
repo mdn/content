@@ -145,14 +145,14 @@ function rSAFor() {
 }
 ```
 
-In the above code, we call `navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: 'https://example.com'})` to discover if the origin has previously been granted permission, or if this call needs to be made to grant this access.
+In the above code, we call `navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: 'https://example.com'})` to discover if the origin has previously been granted permission, or if cookie access still needs to be requested.
 
-- If the permission status is `"granted"` we can just start using cookies; there is no need to call `requestStorageAccessFor()` again.
+- If the permission status is `"granted"` we can just start using cookies; `requestStorageAccessFor()` was already called so there is no need to call it again.
 - If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor('https://example.com')` call from within a user gesture, such as a button click.
 
 > **Note:** The feature name used when querying the permissions status in this case is different to the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`.
 
-> **Note:** Unlike `requestStorageAccess()`, Chrome doesn't check for an interaction in a top-level document within the last 30 days when `requestStorageAccessFor()` is called because the user is already on the page. See [Browser-specific variations > Chrome]() for more details of this behavior.
+> **Note:** Unlike with `requestStorageAccess()`, Chrome doesn't check for an interaction in a top-level document within the last 30 days when `requestStorageAccessFor()` is called because the user is already on the page. See [Browser-specific variations > Chrome](/en-US/docs/Web/API/Storage_Access_API#chrome) for more details of this behavior.
 
 After the `"top-level-storage-access"` permission is granted, cross-site requests will include cookies if they include [CORS](/en-US/docs/Web/HTTP/CORS) / [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin), so sites may want to wait before triggering a request. Such requests must use the [`credentials: 'include'`](/en-US/docs/Web/API/fetch#credentials) option and resources must include the `crossorigin="use-credentials"` attribute.
 
