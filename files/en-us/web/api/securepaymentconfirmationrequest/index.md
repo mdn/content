@@ -9,7 +9,7 @@ spec-urls: https://w3c.github.io/secure-payment-confirmation/#sctn-securepayment
 
 The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) when used to authenticate a user during an e-commerce transaction [using SPC with Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
-An instance of this dictionary must be passed into the {{domxref("PaymentRequest.PaymentRequest()", "PaymentRequest()")}} constructor as the value of the [`data`](/en-US/docs/Web/API/PaymentRequest/PaymentRequest#data) field corresponding to a [`supportedMethods`](https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/PaymentRequest#supportedmethods) value of `"secure-payment-confirmation"`.
+An instance of this dictionary must be passed into the {{domxref("PaymentRequest.PaymentRequest()", "PaymentRequest()")}} constructor as the value of the [`data`](/en-US/docs/Web/API/PaymentRequest/PaymentRequest#data) field corresponding to a [`supportedMethods`](/en-US/docs/Web/API/PaymentRequest/PaymentRequest#supportedmethods) value of `"secure-payment-confirmation"`.
 
 ## Instance properties
 
