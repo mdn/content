@@ -18,7 +18,7 @@ Windows that are part of an origin-keyed agent cluster are subjects to some addi
 - Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
 - Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
-Note that origin-keyed agent cluster feature is only supported in {{glossary("Secure Context")}}. If a site is not a Secure Context, the `window.originAgentCluster` will always return `false`.
+Note that the origin-keyed agent cluster feature is only supported in {{glossary("Secure Context", "secure contexts")}}. If a site is not a secure context, the `window.originAgentCluster` will always return `false`.
 
 ## Specifications
 
