@@ -1,6 +1,6 @@
 ---
 title: Using Secure Payment Confirmation
-slug: Web/API/Payment_Request_API/UsingWithSecurePaymentConfirmation
+slug: Web/API/Payment_Request_API/Using_secure_payment_confirmation
 page-type: guide
 spec-urls:
   - https://w3c.github.io/payment-request/
