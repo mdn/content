@@ -163,10 +163,10 @@ Let's start with some simple rectangles.
 
    Save and refresh, and you'll see your new rectangle. This raises an important point: graphics operations like drawing rectangles, lines, and so forth are performed in the order in which they occur. Think of it like painting a wall, where each coat of paint overlaps and may even hide what's underneath. You can't do anything to change this, so you have to think carefully about the order in which you draw the graphics.
 
-4. Note that you can draw semi-transparent graphics by specifying a semi-transparent color, for example by using `rgba()`. The `a` value defines what's called the "alpha channel, " or the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:
+4. Note that you can draw semi-transparent graphics by specifying a semi-transparent color, for example by using `rgb()`. The "alpha channel" defines the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:
 
    ```js
-   ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
+   ctx.fillStyle = "rgb(255 0 255 / 75%)";
    ctx.fillRect(25, 100, 175, 50);
    ```
 
@@ -435,7 +435,7 @@ Let's build a simple example.
 4. The idea here is that we'll draw something on the canvas inside the `for` loop, and iterate on it each time so we can create something interesting. Add the following code inside your `for` loop:
 
    ```js
-   ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
+   ctx.fillStyle = `rgb(${255 - length} 0 ${255 - length} / 90%)`;
    ctx.beginPath();
    ctx.moveTo(moveOffset, moveOffset);
    ctx.lineTo(moveOffset + length, moveOffset);
@@ -486,7 +486,7 @@ To see how it works, let's quickly look again at our Bouncing Balls example ([se
 
 ```js
 function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
@@ -826,7 +826,7 @@ Here we have covered only the real basics of canvas — there is so much more to
 
 ## Examples
 
-- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
+- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
 - [Voice change-o-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

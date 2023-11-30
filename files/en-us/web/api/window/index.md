@@ -89,6 +89,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the window that opened this current window.
 - {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns `true` if this window belongs to an origin-keyed agent cluster.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
 - {{domxref("Window.outerWidth")}} {{ReadOnlyInline}}
@@ -241,7 +243,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : Toggles a user's ability to resize a window.
-- {{domxref("setTimeout", "Window.setTimeout()")}}
+- {{domxref("setTimeout()", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
   - : Displays a directory picker which allows the user to select a directory.

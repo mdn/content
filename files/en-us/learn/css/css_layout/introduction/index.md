@@ -103,7 +103,7 @@ However, if we add `display: flex` to the parent, the three items now arrange th
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -136,7 +136,7 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -178,7 +178,7 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -216,7 +216,7 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -285,8 +285,8 @@ p {
 }
 
 .box {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   border-radius: 5px;
 }
@@ -358,8 +358,8 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -368,8 +368,8 @@ p {
 
 ```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -408,8 +408,8 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -419,8 +419,8 @@ p {
 ```css hidden
 .positioned {
   position: relative;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   top: 30px;
   left: 30px;
 }
@@ -459,8 +459,8 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -469,8 +469,8 @@ p {
 
 ```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -517,8 +517,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -586,8 +586,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
