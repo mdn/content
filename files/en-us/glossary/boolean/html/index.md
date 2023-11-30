@@ -14,6 +14,8 @@ If the attribute is present, it can have one of the following values:
 - the empty string, e.g. `attribute=""`
 - attribute's name itself, with no leading or trailing whitespace, e.g. `attribute="attribute"`
 
+> **Note:** The values "true" and "false" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether.
+
 Here's an example of a HTML boolean attribute `checked`:
 
 ```html
