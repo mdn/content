@@ -77458,6 +77458,25 @@
       "caraya"
     ]
   },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-21T10:16:09.302Z",
+    "contributors": [
+      "KartikSoneji",
+      "blueblots",
+      "fscholz",
+      "Thomazella",
+      "s-lee",
+      "jwhitlock",
+      "Jeremie",
+      "teoli",
+      "DBaron",
+      "ethertank",
+      "Sheppy",
+      "jswisher",
+      "ziyunfei",
+      "Marsf"
+    ]
+  },
   "Web/CSS/CSS_fragmentation": {
     "modified": "2020-07-07T12:15:32.340Z",
     "contributors": ["wbamberg", "mfluehr"]
@@ -92363,25 +92382,6 @@
       "MashKao",
       "teoli",
       "franciov"
-    ]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-21T10:16:09.302Z",
-    "contributors": [
-      "KartikSoneji",
-      "blueblots",
-      "fscholz",
-      "Thomazella",
-      "s-lee",
-      "jwhitlock",
-      "Jeremie",
-      "teoli",
-      "DBaron",
-      "ethertank",
-      "Sheppy",
-      "jswisher",
-      "ziyunfei",
-      "Marsf"
     ]
   },
   "Web/HTML": {
