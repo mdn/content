@@ -12151,6 +12151,7 @@
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
+/en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn
 /en-US/docs/Web/Guide/Mobile/Separate_sites	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Performance/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -13168,7 +13169,7 @@
 /en-US/docs/Web_Audio_API/Using_Web_Audio_API	/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
 /en-US/docs/Web_Development	/en-US/docs/Web/Guide
 /en-US/docs/Web_Development/HTTP_cookies	/en-US/docs/Web/HTTP/Cookies
-/en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Web/Guide/Introduction_to_Web_development
+/en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Learn
 /en-US/docs/Web_Development/Mobile	/en-US/docs/Web/Guide/Mobile
 /en-US/docs/Web_Development/Mobile/A_hybrid_approach	/en-US/docs/Web/Guide/Mobile/A_hybrid_approach
 /en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Web/Guide/Mobile/Mobile-friendliness
@@ -13178,7 +13179,7 @@
 /en-US/docs/Web_Development/Responsive_Web_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Web_Development2/Introduction_to_Web_development	/en-US/docs/Web/Guide/Introduction_to_Web_development
+/en-US/docs/Web_Development2/Introduction_to_Web_development	/en-US/docs/Learn
 /en-US/docs/Web_development/Historical_artifacts_to_avoid	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web_development/Writing_Forward_Compatible_Websites	/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /en-US/docs/Web_development/Writing_forward-compatible_websites	/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
