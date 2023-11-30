@@ -811,7 +811,7 @@
       "guides": [],
       "interfaces": ["InputDeviceCapabilities"],
       "methods": [],
-      "properties": [],
+      "properties": ["UIEvent.sourceCapabilities"],
       "events": []
     },
     "Intersection Observer API": {
