@@ -98,7 +98,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
 - {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
-  - : Fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list added via {{domxref("CookieStoreManager.subscribe()")}}.
+  - : Fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
   - : Occurs when a {{domxref("fetch()")}} is called.
 - {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
