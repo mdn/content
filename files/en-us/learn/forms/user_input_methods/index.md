@@ -1,5 +1,5 @@
 ---
-title: User input and controls
+title: User input methods and controls
 slug: Learn/Forms/User_input_methods
 page-type: guide
 ---
