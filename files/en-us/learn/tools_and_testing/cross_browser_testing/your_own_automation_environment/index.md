@@ -143,7 +143,16 @@ There is also nothing to stop you running the test on multiple browsers simultan
      try {
        await driver.get("http://www.google.com");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
-       await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
+       //await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
+       await driver.sleep(2000).then(async() => {
+         await driver.getTitle().then(async(title) => {
+           if (title === "webdriver - Google Search") {
+             console.log("Test passed");
+           } else {
+             console.log("Test failed");
+           }
+         });
+       });
      } finally {
        driver.quit();
      }
@@ -151,6 +160,7 @@ There is also nothing to stop you running the test on multiple browsers simultan
 
    searchTest(driver_fx);
    searchTest(driver_chr);
+
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
