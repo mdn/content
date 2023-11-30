@@ -2,13 +2,17 @@
 title: Boolean attribute (HTML)
 slug: Glossary/Boolean/HTML
 page-type: glossary-definition
+spec-urls: https://html.spec.whatwg.org/#boolean-attributes
 ---
 
 {{GlossarySidebar}}
 
-A **boolean attribute** in HTML is an attribute that can be either `true` or `false`.
+A **boolean attribute** in HTML is an attribute that represents `true` or `false` values. The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
-It is worth noticing that a boolean attribute is `true` when it is present, and `false` when it is absent.
+If the attribute is present, it can have one of the following values:
+- no value at all, e.g. `attribute`
+- the empty string, e.g. `attribute=""`
+- attribute's name itself, with no leading or trailing whitespace, e.g. `attribute="attribute"`
 
 Here's an example of a HTML boolean attribute `checked`:
 
@@ -16,9 +20,7 @@ Here's an example of a HTML boolean attribute `checked`:
 <!-- The following checkboxes will be checked on initial rendering -->
 <input type="checkbox" checked />
 <input type="checkbox" checked="" />
-<input type="checkbox" checked="true" />
-<input type="checkbox" checked="false" />
-<input type="checkbox" checked="any value" />
+<input type="checkbox" checked="checked" />
 
 <!-- The following checkbox will not be checked on initial rendering -->
 <input type="checkbox" />
