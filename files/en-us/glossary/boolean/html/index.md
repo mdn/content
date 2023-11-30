@@ -7,7 +7,7 @@ spec-urls: https://html.spec.whatwg.org/#boolean-attributes
 
 {{GlossarySidebar}}
 
-A **boolean attribute** in HTML is an attribute that represents `true` or `false` values. The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
+A **boolean attribute** in HTML is an attribute that represents `true` or `false` values. If an HTML tag contains a boolean attribute - no matter the value of that attribute - the attribute is set to `true` on that element. If an HTML tag does not contain the attribute, the attribute is set to `false`.
 
 If the attribute is present, it can have one of the following values:
 
