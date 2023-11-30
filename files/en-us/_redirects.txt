@@ -63,7 +63,7 @@
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_overview
 /en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript
-/en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
+/en-US/docs/About_WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
 /en-US/docs/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Accessibility	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/ARIA	/en-US/docs/Web/Accessibility/ARIA
@@ -7370,7 +7370,7 @@
 /en-US/docs/Values,_Variables,_and_Literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
 /en-US/docs/View_source	https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html
 /en-US/docs/Vuletube-vue-typescript-threejs-nui-voice-opencvjs	/en-US/docs/Games/
-/en-US/docs/WOFF	/en-US/docs/Web/Guide/WOFF
+/en-US/docs/WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
 /en-US/docs/We/API/RotationRate	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web-based_protocol_handlers	/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /en-US/docs/Web-related_technologies	/en-US/docs/Related
@@ -12162,6 +12162,7 @@
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Web/Guide/Using_FormData_Objects	/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/en-US/docs/Web/Guide/WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
 /en-US/docs/Web/Guide/Writing_forward-compatible_websites	/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /en-US/docs/Web/HTML/Applying_color	/en-US/docs/Web/CSS/CSS_colors/Applying_color
 /en-US/docs/Web/HTML/Block-level_elements	/en-US/docs/Glossary/Block-level_content
