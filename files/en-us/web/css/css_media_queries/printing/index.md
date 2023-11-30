@@ -4,11 +4,7 @@ slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
-</section>
-
-There may be times in which your website or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
+There may be times in which your website or application would like to improve the user's experience when printing content. There are several possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.
 - You wish to use different styles to enhance the appearance of your content on paper.
@@ -25,7 +21,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 <link href="/path/to/print.css" media="print" rel="stylesheet" />
 ```
 
-## Using media queries to improve layout
+## Using media queries and @page to improve layout
 
 You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance for your webpage when it is printed on paper and when it is displayed on the screen. The `print` option sets the styles that will be used when the content is printed.
 
@@ -41,6 +37,8 @@ Add this at the end of your stylesheet. Note that specificity and precedence rul
   }
 }
 ```
+
+You can also use the {{cssxref("@page")}} at-rule to modify different aspects of printed pages including the page's dimensions, orientation, and margins. The `@page` at-rule can be used to target all pages in a print-out or just a specific subset of pages
 
 ## Detecting print requests
 
@@ -96,3 +94,4 @@ document.getElementById("print_external").addEventListener("click", () => {
 - {{ domxref("window.afterprint_event", "afterprint") }} event
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("@media")}}
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
