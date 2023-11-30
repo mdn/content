@@ -1,6 +1,6 @@
 ---
 title: Printing
-slug: Web/Guide/Printing
+slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
 ---
 
