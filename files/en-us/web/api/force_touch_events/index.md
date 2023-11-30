@@ -2,9 +2,11 @@
 title: Force Touch events
 slug: Web/API/Force_Touch_events
 page-type: web-api-overview
+status:
+  - non-standard
 ---
 
-{{DefaultAPISidebar("Force Touch events")}}{{Non-standard_header}}
+{{DefaultAPISidebar("Force Touch Events")}}{{Non-standard_header}}
 
 **Force Touch events** are a proprietary, Apple-specific feature which makes possible (where supported by the input hardware) new interactions based on how hard the user clicks or presses down on the touchscreen or trackpad.
 
