@@ -143,7 +143,6 @@ There is also nothing to stop you running the test on multiple browsers simultan
      try {
        await driver.get("http://www.google.com");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
-       //await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
        await driver.sleep(2000).then(async () => {
          await driver.getTitle().then(async (title) => {
            if (title === "webdriver - Google Search") {
