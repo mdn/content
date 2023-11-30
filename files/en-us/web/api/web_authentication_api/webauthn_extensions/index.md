@@ -348,7 +348,7 @@ If the relying party is not authorized, the extension is ignored, and no `"minPi
 - Processed by: User agent
 - Specification: [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/)
 
-Allows a relying party to request the creation of a WebAuthn credential that may be used –by both the Relying Party and other parties– with Secure Payment Confirmation; see [Using Payment Request API for Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_with_Secure_Payment_Confirmation).
+Allows a relying party to request the creation of a WebAuthn credential that may be used – by both the Relying Party and other parties – with Secure Payment Confirmation; see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
 #### Input
 
