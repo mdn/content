@@ -7,7 +7,7 @@ browser-compat: api.Notification
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The **`Notification`** interface of the [Notifications API](/en-US/docs/Web/API/Notifications_API) is used to configure and display desktop notifications to the user.
+The **`Notification`** interface of the {{domxref("Notifications API", "", "", "nocode")}} is used to configure and display desktop notifications to the user.
 
 These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
 
@@ -20,7 +20,7 @@ These notifications' appearance and specific functionality vary across platforms
 
 ## Static properties
 
-These properties are available only on the `Notification` object itself.
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
 
@@ -35,7 +35,7 @@ These properties are available only on the `Notification` object itself.
 
 ## Instance properties
 
-These properties are available only on instances of the `Notification` object.
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
@@ -70,14 +70,14 @@ These properties are available only on instances of the `Notification` object.
 
 ## Static methods
 
-These methods are available only on the `Notification` object itself.
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}
   - : Requests permission from the user to display notifications.
 
 ## Instance methods
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.close()")}}
   - : Programmatically closes a notification instance.
