@@ -8,14 +8,14 @@ browser-compat: api.WakeLockSentinel.type
 
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-The read-only **`type`** property of the
+The **`type`** read-only property of the
 {{domxref("WakeLockSentinel")}} interface returns a string
 representation of the currently acquired {{domxref("WakeLockSentinel")}} type.
 
 ### Value
 
 A string representation of the currently acquired wake lock type.
-The type 'screen'` is a screen wake lock. It prevents devices from dimming or locking the screen.
+The type `screen` is a screen wake lock. It prevents devices from dimming or locking the screen.
 
 ## Examples
 
