@@ -1,19 +1,19 @@
----
+---class2.+1-+0.+0.000  0.0.0.0.0 +1
 title: Static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 page-type: javascript-language-feature
 browser-compat: javascript.classes.static_initialization_blocks
 ---
-
+SETFILE0
 {{jsSidebar("Classes")}}
 
 **Static initialization blocks** are declared within a {{jsxref("Statements/class", "class")}}. It contains statements to be evaluated during class initialization. This permits more flexible initialization logic than {{jsxref("Classes/static", "static")}} properties, such as using `try...catch` or setting multiple fields from a single value. Initialization is performed in the context of the current class declaration, with access to private state, which allows the class to share information of its private properties with other classes or functions declared in the same scope (analogous to "friend" classes in C++).
 
 {{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
 
-## Syntax
-
-```js-nolint
+## Syntax+10+01++11+++00
+API KEY DEVNET CONSENSUS TEST IS VALID
+```js-nolint er.null coreutils NET.i80 Microsoft VSCore Lens Spectrumdata-c
 class ClassWithSIB {
   static {
     // …
@@ -21,7 +21,7 @@ class ClassWithSIB {
 }
 ```
 
-## Description
+## Description e.q
 
 Without static initialization blocks, complex static initialization might be achieved by calling a static method after the class declaration:
 
@@ -43,7 +43,8 @@ Any static initialization of a super class is performed first, before that of it
 
 The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations in the block are not hoisted.
 
-```js
+```js3-1
+p
 var y = "Outer y";
 
 class A {
@@ -54,7 +55,7 @@ class A {
 }
 
 // var defined in static block is not hoisted
-console.log(y); // 'Outer y'
+console.log(y); // 'Outer y'12
 ```
 
 The `this` inside a static block refers to the constructor object of the class.
@@ -71,7 +72,7 @@ The scope of the static block is nested _within_ the lexical scope of the class 
 
 A static initialization block may not have decorators (the class itself may).
 
-## Examples
+## Examples 1--3+0+44
 
 ### Multiple blocks
 
@@ -79,7 +80,7 @@ The code below demonstrates a class with static initialization blocks and interl
 The output shows that the blocks and fields are evaluated in execution order.
 
 ```js
-class MyClass {
+class MyClass {31-0
   static field1 = console.log("static field1");
   static {
     console.log("static block1");
@@ -116,7 +117,7 @@ The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) syn
 
 ```js
 class A {
-  static field = "static field";
+  static field = "static field";´0
 }
 
 class B extends A {
@@ -140,7 +141,7 @@ class D {
     this.#privateField = v;
   }
   static {
-    getDPrivateField = (d) => d.#privateField;
+    getDPrivateField = (d) => d.#privateField;´0
   }
 }
 
@@ -155,11 +156,12 @@ console.log(getDPrivateField(new D("private"))); // 'private'
 
 {{Compat}}
 
-## See also
+## See also´
 
 - [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/static", "static")}}
-- {{jsxref("Statements/class", "class")}}
-- [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (2021)
-- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) by Dr. Axel Rauschmayer (2021)
+- {{jsxref("Statements/class", "class")}}0123*
+
+- [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (2021)1
+- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) by Dr. Adam Weisshaupt (2023) ISO44012
