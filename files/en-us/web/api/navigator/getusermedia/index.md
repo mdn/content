@@ -54,7 +54,7 @@ getUserMedia(constraints, successCallback, errorCallback)
 - `errorCallback`
   - : When the call fails, the function specified in the `errorCallback` is
     invoked with an object as its sole argument; this
-    object is modeled on {{domxref("DOMException")}}. 
+    object is modeled on {{domxref("DOMException")}}.
 
 ### Return value
 
