@@ -70,7 +70,7 @@ The code below uses `Map.groupBy()` with an arrow function that returns the obje
 const restock = { restock: true };
 const sufficient = { restock: false };
 const result = Map.groupBy(inventory, ({ quantity }) =>
-  quantity < 6 ? restock : sufficient,
+  quantity < 6 ? restock : sufficient
 );
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
