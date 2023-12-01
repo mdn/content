@@ -75,5 +75,4 @@ requestWakeLock();
 
 ## See also
 
-- {{DOMxRef("WakeLock")}}
-- {{DOMxRef("Navigator.wakeLock")}}
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/articles/wake-lock/)

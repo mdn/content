@@ -47,3 +47,7 @@ wakeLock.addEventListener("release", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/articles/wake-lock/)
