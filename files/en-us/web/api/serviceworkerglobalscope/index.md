@@ -102,7 +102,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
   - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers.
 - {{domxref("ServiceWorkerGlobalScope/messageerror_event", "messageerror")}}
-  - : The **`messageerror`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages can't be deserialized.
+  - : Occurs when incoming messages can't be deserialized.
 - {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
   - : Occurs when a user clicks on a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
