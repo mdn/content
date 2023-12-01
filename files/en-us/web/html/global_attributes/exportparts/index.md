@@ -21,37 +21,57 @@ Attribute `exportparts` must be placed on a _shadow Host_, which is the element 
 
 First let's create a card component that we will then wrap with another component.
 
-```js
-class CardComponent extends HTMLElement {
-  connectedCallback() {
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.innerHTML = `
-       <style>.base { display: grid };</style>
-       <div class="base" part="base">
-         <div part="header"><slot name="header"></slot></div>
-         <div part="body"><slot></slot></div>
-         <div part="footer"><slot name="footer"></slot></div>
-       </div>
-    `;
-  }
-}
+```html
+<template id="card-component-template">
+  <style>.base { display: grid };</style>
+  <div class="base" part="base">
+    <div part="header"><slot name="header"></slot></div>
+    <div part="body"><slot></slot></div>
+    <div part="footer"><slot name="footer"></slot></div>
+  </div>
+</template>
+```
 
-window.customElements.define("card-component", CardComponent);
+Then we can take the HTML above, and use it to "define" our web component.
+
+```js
+customElements.define('card-component',
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const cardComponent = document.getElementById('card-component-template').content;
+      const shadowRoot = this.attachShadow({
+        mode: 'open'
+      });
+      shadowRoot.appendChild(cardComponent.cloneNode(true));
+    }
+  }
+);
 ```
 
 ### Re-exporting parts
 
-With the above component, we could wrap it with another component and export all of the "parts" as is.
+With the above `<card-component>`, we could wrap it with another component and export all of the "parts" as is.
+
+```html
+<template id="card-wrapper">
+  <card-component exportparts="base, header, body, footer"></card-component>
+</template>
+```
 
 ```js
-class CardWrapper extends HTMLElement {
-  connectedCallback() {
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.innerHTML = `<card-component exportparts="base, header, body, footer"></card-component>`;
+customElements.define('card-wrapper',
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const cardWrapper = document.getElementById('card-wrapper').content;
+      const shadowRoot = this.attachShadow({
+        mode: 'open'
+      });
+      shadowRoot.appendChild(cardWrapper.cloneNode(true));
+    }
   }
-}
-
-window.customElements.define("card-wrapper", CardWrapper);
+)
 ```
 
 Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
@@ -64,19 +84,30 @@ card-wrapper::part(header) {
 
 ### Renaming / Remapping parts
 
-To rename an exportpart the syntax looks something like this: `exportparts="<original-name>:<new-name>,<original-name>:<new-name>"`
+To rename an exportpartm the syntax looks something like this: `exportparts="<original-name>:<new-name>,<original-name>:<new-name>"`
 
 And here's the prior `CardWrapper` with the remapping syntax:
 
-```js
-class CardWrapper extends HTMLElement {
-  connectedCallback() {
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.innerHTML = `<card-component exportparts="base:card__base, header:card__header, body:card__body, footer:card__footer"></card-component>`;
-  }
-}
 
-window.customElements.define("card-wrapper", CardWrapper);
+```html
+<template id="card-wrapper">
+  <card-component exportparts="base:card__base, header:card__header, body:card__body, footer:card__footer"></card-component>
+</template>
+```
+
+```js
+customElements.define('card-wrapper',
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const cardWrapper = document.getElementById('card-wrapper').content;
+      const shadowRoot = this.attachShadow({
+        mode: 'open'
+      });
+      shadowRoot.appendChild(cardWrapper.cloneNode(true));
+    }
+  }
+)
 ```
 
 Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
