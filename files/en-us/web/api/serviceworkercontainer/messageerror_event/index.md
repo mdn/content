@@ -8,7 +8,7 @@ browser-compat: api.ServiceWorkerContainer.messageerror_event
 
 {{APIRef}}
 
-The **`messageerror`** event is used in a page controlled by a service worker to listen when messages can't be deserialized.
+The **`messageerror`** event is used in a page controlled by a service worker to listen when incoming messages can't be deserialized.
 
 This event is not cancelable and does not bubble.
 
@@ -45,7 +45,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
+In this example the service worker get the client's ID from a {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event and then sends it a message using {{domxref("Client.postMessage")}}:
 
 ```js
 // service-worker.js
@@ -93,4 +93,4 @@ navigator.serviceWorker.onmessageerror = (event) => {
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
