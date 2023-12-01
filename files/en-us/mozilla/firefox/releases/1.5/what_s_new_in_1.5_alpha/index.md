@@ -94,7 +94,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
   - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. [Firefox bug 282103](https://bugzil.la/282103)
 
-- E4X
+- ECMAScript for XML (E4X)
 
   - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://www.ecma-international.org/publications/standards/Ecma-357.htm). [Firefox bug 246441](https://bugzil.la/246441)
 

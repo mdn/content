@@ -29,8 +29,8 @@ A {{domxref("Node")}} object.
 
 ## Examples
 
-In this example, we create an event listener to handle {{domxref("Document/pointerup_event", "pointerup")}} events on
-a list. The listener gets the common ancestors of each piece of selected text, and
+In this example, we create an event listener to handle {{domxref("Element/pointerup_event", "pointerup")}} events on
+a list. The listener gets the common ancestors of each piece of selected text and
 triggers an animation to highlight them.
 
 ### HTML

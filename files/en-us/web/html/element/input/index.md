@@ -681,9 +681,9 @@ The following non-standard attributes are also available on some browsers. As a 
 
   - : (Safari only). A string which indicates how auto-capitalization should be applied while the user is editing this field. Permitted values are:
 
-    - `none`
+    - `none` or `off`
       - : Do not automatically capitalize any text
-    - `sentences`
+    - `sentences` or `on`
       - : Automatically capitalize the first character of each sentence.
     - `words`
       - : Automatically capitalize the first character of each word.

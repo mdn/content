@@ -14,7 +14,7 @@ Registering a custom property allows you to tell the browser how the custom prop
 
 ### CSS.registerProperty
 
-The following will register a {{cssxref('--*', 'CSS custom properties')}}, `--my-prop`, using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}, as a color, give it a default value, and have it not inherit its value:
+The following will register a {{cssxref('--*', 'CSS custom property')}} named `--my-prop` using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}. `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```js
 window.CSS.registerProperty({
@@ -27,7 +27,7 @@ window.CSS.registerProperty({
 
 ### @property
 
-The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom properties')}}, `--my-prop`, using {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule), as a color, give it a default value, and have it not inherit its value:
+The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom property')}} named `--my-prop` using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```css
 @property --my-prop {

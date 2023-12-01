@@ -45,7 +45,7 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
   - : Aborts the read operation. Upon return, the `readyState` will be `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains an {{jsxref("ArrayBuffer")}} representing the file's data.
-- {{domxref("FileReader.readAsBinaryString()")}}
+- {{domxref("FileReader.readAsBinaryString()")}} {{deprecated_inline}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains the raw binary data from the file as a string.
 - {{domxref("FileReader.readAsDataURL()")}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains a `data:` URL representing the file's data.

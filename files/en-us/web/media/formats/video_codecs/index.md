@@ -1205,7 +1205,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
           <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
           containers only.
         </p>
-        <p>Chrome does not support MP4V-ES; however, Chrome OS does.</p>
+        <p>Chrome does not support MP4V-ES; however, ChromeOS does.</p>
       </td>
     </tr>
     <tr>

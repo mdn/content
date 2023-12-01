@@ -1,5 +1,5 @@
 ---
-title: "location: assign() method"
+title: "Location: assign() method"
 short-title: assign()
 slug: Web/API/Location/assign
 page-type: web-api-instance-method
