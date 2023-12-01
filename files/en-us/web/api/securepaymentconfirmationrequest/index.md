@@ -37,7 +37,7 @@ An instance of this dictionary must be passed into the {{domxref("PaymentRequest
 - `rpId`
   - : A string that specifies the relying party's identifier (for example "login.example.org").
 - `showOptOut` {{optional_inline}}
-  - : A boolean indicating whether the user should be given a chance to opt-out during the [transaction dialog UX](/en-us/web/api/payment_request_api/using_secure_payment_confirmation/#transaction-dialog:). Defaults to `false`.
+  - : A boolean indicating whether the user should be given a chance to opt-out during the [transaction dialog UX](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation#authenticating_a_payment). Defaults to `false`.
 - `timeout` {{optional_inline}}
   - : The number of milliseconds before the request to sign the transaction details times out. At most 1 hour.
 
