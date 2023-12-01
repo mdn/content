@@ -9,7 +9,7 @@ browser-compat: api.FileReaderSync
 
 The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.
 
-{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}
 
 > **Warning:** This interface is **only available** in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 

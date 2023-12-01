@@ -10,6 +10,8 @@ browser-compat: api.FileReaderSync.FileReaderSync
 
 The **`FileReaderSync()`** constructor creates a new {{domxref("FileReaderSync")}}.
 
+{{AvailableInWorkers("notservice")}}
+
 ## Syntax
 
 ```js-nolint
