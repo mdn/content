@@ -104,9 +104,9 @@ For example:
 <iframe src="https://example.org" allow="payment"></iframe>
 ```
 
-### Authenticating a payment
+### Authenticating a payment<a id="transaction-dialog"></a>
 
-An origin may invoke the Payment Request API with the `"secure-payment-confirmation"` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface (the <dfn id="transaction-dialog">"transaction dialog"</dfn>) with transaction details (e.g., the payment currency and amount and the payee origin).
+An origin may invoke the Payment Request API with the `"secure-payment-confirmation"` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface (the "transaction dialog") with transaction details (e.g., the payment currency and amount and the payee origin).
 
 > **Note:** Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the `payment` permission policy set.
 
