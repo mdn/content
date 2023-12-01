@@ -278,7 +278,7 @@ The above are good design practices. They will benefit everyone.
 - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 - [Accessibility overview](/en-US/docs/Learn/Accessibility)
-- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines).
+- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
 - [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities.](https://www.cdc.gov/ncbddd/disabilityandhealth/)
+- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)
