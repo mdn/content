@@ -10,7 +10,7 @@ browser-compat: api.UIEvent.sourceCapabilities
 
 {{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
-The **`UIEvent.sourceCapabilities`** read-only property returns
+The **`sourceCapabilities`** read-only property of the {{domxref("UIEvent")}} interface returns
 an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides
 information about the physical device responsible for generating a touch event. If no
 input device was responsible for the event, it returns `null`.
