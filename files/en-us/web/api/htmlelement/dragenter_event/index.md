@@ -121,9 +121,3 @@ target.addEventListener("dragleave", (event) => {
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragenter_event", "dragenter")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragenter_event", "dragenter")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragenter_event", "dragenter")}} event

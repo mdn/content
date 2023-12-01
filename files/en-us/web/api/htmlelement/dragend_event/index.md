@@ -114,9 +114,3 @@ source.addEventListener("dragend", (event) => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragend_event", "dragend")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} event
