@@ -130,7 +130,7 @@ It's important, however, to keep in mind that while a `local-floor` space provid
 
 If upon attempting to create a `local-floor` reference space, the user's XR device doesn't have built-in support for determining floor level, the WebXR layer will still create a `local-floor` space. However, the floor level will be simulated by choosing and emulating the floor level and shifting the view upward by a fixed amount in order to ensure that the scene's contents render in the right place.
 
-Keep in mind that by default, the viewer's position is placed _immediately_ above the floor, like a camera lying on the ground. If you wish to simulate a human's perspective on the scene, you probably want to move the viewpoint upward by a distance that approximates human eye level by transforming it by providing an appropriate transform matrix to the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.requestOffsetReferenceSpace", "requestOffsetReferenceSpace()")}}.
+Keep in mind that by default, the viewer's position is placed _immediately_ above the floor, like a camera lying on the ground. If you wish to simulate a human's perspective on the scene, you probably want to move the viewpoint upward by a distance that approximates human eye level by transforming it by providing an appropriate transform matrix to the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
 
 This would change the `onRefSpaceCreated()` method from the above snippet to:
 
