@@ -2005,7 +2005,10 @@
         "ServiceWorkerRegistration.getNotifications()"
       ],
       "properties": [],
-      "events": ["ServiceWorkerGlobalScope: notificationclick"]
+      "events": [
+        "ServiceWorkerGlobalScope: notificationclick",
+        "ServiceWorkerGlobalScope: notificationclose"
+      ]
     },
     "WebRTC": {
       "overview": ["WebRTC API"],
