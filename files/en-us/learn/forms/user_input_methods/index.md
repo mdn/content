@@ -4,16 +4,22 @@ slug: Learn/Forms/User_input_methods
 page-type: guide
 ---
 
-Web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies. Relevant APIs and events include [touch events](/en-US/docs/Web/API/Touch_events), [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API), [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) and more.
+Web forms require user input. In designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
+
+In this article, we take a look at the different ways users interact with web content, and provides recommendations for managing user input, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.
+
+As you develop more complex and interactive forms or other user interactions, there are many HTML features and JavaScript APIs you may want to investigate, including making elements [content editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable), supporting [touch events](/en-US/docs/Web/API/Touch_events), controlling the user's [pointer device](/en-US/docs/Web/API/Pointer_Lock_API), controlling the [screen's orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), making the content [fullscreen](/en-US/docs/Web/API/Fullscreen_API), using [drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) for file uploads, and more.
 
 ## Recommendations
 
 To provide good user experience to the greatest number of users, you need to support multiple input methods, including mouse, keyboard, finger touch and so on. Available input mechanisms depend on the capabilities of the device running the application:
 
 - Some devices provide touchscreen displays: the Web Platform offers [touch events](/en-US/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
-- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) helps you in implementing a first-person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
-- Using features such as [`contentEditable``](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors and with [Drag\&Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app.
-- When screen orientation matters for your application, through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
+- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) is userful when your content requires full control of the pointing device.
+- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your content in fullscreen mode.
+- Using features such as [`contentEditable``](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors.
+- The [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users move elements, which can help improve the user experience when it comes to selecting files for upload or reordering content modules within a page.
+- When screen orientation matters for your layout, you can use [CSS media queries](/en-US/docs/Web/CSS/@media/orientation) to style your forms based on the browser orientation, or even use the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) to read the screen orientation state and perform other actions.
 
 You should always be mindful of keyboard accessibility — many web users only use keyboard to navigate websites and apps, and locking them out of your functionality is a bad idea.
 
@@ -23,7 +29,9 @@ The following is a set of recommendations and best practices for users can use y
 
 #### Keyboard
 
-Keyboard input can be controlled by your app. For example, if you want to add controls when any key gets pressed, you need to add an event listener on the window object:
+Most users will use a keyboard to enter data into your form controls. Some will also use the keyboard to navigate to those form controls. To be accessible, and for better user experience, it's important to properly [label all form controls](/en-US/docs/Learn/Forms/Your_first_form#the_label_input_and_textarea_elements). When each form control has a correctly associated {{htmlelement("label")}}, your form will be keyboard navigable.
+
+If you want to add additional keyboard support, such as validating a form control when a specific key is hit, you can use event listeners to capture and react to keyboard events. For example, if you want to add controls when any key gets pressed, you need to add an event listener on the window object:
 
 ```js
 window.addEventListener("keydown", handleKeyDown, true);
@@ -36,13 +44,13 @@ where `handleKeyDown` and `handleKeyUp` are the functions implementing the contr
 
 #### Mouse
 
-The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/en-US/docs/Web/API/Element/click_event), [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event), [`mouseup`](/en-US/docs/Web/API/Element/mouseup_event), and [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/en-US/docs/Web/Events).
+You can also capture mouse and other pointer events. The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/en-US/docs/Web/API/Element/click_event), [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event), [`mouseup`](/en-US/docs/Web/API/Element/mouseup_event), and [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/en-US/docs/Web/Events).
 
-When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below).
+When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below). You can also [use CSS to test for pointer device](/en-US/docs/Learn/CSS/CSS_layout/Media_queries#use_of_pointing_devices) support.
 
 #### Finger touch
 
-To support web applications on touchscreen devices, it's a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/en-US/docs/Web/API/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
+To provide additional support for touchscreen devices, it's a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/en-US/docs/Web/API/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
 
 If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:
 
@@ -59,13 +67,13 @@ where `element` is the DOM element you want to register the touch events on.
 
 #### Pointer Events
 
-When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. [Pointer Events](https://www.w3.org/TR/pointerevents/) help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
+Mice aren't the only pointing devices. Your user's devices may incorporate multiple forms of input, like mouse, finger touch and pen input. Each of these pointers has a different size. The [Pointer Events API](/en-US/docs/Web/API/Pointer_events) may come in handy if you need to manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc. The [pointerEvent interface](/en-US/docs/Web/API/PointerEvent) provides all the details you may want to capture about the pointer device, including the size, pressure, and angle of the pointer event.
 
 ### Implement controls
 
 #### Pointer lock
 
-In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) gives you full control of the pointing device.
+If you need to access mouse events even when the cursor goes past the boundary of the browser or screen: the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) gives you full control of the pointing device.
 
 This is the code to request pointer lock on an `element`:
 
@@ -77,18 +85,20 @@ element.requestPointerLock();
 
 #### Screen Orientation
 
-When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+If you need slightly different layouts depending on whether the user is in portrait or landscape mode, you can use [CSS media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries#media_feature_rules) to determine the orientation and nest CSS for different layouts or form control widths based on the size or orientation of the screen when [styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
 
-Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or with CSS through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
+When screen orientation matters for your form, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+
+Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature. When the screen orientation changes, the {{domxref("ScreenOrientation.change_event", "change")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("ScreenOrientation.lock()")}} method, while the {{domxref("ScreenOrientation.unlock()")}} method removes all the previous screen locks that have been set.
 
 > **Note:** More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
 #### Fullscreen
 
-You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element:
+In the unlikely event that you need to present your form in fullscreen mode, it is possible to do so by calling {{domxref("Element.requestFullscreen()")}} on that element:
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("myForm");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -98,7 +108,7 @@ if (elem.requestFullscreen) {
 
 #### Drag & Drop
 
-[Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) allows your application's users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
+[Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) enables users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
 
 Here is an example that allows a section of content to be dragged.
 
@@ -119,7 +129,7 @@ in which we:
 
 #### contentEditable
 
-In open web apps any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
+Generally, you should use a {{HTMLElement("textarea")}} or an appropriate {{HTMLElement("input")}} type, along with a descriptive {{HTMLElement("label")}}, within a {{HTMLElement("form")}}, to collect data from users. Form controls are not the only elements that can receive user input. Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
 ```css hidden
 div {
@@ -133,16 +143,11 @@ div {
 <div contenteditable="true">This text can be edited by the user.</div>
 ```
 
+If using non-semantic elements for data entry, if you are [creating your own form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality. The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute does not need to be added. However, the element's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/), [label](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), and [description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) need to be added with ARIA. JavaScript is required to handle, including [validation](/en-US/docs/Learn/Forms/Form_validation) and [submitting](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) or [saving](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript), all user-updated content.
+
 {{EmbedLiveSample("contentEditable")}}
 
 > **Note:** Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
-
-## Examples
-
-- **[Tracking multiple touch points at a time](/en-US/docs/Web/API/Touch_events#example)**
-  - : This example tracks multiple touch points at a time, allowing the user to draw in a `{{htmlelement("canvas")}}` with more than one finger at a time. It will only work on a browser that supports touch events.
-- **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#examples)**
-  - : We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a `{{htmlelement("canvas")}}` element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.
 
 ## Tutorials
 
@@ -150,6 +155,8 @@ div {
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
 - [Drag Operations Guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
 
 ## Reference
 
