@@ -198,7 +198,7 @@ We have still _another_ problem: our `<Todo />` component gives every task an `i
 - [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
 - When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Element/label) can break.
 
-The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The `<label>`s2 only acknowledge the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
+The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The `<label>`s only acknowledge the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
 
 We had unique `id` attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time. Update the `Todo` component instances inside `App.jsx` to add in `id` props, as follows:
 
@@ -324,10 +324,10 @@ const taskList = props.tasks?.map((task) => (
 
 Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, reused pieces of UI, or both, we can make two more components:
 
-- `<Form/>`
-- `<FilterButton/>`
+- `<Form />`
+- `<FilterButton />`
 
-Since we know we need both, we can batch some of the file creation work together with a terminal command. Run this command in your terminal, taking care that you're in the root directory of your app:
+Since we know we need both, we can batch some of the file creation work together in one terminal command. Run this command in your terminal, taking care that you're in the root directory of your app:
 
 ```bash
 touch src/components/{Form,FilterButton}.jsx
@@ -337,9 +337,8 @@ touch src/components/{Form,FilterButton}.jsx
 
 Open `components/Form.jsx` and do the following:
 
-- Make yourself a new `Form()` component with the same basic structure as `Todo()`.
+- Declare a `Form()` function and export it at the end of the file.
 - Copy the `<form>` tags and everything between them from inside `App.jsx`, and paste them inside `Form()`'s `return` statement.
-- Export `Form` at the end of the file.
 
 Your `Form.jsx` file should read like this:
 
@@ -369,14 +368,14 @@ function Form() {
 export default Form;
 ```
 
-### The \<FilterButton />
+### The `<FilterButton />`
 
 Do the same things you did to create `Form.jsx` inside `FilterButton.jsx`, but call the component `FilterButton()` and copy the HTML for the first button inside `<div className="filters btn-group stack-exception">` from `App.jsx` into the `return` statement.
 
 The file should read like this:
 
 ```jsx
-function FilterButton(props) {
+function FilterButton() {
   return (
     <button type="button" className="btn toggle-btn" aria-pressed="true">
       <span className="visually-hidden">Show </span>
