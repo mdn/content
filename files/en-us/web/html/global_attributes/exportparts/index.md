@@ -104,8 +104,7 @@ And here's the prior `CardWrapper` with the remapping syntax:
        header:card__header, 
        body:card__body, 
        footer:card__footer
-     "
-  >
+     ">
   </card-component>
 </template>
 ```
