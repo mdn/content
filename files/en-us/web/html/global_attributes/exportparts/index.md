@@ -23,7 +23,11 @@ First let's create a card component that we will then wrap with another componen
 
 ```html
 <template id="card-component-template">
-  <style>.base { display: grid };</style>
+  <style>
+    .base {
+      display: grid;
+    }
+  </style>
   <div class="base" part="base">
     <div part="header"><slot name="header"></slot></div>
     <div part="body"><slot></slot></div>
