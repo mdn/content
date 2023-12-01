@@ -26,7 +26,7 @@ getAll(name)
 
 ### Return value
 
-An array of strings.
+An array of strings, which may empty if no values for the given parameter are found.
 
 ## Examples
 

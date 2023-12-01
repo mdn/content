@@ -29,7 +29,7 @@ off of ground level:
 
 ```js
 xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-  new XRRigidTransform({ y: -2 }, { x: 0.0, y: 1.0, z: 0.0, w: 1.0 })
+  new XRRigidTransform({ y: -2 }, { x: 0.0, y: 1.0, z: 0.0, w: 1.0 }),
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: "Dynamic behavior in Svelte: working with variables and props"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -106,7 +107,7 @@ The state of our component will be represented by these three top-level variable
 
 At the moment, our displayed to-do items are all static. We want to iterate over each item in our `todos` array and render the markup for each task, so let's do that now.
 
-HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each}`](https://svelte.dev/docs#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
+HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each}`](https://svelte.dev/docs/logic-blocks#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
 
 Let's give it a try.
 
@@ -289,7 +290,7 @@ Now on to the next major task for this article — let's add some functionality 
 
    Whenever the value of the variable `newTodoName` changes, it will be reflected in the `value` attribute of the input, and whenever a key is pressed in the input, we will update the contents of the variable `newTodoName`.
 
-   This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs#bind_element_property) directive:
+   This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs/element-directives#bind-property) directive:
 
    ```svelte
    <input bind:value={newTodoName} />
@@ -332,9 +333,9 @@ Now on to the next major task for this article — let's add some functionality 
    <form on:submit|preventDefault={addTodo}>
    ```
 
-   The [`on:eventname`](https://svelte.dev/docs#on_element_event) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
+   The [`on:eventname`](https://svelte.dev/docs/element-directives#on-eventname) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
 
-7. If you try adding new to-dos at this point, the new to-dos are added to the to-dos array, but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs#2_Assignments_are_reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
+7. If you try adding new to-dos at this point, the new to-dos are added to the to-dos array, but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs/svelte-components#script-2-assignments-are-reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
 
    Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result: we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
 
@@ -391,8 +392,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
      filter === "active"
        ? todos.filter((t) => !t.completed)
        : filter === "completed"
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
    ```
 
    We use the `filter` variable to control the active filter: _all_, _active_, or _completed_. Just assigning one of these values to the filter variable will activate the filter and update the list of to-dos. Let's see how to achieve this.

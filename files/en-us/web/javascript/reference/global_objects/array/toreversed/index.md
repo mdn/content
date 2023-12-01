@@ -15,6 +15,10 @@ The **`toReversed()`** method of {{jsxref("Array")}} instances is the [copying](
 toReversed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new array containing the elements in reversed order.
@@ -53,7 +57,7 @@ console.log([1, , 3, 4].toReversed()); // [4, 3, undefined, 1]
 
 ### Calling toReversed() on non-array objects
 
-The `toReversed()` method reads the `length` property of `this`. It then visits each index between `length - 1` and `0` in descending order, and adds the value of that index in the original array to the corresponding index in the new array.
+The `toReversed()` method reads the `length` property of `this`. It then visits each property having an integer key between `length - 1` and `0` in descending order, adding the value of the current property to the end of the array to be returned.
 
 ```js
 const arrayLike = {
@@ -77,6 +81,7 @@ console.log(Array.prototype.toReversed.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}

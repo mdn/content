@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Exception constructor
 slug: WebAssembly/JavaScript_interface/Exception/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception.Exception
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Exception.Exception
 ---
 
 {{WebAssemblySidebar}}
@@ -12,7 +13,7 @@ The constructor accepts a [`Tag`](/en-US/docs/WebAssembly/JavaScript_interface/E
 The data types of each of the payload elements must match the corresponding data type specified in the `Tag`.
 
 The constructor may also take an `options` object.
-The `options.traceStack` property can be set `true` (by default it is `false`) to indicate that a WASM stack trace may be attached to the exception's [`stack`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/stack) property.
+The `options.traceStack` property can be set `true` (by default it is `false`) to indicate that a Wasm stack trace may be attached to the exception's [`stack`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/stack) property.
 
 ## Syntax
 

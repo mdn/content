@@ -108,7 +108,7 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 navigator.serviceWorker.register("sw.js");
 
 function showNotification() {
-  Notification.requestPermission((result) => {
+  Notification.requestPermission().then((result) => {
     if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
         registration.showNotification("Vibration Sample", {

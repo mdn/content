@@ -175,7 +175,7 @@ function gotStream(stream) {
   } else {
     log(
       "Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
-        "back to the <strong>deprecated</strong> addStream() method…"
+        "back to the <strong>deprecated</strong> addStream() method…",
     );
     callerPC.addStream(stream);
   }
@@ -186,7 +186,7 @@ function gotStream(stream) {
     log(
       "Your browser doesn't support RTCPeerConnection.getSenders(), so " +
         "falling back to use <strong>deprecated</strong> createDTMFSender() " +
-        "instead."
+        "instead.",
     );
     dtmfSender = callerPC.createDTMFSender(audioTracks[0]);
   }
@@ -299,7 +299,7 @@ function handleCallerNegotiationNeeded() {
     })
     .then(() => {
       log(
-        "Setting receiver's remote description to the same as caller's local"
+        "Setting receiver's remote description to the same as caller's local",
       );
       return receiverPC.setRemoteDescription(callerPC.localDescription);
     })

@@ -3,7 +3,7 @@ title: "DOMPointReadOnly: fromPoint() static method"
 short-title: fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint_static
 page-type: web-api-static-method
-browser-compat: api.DOMPointReadOnly.fromPoint
+browser-compat: api.DOMPointReadOnly.fromPoint_static
 ---
 
 {{APIRef("DOM")}}

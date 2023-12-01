@@ -11,7 +11,7 @@ has been provided to {{jsxref("Date")}} or {{jsxref("Date.parse()")}}.
 
 ## Message
 
-```
+```plain
 RangeError: Invalid time value (V8-based)
 RangeError: invalid date (Firefox)
 RangeError: Invalid Date (Safari)

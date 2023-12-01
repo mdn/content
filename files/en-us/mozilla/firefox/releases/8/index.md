@@ -1,6 +1,7 @@
 ---
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -23,7 +24,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 ### DOM
 
 - The {{ domxref("Element.insertAdjacentHTML","insertAdjacentHTML") }} method has been implemented.
-- {{ domxref("BlobBuilder") }} now has a `getFile()` method that returns the content of the blob as a file.
+- `BlobBuilder` now has a `getFile()` method that returns the content of the blob as a file.
 - The {{ domxref("FileReaderSync") }} interface (part of the FileAPI) has been implemented.
 - Event handling in nested {{ HTMLElement("label") }}s has been fixed.
 - You can now use {{ domxref("window.postMessage()") }} to pass {{ domxref("File") }} and {{ domxref("FileList") }} objects between windows.

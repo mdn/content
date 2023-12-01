@@ -1,6 +1,7 @@
 ---
 title: Audio and video manipulation
 slug: Web/Guide/Audio_and_video_manipulation
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -31,12 +32,7 @@ For example, let's process a video to display it in greyscale. In this case, we'
 We can set up our video player and `<canvas>` element like this:
 
 ```html
-<video
-  id="my-video"
-  controls="true"
-  width="480"
-  height="270"
-  crossorigin="anonymous">
+<video id="my-video" controls width="480" height="270" crossorigin="anonymous">
   <source
     src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
@@ -76,7 +72,7 @@ const processor = {
         this.height = this.video.height;
         this.timerCallback();
       },
-      false
+      false,
     );
   },
 
@@ -152,7 +148,7 @@ myVideo.playbackRate = 2;
 #### Editable example
 
 ```html hidden
-<video id="my-video" controls="true" width="480" height="270">
+<video id="my-video" controls width="480" height="270">
   <source
     src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
@@ -227,7 +223,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 ```js
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video")
+  document.getElementById("my-video"),
 );
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -242,12 +238,7 @@ filter.gain.value = 25;
 #### Editable example
 
 ```html hidden
-<video
-  id="my-video"
-  controls="true"
-  width="480"
-  height="270"
-  crossorigin="anonymous">
+<video id="my-video" controls width="480" height="270" crossorigin="anonymous">
   <source
     src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
@@ -269,7 +260,7 @@ filter.gain.value = 25;
 ```js hidden
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video")
+  document.getElementById("my-video"),
 );
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -352,7 +343,7 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/master/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
+> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
 
 ### JavaScript codecs
 
@@ -385,7 +376,7 @@ Libraries currently exist for the following formats:
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
 - [Animating Textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters) (2012)](https://web.dev/webaudio-games/#room-effects-and-filters)
+- [Developing Game Audio with the Web Audio API (Room effects and filters) (2012)](https://web.dev/articles/webaudio-games#room_effects_and_filters)
 
 ### Reference
 

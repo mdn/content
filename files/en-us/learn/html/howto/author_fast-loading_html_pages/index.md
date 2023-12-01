@@ -1,6 +1,7 @@
 ---
 title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
@@ -68,7 +69,7 @@ Any dynamic features that require the page to complete loading before being used
 
 ### Reduce the number of inline scripts
 
-Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use modern [AJAX](/en-US/docs/Web/Guide/AJAX) methods to manipulate page content for modern browsers, rather than the older approaches based on `document.write()`.
+Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use [DOM APIs to manipulate page content](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents), rather than `document.write()`.
 
 ### Use modern CSS and valid markup
 
@@ -134,7 +135,7 @@ and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/El
 
 ### Use lazy loading for images
 
-By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
+By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the window's [`load`](/en-US/docs/Web/API/Window/load_event) event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
 
 To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 

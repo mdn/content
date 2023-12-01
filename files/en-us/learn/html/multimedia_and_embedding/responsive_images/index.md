@@ -1,6 +1,7 @@
 ---
 title: Responsive images
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -24,7 +25,7 @@ In this article, we'll learn about the concept of responsive images — images t
       <th scope="row">Objective:</th>
       <td>
         Learn how to use features like
-         <a href="en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
+         <a href="/en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
         {{htmlelement("picture")}} element to implement responsive
         image solutions on websites.
       </td>

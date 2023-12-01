@@ -4,6 +4,8 @@ slug: Glossary/Key
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A key is a piece of information used by a {{Glossary("cipher")}} for {{Glossary("encryption")}} and/or {{Glossary("decryption")}}.
 
 Encrypted messages should remain secure even if everything about the {{Glossary("cryptosystem")}}, except for the key, is public knowledge.

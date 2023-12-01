@@ -1,6 +1,7 @@
 ---
 title: Introduction to automated testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -40,7 +41,7 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [LambdaTest](https://www.lambdatest.com/), [Sauce Labs](https://saucelabs.com/), [BrowserStack](https://www.browserstack.com/), and [TestingBot](https://testingbot.com) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
@@ -177,12 +178,11 @@ To use each plugin, you need to first install it via npm, then require any depen
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function html(cb) {
+   function html() {
      return gulp
        .src("src/index.html")
        .pipe(htmltidy())
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -223,7 +223,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function css(cb) {
+   function css() {
      return gulp
        .src("src/style.css")
        .pipe(csslint())
@@ -231,10 +231,9 @@ In the input version of the file, you may have noticed that we put an empty {{ht
        .pipe(
          autoprefixer({
            cascade: false,
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -286,7 +285,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function js(cb) {
+   function js() {
      return gulp
        .src("src/main.js")
        .pipe(jshint())
@@ -294,10 +293,9 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
        .pipe(
          babel({
            presets: ["@babel/env"],
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -425,39 +423,32 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
 2. Install the Node Sauce Labs wrapper using the following command:
 
-   ```
+   ```bash
    npm install saucelabs
    ```
 
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
    ```js
-   const SauceLabs = require("saucelabs");
+   const SauceLabs = require("saucelabs").default;
 
-   let myAccount = new SauceLabs({
-     username: "your-sauce-username",
-     password: "your-sauce-api-key",
-   });
-
-   myAccount.getAccountDetails((err, res) => {
-     console.log(res);
-     myAccount.getServiceStatus((err, res) => {
-       // Status of the Sauce Labs services
-       console.log(res);
-       myAccount.getJobs((err, jobs) => {
-         // Get a list of all your jobs
-         for (const job of jobs) {
-           myAccount.showJob(job.id, (err, res) => {
-             let str = `${res.id}: Status: ${res.status}`;
-             if (res.error) {
-               str += `\x1b[31m Error: ${res.error}\x1b[0m`;
-             }
-             console.log(str);
-           });
-         }
-       });
+   (async () => {
+     const myAccount = new SauceLabs({
+       username: "your-sauce-username",
+       password: "your-sauce-api-key",
      });
-   });
+
+     // Get full WebDriver URL from the client depending on region:
+     console.log(myAccount.webdriverEndpoint);
+
+     // Get job details of last run job
+     const jobs = await myAccount.listJobs("your-sauce-username", {
+       limit: 1,
+       full: true,
+     });
+
+     console.log(jobs);
+   })();
    ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
@@ -560,7 +551,7 @@ Let's have a brief look at how we'd access the API using Node.js.
    getPlanDetails();
    ```
 
-3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack automation dashboard](https://www.browserstack.com/automate). Fill these in now.
+3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the Authentication & Security section. Fill these in now.
 4. Make sure everything is saved, and run your file like so:
 
    ```bash
@@ -603,7 +594,7 @@ function getSessionsInBuild(build) {
     { uri: `${baseUrl}builds/${buildId}/sessions.json` },
     (err, res, body) => {
       console.log(JSON.parse(body));
-    }
+    },
   );
   /* Response:
   [
@@ -731,7 +722,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:
 
-   ```
+   ```bash
    npm install testingbot-api
    ```
 

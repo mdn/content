@@ -4,6 +4,8 @@ slug: Glossary/Second-level_Domain
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A Second Level Domain ({{Glossary("SLD")}}) is the part of the domain name that is located right before a Top Level Domain ({{Glossary("TLD")}}).
 
 For example, in `mozilla.org` the SLD is `mozilla` and the TLD is `org`.

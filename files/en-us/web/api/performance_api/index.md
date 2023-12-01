@@ -77,6 +77,8 @@ The following interfaces are present in the Performance API:
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
+- {{domxref("VisibilityStateEntry")}}
+  - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 ## Guides
 
@@ -88,40 +90,6 @@ The following guides help you to understand key concepts of the Performance API 
 - [Navigation timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Measuring navigation timing of a document.
 - [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
 - [Server timing](/en-US/docs/Web/API/Performance_API/Server_timing): Collecting server-side metrics.
-- Paint timing
-- Long task timing
-- Largest contentful paint
-- Event timing
-- Element timing
-- Layout shift
-
-## How-Tos
-
-The following how-to pages provide practical information and best practices when using the Performance API:
-
-How to ...
-
-- Observe performance data
-- Collect custom metrics on the client side
-- Collect custom metrics on the server side
-- Measure FCP
-- Measure LCP
-- Measure FID
-- Measure TTI
-- Measure TBT
-- Measure CLS
-- Measure TTFB
-- Sync timings between window and worker contexts
-- Set HTTP headers for Performance APIs to work best
-- Use the Beacon API to log performance information
-- Record rage clicks
-- Manage buffer sizes when recording a lot of PerformanceEntry objects
-
-## Tutorials
-
-The following course helps you to take your first steps with the Performance API:
-
-- Instrumenting a sample application
 
 ## Specifications
 

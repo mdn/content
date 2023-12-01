@@ -61,7 +61,7 @@ elem.addEventListener(
   (e) => {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 elem.dispatchEvent(event);

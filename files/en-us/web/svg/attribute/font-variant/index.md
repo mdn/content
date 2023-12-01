@@ -13,7 +13,6 @@ The **`font-variant`** attribute indicates whether the text is to be rendered us
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

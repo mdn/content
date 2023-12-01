@@ -47,7 +47,7 @@ function waitToCompleteIceGathering(pc) {
       "icegatheringstatechange",
       (e) =>
         e.target.iceGatheringState === "complete" &&
-        resolve(pc.localDescription)
+        resolve(pc.localDescription),
     );
   });
 }
@@ -66,7 +66,7 @@ async function newPeer(remoteOffer) {
 
 pc.addEventListener(
   "icecandidate",
-  (e) => pc.canTrickleIceCandidates && sendCandidateToPeer(e.candidate)
+  (e) => pc.canTrickleIceCandidates && sendCandidateToPeer(e.candidate),
 );
 ```
 

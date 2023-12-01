@@ -11,7 +11,7 @@ This reference describes the technologies, features, and APIs that [Progressive 
 
 ## Web app manifest
 
-- [Web app manifest members](/en-US/docs/Web/Manifest/)
+- [Web app manifest members](/en-US/docs/Web/Manifest)
   - : Developers can use web app manifest members to describe a PWA, customize its appearance, and more deeply integrate it into the operating system.
 
 ## Service Worker APIs

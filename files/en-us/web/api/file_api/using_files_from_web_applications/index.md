@@ -4,7 +4,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 page-type: guide
 ---
 
-{{APIRef("File API")}}
+{{DefaultAPISidebar("File API")}}
 
 Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
 
@@ -62,7 +62,7 @@ There are three attributes provided by the {{DOMxRef("File")}} object that conta
 The following example shows a possible use of the `size` property:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -106,7 +106,7 @@ The following example shows a possible use of the `size` property:
           ];
           const exponent = Math.min(
             Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1
+            units.length - 1,
           );
           const approx = numberOfBytes / 1024 ** exponent;
           const output =
@@ -120,7 +120,7 @@ The following example shows a possible use of the `size` property:
             uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
-        false
+        false,
       );
     </script>
   </body>
@@ -156,7 +156,7 @@ fileSelect.addEventListener(
       fileElem.click();
     }
   },
-  false
+  false,
 );
 ```
 
@@ -278,7 +278,7 @@ Next, we establish the {{DOMxRef("FileReader")}} to handle asynchronously loadin
 
 ## Using object URLs
 
-The DOM {{DOMxRef("URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL()")}} methods let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{DOMxRef("File")}} object, including local files on the user's computer.
+The DOM {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{DOMxRef("File")}} object, including local files on the user's computer.
 
 When you have a {{DOMxRef("File")}} object you'd like to reference by URL from HTML, you can create an object URL for it like this:
 
@@ -286,7 +286,7 @@ When you have a {{DOMxRef("File")}} object you'd like to reference by URL from H
 const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxRef("URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxRef("URL.revokeObjectURL()")}}:
+The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}:
 
 ```js
 URL.revokeObjectURL(objectURL);
@@ -328,7 +328,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // prevent navigation to "#"
   },
-  false
+  false,
 );
 
 fileElem.addEventListener("change", handleFiles, false);
@@ -369,9 +369,9 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is `null`, we se
 
    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
    2. Create a new image ({{HTMLElement("img")}}) element.
-   3. Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
+   3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.
    4. Set the image's height to 60 pixels.
-   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
+   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
    6. Append the new list item to the list.
 
 Here is a live demo of the code above:
@@ -380,7 +380,11 @@ Here is a live demo of the code above:
 
 ## Example: Uploading a user-selected file
 
-Another thing you might want to do is let the user upload the selected file or files (such as the images selected using the previous example) to a server. This can be done asynchronously very easily.
+This example shows how to let the user upload files (such as the images selected using the previous example) to a server.
+
+> **Note:** It's usually preferable to make HTTP requests using the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead of {{domxref("XMLHttpRequest")}}. However, in this case we want to show the user the upload progress, and this feature is still not supported by the Fetch API, so the example uses `XMLHttpRequest`.
+>
+> Work to track standardization of progress notifications using the Fetch API is at <https://github.com/whatwg/fetch/issues/607>.
 
 ### Creating the upload tasks
 
@@ -418,7 +422,7 @@ function FileUpload(img, file) {
         self.ctrl.update(percentage);
       }
     },
-    false
+    false,
   );
 
   xhr.upload.addEventListener(
@@ -428,11 +432,11 @@ function FileUpload(img, file) {
       const canvas = self.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
-    false
+    false,
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -456,7 +460,7 @@ function createThrobber(img) {
       0,
       0,
       (throbberWidth * percent) / 100,
-      throbberHeight
+      throbberHeight,
     );
     if (percent === 100) {
       throbber.ctx.fillStyle = "green";
@@ -576,4 +580,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

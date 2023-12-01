@@ -4,6 +4,8 @@ slug: Web/SVG/Attribute/overline-thickness
 page-type: svg-attribute
 ---
 
+{{SVGRef}}
+
 The `overline-thickness` attribute represents the ideal thickness of the overline. The overline thickness is expressed in the font's coordinate system.
 
 You can use this attribute with the following SVG elements:

@@ -21,35 +21,59 @@ equivalent to `collection.namedItem("value")`.
 ## Syntax
 
 ```js-nolint
-namedItem(str)
-// or collection[str]
+namedItem(name)
+[name]
 ```
 
 ### Parameters
 
-- `str` is a string
+- `name`
+  - : A string which will be used to match against the `name` or `id` attributes of the controls in this `HTMLFormControlsCollection` object.
 
 ### Return value
 
-- `item` is a {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+- A {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 
-### HTML
+### Using namedItem()
+
+#### HTML
 
 ```html
 <form>
-  <input id="my-form-control" type="textarea" />
+  <label for="notes">Notes:</label>
+  <input id="notes" name="my-form-control" type="text" />
+
+  <label for="start">Start date:</label>
+  <input id="start" name="my-form-control" type="date" />
 </form>
+
+<div id="output"></div>
 ```
 
-### JavaScript
+```css hidden
+div {
+  margin: 1rem 0;
+}
+```
+
+#### JavaScript
 
 ```js
-// Returns the HTMLInputElement representing #my-form-control
-elem1 = document.forms[0]["my-form-control"];
+const form = document.querySelector("form");
+const items = form.elements.namedItem("my-form-control");
+
+const output = document.querySelector("#output");
+const itemIDs = Array.from(items)
+  .map((item) => `"${item.id}"`)
+  .join(", ");
+output.textContent = `My items: ${itemIDs}`;
 ```
+
+#### Result
+
+{{EmbedLiveSample("Using namedItem()")}}
 
 ## Specifications
 

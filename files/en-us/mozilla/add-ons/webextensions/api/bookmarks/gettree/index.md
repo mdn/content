@@ -44,7 +44,7 @@ function logItems(bookmarkItem, indent) {
     indent++;
   }
   if (bookmarkItem.children) {
-    for (child of bookmarkItem.children) {
+    for (const child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }

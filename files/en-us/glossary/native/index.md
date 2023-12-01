@@ -4,6 +4,8 @@ slug: Glossary/Native
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A _native_ application has been compiled to run on the hardware/software environment that comprises the targeted architecture.
 
 An example of a native Android app would be a mobile application written in Java using the Android toolchain.

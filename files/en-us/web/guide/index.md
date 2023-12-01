@@ -1,6 +1,7 @@
 ---
 title: Developer guides
 slug: Web/Guide
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -22,15 +23,13 @@ There are a number of guides within MDN docs. These articles aim to add addition
   - : Our complete CSS tutorial, taking you from first steps through styling text, creating layouts, and more.
 - [CSS Layout Guides](/en-US/docs/Web/Guide/CSS/CSS_Layout)
   - : There are a large number of guides to CSS Layout across MDN, this page collects them all together.
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS animations make it possible to animate transitions from one CSS style configuration to another. This guide will help you get started with the animation properties.
 
 ## JavaScript
 
 - [JavaScript learning area](/en-US/docs/Learn/JavaScript)
   - : Whether you are a complete beginner, or hoping to refresh your skills, this is the place to start.
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
-  - : AJAX is a term that defines a group of technologies allowing web applications to make quick, incremental updates to the user interface without reloading the entire browser page. This makes the application faster and more responsive to user actions.
 
 ## Media
 
@@ -43,7 +42,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## APIs
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
   - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using `XMLHttpRequest`. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.
@@ -62,9 +61,9 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Fonts
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : Find out how to use variable fonts in your designs.
-- [The Web Open Font Format (WOFF)](/en-US/docs/Web/Guide/WOFF)
+- [The Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.
 
 ## User interface development

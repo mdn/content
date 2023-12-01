@@ -43,12 +43,10 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
-- {{domxref("HTMLElement.popover")}} {{Experimental_Inline}}
+- {{domxref("HTMLElement.popover")}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
-- {{DOMxRef("HTMLElement.noModule")}}
-  - : A boolean value indicating whether an import script can be executed in user agents that support module scripts.
 - {{DOMxRef("HTMLElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
 - {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
@@ -65,8 +63,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
     As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
-- {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{DOMxRef("HTMLElement.style")}}
@@ -90,11 +86,11 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
   - : Sends a mouse click event to the element.
 - {{DOMxRef("HTMLElement.focus()")}}
   - : Makes the element the current keyboard focus.
-- {{DOMxRef("HTMLElement.hidePopover()")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLElement.hidePopover()")}}
   - : Hides a popover element by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
-- {{DOMxRef("HTMLElement.showPopover()")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLElement.showPopover()")}}
   - : Shows a popover element by adding it to the {{glossary("top layer")}} and removing `display: none;` from its styles.
-- {{DOMxRef("HTMLElement.togglePopover()")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLElement.togglePopover()")}}
   - : Toggles a popover element between the hidden and showing states.
 
 ## Events
@@ -160,13 +156,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 - {{domxref("Element/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
 - {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
-browser-compat: javascript.builtins.WebAssembly.Memory.buffer
+page-type: webassembly-instance-property
+browser-compat: webassembly.api.Memory.buffer
 ---
 
 {{WebAssemblySidebar}}
@@ -12,7 +13,7 @@ The read-only **`buffer`** prototype property of the [`WebAssembly.Memory`](/en-
 
 ### Using buffer
 
-The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values.
+The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values.
 
 ```js
 const memory = new WebAssembly.Memory({

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.includes
 
 {{JSRef}}
 
-The **`includes()`** method determines whether an array
+The **`includes()`** method of {{jsxref("Array")}} instances determines whether an array
 includes a certain value among its entries, returning `true` or
 `false` as appropriate.
 
@@ -97,7 +97,7 @@ console.log([1, , 3].includes(undefined)); // true
 
 ### Calling includes() on non-array objects
 
-The `includes()` method reads the `length` property of `this` and then accesses each integer index.
+The `includes()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -105,6 +105,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 1, // ignored by includes() since length is 3
 };
 console.log(Array.prototype.includes.call(arrayLike, 2));
 // true
@@ -123,7 +124,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.find()")}}

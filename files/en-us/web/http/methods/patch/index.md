@@ -41,7 +41,7 @@ Another (implicit) indication that `PATCH` is allowed, is the presence of the {{
     </tr>
     <tr>
       <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>No</td>
+      <td>Only if freshness information is included</td>
     </tr>
     <tr>
       <th scope="row">

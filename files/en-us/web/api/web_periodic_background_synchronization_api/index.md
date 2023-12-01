@@ -104,5 +104,5 @@ self.addEventListener("periodicsync", (event) => {
 
 ## See also
 
-- [An article on using Periodic Background Sync](https://web.dev/periodic-background-sync/)
+- [An article on using Periodic Background Sync](https://developer.chrome.com/articles/periodic-background-sync/)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

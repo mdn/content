@@ -109,14 +109,14 @@ The following table summarizes the `Number` object's properties.
 | {{jsxref("Number.MIN_SAFE_INTEGER")}}  | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                     |
 | {{jsxref("Number.MAX_SAFE_INTEGER")}}  | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                     |
 
-| Method                               | Description                                                                                                                                                               |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                       |
-| {{jsxref("Number.parseInt()")}}      | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                         |
-| {{jsxref("Number.isFinite()")}}      | Determines whether the passed value is a finite number.                                                                                                                   |
-| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                        |
-| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
+| Method                               | Description                                                                                                                           |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat()")}} function.                 |
+| {{jsxref("Number.parseInt()")}}      | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt()")}} function. |
+| {{jsxref("Number.isFinite()")}}      | Determines whether the passed value is a finite number.                                                                               |
+| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                    |
+| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("NaN")}}. More robust version of the original global {{jsxref("isNaN()")}}.           |
+| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                           |
 
 The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
 
@@ -331,9 +331,9 @@ Calling `Date` without the `new` keyword returns a string representing the curre
 The `parameters` in the preceding syntax can be any of the following:
 
 - Nothing: creates today's date and time. For example, `today = new Date();`.
-- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `let Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
-- A set of integer values for year, month, and day. For example, `let Xmas95 = new Date(1995, 11, 25)`.
-- A set of integer values for year, month, day, hour, minute, and seconds. For example, `let Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+- A string representing a date, in many different forms. The exact forms supported differ among engines, but the following form is always supported: `YYYY-MM-DDTHH:mm:ss.sssZ`. For example, `xmas95 = new Date("1995-12-25")`. If you omit hours, minutes, or seconds, the value will be set to zero.
+- A set of integer values for year, month, and day. For example, `xmas95 = new Date(1995, 11, 25)`.
+- A set of integer values for year, month, day, hour, minute, and seconds. For example, `xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
 ### Methods of the Date object
 
@@ -356,10 +356,10 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 For example, suppose you define the following date:
 
 ```js
-const Xmas95 = new Date("December 25, 1995");
+const xmas95 = new Date("1995-12-25");
 ```
 
-Then `Xmas95.getMonth()` returns 11, and `Xmas95.getFullYear()` returns 1995.
+Then `xmas95.getMonth()` returns 11, and `xmas95.getFullYear()` returns 1995.
 
 The `getTime` and `setTime` methods are useful for comparing dates. The `getTime` method returns the number of milliseconds since the epoch for a `Date` object.
 
@@ -371,7 +371,7 @@ const endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
 endYear.setFullYear(today.getFullYear()); // Set year to this year
 const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
 let daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
-daysLeft = Math.round(daysLeft); //returns days left in the year
+daysLeft = Math.round(daysLeft); // Returns days left in the year
 ```
 
 This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.

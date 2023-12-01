@@ -4,6 +4,8 @@ slug: Glossary/Operator
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Reserved **syntax** consisting of punctuation or alphanumeric characters that carries out built-in functionality. For example, in JavaScript the addition operator ("+") adds numbers together and concatenates strings, whereas the "not" operator ("!") negates an expression — for example making a `true` statement return `false`.
 
 ## See also

@@ -35,7 +35,7 @@ You can set a default value for the input control by including a month and year 
 
 ```html
 <label for="bday-month">What month were you born in?</label>
- <input id="bday-month" type="month" name="bday-month" value="2001-06" />
+<input id="bday-month" type="month" name="bday-month" value="2001-06" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
@@ -55,7 +55,7 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 
 ```js
 const monthControl = document.querySelector('input[type="month"]');
-monthControl.value = '2001-06';
+monthControl.value = "2001-06";
 ```
 
 {{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}
@@ -406,32 +406,32 @@ If `<input type="month">` is not supported, we hide the native picker and show t
 
 ```js
 // Get UI elements
-const nativePicker = document.querySelector('.nativeDatePicker');
-const fallbackPicker = document.querySelector('.fallbackDatePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDatePicker");
+const fallbackPicker = document.querySelector(".fallbackDatePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
 
 // Hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // Test whether a new date input falls back to a text input or not
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'month';
+  test.type = "month";
 } catch (e) {
   console.log(e.description);
 }
 
 // If it does, run the code inside the if () {} block
-if (test.type === 'text') {
+if (test.type === "text") {
   // Hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // Populate the years dynamically
   // (the months are always the same, therefore hardcoded)
@@ -445,7 +445,7 @@ function populateYears() {
 
   // Make this year, and the 100 years before it available in the year <select>
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }

@@ -30,7 +30,7 @@ _Inherits properties from its parent interface, {{domxref("ReadableStream")}}._
 
 _Also inherits properties from its parent interface, {{domxref("ReadableStream")}}._
 
-- {{domxref("WebTransportReceiveStream.getStats()")}}
+- {{domxref("WebTransportReceiveStream.getStats()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
 
 ## Examples
@@ -47,6 +47,6 @@ See [`WebTransport.incomingUnidirectionalStreams`](/en-US/docs/Web/API/WebTransp
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

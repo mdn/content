@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: javascript.classes
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
 Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
@@ -47,7 +47,7 @@ Like function expressions, class expressions may be anonymous, or have a name th
 
 ### Class body
 
-The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
+The body of a class is the part that is in curly braces `{}`. This is where you define class members, such as methods or constructor.
 
 The body of a class is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) even without the `"use strict"` directive.
 
@@ -69,7 +69,7 @@ Together, they add up to 16 possible combinations. To divide the reference more 
   - : Public instance field
 - [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
   - : Public static method, getter, setter, and field
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
   - : Everything that's private
 
 > **Note:** Private features have the restriction that all property names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
@@ -135,7 +135,7 @@ console.log([...square.getSides()]); // [10, 10, 10, 10]
 
 #### Static methods and fields
 
-The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data that don't need to be replicated across instances.
+The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data that doesn't need to be replicated across instances.
 
 ```js
 class Point {
@@ -185,7 +185,7 @@ As seen above, the fields can be declared with or without a default value. Field
 
 See [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
 
-#### Private class features
+#### Private properties
 
 Using private fields, the definition can be refined as below.
 
@@ -205,7 +205,7 @@ By defining things that are not visible outside of the class, you ensure that yo
 
 Private fields can only be declared up-front in a field declaration. They cannot be created later through assigning to them, the way that normal properties can.
 
-For more information, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+For more information, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 ### Inheritance
 
@@ -268,7 +268,7 @@ When a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/cla
 
 1. The {{jsxref("Classes/extends", "extends")}} clause, if present, is first evaluated. It must evaluate to a valid constructor function or `null`, or a {{jsxref("TypeError")}} is thrown.
 2. The {{jsxref("Classes/constructor", "constructor")}} method is extracted, substituted with a default implementation if `constructor` is not present. However, because the `constructor` definition is only a method definition, this step is not observable.
-3. The class elements' property keys are evaluated in the order of declaration. If the property key is computed, the computed expression is evaluated, with the `this` value is set to the `this` value surrounding the class (not the class itself). None of the property values are evaluated yet.
+3. The class elements' property keys are evaluated in the order of declaration. If the property key is computed, the computed expression is evaluated, with the `this` value set to the `this` value surrounding the class (not the class itself). None of the property values are evaluated yet.
 4. Methods and accessors are installed in the order of declaration. Instance methods and accessors are installed on the `prototype` property of the current class, and static methods and accessors are installed on the class itself. Private instance methods and accessors are saved to be installed on the instance directly later. This step is not observable.
 5. The class is now initialized with the prototype specified by `extends` and implementation specified by `constructor`. For all steps above, if an evaluated expression tries to access the name of the class, a {{jsxref("ReferenceError")}} is thrown because the class is not initialized yet.
 6. The class elements' values are evaluated in the order of declaration:
@@ -283,7 +283,7 @@ For how instances are created, see the {{jsxref("Classes/constructor", "construc
 
 ### Binding this with instance and static methods
 
-When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body is always executed in strict mode.
+When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive isn't present, because code within the `class` body is always executed in strict mode.
 
 ```js
 class Animal {
@@ -336,8 +336,8 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [ES6 In Depth: Classes](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/) on hacks.mozilla.org (July 22, 2015)
+- [ES6 In Depth: Classes](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/) on hacks.mozilla.org (2015)

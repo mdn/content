@@ -39,7 +39,7 @@ payment.addEventListener("shippingaddresschange", (evt) => {
   evt.updateWith(
     new Promise((resolve) => {
       updateDetails(details, request.shippingAddress, resolve);
-    })
+    }),
   );
 });
 

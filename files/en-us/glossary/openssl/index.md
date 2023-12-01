@@ -4,7 +4,9 @@ slug: Glossary/OpenSSL
 page-type: glossary-definition
 ---
 
-OpenSSL is an open-source implementation of {{glossary("SSL")}} and {{glossary("TLS")}}.
+{{GlossarySidebar}}
+
+OpenSSL is an open-source implementation of {{glossary("TLS")}} and {{glossary("SSL")}}.
 
 ## See also
 

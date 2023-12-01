@@ -4,6 +4,8 @@ slug: Glossary/Session_Hijacking
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Session hijacking** occurs when an attacker takes over a valid session between two computers. The attacker steals a valid session ID in order to break into the system and snoop data.
 
 Most authentication occurs only at the start of a {{glossary("TCP")}} session. In TCP session hijacking, an attacker gains access by taking over a TCP session between two machines in mid session.

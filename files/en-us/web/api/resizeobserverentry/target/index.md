@@ -39,12 +39,12 @@ const resizeObserver = new ResizeObserver((entries) => {
       entry.target.style.borderRadius = `${Math.min(
         100,
         entry.contentBoxSize.inlineSize / 10 +
-          entry.contentBoxSize.blockSize / 10
+          entry.contentBoxSize.blockSize / 10,
       )}px`;
     } else {
       entry.target.style.borderRadius = `${Math.min(
         100,
-        entry.contentRect.width / 10 + entry.contentRect.height / 10
+        entry.contentRect.width / 10 + entry.contentRect.height / 10,
       )}px`;
     }
   }

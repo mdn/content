@@ -1,12 +1,15 @@
 ---
 title: Baseline (compatibility)
 slug: Glossary/Baseline/Compatibility
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Baseline** identifies widely-supported web platform features.
 Web developers can expect Baseline features to work in contemporary browsers.
 
-A Baseline feature - such as an API, a set of CSS properties, or a JavaScript syntax - is known to work consistently in the current and previous major versions of several well-known browsers (Chrome, Edge, Firefox, and Safari).
+A Baseline feature - such as an API, a set of CSS properties, or a JavaScript syntax - is known to work consistently in at least one version before the current version of all of several well-known browsers (Chrome, Edge, Firefox, and Safari).
 
 ## Badges
 
@@ -27,11 +30,11 @@ If Baseline doesn't cover your situation, then consider reading browser compatib
 ## Contributing
 
 Baseline is a community effort of the W3C WebDX Community Group and relies on MDN's open source browser compatibility data.
-If you have questions, feedback, or want to help update and expand the features covered by Baseline status reports, then go to [web-platform-dx/feature-set](https://github.com/web-platform-dx/feature-set) to participate.
+If you have questions, feedback, or want to help update and expand the features covered by Baseline status reports, then go to [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features) to participate.
 
 ## See also
 
 - [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
-- [web-platform-dx/feature-set repository](https://github.com/web-platform-dx/feature-set)
+- [web-platform-dx/web-features repository](https://github.com/web-platform-dx/web-features)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)

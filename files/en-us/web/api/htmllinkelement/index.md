@@ -16,7 +16,7 @@ The **`HTMLLinkElement`** interface represents reference information for externa
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
-  - : A string representing the type of content being loaded by the HTML link.
+  - : A string representing the type of content being loaded by the HTML link when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
 - {{domxref("HTMLLinkElement.crossOrigin")}}
   - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}

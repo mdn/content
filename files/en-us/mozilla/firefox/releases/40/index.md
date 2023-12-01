@@ -1,6 +1,7 @@
 ---
 title: Firefox 40 for developers
 slug: Mozilla/Firefox/Releases/40
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -93,7 +94,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 - When unable to parse the [`srcset`](/en-US/docs/Web/HTML/Element/image#srcset), the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ([Firefox bug 1139560](https://bugzil.la/1139560)).
 - Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ([Firefox bug 1145439](https://bugzil.la/1145439)).
-- {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} is no longer available for Web workers ([Firefox bug 1154878](https://bugzil.la/1154878)).
+- {{domxref("Navigator.taintEnabled")}} is no longer available for Web workers ([Firefox bug 1154878](https://bugzil.la/1154878)).
 
 #### Web Audio API
 
@@ -114,7 +115,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 #### Dev Tools
 
-- The property {{domxref("console.timeStamp")}} has been added ([Firefox bug 922221](https://bugzil.la/922221)).
+- The property {{domxref("console/timeStamp_static", "console.timeStamp()")}} has been added ([Firefox bug 922221](https://bugzil.la/922221)).
 
 ### MathML
 

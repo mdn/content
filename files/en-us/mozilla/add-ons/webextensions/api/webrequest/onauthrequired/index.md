@@ -60,7 +60,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -71,9 +71,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
@@ -84,7 +84,7 @@ Events have three functions:
     - To handle the request asynchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `Promise` that is resolved with a `BlockingResponse` object, with its `cancel` or its `authCredentials` properties set.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
@@ -106,14 +106,14 @@ Events have three functions:
       - : `integer`. The server's port number.
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `frameId`
   - : `integer`. This is `0` if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
 - `incognito`
   - : `boolean`. Whether the request is from a private browsing window.
 - `isProxy`
   - : `boolean`. `true` for `Proxy-Authenticate`, `false` for `WWW-Authenticate`.
-    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/SSL proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
+    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/TLS proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
 - `method`
   - : `string`. Standard HTTP method (For example, `"GET"` or `"POST"`).
 - `parentFrameId`
@@ -199,10 +199,7 @@ function observe(requestDetails) {
   console.log(`observing: ${requestDetails.requestId}`);
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  observe,
-  {urls: [target]}
-);
+browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
 ```
 
 This code cancels authentication requests for the target URL:
@@ -212,14 +209,12 @@ const target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log(`canceling: ${requestDetails.requestId}`);
-  return {cancel: true};
+  return { cancel: true };
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  cancel,
-  {urls: [target]},
-  ["blocking"]
-);
+browser.webRequest.onAuthRequired.addListener(cancel, { urls: [target] }, [
+  "blocking",
+]);
 ```
 
 This code supplies credentials synchronously. It has to keep track of outstanding requests, to ensure that it doesn't repeatedly try to submit bad credentials:
@@ -229,8 +224,8 @@ const target = "https://intranet.company.com/";
 
 const myCredentials = {
   username: "me@company.com",
-  password: "zDR$ERHGDFy"
-}
+  password: "zDR$ERHGDFy",
+};
 
 const pendingRequests = [];
 
@@ -249,28 +244,22 @@ function provideCredentialsSync(requestDetails) {
   // assume our credentials were bad, and give up.
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
-    return {cancel:true};
+    return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
   console.log(`providing credentials for: ${requestDetails.requestId}`);
-  return {authCredentials: myCredentials};
+  return { authCredentials: myCredentials };
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsSync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsSync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 This code supplies credentials asynchronously, fetching them from storage. It also has to keep track of outstanding requests, to ensure that it doesn't repeatedly try to submit bad credentials:
@@ -281,8 +270,8 @@ const target = "https://httpbin.org/basic-auth/*";
 const pendingRequests = [];
 
 /*
-* A request has completed. We can stop worrying about it.
-*/
+ * A request has completed. We can stop worrying about it.
+ */
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
   let index = pendingRequests.indexOf(requestDetails.requestId);
@@ -297,8 +286,7 @@ function provideCredentialsAsync(requestDetails) {
   // and give up.
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
-    return {cancel: true};
-
+    return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
     console.log(`providing credentials for: ${requestDetails.requestId}`);
@@ -309,20 +297,14 @@ function provideCredentialsAsync(requestDetails) {
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsAsync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsAsync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 {{WebExtExamples}}

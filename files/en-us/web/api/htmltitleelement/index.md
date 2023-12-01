@@ -19,7 +19,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the text of the document's title, and only the text part. For example, consider this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <title>

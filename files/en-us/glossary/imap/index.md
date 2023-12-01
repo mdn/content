@@ -4,6 +4,8 @@ slug: Glossary/IMAP
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 IMAP (Internet Message Access Protocol) is a {{Glossary("protocol")}} used to retrieve and store emails. More recent than {{Glossary("POP")}}, IMAP allows folders and rules on the server.
 
 Unlike POP3, IMAP allows multiple simultaneous connections to one mailbox. Clients accessing a mailbox can receive information about state changes made from other clients. IMAP also provides a mode for clients to stay connected and receive information on demand.

@@ -19,7 +19,6 @@ This attribute is applied only to text written in a vertical {{SVGAttr("writing-
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}

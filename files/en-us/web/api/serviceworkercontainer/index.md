@@ -70,7 +70,7 @@ if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(
       "This page is currently controlled by:",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   }
 
@@ -79,7 +79,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.oncontrollerchange = () => {
     console.log(
       "This page is now controlled by",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   };
 } else {

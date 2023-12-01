@@ -22,7 +22,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("caches", "SharedWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("WorkerGlobalScope.console", "SharedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+- {{domxref("console", "SharedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.fonts", "SharedWorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
@@ -38,7 +38,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("performance_property", "SharedWorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
-- {{domxref("Window.scheduler", "SharedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("scheduler_property", "SharedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("WorkerGlobalScope.self", "SharedWorkerGlobalScope.self")}}
   - : Returns an object reference to the `SharedWorkerGlobalScope` object itself.
@@ -56,21 +56,17 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("btoa", "SharedWorkerGlobalScope.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("Window.cancelAnimationFrame", "SharedWorkerGlobalScope.cancelAnimationFrame()")}}
-  - : Cancels a callback scheduled by requestAnimationFrame.
 - {{domxref("clearInterval", "SharedWorkerGlobalScope.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout", "SharedWorkerGlobalScope.clearTimeout()")}}
-  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+  - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("WorkerGlobalScope.dump", "SharedWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Writes a message to the console.
 - {{domxref("WorkerGlobalScope.importScripts", "SharedWorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
-- {{domxref("Window.requestAnimationFrame", "SharedWorkerGlobalScope.requestAnimationFrame()")}}
-  - : Requests the browser to execute a callback function before painting the next frame.
 - {{domxref("setInterval", "SharedWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
-- {{domxref("setTimeout", "SharedWorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "SharedWorkerGlobalScope.setTimeout()")}}
   - : Sets a delay for executing a function.
 
 ## Events

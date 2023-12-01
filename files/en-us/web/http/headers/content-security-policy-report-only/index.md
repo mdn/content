@@ -37,7 +37,7 @@ Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
 
 ## Directives
 
-The directives of the {{HTTPHeader("Content-Security-Policy")}} header can also be applied to `Content-Security-Policy-Report-Only`.
+The directives of the {{HTTPHeader("Content-Security-Policy")}} header can also be applied to `Content-Security-Policy-Report-Only`, except for the `sandbox` directive, which is ignored when used with `Content-Security-Policy-Report-Only`.
 
 The CSP {{CSP("report-to")}} directive should be used with this header, otherwise this header will be an expensive no-op machine.
 
@@ -89,7 +89,7 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 The HTML of `signup.html` looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

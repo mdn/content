@@ -1,6 +1,7 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
+page-type: guide
 status:
   - deprecated
 ---

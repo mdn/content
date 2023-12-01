@@ -14,7 +14,7 @@ Our simple example for this guide provides a play/pause button that starts and p
 
 ![A demo featuring a play button, and toggle to turn a filter on and off, and a line graph showing the filter frequencies returned after the filter has been applied.](iir-filter-demo.png)
 
-You can check out the [full demo here on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can check out the [full demo here on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 ## Browser support
 
@@ -101,7 +101,7 @@ playButton.addEventListener(
       // …
     }
   },
-  false
+  false,
 );
 ```
 
@@ -129,7 +129,7 @@ filterButton.addEventListener(
       // …
     }
   },
-  false
+  false,
 );
 ```
 
@@ -163,7 +163,7 @@ Now let's get our response data:
 iirFilter.getFrequencyResponse(
   myFrequencyArray,
   magResponseOutput,
-  phaseResponseOutput
+  phaseResponseOutput,
 );
 ```
 
@@ -218,7 +218,7 @@ magResponseOutput.forEach((magResponseData, i) => {
   } else {
     canvasCtx.lineTo(
       (width / totalArrayItems) * i,
-      height - magResponseData * 100 - spacing
+      height - magResponseData * 100 - spacing,
     );
   }
 });

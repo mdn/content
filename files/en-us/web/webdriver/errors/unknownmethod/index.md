@@ -1,6 +1,7 @@
 ---
 title: Unknown method
 slug: Web/WebDriver/Errors/UnknownMethod
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

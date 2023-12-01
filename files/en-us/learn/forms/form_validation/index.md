@@ -1,6 +1,7 @@
 ---
 title: Client-side form validation
 slug: Learn/Forms/Form_validation
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -483,7 +484,7 @@ If the `validity.typeMismatch` property returns `false`, we call the `setCustomV
 
 You can try it out below:
 
-{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 120)}}
 
 > **Note:** You can find this example live on GitHub as [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html).)
 
@@ -702,7 +703,7 @@ p * {
   display: block;
 }
 
-input.mail {
+input#mail {
   appearance: none;
   width: 100%;
   border: 1px solid #333;
@@ -720,7 +721,7 @@ input.invalid {
   background-color: #fdd;
 }
 
-input:focus.invalid {
+input:focus:invalid {
   outline: none;
 }
 

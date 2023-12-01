@@ -17,7 +17,7 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 ## Instance properties
 
-_Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
+_Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
@@ -29,22 +29,24 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
   - : Returns a service worker whose state is `installing`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.paymentManager")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.paymentManager")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
+- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which allows for registering of tasks to run at specific intervals.
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
 - {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
   - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
-- {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
-  - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
+- {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
+  - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 
 ## Instance methods
 
-_Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
+_Also inherits methods from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
@@ -75,7 +77,7 @@ if ("serviceWorker" in navigator) {
         const installingWorker = registration.installing;
         console.log(
           "A new service worker is being installed:",
-          installingWorker
+          installingWorker,
         );
 
         // You can listen for changes to the installing service worker's

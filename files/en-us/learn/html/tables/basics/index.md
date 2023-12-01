@@ -1,6 +1,7 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

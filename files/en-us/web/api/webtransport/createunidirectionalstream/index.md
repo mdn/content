@@ -14,7 +14,7 @@ The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("Writabl
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
-The relative order in which queued bytes are emptied from created streams can be specified using the send-order option.
+The relative order in which queued bytes are emptied from created streams can be specified using the `sendOrder` option.
 If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
 If the order number is not set then the order in which bytes are sent is implementation dependent.
 Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
@@ -25,7 +25,7 @@ Note however that even though bytes from higher send-order streams are sent firs
 
 ```js-nolint
 createUnidirectionalStream()
-createUnidirectionalStream({sendOrder: "596996858"})
+createUnidirectionalStream(options)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ createUnidirectionalStream({sendOrder: "596996858"})
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object.
+A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object (this is a {{domxref("WritableStream")}}).
 
 ### Exceptions
 
@@ -56,7 +56,9 @@ Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of th
 
 ```js
 async function writeData() {
-  const stream = await transport.createUnidirectionalStream();
+  const stream = await transport.createUnidirectionalStream({
+    sendOrder: "596996858",
+  });
   const writer = stream.writable.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
@@ -98,7 +100,7 @@ await writer.abort();
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

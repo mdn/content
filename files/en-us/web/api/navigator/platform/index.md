@@ -1,5 +1,5 @@
 ---
-title: "navigator: platform property"
+title: "Navigator: platform property"
 short-title: platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
@@ -16,7 +16,7 @@ The **`platform`** property read-only property of the {{domxref("Navigator")}} i
 
 ## Value
 
-A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux x86_64"`.
+A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux armv81"`.
 
 ## Examples
 

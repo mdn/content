@@ -61,7 +61,7 @@ objectStoreTitleRequest.onsuccess = () => {
 
   // Log the readyState of this request
   console.log(
-    `The readyState of this request is ${updateTitleRequest.readyState}`
+    `The readyState of this request is ${updateTitleRequest.readyState}`,
   );
 
   // When this new request succeeds, run the displayData()

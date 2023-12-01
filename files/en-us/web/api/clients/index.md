@@ -54,7 +54,7 @@ addEventListener("notificationclick", (event) => {
 
       // Message the client:
       chatClient.postMessage("New chat messages!");
-    })()
+    })(),
   );
 });
 ```

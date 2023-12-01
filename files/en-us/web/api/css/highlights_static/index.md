@@ -5,7 +5,7 @@ slug: Web/API/CSS/highlights_static
 page-type: web-api-static-property
 status:
   - experimental
-browser-compat: api.CSS.highlights
+browser-compat: api.CSS.highlights_static
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}

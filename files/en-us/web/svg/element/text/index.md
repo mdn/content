@@ -101,4 +101,4 @@ svg {
 
 ## Related
 
-- Other SVG text related elements: **{{SVGElement("tspan")}}**, {{SVGElement("tref")}}, {{SVGElement("altGlyph")}}
+- Other SVG text related elements: **{{SVGElement("tspan")}}**, {{SVGElement("tref")}}

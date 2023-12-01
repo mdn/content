@@ -104,6 +104,8 @@ readFilePromise("./data.txt")
   .catch((error) => console.error("Failed to read data"));
 ```
 
+The `resolve` and `reject` callbacks are only available within the scope of the executor function, which means you can't access them after the promise is constructed. If you want to construct the promise before deciding how to resolve it, you can use the {{jsxref("Promise.withResolvers()")}} method instead, which exposes the `resolve` and `reject` functions.
+
 ### Resolver function
 
 The resolver function `resolveFunc` has the following behaviors:
@@ -219,4 +221,5 @@ const rejectedResolved2 = new Promise((resolve) => {
 ## See also
 
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
+- {{jsxref("Promise.withResolvers()")}}

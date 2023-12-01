@@ -1,6 +1,7 @@
 ---
 title: Using CSS generated content
 slug: Learn/CSS/Howto/Generated_content
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

@@ -36,7 +36,7 @@ All events have three functions:
 The only parameter is `listener`, used for any of the above functions.
 
 - `listener`
-  - : A function that is called when this event occurs.
+  - : The function called when this event occurs.
 
 ## Examples
 
@@ -45,7 +45,7 @@ Open <https://giphy.com/explore/cat> when the browser starts up:
 ```js
 function handleStartup() {
   browser.tabs.create({
-    url: "https://giphy.com/explore/cat"
+    url: "https://giphy.com/explore/cat",
   });
 }
 

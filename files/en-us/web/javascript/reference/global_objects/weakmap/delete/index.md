@@ -7,15 +7,14 @@ browser-compat: javascript.builtins.WeakMap.delete
 
 {{JSRef}}
 
-The **`delete()`** method removes the specified element from a
-{{jsxref("WeakMap")}} object.
+The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specified element from this `WeakMap`.
 
 {{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
 
 ## Syntax
 
 ```js-nolint
-delete(key)
+weakMapInstance.delete(key)
 ```
 
 ### Parameters

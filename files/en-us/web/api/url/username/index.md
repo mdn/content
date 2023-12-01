@@ -21,7 +21,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username"
+  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username",
 );
 console.log(url.username); // Logs "anonymous"
 ```

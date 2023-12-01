@@ -3,7 +3,7 @@ title: "CSSNumericValue: parse() static method"
 short-title: parse()
 slug: Web/API/CSSNumericValue/parse_static
 page-type: web-api-static-method
-browser-compat: api.CSSNumericValue.parse
+browser-compat: api.CSSNumericValue.parse_static
 ---
 
 {{APIRef("CSS Typed OM")}}

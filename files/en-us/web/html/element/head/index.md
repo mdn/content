@@ -21,7 +21,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

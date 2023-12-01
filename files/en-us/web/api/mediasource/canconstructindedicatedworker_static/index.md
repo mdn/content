@@ -5,7 +5,7 @@ slug: Web/API/MediaSource/canConstructInDedicatedWorker_static
 page-type: web-api-static-property
 status:
   - experimental
-browser-compat: api.MediaSource.canConstructInDedicatedWorker
+browser-compat: api.MediaSource.canConstructInDedicatedWorker_static
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}

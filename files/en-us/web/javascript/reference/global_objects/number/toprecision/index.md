@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Number.toPrecision
 
 {{JSRef}}
 
-The **`toPrecision()`** method returns a string representing
-the {{jsxref("Number")}} object to the specified precision.
+The **`toPrecision()`** method of {{jsxref("Number")}} values returns a string representing
+this number to the specified precision.
 
 {{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
 

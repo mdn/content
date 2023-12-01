@@ -1,6 +1,7 @@
 ---
 title: Build the brick field
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
+page-type: guide
 ---
 
 {{GamesSidebar}}

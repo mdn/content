@@ -1,6 +1,7 @@
 ---
 title: Beginner's guide to media queries
 slug: Learn/CSS/CSS_layout/Media_queries
+page-type: learn-module-chapter
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
@@ -105,7 +106,7 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
-There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax).
+There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
 #### Orientation
 
@@ -219,7 +220,10 @@ Our starting point is an HTML document with some CSS applied to add background c
 body {
   width: 90%;
   margin: 2em auto;
-  font: 1em/1.3 Arial, Helvetica, sans-serif;
+  font:
+    1em/1.3 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 a:link,
@@ -235,8 +239,8 @@ aside ul {
 
 nav a:link,
 nav a:visited {
-  background-color: rgba(207, 232, 220, 0.2);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220 / 20%);
+  border: 2px solid rgb(79 185 227);
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -245,17 +249,17 @@ nav a:visited {
 }
 
 nav a:hover {
-  background-color: rgba(207, 232, 220, 0.7);
+  background-color: rgb(207 232 220 / 70%);
 }
 
 .related {
-  background-color: rgba(79, 185, 227, 0.3);
-  border: 1px solid rgb(79, 185, 227);
+  background-color: rgb(79 185 227 / 30%);
+  border: 1px solid rgb(79 185 227);
   padding: 10px;
 }
 
 .sidebar {
-  background-color: rgba(207, 232, 220, 0.5);
+  background-color: rgb(207 232 220 / 50%);
   padding: 10px;
 }
 

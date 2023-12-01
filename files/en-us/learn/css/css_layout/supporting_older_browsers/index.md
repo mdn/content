@@ -1,6 +1,7 @@
 ---
 title: Supporting older browsers
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -62,7 +63,7 @@ CSS specifications contain information that explains what the browser does when 
 
 ### Falling back from grid to float
 
-In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the `display: grid` and related properties and the floated layout is used.
+In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view; if not it ignores the `display: grid` and related properties and the floated layout is used.
 
 ```css
 * {
@@ -70,7 +71,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -80,7 +81,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -95,14 +96,12 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 
 {{ EmbedLiveSample('Falling_back_from_grid_to_float', '100%', '200') }}
 
-> **Note:** The {{cssxref("clear")}} property also has no effect once the cleared item becomes a grid item, so you could have a layout with a cleared footer, which is then turned into a Grid Layout.
-
 ### Fallback methods
 
 There are a number of layout methods which can be used in a similar way to this float example. You can choose the one that makes the most sense for the layout pattern you need to create.
 
-- Float and clear
-  - : As shown above, the float and clear properties cease to affect the layout if floated or cleared items become flex or grid items.
+- Float (and clear)
+  - : As shown above, the float property ceases to affect the layout if floated items become flex or grid items. The {{cssxref("clear")}} property also has no effect once the cleared item becomes a flex or grid item.
 - display: inline-block
   - : This method can be used to create column layouts, if an item has `display: inline-block` set but then becomes a flex or grid item, the inline-block behavior is ignored.
 - display: table
@@ -122,7 +121,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -132,7 +131,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -162,7 +161,7 @@ If we add a feature query to the above example, we can use it to set the widths 
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -172,7 +171,7 @@ If we add a feature query to the above example, we can use it to set the widths 
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -202,7 +201,7 @@ The specification for feature queries also contains the ability to test if a bro
 
 The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have _modern_ grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is `-ms-` prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.
 
-The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.
+The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.
 
 ## Testing older browsers
 
@@ -219,8 +218,8 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 ## See also
 
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
+- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using CSS Grid: Supporting Browsers Without Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [A tutorial which uses the IE10 and 11 version of Grid](https://24ways.org/2012/css3-grid-layout/)
 - [Should I try to use the IE10 implementation of Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)

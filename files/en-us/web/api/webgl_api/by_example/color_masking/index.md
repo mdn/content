@@ -111,7 +111,7 @@ window.addEventListener(
       return [Math.random(), Math.random(), Math.random()];
     }
   },
-  false
+  false,
 );
 ```
 

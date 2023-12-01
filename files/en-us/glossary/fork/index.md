@@ -4,6 +4,8 @@ slug: Glossary/Fork
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A fork is a copy of an existing software project at some point to add someone's own modifications to the project.
 
 Basically, if the license of the original software allows, you can copy the code to develop your own version of it, with your own additions, which will be a "fork".

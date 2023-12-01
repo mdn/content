@@ -45,13 +45,13 @@ signalingChannel.onmessage = (evt) => {
           pc.createAnswer(localDescCreated, logError);
         }
       },
-      logError
+      logError,
     );
   } else {
     pc.addIceCandidate(
       new RTCIceCandidate(message.candidate),
       () => {},
-      logError
+      logError,
     );
   }
 };

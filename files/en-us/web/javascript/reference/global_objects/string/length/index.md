@@ -63,10 +63,13 @@ console.log(`The empty string has a length of ${empty.length}`);
 ```js
 const emoji = "😄";
 console.log(emoji.length); // 2
+console.log([...emoji].length); // 1
 const adlam = "𞤲𞥋𞤣𞤫";
 console.log(adlam.length); // 8
+console.log([...adlam].length); // 4
 const formula = "∀𝑥∈ℝ,𝑥²≥0";
 console.log(formula.length); // 11
+console.log([...formula].length); // 9
 ```
 
 ### Assigning to length
@@ -91,4 +94,4 @@ console.log(myString.length); // 9
 
 ## See also
 
-- [JavaScript `String.length` and Internationalizing Web Applications](https://downloads.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)
+- [`Array`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)

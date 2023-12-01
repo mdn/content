@@ -1,6 +1,7 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -141,7 +142,7 @@ try {
   request.open(
     "GET",
     "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
-    true
+    true,
   );
   request.responseType = "arraybuffer";
 
@@ -186,7 +187,7 @@ if (navigator.mediaDevices) {
     })
     .catch(function onError() {
       alert(
-        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?"
+        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
       );
     });
 } else {
@@ -301,7 +302,7 @@ window.onload = () => {
     () => {
       switchState();
     },
-    false
+    false,
   );
 
   window.addEventListener("keypress", checkKey, false);
@@ -348,7 +349,7 @@ When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLEle
 
 A time range is specified using the syntax:
 
-```
+```plain
 #t=[starttime][,endtime]
 ```
 
@@ -409,7 +410,7 @@ If these work but the files you are supplying don't, there are two possible issu
 
 Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
 
-```
+```plain
 # AddType TYPE/SUBTYPE EXTENSION
 
 AddType audio/mpeg mp3
@@ -468,7 +469,7 @@ lastsource.addEventListener(
     d.innerHTML = v.innerHTML;
     v.parentNode.replaceChild(d, v);
   },
-  false
+  false,
 );
 ```
 
@@ -526,7 +527,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 - [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
   - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
-- [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.

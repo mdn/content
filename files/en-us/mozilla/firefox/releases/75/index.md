@@ -1,6 +1,7 @@
 ---
 title: Firefox 75 for developers
 slug: Mozilla/Firefox/Releases/75
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

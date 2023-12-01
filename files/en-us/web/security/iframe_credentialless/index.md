@@ -1,6 +1,7 @@
 ---
 title: IFrame credentialless
 slug: Web/Security/IFrame_credentialless
+page-type: guide
 status:
   - experimental
   - non-standard

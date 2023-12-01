@@ -41,7 +41,7 @@ canvas.addEventListener(
     console.log(e);
     // call to redrawCanvas() or similar
   },
-  false
+  false,
 );
 ```
 

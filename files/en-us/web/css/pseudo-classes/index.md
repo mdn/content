@@ -19,7 +19,7 @@ button:hover {
 }
 ```
 
-A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parenthesis to define the arguments (e.g., `:dir()`). The element that a pseudo-class is attached to is defined as an _anchor element_ (e.g., `button` in case `button:hover`).
+A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parentheses to define the arguments (e.g., `:dir()`). The element that a pseudo-class is attached to is defined as an _anchor element_ (e.g., `button` in case `button:hover`).
 
 Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
@@ -226,11 +226,11 @@ F
 - {{CSSxRef(":first")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 
 H
 
@@ -264,9 +264,7 @@ N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -280,9 +278,9 @@ O
 P
 
 - {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":paused")}}
 - {{CSSxRef(":playing")}}
 
 R

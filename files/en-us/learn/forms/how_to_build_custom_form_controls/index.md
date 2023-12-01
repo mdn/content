@@ -1,6 +1,7 @@
 ---
 title: How to build custom form controls
 slug: Learn/Forms/How_to_build_custom_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -74,7 +75,7 @@ Designing new interactions is generally only an option for very large industry p
 It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](https://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](http://uxdesign.com/)
+- [UXDesign.com](https://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
 > **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
@@ -120,7 +121,7 @@ The required styles are those necessary to handle the three states of our contro
 ```css
 .select {
   /* This will create a positioning context for the list of options;
-     adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
+     adding this to `.select:focus-within` will be a better option when fully supported
   */
   position: relative;
 
@@ -134,9 +135,9 @@ We need an extra class `active` to define the look and feel of our control when 
 ```css
 .select.active,
 .select:focus {
-  outline: none;
+  outline-color: transparent;
 
-  /* This {{cssxref('box-shadow')}} property is not exactly required, however it's imperative to ensure
+  /* This box-shadow property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
   box-shadow: 0 0 3px 1px #227755;
 }
@@ -176,7 +177,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 ```css
 .select {
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
+     If you are lost with px to em conversion, try https://nekocalc.com/px-to-em-converter */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family: Verdana, Arial, sans-serif;
 
@@ -188,7 +189,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
   /* The first declaration is for browsers that do not support linear gradients. */
   background: #f0f0f0;
@@ -210,7 +211,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 We don't need an extra element to design the down arrow; instead, we're using the {{cssxref("::after")}} pseudo-element. It could also be implemented using a simple background image on the `select` class.
 
 ```css
-.select:after {
+.select::after {
   content: "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
   position: absolute;
   z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
@@ -261,7 +262,7 @@ Next, let's style the list of options:
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
   background: #f0f0f0;
 }
 ```
@@ -279,38 +280,373 @@ For the options, we need to add a `highlight` class to be able to identify the v
 }
 ```
 
-So here's the result with our three states:
+So here's the result with our three states ([check out the source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1)):
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Basic state</th>
-      <th scope="col">Active state</th>
-      <th scope="col">Open state</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        <a
-          href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
-          >Check out the source code</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Basic state
+
+```html hidden
+<div class="select">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+{{EmbedLiveSample("Basic_state",120,130)}}
+
+#### Active state
+
+```html hidden
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+{{EmbedLiveSample("Active_state",120,130)}}
+
+#### Open state
+
+```html hidden
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList">
+    <li class="option highlight">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("Open_state",120,130)}}
 
 ## Bringing your control to life with JavaScript
 
@@ -326,13 +662,13 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
 - The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) extension).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
 Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital to make your script generic and reusable.
 
-In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully
+In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully.
 
 To achieve this, we need two things:
 
@@ -369,7 +705,7 @@ Second, we need two new classes to let us hide the unneeded element: we visually
 .widget select,
 .no-widget .select {
   /* This CSS selector basically says:
-     - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
+     - either we have set the body class to "widget" and thus we hide the actual <select> element
      - or we have not changed the body class, therefore the body class is still "no-widget",
        so the elements whose class is "select" must be hidden */
   position: absolute;
@@ -390,32 +726,195 @@ window.addEventListener("load", () => {
 });
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Without JS</th>
-      <th scope="col">With JS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <a
-          href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
-          >Check out the source code</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Without JS
+
+Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#no_js).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+```
+
+{{EmbedLiveSample("Without_JS",120,130)}}
+
+#### With JS
+
+Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#js).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+```
+
+{{EmbedLiveSample("With_JS",120,130)}}
 
 > **Note:** If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.
 
@@ -563,10 +1062,224 @@ window.addEventListener("load", () => {
 
 At that point, our control will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
 
-| Live example                                                                                                |
-| ----------------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)            |
+#### Live example
+
+Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit" tabindex="-1">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select" tabindex="0">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+    });
+
+    select.addEventListener(
+      "click",
+      (event) => {
+        toggleOptList(select);
+      },
+      false,
+    );
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+
+    select.addEventListener("keyup", (event) => {
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("Live_example",120,130)}}
 
 ### Handling the control's value
 
@@ -668,12 +1381,268 @@ window.addEventListener("load", () => {
 
 In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
 
-With that, we're done! Here's the result:
+With that, we're done!
 
-| Live example                                                                                                |
-| ----------------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)            |
+#### Live example
+
+Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+function updateValue(select, index) {
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+}
+
+function getIndex(select) {
+  const nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+    });
+
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+  });
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach((option, index) => {
+      option.addEventListener("click", (event) => {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
+
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("live_example_2",120,130)}}
 
 But wait a second, are we really done?
 
@@ -737,12 +1706,264 @@ function updateValue(select, index) {
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)):
+Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)).
 
-| Live example                                                                                                |
-| ----------------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
-| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)      |
+#### Live example
+
+Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select" role="listbox">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden" role="presentation">
+      <li class="option" role="option" aria-selected="true">Cherry</li>
+      <li class="option" role="option">Lemon</li>
+      <li class="option" role="option">Banana</li>
+      <li class="option" role="option">Strawberry</li>
+      <li class="option" role="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+function updateValue(select, index) {
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.setAttribute("aria-selected", "false");
+  });
+
+  optionList[index].setAttribute("aria-selected", "true");
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+}
+
+function getIndex(select) {
+  const nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach((option, index) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+
+      option.addEventListener("click", (event) => {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
+
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("live_example_3",120,130)}}
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 
@@ -758,11 +1979,35 @@ We can start with a completely semantic, accessible, unordered list of {{htmlele
 <fieldset>
   <legend>Pick a fruit</legend>
   <ul class="styledSelect">
-    <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
-    <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
-    <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
-    <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
-    <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Cherry"
+        id="fruitCherry"
+        checked />
+      <label for="fruitCherry">Cherry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Lemon" id="fruitLemon" />
+      <label for="fruitLemon">Lemon</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Banana" id="fruitBanana" />
+      <label for="fruitBanana">Banana</label>
+    </li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Strawberry"
+        id="fruitStrawberry" />
+      <label for="fruitStrawberry">Strawberry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Apple" id="fruitApple" />
+      <label for="fruitApple">Apple</label>
+    </li>
   </ul>
 </fieldset>
 ```
@@ -791,13 +2036,13 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
   height: 0;
-  outline: none;
+  outline-color: transparent;
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
   content: "▼";
@@ -810,7 +2055,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect:focus-within {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
   background-color: #333;
@@ -847,7 +2092,7 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 
 - [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- [The native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Additional form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
@@ -858,7 +2103,7 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 ### Advanced Topics
 
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- **How to build custom form widgets**
+- **How to build custom form controls**
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

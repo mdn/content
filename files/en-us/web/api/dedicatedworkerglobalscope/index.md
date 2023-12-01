@@ -22,7 +22,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("caches", "DedicatedWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("WorkerGlobalScope.console", "DedicatedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+- {{domxref("console", "DedicatedWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.fonts", "DedicatedWorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
@@ -38,7 +38,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("performance_property", "DedicatedWorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
-- {{domxref("Window.scheduler", "DedicatedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("scheduler_property", "DedicatedWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("WorkerGlobalScope.self", "DedicatedWorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
@@ -61,9 +61,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("Window.cancelAnimationFrame", "DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
   - : Cancels a callback scheduled by requestAnimationFrame.
 - {{domxref("clearInterval", "DedicatedWorkerGlobalScope.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout", "DedicatedWorkerGlobalScope.clearTimeout()")}}
-  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+  - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("WorkerGlobalScope.dump", "DedicatedWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Writes a message to the console.
 - {{domxref("WorkerGlobalScope.importScripts", "DedicatedWorkerGlobalScope.importScripts()")}}
@@ -72,7 +72,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Requests the browser to execute a callback function before painting the next frame.
 - {{domxref("setInterval", "DedicatedWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
-- {{domxref("setTimeout", "DedicatedWorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "DedicatedWorkerGlobalScope.setTimeout()")}}
   - : Sets a delay for executing a function.
 
 ## Events

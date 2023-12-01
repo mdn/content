@@ -1,6 +1,7 @@
 ---
 title: Buttons
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -45,7 +46,7 @@ startButton = game.add.button(
   this,
   1,
   0,
-  2
+  2,
 );
 startButton.anchor.set(0.5);
 ```

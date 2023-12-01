@@ -13,7 +13,6 @@ The **`font-size`** attribute refers to the size of the font from {{Glossary("ba
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

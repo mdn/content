@@ -57,7 +57,7 @@ ext.blendFuncSeparateiOES(
   gl.SRC_ALPHA,
   gl.ONE_MINUS_SRC_ALPHA,
   gl.ZERO,
-  gl.ZERO
+  gl.ZERO,
 );
 ext.colorMaskiOES(1, 0, 1, 0, 0);
 ```

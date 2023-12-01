@@ -82,7 +82,7 @@ The value of each property is defined in HTML using the class property any eleme
 <p class="h-card">
   <img class="u-photo" src="https://example.org/photo.png" alt="" />
   <a class="p-name u-url" href="https://example.org">Joe Bloggs</a>
-  <a class="u-email" href="mailto:joebloggs@example.com" >joebloggs@example.com</a>,
+  <a class="u-email" href="mailto:jbloggs@example.com">jbloggs@example.com</a>,
   <span class="p-street-address">17 Austerstræti</span>
   <span class="p-locality">Reykjavík</span>
   <span class="p-country-name">Iceland</span>
@@ -104,7 +104,9 @@ The value of each property is defined in HTML using the class property any eleme
 
 ```html
 <div class="h-card">
-  <a class="p-name u-url" href="https://blog.lizardwrangler.com/" >Mitchell Baker</a>
+  <a class="p-name u-url" href="https://blog.lizardwrangler.com/">
+    Mitchell Baker
+  </a>
   (<a class="p-org h-card" href="https://mozilla.org/">Mozilla Foundation</a>)
 </div>
 ```
@@ -151,7 +153,9 @@ Example h-entry as a blog post:
   <p>
     Published by
     <a class="p-author h-card" href="https://example.com">W. Developer</a> on
-    <time class="dt-published" datetime="2013-06-13 12:00:00" >13<sup>th</sup> June 2013</time>
+    <time class="dt-published" datetime="2013-06-13 12:00:00">
+      13<sup>th</sup> June 2013
+    </time>
   </p>
 
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
@@ -186,30 +190,33 @@ Example h-entry as a blog post:
       </a>
       <a
         class="p-name u-url"
-        href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a>
+        href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">
+        Greg McVerry
+      </a>
     </span>
     Replied to
     <a
       class="u-in-reply-to"
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">
       a post on <strong>developer.mozilla.org</strong>
-    </a>:
+    </a>
+    :
   </p>
   <p class="p-name e-content">
     Hey thanks for making this microformats resource
   </p>
   <p>
-    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
-      >Greg McVerry</a
-    >
+    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">
+      Greg McVerry
+    </a>
     published this
     <a
       class="u-url url"
-      href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
-      ><time class="dt-published" datetime="2019-05-31T14:19:09+0000"
-        >31 May 2019</time
-      ></a
-    >
+      href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource">
+      <time class="dt-published" datetime="2019-05-31T14:19:09+0000">
+        31 May 2019
+      </time>
+    </a>
   </p>
 </div>
 ```
@@ -218,20 +225,16 @@ Example h-entry as a blog post:
 {
   "items": [
     {
-      "type": [ "h-entry" ],
+      "type": ["h-entry"],
       "properties": {
         "in-reply-to": [
           "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats"
         ],
-        "name": [
-          "Hey thanks for making this microformats resource"
-        ],
+        "name": ["Hey thanks for making this microformats resource"],
         "url": [
           "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
         ],
-        "published": [
-          "2019-05-31T14:19:09+0000"
-        ],
+        "published": ["2019-05-31T14:19:09+0000"],
         "content": [
           {
             "html": "Hey thanks for making this microformats resource",
@@ -241,9 +244,9 @@ Example h-entry as a blog post:
         ],
         "author": [
           {
-            "type": [ "h-card" ],
+            "type": ["h-card"],
             "properties": {
-              "name": [ "Greg McVerry" ],
+              "name": ["Greg McVerry"],
               "photo": [
                 "https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
               ],
@@ -276,7 +279,9 @@ The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-ent
     <p>
       Published by
       <a class="p-author h-card" href="https://example.com">W. Developer</a> on
-      <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time>
+      <time class="dt-published" datetime="2013-06-13 12:00:00">
+        13<sup>th</sup> June 2013
+      </time>
     </p>
     <p class="p-summary">
       In which I extoll the virtues of using microformats.
@@ -317,7 +322,9 @@ The `h-event` is for events on the web. h-event is often used with both event li
   <h1 class="p-name">Microformats Meetup</h1>
   <p>
     From
-    <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+    <time class="dt-start" datetime="2013-06-30 12:00">
+      30<sup>th</sup> June 2013, 12:00
+    </time>
     to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time> at
     <span class="p-location">Some bar in SF</span>
   </p>
@@ -342,8 +349,14 @@ The `h-event` is for events on the web. h-event is often used with both event li
 ```html
 <div class="h-event">
   <h2 class="p-name">IndieWeb Summit</h2>
-  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00">June 29, 2019 at 9:00am (-0700)</time><br />through
-  <time class="dt-end" datetime="2019-06-30T18:00:00-07:00">June 30, 2019 at 6:00pm (-0700)</time><br />
+  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00">
+    June 29, 2019 at 9:00am (-0700)
+  </time>
+  <br />through
+  <time class="dt-end" datetime="2019-06-30T18:00:00-07:00">
+    June 30, 2019 at 6:00pm (-0700)
+  </time>
+  <br />
   <div class="p-location h-card">
     <div>
       <span class="p-name">Mozilla</span>
@@ -364,7 +377,9 @@ The `h-event` is for events on the web. h-event is often used with both event li
     </span>
     Published this
     <a href="https://aaronparecki.com/2019/06/29/1/" class="u-url">event </a>on
-    <time class="dt published" datetime="2019-05-25T18:00:00-07:00">May 5th, 2019</time>
+    <time class="dt published" datetime="2019-05-25T18:00:00-07:00">
+      May 5th, 2019
+    </time>
   </div>
 </div>
 ```
@@ -373,42 +388,24 @@ The `h-event` is for events on the web. h-event is often used with both event li
 {
   "items": [
     {
-      "type": [
-        "h-event"
-      ],
+      "type": ["h-event"],
       "properties": {
-        "name": [
-          "IndieWeb Summit"
-        ],
-        "url": [
-          "https://aaronparecki.com/2019/06/29/1/"
-        ],
+        "name": ["IndieWeb Summit"],
+        "url": ["https://aaronparecki.com/2019/06/29/1/"],
         "author": [
           {
-            "type": [
-              "h-card"
-            ],
+            "type": ["h-card"],
             "properties": {
-              "name": [
-                "Aaron Parecki"
-              ],
-              "url": [
-                "https://aaronparecki.com"
-              ]
+              "name": ["Aaron Parecki"],
+              "url": ["https://aaronparecki.com"]
             },
             "lang": "en",
             "value": "Aaron Parecki"
           }
         ],
-        "start": [
-          "2019-06-29T09:00:00-07:00"
-        ],
-        "end": [
-          "2019-06-30T18:00:00-07:00"
-        ],
-        "published": [
-          "2019-05-25T18:00:00-07:00"
-        ],
+        "start": ["2019-06-29T09:00:00-07:00"],
+        "end": ["2019-06-30T18:00:00-07:00"],
+        "published": ["2019-05-25T18:00:00-07:00"],
         "content": [
           {
             "html": "Come join us",
@@ -418,31 +415,15 @@ The `h-event` is for events on the web. h-event is often used with both event li
         ],
         "location": [
           {
-            "type": [
-              "h-card"
-            ],
+            "type": ["h-card"],
             "properties": {
-              "name": [
-                "Mozilla"
-              ],
-              "p-street-address": [
-                "1120 NW Couch St"
-              ],
-              "locality": [
-                "Portland"
-              ],
-              "region": [
-                "Oregon"
-              ],
-              "country": [
-                "US"
-              ],
-              "latitude": [
-                "45.52345"
-              ],
-              "longitude": [
-                "-122.682677"
-              ]
+              "name": ["Mozilla"],
+              "p-street-address": ["1120 NW Couch St"],
+              "locality": ["Portland"],
+              "region": ["Oregon"],
+              "country": ["US"],
+              "latitude": ["45.52345"],
+              "longitude": ["-122.682677"]
             },
             "lang": "en",
             "value": "Mozilla"

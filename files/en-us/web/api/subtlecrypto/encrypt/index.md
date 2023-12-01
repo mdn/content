@@ -127,7 +127,7 @@ function encryptMessage(publicKey) {
       name: "RSA-OAEP",
     },
     publicKey,
-    encoded
+    encoded,
   );
 }
 ```
@@ -156,7 +156,7 @@ function encryptMessage(key) {
       length: 64,
     },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -173,7 +173,7 @@ const key_encoded = await crypto.subtle.importKey(
   key.buffer,
   "AES-CTR",
   false,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 const encrypted_content = await window.crypto.subtle.encrypt(
   {
@@ -182,7 +182,7 @@ const encrypted_content = await window.crypto.subtle.encrypt(
     length: 128,
   },
   key_encoded,
-  data
+  data,
 );
 
 // Uint8Array
@@ -212,7 +212,7 @@ function encryptMessage(key) {
       iv: iv,
     },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -237,7 +237,7 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     { name: "AES-GCM", iv: iv },
     key,
-    encoded
+    encoded,
   );
 }
 ```

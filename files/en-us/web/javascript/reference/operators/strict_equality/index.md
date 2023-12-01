@@ -92,6 +92,6 @@ console.log(object1 === object1); // true
 
 ## See also
 
-- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Equality (`==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality (`!=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict inequality (`!==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

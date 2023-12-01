@@ -26,6 +26,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformanceServerTiming")}}
 - {{domxref("TaskAttributionTiming")}}
+- {{domxref("VisibilityStateEntry")}}
 
 ## Instance properties
 

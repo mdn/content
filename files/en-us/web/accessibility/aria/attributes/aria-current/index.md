@@ -29,19 +29,19 @@ The breadcrumb for the "current page" should have `aria-current="page"` set on i
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
     <li>
-      <a href="../../../../../"> Web technology for developers </a>
+      <a href="../../../../../">Web technology for developers</a>
     </li>
     <li>
-      <a href="../../../../"> Accessibility </a>
+      <a href="../../../../">Accessibility</a>
     </li>
     <li>
-      <a href="../../../"> ARIA </a>
+      <a href="../../../">ARIA</a>
     </li>
     <li>
-      <a href="../../"> ARIA States and Properties </a>
+      <a href="../../">ARIA States and Properties</a>
     </li>
     <li>
-      <a href="./" aria-current="page"> ARIA: `aria-current` attribute </a>
+      <a href="./" aria-current="page">ARIA: `aria-current` attribute</a>
     </li>
   </ol>
 </nav>
@@ -85,6 +85,7 @@ Usable in all roles; except in for elements with the role of [`gridcell`](/en-US
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
+- [Breadcrumb navigation with `aria-current`](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
 
 <section id="Quick_links">
 

@@ -171,7 +171,7 @@ div {
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)

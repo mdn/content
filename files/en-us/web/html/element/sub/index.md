@@ -64,7 +64,7 @@ Traditional footnotes are denoted using numbers which are rendered in subscript.
 
 In mathematics, families of variables related to the same concept (such as distances along the same axis) are represented using the same variable name with a subscript following. For example:
 
-```html
+```html-nolint
 <p>
   The horizontal coordinates' positions along the X-axis are represented as
   <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
@@ -136,8 +136,9 @@ Another example:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
+          ></code
         >
       </td>
     </tr>

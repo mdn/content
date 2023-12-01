@@ -1,6 +1,7 @@
 ---
 title: Sizing items in CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

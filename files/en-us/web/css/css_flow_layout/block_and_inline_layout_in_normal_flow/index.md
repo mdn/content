@@ -1,6 +1,6 @@
 ---
 title: Block and inline layout in normal flow
-slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 page-type: guide
 ---
 
@@ -53,7 +53,7 @@ In the example below, the paragraphs have a top margin of `20px` and a bottom ma
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 > **Note:** If you are not sure whether margins are collapsing, check the Box Model values in your browser DevTools. This will give you the actual size of the margin which can help you to identify what is happening.
 >
@@ -101,7 +101,7 @@ In this guide, we have looked at how elements display in normal flow, as block a
 
 ## See also
 
-- [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_Box_Model)
+- [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_box_model)
 - _[Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - [Block-level elements](/en-US/docs/Glossary/Block-level_content)

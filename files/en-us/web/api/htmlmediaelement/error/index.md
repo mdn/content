@@ -27,7 +27,7 @@ handler logs the details to console.
 const videoElement = document.createElement("video");
 videoElement.onerror = () => {
   console.error(
-    `Error ${videoElement.error.code}; details: ${videoElement.error.message}`
+    `Error ${videoElement.error.code}; details: ${videoElement.error.message}`,
   );
 };
 videoElement.src = "https://example.com/bogusvideo.mp4";

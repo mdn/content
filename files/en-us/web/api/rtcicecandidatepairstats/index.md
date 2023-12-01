@@ -2,21 +2,19 @@
 title: RTCIceCandidatePairStats
 slug: Web/API/RTCIceCandidatePairStats
 page-type: web-api-interface
-browser-compat: api.RTCIceCandidatePairStats
+browser-compat: api.RTCStatsReport.type_candidate-pair
 ---
 
 {{APIRef("WebRTC")}}
 
-The WebRTC **`RTCIceCandidatePairStats`** dictionary reports statistics which provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
+The **`RTCIceCandidatePairStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics that provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
 
-If a {{domxref("RTCStats")}}-based object's {{domxref("RTCStats.type", "type")}} is `candidate-pair`, it's an `RTCIceCandidatePairStats` object.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `"candidate-pair"`.
 
 ## Instance properties
 
-_`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits its properties. In addition, it adds the following new properties:_
-
 - {{domxref("RTCIceCandidatePairStats.availableIncomingBitrate", "availableIncomingBitrate")}} {{optional_inline}}
-  - : Provides an informative value representing the available inbound capacity of the network by reporting the total number of bits per second available for all of the candidate pair's incoming {{Glossary("RTP")}} streams. This does not take into account the size of the {{Glossary("IP")}} overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.
+  - : Provides a value representing the available inbound capacity of the network by reporting the total number of bits per second available for all of the candidate pair's incoming {{Glossary("RTP")}} streams. This does not take into account the size of the {{Glossary("IP")}} overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.
 - {{domxref("RTCIceCandidatePairStats.availableOutgoingBitrate", "availableOutgoingBitrate")}} {{optional_inline}}
   - : Provides an informative value representing the available outbound capacity of the network by reporting the total number of bits per second available for all of the candidate pair's outgoing {{Glossary("RTP")}} streams. This does not take into account the size of the {{Glossary("IP")}} overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.
 - {{domxref("RTCIceCandidatePairStats/bytesReceived", "bytesReceived")}} {{optional_inline}}
@@ -50,9 +48,24 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
 - {{domxref("RTCIceCandidatePairStats.transportId", "transportId")}} {{optional_inline}}
   - : A string that uniquely identifies the {{domxref("RTCIceTransport")}} that was inspected to obtain the transport-related statistics (as found in {{domxref("RTCTransportStats")}}) used in generating this object.
 
-### Obsolete properties
+### Common instance properties
 
-The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the [compatibility table](#browser_compatibility) for details on which browsers support them and in which versions.
+The following properties are common to all WebRTC statistics objects.
+
+<!-- RTCStats -->
+
+- {{domxref("RTCIceCandidatePairStats.id", "id")}}
+  - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
+- {{domxref("RTCIceCandidatePairStats.timestamp", "timestamp")}}
+  - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
+- {{domxref("RTCIceCandidatePairStats.type", "type")}}
+  - : A string with the value `"candidate-pair"`, indicating the type of statistics that the object contains.
+
+### Deprecated properties
+
+The following properties have been removed from the specification and should no longer be used.
+You should update any existing code to avoid using them as soon as is practical.
+Check the [compatibility table](#browser_compatibility) for details on which browsers support them and in which versions.
 
 - {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{Deprecated_Inline}} {{optional_inline}}
   - : An integer value indicating the candidate pair's priority.
@@ -64,17 +77,21 @@ The following properties have been removed from the specification and should no 
 ### Non-standard properties
 
 - {{domxref("RTCIceCandidatePairStats.selected", "selected")}} {{Non-standard_Inline}} {{optional_inline}}
-  - : A Firefox-specific Boolean value which is `true` if the candidate pair described by this object is the one currently in use. The spec-compliant way to determine the selected candidate pair is to look for a stats object of type `transport`, which is an {{domxref("RTCTransportStats")}} object. That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.
+  - : A Firefox-specific Boolean value which is `true` if the candidate pair described by this object is the one currently in use.
+    The spec-compliant way to determine the selected candidate pair is to look for a stats object of type `transport`, which is an {{domxref("RTCTransportStats")}} object.
+    That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.
 
 ## Usage notes
 
-The currently-active ICE candidate pair—if any—can be obtained by calling the {{domxref("RTCIceTransport")}} method {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}, which returns an {{domxref("RTCIceCandidatePair")}} object, or `null` if there isn't a pair selected. The active candidate pair describes the current configuration of the two ends of the {{domxref("RTCPeerConnection")}}.
+The currently-active ICE candidate pair—if any—can be obtained by calling the {{domxref("RTCIceTransport")}} method {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}, which returns an {{domxref("RTCIceCandidatePair")}} object, or `null` if there isn't a pair selected.
+The active candidate pair describes the current configuration of the two ends of the {{domxref("RTCPeerConnection")}}.
 
-Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again. For more information, see [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
+Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again.
+For more information, see [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
 ## Example
 
-This example computes the average time elapsed between connectivity checks if the {{domxref("RTCStats")}} object `rtcStats` is an `RTCIceCandidatePairStats` object.
+This example computes the average time elapsed between connectivity checks.
 
 ```js
 if (rtcStats && rtcStats.type === "candidate-pair") {
@@ -82,11 +99,13 @@ if (rtcStats && rtcStats.type === "candidate-pair") {
     (rtcStats.lastRequestTimestamp - rtcStats.firstRequestTimestamp) /
     rtcStats.requestsSent;
 
-  log(`Average time between ICE connectivity checks: ${elapsed} ms.`);
+  console.log(`Average time between ICE connectivity checks: ${elapsed} ms.`);
 }
 ```
 
-The code begins by looking at `rtcStats` to see if its {{domxref("RTCStats.type", "type")}} is `candidate-pair`. If it is, then we know that `rtcStats` is in fact an {{domxref("RTCIceCandidatePairStats")}} object. If so, we compute the average time elapsed between STUN connectivity checks and log that information.
+The code begins by looking at `rtcStats` to see if its {{domxref("RTCIceCandidatePairStats.type", "type")}} is `candidate-pair`.
+If it is, then we know that `rtcStats` is in fact an {{domxref("RTCIceCandidatePairStats")}} object.
+We can then compute the average time elapsed between STUN connectivity checks and log that information.
 
 ## Specifications
 

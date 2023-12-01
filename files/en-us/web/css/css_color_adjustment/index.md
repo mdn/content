@@ -16,7 +16,6 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
 ### Properties
 
 - {{cssxref("color-scheme")}}
-- {{cssxref("color-adjust")}} shorthand
 - {{cssxref("forced-color-adjust")}}
 - {{cssxref("print-color-adjust")}}
 
@@ -55,4 +54,4 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
 
 ## See also
 
-- [CSS colors module](/en-US/docs/Web/CSS/CSS_Colors)
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module

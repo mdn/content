@@ -71,7 +71,7 @@ trustedTypes.createPolicy("default", {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
     return `${s}?default-policy-used&type=${encodeURIComponent(
-      type
+      type,
     )}&sink=${encodeURIComponent(sink)}`;
   },
 });

@@ -7,7 +7,12 @@ status:
 browser-compat: api.Sanitizer
 ---
 
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}{{SeeCompatTable}}
+
+{{securecontext_header}}
+
+> **Warning:** This documentation reflects stale browser implementations.
+> The specification has changed significantly since the docs were written, and they will need to be updated once browser implementations catch up.
 
 The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
 
@@ -116,7 +121,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
 > const sanitizedString = new Sanitizer().sanitizeFor(
 >   "div",
->   unsanitized_string
+>   unsanitized_string,
 > ).innerHTML;
 > ```
 

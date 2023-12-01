@@ -119,7 +119,7 @@ browser.downloads
   .then(logDownloads, onError);
 ```
 
-You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js) example.
+You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/main/latest-download/popup/latest_download.js) example.
 
 {{WebExtExamples}}
 

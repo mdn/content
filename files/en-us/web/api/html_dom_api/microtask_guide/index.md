@@ -102,7 +102,7 @@ Executing this code twice in a row gives the following results.
 
 When the data is not cached:
 
-```
+```plain
 Fetching data
 Data fetched
 Loaded data
@@ -110,7 +110,7 @@ Loaded data
 
 When the data is cached:
 
-```
+```plain
 Fetching data
 Loaded data
 Data fetched

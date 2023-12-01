@@ -70,8 +70,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 
@@ -97,7 +97,7 @@ self.addEventListener("fetch", (event) => {
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
-    })
+    }),
   );
 });
 ```

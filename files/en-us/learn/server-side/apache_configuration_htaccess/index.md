@@ -1,6 +1,7 @@
 ---
 title: "Apache Configuration: .htaccess"
 slug: Learn/Server-side/Apache_Configuration_htaccess
+page-type: guide
 ---
 
 {{LearnSidebar}}
@@ -156,7 +157,7 @@ For example, the filename extensions of content files often define the content's
 
 Associates media types with one or more extensions to make sure the resources will be served appropriately.
 
-Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
+Servers should use `text/javascript` for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
 ```apacheconf
 <IfModule mod_expires.c>
@@ -299,7 +300,7 @@ These Rewrite rules will redirect from the `http://` insecure version to the `ht
 </IfModule>
 ```
 
-If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create your SSL certificates, it will fail to validate the certificate if validation requests are redirected to HTTPS. Turn on the condition(s) you need.
+If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create your TLS certificates, it will fail to validate the certificate if validation requests are redirected to HTTPS. Turn on the condition(s) you need.
 
 ```apacheconf
 <IfModule mod_rewrite.c>
@@ -343,7 +344,7 @@ This can cause SEO problems (duplicate content), and therefore, you should choos
 
 Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (http or https).
 
-The rule assumes by default that both HTTP and HTTPS environments are available for redirection. If your SSL certificate could not handle one of the domains used during redirection, you should turn the condition on.
+The rule assumes by default that both HTTP and HTTPS environments are available for redirection. If your TLS certificate could not handle one of the domains used during redirection, you should turn the condition on.
 
 The following might not be a good idea if you use "real" subdomains for certain parts of your website.
 

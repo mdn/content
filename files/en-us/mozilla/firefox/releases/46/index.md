@@ -1,6 +1,7 @@
 ---
 title: Firefox 46 for developers
 slug: Mozilla/Firefox/Releases/46
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -51,7 +52,7 @@ Highlights:
 - The non-standard `WeakMap.prototype.clear()` and `WeakSet.prototype.clear()` methods have been removed ([Firefox bug 1101817](https://bugzil.la/1101817)).
 - The non-standard, static `RegExp.multiline` property is now deprecated ([Firefox bug 1220457](https://bugzil.la/1220457)).
 - Built-in accessor function names now have a "get" or "set" prefix ([Firefox bug 1180290](https://bugzil.la/1180290), [Firefox bug 1235656](https://bugzil.la/1235656)).
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 (legacy) array comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 (legacy) generator comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
+- [JS1.7/JS1.8 (legacy) array comprehensions and generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator) have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
 
 ### Interfaces/APIs/DOM
 
@@ -59,11 +60,11 @@ Highlights:
 
 - The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedindex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedoptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 
-- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, {{domxref("OffscreenCanvas.toBlob()")}}, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 1172796](https://bugzil.la/1172796)).
+- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, `OffscreenCanvas.toBlob()`, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 1172796](https://bugzil.la/1172796)).
 - The {{domxref("ImageBitmap.close()")}} method is now supported ([Firefox bug 1172796](https://bugzil.la/1172796)).
 - A new {{domxref("ImageBitmapRenderingContext")}} rendering context is now implemented. Use `"bitmaprenderer"` with {{domxref("OffscreenCanvas.getContext()")}} or {{domxref("HTMLCanvasElement.getContext()")}} to obtain this context. ([Firefox bug 1172796](https://bugzil.la/1172796)).
 

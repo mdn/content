@@ -3,7 +3,7 @@ title: "CSS: registerProperty() static method"
 short-title: registerProperty()
 slug: Web/API/CSS/registerProperty_static
 page-type: web-api-static-method
-browser-compat: api.CSS.registerProperty
+browser-compat: api.CSS.registerProperty_static
 ---
 
 {{APIRef("CSSOM")}}
@@ -13,7 +13,7 @@ The **`CSS.registerProperty()`** static method registers
 values, and properties that do or do not inherit their value.
 
 Registering a custom property allows you to tell the browser how the custom property
-should behave; what are allowed types, whether the custom property inherits its value,
+should behave; what types are allowed, whether the custom property inherits its value,
 and what the default value of the custom property is.
 
 ## Syntax
@@ -123,6 +123,7 @@ We can add these styles to some buttons:
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSS.supports()")}}
-- {{DOMxRef("CSS.escape()")}}
-- {{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}
+- {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
+- {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
+- {{DOMxRef("CSS/factory_functions_static", 'CSS factory functions')}}
+- CSS {{cssxref("@property")}}
