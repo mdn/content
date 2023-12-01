@@ -9,6 +9,7 @@ browser-compat: api.Element.click_event
 {{APIRef}}
 
 An element receives a **`click`** event when any of the following occurs:
+
 - a pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
 - a touch gesture is performed on the element
 - the <kbd>Space</kbd> key or <kbd>Enter</kbd> key is pressed while the element is focused
