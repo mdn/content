@@ -12,11 +12,13 @@ spec-urls:
 
 Secure Payment Confirmation (SPC), available through the Payment Request API, provides a mechanism for strong customer authentication during checkout, thereby protecting against online payment fraud.
 
+## Overview
+
 To protect against online payment fraud, it is common to authenticate the account holder. Strong authentication lowers the risk of fraud, but increases the likelihood that friction during checkout will lead to shopping cart abandonment. Banks, merchants, payment services providers, and other entities in a payments ecosystem therefore consider a number of factors when deciding what type and strength of authentication to use for each transaction, including the amount, the items being purchased, the user's payment history, which party bears liability in the case of fraud, and regulatory requirements (such as [European Payment Services Directive 2](<https://en.wikipedia.org/wiki/Payment_Services_Directive#Revised_Directive_on_Payment_Services_(PSD2)>) requirements for strong customer authentication and evidence of user consent).
 
 A number of mechanisms are used in combination for strong authentication, including passwords, one-time SMS codes, mobile applications, and Web Authentication. Each one has its advantages and disadvantages. For example, one-time SMS codes are now familiar to users but can involve usability issues (such as device unavailability) and security vulnerabilities. Web Authentication offers better security and is available in all major browsers and all modern mobile devices and computers. However, Web Authentication alone does not provide evidence of user consent to make a payment.
 
-SPC is designed to enable streamlined strong customer authentication (SCA) in a variety of payment systems, and to provide cryptographic evidence that the user has consented to the terms of a transaction. When the API is called, the browser displays elements of the transaction in a dialog box: the name of the merchant, payment instrument, and amount and currency of payment. For example, here is the Chrome M118 transaction dialog for SPC:
+SPC is designed to enable streamlined strong customer authentication (SCA) in a variety of payment systems, and to provide cryptographic evidence that the user has consented to the terms of a transaction. When the API is called, the browser displays elements of the transaction in a dialog box: the name of the merchant, payment instrument, and amount and currency of payment. For example, here is the Chrome browser (version M118) [transaction dialog](#transaction-dialog) for SPC:
 
 ![Chrome M118 transaction dialog for SPC](chrome-tx-dialog.png)
 
@@ -104,7 +106,7 @@ For example:
 
 ### Authenticating a payment
 
-An origin may invoke the Payment Request API with the `"secure-payment-confirmation"` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface with transaction details (e.g., the payment currency and amount and the payee origin).
+An origin may invoke the Payment Request API with the `"secure-payment-confirmation"` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface (the <dfn id="transaction-dialog">"transaction dialog"</dfn>) with transaction details (e.g., the payment currency and amount and the payee origin).
 
 > **Note:** Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the `payment` permission policy set.
 
