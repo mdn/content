@@ -56,6 +56,10 @@ Both pieces of text have their default black color. The "good" `<div>` has a lig
 ```
 
 ```css
+body {
+  background-color: #5A80A9
+}
+
 div {
   font-family: sans-serif;
   text-align: center;
@@ -64,7 +68,7 @@ div {
   width: 250px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 4px 4px 4px black;
 }
 
 .good {
