@@ -31,9 +31,6 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event. Tells the browser that work is ongoing.
-
 ## Example
 
 ```js
