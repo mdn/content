@@ -983,7 +983,8 @@
       "overview": ["Payment Request API"],
       "guides": [
         "/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API",
-        "/docs/Web/API/Payment_Request_API/Concepts"
+        "/docs/Web/API/Payment_Request_API/Concepts",
+        "/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation"
       ],
       "interfaces": [
         "MerchantValidationEvent",
@@ -991,7 +992,8 @@
         "PaymentMethodChangeEvent",
         "PaymentRequest",
         "PaymentRequestUpdateEvent",
-        "PaymentResponse"
+        "PaymentResponse",
+        "SecurePaymentConfirmationRequest"
       ],
       "dictionaries": [
         "AddressErrors",
