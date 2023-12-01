@@ -76,7 +76,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Good_Contrast', '100%', '100')}}
+{{EmbedLiveSample('Good_Contrast', '100%', '200')}}
 
 The "bad" `<div>` on the other hand has a very dark purple background, which makes the text much harder to read:
 
