@@ -5,7 +5,7 @@ page-type: web-api-interface
 spec-urls: https://w3c.github.io/secure-payment-confirmation/#sctn-securepaymentconfirmationrequest-dictionary
 ---
 
-{APIRef("Payment Request API")}}
+{{APIRef("Payment Request API")}}
 
 The **`SecurePaymentConfirmationRequest`** dictionary describes input to the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) when used to authenticate a user during an e-commerce transaction [using SPC with Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
