@@ -32,12 +32,7 @@ For example, let's process a video to display it in greyscale. In this case, we'
 We can set up our video player and `<canvas>` element like this:
 
 ```html
-<video
-  id="my-video"
-  controls="true"
-  width="480"
-  height="270"
-  crossorigin="anonymous">
+<video id="my-video" controls width="480" height="270" crossorigin="anonymous">
   <source
     src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
@@ -153,7 +148,7 @@ myVideo.playbackRate = 2;
 #### Editable example
 
 ```html hidden
-<video id="my-video" controls="true" width="480" height="270">
+<video id="my-video" controls width="480" height="270">
   <source
     src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
@@ -243,12 +238,7 @@ filter.gain.value = 25;
 #### Editable example
 
 ```html hidden
-<video
-  id="my-video"
-  controls="true"
-  width="480"
-  height="270"
-  crossorigin="anonymous">
+<video id="my-video" controls width="480" height="270" crossorigin="anonymous">
   <source
     src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
@@ -353,7 +343,7 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/master/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
+> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
 
 ### JavaScript codecs
 

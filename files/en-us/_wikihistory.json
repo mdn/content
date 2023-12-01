@@ -20931,10 +20931,6 @@
     "modified": "2020-10-15T22:21:03.220Z",
     "contributors": ["1valdis"]
   },
-  "Web/API/AudioWorkletProcessor/parameterDescriptors": {
-    "modified": "2020-10-15T22:21:04.116Z",
-    "contributors": ["Sheppy", "chrisdavidmills", "1valdis"]
-  },
   "Web/API/AudioWorkletProcessor/port": {
     "modified": "2020-10-15T22:21:03.014Z",
     "contributors": ["chrisdavidmills", "1valdis"]
@@ -45161,10 +45157,6 @@
   "Web/API/MediaError/msExtendedCode": {
     "modified": "2019-03-23T22:00:50.075Z",
     "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
-  "Web/API/MediaImage": {
-    "modified": "2020-10-15T22:30:04.566Z",
-    "contributors": ["lbd1607", "bershanskiy"]
   },
   "Web/API/MediaKeyMessageEvent": {
     "modified": "2020-10-15T21:33:46.465Z",
@@ -77462,6 +77454,25 @@
       "caraya"
     ]
   },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-21T10:16:09.302Z",
+    "contributors": [
+      "KartikSoneji",
+      "blueblots",
+      "fscholz",
+      "Thomazella",
+      "s-lee",
+      "jwhitlock",
+      "Jeremie",
+      "teoli",
+      "DBaron",
+      "ethertank",
+      "Sheppy",
+      "jswisher",
+      "ziyunfei",
+      "Marsf"
+    ]
+  },
   "Web/CSS/CSS_fragmentation": {
     "modified": "2020-07-07T12:15:32.340Z",
     "contributors": ["wbamberg", "mfluehr"]
@@ -77910,6 +77921,26 @@
       "Sebastianz",
       "teoli",
       "sujeetkalaskar"
+    ]
+  },
+  "Web/CSS/CSS_media_queries/Printing": {
+    "modified": "2019-03-18T20:51:52.142Z",
+    "contributors": [
+      "benrwb",
+      "wbamberg",
+      "oshliaer",
+      "stevemao",
+      "teoli",
+      "olegskl",
+      "GabrielF",
+      "harshadotcom",
+      "Bognar",
+      "kscarfone",
+      "fusionchess",
+      "ethertank",
+      "Sheppy",
+      "tw2113",
+      "dl748"
     ]
   },
   "Web/CSS/CSS_media_queries/Testing_media_queries": {
@@ -92036,10 +92067,6 @@
       "ethertank"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2020-12-14T00:30:29.082Z",
-    "contributors": ["Sheppy", "steffix.h2", "shing0608"]
-  },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
     "contributors": [
@@ -92244,25 +92271,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-05-06T13:39:52.700Z",
-    "contributors": [
-      "gurdiga",
-      "Sheppy",
-      "davidshq",
-      "teoli",
-      "Jeremie",
-      "openjck",
-      "Martndemus",
-      "jswisher",
-      "addyosmani",
-      "mmclark",
-      "happysadman",
-      "pauldefoe",
-      "fantasticfears",
-      "limomo"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2020-03-07T14:19:21.961Z",
     "contributors": [
@@ -92340,26 +92348,6 @@
     "modified": "2019-03-23T23:30:00.833Z",
     "contributors": ["estelle", "chrisdavidmills", "shahzad11", "Sheppy"]
   },
-  "Web/Guide/Printing": {
-    "modified": "2019-03-18T20:51:52.142Z",
-    "contributors": [
-      "benrwb",
-      "wbamberg",
-      "oshliaer",
-      "stevemao",
-      "teoli",
-      "olegskl",
-      "GabrielF",
-      "harshadotcom",
-      "Bognar",
-      "kscarfone",
-      "fusionchess",
-      "ethertank",
-      "Sheppy",
-      "tw2113",
-      "dl748"
-    ]
-  },
   "Web/Guide/User_input_methods": {
     "modified": "2020-07-22T12:38:46.565Z",
     "contributors": [
@@ -92371,41 +92359,6 @@
       "MashKao",
       "teoli",
       "franciov"
-    ]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-21T10:16:09.302Z",
-    "contributors": [
-      "KartikSoneji",
-      "blueblots",
-      "fscholz",
-      "Thomazella",
-      "s-lee",
-      "jwhitlock",
-      "Jeremie",
-      "teoli",
-      "DBaron",
-      "ethertank",
-      "Sheppy",
-      "jswisher",
-      "ziyunfei",
-      "Marsf"
-    ]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:13:54.637Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "xfq",
-      "kohei.yoshino",
-      "yyss",
-      "pixelastic",
-      "Gerv",
-      "Bzbarsky",
-      "Sheppy",
-      "Hsivonen",
-      "jswisher"
     ]
   },
   "Web/HTML": {

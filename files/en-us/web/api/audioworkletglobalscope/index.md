@@ -71,7 +71,7 @@ console.log(usefulVariable);
 registerProcessor("test-processor", TestProcessor);
 ```
 
-Next, in our main scripts file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}} — passing the name of the processor to it — and connect the node to an audio graph. We should see the output of {{domxref("console.log()")}} calls in the console:
+Next, in our main scripts file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}} — passing the name of the processor to it — and connect the node to an audio graph. We should see the output of {{domxref("console/log_static", "console.log()")}} calls in the console:
 
 ```js
 const audioContext = new AudioContext();

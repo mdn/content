@@ -359,7 +359,7 @@ When the "Create new column" button is clicked, the `createColumn()` function is
 We then add an event listener to the close button via {{domxref("EventTarget.addEventListener", "addEventListener")}}. Clicking the close button does two things:
 
 - Adds the `fade-out` class to the `<div>`. Adding the class triggers the exit animation set on that class.
-- Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
+- Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout()")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
 
 #### CSS
 

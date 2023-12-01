@@ -40,7 +40,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 button is clicked by changing the `gain` property value.
 
 The below snippet wouldn't work as is — for a complete working example, check out our
-[Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo ([view source](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
+[Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo ([view source](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js).)
 
 ```html
 <div>

@@ -63,7 +63,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : Find out how to use variable fonts in your designs.
-- [The Web Open Font Format (WOFF)](/en-US/docs/Web/Guide/WOFF)
+- [The Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.
 
 ## User interface development

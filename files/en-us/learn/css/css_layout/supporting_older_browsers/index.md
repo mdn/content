@@ -71,7 +71,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -81,7 +81,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -121,7 +121,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -131,7 +131,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -161,7 +161,7 @@ If we add a feature query to the above example, we can use it to set the widths 
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -171,7 +171,7 @@ If we add a feature query to the above example, we can use it to set the widths 
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   width: 33.333%;
 }
