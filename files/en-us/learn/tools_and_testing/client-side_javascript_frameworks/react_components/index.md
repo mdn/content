@@ -196,11 +196,11 @@ If you change each `<Todo />` component's `completed` prop, your browser will ch
 We have still _another_ problem: our `<Todo />` component gives every task an `id` attribute of `todo-0`. This is bad for a couple of reasons:
 
 - [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
-- When `id`s are not unique, the functionality of checkboxes and other form control elements can break.
+- When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Element/label) can break.
 
-The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The browser only acknowledges the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
+The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The `<label>`s2 only acknowledge the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
 
-We had unique id attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time. Update the `Todo` component instances inside `App.jsx` to add in `id` props, as follows:
+We had unique `id` attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time. Update the `Todo` component instances inside `App.jsx` to add in `id` props, as follows:
 
 ```jsx
 <Todo name="Eat" id="todo-0" completed />
@@ -220,6 +220,8 @@ Now go back to `Todo.jsx` and make use of the `id` prop. It needs to replace the
   </label>
 </div>
 ```
+
+With these fixes in place, clicking on the labels next to each checkbox will do what we expect – check and uncheck the checkboxes next to those labels.
 
 ## So far, so good?
 
