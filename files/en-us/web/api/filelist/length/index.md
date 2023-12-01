@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FileList.length
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{APIRef("File API")}}
 
 The read-only {{domxref("FileList")}} **`length`** property returns the number of files in the `FileList`.
 

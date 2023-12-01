@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Blob.stream
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's
 **`stream()`** method returns a {{domxref("ReadableStream")}}
