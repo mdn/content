@@ -2,11 +2,10 @@
 title: Browser support for JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 page-type: guide
+browser-compat: webextensions.api
 ---
 
-{{AddonSidebar}}
-
-{{WebExtAllCompatTables}}
+{{AddonSidebar}}{{Compat}}
 
 > **Note:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

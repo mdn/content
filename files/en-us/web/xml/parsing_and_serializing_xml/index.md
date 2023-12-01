@@ -1,6 +1,6 @@
 ---
 title: Parsing and serializing XML
-slug: Web/Guide/Parsing_and_serializing_XML
+slug: Web/XML/Parsing_and_serializing_XML
 page-type: guide
 ---
 
