@@ -27,4 +27,4 @@ If you are unsure of the type of a value, you can use the [`typeof`](/en-US/docs
   - {{Glossary("boolean")}}
   - {{Glossary("null")}}
   - {{Glossary("undefined")}}
-  - {{Glossary("symbol")}}
+  - [Symbol](en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
