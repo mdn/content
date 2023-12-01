@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.serial
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SeeCompatTable}}
 
 The **`serial`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the {{domxref("Web Serial API")}}.
 

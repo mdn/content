@@ -61,9 +61,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("Window.cancelAnimationFrame", "DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
   - : Cancels a callback scheduled by requestAnimationFrame.
 - {{domxref("clearInterval", "DedicatedWorkerGlobalScope.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout", "DedicatedWorkerGlobalScope.clearTimeout()")}}
-  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+  - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("WorkerGlobalScope.dump", "DedicatedWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Writes a message to the console.
 - {{domxref("WorkerGlobalScope.importScripts", "DedicatedWorkerGlobalScope.importScripts()")}}
@@ -72,7 +72,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Requests the browser to execute a callback function before painting the next frame.
 - {{domxref("setInterval", "DedicatedWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
-- {{domxref("setTimeout", "DedicatedWorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "DedicatedWorkerGlobalScope.setTimeout()")}}
   - : Sets a delay for executing a function.
 
 ## Events
