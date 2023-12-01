@@ -45,14 +45,18 @@ That second bullet is especially valuable: making a component out of common UI e
 
 ## Make a `<Todo />`
 
-Before we can make a component, we should create a new file for it. In fact, we should make a directory just for our components. The following commands make a `components` directory and then, within that, a file called `Todo.jsx`. Make sure you're in the root of your app before you run these!
+Before we can make a component, we should create a new file for it. In fact, we should make a directory just for our components. Make sure you're in the root of your app before you run these commands!
 
 ```bash
+# create a `components` directory
 mkdir src/components
+# within `components`, create a file called `Todo.jsx`
 touch src/components/Todo.jsx
 ```
 
-Let's start adding the code for the `Todo` component to `Todo.jsx`: add the following snippet to it now. In this code, we define the function and export it:
+Don't forget to restart your development server if you stopped it to run the previous commands!
+
+Let's add define a `Todo()` function in `Todo.jsx`. Here, we define a function and export it:
 
 ```jsx
 function Todo() {}
@@ -106,7 +110,7 @@ With this component imported, you can replace all of the `<li>` elements in `App
 </ul>
 ```
 
-When you look back at your browser, you'll notice something unfortunate: your list now repeats the first task three times!
+When you return to your app, you'll notice something unfortunate: your list now repeats the first task three times!
 
 ![Our todo list app, with todo components repeating because the label is hardcoded into the component](todo-list-repeating-todos.png)
 
