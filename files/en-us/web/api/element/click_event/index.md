@@ -16,6 +16,7 @@ If the button is pressed on one element and the pointer is moved outside the ele
 
 the event is a device independent event, meaning it can be activated with a touch, keyboard, mouse and any other mechanism provided by an assistive technology.
 .
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
