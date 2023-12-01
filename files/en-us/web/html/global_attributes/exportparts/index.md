@@ -98,8 +98,8 @@ And here's the prior `CardWrapper` with the remapping syntax:
 
 ```html
 <template id="card-wrapper">
-  <card-component 
-     exportparts="
+  <card-component
+    exportparts="
        base:card__base, 
        header:card__header, 
        body:card__body, 
