@@ -39,17 +39,20 @@ First let's create a card component that we will then wrap with another componen
 Then we can take the HTML above, and use it to "define" our web component.
 
 ```js
-customElements.define('card-component',
+customElements.define(
+  "card-component",
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardComponent = document.getElementById('card-component-template').content;
+      const cardComponent = document.getElementById(
+        "card-component-template",
+      ).content;
       const shadowRoot = this.attachShadow({
-        mode: 'open'
+        mode: "open",
       });
       shadowRoot.appendChild(cardComponent.cloneNode(true));
     }
-  }
+  },
 );
 ```
 
@@ -64,18 +67,19 @@ With the above `<card-component>`, we could wrap it with another component and e
 ```
 
 ```js
-customElements.define('card-wrapper',
+customElements.define(
+  "card-wrapper",
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById('card-wrapper').content;
+      const cardWrapper = document.getElementById("card-wrapper").content;
       const shadowRoot = this.attachShadow({
-        mode: 'open'
+        mode: "open",
       });
       shadowRoot.appendChild(cardWrapper.cloneNode(true));
     }
-  }
-)
+  },
+);
 ```
 
 Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
@@ -92,7 +96,6 @@ To rename an exportpartm the syntax looks something like this: `exportparts="<or
 
 And here's the prior `CardWrapper` with the remapping syntax:
 
-
 ```html
 <template id="card-wrapper">
   <card-component 
@@ -108,18 +111,19 @@ And here's the prior `CardWrapper` with the remapping syntax:
 ```
 
 ```js
-customElements.define('card-wrapper',
+customElements.define(
+  "card-wrapper",
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById('card-wrapper').content;
+      const cardWrapper = document.getElementById("card-wrapper").content;
       const shadowRoot = this.attachShadow({
-        mode: 'open'
+        mode: "open",
       });
       shadowRoot.appendChild(cardWrapper.cloneNode(true));
     }
-  }
-)
+  },
+);
 ```
 
 Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
