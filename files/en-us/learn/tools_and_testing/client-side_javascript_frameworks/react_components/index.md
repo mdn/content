@@ -233,7 +233,7 @@ We can clean up our code with one of JavaScript's core abilities: iteration. To 
 
 Each of our tasks currently contains three pieces of information: its name, whether it has been checked, and its unique ID. This data translates nicely to an object. Since we have more than one task, an array of objects would work well in representing this data.
 
-In `src/main.jsx`, make a new `const` beneath the final import, but above `ReactDOM.render()`:
+In `src/main.jsx`, declare a new `const` beneath the final import, but above `ReactDOM.createRoot()`:
 
 ```jsx
 const DATA = [
@@ -245,7 +245,7 @@ const DATA = [
 
 > **Note:** If your text editor has an [ESLint](https://eslint.org/) plugin, you may see a warning on this `DATA` const. This warning comes from the ESLint configuration supplied by the Vite template we used, and it doesn't apply to this code. You can safely suppress the warning by adding `// eslint-disable-next-line` to the line above the `DATA` const.
 
-Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line of `src/main.jsx` should read like this:
+Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final lines of `src/main.jsx` should read like this:
 
 ```jsx
 const root = ReactDOM.createRoot(document.getElementById("root"));
