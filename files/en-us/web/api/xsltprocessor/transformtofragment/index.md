@@ -21,7 +21,7 @@ transformToFragment(source, document)
 - `source`
   - : The {{DOMxRef("Node")}} source to apply the XSLT stylesheet to.
 - `document`
-  - : The {{DOMxRef("Document")}} the document fragment will be associated to. (Any document fragment is associated with a document it can be added to). 
+  - : The {{DOMxRef("Document")}} the document fragment will be associated to. (Any document fragment is associated with a document it can be added to).
 
 ### Return value
 
