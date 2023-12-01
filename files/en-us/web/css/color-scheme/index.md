@@ -7,7 +7,7 @@ browser-compat: css.properties.color-scheme
 
 {{CSSRef}}
 
-The **`color-scheme`** CSS property allows an element to indicate which color schemes it can comfortably be rendered in.
+The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to indicate which color schemes it can comfortably be rendered in.
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes form controls, scrollbars, and the used values of CSS system colors.
 
@@ -58,11 +58,48 @@ The `color-scheme` property's value must be one of the following keywords.
 
 ### Adapting to color schemes
 
-To opt the entire page into the user's color scheme preferences declare `color-scheme` on the {{cssxref(":root")}} element.
+To opt the entire page into the user's color scheme preferences, declare `color-scheme` on the {{cssxref(":root")}} element.
 
 ```css
 :root {
   color-scheme: light dark;
+}
+```
+
+### Setting colors based on color scheme
+
+To style elements based on color scheme preferences, use [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query:
+
+```css
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  .element {
+    color: black;
+    background-color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .element {
+    color: white;
+    background-color: black;
+  }
+}
+```
+
+Alternatively, use the experimental [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions):
+
+```css
+:root {
+  color-scheme: light dark;
+}
+
+.element {
+  color: light-dark(black, white);
+  background-color: light-dark(white, black);
 }
 ```
 
