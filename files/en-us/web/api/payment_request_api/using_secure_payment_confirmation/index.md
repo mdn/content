@@ -104,7 +104,7 @@ For example:
 <iframe src="https://example.org" allow="payment"></iframe>
 ```
 
-### Authenticating a payment<a id="transaction-dialog"></a>
+### Authenticating a payment
 
 An origin may invoke the Payment Request API with the `"secure-payment-confirmation"` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface (the "transaction dialog") with transaction details (e.g., the payment currency and amount and the payee origin).
 
