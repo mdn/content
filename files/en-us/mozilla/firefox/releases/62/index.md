@@ -78,8 +78,8 @@ _No changes._
 - The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ([Firefox bug 1460481](https://bugzil.la/1460481)).
 - The {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} constructor has been implemented ([Firefox bug 1351193](https://bugzil.la/1351193)).
 - {{domxref("Document.domain")}} can no longer return `null` ([Firefox bug 819475](https://bugzil.la/819475)). If the domain cannot be identified, then `domain` returns an empty string instead of `null`.
-- Added the {{domxref("console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ([Firefox bug 1458466](https://bugzil.la/1458466)).
-- Added {{domxref("console.countReset()")}} to reset a console counter value ([Firefox bug 1459279](https://bugzil.la/1459279)).
+- Added the {{domxref("console/timeLog_static", "console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ([Firefox bug 1458466](https://bugzil.la/1458466)).
+- Added {{domxref("console/countReset_static", "console.countReset()")}} to reset a console counter value ([Firefox bug 1459279](https://bugzil.la/1459279)).
 
 #### DOM events
 

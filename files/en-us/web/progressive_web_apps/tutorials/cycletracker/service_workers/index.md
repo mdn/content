@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working web app! But it isn't yet a PWA. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
 
-If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `styles.css`, `app.js`, and `cycletracker.json`, respectively.
+If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `styles.css`, `app.js`, and `cycletracker.json`, respectively.
 
 In this section, we are creating `sw.js`, the service worker script, that will convert our Web App into a PWA. We already have one JavaScript file; the last line in the HTML file calls the `app.js`. This JavaScript provides all the functionality for the standard web application features. Instead of calling the `sw.js` file like we did the `app.js` file with the `src` attribute of {{HTMLElement("script")}}, we will create a relationship between the web app and its service worker by registering the service worker.
 
@@ -359,7 +359,7 @@ Open `index.html` and add the following {{HTMLElement("script")}} after the scri
 </script>
 ```
 
-You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
 
 ## Debugging service workers
 

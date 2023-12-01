@@ -202,7 +202,7 @@ Before closing the `</body>`, we include a link to the yet-to-be-written `app.js
 
 The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycles within the content of the body.
 
-The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete! You can open the file in your browser at this point, but you'll notice that it's quite plain. We'll fix that in the next section.
+The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css/index.html) is now complete! You can open the file in your browser at this point, but you'll notice that it's quite plain. We'll fix that in the next section.
 
 ## CSS content
 
@@ -234,7 +234,7 @@ li:nth-of-type(even) {
 }
 ```
 
-If every line is familiar to you, you can copy the above CSS, or write your own CSS, and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), then [finish up the static HTML and CSS](#finishing-the-static-html-and-css-for-our-pwa). If anything in the above CSS is new to you, keep reading for an explanation.
+If every line is familiar to you, you can copy the above CSS, or write your own CSS, and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css/style.css), then [finish up the static HTML and CSS](#finishing-the-static-html-and-css-for-our-pwa). If anything in the above CSS is new to you, keep reading for an explanation.
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows fake data for two menstrual cycles and a header.](html.jpg)
 
@@ -319,7 +319,7 @@ li:nth-of-type(even) {
 
 If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_selectors), or work through the [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
 
-Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
+Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
 ### Finishing the static HTML and CSS for our PWA
 
@@ -341,6 +341,6 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert this static content into a web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) to view our progress.
 
-Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) from GitHub.
+Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css) from GitHub.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
