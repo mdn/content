@@ -16,6 +16,7 @@ Some examples of situations that will trigger a `pointercancel` event:
 - The device's screen orientation is changed while the pointer is active.
 - The browser decides that the user started pointer input accidentally. This can happen if, for example, the hardware supports palm rejection to prevent a hand resting on the display while using a stylus from accidentally triggering events.
 - The {{cssxref("touch-action")}} CSS property prevents the input from continuing.
+- When the user interacted with too many simultaneous pointers the browser can fire this event for all existing pointers (even if they are still touching the screen).
 
 > **Note:** After the `pointercancel` event is fired, the browser will also send {{domxref("Element/pointerout_event", "pointerout")}} followed by {{domxref("Element/pointerleave_event", "pointerleave")}}.
 
