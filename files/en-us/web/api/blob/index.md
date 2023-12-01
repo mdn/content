@@ -132,7 +132,7 @@ Another way to read content from a `Blob` is to use a {{domxref("Response")}}. T
 const text = await new Response(blob).text();
 ```
 
-Or by using {{DOMxRef("Blob.prototype.text()")}}:
+Or by using {{DOMxRef("Blob.text()")}}:
 
 ```js
 const text = await blob.text();

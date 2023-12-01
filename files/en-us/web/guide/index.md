@@ -30,8 +30,6 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [JavaScript learning area](/en-US/docs/Learn/JavaScript)
   - : Whether you are a complete beginner, or hoping to refresh your skills, this is the place to start.
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
-  - : AJAX is a term that defines a group of technologies allowing web applications to make quick, incremental updates to the user interface without reloading the entire browser page. This makes the application faster and more responsive to user actions.
 
 ## Media
 
@@ -65,7 +63,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : Find out how to use variable fonts in your designs.
-- [The Web Open Font Format (WOFF)](/en-US/docs/Web/Guide/WOFF)
+- [The Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.
 
 ## User interface development
