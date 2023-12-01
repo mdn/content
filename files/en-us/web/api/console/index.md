@@ -24,7 +24,7 @@ This page documents the [Methods](#methods) available on the `console` object an
 ## Instance methods
 
 - {{domxref("console/assert_static", "console.assert()")}}
-  - : Log a message and stack trace to console if the first argument is `false`.
+  - : Log an error message to console if the first argument is `false`.
 - {{domxref("console/clear_static", "console.clear()")}}
   - : Clear the console.
 - {{domxref("console/count_static", "console.count()")}}
