@@ -191,12 +191,12 @@ If you change each `<Todo />` component's `completed` prop, your browser will ch
 
 We have still _another_ problem: our `<Todo />` component gives every task an `id` attribute of `todo-0`. This is bad for a couple of reasons:
 
-- [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.), and,
-- when `id`s are not unique, the functionality of checkboxes and other form control elements can break.
+- [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
+- When `id`s are not unique, the functionality of checkboxes and other form control elements can break.
 
 The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The browser only acknowledges the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
 
-We had unique id attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time:
+We had unique id attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time. Update the `Todo` component instances inside `App.jsx` to add in `id` props, as follows:
 
 ```jsx
 <Todo name="Eat" id="todo-0" completed />
@@ -204,9 +204,9 @@ We had unique id attributes before we created the `<Todo />` component. Let's br
 <Todo name="Repeat" id="todo-2" />
 ```
 
-**Note:** The `completed` prop is last here because it is a boolean with no assignment. This is purely a stylistic convention. The order of props does not matter because props are JavaScript objects, and JavaScript objects are unordered.
+> **Note:** The `completed` prop is last here because it is a boolean with no assignment. This is purely a stylistic convention. The order of props does not matter because props are JavaScript objects, and JavaScript objects are unordered.
 
-Now go back to `Todo.jsx` and make use of the `id` prop. It needs to replace the value of the `id` attribute of the `<input />` element, as well as the value of its label's `htmlFor` attribute:
+Now go back to `Todo.jsx` and make use of the `id` prop. It needs to replace the `<input />` element's `id` attribute value, as well as its `<label>`'s `htmlFor` attribute value:
 
 ```jsx
 <div className="c-cb">
