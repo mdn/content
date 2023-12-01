@@ -20,7 +20,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Also inherits properties from its parent interface, {{domxref("ExtendableEvent")}}_.
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
@@ -29,7 +29,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 ## Instance methods
 
-_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
+_Also inherits methods from its parent interface, {{domxref("ExtendableEvent")}}_.
 
 ## Example
 
