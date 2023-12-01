@@ -58,6 +58,7 @@ Both pieces of text have their default black color. The "good" `<div>` has a lig
 ```css
 body {
   background-color: #5a80a9;
+  padding: 2.5rem;
 }
 
 div {
