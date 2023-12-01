@@ -8,12 +8,14 @@ browser-compat: api.Element.click_event
 
 {{APIRef}}
 
-An element receives a **`click`** event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.
+An element receives a **`click`** event when a touch gesture is performed on the element or Space or Enter ke is pressed using a keyboard while the element is focused or a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
 `click` fires after both the {{domxref("Element/mousedown_event", "mousedown")}} and {{domxref("Element/mouseup_event", "mouseup")}} events have fired, in that order.
 
+the event is a device independent event, meaning it can be activated with a touch, keyboard, mouse and any other mechanism provided by an assistive technology.
+.
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
