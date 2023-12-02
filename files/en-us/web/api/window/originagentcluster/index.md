@@ -3,6 +3,8 @@ title: "Window: originAgentCluster property"
 short-title: originAgentCluster
 slug: Web/API/Window/originAgentCluster
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Window.originAgentCluster
 ---
 
