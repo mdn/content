@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.URL.revokeObjectURL_static
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("File API")}}
 
 The **`URL.revokeObjectURL()`** static
 method releases an existing object URL which was previously created by calling
