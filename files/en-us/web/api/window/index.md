@@ -274,7 +274,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
