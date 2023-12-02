@@ -23,7 +23,7 @@ item(index)
 
 ### Return value
 
-A [`File`](/en-US/docs/Web/API/File) object representing the requested file.
+A {{domxref("File")}} object representing the requested file.
 
 ## Examples
 
