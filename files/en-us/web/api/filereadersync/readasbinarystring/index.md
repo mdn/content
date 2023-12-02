@@ -14,7 +14,7 @@ browser-compat: api.FileReaderSync.readAsBinaryString
 
 The `readAsBinaryString()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
-{{AvailableInWorkers("notservice")}}
+{{AvailableInWorkers}}
 
 ## Syntax
 
