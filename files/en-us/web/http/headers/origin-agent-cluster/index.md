@@ -39,7 +39,7 @@ The browser will ensure that all pages from a given origin are either origin-key
 - If the first page from an origin does not set the header, then no other pages from that origin will be origin-keyed, even if those other pages do set the header.
 - If the first page from an origin sets the header and is made origin-keyed, then all other pages from that origin will be origin-keyed whether they ask for it or not.
 
-To avoid this kind if unpredictable situation, you should be sure to set this header for all pages from a given origin, or none of them.
+To avoid this kind of unpredictable situation, you should be sure to set this header for all pages from a given origin, or none of them.
 
 <table class="properties">
   <tbody>
