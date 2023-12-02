@@ -684,4 +684,4 @@ With this set, the browser won't tamper with the appearance of the element, and 
 
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
-- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
