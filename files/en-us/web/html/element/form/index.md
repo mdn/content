@@ -30,8 +30,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. Possible values:
 
-    - `none`: No automatic capitalization.
-    - `sentences` (default): Capitalize the first letter of each sentence.
+    - `none` or `off`: No automatic capitalization.
+    - `sentences` or `on` (default): Capitalize the first letter of each sentence.
     - `words`: Capitalize the first letter of each word.
     - `characters`: Capitalize all characters — that is, uppercase.
 
