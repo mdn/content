@@ -176,5 +176,3 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 - {{HTMLElement("img")}}
 - [SVG](/en-US/docs/Web/SVG)
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-
-Canvas resources:
