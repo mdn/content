@@ -8,7 +8,7 @@ browser-compat: api.FileReader.result
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("FileReader")}} **`result`** property returns the
+The **`result`** read-only property of the {{domxref("FileReader")}} interface returns the
 file's contents. This property is only valid after the read operation is complete, and
 the format of the data depends on which of the methods was used to initiate the read
 operation.

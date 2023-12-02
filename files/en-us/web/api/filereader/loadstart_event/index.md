@@ -8,7 +8,7 @@ browser-compat: api.FileReader.loadstart_event
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `loadstart` event is fired when a file read operation has begun.
+The **`loadstart`** event is fired when a file read operation has begun.
 
 This event is not cancelable and does not bubble.
 

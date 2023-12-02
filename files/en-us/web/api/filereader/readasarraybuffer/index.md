@@ -8,8 +8,7 @@ browser-compat: api.FileReader.readAsArrayBuffer
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("FileReader")}} interface's
-**`readAsArrayBuffer()`** method is used to start reading the
+The **`readAsArrayBuffer()`** method of the {{domxref("FileReader")}} interface is used to start reading the
 contents of a specified {{domxref("Blob")}} or {{domxref("File")}}. When the read
 operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes
 `DONE`, and the {{domxref("FileReader/loadend_event", "loadend")}} is

@@ -8,7 +8,7 @@ browser-compat: api.FileReader.error
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("FileReader")}} **`error`** property returns the
+The **`error`** read-only property of the {{domxref("FileReader")}} interface returns the
 error that occurred while reading the file.
 
 ## Value
