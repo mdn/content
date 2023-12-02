@@ -8,7 +8,7 @@ browser-compat: api.Blob.text
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`text()`** method in the
+The **`text()`** method of the
 {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a
 string containing the contents of the blob, interpreted as UTF-8.
 

@@ -8,9 +8,7 @@ browser-compat: api.Blob.stream
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("Blob")}} interface's
-**`stream()`** method returns a {{domxref("ReadableStream")}}
-which upon reading returns the data contained within the `Blob`.
+The **`stream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}} which upon reading returns the data contained within the `Blob`.
 
 ## Syntax
 
