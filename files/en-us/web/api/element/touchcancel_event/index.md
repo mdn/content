@@ -16,7 +16,7 @@ Some examples of situations that will trigger a `touchcancel` event:
 - The device's screen orientation is changed while the touch is active.
 - The browser decides that the user started touch input accidentally. This can happen if, for example, the hardware supports palm rejection to prevent a hand resting on the display while using a stylus from accidentally triggering events.
 - The {{cssxref("touch-action")}} CSS property prevents the input from continuing.
-- When the user interacted with too many simultaneous fingers the browser can fire this event for all existing pointers (even if they are still touching the screen).
+- When the user interacts with too many fingers simultaneously, the browser can fire this event for all existing pointers (even if the user is still touching the screen).
 
 ## Syntax
 
