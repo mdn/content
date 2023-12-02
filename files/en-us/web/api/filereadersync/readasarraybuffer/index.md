@@ -53,8 +53,8 @@ The following exceptions can be raised by this method:
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- {{DOMxRef("File API", "", "", "nocode")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{ domxref("Blob") }}
+- {{DOMxRef("Blob")}}
