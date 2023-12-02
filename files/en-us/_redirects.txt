@@ -12090,6 +12090,7 @@
 /en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/Graphics	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML	/en-US/docs/Learn/HTML
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
