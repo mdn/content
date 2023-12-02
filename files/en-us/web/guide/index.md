@@ -33,8 +33,6 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Media
 
-.
-
 - [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery)
   - : We can deliver audio and video on the web in several ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
 - [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation)
