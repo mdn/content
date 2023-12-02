@@ -30,7 +30,7 @@ parseInt(string, radix)
 
 An integer parsed from the given `string`, or {{jsxref("NaN")}} when
 
-- the `radix` as a 32-bit integer is smaller than `2` or bigger than `36`, or
+- the `radix` as a 32-bit integer is bigger than `2` or smaller than `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
 > **Note:** JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. `parseInt()` and [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
