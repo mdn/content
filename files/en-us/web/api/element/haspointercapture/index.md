@@ -26,8 +26,7 @@ hasPointerCapture(pointerId)
 
 ### Return value
 
-A boolean value — `true` if the element does have pointer
-capture, `false` if it doesn't.
+A boolean value — `true` if the element does have pointer capture for the pointer identified by the given pointer ID, `false` if it doesn't.
 
 ## Examples
 

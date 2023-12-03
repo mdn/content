@@ -226,11 +226,11 @@ F
 - {{CSSxRef(":first")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 
 H
 
@@ -264,9 +264,7 @@ N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -280,9 +278,9 @@ O
 P
 
 - {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":paused")}}
 - {{CSSxRef(":playing")}}
 
 R
