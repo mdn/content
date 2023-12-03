@@ -27,9 +27,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ## Events
 
-Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to this event using {{domxref("EventTarget.addEventListener()", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`connect`](/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event)
+- {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}}
   - : Fired on shared workers when a new client connects.
 
 ## Specifications
