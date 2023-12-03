@@ -26,9 +26,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `accept-charset`
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
-- `autocapitalize` {{non-standard_inline}}
 
-  - : A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. Possible values:
+- `autocapitalize`
+
+  - : An attribute used by mobile browsers that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. When autocapitalize is not specified, the default behavior varies between mobile browsers. For example, in Chrome Android and Safari iOS, the default setting is `on`/`sentences`, whereas in Firefox Android, it defaults to `off`/`none`. Possible values:
 
     - `none` or `off`: No automatic capitalization.
     - `sentences` or `on`: Capitalize the first letter of each sentence.
