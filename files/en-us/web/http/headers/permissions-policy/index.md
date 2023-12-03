@@ -27,7 +27,7 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Per
 ## Syntax
 
 ```http
-Permissions-Policy: <directive> <allowlist>
+Permissions-Policy: <directive>=<allowlist>
 ```
 
 - `<directive>`
