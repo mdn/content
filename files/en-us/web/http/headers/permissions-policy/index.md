@@ -94,7 +94,7 @@ You can specify
 
 - {{httpheader('Permissions-Policy/encrypted-media', 'encrypted-media')}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to use the [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.
+  - : Controls whether the current document is allowed to use the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.
 
 - {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}} {{Experimental_Inline}}
 
