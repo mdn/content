@@ -8,8 +8,7 @@ browser-compat: api.ServiceWorkerGlobalScope.messageerror_event
 
 {{APIRef("Service Workers API")}}
 
-The **`messageerror`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages can't be deserialized. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.
-The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.
+The **`messageerror`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages can't be deserialized.
 
 This event is not cancelable and does not bubble.
 
@@ -70,7 +69,7 @@ The service worker can listen for the message deserialization error by listening
 // service-worker.js
 self.addEventListener("messageerror", (event) => {
   // event is an ExtendableMessageEvent object
-  console.log("The client sent me a message failed");
+  console.error("Message deserialization failed");
 
   event.source.postMessage("Hi client");
 });
@@ -82,7 +81,7 @@ Alternatively, the script can listen for the message deserialization error using
 // service-worker.js
 self.onmessageerror = (event) => {
   // event is an ExtendableMessageEvent object
-  console.log("The client sent me a message failed");
+  console.error("Message deserialization failed");
 
   event.source.postMessage("Hi client");
 };
