@@ -57,7 +57,7 @@ const nestedDirectoryHandle = await directoryHandle
 // Access existing files and folders via their names
 const existingFileHandle = await opfsRoot.getFileHandle('my first file');
 const existingDirectoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder);
+    .getDirectoryHandle('my first folder');
 ```
 
 ### Reading a file
