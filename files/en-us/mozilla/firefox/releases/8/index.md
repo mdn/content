@@ -29,7 +29,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - Event handling in nested {{ HTMLElement("label") }}s has been fixed.
 - You can now use {{ domxref("window.postMessage()") }} to pass {{ domxref("File") }} and {{ domxref("FileList") }} objects between windows.
 - When editing {{ domxref("HTMLelement.contenteditable", "contenteditable") }} areas, exiting a heading by pressing return, or exiting list editing mode by pressing return twice, now returns to paragraph entry mode (that is, paragraphs inside {{ HTMLElement("p") }} blocks) instead of separating lines by {{ HTMLElement("br") }} elements.
-- Fixed a bug that prevents justification from taking effect properly when applied to the first line in a {{{ domxref("HTMLelement.contenteditable", "contenteditable") }} area.
+- Fixed a bug that prevents justification from taking effect properly when applied to the first line in a {{ domxref("HTMLelement.contenteditable", "contenteditable") }} area.
 - Fixed a bug that caused pressing delete or backspace at the beginning of a {{ domxref("HTMLelement.contenteditable", "contenteditable") }} area to affect the previous `contenteditable` block if one is present.
 - {{ domxref("Document.getSelection()") }} now returns the same `Selection` object as {{ domxref("window.getSelection()") }}, instead of _stringifying_ it.
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
