@@ -29,6 +29,8 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ## Events
 
+Listen to this event using {{domxref("EventTarget/addEventListener()", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
 - {{domxref("DedicatedWorkerGlobalScope/message_event", "message")}}
   - : Fired when the worker receives a message from its parent.
 - {{domxref("DedicatedWorkerGlobalScope/messageerror_event", "messageerror")}}
