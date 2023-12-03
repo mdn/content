@@ -152,7 +152,7 @@ function onRefSpaceCreated(refSpace) {
 
 In this code, executed after the reference space has been created, we create an {{domxref("XRRigidTransform")}} representing the transform that will move the viewpoint upward by 1.5 meters. This approximates human height, though it assumes we've previously transformed the coordinate system so that the value of each coordinate is no longer constrained to -1 to 1, while maintaining the definition that a value of 1 represents one meter).
 
-The new transform is passed into `requestOffsetReferenceFrame()` to obtain a reference frame which maps the coordinates between the base coordinate system and that of the rendered image. The new reference space replaces the original one. Finally, drawing begins by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
+The new transform is passed into `getOffsetReferenceFrame()` to obtain a reference frame that maps the coordinates between the base coordinate system and that of the rendered image. The new reference space replaces the original one. Finally, drawing begins by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ## See also
 
