@@ -3,13 +3,11 @@ title: "HighlightRegistry: has() method"
 short-title: has()
 slug: Web/API/HighlightRegistry/has
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HighlightRegistry.has
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.has
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`has()`** method of the {{domxref("HighlightRegistry")}} interface returns a boolean indicating whether or not a {{domxref("Highlight")}} object with the specified name exists in the registry.
 
