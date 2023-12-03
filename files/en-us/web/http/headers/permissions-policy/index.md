@@ -187,7 +187,7 @@ You can specify
 
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).
+  - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).
 
 - {{httpheader("Permissions-Policy/web-share", "web-share")}}
 
