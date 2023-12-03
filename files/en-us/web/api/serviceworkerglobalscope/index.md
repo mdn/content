@@ -37,6 +37,8 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ## Events
 
+Listen to this event using {{domxref("EventTarget/addEventListener()", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
 - {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} {{Experimental_Inline}}
