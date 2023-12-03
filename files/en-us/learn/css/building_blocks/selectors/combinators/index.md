@@ -124,6 +124,8 @@ p img {
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
 
+> **Note:** In the example above, the `&` nesting selector is not required but adding it explicitly helps to understand that CSS nesting is being used.
+
 ## Using combinators
 
 You can combine any of the selectors that we discovered in previous lessons with combinators in order to pick out part of your document. For example, to select list items with a class of "a" which are direct children of a `<ul>`, try the following:
