@@ -18,11 +18,20 @@ The above example demonstrates a number of features of `<textarea>`:
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
 - Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
 
-The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
+The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `autocapitalize`
+
+  - : An attribute used by mobile browsers that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. When autocapitalize is not specified, the default behavior varies between mobile browsers. For example, in Chrome Android and Safari iOS, the default setting is `on`/`sentences`, whereas in Firefox Android, it defaults to `off`/`none`. Possible values:
+
+    - `none` or `off`: No automatic capitalization.
+    - `sentences` or `on`: Capitalize the first letter of each sentence.
+    - `words`: Capitalize the first letter of each word.
+    - `characters`: Capitalize all characters — that is, uppercase.
 
 - `autocomplete`
 
