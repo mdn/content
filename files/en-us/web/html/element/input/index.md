@@ -366,7 +366,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Attributes/autocapitalize)
+- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
 
   - : The `autocapitalize` attribute is used in mobile browsers to control how textual form elements are automatically capitalized. It specifies whether letters in the input field should be automatically capitalized and if so, in what manner. This attribute does not affect input types `url`, `email`, or `password`, where autocapitalization is never enabled. The possible values are:
 
