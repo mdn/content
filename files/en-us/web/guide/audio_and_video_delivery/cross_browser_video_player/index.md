@@ -323,4 +323,4 @@ document.addEventListener("fullscreenchange", (e) => {
 - {{ htmlelement("video") }} for reference material
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)
-- [Video for Everybody](http://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.
+- [Video for Everybody](https://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.
