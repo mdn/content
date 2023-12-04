@@ -366,9 +366,9 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
+- `autocapitalize`
 
-  - : The `autocapitalize` attribute controls whether text entered into input fields is automatically capitalized on mobile browsers and, if so, in what manner. This attribute does not affect the `url`, `email`, or `password` input types, where autocapitalization is never enabled. The possible values are:
+  - : Controls whether text entered into input fields is automatically capitalized on mobile browsers and, if so, in what manner. This attribute does not affect the `url`, `email`, or `password` input types, where autocapitalization is never enabled. The possible values are:
 
     - `none` or `off`
       - : Do not automatically capitalize any text.
@@ -379,7 +379,7 @@ A few additional non-standard attributes are listed following the descriptions o
     - `characters`
       - : Automatically capitalize every character.
 
-    > **Note:** `autocapitalize` can be set on `<input>` and {{htmlelement("textarea")}} elements, or on their containing {{htmlelement("form")}} elements. When `autocapitalize` is set on a `<form>` element, it sets the autocapitalize behavior for all contained inputs (except `url`, `email`, or `password` types) and text areas, overriding any `autocapitalize` values set on contained elements.
+    > **Note:** `autocapitalize` can be set on `<input>` and {{htmlelement("textarea")}} elements, and on their containing {{htmlelement("form")}} elements. When `autocapitalize` is set on a `<form>` element, it sets the autocapitalize behavior for all contained inputs (except `url`, `email`, and `password` types) and `<textarea>`s, overriding any `autocapitalize` values set on contained elements.
 
     > **Note:** Where `autocapitalize` is not specified, the adopted default behavior varies between browsers. Chrome (Android) and Safari (iOS) default to `on`/`sentences`, while Firefox (Android) defaults to `off`/`none`.
 
