@@ -1,10 +1,10 @@
 ---
 title: Creating a cross-browser video player
-slug: Web/Guide/Audio_and_video_delivery/cross_browser_video_player
+slug: Web/Media/Audio_and_video_delivery/cross_browser_video_player
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
 This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
@@ -246,7 +246,7 @@ video.addEventListener("timeupdate", () => {
 });
 ```
 
-> **Note:** for more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges).
+> **Note:** for more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges).
 
 ### Skip Ahead
 
@@ -323,4 +323,4 @@ document.addEventListener("fullscreenchange", (e) => {
 - {{ htmlelement("video") }} for reference material
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)
-- [Video for Everybody](http://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.
+- [Video for Everybody](https://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.
