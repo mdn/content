@@ -1,6 +1,6 @@
 ---
 title: Audio and Video Delivery
-slug: Web/Guide/Audio_and_video_delivery
+slug: Web/Media/Audio_and_video_delivery
 page-type: guide
 ---
 

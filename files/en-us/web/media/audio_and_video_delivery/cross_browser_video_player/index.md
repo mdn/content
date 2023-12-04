@@ -1,6 +1,6 @@
 ---
 title: Creating a cross-browser video player
-slug: Web/Guide/Audio_and_video_delivery/cross_browser_video_player
+slug: Web/Media/Audio_and_video_delivery/cross_browser_video_player
 page-type: guide
 ---
 

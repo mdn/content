@@ -1,6 +1,6 @@
 ---
 title: Audio and video manipulation
-slug: Web/Guide/Audio_and_video_manipulation
+slug: Web/Media/Audio_and_video_manipulation
 page-type: guide
 ---
 

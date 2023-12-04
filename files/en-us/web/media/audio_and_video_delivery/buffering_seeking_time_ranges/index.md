@@ -1,6 +1,6 @@
 ---
 title: Media buffering, seeking, and time ranges
-slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 page-type: guide
 ---
 

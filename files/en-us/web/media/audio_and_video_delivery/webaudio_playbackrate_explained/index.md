@@ -1,6 +1,6 @@
 ---
 title: Web Audio playbackRate explained
-slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
+slug: Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
 page-type: guide
 ---
 
