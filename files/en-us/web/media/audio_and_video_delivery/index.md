@@ -479,7 +479,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Audio only
 
-- [SoundManager](http://www.schillmania.com/projects/soundmanager2/)
+- [SoundManager](https://www.schillmania.com/projects/soundmanager2/)
 - [AmplitudeJS](https://521dimensions.com/open-source/amplitudejs)
 - [HowlerJS](https://howlerjs.com/)
 
