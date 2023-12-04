@@ -13,7 +13,7 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
 - Numeric controls:
 
   - The new `<scale>` element lets you create sliding scales that let the user select any value in a specified range. This widget would typically be used, for example, to create a volume control.
-  - A new value, `number`, for the `type` attribute of textboxes creates a textbox in which only numbers may be entered. In addition, arrow buttons appear to one side which may be used to step through values. ([Firefox bug 345510](https://bugzil.la/345510))
+  - A new value, `number`, for the `type` attribute of textboxes creates a textbox in which only numbers may be entered. In addition, arrow buttons appear to one side which may be used to step through values. [More information about numeric textboxes](https://wiki.mozilla.org/XUL:Specs:NumberBox). ([Firefox bug 345510](https://bugzil.la/345510))
   - A `<spinbuttons>` element is added which can be used when creating widgets using XBL bindings. ([Firefox bug 155053](https://bugzil.la/155053))
   - Two widgets, `<datepicker>` and `<timepicker>`, can be used to allow the entry of dates and times. The datepicker is available in a number of styles by setting the `type` attribute, to allow entry with textboxes or a calendar grid. [More information about date pickers.](https://wiki.mozilla.org/XUL:Specs:DateTimePickers)
 
