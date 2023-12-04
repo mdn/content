@@ -121,7 +121,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - New Preferences bindings
 
-  - : These [new bindings](http://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
+  - : These [new bindings](https://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
 
 - API for implementing new command-line switches
 
