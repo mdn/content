@@ -4,7 +4,7 @@ slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
 Livestreaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, livestreaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article, we'll introduce you to the subject and let you know how you can get started.
 
@@ -78,7 +78,7 @@ For example, [you could implement MPEG-DASH using JavaScript while offloading th
 
 A couple of HTTP-based livestreaming video formats are beginning to see support across browsers.
 
-> **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
+> **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 

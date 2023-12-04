@@ -4,9 +4,9 @@ slug: Web/Media/Audio_and_video_delivery/Video_player_styling_basics
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-In the previous [Cross browser video player article](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
+In the previous [Cross browser video player article](/en-US/docs/Web/Media) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
 
 ## The example in action
 
@@ -42,7 +42,7 @@ The markup for the custom controls now looks as follows:
 
 ### Related CSS alteration
 
-The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
+The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
 
 This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.
 
@@ -188,7 +188,7 @@ The {{htmlelement("progress") }} element has the following basic style set up:
 
 Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons.
 
-As mentioned in the [previous article](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player), there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:
+As mentioned in the [previous article](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player), there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:
 
 ```css
 .controls progress[data-state="fake"] {
@@ -365,7 +365,7 @@ progress.addEventListener("click", (e) => {
 
 #### Fullscreen
 
-The [FullScreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen) hasn't changed.
+The [FullScreen implementation](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player#fullscreen) hasn't changed.
 
 ## Responsive styling
 

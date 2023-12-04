@@ -4,7 +4,7 @@ slug: Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
 This article provides:
 
@@ -604,9 +604,9 @@ The following tables list basic audio support across desktop and mobile browsers
 
 ## See also
 
-- [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
+- [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
+- [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jplayer.org): An open source audio and video library for jQuery and Zepto.

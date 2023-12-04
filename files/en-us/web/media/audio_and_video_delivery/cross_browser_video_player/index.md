@@ -4,7 +4,7 @@ slug: Web/Media/Audio_and_video_delivery/cross_browser_video_player
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
 This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
@@ -246,7 +246,7 @@ video.addEventListener("timeupdate", () => {
 });
 ```
 
-> **Note:** for more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges).
+> **Note:** for more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges).
 
 ### Skip Ahead
 

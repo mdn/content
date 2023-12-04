@@ -4,21 +4,9 @@ slug: Web/Media/Audio_and_video_delivery
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
-  <ol>
-    <li class="toggle">
-      <details>
-        <summary>Guides</summary>
-        <ol>
-          {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
+We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
 
@@ -49,7 +37,7 @@ The code above will create an audio player that attempts to preload as much audi
 
 > **Note:** The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### HTML Video
 
@@ -83,7 +71,7 @@ The code above creates a video player of dimensions 640x480 pixels, displaying a
 
 > **Note:** The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely.
 
-For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player).
+For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
 
 ### JavaScript Audio
 
@@ -248,13 +236,13 @@ One of the principal uses of EME is to allow browsers to implement DRM ([Digital
 
 New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount.
 
-The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) and [MPEG-DASH](/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](https://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
+The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) and [MPEG-DASH](/en-US/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](https://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
 
 > **Note:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
 DASH also provides a number of profiles including simple onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
-For further information see [Live streaming web audio and video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
+For further information see [Live streaming web audio and video](/en-US/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
 
 ## Customizing Your Media Player
 
@@ -309,7 +297,7 @@ window.onload = () => {
 };
 ```
 
-You can [try this example out here](https://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
+You can [try this example out here](https://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
 
 ## Other tips for audio/video
 
@@ -501,31 +489,31 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ## Basic tutorials
 
-- [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
+- [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
   - : A guide to creating a basic cross browser video player using the {{ htmlelement ("video") }} element.
-- [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
+- [Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
-- [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
-- [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
+- [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)
   - : Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/en-US/docs/Web/API/TimeRanges), and other features of the media API.
-- [HTML playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate explained](/en-US/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
   - : The `playbackRate` property allows us to change the speed or rate at which a piece of web audio or video is playing. This article explains it in detail.
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.
 
 ## Streaming media tutorials
 
-- [Live streaming web audio and video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
+- [Live streaming web audio and video](/en-US/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
   - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
-- [Setting up adaptive streaming media sources](/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
+- [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
   - : Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
   - : Details how to set up adaptive streaming using DASH and WebM.
 
 ## Advanced tutorials
 
-- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
   - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
