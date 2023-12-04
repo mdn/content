@@ -1,6 +1,6 @@
 ---
 title: Styling animated buttons with CSS transforms
-slug: Web/CSS/CSS_transforms/styling_animated_buttons_with_css_transforms
+slug: Web/CSS/CSS_transforms/Styling_animated_buttons_with_css_transforms
 page-type: guide
 ---
 
