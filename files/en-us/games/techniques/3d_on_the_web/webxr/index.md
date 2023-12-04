@@ -44,7 +44,7 @@ Three.js is one of the most popular 3D engines for the web, and it can be used f
 
 There's also a markup framework called [A-Frame](https://aframe.io/) that offers simple building blocks for WebXR, so you can rapidly build and experiment with VR websites and games: read the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) tutorial for more details.
 
-Immersion is more important than gameplay or graphics - you have to feel you're "inside" the experience. It's not easy to achieve, but it doesn't require realistic images. Quite the contrary, as having a basic shapes flying around with a high frame rate can make for a compelling experience. Remember: experimenting is key - see what works for your game in particular.
+Immersion takes priority over gameplay and graphics - you must feel part of the experience. It's not easy to achieve, but it doesn't require realistic images. On the contrary, even basic shapes soaring past at high frame rates can be thrilling if the experience is immersive. Remember: experimenting is key - feel free to go with what works well for your project.
 
 ## The future of WebXR
 
