@@ -26,7 +26,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `autocapitalize`
 
-  - : The `autocapitalize` attribute controls whether text entered into `<textarea>`s is automatically capitalized on mobile browsers and, if so, in what manner. The possible values are:
+  - : Controls whether text entered into `<textarea>`s is automatically capitalized on mobile browsers and, if so, in what manner. The possible values are:
 
     - `none` or `off`
       - : Do not automatically capitalize any text.
