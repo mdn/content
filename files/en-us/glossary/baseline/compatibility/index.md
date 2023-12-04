@@ -25,20 +25,20 @@ If you see a **newly available** Baseline badge, then you can trust that the fea
 A newly available feature works in the latest browsers, but may not work with older browsers and devices.
 Consider your site's audience carefully before using a newly available feature.
 
-If you see a **limited availability** badge, then that feature is *not* Baseline.
+If you see a **limited availability** badge, then that feature is _not_ Baseline.
 Do more research and testing with your site's users before relying on that feature, or wait for it to become Baseline.
 
 ## Browser set
 
 Baseline tracks availability with the following browsers:
 
-* Apple Safari (iOS)
-* Apple Safari (macOS)
-* Google Chrome (Android)
-* Google Chrome (desktop)
-* Microsoft Edge (desktop)
-* Mozilla Firefox (Android)
-* Mozilla Firefox (desktop)
+- Apple Safari (iOS)
+- Apple Safari (macOS)
+- Google Chrome (Android)
+- Google Chrome (desktop)
+- Microsoft Edge (desktop)
+- Mozilla Firefox (Android)
+- Mozilla Firefox (desktop)
 
 ## Extra considerations
 
