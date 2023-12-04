@@ -124,7 +124,7 @@ p img {
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
 
-> **Note:** In the example above, the `&` nesting selector is not required but adding it explicitly helps to understand that CSS nesting is being used.
+> **Note:** In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
 
 ## Using combinators
 
