@@ -88,22 +88,22 @@ There are a few perceived limitations with the Navigation API:
 
 ## Interfaces
 
-- {{domxref("NavigateEvent")}}
+- {{domxref("NavigateEvent")}} {{Experimental_Inline}}
   - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
-- {{domxref("Navigation")}}
+- {{domxref("Navigation")}} {{Experimental_Inline}}
   - : Allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
-- {{domxref("NavigationCurrentEntryChangeEvent")}}
+- {{domxref("NavigationCurrentEntryChangeEvent")}} {{Experimental_Inline}}
   - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed. It provides access to the navigation type, and the previous history entry that was navigated from.
-- {{domxref("NavigationDestination")}}
+- {{domxref("NavigationDestination")}} {{Experimental_Inline}}
   - : Represents the destination being navigated to in the current navigation.
-- {{domxref("NavigationHistoryEntry")}}
+- {{domxref("NavigationHistoryEntry")}} {{Experimental_Inline}}
   - : Represents a single navigation history entry.
-- {{domxref("NavigationTransition")}}
+- {{domxref("NavigationTransition")}} {{Experimental_Inline}}
   - : Represents an ongoing navigation.
 
 ## Extensions to other interfaces
 
-- {{domxref("Window.navigation")}}
+- {{domxref("Window.navigation")}} {{Experimental_Inline}}
   - : Returns the current `window`'s associated {{domxref("Navigation")}} object. This is the entry point for the Navigation API.
 
 ## Examples
