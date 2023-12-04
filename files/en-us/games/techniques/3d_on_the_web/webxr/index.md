@@ -48,7 +48,7 @@ Immersion takes priority over gameplay and graphics - you must feel part of the 
 
 ## The future of WebXR
 
-It's happening — consumer devices are on the market right now, and we already have JavaScript APIs to support them on the web. All we need now is a widely-adopted, stable specification, good UX and UI, better hardware, and more tools and libraries — and all of that is on the horizon. It's the perfect time to dive in and experiment with WebXR.
+Consumer devices are available on the market, and we have JavaScript APIs to support them on the web. As hardware becomes more affordable and the ecosystem matures, developers can focus on building experiences through good UX and UI. It's the perfect time to dive in and experiment with WebXR.
 
 ## See also
 
