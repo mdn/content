@@ -65,6 +65,8 @@ In the following example, we have a single {{htmlelement("button")}} in the page
 
 ```html
 <button>Change color</button>
+#if the filename of javascript is script.js
+<script src="script.js"></script>
 ```
 
 ```css hidden
