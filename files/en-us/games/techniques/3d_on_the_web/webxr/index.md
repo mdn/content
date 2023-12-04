@@ -38,7 +38,7 @@ The best place to start with the WebXR API is with our [Fundamentals of WebXR](/
 
 ## Tools and techniques
 
-The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. Its popularity continues today, and it can be used for WebXR games. Check out Three.js' [How to create VR content](https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content) documentation to help you make WebXR games with Three.js.
+Three.js is one of the most popular 3D engines for the web, and it can be used for WebXR games. Check out Three.js' [How to create VR content](https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content) documentation to help you make WebXR games with Three.js.
 
 ![A 3D representation of a landscape: it's a pinkish sunset, with a blue mountainous land in the background surrounded by a mirror sea and a darker blue island in the second plan.](sechelt.jpg)
 
