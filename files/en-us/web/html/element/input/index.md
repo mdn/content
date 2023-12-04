@@ -321,6 +321,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | --------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                   |
 | [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                          |
+| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls text capitalization in mobile browsers.                                      |
 | [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
 | [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
@@ -364,6 +365,23 @@ A few additional non-standard attributes are listed following the descriptions o
 - `alt`
 
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
+
+- `autocapitalize`
+
+  - : Controls whether text entered into input fields is automatically capitalized on mobile browsers and, if so, in what manner. This attribute does not affect the `url`, `email`, or `password` input types, where autocapitalization is never enabled. The possible values are:
+
+    - `none` or `off`
+      - : Do not automatically capitalize any text.
+    - `sentences` or `on`
+      - : Automatically capitalize the first character of each sentence.
+    - `words`
+      - : Automatically capitalize the first character of each word.
+    - `characters`
+      - : Automatically capitalize every character.
+
+    > **Note:** `autocapitalize` can be set on `<input>` and {{htmlelement("textarea")}} elements, and on their containing {{htmlelement("form")}} elements. When `autocapitalize` is set on a `<form>` element, it sets the autocapitalize behavior for all contained inputs (except `url`, `email`, and `password` types) and `<textarea>`s, overriding any `autocapitalize` values set on contained elements.
+
+    > **Note:** Where `autocapitalize` is not specified, the adopted default behavior varies between browsers. Chrome (Android) and Safari (iOS) default to `on`/`sentences`, while Firefox (Android) defaults to `off`/`none`.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
@@ -626,12 +644,6 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
-      <td>
-        A string indicating how auto-capitalization should be applied to the content of text elements. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
         A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
@@ -676,19 +688,6 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
-
-- `autocapitalize` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates how auto-capitalization should be applied while the user is editing this field. Permitted values are:
-
-    - `none` or `off`
-      - : Do not automatically capitalize any text
-    - `sentences` or `on`
-      - : Automatically capitalize the first character of each sentence.
-    - `words`
-      - : Automatically capitalize the first character of each word.
-    - `characters`
-      - : Automatically capitalize every character.
 
 - `autocorrect` {{non-standard_inline}}
 

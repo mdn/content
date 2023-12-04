@@ -24,16 +24,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute on `<input type=file>` elements.
 
 - `accept-charset`
+
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
-- `autocapitalize` {{non-standard_inline}}
 
-  - : A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. Possible values:
+- `autocapitalize`
 
-    - `none`: No automatic capitalization.
-    - `sentences` (default): Capitalize the first letter of each sentence.
-    - `words`: Capitalize the first letter of each word.
-    - `characters`: Capitalize all characters — that is, uppercase.
+  - : Controls whether text entered into the form is automatically capitalized on mobile browsers and, if so, in what manner. The possible values are:
+
+    - `none` or `off`
+      - : Do not automatically capitalize any text.
+    - `sentences` or `on`
+      - : Automatically capitalize the first character of each sentence.
+    - `words`
+      - : Automatically capitalize the first character of each word.
+    - `characters`
+      - : Automatically capitalize every character.
+
+    > **Note:** When `autocapitalize` is set on a `<form>`, it controls the autocapitalization behavior of all contained {{htmlelement("input")}} (except `url`, `email`, and `password` types) and {{htmlelement("textarea")}} elements, overriding any `autocapitalize` values set on contained elements.
+
+    > **Note:** Where `autocapitalize` is not specified, the adopted default behavior varies between browsers. Chrome (Android) and Safari (iOS) default to `on`/`sentences`, while Firefox (Android) defaults to `off`/`none`.
 
 - `autocomplete`
 

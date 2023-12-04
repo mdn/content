@@ -18,11 +18,28 @@ The above example demonstrates a number of features of `<textarea>`:
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
 - Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
 
-The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
+The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `autocapitalize`
+
+  - : Controls whether text entered into `<textarea>`s is automatically capitalized on mobile browsers and, if so, in what manner. The possible values are:
+
+    - `none` or `off`
+      - : Do not automatically capitalize any text.
+    - `sentences` or `on`
+      - : Automatically capitalize the first character of each sentence.
+    - `words`
+      - : Automatically capitalize the first character of each word.
+    - `characters`
+      - : Automatically capitalize every character.
+
+    > **Note:** `autocapitalize` can be set on `<textarea>` and {{htmlelement("input")}} elements, and on their containing {{htmlelement("form")}} elements. When `autocapitalize` is set on a `<form>` element, it sets the autocapitalize behavior for all contained `<textarea>`s and inputs (except `url`, `email`, and `password` types), overriding any `autocapitalize` values set on contained elements.
+
+    > **Note:** Where `autocapitalize` is not specified, the adopted default behavior varies between browsers. Chrome (Android) and Safari (iOS) default to `on`/`sentences`, while Firefox (Android) defaults to `off`/`none`.
 
 - `autocomplete`
 
