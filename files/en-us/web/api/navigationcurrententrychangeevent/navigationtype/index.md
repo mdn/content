@@ -10,8 +10,7 @@ browser-compat: api.NavigationCurrentEntryChangeEvent.navigationType
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`navigationType`** read-only property of the
-{{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the type of the navigation that resulted in the change. The property may return `null` if the change is due to {{domxref("Navigation.updateCurrentEntry()")}}.
+The **`navigationType`** read-only property of the {{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the type of the navigation that resulted in the change. The property may return `null` if the change is due to {{domxref("Navigation.updateCurrentEntry()")}}.
 
 ## Value
 
