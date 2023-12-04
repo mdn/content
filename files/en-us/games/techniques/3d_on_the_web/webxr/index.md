@@ -38,11 +38,11 @@ The best place to start with the WebXR API is with our [Fundamentals of WebXR](/
 
 ## Tools and techniques
 
-Three.js is one of the most popular 3D engines for the web, and it can be used for WebXR games. Check out Three.js' [How to create VR content](https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content) documentation to help you make WebXR games with Three.js.
+[A-Frame](https://aframe.io/) is a web framework that offers simple building blocks for WebXR, so you can rapidly build and experiment with VR websites and games. You can read MDN's [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) tutorial for more details.
+
+Separately, Three.js is one of the most popular 3D engines for the web, and it can be used for WebXR games. Check out Three.js' [How to create VR content](https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content) documentation to help you make WebXR games with Three.js.
 
 ![A 3D representation of a landscape: it's a pinkish sunset, with a blue mountainous land in the background surrounded by a mirror sea and a darker blue island in the second plan.](sechelt.jpg)
-
-There's also a markup framework called [A-Frame](https://aframe.io/) that offers simple building blocks for WebXR, so you can rapidly build and experiment with VR websites and games: read the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) tutorial for more details.
 
 Immersion takes priority over gameplay and graphics - you must feel part of the experience. It's not easy to achieve, but it doesn't require realistic images. On the contrary, even basic shapes soaring past at high frame rates can be thrilling if the experience is immersive. Remember: experimenting is key - feel free to go with what works well for your project.
 
