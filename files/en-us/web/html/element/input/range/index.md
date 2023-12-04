@@ -116,7 +116,7 @@ By default, the granularity is 1, meaning the value is always an integer. To con
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
 
-#### Setting step to "any"
+#### Setting step to `any`
 
 If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute:
 
