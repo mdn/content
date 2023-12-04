@@ -26,7 +26,7 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
 
 - Trees can now be scrolled horizontally. If the columns don't fit into the available width, a horizontal scrollbar appears. This happens if the columns' specified widths add up to more than the available space. See [Firefox bug 212789](https://bugzil.la/212789) for details.
 - A new selection style allows cells to be selected individually, instead of entire rows. To use this selection style, set the tree's `seltype` attribute to `cell`.
-- Trees now support editing of individual cells. When the user double-clicks an editable cell, a text field appears in which the user can edit the contents of the cell.
+- Trees now support editing of individual cells. When the user double-clicks an editable cell, a text field appears in which the user can edit the cell's contents. See [these notes](https://wiki.mozilla.org/XUL:Tree) for details.
 - \<treecol> elements now support an `overflow` attribute which may be set to true to allow the text of cells within that column to expand to neighboring blank cells if the text is too large to fit into that single cell.
 
 ### Improvements to menus
