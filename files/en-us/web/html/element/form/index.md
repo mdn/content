@@ -5,7 +5,6 @@ page-type: html-element
 browser-compat: html.elements.form
 ---
 
-test
 {{HTMLSidebar}}
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
