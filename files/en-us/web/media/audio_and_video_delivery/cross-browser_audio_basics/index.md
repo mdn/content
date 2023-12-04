@@ -556,7 +556,7 @@ There are also a couple of events related to buffering:
 - `seeked`
   - : `seeked` occurs when the `seeking` attribute changes to `false`.
 
-> **Note:** You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
+> **Note:** You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
 
 ## Browser support
 
