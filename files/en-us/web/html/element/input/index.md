@@ -321,7 +321,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | --------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                   |
 | [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                          |
-| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls text capitalization in mobile browsers.                                      |
+| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls automatic capitalization in inputted text.                                   |
 | [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
 | [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
@@ -368,20 +368,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `autocapitalize`
 
-  - : Controls whether text entered into input fields is automatically capitalized on mobile browsers and, if so, in what manner. This attribute does not affect the `url`, `email`, or `password` input types, where autocapitalization is never enabled. The possible values are:
-
-    - `none` or `off`
-      - : Do not automatically capitalize any text.
-    - `sentences` or `on`
-      - : Automatically capitalize the first character of each sentence.
-    - `words`
-      - : Automatically capitalize the first character of each word.
-    - `characters`
-      - : Automatically capitalize every character.
-
-    > **Note:** `autocapitalize` can be set on `<input>` and {{htmlelement("textarea")}} elements, and on their containing {{htmlelement("form")}} elements. When `autocapitalize` is set on a `<form>` element, it sets the autocapitalize behavior for all contained inputs (except `url`, `email`, and `password` types) and `<textarea>`s, overriding any `autocapitalize` values set on contained elements.
-
-    > **Note:** Where `autocapitalize` is not specified, the adopted default behavior varies between browsers. Chrome (Android) and Safari (iOS) default to `on`/`sentences`, while Firefox (Android) defaults to `off`/`none`.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
