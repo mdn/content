@@ -6,7 +6,11 @@ status:
   - experimental
 browser-compat:
   - api.Navigation
+  - api.NavigationDestination
+  - api.NavigationHistoryEntry
+  - api.NavigationTransition
   - api.NavigateEvent
+  - api.NavigationCurrentEntryChangeEvent
 spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigation-api
 ---
 
