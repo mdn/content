@@ -17,7 +17,9 @@ Use the sliders in the frame below to modify the translation, rotation, scale, a
 
 The cube in the above example is comprised of six `<div>` elements, all of which are styled with CSS to create the cube's faces.
 
-The cube is not drawn using a 2D or 3D canvas context, so you can inspect the faces of the cube with your browser's developer tools as you would inspect any other DOM element. Try using your browser's developer tools element picker to inspect different faces of the cube as you transform its position and rotation.
+The cube is not drawn using a 2D or 3D canvas context, so **you can inspect the faces of the cube with your browser's developer tools as you would inspect any other DOM element**. Try using your browser's developer tools element picker to inspect different faces of the cube as you transform its position and rotation.
+
+> Note that the order in which 3D rotations are applied affects the resultant transformation. In the above example, rotations are applied in the order X → Y → Z.
 
 You can [view this example's source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/transforms.html).
 
@@ -51,7 +53,7 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 - [Styling animated buttons with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/styling_animated_buttons_with_css_transforms)
-  - : Contains several examples of `<input>` elements styled using animated CSS transforms.
+  - : Contains several examples of `<button>` elements styled using animated CSS transforms.
 
 ## Related concepts
 
