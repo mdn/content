@@ -108,7 +108,7 @@ _No change._
 
 ## Security
 
-- URL with the `view-source:` protocol don't open the [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) tool anymore when used from a Web page ([Firefox bug 1172165](https://bugzil.la/1172165)).
+- URLs with the `view-source:` protocol don't open the [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) tool anymore when used from a Web page ([Firefox bug 1172165](https://bugzil.la/1172165)).
 - The Firefox [click-to-activate plugin whitelist](https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/) has been removed: only Flash doesn't need to be clicked to be activated ([Firefox bug 1263630](https://bugzil.la/1263630)).
 
 ## Changes for add-on and Mozilla developers
@@ -119,7 +119,7 @@ _No change._
 
 ### FUEL
 
-The FUEL JavaScript library, introduced back in Firefox 3, **has been removed**. This library was designed to aid in add-on development and with the introduction of the Add-on SDK§ and, now, by [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) support, is no longer useful. ([Firefox bug 1090880](https://bugzil.la/1090880))
+The FUEL JavaScript library, introduced back in Firefox 3, **has been removed**. This library was designed to aid in add-on development and with the introduction of the Add-on SDK and, now, by [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) support, is no longer useful. ([Firefox bug 1090880](https://bugzil.la/1090880))
 
 ### XUL
 
