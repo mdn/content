@@ -92233,32 +92233,6 @@
       "jswisher"
     ]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2019-10-25T14:14:58.592Z",
-    "contributors": [
-      "SphinxKnight",
-      "scottj33",
-      "..",
-      "jamesdhurd",
-      "Ajimi",
-      "jortoller",
-      "Tigt",
-      "fscholz",
-      "idrees007",
-      "jsx",
-      "Mutijima",
-      "Dyvik",
-      "Sheppy",
-      "indrani7",
-      "Nickolay",
-      "Delapouite",
-      "Psy",
-      "Balaji1103",
-      "jswisher",
-      "coolsidx",
-      "ethertank"
-    ]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-07-16T03:51:08.991Z",
     "contributors": [
@@ -92305,6 +92279,43 @@
       "kohei.yoshino",
       "wbamberg",
       "jswisher"
+    ]
+  },
+  "Web/Guide/Parsing_and_serializing_XML": {
+    "modified": "2020-09-09T05:19:22.895Z",
+    "contributors": [
+      "lionel-rowe",
+      "tjallingt",
+      "jabcreations",
+      "Sheppy",
+      "sideshowbarker",
+      "mikerissi",
+      "tonyfinn",
+      "Mkmelin",
+      "RomainLanz",
+      "rolfedh",
+      "southpolesteve",
+      "teoli",
+      "kscarfone",
+      "Tim_Morgan",
+      "gal007",
+      "ethertank",
+      "fusionchess",
+      "ziyunfei",
+      "Hsivonen",
+      "pincopalla",
+      "akorchev",
+      "kmaglione",
+      "Reno Greenleaf",
+      "lgreco",
+      "Brettz9",
+      "Kirschkern",
+      "ericjung",
+      "Mgjbot",
+      "Nickolay",
+      "IsNull",
+      "FST777",
+      "Nightstrike"
     ]
   },
   "Web/Guide/Performance": {
