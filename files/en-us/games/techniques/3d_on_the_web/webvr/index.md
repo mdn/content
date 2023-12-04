@@ -26,9 +26,8 @@ The [WebVR API](/en-US/docs/Web/API/WebVR_API) is the central API for capturing 
 
 ### Browser support and spec status
 
-Currently browser support for the WebVR API is still experimental — it works in [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) and [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list) (Mozilla and Google teamed up to work on the implementation together), but sooner rather than later we'll see it in regular builds.
-
-The [WebVR spec](https://mozvr.github.io/webvr-spec/webvr.html) is in Editor's Draft status which means it is still subject to change. The development is led by [Vladimir Vukicevic](https://twitter.com/vvuk) from Mozilla and [Brandon Jones](https://twitter.com/tojiro) from Google. For more info be sure to visit the <https://mixedreality.mozilla.org/> and [WebVR.info](https://webvr.info/) websites.
+The [WebVR spec](https://mozvr.github.io/webvr-spec/webvr.html), led by [Vladimir Vukicevic](https://twitter.com/vvuk) from Mozilla and [Brandon Jones](https://twitter.com/tojiro) from Google, is being replaced by the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API). WebVR may still be available in some browsers while WebXR is finalized.
+For more info, see the <https://mixedreality.mozilla.org/> and [WebVR.info](https://webvr.info/) websites.
 
 ### Using the WebVR API
 

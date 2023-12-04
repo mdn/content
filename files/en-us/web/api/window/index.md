@@ -89,6 +89,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the window that opened this current window.
 - {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns `true` if this window belongs to an origin-keyed agent cluster.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
 - {{domxref("Window.outerWidth")}} {{ReadOnlyInline}}
@@ -241,9 +243,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls to a particular set of coordinates in the document.
 - {{domxref("setInterval", "Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
-  - : Toggles a user's ability to resize a window.
-- {{domxref("setTimeout", "Window.setTimeout()")}}
+- {{domxref("setTimeout()", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
   - : Displays a directory picker which allows the user to select a directory.
@@ -276,6 +276,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
+  - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

@@ -30,22 +30,7 @@ onresize = (event) => {};
 
 ## Event type
 
-A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
-
-{{InheritanceDiagram("UIEvent")}}
-
-## Event properties
-
-_This interface also inherits properties of its parent, {{domxref("Event")}}._
-
-- {{domxref("UIEvent.detail")}} {{ReadOnlyInline}}
-  - : Returns a `long` with details about the event, depending on the event type.
-- {{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
-- {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
-  - : Returns a {{glossary("WindowProxy")}} that contains the view that generated the event.
-- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{ReadOnlyInline}}
-  - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
+A generic {{domxref("Event")}}.
 
 ## Examples
 

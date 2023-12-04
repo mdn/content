@@ -342,6 +342,37 @@ If the relying party is authorized to receive the `minPinLength` value (if its `
 
 If the relying party is not authorized, the extension is ignored, and no `"minPinLength"` output value is provided.
 
+### `payment`
+
+- Usable in: Registration ({{domxref("CredentialsContainer.create()","create()")}})
+- Processed by: User agent
+- Specification: [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/)
+
+Allows a relying party to request the creation of a WebAuthn credential that may be used – by both the Relying Party and other parties – with Secure Payment Confirmation; see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
+
+#### Input
+
+The inputs for the `payment` extension are defined in the [AuthenticationExtensionsPaymentInputs dictionary](https://w3c.github.io/secure-payment-confirmation/#dictdef-authenticationextensionspaymentinputs)
+
+- `isPayment`
+  - : A boolean that indicates that the extension is active.
+- `rpID`
+  - : The [Relying Party](https://w3c.github.io/webauthn/#relying-party) id of the credential(s) being used. Only used at authentication time; not registration.
+- `topOrigin`
+  - : The origin of the top-level frame. Only used at authentication time; not registration.
+- `payeeName`
+  - : The payee name, if present, that was displayed to the user. Only used at authentication time; not registration.
+- `payeeOrigin`
+  - : The payee origin, if present, that was displayed to the user. Only used at authentication time; not registration.
+- `total`
+  - : The transaction amount that was displayed to the user. Only used at authentication time; not registration. The total is of type [PaymentCurrencyAmount](https://w3c.github.io/payment-request/#dom-paymentcurrencyamount).
+- `instrument`
+  - : The instrument details that were displayed to the user. Only used at authentication time; not registration. The instrument is of type [PaymentCredentialInstrument](https://w3c.github.io/secure-payment-confirmation/#dictdef-paymentcredentialinstrument).
+
+#### Output
+
+None
+
 ## Specifications
 
 There are a number of places that WebAuthn extensions are specified. IANA's [WebAuthn Extension Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-extension-ids) provides a registry of all extensions, but bear in mind that some may be deprecated.
