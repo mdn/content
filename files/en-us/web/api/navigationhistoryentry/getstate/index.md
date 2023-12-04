@@ -10,8 +10,7 @@ browser-compat: api.NavigationHistoryEntry.getState
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`getState()`** method of the
-{{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
+The **`getState()`** method of the {{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
 
 ## Syntax
 
