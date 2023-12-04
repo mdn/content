@@ -30,20 +30,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `autocapitalize`
 
-  - : Controls whether text entered into the form is automatically capitalized on mobile browsers and, if so, in what manner. The possible values are:
-
-    - `none` or `off`
-      - : Do not automatically capitalize any text.
-    - `sentences` or `on`
-      - : Automatically capitalize the first character of each sentence.
-    - `words`
-      - : Automatically capitalize the first character of each word.
-    - `characters`
-      - : Automatically capitalize every character.
-
-    > **Note:** When `autocapitalize` is set on a `<form>`, it controls the autocapitalization behavior of all contained {{htmlelement("input")}} (except `url`, `email`, and `password` types) and {{htmlelement("textarea")}} elements, overriding any `autocapitalize` values set on contained elements.
-
-    > **Note:** Where `autocapitalize` is not specified, the adopted default behavior varies between browsers. Chrome (Android) and Safari (iOS) default to `on`/`sentences`, while Firefox (Android) defaults to `off`/`none`.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - `autocomplete`
 
