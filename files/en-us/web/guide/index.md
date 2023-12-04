@@ -33,8 +33,6 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Media
 
-- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-  - : Modern websites and applications often need to present graphics of varying sophistication.
 - [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery)
   - : We can deliver audio and video on the web in several ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
 - [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation)
@@ -63,7 +61,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : Find out how to use variable fonts in your designs.
-- [The Web Open Font Format (WOFF)](/en-US/docs/Web/Guide/WOFF)
+- [The Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.
 
 ## User interface development

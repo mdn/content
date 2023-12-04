@@ -67,7 +67,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 - {{domxref("setInterval", "WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout", "WorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("reportError", "WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.

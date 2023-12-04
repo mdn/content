@@ -90,7 +90,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 
-- `fetchpriority` {{Experimental_Inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
