@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Blob.slice
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("Blob")}} interface's **`slice()`** method
+The **`slice()`** method of the {{domxref("Blob")}} interface
 creates and returns a new `Blob` object which contains data from a subset of
 the blob on which it's called.
 
