@@ -16,7 +16,7 @@ With the popularity of existing VR headsets such as Meta Quest, Valve Index, and
 
 ![Three different VR devices: the Meta Quest 3, the Valve Index, and the Sony PSVR2.](hmds.jpg)
 
-### History of the WebVR spec
+### Development of WebVR
 
 The [WebVR spec](https://mozvr.github.io/webvr-spec/webvr.html), led by [Vladimir Vukicevic](https://twitter.com/vvuk) from Mozilla and [Brandon Jones](https://twitter.com/tojiro) from Google, is being replaced by the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API). WebVR may still be available in some browsers while WebXR is finalized.
 For more info, see the <https://mixedreality.mozilla.org/> and [WebVR.info](https://webvr.info/) websites.
