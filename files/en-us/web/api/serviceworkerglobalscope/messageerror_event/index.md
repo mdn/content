@@ -70,8 +70,6 @@ The service worker can listen for the message deserialization error by listening
 self.addEventListener("messageerror", (event) => {
   // event is an ExtendableMessageEvent object
   console.error("Message deserialization failed");
-
-  event.source.postMessage("Hi client");
 });
 ```
 
@@ -82,8 +80,6 @@ Alternatively, the script can listen for the message deserialization error using
 self.onmessageerror = (event) => {
   // event is an ExtendableMessageEvent object
   console.error("Message deserialization failed");
-
-  event.source.postMessage("Hi client");
 };
 ```
 
