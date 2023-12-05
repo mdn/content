@@ -610,7 +610,7 @@ Compress all output labeled with one of the following media types using the [Add
 
 ## Map extensions to media types
 
-Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these file types were served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
+Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these file types were served without an appropriate `Content-Encoding` response header, client applications (e.g., browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
 
 ```apacheconf
 <IfModule mod_deflate.c>
