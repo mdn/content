@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerContainer.messageerror_event
 ---
 
-{{APIRef}}
+{{APIRef("Service Workers API")}}
 
 The **`messageerror`** event is used in a page controlled by a service worker to listen when incoming messages can't be deserialized.
 

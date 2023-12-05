@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerContainer.message_event
 ---
 
-{{APIRef}}
+{{APIRef("Service Workers API")}}
 
 The **`message`** event is used in a page controlled by a service worker to receive messages from the service worker.
 
