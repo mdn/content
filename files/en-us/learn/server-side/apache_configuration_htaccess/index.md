@@ -521,7 +521,7 @@ If you have access to the main server configuration file, use the [`TraceEnable`
 
 ## Remove the `X-Powered-By` response header
 
-Some frameworks like PHP and ASP.NET set an `X-Powered-By` header that contains information about them (e.g.: their name, version number)
+Some frameworks like PHP and ASP.NET set an `X-Powered-By` header that contains information about them (e.g., their name, version number)
 
 This header doesn't provide any value, and in some cases, the information it provides can expose vulnerabilities
 
