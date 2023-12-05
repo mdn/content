@@ -17,15 +17,15 @@ What happens when a web page element needs to be visible on screen regardless of
 
 To access a window's visual viewport, you can obtain a {{domxref("VisualViewport")}} object from the {{domxref("window.visualViewport")}} property. The object includes a set of properties describing the viewport. It also adds two events, `onresize` and `onscroll`, that fire whenever the visual viewport changes. These events allow you to position elements relative to the visual viewport that would normally be anchored to the layout viewport.
 
-## Accessing the API
-
-- {{domxref("window.visualViewport")}} {{ReadOnlyInline}}
-  - : A read-only reference to the window's {{domxref("VisualViewport")}} object. If this property doesn't exist, the API is unsupported.
-
 ## Interfaces
 
 - {{DOMxRef("VisualViewport")}}
   - : Represents the visual viewport for a given window. A window's `VisualViewport` object provides information about the viewport's position and size, and receives the {{domxref("VisualViewport.resize_event", "resize")}} and {{domxref("VisualViewport.scroll_event", "scroll")}} events you can monitor to know when changes occur to the window's viewport.
+
+### Extensions to other interfaces
+
+- {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
+  - : A read-only reference to the window's {{domxref("VisualViewport")}} object. If this property doesn't exist, the API is unsupported.
 
 ## Example
 
