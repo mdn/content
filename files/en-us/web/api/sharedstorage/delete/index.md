@@ -21,7 +21,7 @@ delete(key)
 ### Parameters
 
 - `key`
-  - : A string representing the key of the key/value pair you want to delete.
+  - : A string representing the key of the key-value pair you want to delete.
 
 ### Return value
 
@@ -36,7 +36,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 - In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if:
   - The worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 
-> **Note:** If the key/value pair doesn't exist in the shared storage, no error is thrown — the operation still fulfills with `undefined`.
+> **Note:** If the key-value pair doesn't exist in the shared storage, no error is thrown — the operation still fulfills with `undefined`.
 
 > **Note:** In the case of {{domxref("WindowSharedStorage")}}, if the `delete()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
 

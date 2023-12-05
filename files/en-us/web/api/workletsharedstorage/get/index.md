@@ -22,7 +22,7 @@ get(key)
 ### Parameters
 
 - `key`
-  - : A string representing the key of the key/value pair you want to retrieve.
+  - : A string representing the key of the key-value pair you want to retrieve.
 
 ### Return value
 

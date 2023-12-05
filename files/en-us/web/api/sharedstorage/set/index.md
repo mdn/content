@@ -28,7 +28,7 @@ set(key, value, options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `ignoreIfPresent`
-      - : A boolean value. The value `true` causes the set operation to abort if a key/value pair with the specified `key` already exists. The default value `false` causes the set operation to overwrite the previous value.
+      - : A boolean value. The value `true` causes the set operation to abort if a key-value pair with the specified `key` already exists. The default value `false` causes the set operation to overwrite the previous value.
 
 ### Return value
 

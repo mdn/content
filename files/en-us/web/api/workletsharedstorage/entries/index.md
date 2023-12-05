@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-An array of the `WorkletSharedStorage`'s enumerable property key/value pairs.
+An array of the `WorkletSharedStorage`'s enumerable property key-value pairs.
 
 ### Exceptions
 
