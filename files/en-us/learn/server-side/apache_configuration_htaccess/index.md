@@ -540,7 +540,7 @@ expose_php = off;
 
 ## Remove Apache-generated server information footer
 
-Prevent Apache from adding a trailing footer line containing information about the server to the server-generated documents (e.g.: error messages, directory listings, etc.). See the [`ServerSignature` directive](https://httpd.apache.org/docs/current/mod/core.html#serversignature) documentation for more information on what the server signature provides and the [`ServerTokens` directive](https://httpd.apache.org/docs/current/mod/core.html#servertokens) for information about configuring the information provided in the signature.
+Prevent Apache from adding a trailing footer line containing information about the server to the server-generated documents (e.g., error messages, directory listings, etc.). See the [`ServerSignature` directive](https://httpd.apache.org/docs/current/mod/core.html#serversignature) documentation for more information on what the server signature provides and the [`ServerTokens` directive](https://httpd.apache.org/docs/current/mod/core.html#servertokens) for information about configuring the information provided in the signature.
 
 ```apacheconf
 ServerSignature Off
