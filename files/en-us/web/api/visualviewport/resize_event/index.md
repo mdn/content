@@ -49,7 +49,3 @@ visualViewport.onresize = () => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Visual Viewport API homepage](/en-US/docs/Web/API/Visual_Viewport_API)
