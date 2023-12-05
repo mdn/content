@@ -33,9 +33,9 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Media
 
-- [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery)
+- [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery)
   - : We can deliver audio and video on the web in several ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
-- [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation)
+- [Audio and video manipulation](/en-US/docs/Web/Media/Audio_and_video_manipulation)
   - : The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.
 
 ## APIs
@@ -49,7 +49,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Performance
 
-- [Optimization and performance](/en-US/docs/Web/Guide/Performance)
+- [Optimization and performance](/en-US/docs/Web/Performance)
   - : When building modern web apps and sites, it's important to make your content work quickly and efficiently. This lets it perform effectively for both powerful desktop systems and weaker handheld devices.
 
 ## Mobile web development
