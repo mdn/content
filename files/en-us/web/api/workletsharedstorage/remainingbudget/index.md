@@ -13,7 +13,7 @@ browser-compat: api.WorkletSharedStorage.remainingBudget
 The **`remainingBudget()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns the remaining navigation budget for the current origin.
 
-The navigation budget is the number of bits of entropy permitted inside a {{htmlelement("fencedframe")}} as a result of {{domxref("WindowSharedStorage.selectURL()")}} calls, per origin, per 24-hour time period. This is not the same as the number of navigations; rather it is based on the number of potential navigations in each call. Each time a `selectURL()` navigation occurs, an amount equal to logarithm base 2 of the number of URL choices is deducted from the corresponding origin's budget.
+The navigation budget is the number of entropy bits permitted inside a {{htmlelement("fencedframe")}} due to the {{domxref("WindowSharedStorage.selectURL()")}} calls per origin every 24 hours. This is not the same as the number of navigations; rather, it is based on the number of potential navigations in each call. Each time a `selectURL()` navigation occurs, the corresponding origin's budget decreases by the logarithm (base 2) of the number of URL choices.
 
 Navigation budget is a mechanism designed to limit the rate of leakage of cross-site data to the destination pages navigated to in [fenced frames](/en-US/docs/Web/API/Fenced_Frame_API).
 
