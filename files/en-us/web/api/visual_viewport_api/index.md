@@ -2,7 +2,10 @@
 title: Visual Viewport API
 slug: Web/API/Visual_Viewport_API
 page-type: web-api-overview
-browser-compat: api.VisualViewport
+browser-compat:
+  - api.VisualViewport
+  - api.Window.visualViewport
+spec-urls: https://drafts.csswg.org/cssom-view/#visualViewport
 ---
 
 {{DefaultAPISidebar("Visual Viewport")}}
