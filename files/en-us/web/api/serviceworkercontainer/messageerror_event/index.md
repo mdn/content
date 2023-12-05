@@ -67,7 +67,7 @@ The service worker can listen for the message deserialization error by listening
 ```js
 // main.js
 navigator.serviceWorker.addEventListener("messageerror", (event) => {
-  console.log("Receive message from service worker failed!");
+  console.error("Receive message from service worker failed!");
 });
 ```
 
@@ -76,7 +76,7 @@ Alternatively, the script can listen for the message deserialization error using
 ```js
 // main.js
 navigator.serviceWorker.onmessageerror = (event) => {
-  console.log("Receive message from service worker failed!");
+  console.error("Receive message from service worker failed!");
 };
 ```
 
