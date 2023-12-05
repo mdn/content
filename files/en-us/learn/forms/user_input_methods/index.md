@@ -4,9 +4,9 @@ slug: Learn/Forms/User_input_methods
 page-type: guide
 ---
 
-Web forms require user input. In designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
+Web forms require user input. When designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
 
-In this article, we take a look at the different ways users interact with web content, and provides recommendations for managing user input, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.
+In this article, we take a look at the different ways users interact with forms and other web content, and provides recommendations for managing user input, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.
 
 As you develop more complex and interactive forms or other user interactions, there are many HTML features and JavaScript APIs you may want to investigate, including making elements [content editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable), supporting [touch events](/en-US/docs/Web/API/Touch_events), controlling the user's [pointer device](/en-US/docs/Web/API/Pointer_Lock_API), controlling the [screen's orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), making the content [fullscreen](/en-US/docs/Web/API/Fullscreen_API), using [drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) for file uploads, and more.
 
@@ -14,16 +14,16 @@ As you develop more complex and interactive forms or other user interactions, th
 
 To provide good user experience to the greatest number of users, you need to support multiple input methods, including mouse, keyboard, finger touch and so on. Available input mechanisms depend on the capabilities of the device running the application:
 
-- Some devices provide touchscreen displays: the Web Platform offers [touch events](/en-US/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
-- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) is userful when your content requires full control of the pointing device.
-- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your content in fullscreen mode.
-- Using features such as [`contentEditable``](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors.
+- Some devices provide touchscreen displays: the web platform offers [touch events](/en-US/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
+- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) is useful when your content requires full control of the pointing device.
+- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) allows you to display your content in fullscreen mode.
+- Features such as [`contentEditable``](/en-US/docs/Web/HTML/Global_attributes/contenteditable) enable you to implement rich-text editors.
 - The [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users move elements, which can help improve the user experience when it comes to selecting files for upload or reordering content modules within a page.
 - When screen orientation matters for your layout, you can use [CSS media queries](/en-US/docs/Web/CSS/@media/orientation) to style your forms based on the browser orientation, or even use the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) to read the screen orientation state and perform other actions.
 
 You should always be mindful of keyboard accessibility — many web users only use keyboard to navigate websites and apps, and locking them out of your functionality is a bad idea.
 
-The following is a set of recommendations and best practices for users can use your websites and applications:
+The following sections provide a set of recommendations and best practices for enabling the widest possible set of users to use your websites and applications.
 
 ### Supporting common input mechanisms
 
@@ -67,7 +67,7 @@ where `element` is the DOM element you want to register the touch events on.
 
 #### Pointer Events
 
-Mice aren't the only pointing devices. Your user's devices may incorporate multiple forms of input, like mouse, finger touch and pen input. Each of these pointers has a different size. The [Pointer Events API](/en-US/docs/Web/API/Pointer_events) may come in handy if you need to manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc. The [pointerEvent interface](/en-US/docs/Web/API/PointerEvent) provides all the details you may want to capture about the pointer device, including the size, pressure, and angle of the pointer event.
+Mice aren't the only pointing devices. Your user's devices may incorporate multiple forms of input, like mouse, finger touch, and pen input. Each of these pointers has a different size. The [Pointer Events API](/en-US/docs/Web/API/Pointer_events) may come in handy if you need to manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc. The [`PointerEvent` interface](/en-US/docs/Web/API/PointerEvent) provides all the details you may want to capture about the pointer device, including its size, pressure, and angle.
 
 ### Implement controls
 
@@ -104,7 +104,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** To find out more about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+> **Note:** To find out more about adding fullscreen functionality to your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 #### Drag & Drop
 
@@ -122,14 +122,14 @@ Here is an example that allows a section of content to be dragged.
 
 in which we:
 
-- Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
-- Add a listener for the [`dragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener
+- Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to `true` on the element that you wish to make draggable.
+- Add a listener for the [`dragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener.
 
 > **Note:** You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
 #### contentEditable
 
-Generally, you should use a {{HTMLElement("textarea")}} or an appropriate {{HTMLElement("input")}} type, along with a descriptive {{HTMLElement("label")}}, within a {{HTMLElement("form")}}, to collect data from users. Form controls are not the only elements that can receive user input. Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
+Generally, you should use a {{HTMLElement("textarea")}} or an appropriate {{HTMLElement("input")}} type within a {{HTMLElement("form")}} to collect data from users, along with a descriptive {{HTMLElement("label")}}. However, form controls are not the only elements that can receive user input. Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
 ```css hidden
 div {
@@ -143,7 +143,12 @@ div {
 <div contenteditable="true">This text can be edited by the user.</div>
 ```
 
-If using non-semantic elements for data entry, if you are [creating your own form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality. The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute does not need to be added. However, the element's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/), [label](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), and [description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) need to be added with ARIA. JavaScript is required to handle, including [validation](/en-US/docs/Learn/Forms/Form_validation) and [submitting](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) or [saving](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript), all user-updated content.
+If using non-semantic elements for data entry when [creating your own form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality. The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute does not need to be added.
+
+There are however other aspects of your custom form's functionality that need significant work to provide an accessible experience:
+
+- The element's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/), [label](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), and [description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) need to be added with ARIA.
+- JavaScript is required to handle functionality such as [validation](/en-US/docs/Learn/Forms/Form_validation), [submission](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data), and [saving](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript) of user-updated content.
 
 {{EmbedLiveSample("contentEditable")}}
 
