@@ -43,9 +43,9 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - XLink href has been restored and the MathML3 `href` attribute is now supported. Developers are encouraged to move to the latter syntax.
 - Support for the `voffset` attribute on {{ MathMLElement("mpadded") }} elements has been added and behavior of `lspace` attribute has been fixed.
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
-- Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
+- Support for [Asana Math(https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces(</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
 
 ### DOM
 
@@ -103,7 +103,7 @@ These changes affect add-on developers as well as developers working on or with 
 ### XUL
 
 - `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
-- `<panel>` elements can now be configured to let the user drag them by clicking anywhere on their background] by using the new `backdrag` attribute.
+- `<panel>` elements can now be configured to let the user drag them by clicking anywhere on their background by using the new `backdrag` attribute.
 
 ### XPCOM
 
