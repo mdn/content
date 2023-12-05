@@ -128,4 +128,4 @@ For more details about this example, see [K+ frequency measurement](https://deve
 
 ## See also
 
-- [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API)
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)

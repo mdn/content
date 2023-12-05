@@ -76,7 +76,7 @@ async function injectContent() {
 injectContent();
 ```
 
-For more details about this example and links to other examples, see the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing page.
+For more details about this example and links to other examples, see the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page.
 
 ## Specifications
 
@@ -88,4 +88,4 @@ For more details about this example and links to other examples, see the [Shared
 
 ## See also
 
-- [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API)
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)

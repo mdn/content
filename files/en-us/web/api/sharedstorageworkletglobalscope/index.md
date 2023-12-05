@@ -40,7 +40,7 @@ class SelectURLOperation {
 register("ab-testing", SelectURLOperation);
 ```
 
-See the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing page for a walkthrough of this example and links to other examples.
+See the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page for a walkthrough of this example and links to other examples.
 
 ## Specifications
 
@@ -52,4 +52,4 @@ See the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing pag
 
 ## See also
 
-- [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API)
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
