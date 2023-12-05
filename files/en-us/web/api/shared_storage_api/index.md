@@ -9,27 +9,27 @@ browser-compat: api.SharedStorage
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Shared Storage API")}}
 
-The **Shared Storage API** is a client-side storage mechanism that enables unpartitioned, cross-site data access in a privacy-preserving manner for specific use cases that require it.
+The **Shared Storage API** is a client-side storage mechanism that enables unpartitioned, cross-site data access while preserving privacy (i.e. without relying on tracking cookies).
 
 ## Concepts and usage
 
-One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is third-party cookies set on content embedded in {{htmlelement("iframe")}} elements, which can be used to share information and track users across sites.
+One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is the use of cookies set on third-party content embedded in sites (for example via {{htmlelement("iframe")}} elements). These cookies can be used to track and profile users, and share information across sites.
 
 To prevent cross-site tracking, browsers are working towards partitioning all storage types, including [Cookies](/en-US/docs/Web/HTTP/Cookies), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and the [Cache API](/en-US/docs/Web/API/Cache). However, a major barrier to achieving this is the need for several legitimate use cases that rely on cross-site information sharing. Examples of such uses cases include advertisers wanting to measure the reach of their across sites and generate reports, and site owners wanting to customize user experiences based on the group they are in or their previous site interactions.
 
-The Shared Storage API provides a flexible solution to fulfill such use cases — aiming to provide the required data storage, processing, and sharing — but without sharing user data with parties that shouldn't have access to it.
+The Shared Storage API provides a flexible solution for such use cases. It aims to provide the required data storage, processing, and sharing capabilities without the ability to track and profile users.
 
 Like other storage APIs, you can write to shared storage at any time. However, you can only read shared storage data from inside a {{domxref("SharedStorageWorklet", "worklet", "", "nocode")}}. Worklets provide a secure environment inside which you can process shared storage data and return useful results, but you can't directly share the data with the associated browsing context.
 
 To extract useful results from a shared storage worklet, you need to use an **output gate**. These gates serve specific purposes such as selecting a URL from a provided list to display to the user based on shared storage data. Results meant for the user are shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API) where they can't be accessed from the embedding page.
 
-### Use cases
+## Output gates
 
 The currently available output gates for the Shared Storage API are discussed in the sections below. In each section, we list typical use cases for each gate and provide links to guides with more information and code examples.
 
 > **Note:** More output gates will likely be added in the future to support additional use cases.
 
-#### URL Selection
+### URL Selection
 
 The **URL Selection** output gate, accessed via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method, is used to select a URL from a provided list to display to the user, based on shared storage data. This gate be used for the following purposes:
 
@@ -37,7 +37,7 @@ The **URL Selection** output gate, accessed via the {{domxref("WindowSharedStora
 - [**A/B testing**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/): Assign a user to an experiment group, then store group details in shared storage for cross-site access.
 - [**Custom user experiences**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/known-customer/): Share custom content and calls-to-action based on a user's registration status or other user states.
 
-#### Run
+### Run
 
 The **Run** output gate, accessed via the {{domxref("WindowSharedStorage.run", "run()")}} method, is intended to be used in a generic way to process some shared storage data.
 
@@ -49,7 +49,7 @@ The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/
 
 ## Understanding how shared storage works
 
-There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. This example assigns a user to an experiment group, stores the group details in shared storage, and then allows other sites to use that data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
+There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
 
 ### Writing to shared storage
 
@@ -80,19 +80,19 @@ async function injectContent() {
 
 ### Reading and processing data from shared storage
 
-As mentioned above, to extract useful results from a shared storage worklet you need to use an **output gate**. In this example, we'll use the URL Selection output gate to read the user's experiment group and then load a URL in a fenced frame based on their group.
+As mentioned above, to extract useful results from a shared storage worklet, you need to use an **output gate**. In this example, we'll use the [URL Selection output gate](#url_selection) to read the user's experiment group and then display a URL in a fenced frame based on their group.
 
 To use the output gate, you need to:
 
-- Define an operation in a worklet module script to handle choosing the URL, and register it.
-- Add the module to your shared storage worklet.
-- Choose the URL using the worklet operation and load it in a fenced frame.
+1. Define an operation in a worklet module script to handle choosing the URL, and register it.
+2. Add the module to your shared storage worklet.
+3. Choose the URL using the worklet operation and load it in a fenced frame.
 
 Below we'll look at these steps one by one.
 
 #### Define an operation in a worklet module
 
-The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value and choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
+The URL selection is based on the experiment group stored in shared storage. To retrieve this value and choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context. This ensures the raw data is hidden from other contexts, thereby preserving privacy.
 
 The URL Selection operation is a JavaScript class that must follow the rules below (these rules vary for each output gate, depending on their intended use case):
 
@@ -122,7 +122,7 @@ Notice how the value set in our main app context is retrieved using {{domxref("W
 
 > **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
 
-#### Add the worklet
+#### Add the module to the shared storage worklet
 
 To use the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. In our main app context, this is done before we set the experiment group value, so that it is ready to use when needed:
 
@@ -158,7 +158,7 @@ const fencedFrameConfig = await window.sharedStorage.selectURL(
 );
 ```
 
-Because the options object contains `resolveToConfig: true`, the returned {{jsxref("Promise")}} will resolve with a {{domxref("FencedFrameConfig")}} object, which can be set as the value of the {{domxref("HTMLFencedFrameElement.config")}} property, resulting in the chosen URL being displayed in the associated {{htmlelement("fencedframe")}} element:
+Because the options object contains `resolveToConfig: true`, the returned {{jsxref("Promise")}} will resolve with a {{domxref("FencedFrameConfig")}} object. This object can be set as the value of the {{domxref("HTMLFencedFrameElement.config")}} property, resulting in the chosen URL having its content displayed in the corresponding {{htmlelement("fencedframe")}} element:
 
 ```js
 document.getElementById("content-slot").config = fencedFrameConfig;

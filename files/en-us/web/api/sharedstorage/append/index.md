@@ -23,7 +23,7 @@ append(key, value)
 - `key`
   - : A string representing the key of the key-value pair to which you want to append a value.
 - `value`
-  - : A string that you want to append to the existing value.
+  - : A string that you want to append to the existing value of the key-value pair.
 
 > **Note:** If the specified `key` isn't found in the shared storage, the `append()` operation is equivalent to {{domxref("SharedStorage.set", "set()")}}, that is, a new key-value pair with the specified `key` is added to the shared storage.
 
@@ -33,11 +33,11 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
-- In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
-- In both cases, the `Promise` rejects with a {{jsxref("TypeError")}} if:
+- The `Promise` rejects with a {{jsxref("TypeError")}} if:
   - The appended entry was not successfully stored in the database due to shared storage not being available (for example it is disabled using a browser setting).
   - `key` and/or `value` exceed the browser-defined maximum length.
   - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+- In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 
 > **Note:** In the case of {{domxref("WindowSharedStorage")}}, if the `append()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
 

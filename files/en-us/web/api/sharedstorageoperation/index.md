@@ -9,11 +9,9 @@ browser-compat: api.SharedStorageOperation
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`SharedStorageOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the base class for all different output gate operation types.
+The **`SharedStorageOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the base class for all output gate operation types.
 
-{{InheritanceDiagram}}
-
-The different output gate types are detailed below:
+The output gate types are detailed below:
 
 <table class="no-markdown">
   <thead>

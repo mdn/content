@@ -25,9 +25,9 @@ The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "
 _`WindowSharedStorage` inherits properties from its parent interface, {{domxref("SharedStorage")}}._
 
 - {{domxref("WindowSharedStorage.run", "run()")}} {{Experimental_Inline}}
-  - : Executes a run operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+  - : Executes a [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) operation that has been registered in a module added to the {{domxref("SharedStorageWorklet")}} of the current origin.
 - {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} {{Experimental_Inline}}
-  - : Executes a URL Selection operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+  - : Executes a [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) operation that has been registered in a module added to the {{domxref("SharedStorageWorklet")}} of the current origin.
 
 ## Examples
 

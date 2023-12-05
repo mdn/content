@@ -9,14 +9,14 @@ browser-compat: api.SharedStorageSelectURLOperation
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a URL Selection output gate operation.
+The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) operation.
 
 {{InheritanceDiagram}}
 
 ## Instance methods
 
 - {{domxref("SharedStorageSelectURLOperation.run", "run()")}} {{Experimental_Inline}}
-  - : Defines the structure to which that the `run()` method defined inside a URL Selection output gate operation should conform.
+  - : Defines the structure to which the `run()` method defined inside a URL Selection output gate operation should conform.
 
 ## Examples
 
@@ -76,7 +76,7 @@ async function injectContent() {
 injectContent();
 ```
 
-See the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing page for more information about this example and for links to other examples.
+For more details about this example and links to other examples, see the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing page.
 
 ## Specifications
 
