@@ -8,7 +8,7 @@ browser-compat: api.VisualViewport.resize_event
 
 {{APIRef("Visual Viewport")}}
 
-The **`resize`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is resized.
+The **`resize`** event of the {{domxref("VisualViewport")}} interface is fired when the visual viewport is resized.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
+You can use the `resize` event in an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:
 
 ```js
 visualViewport.addEventListener("resize", () => {
