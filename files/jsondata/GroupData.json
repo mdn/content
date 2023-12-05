@@ -1627,7 +1627,7 @@
       "interfaces": ["VisualViewport"],
       "methods": [],
       "properties": ["Window.visualViewport"],
-      "events": ["VisualViewport: resize", "VisualViewport: scroll"]
+      "events": []
     },
     "Web Animations": {
       "overview": ["Web Animations API"],
