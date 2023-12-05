@@ -37,7 +37,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-### Resetting opacity on drag end
+### Resetting opacity on dragend
 
 In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
@@ -58,7 +58,7 @@ For a complete example of drag and drop, see the page for the [`drag`](/en-US/do
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
