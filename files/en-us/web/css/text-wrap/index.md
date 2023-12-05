@@ -53,7 +53,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 As `balance` is limited to a short number of lines, this value should generally be used for headings, captions, and blockquotes.
 
-The `pretty` value can have a negative effect on performance and should be only used for longer blocks of text when layout is favorable over speed.
+The `pretty` value can have a negative effect on performance. Only use this value for longer blocks of text when layout is more important than speed.
 
 The `stable` value should be used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This ensures that the previous lines remain stable when users edit the content.
 
