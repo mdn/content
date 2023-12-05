@@ -130,7 +130,7 @@ See the [ErrorDocument Directive](https://httpd.apache.org/docs/current/mod/core
 ErrorDocument 500 /errors/500.html
 ErrorDocument 404 /errors/400.html
 ErrorDocument 401 https://example.com/subscription_info.html
-ErrorDocument 403 "Sorry, can't allow you access today"
+ErrorDocument 403 "Sorry, can't allow you access today."
 ```
 
 ## Error prevention
