@@ -58,7 +58,7 @@ However, in this partial example, we haven't implemented dropping: for a complet
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
