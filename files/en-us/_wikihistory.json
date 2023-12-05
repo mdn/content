@@ -77124,10 +77124,6 @@
     "modified": "2020-07-07T12:03:44.891Z",
     "contributors": ["wbamberg", "mfluehr"]
   },
-  "Web/CSS/CSS_charsets": {
-    "modified": "2020-10-15T21:38:35.251Z",
-    "contributors": ["wbamberg", "fscholz", "mfluehr", "Sebastianz", "teoli"]
-  },
   "Web/CSS/CSS_colors": {
     "modified": "2020-12-02T11:04:05.642Z",
     "contributors": ["peterbe", "wbamberg", "fscholz", "Sheppy", "mfluehr"]
@@ -78499,6 +78495,10 @@
   "Web/CSS/CSS_shapes/Shapes_from_images": {
     "modified": "2020-04-27T22:31:21.929Z",
     "contributors": ["ExE-Boss", "mfuji09", "rachelandrew"]
+  },
+  "Web/CSS/CSS_syntax": {
+    "modified": "2020-10-15T21:38:35.251Z",
+    "contributors": ["wbamberg", "fscholz", "mfluehr", "Sebastianz", "teoli"]
   },
   "Web/CSS/CSS_table": {
     "modified": "2020-07-07T12:26:58.542Z",
