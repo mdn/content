@@ -364,7 +364,7 @@ Note that polyfills.js is basically the two polyfills we are using put together 
 
 You can see this code in action in [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (see the [source code also](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton. Check out his article [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) for the original code, plus a lot of useful explanation around the wider subject).
 
-> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
+> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
 
 #### JavaScript transpiling
 
@@ -391,7 +391,7 @@ In the previous article, we included quite a lot of discussion about [handling C
 - Chrome/Opera/Safari would use `webkitObject`
 - Microsoft would use `msObject`
 
-Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
+Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

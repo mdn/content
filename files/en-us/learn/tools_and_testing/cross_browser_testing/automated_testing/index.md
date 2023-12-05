@@ -430,32 +430,25 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
    ```js
-   const SauceLabs = require("saucelabs");
+   const SauceLabs = require("saucelabs").default;
 
-   let myAccount = new SauceLabs({
-     username: "your-sauce-username",
-     password: "your-sauce-api-key",
-   });
-
-   myAccount.getAccountDetails((err, res) => {
-     console.log(res);
-     myAccount.getServiceStatus((err, res) => {
-       // Status of the Sauce Labs services
-       console.log(res);
-       myAccount.getJobs((err, jobs) => {
-         // Get a list of all your jobs
-         for (const job of jobs) {
-           myAccount.showJob(job.id, (err, res) => {
-             let str = `${res.id}: Status: ${res.status}`;
-             if (res.error) {
-               str += `\x1b[31m Error: ${res.error}\x1b[0m`;
-             }
-             console.log(str);
-           });
-         }
-       });
+   (async () => {
+     const myAccount = new SauceLabs({
+       username: "your-sauce-username",
+       password: "your-sauce-api-key",
      });
-   });
+
+     // Get full WebDriver URL from the client depending on region:
+     console.log(myAccount.webdriverEndpoint);
+
+     // Get job details of last run job
+     const jobs = await myAccount.listJobs("your-sauce-username", {
+       limit: 1,
+       full: true,
+     });
+
+     console.log(jobs);
+   })();
    ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.

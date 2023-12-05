@@ -29,7 +29,7 @@ _Doesn't inherit any properties._
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
-- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}}
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.

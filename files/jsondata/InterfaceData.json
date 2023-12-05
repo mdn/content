@@ -2452,6 +2452,10 @@
       "inh": "PerformanceEntry",
       "impl": []
     },
+    "PerformanceLongAnimationFrameTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceLongTaskTiming": {
       "inh": "PerformanceEntry",
       "impl": []

@@ -114,7 +114,7 @@ dc.addEventListener(
 
 The received event provides details in an {{domxref("RTCError")}} object called {{domxref("RTCErrorEvent.error", "error")}}; `RTCError` is an extension of the {{domxref("DOMException")}} interface. The error's {{domxref("DOMException.name", "name")}} is `RTCError` and the {{domxref("DOMException.message", "message")}} is an error string specified by the WebRTC layer.
 
-Error information is output to the console using {{domxref("console.error()")}}. The `message` string is always output, as is information about the source file's name, line number, and column number at which the error occurred.
+Error information is output to the console using {{domxref("console/error_static", "console.error()")}}. The `message` string is always output, as is information about the source file's name, line number, and column number at which the error occurred.
 
 In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.
 
