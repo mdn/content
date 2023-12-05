@@ -11,9 +11,9 @@ browser-compat: api.WindowSharedStorage.run
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`run()`** method of the
-{{domxref("WindowSharedStorage")}} interface executes a run operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+{{domxref("WindowSharedStorage")}} interface executes a [run operation](/en-US/docs/Web/API/SharedStorageRunOperation) registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
 
-> **Note:** The **Run** output gate is intended as a generic way to process some shared storage data.
+> **Note:** The [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) is intended as a generic way to process some shared storage data.
 
 ## Syntax
 

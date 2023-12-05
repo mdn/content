@@ -25,7 +25,7 @@ run(urls, data)
     - `url`
       - : A string representing the URL.
     - `reportingMetadata` {{optional_inline}}
-      - : An object containing properties with names equal to event types, and values equal to URLs where reporting destinations are located, for example, `"click" : "my-reports/report1.html"`. These act as destinations for reports submitted with a destination type of `"shared-storage-select-url"`, for example via a {{domxref("Fence.reportEvent()")}} or {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method call.
+      - : An object containing properties where names are event types and values are URLs pointing to reporting destinations, for example `"click" : "my-reports/report1.html"`. The URLs act as destinations for reports submitted with a destination of type `"shared-storage-select-url"`, typically submitted via a {{domxref("Fence.reportEvent()")}} or {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method call.
 - `data`
   - : An object representing any data required for executing the operation.
 

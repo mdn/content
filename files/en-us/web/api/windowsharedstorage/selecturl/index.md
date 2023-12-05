@@ -11,9 +11,9 @@ browser-compat: api.WindowSharedStorage.selectURL
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`selectURL()`** method of the
-{{domxref("WindowSharedStorage")}} interface executes a URL Selection operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+{{domxref("WindowSharedStorage")}} interface executes a [URL Selection operation](/en-US/docs/Web/API/SharedStorageSelectURLOperation) registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
 
-> **Note:** The **URL Selection** output gate is used to select a URL from a provided list to display to the user, based on shared storage data.
+> **Note:** The [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) is used to select a URL from a provided list to display to the user, based on shared storage data.
 
 ## Syntax
 
@@ -25,21 +25,21 @@ selectURL(name, urls, options)
 ### Parameters
 
 - `name`
-  - : A string representing the name of the operation registered inside the shared storage worklet module that is to be run. This must match the name given to the operation when it is registered with {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
+  - : A string representing the registered operation's name within the shared storage worklet module. It must match the name given to the operation when it is registered with {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 - `urls`
   - : An array of objects representing the URLs to be chosen between by the URL Selection operation. Each object contains two properties:
     - `url`
       - : A string representing the URL.
     - `reportingMetadata` {{optional_inline}}
-      - : An object containing properties with names equal to event types, and values equal to URLs where reporting destinations are located, for example, `"click" : "my-reports/report1.html"`. These act as destinations for reports submitted with a destination type of `"shared-storage-select-url"`, for example via a {{domxref("Fence.reportEvent()")}} or {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method call.
+      - : An object containing properties where names are event types and values are URLs pointing to reporting destinations, for example `"click" : "my-reports/report1.html"`. The URLs act as destinations for reports submitted with a destination of type `"shared-storage-select-url"`, typically submitted via a {{domxref("Fence.reportEvent()")}} or {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method call.
 - `options` {{optional_inline}}
   - : An options object, which can contain the following properties:
     - `data` {{optional_inline}}
       - : An object representing any data required for executing the operation.
     - `keepAlive` {{optional_inline}}
-      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be again. You therefore need to set `keepAlive` to `true` for each operation that is not intended to be the last one. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run; it therefore cannot be run again.
+      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be run again. Therefore, you need to set `keepAlive` to `true` for each operation that is not intended to be the last one. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run and cannot be run again.
     - `resolveToConfig` {{optional_inline}}
-      - : A boolean value. If set to `true`, the fulfillment value of the {{jsxref("Promise")}} returned by `run()` will be a {{domxref("FencedFrameConfig")}} object that can be used to load content into a {{htmlelement("fencedframe")}} via its `config` attribute. The default value, `false`, means that the fulfillment value will be a URL that can be used to embed content into an {{htmlelement("iframe")}}.
+      - : A boolean value. If set to `true`, the fulfillment value of the {{jsxref("Promise")}} returned by `run()` will be a {{domxref("FencedFrameConfig")}} object that can be used to load content into a {{htmlelement("fencedframe")}} via its `config` attribute. The default value, `false`, means that the fulfillment value will be a URL that can be used to load content into an {{htmlelement("iframe")}}.
 
 ### Return value
 

@@ -38,7 +38,7 @@ Each origin has its own storage — this is true for both web storage and [share
 
 ![A box diagram showing a top-level browsing context called publisher.com, with third-party content embedded in it](embedded-content.png)
 
-Third-party code can be added to another site by injecting it with a {{htmlelement("script")}} element, or navigating an {{htmlelement("iframe")}} to a site that contains it. If you are a third-party from another origin, how you are added to another site determines the browsing context of your code.
+Third-party code can be added to another site by injecting it with a {{htmlelement("script")}} element or by setting the source of an {{htmlelement("iframe")}} to a site that contains third-party code. The method used for integrating third-party code determines the browsing context of the code.
 
 - If your third-party code is added to another site with a `<script>` element, your code will be executed in the browsing context of the embedder. Therefore, when you call {{domxref("Storage.setItem()")}} or {{domxref("SharedStorage.set()")}}, the key/value pair will be written to the embedder's storage. From the browser's perspective, there is no difference between first-party code and third-party code when a `<script>` tag is used.
 - When your third-party code is added to another site within an `<iframe>`, the code inside the `<iframe>` will be executed with the origin of the `<iframe>`'s browsing context. If the code inside the `<iframe>` calls {{domxref("Storage.setItem()")}}, data will be written into the local or session storage of the `<iframe>`'s origin. If the `<iframe>` code calls {{domxref("SharedStorage.set()")}}, the data will be written into the shared storage of the `<iframe>`'s origin.

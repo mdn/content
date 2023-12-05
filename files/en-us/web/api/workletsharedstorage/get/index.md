@@ -63,8 +63,7 @@ The worklet module is shown below:
 ```js
 // k-frequency-measurement-worklet.js
 
-// Learn more about noise and scaling from the Private Aggregation fundamentals
-// documentation on Chrome blog
+// Scale factor for handling noise added to data
 const SCALE_FACTOR = 65536;
 
 /**
@@ -129,3 +128,4 @@ For more details about this example, see [K+ frequency measurement](https://deve
 ## See also
 
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
+- [Noise and scaling](https://developers.google.com/privacy-sandbox/relevance/private-aggregation/fundamentals#noise_and_scaling) on developer.chrome.com (2023)
