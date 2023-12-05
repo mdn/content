@@ -90,6 +90,8 @@ navigator.serviceWorker.onmessageerror = (event) => {
 
 ## See also
 
+- {{domxref("ServiceWorkerContainer/message_event", "message")}}
+- {{domxref("Client.postMessage()")}}
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
