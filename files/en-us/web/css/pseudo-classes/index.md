@@ -73,7 +73,7 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 - {{CSSxRef(":optional")}}
   - : Matches when a form element is optional.
 - {{CSSxRef(":user-valid")}}
-  - : Represents an element with corrent input, but only when the user has interacted with it.
+  - : Represents an element with correct input, but only when the user has interacted with it.
 - {{CSSxRef(":user-invalid")}}
   - : Represents an element with incorrect input, but only when the user has interacted with it.
 
