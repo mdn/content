@@ -69,7 +69,7 @@ The reason the first declaration in this selector block is invalid is because th
 
 The parser ignores the property with a invalid value, and starts parsing again after it encounters the next semi-colon. The {{cssxref("border-width")}} value of `100vh` is likely a mistake, but it's not an error. As it is valid, it will be parsed and applied to the elements matching the selector.
 
-### Document end
+### Auto-closed endings
 
 If a stylesheet — be it an external style sheet, CSS within a HTML {{HTMLElement("style")}} element, or an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
 
@@ -77,11 +77,11 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 
 Do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain, and ensures that the browser parses the CSS you intended.
 
+> **Note:** If a comment is with `/*` but not closed, any and all CSS encountered until the closing comment `*/` is found will be treated as a comment. Forgetting to close a comment may not make your CSS invalid, but it will make cause the CSS inside the comment to be ignored.
+
 ### Grammar check
 
 After each declaration, style rule, at-rule, etc. is parsed, the user agent checks to make sure the grammar is the expected grammar for that declaration. For example, if a property value is of the wrong data type or if a descriptor is not valid for the at-rule being described, the content that does not match the expected grammar is deemed invalid, and gets ignored.
-
-> **Note:** If a comment is with `/*` but not closed, any and all CSS encountered until the closing comment `*/` is found will be treated as a comment. Forgetting to close a comment may not make your CSS invalid, but it will make cause the CSS inside the comment to be ignored.
 
 ## See also
 
