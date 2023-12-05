@@ -89,6 +89,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the window that opened this current window.
 - {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns `true` if this window belongs to an origin-keyed agent cluster.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
 - {{domxref("Window.outerWidth")}} {{ReadOnlyInline}}
@@ -239,9 +241,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls to a particular set of coordinates in the document.
 - {{domxref("setInterval", "Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
-  - : Toggles a user's ability to resize a window.
-- {{domxref("setTimeout", "Window.setTimeout()")}}
+- {{domxref("setTimeout()", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
   - : Displays a directory picker which allows the user to select a directory.
@@ -274,6 +274,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
+  - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -283,7 +285,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from the {{domxref("Document")}} contained in the window object.
 
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
@@ -299,17 +301,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-
-### Animation events
-
-- {{domxref("Window/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
-- {{domxref("Window/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
-- {{domxref("Window/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
-- {{domxref("Window/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
 
 ### Clipboard events
 
@@ -391,17 +382,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
-
-### Transition events
-
-- {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
-- {{domxref("Window/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
-- {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
-- {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ### Deprecated events
 

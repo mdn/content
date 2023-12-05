@@ -142,9 +142,9 @@ To test it out, open a page on MDN that contains images (for example, [the page 
 ## Modifying request headers
 
 Finally, use `webRequest` to modify request headers.
-In this example, you change the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under "http\://useragentstring.com/".
+In this example, you change the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under "https\://useragentstring.com/".
 
-Update the "manifest.json" to include `http://useragentstring.com/` like this:
+Update the "manifest.json" to include `https://useragentstring.com/` like this:
 
 ```json
 {
@@ -156,7 +156,7 @@ Update the "manifest.json" to include `http://useragentstring.com/` like this:
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "http://useragentstring.com/"
+    "https://useragentstring.com/"
   ],
 
   "background": {
@@ -168,7 +168,7 @@ Update the "manifest.json" to include `http://useragentstring.com/` like this:
 Replace "background.js" with code like this:
 
 ```js
-let targetPage = "http://useragentstring.com/*";
+let targetPage = "https://useragentstring.com/*";
 
 let ua =
   "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
@@ -198,8 +198,8 @@ See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on t
 The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the `ua` variable, and returns the modified array.
 This modified array is sent to the server.
 
-To test it out, open [useragentstring.com](http://useragentstring.com/) and check that it identifies the browser as Firefox.
-Then reload the extension, reload [useragentstring.com](http://useragentstring.com/), and see that Firefox is now identified as Opera.
+To test it out, open [useragentstring.com](https://useragentstring.com/) and check that it identifies the browser as Firefox.
+Then reload the extension, reload [useragentstring.com](https://useragentstring.com/), and see that Firefox is now identified as Opera.
 
 ![useragentstring.com showing details of the modified user agent string](modified_request_header.png)
 

@@ -115,7 +115,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 #### Dev Tools
 
-- The property {{domxref("console.timeStamp")}} has been added ([Firefox bug 922221](https://bugzil.la/922221)).
+- The property {{domxref("console/timeStamp_static", "console.timeStamp()")}} has been added ([Firefox bug 922221](https://bugzil.la/922221)).
 
 ### MathML
 
