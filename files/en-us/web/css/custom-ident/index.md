@@ -21,10 +21,27 @@ The syntax of `<custom-ident>` is similar to CSS identifiers (such as property n
 - any decimal digit (`0` to `9`),
 - a hyphen (`-`),
 - an underscore (`_`),
-- an escaped character (preceded by a backslash, `\`),
+- an [escaped character](#escaping-characters) (preceded by a backslash, `\`),
 - a [Unicode](https://en.wikipedia.org/wiki/Unicode) character (in the format of a backslash, `\`, followed by one to six hexadecimal digits, representing its Unicode code point)
 
-Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). On the other hand, as there are several ways to escape a character, `toto\?` and `toto\3F` are the same identifiers.
+Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity).
+
+### Escaping characters
+
+Any Unicode code point can be included as part of a `<custom-ident>` or quoted {{cssxref("string")}} by escaping it.
+
+In CSS, there are several ways to escape a character. Escape sequences start with a backslash (`\`), and continue with:
+
+- One to six hex (`ABCDEF0123456789`) digits. The hex digits can optionally be followed white space. The hex escape sequence gets replaced by the Unicode code point whose value is given by those digits. The whitespace allows the sequences to be followed by actual hex digits (versus replaced ones).
+- Any Unicode code point that is not a hex digit or a newline character.
+
+Examples:
+
+- "&B" can be written as `\26 B` and `\000026B`.
+- "hi.there" can be written as `hi\.there` and `hi\002Ethere`.
+- "toto?" can be written as`toto\?`, `toto\3F`, or `toto\00003F`
+
+To include actual white space after an escape sequence, include two white spaces in the escape sequence .
 
 ### Forbidden values
 
