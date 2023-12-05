@@ -51,7 +51,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 - The {{ domxref("File") }} interface's non-standard methods `getAsBinary()`, `getAsDataURL()`, and `getAsText()` have been removed as well as the non-standard properties `fileName` and `fileSize` ([Firefox bug 661876](https://bugzil.la/661876)).
 - The {{ domxref("FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the `Content-Disposition` HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.
-- The {{ domxref("HTTPelement.dir") }} property now always returns its result as all lower-case, as required by the HTML specification.
+- The {{ domxref("HTMLelement.dir") }} property now always returns its result as all lower-case, as required by the HTML specification.
 - The {{ domxref("FileReader") }} `readAsArrayBuffer()` method is now implemented.
 - `Document.createEntityReference` has been removed. It was never properly implemented and is not implemented in most other browsers.
 - `document.normalizeDocument` has been removed. Use {{ domxref("Node.normalize") }} instead.
