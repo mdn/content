@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.URL.createObjectURL_static
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("File API")}}
 
 The **`URL.createObjectURL()`** static
 method creates a string containing a URL representing the object
@@ -18,7 +18,7 @@ in the window on which it was created. The new object URL represents the specifi
 
 To release an object URL, call {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}.
 
-{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}
 
 > **Note:** This feature is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API) due to its
 > potential to create memory leaks.
