@@ -49,7 +49,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Fired when at least one of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has failed.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}}
   - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
-- {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
   - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
@@ -63,7 +63,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Occurs when a user clicks on a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
   - : Occurs when a user closes a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/paymentrequest_event", "paymentrequest")}} {{Experimental_Inline}}
   - : Fired on a payment app when a payment flow has been initiated on the merchant website via the {{domxref("PaymentRequest.show()")}} method.
 - {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
   - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.

@@ -1,10 +1,10 @@
 ---
 title: Web Audio playbackRate explained
-slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
+slug: Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
 The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
