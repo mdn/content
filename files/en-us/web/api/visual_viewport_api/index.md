@@ -12,7 +12,7 @@ spec-urls: https://drafts.csswg.org/cssom-view/#visualViewport
 
 The **Visual Viewport API** provides an explicit mechanism for querying and modifying the properties of the window's {{Glossary("visual viewport")}}. The visual viewport is the visual portion of a screen excluding on-screen keyboards, areas outside of a pinch-zoom area, or any other on-screen artifact that doesn't scale with the dimensions of a page.
 
-## Visual Viewport concepts and usage
+## Concepts and usage
 
 The mobile web contains two viewports, the layout viewport and the visual viewport. The layout viewport covers all the elements on a page and the visual viewport is what is actually visible on the screen. When the user pinch-zooms into the page, the visual viewport shrinks but the layout viewport is unchanged. User-interface features like the on-screen keyboard (OSK) can shrink the visual viewport without affecting the layout viewport.
 
@@ -30,7 +30,7 @@ To access a window's visual viewport, you can obtain a {{domxref("VisualViewport
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : A read-only reference to the window's {{domxref("VisualViewport")}} object. If this property doesn't exist, the API is unsupported.
 
-## Example
+## Examples
 
 The code below is based on [the sample in the specification](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html), though it adds a few things that make it function better. It shows a function called `viewportHandler()`. When called it queries the `offsetLeft` and `height` properties for values it uses in a CSS `translate()` method. You invoke this function by passing it to _both_ event calls.
 
