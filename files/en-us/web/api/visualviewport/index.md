@@ -17,7 +17,7 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 ## Instance properties
 
-_`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("VisualViewport.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
@@ -33,6 +33,10 @@ _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarg
   - : Returns the height of the visual viewport in CSS pixels.
 - {{domxref("VisualViewport.scale")}} {{ReadOnlyInline}}
   - : Returns the pinch-zoom scaling factor applied to the visual viewport.
+
+## Instance methods
+
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ## Events
 
