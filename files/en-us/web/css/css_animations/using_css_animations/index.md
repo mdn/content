@@ -16,7 +16,7 @@ There are three key advantages to CSS animations over traditional script-driven 
 
 ## Configuring an animation
 
-To create a CSS animation sequence, you style the element you want to animate with the {{cssxref("animation")}} property or its sub-properties. This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does **not** configure the actual appearance of the animation, which is done using the {{cssxref("@keyframes")}} at-rule as described in the [Defining the animation sequence using keyframes](#defining_the_animation_sequence_using_keyframes) section below.
+To create a CSS animation sequence, you style the element you want to animate with the {{cssxref("animation")}} property or its sub-properties. This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does **not** configure the actual appearance of the animation, which is done using the {{cssxref("@keyframes")}} at-rule as described in the [Defining animation sequence using keyframes](#defining_animation_sequence_using_keyframes) section below.
 
 The sub-properties of the {{cssxref("animation")}} property are:
 
