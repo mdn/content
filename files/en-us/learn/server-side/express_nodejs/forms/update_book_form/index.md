@@ -16,8 +16,8 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
     Book.findById(req.params.id).populate("author").populate("genre").exec(),
-    Author.find().exec(),
-    Genre.find().exec(),
+    Author.find().sort({ family_name: 1 }).exec(),
+    Genre.find().sort({ name: 1 }).exec(),
   ]);
 
   if (book === null) {
@@ -63,12 +63,9 @@ Find the exported `book_update_post()` controller method, and replace it with th
 exports.book_update_post = [
   // Convert the genre to an array.
   (req, res, next) => {
-    if (!(req.body.genre instanceof Array)) {
-      if (typeof req.body.genre === "undefined") {
-        req.body.genre = [];
-      } else {
-        req.body.genre = new Array(req.body.genre);
-      }
+    if (!Array.isArray(req.body.genre)) {
+      req.body.genre =
+        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
   },
@@ -109,8 +106,8 @@ exports.book_update_post = [
 
       // Get all authors and genres for form
       const [allAuthors, allGenres] = await Promise.all([
-        Author.find().exec(),
-        Genre.find().exec(),
+        Author.find().sort({ family_name: 1 }).exec(),
+        Genre.find().sort({ name: 1 }).exec(),
       ]);
 
       // Mark our selected genres as checked.

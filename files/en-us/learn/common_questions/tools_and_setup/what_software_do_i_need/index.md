@@ -84,7 +84,7 @@ All desktop operating systems come with a basic text editor. These editors are a
             <a href="https://www.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://www.jetbrains.com/webstorm/">Web Storm</a></li>
-          <li><a href="http://brackets.io/">Brackets</a></li>
+          <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
         </ul>
@@ -111,7 +111,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li>
             <a href="https://www.visualstudio.com/">Visual Studio Code</a>
           </li>
-          <li><a href="http://brackets.io/">Brackets</a></li>
+          <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
         </ul>
@@ -154,14 +154,14 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li>
             <a href="https://www.visualstudio.com/">Visual Studio Code</a>
           </li>
-          <li><a href="http://brackets.io/">Brackets</a></li>
+          <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -239,7 +239,7 @@ Uploading files to a web server is a very important step while creating a websit
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a> (All OS)</li>

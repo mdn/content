@@ -450,6 +450,16 @@ Any errors are caught and passed to `handleGetUserMediaError()`, described in [H
 
 > **Note:** As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
 
+Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into
+{{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}.
+
+```js
+function handleVideoAnswerMsg(msg) {
+  const desc = new RTCSessionDescription(msg.sdp);
+  myPeerConnection.setRemoteDescription(desc).catch(reportError);
+}
+```
+
 ##### Sending ICE candidates
 
 The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the `RTCPeerConnection`'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event.
@@ -612,7 +622,7 @@ Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to 
 
 #### Dealing with state changes
 
-There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
+There are a number of additional events for which you can set listeners to notify your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
 
 ##### ICE connection state
 

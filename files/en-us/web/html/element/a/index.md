@@ -466,9 +466,6 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, or any element that accepts
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.

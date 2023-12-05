@@ -161,7 +161,7 @@ Now add a rule between the columns with `column-rule`. In a similar way to the {
 .container {
   column-count: 3;
   column-gap: 20px;
-  column-rule: 4px dotted rgb(79, 185, 227);
+  column-rule: 4px dotted rgb(79 185 227);
 }
 ```
 
@@ -231,11 +231,11 @@ body {
 .container {
   column-count: 3;
   column-gap: 20px;
-  column-rule: 4px dotted rgb(79, 185, 227);
+  column-rule: 4px dotted rgb(79 185 227);
 }
 h2 {
   column-span: all;
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   color: white;
   padding: 0.5em;
 }
@@ -369,8 +369,8 @@ body {
 }
 
 .card {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 0 0 1em 0;
 }
@@ -385,8 +385,8 @@ To control this behavior, we can use properties from the [CSS Fragmentation](/en
 ```css
 .card {
   break-inside: avoid;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 0 0 1em 0;
 }

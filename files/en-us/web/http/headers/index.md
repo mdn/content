@@ -109,7 +109,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 
 - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
+- {{HTTPHeader("Device-Memory")}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 - {{HTTPHeader("DPR")}} {{deprecated_inline}}
   - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
