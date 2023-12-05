@@ -37,7 +37,9 @@ The first example we'll look at is a classic tabbed info box — a very common f
 
 You might be thinking "why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design. In addition, so-called "single page apps" are becoming very popular — especially for mobile web UIs — because having everything served as a single file cuts down on the number of HTTP requests required to view all the content, thereby improving performance.
 
-> **Note:** Some web developers take things even further, only having one page of information loaded at once, and dynamically changing the information shown using a JavaScript feature such as [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest). At this point in your learning however we want to keep things as simple as possible. There is some JavaScript later on, but only a tiny bit.
+> **Note:** Some web developers take things even further, writing what's called a {{Glossary("SPA", "single-page app")}} consisting of only one page, which is updated with content fetched from the server using JavaScript APIs such as {{domxref("fetch()")}}.
+>
+> At this point in your learning, however, we want to keep things as simple as possible. There is some JavaScript later on, but only a tiny bit.
 
 To start with, we'd like you to make a local copy of the starting HTML file — [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html). Save this somewhere sensible on your local computer, and open it up in your text editor. Let's look at the HTML contained within the body:
 
