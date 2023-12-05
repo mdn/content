@@ -51,7 +51,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ## Description
 
-As `balance` is limited to a short number of lines then this should generally be used for headings, captions, and blockquotes.
+As `balance` is limited to a short number of lines, this value should generally be used for headings, captions, and blockquotes.
 
 The `pretty` value can have a negative effect on performance and should be only used for longer blocks of text when layout is favorable over speed.
 
