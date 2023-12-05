@@ -62,7 +62,7 @@ For a complete example of drag and drop, see the page for the [`drag`](/en-US/do
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
