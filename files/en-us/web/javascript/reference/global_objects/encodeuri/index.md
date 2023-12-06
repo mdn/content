@@ -63,7 +63,9 @@ const link = encodeURI(`https://example.com/?choice=${name}`); // "https://examp
 console.log([...new URL(link).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']
 
 // Instead:
-const link = encodeURI(`https://example.com/?choice=${encodeURIComponent(name)}`);
+const link = encodeURI(
+  `https://example.com/?choice=${encodeURIComponent(name)}`,
+);
 // "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
 console.log([...new URL(link).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
 ```
