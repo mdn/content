@@ -6,6 +6,7 @@ browser-compat:
   - api.Permissions
   - api.Navigator.permissions
   - api.WorkerNavigator.permissions
+spec-urls: https://w3c.github.io/permissions/
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -34,7 +35,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API): `clipboard-read`, `clipboard-write`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API): `geolocation`
-- [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API)
+- [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
 - [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
@@ -42,7 +43,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`
 - [Storage API](/en-US/docs/Web/API/Storage_API): `persistent-storage`
-- [Web Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API): `speaker-selection`
+- [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API): `speaker-selection`
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
 - [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
 
