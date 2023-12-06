@@ -53,6 +53,21 @@ The `encodeURI()` function does not encode characters that have special meaning 
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 
+`encodeURI`, as the name implies, is used to encode a URL as a whole, assuming it is already well-formed. If you want to dynamically assemble string values into a URL, you probably want to use {{jsxref("encodeURIComponent()")}} on each dynamic segment instead, to avoid URL syntax characters in unwanted places.
+
+```url
+const name = "Ben & Jerry's";
+
+// This is bad:
+const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
+console.log([...new URL(link).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']
+
+// Instead:
+const link = encodeURI(`https://example.com/?choice=${encodeURIComponent(name)}`);
+// "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
+console.log([...new URL(link).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
+```
+
 ## Examples
 
 ### encodeURI() vs. encodeURIComponent()
@@ -72,8 +87,6 @@ console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24%23
 console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 ```
-
-Note that `&`, `+`, and `=` are characters used to construct the query string of a URL, and therefore they are treated as special characters in {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} HTTP requests. Since `encodeURI()` does not encode those, it _cannot_ form a proper HTTP `GET` or `POST` request just by itself, in the case where those characters would appear in other parts of the URL, such as the URL path, the fragment, or in the value of a query string parameter. However, `encodeURIComponent()` does encode these characters, so in such cases both functions would have to be used.
 
 ### Encoding a lone surrogate throws
 
