@@ -24,8 +24,8 @@ const allowed = FeaturePolicy.allowsFeature(feature)
 
 or
 
-```js
-const allowed = FeaturePolicy.allowsFeature(feature, origin);
+```js-nolint
+const allowed = FeaturePolicy.allowsFeature(feature, origin)
 ```
 
 ### Parameters
