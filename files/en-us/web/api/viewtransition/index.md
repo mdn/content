@@ -17,11 +17,11 @@ This object type is returned by the {{domxref("Document.startViewTransition()", 
 
 ## Instance properties
 
-- {{domxref("ViewTransition.finished")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.finished")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
-- {{domxref("ViewTransition.ready")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
-- {{domxref("ViewTransition.updateCallbackDone")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}}'s callback fulfills.
 
 ## Instance methods
