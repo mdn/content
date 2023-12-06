@@ -109,7 +109,7 @@ They generally fall into two categories.
   This is how [Google Maps](https://www.google.com/maps) is able to find your location and plot it on a map.
 - The {{domxref("Canvas_API","Canvas")}} and {{domxref("WebGL_API","WebGL")}} APIs allow you to create animated 2D and 3D graphics.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
-- [Audio and Video APIs](/en-US/docs/Web/Guide/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and {{domxref("WebRTC API", "WebRTC")}} allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
+- [Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and {{domxref("WebRTC API", "WebRTC")}} allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
 > **Note:** Many of the above demos won't work in an older browser — when experimenting, it's a good idea to use a modern browser like Firefox, Chrome, Edge or Opera to run your code in.
 > You will need to consider [cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) in more detail when you get closer to delivering production code (i.e. real code that real customers will use).
@@ -162,8 +162,8 @@ function updateName() {
 
 Here we are selecting a button (line 1), then attaching an event listener to it (line 3) so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: button is undefined`.
-This means that the `button` object does not exist yet, so we can't add an event listener to it.
+If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
+This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > **Note:** This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 

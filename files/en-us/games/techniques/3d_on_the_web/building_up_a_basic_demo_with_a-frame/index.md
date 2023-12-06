@@ -6,7 +6,7 @@ page-type: guide
 
 {{GamesSidebar}}
 
-The [WebVR](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
+The [WebXR](/en-US/docs/Games/Techniques/3D_on_the_web/WebXR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) and augmented reality (AR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
 
 ## High level overview
 
