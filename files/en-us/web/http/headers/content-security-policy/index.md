@@ -200,8 +200,6 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("setTimeout()")}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `'unsafe-allow-redirects'` {{experimental_inline}}
-  - : TBD
 
 ### Hosts values
 
