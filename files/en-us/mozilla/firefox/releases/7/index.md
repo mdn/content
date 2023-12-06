@@ -103,7 +103,7 @@ These changes affect add-on developers as well as developers working on or with 
 ### XUL
 
 - `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
-- `<panel>` elements can now be configured to let the user drag them by clicking anywhere on their background] by using the new `backdrag` attribute.
+- `<panel>` elements can now be configured to let the user drag them by clicking anywhere on their background by using the new `backdrag` attribute.
 
 ### XPCOM
 
