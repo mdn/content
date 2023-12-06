@@ -55,7 +55,7 @@ http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+ha
 
 `encodeURI`, as the name implies, is used to encode a URL as a whole, assuming it is already well-formed. If you want to dynamically assemble string values into a URL, you probably want to use {{jsxref("encodeURIComponent()")}} on each dynamic segment instead, to avoid URL syntax characters in unwanted places.
 
-```url
+```js
 const name = "Ben & Jerry's";
 
 // This is bad:
