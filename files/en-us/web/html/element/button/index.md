@@ -68,6 +68,14 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
 
+- `invoketarget`
+
+  - : Turns a `<button>` element into an Invoker control button; takes the ID of the element to control as its value. See the {{domxref("Invokers API", "Invokers API", "", "nocode")}} landing page for more details.
+
+- `invokeaction`
+
+  - : Specifies the action to be performed on the element being controlled by an Invoker.
+
 - `popovertarget`
 
   - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
