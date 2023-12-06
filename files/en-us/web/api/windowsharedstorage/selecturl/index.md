@@ -11,7 +11,7 @@ browser-compat: api.WindowSharedStorage.selectURL
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`selectURL()`** method of the
-{{domxref("WindowSharedStorage")}} interface executes a [URL Selection operation](/en-US/docs/Web/API/SharedStorageSelectURLOperation) registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
+{{domxref("WindowSharedStorage")}} interface executes a [URL Selection operation](/en-US/docs/Web/API/SharedStorageSelectURLOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
 
 > **Note:** The [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) is used to select a URL from a provided list to display to the user, based on shared storage data.
 
