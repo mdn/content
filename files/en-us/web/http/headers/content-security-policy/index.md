@@ -191,6 +191,8 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
 - `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ### Unsafe keyword values
 
