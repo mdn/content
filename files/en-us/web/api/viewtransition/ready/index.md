@@ -17,7 +17,7 @@ The **`ready`** read-only property of the
 
 ## Value
 
-A promise.
+A Promise.
 
 ## Examples
 
