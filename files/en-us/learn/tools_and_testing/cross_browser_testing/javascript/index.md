@@ -178,7 +178,7 @@ Unfortunately, we still have the same error — the problem has not gone away. L
 
 > **Note:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
-In Firefox, the Debugger tab looks as follows:
+In Firefox, the Debugger tab looks like this:
 
 ![Firefox debugger](debugger-tab.png)
 
