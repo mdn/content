@@ -9,7 +9,7 @@ browser-compat: css.types.counter
 
 The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one.
 
-The `counter()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) {{CSSxRef("content")}} property values, but can theoretically be used anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
+The `counter()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) through the {{cssxref("content")}} property but, theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
 
 {{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
 
@@ -35,7 +35,7 @@ The `counter()` function accepts up to two parameters. The first parameter is th
 - `<counter-style>`
   - : A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols", "symbols()")}} function, where a counter style name is a `numeric`, `alphabetic`, or `symbolic` simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to `decimal`.
 
-> **Note:** See also the {{cssxref("counters", "counters()")}} function which provides a third parameter, a string, to join the counter values when nesting counters.
+> **Note:** To join the counter values when nesting counters, use the {{cssxref("counters", "counters()")}} function, which provides an additional {{cssxref("string")}} parameter.
 
 ### Formal syntax
 
@@ -77,7 +77,7 @@ li::after {
 
 {{EmbedLiveSample("lower-roman compared to lower-alpha", "100%", 150)}}
 
-### Counter displayed three ways
+### Displaying a counter using three styles
 
 In this example, we use the `counter()` function three times.
 
@@ -93,7 +93,7 @@ In this example, we use the `counter()` function three times.
 
 #### CSS
 
-We include the `counter()` function with three different counter styles, including the default decimal value. We added padding to the list, providing space for the long `::marker` string.
+We include the `counter()` function with three different counter styles, including the default decimal value. We've added padding to the list to provide space for the long `::marker` string.
 
 ```css-nolint
 ol {
