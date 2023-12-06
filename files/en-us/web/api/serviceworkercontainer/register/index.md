@@ -152,8 +152,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-However, servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
-worker script, and then you can specify a max scope for that service worker above the
+As noted above, servers can remove the restriction on scope by setting the `Service-Worker-Allowed`
+header on the service worker script, specifying a maximum scope for that service worker above the
 service worker's location.
 
 The following code, if included in `example.com/index.html`, would apply to all
