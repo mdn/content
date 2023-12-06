@@ -73,7 +73,7 @@ The parser ignores the property with a invalid value, and starts parsing again a
 
 ### Auto-closed endings
 
-If a stylesheet — be it an external style sheet, CSS within a HTML {{HTMLElement("style")}} element, or an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
+If a stylesheet — be it an external style sheet, CSS within an HTML {{HTMLElement("style")}} element, or an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. Failing to properly close CSS statements doesn't necessarily make the statements invalid.
 
