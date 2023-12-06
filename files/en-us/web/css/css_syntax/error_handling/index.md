@@ -38,21 +38,23 @@ There are many ways you might make a mistake writing a selector, but only invali
 
 If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, element or custom-element that doesn't exist, it may be a logic error, but not an error the parser needs to handle. If, however, you have a typo in a pseudo-class or pseudo-element, that may create an invalid selector, which is an error the parser will notice.
 
-If a selector list contains any invalid selectors, it creates an [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), and the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} and {{cssxref(":where")}} pseudo-classes, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), the selector list will not be invalidated. There is also an [exception for -webkit- prefixed pseudo-elements](#webkit-exception).
+If a selector list contains any invalid selectors, it creates an [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), and the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} and {{cssxref(":where")}} pseudo-classes, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), the selector list will not be invalidated. There is also an [exception for -webkit-]](#webkit-exception) prefixed pseudo-elements.
 
-If a selector list contains any invalid selectors outside of an `:is()` or `:where()`, that single unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The user-agent will look for the closing curly-brace and continue parsing again from there.
+If a selector list contains any invalid selectors outside of an `:is()` or `:where()`, that single unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The user-agent will look for the closing curly brace and will continue parsing again from that point on.
 
 #### Webkit exception
 
-Due to legacy issues with the overuse of browser prefixes in selectors (and property names), to prevent the invalidation of selector lists, browsers treat all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) whose beginning with a `-webkit-` prefix, case-insensitive, that don't end with `()`, as valid.
+Due to legacy issues with the overuse of browser prefixes in selectors (and property names), to prevent the invalidation of selector lists, browsers treat all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) that start with a `-webkit-` prefix, case-insensitive, and that don't end with `()`, as valid.
 
-This means that `::-webkit-works-only-in-samsung` will not invalidate a selector list no matter the browser. In such cases, the pseudo-element may not be recognized or supported by the browser, but if a `-webkit-` prefixed pseudo-element selector is not recognized, it won't match anything but the entire declaration block will not fail because of it. On the other hand, the selector `::-webkit-works()` ends in a function notation, and will invalidate the selector list and make the browser ignore the entire selector block.
+This means that `::-webkit-works-only-in-samsung` will not invalidate a selector list no matter the browser. In such cases, the pseudo-element may not be recognized or supported by the browser, but if a `-webkit-` prefixed pseudo-element will not cause the entire selector list and it's associated style block to be ignored. On the other hand, the unknown prefixed selector with a function notation `::-webkit-imaginary-function()` will invalidate the entire selector list and the browser will ignore the entire selector block.
 
 ### Errors within CSS declaration blocks
 
-When it comes to CSS properties and values within a declaration block, if either the property or the value is invalid, that property-value pair is ignored and discarded. When a user agent parsese, or interprets, a list of declarations, unknown syntax at any point causes the user-agent's parser to discard the declaration it is currently parsing, and continue parsing CSS after the next semicolon or closing curly bracket is encountered, whichever comes first.
+When it comes to CSS properties and values within a declaration block, if either the property or the value is invalid, that property-value pair is ignored and discarded. When a user agent parses, or interprets, a list of declarations, unknown syntax at any point causes the user-agent's parser to discard just that rule and continue parsing CSS after the next semicolon or closing curly bracket is encountered, whichever comes first.
 
-The parser seeks forward until it finds a semicolon (or the end of the block). It then starts fresh, trying to parse a declaration again. This example contains an error. The parser ignores the error (and the comments), seeking forward until it encounters a semi-colon, then restarts parsing:
+The parser seeks forward until it finds a semicolon (or the end of the block). It then starts fresh, trying to parse a declaration again.
+
+This example contains an error. The parser ignores the error (and the comments), seeking forward until it encounters a semi-colon, then restarts parsing:
 
 ```css-nolint bad
 p {
