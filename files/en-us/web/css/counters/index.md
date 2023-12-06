@@ -102,7 +102,7 @@ li::before {
 
 #### Result
 
-{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 270)}}
+{{EmbedLiveSample("Comparing default counter value to uppercase roman numerals", "100%", 270)}}
 
 ### Comparing decimal-leading-zero counter value to lowercase letters
 
