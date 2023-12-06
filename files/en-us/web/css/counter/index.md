@@ -116,7 +116,7 @@ li::after {
 
 #### Result
 
-{{EmbedLiveSample("Counter displayed three ways", "100%", 150)}}
+{{EmbedLiveSample("Displaying a counter using three styles", "100%", 150)}}
 
 ## Specifications
 
