@@ -157,7 +157,7 @@ worker script, and then you can specify a max scope for that service worker abov
 service worker's location.
 
 The following code, if included in `example.com/index.html`, would apply to all
-resources under `example.com` if the server set the Service-Worker-Allowed header
+resources under `example.com` if the server set the `Service-Worker-Allowed` header
 to `/` or `https://example.com/`. If the server doesn't set the header,
 the service worker registration will fail, as the requested `scope` is too broad.
 
