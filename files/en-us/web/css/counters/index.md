@@ -158,7 +158,7 @@ li::before {
 
 #### Result
 
-{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 270)}}
+{{EmbedLiveSample("Comparing decimal-leading-zero counter value to lowercase letters", "100%", 270)}}
 
 ## Specifications
 
