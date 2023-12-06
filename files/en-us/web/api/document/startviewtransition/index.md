@@ -10,8 +10,7 @@ browser-compat: api.Document.startViewTransition
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-The **`startViewTransition()`** method of the
-{{domxref("View Transitions API", "View Transitions API", "", "nocode")}} starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
+The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
 
 When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process).
 
