@@ -36,13 +36,6 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - {{domxref('MerchantValidationEvent')}}
   - : Represents the browser requiring the merchant (website) to validate themselves as allowed to use a particular payment handler (e.g., registered as allowed to use Apple Pay).
 
-## Dictionaries
-
-- {{domxref("AddressErrors")}}
-  - : A dictionary containing strings providing descriptive explanations of any errors in any {{domxref("PaymentAddress")}} entries which have errors.
-- {{domxref("PaymentRequestUpdateEvent.updateWith#parameters", "PaymentDetailsUpdate")}}
-  - : An object describing changes that need to be made to the payment details in the event that the server needs to update information following the instantiation of the payment interface but before the user begins to interact with it.
-
 ## Specifications
 
 {{Specifications}}
