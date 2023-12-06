@@ -24,9 +24,11 @@ setReportEventDataForAutomaticBeacons(event)
 ### Parameters
 
 - `event`
-  - : an object representing the data to send. The required properties are as follows:
+  - : an object representing the data to send. The possible properties are as follows:
     - `eventType`
-      - : A string representing the type of event that is being reported. Currently the only available option is the special event identifier `reserved.top_navigation`.
+      - : A string representing the type of event that is being reported. The available values are:
+        - `reserved.top_navigation_start`: An event fired when a top-level navigation begins.
+        - `reserved.top_navigation_commit`: An event fired when a top-level navigation completes.
     - `eventData`
       - : A string representing the data to be sent.
     - `destination`
@@ -36,6 +38,8 @@ setReportEventDataForAutomaticBeacons(event)
         - `"component-seller"`: The seller for a component auction in a multi-level auction.
         - `"direct-seller"`: The seller that directly ran the auction the buyer bid in. If the ad was a single-level auction, the value used will be `"seller"`. If the ad was a multi-level auction, the value used will be `"component-seller"`.
         - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
+    - `once` {{optional_inline}}
+      - : A boolean value. If set to `true`, the automatic beacon will only be sent for the next event, and beacons will not be sent for subsequent events until `setReportEventDataForAutomaticBeacons()` is invoked again. For example, when used with a `click` handler this can be used to send beacon data only for specific top-level navigations, rather than for every top-level navigation. This property defaults to `false`.
 
 ### Return value
 
@@ -45,7 +49,7 @@ None (`Undefined`).
 
 ```js
 window.fence.setReportEventDataForAutomaticBeacons({
-  eventType: "reserved.top_navigation",
+  eventType: "reserved.top_navigation_start",
   eventData: "an example string",
   destination: ["seller", "buyer"],
 });

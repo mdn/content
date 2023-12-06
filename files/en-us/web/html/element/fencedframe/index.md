@@ -11,7 +11,7 @@ browser-compat: html.elements.fencedframe
 
 The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one. `<fencedframe>`s are very similar to {{htmlelement("iframe")}} elements in form and function, except that:
 
-- Communication cannot be shared between the `<fencedframe>` content and its embedding site.
+- Communication is restricted between the `<fencedframe>` content and its embedding site.
 - A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
 - A `<fencedframes>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](/en-US/docs/Web/API/Fenced_frame_API#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
@@ -39,11 +39,16 @@ Permissions delegated from the top-level context to a fenced frame for allowing 
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
-| Feature                                                                                               | Permissions policy directive |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------- |
-| [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) | `attribution-reporting`      |
-
-> **Note:** More features will be added to the list as MDN is updated to cover more privacy sandbox features.
+- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+  - `attribution-reporting`
+  - `private-aggregation`
+  - `shared-storage`
+  - `shared-storage-select-url`
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
+  - `attribution-reporting`
+  - `private-aggregation`
+  - `shared-storage`
+  - `shared-storage-select-url`
 
 Currently these are always enabled inside fenced frames. In the future, which ones are enabled will be controllable using the `<fencedframe>` `allow` attribute. Blocking privacy sandbox features in this manner will also block the fenced frame from loading — there will be no communication channel at all.
 
@@ -56,6 +61,8 @@ However, trying to traverse the boundary via an API call such as {{domxref("HTML
 ## Positioning and scaling
 
 As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+
+The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
 
 ## Examples
 

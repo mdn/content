@@ -12,11 +12,13 @@ browser-compat: api.Window.fence
 
 The `fence` read-only property of the {{domxref("Window")}} interface returns a {{domxref("Fence")}} object instance for the current document context.
 
-It is available only to documents embedded inside a {{htmlelement("fencedframe")}}.
+`Fence` objects are only available to documents embedded inside {{htmlelement("fencedframe")}}s (loaded via {{domxref("FencedFrameConfig")}}s) or {{htmlelement("iframe")}}s (loaded via opaque URNs).
+
+> **Note:** See [How do `<fencedframe>`s work?](/en-US/docs/Web/API/Fenced_frame_API#how_do_fencedframes_work) for some description around `FencedFrameConfig`s and opaque URNs.
 
 ## Value
 
-A {{domxref("Fence")}} object instance, or `null` if the document context doesn't have an associated {{domxref("FencedFrameConfig")}} (i.e. it isn't embedded inside a `<fencedframe>`).
+A {{domxref("Fence")}} object instance, or `null` if the document context does not have access to a {{domxref("Fence")}} object.
 
 ## Examples
 

@@ -14,7 +14,7 @@ The **`deprecatedReplaceInURN()`** method of the {{domxref("Navigator")}} interf
 
 A `FencedFrameConfig` or opaque URN is returned from a source such as the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) `runAdAuction()` method, and then set as the value of {{domxref("HTMLFencedFrameElement.config")}}. The content URL associated with the `FencedFrameConfig` or opaque URN is mapped to it internally by the browser, and can't be accessed via JavaScript.
 
-However, you may wish to substitute parts of that internal URL. This is a common approach for passing runtime data into ad creatives to use in rendering. `deprecatedReplaceInURN()` enables that substitution for fenced frame URLs.
+However, you may wish to substitute parts of that internal URL. This is a common approach for passing runtime data into ad creatives to use in rendering. `deprecatedReplaceInURN()` has been made available as a temporary measure to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) APIs.
 
 ## Syntax
 

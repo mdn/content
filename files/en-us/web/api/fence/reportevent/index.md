@@ -24,8 +24,8 @@ reportEvent(event)
 ### Parameters
 
 - `event`
-  - : an object or a string representing the data to send.
-    - If the value is an object, the required properties are as follows:
+  - : An object or string representing the data to send.
+    - An object value defines a specific report event that you want to send. The required properties are as follows:
       - `eventType`
         - : A string representing the type of event that is being reported — for example you might be interested in how many times an ad is clicked on. This string can be any relevant event name (for example [`click`](/en-US/docs/Web/API/Element/click_event)). This needs to match the event type specified in the associated {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} call in a Protected Audience API worklet.
       - `eventData`
@@ -37,7 +37,7 @@ reportEvent(event)
           - `"component-seller"`: The seller for a component auction in a multi-level auction.
           - `"direct-seller"`: The seller that directly ran the auction the buyer bid in. If the ad was a single-level auction, the value used will be `"seller"`. If the ad was a multi-level auction, the value used will be `"component-seller"`.
           - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
-    - If the value is a string ... TODO
+    - A string value represents an `eventType`, for example `"click"` (see the earlier definition of `eventType`). When an `eventType` string is passed as the value of `reportEvent()`, it triggers all Private Aggregation contributions that were made conditional on that event type (for example via {{domxref("PrivateAggregation.contributeToHistogramOnEvent()")}}) to be sent.
 
 ### Return value
 

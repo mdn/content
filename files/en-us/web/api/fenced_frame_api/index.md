@@ -23,7 +23,7 @@ Most modern browsers are working on mechanisms to partition storage so that cook
 
 - Communication cannot be shared between the `<fencedframe>` content and its embedding site.
 - A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
-- A `<fencedframes>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](#use_cases).
+- A `<fencedframe>` cannot be freely manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
 
 ### Use cases
@@ -41,7 +41,7 @@ Most modern browsers are working on mechanisms to partition storage so that cook
 
 As mentioned above, you don't control the content embedded in a {{htmlelement("fencedframe")}} directly via regular script.
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/) or [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config")}} property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/) or [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)) generates a {{domxref("FencedFrameConfig")}} object, which is then set via JavaScript as the value of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config")}} property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -59,13 +59,15 @@ frame.config = frameConfig;
 
 Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
+> **Note:** Support is provided for opaque URNs in `<iframe>`s to ease migration of existing implementations over to [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) APIs. This support is intended to be temporary and will be removed in the future as adoption grows.
+
 > **Note:** `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) for more details.
 
 ### Accessing fenced frame functionality on the `Fence` object
 
 Inside documents embedded in `<fencedframe>`s, JavaScript has access to a {{domxref("Window.fence")}} property that returns a {{domxref("Fence")}} instance for that document. This object contains several functions specifically relevant to fenced frame API functionality.
 
-For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specified URLs, for the purpose of collecting ad auction results. This data could then be reported via the [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/).
+For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specified URLs, in order to report ad views and clicks.
 
 ### Permissions policy
 
@@ -89,8 +91,8 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 - [User-agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are not available inside fenced frames because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
 - Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside frenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
-- [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) has beren added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
-- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, keep it unsandboxed, or explicitly specify the following default attribute set:
+- [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) has been added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
+- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, keep it unsandboxed, or specify at least the following attributes:
   - `allow-same-origin`
   - `allow-forms`
   - `allow-scripts`
@@ -120,11 +122,11 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 ## Enrollment and local testing
 
-To use the Fenced Frame API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, data reporting and retrieval events will not occur.
+Certain API features that create {{domxref("FencedFrameConfig")}}s such as {{domxref("Navigator.runAdAuction()")}} ([Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)) and {{domxref("WindowSharedStorage.selectURL()")}} ([Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)), as well as other features such as {{domxref("Fence.reportEvent()")}}, require you to enroll your site in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API calls will fail with a console warning.
 
-You can still test your fenced Frame API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
-
-`chrome://flags/#privacy-sandbox-enrollment-overrides`
+> **Note:** In Chrome, you can still test your fenced frame code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
+>
+> `chrome://flags/#privacy-sandbox-enrollment-overrides`
 
 ## Examples
 
