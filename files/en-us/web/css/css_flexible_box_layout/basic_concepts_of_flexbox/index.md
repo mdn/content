@@ -61,7 +61,9 @@ After a while, thinking about start and end rather than left and right becomes n
 
 ## The flex container
 
-An area of a document laid out using flexbox is called a **flex container**. To create a flex container, we set the value of the area's container's {{cssxref("display")}} property to `flex` or `inline-flex`. As soon as we do this the direct children of that container become **flex items**. As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
+An area of a document that is laid out using flexbox is called a **flex container**. To create a flex container, set the area's {{cssxref("display")}} property to `flex`. When we do this, the direct children of that container become **flex items**. You can explicitly control whether the container itself is displayed inline or in block formatting context using `inline flex` or `block flex` (see the [outside](/en-US/docs/Web/CSS/display#outside) section of CSS `display`).
+
+As with all properties in CSS, some initial values are defined, so the contents of a new flex container will behave in the following way:
 
 - Items display in a row (the `flex-direction` property's default is `row`).
 - The items start from the start edge of the main axis.

@@ -31,14 +31,14 @@ display: none;
 display: contents;
 
 /* multi-keyword syntax */
+display: block flex;
 display: block flow;
+display: block flow-root;
+display: block grid;
+display: inline flex;
 display: inline flow;
 display: inline flow-root;
-display: block flex;
-display: inline flex;
-display: block grid;
 display: inline grid;
-display: block flow-root;
 
 /* other values */
 display: table;
@@ -70,8 +70,8 @@ The keyword values can be grouped into six value categories.
     - `inline`
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** Browsers that support the multi-keyword syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
-> This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> This is backwards-compatible with single-keyword syntax; for example, if you specify an element to be block, you would expect that the children of that element would participate in normal block and inline flow layout.
 
 ### Inside
 
@@ -98,8 +98,8 @@ The keyword values can be grouped into six value categories.
     - `ruby` {{Experimental_Inline}}
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
-> **Note:** Browsers that support the multi-keyword syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
-> This will result in expected behavior; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
+> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
+> This is backwards-compatible with single-keyword syntax; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
 
 ### List Item
 
@@ -190,11 +190,12 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
         It is equivalent to `inline grid`.
 
-### Which syntax should you use now?
+### Which syntax should you use?
 
-The Level 3 specification details two values for the `display` property — enabling the specification of the outer and inner display type explicitly — but this is not yet well-supported by browsers.
+The [CSS Display Module Level 3](https://drafts.csswg.org/css-display/) specification describes a multi-keyword syntax for values you can use with the `display` property so that you can define the **outer** and **inner** display type explicitly.
+The single keyword values (precomposed `<display-legacy>` values) are still supported for backwards-compatibility.
 
-The precomposed `<display-legacy>` methods allow the same results with single keyword values, and should be favoured by developers until the two keyword values are better supported. For example, using two values you might specify an inline flex container as follows:
+For example, using two values you can specify an inline flex container as follows:
 
 ```css
 .container {
@@ -202,7 +203,7 @@ The precomposed `<display-legacy>` methods allow the same results with single ke
 }
 ```
 
-This can currently be specified using a single value.
+This can be specified using a single value:
 
 ```css
 .container {
@@ -210,7 +211,7 @@ This can currently be specified using a single value.
 }
 ```
 
-For more information on these changes to the specification, see the article [Adapting to the new multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display).
+For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) guide.
 
 ### Global
 
@@ -225,7 +226,9 @@ display: unset;
 
 The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the [Syntax](#syntax) section. In addition, see the following material, which covers the various values of display in depth.
 
-- [Adapting to the new multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+### Multi-keyword values
+
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 
 ### CSS Flow Layout (display: block, display: inline)
 
@@ -319,8 +322,6 @@ In this example we have two block-level container elements, each one with three 
 
 We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.
 
-> **Note:** We've not included any of the modern multi-keyword syntax, as support for that is still fairly limited.
-
 #### HTML
 
 ```html
@@ -342,12 +343,16 @@ We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the
     <option selected>block</option>
     <option>inline</option>
     <option>inline-block</option>
+    <option>inline flow-root</option>
     <option>none</option>
     <option>flex</option>
     <option>inline-flex</option>
+    <option>inline flex</option>
     <option>grid</option>
     <option>inline-grid</option>
+    <option>inline grid</option>
     <option>table</option>
+    <option>block table</option>
     <option>list-item</option>
   </select>
 </div>
@@ -405,7 +410,14 @@ updateDisplay();
 
 {{EmbedLiveSample('display_value_comparison','100%', 440)}}
 
-> **Note:** You can find more examples in the pages for each separate display data type, linked above.
+Note that some multi-keyword values are added for illustration which have the following equivalents:
+
+- `inline-block` = `inline flow-root`
+- `inline-flex` = `inline flex`
+- `inline-grid` = `inline grid`
+- `table` = `block table`
+
+You can find more examples in the pages for each separate display data type under [Grouped values](#grouped_values)
 
 ## Specifications
 

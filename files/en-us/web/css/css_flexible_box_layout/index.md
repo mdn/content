@@ -65,6 +65,8 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 
 ## See also
 
+- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 - Glossary terms:
   - {{Glossary("Flexbox")}}
   - {{Glossary("Flex Container")}}
